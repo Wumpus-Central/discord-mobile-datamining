@@ -1,15 +1,15 @@
 // === Module 15302: usePrivateChannelWave ===
 
 // Module 15302 (usePrivateChannelWave)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-const require = fn;
+const require = arg1;
 ({ ME: closure_6, Routes: error } = ME);
-const result = require("obj132").fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
 
 export default function usePrivateChannelWave(id) {
   const _require = id;
@@ -48,22 +48,22 @@ export default function usePrivateChannelWave(id) {
           } else {
             closure_1 = tmp3;
             closure_0 = tmp7;
-            tmp7 = first;
-            if (!first) {
+            tmp7 = closure_1_1;
+            if (!closure_1_1) {
               closure_1_2(true);
-              let obj3 = id(closure_1_2[5]);
+              let obj3 = closure_1_0(closure_1_2[5]);
               obj1 = { channelId: null, source: "Messages Tab" };
-              obj1[0] = id.id;
+              obj1[0] = closure_1_0.id;
               obj3.trackWaveCtaClicked(obj1);
-              id(closure_1_2[6]).transitionTo(closure_1_7.CHANNEL(closure_1_6, id.id));
+              closure_1_0(closure_1_2[6]).transitionTo(closure_1_7.CHANNEL(closure_1_6, closure_1_0.id));
               c3 = 1;
-              const obj7 = first(closure_1_2[7]);
+              const obj7 = closure_1_1(closure_1_2[7]);
               const obj2 = { location: null };
               obj2[0] = closure_1_8.SEND_WAVE;
               c4 = 2;
               c5 = 1;
               obj3 = { value: null, done: false };
-              obj3[0] = obj7.sendStickers(id.id, ["749054660769218631"], "", obj2);
+              obj3[0] = obj7.sendStickers(closure_1_0.id, ["749054660769218631"], "", obj2);
               return obj3;
             }
           }
@@ -76,11 +76,11 @@ export default function usePrivateChannelWave(id) {
               ok = 429 !== closure_0.status;
             }
             if (!ok) {
-              obj1 = first(closure_1_2[8]);
+              obj1 = closure_1_1(closure_1_2[8]);
               const obj4 = { key: "HANDLE_WAVE_PRESS_TOAST", content: null, icon: null };
-              const intl = id(closure_1_2[9]).intl;
-              obj4[1] = intl.string(id(closure_1_2[9]).t.Whhv4w);
-              obj4[2] = first(closure_1_2[10]);
+              const intl = closure_1_0(closure_1_2[9]).intl;
+              obj4[1] = intl.string(closure_1_0(closure_1_2[9]).t.Whhv4w);
+              obj4[2] = closure_1_1(closure_1_2[10]);
               obj1.open(obj4);
             }
           } else if (arg0 === 1) {

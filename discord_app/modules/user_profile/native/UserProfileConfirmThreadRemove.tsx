@@ -7,10 +7,10 @@ import nameFromUserDefault from "nameFromUser" /* 4219 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmThreadRemove.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmThreadRemove.tsx");
 
 export default function UserProfileConfirmThreadRemove(isForumPost) {
   isForumPost = isForumPost.isForumPost;
@@ -20,20 +20,20 @@ export default function UserProfileConfirmThreadRemove(isForumPost) {
   const intl = getSystemLocale.intl;
   const t = getSystemLocale.t;
   obj = { title: intl.string(isForumPost ? t["8sKSjm"] : t.ZPm8jN), content: null, actions: null };
-  const intl2 = getSystemLocale.intl;
-  const t2 = getSystemLocale.t;
+  const intl2 = tmp4(1236).intl;
+  const t2 = tmp4(1236).t;
   obj[1] = intl2.formatToPlainString(isForumPost ? t2["6UGfnx"] : t2["hL+Znb"], { user: name });
   obj = { children: null };
   obj1 = { variant: "destructive", text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp4(1236).intl;
   obj1[1] = intl3.string(getSystemLocale.t.N86XcP);
   obj1[2] = onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj1, "remove-user-from-thread"), ];
+  const items = [closure_3(getAlertModalItemKey.AlertActionButton, obj1, "remove-user-from-thread"), ];
   const obj2 = { variant: "secondary", text: null };
-  const intl4 = getSystemLocale.intl;
+  const intl4 = tmp4(1236).intl;
   obj2[1] = intl4.string(getSystemLocale.t.yNbnce);
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj2, "cancel-remove-user-from-thread");
+  items[1] = closure_3(getAlertModalItemKey.AlertActionButton, obj2, "cancel-remove-user-from-thread");
   obj[0] = items;
   obj[2] = callback(getAlertModalItemKey.AlertActions, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  return closure_3(getAlertModalItemKey.AlertModal, obj);
 };

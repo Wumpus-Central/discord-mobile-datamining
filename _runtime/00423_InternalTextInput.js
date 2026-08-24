@@ -3,9 +3,9 @@
 // Module 423 (InternalTextInput)
 import setDefault from "set" /* 144 */;
 import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop2 from "noop" /* 19 */;
+import closure_6 from "_objectWithoutProperties" /* 109 */;
+import closure_7 from "_slicedToArray" /* 32 */;
+import closure_8 from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import { default as Commands, Commands } from "Commands" /* 145 */;
@@ -34,21 +34,27 @@ function InternalTextInput(value) {
   if (!closure_5) {
     const multiline = value.multiline;
   }
+  obj = tmp10;
   const tmp11 = editable(callback3(0), 2);
   first = tmp11[0];
+  closure_3 = first;
   defaultValue = tmp11[1];
   importDefault = value;
   obj = tmp9;
   closure_3 = tmp8;
   closure_5 = tmp10;
+  let callback;
   editable = undefined;
-  const tmp13 = editable(callback3(value.value), 2);
+  let hitSlop;
+  let onPress;
+  let tmp13 = editable(callback3(value.value), 2);
   const first1 = tmp13[0];
+  callback = first1;
   editable = tmp15;
   const tmp16 = editable(callback3({ mostRecentEventCount: first, selection: { end: -1, start: -1 } }), 2);
-  let hitSlop = tmp17;
+  hitSlop = tmp17;
   const selection2 = tmp16[0].selection;
-  let onPress = selection2;
+  onPress = selection2;
   const items = [first, tmp8, , , , , , , ];
   ({ value: arr[2], defaultValue: arr[3] } = value);
   items[4] = first1;
@@ -59,8 +65,8 @@ function InternalTextInput(value) {
   onPressIn(() => {
     obj = {};
     if (tmp) {
-      obj.text = value.value;
-      editable(value.value);
+      obj.text = iter.value;
+      editable(iter.value);
     }
     let tmp5 = obj;
     if (obj) {
@@ -68,6 +74,7 @@ function InternalTextInput(value) {
     }
     if (tmp5) {
       tmp5 = onPress.start !== tmp4.start || onPress.end !== tmp4.end;
+      const tmp6 = onPress.start !== tmp4.start || onPress.end !== tmp4.end;
     }
     if (tmp5) {
       obj.selection = tmp4;
@@ -97,23 +104,25 @@ function InternalTextInput(value) {
         num2 = -1;
       }
       textAndSelection.setTextAndSelection(current, first, defaultValue, num, num2);
+      const tmp13 = textAndSelection;
     }
-    tmp = closure_6 !== value.value && typeof value.value === "string";
   }, items);
   closure_5 = tmp15;
-  const callback = tmp17;
+  callback = tmp17;
   onPressIn(() => {
     const current = first.current;
     if (null != current) {
       value(first[5]).registerInput(current);
       return () => {
-        current(first[5]).unregisterInput(current);
-        obj = current(first[5]);
+        current(closure_1_1[5]).unregisterInput(current);
+        obj = current(closure_1_1[5]);
+        const tmp = current;
+        const tmp2 = closure_1_1;
+        const tmp3 = current;
         if (obj2.currentlyFocusedInput() === current) {
-          current(first[6])(current).blur();
-          const obj3 = current(first[6])(current);
+          tmp(tmp2[6])(tmp3).blur();
+          const obj3 = tmp(tmp2[6])(tmp3);
         }
-        obj2 = current(first[5]);
       };
     }
   }, []);
@@ -137,16 +146,16 @@ function InternalTextInput(value) {
         return closure_1.current;
       };
       obj[2] = function isFocused() {
-        const result = closure_1_0(first[5]).currentlyFocusedInput();
+        const result = closure_1_0(closure_1_1[5]).currentlyFocusedInput();
         let tmp2 = null != result;
         if (tmp2) {
           tmp2 = result === closure_1.current;
         }
         return tmp2;
       };
-      obj[3] = function setSelection(closure_0, closure_02) {
+      obj[3] = function setSelection(arg0, arg1) {
         if (null != closure_1.current) {
-          store.setTextAndSelection(tmp.current, closure_3, null, closure_0, closure_02);
+          store.setTextAndSelection(tmp.current, closure_3, null, arg0, arg1);
         }
       };
       const merged = Object.assign(current, obj);
@@ -200,16 +209,16 @@ function InternalTextInput(value) {
         return closure_1.current;
       };
       obj[2] = function isFocused() {
-        const result = closure_1_0(first[5]).currentlyFocusedInput();
+        const result = closure_1_0(closure_1_1[5]).currentlyFocusedInput();
         let tmp2 = null != result;
         if (tmp2) {
           tmp2 = result === closure_1.current;
         }
         return tmp2;
       };
-      obj[3] = function setSelection(closure_0, closure_02) {
+      obj[3] = function setSelection(arg0, arg1) {
         if (null != closure_1.current) {
-          store.setTextAndSelection(tmp.current, closure_3, null, closure_0, closure_02);
+          store.setTextAndSelection(tmp.current, closure_3, null, arg0, arg1);
         }
       };
       const merged = Object.assign(current, obj);
@@ -320,6 +329,7 @@ function InternalTextInput(value) {
     if (typeof fontWeight === "number") {
       obj = { fontWeight: tmp36.fontWeight.toString() };
       tmp39 = obj;
+      const str7 = tmp36.fontWeight;
     }
     let tmp40 = tmp39;
     if (null != tmp36.verticalAlign) {
@@ -369,7 +379,7 @@ function InternalTextInput(value) {
   importDefault(first[11])(!tmp47, "Cannot specify both value and children.");
   let tmp49 = children;
   if (countResult > 1) {
-    let obj2 = { children: null };
+    const obj2 = { children: null };
     obj2[0] = children;
     tmp49 = jsx(tmp21(tmp22[12]), { children: null });
   }
@@ -416,15 +426,14 @@ function InternalTextInput(value) {
     if (value.onBlur) {
       value.onBlur(arg0);
     }
-    obj = value(first[5]);
   };
   obj3.onChange = function onChange(nativeEvent) {
     const text = nativeEvent.nativeEvent.text;
     if (value.onChange) {
-      value.onChange(nativeEvent);
+      obj.onChange(nativeEvent);
     }
     if (value.onChangeText) {
-      value.onChangeText(text);
+      obj.onChangeText(text);
     }
     if (null != first.current) {
       textAndSelection(text);
@@ -436,7 +445,6 @@ function InternalTextInput(value) {
     if (value.onFocus) {
       value.onFocus(arg0);
     }
-    obj = value(first[5]);
   };
   obj3.onScroll = function onScroll(arg0) {
     if (value.onScroll) {
@@ -459,7 +467,7 @@ function InternalTextInput(value) {
   obj3.style = tmp37;
   obj3.text = defaultValue;
   obj3.textBreakStrategy = value.textBreakStrategy;
-  children = <defaultValue ref={tmp23} />;
+  children = tmp51(defaultValue, obj3);
   return jsx(importDefault(first[13]), { value: true, children });
 }
 let closure_2 = ["aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-selected", "accessibilityState", "id", "tabIndex", "selection", "selectionColor", "selectionHandleColor", "cursorColor"];

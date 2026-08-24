@@ -1195,6 +1195,7 @@ if (_typeof) {
     const first = parts[0];
     const replaced = parts[1] || "".replace(/0+$/, "");
     const str = String(arg0);
+    const str2 = parts[1] || "";
     const substr = first.slice(-1);
     let str3 = "other";
     if (!arg1) {
@@ -2600,35 +2601,35 @@ if (_typeof) {
   }
   obj = Object.create(null);
   obj[0] = _default;
-  const items = [obj];
+  let items = [obj];
   let obj64 = obj;
-  let item = items.forEach((item, index) => {
-    closure_0 = item;
-    let tmp = item;
-    if (item) {
-      tmp = typeof item !== "string";
+  let item = items.forEach((str) => {
+    closure_0 = str;
+    let tmp = str;
+    if (str) {
+      tmp = typeof str !== "string";
     }
     if (tmp) {
       const _Array = Array;
-      tmp = !Array.isArray(item);
+      tmp = !Array.isArray(str);
     }
     if (tmp) {
       let _Object = Object;
-      const keys = Object.keys(item);
-      item = keys.forEach((item, index) => {
-        closure_0 = item;
-        if ("default" !== item) {
-          if (!(item in closure_0)) {
+      const keys = Object.keys(str);
+      const item = keys.forEach((arg0) => {
+        closure_0 = arg0;
+        if ("default" !== arg0) {
+          if (!(arg0 in closure_0)) {
             const _Object = Object;
-            let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, item);
+            let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, arg0);
             if (!ownPropertyDescriptor.get) {
               const obj = { enumerable: true, get: null };
               obj[1] = function get() {
-                return item[item];
+                return table[table];
               };
               ownPropertyDescriptor = obj;
             }
-            Object.defineProperty(tmp, item, ownPropertyDescriptor);
+            Object.defineProperty(tmp, arg0, ownPropertyDescriptor);
           }
         }
       });
@@ -3036,10 +3037,10 @@ if (_typeof) {
   obj50[1] = items98;
   obj5[153] = obj50;
   const obj51 = { cardinal: null, ordinal: null };
-  const items99 = ["one", "other"];
-  obj51[0] = items99;
-  const items100 = ["many", "other"];
-  obj51[1] = items100;
+  items = ["one", "other"];
+  obj51[0] = items;
+  items = ["many", "other"];
+  obj51[1] = items;
   obj5[154] = obj51;
   obj5[155] = obj1;
   obj5[156] = obj1;
@@ -3048,29 +3049,29 @@ if (_typeof) {
   obj5[159] = obj3;
   obj5[160] = obj3;
   const obj52 = { cardinal: null, ordinal: null };
-  const items101 = ["one", "few", "other"];
-  obj52[0] = items101;
-  const items102 = ["other"];
-  obj52[1] = items102;
+  items = ["one", "few", "other"];
+  obj52[0] = items;
+  items = ["other"];
+  obj52[1] = items;
   obj5[161] = obj52;
   const obj53 = { cardinal: null, ordinal: null };
-  const items103 = ["one", "few", "other"];
-  obj53[0] = items103;
-  const items104 = ["other"];
-  obj53[1] = items104;
+  items = ["one", "few", "other"];
+  obj53[0] = items;
+  items = ["other"];
+  obj53[1] = items;
   obj5[162] = obj53;
   obj5[163] = obj1;
   const obj54 = { cardinal: null, ordinal: null };
-  const items105 = ["one", "few", "many", "other"];
-  obj54[0] = items105;
-  const items106 = ["other"];
-  obj54[1] = items106;
+  items = ["one", "few", "many", "other"];
+  obj54[0] = items;
+  items = ["other"];
+  obj54[1] = items;
   obj5[164] = obj54;
   const obj55 = { cardinal: null, ordinal: null };
-  const items107 = ["one", "two", "few", "other"];
-  obj55[0] = items107;
-  const items108 = ["other"];
-  obj55[1] = items108;
+  items = ["one", "two", "few", "other"];
+  obj55[0] = items;
+  items = ["other"];
+  obj55[1] = items;
   obj5[165] = obj55;
   obj5[166] = obj4;
   obj5[167] = obj4;
@@ -3080,16 +3081,16 @@ if (_typeof) {
   obj5[171] = obj1;
   obj5[172] = obj1;
   const obj56 = { cardinal: null, ordinal: null };
-  const items109 = ["one", "other"];
-  obj56[0] = items109;
-  const items110 = ["one", "many", "other"];
-  obj56[1] = items110;
+  items = ["one", "other"];
+  obj56[0] = items;
+  items = ["one", "many", "other"];
+  obj56[1] = items;
   obj5[173] = obj56;
   const obj57 = { cardinal: null, ordinal: null };
-  const items111 = ["one", "few", "other"];
-  obj57[0] = items111;
-  const items112 = ["other"];
-  obj57[1] = items112;
+  items = ["one", "few", "other"];
+  obj57[0] = items;
+  items = ["other"];
+  obj57[1] = items;
   obj5[174] = obj57;
   obj5[175] = obj1;
   obj5[176] = obj1;
@@ -3105,10 +3106,10 @@ if (_typeof) {
   obj5[186] = obj1;
   obj5[187] = obj1;
   const obj58 = { cardinal: null, ordinal: null };
-  const items113 = ["one", "other"];
-  obj58[0] = items113;
-  const items114 = ["few", "other"];
-  obj58[1] = items114;
+  items = ["one", "other"];
+  obj58[0] = items;
+  items = ["few", "other"];
+  obj58[1] = items;
   obj5[188] = obj58;
   obj5[189] = obj2;
   obj5[190] = obj1;
@@ -3119,26 +3120,26 @@ if (_typeof) {
   obj5[195] = obj1;
   obj5[196] = obj1;
   const obj59 = { cardinal: null, ordinal: null };
-  const items115 = ["one", "few", "many", "other"];
-  obj59[0] = items115;
-  const items116 = ["few", "other"];
-  obj59[1] = items116;
+  items = ["one", "few", "many", "other"];
+  obj59[0] = items;
+  items = ["few", "other"];
+  obj59[1] = items;
   obj5[197] = obj59;
   obj5[198] = obj3;
   obj5[199] = obj1;
   obj5[200] = obj1;
   obj5[201] = obj1;
   const obj60 = { cardinal: null, ordinal: null };
-  const items117 = ["one", "many", "other"];
-  obj60[0] = items117;
-  const items118 = ["many", "other"];
-  obj60[1] = items118;
+  items = ["one", "many", "other"];
+  obj60[0] = items;
+  items = ["many", "other"];
+  obj60[1] = items;
   obj5[202] = obj60;
   const obj61 = { cardinal: null, ordinal: null };
-  const items119 = ["other"];
-  obj61[0] = items119;
-  const items120 = ["one", "other"];
-  obj61[1] = items120;
+  items = ["other"];
+  obj61[0] = items;
+  items = ["one", "other"];
+  obj61[1] = items;
   obj5[203] = obj61;
   obj5[204] = obj1;
   obj5[205] = obj1;
@@ -3173,35 +3174,35 @@ if (_typeof) {
   }
   const obj62 = Object.create(null);
   obj62[0] = _default2;
-  const items121 = [obj5];
+  items = [obj5];
   obj64 = obj62;
-  const item1 = items121.forEach((item, index) => {
-    closure_0 = item;
-    let tmp = item;
-    if (item) {
-      tmp = typeof item !== "string";
+  const item1 = items.forEach((str) => {
+    closure_0 = str;
+    let tmp = str;
+    if (str) {
+      tmp = typeof str !== "string";
     }
     if (tmp) {
       const _Array = Array;
-      tmp = !Array.isArray(item);
+      tmp = !Array.isArray(str);
     }
     if (tmp) {
       let _Object = Object;
-      const keys = Object.keys(item);
-      item = keys.forEach((item, index) => {
-        closure_0 = item;
-        if ("default" !== item) {
-          if (!(item in closure_0)) {
+      const keys = Object.keys(str);
+      const item = keys.forEach((arg0) => {
+        closure_0 = arg0;
+        if ("default" !== arg0) {
+          if (!(arg0 in closure_0)) {
             const _Object = Object;
-            let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, item);
+            let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, arg0);
             if (!ownPropertyDescriptor.get) {
               const obj = { enumerable: true, get: null };
               obj[1] = function get() {
-                return item[item];
+                return table[table];
               };
               ownPropertyDescriptor = obj;
             }
-            Object.defineProperty(tmp, item, ownPropertyDescriptor);
+            Object.defineProperty(tmp, arg0, ownPropertyDescriptor);
           }
         }
       });
@@ -3405,34 +3406,34 @@ if (_typeof) {
   if (!_default3) {
     obj64 = Object.create(null);
     obj64[0] = _default3;
-    const items122 = [obj63];
-    const item2 = items122.forEach((item, index) => {
-      closure_0 = item;
-      let tmp = item;
-      if (item) {
-        tmp = typeof item !== "string";
+    items = [obj63];
+    const item2 = items.forEach((str) => {
+      closure_0 = str;
+      let tmp = str;
+      if (str) {
+        tmp = typeof str !== "string";
       }
       if (tmp) {
         const _Array = Array;
-        tmp = !Array.isArray(item);
+        tmp = !Array.isArray(str);
       }
       if (tmp) {
         let _Object = Object;
-        const keys = Object.keys(item);
-        item = keys.forEach((item, index) => {
-          closure_0 = item;
-          if ("default" !== item) {
-            if (!(item in closure_0)) {
+        const keys = Object.keys(str);
+        const item = keys.forEach((arg0) => {
+          closure_0 = arg0;
+          if ("default" !== arg0) {
+            if (!(arg0 in closure_0)) {
               const _Object = Object;
-              let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, item);
+              let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, arg0);
               if (!ownPropertyDescriptor.get) {
                 const obj = { enumerable: true, get: null };
                 obj[1] = function get() {
-                  return item[item];
+                  return table[table];
                 };
                 ownPropertyDescriptor = obj;
               }
-              Object.defineProperty(tmp, item, ownPropertyDescriptor);
+              Object.defineProperty(tmp, arg0, ownPropertyDescriptor);
             }
           }
         });

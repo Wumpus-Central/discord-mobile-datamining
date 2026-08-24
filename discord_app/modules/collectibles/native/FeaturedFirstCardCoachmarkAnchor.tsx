@@ -2,12 +2,12 @@
 
 // Module 14962 (FeaturedFirstCardCoachmarkAnchor)
 import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 14963 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/FeaturedFirstCardCoachmarkAnchor.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/FeaturedFirstCardCoachmarkAnchor.tsx");
 
 export default function FeaturedFirstCardCoachmarkAnchor(children) {
   const ref = React.useRef(null);

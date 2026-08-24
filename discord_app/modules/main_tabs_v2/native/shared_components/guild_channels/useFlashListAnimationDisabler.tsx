@@ -1,13 +1,13 @@
 // === Module 13477: useFlashListAnimationDisabler ===
 
 // Module 13477 (useFlashListAnimationDisabler)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = { code: "function useFlashListAnimationDisablerTsx1(){const{lastId}=this.__closure;return lastId.get();}" };
 let closure_4 = { code: "function useFlashListAnimationDisablerTsx2(current,prev){const{enableAnimation}=this.__closure;if(current!==prev){enableAnimation.set(false);}}" };
 let closure_5 = { code: "function useFlashListAnimationDisablerTsx3(finished){const{enableAnimation}=this.__closure;if(finished&&!enableAnimation.get()){enableAnimation.set(true);}}" };
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useFlashListAnimationDisabler.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useFlashListAnimationDisabler.tsx");
 
 export const useFlashListAnimationDisabler = function useFlashListAnimationDisabler(userId) {
   const _require = userId;

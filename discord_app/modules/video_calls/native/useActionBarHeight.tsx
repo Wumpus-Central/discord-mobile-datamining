@@ -4,16 +4,17 @@
 import initialize from "initialize" /* 589 */;
 import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 8697 */;
 import useCanCurrentUserSpeakInChannelDefault from "useCanCurrentUserSpeakInChannel" /* 10526 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
 import { InputModes } from "ME" /* 676 */;
 import { ACTION_SHEET_HANDLE_SPACING as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
 
-require = fn;
+require = arg1;
 let sum = 2 * require("ActionButton").SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
 
 export default function useActionBarHeight(id) {
   const isFiveButtonLayout = useIsFiveButtonLayout.useIsFiveButtonLayout(id);
+  const obj = useIsFiveButtonLayout;
   const tmp2 = useCanCurrentUserSpeakInChannelDefault(id);
   const items = [closure_3];
   let num = 88;

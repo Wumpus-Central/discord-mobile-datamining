@@ -6,18 +6,17 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import PressableBase from "PressableBase" /* 5433 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12138 */;
-import registerAssetDefault from "registerAsset" /* 12617 */;
-import registerAssetDefault2 from "registerAsset" /* 12618 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
+import closure_5 from "handleThemeChange" /* 1302 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ Image: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let createCacheKey = {};
+createCacheKey = { wrapper: null, text: null, fallbackImage: null };
+createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.alignItems = "center";
 createCacheKey.justifyContent = "center";
@@ -32,15 +31,16 @@ class DefaultFallback extends PureComponent {
 }
 DefaultFallback.prototype["render"] = function render() {
   const tmp = callback3(this.context);
-  const obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
+  let obj = { style: tmp.wrapper, children: null };
+  obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = registerAssetDefault;
+    let tmp6Result = tmp6(12617);
   } else {
-    tmp6Result = registerAssetDefault2;
+    tmp6Result = tmp6(12618);
   }
   obj[2] = tmp6Result;
-  obj[1] = callback(closure_3, obj);
-  return callback(closure_4, obj);
+  obj[1] = closure_6(closure_3, obj);
+  return closure_6(closure_4, obj);
 };
 DefaultFallback.contextType = require("ManaContext").ThemeContext;
 const obj2 = { touchable: null, imageContainer: null, image: null };
@@ -124,16 +124,18 @@ StreamPreview.defaultProps = {
       stringResult = string(t.uQZTBV);
     }
     obj[1] = stringResult;
-    return callback(DefaultFallback, obj);
+    return closure_6(DefaultFallback, obj);
   }
 };
-const result = require("obj132").fileFinishedImporting("components_native/StreamPreview.tsx");
+let obj1 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: ThemesDefault.colors.TEXT_MUTED };
+const result = require("set").fileFinishedImporting("components_native/StreamPreview.tsx");
 
 export default function ConnectedStreamPreview(stream) {
   ({ guildId, channelId, ownerId } = stream.stream);
   ({ previewUrl, isLoading } = useFetchStreamPreviewDefault(guildId, channelId, ownerId));
+  let obj = initialize;
   const items = [closure_5];
-  const obj = {};
+  obj = {};
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   const merged = Object.assign(stream);
   obj.url = previewUrl;

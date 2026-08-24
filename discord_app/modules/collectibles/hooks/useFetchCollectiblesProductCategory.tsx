@@ -1,16 +1,16 @@
 // === Module 10394: useFetchCollectiblesProductCategory ===
 
 // Module 10394 (useFetchCollectiblesProductCategory)
-import obj132Default from "obj132" /* 8390 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
+import setDefault from "set" /* 8390 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
 
 export const useFetchCollectiblesProductCategory = function useFetchCollectiblesProductCategory(skuId) {
   const _require = skuId;
-  obj132Default();
+  setDefault();
   let obj = _require(647);
   let items = [closure_4];
   const tmp2 = callback(obj.useStateFromStoresArray(items, () => {

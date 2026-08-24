@@ -2,9 +2,9 @@
 
 // Module 15116 (hasExceededThreshold)
 import Storage2 from "Storage" /* 595 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-require = fn;
+require = arg1;
 function hasExceededThreshold(name) {
   let tmp = "anonymous" !== name.name;
   if (tmp) {
@@ -27,9 +27,12 @@ function flushViolators() {
   if (!(function hasViolator() {
     const obj = dependencyMap[Symbol.iterator]();
     while (obj !== undefined) {
+      let tmp3 = callback;
       let tmp4 = callback(tmp2, 2);
       let first = tmp4[0];
+      let tmp6 = callback2;
       if (callback2(tmp4[1])) {
+        let tmp7 = obj;
         obj.return();
         let flag = true;
         return true;
@@ -43,9 +46,12 @@ function flushViolators() {
     map[Symbol.iterator]();
   }
   (function printViolators() {
-    const num = 34;
-    const num2 = 20;
-    const num3 = 20;
+    let num;
+    num = 34;
+    let num2;
+    num2 = 20;
+    let num3;
+    num3 = 20;
     {
       const sum = num + num2 + num3 + 6;
     }
@@ -57,29 +63,40 @@ function flushViolators() {
     logger.log(`${"|".padEnd(tmp, "-")}|`);
     const padEndResult1 = "Total Exec Time".padEnd(num2, " ");
     while (tmp10 !== undefined) {
+      let tmp12 = callback;
       let tmp13 = callback(tmp11, 2);
       [obj, tmp14] = tmp13;
       let tmp16 = "" !== closure_7;
       if (tmp16) {
+        let tmp17 = obj;
         tmp16 = obj === tmp15;
       }
       if (!tmp16) {
+        let tmp18 = callback2;
+        let tmp19 = tmp14;
         tmp16 = callback2(tmp14);
       }
       if (tmp16) {
+        let tmp20 = logger;
+        let tmp21 = obj;
         let padEndResult2 = obj.padEnd(num, " ");
+        let tmp23 = tmp14;
         let execTime = tmp14.execTime;
         let text = `${execTime.toFixed(2)}ms`;
         let str = tmp14.execCount;
         let padEndResult3 = `${execTime.toFixed(2)}ms`.padEnd(num2, " ");
         str = str.toString();
         let _HermesInternal = HermesInternal;
+        let str2 = "| ";
+        let tmp26 = padEndResult2;
+        let str3 = "| ";
+        let str4 = "| ";
+        let str5 = "|";
         let logResult5 = logger.log("| " + padEndResult2 + "| " + padEndResult3 + "| " + str.padEnd(num3, " ") + "|");
       }
       continue;
     }
     logger.log(`${"|".padEnd(tmp, "-")}|`);
-    tmp10 = dependencyMap[Symbol.iterator]();
   })();
 }
 const logger = new require("log").Logger("useStateFromStores");
@@ -90,7 +107,7 @@ let c7 = "";
 let c8 = false;
 let c9;
 const map = new Map();
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx");
 
 export function getUseStateFromStoresExecutionWindowThresholdMs() {
   let num = arg0;
@@ -152,10 +169,10 @@ export function getUseStateFromStoresDebuggingEnabled() {
   }
   return flag;
 }
-export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromStoresDebuggingEnabled(arg0) {
-  closure_8 = arg0;
+export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromStoresDebuggingEnabled(first) {
+  closure_8 = first;
   const Storage = Storage2.Storage;
-  const result = Storage.set("useStateFromStoresDebuggingEnabled", arg0);
+  const result = Storage.set("useStateFromStoresDebuggingEnabled", first);
   if (closure_8) {
     const _setInterval = setInterval;
     let interval = setInterval(flushViolators, c4);
@@ -183,6 +200,7 @@ export const getUseStateFromStoresHookInfo = function getUseStateFromStoresHookI
         let str9 = parts[num];
         let str10 = str9.trim();
         let tmp7 = str10.split(" ")[1];
+        let tmp8 = num;
         if ("useStateFromStores" !== tmp7) {
           if ("useStateFromStoresArray" !== tmp7) {
             str8 = tmp7;
@@ -211,7 +229,7 @@ export const getUseStateFromStoresHookInfo = function getUseStateFromStoresHookI
     return value;
   }
 };
-export const trackGetStateFromStoresPerformance = function trackGetStateFromStoresPerformance(execTime, fn) {
+export const trackGetStateFromStoresPerformance = function trackGetStateFromStoresPerformance(execTime) {
   if (c8) {
     if (null != execTime) {
       const _performance = performance;
@@ -241,8 +259,8 @@ export const trackGetStateFromStoresPerformance = function trackGetStateFromStor
           logger.log("" + execTime.name + " cumulatively used " + execTime.execTime + "ms of execution time and ran " + execTime.execCount + " times.");
         }
       }
-      return fn();
+      return arg1();
     }
   }
-  return fn();
+  return arg1();
 };

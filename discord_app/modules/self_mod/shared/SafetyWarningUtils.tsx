@@ -2,15 +2,16 @@
 
 // Module 10582 (trackViewedEvent)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 
 export const trackViewedEvent = function trackViewedEvent(SAFETY_WARNING_VIEWED, warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType } = warningId);
-  const obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
   let parsed;
   if (null != warningId) {
     const _parseInt = parseInt;
@@ -25,7 +26,8 @@ export const ViewNameTypes = { SAFETY_WARNING_BANNER: "safety_warning_banner", S
 export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, viewName, isNudgeWarning } = warningId);
-  const obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null, view_name: null, is_nudge_warning: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null, view_name: null, is_nudge_warning: null };
   let parsed;
   if (null != warningId) {
     const _parseInt = parseInt;
@@ -42,7 +44,8 @@ export const CtaEventTypes = { OPEN_MORE_TIPS: "open_more_tips", USER_BANNER_DIS
 export const trackCtaEvent = function trackCtaEvent(warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, cta, isNudgeWarning } = warningId);
-  const obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null, cta: null, is_nudge_warning: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null, cta: null, is_nudge_warning: null };
   let parsed;
   if (null != warningId) {
     const _parseInt = parseInt;

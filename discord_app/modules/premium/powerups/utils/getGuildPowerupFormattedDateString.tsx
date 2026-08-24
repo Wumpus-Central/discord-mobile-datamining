@@ -1,9 +1,9 @@
 // === Module 11669: getGuildPowerupFormattedDateString ===
 
 // Module 11669 (getGuildPowerupFormattedDateString)
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import closure_0 from "_getSystemLocale" /* 1994 */;
 
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx");
 
 export default function getGuildPowerupFormattedDateString(arg0) {
   let obj = arg1;

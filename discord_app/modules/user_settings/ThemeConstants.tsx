@@ -1,7 +1,7 @@
 // === Module 1305: SystemThemeState ===
 
 // Module 1305 (SystemThemeState)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import create from "create" /* 1306 */;
 
@@ -14,7 +14,7 @@ const obj2 = { [create.Theme.UNSET]: ThemeTypes.DARK, [create.Theme.DARK]: Theme
 const obj3 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARK, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
 const obj4 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARKER, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
 const obj5 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARK, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
-const result = obj132.fileFinishedImporting("modules/user_settings/ThemeConstants.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/ThemeConstants.tsx");
 
 export const SystemThemeState = { UNSET: 0, [0]: "UNSET", OFF: 1, [1]: "OFF", ON: 2, [2]: "ON" };
 export const SystemTheme = obj;

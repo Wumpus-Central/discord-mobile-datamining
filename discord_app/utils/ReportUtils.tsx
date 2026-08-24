@@ -1,14 +1,14 @@
 // === Module 7267: canReportUser ===
 
 // Module 7267 (canReportUser)
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleInviteData from "handleInviteData" /* 4295 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import closure_1 from "handleInviteData" /* 4295 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 ({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("utils/ReportUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/ReportUtils.tsx");
 
 export const canReportUser = function canReportUser(user) {
   if (null == user) {

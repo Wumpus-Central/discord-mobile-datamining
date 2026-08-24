@@ -4,11 +4,12 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import initialize from "initialize" /* 1303 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
-import setLibraryApplications from "setLibraryApplications" /* 4512 */;
+import closure_5 from "initialize" /* 1303 */;
+import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_7 from "setLibraryApplications" /* 4512 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function reset() {
   c2 = null;
   c3 = null;
@@ -43,8 +44,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getTestModeApplicationId"] = function getTestModeApplicationId() {
   return closure_2;
 };
-prototype["inTestModeForApplication"] = function inTestModeForApplication(closure_0) {
-  return closure_2 === closure_0;
+prototype["inTestModeForApplication"] = function inTestModeForApplication(applicationId) {
+  return closure_2 === applicationId;
 };
 prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedApplication(arg0) {
   let tmp = closure_2 === arg0;
@@ -53,12 +54,12 @@ prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedAp
   }
   return tmp;
 };
-prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(closure_0) {
+prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(applicationId) {
   const DeveloperMode = explicitContentFromProto.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     const self = this;
-    setting = this.inTestModeForApplication(closure_0);
+    setting = this.inTestModeForApplication(applicationId);
   }
   return setting;
 };
@@ -143,6 +144,6 @@ obj = {
   DEVELOPER_TEST_MODE_RESET: reset
 };
 const testModeStore = new TestModeStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("stores/game_store/TestModeStore.tsx");
+let result = set.fileFinishedImporting("stores/game_store/TestModeStore.tsx");
 
 export default testModeStore;

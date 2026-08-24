@@ -1,14 +1,15 @@
 // === Module 8646: getFastestListSectionsWithErrorChecking ===
 
 // Module 8646 (getFastestListSectionsWithErrorChecking)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import logFastestListError from "logFastestListError" /* 8640 */;
 
-const result = obj132.fileFinishedImporting("modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx");
+const result = set.fileFinishedImporting("modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx");
 
 export default function getFastestListSectionsWithErrorChecking(itemSizes) {
   if (tmp) {
-    const obj = { itemSizesLength: null, itemKeysLength: null, listId: null, detail: "Using non-uniform item sizes or list keys forces a full iteration of the list entries. This will cause performance issues on slower devices, please consider using a uniform configuration." };
+    let obj = logFastestListError;
+    obj = { itemSizesLength: null, itemKeysLength: null, listId: null, detail: "Using non-uniform item sizes or list keys forces a full iteration of the list entries. This will cause performance issues on slower devices, please consider using a uniform configuration." };
     obj[0] = itemSizes.itemSizes.length;
     obj[1] = itemSizes.itemKeys.length;
     obj[2] = itemSizes.listId;

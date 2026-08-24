@@ -2,23 +2,23 @@
 
 // Module 11803 (useGetJoinRequestAndGuildForInterviewChannel)
 import initialize from "initialize" /* 589 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
+import closure_8 from "handleGatewayJoinRequestUpdate" /* 4198 */;
 import { Permissions } from "ME" /* 676 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");
 
 export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   [tmp2, require] = callback(joinRequest.useState(false), 2);
   const tmp3 = callback(joinRequest.useState(false), 2);
   const first = tmp3[0];
   dependencyMap = tmp3[1];
-  let tmp = callback(joinRequest.useState(false), 2);
+  const tmp = callback(joinRequest.useState(false), 2);
   const castResult = first(11).cast(id);
   callback = castResult;
   let obj = first(11);
@@ -36,7 +36,7 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
       obj[0] = request;
       let canResult = null != guild;
       if (canResult) {
-        canResult = closure_1_6.can(Permissions.KICK_MEMBERS, guild);
+        canResult = closure_1_6.can(closure_1_9.KICK_MEMBERS, guild);
       }
       obj[1] = canResult;
       obj[2] = guild;
@@ -52,7 +52,6 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
       const requestToJoinGuilds = first(8537).fetchRequestToJoinGuilds();
       const obj = first(8537);
     }
-    tmp = null != joinRequestGuild || first;
   }, items1);
   const items2 = [joinRequest, castResult];
   const effect1 = joinRequest.useEffect(() => {

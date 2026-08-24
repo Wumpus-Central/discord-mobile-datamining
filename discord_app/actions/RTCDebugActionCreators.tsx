@@ -2,14 +2,15 @@
 
 // Module 12597 (open)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import obj132Default from "obj132" /* 4004 */;
+import setDefault from "set" /* 4004 */;
 import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9658 */;
-import updateStats from "updateStats" /* 12596 */;
+import closure_2 from "updateStats" /* 12596 */;
 
-const result = require("obj132").fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
 
 export const open = function open(section) {
-  const obj = { type: "RTC_DEBUG_MODAL_OPEN", section };
+  let obj = dispatcherDefault;
+  obj = { type: "RTC_DEBUG_MODAL_OPEN", section };
   obj.dispatch(obj);
   dispatcherDefault.dispatch({ type: "RTC_DEBUG_POPOUT_WINDOW_OPEN" });
 };
@@ -20,25 +21,28 @@ export const openReplay = function openReplay() {
   dispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_OPEN_REPLAY" });
 };
 export const setSection = function setSection(section) {
-  const obj = { type: "RTC_DEBUG_MODAL_SET_SECTION", section };
+  let obj = dispatcherDefault;
+  obj = { type: "RTC_DEBUG_MODAL_SET_SECTION", section };
   obj.dispatch(obj);
 };
 export const setShouldRecordNextConnection = function setShouldRecordNextConnection(value) {
   trackVoiceAndVideoDebuggingSettingsUpdatedDefault("connection_replay_log_enabled", value, closure_2.shouldRecordNextConnection());
-  const obj = { type: "RTC_DEBUG_SET_RECORDING_FLAG", value };
+  let obj = dispatcherDefault;
+  obj = { type: "RTC_DEBUG_SET_RECORDING_FLAG", value };
   obj.dispatch(obj);
 };
 export const setSimulcastDebugOverride = function setSimulcastDebugOverride(userId, context, quality) {
-  const obj = { type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE", userId, context, quality };
+  let obj = dispatcherDefault;
+  obj = { type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE", userId, context, quality };
   obj.dispatch(obj);
 };
 export const chooseReplayPath = function chooseReplayPath() {
-  const fileManager = obj132Default.fileManager;
+  const fileManager = setDefault.fileManager;
   const items = [{ name: "All Files", extensions: ["*"] }];
-  fileManager.showOpenDialog({ filters: items }).then((result) => {
+  fileManager.showOpenDialog({ filters: items }).then((arg0) => {
     let str = "";
-    if (0 !== result.length) {
-      str = result[0];
+    if (0 !== arg0.length) {
+      str = arg0[0];
     }
     callback(table[1]).dispatch({ type: "RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH", path: str });
   });

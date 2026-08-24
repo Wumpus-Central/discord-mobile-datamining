@@ -1,7 +1,7 @@
 // === Module 13770: checkForNewerBuild ===
 
 // Module 13770 (checkForNewerBuild)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -24,9 +24,11 @@ const prototype = MobileNativeUpdateStore.prototype;
 prototype["checkForNewerBuild"] = function checkForNewerBuild() {
   if (true !== checking.checking) {
     dispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
-    _checkForNewerBuild.checkForNewerBuild().then((result) => {
-      callback(709);
-      const obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild: result };
+    let obj = dispatcherDefault;
+    const obj2 = _checkForNewerBuild;
+    _checkForNewerBuild.checkForNewerBuild().then((newBuild) => {
+      let obj = callback(709);
+      obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
       obj.dispatch(obj);
     }, () => {
       callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
@@ -69,7 +71,22 @@ const mobileNativeUpdateStore = new MobileNativeUpdateStore(dispatcherDefault, {
     const obj = { lastCheck: new Date(), checking: false, newBuild: newBuild.newBuild };
   }
 });
+let obj = {
+  MOBILE_NATIVE_UPDATE_CHECK_STARTED: function handleCheckStarted() {
+    const obj = {};
+    const merged = Object.assign(obj);
+    obj.checking = true;
+  },
+  MOBILE_NATIVE_UPDATE_CHECK_FAILED: function handleCheckFailed() {
+    const obj = {};
+    const merged = Object.assign(obj);
+    obj.checking = false;
+  },
+  MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function handleCheckFinished(newBuild) {
+    const obj = { lastCheck: new Date(), checking: false, newBuild: newBuild.newBuild };
+  }
+};
 const tmp3 = new timestampDefault("MobileNativeUpdateStore");
-const result = obj132.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateStore.tsx");
+const result = set.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateStore.tsx");
 
 export default mobileNativeUpdateStore;

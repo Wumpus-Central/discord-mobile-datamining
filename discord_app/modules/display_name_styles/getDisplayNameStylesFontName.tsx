@@ -16,7 +16,7 @@ obj[require("DisplayNameFont").DisplayNameFont.PLAYPEN_SANS] = messagesProxyDefa
 obj[require("DisplayNameFont").DisplayNameFont.ORBITRON] = messagesProxyDefault.pwbAIk;
 obj[require("DisplayNameFont").DisplayNameFont.NEW_ROCKER] = messagesProxyDefault["Llo/Ia"];
 obj[require("DisplayNameFont").DisplayNameFont.KALAM] = messagesProxyDefault.t9Les4;
-const result = require("obj132").fileFinishedImporting("modules/display_name_styles/getDisplayNameStylesFontName.tsx");
+const result = require("set").fileFinishedImporting("modules/display_name_styles/getDisplayNameStylesFontName.tsx");
 
 export default function getDisplayNameStylesFontName(arg0) {
   let ZEL6mz = obj[arg0];

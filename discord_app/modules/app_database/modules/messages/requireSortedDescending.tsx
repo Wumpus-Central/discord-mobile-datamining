@@ -1,11 +1,11 @@
 // === Module 5000: requireSortedDescending ===
 
 // Module 5000 (requireSortedDescending)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 
-const result = obj132.fileFinishedImporting("modules/app_database/modules/messages/requireSortedDescending.tsx");
+const result = set.fileFinishedImporting("modules/app_database/modules/messages/requireSortedDescending.tsx");
 
 export const requireSortedDescending = function requireSortedDescending(messages) {
   let tmp4 = messages.length <= 2;

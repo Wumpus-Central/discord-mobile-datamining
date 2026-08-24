@@ -1,17 +1,17 @@
 // === Module 4052: isPremiumGiftingSupported ===
 
 // Module 4052 (isPremiumGiftingSupported)
-import obj132 from "obj132" /* 2 */;
-import obj1322 from "obj132" /* 500 */;
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 
-const result = obj132.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
+const result = set.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 
 export const isPremiumGiftingSupported = function isPremiumGiftingSupported() {
   return !isMetaQuest.isMetaQuest();
 };
 export const isGooglePlayBillingSupported = function isGooglePlayBillingSupported() {
-  let isAndroidResult = obj1322.isAndroid();
+  let isAndroidResult = set2.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !isMetaQuest.isMetaQuest();
     const tmpResult = isMetaQuest;

@@ -1,17 +1,14 @@
 // === Module 13004: getGiftingBadgeProgressPercent ===
 
 // Module 13004 (getGiftingBadgeProgressPercent)
-import obj132 from "obj132" /* 2 */;
-import initialize from "initialize" /* 589 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import initialize2 from "initialize" /* 8936 */;
+import set from "set" /* 2 */;
+import initialize from "initialize" /* 8936 */;
 import apexExperiment from "apexExperiment" /* 9592 */;
 import apexExperiment2 from "apexExperiment" /* 13005 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-let closure_2 = initialize2.getSingleRequirementThreshold;
-let result = obj132.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
+let closure_2 = initialize.getSingleRequirementThreshold;
+let result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = callback(currentTier);
@@ -72,7 +69,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     tmp4 = enabled2;
   }
-  let tmpResult = initialize;
+  let tmpResult = tmp(589);
   const items = [closure_3];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -85,8 +82,8 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = UNSAFE_isDismissibleContentDismissed;
-  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  tmpResult = tmp(4196);
+  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1377).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;
   }

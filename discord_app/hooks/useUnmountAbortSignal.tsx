@@ -1,10 +1,10 @@
 // === Module 7220: useUnmountAbortSignal ===
 
 // Module 7220 (useUnmountAbortSignal)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import useInitialValueDefault from "useInitialValue" /* 7127 */;
 
-const result = obj132.fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
+const result = set.fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
 
 export default function useUnmountAbortSignal() {
   const tmp = useInitialValueDefault(() => {

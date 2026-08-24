@@ -1,25 +1,21 @@
 // === Module 6291: TableRowInner ===
 
 // Module 6291 (TableRowInner)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import map from "map" /* 4097 */;
-import Text from "Text" /* 4734 */;
 import getFontScale from "getFontScale" /* 4751 */;
-import TableRowDivider from "TableRowDivider" /* 6287 */;
 import context2 from "context" /* 6290 */;
 import PressableCard from "PressableCard" /* 6292 */;
-import TableRowArrow from "TableRowArrow" /* 6297 */;
 import TableRowTrailingText from "TableRowTrailingText" /* 6300 */;
-import DragIcon from "DragIcon" /* 6301 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 class TableRow {
   constructor(arg0) {
     ({ icon, disabled } = global);
@@ -111,7 +107,7 @@ class TableRowInner {
     tmp6 = closure_0;
     obj2 = require("getFontScale");
     fontScale = obj2.useFontScale();
-    obj3 = require("obj132");
+    obj3 = require("set");
     if (obj3.isAndroid()) {
       num2 = 1.2;
       tmp8 = fontScale > 1.2;
@@ -241,9 +237,10 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[4] = num;
   let md;
   if (flag) {
-    md = ThemesDefault.radii.md;
+    md = tmp(712).radii.md;
   }
-  obj = { minWidth: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
+  obj = { row: obj, iconContainer: null, trailing: null, content: null, labels: null, trailingText: md, dragHandle: null };
+  obj = { minWidth: tmp(712).modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: tmp(712).modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
   obj[1] = obj;
   obj[2] = { marginStart: 18 };
   let str = "row";
@@ -293,7 +290,7 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
 TableRow.Icon = require("TableRowIcon").TableRowIcon;
 TableRow.Arrow = require("TableRowArrow").TableRowArrow;
 TableRow.TrailingText = require("TableRowTrailingText").TableRowTrailingText;
-const result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 
 export { TableRow };
 export { TableRowInner };

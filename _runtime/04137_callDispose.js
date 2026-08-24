@@ -3,6 +3,7 @@
 // Module 4137 (callDispose)
 arg5.callDispose = function callDispose(closure_0) {
   for (const key10006 in arg0) {
+    let tmp7 = key10006;
     let _Object3 = Object;
     let call = hasOwnProperty.call;
     if (typeof call === "unknown") {

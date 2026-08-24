@@ -2,7 +2,7 @@
 
 // Module 4948 (calculateGPSValue)
 import _modDef4933 from "module_4933" /* 4933 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function calculateGPSValue(str) {
   [tmp2, str] = callback(str.split(","), 2);
@@ -61,7 +61,7 @@ export default {
     }
     return str;
   },
-  (match) => _modDef4933.ResolutionUnit(parseInt(match, 10)),
+  (joined) => _modDef4933.ResolutionUnit(parseInt(joined, 10)),
   (str) => {
     let XResolutionResult = str;
     if (obj.test(str)) {
@@ -99,43 +99,44 @@ export default {
     }
     return FocalLengthResult;
   },
-  (match) => _modDef4933.FocalPlaneResolutionUnit(parseInt(match, 10)),
-  (match) => {
-    if ("0x" === match.substring(0, 2)) {
+  (joined) => _modDef4933.FocalPlaneResolutionUnit(parseInt(joined, 10)),
+  (joined) => {
+    if ("0x" === joined.substring(0, 2)) {
       const _parseInt2 = parseInt;
-      let parsed = parseInt(match.substring(2), 16);
+      let parsed = parseInt(joined.substring(2), 16);
     } else {
       const _parseInt = parseInt;
-      parsed = parseInt(match, 10);
+      parsed = parseInt(joined, 10);
     }
     return _modDef4933.ColorSpace(parsed);
   },
   (arg0, str) => {
     if (obj.test(str)) {
       const parts = str.split(", ");
-      const mapped = parts.map((item, index) => item.charCodeAt(0));
+      const mapped = parts.map((str) => str.charCodeAt(0));
       return _modDef4933.ComponentsConfiguration(mapped);
     } else {
       return str;
     }
     obj = /^\d, \d, \d, \d$/;
   },
-  (match) => _modDef4933.Contrast(parseInt(match, 10)),
-  (match) => _modDef4933.CustomRendered(parseInt(match, 10)),
-  (match) => _modDef4933.ExposureMode(parseInt(match, 10)),
-  (match) => _modDef4933.ExposureProgram(parseInt(match, 10)),
+  (joined) => _modDef4933.Contrast(parseInt(joined, 10)),
+  (joined) => _modDef4933.CustomRendered(parseInt(joined, 10)),
+  (joined) => _modDef4933.ExposureMode(parseInt(joined, 10)),
+  (joined) => _modDef4933.ExposureProgram(parseInt(joined, 10)),
   (str) => {
     let ExposureTimeResult = str;
     if (obj.test(str)) {
       const parts = str.split("/");
-      ExposureTimeResult = _modDef4933.ExposureTime(parts.map((item, index) => parseInt(item, 10)));
+      ExposureTimeResult = _modDef4933.ExposureTime(parts.map((joined) => parseInt(joined, 10)));
+      const obj2 = _modDef4933;
     }
     return ExposureTimeResult;
   },
-  (match) => _modDef4933.MeteringMode(parseInt(match, 10)),
-  (match) => _modDef4933.Saturation(parseInt(match, 10)),
-  (match) => _modDef4933.SceneCaptureType(parseInt(match, 10)),
-  (match) => _modDef4933.Sharpness(parseInt(match, 10)),
+  (joined) => _modDef4933.MeteringMode(parseInt(joined, 10)),
+  (joined) => _modDef4933.Saturation(parseInt(joined, 10)),
+  (joined) => _modDef4933.SceneCaptureType(parseInt(joined, 10)),
+  (joined) => _modDef4933.Sharpness(parseInt(joined, 10)),
   (str) => {
     let ShutterSpeedValueResult = str;
     if (obj.test(str)) {
@@ -143,5 +144,5 @@ export default {
     }
     return ShutterSpeedValueResult;
   },
-  (match) => _modDef4933.WhiteBalance(parseInt(match, 10))
+  (joined) => _modDef4933.WhiteBalance(parseInt(joined, 10))
 };

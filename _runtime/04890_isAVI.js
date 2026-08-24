@@ -51,10 +51,10 @@ arg5.isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
     }
     let tmp8 = !excludeSimilarTypes;
     if (!excludeSimilarTypes) {
-      const fileChunk1 = getFileChunk.getFileChunk(fileChunk);
-      const FileTypes2 = _mod4883.FileTypes;
-      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && getFileChunk.isftypStringIncluded(fileChunk1);
-      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && getFileChunk.isftypStringIncluded(fileChunk1);
+      const fileChunk1 = tmp(4882).getFileChunk(fileChunk);
+      const FileTypes2 = tmp(4883).FileTypes;
+      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && tmp(4882).isftypStringIncluded(fileChunk1);
+      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && tmp(4882).isftypStringIncluded(fileChunk1);
     }
     checkByFileTypeResult = tmp8;
   }

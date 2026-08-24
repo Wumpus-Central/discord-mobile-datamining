@@ -6,9 +6,10 @@ import _modDef4656 from "module_4656" /* 4656 */;
 import maybeShowUrgentMessageModalDefault from "maybeShowUrgentMessageModal" /* 16714 */;
 import navigateToSystemDMDefault from "navigateToSystemDM" /* 16716 */;
 
-require = fn;
+require = arg1;
 const tmp2 = new maybeShowUrgentMessageModalDefault(() => {
-  const obj = { title: null, body: null, isDismissable: false, onConfirm: null };
+  let obj = _modDef4656;
+  obj = { title: null, body: null, isDismissable: false, onConfirm: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.bAhz9l);
   const intl2 = getSystemLocale.intl;
@@ -16,6 +17,6 @@ const tmp2 = new maybeShowUrgentMessageModalDefault(() => {
   obj[3] = navigateToSystemDMDefault;
   return obj.show(obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/urgent_system_dm/native/UrgentSystemDMManager.tsx");
+const result = require("set").fileFinishedImporting("modules/urgent_system_dm/native/UrgentSystemDMManager.tsx");
 
 export default tmp2;

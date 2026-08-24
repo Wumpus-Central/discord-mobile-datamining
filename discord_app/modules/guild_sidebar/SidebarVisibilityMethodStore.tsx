@@ -1,11 +1,11 @@
 // === Module 9505: SidebarVisibilityMethodStore ===
 
 // Module 9505 (SidebarVisibilityMethodStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let obj = keys.create(() => ({}));
-const result = obj132.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");
 
 export const SidebarVisibilityMethodStore = obj;
 export const setGetVisibleGuildIds = function setGetVisibleGuildIds(getVisibleGuildIds) {

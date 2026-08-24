@@ -5,17 +5,19 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ View: c3, ActivityIndicator: c4 } = get_ActivityIndicator);
-const createCacheKey = { flex: 1, gap: 20, paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey = { container: null, loadingState: null, emptyState: null };
+createCacheKey = { flex: 1, gap: 20, paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[2] = { alignItems: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileMutualGuildsActionSheet.tsx");
+let obj1 = { paddingTop: ThemesDefault.space.PX_8, alignItems: "center" };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutualGuildsActionSheet.tsx");
 
 export default function UserProfileMutualGuildsActionSheet(user) {
   user = user.user;
@@ -27,18 +29,18 @@ export default function UserProfileMutualGuildsActionSheet(user) {
   if (mutualGuilds != null) {
     length = mutualGuilds.length;
   }
-  { scrollable: true, title: onPressMutualGuild(11772)(length), children: null };
-  let obj = { style: tmp.container, children: null };
+  let obj = { scrollable: true, title: onPressMutualGuild(11772)(length), children: null };
+  obj = { style: tmp.container, children: null };
   if (null == mutualGuilds) {
     obj = { style: null, children: null };
     obj[0] = tmp.loadingState;
-    obj[1] = <closure_4 />;
-    let tmp3Result = <closure_3 style={null}>{null}</closure_3>;
+    obj[1] = tmp3(closure_4, {});
+    let tmp3Result = tmp3(tmp7, obj);
   } else if (0 === mutualGuilds.length) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.emptyState;
-    obj1[1] = jsx(user(11773).NoMutualServers, {});
-    tmp3Result = <closure_3 style={null}>{null}</closure_3>;
+    obj1[1] = tmp3(user(11773).NoMutualServers, {});
+    tmp3Result = tmp3(tmp7, obj1);
   } else {
     const obj2 = { data: null, keyExtractor: null, renderItem: null };
     obj2[0] = mutualGuilds;
@@ -48,17 +50,17 @@ export default function UserProfileMutualGuildsActionSheet(user) {
     obj2[2] = function renderItem(item) {
       item = item.item;
       ({ start, end } = item);
-      return jsx(user(dependencyMap[9]).MutualGuildRow, {
+      return closure_1_5(user(closure_1_2[9]).MutualGuildRow, {
         user: item,
         mutualGuild: item,
         onPress() {
-          return onPressMutualGuild(item.guild.id);
+          return closure_1_1(item.guild.id);
         },
         start,
         end
       });
     };
-    tmp3Result = jsx(user(9450).UserProfileStackedActionSheetList, { data: null, keyExtractor: null, renderItem: null });
+    tmp3Result = tmp3(user(9450).UserProfileStackedActionSheetList, obj2);
   }
   obj[1] = tmp3Result;
   obj[2] = <closure_3 style={tmp.container}>{null}</closure_3>;

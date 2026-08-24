@@ -1,7 +1,7 @@
 // === Module 13564: buildZoomedInAnalyticsEvent ===
 
 // Module 13564 (buildZoomedInAnalyticsEvent)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
 import noop from "noop" /* 13081 */;
@@ -45,14 +45,14 @@ let closure_4 = {
         }
         const _Object2 = Object;
         const entries = Object.entries(data);
-        const found = entries.filter((item, index) => {
-          [, tmp] = item;
+        const found = entries.filter((arg0) => {
+          [, tmp] = arg0;
           return null != tmp;
         });
         let joined = null;
         if (0 !== found.length) {
-          const mapped = found.map((item, index) => {
-            [tmp, tmp2] = item;
+          const mapped = found.map((arg0) => {
+            [tmp, tmp2] = arg0;
             return "" + tmp + "=" + tmp2;
           });
           joined = mapped.join(", ");
@@ -607,7 +607,7 @@ let closure_5 = {
               str10 = joined;
             }
             const items = [tmp67, tmp58, tmp59];
-            const found = items.filter((item, index) => null != item);
+            const found = items.filter((arg0) => null != arg0);
             joined = found.join("/");
           }
           if (str10 == null) {
@@ -669,6 +669,7 @@ let closure_5 = {
                   combined = "" + tmp41 + "/" + tmp15;
                 }
               }
+              let tmp19 = combined;
             } else {
               if (typeof data.op !== "number") {
                 let tmp46 = null;
@@ -690,6 +691,7 @@ let closure_5 = {
                 tmp46 = str25;
               }
               if (null == tmp46) {
+                tmp19 = tmp15;
               } else if (null != tmp15) {
                 const _HermesInternal2 = HermesInternal;
                 let combined1 = "" + tmp46 + "/" + tmp15;
@@ -709,12 +711,14 @@ let closure_5 = {
             if (typeof evt2 === "string") {
               tmp18 = evt2;
             }
+            tmp19 = tmp15;
             if (null != tmp17) {
               let combined2 = tmp17;
               if (null != tmp18) {
                 const _HermesInternal = HermesInternal;
                 combined2 = "" + tmp17 + "/" + tmp18;
               }
+              tmp19 = combined2;
             }
           }
           if (typeof data.op !== "number") {
@@ -745,6 +749,7 @@ let closure_5 = {
             }
             tmp26 = tmp30;
           }
+          tmp19 = tmp26;
           if (null == tmp26) {
             if (typeof data.op !== "number") {
               let tmp31 = null;
@@ -770,6 +775,7 @@ let closure_5 = {
               const _String = String;
               StringResult = String(tmp31);
             }
+            tmp19 = StringResult;
           }
         }
       } else {
@@ -788,11 +794,11 @@ let closure_5 = {
     return obj;
   }
 };
-const result = obj132.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx");
+const result = set.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx");
 
 export const buildZoomedInAnalyticsEvent = function buildZoomedInAnalyticsEvent(key) {
-  if (key.key.key in dependencyMap) {
-    const tmp6 = dependencyMap[key](key);
+  if (key.key in closure_4) {
+    const tmp6 = tmp[key](key);
     let tmp7 = null;
     if (null != tmp6) {
       let obj = { key: null, props: null };
@@ -801,17 +807,21 @@ export const buildZoomedInAnalyticsEvent = function buildZoomedInAnalyticsEvent(
       tmp7 = obj;
     }
     return tmp7;
-  } else if (key in dependencyMap2) {
-    const tmp4 = dependencyMap2[key.key](key);
-    let tmp5 = null;
-    if (null != tmp4) {
-      obj = { key: null, props: null };
-      obj[0] = key2;
-      obj[1] = tmp4;
-      tmp5 = obj;
-    }
-    return tmp5;
   } else {
-    return null;
+    if (key in closure_5) {
+      const tmp4 = tmp2[key.key](key);
+      let tmp5 = null;
+      if (null != tmp4) {
+        obj = { key: null, props: null };
+        obj[0] = key2;
+        obj[1] = tmp4;
+        tmp5 = obj;
+      }
+      return tmp5;
+    } else {
+      return null;
+    }
+    tmp2 = closure_5;
   }
+  tmp = closure_4;
 };

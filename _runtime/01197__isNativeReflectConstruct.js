@@ -1,10 +1,10 @@
 // === Module 1197: _isNativeReflectConstruct ===
 
 // Module 1197 (_isNativeReflectConstruct)
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_inherits" /* 98 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_4 from "_classCallCheck" /* 41 */;
 import importDefaultResult1 from "_createClass" /* 42 */;
 
 let ScreenshotButtonManager = arg1;
@@ -205,14 +205,13 @@ export const showFeedbackWidget = () => {
 };
 export const showScreenshotButton = () => {
   if (obj.isWeb()) {
-    const debug = ScreenshotButtonManager(817).debug;
+    const debug = tmp(817).debug;
     debug.warn("ScreenshotButton is not supported on Web.");
   } else {
-    const result = ScreenshotButtonManager(1198).lazyLoadAutoInjectScreenshotButtonIntegration();
+    const result = tmp(1198).lazyLoadAutoInjectScreenshotButtonIntegration();
     importDefaultResult1Result3.show();
-    const tmpResult = ScreenshotButtonManager(1198);
+    const tmpResult = tmp(1198);
   }
-  obj = ScreenshotButtonManager(1002);
 };
 export const hideScreenshotButton = () => {
   importDefaultResult1Result3.hide();

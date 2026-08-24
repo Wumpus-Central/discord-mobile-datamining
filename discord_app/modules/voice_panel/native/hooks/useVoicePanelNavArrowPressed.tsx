@@ -1,10 +1,10 @@
 // === Module 16321: useVoicePanelNavArrowPressed ===
 
 // Module 16321 (useVoicePanelNavArrowPressed)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
 
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
 
 export default function useVoicePanelNavArrowPressed() {
   const context = dismissPanel.useContext(focused(setFocused[2]));

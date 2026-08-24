@@ -3,11 +3,11 @@
 // Module 14611 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-{
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Ksh3ik);
@@ -32,6 +32,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
 
 export default createToggle;

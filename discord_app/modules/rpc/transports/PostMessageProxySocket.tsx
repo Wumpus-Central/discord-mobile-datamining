@@ -1,7 +1,7 @@
 // === Module 8761: send ===
 
 // Module 8761 (send)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import HANDSHAKEDefault from "HANDSHAKE" /* 8751 */;
 import prototypeDefault from "prototype" /* 8752 */;
@@ -80,6 +80,6 @@ prototype["close"] = function close(arg0, arg1) {
   }
   self.closed = true;
 };
-let result = obj132.fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
+let result = set.fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
 
 export default WindowProxySocket;

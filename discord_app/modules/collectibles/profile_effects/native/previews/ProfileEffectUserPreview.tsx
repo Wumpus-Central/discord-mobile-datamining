@@ -6,9 +6,9 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import filterLayerDefault from "filterLayer" /* 9284 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
 
 export default function ProfileEffectUserPreview(profileEffect) {
   profileEffect = profileEffect.profileEffect;

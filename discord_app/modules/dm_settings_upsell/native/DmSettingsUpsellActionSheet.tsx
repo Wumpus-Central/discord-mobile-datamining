@@ -2,40 +2,46 @@
 
 // Module 16556 (DmSettingsUpsellActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+createCacheKey = { container: null, headerImage: null, title: null, body: null, guildContainer: null, guildInfo: null, footer: null };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", width: 73, height: 86 };
 createCacheKey[2] = { textAlign: "center", alignSelf: "center", width: 250 };
 createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { paddingVertical: ThemesDefault.space.PX_16 };
+let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { marginTop: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
+let obj2 = { marginTop: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
 createCacheKey[6] = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/dm_settings_upsell/native/DmSettingsUpsellActionSheet.tsx");
+let obj3 = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/dm_settings_upsell/native/DmSettingsUpsellActionSheet.tsx");
 
 export default function DmSettingsUpsellActionSheet(guildId) {
   guildId = guildId.guildId;
+  let stateFromStores;
   const tmp = callback3();
   let obj = guildId(589);
   const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId));
   const items1 = [guildId];
   const effect = React.useEffect(() => {
-    const result = guildId(dependencyMap[7]).acknowledgeDmSettingsUpsell(guildId);
-    const obj = guildId(dependencyMap[7]);
-    guildId(dependencyMap[8]).trackEvent(guildId(dependencyMap[8]).DmUpsellActionTypes.MODAL_VIEWED, guildId);
+    const result = guildId(closure_1_2[7]).acknowledgeDmSettingsUpsell(guildId);
+    const obj = guildId(closure_1_2[7]);
+    guildId(closure_1_2[8]).trackEvent(guildId(closure_1_2[8]).DmUpsellActionTypes.MODAL_VIEWED, guildId);
   }, items1);
   let tmp6 = null;
   if (null != stateFromStores) {
+    obj = { startExpanded: true, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj1 = { source: null, style: null };
@@ -75,30 +81,30 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     items2[3] = callback2(closure_4, obj5);
     const obj10 = { size: "lg", onPress: null, text: null };
     obj10[1] = function onPress() {
-      const sanitizedRestrictedGuilds = guildId(dependencyMap[15]).getSanitizedRestrictedGuilds();
+      const sanitizedRestrictedGuilds = guildId(closure_1_2[15]).getSanitizedRestrictedGuilds();
       sanitizedRestrictedGuilds.add(guildId);
-      const RestrictedGuildIds = guildId(dependencyMap[16]).RestrictedGuildIds;
-      let obj = guildId(dependencyMap[15]);
-      RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds)).then((result) => {
-        callback2(4094);
-        const obj = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: callback2(8764), content: null };
+      const RestrictedGuildIds = guildId(closure_1_2[16]).RestrictedGuildIds;
+      let obj = guildId(closure_1_2[15]);
+      RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds)).then(() => {
+        let obj = callback2(4094);
+        obj = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: callback2(8764), content: null };
         const intl = callback(1236).intl;
         obj[2] = intl.string(callback(1236).t.rlYD1W);
         obj.open(obj);
       });
       const updateSettingResult = RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds));
-      stateFromStores(dependencyMap[19]).hideActionSheet();
-      const obj3 = stateFromStores(dependencyMap[19]);
-      guildId(dependencyMap[8]).trackEvent(guildId(dependencyMap[8]).DmUpsellActionTypes.MODAL_DISABLED_DMS, guildId);
+      stateFromStores(closure_1_2[19]).hideActionSheet();
+      const obj3 = stateFromStores(closure_1_2[19]);
+      guildId(closure_1_2[8]).trackEvent(guildId(closure_1_2[8]).DmUpsellActionTypes.MODAL_DISABLED_DMS, guildId);
     };
     const intl4 = tmp2(1236).intl;
     obj10[2] = intl4.string(tmp2(1236).t.TD7iUx);
     items2[4] = callback(tmp2(4745).Button, obj10);
     const obj11 = { size: "lg", variant: "secondary", onPress: null, text: null };
     obj11[2] = function onPress() {
-      stateFromStores(dependencyMap[19]).hideActionSheet();
-      const obj = stateFromStores(dependencyMap[19]);
-      guildId(dependencyMap[8]).trackEvent(guildId(dependencyMap[8]).DmUpsellActionTypes.MODAL_DISMISSED, guildId);
+      stateFromStores(closure_1_2[19]).hideActionSheet();
+      const obj = stateFromStores(closure_1_2[19]);
+      guildId(closure_1_2[8]).trackEvent(guildId(closure_1_2[8]).DmUpsellActionTypes.MODAL_DISMISSED, guildId);
     };
     const intl5 = tmp2(1236).intl;
     obj11[3] = intl5.string(tmp2(1236).t.PsWbcp);
@@ -109,11 +115,11 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     const obj13 = { onClick: null };
     obj13[0] = function onClick() {
       if (null != stateFromStores) {
-        stateFromStores(dependencyMap[19]).hideActionSheet();
-        stateFromStores(dependencyMap[20])(tmp);
-        const obj = stateFromStores(dependencyMap[19]);
-        guildId(dependencyMap[8]).trackEvent(guildId(dependencyMap[8]).DmUpsellActionTypes.MODAL_GUILD_SETTINGS_CLICKED, guildId);
-        const obj2 = guildId(dependencyMap[8]);
+        stateFromStores(closure_1_2[19]).hideActionSheet();
+        stateFromStores(closure_1_2[20])(tmp);
+        const obj = stateFromStores(closure_1_2[19]);
+        guildId(closure_1_2[8]).trackEvent(guildId(closure_1_2[8]).DmUpsellActionTypes.MODAL_GUILD_SETTINGS_CLICKED, guildId);
+        const obj2 = guildId(closure_1_2[8]);
       }
     };
     obj12[2] = intl6.format(tmp2(1236).t.IzZxXW, obj13);

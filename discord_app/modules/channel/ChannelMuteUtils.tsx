@@ -1,10 +1,10 @@
 // === Module 10085: getMuteSettings ===
 
 // Module 10085 (getMuteSettings)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import tDefault from "t" /* 3975 */;
 
-const result = obj132.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
+const result = set.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
 
 export const getMuteSettings = function getMuteSettings(selected_time_window) {
   const mute_config = { selected_time_window, end_time: null };

@@ -1,13 +1,13 @@
 // === Module 12118: useTrackUserProfileActivityView ===
 
 // Module 12118 (useTrackUserProfileActivityView)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import map from "map" /* 9199 */;
+import closure_5 from "map" /* 9199 */;
 
-const require = fn;
+const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileActivityView.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileActivityView.tsx");
 
 export default function useTrackUserProfileActivityView(arg0) {
   ({ userId: require, onAction } = arg0);

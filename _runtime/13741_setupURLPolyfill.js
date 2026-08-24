@@ -7,10 +7,12 @@ import URLSearchParams from "URLSearchParams" /* 13757 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 13742 */;
 
 for (const key10016 in require("BlobModule")) {
+  let tmp3 = key10016;
   arg5[key10016] = require("BlobModule")[key10016];
   continue;
 }
 for (const key10020 in require("URLSearchParams")) {
+  let tmp4 = key10020;
   arg5[key10020] = require("URLSearchParams")[key10020];
   continue;
 }

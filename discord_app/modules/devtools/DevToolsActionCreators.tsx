@@ -2,12 +2,13 @@
 
 // Module 13951 (updateDevToolsSettings)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initialize from "initialize" /* 7471 */;
+import closure_2 from "initialize" /* 7471 */;
 
-const result = require("obj132").fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
 
 export const updateDevToolsSettings = function updateDevToolsSettings(settings) {
-  const obj = { type: "DEV_TOOLS_SETTINGS_UPDATE", settings };
+  let obj = dispatcherDefault;
+  obj = { type: "DEV_TOOLS_SETTINGS_UPDATE", settings };
   obj.dispatch(obj);
 };
 export const toggleDisplayDevTools = function toggleDisplayDevTools() {

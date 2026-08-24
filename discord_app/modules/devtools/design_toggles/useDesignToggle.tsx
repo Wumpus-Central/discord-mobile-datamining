@@ -1,10 +1,10 @@
 // === Module 5295: useDesignToggle ===
 
 // Module 5295 (useDesignToggle)
-import getUserAgnosticState from "getUserAgnosticState" /* 5294 */;
+import closure_2 from "getUserAgnosticState" /* 5294 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");
 
 export default function useDesignToggle(arg0) {
   const _require = arg0;

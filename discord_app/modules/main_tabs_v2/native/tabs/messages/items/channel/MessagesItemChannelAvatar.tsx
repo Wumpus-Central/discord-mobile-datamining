@@ -3,17 +3,17 @@
 // Module 15299
 import ThemesDefault from "Themes" /* 712 */;
 import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import sortActivity from "sortActivity" /* 4559 */;
-import handleTypingStart from "handleTypingStart" /* 11152 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "sortActivity" /* 4559 */;
+import closure_6 from "handleTypingStart" /* 11152 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 let closure_10 = createCacheKey.createStyles((arg0) => {
   const avatar = { borderRadius: ThemesDefault.radii.round, marginRight: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;
@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   if (muted) {
     muted = !channelSelected;
   }
-  const tmpResult = callback(muted);
+  const tmpResult = closure_10(muted);
   const REFRESH_MEDIUM_32 = channel(1297).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = id.getId();
   let obj = channel(589);
@@ -46,6 +46,8 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   stateFromStores = obj.useStateFromStores(items, () => {
     const typingUsers = closure_1_6.getTypingUsers(channel.id);
     for (const key10007 in typingUsers) {
+      let tmp2 = key10007;
+      let tmp3 = closure_2;
       if (key10007 === closure_2) {
         continue;
       } else {
@@ -69,7 +71,8 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     return tmp;
   });
   const obj2 = channel(589);
-  const tmp3 = channel;
+  let tmp = closure_10;
+  let tmp3 = channel;
   const items2 = [closure_7];
   const stateFromStores2 = channel(589).useStateFromStores(items2, () => {
     let recipientId;
@@ -123,10 +126,11 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
       tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "md", size: "primary", animate: null, typing: null, autoStatusCutout: null });
+      const tmp11 = jsx;
     }
   }
   return tmp11Result;
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx");
 
 export default memoResult;

@@ -1,10 +1,10 @@
 // === Module 8539: useCurrentUserGuildJoinRequest ===
 
 // Module 8539 (useCurrentUserGuildJoinRequest)
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4198 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
 
 export const useCurrentUserGuildJoinRequest = function useCurrentUserGuildJoinRequest(guildId) {
   const _require = guildId;

@@ -1,11 +1,10 @@
 // === Module 12192: resolveTextComponentValues ===
 
 // Module 12192 (resolveTextComponentValues)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import resolveFieldValue2 from "resolveFieldValue" /* 12193 */;
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 12194 */;
 
-let result = obj132.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
 
 export const resolveTextComponentValues = function resolveTextComponentValues(subtitle_1, resolveFieldValue, numberFormat, arg3) {
   let flag = arg3;
@@ -23,7 +22,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
     let iter = resolveFieldValue(subtitle_1.fields.text, items);
     let str = null;
     if (!flag2) {
-      const items1 = [resolveFieldValue2.ResolvedValueType.STRING, resolveFieldValue2.ResolvedValueType.NUMBER];
+      const items1 = [tmp9(12193).ResolvedValueType.STRING, tmp9(12193).ResolvedValueType.NUMBER];
       str = resolveFieldValue(subtitle_1.fields.label, items1);
     }
     if (null == iter) {
@@ -89,17 +88,17 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     return tmp4;
   } else {
     const items = [resolveFieldValue2.ResolvedValueType.STRING, resolveFieldValue2.ResolvedValueType.NUMBER];
-    const iter = dependencyMap(fields.fields.value, items);
+    const iter = closure_1(fields.fields.value, items);
     const items1 = [resolveFieldValue2.ResolvedValueType.STRING];
-    const iter2 = dependencyMap(fields.fields.label, items1);
+    const iter2 = closure_1(fields.fields.label, items1);
     const items2 = [resolveFieldValue2.ResolvedValueType.MEDIA];
-    const tmp8 = dependencyMap(fields.fields.icon, items2);
+    const tmp8 = closure_1(fields.fields.icon, items2);
     if (null == iter) {
       obj = { status: "skeleton" };
     } else {
-      if (iter.type === resolveFieldValue2.ResolvedValueType.STRING) {
+      if (iter.type === tmp6(12193).ResolvedValueType.STRING) {
         let formatResult = iter.value;
-      } else if (iter.presentationType === ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.DURATION) {
+      } else if (iter.presentationType === tmp6(12194).ApplicationWidgetFieldPresentationType.DURATION) {
         formatResult = formatDurationNarrow(iter.value);
       } else {
         formatResult = closure_2.format(iter.value);
@@ -168,14 +167,20 @@ export const resolveProgressPercentage = function resolveProgressPercentage(iter
       const _Math6 = Math;
       num = Math.min(Math.max(Math.round(100 * value), 0), 100);
     }
-  } else if (0 !== iter2.value) {
-    const result = num.value / iter2.value;
-    const _isNaN = isNaN;
-    if (!isNaN(result)) {
-      const _Math = Math;
-      const _Math2 = Math;
-      const _Math3 = Math;
-      const num3 = Math.min(Math.max(Math.round(100 * result), 0), 100);
+    let num2 = num;
+  } else {
+    num2 = 0;
+    if (0 !== iter2.value) {
+      const result = num.value / iter2.value;
+      const _isNaN = isNaN;
+      let num3 = 0;
+      if (!isNaN(result)) {
+        const _Math = Math;
+        const _Math2 = Math;
+        const _Math3 = Math;
+        num3 = Math.min(Math.max(Math.round(100 * result), 0), 100);
+      }
+      num2 = num3;
     }
   }
 };

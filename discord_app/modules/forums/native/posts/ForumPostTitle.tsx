@@ -4,12 +4,12 @@
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4734 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
-require = fn;
+require = arg1;
 noopAll;
-let createCacheKey = null;
+createCacheKey = null;
 if (PlatformTypes.isIOS()) {
   createCacheKey = { lineHeight: 22 };
 }
@@ -18,7 +18,7 @@ PlatformTypes = { marginBottom: 6 };
 createCacheKey = Object.assign(createCacheKey);
 createCacheKey[0] = PlatformTypes;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
 
 export default function ForumPostTitle(arg0) {
   ({ title, lineClamp, ellipsizeMode, hasUnreads, onTextLayout } = arg0);

@@ -1,9 +1,8 @@
 // === Module 13816: handleBackPress ===
 
 // Module 13816 (handleBackPress)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import computeEntryState from "computeEntryState" /* 1498 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
 import useKeyboardType from "useKeyboardType" /* 4239 */;
 import initializeDefault from "initialize" /* 4720 */;
@@ -16,10 +15,10 @@ function handleBackPress() {
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };
-    obj[0] = KeyboardTypes.KeyboardTypes.SYSTEM;
-    computeEntryState.setKeyboardType(obj);
+    obj[0] = tmp(1627).KeyboardTypes.SYSTEM;
+    tmp(1498).setKeyboardType(obj);
     flag = true;
-    const tmpResult = computeEntryState;
+    const tmpResult = tmp(1498);
   }
   return flag;
 }
@@ -44,6 +43,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const backPressManager = new BackPressManager();
-let result = obj132.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
+let result = set.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
 
 export default backPressManager;

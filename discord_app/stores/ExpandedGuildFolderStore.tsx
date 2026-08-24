@@ -3,7 +3,8 @@
 // Module 5079 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_0 from "handleConnectionClosedOrResumed" /* 1340 */;
+import set from "set" /* 2 */;
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
@@ -54,7 +55,7 @@ const expandedGuildFolderStore = new ExpandedGuildFolderStore(dispatcherDefault,
     } else {
       function _loop(iter) {
         guildFolders = iter;
-        if (!guildFolders.some((item, index) => item.folderId === closure_0)) {
+        if (!guildFolders.some((folderId) => folderId.folderId === closure_0)) {
           const _Set = Set;
           set = new Set(set);
           set.delete(iter);
@@ -78,6 +79,6 @@ const expandedGuildFolderStore = new ExpandedGuildFolderStore(dispatcherDefault,
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/ExpandedGuildFolderStore.tsx");
+const result = set.fileFinishedImporting("stores/ExpandedGuildFolderStore.tsx");
 
 export default expandedGuildFolderStore;

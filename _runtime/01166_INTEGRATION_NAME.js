@@ -10,7 +10,7 @@ obj[0] = isHermesEnabled.isWeb();
 
 export const INTEGRATION_NAME = "ReactNativeTracing";
 export const defaultReactNativeTracingOptions = obj;
-export const reactNativeTracingIntegration = (arg0) => {
+export const reactNativeTracingIntegration = () => {
   obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -67,6 +67,7 @@ export const reactNativeTracingIntegration = (arg0) => {
       obj(merged1[1]).addThreadInfoToSpan(getOptions);
       const obj2 = obj(merged1[1]);
       const tmp = obj;
+      const tmp2 = merged1;
       obj = { traceFetch: merged1.traceFetch, traceXHR: merged1.traceXHR, shouldCreateSpanForRequest: merged1.shouldCreateSpanForRequest, tracePropagationTargets: null };
       let tracePropagationTargets = getOptions.getOptions().tracePropagationTargets;
       if (!tracePropagationTargets) {
@@ -76,11 +77,10 @@ export const reactNativeTracingIntegration = (arg0) => {
           tmp5 = items;
         }
         tracePropagationTargets = tmp5;
-        tmpResult = tmp(merged1[0]);
+        tmpResult = tmp(tmp2[0]);
       }
       obj[3] = tracePropagationTargets;
       const result1 = obj(merged1[3]).instrumentOutgoingRequests(getOptions, obj);
-      const obj3 = obj(merged1[3]);
     },
     processEvent(contexts) {
       let currentRoute = contexts.contexts;
@@ -108,6 +108,7 @@ export const getCurrentReactNativeTracingIntegration = function getCurrentReactN
   if (client) {
     return client.getIntegrationByName(ReactNativeTracing);
   }
+  obj = registerSpanErrorInstrumentation;
 };
 export const getReactNativeTracingIntegration = function getReactNativeTracingIntegration(getIntegrationByName) {
   return getIntegrationByName.getIntegrationByName(ReactNativeTracing);

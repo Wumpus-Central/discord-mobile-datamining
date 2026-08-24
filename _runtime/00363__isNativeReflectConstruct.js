@@ -3,10 +3,10 @@
 // Module 363 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 366 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 let AnimatedInterpolation = importDefault;
@@ -51,17 +51,20 @@ function mapStringToNumericComponents(str) {
     let num = 0;
     let num2 = 0;
     while (null != match) {
+      let tmp5 = num;
+      let tmp6 = match;
       if (match.index > num) {
         let arr = items1.push(str.substring(num, match.index));
       }
       let _parseFloat = parseFloat;
       arr = items1.push(parseFloat(match[0]));
       num = match.index + match[0].length;
+      let tmp9 = regex;
       match = regex.exec(str);
       num2 = num;
     }
     AnimatedInterpolation(38)(items1.length > 0, "outputRange must contain color or value with numeric component");
-    if (num2 < "outputRange must contain color or value with numeric component".length) {
+    if (num2 < str.length) {
       items1.push(str.substring(num2, str.length));
     }
     obj = { isColor: false, components: null };
@@ -110,24 +113,26 @@ let items = [
             _interpolation = mapped;
             const isColor = mapped[0].isColor;
             easing = isColor;
-            const mapped1 = mapped.map((item, index) => {
-              const components = item.components;
+            const mapped1 = mapped.map((components) => {
+              components = components.components;
               if (easing) {
                 let found = components;
               } else {
-                found = components.filter((item, index) => typeof item === "number");
+                found = components.filter((num) => typeof num === "number");
               }
               return found;
             });
+            let extrapolate = mapped1;
             const first = mapped1[0];
-            let extrapolate = first.map((item, index) => {
-              let _undefined = index;
+            extrapolate = first.map((arg0, arg1) => {
+              let _undefined = arg1;
               const obj = {};
               const merged = Object.assign(_undefined);
-              obj.outputRange = extrapolate.map((item, index) => item[c0]);
+              obj.outputRange = extrapolate.map((arg0) => arg0[c0]);
               _undefined = undefined;
               c1 = undefined;
               easing = undefined;
+              extrapolate = undefined;
               extrapolate = undefined;
               ({ outputRange: c0, inputRange: c1, easing } = obj);
               if (!easing) {
@@ -151,13 +156,13 @@ let items = [
                 if (1 < _undefined2.length - 1) {
                   let num2 = 1;
                   num = 1;
-                  if (_undefined2[1] < num) {
+                  if (arr[1] < num) {
                     const sum = num2 + 1;
                     num = sum;
-                    while (sum < _undefined2.length - 1) {
+                    while (sum < arr.length - 1) {
                       num2 = sum;
                       num = sum;
-                      if (_undefined2[sum] >= num) {
+                      if (arr[sum] >= num) {
                         break;
                       }
                     }
@@ -198,18 +203,18 @@ let items = [
                     }
                   } else {
                     tmp13 = tmp12;
-                    if ("identity" !== extrapolate) {
+                    if ("identity" !== tmp11) {
                       tmp14 = tmp12;
-                      if ("clamp" === extrapolate) {
+                      if ("clamp" === tmp11) {
                         tmp14 = tmp6;
                       }
                     }
                   }
                 } else {
                   tmp13 = num;
-                  if ("identity" !== extrapolate) {
+                  if ("identity" !== tmp10) {
                     tmp12 = num;
-                    if ("clamp" === extrapolate) {
+                    if ("clamp" === tmp10) {
                       tmp12 = tmp4;
                     }
                   }
@@ -219,9 +224,9 @@ let items = [
             });
             self._interpolation = isColor ? ((arg0) => {
               closure_0 = arg0;
-              const mapped = extrapolate.map((item, index) => {
-                const tmp = item(closure_0);
-                if (index < 3) {
+              const mapped = extrapolate.map((arg0, arg1) => {
+                const tmp = arg0(closure_0);
+                if (arg1 < 3) {
                   const _Math2 = Math;
                   let rounded = Math.round(tmp);
                 } else {
@@ -233,12 +238,12 @@ let items = [
               return "rgba(" + mapped[0] + ", " + mapped[1] + ", " + mapped[2] + ", " + mapped[3] + ")";
             }) : ((arg0) => {
               closure_0 = arg0;
-              const table = extrapolate.map((item, index) => item(closure_0));
+              const table = extrapolate.map((arg0) => arg0(closure_0));
               c2 = 0;
               const components = table[0].components;
-              const mapped = components.map((item, index) => {
-                let tmp = item;
-                if (typeof item === "number") {
+              const mapped = components.map((num) => {
+                let tmp = num;
+                if (typeof num === "number") {
                   closure_2 = tmp4 + 1;
                   tmp = table[tmp4];
                 }
@@ -250,6 +255,7 @@ let items = [
         }
         if (typeof _config.outputRange[0] === "object") {
           const outputRange1 = _config.outputRange;
+          AnimatedInterpolation = outputRange1;
           const _Array = Array;
           const _Array2 = Array;
           let obj = {};
@@ -260,6 +266,7 @@ let items = [
           AnimatedInterpolation = undefined;
           _interpolation = undefined;
           easing = undefined;
+          extrapolate = undefined;
           extrapolate = undefined;
           ({ outputRange: c0, inputRange: _interpolation, easing: easing2 } = obj);
           if (!easing2) {
@@ -284,13 +291,13 @@ let items = [
             if (1 < _undefined2.length - 1) {
               let num2 = 1;
               num = 1;
-              if (_undefined2[1] < num) {
+              if (arr[1] < num) {
                 const sum = num2 + 1;
                 num = sum;
-                while (sum < _undefined2.length - 1) {
+                while (sum < arr.length - 1) {
                   num2 = sum;
                   num = sum;
-                  if (_undefined2[sum] >= num) {
+                  if (arr[sum] >= num) {
                     break;
                   }
                 }
@@ -331,18 +338,18 @@ let items = [
                 }
               } else {
                 tmp13 = tmp12;
-                if ("identity" !== extrapolate) {
+                if ("identity" !== tmp11) {
                   tmp14 = tmp12;
-                  if ("clamp" === extrapolate) {
+                  if ("clamp" === tmp11) {
                     tmp14 = tmp6;
                   }
                 }
               }
             } else {
               tmp13 = num;
-              if ("identity" !== extrapolate) {
+              if ("identity" !== tmp10) {
                 tmp12 = num;
-                if ("clamp" === extrapolate) {
+                if ("clamp" === tmp10) {
                   tmp12 = tmp4;
                 }
               }
@@ -381,13 +388,13 @@ let items = [
             if (1 < _undefined2.length - 1) {
               let num2 = 1;
               num = 1;
-              if (_undefined2[1] < num) {
+              if (arr[1] < num) {
                 const sum = num2 + 1;
                 num = sum;
-                while (sum < _undefined2.length - 1) {
+                while (sum < arr.length - 1) {
                   num2 = sum;
                   num = sum;
-                  if (_undefined2[sum] >= num) {
+                  if (arr[sum] >= num) {
                     break;
                   }
                 }
@@ -428,18 +435,18 @@ let items = [
                 }
               } else {
                 tmp13 = tmp12;
-                if ("identity" !== extrapolate) {
+                if ("identity" !== tmp11) {
                   tmp14 = tmp12;
-                  if ("clamp" === extrapolate) {
+                  if ("clamp" === tmp11) {
                     tmp14 = tmp6;
                   }
                 }
               }
             } else {
               tmp13 = num;
-              if ("identity" !== extrapolate) {
+              if ("identity" !== tmp10) {
                 tmp12 = num;
-                if ("clamp" === extrapolate) {
+                if ("clamp" === tmp10) {
                   tmp12 = tmp4;
                 }
               }
@@ -457,7 +464,8 @@ let items = [
       const _parent = this._parent;
       _parent.__makeNative(arg0);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__makeNative", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__makeNative", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -487,7 +495,7 @@ let items = [
       } else {
         constructResult = obj.apply(obj, items);
       }
-      const tmp4Result = callback(obj, constructResult);
+      const tmp4Result = closure_3(obj, constructResult);
       tmp4Result._parent = this;
       tmp4Result._config = _config;
       return tmp4Result;
@@ -499,7 +507,8 @@ let items = [
       const _parent = this._parent;
       _parent.__addChild(this);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__attach", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -512,7 +521,8 @@ let items = [
       const _parent = this._parent;
       _parent.__removeChild(this);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__detach", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -526,14 +536,14 @@ let items = [
       const outputRange = this._config.outputRange;
       let platform_color = null;
       if (typeof outputRange[0] === "string") {
-        let mapped = outputRange.map((item, index) => {
-          const tmp3 = platform_color(dependencyMap[9])(item);
+        let mapped = outputRange.map((arg0) => {
+          const tmp3 = platform_color(closure_1_1[9])(arg0);
           if (typeof tmp3 === "number") {
             const color = "color";
             let transformDataTypeResult = tmp3;
           } else {
-            transformDataTypeResult = platform_color(dependencyMap[10]).transformDataType(item);
-            const tmpResult = platform_color(dependencyMap[10]);
+            transformDataTypeResult = platform_color(closure_1_1[10]).transformDataType(arg0);
+            const tmpResult = platform_color(closure_1_1[10]);
           }
           return transformDataTypeResult;
         });

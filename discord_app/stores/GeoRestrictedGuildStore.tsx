@@ -18,18 +18,18 @@ const geoRestrictedGuildStore = new GeoRestrictedGuildStore(dispatcherDefault, {
   },
   GUILD_DELETE: function handleDeleteGuild(guild) {
     guild = guild.guild;
-    if (-1 === guild.findIndex((item, index) => item.id === user.id)) {
+    if (-1 === guild.findIndex((id) => id.id === user.id)) {
       return false;
     } else {
-      guild = guild.filter((item, index) => item.id !== user.id);
+      guild = guild.filter((id) => id.id !== user.id);
     }
   },
   GUILD_GEO_RESTRICTED: function handleGeoRestrictGuild(guildId) {
     let found = guildId;
-    found = found.filter((item, index) => item.id !== found.guildId);
+    found = found.filter((id) => id.id !== found.guildId);
     found.push({ id: guildId.guildId, name: guildId.name, icon: guildId.icon, unavailable: true, geo_restricted: true });
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/GeoRestrictedGuildStore.tsx");
+const result = require("set").fileFinishedImporting("stores/GeoRestrictedGuildStore.tsx");
 
 export default geoRestrictedGuildStore;

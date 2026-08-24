@@ -2,11 +2,11 @@
 
 // Module 8446 (isActivityInTextSupportedForChannel)
 import set from "set" /* 692 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "sum" /* 505 */;
 
-require = fn;
+require = arg1;
 function isActivityInTextSupportedForChannel(channel) {
   if (null == channel) {
     return false;
@@ -27,7 +27,7 @@ function isActivityInTextSupportedForChannel(channel) {
     return hasItem;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
 
 export { isActivityInTextSupportedForChannel };
 export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(channel) {
@@ -59,11 +59,11 @@ export const useIsActivitiesInTextEnabled = function useIsActivitiesInTextEnable
       flag = false;
       if (undefined !== channel) {
         flag = false;
-        if (isActivityInTextSupportedForChannel(channel)) {
+        if (closure_1_5(channel)) {
           flag = true;
           if (null != channel.guild_id) {
             flag = true;
-            if (!closure_1_3.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
+            if (!closure_1_3.can(closure_1_4.USE_EMBEDDED_ACTIVITIES, channel)) {
               flag = false;
             }
           }
@@ -97,7 +97,7 @@ export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
       }
       let tmp4 = null != guild_id;
       if (!tmp4) {
-        tmp4 = isActivityInTextSupportedForChannel(channel);
+        tmp4 = closure_1_5(channel);
       }
       tmp2 = tmp4;
     }

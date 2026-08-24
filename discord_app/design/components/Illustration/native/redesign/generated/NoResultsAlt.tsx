@@ -7,12 +7,13 @@ import getIllustrationSource from "getIllustrationSource" /* 7907 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx");
+const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx");
 
 export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
-  const obj = {
+  let obj = getIllustrationSource;
+  obj = {
     dark() {
       return callback(8868);
     },
@@ -26,7 +27,8 @@ export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useNoResultsAltSource = function useNoResultsAltSource() {
-  const obj = {
+  let obj = AccessibilityAnnouncer;
+  obj = {
     dark() {
       return callback(8868);
     },
@@ -40,7 +42,19 @@ export const useNoResultsAltSource = function useNoResultsAltSource() {
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const NoResultsAlt = function NoResultsAlt(arg0) {
-  const obj = {};
+  let obj = AccessibilityAnnouncer;
+  obj = {
+    dark() {
+      return callback(8868);
+    },
+    darker() {
+      return callback(8869);
+    },
+    light() {
+      return callback(8635);
+    }
+  };
+  obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

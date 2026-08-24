@@ -6,7 +6,7 @@ import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 const forwardRefResult = importAllResult.forwardRef((width, ref) => {
   let num = width.width;
@@ -34,6 +34,6 @@ const forwardRefResult = importAllResult.forwardRef((width, ref) => {
   return callback2(inlineStylesDefault, obj);
 });
 forwardRefResult.displayName = "SkipForwardIcon";
-const result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/icons/SkipForwardIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/icons/SkipForwardIcon.tsx");
 
 export const SkipForwardIcon = forwardRefResult;

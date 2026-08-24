@@ -5,9 +5,9 @@ import noopAll from "noop" /* 19 */;
 import Background from "Background" /* 6950 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
 
 export default function ScrollHandlingActionSheet(children) {
   const merged = Object.assign(children, Object.create(null));

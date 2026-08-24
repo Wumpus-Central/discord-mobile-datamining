@@ -5,14 +5,14 @@ import ThemesDefault from "Themes" /* 712 */;
 import ButtonGroup from "ButtonGroup" /* 6687 */;
 import usePrimaryActionButtonType from "usePrimaryActionButtonType" /* 8800 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
 import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort" /* 4370 */;
 import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 function GuildEventCardControls(onCloseAction) {
   ({ event, isConnected } = onCloseAction);
   let obj = usePrimaryActionButtonType;
@@ -23,15 +23,16 @@ function GuildEventCardControls(onCloseAction) {
   if (tmp6Result) {
     obj = { event: null };
     obj[0] = event;
-    tmp6Result = callback2(usePrimaryActionButtonType.GuildEventCardRSVPAction, obj);
+    tmp6Result = tmp6(tmp2(8800).GuildEventCardRSVPAction, obj);
   }
   items[1] = tmp6Result;
   items[2] = callback2(usePrimaryActionButtonType.GuildEventShareAction, { event });
   obj[2] = items;
-  return callback(ButtonGroup.ButtonGroup, obj);
+  return closure_8(ButtonGroup.ButtonGroup, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 0 };
+let obj = { actionContainer: null };
+obj = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 0 };
 obj[0] = obj;
 const styles = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((event) => {
@@ -48,7 +49,8 @@ const memoResult = importAllResult.memo((event) => {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const channel_id = event.channel_id;
+  let channel_id;
+  channel_id = event.channel_id;
   let obj = event(channel_id[10]);
   const items = [closure_4];
   const items1 = [channel_id];
@@ -78,7 +80,7 @@ const memoResult = importAllResult.memo((event) => {
     obj = { noBackground: true, onConfirmPress: null, channelId: null };
     obj[1] = onCloseAction;
     obj[2] = channel_id;
-    hasItem = callback2(importDefault(tmp2[13]), obj);
+    hasItem = tmp6(importDefault(tmp2[13]), obj);
   }
   items2[2] = hasItem;
   items2[3] = callback2(event(channel_id[8]).GuildEventSimpleLocation, { event });
@@ -88,7 +90,7 @@ const memoResult = importAllResult.memo((event) => {
     obj1[0] = event;
     obj1[1] = onCloseAction;
     obj1[2] = stateFromStores;
-    tmp6Result = callback2(GuildEventCardControls, obj1);
+    tmp6Result = tmp6(GuildEventCardControls, obj1);
   }
   items2[4] = tmp6Result;
   tmp6Result = null != result;
@@ -104,13 +106,13 @@ const memoResult = importAllResult.memo((event) => {
       }
       return tmpResult;
     };
-    tmp6Result = callback2(importDefault(tmp2[14]), obj2);
+    tmp6Result = tmp6(importDefault(tmp2[14]), obj2);
   }
   items2[5] = tmp6Result;
-  obj[2] = callback(View, { children: items2 });
+  obj[2] = closure_8(View, { children: items2 });
   return callback2(event(channel_id[12]).Card, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCard.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCard.tsx");
 
 export default memoResult;
 export const useGuildEventCardStyles = styles;

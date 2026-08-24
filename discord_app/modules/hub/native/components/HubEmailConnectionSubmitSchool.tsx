@@ -10,32 +10,39 @@ import Button2 from "Button" /* 4745 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
 import _modDef8575 from "module_8575" /* 8575 */;
 import HubEmailConnectionModal from "HubEmailConnectionModal" /* 11905 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 11897 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
+createCacheKey = { container: { paddingHorizontal: 16 }, title: null, description: null, scrollViewContainer: null, input: null, redesignTextInput: null, redesignGrowSpacing: null, redesignSubmit: null };
+createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center", marginBottom: 24 };
 createCacheKey[3] = { flexGrow: 2 };
 createCacheKey[4] = { marginBottom: 8 };
 createCacheKey[5] = { borderRadius: ThemesDefault.radii.lg };
+let obj1 = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[6] = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
+let obj2 = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
 createCacheKey[7] = { paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionSubmitSchool.tsx");
+let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionSubmitSchool.tsx");
 
 export default function HubEmailConnectionSubmitSchool(arg0) {
   ({ onClose: require, email: importDefault } = arg0);
+  dependencyMap = undefined;
+  closure_3 = undefined;
   let callback;
   let ref;
+  let first;
   function _submitWaitlist() {
     const self = this;
     const tmp = callback(function*() {
@@ -137,7 +144,8 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   [obj2, c4] = callback(ref.useState(null), 2);
   ref = ref.useRef(null);
   const tmp7 = callback(ref.useState(""), 2);
-  const first = tmp7[0];
+  first = tmp7[0];
+  obj = { ref, contentContainerStyle: null, children: null };
   const items = [tmp.scrollViewContainer, ];
   obj = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault().insets.bottom + ThemesDefault.space.PX_16 };
   items[1] = obj;
@@ -186,10 +194,10 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   };
   items1[2] = callback2(_modDef8575, obj4);
   obj1[1] = items1;
-  const items2 = [callback(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing }), ];
+  const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing }), ];
   const obj7 = { style: tmp.redesignSubmit, children: null };
   const obj8 = { size: "lg", loading: tmp4[0], text: null, onPress: null };
-  const intl5 = getSystemLocale.intl;
+  const intl5 = tmp2(1236).intl;
   obj8[2] = intl5.string(getSystemLocale.t.PDsYAo);
   obj8[3] = function submitWaitlist() {
     const self = this;
@@ -204,6 +212,6 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   obj7[1] = callback2(Button2.Button, obj8);
   items2[2] = callback2(first, obj7);
   obj[2] = items2;
-  obj5[0] = callback(tmp11, obj);
+  obj5[0] = closure_10(tmp11, obj);
   return callback2(HubEmailConnectionModal.HubEmailConnectionScreen, obj5);
 };

@@ -25,16 +25,16 @@ function _htmlElementAsString(tagName, arr) {
         }
       }
     }
-    arr = items.push(tagName.tagName.toLowerCase());
+    items.push(tagName.tagName.toLowerCase());
     let length;
     if (arr != null) {
       length = arr.length;
     }
     let mapped = null;
     if (length) {
-      const found = arr.filter((item, index) => tagName.getAttribute(item));
-      mapped = found.map((item, index) => {
-        items = [item, tagName.getAttribute(item)];
+      const found = arr.filter((arg0) => tagName.getAttribute(arg0));
+      mapped = found.map((arg0) => {
+        items = [arg0, tagName.getAttribute(arg0)];
         return items;
       });
     }
@@ -43,13 +43,13 @@ function _htmlElementAsString(tagName, arr) {
       length1 = mapped.length;
     }
     if (length1) {
-      const item = mapped.forEach((item, index) => {
-        items.push("[" + item[0] + "=\"" + item[1] + "\"]");
+      const item = mapped.forEach((arg0) => {
+        items.push("[" + arg0[0] + "=\"" + arg0[1] + "\"]");
       });
     } else {
       if (tagName.id) {
         const _HermesInternal = HermesInternal;
-        arr = items.push("#" + tagName.id);
+        items.push("#" + tagName.id);
       }
       if (tagName.className) {
         if (tmp2Result.isString(str4)) {
@@ -71,7 +71,12 @@ function _htmlElementAsString(tagName, arr) {
       let tmp25 = nextResult;
       let attr = tagName.getAttribute(nextResult);
       if (attr) {
+        let tmp28 = nextResult;
+        let tmp29 = attr;
         let _HermesInternal3 = HermesInternal;
+        let str9 = "[";
+        let str10 = "=\"";
+        let str11 = "\"]";
         let arr2 = items.push("[" + tmp25 + "=\"" + tmp27 + "\"]");
       }
       continue;
@@ -100,6 +105,7 @@ arg5.getComponentName = function getComponentName(arg0) {
       if (num < 5) {
         continue;
       } else {
+        let tmp5 = null;
         return null;
       }
     }
@@ -151,20 +157,31 @@ arg5.htmlTreeAsString = function htmlTreeAsString(arg0) {
               const parentNode = tmp.parentNode;
               tmp = parentNode;
               while (parentNode) {
+                let tmp18 = sum;
                 let tmp19 = +sum;
                 sum = tmp19 + 1;
                 if (tmp19 >= 5) {
                   break;
                 } else {
+                  let tmp20 = _htmlElementAsString;
+                  let tmp21 = tmp;
+                  let tmp22 = keyAttrs;
                   let tmp23 = _htmlElementAsString(tmp, tmp3);
                   arr2 = tmp23;
                   if ("html" === tmp23) {
                     break;
                   } else {
+                    let tmp24 = sum;
                     if (sum <= 1) {
                       continue;
-                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
-                      break;
+                    } else {
+                      let tmp25 = num2;
+                      let tmp26 = items;
+                      let tmp27 = arr2;
+                      let tmp28 = num3;
+                      if (num2 + 3 * items.length + arr2.length >= tmp5) {
+                        break;
+                      }
                     }
                     continue;
                   }

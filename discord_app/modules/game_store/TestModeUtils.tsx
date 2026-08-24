@@ -1,11 +1,11 @@
 // === Module 7871: isTestModeForApplication ===
 
 // Module 7871 (isTestModeForApplication)
-import initialize from "initialize" /* 7872 */;
-import reset from "reset" /* 7874 */;
+import closure_2 from "initialize" /* 7872 */;
+import closure_3 from "reset" /* 7874 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
 
 export const isTestModeForApplication = function isTestModeForApplication(applicationId) {
   let result = closure_3.inTestModeForApplication(applicationId);
@@ -28,9 +28,9 @@ export const useIsTestModeForApplication = function useIsTestModeForApplication(
   return _require(589).useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let result = closure_1_3.inTestModeForApplication(closure_0);
+      let result = closure_1_3.inTestModeForApplication(tmp);
       if (!result) {
-        result = closure_1_2.inDevModeForApplication(closure_0);
+        result = closure_1_2.inDevModeForApplication(tmp);
       }
       tmp2 = result;
     }

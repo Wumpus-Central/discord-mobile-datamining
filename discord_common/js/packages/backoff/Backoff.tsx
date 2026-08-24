@@ -1,9 +1,9 @@
 // === Module 584: fails ===
 
 // Module 584 (fails)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-let result = obj132.fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
 class Backoff {
   constructor() {
     num = global;
@@ -46,7 +46,7 @@ Object.defineProperty(prototype, "fails", {
   set: undefined
 });
 Object.defineProperty(prototype, "current", {
-  get: function current(closure_1_1, current, arg2) {
+  get: function current(AUTO_DISMISS, current, arg2) {
     return this._current;
   },
   set: undefined
@@ -63,7 +63,8 @@ prototype["succeed"] = function succeed() {
   this._current = this.min;
 };
 prototype["fail"] = function fail(_callback) {
-  const self = this;
+  let self = this;
+  self = this;
   closure_0 = _callback;
   this._fails = this._fails + 1;
   const result = 2 * this._current;

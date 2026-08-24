@@ -1,10 +1,10 @@
 // === Module 4029: has ===
 
 // Module 4029 (has)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 
-const result = obj132.fileFinishedImporting("utils/BasicPermissionUtils.tsx");
+const result = set.fileFinishedImporting("utils/BasicPermissionUtils.tsx");
 const prototype = function BasicPermissionUtils() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -17,8 +17,8 @@ prototype["asBasicFlag"] = function asBasicFlag(permissions) {
 prototype["asBigFlag"] = function asBigFlag(VIEW_CHANNEL) {
   const self = this;
   if (!Object.hasOwn(this.cache, VIEW_CHANNEL)) {
-    const deserializer = fromStringAll;
-    self.cache[VIEW_CHANNEL] = deserializer.deserialize(VIEW_CHANNEL);
+    self.cache[VIEW_CHANNEL] = fromStringAll.deserialize(VIEW_CHANNEL);
+    const obj = fromStringAll;
   }
   return self.cache[VIEW_CHANNEL];
 };

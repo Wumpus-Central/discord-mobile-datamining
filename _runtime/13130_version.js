@@ -5,8 +5,8 @@ import SemVer from "SemVer" /* 13122 */;
 
 
 export default (str) => {
-  str = str.trim();
-  const tmpResult = SemVer(str.replace(/^[=v]+/, ""), arg1);
+  const tmp = SemVer;
+  const tmpResult = tmp(str.trim().replace(/^[=v]+/, ""), arg1);
   let version = null;
   if (tmpResult) {
     version = tmpResult.version;

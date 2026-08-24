@@ -2,10 +2,10 @@
 
 // Module 15423 (_saveGuildThemeNuxPreference)
 import GuildThemeSourcePreference2 from "GuildThemeSourcePreference" /* 4306 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 
-require = fn;
+require = arg1;
 function _saveGuildThemeNuxPreference() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -98,14 +98,14 @@ function _saveGuildThemeNuxPreference() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/guild_themes/GuildThemeNuxUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeNuxUtils.tsx");
 
 export const getInitialGuildThemeNuxSelection = function getInitialGuildThemeNuxSelection() {
   defaultGuildThemePreference = defaultGuildThemePreference.getDefaultGuildThemePreference();
   if (defaultGuildThemePreference === GuildThemeSourcePreference2.GuildThemeSourcePreference.PERSONAL) {
-    let GUILD = GuildThemeSourcePreference2.GuildThemeSourcePreference.PERSONAL;
+    let GUILD = tmp2(4306).GuildThemeSourcePreference.PERSONAL;
   } else {
-    GUILD = GuildThemeSourcePreference2.GuildThemeSourcePreference.GUILD;
+    GUILD = tmp2(4306).GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
 };

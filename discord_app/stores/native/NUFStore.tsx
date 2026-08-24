@@ -3,8 +3,8 @@
 // Module 5387 (handleCacheOrSocketLoaded)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_0 from "createGuildRecordFromRust" /* 1910 */;
+import closure_1 from "markAllUserIdListsStale" /* 4030 */;
 
 function handleCacheOrSocketLoaded() {
   let flag = false;
@@ -73,6 +73,6 @@ const nUFStore = new NUFStore(dispatcherDefault, {
   CACHE_LOADED_LAZY: handleCacheOrSocketLoaded,
   CONNECTION_OPEN: handleCacheOrSocketLoaded
 });
-const result = require("obj132").fileFinishedImporting("stores/native/NUFStore.tsx");
+const result = require("set").fileFinishedImporting("stores/native/NUFStore.tsx");
 
 export default nUFStore;

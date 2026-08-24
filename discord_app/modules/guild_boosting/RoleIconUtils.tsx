@@ -5,13 +5,13 @@ import getAvatarURL from "getAvatarURL" /* 1435 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
 import ME from "ME" /* 676 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
 ({ Endpoints: c3, GuildFeatures: c4 } = ME);
 let closure_5 = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/role-icons";
 let closure_6 = "" + location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-let closure_7 = obj132.isAndroid();
-const result = obj132.fileFinishedImporting("modules/guild_boosting/RoleIconUtils.tsx");
+let closure_7 = set.isAndroid();
+const result = set.fileFinishedImporting("modules/guild_boosting/RoleIconUtils.tsx");
 
 export const getRoleIconData = function getRoleIconData(role, arg1) {
   if (null == role) {
@@ -21,6 +21,7 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
     if (null != role.unicodeEmoji) {
       let obj = parseRawEmojiObjectDefault;
       byName = obj.getByName(parseRawEmojiObjectDefault.convertSurrogateToName(role.unicodeEmoji, false));
+      const obj2 = parseRawEmojiObjectDefault;
     }
     ({ id, icon } = role);
     let tmp4;
@@ -34,8 +35,8 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
         let str3 = "quality=lossless";
         let str5 = "";
         if (null != arg1) {
-          handleImageLoad;
-          handleImageLoad;
+          tmp5(1469);
+          tmp5(1469);
           let str7 = "";
           const text = `size=${tmp9(arg1 * obj3.getDevicePixelRatio())}`;
           if (!closure_7) {

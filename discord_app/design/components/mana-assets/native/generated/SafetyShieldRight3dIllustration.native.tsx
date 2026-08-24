@@ -1,13 +1,13 @@
 // === Module 6106: SafetyShieldRight3dIllustration ===
 
 // Module 6106 (SafetyShieldRight3dIllustration)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import metadataDefault from "metadata" /* 6107 */;
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyShieldRight3dIllustration.native.tsx");
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyShieldRight3dIllustration.native.tsx");
 
 export const SafetyShieldRight3dIllustration = function SafetyShieldRight3dIllustration(width) {
   let num = width.width;
@@ -23,7 +23,8 @@ export const SafetyShieldRight3dIllustration = function SafetyShieldRight3dIllus
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { uri: metadataDefault };
+  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  obj = { uri: metadataDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];

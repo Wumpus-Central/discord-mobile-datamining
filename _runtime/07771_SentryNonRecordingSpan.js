@@ -1,7 +1,7 @@
 // === Module 7771: SentryNonRecordingSpan ===
 
 // Module 7771 (SentryNonRecordingSpan)
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const SentryNonRecordingSpan = require;

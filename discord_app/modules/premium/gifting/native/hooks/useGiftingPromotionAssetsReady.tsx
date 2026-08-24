@@ -1,11 +1,11 @@
 // === Module 16169: useGiftingPromotionAssetsReady ===
 
 // Module 16169 (useGiftingPromotionAssetsReady)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10304 */;
 import usePreloadedAssetDefault from "usePreloadedAsset" /* 16170 */;
 
-const result = obj132.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
+const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 
 export default function useGiftingPromotionAssetsReady(asset, asset2) {
   let obj = useThemeAndReducedMotionAwareAssetUrl;

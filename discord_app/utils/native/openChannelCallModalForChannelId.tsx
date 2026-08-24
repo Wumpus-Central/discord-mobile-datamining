@@ -3,10 +3,10 @@
 // Module 8734 (openChannelCallModalForChannelId)
 import connectToStage from "connectToStage" /* 8057 */;
 import openChannelCallModal from "openChannelCallModal" /* 8663 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("utils/native/openChannelCallModalForChannelId.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("utils/native/openChannelCallModalForChannelId.tsx");
 
 export default function openChannelCallModalForChannelId(arg0, arg1) {
   channel = channel.getChannel(arg0);
@@ -17,9 +17,11 @@ export default function openChannelCallModalForChannelId(arg0, arg1) {
     }
     if (isGuildStageVoiceResult) {
       isGuildStageVoiceResult = false === connectToStage.connectToStage(channel);
+      const obj2 = connectToStage;
     }
     if (!isGuildStageVoiceResult) {
       openChannelCallModal.openChannelCallModal(channel);
+      const obj3 = openChannelCallModal;
     }
   }
 };

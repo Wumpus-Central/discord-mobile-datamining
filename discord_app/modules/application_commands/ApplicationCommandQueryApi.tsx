@@ -4,15 +4,15 @@
 import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
 import ScoreMethod from "ScoreMethod" /* 8456 */;
 import getOptionValue from "getOptionValue" /* 8458 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import getIndexKey from "getIndexKey" /* 8448 */;
-import getIndexKey2 from "getIndexKey" /* 8448 */;
+import closure_10 from "getIndexKey" /* 8448 */;
 import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
 import { NOOP } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function findCommandInSection(found, commandKey) {
   const _require = commandKey;
   if (null != commandKey) {
@@ -21,8 +21,8 @@ function findCommandInSection(found, commandKey) {
     } else {
       const _Object = Object;
       const values = Object.values(found.commands);
-      found = values.find((item, index) => {
-        const rootCommand = item.rootCommand;
+      found = values.find((rootCommand) => {
+        rootCommand = rootCommand.rootCommand;
         let id;
         if (rootCommand != null) {
           id = rootCommand.id;
@@ -35,7 +35,7 @@ function findCommandInSection(found, commandKey) {
       }
       let command;
       if (null != rootCommand) {
-        _require(5245);
+        obj = _require(5245);
         obj = { rootCommand: null, command: null, applicationId: null };
         obj[0] = rootCommand;
         obj[1] = rootCommand;
@@ -57,7 +57,7 @@ function findCommandInSection(found, commandKey) {
 ({ useContextIndexState: closure_6, useDiscoveryState: error, useQueryState: closure_8, useUserIndexState: c9 } = getIndexKey);
 let items = [require("PermissionOverwriteType").ApplicationCommandType.CHAT];
 let obj = { id: "placeholder-section", type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.APPLICATION, name: "" };
-let result = require("obj132").fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
+let result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandKey) {
   closure_0 = arg2;
@@ -85,8 +85,8 @@ export const getCachedCommand = function getCachedCommand(type, commandKey) {
     }
     const combined = values.concat(Object.values(sections1));
     if (null != arg2) {
-      const found = combined.find((item, index) => {
-        const application = item.descriptor.application;
+      const found = combined.find((descriptor) => {
+        const application = descriptor.descriptor.application;
         let id;
         if (application != null) {
           id = application.id;
@@ -103,11 +103,15 @@ export const getCachedCommand = function getCachedCommand(type, commandKey) {
       const iter = combined[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
+        let tmp5 = nextResult;
+        let tmp6 = findCommandInSection;
         let tmp7 = findCommandInSection(nextResult, commandKey);
+        let tmp8 = tmp7;
         if (null != tmp7) {
           obj = { application: null, command: null };
           obj[0] = nextResult.descriptor.application;
           obj[1] = tmp7;
+          let tmp9 = iter;
           iter.return();
           return obj;
         }
@@ -156,10 +160,11 @@ export const getCachedApplicationSection = function getCachedApplicationSection(
   }
   return descriptor;
 };
-export const getCachedResults = function getCachedResults(withAffinitySuggestions, CHAT, query) {
+export const getCachedResults = function getCachedResults(type, CHAT, query) {
+  obj = { commandTypes: items, text: query };
   items = [CHAT];
   obj = { scoreMethod: ScoreMethod.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
-  query = authStore.query(withAffinitySuggestions, obj, obj);
+  query = authStore.query(type, obj, obj);
   obj = { commands: query.commands, sections: query.descriptors };
   return obj;
 };
@@ -195,6 +200,7 @@ export const useCachedResults = function useCachedResults(arg0, CHAT, text) {
 export const useDiscovery = function useDiscovery(options) {
   ({ context, filters } = options);
   options = options.options;
+  let guild_id;
   let descriptors;
   let commands;
   let sectionedCommands;
@@ -202,7 +208,7 @@ export const useDiscovery = function useDiscovery(options) {
   let first;
   closure_8 = undefined;
   let memo;
-  let guild_id = null;
+  guild_id = null;
   if ("channel" === context.type) {
     guild_id = context.channel.guild_id;
   }
@@ -213,7 +219,7 @@ export const useDiscovery = function useDiscovery(options) {
   obj = {};
   const merged = Object.assign(options);
   obj.allowFetch = options.allowFetch;
-  const tmp4 = first(context, stateFromStores, filters, obj);
+  let tmp4 = first(context, stateFromStores, filters, obj);
   descriptors = tmp4.descriptors;
   commands = tmp4.commands;
   sectionedCommands = tmp4.sectionedCommands;
@@ -231,9 +237,12 @@ export const useDiscovery = function useDiscovery(options) {
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
       obj = { type: null, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
       obj[0] = tmp;
+      let tmp2 = filters;
+      let tmp3 = guild_id;
       obj[1] = filters(guild_id[14]).ApplicationCommandInputType.PLACEHOLDER;
       let _HermesInternal = HermesInternal;
       obj[2] = "placeholder-" + num2;
+      let tmp4 = closure_1_15;
       obj[8] = closure_1_15;
       let arr = items.push(obj);
     }
@@ -250,16 +259,16 @@ export const useDiscovery = function useDiscovery(options) {
       hasMoreAfter: false,
       placeholders: loading ? memo : [],
       sectionDescriptors: descriptors,
-      filterSection(id, arg1) {
+      filterSection(id) {
         callback(id);
       },
-      scrollDown: NOOP
+      scrollDown: closure_1_12
     };
     if (null == first) {
       if (!loading) {
         return obj;
       } else {
-        first = sectionedCommands[0];
+        first = arr[0];
         if (null != first) {
           obj = { section: null, data: null };
           obj[0] = first.section;
@@ -267,11 +276,11 @@ export const useDiscovery = function useDiscovery(options) {
           HermesBuiltin.arraySpread(memo, HermesBuiltin.arraySpread(first.data, 0));
           obj[1] = items;
           first = [obj];
-          HermesBuiltin.arraySpread(sectionedCommands.slice(1), 1);
+          HermesBuiltin.arraySpread(arr.slice(1), 1);
           obj.commandsByActiveSection = first;
           let tmp7 = memo;
         } else {
-          const tmp6 = filters(guild_id[9]).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
+          const tmp6 = filters(guild_id[9]).BUILT_IN_SECTIONS[closure_1_11.BUILT_IN];
           const items1 = [tmp6];
           obj.activeSections = items1;
           obj = { section: null, data: null };
@@ -282,11 +291,11 @@ export const useDiscovery = function useDiscovery(options) {
           obj.commandsByActiveSection = items2;
         }
         const items3 = [];
-        HermesBuiltin.arraySpread(tmp7, HermesBuiltin.arraySpread(commands, 0));
+        HermesBuiltin.arraySpread(tmp7, HermesBuiltin.arraySpread(tmp, 0));
         obj.commands = items3;
       }
     } else {
-      const found = sectionedCommands.find((item, index) => item.section.id === closure_7);
+      const found = arr.find((section) => section.section.id === closure_7);
       if (null != found) {
         const items4 = [found.section];
         let items5 = items4;
@@ -304,8 +313,8 @@ export const useDiscovery = function useDiscovery(options) {
     }
   }, items3);
 };
-export const executeQuery = function executeQuery(withAffinitySuggestions, commandTypes, placeholderCount) {
-  const query = authStore.query(withAffinitySuggestions, commandTypes, placeholderCount);
+export const executeQuery = function executeQuery(type, commandTypes, placeholderCount) {
+  const query = authStore.query(type, commandTypes, placeholderCount);
   ({ descriptors, commands, loading } = query);
   let num = 0;
   if (loading) {
@@ -319,9 +328,12 @@ export const executeQuery = function executeQuery(withAffinitySuggestions, comma
   for (let num3 = 0; num3 < num; num3 = num3 + 1) {
     obj = { type: null, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
     obj[0] = tmp3;
+    let tmp4 = require;
+    let tmp5 = dependencyMap;
     obj[1] = ApplicationCommandSectionType.ApplicationCommandInputType.PLACEHOLDER;
     let _HermesInternal = HermesInternal;
     obj[2] = "placeholder-" + num3;
+    let tmp6 = obj;
     obj[8] = obj;
     let arr = items.push(obj);
   }
@@ -349,7 +361,7 @@ export const useQuery = function useQuery(arg0, commandTypes, placeholderCount) 
   obj = {};
   const merged = Object.assign(placeholderCount);
   obj.allowFetch = true;
-  const tmp2 = callback2(arg0, commandTypes, obj);
+  let tmp2 = callback2(arg0, commandTypes, obj);
   const descriptors = tmp2.descriptors;
   const commands = tmp2.commands;
   const loading = tmp2.loading;
@@ -363,9 +375,12 @@ export const useQuery = function useQuery(arg0, commandTypes, placeholderCount) 
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
       obj = { type: null, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
       obj[0] = tmp;
+      let tmp2 = commandTypes;
+      let tmp3 = descriptors;
       obj[1] = commandTypes(descriptors[14]).ApplicationCommandInputType.PLACEHOLDER;
       let _HermesInternal = HermesInternal;
       obj[2] = "placeholder-" + num2;
+      let tmp4 = closure_1_15;
       obj[8] = closure_1_15;
       let arr = items.push(obj);
     }
@@ -375,19 +390,19 @@ export const useQuery = function useQuery(arg0, commandTypes, placeholderCount) 
   return loading.useMemo(() => {
     if (loading) {
       items = [];
-      HermesBuiltin.arraySpread(memo, HermesBuiltin.arraySpread(commands, 0));
+      HermesBuiltin.arraySpread(memo, HermesBuiltin.arraySpread(tmp2, 0));
       let tmp3 = items;
     } else {
-      tmp3 = commands;
+      tmp3 = tmp2;
     }
     obj = { commands: tmp3, sections: null, scrollDown: null };
     if (loading) {
       if (0 === descriptors.length) {
-        const items1 = [commandTypes(descriptors[9]).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN]];
+        const items1 = [commandTypes(descriptors[9]).BUILT_IN_SECTIONS[closure_1_11.BUILT_IN]];
         let tmp10 = items1;
       }
       obj[1] = tmp10;
-      obj[2] = NOOP;
+      obj[2] = closure_1_12;
       return obj;
     }
     tmp10 = descriptors;
@@ -421,11 +436,15 @@ export const useCommand = function useCommand(arg0, commandId) {
       }
       const combined = values.concat(Object.values(sections1));
       for (const item10019 of combined) {
+        let tmp5 = item10019;
+        let tmp6 = closure_0;
         let tmp7 = item10019.commands[closure_0];
+        let tmp8 = tmp7;
         if (null != tmp7) {
           obj = { command: null, application: null };
           obj[0] = tmp7;
           obj[1] = item10019.descriptor.application;
+          let tmp9 = obj4;
           obj4.return();
           return obj;
         }
@@ -494,19 +513,19 @@ export const useCommandsForApplication = function useCommandsForApplication(arg0
       commands = {};
     }
     const values = Object.values(commands);
-    const mapped = values.map((item, index) => {
-      let command = item;
-      if (null != item.rootCommand) {
-        dependencyMap(table[6]);
+    const mapped = values.map((rootCommand) => {
+      let command = rootCommand;
+      if (null != rootCommand.rootCommand) {
+        obj = dependencyMap(table[6]);
         obj = { rootCommand: null, command: null, applicationId: null };
-        ({ rootCommand: obj2[0], rootCommand: obj2[1], applicationId: obj2[2] } = item);
+        ({ rootCommand: obj2[0], rootCommand: obj2[1], applicationId: obj2[2] } = rootCommand);
         command = obj.buildCommand(obj);
       }
       return command;
     });
-    callback = mapped.reduce((acc, item, index) => {
-      acc[item.id] = item;
-      return acc;
+    callback = mapped.reduce((arg0, id) => {
+      arg0[id.id] = id;
+      return arg0;
     }, {});
     let application;
     if (tmp9 != null) {
@@ -516,7 +535,7 @@ export const useCommandsForApplication = function useCommandsForApplication(arg0
       }
     }
     obj = { application, commands: null, sectionDescriptor: null, isGuildInstalled: null, isUserInstalled: null };
-    const mapped1 = commands.map((item, index) => dependencyMap[item]);
+    const mapped1 = commands.map((arg0) => dependencyMap[arg0]);
     obj[1] = mapped1.filter(callback(sectionDescriptor[10]).isNotNullish);
     descriptor = undefined;
     if (tmp9 != null) {
@@ -529,15 +548,18 @@ export const useCommandsForApplication = function useCommandsForApplication(arg0
   }, items);
 };
 export const useAccessibleCommandsForApplication = function useAccessibleCommandsForApplication(channel, arg1, arg2) {
+  let _require = channel;
   obj = isUserInstalled;
   items = [channel];
-  const _require = arg1;
+  _require = arg1;
   let commands = arg2;
+  let sectionDescriptor;
+  let isGuildInstalled;
   const memo = isUserInstalled.useMemo(() => ({ channel: closure_0, type: "channel" }), items);
   let tmp2 = callback3(true, true);
-  let sectionDescriptor = tmp2;
+  sectionDescriptor = tmp2;
   const tmp3 = callback(memo, true, true);
-  let isGuildInstalled = tmp3;
+  isGuildInstalled = tmp3;
   let result;
   if (tmp2 != null) {
     result = tmp2.result;
@@ -591,19 +613,19 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
       commands = {};
     }
     const values = Object.values(commands);
-    const mapped = values.map((item, index) => {
-      let command = item;
-      if (null != item.rootCommand) {
-        dependencyMap(table[6]);
+    const mapped = values.map((rootCommand) => {
+      let command = rootCommand;
+      if (null != rootCommand.rootCommand) {
+        obj = dependencyMap(table[6]);
         obj = { rootCommand: null, command: null, applicationId: null };
-        ({ rootCommand: obj2[0], rootCommand: obj2[1], applicationId: obj2[2] } = item);
+        ({ rootCommand: obj2[0], rootCommand: obj2[1], applicationId: obj2[2] } = rootCommand);
         command = obj.buildCommand(obj);
       }
       return command;
     });
-    callback = mapped.reduce((acc, item, index) => {
-      acc[item.id] = item;
-      return acc;
+    callback = mapped.reduce((arg0, id) => {
+      arg0[id.id] = id;
+      return arg0;
     }, {});
     let application;
     if (tmp9 != null) {
@@ -613,7 +635,7 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
       }
     }
     obj = { application, commands: null, sectionDescriptor: null, isGuildInstalled: null, isUserInstalled: null };
-    const mapped1 = commands.map((item, index) => dependencyMap[item]);
+    const mapped1 = commands.map((arg0) => dependencyMap[arg0]);
     obj[1] = mapped1.filter(callback(sectionDescriptor[10]).isNotNullish);
     descriptor = undefined;
     if (tmp9 != null) {
@@ -637,35 +659,35 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
         if (null != allowedForUser.guild_id) {
           let permissions;
           if (sectionDescriptor != null) {
-            permissions = sectionDescriptor.permissions;
+            permissions = tmp3.permissions;
           }
           allowedForUser = null;
           if (null != permissions) {
             obj = commands(sectionDescriptor[13]);
-            allowedForUser = obj.computeAllowedForUser(sectionDescriptor.permissions, tmp.guild_id, permissionContext.userId, permissionContext.roleIds, permissionContext.isImpersonating);
+            allowedForUser = obj.computeAllowedForUser(tmp3.permissions, tmp.guild_id, permissionContext.userId, permissionContext.roleIds, permissionContext.isImpersonating);
           }
         }
         allowedForChannel = null;
         if (null != allowedForUser.guild_id) {
           let permissions1;
           if (sectionDescriptor != null) {
-            permissions1 = sectionDescriptor.permissions;
+            permissions1 = tmp10.permissions;
           }
           allowedForChannel = null;
           if (null != permissions1) {
-            allowedForChannel = commands(sectionDescriptor[13]).computeAllowedForChannel(sectionDescriptor.permissions, tmp, tmp.guild_id);
+            allowedForChannel = commands(sectionDescriptor[13]).computeAllowedForChannel(tmp10.permissions, tmp, tmp.guild_id);
             const obj2 = commands(sectionDescriptor[13]);
           }
         }
-        return arr.filter((item, index) => {
-          commands(sectionDescriptor[13]);
-          obj = { applicationAllowedForUser: allowedForUser, applicationAllowedForChannel: allowedForChannel, isGuildInstalled, isUserInstalled, commandBotId: null };
+        return arr.filter((arg0) => {
+          obj = commands(sectionDescriptor[13]);
+          obj = { applicationAllowedForUser: allowedForUser, applicationAllowedForChannel: allowedForChannel, isGuildInstalled: closure_1_3, isUserInstalled: closure_1_4, commandBotId: null };
           let botId;
           if (closure_1_2 != null) {
             botId = closure_1_2.botId;
           }
           obj[4] = botId;
-          return obj.hasAccess(item, permissionContext, obj) === allowedForUser(sectionDescriptor[13]).HasAccessResult.ALLOWED;
+          return obj.hasAccess(arg0, closure_1_5, obj) === allowedForUser(sectionDescriptor[13]).HasAccessResult.ALLOWED;
         });
       }
       arr = allowedForChannel;

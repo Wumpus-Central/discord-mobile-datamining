@@ -1,12 +1,12 @@
 // === Module 6903: saferParse ===
 
 // Module 6903 (saferParse)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import tDefault from "t" /* 4092 */;
 import collectAst from "collectAst" /* 6904 */;
 
-function saferParse(fn, closure_0, inline, arg3, arg4) {
-  let text = closure_0;
+function saferParse(arg0, arg1, inline) {
+  let text = arg1;
   let tmp6 = arg3;
   if (arg3 === undefined) {
     tmp6 = null;
@@ -17,8 +17,10 @@ function saferParse(fn, closure_0, inline, arg3, arg4) {
 
   `;
     }
-    const tmp8 = fn(text, inline);
+    const tmp8 = arg0(text, inline);
     const flattenAstResult = collectAst.flattenAst(inline, tmp8);
+    const obj = collectAst;
+    const obj2 = collectAst;
     ({ hasBailedAst, ast } = collectAst.constrainAst(flattenAstResult));
     if (tmp6) {
       ast = tmp6(ast, inline.inline, hasBailedAst);
@@ -33,18 +35,18 @@ function saferParse(fn, closure_0, inline, arg3, arg4) {
     hasBailedAst = false;
   }
 }
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/markup/native/MarkupParser.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/markup/native/MarkupParser.tsx");
 
 export default {
   astParserFor(importDefaultResultResult) {
     closure_0 = tDefault.parserFor(importDefaultResultResult);
-    return (closure_0, inline, inline) => {
-      let str = closure_0;
-      if (closure_0 === undefined) {
+    return (arg0, inline) => {
+      let str = arg0;
+      if (arg0 === undefined) {
         str = "";
       }
-      let obj = inline;
-      if (inline === undefined) {
+      let obj = arg2;
+      if (arg2 === undefined) {
         obj = {};
       }
       let tmp = arg3;
@@ -53,24 +55,25 @@ export default {
       }
       obj = { inline };
       const merged = Object.assign(obj);
-      return saferParse(closure_0, str, obj, tmp, !inline);
+      return closure_1_3(closure_0, str, obj, tmp, !inline);
     };
   },
   reactParserFor(importDefaultResultResult) {
     closure_0 = tDefault.parserFor(importDefaultResultResult);
+    let obj = tDefault;
     const obj2 = tDefault;
     importDefault = obj2.reactFor(tDefault.ruleOutput(importDefaultResultResult, "react"));
-    return (closure_0, arg1, inline) => {
-      let str = closure_0;
-      if (closure_0 === undefined) {
+    return () => {
+      let str = arg0;
+      if (arg0 === undefined) {
         str = "";
       }
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
       }
-      let obj = inline;
-      if (inline === undefined) {
+      let obj = arg2;
+      if (arg2 === undefined) {
         obj = {};
       }
       let tmp = arg3;
@@ -81,9 +84,9 @@ export default {
         obj = { inline: null };
         obj[0] = flag;
         const merged = Object.assign(obj);
-        return ((arg0, inline) => {
+        return ((arg0, arg1) => {
           try {
-            return callback(arg0, inline);
+            return callback(arg0, arg1);
           } catch (tmp4) {
             const message = tmp4.message;
             let hasItem;
@@ -97,7 +100,7 @@ export default {
               throw tmp4;
             }
           }
-        })(saferParse(closure_0, str, obj, tmp, !flag), obj);
+        })(closure_1_3(closure_0, str, obj, tmp, !flag), obj);
       } else {
         return null;
       }

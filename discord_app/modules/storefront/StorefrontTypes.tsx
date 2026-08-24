@@ -1,9 +1,9 @@
 // === Module 7207: StorefrontPromotionRewardType ===
 
 // Module 7207 (StorefrontPromotionRewardType)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/storefront/StorefrontTypes.tsx");
+const result = set.fileFinishedImporting("modules/storefront/StorefrontTypes.tsx");
 
 export const StorefrontPromotionRewardType = { DISCOUNT: 1, [1]: "DISCOUNT", FIXED_PRICE: 2, [2]: "FIXED_PRICE", ACTION: 3, [3]: "ACTION" };
 export const StorefrontPromotionRewardEligibilityStatus = { EARNED: 1, [1]: "EARNED", IN_PROGRESS: 2, [2]: "IN_PROGRESS", NOT_ELIGIBLE: 3, [3]: "NOT_ELIGIBLE", CONSUMED: 4, [4]: "CONSUMED" };

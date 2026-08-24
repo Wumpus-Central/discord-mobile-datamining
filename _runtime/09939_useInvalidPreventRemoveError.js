@@ -1,7 +1,7 @@
 // === Module 9939: useInvalidPreventRemoveError ===
 
 // Module 9939 (useInvalidPreventRemoveError)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 

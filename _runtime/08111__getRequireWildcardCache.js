@@ -2,8 +2,8 @@
 
 // Module 8111 (_getRequireWildcardCache)
 import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "get ActivityIndicator" /* 17 */;
+import closure_4 from "jsxProd" /* 21 */;
 
 function _getRequireWildcardCache(arg0) {
   if (typeof WeakMap !== "function") {
@@ -39,6 +39,7 @@ if (!noop) {
     }
     obj = Object.create(null);
     for (const key10027 in _module) {
+      let tmp12 = key10027;
       if ("default" === key10027) {
         continue;
       } else {
@@ -108,8 +109,9 @@ export const StepsIndicator = function StepsIndicator(options) {
   }
   const items1 = [currentValue, StepMarker, options, thumbImage, renderStepNumber, memo];
   closure_6 = obj.useCallback((index) => {
-    { style: options(currentValue[4]).styles.stepIndicatorElement, children: null };
-    const obj = { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] };
+    let obj = { style: options(currentValue[4]).styles.stepIndicatorElement, children: null };
+    obj = thumbImage;
+    obj = { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] };
     const items = [thumbImage.jsx(options(currentValue[5]).SliderTrackMark, { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] }, "" + arg1 + "-SliderTrackMark"), ];
     let jsxResult = null;
     if (renderStepNumber) {
@@ -121,12 +123,13 @@ export const StepsIndicator = function StepsIndicator(options) {
     }
     items[1] = jsxResult;
     obj[1] = items;
-    return < key={arg1}><renderStepNumber.View key={"" + arg1 + "-View"} isTrue={currentValue === index} index={index} thumbImage={thumbImage} StepMarker={StepMarker} currentValue={currentValue} min={options[0]} max={options[options.length - 1]} /></>;
+    return < key={arg1}><renderStepNumber.View key={"" + arg1 + "-View"} isTrue={currentValue === arg0} index={arg0} thumbImage={thumbImage} StepMarker={StepMarker} currentValue={currentValue} min={options[0]} max={options[options.length - 1]} /></>;
   }, items1);
+  obj = { pointerEvents: "none", style: null, children: null };
   const items2 = [options(currentValue[4]).styles.stepsIndicator, ];
   obj = { marginHorizontal: sliderWidth * options(currentValue[3]).constants.MARGIN_HORIZONTAL_PADDING };
   items2[1] = obj;
   obj[1] = items2;
-  obj[2] = reversed.map((item, index) => callback(item, index));
+  obj[2] = reversed.map((arg0, arg1) => callback(arg0, arg1));
   return <renderStepNumber.View marginHorizontal={sliderWidth * options(currentValue[3]).constants.MARGIN_HORIZONTAL_PADDING} />;
 };

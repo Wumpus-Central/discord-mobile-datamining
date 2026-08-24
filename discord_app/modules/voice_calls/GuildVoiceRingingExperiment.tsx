@@ -1,12 +1,13 @@
 // === Module 4798: experiment ===
 
 // Module 4798 (experiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
 import createExperiment from "createExperiment" /* 4286 */;
 
 const items = [{ id: 1, label: "Allow users to ring each other in Guild Voice Channels", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2024-12_guild_voice_channel_ringing", label: "Guild Voice Ringing", defaultConfig: { enabled: false }, commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, treatments: items });
-const result = obj132.fileFinishedImporting("modules/voice_calls/GuildVoiceRingingExperiment.tsx");
+const obj = { kind: "guild", id: "2024-12_guild_voice_channel_ringing", label: "Guild Voice Ringing", defaultConfig: { enabled: false }, commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, treatments: items };
+const result = set.fileFinishedImporting("modules/voice_calls/GuildVoiceRingingExperiment.tsx");
 
 export default experiment;

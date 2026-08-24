@@ -1,13 +1,13 @@
 // === Module 10670: GUILD_SELECT_ALL_SERVERS_OPTION_ID ===
 
 // Module 10670 (GUILD_SELECT_ALL_SERVERS_OPTION_ID)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const obj = { ROUTE: "route", PRESSABLE: "pressable", TOGGLE: "toggle", STATIC: "static", RADIO: "radio", VOLUME_SLIDER: "volume_slider", SLIDER: "slider", GUILD_SELECTOR: "guild_selector", LIST: "list", SEGMENTED_CONTROL: "segmented_control" };
 const items = [, , ];
 ({ ROUTE: arr[0], PRESSABLE: arr[1], STATIC: arr[2] } = obj);
-const set = new Set(items);
-const result = obj132.fileFinishedImporting("modules/settings/native/renderer/SettingRendererConstants.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/settings/native/renderer/SettingRendererConstants.tsx");
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
 export const NodeType = obj;

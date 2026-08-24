@@ -24,6 +24,6 @@ const adPersonalizationStore = new AdPersonalizationStore(dispatcherDefault, {
   CONNECTION_OPEN: reset,
   LOGOUT: reset
 });
-const result = require("obj132").fileFinishedImporting("modules/ads/AdPersonalizationStore.tsx");
+const result = require("set").fileFinishedImporting("modules/ads/AdPersonalizationStore.tsx");
 
 export default adPersonalizationStore;

@@ -9,13 +9,13 @@ import Text from "Text" /* 4734 */;
 import PressableBase from "PressableBase" /* 5433 */;
 import map from "map" /* 9288 */;
 import registerAssetDefault from "registerAsset" /* 15462 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function handlePress() {
   const self = this;
   const apply = _handlePress.apply;
@@ -97,16 +97,19 @@ function _handlePress() {
 noopAll;
 ({ HelpdeskArticles: c5, Fonts } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
+createCacheKey = { MFAWarning: null, MFAWarningIcon: null, MFAWarningLink: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: 10, width: 98, height: 53 };
 createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/GuildMFAWarning.tsx");
+let obj1 = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/GuildMFAWarning.tsx");
 
 export default function GuildMFAWarning() {
   const tmp = callback4();
-  let obj = { style: tmp.MFAWarningIcon, source: registerAssetDefault };
+  let obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
+  obj = { style: tmp.MFAWarningIcon, source: registerAssetDefault };
   const items = [callback2(Image, obj), ];
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = getSystemLocale.intl;

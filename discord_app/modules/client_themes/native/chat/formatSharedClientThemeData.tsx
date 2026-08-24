@@ -1,14 +1,14 @@
 // === Module 8437: formatSharedClientThemeData ===
 
 // Module 8437 (formatSharedClientThemeData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2533 */;
 import registerAssetDefault from "registerAsset" /* 7989 */;
 
 const Image = get_ActivityIndicator.Image;
-const result = obj132.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
+const result = set.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
 
 export const formatSharedClientThemeData = function formatSharedClientThemeData(message, ensureAvatarSourceResult, nick) {
   const sharedClientTheme = message.sharedClientTheme;

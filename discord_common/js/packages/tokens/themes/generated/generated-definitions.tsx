@@ -1,7 +1,7 @@
 // === Module 713: items ===
 
 // Module 713 (items)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const obj = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" };
 const items = [, ];
@@ -11,7 +11,7 @@ const items2 = [, ];
 ({ DARKER: arr3[0], DARK: arr3[1] } = obj);
 items1[1] = items2;
 const map = new Map(items1);
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/tokens/themes/generated/generated-definitions.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/themes/generated/generated-definitions.tsx");
 
 export const ThemeTypes = obj;
 export const ThemeExtends = map;

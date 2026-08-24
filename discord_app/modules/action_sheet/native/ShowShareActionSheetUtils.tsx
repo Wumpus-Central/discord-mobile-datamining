@@ -1,8 +1,7 @@
 // === Module 9069: trackAppClickInNativeShareSheet ===
 
 // Module 9069 (trackAppClickInNativeShareSheet)
-import obj132 from "obj132" /* 2 */;
-import obj1322 from "obj132" /* 500 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
@@ -12,7 +11,7 @@ import apexExperiment from "apexExperiment" /* 9071 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = SHARE_PREPARING_MODAL_KEY.SHARE_SHEET_PRESENT_DELAY_MS;
-const result = obj132.fileFinishedImporting("modules/action_sheet/native/ShowShareActionSheetUtils.tsx");
+const result = set.fileFinishedImporting("modules/action_sheet/native/ShowShareActionSheetUtils.tsx");
 
 export const trackAppClickInNativeShareSheet = function trackAppClickInNativeShareSheet(app, _location) {
   let str = app;
@@ -29,14 +28,14 @@ export const getMediaShareParams = function getMediaShareParams(source) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
         if (obj11.isDiscordDirectAssetUrl(source.shareURI)) {
-          let tmpResult = obj1322;
+          let tmpResult = tmp(500);
           if (tmpResult.isAndroid()) {
             obj = { presentDelayMs: null };
             obj[0] = closure_4;
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            tmpResult = decideFileExtension;
+            tmpResult = tmp(6924);
             const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
             obj = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj[0] = videoURI;
@@ -51,7 +50,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj[1] = tmp11;
             return obj;
           } else {
-            const decideFileExtensionResult1 = decideFileExtension.decideFileExtension(source.uri, contentType, true);
+            const decideFileExtensionResult1 = tmp(6924).decideFileExtension(source.uri, contentType, true);
             const obj2 = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj2[0] = source.shareURI;
             let tmp6;
@@ -84,5 +83,5 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   return { mediaFallbackUrl };
 };
 export const resolveShareFileExtension = function resolveShareFileExtension(closure_1_0, closure_1_1) {
-  return decideFileExtension.decideFileExtension(closure_1_0, importDefault, true);
+  return decideFileExtension.decideFileExtension(closure_1_0, closure_1_1, true);
 };

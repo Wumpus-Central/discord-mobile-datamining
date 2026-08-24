@@ -1,13 +1,14 @@
 // === Module 4259: start ===
 
 // Module 4259 (start)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {
 }
 const prototype = Timeout.prototype;
 prototype["start"] = function start(arg0, arg1) {
-  const self = this;
+  let self = this;
+  self = this;
   closure_0 = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -37,7 +38,7 @@ class DelayedCall {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj._delay = global;
-    obj._handler = fn;
+    obj._handler = arg1;
     tmp2 = Timeout;
     if (typeof Timeout !== "function") {
       str = "Trying to call a non-function";
@@ -75,7 +76,7 @@ const prototype3 = function BatchInvocationManagerResetError() {
 }.prototype;
 class prototype3 extends Error {
 }
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/timers/Timers.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/timers/Timers.tsx");
 class Interval {
 }
 const prototype4 = Interval.prototype;
@@ -96,8 +97,8 @@ prototype4["isStarted"] = function isStarted() {
 };
 class BatchInvocationManager {
   constructor(arg0) {
-    obj = fn;
-    if (fn === undefined) {
+    obj = arg1;
+    if (arg1 === undefined) {
       obj = {};
     }
     obj = Object.create(new.target.prototype);
@@ -133,7 +134,8 @@ class BatchInvocationManager {
 }
 const prototype5 = BatchInvocationManager.prototype;
 prototype5["queue"] = function queue(arg0) {
-  const self = this;
+  let self = this;
+  self = this;
   let tmp = arg0;
   if (!Array.isArray(arg0)) {
     const items = [arg0];
@@ -148,6 +150,7 @@ prototype5["queue"] = function queue(arg0) {
     let predicate = options.predicate;
     let num;
     if (predicate != null) {
+      let tmp4 = nextResult;
       num = predicate(tmp3);
     }
     if (num == null) {
@@ -155,10 +158,12 @@ prototype5["queue"] = function queue(arg0) {
     }
     if (num) {
       let _pending = self._pending;
+      let tmp5 = nextResult;
       num = !_pending.has(tmp3);
     }
     if (num) {
       let _pending2 = self._pending;
+      let tmp6 = nextResult;
       let addResult = _pending2.add(tmp3);
       let arr = items1.push(tmp3);
     }
@@ -198,7 +203,7 @@ prototype5["reset"] = function reset() {
       onCancelled(items);
     }
   }
-  const item = items1.forEach((item, index) => item.reject(closure_0));
+  const item = items1.forEach((reject) => reject.reject(closure_0));
 };
 prototype5["_flush"] = function _flush() {
   const self = this;
@@ -233,35 +238,36 @@ prototype5["_flush"] = function _flush() {
             let items1;
             items1 = 0;
             const items = [];
-            items1 = HermesBuiltin.arraySpread(self._pending, items1);
-            const _pending = self._pending;
+            items1 = HermesBuiltin.arraySpread(closure_1_0._pending, items1);
+            const _pending = closure_1_0._pending;
             _pending.clear();
             closure_1 = 0;
             items1 = [];
-            closure_1 = HermesBuiltin.arraySpread(self._promises, closure_1);
-            const _promises = self._promises;
+            closure_1 = HermesBuiltin.arraySpread(closure_1_0._promises, closure_1);
+            const _promises = closure_1_0._promises;
             _promises.clear();
             if (0 !== items.length) {
               c5 = 1;
               c3 = 2;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = self.invoke(items);
+              obj1[0] = obj5.invoke(items);
               return obj1;
             } else {
-              const item = items1.forEach((item, index) => item.resolve());
+              const item = items1.forEach((resolve) => resolve.resolve());
             }
+            obj5 = closure_1_0;
           }
         } else {
           if (1 === tmp6) {
             c5 = 0;
             closure_1 = closure_4;
-            const item1 = items1.forEach((item, index) => item.reject(closure_1));
+            const item1 = items1.forEach((reject) => reject.reject(closure_1));
           } else if (arg0 === 1) {
             c6 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            const item2 = items1.forEach((item, index) => item.resolve());
+            const item2 = items1.forEach((resolve) => resolve.resolve());
             c5 = 0;
           }
           c5 = 0;
@@ -287,8 +293,8 @@ prototype5["_flush"] = function _flush() {
 export { Timeout };
 export { DelayedCall };
 export { Interval };
-export const timeoutPromise = function timeoutPromise(result) {
-  closure_0 = result;
+export const timeoutPromise = function timeoutPromise(arg0) {
+  closure_0 = arg0;
   return new Promise((arg0) => {
     closure_0 = arg0;
     const timerId = setTimeout(() => callback(), closure_0);

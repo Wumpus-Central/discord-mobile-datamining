@@ -2,17 +2,16 @@
 
 // Module 16685 (isChannelEligible)
 import set2 from "set" /* 692 */;
-import apexExperimentDefault from "apexExperiment" /* 8293 */;
 import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9637 */;
 import onPostConnectionOpenDefault from "onPostConnectionOpen" /* 16686 */;
-import recomputeAffinities from "recomputeAffinities" /* 5407 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import getCurrentTime from "getCurrentTime" /* 8290 */;
+import closure_3 from "recomputeAffinities" /* 5407 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "reinjectEphemerals" /* 4994 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
+import closure_7 from "getCurrentTime" /* 8290 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-require = fn;
+require = arg1;
 ({ GiftIntentSecondaryAction: closure_8, GiftIntentType: c9 } = GuildFeatures);
 onPostConnectionOpenDefault;
 class MobileGiftIntentCardManager extends tmp3 {
@@ -22,7 +21,8 @@ prototype["isChannelEligible"] = function isChannelEligible(channel) {
   return channel.type === set2.ChannelTypes.DM;
 };
 prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
-  const self = this;
+  let self = this;
+  self = this;
   closure_1 = id;
   const _require = closure_0;
   const EnableFriendAnniversaryNotifications = _require(self[8]).EnableFriendAnniversaryNotifications;
@@ -39,7 +39,7 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
             obj[0] = tmp(tmp2[11]).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
             obj[1] = tmp(tmp2[11]).ImpressionTypes.VIEW;
             obj = { gift_intent_type: null, dm_affinity: null, channel_id: null };
-            obj[0] = constants2.FRIEND_ANNIVERSARY;
+            obj[0] = tmp6.FRIEND_ANNIVERSARY;
             let dmProbability;
             if (userAffinity != null) {
               dmProbability = userAffinity.dmProbability;
@@ -49,26 +49,29 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
             obj[2] = obj;
             tmpResult.trackImpression(obj);
           }
+          tmp6 = constants2;
         } else {
-          ready.whenReady(id, () => {
+          obj5.whenReady(id, () => {
             if (closure_1_6.getChannelId() === closure_1) {
               self.maybeSendCard(tmp, closure_0);
             }
           });
         }
+        obj5 = ready;
       }
     }
   }
 };
 prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedChannelIfEligible(channelId) {
-  const self = this;
+  let self = this;
+  self = this;
   channel = channel.getChannel(channelId);
   if (null != channel) {
     if (self.isChannelEligible(channel)) {
       const _Set = Set;
       const set = new Set(channel.recipients);
       const friendAnniversaries = closure_7.getFriendAnniversaries();
-      const found = friendAnniversaries.find((item, index) => set.has(item));
+      const found = friendAnniversaries.find((arg0) => set.has(arg0));
       if (null != found) {
         const delayedCall = new found(set[12]).DelayedCall(1000, () => {
           self.maybeSendCard(channel.id, found);
@@ -81,8 +84,8 @@ prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedCh
 prototype["maybeFetchUserAffinities"] = function maybeFetchUserAffinities() {
   if (obj.getConfig({ location: "MobileGiftIntentCardManager" }).enabled) {
     const userAffinitiesV2 = fetchUserAffinitiesV2.fetchUserAffinitiesV2();
+    const obj2 = fetchUserAffinitiesV2;
   }
-  obj = apexExperimentDefault;
 };
 prototype["onChannelSelect"] = function onChannelSelect(channelId) {
   const result = this.sendCardInSelectedChannelIfEligible(channelId.channelId);
@@ -92,6 +95,6 @@ prototype["sendGiftingPromptSystemMessagesIfEligible"] = function sendGiftingPro
   const result1 = this.sendCardInSelectedChannelIfEligible(store.getChannelId());
 };
 const mobileGiftIntentCardManager = new MobileGiftIntentCardManager();
-let result = require("obj132").fileFinishedImporting("modules/premium/gifting/native/MobileGiftIntentCardManager.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/gifting/native/MobileGiftIntentCardManager.tsx");
 
 export default mobileGiftIntentCardManager;

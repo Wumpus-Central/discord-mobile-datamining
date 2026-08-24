@@ -3,9 +3,9 @@
 // Module 7629 (createFromServer)
 import hasFlag from "hasFlag" /* 1403 */;
 import toJSDefault from "toJS" /* 1931 */;
-import createFromServer from "createFromServer" /* 7630 */;
+import closure_2 from "createFromServer" /* 7630 */;
 
-require = fn;
+require = arg1;
 toJSDefault;
 let PromotionRecord;
 class PromotionRecord extends tmp2 {
@@ -118,7 +118,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
   if (marketing_components == null) {
     marketing_components = [];
   }
-  obj[20] = marketing_components.map((item, index) => closure_1_2.createFromServer(item, { startDate: date, endDate: date1 }));
+  obj[20] = marketing_components.map((arg0) => closure_1_2.createFromServer(arg0, { startDate: date, endDate: date1 }));
   const metadata = id.metadata;
   let reward_sku_ids;
   if (metadata != null) {
@@ -192,10 +192,10 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return !allowedCountries.includes(arg0);
   } else {
     const promotionType = self.promotionType;
-    if (require(7656) /* CountryListMode */.PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
-      if (require(7656) /* CountryListMode */.PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
-        if (require(7656) /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
-          if (require(7656) /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
+    if (tmp(7656).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
+      if (tmp(7656).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
+        if (tmp(7656).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
+          if (tmp(7656).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
             return false;
           }
         }
@@ -207,6 +207,6 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return inboundRestrictedCountries.includes(arg0);
   }
 };
-const result = require("obj132").fileFinishedImporting("records/PromotionRecord.tsx");
+const result = require("set").fileFinishedImporting("records/PromotionRecord.tsx");
 
 export default PromotionRecord;

@@ -1,14 +1,14 @@
 // === Module 13287: dismissGdmBlockedUserWarning ===
 
 // Module 13287 (dismissGdmBlockedUserWarning)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
 import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13283 */;
 
 let closure_2 = useSharedSpacesWarningStore.setDismissalTimeForChannel;
 const Endpoints = ME.Endpoints;
-const result = obj132.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
 
 export const dismissGdmBlockedUserWarning = function dismissGdmBlockedUserWarning(channelId) {
   callback(channelId);

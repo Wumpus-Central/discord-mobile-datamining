@@ -1,14 +1,14 @@
 // === Module 15133: PasswordScreen ===
 
 // Module 15133 (PasswordScreen)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/mfa/native/screens/PasswordScreen.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/mfa/native/screens/PasswordScreen.tsx");
 
 export default function PasswordScreen(finish) {
   finish = finish.finish;
@@ -50,6 +50,7 @@ export default function PasswordScreen(finish) {
         closure_1(message);
         callback(false);
         c6 = 3;
+        const tmp15 = closure_1;
       } else if (arg0 === 1) {
         c6 = 3;
         throw arg1;
@@ -93,8 +94,8 @@ export default function PasswordScreen(finish) {
   obj1[6] = tmp5[0];
   obj1[8] = tmp6[1];
   obj1[9] = sendPassword;
-  let tmp15 = tmp10;
-  if (!tmp10) {
+  let tmp15 = tmp8;
+  if (!tmp8) {
     tmp15 = tmp10;
   }
   obj1[10] = tmp15;
@@ -102,17 +103,18 @@ export default function PasswordScreen(finish) {
   obj[1] = <View style={screenStyles.inputContainer}>{null}</View>;
   const obj2 = { text: null, disabled: null, loading: null, onPress: null };
   const tmp12 = importDefault(first[7]);
+  const tmp14 = View;
   const intl4 = tmp13(tmp2[8]).intl;
   obj2[0] = intl4.string(finish(first[8]).t.geKm7t);
-  let tmp17 = tmp10;
-  if (!tmp10) {
+  let tmp17 = tmp8;
+  if (!tmp8) {
     tmp17 = tmp10;
   }
   if (!tmp17) {
     tmp17 = 0 === first.length;
   }
   obj2[1] = tmp17;
-  obj2[2] = tmp10;
+  obj2[2] = tmp8;
   obj2[3] = sendPassword;
   obj[2] = jsx(tmp(first[10]), { text: null, disabled: null, loading: null, onPress: null });
   obj[3] = { mfaChallenge: finish.mfaChallenge, finish };

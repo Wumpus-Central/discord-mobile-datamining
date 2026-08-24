@@ -1,9 +1,9 @@
 // === Module 15308: getSuggestedContactNameForSuggestion ===
 
 // Module 15308 (getSuggestedContactNameForSuggestion)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
+const result = set.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
 
 export const getSuggestedContactNameForSuggestion = function getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend) {
   let contactNames;

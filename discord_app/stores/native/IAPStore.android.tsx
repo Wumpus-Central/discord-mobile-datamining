@@ -1,13 +1,13 @@
 // === Module 5319: updateProduct ===
 
 // Module 5319 (updateProduct)
-import obj132 from "obj132" /* 2 */;
 import sum from "sum" /* 505 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4054 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
 import GPlayConnectionState from "GPlayConnectionState" /* 5320 */;
+import set from "set" /* 2 */;
 
 function updateProduct(currencyCode) {
   const formatted = currencyCode.currencyCode.toLowerCase();
@@ -15,6 +15,7 @@ function updateProduct(currencyCode) {
   if ("BG" === c14) {
     if (formatted === CurrencyCodes.EUR) {
       let formatDualPriceForBGResult = formatSingleCurrencyPrice.formatDualPriceForBG(result, { convertToMajorUnits: false });
+      const obj2 = formatSingleCurrencyPrice;
     }
     let obj = {};
     const merged = Object.assign(currencyCode);
@@ -28,34 +29,34 @@ function updateProduct(currencyCode) {
 }
 function skusLoaded(arg0) {
   ({ skus, skusType } = arg0);
-  let item = skus.forEach((item, index) => {
-    const result = store.set(item.identifier, item);
+  let item = skus.forEach((identifier) => {
+    const result = store.set(identifier.identifier, identifier);
   });
   const arr = Array.from(map.values());
   let found;
   if (arr != null) {
-    found = arr.filter((item, index) => null != item);
+    found = arr.filter((arg0) => null != arg0);
   }
   let mapped = found;
   if (found != null) {
-    const item1 = found.forEach((item, index) => {
-      let offerIds;
-      if (item != null) {
-        offerIds = item.offerIds;
+    const item1 = found.forEach((offerIds) => {
+      offerIds = undefined;
+      if (offerIds != null) {
+        offerIds = offerIds.offerIds;
       }
       if (null != offerIds) {
-        item = offerIds.forEach((item, index) => set.add(item));
+        const item = offerIds.forEach((arg0) => set.add(arg0));
       }
     });
   }
   try {
     mapped = undefined;
     if (mapped != null) {
-      mapped = arr2.map(updateProduct);
+      mapped = mapped.map(updateProduct);
     }
     if (mapped != null) {
-      const item2 = arr3.forEach((item, index) => {
-        const result = store.set(item.identifier, item);
+      const item2 = mapped.forEach((identifier) => {
+        const result = store.set(identifier.identifier, identifier);
       });
     }
     if (GPlaySkusType.IN_APP === skusType) {
@@ -63,10 +64,9 @@ function skusLoaded(arg0) {
     } else if (tmp12.SUBSCRIPTION === skusType) {
       c13 = false;
     }
-    arr2 = mapped;
-    arr3 = mapped;
   } catch (tmp7) {
     let result = _createGatewayCheckoutContext.captureBillingException(tmp7);
+    const obj = _createGatewayCheckoutContext;
   }
 }
 GPlayConnectionState = GPlayConnectionState.GPlayConnectionState;
@@ -75,7 +75,7 @@ const CurrencyCodes = sum.CurrencyCodes;
 const DISCONNECTED = GPlayConnectionState.DISCONNECTED;
 let c6 = null;
 const map = new Map();
-const set = new Set();
+let set = new Set();
 const set1 = new Set();
 let c10 = null;
 let c11 = false;
@@ -156,13 +156,14 @@ const iAPStore = new IAPStore(dispatcherDefault, {
   GPLAY_VERIFICATION_END: function handleVerificationEnd(productId) {
     productId = productId.productId;
     if (set1.has(productId)) {
-      set1.delete(productId);
+      obj.delete(productId);
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
       error = new Error("Tried verifying product without initialization: " + productId);
       throw error;
     }
+    obj = set1;
   },
   GPLAY_UPDATE_PENDING_DOWNGRADE: function handleUpdatePendingDowngrade(pendingDowngrade) {
     pendingDowngrade = pendingDowngrade.pendingDowngrade;
@@ -174,6 +175,6 @@ const iAPStore = new IAPStore(dispatcherDefault, {
     countryCode = countryCode.countryCode;
   }
 });
-let result = obj132.fileFinishedImporting("stores/native/IAPStore.android.tsx");
+let result = set.fileFinishedImporting("stores/native/IAPStore.android.tsx");
 
 export default iAPStore;

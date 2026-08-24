@@ -7,10 +7,10 @@ import logger2 from "logger" /* 4583 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4584 */;
 import cloneDeepDefault from "cloneDeep" /* 4585 */;
 import flatRestDefault from "flatRest" /* 4614 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
 
-require = fn;
+require = arg1;
 ({ ConnectionStates: c4, DEFAULT_VOICE_BITRATE: c5, MediaTypes: closure_6, ResolutionTypes: error, MediaEngineContextTypes: closure_8, VIDEO_QUALITY_FRAMERATE: c9, SIMULCAST_HQ_QUALITY: c10 } = DesktopSources);
 let c11 = 0;
 onDefault;
@@ -54,7 +54,7 @@ class BaseConnection extends tmp3 {
       return null;
     };
     tmp4.context = global;
-    tmp4.userId = fn;
+    tmp4.userId = arg1;
     videoQualityManager = new require("WantsVideoQuality").VideoQualityManager(global, tmp4);
     tmp4.videoQualityManager = videoQualityManager;
     _default = new require("logger").default(tmp4, tmp4.videoQualityManager);
@@ -71,8 +71,8 @@ prototype["destroy"] = function destroy() {
   this.emit(BaseConnectionEvent.BaseConnectionEvent.Destroy, this);
   this.removeAllListeners();
 };
-prototype["getLocalMute"] = function getLocalMute(item) {
-  return this.localMutes[item] || false;
+prototype["getLocalMute"] = function getLocalMute(hasItem) {
+  return this.localMutes[hasItem] || false;
 };
 prototype["getLocalVideoDisabled"] = function getLocalVideoDisabled(arg0) {
   let flag = this.disabledLocalVideos[arg0];
@@ -160,7 +160,7 @@ prototype["setConnectionState"] = function setConnectionState(DISCONNECTED) {
 prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
   const self = this;
   const videoStreamParameters = this.videoStreamParameters;
-  let num = videoStreamParameters.findIndex((item, index) => 100 === item.quality);
+  let num = videoStreamParameters.findIndex((quality) => 100 === quality.quality);
   if (-1 === num) {
     num = 0;
   }
@@ -186,6 +186,9 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
   let tmp6 = quality;
   if (0 < self.videoStreamParameters.length) {
     do {
+      let tmp7 = num2;
+      let tmp8 = tmp3;
+      let tmp9 = tmp4;
       let tmp10 = tmp3;
       let tmp11 = tmp4;
       if (num2 !== num) {
@@ -219,8 +222,8 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
   tmp5.streamParameters = cloneDeepDefault(self.videoStreamParameters);
   const prop = self.videoStreamParameters;
   const items = [
-    ...prop.map((item, index) => {
-      let num = item.maxPixelCount;
+    ...prop.map((maxPixelCount) => {
+      let num = maxPixelCount.maxPixelCount;
       if (num == null) {
         num = 0;
       }
@@ -261,12 +264,12 @@ prototype["applyQualityConstraints"] = function applyQualityConstraints() {
 };
 prototype["initializeStreamParameters"] = function initializeStreamParameters(items) {
   const self = this;
-  const found = items.filter((item, index) => (item.type === constants.VIDEO || item.type === tmp.SCREEN) && typeof item.rid === "string");
-  this.videoStreamParameters = found.map((item, index) => {
+  const found = items.filter((type) => (type.type === constants.VIDEO || type.type === tmp.SCREEN) && typeof type.rid === "string");
+  this.videoStreamParameters = found.map((ssrc) => {
     const videoQualityManager = self.videoQualityManager;
-    const quality = videoQualityManager.getQuality(item.ssrc);
-    let obj = { type: item.type, active: item.active, rid: item.rid, ssrc: item.ssrc, rtxSsrc: item.rtxSsrc, quality: item.quality, maxBitrate: null, maxFrameRate: null, maxResolution: null };
-    let num = item.quality;
+    const quality = videoQualityManager.getQuality(ssrc.ssrc);
+    let obj = { type: ssrc.type, active: ssrc.active, rid: ssrc.rid, ssrc: ssrc.ssrc, rtxSsrc: ssrc.rtxSsrc, quality: ssrc.quality, maxBitrate: null, maxFrameRate: null, maxResolution: null };
+    let num = ssrc.quality;
     if (num == null) {
       num = 100;
     }
@@ -304,10 +307,10 @@ prototype["getLocalWant"] = function getLocalWant(arg0) {
   let num = arg0;
   closure_0 = arg0;
   const videoStreamParameters = this.videoStreamParameters;
-  let someResult = videoStreamParameters.some((item, index) => {
-    let tmp = item.ssrc === closure_0;
+  let someResult = videoStreamParameters.some((ssrc) => {
+    let tmp = ssrc.ssrc === closure_0;
     if (tmp) {
-      tmp = item.quality === closure_1_10;
+      tmp = ssrc.quality === closure_1_10;
     }
     return tmp;
   });
@@ -363,9 +366,10 @@ prototype["emitStats"] = function emitStats() {
   const self = this;
   return callback(function*() {
     closure_1 = tmp5;
-    closure_0 = yield self.getStats();
+    closure_0 = tmp2;
+    closure_0 = yield closure_1_0.getStats();
     if (null != closure_0) {
-      closure_0.emit(self(table[5]).BaseConnectionEvent.Stats, closure_0);
+      closure_0.emit(closure_1_0(table[5]).BaseConnectionEvent.Stats, closure_0);
     }
     return closure_0;
   })();
@@ -384,7 +388,7 @@ prototype["setSpatialAudioEnabled"] = function setSpatialAudioEnabled(arg0) {
 prototype["setCalcMaxBitrateFunc"] = function setCalcMaxBitrateFunc(calcMaxBitrateFunc) {
   this.calcMaxBitrateFunc = calcMaxBitrateFunc;
 };
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
 export const BaseConnectionEvent = require("BaseConnectionEvent").BaseConnectionEvent;

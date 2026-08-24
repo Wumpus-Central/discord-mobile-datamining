@@ -9,10 +9,12 @@ import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1191 */;
 import addGestureBreadcrumb from "addGestureBreadcrumb" /* 1193 */;
 
 for (const key10013 in require("module_1155")) {
+  let tmp2 = key10013;
   arg5[key10013] = require("module_1155")[key10013];
   continue;
 }
 for (const key10017 in require("TimeToInitialDisplay")) {
+  let tmp3 = key10017;
   arg5[key10017] = require("TimeToInitialDisplay")[key10017];
   continue;
 }

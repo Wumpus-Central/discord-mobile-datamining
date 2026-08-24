@@ -1,17 +1,15 @@
 // === Module 7443: set ===
 
 // Module 7443 (set)
-import obj132 from "obj132" /* 2 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import CodedLinkType from "CodedLinkType" /* 4363 */;
-import makeStorefrontSKUCodedLink from "makeStorefrontSKUCodedLink" /* 4379 */;
-import extractActivityBookmarkParams from "extractActivityBookmarkParams" /* 7444 */;
+import set from "set" /* 2 */;
 
 const items = [CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, CodedLinkType.CodedLinkType.APP_OAUTH2_LINK];
-const set = new Set(items);
+let set = new Set(items);
 const items1 = [CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK, CodedLinkType.CodedLinkType.APP_OAUTH2_LINK];
 const set1 = new Set(items1);
-let result = obj132.fileFinishedImporting("modules/coded_links/ApplicationCodedLink.tsx");
+let result = set.fileFinishedImporting("modules/coded_links/ApplicationCodedLink.tsx");
 
 export const APP_LINK_CODED_TYPES = set;
 export const isApplicationCodedLink = function isApplicationCodedLink(type) {
@@ -23,10 +21,10 @@ export const isApplicationCodedLinkMobileSupported = function isApplicationCoded
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
   if (CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
-    if (CodedLinkType.CodedLinkType.APP_OAUTH2_LINK !== type) {
-      if (CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-        if (CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          let tmpResult = makeStorefrontSKUCodedLink;
+    if (tmp(4363).CodedLinkType.APP_OAUTH2_LINK !== type) {
+      if (tmp(4363).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+        if (tmp(4363).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
+          let tmpResult = tmp(4379);
           const result = tmpResult.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
@@ -36,11 +34,11 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
             tmp5 = obj;
           }
           return tmp5;
-        } else if (CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK === type) {
+        } else if (tmp(4363).CodedLinkType.ACTIVITY_BOOKMARK === type) {
           obj = { type: null, applicationId: null, params: null };
           obj[0] = type;
           obj[1] = code;
-          tmpResult = extractActivityBookmarkParams;
+          tmpResult = tmp(7444);
           obj[2] = tmpResult.extractActivityBookmarkParams(url);
           return obj;
         }

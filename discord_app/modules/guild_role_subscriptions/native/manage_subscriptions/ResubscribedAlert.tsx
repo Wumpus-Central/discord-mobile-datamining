@@ -10,19 +10,20 @@ import componentDidMountDefault from "componentDidMount" /* 4763 */;
 import registerAssetDefault from "registerAsset" /* 14565 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+createCacheKey = { container: null, body: null, centerText: null, headerImage: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { width: 87, height: 87 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ResubscribedAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ResubscribedAlert.tsx");
 
 export default function ResubscribedAlert(onClose) {
   const tmp = callback3();
@@ -31,6 +32,7 @@ export default function ResubscribedAlert(onClose) {
   obj[0] = intl.string(getSystemLocale.t["NX+WJN"]);
   obj[1] = onClose.onClose;
   obj[2] = tmp.container;
+  obj = { style: tmp.body, children: null };
   obj = { source: registerAssetDefault, style: tmp.headerImage };
   const items = [callback(closure_4, obj), callback(Button.Spacer, { size: 27 }), , , ];
   obj1 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };

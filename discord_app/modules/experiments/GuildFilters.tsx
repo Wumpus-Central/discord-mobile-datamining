@@ -1,25 +1,23 @@
 // === Module 4293: isInRange ===
 
 // Module 4293 (isInRange)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
-import obj132Default from "obj132" /* 687 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import getGuild from "getGuild" /* 4294 */;
-import handleInviteData from "handleInviteData" /* 4295 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "getGuild" /* 4294 */;
+import closure_4 from "handleInviteData" /* 4295 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import importDefaultResult from "MurmurHashV3" /* 1217 */;
 
-function isInRange(memberCount, closure_0, closure_1) {
+function isInRange(arg0, arg1, arg2) {
   try {
-    const obj = IntegerDefault(memberCount);
+    const obj = IntegerDefault(arg0);
     let tmp6 = null;
-    if (null != closure_0) {
-      tmp6 = IntegerDefault(closure_0);
+    if (null != arg1) {
+      tmp6 = tmp3(14)(arg1);
     }
     let tmp9 = null;
-    if (null != closure_1) {
-      tmp9 = IntegerDefault(closure_1);
+    if (null != arg2) {
+      tmp9 = tmp3(14)(arg2);
     }
     let tmp12 = null == tmp6;
     if (!tmp12) {
@@ -41,13 +39,16 @@ function getRangeData(arg0) {
   let min;
   let max;
   while (tmp3 !== undefined) {
+    let tmp5 = callback;
     let tmp6 = callback(tmp4, 2);
     [tmp7, tmp8] = tmp6;
+    let tmp9 = importDefault;
+    let tmp10 = dependencyMap;
     let obj = importDefaultResult;
     if (obj.v3("min_id") === tmp7) {
       min = tmp8;
     } else {
-      let tmp9Result = importDefaultResult;
+      let tmp9Result = tmp9(1217);
       if (tmp9Result.v3("max_id") === tmp7) {
         max = tmp8;
       }
@@ -60,10 +61,14 @@ let obj = {};
 obj[importDefaultResult.v3("guild_ids")] = (arg0) => {
   importDefault = [];
   while (tmp !== undefined) {
+    let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     let tmp5 = tmp4[1];
+    let tmp6 = importDefault;
+    let tmp7 = dependencyMap;
     let obj = importDefaultResult;
     if (tmp4[0] === obj.v3("guild_ids")) {
+      let tmp8 = tmp5;
       importDefault = tmp5;
     }
     continue;
@@ -72,12 +77,15 @@ obj[importDefaultResult.v3("guild_ids")] = (arg0) => {
 };
 obj[importDefaultResult.v3("guild_id_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
-  return (memberCount) => isInRange(memberCount, closure_0, closure_1);
+  return (arg0) => closure_1_6(arg0, closure_0, closure_1);
 };
 const importDefaultResult1 = importDefaultResult;
 obj[importDefaultResult.v3("guild_age_range_days")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
-  return (arg0) => isInRange(Math.floor(DISCORD_EPOCHDefault.age(arg0) / obj132Default.Millis.DAY), closure_0, closure_1);
+  return (arg0) => {
+    const obj = closure_1_0(closure_1_1[6]);
+    return closure_1_6(Math.floor(closure_1_0(closure_1_1[6]).age(arg0) / closure_1_0(closure_1_1[7]).Millis.DAY), closure_0, closure_1);
+  };
 };
 const importDefaultResult2 = importDefaultResult;
 obj[importDefaultResult.v3("guild_member_count_range")] = (arg0) => {
@@ -86,7 +94,7 @@ obj[importDefaultResult.v3("guild_member_count_range")] = (arg0) => {
     const memberCount = closure_1_4.getMemberCount(arg0);
     let tmp2 = null != memberCount;
     if (tmp2) {
-      tmp2 = isInRange(memberCount, closure_0, closure_1);
+      tmp2 = closure_1_6(memberCount, closure_0, closure_1);
     }
     return tmp2;
   };
@@ -101,9 +109,9 @@ obj[importDefaultResult.v3("guild_has_feature")] = (arg0) => {
     }
     let someResult = null != guild;
     if (someResult) {
-      someResult = guild.some((item, index) => {
+      someResult = guild.some((arg0) => {
         const features = guild.features;
-        return features.has(item);
+        return features.has(arg0);
       });
     }
     return someResult;
@@ -119,7 +127,7 @@ obj[importDefaultResult.v3("guild_hub_types")] = (arg0) => {
     }
     let someResult = null != guild && typeof guild.hubType === "number";
     if (someResult) {
-      someResult = guild.some((item, index) => guild.hubType === item);
+      someResult = guild.some((arg0) => guild.hubType === arg0);
     }
     return someResult;
   };
@@ -142,17 +150,20 @@ obj[importDefaultResult.v3("guild_has_vanity_url")] = (arg0) => {
 const importDefaultResult6 = importDefaultResult;
 obj[importDefaultResult.v3("guild_in_range_by_hash")] = (arg0) => {
   while (tmp !== undefined) {
+    let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     [tmp5, tmp6] = tmp4;
     let tmp7 = importDefault;
     let tmp8 = num;
     let obj = importDefault(num[5]);
     if (obj.v3("hash_key") === tmp5) {
+      let tmp10 = tmp6;
       importDefault = tmp6;
     } else {
       let tmp7Result = tmp7(tmp8[5]);
       if (tmp7Result.v3("target") === tmp5) {
         let _parseInt = parseInt;
+        let tmp9 = tmp6;
         num = parseInt(tmp6);
         if (num == null) {
           num = 0;
@@ -167,6 +178,6 @@ obj[importDefaultResult.v3("guild_in_range_by_hash")] = (arg0) => {
   };
 };
 const importDefaultResult7 = importDefaultResult;
-const result = require("obj132").fileFinishedImporting("modules/experiments/GuildFilters.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/GuildFilters.tsx");
 
 export const GUILD_FILTERS = obj;

@@ -3,7 +3,7 @@
 // Module 1059 (extractNetworkProtocol)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 import WINDOW from "WINDOW" /* 1039 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -16,28 +16,38 @@ export const extractNetworkProtocol = function extractNetworkProtocol(nextHopPro
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("/" === nextResult) {
-      let tmp9 = _slicedToArray(nextHopProtocol.split("/"), 2);
+      let tmp8 = callback;
+      let num = 2;
+      let tmp9 = callback(nextHopProtocol.split("/"), 2);
       [str, str2] = tmp9;
+      let tmp10 = iter;
       iter.return();
       break;
     } else {
       let _isNaN = isNaN;
       let _Number = Number;
+      let tmp3 = nextResult;
+      let tmp4 = str3;
       if (isNaN(Number(tmp2))) {
+        let tmp7 = nextResult;
         str3 = `${tmp2}`;
         continue;
       } else {
         let str4 = "http";
+        let str5 = "h";
         if ("h" !== `${tmp2}`) {
           str4 = str3;
         }
         str = str4;
+        let tmp5 = str3;
         str2 = nextHopProtocol.split(str3)[1];
+        let tmp6 = iter;
         iter.return();
         break;
       }
       break;
     }
+    let tmp11 = str3;
     if (str3 === nextHopProtocol) {
       str = str3;
     }
@@ -116,9 +126,10 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
       activeSpan.updateStartTime(sum);
     }
     const obj2 = _require(817);
+    const tmp6 = _require;
     return _require(817).withActiveSpan(activeSpan, () => {
-      sum(sum1[1]);
-      const obj = { startTime: sum };
+      let obj = sum(sum1[1]);
+      obj = { startTime: sum };
       const merged = Object.assign(closure_2);
       const startInactiveSpanResult = obj.startInactiveSpan(obj);
       if (startInactiveSpanResult) {
@@ -139,11 +150,11 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
     if (integrationByName != null) {
       const replayId = integrationByName.getReplayId();
     }
-    let tmpResult = registerSpanErrorInstrumentation;
+    let tmpResult = tmp(817);
     const currentScope = tmpResult.getCurrentScope();
     const user = currentScope.getUser();
     if (undefined !== user) {
-      const tmp8 = user.email || user.id || user.ip_address;
+      const tmp9 = user.email || user.id || user.ip_address;
     }
     try {
       const profile_id = currentScope.getScopeData().contexts.profile.profile_id;
@@ -154,7 +165,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
       obj[3] = profile_id;
       obj[4] = replayId;
       obj[5] = transaction;
-      const _navigator = WINDOW.WINDOW.navigator;
+      const _navigator = tmp(1039).WINDOW.navigator;
       let userAgent;
       if (_navigator != null) {
         userAgent = _navigator.userAgent;
@@ -166,7 +177,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
       }
       obj[7] = str2;
       const merged = Object.assign(attributes);
-      tmpResult = registerSpanErrorInstrumentation;
+      tmpResult = tmp(817);
       obj = { name: null, attributes: null, startTime: null, experimental: null };
       obj[0] = name;
       obj[1] = obj;

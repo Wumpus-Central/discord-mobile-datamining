@@ -1,18 +1,15 @@
 // === Module 9628: useFetchClaimableGiftingPromotionRewardSkuIds ===
 
 // Module 9628 (useFetchClaimableGiftingPromotionRewardSkuIds)
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import MarketingComponentType from "MarketingComponentType" /* 7931 */;
 import apexExperiment from "apexExperiment" /* 9629 */;
 import apexExperiment2 from "apexExperiment" /* 9630 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createEmptyPromotionsByType" /* 7628 */;
 import { SubscriptionPlans } from "GuildFeatures" /* 1924 */;
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchClaimableGiftingPromotionRewardSkuIds() {
   const tmp = purchases(hasPreviouslyFetched.useState(), 2);
@@ -31,13 +28,14 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
           if (null == fetchPurchasesError) {
-            let found = stateFromStoresArray.filter((item, index) => null == closure_2.get(item));
+            let found = arr.filter((arg0) => null == closure_2.get(arg0));
           } else {
             found = [];
           }
           callback(found);
           tmp.current = true;
         }
+        arr = stateFromStoresArray;
       }
     }
   }, items1);
@@ -45,7 +43,7 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
 };
 export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   const map = new Map();
-  const item = arr.forEach((item, index) => map.set(item.skuId, item.assetId));
+  const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
   return map;
 };
 export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSkuStep(id) {
@@ -132,7 +130,7 @@ export const createGradientStyle = function createGradientStyle(gradient) {
       result = (angle + 180) % 360;
     }
     if (null != colorStops) {
-      const mapped = gradient.map((item, index) => "" + item + " " + colorStops[index] + "%");
+      const mapped = gradient.map((arg0, arg1) => "" + arg0 + " " + colorStops[arg1] + "%");
       let joined = mapped.join(", ");
     } else {
       joined = gradient.join(", ");
@@ -180,26 +178,27 @@ export const combinePromotionStyles = function combinePromotionStyles(background
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = apexExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == marketingComponentByType.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (null == marketingComponentByType.getMarketingComponentByType(tmp(7931).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;
     } else {
-      const giftPromotion = marketingComponentByType.getGiftPromotion();
+      const giftPromotion = obj.getGiftPromotion();
       let id;
       if (giftPromotion != null) {
         id = giftPromotion.id;
       }
       let tmp5 = null != id;
       if (tmp5) {
-        let tmpResult = UNSAFE_isDismissibleContentDismissed;
-        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(DismissibleContent.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
+        let tmpResult = tmp(4196);
+        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1377).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
         if (isDismissed) {
-          tmpResult = UNSAFE_isDismissibleContentDismissed;
-          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(DismissibleContent.DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
+          tmpResult = tmp(4196);
+          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1377).DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
         }
         tmp5 = isDismissed;
       }
       return tmp5;
     }
+    obj = marketingComponentByType;
   } else {
     return false;
   }

@@ -1,7 +1,7 @@
 // === Module 13242: apexExperiment ===
 
 // Module 13242 (apexExperiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 import createExperiment from "createExperiment" /* 4286 */;
@@ -13,7 +13,7 @@ const experiment = createExperiment.createExperiment(obj);
 obj = { 1: null };
 obj[1] = { enabled: true };
 const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2026-07-hotwheels-clickable-game-icon", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = obj132.fileFinishedImporting("modules/content_inventory/ContentInventoryExperiments.tsx");
+const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryExperiments.tsx");
 
 export const MemberlistRankerExperiment = apexExperiment;
 export const HotwheelsActivityFeedNvidiaExperiment = experiment;

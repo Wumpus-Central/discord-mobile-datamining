@@ -1,7 +1,7 @@
 // === Module 10881: items ===
 
 // Module 10881 (items)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import tDefault from "t" /* 3975 */;
 
@@ -68,10 +68,10 @@ const items = [
       } else {
         num3 = 8;
         if (1 === dayResult) {
-          const obj2 = tDefault();
-          tDefault().startOf("day").add(9, "hours");
+          const obj2 = tmp(3975)();
+          const startOfResult = tmp(3975)().startOf("day");
           num3 = 8;
-          const startOfResult = tDefault().startOf("day");
+          const addResult = tmp(3975)().startOf("day").add(9, "hours");
         }
       }
       const obj = tDefault();
@@ -86,6 +86,6 @@ const items = [
     }
   }
 ];
-const result = obj132.fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersTypes.tsx");
+const result = set.fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersTypes.tsx");
 
 export const MESSAGE_REMINDER_DURATION_ITEMS = items;

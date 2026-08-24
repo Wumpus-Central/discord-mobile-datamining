@@ -14,6 +14,7 @@ arg5.default = function pointsDiffer(arg0, arg1) {
   let tmp = point !== point2;
   if (tmp) {
     tmp = point.x !== point2.x || point.y !== point2.y;
+    const tmp2 = point.x !== point2.x || point.y !== point2.y;
   }
   return tmp;
 };

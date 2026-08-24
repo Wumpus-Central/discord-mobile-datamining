@@ -3,11 +3,11 @@
 // Module 6620 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6610 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import noop from "noop" /* 19 */;
+import closure_5 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const FeDropShadow = importDefault;
@@ -62,9 +62,10 @@ let obj = {
     if (undefined !== _in) {
       str = _in;
     }
+    let obj = { children: null };
     ({ dx, dy, result } = props);
     const items = [callback3(FeDropShadow(6621), { in: str, stdDeviation: props.stdDeviation }), callback3(FeDropShadow(6623), { dx, dy, result: "offsetblur" }), , , ];
-    let obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
+    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
     items[2] = callback3(FeDropShadow(6625), obj);
     items[3] = callback3(FeDropShadow(6614), { in2: "offsetblur", operator: "in" });
     obj = { result, children: null };

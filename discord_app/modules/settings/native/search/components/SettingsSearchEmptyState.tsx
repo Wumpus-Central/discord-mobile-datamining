@@ -10,7 +10,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { paddingTop: 24, justifyContent: "center", alignItems: "center" }, textContainer: { marginTop: 24 } });
 const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
@@ -20,8 +20,10 @@ const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
     const intl = callback(1236).intl;
     AccessibilityAnnouncer.announce(intl.string(callback(1236).t.zihbmv), "polite");
   }, []);
+  let obj = { style: tmp.container, children: null };
   const items = [callback(getNoResultsAltSource.NoResultsAlt, { resizeMode: "contain" }), ];
-  const obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  obj = { style: tmp.textContainer, align: "center", justify: "center", children: null };
+  obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.zihbmv);
   const items1 = [callback(Text.Text, obj), ];
@@ -34,6 +36,6 @@ const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");
+const result = require("set").fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");
 
 export default memoResult;

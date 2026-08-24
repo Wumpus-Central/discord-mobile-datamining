@@ -1,9 +1,9 @@
 // === Module 14073: canResetThemeColors ===
 
 // Module 14073 (canResetThemeColors)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");
 
 export const canResetThemeColors = function canResetThemeColors(pendingThemeColors, themeColors) {
   if (undefined === pendingThemeColors) {

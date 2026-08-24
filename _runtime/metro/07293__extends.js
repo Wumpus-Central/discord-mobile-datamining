@@ -9,7 +9,10 @@ function _extends() {
     fn = (arg0) => {
       for (let num = 1; num < arguments.length; num = num + 1) {
         let tmp = arguments[num];
+        let tmp2 = tmp;
+        let tmp3 = num;
         for (const key10011 in tmp) {
+          let tmp5 = key10011;
           let hasOwnProperty = {}.hasOwnProperty;
           let call = hasOwnProperty.call;
           if (typeof call === "unknown") {

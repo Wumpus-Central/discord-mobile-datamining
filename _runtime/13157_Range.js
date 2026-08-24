@@ -10,14 +10,14 @@ export default (arr) => {
   try {
     let tmp9 = new _require(13152)(arg1, arg2);
     closure_3 = tmp9;
-    const item = arr.forEach((item, index) => {
-      if (regex.test(item)) {
+    const item = arr.forEach((arg0) => {
+      if (regex.test(arg0)) {
         let tmp = closure_1;
         if (closure_1) {
-          tmp = 1 !== _null2.compare(item);
+          tmp = 1 !== _null2.compare(arg0);
         }
         if (!tmp) {
-          closure_1 = item;
+          closure_1 = arg0;
           const tmp9 = new callback(_null[1])(closure_1, callback);
           _null2 = tmp9;
         }

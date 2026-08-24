@@ -1,10 +1,10 @@
 // === Module 10409: EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS ===
 
 // Module 10409 (EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 let obj = { EARN: 0.25, SPEND: 0.3 };
-let result = obj132.fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
+let result = set.fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
 
 export const EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS = 3000;
 export const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = obj;

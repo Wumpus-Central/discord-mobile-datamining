@@ -5,10 +5,11 @@ import extractId from "extractId" /* 513 */;
 import initialize from "initialize" /* 589 */;
 import loggerDefault from "logger" /* 1369 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "initialize" /* 1212 */;
 
-require = fn;
+require = arg1;
 function getUnitId(arg0, guildId) {
   if ("guild" === arg0) {
     return guildId.guildId;
@@ -35,18 +36,19 @@ function useUnitId(arg0, guildId) {
   } else if ("user" === arg0) {
     return tmp4;
   } else if ("installation" === arg0) {
-    let tmpResult = extractId;
+    let tmpResult = tmp(513);
     let str3 = tmpResult.maybeExtractId(tmp5);
     if (str3 == null) {
       str3 = "";
     }
     return str3;
   } else {
-    tmpResult = isDiscordFrontendDevelopment;
+    tmpResult = tmp(1370);
     tmpResult.assertNever(arg0);
   }
+  const obj = initialize;
 }
-const result = require("obj132").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
 
 export default function createApexExperiment(ApexExperiment) {
   return loggerDefault(ApexExperiment, closure_5, getUnitId, useUnitId);

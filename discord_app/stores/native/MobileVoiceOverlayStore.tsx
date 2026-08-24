@@ -1,8 +1,8 @@
 // === Module 12548: getUserAgnosticState ===
 
 // Module 12548 (getUserAgnosticState)
-import obj132 from "obj132" /* 2 */;
-import obj1322 from "obj132" /* 500 */;
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
@@ -28,7 +28,7 @@ prototype["initialize"] = function initialize(enabled) {
   }
 };
 prototype["getEnabled"] = function getEnabled() {
-  let isAndroidResult = obj1322.isAndroid();
+  let isAndroidResult = set2.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !isMetaQuest.isMetaQuest();
     const tmpResult = isMetaQuest;
@@ -42,16 +42,17 @@ MobileVoiceOverlayStore.displayName = "MobileVoiceOverlayStore";
 MobileVoiceOverlayStore.persistKey = "MobileVoiceOverlayStore";
 const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(dispatcherDefault, {
   MOBILE_VOICE_OVERLAY_STATE_CHANGED: function handleMobileVoiceOverlayStateChanged(enabled) {
-    const obj = { enabled: enabled.enabled };
+    let obj = expandEventPropertiesDefault;
+    obj = { enabled: enabled.enabled };
     obj.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, obj);
     enabled = enabled.enabled;
   }
 });
-const result = obj132.fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
+const result = set.fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
 
 export default mobileVoiceOverlayStore;
 export const isMobileOverlaySupported = function isMobileOverlaySupported() {
-  let isAndroidResult = obj1322.isAndroid();
+  let isAndroidResult = set2.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !isMetaQuest.isMetaQuest();
     const tmpResult = isMetaQuest;

@@ -1,12 +1,12 @@
 // === Module 8417: maybeFetchUserProfile ===
 
 // Module 8417 (maybeFetchUserProfile)
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "createUserWidgetFromServer" /* 5365 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/user_profile/maybeFetchUserProfile.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/user_profile/maybeFetchUserProfile.tsx");
 
 export default function maybeFetchUserProfile(id, closure_0, guildMember) {
   const _require = id;
@@ -41,8 +41,8 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
   } else if (fetchingProfile.isFetchingProfile(id, guildId)) {
     return Promise.resolve();
   } else {
-    const userProfile = fetchingProfile.getUserProfile(id);
-    const guildMemberProfile = fetchingProfile.getGuildMemberProfile(id, guildId);
+    const userProfile = obj10.getUserProfile(id);
+    const guildMemberProfile = obj10.getGuildMemberProfile(id, guildId);
     let tmp7 = userProfile;
     if (null != guildId) {
       tmp7 = guildMemberProfile;
@@ -78,19 +78,22 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
         }
       }
     }
-    const mutualGuilds = fetchingProfile.getMutualGuilds(id);
-    const mutualFriends = fetchingProfile.getMutualFriends(id);
+    const mutualGuilds = obj10.getMutualGuilds(id);
+    const mutualFriends = obj10.getMutualFriends(id);
     const tmp17 = null == guildId ? null == userProfile : null == guildMemberProfile;
     let tmp18 = !tmp17;
     if (!tmp17) {
       if (!tmp12) {
         tmp12 = null == mutualGuilds && withMutualGuilds;
+        const tmp19 = null == mutualGuilds && withMutualGuilds;
       }
       if (!tmp12) {
         tmp12 = null == mutualFriends && flag2;
+        const tmp20 = null == mutualFriends && flag2;
       }
       if (!tmp12) {
         tmp12 = null == tmp16 && flag;
+        const tmp21 = null == tmp16 && flag;
       }
       tmp18 = tmp12;
     }
@@ -151,8 +154,8 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
     obj[7] = tmp34;
     if (flag3) {
       obj(709).wait(() => {
-        obj = id(dependencyMap[7]);
-        return obj.fetchProfile(id, obj, obj(dependencyMap[8]));
+        obj = id(closure_1_2[7]);
+        return obj.fetchProfile(id, obj, obj(closure_1_2[8]));
       });
       return Promise.resolve();
     } else {

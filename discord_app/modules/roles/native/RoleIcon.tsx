@@ -6,9 +6,9 @@ import Button from "Button" /* 1297 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
 export default function RoleIcon(arg0) {
   ({ source, unicodeEmoji, size } = arg0);

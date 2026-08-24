@@ -1,7 +1,7 @@
 // === Module 1304: CHANNEL_SIDEBAR_WIDTH ===
 
 // Module 1304 (CHANNEL_SIDEBAR_WIDTH)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage3 from "Storage" /* 595 */;
@@ -74,7 +74,7 @@ Object.defineProperty(prototype, "lowQualityImageMode", {
   set: undefined
 });
 Object.defineProperty(prototype, "videoUploadQuality", {
-  get: function videoUploadQuality(dataSavingMode) {
+  get: function videoUploadQuality(arg0) {
     let videoUploadQuality = closure_12.videoUploadQuality;
     if (videoUploadQuality == null) {
       videoUploadQuality = STANDARD;
@@ -364,7 +364,7 @@ obj = {
   }
 };
 const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(dispatcherDefault, obj);
-const result = obj132.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;
 export const VideoQualitySettings = obj;

@@ -2,15 +2,15 @@
 
 // Module 16704 (handleVoiceStateUpdates)
 import initializeDefault from "initialize" /* 5038 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "reinjectEphemerals" /* 4994 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "handleConnectionOpen" /* 1979 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { MessageFlags } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 initializeDefault;
 class StageChannelRequestToSpeakMessageManager extends tmp2 {
   constructor() {
@@ -21,19 +21,19 @@ class StageChannelRequestToSpeakMessageManager extends tmp2 {
 }
 StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceStates) {
   voiceStates = voiceStates.voiceStates;
-  const item = voiceStates.forEach((item, index) => {
-    ({ channelId, userId } = item);
-    const requestToSpeakTimestamp = item.requestToSpeakTimestamp;
+  const item = voiceStates.forEach((requestToSpeakTimestamp) => {
+    ({ channelId, userId } = requestToSpeakTimestamp);
+    requestToSpeakTimestamp = requestToSpeakTimestamp.requestToSpeakTimestamp;
     if (voiceChannelId.getVoiceChannelId() === channelId) {
-      if (item.suppress) {
+      if (requestToSpeakTimestamp.suppress) {
         if (null != channelId) {
           if (userId !== id.getId()) {
             if (closure_6.can(userId(table[8]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(table[9]).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = userId(table[9]);
+                  const result = tmp11(tmp12[9]).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = tmp11(tmp12[9]);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -48,11 +48,12 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  callback(table[11]).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = callback(table[11]);
+                  callback(tmp12[11]).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = callback(tmp12[11]);
                 }
               }
             }
+            tmp11 = userId;
           }
         }
       }
@@ -60,6 +61,6 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
   });
 };
 const stageChannelRequestToSpeakMessageManager = new StageChannelRequestToSpeakMessageManager();
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx");
 
 export default stageChannelRequestToSpeakMessageManager;

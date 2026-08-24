@@ -10,13 +10,13 @@ import ChangePhoneReason from "ChangePhoneReason" /* 8629 */;
 import _modDef14101 from "module_14101" /* 14101 */;
 import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14151 */;
 import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14153 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { UserFlags } from "ME" /* 676 */;
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
 import apply from "apply" /* 12 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
+require = arg1;
 let closure_6 = apply.debounce(function toggleSMS(user) {
   user = user.user;
   if (user.mfaSMSEnabled) {
@@ -39,8 +39,9 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
         const str = intl.string(getSystemLocale.t.DZQe23);
         obj = { title: null };
         obj[0] = formatted2;
-        _modDef4656.confirm(obj).then((result) => {
-          if (result) {
+        const obj3 = _modDef4656;
+        _modDef4656.confirm(obj).then((arg0) => {
+          if (arg0) {
             callback(table[7]).enableSMS();
             const obj = callback(table[7]);
           }
@@ -105,6 +106,6 @@ apply = {
   usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled
 };
 apply = createToggle.createToggle(apply);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");
 
 export default apply;

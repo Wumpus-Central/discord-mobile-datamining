@@ -3,21 +3,22 @@
 // Module 5276 (guildHasCommunity)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import SidebarType from "SidebarType" /* 4972 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "comparator" /* 1980 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1980 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "generateOldThreadCutoff" /* 4772 */;
+import closure_11 from "updateUserGuildSettingsInternal" /* 5043 */;
 import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function guildHasCommunity(nextResult) {
   const guild = store.getGuild(nextResult);
   let hasItem;
@@ -33,8 +34,11 @@ function seedCommunityBaseline() {
   const iter = guildIds[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp5 = guildHasCommunity;
     let tmp4 = nextResult;
     if (guildHasCommunity(nextResult)) {
+      let tmp6 = set1;
+      let tmp7 = nextResult;
       let addResult = set1.add(tmp4);
     }
     continue;
@@ -69,17 +73,18 @@ function maybeAckViewedChannel(guildId, channelId) {
   }
   if (tmp) {
     dispatcherDefault.wait(() => {
-      channelId(dependencyMap[12]);
-      const obj = { object: closure_1_12.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: closure_1_13.ACK_AUTOMATIC };
-      return obj.ack(channelId, obj, true, true, DISCORD_EPOCHDefault.atPreviousMillisecond(channelId));
+      let obj = channelId(closure_1_2[12]);
+      obj = { object: closure_1_12.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: closure_1_13.ACK_AUTOMATIC };
+      return obj.ack(channelId, obj, true, true, closure_1_1(closure_1_2[13]).atPreviousMillisecond(channelId));
     });
+    const obj3 = dispatcherDefault;
   }
 }
 function initializeNewChannels(guildId) {
   closure_0 = guildId;
   if (null == dependencyMap[guildId]) {
     let joinedAt;
-    const mapped = channels.getChannels(guildId)[closure_7].map((item, index) => item.channel.id);
+    const mapped = channels.getChannels(guildId)[closure_7].map((channel) => channel.channel.id);
     member = member.getMember(guildId, id.getId());
     if (member != null) {
       joinedAt = member.joinedAt;
@@ -87,19 +92,19 @@ function initializeNewChannels(guildId) {
     if (null != joinedAt) {
       const _Set2 = Set;
       set = new Set();
-      dependencyMap[guildId] = set;
+      tmp[guildId] = set;
       const _Date2 = Date;
       const date = new Date(joinedAt);
       const time = date.getTime();
       if (0 !== mapped.length) {
         const _Set = Set;
-        set1 = new Set(mapped.filter((item, index) => {
-          const extractTimestampResult = callback(dependencyMap[13]).extractTimestamp(item);
-          let tmp4 = null == closure_1_10.getTrackedAckMessageId(item);
+        set1 = new Set(mapped.filter((channelId) => {
+          const extractTimestampResult = callback(closure_1_2[13]).extractTimestamp(channelId);
+          let tmp4 = null == closure_1_10.getTrackedAckMessageId(channelId);
           if (tmp4) {
             const _Date = Date;
             const timestamp = Date.now();
-            tmp4 = extractTimestampResult > timestamp - callback(dependencyMap[9]).Millis.WEEK;
+            tmp4 = extractTimestampResult > timestamp - callback(closure_1_2[9]).Millis.WEEK;
           }
           if (tmp4) {
             tmp4 = extractTimestampResult > closure_1_3.getGuildRecentsDismissedAt(closure_0);
@@ -108,11 +113,11 @@ function initializeNewChannels(guildId) {
             tmp4 = extractTimestampResult > callback;
           }
           if (tmp4) {
-            tmp4 = !closure_1_11.isChannelOrParentOptedIn(closure_0, item);
+            tmp4 = !closure_1_11.isChannelOrParentOptedIn(closure_0, channelId);
           }
           return tmp4;
         }));
-        dependencyMap[guildId] = set1;
+        tmp[guildId] = set1;
         let _Date = Date;
         closure_17[guildId] = Date.now();
       }
@@ -122,10 +127,10 @@ function initializeNewChannels(guildId) {
 }
 function pruneNewChannels() {
   const keys = DISCORD_EPOCHDefault.keys(closure_16);
-  const item = keys.forEach((item, index) => {
-    closure_0 = item;
-    const items = [...closure_16[item]];
-    table[item] = new Set(items.filter((item, index) => !closure_1_11.isChannelOrParentOptedIn(closure_0, item)));
+  const item = keys.forEach((arg0) => {
+    closure_0 = arg0;
+    const items = [...closure_16[arg0]];
+    table[arg0] = new Set(items.filter((channelId) => !closure_1_11.isChannelOrParentOptedIn(closure_0, channelId)));
   });
 }
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = ME);
@@ -200,7 +205,7 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
     if (null == dependencyMap[guildId]) {
       return false;
     } else {
-      const item = channelIds.forEach((item, index) => closure_1_16[guildId].delete(item));
+      const item = channelIds.forEach((arg0) => closure_1_16[guildId].delete(arg0));
       if (0 === tmp3[guildId].size) {
         delete tmp[tmp2];
       }
@@ -218,7 +223,7 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
       if (!tmp2) {
         const _Date = Date;
         const timestamp = Date.now();
-        tmp2 = table[guildId] < timestamp - obj132Default.Millis.HOUR;
+        tmp2 = table[guildId] < timestamp - setDefault.Millis.HOUR;
       }
       let flag = false;
       if (tmp2) {
@@ -276,7 +281,7 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
     }
     if (true === hasItem) {
       if (!set1.has(guild.id)) {
-        set1.add(guild.id);
+        obj2.add(guild.id);
         closure_0 = tmp7;
         const guild1 = store.getGuild(guild.id);
         const _Set = Set;
@@ -284,13 +289,13 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
         if (tmp14) {
           const items = [, ];
           ({ rulesChannelId: arr[0], publicUpdatesChannelId: arr[1] } = guild1);
-          const item = items.forEach((item, index) => {
-            let hasItem = null != item;
+          const item = items.forEach((arg0) => {
+            let hasItem = null != arg0;
             if (hasItem) {
-              hasItem = set.has(item);
+              hasItem = set.has(arg0);
             }
             if (hasItem) {
-              set.add(item);
+              set.add(arg0);
             }
           });
         }
@@ -299,6 +304,7 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
         closure_17[guild.id] = Date.now();
         return true;
       }
+      obj2 = set1;
     }
     if (true !== hasItem) {
       set1.delete(guild.id);
@@ -319,9 +325,10 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
       }
       dependencyMap[channel.guild_id] = set;
       dependencyMap[channel.guild_id].add(channel.id);
+      const obj = dependencyMap[channel.guild_id];
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
+const result = set.fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
 
 export default newChannelsStore;

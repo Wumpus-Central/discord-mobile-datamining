@@ -59,12 +59,12 @@ const items = [
   },
   {
     key: "getUint16",
-    value: function getUint16(c5, arg1) {
+    value: function getUint16(sum, arg1) {
       const buffer = this.buffer;
       if (arg1) {
-        let uInt16LE = buffer.readUInt16LE(c5);
+        let uInt16LE = buffer.readUInt16LE(sum);
       } else {
-        uInt16LE = buffer.readUInt16BE(c5);
+        uInt16LE = buffer.readUInt16BE(sum);
       }
       return uInt16LE;
     }

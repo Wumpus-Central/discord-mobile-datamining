@@ -2,19 +2,20 @@
 
 // Module 4923 (getDataView)
 import getDataView from "getDataView" /* 4910 */;
-import _modDef4913 from "module_4913" /* 4913 */;
 
 require = arg1;
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
   isWebpFile(dataView) {
     let tmp = dataView;
     if (tmp) {
       tmp = getDataView.getStringFromDataView(dataView, 0, 4) === "RIFF";
+      const obj = getDataView;
     }
     if (tmp) {
       tmp = getDataView.getStringFromDataView(dataView, 8, 4) === "WEBP";
+      const obj2 = getDataView;
     }
     return tmp;
   },
@@ -28,13 +29,21 @@ arg5.default = {
     let tiffHeaderOffset;
     if (20 < byteLength.byteLength) {
       while (true) {
+        let tmp10 = dependencyMap;
+        let tmp9 = require;
         let obj = getDataView;
         let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
         let uint32 = byteLength.getUint32(num + 4, true);
+        let tmp13 = module;
         let flag3 = flag;
-        if (_modDef4913.USE_EXIF) {
+        let tmp14 = num;
+        let tmp15 = tmp;
+        let tmp16 = tmp2;
+        let tmp17 = tmp3;
+        let tmp18 = tmp4;
+        if (module(4913).USE_EXIF) {
           if ("EXIF" === stringFromDataView) {
-            let tmp9Result = getDataView;
+            let tmp9Result = tmp9(4910);
             let sum = num + 8;
             let sum1 = sum;
             if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
@@ -55,7 +64,7 @@ arg5.default = {
             tmp = sum4;
             tmp2 = tmp20;
             tmp3 = tmp21;
-            let tmp4 = tmp22;
+            tmp4 = tmp22;
             hasAppMarkers = flag3;
             vp8xChunkOffset = sum4;
             iccChunks = tmp20;
@@ -66,7 +75,7 @@ arg5.default = {
             }
           }
         }
-        if (_modDef4913.USE_XMP) {
+        if (tmp13(4913).USE_XMP) {
           if ("XMP " === stringFromDataView) {
             obj = { dataOffset: null, length: null };
             obj[0] = num + 8;
@@ -79,7 +88,7 @@ arg5.default = {
             tmp22 = tmp4;
           }
         }
-        if (_modDef4913.USE_ICC) {
+        if (tmp13(4913).USE_ICC) {
           if ("ICCP" === stringFromDataView) {
             obj = { offset: null, length: null, chunkNumber: 1, chunksTotal: 1 };
             obj[0] = num + 8;

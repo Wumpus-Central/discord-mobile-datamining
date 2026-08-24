@@ -4,19 +4,19 @@
 import fromStringAll from "fromString" /* 506 */;
 import combinedDefault from "combined" /* 1993 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { Permissions } from "sum" /* 505 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
 
 export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   const _require = channel;
   let obj = _require(589);
   const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(closure_1_7.CREATE_INSTANT_INVITE, closure_0));
   const obj2 = applyOverwritesAll;
   const canEveryoneRoleResult = obj2.canEveryoneRole(fromStringAll.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT), channel);
   privacy_level = undefined;
@@ -29,11 +29,12 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   } else if (stateFromStores) {
     if (canEveryoneRoleResult) {
       let formatResult = null;
-      if (arg2 === constants.PUBLIC) {
+      if (arg2 === tmp6.PUBLIC) {
         const intl3 = tmp(1236).intl;
         obj = { articleURL: null };
         obj[0] = combinedDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
         formatResult = intl3.format(tmp(1236).t["ew/Jq4"], obj);
+        const obj5 = combinedDefault;
       }
       let stringResult1 = formatResult;
     } else {

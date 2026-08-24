@@ -1,13 +1,13 @@
 // === Module 5816: GemLevel2SpotIllustration ===
 
 // Module 5816 (GemLevel2SpotIllustration)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import metadataDefault from "metadata" /* 5817 */;
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/GemLevel2SpotIllustration.native.tsx");
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemLevel2SpotIllustration.native.tsx");
 
 export const GemLevel2SpotIllustration = function GemLevel2SpotIllustration(width) {
   let num = width.width;
@@ -23,7 +23,8 @@ export const GemLevel2SpotIllustration = function GemLevel2SpotIllustration(widt
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { uri: metadataDefault };
+  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  obj = { uri: metadataDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];

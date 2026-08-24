@@ -4,7 +4,7 @@
 import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 12200 */;
 import toDotPath from "toDotPath" /* 12202 */;
 import mergeDefs from "mergeDefs" /* 12203 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_1 from "asyncGeneratorStep" /* 5 */;
 
 let self = this;
 let self2 = this;
@@ -31,11 +31,13 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
+            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
+                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -48,6 +50,7 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
+              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -109,7 +112,7 @@ if (self2) {
             Err = merged;
           }
           const issues = iter.issues;
-          const err = new Err(issues.map((item, index) => closure_1_6.finalizeIssue(item, merged, closure_1_4.config())));
+          const err = new Err(issues.map((path) => closure_1_6.finalizeIssue(path, merged, closure_1_4.config())));
           let callee;
           if (Err != null) {
             callee = Err.callee;
@@ -123,7 +126,8 @@ if (self2) {
     };
     exports.parse = exports._parse(fnResult.$ZodRealError);
     exports._parseAsync = (arg0) => {
-      closure_0 = asyncGeneratorStep((arg0, arg1, arg2, arg3) => {
+      closure_0 = arg0;
+      closure_0 = callback((arg0, arg1, arg2, arg3) => {
         closure_0 = arg0;
         closure_1 = arg1;
         closure_2 = arg2;
@@ -182,6 +186,8 @@ if (self2) {
                     obj3[0] = closure_2;
                     return obj3;
                   }
+                  const tmp38 = closure_0;
+                  const tmp39 = merged;
                 }
               } else if (arg0 === 1) {
                 c8 = 3;
@@ -204,7 +210,7 @@ if (self2) {
                   closure_4 = closure_0;
                 }
                 const issues = closure_2.issues;
-                const tmp24 = new closure_4(issues.map((item, index) => closure_6.finalizeIssue(item, merged, closure_4.config())));
+                const tmp24 = new closure_4(issues.map((path) => closure_6.finalizeIssue(path, merged, closure_4.config())));
                 closure_3 = tmp24;
                 let callee;
                 if (closure_0 != null) {
@@ -261,7 +267,7 @@ if (self2) {
             }
             obj1 = { success: false, error: null };
             const issues = iter.issues;
-            const ZodError = new $ZodError(issues.map((item, index) => closure_1_6.finalizeIssue(item, obj, closure_1_4.config())));
+            const ZodError = new $ZodError(issues.map((path) => closure_1_6.finalizeIssue(path, obj, closure_1_4.config())));
             obj1[1] = ZodError;
             let obj2 = obj1;
           } else {
@@ -274,7 +280,8 @@ if (self2) {
     };
     exports.safeParse = exports._safeParse(fnResult.$ZodRealError);
     exports._safeParseAsync = (arg0) => {
-      closure_0 = asyncGeneratorStep((arg0, arg1, arg2) => {
+      closure_0 = arg0;
+      closure_0 = callback((arg0, arg1, arg2) => {
         closure_0 = arg0;
         closure_1 = arg1;
         closure_2 = arg2;
@@ -330,6 +337,8 @@ if (self2) {
                     obj3[0] = closure_1;
                     return obj3;
                   }
+                  const tmp28 = merged;
+                  const tmp29 = closure_1;
                 }
               } else if (arg0 === 1) {
                 c6 = 3;
@@ -345,7 +354,7 @@ if (self2) {
               if (closure_1.issues.length) {
                 const obj4 = { success: false, error: null };
                 const issues = closure_1.issues;
-                const tmp19 = new closure_0(issues.map((item, index) => c6.finalizeIssue(item, merged, closure_4.config())));
+                const tmp19 = new closure_0(issues.map((path) => c6.finalizeIssue(path, merged, closure_4.config())));
                 obj4[1] = tmp19;
               } else {
                 { success: true, data: null }[1] = closure_1.value;
@@ -390,7 +399,8 @@ if (self2) {
     };
     exports.decode = exports._decode(fnResult.$ZodRealError);
     exports._encodeAsync = (arg0) => {
-      closure_0 = asyncGeneratorStep((arg0, arg1, arg2) => {
+      closure_0 = arg0;
+      closure_0 = callback((arg0, arg1, arg2) => {
         closure_0 = arg0;
         closure_1 = arg1;
         closure_2 = arg2;
@@ -431,6 +441,8 @@ if (self2) {
                 _parseAsync = _parseAsync._parseAsync;
                 _parseAsync(_parseAsync)(_parseAsync, closure_1, merged);
                 c3 = 3;
+                const tmp4 = _parseAsync;
+                const tmp5 = closure_1;
               }
             } catch (tmp12) {
               c3 = tmp;
@@ -452,7 +464,8 @@ if (self2) {
     };
     exports.encodeAsync = exports._encodeAsync(fnResult.$ZodRealError);
     exports._decodeAsync = (arg0) => {
-      closure_0 = asyncGeneratorStep((arg0, arg1, arg2) => {
+      closure_0 = arg0;
+      closure_0 = callback((arg0, arg1, arg2) => {
         closure_0 = arg0;
         closure_1 = arg1;
         closure_2 = arg2;
@@ -527,7 +540,8 @@ if (self2) {
     };
     exports.safeDecode = exports._safeDecode(fnResult.$ZodRealError);
     exports._safeEncodeAsync = (arg0) => {
-      closure_0 = asyncGeneratorStep((arg0, arg1, arg2) => {
+      closure_0 = arg0;
+      closure_0 = callback((arg0, arg1, arg2) => {
         closure_0 = arg0;
         closure_1 = arg1;
         closure_2 = arg2;
@@ -568,6 +582,8 @@ if (self2) {
                 _safeParseAsync = _safeParseAsync._safeParseAsync;
                 _safeParseAsync(_safeParseAsync)(_safeParseAsync, closure_1, merged);
                 c3 = 3;
+                const tmp4 = _safeParseAsync;
+                const tmp5 = closure_1;
               }
             } catch (tmp12) {
               c3 = tmp;
@@ -589,7 +605,8 @@ if (self2) {
     };
     exports.safeEncodeAsync = exports._safeEncodeAsync(fnResult.$ZodRealError);
     exports._safeDecodeAsync = (arg0) => {
-      closure_0 = asyncGeneratorStep((arg0, arg1, arg2) => {
+      closure_0 = arg0;
+      closure_0 = callback((arg0, arg1, arg2) => {
         closure_0 = arg0;
         closure_1 = arg1;
         closure_2 = arg2;

@@ -1,7 +1,7 @@
 // === Module 3: timestamp ===
 
 // Module 3 (timestamp)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import reportAll from "report" /* 7 */;
 import log from "log" /* 4 */;
 
@@ -20,6 +20,6 @@ log.setLogFn((name) => {
   const items1 = [name, arg1, arg2, ...substr];
   log.defaultLogFn.apply(items1);
 });
-let result = obj132.fileFinishedImporting("modules/debug/Logger.tsx");
+let result = set.fileFinishedImporting("modules/debug/Logger.tsx");
 
 export default log.Logger;

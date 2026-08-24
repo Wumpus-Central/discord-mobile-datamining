@@ -1,19 +1,17 @@
 // === Module 524: v4 ===
 
 // Module 524 (v4)
-import uint8ArrayDefault from "uint8Array" /* 516 */;
 import unsafeStringify from "unsafeStringify" /* 517 */;
-import _modDef525 from "module_525" /* 525 */;
 
 require = arg1;
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function v4(arg0, arg1, arg2) {
   let obj = arg0;
-  if (_modDef525.randomUUID) {
+  if (module(525).randomUUID) {
     if (!arg1) {
       if (!obj) {
-        return _modDef525.randomUUID();
+        return tmp(525).randomUUID();
       }
     }
   }
@@ -22,7 +20,8 @@ arg5.default = function v4(arg0, arg1, arg2) {
   }
   let random = obj.random;
   if (!random) {
-    random = obj.rng || uint8ArrayDefault();
+    random = obj.rng || tmp(516)();
+    const tmp3 = obj.rng || tmp(516);
   }
   random[6] = 15 & random[6] | 64;
   random[8] = 63 & random[8] | 128;

@@ -2,12 +2,12 @@
 
 // Module 4690
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4691 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importDefaultResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["obscureBackground", "hideNavigationBar", "onFocus", "onBlur", "onSearchButtonPress", "onCancelButtonPress", "onChangeText"];
 let c5 = importDefaultResult;
 
@@ -54,10 +54,10 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
     }
   }));
   const items = [ref];
-  importDefault = importDefaultResult.useCallback((fn) => {
+  importDefault = importDefaultResult.useCallback((arg0) => {
     const current = ref.current;
     if (current) {
-      fn(current);
+      arg0(current);
     } else {
       const _console = console;
       console.warn("Reference to native search bar component has not been updated yet");

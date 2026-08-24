@@ -6,18 +6,19 @@ import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
 import getInitialGuildStateDefault from "getInitialGuildState" /* 4231 */;
 import useChatLayout from "useChatLayout" /* 4232 */;
 import useChatLayoutDefault from "useChatLayout" /* 4232 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import getParticipants from "getParticipants" /* 4773 */;
-import getIdFromHistoryItem from "getIdFromHistoryItem" /* 7291 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getParticipants" /* 4773 */;
+import closure_6 from "getIdFromHistoryItem" /* 7291 */;
 import { CHANNEL_PREFIX } from "getIdFromHistoryItem" /* 7291 */;
-import withEqualityFn from "withEqualityFn" /* 8664 */;
+import closure_8 from "withEqualityFn" /* 8664 */;
 
-require = fn;
+require = arg1;
 function getFocusedChannelId() {
   let params = require;
   let paramsResult3 = dependencyMap;
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const obj = getRootNavigationRef;
   const isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
   let tmp2 = null;
   if (null != rootNavigationRef) {
@@ -144,7 +145,7 @@ function getFocusedChannelId() {
   }
 }
 let c9 = null;
-const result = require("obj132").fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
+const result = require("set").fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
 
 export { getFocusedChannelId };
 export const isChannelFocused = function isChannelFocused() {
@@ -155,20 +156,20 @@ export const useIsChannelFocused = function useIsChannelFocused() {
   closure_0 = tmp[1];
   const items = [useChatLayoutDefault()];
   const effect = React.useEffect(() => {
-    callback(null != getFocusedChannelId());
+    callback(null != closure_1_10());
   }, items);
   const effect1 = React.useEffect(() => {
     function handleStateChange() {
       rootNavigationRef(null != closure_1_10());
     }
-    const rootNavigationRef = callback(dependencyMap[7]).getRootNavigationRef();
+    const rootNavigationRef = callback(closure_1_2[7]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = callback(dependencyMap[7]);
+    const obj = callback(closure_1_2[7]);
   }, []);
   return tmp[0];
 };

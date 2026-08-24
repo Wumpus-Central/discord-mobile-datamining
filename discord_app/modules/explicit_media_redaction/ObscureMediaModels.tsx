@@ -1,17 +1,16 @@
 // === Module 5021: ObscureReason ===
 
 // Module 5021 (ObscureReason)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const obj = { SPOILER: "spoiler", EXPLICIT_CONTENT: "explicit_content", POTENTIAL_EXPLICIT_CONTENT: "potential_explicit_content", GORE_CONTENT: "gore_content", SELF_HARM_CONTENT: "self_harm_content" };
 const items = [, , , ];
 ({ EXPLICIT_CONTENT: arr[0], GORE_CONTENT: arr[1], SELF_HARM_CONTENT: arr[2], POTENTIAL_EXPLICIT_CONTENT: arr[3] } = obj);
+let set = new Set(items);
 const items1 = [, , ];
 ({ EXPLICIT_CONTENT: arr2[0], GORE_CONTENT: arr2[1], SELF_HARM_CONTENT: arr2[2] } = obj);
-const set = new Set(items);
-const set1 = new Set(items1);
-const result = obj132.fileFinishedImporting("modules/explicit_media_redaction/ObscureMediaModels.tsx");
+const result = set.fileFinishedImporting("modules/explicit_media_redaction/ObscureMediaModels.tsx");
 
 export const ObscureReason = obj;
 export const SENSITIVE_CONTENT_OBSCURABLE_REASONS = set;
-export const AGE_VERIFICATION_OBSCURABLE_REASONS = set1;
+export const AGE_VERIFICATION_OBSCURABLE_REASONS = new Set(items1);

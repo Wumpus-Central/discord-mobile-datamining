@@ -3,9 +3,9 @@
 // Module 6506 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import ManualGesture from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
@@ -59,7 +59,8 @@ let items = [
     value: function onChange(arg0) {
       this.handlers.changeEventCalculator = changeEventCalculator;
       const self = this;
-      let fn = callback2(callback(self.prototype), "onChange", this);
+      let fn;
+      fn = callback2(callback(self.prototype), "onChange", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

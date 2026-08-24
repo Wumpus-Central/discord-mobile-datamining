@@ -1,11 +1,11 @@
 // === Module 9646: getPrivateChannelCall ===
 
 // Module 9646 (getPrivateChannelCall)
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_2 from "updateVoiceState" /* 4542 */;
 import { NOOP_NULL } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
 
 export default function getPrivateChannelCall(id) {
   const _require = id;

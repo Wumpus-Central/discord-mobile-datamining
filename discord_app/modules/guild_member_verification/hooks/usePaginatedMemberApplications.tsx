@@ -1,26 +1,31 @@
 // === Module 15840: result ===
 
 // Module 15840 (result)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 const result = require("MAX_RESULTS_PER_PAGE").MAX_RESULTS_PER_PAGE * require("MAX_RESULTS_PER_PAGE").MAX_VISIBLE_PAGES;
-const result1 = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx");
+const result1 = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx");
 
 export const MEMBER_APPLICATION_FETCH_LIMIT = result;
 export const usePaginatedMemberApplications = function usePaginatedMemberApplications(guildId) {
   guildId = guildId.guildId;
+  closure_0 = guildId;
   const guildJoinRequests = guildId.guildJoinRequests;
+  closure_2 = undefined;
+  let first;
   let callback;
   let React;
+  closure_6 = undefined;
   closure_2 = React.useRef(false);
   const tmp = callback(React.useState(null), 2);
-  const first = tmp[0];
+  first = tmp[0];
   callback = tmp[1];
   React = React.useRef(null);
   closure_6 = React.useRef(false);
+  closure_0 = undefined;
   closure_0 = first((arg0, arg1) => {
     closure_0 = arg0;
     let aPIError = arg1;
@@ -68,7 +73,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                   flag = true;
                 }
                 if (!ref3.current) {
-                  if (null != first) {
+                  if (null != closure_1_3) {
                     closure_1_4(null);
                   }
                   ref2 = 2;

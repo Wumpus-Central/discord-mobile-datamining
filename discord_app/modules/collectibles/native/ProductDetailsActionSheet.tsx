@@ -2,26 +2,29 @@
 
 // Module 9265 (PreviewProfileTrigger)
 import timestampDefault from "timestamp" /* 3 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import context from "context" /* 9175 */;
-import apexExperiment from "apexExperiment" /* 12003 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
+import closure_9 from "updateCategoriesAndProducts" /* 5301 */;
 import { ShopCtaEnum } from "items" /* 678 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import sum from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import ManaContext from "ManaContext" /* 4104 */;
 
-require = fn;
+require = arg1;
 function PreviewProfileTrigger(handlePreviewPress) {
   handlePreviewPress = handlePreviewPress.handlePreviewPress;
   const onTrackPress = handlePreviewPress.onTrackPress;
+  dependencyMap = undefined;
+  closure_3 = undefined;
+  importAllResult = undefined;
+  closure_5 = undefined;
   const tmp = callback3();
   dependencyMap = tmp;
   let obj = handlePreviewPress(4104);
@@ -47,7 +50,7 @@ function PreviewProfileTrigger(handlePreviewPress) {
       return items;
     },
     onPress: importAllResult.useCallback(() => {
-      onTrackPress(ShopCtaEnum.FULL_PROFILE_PREVIEW_BUTTON);
+      onTrackPress(closure_1_10.FULL_PROFILE_PREVIEW_BUTTON);
       handlePreviewPress();
     }, items),
     accessibilityRole: "button",
@@ -61,8 +64,9 @@ function PreviewProfileTrigger(handlePreviewPress) {
   return callback2(closure_7, obj);
 }
 function ProductDetailsActionSheetInner(arg0) {
+  let ref1;
   ({ product, initialVariantIndex, analyticsLocations, paymentGateway } = arg0);
-  const ref1 = importAllResult.useRef(null);
+  ref1 = importAllResult.useRef(null);
   const ref = importAllResult.useRef(null);
   return callback2(ref1(6950).BottomSheet, {
     scrollable: true,
@@ -90,6 +94,8 @@ function ProductDetailsActionSheetInner(arg0) {
 function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
+  dependencyMap = undefined;
+  let ref1;
   ({ analyticsLocations, paymentGateway } = skuId);
   let obj = skuId(11998);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
@@ -99,7 +105,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   obj1 = skuId(8389);
   const getOrFetchPurchases = obj1.useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const ref1 = importAllResult.useRef(null);
+  ref1 = importAllResult.useRef(null);
   const items = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
     if (hasPreviouslyFetched) {
@@ -147,11 +153,10 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   } else {
     callback2(initialVariantIndex(12002), {});
   }
-  ref = importAllResult.useRef(null);
 }
 function ProductDetailsActionSheetWithOrderCTX(arg0) {
-  let obj = obj132;
-  const tmp4 = obj.isIOS() ? constants.APPLE_ADVANCED_COMMERCE : constants.GOOGLE;
+  let obj = set;
+  const tmp4 = obj.isIOS() ? closure_12.APPLE_ADVANCED_COMMERCE : closure_12.GOOGLE;
   analyticsLocations = arg0;
   if (tmpResult.useIsShopStandalonePdpMobileEnabled("product_details_action_sheet")) {
     if ("skuId" in analyticsLocations) {
@@ -165,6 +170,8 @@ function ProductDetailsActionSheetWithOrderCTX(arg0) {
     obj[2] = analyticsLocations;
     obj[3] = tmp4;
     callback2(ManagedProductDetailsActionSheetInner, obj);
+    const tmp13 = callback2;
+    const tmp14 = ManagedProductDetailsActionSheetInner;
   } else {
     if ("product" in analyticsLocations) {
       obj = {};
@@ -177,7 +184,6 @@ function ProductDetailsActionSheetWithOrderCTX(arg0) {
     }
     return tmp7;
   }
-  tmpResult = apexExperiment;
 }
 let c4 = importAllResult;
 ({ useCallback: c5, useMemo: closure_6 } = noop);
@@ -186,9 +192,10 @@ let c4 = importAllResult;
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = {};
 let closure_17 = new timestampDefault("ProductDetailsActionSheet");
-let obj = { position: "absolute", top: 0, right: ThemesDefault.space.PX_16, zIndex: 2, flexDirection: "row", gap: ThemesDefault.space.PX_8 };
+let obj = { container: { position: "relative", flex: 1 }, actionButtons: null, previewProfileButton: null, previewProfileButtonLight: null, previewProfileButtonLightPressed: null, previewProfileButtonDark: null, previewProfileButtonDarkPressed: null, previewProfileButtonMidnight: null, badgeWrapper: null };
+obj = { position: "absolute", top: 0, right: ThemesDefault.space.PX_16, zIndex: 2, flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 obj[1] = obj;
-const createCacheKey = { width: require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT, height: require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
+createCacheKey = { width: require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT, height: require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
 obj[2] = createCacheKey;
 let obj2 = { backgroundColor: null };
 obj2[0] = ManaContext.setColorOpacity("white", 0.72);
@@ -198,9 +205,11 @@ obj3[0] = ManaContext.setColorOpacity("white", 0.62);
 obj[4] = obj3;
 const tmp6 = new timestampDefault("ProductDetailsActionSheet");
 obj[5] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+let obj4 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj[6] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
 ManaContext = { borderColor: ThemesDefault.colors.BORDER_STRONG };
 obj[7] = ManaContext;
+let obj5 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
 obj[8] = { position: "absolute", top: 0, left: ThemesDefault.space.PX_16, zIndex: 2 };
 let closure_18 = createCacheKey.createStyles(obj);
 let closure_20 = importAllResult.forwardRef((product, ref) => {
@@ -218,6 +227,7 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
   analyticsLocations = undefined;
   let collectiblesAnalyticsContext;
   importAllResult = undefined;
+  let currentUser;
   let callback;
   c7 = undefined;
   const OTPACOMOrderExperiment = require(analyticsLocations[20]).OTPACOMOrderExperiment;
@@ -260,7 +270,7 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
   }), items2);
   const tmp13 = collectiblesAnalyticsContext(importAllResult.useState(num), 2);
   [tmp20, tmp21] = collectiblesAnalyticsContext(importAllResult.useState(undefined), 2);
-  let currentUser = tmp21;
+  currentUser = tmp21;
   const tmp19 = collectiblesAnalyticsContext(importAllResult.useState(undefined), 2);
   if (selectedProduct.skuId !== tmp22[0]) {
     tmp23(selectedProduct.skuId);
@@ -300,15 +310,15 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
   tmp22 = collectiblesAnalyticsContext(importAllResult.useState(selectedProduct.skuId), 2);
   currentUser = require(analyticsLocations[17]).useCurrentUser();
   const items3 = [product, tmp14, tmp10[1], currentUser.id, analyticsLocations, collectiblesAnalyticsContext];
-  obj1.useCallback(() => {
+  callback = obj1.useCallback(() => {
     callback(false);
     analyticsLocations(analyticsLocations[18])({
       userId: currentUser.id,
       isPreviewingChanges: true,
       sourceAnalyticsLocations: analyticsLocations,
       onClose() {
-        closure_1_0(analyticsLocations[19]);
-        const obj = { product: closure_0, initialVariantIndex: closure_1, analyticsLocations: closure_2, shopAnalyticsContext: closure_3 };
+        let obj = closure_1_0(closure_1_2[19]);
+        obj = { product: closure_0, initialVariantIndex: closure_1, analyticsLocations: closure_2, shopAnalyticsContext: closure_3 };
         return obj.openProductDetailsActionSheet(obj);
       }
     });
@@ -356,9 +366,9 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
     _undefined(type.type);
   }, []);
   const effect = obj1.useEffect(() => {
-    analyticsLocations(analyticsLocations[30]);
-    const obj = { type: "Collectibles Shop Details Modal", location_stack: analyticsLocations, sku_id: product.skuId };
-    obj.track(AnalyticEvents.OPEN_MODAL, obj);
+    let obj = analyticsLocations(analyticsLocations[30]);
+    obj = { type: "Collectibles Shop Details Modal", location_stack: analyticsLocations, sku_id: product.skuId };
+    obj.track(closure_1_11.OPEN_MODAL, obj);
   }, items5);
   const hideBadge = product.hideBadge;
   const tmp38Result = tmp38(() => {
@@ -444,7 +454,7 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
       enabled = OTPACOMOrderExperiment.useConfig({ location: "ProductDetailsActionSheetInner" }).enabled;
     }
     if (!enabled) {
-      let result = paymentGateway === constants.GOOGLE;
+      let result = paymentGateway === tmp56.GOOGLE;
       if (result) {
         result = tmp(tmp2[41]).isGooglePlayBillingSupported();
         const tmpResult10 = tmp(tmp2[41]);
@@ -455,6 +465,7 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
       enabled = result;
     }
     tmp55 = enabled;
+    tmp56 = constants;
   }
   const tmpResult9 = require(analyticsLocations[40]);
   const obj7 = { value: analyticsLocations, children: null };
@@ -468,13 +479,13 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
   }
   const items8 = [tmp40, callback2(analyticsLocations(analyticsLocations[44]), { selectedProduct, size: "md", onTrackPress: trackPdpClick })];
   obj9[1] = items8;
-  const items9 = [callback(closure_8, obj9), , , , , ];
+  const items9 = [closure_15(closure_8, obj9), , , , , ];
   let tmp63Result = null != tmp49;
   if (tmp63Result) {
     const obj11 = { style: null, children: null };
     obj11[0] = tmp4.badgeWrapper;
     obj11[1] = tmp49;
-    tmp63Result = callback2(closure_8, obj11);
+    tmp63Result = tmp63(tmp60, obj11);
   }
   items9[1] = tmp63Result;
   items9[2] = callback2(analyticsLocations(analyticsLocations[45]), { product: selectedProduct, handlePreviewPress: callback, onTrackPress: trackPdpClick, onBundleActiveItemChange: tmp39 });
@@ -483,7 +494,7 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
   const tmp58 = analyticsLocations(analyticsLocations[42])(selectedProduct);
   items9[5] = callback2(require(analyticsLocations[48]).Spacer, { size: analyticsLocations(analyticsLocations[10]).space.PX_16 });
   obj8[3] = items9;
-  const items10 = [callback(require(analyticsLocations[43]).BottomSheetScrollView, obj8), ];
+  const items10 = [closure_15(require(analyticsLocations[43]).BottomSheetScrollView, obj8), ];
   const obj13 = { skuIDs: [], activeSubscription: null, children: null };
   const obj14 = {
     paymentGateway,
@@ -503,9 +514,10 @@ let closure_20 = importAllResult.forwardRef((product, ref) => {
   obj13[2] = callback2(tmp6Result, obj14, selectedProduct.skuId);
   items10[1] = callback2(require(analyticsLocations[49]).NativePaymentContextProvider, obj13);
   obj7[1] = items10;
-  return callback(require(analyticsLocations[22]).AnalyticsLocationProvider, obj7);
+  return closure_15(require(analyticsLocations[22]).AnalyticsLocationProvider, obj7);
 });
-let result = require("obj132").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheet.tsx");
+let obj7 = { position: "absolute", top: 0, left: ThemesDefault.space.PX_16, zIndex: 2 };
+let result = require("set").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheet.tsx");
 
 export default function ProductDetailsActionSheet(shopAnalyticsContext) {
   shopAnalyticsContext = shopAnalyticsContext.shopAnalyticsContext;
@@ -513,7 +525,8 @@ export default function ProductDetailsActionSheet(shopAnalyticsContext) {
     shopAnalyticsContext = closure_16;
   }
   const merged = Object.assign(shopAnalyticsContext, Object.create(null));
-  const obj = {};
+  let obj = { newValue: shopAnalyticsContext, children: null };
+  obj = {};
   const merged1 = Object.assign(merged);
   obj[1] = callback2(ProductDetailsActionSheetWithOrderCTX, obj);
   return callback2(context.CollectiblesAnalyticsProvider, obj);

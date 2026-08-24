@@ -21,24 +21,25 @@ SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
   if (null != prices.prices) {
     let _Object = Object;
     const keys = Object.keys(prices.prices);
-    const reduced = keys.reduce((acc, item, index) => {
+    const reduced = keys.reduce((arg0, arg1) => {
       if (null == prices.prices) {
-        return acc;
+        return arg0;
       } else {
-        const obj = { countryCode: null, prices: null };
-        obj[0] = tmp.prices[item].country_prices.country_code;
+        let obj = { countryPrices: null, paymentSourcePrices: null };
+        obj = { countryCode: null, prices: null };
+        obj[0] = tmp.prices[arg1].country_prices.country_code;
         prices = tmp3.country_prices.prices;
-        obj[1] = prices.map((item, index) => ({ amount: item.amount, currency: item.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
+        obj[1] = prices.map((amount) => ({ amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
         obj[0] = obj;
         const _Object = Object;
         const entries = Object.entries(tmp3.payment_source_prices);
-        obj[1] = entries.reduce((acc, item, index) => {
-          [tmp, arr] = item;
-          acc[tmp] = arr.map((item, index) => ({ amount: item.amount, currency: item.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
-          return acc;
+        obj[1] = entries.reduce((arg0, arg1) => {
+          [tmp, arr] = arg1;
+          arg0[tmp] = arr.map((amount) => ({ amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
+          return arg0;
         }, {});
-        acc[item] = obj;
-        return acc;
+        arg0[arg1] = obj;
+        return arg0;
       }
     }, {});
   }
@@ -63,10 +64,10 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
   get: function premiumSubscriptionType() {
     const skuId = this.skuId;
     if (constants.LEGACY !== skuId) {
-      if (constants.TIER_2 !== skuId) {
-        if (constants.TIER_1 === skuId) {
+      if (tmp.TIER_2 !== skuId) {
+        if (tmp.TIER_1 === skuId) {
           return closure_1.TIER_1;
-        } else if (constants.TIER_0 === skuId) {
+        } else if (tmp.TIER_0 === skuId) {
           return closure_1.TIER_0;
         } else {
           return null;
@@ -81,14 +82,15 @@ prototype["toServerData"] = function toServerData() {
   const self = this;
   let obj = {};
   const keys = Object.keys(this.prices);
-  const item = keys.forEach((item, index) => {
+  const item = keys.forEach((arg0) => {
+    obj = { country_prices: obj, payment_source_prices: tmp.paymentSourcePrices };
     obj = { country_code: tmp.countryPrices.countryCode, prices: tmp.countryPrices.prices };
-    obj[item] = obj;
+    obj[arg0] = obj;
   });
   obj = { id: this.id, name: this.name, sku_id: this.skuId, interval: this.interval, interval_count: this.intervalCount, tax_inclusive: this.taxInclusive, currency: this.currency, price: this.price, prices: obj, price_tier: this.price };
   return obj;
 };
-const result = require("obj132").fileFinishedImporting("records/SubscriptionPlanRecord.tsx");
+const result = require("set").fileFinishedImporting("records/SubscriptionPlanRecord.tsx");
 
 export default SubscriptionPlanRecord;
 export const getPriceFromServer = function getPriceFromServer(amount, taxInclusive) {

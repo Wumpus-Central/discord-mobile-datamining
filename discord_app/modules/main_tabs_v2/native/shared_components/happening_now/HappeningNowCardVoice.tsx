@@ -5,15 +5,15 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getNicknameDefault from "getNickname" /* 4796 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import recomputeAffinities from "recomputeAffinities" /* 5407 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_5 from "recomputeAffinities" /* 5407 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
 import { HappeningNowCardTrackingType as closure_8 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   if (0 === stateFromStoresArray.length) {
     return "";
@@ -23,12 +23,14 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
     const intl = getSystemLocale.intl;
     let obj = { user1: null, user2: null };
     obj[0] = getNicknameDefault.getName(guildId, null, stateFromStoresArray[0]);
+    const obj2 = getNicknameDefault;
     obj[1] = getNicknameDefault.getName(guildId, null, stateFromStoresArray[1]);
     return intl.formatToPlainString(getSystemLocale.t["4SM/RX"], obj);
   } else {
     const intl2 = getSystemLocale.intl;
     obj = { user1: null, user2: null, extras: null };
     obj[0] = getNicknameDefault.getName(guildId, null, stateFromStoresArray[0]);
+    const obj6 = getNicknameDefault;
     obj[1] = getNicknameDefault.getName(guildId, null, stateFromStoresArray[1]);
     obj[2] = stateFromStoresArray.length - 2;
     return intl2.formatToPlainString(getSystemLocale.t.pjxkCI, obj);
@@ -39,22 +41,25 @@ let c3 = importAllResult;
 let closure_12 = createCacheKey.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
+  let voiceState = guildId;
   const index = guildId.index;
   let voiceUserAffinitySortType = index;
-  const voiceState = guildId.voiceState;
+  voiceState = guildId.voiceState;
   let flag = guildId.panelVariant;
   if (flag === undefined) {
     flag = false;
   }
+  let stateFromStoresArray;
   const tmp = callback2();
+  voiceUserAffinitySortType = undefined;
   let obj = voiceState(voiceState[17]);
   voiceUserAffinitySortType = obj.useVoiceUserAffinitySortType("useVoiceChannelUsers");
   obj1 = voiceState(voiceState[18]);
   let items = [closure_7, closure_6, closure_5];
   const items1 = [voiceUserAffinitySortType, voiceState.channelId];
-  const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
+  stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
-    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((item, index) => user.getUser(item.userId));
+    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);
     const items = [
       (id) => {
@@ -114,14 +119,15 @@ const memoResult = importAllResult.memo((guildId) => {
     obj5[0] = voiceState;
     items4[1] = callback(tmp2(tmp3[16]).HappeningNowVoiceCardSubtitle, obj5);
     obj3[1] = items4;
-    items3[1] = callback(View, obj3);
+    items3[1] = closure_11(View, obj3);
     obj[4] = items3;
-    tmp11Result = callback(voiceUserAffinitySortType(tmp3[13]), obj);
+    tmp11Result = tmp11(voiceUserAffinitySortType(tmp3[13]), obj);
+    const tmp12 = voiceUserAffinitySortType;
     const tmp13 = voiceUserAffinitySortType(tmp3[13]);
   }
   return tmp11Result;
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");
 
 export default memoResult;
 export const useVoiceChannelUsers = function useVoiceChannelUsers(channelId) {
@@ -132,7 +138,7 @@ export const useVoiceChannelUsers = function useVoiceChannelUsers(channelId) {
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
   return _require(589).useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
-    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((item, index) => user.getUser(item.userId));
+    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);
     const items = [
       (id) => {

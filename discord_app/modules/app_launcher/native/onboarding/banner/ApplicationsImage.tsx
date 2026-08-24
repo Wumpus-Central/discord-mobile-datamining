@@ -7,20 +7,23 @@ import preloadDefault from "preload" /* 5449 */;
 import handleApplicationSelected from "handleApplicationSelected" /* 11224 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.sm + 3, position: "absolute", padding: 3 };
+createCacheKey = { appIconContainer: null, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.sm + 3, position: "absolute", padding: 3 };
 createCacheKey[0] = createCacheKey;
 let items = [{ rotate: "-10deg" }];
 createCacheKey[1] = { transform: items };
 let items1 = [{ rotate: "15deg" }];
 createCacheKey[2] = { left: ThemesDefault.space.PX_32, transform: items1 };
+let obj1 = { left: ThemesDefault.space.PX_32, transform: items1 };
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm, width: 36, height: 36 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx");
+const obj2 = { borderRadius: ThemesDefault.radii.sm, width: 36, height: 36 };
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx");
 
 export default function ApplicationsImage(arg0) {
   ({ firstApplication, secondApplication } = arg0);

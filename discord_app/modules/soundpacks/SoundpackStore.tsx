@@ -1,7 +1,7 @@
 // === Module 10041: Soundpacks ===
 
 // Module 10041 (Soundpacks)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import Soundpacks2 from "Soundpacks" /* 10042 */;
@@ -18,8 +18,9 @@ prototype["initialize"] = function initialize(arg0) {
     const _Object = Object;
     const values = Object.values(Soundpacks);
     if (!values.includes(closure_1.soundpack)) {
-      closure_1.soundpack = Soundpacks.CLASSIC;
+      closure_1.soundpack = tmp2.CLASSIC;
     }
+    tmp2 = Soundpacks;
   }
 };
 prototype["getState"] = function getState() {
@@ -43,6 +44,6 @@ const soundpackStore = new SoundpackStore(dispatcherDefault, {
     obj[1] = lastSoundpackExperimentId;
   }
 });
-const result = obj132.fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
+const result = set.fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
 
 export default soundpackStore;

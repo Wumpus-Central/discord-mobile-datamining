@@ -1,13 +1,13 @@
 // === Module 9294: ClearAfterValues ===
 
 // Module 9294 (ClearAfterValues)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import StatusTypes from "StatusTypes" /* 9292 */;
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const items = [, , ];
 ({ MINUTES_30: arr[0], HOURS_1: arr[1], HOURS_4: arr[2] } = ClearAfterValues);
-const result = obj132.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
+const result = set.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
 export default function computeInitialClearAfter() {
   const CustomStatusSetting = _require(4066).CustomStatusSetting;
@@ -40,7 +40,7 @@ export default function computeInitialClearAfter() {
           const _Number = Number;
           const _Date = Date;
           _require = Number(NumberResult) - Date.now();
-          let TODAY = items.find((item, index) => closure_0 <= item);
+          let TODAY = items.find((arg0) => closure_0 <= arg0);
           if (TODAY == null) {
             TODAY = ClearAfterValues.TODAY;
           }

@@ -4,21 +4,24 @@
 import sendRequest from "sendRequest" /* 530 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import prototypeDefault from "prototype" /* 4062 */;
+import set from "set" /* 2 */;
 
-require = fn;
-let obj = { ADDRESS_LINE_1: "address_line1", ADDRESS_LINE_2: "address_line2", ADDRESS_CITY: "address_city", ADDRESS_STATE: "address_state", ADDRESS_ZIP: "address_zip", ADDRESS_COUNTRY: "address_country", CARD_NUMBER: "number", CARD_EXPIRATION_DATE: "exp", CARD_EXPIRATION_MONTH: "exp_month", CARD_EXPIRATION_YEAR: "exp_year" };
+require = arg1;
+let obj = { UNKNOWN: 0, [0]: "UNKNOWN", UNKNOWN_BILLING_PROFILE: 100001, [100001]: "UNKNOWN_BILLING_PROFILE", UNKNOWN_PAYMENT_SOURCE: 100002, [100002]: "UNKNOWN_PAYMENT_SOURCE", UNKNOWN_SUBSCRIPTION: 100003, [100003]: "UNKNOWN_SUBSCRIPTION", ALREADY_SUBSCRIBED: 100004, [100004]: "ALREADY_SUBSCRIBED", INVALID_PLAN: 100005, [100005]: "INVALID_PLAN", PAYMENT_SOURCE_REQUIRED: 100006, [100006]: "PAYMENT_SOURCE_REQUIRED", ALREADY_CANCELED: 100007, [100007]: "ALREADY_CANCELED", INVALID_PAYMENT: 100008, [100008]: "INVALID_PAYMENT", ALREADY_REFUNDED: 100009, [100009]: "ALREADY_REFUNDED", INVALID_BILLING_ADDRESS: 100010, [100010]: "INVALID_BILLING_ADDRESS", ALREADY_PURCHASED: 100011, [100011]: "ALREADY_PURCHASED", DUPLICATE_PURCHASE_ATTEMPT: 100012, [100012]: "DUPLICATE_PURCHASE_ATTEMPT", BILLING_PURCHASE_REQUEST_INVALID: 100017, [100017]: "BILLING_PURCHASE_REQUEST_INVALID", NEGATIVE_INVOICE_AMOUNT: 100027, [100027]: "NEGATIVE_INVOICE_AMOUNT", AUTHENTICATION_REQUIRED: 100029, [100029]: "AUTHENTICATION_REQUIRED", SUBSCRIPTION_RENEWAL_IN_PROGRESS: 100042, [100042]: "SUBSCRIPTION_RENEWAL_IN_PROGRESS", CONFIRMATION_REQUIRED: 100047, [100047]: "CONFIRMATION_REQUIRED", CARD_DECLINED: 100054, [100054]: "CARD_DECLINED", INVALID_GIFT_REDEMPTION_FRAUD_REJECTED: 50097, [50097]: "INVALID_GIFT_REDEMPTION_FRAUD_REJECTED", PURCHASE_TOKEN_AUTHORIZATION_REQUIRED: 100056, [100056]: "PURCHASE_TOKEN_AUTHORIZATION_REQUIRED", INVALID_PAYMENT_SOURCE: 50048, [50048]: "INVALID_PAYMENT_SOURCE", INVALID_CURRENCY_FOR_PAYMENT_SOURCE: 100051, [100051]: "INVALID_CURRENCY_FOR_PAYMENT_SOURCE", BILLING_APPLE_SERVER_API_ERROR: 100070, [100070]: "BILLING_APPLE_SERVER_API_ERROR", BILLING_TRIAL_REDEMPTION_DISABLED: 100078, [100078]: "BILLING_TRIAL_REDEMPTION_DISABLED", BILLING_PAUSE_DISABLED: 100079, [100079]: "BILLING_PAUSE_DISABLED", BILLING_PAUSE_PENDING_ALREADY_SET: 100080, [100080]: "BILLING_PAUSE_PENDING_ALREADY_SET", BILLING_PAUSE_NOT_ELIGIBLE: 100081, [100081]: "BILLING_PAUSE_NOT_ELIGIBLE", BILLING_PAUSE_INVALID_INTERVAL: 100082, [100082]: "BILLING_PAUSE_INVALID_INTERVAL", BILLING_ALREADY_PAUSED: 100083, [100083]: "BILLING_ALREADY_PAUSED", BILLING_CANNOT_CHARGE_ZERO_AMOUNT: 100084, [100084]: "BILLING_CANNOT_CHARGE_ZERO_AMOUNT", BILLING_PAUSE_INVALID_UPDATE: 100094, [100094]: "BILLING_PAUSE_INVALID_UPDATE", BILLING_BUNDLE_ALREADY_PURCHASED: 100096, [100096]: "BILLING_BUNDLE_ALREADY_PURCHASED", BILLING_BUNDLE_PARTIALLY_OWNED: 100097, [100097]: "BILLING_BUNDLE_PARTIALLY_OWNED", BILLING_INSUFFICIENT_FUNDS: 100107, [100107]: "BILLING_INSUFFICIENT_FUNDS", BILLING_OUTDATED_REQUEST_PARAMETERS: 100111, [100111]: "BILLING_OUTDATED_REQUEST_PARAMETERS", BILLING_CURRENCY_NOT_ALLOWED_FOR_COUNTRY: 100144, [100144]: "BILLING_CURRENCY_NOT_ALLOWED_FOR_COUNTRY", BILLING_SPENDING_LIMIT_WILL_EXCEED: 100150, [100150]: "BILLING_SPENDING_LIMIT_WILL_EXCEED", BILLING_SPENDING_LIMIT_REACHED: 100151, [100151]: "BILLING_SPENDING_LIMIT_REACHED", BILLING_ORDER_NOT_SIGNABLE: 100152, [100152]: "BILLING_ORDER_NOT_SIGNABLE", BILLING_APPLE_STORE_COUNTRY_MISMATCH: 100153, [100153]: "BILLING_APPLE_STORE_COUNTRY_MISMATCH", BILLING_CLAIM_IN_GAME_BEFORE_REPURCHASE: 100155, [100155]: "BILLING_CLAIM_IN_GAME_BEFORE_REPURCHASE", VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE: 590001, [590001]: "VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE" };
+obj = { CARD_NUMBER: "cardNumber", CARD_CVC: "cvc", CARD_EXPIRATION_DATE: "expirationDate", CARD_NAME: "name", ADDRESS_NAME: "name", ADDRESS_LINE_1: "line1", ADDRESS_LINE_2: "line2", ADDRESS_CITY: "city", ADDRESS_STATE: "state", ADDRESS_POSTAL_CODE: "postalCode", ADDRESS_COUNTRY: "country" };
+obj = { ADDRESS_LINE_1: "address_line1", ADDRESS_LINE_2: "address_line2", ADDRESS_CITY: "address_city", ADDRESS_STATE: "address_state", ADDRESS_ZIP: "address_zip", ADDRESS_COUNTRY: "address_country", CARD_NUMBER: "number", CARD_EXPIRATION_DATE: "exp", CARD_EXPIRATION_MONTH: "exp_month", CARD_EXPIRATION_YEAR: "exp_year" };
 let closure_3 = Object.freeze({ [obj.ADDRESS_LINE_1]: obj.ADDRESS_LINE_1, [obj.ADDRESS_LINE_2]: obj.ADDRESS_LINE_2, [obj.ADDRESS_CITY]: obj.ADDRESS_CITY, [obj.ADDRESS_STATE]: obj.ADDRESS_STATE, [obj.ADDRESS_ZIP]: obj.ADDRESS_POSTAL_CODE, [obj.ADDRESS_COUNTRY]: obj.ADDRESS_COUNTRY, [obj.CARD_NUMBER]: obj.CARD_NUMBER, [obj.CARD_EXPIRATION_DATE]: obj.CARD_EXPIRATION_DATE, [obj.CARD_EXPIRATION_MONTH]: obj.CARD_EXPIRATION_DATE, [obj.CARD_EXPIRATION_YEAR]: obj.CARD_EXPIRATION_DATE });
 let closure_4 = Object.freeze({ line_1: obj.ADDRESS_LINE_1, line_2: obj.ADDRESS_LINE_2, postal_code: obj.ADDRESS_POSTAL_CODE });
 const items = [, , , ];
 ({ CARD_NUMBER: arr[0], CARD_CVC: arr[1], CARD_EXPIRATION_DATE: arr[2], CARD_NAME: arr[3] } = obj);
-const set = new Set(items);
+let set = new Set(items);
 const items1 = [, , , , , , ];
 ({ ADDRESS_NAME: arr2[0], ADDRESS_LINE_1: arr2[1], ADDRESS_LINE_2: arr2[2], ADDRESS_CITY: arr2[3], ADDRESS_STATE: arr2[4], ADDRESS_POSTAL_CODE: arr2[5], ADDRESS_COUNTRY: arr2[6] } = obj);
 const set1 = new Set(items1);
 prototypeDefault;
 class BillingError extends tmp4 {
   constructor(arg0, arg1) {
-    tmp = new tmp(global, fn, tmp6, tmp5, tmp4, tmp3, tmp2, new.target);
+    tmp = new tmp(global, arg1, tmp6, tmp5, tmp4, tmp3, tmp2, new.target);
     // ThrowIfThisInitialized (0x7c)
     tmp.paymentId = null;
     tmp8 = closure_2;
@@ -139,6 +142,7 @@ class BillingError extends tmp4 {
 const prototype = BillingError.prototype;
 prototype["_isInFieldSet"] = function _isInFieldSet(set) {
   for (const key10004 in this.fields) {
+    let tmp = key10004;
     if (!arg0.has(key10004)) {
       continue;
     } else {
@@ -158,31 +162,31 @@ BillingError.Fields = obj;
 BillingError.Sections = { CARD: "card", ADDRESS: "address" };
 BillingError.CARD_ERRORS = set;
 BillingError.ADDRESS_ERRORS = set1;
-const result = require("obj132").fileFinishedImporting("errors/BillingError.tsx");
+const result = set.fileFinishedImporting("errors/BillingError.tsx");
 
 export default BillingError;
 export const ErrorCodes = obj;
 export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8BillingAddressSkemaErrorToBillingError(c8) {
-  if (typeof BillingError !== "string") {
+  if (typeof c8 !== "string") {
     let code;
-    if (BillingError != null) {
-      const body = BillingError.body;
+    if (c8 != null) {
+      const body = c8.body;
       if (body != null) {
         code = body.code;
       }
     }
     if (code === sendRequest.INVALID_FORM_BODY_ERROR_CODE) {
       let errors;
-      if (BillingError != null) {
-        const body2 = BillingError.body;
+      if (c8 != null) {
+        const body2 = c8.body;
         if (body2 != null) {
           errors = body2.errors;
         }
       }
       if (!Array.isArray(errors)) {
         let billing_address;
-        if (BillingError != null) {
-          const body3 = BillingError.body;
+        if (c8 != null) {
+          const body3 = c8.body;
           if (body3 != null) {
             errors = body3.errors;
             if (errors != null) {
@@ -192,24 +196,26 @@ export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8Bil
         }
         if (null != billing_address) {
           for (const key10023 in arg0.body.errors.billing_address) {
+            let tmp15 = key10023;
             billing_address = arg0.body.errors.billing_address;
             delete tmp3[tmp4];
             arg0.body.errors[key10023] = arg0.body.errors.billing_address[key10023];
             continue;
           }
-          const errors2 = BillingError.body.errors;
+          const errors2 = c8.body.errors;
           delete tmp2[tmp];
         }
       }
-      const body4 = BillingError.body;
+      const body4 = c8.body;
       let errors1;
       if (body4 != null) {
         errors1 = body4.errors;
       }
       if (null != errors1) {
-        BillingError.body = sendRequest.convertSkemaError(BillingError.body.errors);
+        c8.body = sendRequest.convertSkemaError(c8.body.errors);
+        obj = sendRequest;
       }
     }
   }
-  return new BillingError(BillingError);
+  return new BillingError(c8);
 };

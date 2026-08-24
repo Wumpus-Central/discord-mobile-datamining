@@ -1,8 +1,8 @@
 // === Module 1292: DEFAULT_LOCALE ===
 
 // Module 1292 (DEFAULT_LOCALE)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const IntlManager = require;
@@ -55,11 +55,12 @@ class IntlManager {
 let items = [
   {
     key: "withFormatters",
-    value: function withFormatters(arg0) {
+    value: function withFormatters(set) {
       const self = this;
-      const entries = Object.entries(arg0);
+      const entries = Object.entries(set);
       while (tmp2 !== undefined) {
-        let tmp5 = _slicedToArray(tmp3, 2);
+        let tmp4 = callback;
+        let tmp5 = callback(tmp3, 2);
         self[tmp5[0]] = self.makeFormatFunction(tmp5[1]);
         continue;
       }
@@ -72,10 +73,10 @@ let items = [
       const self = this;
       ({ format, builder: exports } = arg0);
       closure_0 = format.bind(this);
-      return (fn) => {
+      return (arg0, arg1) => {
         let tmp = null;
-        if (null != fn) {
-          tmp = callback(fn(self.currentLocale), arg1, closure_1);
+        if (null != arg0) {
+          tmp = callback(arg0(self.currentLocale), arg1, closure_1);
         }
         return tmp;
       };
@@ -102,24 +103,24 @@ let items = [
   },
   {
     key: "string",
-    value: function string(fn) {
+    value: function string(arg0) {
       let str = "";
-      if (null != fn) {
+      if (null != arg0) {
         const self = this;
-        str = fn(this.currentLocale).reserialize();
-        const obj = fn(this.currentLocale);
+        str = arg0(this.currentLocale).reserialize();
+        const obj = arg0(this.currentLocale);
       }
       return str;
     }
   },
   {
     key: "reserialize",
-    value: function reserialize(fn) {
-      if (null == fn) {
+    value: function reserialize(arg0) {
+      if (null == arg0) {
         return "";
       } else {
         const self = this;
-        const obj = fn(this.currentLocale);
+        const obj = arg0(this.currentLocale);
         let reserializeResult = obj;
         if (typeof obj !== "string") {
           reserializeResult = obj.reserialize();

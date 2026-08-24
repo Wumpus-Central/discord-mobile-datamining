@@ -12,7 +12,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles(() => {
@@ -23,10 +23,10 @@ let closure_6 = createCacheKey.createStyles(() => {
   const colors = ThemesDefault.colors;
   if (flag) {
     let BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_MOD_SUBTLE;
-    let tmp4 = importDefault;
+    let tmp4 = tmp;
   } else {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp4 = importDefault;
+    tmp4 = tmp;
   }
   let obj = { backgroundColor: BACKGROUND_SURFACE_HIGH, marginHorizontal: 2, borderRadius: null, borderWidth: null, borderColor: null, paddingHorizontal: null, paddingVertical: null, overflow: "hidden", flexDirection: "row", alignItems: "center", flexShrink: 1 };
   const radii = tmp4(712).radii;
@@ -52,7 +52,7 @@ let closure_6 = createCacheKey.createStyles(() => {
   obj[5] = { marginRight: tmp4(712).space.PX_4 };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("design/components/TagListInput/native/TagListInputTag.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TagListInput/native/TagListInputTag.native.tsx");
 
 export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   ({ tag, selected, onPress: require, start } = end);
@@ -112,5 +112,5 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   obj1[4] = tag.text;
   items1[1] = callback(Text.Text, obj1);
   obj[6] = items1;
-  return callback(PressableBase.PressableOpacity, obj);
+  return closure_5(PressableBase.PressableOpacity, obj);
 };

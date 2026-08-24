@@ -11,10 +11,10 @@ arg5._getTraceInfoFromScope = function _getTraceInfoFromScope(arg0, arg1) {
     let withScopeResult = _require(848).withScope(arg1, () => {
       const activeSpan = callback(table[1]).getActiveSpan();
       if (activeSpan) {
-        let tmpResult = callback(table[1]);
+        let tmpResult = tmp(tmp2[1]);
         let spanToTraceContextResult = tmpResult.spanToTraceContext(activeSpan);
       } else {
-        tmpResult = callback(table[0]);
+        tmpResult = tmp(tmp2[0]);
         spanToTraceContextResult = tmpResult.getTraceContextFromScope(table);
       }
       const tmpResult1 = callback(table[2]);

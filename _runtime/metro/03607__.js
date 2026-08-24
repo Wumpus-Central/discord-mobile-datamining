@@ -20,8 +20,8 @@ if (!buildMatchPatternFn) {
 obj2 = {
   matchPattern: /^\d+/i,
   parsePattern: /\d+/i,
-  valueCallback(match) {
-    return parseInt(match, 10);
+  valueCallback(joined) {
+    return parseInt(joined, 10);
   }
 };
 const items = [/^[bB]/i, /^(^[aA]|ค\.?ศ\.?|คริสตกาล|คริสต์ศักราช|)/i];

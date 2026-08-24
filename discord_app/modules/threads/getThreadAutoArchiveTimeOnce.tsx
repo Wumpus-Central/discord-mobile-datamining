@@ -2,17 +2,17 @@
 
 // Module 5269 (getThreadAutoArchiveTimeOnce)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import obj132Default from "obj132" /* 687 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import setDefault from "set" /* 687 */;
+import closure_2 from "generateOldThreadCutoff" /* 4772 */;
 
-let result = require("obj132").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
+let result = require("set").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
 
 export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
   if (null == threadMetadata.threadMetadata) {
     return 0;
   } else {
     let num3 = 0;
-    const result = threadMetadata.threadMetadata.autoArchiveDuration * obj132Default.Millis.MINUTE;
+    const result = threadMetadata.threadMetadata.autoArchiveDuration * setDefault.Millis.MINUTE;
     if (null != threadMetadata.threadMetadata) {
       let id = closure_2.lastMessageId(threadMetadata.id);
       if (id == null) {
@@ -47,6 +47,7 @@ export const getThreadLastActivityTime = function getThreadLastActivityTime(thre
       id = threadMetadata.id;
     }
     let num = 0;
+    const obj = DISCORD_EPOCHDefault;
     if (null != threadMetadata.lastNonMessageActivityTimestamp) {
       const _Date = Date;
       const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);

@@ -1,7 +1,7 @@
 // === Module 4308: validateSavedTheme ===
 
 // Module 4308 (validateSavedTheme)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef1208 from "module_1208" /* 1208 */;
@@ -92,7 +92,7 @@ obj = {
     themes = themes.themes;
     const HAS_FETCHED = obj.HAS_FETCHED;
     const found = themes.filter(validateSavedTheme);
-    closure_4 = found.map((item, index) => ({ colors: item.colors, gradient_angle: item.gradient_angle, base_mix: item.base_mix, base_theme: table[item.base_theme] }));
+    closure_4 = found.map((colors) => ({ colors: colors.colors, gradient_angle: colors.gradient_angle, base_mix: colors.base_mix, base_theme: table[colors.base_theme] }));
   },
   SAVED_CUSTOM_THEMES_FETCH_FAILURE: function handleCustomThemesFetchFailure(error) {
     const ERROR = obj.ERROR;
@@ -101,7 +101,7 @@ obj = {
   }
 };
 const savedCustomThemeStore = new SavedCustomThemeStore(dispatcherDefault, obj);
-const result = obj132.fileFinishedImporting("modules/client_themes/SavedCustomThemeStore.tsx");
+const result = set.fileFinishedImporting("modules/client_themes/SavedCustomThemeStore.tsx");
 
 export default savedCustomThemeStore;
 export const FetchState = obj;

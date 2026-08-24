@@ -1,11 +1,11 @@
 // === Module 15313: useMessagesScrollToTop ===
 
 // Module 15313 (useMessagesScrollToTop)
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");
 
 export default function useMessagesScrollToTop(listRef) {
   listRef = listRef.listRef;
@@ -14,7 +14,7 @@ export default function useMessagesScrollToTop(listRef) {
   const ref = React.useRef(React.useMemo(() => ({
     scrollToTopTimeout: -1,
     scrollToTop() {
-      if (null != obj.coerceGuildsRoute(listRefHappeningNow(closure_1_2[3])())) {
+      if (null != obj.coerceGuildsRoute(closure_1_1(closure_1_2[3])())) {
         const self = this;
         if (-1 === this.scrollToTopTimeout) {
           const _setTimeout = setTimeout;

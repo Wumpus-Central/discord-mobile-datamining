@@ -1,10 +1,10 @@
 // === Module 7519: setFilterTagIds ===
 
 // Module 7519 (setFilterTagIds)
-import "ensureGuildLoaded";
-import obj132 from "obj132" /* 2 */;
+import set from "ensureGuildLoaded" /* 1391 */;
+import set from "set" /* 2 */;
 
-let obj132 = Object.create(function ForumChannelAnalyticsManager() {
+set = Object.create(function ForumChannelAnalyticsManager() {
   const obj = Object.create(new.target.prototype);
   obj.setFilterTagIds = function setFilterTagIds(filterTagIds) {
     obj.filterTagIds = filterTagIds;
@@ -65,19 +65,19 @@ let obj132 = Object.create(function ForumChannelAnalyticsManager() {
   };
   return obj;
 }.prototype.prototype);
-obj132.setFilterTagIds = function setFilterTagIds(filterTagIds) {
+set.setFilterTagIds = function setFilterTagIds(filterTagIds) {
   obj.filterTagIds = filterTagIds;
 };
-obj132.setSortOrder = function setSortOrder(sortOrder) {
+set.setSortOrder = function setSortOrder(sortOrder) {
   obj.sortOrder = sortOrder;
 };
-obj132.setLayout = function setLayout(layout) {
+set.setLayout = function setLayout(layout) {
   obj.layout = layout;
 };
-obj132.setTagSetting = function setTagSetting(tagSetting) {
+set.setTagSetting = function setTagSetting(tagSetting) {
   obj.tagSetting = tagSetting;
 };
-obj132.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
+set.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
   if (null != obj.filterTagIds) {
     const _Array = Array;
     let items = Array.from(tmp.filterTagIds);
@@ -86,7 +86,7 @@ obj132.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
   }
   return items;
 };
-obj132.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
+set.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
   let sortOrder = obj.sortOrder;
   if (sortOrder == null) {
     const channel = obj.getChannel(id);
@@ -98,7 +98,7 @@ obj132.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
   }
   return sortOrder;
 };
-obj132.getLayoutAnalytics = function getLayoutAnalytics(id) {
+set.getLayoutAnalytics = function getLayoutAnalytics(id) {
   let layout = obj.layout;
   if (layout == null) {
     const channel = obj.getChannel(id);
@@ -110,7 +110,7 @@ obj132.getLayoutAnalytics = function getLayoutAnalytics(id) {
   }
   return layout;
 };
-obj132.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
+set.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
   let tagSetting = obj.tagSetting;
   if (tagSetting == null) {
     const channel = obj.getChannel(id);
@@ -122,6 +122,6 @@ obj132.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
   }
   return tagSetting;
 };
-const result = obj132.fileFinishedImporting("modules/forums/tracking/ForumChannelAnalyticsManager.tsx");
+const result = set.fileFinishedImporting("modules/forums/tracking/ForumChannelAnalyticsManager.tsx");
 
-export default obj132;
+export default set;

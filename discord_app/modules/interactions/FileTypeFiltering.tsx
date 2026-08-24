@@ -2,11 +2,11 @@
 
 // Module 11336 (fileTypesFormattedStringHelper)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
 
-require = fn;
+require = arg1;
 function fileTypesFormattedStringHelper(arr, locale) {
   if (null != arr) {
     if (0 !== arr.length) {
@@ -15,18 +15,18 @@ function fileTypesFormattedStringHelper(arr, locale) {
       const items = [];
       if (arr.includes("image")) {
         const intl = getSystemLocale.intl;
-        arr = items.push(intl.string(getSystemLocale.t["0r2WwT"]));
+        items.push(intl.string(getSystemLocale.t["0r2WwT"]));
       }
       if (arr.includes("video")) {
         const intl2 = getSystemLocale.intl;
-        arr = items.push(intl2.string(getSystemLocale.t["al+5qH"]));
+        items.push(intl2.string(getSystemLocale.t["al+5qH"]));
       }
       if (arr.includes("audio")) {
         const intl3 = getSystemLocale.intl;
         items.push(intl3.string(getSystemLocale.t.Kzll3E));
       }
       const push = items.push;
-      const found = arr.filter((item, index) => item.startsWith("."));
+      const found = arr.filter((str) => str.startsWith("."));
       const items1 = [];
       HermesBuiltin.arraySpread(found.sort(), 0);
       HermesBuiltin.apply(items1, items);
@@ -44,20 +44,20 @@ let closure_7 = ["mp4", "mov", "qt", "webm"];
 let closure_8 = ["mp3", "m4a", "wav", "ogg", "opus", "flac"];
 let closure_9 = { jpg: ["jpeg", "jfif", "heic", "heif"], mov: ["mp4", "qt"] };
 let closure_10 = { jpg: ["jpeg", "jfif"], mp4: ["mov", "qt"] };
-const result = require("obj132").fileFinishedImporting("modules/interactions/FileTypeFiltering.tsx");
+const result = require("set").fileFinishedImporting("modules/interactions/FileTypeFiltering.tsx");
 
 export const useFileTypesFormattedString = function useFileTypesFormattedString(fileTypes) {
   const _require = fileTypes;
   const items = [closure_5];
   const stateFromStores = _require(589).useStateFromStores(items, () => locale.locale);
   const items1 = [fileTypes, stateFromStores];
-  return React.useMemo(() => fileTypesFormattedStringHelper(closure_0, stateFromStores), items1);
+  return React.useMemo(() => closure_1_11(closure_0, stateFromStores), items1);
 };
 export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
   if (null != fileTypes) {
     if (0 !== fileTypes.length) {
-      const found = fileTypes.filter((item, index) => item.startsWith("."));
-      const mapped = found.map((item, index) => item.slice(1));
+      const found = fileTypes.filter((str) => str.startsWith("."));
+      const mapped = found.map((arr) => arr.slice(1));
       if (fileTypes.includes("image")) {
         const push = mapped.push;
         const items = [];
@@ -91,30 +91,30 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
     obj[2] = function validateFilenames(arr) {
       let everyResult = 0 === items3.length;
       if (!everyResult) {
-        everyResult = arr.every((item, index) => {
-          closure_0 = item;
-          return closure_0.some((item, index) => {
-            const formatted = item.toLowerCase();
-            return formatted.endsWith("." + item);
+        everyResult = arr.every((arg0) => {
+          closure_0 = arg0;
+          return closure_0.some((arg0) => {
+            const formatted = closure_0.toLowerCase();
+            return formatted.endsWith("." + arg0);
           });
         });
       }
       return everyResult;
     };
     obj[3] = function showInvalidFileTypeAlert() {
-      callback(dependencyMap[6]);
-      let obj = { title: null, body: null };
-      const intl = items3(dependencyMap[4]).intl;
-      obj[0] = intl.string(items3(dependencyMap[4]).t.azO1Pe);
-      const intl2 = items3(dependencyMap[4]).intl;
+      let obj = callback(closure_1_2[6]);
+      obj = { title: null, body: null };
+      const intl = items3(closure_1_2[4]).intl;
+      obj[0] = intl.string(items3(closure_1_2[4]).t.azO1Pe);
+      const intl2 = items3(closure_1_2[4]).intl;
       obj = { types: callback };
-      obj[1] = intl2.formatToPlainString(items3(dependencyMap[4]).t["5U9LSo"], obj);
+      obj[1] = intl2.formatToPlainString(items3(closure_1_2[4]).t["5U9LSo"], obj);
       obj.show(obj);
     };
-    obj[4] = 0 === items3.length || items3.some((item, index) => {
-      let hasItem = closure_6.includes(item);
+    obj[4] = 0 === items3.length || items3.some((arg0) => {
+      let hasItem = closure_6.includes(arg0);
       if (!hasItem) {
-        hasItem = closure_7.includes(item);
+        hasItem = closure_7.includes(arg0);
       }
       return hasItem;
     });
@@ -123,25 +123,26 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
   items3 = [];
 };
 export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
+  let _require = fileTypes;
   let items = [fileTypes];
   const memo = React.useMemo(() => {
     if (null != closure_0) {
-      if (0 !== closure_0.length) {
-        const found = closure_0.filter((item, index) => item.startsWith("."));
-        const mapped = found.map((item, index) => item.slice(1));
-        if (closure_0.includes("image")) {
+      if (0 !== arr.length) {
+        const found = arr.filter((str) => str.startsWith("."));
+        const mapped = found.map((arr) => arr.slice(1));
+        if (arr.includes("image")) {
           const push = mapped.push;
           const items = [];
           HermesBuiltin.arraySpread(closure_1_6, 0);
           HermesBuiltin.apply(items, mapped);
         }
-        if (closure_0.includes("video")) {
+        if (arr.includes("video")) {
           const push2 = mapped.push;
           const items1 = [];
           HermesBuiltin.arraySpread(closure_1_7, 0);
           HermesBuiltin.apply(items1, mapped);
         }
-        if (closure_0.includes("audio")) {
+        if (arr.includes("audio")) {
           const push3 = mapped.push;
           const items2 = [];
           HermesBuiltin.arraySpread(closure_1_8, 0);
@@ -157,23 +158,25 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
       return [];
     }
   }, items);
-  const _require = fileTypes;
+  let stateFromStores = memo;
+  _require = fileTypes;
+  stateFromStores = undefined;
   let obj = _require(memo1[5]);
   let items1 = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items1, () => locale.locale);
+  stateFromStores = obj.useStateFromStores(items1, () => locale.locale);
   let items2 = [fileTypes, stateFromStores];
-  memo1 = React.useMemo(() => fileTypesFormattedStringHelper(closure_0, stateFromStores), items2);
+  memo1 = React.useMemo(() => closure_1_11(closure_0, stateFromStores), items2);
   const items3 = [memo];
   const items4 = [memo1];
   const callback = React.useCallback((arr) => {
     closure_0 = stateFromStores;
     let everyResult = 0 === stateFromStores.length;
     if (!everyResult) {
-      everyResult = arr.every((item, index) => {
-        closure_0 = item;
-        return closure_0.some((item, index) => {
-          const formatted = item.toLowerCase();
-          return formatted.endsWith("." + item);
+      everyResult = arr.every((arg0) => {
+        closure_0 = arg0;
+        return closure_0.some((arg0) => {
+          const formatted = closure_0.toLowerCase();
+          return formatted.endsWith("." + arg0);
         });
       });
     }
@@ -181,8 +184,8 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
   }, items3);
   const items5 = [memo];
   const callback1 = React.useCallback(() => {
-    stateFromStores(memo1[6]);
-    let obj = { title: null, body: null };
+    let obj = stateFromStores(memo1[6]);
+    obj = { title: null, body: null };
     const intl = callback(memo1[4]).intl;
     obj[0] = intl.string(callback(memo1[4]).t.azO1Pe);
     const intl2 = callback(memo1[4]).intl;
@@ -195,10 +198,10 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
     typesFormattedString: memo1,
     validateFilenames: callback,
     showInvalidFileTypeAlert: callback1,
-    mediaFilesAllowed: React.useMemo(() => 0 === stateFromStores.length || stateFromStores.some((item, index) => {
-      let hasItem = closure_6.includes(item);
+    mediaFilesAllowed: React.useMemo(() => 0 === stateFromStores.length || stateFromStores.some((arg0) => {
+      let hasItem = closure_6.includes(arg0);
       if (!hasItem) {
-        hasItem = closure_7.includes(item);
+        hasItem = closure_7.includes(arg0);
       }
       return hasItem;
     }), items5)

@@ -1,7 +1,7 @@
 // === Module 6911: openContextMenu ===
 
 // Module 6911 (openContextMenu)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
@@ -124,7 +124,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
           tmp16Result = tmp16(6915);
           importDefault = tmp16Result.addResultListener(() => {
             callback();
-            obj = callback(dependencyMap[1]);
+            obj = callback(closure_1_2[1]);
             obj = { type: "CONTEXT_MENU_OPEN", contextMenu: obj };
             obj.dispatch(obj);
           });
@@ -136,12 +136,13 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
     obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
     obj1[1] = obj;
     dispatcherDefault.dispatch(obj1);
+    const obj6 = dispatcherDefault;
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }
 }
 const AppContext = ME.AppContext;
-const result = obj132.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
 
 export function closeContextMenu() {
 

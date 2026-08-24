@@ -1,7 +1,7 @@
 // === Module 14599: volumeSlider ===
 
 // Module 14599 (volumeSlider)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
 import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 7299 */;
@@ -22,6 +22,19 @@ const volumeSlider = createToggle.createVolumeSlider({
     return _fetchDefaultSoundsFromApi2.updateUserSoundboardVolume(volume, items);
   }
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/SoundboardVolumeSetting.tsx");
+const obj = {
+  useTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.kbFsAD);
+  },
+  parent: MobileUserSettings.MobileUserSettings.VOICE,
+  maximum: 100,
+  useValue: hasPermissionToPlaySound.getAmplitudinalSoundboardVolume,
+  onValueChange(volume) {
+    const items = [QUICK_SWITCHERDefault.USER_SETTINGS];
+    return _fetchDefaultSoundsFromApi2.updateUserSoundboardVolume(volume, items);
+  }
+};
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/SoundboardVolumeSetting.tsx");
 
 export default volumeSlider;

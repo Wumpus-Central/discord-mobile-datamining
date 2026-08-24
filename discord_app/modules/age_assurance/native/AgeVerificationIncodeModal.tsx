@@ -2,23 +2,26 @@
 
 // Module 5431 (AgeVerificationIncodeModal)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let closure_5 = { METHOD_SELECT: "METHOD_SELECT", VERIFY_AGE: "VERIFY_AGE" };
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
+createCacheKey = { headerStyle: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeModal.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeModal.tsx");
 
 export default function AgeVerificationIncodeModal(webviewUrl) {
   webviewUrl = webviewUrl.webviewUrl;
   const onComplete = webviewUrl.onComplete;
   const onClose = webviewUrl.onClose;
+  let React;
+  jsx = undefined;
   const tmp = callback();
-  const React = tmp;
+  React = tmp;
   let intl = webviewUrl(onClose[6]).intl;
   const stringResult = intl.string(webviewUrl(onClose[6]).t.wJVyYR);
   jsx = stringResult;
@@ -32,6 +35,28 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
     const uRL = new URL(closure_0);
     const origin = uRL.origin;
     let obj = {
+      headerStyle: origin.headerStyle,
+      headerTitle() {
+        return null;
+      },
+      headerLeft() {
+        const obj = { onPress: handleClose, text: null };
+        const intl = callback(1236).intl;
+        obj[1] = intl.string(callback(1236).t.cpT0Cq);
+        return handleClose(callback(5432).HeaderActionButton, obj);
+      },
+      render(arg0, arg1) {
+        closure_0 = arg1;
+        return handleClose(callback2(5435), {
+          onClose: handleClose,
+          trustedOrigin: origin,
+          onMethodSelected(injectedJavaScriptBeforeContentLoaded) {
+            return navigation.navigate(closure_1_5.VERIFY_AGE, { injectedJavaScriptBeforeContentLoaded });
+          }
+        });
+      }
+    };
+    obj = {
       headerStyle: origin.headerStyle,
       headerTitle: handleClose,
       headerLeft() {

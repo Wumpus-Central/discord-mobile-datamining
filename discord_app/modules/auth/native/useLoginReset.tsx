@@ -1,10 +1,10 @@
 // === Module 8591: useLoginReset ===
 
 // Module 8591 (useLoginReset)
-import noop from "noop" /* 19 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
 
-const result = require("obj132").fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
 
 export default function useLoginReset() {
   const effect = React.useEffect(() => () => {

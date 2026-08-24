@@ -1,20 +1,20 @@
 // === Module 10438: useSetMediaPostThumbnail ===
 
 // Module 10438 (useSetMediaPostThumbnail)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { DraftType } from "handleChanged" /* 4825 */;
-import map from "map" /* 4824 */;
+import closure_5 from "map" /* 4824 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
 
 export default function useSetMediaPostThumbnail(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   const items = [closure_5];
   stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => {
-    const uploads = closure_1_5.getUploads(closure_0, DraftType.ChannelMessage);
-    let found = uploads.find((item, index) => {
+    const uploads = closure_1_5.getUploads(closure_0, closure_1_4.ChannelMessage);
+    let found = uploads.find((item) => {
       let platform;
       if (item != null) {
         item = item.item;
@@ -37,36 +37,36 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
   return React.useCallback(() => {
     let id;
     if (callback != null) {
-      id = callback.id;
+      id = tmp.id;
     }
     if (null != id) {
       let tmp4 = null != stateFromStores;
       if (tmp4) {
         let id1;
-        if (callback != null) {
-          id1 = callback.id;
+        if (tmp != null) {
+          id1 = tmp.id;
         }
-        tmp4 = stateFromStores.id !== id1;
+        tmp4 = tmp24.id !== id1;
       }
       if (tmp4) {
         let obj = callback(stateFromStores[5]);
-        obj.update(closure_0, stateFromStores.id, DraftType.ChannelMessage, { thumbnail: false });
+        obj.update(closure_0, tmp24.id, closure_1_4.ChannelMessage, { thumbnail: false });
       }
       let flag;
-      if (callback != null) {
-        flag = callback.isThumbnail;
+      if (tmp != null) {
+        flag = tmp.isThumbnail;
       }
       if (flag == null) {
         flag = false;
       }
       const obj2 = callback(stateFromStores[5]);
       let id2;
-      if (callback != null) {
-        id2 = callback.id;
+      if (tmp != null) {
+        id2 = tmp.id;
       }
       obj = { thumbnail: null, spoiler: false };
       obj[0] = !flag;
-      obj2.update(closure_0, id2, DraftType.ChannelMessage, obj);
+      obj2.update(closure_0, id2, closure_1_4.ChannelMessage, obj);
       callback(stateFromStores[6]).hideActionSheet();
       const obj4 = callback(stateFromStores[6]);
     }

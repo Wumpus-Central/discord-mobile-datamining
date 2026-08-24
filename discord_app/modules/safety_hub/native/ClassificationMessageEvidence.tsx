@@ -2,25 +2,25 @@
 
 // Module 11070 (ClassificationEvidence)
 import setOptionsDefault from "setOptions" /* 8157 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import closure_9 from "handleThemeChange" /* 1302 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
 import SafetyHubView from "SafetyHubView" /* 5438 */;
 import { MessageTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c5, findNodeHandle: closure_6, Image: error, ActivityIndicator: closure_8 } = get_ActivityIndicator);
 ({ DEFAULT_MEDIA_MAX_WIDTH: closure_12, DEFAULT_MEDIA_MAX_HEIGHT: map1, VIDEO_PLACEHOLDER_WIDTH: closure_14, VIDEO_PLACEHOLDER_HEIGHT: closure_15, VIDEO_PLACEHOLDER_FILENAME: closure_16 } = SafetyHubView);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let closure_20 = new setOptionsDefault();
 let closure_21 = createCacheKey.createStyles({ dummyVideoAttachments: { width: 0, height: 0 } });
 let tmp5 = new setOptionsDefault();
-const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/ClassificationMessageEvidence.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/ClassificationMessageEvidence.tsx");
 
 export default function ClassificationEvidence(arg0) {
   let attachments = callback2();
@@ -56,23 +56,25 @@ export default function ClassificationEvidence(arg0) {
   const stateFromStores1 = tmpResult.useStateFromStores(items2, () => username.getUsername());
   memo = obj1.useMemo(() => {
     const attachments = first2.attachments;
-    return attachments.map((item, index) => {
+    return attachments.map((filename) => {
       let obj = {};
-      const merged = Object.assign(item);
-      let str = item.filename;
+      const merged = Object.assign(filename);
+      let str = filename.filename;
       if (str == null) {
         str = "";
       }
       obj.filename = str;
-      obj.flags = ref(closure_1_2[15]).getSpoilerFlagsForAttachment(item);
+      obj.flags = closure_1_0(closure_1_2[15]).getSpoilerFlagsForAttachment(filename);
       obj.size = 0;
-      obj.proxy_url = item.url;
-      const obj2 = ref(closure_1_2[15]);
-      if (obj3.isImageFile(item.filename)) {
+      obj.proxy_url = filename.url;
+      const obj2 = closure_1_0(closure_1_2[15]);
+      const tmp2 = closure_1_0;
+      const tmp3 = closure_1_2;
+      if (obj3.isImageFile(filename.filename)) {
         obj = {};
         const merged1 = Object.assign(obj);
         let width;
-        if (table[item.id] != null) {
+        if (table[filename.id] != null) {
           width = tmp16.width;
         }
         if (width == null) {
@@ -80,7 +82,7 @@ export default function ClassificationEvidence(arg0) {
         }
         obj.width = width;
         let height;
-        if (table[item.id] != null) {
+        if (table[filename.id] != null) {
           height = tmp18.height;
         }
         if (height == null) {
@@ -88,9 +90,10 @@ export default function ClassificationEvidence(arg0) {
         }
         obj.height = height;
         let tmp4 = obj;
+        const tmp15 = table;
       } else {
         tmp4 = obj;
-        if (tmp2Result.isVideoFile(item.filename)) {
+        if (tmp2Result.isVideoFile(filename.filename)) {
           obj = {};
           const merged2 = Object.assign(obj);
           obj.width = closure_1_14;
@@ -99,7 +102,7 @@ export default function ClassificationEvidence(arg0) {
           obj.filename = closure_1_16;
           tmp4 = obj;
         }
-        tmp2Result = ref(closure_1_2[16]);
+        tmp2Result = tmp2(tmp3[16]);
       }
       return tmp4;
     });
@@ -108,16 +111,19 @@ export default function ClassificationEvidence(arg0) {
   const items5 = [first];
   const callback = obj1.useCallback((nativeEvent) => {
     ({ index, layout } = nativeEvent.nativeEvent);
-    const mapped = memo.map((item, index) => {
-      let obj = { uri: item.url, videoURI: null, thumbnail: null, mediaIndex: null, channelId: "1", messageId: null, width: null, height: null, accessoryType: "attachment", attachmentId: null };
+    const mapped = memo.map((uri) => {
+      let obj = { uri: uri.url, videoURI: null, thumbnail: null, mediaIndex: null, channelId: "1", messageId: null, width: null, height: null, accessoryType: "attachment", attachmentId: null };
       let url;
-      if (obj2.isVideoFile(attachments.attachments[index].filename)) {
-        url = item.url;
+      if (obj2.isVideoFile(attachments.attachments[arg1].filename)) {
+        url = uri.url;
       }
       obj[1] = url;
-      obj2 = ref(closure_1_2[16]);
+      obj2 = closure_1_0(closure_1_2[16]);
+      const tmp = closure_1_0;
+      const tmp2 = closure_1_2;
+      const tmp3 = attachments;
       let tmp5;
-      if (tmpResult.isVideoFile(attachments.attachments[index].filename)) {
+      if (tmpResult.isVideoFile(tmp3.attachments[arg1].filename)) {
         obj = { width: null, height: null, uri: null };
         obj[0] = closure_1_14;
         obj[1] = closure_1_15;
@@ -125,10 +131,10 @@ export default function ClassificationEvidence(arg0) {
         tmp5 = obj;
       }
       obj[2] = tmp5;
-      obj[3] = index;
+      obj[3] = arg1;
       obj[5] = closure_9;
       let width;
-      if (table[item.id] != null) {
+      if (table[uri.id] != null) {
         width = tmp10.width;
       }
       if (width == null) {
@@ -136,14 +142,14 @@ export default function ClassificationEvidence(arg0) {
       }
       obj[6] = width;
       let height;
-      if (table[item.id] != null) {
+      if (table[uri.id] != null) {
         height = tmp12.height;
       }
       if (height == null) {
         height = closure_1_13;
       }
       obj[7] = height;
-      obj[9] = item.id;
+      obj[9] = uri.id;
       return obj;
     });
     ref(8992).openMediaModal({ initialIndex: index, initialSources: mapped, disableDownload: true, disableMediaOverlayButton: true, shareable: false, originViewOrOriginLayout: layout });
@@ -154,18 +160,18 @@ export default function ClassificationEvidence(arg0) {
   }, items5);
   const effect = obj1.useEffect(() => {
     const attachments = first2.attachments;
-    const found = attachments.filter((item, index) => callback(table[16]).isImageFile(item.filename));
-    const mapped = found.map((item, index) => {
-      closure_0 = item;
+    const found = attachments.filter((filename) => callback(table[16]).isImageFile(filename.filename));
+    const mapped = found.map((arg0) => {
+      closure_0 = arg0;
       const promise = new Promise((arg0, arg1) => {
-        item = arg0;
-        return closure_1_7.getSize(item.url, (width, height) => callback({ width, height }), arg1);
+        const url = arg0;
+        return closure_1_7.getSize(url.url, (width, height) => callback({ width, height }), arg1);
       });
       return new Promise((arg0, arg1) => {
-        item = arg0;
-        return closure_1_7.getSize(item.url, (width, height) => callback({ width, height }), arg1);
-      }).then((result) => {
-        closure_0 = result;
+        const url = arg0;
+        return closure_1_7.getSize(url.url, (width, height) => callback({ width, height }), arg1);
+      }).then((arg0) => {
+        closure_0 = arg0;
         return closure_1_4((arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
@@ -187,15 +193,33 @@ export default function ClassificationEvidence(arg0) {
     }
   }
   if (first3 > 0) {
+    obj = { children: null };
     const items8 = [callback(closure_8, {}), ];
     obj = { style: null, children: null };
     obj[0] = attachments.dummyVideoAttachments;
     attachments = first2.attachments;
-    first2 = attachments.filter((item, index) => ref(4811).isVideoFile(item.filename));
-    obj[1] = first2.map((item, index) => {
-      closure_0 = item;
-      let obj = { uri: item.url };
-      return closure_1_18(first(9019), obj, index);
+    first2 = attachments.filter((filename) => ref(4811).isVideoFile(filename.filename));
+    obj[1] = first2.map((uri) => {
+      closure_0 = uri;
+      obj = {
+        source: obj,
+        onLoad(arg0) {
+          closure_0 = arg0;
+          closure_1_4((arg0) => {
+            let obj = {};
+            const merged = Object.assign(arg0);
+            obj = { width: closure_0.naturalSize.width, height: closure_0.naturalSize.height };
+            obj[closure_0.id] = obj;
+            return obj;
+          });
+          closure_1_8((arg0) => arg0 - 1);
+        },
+        onError() {
+          return callback((arg0) => arg0 - 1);
+        }
+      };
+      obj = { uri: uri.url };
+      return closure_1_18(first(9019), obj, arg1);
     });
     items8[1] = callback(tmp24, obj);
     obj[0] = items8;
@@ -207,12 +231,12 @@ export default function ClassificationEvidence(arg0) {
     const items9 = [callback(tmp13(11073), obj1), ];
     obj2 = { rowGenerator: null, message: null, modifyRow: null };
     obj2[0] = closure_20;
-    tmp13(10066);
+    let tmp13Result = tmp13(10066);
     tmpResult = tmp(4803);
     const obj3 = { id: null, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     obj3[0] = first2.id;
     const _Date = Date;
-    const tmp13Result = tmp13(11);
+    tmp13Result = tmp13(11);
     const date = new Date(tmp13Result.extractTimestamp(first2.id));
     obj3[1] = date.toUTCString();
     obj3[3] = MessageTypes.DEFAULT;
@@ -230,6 +254,7 @@ export default function ClassificationEvidence(arg0) {
     obj2[2] = callback1;
     items9[1] = callback(tmp13Result, obj2);
     obj5[0] = items9;
+    const tmp29 = callback;
   }
-  callback(assetSource, obj5);
+  closure_19(assetSource, obj5);
 };

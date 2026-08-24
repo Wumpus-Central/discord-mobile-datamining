@@ -1,13 +1,13 @@
 // === Module 11471: guildDirectoryEntryFromServer ===
 
 // Module 11471 (guildDirectoryEntryFromServer)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import DirectoryEntryTypes2 from "DirectoryEntryTypes" /* 11472 */;
 
 const DirectoryEntryTypes = DirectoryEntryTypes2.DirectoryEntryTypes;
-const result = obj132.fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");
+const result = set2.fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");
 
 export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromServer(entry) {
   if (entry.type === DirectoryEntryTypes.GUILD) {
@@ -71,8 +71,9 @@ export const orderByDateAdded = function orderByDateAdded(reactions) {
   return applyDefault.orderBy(reactions, items, ["desc"]);
 };
 export const rankByDateAdded = function rankByDateAdded(arr) {
-  const found = arr.filter((item, index) => item.featurableInDirectory);
+  const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
   const items = [(createdAt) => createdAt.createdAt];
+  const obj = applyDefault;
   return applyDefault.orderBy(found, items, ["desc"]).slice(0, 5);
 };
 export const rankGuildEntries = function rankGuildEntries(arr) {

@@ -1,14 +1,14 @@
 // === Module 10861: useChannelFollowerStats ===
 
 // Module 10861 (useChannelFollowerStats)
-import obj132Default from "obj132" /* 687 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import getFollowerStatsForChannel from "getFollowerStatsForChannel" /* 10862 */;
+import setDefault from "set" /* 687 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getFollowerStatsForChannel" /* 10862 */;
 
-const require = fn;
-const HOUR = obj132Default.Millis.HOUR;
-const result = require("obj132").fileFinishedImporting("modules/channel_following/useChannelFollowerStats.tsx");
+const require = arg1;
+const HOUR = setDefault.Millis.HOUR;
+const result = require("set").fileFinishedImporting("modules/channel_following/useChannelFollowerStats.tsx");
 
 export default function useChannelFollowerStats(arg0) {
   const _require = arg0;
@@ -32,7 +32,6 @@ export default function useChannelFollowerStats(arg0) {
     if (tmp11) {
       dependencyMap(false);
     }
-    tmp11 = null != stateFromStores && first;
   }, items2);
   const items3 = [stateFromStores, first];
   return items3;

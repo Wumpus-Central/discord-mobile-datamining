@@ -4,11 +4,11 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import noop from "noop" /* 19 */;
-import "createToggle";
+import closure_2 from "noop" /* 19 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["ms+Tme"]);
@@ -50,6 +50,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/InGameDMsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InGameDMsSetting.tsx");
 
 export default createToggle;

@@ -2,14 +2,14 @@
 
 // Module 4520 (getComboId)
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import addSku from "addSku" /* 4521 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "addSku" /* 4521 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 ({ LibraryApplicationFlags: c5, LocalDispatchApplicationStates: closure_6, StatusTypes: error } = ME);
-const result = require("obj132").fileFinishedImporting("utils/LibraryApplicationUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/LibraryApplicationUtils.tsx");
 
 export const getComboId = function getComboId(arg0, arg1) {
   return "" + arg0 + ":" + arg1;
@@ -23,7 +23,7 @@ export const shouldShareApplicationActivity = function shouldShareApplicationAct
   if (ShowCurrentGame.getSetting()) {
     const StatusSetting = explicitContentFromProto.StatusSetting;
     if (StatusSetting.getSetting() !== constants3.INVISIBLE) {
-      activeLibraryApplication = activeLibraryApplication.getActiveLibraryApplication(application_id);
+      const activeLibraryApplication = closure_7.getActiveLibraryApplication(application_id);
       let tmp7 = null == activeLibraryApplication;
       if (!tmp7) {
         tmp7 = !activeLibraryApplication.hasFlag(constants.PRIVATE);
@@ -59,7 +59,7 @@ export const convertToTransitionState = function convertToTransitionState(type) 
   let tmp = null;
   if (null != type) {
     if (type.type !== constants2.INSTALLING) {
-      if (type.type !== constants2.UPDATING) {
+      if (type.type !== tmp2.UPDATING) {
         let tmp3 = null;
       }
       tmp = tmp3;
@@ -69,36 +69,36 @@ export const convertToTransitionState = function convertToTransitionState(type) 
   return tmp;
 };
 export const getCombinedProgress = function getCombinedProgress(arr) {
-  return arr.reduce((acc, item, index) => {
+  return arr.reduce((total, type) => {
     let tmp = null;
-    if (null != item) {
-      if (item.type !== constants.INSTALLING) {
-        if (item.type !== constants.UPDATING) {
+    if (null != type) {
+      if (type.type !== constants.INSTALLING) {
+        if (type.type !== tmp2.UPDATING) {
           let tmp3 = null;
         }
         tmp = tmp3;
       }
-      tmp3 = item;
+      tmp3 = type;
     }
-    let tmp4 = acc;
+    let tmp4 = total;
     if (null != tmp) {
-      tmp4 = acc;
-      if (item.type !== constants.UP_TO_DATE) {
+      tmp4 = total;
+      if (type.type !== constants.UP_TO_DATE) {
         const obj = { total: null, progress: null };
         const _Number = Number;
-        obj[0] = acc.total + Number(tmp.total);
+        obj[0] = total.total + Number(tmp.total);
         const _Number2 = Number;
-        obj[1] = acc.progress + Number(tmp.progress);
+        obj[1] = total.progress + Number(tmp.progress);
         tmp4 = obj;
       }
     }
     return tmp4;
   }, { total: 0, progress: 0 });
 };
-export const isUserEntitledToLibraryApplication = function isUserEntitledToLibraryApplication(closure_10) {
-  let isEntitledResult = closure_10.isDiscordApplication();
+export const isUserEntitledToLibraryApplication = function isUserEntitledToLibraryApplication(libraryApplication) {
+  let isEntitledResult = libraryApplication.isDiscordApplication();
   if (isEntitledResult) {
-    isEntitledResult = closure_10.isEntitled(currentUser.getCurrentUser(), closure_4);
+    isEntitledResult = libraryApplication.isEntitled(currentUser.getCurrentUser(), closure_4);
   }
   return isEntitledResult;
 };

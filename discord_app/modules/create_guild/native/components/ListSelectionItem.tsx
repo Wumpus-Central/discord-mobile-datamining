@@ -5,9 +5,9 @@ import noopAll from "noop" /* 19 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");
+const result = require("set").fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");
 
 export default function ListSelectionItem(arg0) {
   ({ Icon, message, onPress } = arg0);

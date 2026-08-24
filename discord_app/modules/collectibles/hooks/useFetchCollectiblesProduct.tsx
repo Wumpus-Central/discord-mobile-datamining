@@ -1,14 +1,14 @@
 // === Module 10376: useFetchCollectiblesProduct ===
 
 // Module 10376 (useFetchCollectiblesProduct)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
-import addSku from "addSku" /* 4521 */;
-import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "addSku" /* 4521 */;
+import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
 import { SKUProductLines } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
 
 export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, arg1) {
   const _require = skuId;
@@ -74,8 +74,8 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
       tmp2 = stateFromStores1;
     }
     if (!tmp2) {
-      skuId(table[7]);
-      const obj = { includeBundles: null };
+      let obj = skuId(table[7]);
+      obj = { includeBundles: null };
       obj[0] = table;
       const collectiblesProduct = obj.fetchCollectiblesProduct(skuId, obj);
     }

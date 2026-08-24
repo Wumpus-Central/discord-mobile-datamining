@@ -1,19 +1,19 @@
 // === Module 8570: ConfirmEmailChangeStart ===
 
 // Module 8570 (ConfirmEmailChangeStart)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: closure_6, Image: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, button: { marginTop: 16, width: "100%" } });
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
 
 export default function ConfirmEmailChangeStart() {
   const tmp = callback4();
@@ -44,7 +44,7 @@ export default function ConfirmEmailChangeStart() {
     const intl2 = tmp2(1236).intl;
     obj3[4] = intl2.string(tmp2(1236).t.dQ71Wa);
     items1[1] = callback2(tmp2(4734).Text, obj3);
-    items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((item, index) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children: item }, index));
+    items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((children) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children }, arg1));
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.button;
     const obj5 = { text: null, onPress: null, loading: null, grow: true };

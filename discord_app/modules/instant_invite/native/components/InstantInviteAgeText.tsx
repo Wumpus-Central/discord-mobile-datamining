@@ -3,22 +3,17 @@
 // Module 11892 (InstantInviteAgeText)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
 import apexExperiment from "apexExperiment" /* 8307 */;
-import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 8918 */;
-import isGuildMember from "isGuildMember" /* 8920 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import updateWithLatestInvite from "updateWithLatestInvite" /* 8919 */;
+import closure_3 from "updateWithLatestInvite" /* 8919 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsxs: c4, jsx: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" } });
-const result = require("obj132").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");
 
 export default function InstantInviteAgeText(style) {
   ({ channel: require, callbackActionSheet: dependencyMap, canEditInvite } = style);
@@ -43,34 +38,35 @@ export default function InstantInviteAgeText(style) {
     }
     obj = { variant: null, children: null };
     obj[0] = str2;
-    const items2 = [isGuildMember.maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
+    const items2 = [tmp2(8920).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
     obj[1] = items2;
-    const items3 = [callback(Text.Text, obj), ];
+    const items3 = [closure_4(tmp2(4734).Text, obj), ];
     if (canEditInvite) {
       obj1 = { onPress: null, accessibilityRole: "link", accessibilityLabel: null, hitSlop: null, children: null };
       obj1[0] = function onPress() {
-        showInstantInviteActionSheet.handlePressSettings(closure_0, closure_1, closure_3);
+        closure_1_0(closure_1_1[10]).handlePressSettings(closure_0, closure_1, closure_3);
         if (callback != null) {
           callback();
         }
       };
-      const intl = getSystemLocale.intl;
-      obj1[2] = intl.string(getSystemLocale.t["VNe8P/"]);
+      const intl = tmp2(1236).intl;
+      obj1[2] = intl.string(tmp2(1236).t["VNe8P/"]);
       obj1[3] = { top: 8, left: 8, bottom: 8, right: 8 };
       if (manaTypeConsolidationExperiment) {
         str = "experimental/body-md/medium";
       }
       const obj2 = { variant: null, color: "text-link", children: null };
       obj2[0] = str;
-      const intl2 = getSystemLocale.intl;
-      obj2[2] = intl2.string(getSystemLocale.t["VNe8P/"]);
-      obj1[4] = callback2(Text.Text, obj2);
-      canEditInvite = callback2(PressableBase.PressableOpacity, obj1);
+      const intl2 = tmp2(1236).intl;
+      obj2[2] = intl2.string(tmp2(1236).t["VNe8P/"]);
+      obj1[4] = closure_5(tmp2(4734).Text, obj2);
+      canEditInvite = tmp9(tmp2(5433).PressableOpacity, obj1);
     }
     items3[1] = canEditInvite;
     obj[1] = items3;
-    tmp7Result = callback(View, obj);
-    const tmp2Result = isGuildMember;
+    tmp7Result = tmp7(View, obj);
+    const tmp2Result = tmp2(8920);
+    const tmp8 = View;
   }
   return tmp7Result;
 };

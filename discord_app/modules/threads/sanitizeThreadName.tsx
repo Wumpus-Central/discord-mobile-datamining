@@ -1,9 +1,9 @@
 // === Module 8464: sanitizeThreadName ===
 
 // Module 8464 (sanitizeThreadName)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");
+const result = set.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");
 
 export default function sanitizeThreadName(str) {
   let trimmed = str;

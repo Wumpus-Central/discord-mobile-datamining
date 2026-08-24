@@ -21,6 +21,7 @@ function getExpoUpdatesContext() {
     }
     if (updateId2) {
       obj.update_id = expoUpdates.updateId.toLowerCase();
+      const str = expoUpdates.updateId;
     }
     const channel = expoUpdates.channel;
     let channel2 = typeof channel === "string";
@@ -29,6 +30,7 @@ function getExpoUpdatesContext() {
     }
     if (channel2) {
       obj.channel = expoUpdates.channel.toLowerCase();
+      const str2 = expoUpdates.channel;
     }
     const runtimeVersion = expoUpdates.runtimeVersion;
     let runtimeVersion2 = typeof runtimeVersion === "string";
@@ -37,6 +39,7 @@ function getExpoUpdatesContext() {
     }
     if (runtimeVersion2) {
       obj.runtime_version = expoUpdates.runtimeVersion.toLowerCase();
+      const str3 = expoUpdates.runtimeVersion;
     }
     const checkAutomatically = expoUpdates.checkAutomatically;
     let checkAutomatically2 = typeof checkAutomatically === "string";
@@ -45,6 +48,7 @@ function getExpoUpdatesContext() {
     }
     if (checkAutomatically2) {
       obj.check_automatically = expoUpdates.checkAutomatically.toLowerCase();
+      const str4 = expoUpdates.checkAutomatically;
     }
     const emergencyLaunchReason = expoUpdates.emergencyLaunchReason;
     let emergencyLaunchReason2 = typeof emergencyLaunchReason === "string";
@@ -73,7 +77,7 @@ arg5.expoContextIntegration = () => {
   function getExpoUpdatesContextCached() {
     let tmp = closure_0;
     if (!closure_0) {
-      const tmp3 = getExpoUpdatesContext();
+      const tmp3 = closure_1_3();
       closure_0 = tmp3;
       tmp = tmp3;
     }
@@ -89,26 +93,25 @@ arg5.expoContextIntegration = () => {
             if (obj.isExpo()) {
               if (!tmp4Result.isExpoGo()) {
                 try {
-                  const NATIVE = on(closure_1_1[1]).NATIVE;
+                  const NATIVE = tmp4(tmp5[1]).NATIVE;
                   NATIVE.setContext(closure_1_2, tmp7);
                 } catch (tmp10) {
                   const debug = tmp3(tmp2[2]).debug;
                   debug.error("Error setting Expo updates context:", tmp10);
                 }
               }
-              tmp4Result = on(closure_1_1[0]);
+              tmp4Result = tmp4(tmp5[0]);
             }
-            obj = on(closure_1_1[0]);
           })();
         }
       });
     },
     processEvent(contexts) {
-      let obj = require(getExpoUpdatesContextCached[0]);
+      let obj = closure_1_0(getExpoUpdatesContextCached[0]);
       if (obj.isExpo()) {
-        let tmpResult = require(getExpoUpdatesContextCached[0]);
+        let tmpResult = tmp(tmp2[0]);
         if (tmpResult.isExpoGo()) {
-          tmpResult = require(getExpoUpdatesContextCached[3]);
+          tmpResult = tmp(tmp2[3]);
           const expoDevice = tmpResult.getExpoDevice();
           let tmp4;
           if (expoDevice) {
@@ -128,7 +131,7 @@ arg5.expoContextIntegration = () => {
             const _Object2 = Object;
             contexts.contexts.device = Object.assign(Object.assign({}, tmp4), contexts.contexts.device);
           }
-          const expoDevice1 = require(getExpoUpdatesContextCached[3]).getExpoDevice();
+          const expoDevice1 = tmp(tmp2[3]).getExpoDevice();
           let tmp9;
           if (expoDevice1) {
             obj = { build: null, version: null, name: null };
@@ -141,16 +144,17 @@ arg5.expoContextIntegration = () => {
             const _Object4 = Object;
             contexts.contexts.os = Object.assign(Object.assign({}, tmp9), contexts.contexts.os);
           }
-          const tmpResult1 = require(getExpoUpdatesContextCached[3]);
+          const tmpResult1 = tmp(tmp2[3]);
         }
         contexts.contexts = contexts.contexts || {};
         let tmp13 = closure_0;
         if (!closure_0) {
-          const tmp15 = getExpoUpdatesContext();
+          const tmp15 = closure_1_3();
           closure_0 = tmp15;
           tmp13 = tmp15;
         }
-        contexts.contexts[ota_updates] = Object.assign({}, tmp13);
+        contexts.contexts[closure_1_2] = Object.assign({}, tmp13);
+        const tmp11 = closure_1_2;
       }
       return contexts;
     }

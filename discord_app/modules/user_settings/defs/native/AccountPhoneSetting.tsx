@@ -6,12 +6,12 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 import ChangePhoneReason from "ChangePhoneReason" /* 8629 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
-import "createToggle";
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.dEYpSt);
@@ -29,12 +29,13 @@ let createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    const obj = { allowDeletePhone: true, reason: ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE };
+    let obj = _modDef5260;
+    obj = { allowDeletePhone: true, reason: ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE };
     obj.pushLazy(asyncRequireImpl(8626, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
 
 export default createToggle;

@@ -1,7 +1,7 @@
 // === Module 15119: get webauthn ===
 
 // Module 15119 (get webauthn)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const obj = {};
 Object.defineProperty(obj, "webauthn", {
@@ -39,6 +39,6 @@ Object.defineProperty(obj, "backup", {
   },
   set: undefined
 });
-const result = obj132.fileFinishedImporting("modules/mfa/MFAConstants.tsx");
+const result = set.fileFinishedImporting("modules/mfa/MFAConstants.tsx");
 
 export const SELECT_NAMES = obj;

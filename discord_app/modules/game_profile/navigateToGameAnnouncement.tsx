@@ -1,11 +1,11 @@
 // === Module 9170: _navigateToGameAnnouncement ===
 
 // Module 9170 (_navigateToGameAnnouncement)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _navigateToGameAnnouncement() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -168,7 +168,7 @@ function _navigateToGameAnnouncement() {
   return applyArgumentsResult;
 }
 ({ GuildFeatures: c5, JoinGuildSources: closure_6, Routes: error } = ME);
-const result = require("obj132").fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
+const result = require("set").fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
 
 export default function navigateToGameAnnouncement() {
   const self = this;

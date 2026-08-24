@@ -2,18 +2,17 @@
 
 // Module 6294 (AnimatedPressableHighlight)
 import SPRING_CONFIG from "SPRING_CONFIG" /* 6295 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "obj132";
+import set from "set" /* 500 */;
 import importDefaultResult from "module_4115" /* 4115 */;
-import obj132 from "obj132" /* 2 */;
 
-require = fn;
+require = arg1;
 let closure_6 = importDefaultResult.createAnimatedComponent(require("PressableBase").PressableHighlight);
-const result = obj132.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");
+const result = set.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");
 
-export const AnimatedPressableHighlight = obj132.isAndroid() ? (function AnimatedPressableHighlightAndroid(children) {
+export const AnimatedPressableHighlight = set.isAndroid() ? (function AnimatedPressableHighlightAndroid(children) {
   const merged = Object.assign(children, Object.create(null));
   let token;
   let obj = merged(4097);

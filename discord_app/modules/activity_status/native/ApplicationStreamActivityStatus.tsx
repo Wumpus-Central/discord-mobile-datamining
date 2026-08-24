@@ -7,10 +7,10 @@ import ActivityStatusIconDefault from "ActivityStatusIcon" /* 9898 */;
 import ActivityStatusTextDefault from "ActivityStatusText" /* 9901 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
 
 export default function ApplicationStreamActivityStatus(hideText) {
   ({ game, hideIcon } = hideText);
@@ -56,6 +56,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
     obj[0] = tmp7(9899).TvIcon;
     obj[1] = iconStyle;
     tmp12 = callback(ActivityStatusIconDefault, obj);
+    const tmp15 = ActivityStatusIconDefault;
   }
   const children = [tmp12, ];
   let tmp16 = !flag;
@@ -67,5 +68,5 @@ export default function ApplicationStreamActivityStatus(hideText) {
     tmp16 = callback(ActivityStatusTextDefault, obj);
   }
   children[1] = tmp16;
-  return callback(closure_4, { children });
+  return closure_5(closure_4, { children });
 };

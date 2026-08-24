@@ -1,7 +1,7 @@
 // === Module 312: get VirtualizedList ===
 
 // Module 312 (get VirtualizedList)
-const require = fn;
+const require = arg1;
 const dependencyMap = arg6;
 const obj = { keyExtractor: require("elementsThatOverlapOffsets").keyExtractor };
 Object.defineProperty(obj, "VirtualizedList", { get: () => require(314) /* _isNativeReflectConstruct */.default, set: undefined });

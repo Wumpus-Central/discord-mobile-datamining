@@ -1,7 +1,7 @@
 // === Module 5087: noop ===
 
 // Module 5087 (noop)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged" /* 5069 */;
 import isSubscriptionGated from "isSubscriptionGated" /* 1981 */;
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled" /* 4195 */;
@@ -10,8 +10,7 @@ import getHash from "getHash" /* 4288 */;
 import getMemberSafetyPageStore from "getMemberSafetyPageStore" /* 5088 */;
 import handleReset from "handleReset" /* 5250 */;
 import snapshotSelectedGuildId from "snapshotSelectedGuildId" /* 4260 */;
-import "processChannel";
-import processChannel from "processChannel" /* 4800 */;
+import processChannel from "processChannel" /* 4799 */;
 import dropChannelIfEmpty from "dropChannelIfEmpty" /* 4995 */;
 import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
 import guildHasCommunity from "guildHasCommunity" /* 5276 */;
@@ -37,7 +36,7 @@ import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import handleCacheOrSocketLoaded from "handleCacheOrSocketLoaded" /* 5387 */;
 import makeSortedChannel from "makeSortedChannel" /* 5388 */;
 
-const result = obj132.fileFinishedImporting("modules/app_startup/AllCacheStores.native.tsx");
+const result = set.fileFinishedImporting("modules/app_startup/AllCacheStores.native.tsx");
 
 export default function noop() {
 

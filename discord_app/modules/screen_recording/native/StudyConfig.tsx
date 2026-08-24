@@ -1,10 +1,10 @@
 // === Module 15202: SURVEY_CONFIGS ===
 
 // Module 15202 (SURVEY_CONFIGS)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const obj = {};
-const result = obj132.fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
+const result = set.fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
 
 export const SURVEY_CONFIGS = obj;
 export const getSurveyConfig = function getSurveyConfig(closure_0) {
@@ -30,5 +30,5 @@ export const getSurveyConfigSafe = function getSurveyConfigSafe(arg0) {
 };
 export const getAvailableSurveys = function getAvailableSurveys() {
   const values = Object.values(obj);
-  return values.filter((item, index) => item.predicate());
+  return values.filter((predicate) => predicate.predicate());
 };

@@ -12,6 +12,7 @@ function setSpanDurationAsMeasurementOnTransactionEvent(measurements, arg1, time
       const obj = { value: null, unit: "millisecond" };
       obj[0] = 1000 * (timestamp.timestamp - timestamp.start_timestamp);
       measurements.measurements[arg1] = obj;
+      const tmp3 = measurements.measurements || {};
     }
   }
   const debug = registerSpanErrorInstrumentation.debug;
@@ -30,12 +31,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn) => {
-      closure_0 = fn;
+    _Promise = new _Promise((arg0, arg1) => {
+      closure_0 = arg0;
       closure_1 = arg1;
-      function fulfilled(result) {
+      function fulfilled(arg0) {
         try {
-          step(iter.next(result));
+          step(iter.next(arg0));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -55,8 +56,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((fn) => {
-              fn(closure_0);
+            tmp = new tmp((arg0) => {
+              arg0(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -70,13 +71,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        fn(value);
+        arg0(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
-            fn(closure_0);
+          tmp3 = new tmp3((arg0) => {
+            arg0(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -212,8 +213,8 @@ arg5.captureAppStart = function captureAppStart() {
     }
   });
 };
-arg5._captureAppStart = function _captureAppStart(_captureAppStartResult3) {
-  const isManual = _captureAppStartResult3.isManual;
+arg5._captureAppStart = function _captureAppStart(isManual) {
+  isManual = isManual.isManual;
   c1 = undefined;
   return fn(this, undefined, undefined, function*() {
     if (c5 === 2) {
@@ -381,333 +382,458 @@ arg5.appStartIntegration = () => {
       return (function*() {
         if (c4 === 2) {
           c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp5 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
-          }
+          let throwTypeErrorResult = HermesBuiltin.throwTypeError();
         } else {
-          try {
-            c4 = 2;
-            let num2 = 0;
-            if (0 === c3) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                c2 = tmp2;
-                let app_start_timestamp_ms = tmp3;
-                let lib;
-                app_start_timestamp_ms = undefined;
-                c2 = undefined;
-                c3 = undefined;
-                c4 = undefined;
-                c5 = undefined;
-                c6 = undefined;
-                c7 = undefined;
-                c8 = undefined;
-                c9 = undefined;
-                c10 = undefined;
-                closure_11 = undefined;
-                c12 = undefined;
-                c13 = undefined;
-                c14 = undefined;
-                c15 = undefined;
-                c16 = undefined;
-                c17 = undefined;
-                if (!c3) {
-                  const contexts = closure_1_0.contexts;
-                  let trace;
-                  if (null !== contexts) {
-                    if (undefined !== contexts) {
-                      trace = contexts.trace;
-                    }
-                  }
-                  if (trace) {
-                    if (!closure_1_0) {
-                      if (closure_5) {
-                        if (tmp213 !== closure_1_0.contexts.trace.span_id) {
-                          const debug13 = lib(closure_2_1[0]).debug;
-                          debug13.warn("[AppStart] First started active root span id does not match the transaction event span id. Can not attached app start.");
-                          c4 = 3;
-                          obj1 = { value: null, done: true };
-                          obj1[0] = undefined;
-                          return obj1;
-                        }
-                      } else {
-                        const debug12 = lib(closure_2_1[0]).debug;
-                        debug12.warn("[AppStart] No first started active root span id recorded. Can not attach app start.");
-                        c4 = 3;
-                        let obj2 = { value: null, done: true };
-                        obj2[0] = undefined;
-                        return obj2;
+          throwTypeErrorResult = arg1;
+          throwTypeErrorResult = arg0;
+          throwTypeErrorResult = tmp4;
+          if (tmp5 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: "HermesInternal" };
+            }
+          } else {
+            try {
+              c4 = 2;
+              let num2 = 0;
+              if (0 === c3) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  c2 = tmp2;
+                  let app_start_timestamp_ms = tmp3;
+                  let lib;
+                  app_start_timestamp_ms = undefined;
+                  c2 = undefined;
+                  c3 = undefined;
+                  c4 = undefined;
+                  c5 = undefined;
+                  c6 = undefined;
+                  c7 = undefined;
+                  c8 = undefined;
+                  c9 = undefined;
+                  c10 = undefined;
+                  closure_11 = undefined;
+                  c12 = undefined;
+                  c13 = undefined;
+                  c14 = undefined;
+                  c15 = undefined;
+                  c16 = undefined;
+                  c17 = undefined;
+                  throwTypeErrorResult = c3;
+                  if (!c3) {
+                    throwTypeErrorResult = closure_1_0;
+                    const contexts = closure_1_0.contexts;
+                    throwTypeErrorResult = null;
+                    throwTypeErrorResult = undefined;
+                    if (null !== contexts) {
+                      if (undefined !== contexts) {
+                        throwTypeErrorResult = contexts.trace;
                       }
                     }
-                    const NATIVE = lib(closure_2_1[1]).NATIVE;
-                    c3 = 1;
-                    c4 = 1;
-                    let obj3 = { value: null, done: false };
-                    obj3[0] = NATIVE.fetchNativeAppStart();
-                    return obj3;
-                  } else {
-                    const debug11 = lib(closure_2_1[0]).debug;
-                    debug11.warn("[AppStart] Transaction event is missing trace context. Can not attach app start.");
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = closure_1_0;
+                      if (!closure_1_0) {
+                        if (closure_5) {
+                          throwTypeErrorResult = closure_1_0;
+                          if (throwTypeErrorResult !== closure_1_0.contexts.trace.span_id) {
+                            throwTypeErrorResult = lib;
+                            throwTypeErrorResult = closure_2_1;
+                            const debug13 = lib(closure_2_1[0]).debug;
+                            throwTypeErrorResult = debug13.warn("[AppStart] First started active root span id does not match the transaction event span id. Can not attached app start.");
+                            c4 = 3;
+                            obj1 = { value: null, done: true };
+                            obj1[0] = undefined;
+                            return obj1;
+                          }
+                        } else {
+                          throwTypeErrorResult = lib;
+                          throwTypeErrorResult = closure_2_1;
+                          const debug12 = lib(closure_2_1[0]).debug;
+                          throwTypeErrorResult = debug12.warn("[AppStart] No first started active root span id recorded. Can not attach app start.");
+                          c4 = 3;
+                          let obj2 = { value: null, done: true };
+                          obj2[0] = undefined;
+                          return obj2;
+                        }
+                      }
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = closure_2_1;
+                      const NATIVE = lib(closure_2_1[1]).NATIVE;
+                      c3 = 1;
+                      c4 = 1;
+                      let obj3 = { value: null, done: false };
+                      obj3[0] = NATIVE.fetchNativeAppStart();
+                      return obj3;
+                    } else {
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = closure_2_1;
+                      const debug11 = lib(closure_2_1[0]).debug;
+                      throwTypeErrorResult = debug11.warn("[AppStart] Transaction event is missing trace context. Can not attach app start.");
+                    }
+                  }
+                  c4 = 3;
+                }
+              } else {
+                let num6 = 1;
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj4 = { value: null, done: true };
+                  obj4[0] = arg1;
+                  return obj4;
+                } else {
+                  throwTypeErrorResult = app_start_timestamp_ms;
+                  lib = arg1;
+                  throwTypeErrorResult = lib;
+                  if (!lib) {
+                    let debug = lib(closure_2_1[0]).debug;
+                    debug.warn("[AppStart] Failed to retrieve the app start metrics from the native layer.");
                   }
                 }
-                c4 = 3;
               }
-            } else {
-              let num6 = 1;
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj4 = { value: null, done: true };
-                obj4[0] = arg1;
-                return obj4;
+              if (lib.has_fetched) {
+                throwTypeErrorResult = c2;
+                throwTypeErrorResult = lib;
+                throwTypeErrorResult = closure_2_1;
+                const debug10 = lib(closure_2_1[0]).debug;
+                throwTypeErrorResult = debug10.warn("[AppStart] Measured app start metrics were already reported from the native layer.");
               } else {
-                lib = arg1;
-                if (!lib) {
-                  let debug = lib(closure_2_1[0]).debug;
-                  debug.warn("[AppStart] Failed to retrieve the app start metrics from the native layer.");
-                }
-              }
-            }
-            if (lib.has_fetched) {
-              const debug10 = lib(closure_2_1[0]).debug;
-              debug10.warn("[AppStart] Measured app start metrics were already reported from the native layer.");
-            } else {
-              app_start_timestamp_ms = lib.app_start_timestamp_ms;
-              if (app_start_timestamp_ms) {
-                timestampMs = undefined;
-                if (null != closure_2_4) {
-                  timestampMs = closure_2_4.timestampMs;
-                }
-                if (!timestampMs) {
-                  obj = lib(closure_2_1[5]);
-                  timestampMs = obj.getBundleStartTimestampMs();
-                }
-                if (timestampMs) {
-                  if (lib.start_timestamp) {
-                    if (closure_2_1 >= 1000 * lib.start_timestamp - 60000) {
-                      closure_3 = timestampMs - closure_2_1;
-                      if (closure_3 >= 60000) {
-                        const debug9 = lib(closure_2_1[0]).debug;
-                        debug9.warn("[AppStart] App start duration is over a minute long, not adding app start span.");
-                      } else if (closure_3 < num2) {
-                        const debug8 = lib(closure_2_1[0]).debug;
-                        debug8.warn("[AppStart] Last recorded app start end timestamp is before the app start timestamp.", "This is usually caused by missing `Sentry.wrap(RootComponent)` call.");
-                      } else {
-                        c3 = true;
-                        let data = lib.contexts.trace.data;
-                        if (!data) {
-                          data = {};
-                        }
-                        lib.contexts.trace.data = data;
-                        closure_1_0.contexts.trace.data[lib(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = lib(closure_2_1[4]).UI_LOAD;
-                        closure_1_0.contexts.trace.op = lib(closure_2_1[4]).UI_LOAD;
-                        const tmp59 = lib(closure_2_1[7]);
-                        if (closure_2_5) {
-                          SPAN_ORIGIN_AUTO_APP_START = tmp59.SPAN_ORIGIN_MANUAL_APP_START;
+                app_start_timestamp_ms = lib.app_start_timestamp_ms;
+                if (app_start_timestamp_ms) {
+                  timestampMs = undefined;
+                  if (null != closure_2_4) {
+                    timestampMs = closure_2_4.timestampMs;
+                  }
+                  if (!timestampMs) {
+                    obj = lib(closure_2_1[5]);
+                    timestampMs = obj.getBundleStartTimestampMs();
+                  }
+                  if (timestampMs) {
+                    if (lib.start_timestamp) {
+                      if (closure_2_1 >= 1000 * lib.start_timestamp - 60000) {
+                        closure_3 = timestampMs - closure_2_1;
+                        if (closure_3 >= 60000) {
+                          throwTypeErrorResult = c2;
+                          throwTypeErrorResult = lib;
+                          throwTypeErrorResult = closure_2_1;
+                          const debug9 = lib(closure_2_1[0]).debug;
+                          throwTypeErrorResult = debug9.warn("[AppStart] App start duration is over a minute long, not adding app start span.");
                         } else {
-                          SPAN_ORIGIN_AUTO_APP_START = tmp59.SPAN_ORIGIN_AUTO_APP_START;
-                        }
-                        lib.contexts.trace.data[lib(closure_2_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = SPAN_ORIGIN_AUTO_APP_START;
-                        lib.contexts.trace.origin = SPAN_ORIGIN_AUTO_APP_START;
-                        closure_5 = closure_1_1 / 1000;
-                        lib.start_timestamp = closure_5;
-                        spans = lib.spans;
-                        if (!spans) {
-                          spans = [];
-                        }
-                        lib.spans = spans;
-                        spans = closure_1_0.spans;
-                        closure_7 = spans.find((item, index) => "ui.load.initial_display" === item.op);
-                        if (closure_7) {
-                          closure_7.start_timestamp = closure_2_5;
-                          callback(closure_1_0, "time_to_initial_display", closure_7);
-                        }
-                        closure_8 = spans.find((item, index) => "ui.load.full_display" === item.op);
-                        if (closure_8) {
-                          closure_8.start_timestamp = closure_2_5;
-                          callback(closure_1_0, "time_to_full_display", closure_8);
-                        }
-                        callback = timestampMs / 1000;
-                        let timestamp = lib.timestamp;
-                        if (timestamp) {
-                          timestamp = lib.timestamp < closure_1_9;
-                        }
-                        if (timestamp) {
-                          const debug5 = lib(closure_2_1[0]).debug;
-                          debug5.log("[AppStart] Transaction event timestamp is before app start end. Adjusting transaction event timestamp.");
-                          closure_1_0.timestamp = callback;
-                        }
-                        if ("cold" === lib.type) {
-                          APP_START_WARM = lib(closure_2_1[4]).APP_START_COLD;
-                        } else {
-                          APP_START_WARM = lib(closure_2_1[4]).APP_START_WARM;
-                        }
-                        obj2 = lib(closure_2_1[5]);
-                        let obj5 = { op: null, description: null, start_timestamp: null, timestamp: null, trace_id: null, parent_span_id: null, origin: null };
-                        obj5[0] = APP_START_WARM;
-                        let str9 = "Warm Start";
-                        if ("cold" === lib.type) {
-                          str9 = "Cold Start";
-                        }
-                        obj5[1] = str9;
-                        obj5[2] = c5;
-                        obj5[3] = c9;
-                        obj5[4] = lib.contexts.trace.trace_id;
-                        obj5[5] = lib.contexts.trace.span_id;
-                        obj5[6] = c4;
-                        closure_11 = obj2.createSpanJSON(obj5);
-                        let endFrames;
-                        if (null != closure_2_4) {
-                          endFrames = closure_2_4.endFrames;
-                        }
-                        if (endFrames) {
-                          (function attachFrameDataToSpan(closure_2_11, endFrames) {
-                            if (endFrames.totalFrames <= 0) {
-                              if (endFrames.slowFrames <= 0) {
+                          throwTypeErrorResult = app_start_timestamp_ms;
+                          throwTypeErrorResult = closure_3;
+                          if (closure_3 < num2) {
+                            throwTypeErrorResult = c2;
+                            throwTypeErrorResult = lib;
+                            throwTypeErrorResult = closure_2_1;
+                            const debug8 = lib(closure_2_1[0]).debug;
+                            throwTypeErrorResult = debug8.warn("[AppStart] Last recorded app start end timestamp is before the app start timestamp.", "This is usually caused by missing `Sentry.wrap(RootComponent)` call.");
+                          } else {
+                            throwTypeErrorResult = c2;
+                            c3 = true;
+                            throwTypeErrorResult = lib;
+                            throwTypeErrorResult = lib;
+                            let data = lib.contexts.trace.data;
+                            if (!data) {
+                              data = {};
+                            }
+                            lib.contexts.trace.data = data;
+                            closure_1_0.contexts.trace.data[lib(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = lib(closure_2_1[4]).UI_LOAD;
+                            closure_1_0.contexts.trace.op = lib(closure_2_1[4]).UI_LOAD;
+                            const tmp59 = lib(closure_2_1[7]);
+                            if (closure_2_5) {
+                              SPAN_ORIGIN_AUTO_APP_START = tmp59.SPAN_ORIGIN_MANUAL_APP_START;
+                            } else {
+                              SPAN_ORIGIN_AUTO_APP_START = tmp59.SPAN_ORIGIN_AUTO_APP_START;
+                            }
+                            lib.contexts.trace.data[lib(closure_2_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = SPAN_ORIGIN_AUTO_APP_START;
+                            lib.contexts.trace.origin = SPAN_ORIGIN_AUTO_APP_START;
+                            closure_5 = closure_1_1 / 1000;
+                            lib.start_timestamp = closure_5;
+                            spans = lib.spans;
+                            if (!spans) {
+                              spans = [];
+                            }
+                            lib.spans = spans;
+                            spans = closure_1_0.spans;
+                            closure_7 = spans.find((op) => "ui.load.initial_display" === op.op);
+                            if (closure_7) {
+                              closure_7.start_timestamp = closure_2_5;
+                              callback(closure_1_0, "time_to_initial_display", closure_7);
+                            }
+                            closure_8 = spans.find((op) => "ui.load.full_display" === op.op);
+                            if (closure_8) {
+                              closure_8.start_timestamp = closure_2_5;
+                              callback(closure_1_0, "time_to_full_display", closure_8);
+                            }
+                            callback = timestampMs / 1000;
+                            throwTypeErrorResult = lib;
+                            let timestamp = lib.timestamp;
+                            if (timestamp) {
+                              throwTypeErrorResult = app_start_timestamp_ms;
+                              throwTypeErrorResult = c2;
+                              throwTypeErrorResult = lib;
+                              throwTypeErrorResult = closure_1_9;
+                              timestamp = lib.timestamp < closure_1_9;
+                            }
+                            if (timestamp) {
+                              throwTypeErrorResult = app_start_timestamp_ms;
+                              throwTypeErrorResult = c2;
+                              throwTypeErrorResult = lib;
+                              throwTypeErrorResult = closure_2_1;
+                              const debug5 = lib(closure_2_1[0]).debug;
+                              throwTypeErrorResult = debug5.log("[AppStart] Transaction event timestamp is before app start end. Adjusting transaction event timestamp.");
+                              throwTypeErrorResult = closure_1_0;
+                              throwTypeErrorResult = callback;
+                              closure_1_0.timestamp = callback;
+                            }
+                            throwTypeErrorResult = app_start_timestamp_ms;
+                            throwTypeErrorResult = lib;
+                            if ("cold" === lib.type) {
+                              throwTypeErrorResult = c2;
+                              throwTypeErrorResult = lib;
+                              throwTypeErrorResult = closure_2_1;
+                              APP_START_WARM = lib(closure_2_1[4]).APP_START_COLD;
+                            } else {
+                              throwTypeErrorResult = c2;
+                              throwTypeErrorResult = lib;
+                              throwTypeErrorResult = closure_2_1;
+                              APP_START_WARM = lib(closure_2_1[4]).APP_START_WARM;
+                            }
+                            throwTypeErrorResult = app_start_timestamp_ms;
+                            throwTypeErrorResult = c2;
+                            throwTypeErrorResult = lib;
+                            throwTypeErrorResult = closure_2_1;
+                            obj2 = lib(closure_2_1[5]);
+                            let obj5 = { op: null, description: null, start_timestamp: null, timestamp: null, trace_id: null, parent_span_id: null, origin: null };
+                            throwTypeErrorResult = APP_START_WARM;
+                            obj5[0] = APP_START_WARM;
+                            throwTypeErrorResult = lib;
+                            let str9 = "Warm Start";
+                            if ("cold" === lib.type) {
+                              str9 = "Cold Start";
+                            }
+                            throwTypeErrorResult = app_start_timestamp_ms;
+                            throwTypeErrorResult = c2;
+                            obj5[1] = str9;
+                            throwTypeErrorResult = c5;
+                            obj5[2] = c5;
+                            throwTypeErrorResult = c9;
+                            obj5[3] = c9;
+                            throwTypeErrorResult = lib;
+                            obj5[4] = lib.contexts.trace.trace_id;
+                            throwTypeErrorResult = lib;
+                            obj5[5] = lib.contexts.trace.span_id;
+                            throwTypeErrorResult = c4;
+                            obj5[6] = c4;
+                            closure_11 = obj2.createSpanJSON(obj5);
+                            throwTypeErrorResult = closure_2_4;
+                            throwTypeErrorResult = undefined;
+                            if (null != closure_2_4) {
+                              throwTypeErrorResult = c2;
+                              throwTypeErrorResult = closure_2_4;
+                              throwTypeErrorResult = closure_2_4.endFrames;
+                            }
+                            if (throwTypeErrorResult) {
+                              throwTypeErrorResult = app_start_timestamp_ms;
+                              throwTypeErrorResult = c2;
+                              throwTypeErrorResult = closure_2_11;
+                              throwTypeErrorResult = closure_2_4;
+                              throwTypeErrorResult = (function attachFrameDataToSpan(closure_2_11, endFrames) {
                                 if (endFrames.totalFrames <= 0) {
-                                  const debug2 = callback(app_start_timestamp_ms[0]).debug;
-                                  const _HermesInternal = HermesInternal;
-                                  debug2.warn("[AppStart] Detected zero slow or frozen frames. Not adding measurements to spanId (" + closure_2_11.span_id + ").");
+                                  if (endFrames.slowFrames <= 0) {
+                                    if (endFrames.totalFrames <= 0) {
+                                      const debug2 = callback(app_start_timestamp_ms[0]).debug;
+                                      const _HermesInternal = HermesInternal;
+                                      debug2.warn("[AppStart] Detected zero slow or frozen frames. Not adding measurements to spanId (" + closure_2_11.span_id + ").");
+                                    }
+                                  }
+                                }
+                                closure_2_11.data = closure_2_11.data || {};
+                                ({ totalFrames: closure_2_11.data["frames.total"], slowFrames: closure_2_11.data["frames.slow"], frozenFrames: closure_2_11.data["frames.frozen"] } = endFrames);
+                                const debug = callback(app_start_timestamp_ms[0]).debug;
+                                obj = { spanId: closure_2_11.span_id, frameData: obj };
+                                obj = { total: endFrames.totalFrames, slow: endFrames.slowFrames, frozen: endFrames.frozenFrames };
+                                debug.log("[AppStart] Attached frame data to span.", obj);
+                              })(closure_2_11, closure_2_4.endFrames);
+                            }
+                            throwTypeErrorResult = app_start_timestamp_ms;
+                            throwTypeErrorResult = c2;
+                            throwTypeErrorResult = closure_1_11;
+                            throwTypeErrorResult = spans;
+                            closure_14 = (function createJSExecutionStartSpan(closure_1_11, spans) {
+                              let obj = callback(app_start_timestamp_ms[5]);
+                              const bundleStartTimestampMs = obj.getBundleStartTimestampMs();
+                              if (bundleStartTimestampMs) {
+                                const result = bundleStartTimestampMs / 1000;
+                                if (result < closure_1_11.start_timestamp) {
+                                  const debug2 = tmp(tmp2[0]).debug;
+                                  debug2.warn("Bundle start timestamp is before the app start span start timestamp. Skipping JS execution span.");
+                                } else if (spans) {
+                                  let tmpResult = tmp(tmp2[5]);
+                                  obj = { description: "JS Bundle Execution Before React Root", start_timestamp: null, timestamp: null, origin: null };
+                                  obj[1] = result;
+                                  obj[2] = spans / 1000;
+                                  tmpResult = tmp(tmp2[7]);
+                                  obj[3] = c7 ? tmpResult.SPAN_ORIGIN_MANUAL_APP_START : tmpResult.SPAN_ORIGIN_AUTO_APP_START;
+                                  return tmpResult.createChildSpanJSON(closure_1_11, obj);
+                                } else {
+                                  const debug = tmp(tmp2[0]).debug;
+                                  debug.warn("Missing the root component first constructor call timestamp.");
+                                  obj = { description: "JS Bundle Execution Start", start_timestamp: null, timestamp: null, origin: null };
+                                  obj[1] = result;
+                                  obj[2] = result;
+                                  obj[3] = tmp(tmp2[7]).SPAN_ORIGIN_AUTO_APP_START;
+                                  return tmp(tmp2[5]).createChildSpanJSON(closure_1_11, obj);
                                 }
                               }
-                            }
-                            closure_2_11.data = closure_2_11.data || {};
-                            ({ totalFrames: closure_2_11.data["frames.total"], slowFrames: closure_2_11.data["frames.slow"], frozenFrames: closure_2_11.data["frames.frozen"] } = endFrames);
-                            const debug = callback(app_start_timestamp_ms[0]).debug;
-                            const obj = { total: endFrames.totalFrames, slow: endFrames.slowFrames, frozen: endFrames.frozenFrames };
-                            debug.log("[AppStart] Attached frame data to span.", obj);
-                          })(closure_2_11, closure_2_4.endFrames);
-                        }
-                        closure_14 = (function createJSExecutionStartSpan(closure_1_11, spans) {
-                          let obj = callback(app_start_timestamp_ms[5]);
-                          const bundleStartTimestampMs = obj.getBundleStartTimestampMs();
-                          if (bundleStartTimestampMs) {
-                            const result = bundleStartTimestampMs / 1000;
-                            if (result < closure_1_11.start_timestamp) {
-                              const debug2 = callback(app_start_timestamp_ms[0]).debug;
-                              debug2.warn("Bundle start timestamp is before the app start span start timestamp. Skipping JS execution span.");
-                            } else if (spans) {
-                              callback(app_start_timestamp_ms[5]);
-                              obj = { description: "JS Bundle Execution Before React Root", start_timestamp: null, timestamp: null, origin: null };
-                              obj[1] = result;
-                              obj[2] = spans / 1000;
-                              const tmpResult = callback(app_start_timestamp_ms[7]);
-                              obj[3] = c7 ? tmpResult.SPAN_ORIGIN_MANUAL_APP_START : tmpResult.SPAN_ORIGIN_AUTO_APP_START;
-                              return tmpResult.createChildSpanJSON(closure_1_11, obj);
+                            })(closure_1_11, spans);
+                            throwTypeErrorResult = closure_1_11;
+                            items = [closure_1_11];
+                            lib = num6;
+                            throwTypeErrorResult = closure_14;
+                            if (closure_14) {
+                              throwTypeErrorResult = app_start_timestamp_ms;
+                              throwTypeErrorResult = closure_14;
+                              const items1 = [closure_14];
+                              let items2 = items1;
                             } else {
-                              const debug = callback(app_start_timestamp_ms[0]).debug;
-                              debug.warn("Missing the root component first constructor call timestamp.");
-                              obj = { description: "JS Bundle Execution Start", start_timestamp: null, timestamp: null, origin: null };
-                              obj[1] = result;
-                              obj[2] = result;
-                              obj[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
-                              return callback(app_start_timestamp_ms[5]).createChildSpanJSON(closure_1_11, obj);
+                              items2 = [];
                             }
-                          }
-                        })(closure_1_11, spans);
-                        items = [closure_1_11];
-                        lib = num6;
-                        if (closure_14) {
-                          const items1 = [closure_14];
-                          let items2 = items1;
-                        } else {
-                          items2 = [];
-                        }
-                        lib = HermesBuiltin.arraySpread(items2, num6);
-                        closure_12 = closure_1_11;
-                        spans = closure_1_0.spans;
-                        const found = spans.filter((item, index) => item.start_timestamp_ms / 1000 >= _undefined.start_timestamp);
-                        lib = HermesBuiltin.arraySpread(found.map((item, index) => {
-                          let start_timestamp_ms = item;
-                          if ("UIKit init" === item.description) {
-                            let obj = callback(app_start_timestamp_ms[9]);
-                            obj1 = callback(app_start_timestamp_ms[5]);
-                            let bundleStartTimestampMs = obj1.getBundleStartTimestampMs();
-                            if (!bundleStartTimestampMs) {
-                              obj = { description: "UIKit Init", start_timestamp: null, timestamp: null, origin: null };
-                              obj[1] = start_timestamp_ms.start_timestamp_ms / 1000;
-                              obj[2] = start_timestamp_ms.end_timestamp_ms / 1000;
-                              obj[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
-                              let childSpanJSON = callback(app_start_timestamp_ms[5]).createChildSpanJSON(c12, obj);
-                              obj.setMainThreadInfo(childSpanJSON);
-                              const obj3 = callback(app_start_timestamp_ms[5]);
+                            throwTypeErrorResult = app_start_timestamp_ms;
+                            throwTypeErrorResult = c2;
+                            throwTypeErrorResult = items;
+                            throwTypeErrorResult = items2;
+                            throwTypeErrorResult = num6;
+                            lib = HermesBuiltin.arraySpread(items2, num6);
+                            throwTypeErrorResult = closure_1_11;
+                            closure_12 = closure_1_11;
+                            throwTypeErrorResult = closure_1_0;
+                            spans = closure_1_0.spans;
+                            throwTypeErrorResult = spans;
+                            const found = spans.filter((start_timestamp_ms) => start_timestamp_ms.start_timestamp_ms / 1000 >= _undefined.start_timestamp);
+                            throwTypeErrorResult = lib;
+                            throwTypeErrorResult = items;
+                            lib = HermesBuiltin.arraySpread(found.map((description) => {
+                              let start_timestamp_ms = description;
+                              if ("UIKit init" === description.description) {
+                                let obj = callback(app_start_timestamp_ms[9]);
+                                obj1 = callback(app_start_timestamp_ms[5]);
+                                let bundleStartTimestampMs = obj1.getBundleStartTimestampMs();
+                                if (!bundleStartTimestampMs) {
+                                  obj = { description: "UIKit Init", start_timestamp: null, timestamp: null, origin: null };
+                                  obj[1] = start_timestamp_ms.start_timestamp_ms / 1000;
+                                  obj[2] = start_timestamp_ms.end_timestamp_ms / 1000;
+                                  obj[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
+                                  let childSpanJSON = callback(app_start_timestamp_ms[5]).createChildSpanJSON(tmp3, obj);
+                                  obj.setMainThreadInfo(childSpanJSON);
+                                  const obj3 = callback(app_start_timestamp_ms[5]);
+                                }
+                                obj = { description: "UIKit Init to JS Exec Start", start_timestamp: null, timestamp: null, origin: null };
+                                start_timestamp_ms = start_timestamp_ms.start_timestamp_ms;
+                                obj[1] = start_timestamp_ms / 1000;
+                                obj[2] = bundleStartTimestampMs / 1000;
+                                bundleStartTimestampMs = callback;
+                                obj[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
+                                childSpanJSON = callback(app_start_timestamp_ms[5]).createChildSpanJSON(tmp3, obj);
+                                const obj5 = callback(app_start_timestamp_ms[5]);
+                              } else {
+                                const obj7 = callback(app_start_timestamp_ms[9]);
+                                obj1 = { description: null, start_timestamp: null, timestamp: null, origin: null };
+                                obj1[0] = start_timestamp_ms.description;
+                                obj1[1] = start_timestamp_ms.start_timestamp_ms / 1000;
+                                obj1[2] = start_timestamp_ms.end_timestamp_ms / 1000;
+                                obj1[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
+                                return obj7.setMainThreadInfo(callback(app_start_timestamp_ms[5]).createChildSpanJSON(c12, obj1));
+                              }
+                            }), lib);
+                            throwTypeErrorResult = closure_1_6;
+                            const push = closure_1_6.push;
+                            throwTypeErrorResult = items;
+                            const items3 = [];
+                            throwTypeErrorResult = items3;
+                            throwTypeErrorResult = HermesBuiltin.arraySpread(items, 0);
+                            throwTypeErrorResult = push;
+                            throwTypeErrorResult = items3;
+                            throwTypeErrorResult = closure_1_6;
+                            throwTypeErrorResult = HermesBuiltin.apply(items3, closure_1_6);
+                            throwTypeErrorResult = lib;
+                            throwTypeErrorResult = closure_2_1;
+                            const debug6 = lib(closure_2_1[0]).debug;
+                            throwTypeErrorResult = globalThis;
+                            num2 = JSON;
+                            throwTypeErrorResult = items;
+                            throwTypeErrorResult = debug6.log("[AppStart] Added app start spans to transaction event.", JSON.stringify(items, undefined, 2));
+                            throwTypeErrorResult = closure_1_0;
+                            if ("cold" === closure_1_0.type) {
+                              throwTypeErrorResult = c2;
+                              throwTypeErrorResult = lib;
+                              throwTypeErrorResult = closure_2_1;
+                              APP_START_WARM2 = lib(closure_2_1[8]).APP_START_COLD;
+                            } else {
+                              throwTypeErrorResult = c2;
+                              throwTypeErrorResult = lib;
+                              throwTypeErrorResult = closure_2_1;
+                              APP_START_WARM2 = lib(closure_2_1[8]).APP_START_WARM;
                             }
-                            obj = { description: "UIKit Init to JS Exec Start", start_timestamp: null, timestamp: null, origin: null };
-                            start_timestamp_ms = start_timestamp_ms.start_timestamp_ms;
-                            obj[1] = start_timestamp_ms / 1000;
-                            obj[2] = bundleStartTimestampMs / 1000;
-                            bundleStartTimestampMs = callback;
-                            obj[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
-                            childSpanJSON = callback(app_start_timestamp_ms[5]).createChildSpanJSON(c12, obj);
-                            const obj5 = callback(app_start_timestamp_ms[5]);
-                          } else {
-                            const obj7 = callback(app_start_timestamp_ms[9]);
-                            obj1 = { description: null, start_timestamp: null, timestamp: null, origin: null };
-                            obj1[0] = start_timestamp_ms.description;
-                            obj1[1] = start_timestamp_ms.start_timestamp_ms / 1000;
-                            obj1[2] = start_timestamp_ms.end_timestamp_ms / 1000;
-                            obj1[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
-                            return obj7.setMainThreadInfo(callback(app_start_timestamp_ms[5]).createChildSpanJSON(c12, obj1));
+                            throwTypeErrorResult = app_start_timestamp_ms;
+                            throwTypeErrorResult = c2;
+                            obj6 = { value: null, unit: "millisecond" };
+                            throwTypeErrorResult = closure_3;
+                            obj6[0] = closure_3;
+                            throwTypeErrorResult = lib;
+                            let measurements = lib.measurements;
+                            throwTypeErrorResult = lib;
+                            if (!measurements) {
+                              measurements = {};
+                            }
+                            throwTypeErrorResult = app_start_timestamp_ms;
+                            throwTypeErrorResult = c2;
+                            throwTypeErrorResult.measurements = measurements;
+                            throwTypeErrorResult = closure_1_0;
+                            num6 = closure_1_0.measurements;
+                            throwTypeErrorResult = APP_START_WARM2;
+                            throwTypeErrorResult = obj6;
+                            num6[APP_START_WARM2] = obj6;
+                            throwTypeErrorResult = lib;
+                            throwTypeErrorResult = closure_2_1;
+                            const debug7 = lib(closure_2_1[0]).debug;
+                            const _JSON = JSON;
+                            throwTypeErrorResult = obj6;
+                            throwTypeErrorResult = debug7.log("[AppStart] Added app start measurement to transaction event.", JSON.stringify(obj6, undefined, 2));
+                            const tmp71 = lib;
                           }
-                        }), lib);
-                        const push = closure_1_6.push;
-                        const items3 = [];
-                        HermesBuiltin.arraySpread(items, 0);
-                        HermesBuiltin.apply(items3, closure_1_6);
-                        const debug6 = lib(closure_2_1[0]).debug;
-                        num2 = JSON;
-                        debug6.log("[AppStart] Added app start spans to transaction event.", JSON.stringify(items, undefined, 2));
-                        if ("cold" === closure_1_0.type) {
-                          APP_START_WARM2 = lib(closure_2_1[8]).APP_START_COLD;
-                        } else {
-                          APP_START_WARM2 = lib(closure_2_1[8]).APP_START_WARM;
                         }
-                        obj6 = { value: null, unit: "millisecond" };
-                        obj6[0] = closure_3;
-                        let measurements = lib.measurements;
-                        if (!measurements) {
-                          measurements = {};
-                        }
-                        lib.measurements = measurements;
-                        num6 = closure_1_0.measurements;
-                        num6[APP_START_WARM2] = obj6;
-                        const debug7 = lib(closure_2_1[0]).debug;
-                        const _JSON = JSON;
-                        debug7.log("[AppStart] Added app start measurement to transaction event.", JSON.stringify(obj6, undefined, 2));
                       }
                     }
+                    const debug4 = lib(closure_2_1[0]).debug;
+                    debug4.warn("[AppStart] App start timestamp is too far in the past to be used for app start span.");
+                  } else {
+                    const debug3 = lib(closure_2_1[0]).debug;
+                    debug3.warn("[AppStart] Javascript failed to record app start end. `_setAppStartEndData` was not called nor could the bundle start be found.");
                   }
-                  const debug4 = lib(closure_2_1[0]).debug;
-                  debug4.warn("[AppStart] App start timestamp is too far in the past to be used for app start span.");
                 } else {
-                  const debug3 = lib(closure_2_1[0]).debug;
-                  debug3.warn("[AppStart] Javascript failed to record app start end. `_setAppStartEndData` was not called nor could the bundle start be found.");
+                  let debug2 = lib(closure_2_1[0]).debug;
+                  debug2.warn("[AppStart] App start timestamp could not be loaded from the native layer.");
                 }
-              } else {
-                let debug2 = lib(closure_2_1[0]).debug;
-                debug2.warn("[AppStart] App start timestamp could not be loaded from the native layer.");
               }
+            } catch (throwTypeErrorResult) {
+              c4 = throwTypeErrorResult;
+              throw throwTypeErrorResult;
             }
-          } catch (tmp223) {
-            c4 = tmp;
-            throw tmp223;
           }
         }
       })();
@@ -722,10 +848,12 @@ arg5.appStartIntegration = () => {
     if (!spanId) {
       if (obj.isRootSpan(spanContext)) {
         spanId = spanContext.spanContext().spanId;
-        const debug = flag(_undefined[0]).debug;
+        const debug = tmp2(tmp3[0]).debug;
         debug.log("[AppStart] First started active root span id recorded.", spanId);
       }
       obj = flag(_undefined[3]);
+      tmp2 = flag;
+      tmp3 = _undefined;
     }
   }
   obj = {
@@ -745,7 +873,7 @@ arg5.appStartIntegration = () => {
         const appRegistryIntegration = true(_undefined[2]).getAppRegistryIntegration(arg0);
         if (!tmp5) {
           appRegistryIntegration.onRunApplication(() => {
-            const debug = flag(closure_1_1[0]).debug;
+            const debug = closure_1_0(closure_1_1[0]).debug;
             const log = debug.log;
             if (c3) {
               log("[AppStartIntegration] Resetting app start data flushed flag based on runApplication call.");
@@ -843,7 +971,7 @@ arg5.appStartIntegration = () => {
         } else {
           try {
             c5 = 2;
-            if (0 === c4) {
+            if (0 === logResult3) {
               if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
@@ -859,6 +987,7 @@ arg5.appStartIntegration = () => {
                 timestampMs = undefined;
                 c2 = undefined;
                 c3 = undefined;
+                logResult3 = closure_1_1;
                 if (closure_1_1) {
                   const debug2 = callback(closure_1_1[0]).debug;
                   const log = debug2.log;
@@ -872,7 +1001,7 @@ arg5.appStartIntegration = () => {
                       if (callback(closure_1_1[1]).NATIVE.enableNative) {
                         c3 = 1;
                         const NATIVE = callback(closure_1_1[1]).NATIVE;
-                        c4 = 2;
+                        logResult3 = 2;
                         c5 = 1;
                         obj1 = { value: null, done: false };
                         obj1[0] = NATIVE.fetchNativeFrames();
@@ -909,8 +1038,12 @@ arg5.appStartIntegration = () => {
                 return obj3;
               } else {
                 callback = arg1;
+                logResult3 = callback;
+                logResult3 = closure_1_1;
                 const debug4 = callback(closure_1_1[0]).debug;
-                debug4.log("[AppStart] Captured end frames for standalone app start.", callback);
+                logResult3 = callback;
+                logResult3 = debug4.log("[AppStart] Captured end frames for standalone app start.", callback);
+                logResult3 = closure_4;
                 timestampMs = undefined;
                 if (null != closure_4) {
                   timestampMs = closure_4.timestampMs;
@@ -952,7 +1085,7 @@ arg5.appStartIntegration = () => {
               const obj10 = callback(closure_1_1[0]);
               closure_3 = callback(closure_1_1[3]).convertSpanToTransaction(closure_2);
               if (closure_3) {
-                c4 = 3;
+                logResult3 = 3;
                 c5 = 1;
                 obj6 = { value: null, done: false };
                 obj6[0] = closure_1_7(closure_3);
@@ -968,8 +1101,6 @@ arg5.appStartIntegration = () => {
             if (tmp4 === c3) {
               c5 = tmp2;
               throw tmp81;
-            } else {
-              c4 = tmp;
             }
           }
         }

@@ -2,19 +2,20 @@
 
 // Module 16071 (ChannelSettingsEditForumTag)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import closure_6 from "getEmojiToGroupId" /* 6727 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import set from "set" /* 1925 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-({ EMOJI_URL_BASE_SIZE: closure_8, EmojiIntention: c9 } = require("set"));
+const require = arg1;
+({ EMOJI_URL_BASE_SIZE: closure_8, EmojiIntention: c9 } = set);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { display: "flex", flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { container: null, sections: null, hint: null, emojiIconWrapper: null, imageEmoji: null, textEmoji: null, nameInput: null, saveButton: null };
+createCacheKey = { display: "flex", flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: 12, paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginTop: 8 };
@@ -24,11 +25,14 @@ createCacheKey[5] = { fontSize: 20, lineHeight: 26 };
 createCacheKey[6] = { width: "100%", flexGrow: 1 };
 createCacheKey[7] = { flex: 0 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/forums/native/ChannelSettingsEditForumTag.tsx");
+let result = set.fileFinishedImporting("modules/forums/native/ChannelSettingsEditForumTag.tsx");
 
 export default function ChannelSettingsEditForumTag(channelId) {
   channelId = channelId.channelId;
   const tag = channelId.tag;
+  dependencyMap = undefined;
+  let callback;
+  let navigation;
   let first;
   closure_6 = undefined;
   let first1;
@@ -38,6 +42,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
   closure_11 = undefined;
   let callback2;
   closure_13 = undefined;
+  callback = undefined;
   function handlePressEmoji(id) {
     if (null == id.id) {
       if (null != id.surrogates) {
@@ -51,16 +56,16 @@ export default function ChannelSettingsEditForumTag(channelId) {
           tmp2 = name;
         }
         obj[1] = tmp2;
-        callback(obj);
+        closure_6(obj);
       }
     }
     name = id.name;
   }
   const tmp = callback2();
   dependencyMap = tmp;
-  let callback = tmp2;
+  callback = tmp2;
   let obj = channelId(1500);
-  const navigation = obj.useNavigation();
+  navigation = obj.useNavigation();
   obj1 = navigation;
   let tmp6 = null;
   if (null != tag) {
@@ -96,11 +101,11 @@ export default function ChannelSettingsEditForumTag(channelId) {
   const stateFromStores = tmp3Result.useStateFromStores(items1, () => {
     let id;
     if (first != null) {
-      id = first.id;
+      id = tmp.id;
     }
     let usableCustomEmojiById = null;
     if (null != id) {
-      usableCustomEmojiById = usableCustomEmojiById.getUsableCustomEmojiById(first.id);
+      usableCustomEmojiById = usableCustomEmojiById.getUsableCustomEmojiById(tmp.id);
     }
     return usableCustomEmojiById;
   });
@@ -144,15 +149,15 @@ export default function ChannelSettingsEditForumTag(channelId) {
   const layoutEffect = obj1.useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle() {
-        const intl = channelId(closure_1_2[12]).intl;
+        const intl = closure_1_0(closure_1_2[12]).intl;
         const string = intl.string;
-        const t = channelId(closure_1_2[12]).t;
+        const t = closure_1_0(closure_1_2[12]).t;
         if (closure_3) {
           let children = string(t["/jubeD"]);
         } else {
           children = string(t.zeVg5d);
         }
-        return closure_1_10(channelId(closure_1_2[11]).Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children });
+        return closure_1_10(closure_1_0(closure_1_2[11]).Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children });
       }
     });
   }, items3);
@@ -213,9 +218,9 @@ export default function ChannelSettingsEditForumTag(channelId) {
       let obj = { headerRight: null };
       obj[0] = function headerRight() {
         const obj = { style: saveButton.saveButton, onPress: closure_14, text: null };
-        const intl = channelId(closure_1_2[12]).intl;
-        obj[2] = intl.string(channelId(closure_1_2[12]).t["R3BPH+"]);
-        return closure_1_10(channelId(closure_1_2[14]).HeaderActionButton, obj);
+        const intl = closure_1_0(closure_1_2[12]).intl;
+        obj[2] = intl.string(closure_1_0(closure_1_2[12]).t["R3BPH+"]);
+        return closure_1_10(closure_1_0(closure_1_2[14]).HeaderActionButton, obj);
       };
       setOptions(obj);
     } else {
@@ -228,8 +233,8 @@ export default function ChannelSettingsEditForumTag(channelId) {
     style: tmp.emojiIconWrapper,
     accessibilityRole: "button",
     onPress() {
-      channelId(9298);
-      const obj = { onPressEmoji: handlePressEmoji, pickerIntention: flag.COMMUNITY_CONTENT, channel: closure_11 };
+      let obj = channelId(9298);
+      obj = { onPressEmoji: handlePressEmoji, pickerIntention: flag.COMMUNITY_CONTENT, channel: closure_11 };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
     children: null
@@ -289,8 +294,9 @@ export default function ChannelSettingsEditForumTag(channelId) {
             moderated = tag.moderated;
           }
           tmp2 = null == moderated && undefined;
+          const tmp5 = null == moderated && undefined;
         }
-        callback2(tmp2);
+        closure_10(tmp2);
       };
       obj11[1] = tmp27(tmp3(7178).TableSwitchRow, obj10);
       items7[1] = tmp27(tmp3(6286).TableRowGroup, obj11);
@@ -301,8 +307,8 @@ export default function ChannelSettingsEditForumTag(channelId) {
         let intl4 = tmp3(1236).intl;
         obj13[1] = intl4.string(tmp3(1236).t.huYSMr);
         obj13[2] = function onPress() {
-          tag(4656);
-          let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
+          let obj = tag(4656);
+          obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
           const intl = channelId(1236).intl;
           obj[0] = intl.string(channelId(1236).t.huYSMr);
           const intl2 = channelId(1236).intl;
@@ -313,9 +319,9 @@ export default function ChannelSettingsEditForumTag(channelId) {
           obj[3] = intl4.string(channelId(1236).t.p89ACt);
           obj[4] = function onConfirm() {
             if (!closure_3) {
-              tag(closure_1_2[13]).deleteForumTag(closure_0, id.id);
+              closure_1_1(closure_1_2[13]).deleteForumTag(closure_0, id.id);
               arr = arr.pop();
-              const obj = tag(closure_1_2[13]);
+              const obj = closure_1_1(closure_1_2[13]);
             }
           };
           obj.show(obj);

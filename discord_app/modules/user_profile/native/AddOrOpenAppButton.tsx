@@ -2,15 +2,15 @@
 
 // Module 12094 (AddAppButton)
 import useIsAppDMDefault from "useIsAppDM" /* 11323 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { getSection } from "getIndexKey" /* 8448 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function AddAppButton(application) {
   application = application.application;
   const guildId = application.guildId;
@@ -20,10 +20,10 @@ function AddAppButton(application) {
   items[4] = guildId;
   [][0] = application;
   const callback = React.useCallback(() => {
-    application(dependencyMap[8]);
-    const obj = { applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig, guildId };
+    let obj = application(closure_1_2[8]);
+    obj = { applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig, guildId };
     obj.installApplication(obj);
-    guildId(dependencyMap[9]).hideActionSheet();
+    guildId(closure_1_2[9]).hideActionSheet();
   }, items);
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
@@ -41,11 +41,11 @@ function AddAppButton(application) {
     }, []);
     const callback1 = obj.useCallback((nativeEvent) => {
       if ("longPress" === nativeEvent.nativeEvent.actionName) {
-        const obj = application(dependencyMap[10]);
-        obj.copy(application(dependencyMap[11]).getApplicationInstallURL(application));
-        const obj2 = application(dependencyMap[11]);
-        application(dependencyMap[12]).presentLinkCopied();
-        const obj3 = application(dependencyMap[12]);
+        const obj = application(closure_1_2[10]);
+        obj.copy(application(closure_1_2[11]).getApplicationInstallURL(application));
+        const obj2 = application(closure_1_2[11]);
+        application(closure_1_2[12]).presentLinkCopied();
+        const obj3 = application(closure_1_2[12]);
       }
     }, items1);
     obj = { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null };
@@ -67,8 +67,9 @@ function OpenAppButton(profileApplication) {
   profileApplication = profileApplication.profileApplication;
   const botUserId = profileApplication.botUserId;
   const channel = profileApplication.channel;
+  let callback;
   const tmp = callback2(React.useState(false), 2);
-  let callback = tmp[1];
+  callback = tmp[1];
   const items = [botUserId, channel, profileApplication.id];
   callback = React.useCallback(callback(function*() {
     if (c4 === 2) {
@@ -102,8 +103,8 @@ function OpenAppButton(profileApplication) {
             closure_0 = undefined;
             id = undefined;
             obj1 = { type: "channel", channel: null };
-            obj1[1] = channel;
-            const tmp44 = closure_1_6(obj1, profileApplication.id);
+            obj1[1] = closure_1_2;
+            const tmp44 = closure_1_6(obj1, closure_1_0.id);
             closure_0 = tmp44;
             const descriptor2 = tmp44.descriptor;
             let application;
@@ -123,15 +124,15 @@ function OpenAppButton(profileApplication) {
               v0 = 1;
               c4 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = botUserId(channel[19]).fetchApplication(profileApplication.id);
+              obj2[0] = closure_1_1(closure_1_2[19]).fetchApplication(tmp43.id);
               return obj2;
             } else {
               id = closure_0;
               v0(false);
               if (null != closure_0) {
-                let obj4 = botUserId(channel[9]);
+                let obj4 = closure_1_1(closure_1_2[9]);
                 obj4.hideActionSheet();
-                let obj5 = botUserId(channel[20]);
+                let obj5 = closure_1_1(closure_1_2[20]);
                 const obj3 = { recipientIds: null };
                 obj3[0] = id;
                 v0 = 2;
@@ -143,6 +144,7 @@ function OpenAppButton(profileApplication) {
                 c4 = 3;
               }
             }
+            tmp43 = closure_1_0;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -180,7 +182,7 @@ function OpenAppButton(profileApplication) {
               bestActiveInput.openCustomKeyboard(obj);
             }
           }, 0);
-          obj = botUserId(channel[23]);
+          obj = closure_1_1(closure_1_2[23]);
           const obj6 = { application_id: null };
           obj6[0] = id.id;
           obj.track(closure_1_7.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj6);
@@ -202,7 +204,7 @@ function OpenAppButton(profileApplication) {
   obj[2] = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/AddOrOpenAppButton.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/AddOrOpenAppButton.tsx");
 
 export default function AddOrOpenAppButton(arg0) {
   ({ application, channel } = arg0);

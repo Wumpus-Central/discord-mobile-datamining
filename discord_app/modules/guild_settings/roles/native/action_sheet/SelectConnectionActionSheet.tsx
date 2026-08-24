@@ -2,27 +2,19 @@
 
 // Module 16859 (IdentityApplicationRow)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
 import useThemeDefault from "useTheme" /* 4310 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import PlatformTypes from "PlatformTypes" /* 5220 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
 import BottomSheetModal from "BottomSheetModal" /* 6952 */;
 import ActionSheet from "ActionSheet" /* 7175 */;
-import useSegmentedControlState from "useSegmentedControlState" /* 8799 */;
-import SegmentedControl from "SegmentedControl" /* 10096 */;
 import request from "request" /* 10755 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function IdentityApplicationRow(arg0) {
   ({ applicationId, onPress } = arg0);
   let obj = request;
@@ -35,8 +27,8 @@ function IdentityApplicationRow(arg0) {
     if (null != bot) {
       obj = { user: null, size: null, guildId: "Array" };
       obj[0] = bot;
-      obj[1] = Button.AvatarSizes.XSMALL;
-      tmp6Result = callback(Button.Avatar, obj);
+      obj[1] = tmp(1297).AvatarSizes.XSMALL;
+      tmp6Result = tmp6(tmp(1297).Avatar, obj);
     }
     obj = { icon: null, label: null, subLabel: null, onPress: null };
     obj[0] = tmp6Result;
@@ -47,14 +39,15 @@ function IdentityApplicationRow(arg0) {
     }
     obj[2] = description;
     obj[3] = onPress;
-    return callback(TableRowInner.TableRow, obj);
+    return closure_6(tmp(6291).TableRow, obj);
   }
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx");
 
 export default function SelectConnectionActionSheet(arg0) {
   ({ addConnection: require, excludedConnections: importDefault, excludedApplications: dependencyMap, integrations, onCompleteApplication: closure_3, gameApplicationIds, onCompleteIdentityApplication } = arg0);
+  closure_5 = undefined;
   closure_5 = useThemeDefault();
   let obj = { title: null };
   const intl = getSystemLocale.intl;
@@ -63,15 +56,15 @@ export default function SelectConnectionActionSheet(arg0) {
   const first = tmp5[0];
   let found;
   if (integrations != null) {
-    found = integrations.filter((item, index) => {
-      const application = item.application;
+    found = integrations.filter((application) => {
+      application = application.application;
       let prop;
       if (application != null) {
         prop = application.roleConnectionsVerificationUrl;
       }
       let tmp2 = null != prop;
       if (tmp2) {
-        const application2 = item.application;
+        const application2 = application.application;
         let id;
         if (application2 != null) {
           id = application2.id;
@@ -81,34 +74,35 @@ export default function SelectConnectionActionSheet(arg0) {
       return tmp2;
     });
   }
-  let tmp3Result = PlatformTypes;
+  let tmp3Result = tmp3(5220);
   const platforms = tmp3Result.usePlatforms();
-  const found1 = platforms.filter((item, index) => !set.has(item.type));
+  const found1 = platforms.filter((type) => !set.has(type.type));
   let mapped1;
-  const mapped = found1.map((item, index) => {
-    closure_0 = item;
-    let obj = getAvatarURL;
-    const icon = item.icon;
-    const source = obj.makeSource(AccessibilityAnnouncer.isThemeDark(closure_5) ? icon.darkPNG : icon.lightPNG);
+  const mapped = found1.map((icon) => {
+    closure_0 = icon;
+    let obj = closure_1_0(closure_1_2[11]);
+    icon = icon.icon;
+    const source = obj.makeSource(closure_1_0(closure_1_2[12]).isThemeDark(closure_5) ? icon.darkPNG : icon.lightPNG);
     obj = {
-      icon: closure_1_6(Button.Icon, { source, disableColor: true }),
-      label: item.name,
+      icon: closure_1_6(tmp(tmp2[6]).Icon, { source, disableColor: true }),
+      label: icon.name,
       onPress() {
-        item(item.type);
-        ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+        icon(icon.type);
+        closure_2_1(closure_2_2[13]).hideActionSheet();
       }
     };
-    return closure_1_6(TableRowInner.TableRow, obj, "row-" + item.type);
+    return closure_1_6(closure_1_0(closure_1_2[5]).TableRow, obj, "row-" + icon.type);
   });
   if (found != null) {
-    mapped1 = found.map((item, index) => {
-      const application = item.application;
+    mapped1 = found.map((application) => {
+      application = application.application;
       let tmp = null;
       if (null != application) {
-        const obj = { user: null, size: null, guildId: "Array" };
+        let obj = { icon: null, label: null, subLabel: null, onPress: null };
+        obj = { user: null, size: null, guildId: "Array" };
         obj[0] = application.bot;
-        obj[1] = Button.AvatarSizes.XSMALL;
-        obj[0] = closure_1_6(Button.Avatar, obj);
+        obj[1] = closure_1_0(closure_1_2[6]).AvatarSizes.XSMALL;
+        obj[0] = closure_1_6(closure_1_0(closure_1_2[6]).Avatar, obj);
         obj[1] = application.name;
         let description;
         if ("" !== application.description) {
@@ -117,10 +111,11 @@ export default function SelectConnectionActionSheet(arg0) {
         obj[2] = description;
         obj[3] = function onPress() {
           closure_1_3(application.id);
-          ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+          closure_2_1(closure_2_2[13]).hideActionSheet();
         };
         const _HermesInternal = HermesInternal;
-        tmp = closure_1_6(TableRowInner.TableRow, obj, "row-" + application.id);
+        tmp = closure_1_6(closure_1_0(closure_1_2[5]).TableRow, obj, "row-" + application.id);
+        const tmp2 = closure_1_6;
       }
       return tmp;
     });
@@ -128,17 +123,17 @@ export default function SelectConnectionActionSheet(arg0) {
   if (gameApplicationIds == null) {
     gameApplicationIds = [];
   }
-  const found2 = gameApplicationIds.filter((item, index) => !set2.has(item));
+  const found2 = gameApplicationIds.filter((arg0) => !set2.has(arg0));
   if (null != onCompleteIdentityApplication) {
-    let mapped2 = found2.map((item, index) => {
-      closure_0 = item;
-      return closure_1_6(IdentityApplicationRow, {
-        applicationId: item,
+    let mapped2 = found2.map((applicationId) => {
+      closure_0 = applicationId;
+      return closure_1_6(closure_1_8, {
+        applicationId,
         onPress() {
-          onCompleteIdentityApplication(closure_0);
-          ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+          closure_1_4(closure_0);
+          closure_2_1(closure_2_2[13]).hideActionSheet();
         }
-      }, "row-identity-" + item);
+      }, "row-identity-" + applicationId);
     });
   } else {
     mapped2 = [];
@@ -150,18 +145,18 @@ export default function SelectConnectionActionSheet(arg0) {
   if (num == null) {
     num = 0;
   }
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp3(1236).intl;
   const items = [intl2.string(getSystemLocale.t["3fe7U5"])];
   if (num > 0) {
-    const intl3 = getSystemLocale.intl;
-    items.push(intl3.string(getSystemLocale.t.PHjkRE));
+    const intl3 = tmp3(1236).intl;
+    items.push(intl3.string(tmp3(1236).t.PHjkRE));
   }
-  if (tmp11) {
-    const intl4 = getSystemLocale.intl;
-    items.push(intl4.string(getSystemLocale.t.y3ZnnU));
+  if (mapped2.length > 0) {
+    const intl4 = tmp3(1236).intl;
+    items.push(intl4.string(tmp3(1236).t.y3ZnnU));
   }
-  tmp3Result = useSegmentedControlState;
-  obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((item, index) => ({ id: item, label: item, page: null })) };
+  tmp3Result = tmp3(8799);
+  obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
   const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
   if (1 === first) {
     if (tmp10) {
@@ -179,17 +174,17 @@ export default function SelectConnectionActionSheet(arg0) {
     obj1 = { children: null };
     const obj2 = { state: null };
     obj2[0] = segmentedControlState;
-    obj1[0] = callback2(SegmentedControl.SegmentedControl, obj2);
-    let tmp2Result = callback2(closure_5, obj1);
+    obj1[0] = tmp2(tmp3(10096).SegmentedControl, obj2);
+    let tmp2Result = tmp2(closure_5, obj1);
   } else {
     tmp2Result = null;
   }
   const items1 = [tmp2Result, ];
   const obj3 = { children: null };
-  tmp11 = mapped2.length > 0;
+  const tmp16 = closure_7;
   const tmp4 = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj3[0] = callback2(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, children: callback2(TableRowGroupTitle.TableRowGroup, { hasIcons: true, children: tmp15 }) });
   items1[1] = callback2(BottomSheetModal.BottomSheetScrollView, obj3);
   obj[3] = items1;
-  return callback2(ActionSheet.ActionSheet, obj);
+  return tmp16(ActionSheet.ActionSheet, obj);
 };

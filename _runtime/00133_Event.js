@@ -2,10 +2,10 @@
 
 // Module 133 (Event)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
-const Event = fn;
+const Event = arg1;
 class Event {
   constructor(arg0, arg1) {
     self = this;
@@ -31,10 +31,10 @@ class Event {
       tmp19 = typeError;
       throw typeError;
     } else {
-      tmp20 = fn;
-      if (null != fn) {
-        if (typeof fn !== "object") {
-          if (typeof fn !== "function") {
+      tmp20 = arg1;
+      if (null != arg1) {
+        if (typeof arg1 !== "object") {
+          if (typeof arg1 !== "function") {
             tmp10 = globalThis;
             _TypeError = TypeError;
             tmp11 = new.target;
@@ -51,23 +51,23 @@ class Event {
       _String = String;
       self._type = String(global);
       bubbles = undefined;
-      if (fn != null) {
-        bubbles = fn.bubbles;
+      if (arg1 != null) {
+        bubbles = arg1.bubbles;
       }
       self._bubbles = Boolean(bubbles);
       cancelable = undefined;
-      if (fn != null) {
-        cancelable = fn.cancelable;
+      if (arg1 != null) {
+        cancelable = arg1.cancelable;
       }
       self._cancelable = Boolean(cancelable);
       composed = undefined;
-      if (fn != null) {
-        composed = fn.composed;
+      if (arg1 != null) {
+        composed = arg1.composed;
       }
       self._composed = Boolean(composed);
       nowResult = undefined;
-      if (fn != null) {
-        nowResult = fn[require("SymbolResult1").EVENT_INIT_TIMESTAMP_KEY];
+      if (arg1 != null) {
+        nowResult = arg1[require("SymbolResult1").EVENT_INIT_TIMESTAMP_KEY];
       }
       if (undefined === nowResult) {
         _performance = performance;
@@ -178,7 +178,7 @@ const items = [
     }
   }
 ];
-const tmp2 = _createClassDefault(Event, items);
+let tmp2 = _createClassDefault(Event, items);
 Object.defineProperty(tmp2, "NONE", { enumerable: true, value: 0 });
 Object.defineProperty(tmp2.prototype, "NONE", { enumerable: true, value: 0 });
 Object.defineProperty(tmp2, "CAPTURING_PHASE", { enumerable: true, value: 1 });

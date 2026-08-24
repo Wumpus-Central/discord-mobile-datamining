@@ -7,18 +7,19 @@ arg5.parse = function parse(str) {
     const typeError = new TypeError("argument str must be a string");
     throw typeError;
   } else {
-    let obj = {};
+    let obj = arg1;
+    obj = {};
     if (!arg1) {
       obj = {};
     }
     const parts = str.split(closure_2);
     closure_1 = obj.decode || obj;
-    const item = parts.forEach((item, index) => {
-      index = item.indexOf("=");
+    const item = parts.forEach((arr) => {
+      const index = arr.indexOf("=");
       if (index >= 0) {
-        const trimmed = item.substr(0, index).trim();
-        const str = item.substr(0, index);
-        const trimmed1 = item.substr(index + 1, item.length).trim();
+        const trimmed = arr.substr(0, index).trim();
+        const str = arr.substr(0, index);
+        const trimmed1 = arr.substr(index + 1, arr.length).trim();
         let substr = trimmed1;
         if ("\"" == trimmed1[0]) {
           substr = trimmed1.slice(1, -1);
@@ -26,13 +27,13 @@ arg5.parse = function parse(str) {
         if (null == obj[trimmed]) {
           tmp3[trimmed] = (function tryDecode(substr, closure_1) {
             try {
-              return callback(substr);
+              return closure_1(substr);
             } catch (err) {
               return tmp;
             }
           })(substr, closure_1);
         }
-        const str2 = item.substr(index + 1, item.length);
+        const str2 = arr.substr(index + 1, arr.length);
       }
     });
     return obj;
@@ -46,7 +47,7 @@ arg5.serialize = function serialize(arg0, arg1, arg2) {
   if (regex.test(arg0)) {
     const tmpResult = tmp(arg1);
     if (tmpResult) {
-      if (!regex.test(tmpResult)) {
+      if (!obj2.test(tmpResult)) {
         const _TypeError2 = TypeError;
         const typeError = new TypeError("argument val is invalid");
         throw typeError;
@@ -66,7 +67,7 @@ arg5.serialize = function serialize(arg0, arg1, arg2) {
       }
     }
     if (obj.domain) {
-      if (regex.test(obj.domain)) {
+      if (obj2.test(obj.domain)) {
         items.push(`Domain=${obj.domain}`);
       } else {
         const _TypeError3 = TypeError;
@@ -75,7 +76,7 @@ arg5.serialize = function serialize(arg0, arg1, arg2) {
       }
     }
     if (obj.path) {
-      if (regex.test(obj.path)) {
+      if (obj2.test(obj.path)) {
         items.push(`Path=${obj.path}`);
       } else {
         const _TypeError4 = TypeError;

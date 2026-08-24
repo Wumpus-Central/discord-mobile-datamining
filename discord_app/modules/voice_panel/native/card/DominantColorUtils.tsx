@@ -3,17 +3,17 @@
 // Module 9229 (getCachedSourceFromURI)
 import ThemesDefault from "Themes" /* 712 */;
 import privDefault from "priv" /* 1405 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const require = fn;
+const require = arg1;
 ({ NativeModules: c5, Image: closure_6 } = get_ActivityIndicator);
 let closure_7 = new privDefault({ max: 1000 });
 let tmp3 = new privDefault({ max: 1000 });
 let closure_8 = new privDefault({ max: 1000 });
 const tmp4 = new privDefault({ max: 1000 });
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/card/DominantColorUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/DominantColorUtils.tsx");
 
 export const getCachedSourceFromURI = function getCachedSourceFromURI(avatarURI) {
   let obj = closure_8;
@@ -89,20 +89,20 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
             const ImageManager2 = closure_1_5.ImageManager;
             dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_6.resolveAssetSource(value));
           }
-          dominantColorsLocalAsset.then((result) => {
-            const tmp = closure_1_3(result[0], 3);
+          dominantColorsLocalAsset.then((arg0) => {
+            const tmp = closure_1_3(arg0[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            result = closure_1_7.set(closure_0, obj);
+            const result = closure_1_7.set(closure_0, obj);
             if (ref.current) {
               callback(obj);
             }
-          }).catch((error) => {
+          }).catch(() => {
 
           });
-          const nextPromise = dominantColorsLocalAsset.then((result) => {
-            const tmp = closure_1_3(result[0], 3);
+          const nextPromise = dominantColorsLocalAsset.then((arg0) => {
+            const tmp = closure_1_3(arg0[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            result = closure_1_7.set(closure_0, obj);
+            const result = closure_1_7.set(closure_0, obj);
             if (ref.current) {
               callback(obj);
             }
@@ -172,20 +172,20 @@ export const useDominantColorFromImage = function useDominantColorFromImage(arg0
             const ImageManager2 = closure_1_5.ImageManager;
             dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_6.resolveAssetSource(value));
           }
-          dominantColorsLocalAsset.then((result) => {
-            const tmp = closure_1_3(result[0], 3);
+          dominantColorsLocalAsset.then((arg0) => {
+            const tmp = closure_1_3(arg0[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            result = closure_1_7.set(closure_0, obj);
+            const result = closure_1_7.set(closure_0, obj);
             if (ref.current) {
               callback(obj);
             }
-          }).catch((error) => {
+          }).catch(() => {
 
           });
-          const nextPromise = dominantColorsLocalAsset.then((result) => {
-            const tmp = closure_1_3(result[0], 3);
+          const nextPromise = dominantColorsLocalAsset.then((arg0) => {
+            const tmp = closure_1_3(arg0[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            result = closure_1_7.set(closure_0, obj);
+            const result = closure_1_7.set(closure_0, obj);
             if (ref.current) {
               callback(obj);
             }

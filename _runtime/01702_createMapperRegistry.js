@@ -8,45 +8,55 @@ import isJest from "isJest" /* 1657 */;
 isJest = isJest.isJest();
 function createMapperRegistry() {
   function updateMappersOrder() {
-    function dfs(item) {
-      items.add(item);
+    function dfs(arg0) {
+      items.add(arg0);
       while (tmp2 !== undefined) {
+        let tmp4 = map;
         let value = map.get(tmp3);
         if (value) {
+          let tmp7 = tmp6;
+          let tmp8 = value;
           for (const item10022 of value) {
+            let tmp10 = items;
+            let tmp9 = item10022;
             if (!items.has(item10022)) {
-              let tmp13 = dfs(item10022);
+              let tmp11 = dfs;
+              let tmp12 = item10022;
+              let tmp13 = dfs(tmp9);
             }
             continue;
           }
         }
         continue;
       }
-      items.push(item);
-      tmp2 = item.inputs[Symbol.iterator]();
+      items.push(arg0);
     }
     map = new Map();
-    const item = map.forEach((item, index) => {
-      if (item.outputs) {
-        const outputs = item.outputs;
+    const item = map.forEach((outputs) => {
+      if (outputs.outputs) {
+        outputs = outputs.outputs;
         for (const item10009 of outputs) {
+          let obj = map;
+          let tmp3 = item10009;
           let value = map.get(item10009);
           let arr = value;
           if (undefined === value) {
+            let tmp7 = item10009;
             items = [arg0];
-            let result = map.set(item10009, items);
+            let result = obj.set(tmp3, items);
           } else {
+            let tmp5 = value;
             arr = arr.push(arg0);
           }
           continue;
         }
       }
     });
-    new Set();
+    items = new Set();
     items = [];
-    const item1 = map.forEach((item, index) => {
-      if (!items.has(item)) {
-        dfs(item);
+    const item1 = map.forEach((arg0) => {
+      if (!items.has(arg0)) {
+        dfs(arg0);
       }
     });
   }
@@ -59,9 +69,11 @@ function createMapperRegistry() {
           updateMappersOrder();
         }
         for (const item10015 of closure_1) {
+          let obj = item10015;
           if (item10015.dirty) {
-            item10015.dirty = false;
-            let workletResult = item10015.worklet();
+            let tmp8 = item10015;
+            obj.dirty = false;
+            let workletResult = obj.worklet();
           }
           continue;
         }
@@ -92,6 +104,8 @@ function createMapperRegistry() {
       const nextResult = iter.next();
       while (iter !== undefined) {
         if (nextResult) {
+          let tmp14 = extractInputs;
+          let tmp15 = nextResult;
           let tmp16 = extractInputs(tmp13, items);
         }
         continue;
@@ -107,6 +121,8 @@ function createMapperRegistry() {
           const values = Object.values(iter);
           for (const item10021 of values) {
             if (item10021) {
+              let tmp5 = extractInputs;
+              let tmp6 = item10021;
               let tmp7 = extractInputs(tmp4, arg1);
             }
             continue;
@@ -134,14 +150,14 @@ function createMapperRegistry() {
         let addListenerResult = item10018.addListener(obj.id, () => {
           obj.dirty = true;
           if (closure_1_3) {
-            mapperRun();
+            closure_1_5();
           } else if (!c2) {
             if (closure_1_3) {
               const _requestAnimationFrame = requestAnimationFrame;
-              const animationFrame = requestAnimationFrame(mapperRun);
+              const animationFrame = requestAnimationFrame(closure_1_5);
             } else {
               const _queueMicrotask = queueMicrotask;
-              queueMicrotask(mapperRun);
+              queueMicrotask(closure_1_5);
             }
             c2 = true;
           }
@@ -184,53 +200,63 @@ export const startMapper = function startMapper(fn, arr2, items) {
   const sum = c5 + 1;
   c5 = sum;
   isJest = sum;
-  items(items1[2]);
+  let obj = items(items1[2]);
   fn = function f() {
     __mapperRegistry = __mapperRegistry.__mapperRegistry;
     if (undefined === __mapperRegistry) {
-      if (typeof createMapperRegistry !== "function") {
+      if (typeof closure_1_4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       function updateMappersOrder() {
-        function dfs(item) {
-          items.add(item);
+        function dfs(arg0) {
+          items.add(arg0);
           while (tmp2 !== undefined) {
+            let tmp4 = map;
             let value = map.get(tmp3);
             if (value) {
+              let tmp7 = tmp6;
+              let tmp8 = value;
               for (const item10022 of value) {
+                let tmp10 = items;
+                let tmp9 = item10022;
                 if (!items.has(item10022)) {
-                  let tmp13 = dfs(item10022);
+                  let tmp11 = dfs;
+                  let tmp12 = item10022;
+                  let tmp13 = dfs(tmp9);
                 }
                 continue;
               }
             }
             continue;
           }
-          items.push(item);
-          tmp2 = item.inputs[Symbol.iterator]();
+          items.push(arg0);
         }
         map = new Map();
-        const item = map.forEach((item, index) => {
-          if (item.outputs) {
-            const outputs = item.outputs;
+        const item = map.forEach((outputs) => {
+          if (outputs.outputs) {
+            outputs = outputs.outputs;
             for (const item10009 of outputs) {
+              let obj = map;
+              let tmp3 = item10009;
               let value = map.get(item10009);
               let arr = value;
               if (undefined === value) {
+                let tmp7 = item10009;
                 items = [arg0];
-                let result = map.set(item10009, items);
+                let result = obj.set(tmp3, items);
               } else {
+                let tmp5 = value;
                 arr = arr.push(arg0);
               }
               continue;
             }
           }
         });
-        new Set();
+        items = new Set();
         items = [];
-        const item1 = map.forEach((item, index) => {
-          if (!items.has(item)) {
-            dfs(item);
+        const item1 = map.forEach((arg0) => {
+          if (!items.has(arg0)) {
+            dfs(arg0);
           }
         });
       }
@@ -243,9 +269,11 @@ export const startMapper = function startMapper(fn, arr2, items) {
               updateMappersOrder();
             }
             for (const item10015 of closure_1) {
+              let obj = item10015;
               if (item10015.dirty) {
-                item10015.dirty = false;
-                let workletResult = item10015.worklet();
+                let tmp8 = item10015;
+                obj.dirty = false;
+                let workletResult = obj.worklet();
               }
               continue;
             }
@@ -276,6 +304,8 @@ export const startMapper = function startMapper(fn, arr2, items) {
           const nextResult = iter.next();
           while (iter !== undefined) {
             if (nextResult) {
+              let tmp14 = extractInputs;
+              let tmp15 = nextResult;
               let tmp16 = extractInputs(tmp13, items);
             }
             continue;
@@ -291,6 +321,8 @@ export const startMapper = function startMapper(fn, arr2, items) {
               const values = Object.values(iter);
               for (const item10021 of values) {
                 if (item10021) {
+                  let tmp5 = extractInputs;
+                  let tmp6 = item10021;
                   let tmp7 = extractInputs(tmp4, arg1);
                 }
                 continue;
@@ -319,14 +351,14 @@ export const startMapper = function startMapper(fn, arr2, items) {
           let addListenerResult = item10018.addListener(obj.id, () => {
             obj.dirty = true;
             if (closure_1_3) {
-              mapperRun();
+              closure_1_5();
             } else if (!c2) {
               if (closure_1_3) {
                 const _requestAnimationFrame = requestAnimationFrame;
-                const animationFrame = requestAnimationFrame(mapperRun);
+                const animationFrame = requestAnimationFrame(closure_1_5);
               } else {
                 const _queueMicrotask = queueMicrotask;
-                queueMicrotask(mapperRun);
+                queueMicrotask(closure_1_5);
               }
               c2 = true;
             }
@@ -352,7 +384,7 @@ export const startMapper = function startMapper(fn, arr2, items) {
     }
     __mapperRegistry.start(c3, map, closure_1, c2);
   };
-  let obj = { createMapperRegistry, mapperID: sum, worklet: fn, inputs: items, outputs: items1 };
+  obj = { createMapperRegistry, mapperID: sum, worklet: fn, inputs: items, outputs: items1 };
   fn.__closure = obj;
   fn.__workletHash = 1517453109481;
   fn.__initData = closure_6;

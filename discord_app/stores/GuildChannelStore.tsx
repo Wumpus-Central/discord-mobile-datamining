@@ -6,20 +6,20 @@ import fromStringAll from "fromString" /* 506 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import isSubscriptionGated from "isSubscriptionGated" /* 1981 */;
-import initializeFromUserSettings from "initializeFromUserSettings" /* 1394 */;
+import closure_4 from "isSubscriptionGated" /* 1981 */;
+import closure_5 from "initializeFromUserSettings" /* 1394 */;
 import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord" /* 4020 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "fetchFingerprint" /* 1218 */;
+import closure_11 from "ensureGuildLoaded" /* 1391 */;
+import closure_12 from "trackCommunicationDisabled" /* 1990 */;
+import closure_13 from "createGuildRecordFromRust" /* 1910 */;
+import closure_14 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_15 from "markAllUserIdListsStale" /* 4030 */;
+import closure_16 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function comparator(comparator, comparator2) {
   return comparator.comparator - comparator2.comparator;
 }
@@ -42,6 +42,7 @@ function rebuildGuildChannels(guildId) {
   closure_24[guildId] = obj;
   closure_28[guildId] = [];
   let obj2 = obj;
+  importDefault = undefined;
   const id = obj.id;
   importDefault = id;
   obj1 = obj2(1913);
@@ -53,10 +54,13 @@ function rebuildGuildChannels(guildId) {
     if (keys !== undefined) {
       tmp7 = obj;
       while (keys[tmp] !== undefined) {
+        let tmp25 = tmp15;
+        let tmp26 = store;
         let channel = store.getChannel(tmp15);
         if (null == channel) {
           continue;
         } else {
+          let tmp16 = callback;
           let tmp17 = callback(favoriteChannels, favoriteChannels[tmp15], channel);
           obj = { channel: null, comparator: null };
           obj[0] = tmp17;
@@ -74,6 +78,7 @@ function rebuildGuildChannels(guildId) {
     if (keys1 !== undefined) {
       tmp7 = obj;
       while (keys1[tmp] !== undefined) {
+        let tmp24 = tmp9;
         obj1 = { channel: null, comparator: null };
         obj1[0] = mutableGuildChannelsForGuild[tmp9];
         obj1[1] = mutableGuildChannelsForGuild[tmp9].position;
@@ -87,45 +92,47 @@ function rebuildGuildChannels(guildId) {
     obj2.count = obj2.count + 1;
     let type = channel.type;
     if (closure_1_7(type)) {
-      type = SELECTABLE;
+      type = closure_1_21;
     } else if (closure_1_9(type)) {
-      type = VOCAL;
+      type = closure_1_22;
     }
-    if (channel.type === ChannelTypes.GUILD_DIRECTORY) {
+    if (channel.type === closure_1_18.GUILD_DIRECTORY) {
       if (null == closure_1_28[closure_1]) {
-        closure_1_28[closure_1] = [];
+        closure_1_28[tmp8] = [];
       }
-      let arr = closure_1_28[closure_1];
+      let arr = closure_1_28[tmp8];
       arr = arr.push(channel);
     }
     if (null != obj2[type]) {
-      arr = obj2[type].push(channel);
+      arr = tmp[type].push(channel);
+      const arr2 = tmp[type];
     }
   });
   const sorted = obj[SELECTABLE].sort(comparator);
   const sorted1 = obj[VOCAL].sort(comparator);
   const sorted2 = obj[ChannelTypes.GUILD_CATEGORY].sort(comparator);
+  obj2 = undefined;
+  importDefault = undefined;
   obj2 = {};
   closure_25[obj.id] = obj2;
   importDefault = {};
-  const item1 = obj[SELECTABLE].forEach((item, index) => {
-    const channel = item.channel;
-    const channelName = obj2(dependencyMap[14]).computeChannelName(channel, closure_1_16, closure_1_15);
+  const item1 = obj[SELECTABLE].forEach((channel) => {
+    channel = channel.channel;
+    const channelName = obj2(closure_1_3[14]).computeChannelName(channel, closure_1_16, closure_1_15);
     const call = hasOwnProperty.call;
     let tmp3 = null;
-    if (typeof call === "unknown" ? hasOwnProperty(channelName) : call(table, channelName)) {
-      tmp3 = table[channelName];
+    if (typeof call === "unknown" ? hasOwnProperty(channelName) : call(closure_1, channelName)) {
+      tmp3 = tmp2[channelName];
     }
     if (null == tmp3) {
-      table[channelName] = 1;
+      tmp2[channelName] = 1;
       let sum = channelName;
     } else {
-      table[channelName] = tmp3 + 1;
+      tmp2[channelName] = tmp3 + 1;
       const _HermesInternal = HermesInternal;
       sum = channelName + "~" + tmp3;
     }
     obj2[channel.id] = { id: channel.id, name: sum };
-    obj = obj2(dependencyMap[14]);
   });
   if ((function calculateGuildHasElevatedPermissions(currentUser, guildId) {
     guild = guild.getGuild(guildId);
@@ -140,14 +147,18 @@ function rebuildGuildChannels(guildId) {
     }
     obj = tmp3[closure_21][Symbol.iterator]();
     while (obj !== undefined) {
+      let tmp7 = callback2;
       if (callback2(currentUser, tmp6.channel)) {
+        let tmp8 = obj;
         obj.return();
         let flag = true;
         return true;
       }
     }
     for (const item10033 of tmp5) {
+      let tmp9 = callback2;
       if (callback2(arg0, item10033.channel)) {
+        let tmp10 = obj2;
         obj2.return();
         let flag2 = true;
         return true;
@@ -191,6 +202,7 @@ function handleGuildRoleUpdate(guildId) {
   }
 }
 function hasElevatedPermissions(user, context) {
+  obj = fromStringAll;
   obj = { user, context, checkElevated: false };
   return obj.hasAny(applyOverwritesAll.computePermissions(obj), closure_20);
 }
@@ -208,7 +220,8 @@ let closure_25 = {};
 let closure_26 = {};
 let c27 = null;
 let closure_28 = {};
-{ comparator: -1, channel: createChannelRecord(obj) };
+obj = { comparator: -1, channel: createChannelRecord(obj) };
+obj = { id: ME.NULL_STRING_CHANNEL_ID, type: ChannelTypes.GUILD_CATEGORY, name: "Uncategorized" };
 obj = { id: ME.NULL_STRING_GUILD_ID, SELECTABLE: [], VOCAL: [] };
 let items = [obj];
 obj[ChannelTypes.GUILD_CATEGORY] = items;
@@ -283,18 +296,18 @@ prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id, flag) {
   return this.getFirstChannel(id, (channel) => closure_1_14.can(VIEW_CHANNEL, channel.channel) && !channel.channel.nsfw, flag);
 };
 prototype["getSelectableChannelIds"] = function getSelectableChannelIds(closure_0) {
-  return this.getChannels(closure_0)[SELECTABLE].map((item, index) => item.channel.id);
+  return this.getChannels(closure_0)[SELECTABLE].map((channel) => channel.channel.id);
 };
 prototype["getSelectableChannels"] = function getSelectableChannels(arg0) {
   return this.getChannels(arg0)[SELECTABLE];
 };
-prototype["getVocalChannelIds"] = function getVocalChannelIds(set) {
-  return this.getChannels(set)[VOCAL].map((item, index) => item.channel.id);
+prototype["getVocalChannelIds"] = function getVocalChannelIds(guildId) {
+  return this.getChannels(guildId)[VOCAL].map((channel) => channel.channel.id);
 };
 prototype["getDirectoryChannelIds"] = function getDirectoryChannelIds(guildId) {
   let mapped;
   if (table3[guildId] != null) {
-    mapped = arr.map((item, index) => item.channel.id);
+    mapped = arr.map((channel) => channel.channel.id);
   }
   if (mapped == null) {
     mapped = closure_31;
@@ -377,9 +390,14 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
       let guild_id = iter.next().guild_id;
       let tmp = guild_id;
       if (null != guild_id) {
+        let tmp2 = closure_24;
+        let tmp3 = guild_id;
         closure_24[tmp] = undefined;
         flag = true;
+        let tmp4 = c23;
         if (c23 === tmp) {
+          let tmp5 = rebuildGuildChannels;
+          let tmp6 = guild_id;
           let tmp7 = rebuildGuildChannels(tmp);
         }
       }
@@ -441,14 +459,13 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
     if (tmp2) {
       rebuildGuildChannels(basicChannel.guild_id);
     }
-    tmp2 = null != basicChannel && null != basicChannel.guild_id;
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((acc, item, index) => {
-      const channelId = item.channelId;
-      let tmp = acc;
-      if (sessionId.getSessionId() === item.sessionId) {
+    return voiceStates.reduce((arg0, channelId) => {
+      channelId = channelId.channelId;
+      let tmp = arg0;
+      if (sessionId.getSessionId() === channelId.sessionId) {
         channel = channel.getChannel(channelId);
         let guildId;
         if (channel != null) {
@@ -467,7 +484,7 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
           }
         }
         if (!flag) {
-          flag = acc;
+          flag = arg0;
         }
         tmp = flag;
       }
@@ -475,7 +492,7 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
     }, false);
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/GuildChannelStore.tsx");
+const result = require("set").fileFinishedImporting("stores/GuildChannelStore.tsx");
 
 export default guildChannelStore;
 export const GUILD_SELECTABLE_CHANNELS_KEY = "SELECTABLE";

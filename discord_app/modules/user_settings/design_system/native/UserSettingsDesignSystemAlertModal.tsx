@@ -4,13 +4,13 @@
 import useAlertStore from "useAlertStore" /* 4657 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import Button from "Button" /* 4745 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function DemoModal() {
   callback = React.useCallback(callback(function*() {
     if (c0 === 2) {
@@ -74,11 +74,12 @@ function openDemoModal() {
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 let closure_9 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx");
 
 export default function UserSettingsDesignSystemAlertModal() {
-  { style: callback2().container, children: jsx(Button.Button, { children: null }) };
-  const obj = { onPress: openDemoModal, text: "Show Alert" };
+  let obj = { children: null };
+  obj = { style: callback2().container, children: jsx(Button.Button, { children: null }) };
+  obj = { onPress: openDemoModal, text: "Show Alert" };
   obj[0] = <closure_4 onPress={openDemoModal} text="Show Alert" />;
   return <closure_5 onPress={openDemoModal} text="Show Alert" />;
 };

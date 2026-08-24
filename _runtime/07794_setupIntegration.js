@@ -1,10 +1,8 @@
 // === Module 7794: setupIntegration ===
 
 // Module 7794 (setupIntegration)
-import consoleSandbox from "consoleSandbox" /* 7738 */;
 import getClient from "getClient" /* 7765 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7766 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function setupIntegration(on, name) {
   const _require = on;
@@ -54,8 +52,8 @@ export const addIntegration = function addIntegration(name) {
   const client = getClient.getClient();
   if (client) {
     client.addIntegration(name);
-  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-    const logger = consoleSandbox.logger;
+  } else if (tmp(7766).DEBUG_BUILD) {
+    const logger = tmp(7738).logger;
     const _HermesInternal = HermesInternal;
     logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
   }
@@ -69,6 +67,7 @@ export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1
       let afterAllSetup = obj.afterAllSetup;
     }
     if (nextResult) {
+      let tmp2 = obj;
       let afterAllSetupResult = obj.afterAllSetup(arg0);
     }
     continue;
@@ -80,8 +79,8 @@ export function defineIntegration(arg0) {
 export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
   let arr = defaultIntegrations.defaultIntegrations || [];
   const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((item, index) => {
-    item.isDefaultInstance = true;
+  const item = arr.forEach((arg0) => {
+    arg0.isDefaultInstance = true;
   });
   if (Array.isArray(integrations)) {
     items = [];
@@ -100,23 +99,24 @@ export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultInt
       arr2 = tmp2;
     }
   }
-  const item1 = arr2.forEach((item, index) => {
-    const name = item.name;
+  const obj = {};
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
     let isDefaultInstance = tmp2;
     if (obj[name]) {
       isDefaultInstance = !tmp2.isDefaultInstance;
     }
     if (isDefaultInstance) {
-      isDefaultInstance = item.isDefaultInstance;
+      isDefaultInstance = name.isDefaultInstance;
     }
     if (!isDefaultInstance) {
-      obj[name] = item;
+      obj[name] = name;
     }
   });
-  const values = Object.values({});
-  const findIndexResult = values.findIndex((item, index) => "Debug" === item.name);
+  const values = Object.values(obj);
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
   if (findIndexResult > -1) {
-    arr = values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+    arr = values.push(callback(values.splice(findIndexResult, 1), 1)[0]);
   }
   return values;
 };
@@ -125,9 +125,9 @@ export { setupIntegration };
 export const setupIntegrations = function setupIntegrations(arg0, arr) {
   closure_0 = arg0;
   const obj = {};
-  const item = arr.forEach((item, index) => {
-    if (item) {
-      setupIntegration(closure_0, item, obj);
+  const item = arr.forEach((arg0) => {
+    if (arg0) {
+      closure_1_4(closure_0, arg0, obj);
     }
   });
   return obj;

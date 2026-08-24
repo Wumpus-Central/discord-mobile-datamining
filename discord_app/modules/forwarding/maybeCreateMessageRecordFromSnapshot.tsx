@@ -1,10 +1,10 @@
 // === Module 9164: maybeCreateMessageRecordFromSnapshot ===
 
 // Module 9164 (maybeCreateMessageRecordFromSnapshot)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
 
-const result = obj132.fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
+const result = set.fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
 
 export default function maybeCreateMessageRecordFromSnapshot(merge) {
   let tmp = arg1;

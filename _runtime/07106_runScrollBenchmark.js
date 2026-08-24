@@ -1,11 +1,11 @@
 // === Module 7106: runScrollBenchmark ===
 
 // Module 7106 (runScrollBenchmark)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 7084 */;
-import _slicedToArray from "_slicedToArray" /* 7041 */;
+import closure_2 from "asyncGeneratorStep" /* 7084 */;
+import closure_3 from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 function runScrollBenchmark(arg0, arg1, arg2, arg3) {
   const self = this;
   const apply = _runScrollBenchmark.apply;
@@ -167,12 +167,13 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
           }
           if (Number(length) <= 0) {
             const _Error = Error;
-            error = new Error(tmp(table[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
+            error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
             throw error;
           }
         }
       }
       callback(true);
+      ref = undefined;
       ref = lib(function*() {
         if (c3 === 2) {
           c3 = 3;
@@ -243,6 +244,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
               if (!num4) {
                 num4 = 1;
               }
+              const tmp9 = dependencyMap;
             }
             const targetOffset = closure_2_2.targetOffset;
             let num10 = closure_2_2.speedMultiplier;
@@ -252,7 +254,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
             c2 = 1;
             c3 = 1;
             obj2 = { value: null, done: false };
-            obj2[0] = runScrollBenchmark(callback, targetOffset, closure_1_0, num10);
+            obj2[0] = closure_3_8(callback, targetOffset, closure_1_0, num10);
             return obj2;
           } catch (tmp39) {
             c3 = tmp;
@@ -271,6 +273,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
         return applyArgumentsResult;
       })();
       tmp = ref;
+      tmp2 = table;
     }
   }, items);
   callback3(() => {

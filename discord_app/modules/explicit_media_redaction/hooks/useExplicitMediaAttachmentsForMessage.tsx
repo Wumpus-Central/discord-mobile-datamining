@@ -1,10 +1,10 @@
 // === Module 10869: useRedactableMediaAttachmentsForMessage ===
 
 // Module 10869 (useRedactableMediaAttachmentsForMessage)
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import closure_2 from "reinjectEphemerals" /* 4994 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
 
 export const useRedactableMediaAttachmentsForMessage = function useRedactableMediaAttachmentsForMessage(channelId, messageId, attachmentId) {
   const _require = channelId;

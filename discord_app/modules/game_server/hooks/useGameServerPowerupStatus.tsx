@@ -1,11 +1,11 @@
 // === Module 11744: useGameServerPowerupStatus ===
 
 // Module 11744 (useGameServerPowerupStatus)
-import noop from "noop" /* 19 */;
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated" /* 4282 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleGameServerInstanceCreated" /* 4282 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
 
 export default function useGameServerPowerupStatus(arg0) {
   const _require = arg0;

@@ -3,20 +3,22 @@
 // Module 15471
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "comparator" /* 1980 */;
 import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
-let obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+let obj = { container: null };
+obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
   let selected = guildId.selected;
+  let id;
   let obj = guildId(647);
   const items = [closure_4, closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -27,7 +29,7 @@ const memoResult = importAllResult.memo((guildId) => {
     }
     return channel;
   });
-  let id;
+  id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
@@ -37,7 +39,7 @@ const memoResult = importAllResult.memo((guildId) => {
   const items1 = [guildId, id];
   [][0] = id;
   const callback = importAllResult.useCallback(() => {
-    guildId(dependencyMap[9]).transitionToGuild(guildId, id);
+    guildId(closure_1_2[9]).transitionToGuild(guildId, id);
   }, items1);
   let tmp7 = null;
   if (null != stateFromStores) {
@@ -59,6 +61,6 @@ const memoResult = importAllResult.memo((guildId) => {
   }
   return tmp7;
 });
-let result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/DirectoryChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_sidebar/native/DirectoryChannel.tsx");
 
 export default memoResult;

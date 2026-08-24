@@ -3,12 +3,12 @@
 // Module 7584 (_fileSize)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AbortCodes } from "ME" /* 676 */;
 import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 import { EventEmitter } from "EventEmitter" /* 652 */;
 
-const require = fn;
+const require = arg1;
 let closure_6 = new timestampDefault("UploaderBase.tsx");
 class UploaderBase extends EventEmitter {
   constructor() {
@@ -24,19 +24,19 @@ class UploaderBase extends EventEmitter {
     tmp3._handleStart = function _handleStart(_cancel) {
       lib._cancel = _cancel;
       if (!lib.alreadyStarted) {
-        lib.emit("start", lib._file);
+        obj.emit("start", obj._file);
       }
       lib.alreadyStarted = true;
     };
     tmp3._handleProgress = function _handleProgress(loaded, total, arg2) {
       const lib = arg2;
       const timestamp = Date.now();
-      let obj = lib(dependencyMap[8]);
+      let obj = lib(closure_1_2[8]);
       const rounded = Math.floor((loaded - lib._loaded) / ((timestamp - lib._lastUpdate) / 1000));
       if (null != arg2) {
         const items = obj2._file.items;
         if (items != null) {
-          const item = items.forEach((item, index) => {
+          const item = items.forEach((item) => {
             item.item.progress = table[item.id];
           });
         }
@@ -52,7 +52,8 @@ class UploaderBase extends EventEmitter {
       lib.emit("progress", lib._file);
     };
     tmp3._handleException = function _handleException(closure_0) {
-      const obj = { type: FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN, msg: closure_0.toString() };
+      let obj = { reason: null };
+      obj = { type: closure_1_5.ERROR_SOURCE_UNKNOWN, msg: closure_0.toString() };
       obj[0] = obj;
       lib._handleError(obj);
     };
@@ -63,12 +64,12 @@ class UploaderBase extends EventEmitter {
       ({ code, reason, body } = arg0);
       const result = lib.clearProcessingMessageInterval();
       if (!lib._aborted) {
-        lib._errored = true;
+        obj._errored = true;
         const _JSON = JSON;
         const _HermesInternal = HermesInternal;
-        closure_1_6.log("_handleError: " + code + " (" + JSON.stringify(reason) + ") for " + lib.id);
-        lib.emit("error", lib._file, code, body, reason);
-        lib.removeAllListeners();
+        closure_1_6.log("_handleError: " + code + " (" + JSON.stringify(reason) + ") for " + obj.id);
+        obj.emit("error", obj._file, code, body, reason);
+        obj.removeAllListeners();
       }
     };
     tmp3._handleComplete = function _handleComplete(arg0) {
@@ -86,12 +87,12 @@ class UploaderBase extends EventEmitter {
 const prototype = UploaderBase.prototype;
 prototype["_fileSize"] = function _fileSize() {
   const files = this.files;
-  return files.reduce((acc, item, index) => {
-    let num = item.currentSize;
+  return files.reduce((arg0, currentSize) => {
+    let num = currentSize.currentSize;
     if (num == null) {
       num = 0;
     }
-    return acc + num;
+    return arg0 + num;
   }, 0);
 };
 prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
@@ -129,7 +130,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             let files;
             c2 = undefined;
             let effectiveKestrelLimit;
-            const first = self.files[0];
+            const first = closure_1_0.files[0];
             let target;
             if (first != null) {
               const item = first.item;
@@ -137,25 +138,25 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
                 target = item.target;
               }
             }
-            const uploadTarget = self(closure_1_2[6]).getUploadTarget(target);
+            const uploadTarget = closure_1_0(closure_1_2[6]).getUploadTarget(target);
             store = uploadTarget;
-            if (self.files.length > uploadTarget.getMaxAttachmentsCount()) {
+            if (closure_1_0.files.length > uploadTarget.getMaxAttachmentsCount()) {
               const _HermesInternal2 = HermesInternal;
-              closure_1_6.log("Too many attachments for " + self.id);
+              closure_1_6.log("Too many attachments for " + closure_1_0.id);
               obj1 = { code: null };
               obj1[0] = closure_1_4.TOO_MANY_ATTACHMENTS;
-              self._handleError(obj1);
+              closure_1_0._handleError(obj1);
               c9 = 3;
               return { value: false, done: true };
             } else {
-              files = self(closure_1_2[7]).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
+              files = closure_1_0(closure_1_2[7]).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
               const _HermesInternal3 = HermesInternal;
-              closure_1_6.log("compressing files for " + self.id);
-              files = self.files;
+              closure_1_6.log("compressing files for " + closure_1_0.id);
+              files = closure_1_0.files;
               store = files[Symbol.iterator]();
-              const obj15 = self(closure_1_2[7]);
+              const obj15 = closure_1_0(closure_1_2[7]);
             }
-            const obj14 = self(closure_1_2[6]);
+            const obj14 = closure_1_0(closure_1_2[6]);
           }
         } else if (1 === tmp9) {
           c7 = 0;
@@ -164,7 +165,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         } else if (2 === tmp9) {
           c7 = 1;
           closure_4 = closure_6;
-          self._handleException(closure_4);
+          closure_1_0._handleException(closure_4);
           c7 = 0;
           store.return();
           c9 = 3;
@@ -198,7 +199,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             c9 = 3;
             return { value: false, done: true };
           } else {
-            effectiveKestrelLimit = self(closure_1_2[7]).getEffectiveKestrelLimit(files, store.getMaxFileSize(c2.channelId));
+            effectiveKestrelLimit = closure_1_0(closure_1_2[7]).getEffectiveKestrelLimit(files, store.getMaxFileSize(c2.channelId));
             const currentSize2 = c2.currentSize;
             effectiveKestrelLimit = currentSize2;
             if (currentSize2 == null) {
@@ -218,7 +219,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             } else {
               c7 = 0;
             }
-            const obj13 = self(closure_1_2[7]);
+            const obj13 = closure_1_0(closure_1_2[7]);
           }
         }
         if (store === undefined) {
@@ -229,7 +230,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             const obj6 = { type: null };
             obj6[0] = closure_1_5.POSTCOMPRESSION_SUM_TOO_LARGE;
             obj5[1] = obj6;
-            self._handleError(obj5);
+            closure_1_0._handleError(obj5);
             flag = false;
           }
           c9 = 3;
@@ -262,14 +263,14 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
 prototype["setUploadingTextForUI"] = function setUploadingTextForUI() {
   const files = this.files;
   const files2 = this.files;
-  const someResult = files.some((item, index) => item.isImage);
+  const someResult = files.some((isImage) => isImage.isImage);
   const _fileSizeResult = this._fileSize();
   logger.log("setUploadingTextForUI - total content: " + _fileSizeResult + " bytes and " + this.files.length + " attachments for " + this.id);
   const obj = {};
   const merged = Object.assign(this._file);
   obj.totalPostCompressionSize = _fileSizeResult;
   obj.currentSize = _fileSizeResult;
-  obj.hasVideo = files2.some((item, index) => item.isVideo);
+  obj.hasVideo = files2.some((isVideo) => isVideo.isVideo);
   obj.hasImage = someResult;
   obj.attachmentsCount = this.files.length;
   obj.items = this.files;
@@ -282,12 +283,12 @@ prototype["_recomputeProgress"] = function _recomputeProgress() {
 };
 prototype["_recomputeProgressTotal"] = function _recomputeProgressTotal() {
   const obj = {
-    loaded: files.reduce((acc, item, index) => {
-      let num = item.loaded;
+    loaded: files.reduce((arg0, loaded) => {
+      let num = loaded.loaded;
       if (num == null) {
         num = 0;
       }
-      return acc + num;
+      return arg0 + num;
     }, 0),
     total: this._fileSize()
   };
@@ -297,9 +298,9 @@ prototype["_recomputeProgressTotal"] = function _recomputeProgressTotal() {
 prototype["_recomputeProgressByFile"] = function _recomputeProgressByFile() {
   let obj = {};
   const files = this.files;
-  const item = files.forEach((item, index) => {
-    obj = obj(dependencyMap[8]);
-    obj[item.id] = obj.calculateProgress(item.loaded, item.currentSize);
+  const item = files.forEach((id) => {
+    obj = obj(closure_1_2[8]);
+    obj[id.id] = obj.calculateProgress(id.loaded, id.currentSize);
   });
   return obj;
 };
@@ -327,7 +328,7 @@ prototype["cancel"] = function cancel() {
       _cancel();
     }
     const files = self.files;
-    const item = files.forEach((item, index) => item.cancel());
+    const item = files.forEach((cancel) => cancel.cancel());
     self._handleComplete();
   }
 };
@@ -365,26 +366,26 @@ prototype["cancelItem"] = function cancelItem(itemId) {
             closure_1 = tmp2;
             closure_0 = undefined;
             const _HermesInternal = HermesInternal;
-            closure_1_6.log("Cancel called for " + self.id + " for item " + itemId);
-            const files = self.files;
-            const found = files.find((item, index) => item.id === closure_0);
+            closure_1_6.log("Cancel called for " + closure_1_1.id + " for item " + closure_1_0);
+            const files = closure_1_1.files;
+            const found = files.find((id) => id.id === closure_0);
             closure_0 = found;
             if (null != found) {
               if (!found.isCancelled()) {
-                const files1 = self.files;
+                const files1 = closure_1_1.files;
                 const index = files1.indexOf(found);
                 closure_0 = 0;
-                const files2 = self.files;
+                const files2 = closure_1_1.files;
                 const items = [];
                 closure_0 = HermesBuiltin.arraySpread(files2.slice(0, index), closure_0);
-                const files3 = self.files;
+                const files3 = closure_1_1.files;
                 closure_0 = HermesBuiltin.arraySpread(files3.slice(index + 1), closure_0);
-                self.files = items;
+                closure_1_1.files = items;
                 obj1 = {};
-                const merged = Object.assign(self._file);
-                obj1.items = self.files;
-                self._file = obj1;
-                let obj2 = itemId(closure_1_2[9]);
+                const merged = Object.assign(closure_1_1._file);
+                obj1.items = closure_1_1.files;
+                closure_1_1._file = obj1;
+                let obj2 = closure_1_0(closure_1_2[9]);
                 c3 = 1;
                 c4 = 1;
                 obj2 = { value: null, done: false };
@@ -432,6 +433,6 @@ prototype["upload"] = function upload(arg0) {
   }
 };
 const tmp2 = new timestampDefault("UploaderBase.tsx");
-let result = require("obj132").fileFinishedImporting("lib/uploader/UploaderBase.tsx");
+let result = require("set").fileFinishedImporting("lib/uploader/UploaderBase.tsx");
 
 export default UploaderBase;

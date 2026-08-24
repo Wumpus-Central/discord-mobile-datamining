@@ -1,13 +1,10 @@
 // === Module 447: map ===
 
 // Module 447 (map)
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 92 */;
 import renderElement from "renderElement" /* 114 */;
-import legacySendAccessibilityEventDefault from "legacySendAccessibilityEvent" /* 279 */;
-import AccessibilityInfoDefault from "AccessibilityInfo" /* 448 */;
 
 require = arg1;
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 const items = [["change", "touchExplorationDidChange"], ["reduceMotionChanged", "reduceMotionDidChange"], ["highTextContrastChanged", "highTextContrastDidChange"], ["screenReaderChanged", "touchExplorationDidChange"], ["accessibilityServiceChanged", "accessibilityServiceDidChange"], ["invertColorsChanged", "invertColorDidChange"], ["grayscaleChanged", "grayscaleModeDidChange"]];
 const map = new Map(items);
@@ -16,7 +13,7 @@ arg5.default = {
     return Promise.resolve(false);
   },
   isGrayscaleEnabled(arg0) {
-    return new Promise((arg0, fn) => {
+    return new Promise((arg0, arg1) => {
       const tmp3 = callback(table[0]);
       let isGrayscaleEnabled;
       if (tmp3 != null) {
@@ -28,12 +25,12 @@ arg5.default = {
       } else {
         const _Error = Error;
         error = new Error("NativeAccessibilityInfoAndroid.isGrayscaleEnabled is not available");
-        fn(error);
+        arg1(error);
       }
     });
   },
   isInvertColorsEnabled(arg0) {
-    return new Promise((arg0, fn) => {
+    return new Promise((arg0, arg1) => {
       const tmp3 = callback(table[0]);
       let prop;
       if (tmp3 != null) {
@@ -45,24 +42,24 @@ arg5.default = {
       } else {
         const _Error = Error;
         error = new Error("NativeAccessibilityInfoAndroid.isInvertColorsEnabled is not available");
-        fn(error);
+        arg1(error);
       }
     });
   },
   isReduceMotionEnabled(arg0) {
-    return new Promise((arg0, fn) => {
+    return new Promise((arg0, arg1) => {
       if (null != callback(table[0])) {
         const result = callback(table[0]).isReduceMotionEnabled(arg0);
         const tmpResult = callback(table[0]);
       } else {
         const _Error = Error;
         error = new Error("NativeAccessibilityInfoAndroid is not available");
-        fn(error);
+        arg1(error);
       }
     });
   },
   isHighTextContrastEnabled(arg0) {
-    return new Promise((arg0, fn) => {
+    return new Promise((arg0, arg1) => {
       const tmp3 = callback(table[0]);
       let prop;
       if (tmp3 != null) {
@@ -74,7 +71,7 @@ arg5.default = {
       } else {
         const _Error = Error;
         error = new Error("NativeAccessibilityInfoAndroid.isHighTextContrastEnabled is not available");
-        fn(error);
+        arg1(error);
       }
     });
   },
@@ -87,28 +84,28 @@ arg5.default = {
   isReduceTransparencyEnabled() {
     return Promise.resolve(false);
   },
-  isScreenReaderEnabled(closure_2, arg1, id) {
-    return new Promise((arg0, fn) => {
+  isScreenReaderEnabled(ref, arg1, id) {
+    return new Promise((arg0, arg1) => {
       if (null != callback(table[0])) {
         const result = callback(table[0]).isTouchExplorationEnabled(arg0);
         const tmpResult = callback(table[0]);
       } else {
         const _Error = Error;
         error = new Error("NativeAccessibilityInfoAndroid is not available");
-        fn(error);
+        arg1(error);
       }
     });
   },
   isAccessibilityServiceEnabled(arg0) {
-    return new Promise((arg0, fn) => {
+    return new Promise((arg0, arg1) => {
       if (null != callback(table[0])) {
-        if (null != callback(table[0]).isAccessibilityServiceEnabled) {
-          const result = callback(table[0]).isAccessibilityServiceEnabled(arg0);
-          const tmpResult = callback(table[0]);
+        if (null != tmp(tmp2[0]).isAccessibilityServiceEnabled) {
+          const result = tmp(tmp2[0]).isAccessibilityServiceEnabled(arg0);
+          const tmpResult = tmp(tmp2[0]);
         }
       }
       error = new Error("NativeAccessibilityInfoAndroid.isAccessibilityServiceEnabled is not available");
-      fn(error);
+      arg1(error);
     });
   },
   addEventListener(arg0, arg1) {
@@ -120,41 +117,41 @@ arg5.default = {
       };
       let addListenerResult = obj;
     } else {
-      obj = _isNativeReflectConstructDefault;
+      obj = module(92);
       addListenerResult = obj.addListener(value, arg1);
     }
     return addListenerResult;
   },
   setAccessibilityFocus(arg0) {
-    legacySendAccessibilityEventDefault(arg0, "focus");
+    module(279)(arg0, "focus");
   },
   sendAccessibilityEvent(arg0, arg1) {
     const result = renderElement.sendAccessibilityEvent(arg0, arg1);
   },
   announceForAccessibility(intl) {
-    const obj = AccessibilityInfoDefault;
+    const obj = module(448);
     if (obj != null) {
       const result = obj.announceForAccessibility(intl);
     }
   },
   announceForAccessibilityWithOptions(intl) {
-    const obj = AccessibilityInfoDefault;
+    const obj = module(448);
     if (obj != null) {
       const result = obj.announceForAccessibility(intl);
     }
   },
-  getRecommendedTimeoutMillis(closure_0, fn) {
-    return new Promise((fn) => {
-      const tmp3 = AccessibilityInfoDefault;
+  getRecommendedTimeoutMillis(closure_0, arg1) {
+    return new Promise((arg0, arg1) => {
+      const tmp3 = closure_1_1(closure_1_2[0]);
       let prop;
       if (tmp3 != null) {
         prop = tmp3.getRecommendedTimeoutMillis;
       }
       if (null != prop) {
-        const recommendedTimeoutMillis = AccessibilityInfoDefault.getRecommendedTimeoutMillis(closure_0, fn);
-        const tmpResult = AccessibilityInfoDefault;
+        const recommendedTimeoutMillis = closure_1_1(closure_1_2[0]).getRecommendedTimeoutMillis(closure_0, arg0);
+        const tmpResult = closure_1_1(closure_1_2[0]);
       } else {
-        fn(closure_0);
+        arg0(closure_0);
       }
     });
   }

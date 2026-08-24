@@ -8,7 +8,7 @@ import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
 const context = importAllResult.createContext({ isForm: false });
@@ -25,7 +25,8 @@ const forwardRefResult = importAllResult.forwardRef((keyboardShouldPersistTaps, 
   ({ contentContainerStyle, onScroll, scrollsToTop, onLayout } = keyboardShouldPersistTaps);
   const tmp = callback();
   let redesign = importAllResult.useContext(context2.RedesignCompatContext);
-  let obj = { ref, onLayout, scrollsToTop, style: null, contentContainerStyle: null, contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: null, alwaysBounceVertical: null, onScroll: null, children: null };
+  let obj = { value: { isForm: true }, children: null };
+  obj = { ref, onLayout, scrollsToTop, style: null, contentContainerStyle: null, contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: null, alwaysBounceVertical: null, onScroll: null, children: null };
   const items = [tmp.form, style, ];
   if (redesign) {
     redesign = tmp.redesign;
@@ -43,7 +44,7 @@ const forwardRefResult = importAllResult.forwardRef((keyboardShouldPersistTaps, 
   obj[1] = <ScrollView paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
   return <context.Provider paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
 });
-const result = require("obj132").fileFinishedImporting("design/void/Form/native/Form.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/Form.tsx");
 
 export default forwardRefResult;
 export const FormContext = context;

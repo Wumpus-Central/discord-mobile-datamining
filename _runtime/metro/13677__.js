@@ -2,9 +2,9 @@
 
 // Module 13677
 
-export default (fn) => {
+export default (arg0) => {
   try {
-    return fn();
+    return arg0();
   } catch (err) {
     return true;
   }

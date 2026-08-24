@@ -4,11 +4,11 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import setFontSize from "setFontSize" /* 13813 */;
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import "createToggle";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
+require = arg1;
 function useOfficialMessageStyleSettingValue() {
   const items = [closure_3];
   return initialize.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
@@ -37,7 +37,7 @@ function useOfficialMessageStyleSettingOptions() {
     return items;
   }, []);
 }
-let createToggle = {
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.nC2XBl);
@@ -48,7 +48,7 @@ let createToggle = {
   useOptions: useOfficialMessageStyleSettingOptions
 };
 createToggle = createToggle.createRadio(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
 
 export default createToggle;
 export { useOfficialMessageStyleSettingValue };

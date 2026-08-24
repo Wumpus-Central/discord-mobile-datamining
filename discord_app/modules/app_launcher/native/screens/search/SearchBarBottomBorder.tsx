@@ -2,24 +2,26 @@
 
 // Module 11274 (usePinnedSearchBarBottomBorder)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-const createCacheKey = { borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
+const require = arg1;
+createCacheKey = { border: null };
+createCacheKey = { borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 let closure_6 = { code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}" };
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx");
 
 export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomBorder(arg0) {
   ({ key, triggerScrollHeight } = arg0);
   if (triggerScrollHeight === undefined) {
     triggerScrollHeight = 1;
   }
+  let sharedValue;
   let obj = triggerScrollHeight(4115);
-  const sharedValue = obj.useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
   const items = [key, sharedValue];
   const effect = React.useEffect(() => {
     const result = sharedValue.set(0);
@@ -30,12 +32,12 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   }, items1);
   const tmp = callback();
   const fn = function u() {
-    let obj = triggerScrollHeight(dependencyMap[5]);
+    let obj = triggerScrollHeight(closure_1_2[5]);
     let num = 0;
     if (sharedValue.get() > triggerScrollHeight) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, triggerScrollHeight(dependencyMap[6]).springStandard) };
+    obj = { opacity: obj.withSpring(num, triggerScrollHeight(closure_1_2[6]).springStandard) };
     return obj;
   };
   obj = { withSpring: triggerScrollHeight(4744).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(4748).springStandard };

@@ -1,14 +1,14 @@
 // === Module 14490: logger ===
 
 // Module 14490 (logger)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import log from "log" /* 4 */;
 import generateSessionId from "generateSessionId" /* 14491 */;
 import mapDiscordToMuxMetadata from "mapDiscordToMuxMetadata" /* 14492 */;
 import UDefault from "U" /* 14493 */;
 
 const logger = new log.Logger("SimpleMuxWrapper");
-const result = obj132.fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
+const result = set.fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
 class SimpleMuxWrapper {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -47,10 +47,11 @@ prototype["endSession"] = function endSession() {
   if (this.isMonitoring) {
     try {
       if (typeof UDefault.destroyMonitor === "function") {
-        UDefault.destroyMonitor(self.videoElement);
-        const tmpResult = UDefault;
+        tmp(14493).destroyMonitor(self.videoElement);
+        const tmpResult = tmp(14493);
       }
       self.isMonitoring = false;
+      tmp = importDefault;
     } catch (tmp3) {
       logger.error("Error ending Mux session", tmp3);
     }
@@ -61,10 +62,11 @@ prototype["destroy"] = function destroy() {
   if (this.isMonitoring) {
     try {
       if (typeof UDefault.destroyMonitor === "function") {
-        UDefault.destroyMonitor(self.videoElement);
-        const tmpResult = UDefault;
+        tmp(14493).destroyMonitor(self.videoElement);
+        const tmpResult = tmp(14493);
       }
       self.isMonitoring = false;
+      tmp = importDefault;
     } catch (tmp3) {
       logger.error("Error destroying Mux monitor", tmp3);
     }

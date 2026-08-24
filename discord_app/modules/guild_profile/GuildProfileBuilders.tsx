@@ -1,7 +1,7 @@
 // === Module 6907: getEmoji ===
 
 // Module 6907 (getEmoji)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
 import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
@@ -28,25 +28,31 @@ function getEmoji(guildId) {
     byName = null;
     if (byId != emojiName) {
       byName = parseRawEmojiObjectDefault.getByName(emojiName);
+      const obj2 = parseRawEmojiObjectDefault;
     }
   }
 }
-function buildGuildProfileTraitsFromServer(id, traits) {
+function buildGuildProfileTraitsFromServer(arg0, arg1) {
   const array = new Array(MAX_TRAITS.MAX_TRAITS);
   const fillResult = array.fill(closure_5);
-  const iter = traits[Symbol.iterator]();
+  const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
     let tmp4 = nextResult.position < 0;
     if (!tmp4) {
+      let tmp5 = nextResult;
+      let tmp6 = require;
+      let tmp7 = dependencyMap;
       tmp4 = tmp3.position >= MAX_TRAITS.MAX_TRAITS;
     }
     if (!tmp4) {
+      let tmp8 = nextResult;
       let obj = { label: null, emoji: null };
       obj[0] = tmp3.label;
+      let tmp9 = getEmoji;
       obj = { guildId: null, emojiId: null, emojiName: null };
-      obj[0] = id;
+      obj[0] = arg0;
       ({ emoji_id: obj3[1], emoji_name: obj3[2], position } = tmp3);
       let tmp10 = getEmoji(obj);
       obj[1] = tmp10;
@@ -88,10 +94,10 @@ function buildGuildProfileFromServer(profile) {
   } else {
     const _Object = Object;
     const entries = Object.entries(game_activity);
-    reduced = entries.reduce((acc, item, index) => {
-      [tmp, tmp2] = item;
-      acc[tmp] = { level: tmp2.activity_level, score: tmp2.activity_score };
-      return acc;
+    reduced = entries.reduce((arg0, arg1) => {
+      [tmp, tmp2] = arg1;
+      arg0[tmp] = { level: tmp2.activity_level, score: tmp2.activity_score };
+      return arg0;
     }, {});
   }
   reduced[11] = reduced;
@@ -105,7 +111,7 @@ function buildGuildProfileFromServer(profile) {
 }
 const EmojiDisambiguations = getEmojiToGroupId.EmojiDisambiguations;
 let closure_5 = { label: "" };
-const result = obj132.fileFinishedImporting("modules/guild_profile/GuildProfileBuilders.tsx");
+const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileBuilders.tsx");
 
 export { buildGuildProfileFromServer };
 export const buildGuildProfileUpdateForServer = function buildGuildProfileUpdateForServer(name) {
@@ -130,31 +136,31 @@ export const buildGuildProfileUpdateForServer = function buildGuildProfileUpdate
   }
   if (null != name.traits) {
     const traits = name.traits;
-    const mapped = traits.map((item, index) => {
-      let label;
-      if (item != null) {
-        label = item.label;
+    const mapped = traits.map((label) => {
+      label = undefined;
+      if (label != null) {
+        label = label.label;
       }
       let tmp2 = null;
       if (null != label) {
         tmp2 = null;
-        if (item.label.length > 0) {
+        if (label.label.length > 0) {
           const obj = { label: null, position: null, emoji_id: null, emoji_name: null, emoji_animated: null };
-          obj[0] = item.label;
-          obj[1] = index;
-          const emoji = item.emoji;
+          obj[0] = label.label;
+          obj[1] = arg1;
+          const emoji = label.emoji;
           let id;
           if (emoji != null) {
             id = emoji.id;
           }
           obj[2] = id;
-          const emoji2 = item.emoji;
+          const emoji2 = label.emoji;
           let name;
           if (emoji2 != null) {
             name = emoji2.name;
           }
           obj[3] = name;
-          const emoji3 = item.emoji;
+          const emoji3 = label.emoji;
           let animated;
           if (emoji3 != null) {
             animated = emoji3.animated;
@@ -185,9 +191,9 @@ export const buildGuildProfileUpdateForServer = function buildGuildProfileUpdate
   return obj;
 };
 export const buildTopGamesFromServer = function buildTopGamesFromServer(top_games) {
-  return top_games.reduce((acc, item, index) => {
-    acc[item.game_application_id] = { level: item.activity_level, score: item.activity_score };
-    return acc;
+  return top_games.reduce((arg0, game_application_id) => {
+    arg0[game_application_id.game_application_id] = { level: game_application_id.activity_level, score: game_application_id.activity_score };
+    return arg0;
   }, {});
 };
 export const buildGuildProfileFromInvite = function buildGuildProfileFromInvite(approximate_presence_count) {

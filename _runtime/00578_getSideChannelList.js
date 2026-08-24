@@ -6,8 +6,8 @@ export default function getSideChannelList() {
   let obj = {
     assert(arg0) {
       if (!obj.has(arg0)) {
-        let tmp3 = require(obj[0]);
-        tmp3 = new tmp3("Side channel does not contain " + require(obj[1])(arg0));
+        let tmp3 = closure_1_0(obj[0]);
+        tmp3 = new tmp3("Side channel does not contain " + closure_1_0(obj[1])(arg0));
         throw tmp3;
       }
     },
@@ -37,13 +37,14 @@ export default function getSideChannelList() {
           }
         }
         iter.next = iter2.next;
+        const tmp2 = iter2;
       }
     },
     get(arg0) {
       let tmp;
       if (closure_0) {
-        let iter2 = closure_0.next;
-        let tmp3 = closure_0;
+        let iter2 = iter.next;
+        let tmp3 = iter;
         let tmp4;
         if (null != iter2) {
           while (iter2.key !== arg0) {
@@ -52,8 +53,8 @@ export default function getSideChannelList() {
             iter2 = next;
           }
           tmp3.next = iter2.next;
-          iter2.next = closure_0.next;
-          closure_0.next = iter2;
+          iter2.next = iter.next;
+          iter.next = iter2;
           tmp4 = iter2;
         }
         let value = tmp4;
@@ -66,10 +67,10 @@ export default function getSideChannelList() {
     },
     has(arg0) {
       if (!closure_0) {
-        return closure_0;
+        return tmp;
       } else {
-        let iter2 = closure_0.next;
-        let tmp3 = closure_0;
+        let iter2 = iter.next;
+        let tmp3 = iter;
         if (null != iter2) {
           while (iter2.key !== arg0) {
             let next = iter2.next;
@@ -78,8 +79,9 @@ export default function getSideChannelList() {
           }
         }
         tmp3.next = iter2.next;
-        iter2.next = closure_0.next;
-        closure_0.next = iter2;
+        iter2.next = iter.next;
+        iter.next = iter2;
+        const tmp4 = iter2;
       }
     },
     set(arg0, value) {

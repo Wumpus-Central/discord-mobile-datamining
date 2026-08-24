@@ -2,10 +2,10 @@
 
 // Module 13785 (OverlayCreator)
 import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_0 from "get ActivityIndicator" /* 17 */;
 import map from "map" /* 13786 */;
 import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 13787 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "jsxProd" /* 21 */;
 
 if (noop) {
   const __esModule = noop.__esModule;
@@ -30,7 +30,15 @@ _isNativeReflectConstruct = tmp6;
 export default function OverlayCreator() {
   return function overlay() {
     closure_0 = closure_1.default();
-    let obj = {
+    obj = {
+      onCommand(type) {
+        if ("overlay" === type.type) {
+          closure_0.emit("overlay", type.payload);
+        }
+      },
+      features: obj
+    };
+    obj = {
       overlay(arg0) {
         closure_0 = arg0;
         return () => {
@@ -38,6 +46,7 @@ export default function OverlayCreator() {
           if (arg0 === undefined) {
             obj = {};
           }
+          obj = { style: { flex: 1 }, children: null };
           obj = {};
           const merged = Object.assign(obj);
           const items = [<RN />, <closure_2_2.default emitter={RN} />];

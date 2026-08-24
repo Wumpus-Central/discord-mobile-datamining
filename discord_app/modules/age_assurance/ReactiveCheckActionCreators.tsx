@@ -1,10 +1,10 @@
 // === Module 6702: _resetAgeVerification ===
 
 // Module 6702 (_resetAgeVerification)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _fetchReactiveCheckResult() {
   const self = this;
   const tmp = callback(function*() {
@@ -13,10 +13,10 @@ function _fetchReactiveCheckResult() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw body;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = body;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -27,15 +27,15 @@ function _fetchReactiveCheckResult() {
         if (0 === constants) {
           if (arg0 === 1) {
             c5 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = body;
+            obj[0] = arg1;
             return obj;
           } else {
             const callback = tmp3;
-            body = tmp7;
+            let body = tmp7;
             body = undefined;
             c3 = 1;
             const HTTP = closure_1_0(closure_1_2[2]).HTTP;
@@ -53,15 +53,15 @@ function _fetchReactiveCheckResult() {
           return { value: null, done: true };
         } else if (arg0 === 1) {
           c5 = 3;
-          throw body;
+          throw arg1;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
           const obj3 = { value: null, done: true };
-          obj3[0] = body;
+          obj3[0] = arg1;
           return obj3;
         } else {
-          body = body.body;
+          body = arg1.body;
           obj = callback(table[3]);
           const obj4 = { type: "AGE_VERIFICATION_CHECK_RESULT_SET", status: null };
           obj4[1] = body.status;
@@ -160,7 +160,7 @@ function _resetAgeVerification() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/ReactiveCheckActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/ReactiveCheckActionCreators.tsx");
 
 export const fetchReactiveCheckResult = function fetchReactiveCheckResult() {
   const self = this;

@@ -1,7 +1,7 @@
 // === Module 11523: isComplete ===
 
 // Module 11523 (isComplete)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 8506 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 
@@ -10,7 +10,7 @@ function isComplete(type) {
 }
 let SearchQueryTagTypes = MessageEmbedTypes.SearchQueryTagTypes;
 const SearchFilterAddLocations = SearchEntrypointAnalyticsLocations.SearchFilterAddLocations;
-const result = obj132.fileFinishedImporting("modules/search/native/stores/SearchQueryTagManager.tsx");
+const result = set2.fileFinishedImporting("modules/search/native/stores/SearchQueryTagManager.tsx");
 class SearchQueryTagManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -27,14 +27,14 @@ prototype["markChanged"] = function markChanged() {
   const set = new Set();
   const set1 = new Set();
   const tags = this.tags;
-  const item = tags.forEach((item, index) => {
-    set.add(item.text);
-    let tmp2 = item.type === set.COMPLETE;
+  const item = tags.forEach((text) => {
+    set.add(text.text);
+    let tmp2 = text.type === set.COMPLETE;
     if (tmp2) {
-      tmp2 = null != item.channelId;
+      tmp2 = null != text.channelId;
     }
     if (tmp2) {
-      set1.add(item.channelId);
+      set1.add(text.channelId);
     }
   });
   this.ids = set;
@@ -46,10 +46,10 @@ prototype["mergeTag"] = function mergeTag(location, channelId) {
   closure_1 = channelId;
   const tags = this.tags;
   const items = [];
-  items[HermesBuiltin.arraySpread(tags.filter((item, index) => {
-    let tmp = item !== closure_0;
+  items[HermesBuiltin.arraySpread(tags.filter((arg0) => {
+    let tmp = arg0 !== closure_0;
     if (tmp) {
-      tmp = item !== closure_1;
+      tmp = arg0 !== closure_1;
     }
     return tmp;
   }), 0)] = { type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId };
@@ -59,9 +59,9 @@ prototype["replaceTag"] = function replaceTag(arg0, type) {
   closure_0 = arg0;
   closure_1 = type;
   const tags = this.tags;
-  this.tags = tags.map((item, index) => {
-    let tmp = item;
-    if (item === closure_0) {
+  this.tags = tags.map((arg0) => {
+    let tmp = arg0;
+    if (arg0 === closure_0) {
       tmp = closure_1;
     }
     return tmp;
@@ -78,10 +78,10 @@ prototype["getUserIds"] = function getUserIds(arg0) {
   closure_0 = arg0;
   const set = new Set();
   const tags = this.tags;
-  const item = tags.forEach((item, index) => {
-    if (item.type === constants.COMPLETE) {
-      const userId = item.userId;
-      let tmp2 = item.searchTokenType === constants;
+  const item = tags.forEach((type) => {
+    if (type.type === constants.COMPLETE) {
+      const userId = type.userId;
+      let tmp2 = type.searchTokenType === constants;
       if (tmp2) {
         tmp2 = null != userId;
       }
@@ -95,12 +95,12 @@ prototype["getUserIds"] = function getUserIds(arg0) {
 prototype["isChannelTagsOnly"] = function isChannelTagsOnly() {
   const tags = this.tags;
   const found = tags.filter(isComplete);
-  return found.every((item, index) => null != item.channelId);
+  return found.every((channelId) => null != channelId.channelId);
 };
 prototype["hasUserAddedTags"] = function hasUserAddedTags() {
   const tags = this.tags;
   const found = tags.filter(isComplete);
-  return found.some((item, index) => item.location !== constants.CLIENT_AUTO_ADD);
+  return found.some((location) => location.location !== constants.CLIENT_AUTO_ADD);
 };
 prototype["isEmpty"] = function isEmpty() {
   return 0 === this.tags.length;
@@ -127,16 +127,16 @@ prototype["getQueryString"] = function getQueryString() {
     flag = false;
   }
   const tags = this.tags;
-  const found = tags.filter((item, index) => {
+  const found = tags.filter((type) => {
     let tmp2 = !tmp;
-    if (item.type === flag.PREFIX) {
+    if (type.type === flag.PREFIX) {
       tmp2 = flag;
     }
     return tmp2;
   });
   let str = "";
   if (0 !== found.length) {
-    const mapped = found.map((item, index) => item.text);
+    const mapped = found.map((text) => text.text);
     const _HermesInternal = HermesInternal;
     str = "" + mapped.join(" ");
   }
@@ -147,7 +147,7 @@ prototype["add"] = function add(type) {
   if (!this.exists(type)) {
     if (type.type === SearchQueryTagTypes.PREFIX) {
       if (null != tmp) {
-        if (tmp.type === SearchQueryTagTypes.PREFIX) {
+        if (tmp.type === tmp2.PREFIX) {
           self.replaceTag(tmp, type);
         }
         self.markChanged();
@@ -164,13 +164,13 @@ prototype["add"] = function add(type) {
 };
 prototype["removeAnyPrefixTags"] = function removeAnyPrefixTags() {
   const tags = this.tags;
-  this.tags = tags.filter((item, index) => item.type !== constants.PREFIX);
+  this.tags = tags.filter((type) => type.type !== constants.PREFIX);
   this.markChanged();
 };
 prototype["removeAtIndex"] = function removeAtIndex(closure_0) {
   closure_0 = this.tags[closure_0];
   const tags = this.tags;
-  this.tags = tags.filter((item, index) => item !== closure_0);
+  this.tags = tags.filter((arg0) => arg0 !== closure_0);
   this.markChanged();
 };
 

@@ -76,6 +76,7 @@ arg5.node = function node(arg0) {
           }
           tmp6 = substr2;
           tmp7 = tmp12;
+          const tmp8 = substr3;
         }
         if (tmp7) {
           let UNKNOWN_FUNCTION = tmp7;
@@ -213,6 +214,7 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
             }
             tmp6 = substr2;
             tmp7 = tmp12;
+            const tmp8 = substr3;
           }
           if (tmp7) {
             let UNKNOWN_FUNCTION = tmp7;

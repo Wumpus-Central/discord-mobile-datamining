@@ -1,13 +1,14 @@
 // === Module 14447: QUEST_DOCK_COLLAPSED_HEIGHT ===
 
 // Module 14447 (QUEST_DOCK_COLLAPSED_HEIGHT)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 
-const obj = {};
+let obj = { mass: 0.5, damping: 80, stiffness: 320 };
+obj = {};
 const merged = Object.assign(obj);
 obj.overshootClamping = true;
-const result = obj132.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockConstants.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockConstants.tsx");
 
 export const QUEST_DOCK_COLLAPSED_HEIGHT = 56;
 export const QUEST_DOCK_CLOSED_HEIGHT = 22;

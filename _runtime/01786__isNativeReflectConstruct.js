@@ -2,12 +2,12 @@
 
 // Module 1786 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const JumpingTransition = fn;
+const JumpingTransition = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -60,6 +60,8 @@ class JumpingTransition {
       let obj = { duration: num };
       const fn = function n(originX) {
         const absolute = Math.abs(originX.targetOriginX - originX.currentOriginX);
+        obj = { initialValues: obj, animations: null, callback: null };
+        obj = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
         obj = { originX: null, originY: null, width: null, height: null };
         const bound = Math.max(absolute, Math.abs(originX.targetOriginY - originX.currentOriginY));
         obj[0] = delayFunction(delay, delayFunction(callbackV[5]).withTiming(originX.targetOriginX, obj));
@@ -84,7 +86,7 @@ class JumpingTransition {
         obj[2] = callbackV;
         return obj;
       };
-      obj = { delayFunction, delay, withTiming: callback(dependencyMap[5]).withTiming, config: obj, withSequence: callback(dependencyMap[5]).withSequence, halfDuration: result, Easing: callback(dependencyMap[6]).Easing, callback: callbackV };
+      obj = { delayFunction, delay, withTiming: callback(closure_1_1[5]).withTiming, config: obj, withSequence: callback(closure_1_1[5]).withSequence, halfDuration: result, Easing: callback(closure_1_1[6]).Easing, callback: callbackV };
       fn.__closure = obj;
       fn.__workletHash = 11549153259849;
       fn.__initData = closure_1_6;

@@ -4,12 +4,12 @@
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
 import componentDidMountDefault from "componentDidMount" /* 12678 */;
-import callConnect from "callConnect" /* 4496 */;
+import closure_3 from "callConnect" /* 4496 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/voice_calls/native/components/OngoingCallTimer.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_calls/native/components/OngoingCallTimer.tsx");
 
 export default function OnGoingCallTimer(style) {
   const channelId = style.channelId;
@@ -26,6 +26,7 @@ export default function OnGoingCallTimer(style) {
   let timestamp = 0;
   if (null != stateFromStores) {
     timestamp = DISCORD_EPOCHDefault.extractTimestamp(stateFromStores);
+    const obj2 = DISCORD_EPOCHDefault;
   }
   return jsx(componentDidMountDefault, { style: style.style, timestamp });
 };

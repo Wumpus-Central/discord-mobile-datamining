@@ -1,7 +1,7 @@
 // === Module 1584: useFocusedListenersChildrenAdapter ===
 
 // Module 1584 (useFocusedListenersChildrenAdapter)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -9,23 +9,26 @@ export const useFocusedListenersChildrenAdapter = function useFocusedListenersCh
   navigation = navigation.navigation;
   const focusedListeners = navigation.focusedListeners;
   let addListener;
+  let callback;
   addListener = addListener.useContext(navigation(focusedListeners[1]).NavigationBuilderContext).addListener;
   const items = [focusedListeners, navigation];
-  const callback = addListener.useCallback((fn) => {
+  callback = addListener.useCallback((arg0) => {
     if (navigation.isFocused()) {
       for (const item10012 of focusedListeners) {
         let item10012Result = item10012(arg0);
         let handled = item10012Result.handled;
+        let tmp4 = handled;
         if (handled) {
           let obj = { handled: null, result: null };
           obj[0] = handled;
           obj[1] = tmp5;
+          let tmp6 = obj;
           obj.return();
           return obj;
         }
       }
       obj = { handled: true, result: null };
-      obj[1] = fn(navigation);
+      obj[1] = arg0(navigation);
       return obj;
     } else {
       return { handled: false, result: null };

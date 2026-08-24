@@ -1,7 +1,7 @@
 // === Module 7432: initialize ===
 
 // Module 7432 (initialize)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import ConfettiLocation from "ConfettiLocation" /* 7433 */;
@@ -123,7 +123,7 @@ obj = {
   }
 };
 const poggermodeSettingsStore = new PoggermodeSettingsStore(dispatcherDefault, obj);
-const result = obj132.fileFinishedImporting("modules/poggermode/PoggermodeSettingsStore.tsx");
+const result = set.fileFinishedImporting("modules/poggermode/PoggermodeSettingsStore.tsx");
 
 export default poggermodeSettingsStore;
 export const initialState = obj;

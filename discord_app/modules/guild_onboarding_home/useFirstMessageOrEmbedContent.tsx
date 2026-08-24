@@ -1,9 +1,9 @@
 // === Module 15822: useFirstMessageOrEmbedContent ===
 
 // Module 15822 (useFirstMessageOrEmbedContent)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
+const result = set.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
 
 export default function useFirstMessageOrEmbedContent(content) {
   if (null == content) {
@@ -26,7 +26,9 @@ export default function useFirstMessageOrEmbedContent(content) {
         embeds = content.embeds;
         for (const item10013 of embeds) {
           if (null != item10013.rawDescription) {
+            let tmp6 = item10013;
             if (tmp5.rawDescription.length > 0) {
+              let tmp7 = obj;
               obj.return();
               return item10013.rawDescription;
             }

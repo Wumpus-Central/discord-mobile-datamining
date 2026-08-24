@@ -22,6 +22,7 @@ arg5.initAndBind = function initAndBind(arg0, debug) {
   const currentScope = getClient.getCurrentScope();
   currentScope.update(debug.initialScope);
   const obj4 = new arg0(debug);
+  const obj2 = getClient;
   const currentScope1 = getClient.getCurrentScope();
   currentScope1.setClient(obj4);
   obj4.init();

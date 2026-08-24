@@ -3,17 +3,17 @@
 // Module 15982 (MediaKeyboardBackground)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import DRAG_HANDLE from "DRAG_HANDLE" /* 1624 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function MediaKeyboardBackground(arg0) {
   ({ pointerEvents, style } = arg0);
   const obj = { pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, style: null };
@@ -27,20 +27,24 @@ let c4 = importAllResult;
 ({ HEADER_HANDLE_HEIGHT: closure_6, MediaPickerActionSheetEngagedActions: error } = DRAG_HANDLE);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = isMetaQuest.isMetaQuest();
-let closure_12 = obj132.isIOS();
-let obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
+let closure_12 = set.isIOS();
+let obj = { background: null };
+obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
 obj[0] = obj;
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_15 = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };
 let closure_16 = { code: "function MediaKeyboardBottomSheetTsx2(isOpen,wasOpen){const{IS_IOS,runOnJS,handleSheetOpenChange}=this.__closure;if(IS_IOS&&isOpen!==wasOpen&&(wasOpen!=null||isOpen)){runOnJS(handleSheetOpenChange)(isOpen);}}" };
 let closure_17 = { code: "function MediaKeyboardBottomSheetTsx3(){const{animatedIndex}=this.__closure;return Math.max(animatedIndex.get(),0)>0;}" };
 let closure_18 = { code: "function MediaKeyboardBottomSheetTsx4(result,previous){const{runOnJS,setAccessibilityViewIsModal}=this.__closure;if(result===previous)return;runOnJS(setAccessibilityViewIsModal)(result);}" };
-let result = obj132.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx");
+let result = set.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx");
 
 export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIndex) {
   animatedIndex = animatedIndex.animatedIndex;
   const bottomSheetRef = animatedIndex.bottomSheetRef;
   const onClose = animatedIndex.onClose;
+  let callback = animatedIndex.onAccessibilityFocusRestore;
+  importAllResult = undefined;
+  let isScreenReaderEnabled;
   closure_6 = undefined;
   let ref;
   closure_8 = undefined;
@@ -53,7 +57,7 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   let tmp = callback3();
   let obj = importAllResult;
   const tmp7 = bottomSheetRef(onClose[13])("MediaKeyboardBottomSheet");
-  const callback = importAllResult.useCallback((arg0) => {
+  callback = importAllResult.useCallback((arg0) => {
     const merged = Object.assign(arg0);
     return ref2(closure_14, {});
   }, []);
@@ -87,7 +91,7 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
     }
   }, items);
   obj1 = animatedIndex(onClose[20]);
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   let tmp13 = isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     tmp13 = tmp6;
@@ -101,8 +105,8 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   callback3 = obj.useCallback((arg0) => {
     if (null != ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(ref2.current);
-      ref2.current = null;
+      clearTimeout(tmp.current);
+      tmp.current = null;
     }
     if (arg0) {
       let tmp5 = isScreenReaderEnabled;
@@ -111,11 +115,11 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
       }
       if (tmp5) {
         const _setTimeout = setTimeout;
-        ref2.current = setTimeout(() => {
+        tmp.current = setTimeout(() => {
           closure_9.current = null;
           closure_8.current = true;
-          animatedIndex(onClose[21]);
-          const obj = { ref: closure_7 };
+          let obj = closure_1_0(closure_1_2[21]);
+          obj = { ref: closure_7 };
           const result = obj.setAccessibilityFocus(obj);
         }, 100);
       }

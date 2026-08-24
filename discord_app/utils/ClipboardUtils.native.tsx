@@ -2,7 +2,7 @@
 
 // Module 7167 (_copy)
 import useClipboardDefault from "useClipboard" /* 7168 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _copy() {
   const self = this;
@@ -77,7 +77,7 @@ function _copy() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("utils/ClipboardUtils.native.tsx");
+const result = require("set").fileFinishedImporting("utils/ClipboardUtils.native.tsx");
 
 export const SUPPORTS_COPY = true;
 export const copy = function copy() {

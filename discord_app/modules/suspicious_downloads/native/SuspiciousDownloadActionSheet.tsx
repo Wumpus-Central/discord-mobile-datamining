@@ -4,26 +4,27 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _openURLDefault from "_openURL" /* 4084 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const createCacheKey = { padding: ThemesDefault.space.PX_12 };
+createCacheKey = { container: null, title: null, body: null };
+createCacheKey = { padding: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/suspicious_downloads/native/SuspiciousDownloadActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/suspicious_downloads/native/SuspiciousDownloadActionSheet.tsx");
 
 export default function SuspiciousDownloadActionSheet(href) {
   href = href.href;
   const tmp = callback3();
-  const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
-  const obj = { spacing: 8, justify: "center", align: "center", children: null };
+  let obj = { startExpanded: true, children: null };
+  obj = { spacing: 16, justify: "center", align: "center", style: items, children: null };
+  items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  obj = { spacing: 8, justify: "center", align: "center", children: null };
   const items1 = [callback(href(5447).TrafficConeSpotIllustration, {}), , ];
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1236).intl;
@@ -47,8 +48,8 @@ export default function SuspiciousDownloadActionSheet(href) {
   const intl4 = href(1236).intl;
   obj5[0] = intl4.string(href(1236).t["/bHu89"]);
   obj5[1] = function onPress() {
-    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
-    _openURLDefault(href, true);
+    closure_1_1(closure_1_2[11]).hideActionSheet();
+    closure_1_1(closure_1_2[12])(href, true);
   };
   items3[1] = callback(href(4745).Button, obj5);
   obj3[1] = items3;

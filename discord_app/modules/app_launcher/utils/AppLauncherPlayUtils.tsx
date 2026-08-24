@@ -1,9 +1,9 @@
 // === Module 10710: _launchActivityInBotDM ===
 
 // Module 10710 (_launchActivityInBotDM)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = fn;
+const require = arg1;
 function _launchActivityInBotDM() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -138,7 +138,7 @@ function _launchActivityInBotDM() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/utils/AppLauncherPlayUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/utils/AppLauncherPlayUtils.tsx");
 
 export const launchActivityInBotDM = function launchActivityInBotDM(arg0) {
   const self = this;

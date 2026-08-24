@@ -4,12 +4,12 @@
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
-  ref(7345);
-  let obj = { size: size.size, isRound: size.isRound, hasLeadingIcon: null != size.leadingIcon, isRefreshEnabled: onChangeText(1367)("InputFieldContainer") };
+  let obj = ref(7345);
+  obj = { size: size.size, isRound: size.isRound, hasLeadingIcon: null != size.leadingIcon, isRefreshEnabled: onChangeText(1367)("InputFieldContainer") };
   const inputStyles = obj.useInputStyles(obj);
   let obj2 = ref(4102);
   const focus = obj2.useFocus();
@@ -67,6 +67,9 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   const items1 = [size.leading, , ];
   obj2 = {};
   const merged1 = Object.assign(tmp7);
+  const obj4 = importAllResult;
+  const tmp10 = closure_5;
+  const tmp12 = closure_4;
   const tmp2 = onChangeText(1367)("InputFieldContainer");
   const merged2 = Object.assign(ref(4101).mergeProps(size, focusProps));
   let replaced = str3;
@@ -87,11 +90,11 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   items2[2] = size.inputStyle;
   obj2.style = items2;
   obj2.placeholderTextColor = inputStyles.placeholderText.color;
-  items1[1] = callback(ref(7348).NativeTextInput, obj2);
+  items1[1] = tmp12(ref(7348).NativeTextInput, obj2);
   items1[2] = size.trailing;
   obj1.children = items1;
-  return callback2(ref(7345).InputFieldContainer, obj1);
+  return tmp10(ref(7345).InputFieldContainer, obj1);
 });
-const result = require("obj132").fileFinishedImporting("design/components/TextField/native/BaseTextField.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TextField/native/BaseTextField.native.tsx");
 
 export const BaseTextField = forwardRefResult;

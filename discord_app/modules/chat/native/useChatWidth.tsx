@@ -7,10 +7,10 @@ import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 423
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4234 */;
 import sum from "sum" /* 10719 */;
 import contextDefault from "context" /* 10720 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
 
 export default function useChatWidth(arg0) {
   let context = React.useContext(contextDefault);
@@ -32,6 +32,7 @@ export default function useChatWidth(arg0) {
 };
 export const getChatWidth = function getChatWidth(arg0) {
   const obj = useChatLayout;
+  const tmp = require;
   const width = useBaseAppContainerDimensions.getBaseAppContainerDimensions().width;
   if (null == arg0) {
     let diff = width;

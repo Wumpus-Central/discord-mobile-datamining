@@ -1,10 +1,10 @@
 // === Module 10475: weakMap ===
 
 // Module 10475 (weakMap)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const weakMap = new WeakMap();
-let result = obj132.fileFinishedImporting("modules/chat/native/ChatChangesetUpdateTracker.tsx");
+let result = set.fileFinishedImporting("modules/chat/native/ChatChangesetUpdateTracker.tsx");
 
 export const getAndIncrementChangesetIdForChat = function getAndIncrementChangesetIdForChat(arg0) {
   let num = weakMap.get(arg0);

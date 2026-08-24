@@ -1,7 +1,7 @@
 // === Module 14365: getRevealProgress ===
 
 // Module 14365 (getRevealProgress)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
 function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {
   let num = 0;
@@ -13,7 +13,7 @@ function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {
 getRevealProgress.__closure = {};
 getRevealProgress.__workletHash = 9769647749947;
 getRevealProgress.__initData = { code: "function getRevealProgress_useBountiesRecapScrollTsx1(scrollOffset,startOffset,revealHeight){if(revealHeight<=0){return 0;}return(scrollOffset-startOffset)/revealHeight;}" };
-const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx");
 
 export const RECAP_SNAP_EPSILON = 2;
 export { getRevealProgress };
@@ -21,8 +21,10 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
   listRef = listRef.listRef;
   const enabled = listRef.enabled;
   const offsets = listRef.offsets;
+  let callback;
+  let callback2;
   const items = [listRef];
-  const callback = listRef.useCallback((arg0) => {
+  callback = listRef.useCallback((arg0) => {
     if (null != listRef.current) {
       const current = tmp.current;
       const obj = { offset: null, animated: true };
@@ -37,10 +39,10 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
   const callback1 = listRef.useCallback(() => {
     callback(offsets.lastBounty);
   }, items1);
-  const callback2 = listRef.useCallback((arg0) => {
+  callback2 = listRef.useCallback((arg0) => {
     if (enabled) {
       if (arg0 > offsets.lastBounty) {
-        ({ revealHeight, lastBounty } = offsets);
+        ({ revealHeight, lastBounty } = tmp2);
         if (typeof enabled !== "function") {
           HermesBuiltin.throwTypeError();
         }
@@ -48,7 +50,7 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
         if (revealHeight > 0) {
           num = (arg0 - lastBounty) / revealHeight;
         }
-        const tmp3 = num >= 0.25 ? offsets.fullRecap : offsets.lastBounty;
+        const tmp3 = num >= 0.25 ? tmp2.fullRecap : tmp2.lastBounty;
         const _Math = Math;
         if (Math.abs(arg0 - tmp3) >= 2) {
           callback(tmp3);

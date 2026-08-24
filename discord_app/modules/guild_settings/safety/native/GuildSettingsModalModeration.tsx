@@ -2,23 +2,20 @@
 
 // Module 16755 (GuildSettingsOwnerConfiguredContentLevel)
 import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1993 */;
 import Stack from "Stack" /* 4733 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
 import NavScrim from "NavScrim" /* 6550 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
 import Form from "Form" /* 8083 */;
 import useUserIsTeen from "useUserIsTeen" /* 8152 */;
 import _modDef8874 from "module_8874" /* 8874 */;
 import importAllResult from "noop" /* 19 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import handleFormInit from "handleFormInit" /* 8875 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "handleFormInit" /* 8875 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function GuildSettingsOwnerConfiguredContentLevel(guild) {
   guild = guild.guild;
   let DEFAULT = guild.nsfwLevel;
@@ -33,32 +30,34 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
   let tmp7 = DEFAULT === constants3.AGE_RESTRICTED;
   const userIsTeen = obj.useUserIsTeen();
   if (tmp7) {
-    tmp7 = DEFAULT2 !== constants3.AGE_RESTRICTED;
+    tmp7 = DEFAULT2 !== tmp6.AGE_RESTRICTED;
   }
   let tmp9 = null;
   if (!userIsTeen) {
     obj = { title: null, hasIcons: false, description: null, children: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.YJlvBM);
-    const intl2 = getSystemLocale.intl;
+    const intl = tmp3(1236).intl;
+    obj[0] = intl.string(tmp3(1236).t.YJlvBM);
+    const intl2 = tmp3(1236).intl;
     obj = { helpArticleLink: null };
     obj[0] = combinedDefault.getArticleURL(constants2.NSFW_SERVER_AGE_RESTRICTION);
-    obj[2] = intl2.format(getSystemLocale.t.iyQQ62, obj);
+    obj[2] = intl2.format(tmp3(1236).t.iyQQ62, obj);
     obj1 = { label: null, value: null, onValueChange: null, disabled: null };
-    const intl3 = getSystemLocale.intl;
-    obj1[0] = intl3.string(getSystemLocale.t.N9xEJF);
-    obj1[1] = DEFAULT2 === constants3.AGE_RESTRICTED;
+    const intl3 = tmp3(1236).intl;
+    obj1[0] = intl3.string(tmp3(1236).t.N9xEJF);
+    obj1[1] = DEFAULT2 === tmp6.AGE_RESTRICTED;
     obj1[2] = tmp8;
     obj1[3] = tmp7;
-    obj[3] = callback(TableSwitchRow.TableSwitchRow, obj1);
-    tmp9 = callback(TableRowGroupTitle.TableRowGroup, obj, "filter-section");
+    obj[3] = callback(tmp3(7178).TableSwitchRow, obj1);
+    tmp9 = callback(tmp3(6286).TableRowGroup, obj, "filter-section");
+    const obj4 = combinedDefault;
   }
   return tmp9;
 }
 let c3 = importAllResult;
 ({ GuildFeatures: closure_6, HelpdeskArticles: error, Permissions: closure_8, GuildNSFWContentLevel: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+createCacheKey = { stack: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[0] = createCacheKey;
 let closure_13 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
@@ -68,7 +67,8 @@ class GuildSettingsModalModeration extends PureComponent {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleSaveChanges = function handleSaveChanges() {
       const guild = applyArgumentsResult.props.guild;
-      const obj = { verificationLevel: guild.verificationLevel, explicitContentFilter: guild.explicitContentFilter, ownerConfiguredContentLevel: guild.ownerConfiguredContentLevel };
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { verificationLevel: guild.verificationLevel, explicitContentFilter: guild.explicitContentFilter, ownerConfiguredContentLevel: guild.ownerConfiguredContentLevel };
       obj.saveGuild(guild.id, obj);
     };
     return applyArgumentsResult;
@@ -96,9 +96,9 @@ prototype["updateNavigation"] = function updateNavigation(submitting) {
     } else if (hasChanges) {
       fn2 = () => {
         const obj = { onPress: self.handleSaveChanges, text: null };
-        const intl = self(dependencyMap[10]).intl;
-        obj[1] = intl.string(self(dependencyMap[10]).t["R3BPH+"]);
-        return closure_1_10(self(dependencyMap[15]).HeaderActionButton, obj);
+        const intl = self(closure_1_2[10]).intl;
+        obj[1] = intl.string(self(closure_1_2[10]).t["R3BPH+"]);
+        return closure_1_10(self(closure_1_2[15]).HeaderActionButton, obj);
       };
     }
     setOptionsResult[1] = fn2;
@@ -119,17 +119,18 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
   };
   const features = guild.features;
   const verificationLevelOptions = self(14194).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
-  obj[5] = verificationLevelOptions.map((item, index) => {
-    ({ name, color, value } = item);
-    ({ desc, disabled } = item);
+  obj[5] = verificationLevelOptions.map((arg0) => {
+    ({ name, color, value } = arg0);
+    ({ desc, disabled } = arg0);
     let obj = { value, label: null, subLabel: null, disabled: null };
     let tmpResult = name;
     if (null != color) {
+      obj = { variant: "text-md/semibold", style: null, children: null };
       obj = { color: null };
       obj[0] = color;
       obj[1] = obj;
       obj[2] = name;
-      tmpResult = closure_1_10(self(dependencyMap[19]).Text, obj);
+      tmpResult = tmp(self(closure_1_2[19]).Text, obj);
     }
     obj[1] = tmpResult;
     obj[2] = desc;
@@ -139,7 +140,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
       tmp5 = disabled;
     }
     obj[3] = tmp5;
-    return closure_1_10(self(dependencyMap[18]).TableRadioRow, obj, "level-" + value);
+    return closure_1_10(self(closure_1_2[18]).TableRadioRow, obj, "level-" + value);
   });
   return callback(self(8101).TableRadioGroup, obj, "level-section");
 };
@@ -156,11 +157,12 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
   obj[4] = function onChange(explicitContentFilter) {
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
+  const obj3 = combinedDefault;
   const features = guild.features;
   const contentFilterOptions = self(14194).generateContentFilterOptions(features.has(constants.COMMUNITY));
-  obj[5] = contentFilterOptions.map((item, index) => {
-    const value = item.value;
-    ({ name, desc, disabled } = item);
+  obj[5] = contentFilterOptions.map((value) => {
+    value = value.value;
+    ({ name, desc, disabled } = value);
     const obj = { value, label: name, subLabel: desc, disabled: null };
     const canManageGuild = self.props.canManageGuild;
     let tmp2 = !canManageGuild;
@@ -168,7 +170,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
       tmp2 = disabled;
     }
     obj[3] = tmp2;
-    return closure_1_10(self(dependencyMap[18]).TableRadioRow, obj, "filter-" + value);
+    return closure_1_10(self(closure_1_2[18]).TableRadioRow, obj, "filter-" + value);
   });
   return callback(self(8101).TableRadioGroup, obj, "filter-section");
 };
@@ -176,38 +178,42 @@ prototype["render"] = function render() {
   const props = this.props;
   let canManageGuild = props.canManageGuild;
   ({ guild, hasChanges } = props);
-  const items = [{ paddingTop: 16 }, this.props.contentContainerStyle];
-  let obj = { style: callback2(this.context).stack, spacing: ThemesDefault.space.PX_24, children: null };
+  let obj = { contentContainerStyle: items, children: null };
+  items = [{ paddingTop: 16 }, this.props.contentContainerStyle];
+  obj = { style: callback2(this.context).stack, spacing: ThemesDefault.space.PX_24, children: null };
   const items1 = [this.renderVerificationLevelSection(), this.renderExplicitContentFilter(), ];
   if (canManageGuild) {
     obj = { guild: null, hasChanges: null };
     obj[0] = guild;
     obj[1] = hasChanges;
-    canManageGuild = callback(GuildSettingsOwnerConfiguredContentLevel, obj);
+    canManageGuild = tmp4(GuildSettingsOwnerConfiguredContentLevel, obj);
   }
   obj1 = { children: null };
   items1[2] = canManageGuild;
   obj[2] = items1;
-  obj[1] = callback2(Stack.Stack, obj);
-  const items2 = [callback(Form.Form, obj), callback(NavScrim.NavScrim, {})];
+  obj[1] = closure_11(Stack.Stack, obj);
+  const items2 = [closure_10(Form.Form, obj), closure_10(NavScrim.NavScrim, {})];
   obj1[0] = items2;
-  return callback2(closure_12, obj1);
+  return closure_11(closure_12, obj1);
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   if (this.props.hasChanges) {
     _modDef8874.cancelChanges(tmp.props.guild.id);
+    const obj = _modDef8874;
   }
 };
 prototype["handleVerificationLevelChange"] = function handleVerificationLevelChange(verificationLevel) {
-  const obj = { verificationLevel };
+  let obj = _modDef8874;
+  obj = { verificationLevel };
   obj.updateGuild(obj);
 };
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
-  const obj = { explicitContentFilter };
+  let obj = _modDef8874;
+  obj = { explicitContentFilter };
   obj.updateGuild(obj);
 };
 GuildSettingsModalModeration.contextType = require("ManaContext").ThemeContext;
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx");
 
 export default function ConnectedGuildSettingsModalModeration(contentContainerStyle) {
   let guild;

@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ StyleSheet: c3, TouchableWithoutFeedback: c4, View: c5 } = get_ActivityIndicator);
 const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
   let flag = enabled.enabled;
@@ -14,16 +14,17 @@ const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
   }
   const keyboardType = enabled.keyboardType;
   const onSelectKeyboard = enabled.onSelectKeyboard;
+  let isScreenReaderEnabled;
   let obj = flag(keyboardType[3]);
-  const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
+  isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const items = [flag, isScreenReaderEnabled, keyboardType, onSelectKeyboard];
   const memo = onSelectKeyboard.useMemo(() => ({
     imperativeHandle() {
       return {
-        focused(mode, arg1) {
+        focused(controlsSpecs, arg1) {
           let tmp = closure_0;
           if (closure_0) {
-            tmp = mode;
+            tmp = controlsSpecs;
           }
           if (tmp) {
             tmp = closure_1 !== closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
@@ -40,7 +41,7 @@ const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
       };
     },
     openSystemKeyboard() {
-      callback({ type: flag(keyboardType[4]).KeyboardTypes.SYSTEM });
+      callback({ type: closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM });
     }
   }), items);
   const imperativeHandle = onSelectKeyboard.useImperativeHandle(ref, memo.imperativeHandle);
@@ -63,6 +64,6 @@ const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
 });
 forwardRefResult.displayName = "ChatInputCover";
 const memoResult = importAllResult.memo(forwardRefResult);
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCover.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCover.tsx");
 
 export default memoResult;

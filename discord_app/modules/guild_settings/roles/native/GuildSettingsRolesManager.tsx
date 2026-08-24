@@ -1,11 +1,11 @@
 // === Module 16827: setRoleJustCreated ===
 
 // Module 16827 (setRoleJustCreated)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 const obj = keys.create(() => ({ roleJustCreated: false }));
-const result = obj132.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRolesManager.tsx");
+const result = set.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRolesManager.tsx");
 
 export const setRoleJustCreated = function setRoleJustCreated(arg0) {
   const _require = arg0;

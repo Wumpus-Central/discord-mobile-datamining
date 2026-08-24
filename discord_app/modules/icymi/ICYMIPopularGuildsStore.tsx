@@ -3,9 +3,9 @@
 // Module 15739 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = [];
 let closure_4 = [];
 let c5 = 0;
@@ -36,17 +36,17 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(dispatcherDefault, {
       let items = [];
       offset = 0;
     }
-    set = new Set(items.map((item, index) => item.id));
+    set = new Set(items.map((id) => id.id));
     set1 = new Set(guildIds.getGuildIds());
-    const mapped = guilds.map((item, index) => {
+    const mapped = guilds.map((body) => {
       const obj = set(set1[1]);
-      return obj.fromClientDiscoverableGuild(set(set1[2]).makeDiscoverableGuild(item));
+      return obj.fromClientDiscoverableGuild(set(set1[2]).makeDiscoverableGuild(body));
     });
-    const found = mapped.filter((item, index) => {
-      const hasItem = set1.has(item.id);
+    const found = mapped.filter((id) => {
+      const hasItem = set1.has(id.id);
       let tmp2 = !hasItem;
       if (!hasItem) {
-        tmp2 = !set.has(item.id);
+        tmp2 = !set.has(id.id);
       }
       return tmp2;
     });
@@ -58,6 +58,6 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(dispatcherDefault, {
     c5 = 0;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/icymi/ICYMIPopularGuildsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/ICYMIPopularGuildsStore.tsx");
 
 export default iCYMIPopularGuildsStore;

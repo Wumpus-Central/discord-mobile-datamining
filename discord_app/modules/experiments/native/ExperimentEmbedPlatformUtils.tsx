@@ -1,11 +1,11 @@
 // === Module 10985: regExp ===
 
 // Module 10985 (regExp)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
-const result = obj132.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
+const result = set.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
 export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperimentEmbedTap(experimentFromEmbedURL, experimentTreatmentFromEmbedURL) {
@@ -31,7 +31,7 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
         }
         let tmpResult = tmp(4364);
         const experimentBuckets = tmpResult.getExperimentBuckets(tmp5);
-        const iter = experimentBuckets.find((item, index) => item.value === closure_0);
+        const iter = experimentBuckets.find((value) => value.value === closure_0);
         if (null != iter) {
           if (null != tmp6) {
             if (tmp6.variantId === iter.value) {

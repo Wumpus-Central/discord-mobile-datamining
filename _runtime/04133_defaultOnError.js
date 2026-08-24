@@ -2,11 +2,11 @@
 
 // Module 4133 (defaultOnError)
 import _mod4134 from "module_4134" /* 4134 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 let closure_2 = ["onError", "hybridRef"];
 ({ useEffect: c4, useRef: c5 } = noop);
 function defaultOnError(message) {
@@ -39,8 +39,8 @@ export const RiveView = function RiveView(arg0) {
     const fn = function y() {
       return () => {
         if (ref.current) {
-          closure_1_0(closure_1_1[5]).callDispose(ref.current);
-          ref.current = null;
+          closure_1_0(closure_1_1[5]).callDispose(tmp.current);
+          tmp.current = null;
           const obj = closure_1_0(closure_1_1[5]);
         }
       };
@@ -55,18 +55,18 @@ export const RiveView = function RiveView(arg0) {
     tmp11 = cResult[5];
   }
   callback2(tmp10, tmp11);
-  if (cResult[6] !== hybridRef) {
+  if (cResult[6] !== tmp6) {
     const fn2 = function b(current) {
       closure_1.current = current;
       let f;
       if (closure_0 != null) {
-        f = closure_0.f;
+        f = obj.f;
       }
       if (f) {
-        closure_0.f(current);
+        obj.f(current);
       }
     };
-    cResult[6] = hybridRef;
+    cResult[6] = tmp6;
     cResult[7] = fn2;
     let tmp13 = fn2;
   } else {

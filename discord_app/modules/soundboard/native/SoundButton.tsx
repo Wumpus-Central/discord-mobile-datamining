@@ -6,13 +6,13 @@ import EmojiDefault from "Emoji" /* 6930 */;
 import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11121 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-const require = fn;
+const require = arg1;
 function SoundButtonEmoji(arg0) {
   ({ sound, sharedValues } = arg0);
   const tmp = callback2();
@@ -27,8 +27,8 @@ function SoundButtonEmoji(arg0) {
     if (num == null) {
       num = 0;
     }
-    tmp4(sharedValue1[10]);
-    const tmp4Result = tmp4(sharedValue1[5]);
+    let tmp4Result = tmp4(tmp5[10]);
+    tmp4Result = tmp4(tmp5[5]);
     const playing2 = tmp.sharedValues.playing;
     const items = [1, obj.scaleFactors.playing];
     const tmp3 = playing.get() > 0;
@@ -75,8 +75,8 @@ function SoundButtonEmoji(arg0) {
     if (num == null) {
       num = 0;
     }
-    tmp4(sharedValue1[10]);
-    const tmp4Result = tmp4(sharedValue1[5]);
+    let tmp4Result = tmp4(tmp5[10]);
+    tmp4Result = tmp4(tmp5[5]);
     const playing2 = tmp.sharedValues.playing;
     const items = [1, obj.scaleFactors.playing];
     const tmp3 = playing.get() > 0;
@@ -120,36 +120,41 @@ function SoundButtonEmoji(arg0) {
     str = "";
   }
   obj4[3] = str;
-  obj3[1] = callback(EmojiDefault, obj4);
-  obj2[1] = callback(closure_8, obj3);
-  return callback(closure_8, obj2);
+  obj3[1] = closure_6(EmojiDefault, obj4);
+  obj2[1] = closure_6(closure_8, obj3);
+  return closure_6(closure_8, obj2);
 }
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = importDefaultResult.createAnimatedComponent(View);
 let closure_9 = { damping: 10, stiffness: 300, mass: 1 };
-let obj = { marginTop: 4, height: require("SOUND_BUTTON_HEIGHT").SOUND_BUTTON_HEIGHT, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+let obj = { button: null, buttonPressed: null, buttonDisabled: null, buttonPlaying: null, playingBackground: null, emoji: null, emojiWrapper: null, text: null, textPlaying: null, lock: null };
+obj = { marginTop: 4, height: require("SOUND_BUTTON_HEIGHT").SOUND_BUTTON_HEIGHT, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 obj[0] = obj;
 obj[1] = { backgroundColor: ThemesDefault.colors.CARD_PRIMARY_PRESSED_BG };
 obj[2] = { opacity: 0.5 };
-const createCacheKey = { borderStyle: "solid", borderWidth: 2, borderColor: ThemesDefault.colors.STATUS_SPEAKING };
+createCacheKey = { borderStyle: "solid", borderWidth: 2, borderColor: ThemesDefault.colors.STATUS_SPEAKING };
 obj[3] = createCacheKey;
+let obj1 = { backgroundColor: ThemesDefault.colors.CARD_PRIMARY_PRESSED_BG };
 obj[4] = { position: "absolute", top: 0, bottom: 0, start: 0, end: 0, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.lg - 2 };
 let num;
-if (obj132.isIOS()) {
+if (set.isIOS()) {
   num = 24;
 }
 obj[5] = { height: 24, width: 24, fontSize: num, lineHeight: 28 };
+let obj3 = { position: "absolute", top: 0, bottom: 0, start: 0, end: 0, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.lg - 2 };
 obj[6] = { display: "flex", alignItems: "center", justifyContent: "center", height: 40, width: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, backgroundSize: 32, borderRadius: ThemesDefault.radii.round, marginBottom: 8 };
 obj[7] = { marginHorizontal: 8 };
 obj[8] = { marginHorizontal: 6 };
+let obj4 = { display: "flex", alignItems: "center", justifyContent: "center", height: 40, width: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, backgroundSize: 32, borderRadius: ThemesDefault.radii.round, marginBottom: 8 };
 obj[9] = { position: "absolute", top: ThemesDefault.space.PX_12, end: ThemesDefault.space.PX_12, width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE };
 let closure_10 = createCacheKey.createStyles(obj);
+const obj5 = { position: "absolute", top: ThemesDefault.space.PX_12, end: ThemesDefault.space.PX_12, width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE };
 let closure_11 = importDefaultResult.createAnimatedComponent(require("PressableBase").PressableOpacity);
 let closure_12 = { code: "function SoundButtonTsx1(){const{animationConfig,withDelay,withSpring,interpolate,SPRING_CONFIG}=this.__closure;var _animationConfig$play,_animationConfig$pres,_animationConfig;const isNotPressed=animationConfig.sharedValues.pressed.get()===0;const isPlaying=animationConfig.sharedValues.playing.get()>0;const shouldDoPlayingAnimation=isNotPressed&&isPlaying;const playingAnimationScaleValue=withDelay((_animationConfig$play=animationConfig.playingAnimationDelay)!==null&&_animationConfig$play!==void 0?_animationConfig$play:0,withSpring(interpolate(animationConfig.sharedValues.playing.get(),[0,1],[1,animationConfig.scaleFactors.playing]),SPRING_CONFIG));const pressedAnimationScaleValue=withSpring(interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[1,animationConfig.scaleFactors.pressed]),SPRING_CONFIG);const rotationScaleValue=interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[0,(_animationConfig$pres=(_animationConfig=animationConfig)===null||_animationConfig===void 0?void 0:_animationConfig.pressedRotationDegrees)!==null&&_animationConfig$pres!==void 0?_animationConfig$pres:0]);return{transform:[{scale:shouldDoPlayingAnimation?playingAnimationScaleValue:pressedAnimationScaleValue},{rotate:rotationScaleValue+\"deg\"}]};}" };
 const importDefaultResult1 = importDefaultResult;
-let result = obj132.fileFinishedImporting("modules/soundboard/native/SoundButton.tsx");
+let result = set.fileFinishedImporting("modules/soundboard/native/SoundButton.tsx");
 
 export const SoundButton = importAllResult.memo(function SoundButtonComponent(sound) {
   sound = sound.sound;
@@ -191,16 +196,16 @@ export const SoundButton = importAllResult.memo(function SoundButtonComponent(so
       obj = sharedValue(sharedValue1[19]);
       if (!obj.canUseSoundboardEverywhere(sharedValue1)) {
         if (obj.guildId !== sharedValue.guild_id) {
-          let tmp4Result = sharedValue(sharedValue1[20]);
-          tmp4Result(obj(sharedValue1[21]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE);
+          let tmp4Result = tmp4(tmp5[20]);
+          tmp4Result(obj(tmp5[21]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE);
         }
       }
       if (!obj.available) {
-        tmp4Result = sharedValue(sharedValue1[22]);
+        tmp4Result = tmp4(tmp5[22]);
         obj = { key: "DISABLED_SOUND_PRESSED", icon: null, content: null, toastDurationMs: 3000 };
-        obj[1] = sharedValue(sharedValue1[23]);
-        const intl = obj(sharedValue1[24]).intl;
-        obj[2] = intl.string(obj(sharedValue1[24]).t.MDOXJR);
+        obj[1] = tmp4(tmp5[23]);
+        const intl = obj(tmp5[24]).intl;
+        obj[2] = intl.string(obj(tmp5[24]).t.MDOXJR);
         tmp4Result.open(obj);
       }
     } else {
@@ -239,8 +244,8 @@ export const SoundButton = importAllResult.memo(function SoundButtonComponent(so
     if (num == null) {
       num = 0;
     }
-    tmp4(sharedValue1[10]);
-    const tmp4Result = tmp4(sharedValue1[5]);
+    let tmp4Result = tmp4(tmp5[10]);
+    tmp4Result = tmp4(tmp5[5]);
     const playing2 = tmp.sharedValues.playing;
     const items = [1, obj.scaleFactors.playing];
     const tmp3 = playing.get() > 0;
@@ -326,7 +331,7 @@ export const SoundButton = importAllResult.memo(function SoundButtonComponent(so
   items8[1] = textPlaying;
   items7[2] = callback(obj(sharedValue1[26]).Text, { lineClamp: 1, style: items8, variant: "text-sm/semibold", children: sound.name });
   obj2[7] = items7;
-  const children = [callback2(closure_11, obj2), ];
+  const children = [closure_7(closure_11, obj2), ];
   if (!result) {
     tmp29Result = !flag;
   }
@@ -336,5 +341,5 @@ export const SoundButton = importAllResult.memo(function SoundButtonComponent(so
     tmp29Result = tmp29(tmp(tmp2[27]).LockIcon, obj6);
   }
   children[1] = tmp29Result;
-  return callback2(analyticsLocations, { children });
+  return closure_7(analyticsLocations, { children });
 });

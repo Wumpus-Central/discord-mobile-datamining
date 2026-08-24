@@ -1,12 +1,11 @@
 // === Module 11857: _updateDiscoverability ===
 
 // Module 11857 (_updateDiscoverability)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import callbackDefault from "callback" /* 5223 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 5221 */;
+import closure_4 from "set" /* 5221 */;
 import ME from "ME" /* 676 */;
 
+let closure_0 = arg1;
 function _updateDiscoverability() {
   const self = this;
   const tmp = importDefaultResult((arg0) => {
@@ -121,7 +120,7 @@ function _updateDiscoverability() {
 }
 let c3 = importDefaultResult;
 ({ AnalyticEvents: c5, FriendDiscoveryFlags: closure_6, PlatformTypes: error } = ME);
-importDefaultResult((arg0) => {
+closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -154,7 +153,7 @@ importDefaultResult((arg0) => {
           } else {
             closure_2 = tmp2;
             closure_1 = tmp3;
-            let obj2 = callbackDefault;
+            let obj2 = closure_1_1(closure_1_2[7]);
             obj1 = { name: null };
             obj1[0] = closure_0;
             c3 = 1;
@@ -184,7 +183,7 @@ importDefaultResult((arg0) => {
               num4 = closure_0.length;
             }
             obj[1] = num4;
-            expandEventPropertiesDefault.track(closure_1_5.NAME_SUBMITTED, obj);
+            closure_1_1(closure_1_2[5]).track(closure_1_5.NAME_SUBMITTED, obj);
             c4 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -196,7 +195,7 @@ importDefaultResult((arg0) => {
     }
   })();
 });
-let closure_0 = importDefaultResult((arg0, arg1) => {
+closure_0 = importDefaultResult((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   c4 = 0;
@@ -243,13 +242,13 @@ let closure_0 = importDefaultResult((arg0, arg1) => {
             enabled = tmp69.enabled;
             name = tmp69.name;
             if (null == id) {
-              const obj15 = callback2(dependencyMap[7]);
+              const obj15 = callback2(closure_1_2[7]);
               obj1 = { friend_sync: null };
               obj1[0] = enabled;
               closure_4 = 1;
               constants = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = obj15.connect(closure_1_7.CONTACTS, "@me", name, tmp70, obj1);
+              obj2[0] = obj15.connect(tmp72.CONTACTS, "@me", name, tmp70, obj1);
               return obj2;
             } else if (undefined !== name) {
               const obj3 = { friend_sync: null, name: null };
@@ -258,14 +257,14 @@ let closure_0 = importDefaultResult((arg0, arg1) => {
               closure_4 = 3;
               constants = 1;
               let obj4 = { value: null, done: false };
-              obj4[0] = callback2(dependencyMap[7]).update(closure_1_7.CONTACTS, id, obj3);
+              obj4[0] = callback2(closure_1_2[7]).update(tmp72.CONTACTS, id, obj3);
               return obj4;
             } else {
-              let obj9 = callback2(dependencyMap[7]);
+              let obj9 = callback2(closure_1_2[7]);
               closure_4 = 2;
               constants = 1;
               let obj5 = { value: null, done: false };
-              obj5[0] = obj9.setFriendSync(closure_1_7.CONTACTS, id, enabled);
+              obj5[0] = obj9.setFriendSync(tmp72.CONTACTS, id, enabled);
               return obj5;
             }
           }
@@ -291,8 +290,8 @@ let closure_0 = importDefaultResult((arg0, arg1) => {
                 num8 = name.length;
               }
               obj7[1] = num8;
-              callback2(dependencyMap[5]).track(constants.NAME_SUBMITTED, obj7);
-              const obj21 = callback2(dependencyMap[5]);
+              callback2(closure_1_2[5]).track(constants.NAME_SUBMITTED, obj7);
+              const obj21 = callback2(closure_1_2[5]);
             }
           } else {
             if (2 === tmp6) {
@@ -320,21 +319,21 @@ let closure_0 = importDefaultResult((arg0, arg1) => {
                 num3 = name.length;
               }
               obj[1] = num3;
-              callback2(dependencyMap[5]).track(constants.NAME_SUBMITTED, obj);
-              const obj20 = callback2(dependencyMap[5]);
+              callback2(closure_1_2[5]).track(constants.NAME_SUBMITTED, obj);
+              const obj20 = callback2(closure_1_2[5]);
             }
             constants = 3;
             obj9 = { value: null, done: true };
             obj9[0] = arg1;
             return obj9;
           }
-          const FriendDiscoverySettings = callback(dependencyMap[3]).FriendDiscoverySettings;
+          const FriendDiscoverySettings = callback(closure_1_2[3]).FriendDiscoverySettings;
           setting = FriendDiscoverySettings.getSetting();
-          obj4 = callback(dependencyMap[4]);
+          obj4 = callback(closure_1_2[4]);
           closure_3 = obj4.hasFlag(setting, closure_1_6.FIND_BY_PHONE);
-          obj5 = callback(dependencyMap[4]);
+          obj5 = callback(closure_1_2[4]);
           closure_4 = obj5.hasFlag(setting, closure_1_6.FIND_BY_EMAIL);
-          obj6 = callback2(dependencyMap[5]);
+          obj6 = callback2(closure_1_2[5]);
           const obj10 = { is_enabled: null, am_discoverable_phone: null, am_discoverable_email: null };
           obj10[0] = enabled;
           obj10[1] = closure_3;
@@ -349,7 +348,7 @@ let closure_0 = importDefaultResult((arg0, arg1) => {
     }
   })();
 });
-const result = require("obj132").fileFinishedImporting("modules/contact_sync/native/ContactSyncActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncActionCreators.tsx");
 
 export default {
   updateName: function() {

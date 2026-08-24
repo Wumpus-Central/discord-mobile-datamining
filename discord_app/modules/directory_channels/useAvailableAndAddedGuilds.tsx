@@ -1,17 +1,17 @@
 // === Module 11485: useAvailableAndAddedGuilds ===
 
 // Module 11485 (useAvailableAndAddedGuilds)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
-import isFetching from "isFetching" /* 11479 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_9 from "insertUnsortedGuilds" /* 5078 */;
+import closure_10 from "isFetching" /* 11479 */;
 import { Permissions } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");
 
 export default function useAvailableAndAddedGuilds(arg0, arg1) {
   const _require = arg0;
@@ -26,11 +26,11 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
   const stateFromStoresArray = _require(stateFromStores[8]).useStateFromStoresArray(items1, () => {
     const flattenedGuildIds = closure_1_9.getFlattenedGuildIds();
     const items = [];
-    const item = flattenedGuildIds.forEach((item, index) => {
-      const guild = closure_2_7.getGuild(item);
+    const item = flattenedGuildIds.forEach((arg0) => {
+      const guild = closure_2_7.getGuild(arg0);
       let canResult = null != guild;
       if (canResult) {
-        canResult = closure_2_8.can(Permissions.ADMINISTRATOR, guild);
+        canResult = closure_2_8.can(closure_2_11.ADMINISTRATOR, guild);
       }
       if (canResult) {
         canResult = guild.id !== items;
@@ -75,7 +75,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
               c1 = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.fetchGuildEntriesForIds(c1, closure_1_4.map((item, index) => item.id));
+              obj1[0] = obj1.fetchGuildEntriesForIds(c1, closure_1_4.map((id) => id.id));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -99,17 +99,17 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
     })();
   });
   obj = {
-    availableGuilds: React.useMemo(() => stateFromStoresArray.filter((item, index) => {
+    availableGuilds: React.useMemo(() => stateFromStoresArray.filter((id) => {
       let hasItem;
-      if (set != null) {
-        hasItem = set.has(item.id);
+      if (closure_3 != null) {
+        hasItem = closure_3.has(id.id);
       }
       return !hasItem;
     }), items3),
-    addedGuilds: React.useMemo(() => stateFromStoresArray.filter((item, index) => {
+    addedGuilds: React.useMemo(() => stateFromStoresArray.filter((id) => {
       let hasItem;
-      if (set != null) {
-        hasItem = set.has(item.id);
+      if (closure_3 != null) {
+        hasItem = closure_3.has(id.id);
       }
       return hasItem;
     }), items4),

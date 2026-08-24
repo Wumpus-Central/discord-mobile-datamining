@@ -5,7 +5,38 @@ import getDataView from "getDataView" /* 4910 */;
 
 require = arg1;
 const dependencyMap = arg6;
-const obj = {
+obj = { 4: null, 8: null, 12: null, 16: null, 20: obj, 24: null, 36: null, 40: null, 48: obj, 52: null, 64: null, 80: null };
+obj = {
+  name: "Preferred CMM type",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
+  },
+  description(str) {
+    if (null === str) {
+      return "";
+    } else {
+      const formatted = str.toLowerCase();
+      if ("appl" === formatted) {
+        let str6 = "Apple";
+      } else if ("adbe" === formatted) {
+        str6 = "Adobe";
+      } else if ("msft" === formatted) {
+        str6 = "Microsoft";
+      } else {
+        if ("sunw" === formatted) {
+          str6 = "Sun Microsystems";
+        } else if ("sgi" !== formatted) {
+          str6 = "Taligent";
+          if ("tgnt" !== formatted) {
+            str6 = str;
+          }
+        }
+        str6 = "Silicon Graphics";
+      }
+    }
+  }
+};
+obj = {
   name: "Profile Version",
   value(getUint8, sum) {
     const str = getUint8.getUint8(sum);
@@ -257,13 +288,13 @@ obj[20] = {
 };
 obj[24] = {
   name: "ICC Profile Date",
-  value(getUint16, c5) {
-    const uint16 = getUint16.getUint16(c5);
-    const diff = getUint16.getUint16(c5 + 2) - 1;
-    const uint161 = getUint16.getUint16(c5 + 4);
-    const uint162 = getUint16.getUint16(c5 + 6);
-    const uint163 = getUint16.getUint16(c5 + 8);
-    return new Date(Date.UTC(uint16, diff, uint161, uint162, uint163, getUint16.getUint16(c5 + 10))).toISOString();
+  value(getUint16, sum) {
+    const uint16 = getUint16.getUint16(sum);
+    const diff = getUint16.getUint16(sum + 2) - 1;
+    const uint161 = getUint16.getUint16(sum + 4);
+    const uint162 = getUint16.getUint16(sum + 6);
+    const uint163 = getUint16.getUint16(sum + 8);
+    return new Date(Date.UTC(uint16, diff, uint161, uint162, uint163, getUint16.getUint16(sum + 10))).toISOString();
   }
 };
 obj[36] = {

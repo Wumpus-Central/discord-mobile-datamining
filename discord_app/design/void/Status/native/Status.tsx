@@ -5,14 +5,7 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 13467 */;
 import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13468 */;
-import registerAssetDefault from "registerAsset" /* 13470 */;
-import registerAssetDefault2 from "registerAsset" /* 13471 */;
-import registerAssetDefault3 from "registerAsset" /* 13472 */;
-import registerAssetDefault4 from "registerAsset" /* 13473 */;
-import registerAssetDefault5 from "registerAsset" /* 13474 */;
-import registerAssetDefault6 from "registerAsset" /* 13475 */;
-import registerAssetDefault7 from "registerAsset" /* 13476 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { STATUS_PADDING } from "STATUS_PADDING" /* 1298 */;
 import { StatusTypes } from "ME" /* 676 */;
@@ -20,7 +13,7 @@ import n from "n" /* 12126 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: c9, CHANNEL_SPRING_CONFIG: c10 } = n);
@@ -33,31 +26,32 @@ let closure_14 = createCacheKey.createStyles((items) => {
   if (StatusTypes.ONLINE === arg1) {
     let PRIMARY_400 = ThemesDefault.unsafe_rawColors.GREEN_360;
     let tmp5 = importDefault;
-  } else if (StatusTypes.IDLE === arg1) {
+  } else if (tmp3.IDLE === arg1) {
     PRIMARY_400 = ThemesDefault.unsafe_rawColors.YELLOW_300;
     tmp5 = importDefault;
-  } else if (StatusTypes.DND === arg1) {
+  } else if (tmp3.DND === arg1) {
     PRIMARY_400 = ThemesDefault.unsafe_rawColors.RED_400;
     tmp5 = importDefault;
-  } else if (StatusTypes.STREAMING === arg1) {
+  } else if (tmp3.STREAMING === arg1) {
     PRIMARY_400 = ThemesDefault.unsafe_rawColors.PLATFORM_TWITCH;
     tmp5 = importDefault;
   } else {
-    if (StatusTypes.INVISIBLE !== arg1) {
-      if (StatusTypes.UNKNOWN !== arg1) {
-        const OFFLINE = StatusTypes.OFFLINE;
+    if (tmp3.INVISIBLE !== arg1) {
+      if (tmp3.UNKNOWN !== arg1) {
+        const OFFLINE = tmp3.OFFLINE;
       }
     }
     PRIMARY_400 = ThemesDefault.unsafe_rawColors.PRIMARY_400;
     tmp5 = importDefault;
   }
+  obj = { ellipsis: { backgroundColor: PRIMARY_400, borderRadius: height, height, width: statusTypingDimensions.width, paddingStart: 4, paddingEnd: 2, marginRight: 0 }, ellipsisDot: null };
   obj = { width: dotSize, height: dotSize, backgroundColor: tmp5(712).colors.WHITE };
   obj[1] = obj;
   return obj;
 });
 let closure_15 = { code: "function StatusTsx1(){const{enableAnimation,withSpring,width,CHANNEL_SPRING_CONFIG,height,onAnimationFinished,borderRadius,translateX}=this.__closure;const shouldAnimate=enableAnimation.get()?'respect-motion-settings':'animate-never';return{width:withSpring(width,CHANNEL_SPRING_CONFIG,shouldAnimate),height:withSpring(height,CHANNEL_SPRING_CONFIG,shouldAnimate,onAnimationFinished),borderRadius:withSpring(borderRadius,CHANNEL_SPRING_CONFIG,shouldAnimate),transform:[{translateX:withSpring(translateX,CHANNEL_SPRING_CONFIG,shouldAnimate)}]};}" };
 let closure_16 = { code: "function StatusTsx2(){const{withSpring,statusOpacity,CHANNEL_SPRING_CONFIG}=this.__closure;return{opacity:withSpring(statusOpacity,CHANNEL_SPRING_CONFIG)};}" };
-const result = require("obj132").fileFinishedImporting("design/void/Status/native/Status.tsx");
+const result = require("set").fileFinishedImporting("design/void/Status/native/Status.tsx");
 
 export default function Status(isMobileOnline) {
   let flag = isMobileOnline.isMobileOnline;
@@ -77,42 +71,42 @@ export default function Status(isMobileOnline) {
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = registerAssetDefault;
+    let tmp4Result = tmp4(13470);
   } else if (flag2) {
-    tmp4Result = registerAssetDefault2;
+    tmp4Result = tmp4(13471);
   } else if (flag) {
-    tmp4Result = registerAssetDefault3;
+    tmp4Result = tmp4(13472);
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = registerAssetDefault4;
-  } else if (StatusTypes.DND === status) {
-    tmp4Result = registerAssetDefault5;
+    tmp4Result = tmp4(13473);
+  } else if (tmp7.DND === status) {
+    tmp4Result = tmp4(13474);
   } else {
-    if (StatusTypes.OFFLINE !== status) {
-      if (StatusTypes.INVISIBLE !== status) {
-        const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = registerAssetDefault7;
+    if (tmp7.OFFLINE !== status) {
+      if (tmp7.INVISIBLE !== status) {
+        const ONLINE = tmp7.ONLINE;
+        tmp4Result = tmp4(13476);
       }
     }
-    tmp4Result = registerAssetDefault6;
+    tmp4Result = tmp4(13475);
   }
   obj[1] = tmp4Result;
-  obj[1] = callback(closure_4, obj);
-  return callback(closure_5, obj);
+  obj[1] = closure_11(closure_4, obj);
+  return closure_11(closure_5, obj);
 };
-export const StatusWithTyping = function StatusWithTyping(status) {
-  let flag = status.isMobileOnline;
+export const StatusWithTyping = function StatusWithTyping(isMobileOnline) {
+  let flag = isMobileOnline.isMobileOnline;
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = status.isVROnline;
+  let flag2 = isMobileOnline.isVROnline;
   if (flag2 === undefined) {
     flag2 = false;
   }
-  ({ status, size, streaming, style } = status);
+  ({ status, size, streaming, style } = isMobileOnline);
   if (streaming === undefined) {
     streaming = false;
   }
-  ({ typing, userId } = status);
+  ({ typing, userId } = isMobileOnline);
   let first;
   importDefault = undefined;
   let width;
@@ -179,11 +173,12 @@ export const StatusWithTyping = function StatusWithTyping(status) {
     num2 = 0;
   }
   const tmp = callback2();
+  const tmp12 = closure_10;
   const fn = function f() {
     const obj = { opacity: first(width[20]).withSpring(num2, closure_1_10) };
     return obj;
   };
-  obj = { withSpring: tmp5(tmp4[20]).withSpring, statusOpacity: num2, CHANNEL_SPRING_CONFIG: closure_10 };
+  obj = { withSpring: tmp5(tmp4[20]).withSpring, statusOpacity: num2, CHANNEL_SPRING_CONFIG: tmp12 };
   fn.__closure = obj;
   fn.__workletHash = 7224613224414;
   fn.__initData = closure_16;
@@ -202,6 +197,7 @@ export const StatusWithTyping = function StatusWithTyping(status) {
     ({ ellipsis: obj10[0], ellipsisDot: obj10[1] } = tmp2);
     obj2[4] = callback(tmp3(tmp4[21]), { style: null, dotStyle: null, disableScale: true });
     typing = callback(tmp3(tmp4[19]).View, obj2);
+    let obj4 = { style: null, dotStyle: null, disableScale: true };
   }
   const items2 = [typing, ];
   const obj5 = { style: animatedStyle1, children: null };
@@ -214,12 +210,12 @@ export const StatusWithTyping = function StatusWithTyping(status) {
     tmp3Result = tmp3(tmp4[12]);
   } else if (StatusTypes.IDLE === status) {
     tmp3Result = tmp3(tmp4[13]);
-  } else if (StatusTypes.DND === status) {
+  } else if (tmp22.DND === status) {
     tmp3Result = tmp3(tmp4[14]);
   } else {
-    if (StatusTypes.OFFLINE !== status) {
-      if (StatusTypes.INVISIBLE !== status) {
-        const ONLINE = StatusTypes.ONLINE;
+    if (tmp22.OFFLINE !== status) {
+      if (tmp22.INVISIBLE !== status) {
+        const ONLINE = tmp22.ONLINE;
         tmp3Result = tmp3(tmp4[16]);
       }
     }
@@ -229,5 +225,5 @@ export const StatusWithTyping = function StatusWithTyping(status) {
   obj5[1] = callback(closure_4, obj6);
   items2[1] = callback(importDefault(width[19]).View, obj5);
   obj1[2] = items2;
-  return callback2(importDefault(width[19]).View, obj1);
+  return closure_12(importDefault(width[19]).View, obj1);
 };

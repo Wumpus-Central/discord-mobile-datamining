@@ -1,12 +1,12 @@
 // === Module 4269: formatSize ===
 
 // Module 4269 (formatSize)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-function formatSize(result, closure_3) {
-  let tmp = closure_3;
-  if (closure_3 === undefined) {
+function formatSize(result, arg1) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
     tmp = closure_3;
   }
   let num = 1000;
@@ -57,14 +57,14 @@ function formatSize(result, closure_3) {
 }
 let c2 = 1024;
 let closure_3 = { useKibibytes: false, showDecimalForGB: true, useSpace: true };
-let result = obj132.fileFinishedImporting("utils/FileSizeUtils.tsx");
+let result = set.fileFinishedImporting("utils/FileSizeUtils.tsx");
 
 export const BYTE_IN_KB = 1024;
 export const KB_IN_MB = 1024;
 export { formatSize };
-export const formatKbSize = function formatKbSize(MAX_STICKER_FILE_SIZE, closure_3) {
-  let tmp = closure_3;
-  if (closure_3 === undefined) {
+export const formatKbSize = function formatKbSize(MAX_STICKER_FILE_SIZE, arg1) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
     tmp = closure_3;
   }
   let num = 1000;

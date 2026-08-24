@@ -1,13 +1,13 @@
 // === Module 16279: useInviteMembersCallback ===
 
 // Module 16279 (useInviteMembersCallback)
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ AnalyticsPages: c4, InstantInviteSources: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useInviteMembersCallback.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useInviteMembersCallback.tsx");
 
 export const useInviteMembersCallback = function useInviteMembersCallback(channelId) {
   closure_0 = channelId;
@@ -18,7 +18,7 @@ export const useInviteMembersCallback = function useInviteMembersCallback(channe
       return null;
     } else {
       let tmp = closure_0;
-      let navigateToNewGroupDM = dependencyMap;
+      let navigateToNewGroupDM = closure_1_1;
       if (id.isPrivate()) {
         tmp = tmp(navigateToNewGroupDM[3]);
         navigateToNewGroupDM = tmp.navigateToNewGroupDM;

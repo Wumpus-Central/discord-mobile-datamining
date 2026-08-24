@@ -3,26 +3,27 @@
 // Module 12288 (updateApplicationConfigs)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_0 from "_slicedToArray" /* 32 */;
 
 function updateApplicationConfigs(configs) {
   if (0 !== Object.keys(configs).length) {
     const _Object3 = Object;
     function _loop() {
-      const set = new Set(closure_1.map((item, index) => item.config_id));
+      const set = new Set(closure_1.map((config_id) => config_id.config_id));
       let found;
       if (obj[set] != null) {
-        found = arr.filter((item, index) => !set.has(item.config_id));
+        found = arr.filter((config_id) => !set.has(config_id.config_id));
       }
       if (found == null) {
         found = [];
       }
-      const items = [...tmp];
+      const items = [...closure_1];
       obj[set] = items;
     }
     const entries = Object.entries(configs);
     const tmp17 = entries[Symbol.iterator]();
     while (tmp17 !== undefined) {
+      let tmp4 = callback;
       let tmp5 = callback(tmp2, 2);
       [closure_0, obj] = tmp5;
       let _loopResult = _loop();
@@ -35,8 +36,8 @@ function updateApplicationConfigs(configs) {
     const _Object = Object;
     const _Object2 = Object;
     const keys = Object.keys(configs);
-    const merged2 = Object.assign(Object.fromEntries(keys.map((item, index) => {
-      const items = [item, closure_1.SUCCESS];
+    const merged2 = Object.assign(Object.fromEntries(keys.map((arg0) => {
+      const items = [arg0, closure_1.SUCCESS];
       return items;
     })));
   }
@@ -44,6 +45,7 @@ function updateApplicationConfigs(configs) {
 function handleLogout() {
   closure_3 = {};
   closure_4 = {};
+  NOT_FETCHED = obj.NOT_FETCHED;
   closure_6 = [];
   NOT_FETCHED = obj.NOT_FETCHED;
   closure_8 = [];
@@ -52,8 +54,9 @@ let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", SUCCESS: "SUCCESS"
 let closure_2 = [];
 let closure_3 = {};
 let closure_4 = {};
-let closure_6 = [];
 let NOT_FETCHED = obj.NOT_FETCHED;
+let closure_6 = [];
+NOT_FETCHED = obj.NOT_FETCHED;
 let closure_8 = [];
 const Store = initializeDefault.Store;
 class ApplicationWidgetConfigStoreClass extends Store {
@@ -136,7 +139,7 @@ obj = {
   }
 };
 const applicationWidgetConfigStoreClass = new ApplicationWidgetConfigStoreClass(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigStore.tsx");
+const result = require("set").fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigStore.tsx");
 
 export default applicationWidgetConfigStoreClass;
 export const FetchState = obj;

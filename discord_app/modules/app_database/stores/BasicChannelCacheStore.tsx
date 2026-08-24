@@ -4,8 +4,8 @@
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import allGuildIds from "allGuildIds" /* 1393 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "allGuildIds" /* 1393 */;
 
 let object = importDefault;
 new timestampDefault("BasicChannelCacheStore");
@@ -78,14 +78,17 @@ prototype["handleCacheLoadedLazy"] = function handleCacheLoadedLazy(arg0) {
   this.channels = new Map();
   map1 = new Map();
   while (tmp3 !== undefined) {
+    let tmp5 = callback;
     let tmp6 = callback(tmp4, 2);
     let arr = tmp6[1];
     let guilds = self.guilds;
     let _Object = Object;
-    let result = guilds.set(tmp6[0], Object.fromEntries(arr.map((item, index) => {
-      const items = [item.id, item];
+    let result = guilds.set(tmp6[0], Object.fromEntries(arr.map((id) => {
+      const items = [id.id, id];
       return items;
     })));
+    let tmp8 = arr;
+    let tmp9 = arr;
     for (const item10037 of arr) {
       let channels = self.channels;
       let result1 = channels.set(item10037.id, item10037);
@@ -93,7 +96,6 @@ prototype["handleCacheLoadedLazy"] = function handleCacheLoadedLazy(arg0) {
     }
     continue;
   }
-  tmp3 = arg0.basicGuildChannels[Symbol.iterator]();
 };
 prototype["handleCacheLoadedLazyNoCache"] = function handleCacheLoadedLazyNoCache() {
   const guilds = this.guilds;
@@ -106,12 +108,13 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const guilds = this.guilds;
   const keys = guilds.keys();
   for (const item10012 of keys) {
+    let tmp2 = item10012;
     if (!allGuildIdsResult.has(item10012)) {
-      let deleteResult = self.delete(item10012);
+      let tmp3 = item10012;
+      let deleteResult = self.delete(tmp2);
     }
     continue;
   }
-  const allGuildIdsResult = closure_3.allGuildIds();
 };
 prototype["handleLogout"] = function handleLogout() {
   const guilds = this.guilds;
@@ -127,6 +130,7 @@ const _delete = function delete(arg0) {
     obj = {};
   }
   for (const key10008 in obj) {
+    let tmp2 = key10008;
     let channels = self.channels;
     let deleteResult = channels.delete(key10008);
     continue;
@@ -135,6 +139,7 @@ const _delete = function delete(arg0) {
   guilds2.delete(arg0);
 };
 prototype["delete"] = _delete;
+object = undefined;
 object = new Object(dispatcherDefault, {
   CACHE_LOADED_LAZY_NO_CACHE(arg0) {
     return obj.handleCacheLoadedLazyNoCache(arg0);
@@ -152,8 +157,22 @@ object = new Object(dispatcherDefault, {
 // ThrowIfThisInitialized (0x7c)
 object.channels = new Map();
 let map = new Map();
+let obj = {
+  CACHE_LOADED_LAZY_NO_CACHE(arg0) {
+    return obj.handleCacheLoadedLazyNoCache(arg0);
+  },
+  CACHE_LOADED_LAZY(arg0) {
+    return obj.handleCacheLoadedLazy(arg0);
+  },
+  CONNECTION_OPEN(arg0) {
+    return obj.handleConnectionOpen(arg0);
+  },
+  LOGOUT(arg0) {
+    return obj.handleLogout(arg0);
+  }
+};
 object.guilds = new Map();
 let map1 = new Map();
-let result = require("obj132").fileFinishedImporting("modules/app_database/stores/BasicChannelCacheStore.tsx");
+let result = require("set").fileFinishedImporting("modules/app_database/stores/BasicChannelCacheStore.tsx");
 
 export default object;

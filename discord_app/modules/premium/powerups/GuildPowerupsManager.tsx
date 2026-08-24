@@ -2,25 +2,14 @@
 
 // Module 16585 (handleSelectedGuildChange)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4270 */;
-import experiment from "experiment" /* 4285 */;
-import experiment2 from "experiment" /* 4302 */;
-import apexExperiment from "apexExperiment" /* 4303 */;
-import experiment3 from "experiment" /* 4304 */;
-import apexExperiment2 from "apexExperiment" /* 4305 */;
-import isTablet from "isTablet" /* 4383 */;
 import initializeDefault from "initialize" /* 5038 */;
-import guildPowerupsAckNotification from "guildPowerupsAckNotification" /* 11657 */;
 import getUnitIdDefault from "getUnitId" /* 11671 */;
-import experiment4 from "experiment" /* 11678 */;
-import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 11682 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 15428 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
-import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "handleConnectionOpen" /* 4197 */;
+import closure_6 from "calculateAppliedBoosts" /* 4261 */;
 
-require = fn;
+require = arg1;
 initializeDefault;
 class GuildPowerupsManager extends tmp2 {
   constructor() {
@@ -40,69 +29,71 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
     if (!obj12.isFavoritesGuildId(guildId)) {
       const guild = store.getGuild(guildId);
       if (null != guild) {
-        const GameServerExperiment = experiment.GameServerExperiment;
+        const GameServerExperiment = tmp10(4285).GameServerExperiment;
         let obj = { guildId: null, location: "GuildPowerupsManager" };
         obj[0] = guild.id;
         GameServerExperiment.trackExposure(obj);
-        const FileUpload250MbPowerupExperiment = experiment2.FileUpload250MbPowerupExperiment;
+        const FileUpload250MbPowerupExperiment = tmp10(4302).FileUpload250MbPowerupExperiment;
         obj = { guildId: null, location: "GuildPowerupsManager" };
         obj[0] = guild.id;
         FileUpload250MbPowerupExperiment.trackExposure(obj);
-        const ServerThemeExperiment = experiment3.ServerThemeExperiment;
+        const ServerThemeExperiment = tmp10(4304).ServerThemeExperiment;
         obj1 = { guildId: null, location: "GuildPowerupsManager" };
         obj1[0] = guild.id;
         ServerThemeExperiment.trackExposure(obj1);
-        const ServerThemeApexShadowExperiment = apexExperiment2.ServerThemeApexShadowExperiment;
+        const ServerThemeApexShadowExperiment = tmp10(4305).ServerThemeApexShadowExperiment;
         const obj2 = { guildId: null, location: "GuildPowerupsManager" };
         obj2[0] = guild.id;
         const config = ServerThemeApexShadowExperiment.getConfig(obj2);
-        let tmp10Result = experiment;
+        let tmp10Result = tmp10(4285);
         if (tmp10Result.getGameServerEnabled(guild.id, "GuildPowerupsManager")) {
-          const GameServerPricingExperiment = experiment4.GameServerPricingExperiment;
+          const GameServerPricingExperiment = tmp10(11678).GameServerPricingExperiment;
           obj = { guildId: null, location: "GuildPowerupsManager" };
           obj[0] = guild.id;
           GameServerPricingExperiment.trackExposure(obj);
         }
-        tmp10Result = useHasAllocateBoostPermission;
+        tmp10Result = tmp10(11682);
         if (!tmp10Result.getHasAllocateBoostPermission(closure_4, guild)) {
-          let isCurrentUserEligibleForPowerupUpsells = useIsCurrentUserEligibleForPowerupUpsells.getIsCurrentUserEligibleForPowerupUpsells();
-          let isMobile = isTablet.isMobile;
+          let isCurrentUserEligibleForPowerupUpsells = tmp10(15428).getIsCurrentUserEligibleForPowerupUpsells();
+          let isMobile = tmp10(4383).isMobile;
           if (isMobile) {
-            isMobile = experiment3.getServerThemeEnabled(guildId, "GuildPowerupsManager");
-            const tmp10Result2 = experiment3;
+            isMobile = tmp10(4304).getServerThemeEnabled(guildId, "GuildPowerupsManager");
+            const tmp10Result2 = tmp10(4304);
           }
           if (isMobile) {
-            isMobile = useIsCurrentUserEligibleForPowerupUpsells.getIsCurrentUserEligibleForPowerupUpsells();
-            const tmp10Result3 = useIsCurrentUserEligibleForPowerupUpsells;
+            isMobile = tmp10(15428).getIsCurrentUserEligibleForPowerupUpsells();
+            const tmp10Result3 = tmp10(15428);
           }
           if (isMobile) {
-            isMobile = apexExperiment.getServerThemeUserEnabled("GuildPowerupsManager");
-            const tmp10Result4 = apexExperiment;
+            isMobile = tmp10(4303).getServerThemeUserEnabled("GuildPowerupsManager");
+            const tmp10Result4 = tmp10(4303);
           }
-          let showCoachmark = isTablet.isMobile;
+          let showCoachmark = tmp10(4383).isMobile;
           if (showCoachmark) {
-            showCoachmark = useIsCurrentUserEligibleForPowerupUpsells.getIsCurrentUserEligibleForPowerupUpsells();
-            const tmp10Result5 = useIsCurrentUserEligibleForPowerupUpsells;
+            showCoachmark = tmp10(15428).getIsCurrentUserEligibleForPowerupUpsells();
+            const tmp10Result5 = tmp10(15428);
           }
           if (showCoachmark) {
             showCoachmark = getUnitIdDefault.getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
+            const obj8 = getUnitIdDefault;
           }
-          if (isTablet.isMobile) {
+          if (tmp10(4383).isMobile) {
             if (!isMobile) {
               isMobile = showCoachmark;
             }
             isCurrentUserEligibleForPowerupUpsells = isMobile;
           }
-          const tmp10Result1 = useIsCurrentUserEligibleForPowerupUpsells;
+          const tmp10Result1 = tmp10(15428);
         }
         if (closure_6.shouldFetchCatalogForGuild(guildId)) {
-          const powerupCatalogForGuild = guildPowerupsAckNotification.fetchPowerupCatalogForGuild(guildId);
-          const tmp10Result6 = guildPowerupsAckNotification;
+          const powerupCatalogForGuild = tmp10(11657).fetchPowerupCatalogForGuild(guildId);
+          const tmp10Result6 = tmp10(11657);
         }
-        if (closure_6.shouldFetchPowerupsForGuild(guildId)) {
-          const guildBoostEntitlements = guildPowerupsAckNotification.fetchGuildBoostEntitlements(guildId);
-          const tmp10Result7 = guildPowerupsAckNotification;
+        if (obj9.shouldFetchPowerupsForGuild(guildId)) {
+          const guildBoostEntitlements = tmp10(11657).fetchGuildBoostEntitlements(guildId);
+          const tmp10Result7 = tmp10(11657);
         }
+        obj9 = closure_6;
       }
     }
     obj12 = getFavoritesAwareGuildName;
@@ -116,14 +107,13 @@ prototype["handleAppliedBoostUpdate"] = function handleAppliedBoostUpdate(guildI
 };
 prototype["refreshGuildPowerups"] = function refreshGuildPowerups(guildId) {
   if (true === obj.getHasAllocateBoostPermission(closure_4, store.getGuild(guildId))) {
-    let tmpResult = guildPowerupsAckNotification;
+    let tmpResult = tmp(11657);
     const guildBoostEntitlements = tmpResult.fetchGuildBoostEntitlements(guildId);
-    tmpResult = _fetchAppliedGuildBoostsForGuild;
+    tmpResult = tmp(4270);
     const appliedGuildBoostsForGuild = tmpResult.fetchAppliedGuildBoostsForGuild(guildId, { includeEnded: true });
   }
-  obj = useHasAllocateBoostPermission;
 };
 const guildPowerupsManager = new GuildPowerupsManager();
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/GuildPowerupsManager.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/GuildPowerupsManager.tsx");
 
 export default guildPowerupsManager;

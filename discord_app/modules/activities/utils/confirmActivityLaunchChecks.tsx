@@ -1,12 +1,12 @@
 // === Module 8737: getOrFetchApplicationForLaunch ===
 
 // Module 8737 (getOrFetchApplicationForLaunch)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "participantFromServer" /* 1390 */;
 import { ApplicationFlags } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function getOrFetchApplicationForLaunch() {
   const self = this;
   const apply = _getOrFetchApplicationForLaunch.apply;
@@ -196,8 +196,8 @@ function _confirmActivityChange() {
                 obj1[0] = arg1;
                 return obj1;
               } else if (null != c0) {
-                const promise = new Promise((fn) => {
-                  const _undefined = fn;
+                const promise = new Promise((arg0) => {
+                  const _undefined = arg0;
                   const selfEmbeddedActivities = closure_1_5.getSelfEmbeddedActivities();
                   const value = selfEmbeddedActivities.get(_undefined.id);
                   const _undefined2 = value;
@@ -212,19 +212,18 @@ function _confirmActivityChange() {
                         dependencyMap();
                       }
                       _undefined2(8739)(tmp, channel, () => {
-                        value(table[10])();
-                        const obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
+                        let obj = value(table[10])();
+                        obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
                         obj.leaveActivity(obj);
                         lib(true);
                       }, () => lib(false));
                     }
                   }
-                  fn(true);
-                  const obj2 = _undefined(4011);
+                  arg0(true);
                 });
                 c2 = 2;
                 c3 = 1;
-                let obj2 = { value: null, done: false };
+                const obj2 = { value: null, done: false };
                 obj2[0] = promise;
                 return obj2;
               }
@@ -341,7 +340,7 @@ function _confirmActivityAgeGate() {
                     obj = 2;
                     c6 = 1;
                     const obj3 = { value: null, done: false };
-                    obj3[0] = callback(obj2);
+                    obj3[0] = closure_7(obj2);
                     return obj3;
                   }
                 }
@@ -389,8 +388,8 @@ function _confirmActivityAgeGate() {
                     if (c4 != null) {
                       tmp();
                     }
-                    _undefined(_undefined2[11]);
-                    const obj = { application: c5, channelId: null, onAgree: null, onDisagree: null };
+                    let obj = _undefined(_undefined2[11]);
+                    obj = { application: c5, channelId: null, onAgree: null, onDisagree: null };
                     let id;
                     if (_undefined2 != null) {
                       id = _undefined2.id;
@@ -509,7 +508,7 @@ function _confirmExternalAppLaunch() {
                   c5 = 2;
                   constants = 1;
                   const obj3 = { value: null, done: false };
-                  obj3[0] = callback(obj2);
+                  obj3[0] = closure_7(obj2);
                   return obj3;
                 }
               }
@@ -542,8 +541,8 @@ function _confirmExternalAppLaunch() {
                     if (c3 != null) {
                       tmp();
                     }
-                    _undefined(_undefined2[13]);
-                    const obj = {
+                    let obj = _undefined(_undefined2[13]);
+                    obj = {
                       application: closure_4,
                       onConfirm() {
                         return callback(true);
@@ -639,7 +638,7 @@ function _confirmActivityLaunchChecks() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/activities/utils/confirmActivityLaunchChecks.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/utils/confirmActivityLaunchChecks.tsx");
 
 export const confirmActivityLaunchChecks = function confirmActivityLaunchChecks(arg0) {
   const self = this;

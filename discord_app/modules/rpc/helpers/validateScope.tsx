@@ -1,11 +1,11 @@
 // === Module 13870: validateScope ===
 
 // Module 13870 (validateScope)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import RPC_SCOPE_CONFIG2 from "RPC_SCOPE_CONFIG" /* 4277 */;
 
 let RPC_SCOPE_CONFIG = RPC_SCOPE_CONFIG2.RPC_SCOPE_CONFIG;
-const result = obj132.fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");
+const result = set.fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");
 
 export default function validateScope(arr, str) {
   RPC_SCOPE_CONFIG = arr;
@@ -20,7 +20,7 @@ export default function validateScope(arr, str) {
     const isArray = Array.isArray(obj);
     let tmp = !isArray;
     if (isArray) {
-      tmp = !obj.some((item, index) => arr.includes(item));
+      tmp = !obj.some((arg0) => arr.includes(arg0));
     }
     let tmp2 = !tmp;
     if (tmp) {
@@ -28,7 +28,7 @@ export default function validateScope(arr, str) {
       const isArray1 = Array.isArray(obj2);
       let tmp4 = !isArray1;
       if (isArray1) {
-        tmp4 = !obj2.every((item, index) => arr.includes(item));
+        tmp4 = !obj2.every((arg0) => arr.includes(arg0));
       }
       tmp2 = !tmp4;
     }

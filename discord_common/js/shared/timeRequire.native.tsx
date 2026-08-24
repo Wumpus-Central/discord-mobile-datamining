@@ -1,12 +1,12 @@
 // === Module 5086: timeRequire ===
 
 // Module 5086 (timeRequire)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isTracingDefault from "isTracing" /* 10 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/timeRequire.native.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/timeRequire.native.tsx");
 
-export default function timeRequire(arg0, fn) {
+export default function timeRequire(arg0, arg1) {
   const timestamp = Date.now();
   const diff = Date.now() - timestamp;
   if (diff >= 5) {
@@ -15,12 +15,14 @@ export default function timeRequire(arg0, fn) {
       const _Object = Object;
       const keys = Object.keys(modules);
       const _HermesInternal = HermesInternal;
-      isTracingDefault.mark("\u{1F3C3}", "Require " + arg0 + " (" + keys.filter((item, index) => modules[item].isInitialized).length + " modules)", diff);
+      isTracingDefault.mark("\u{1F3C3}", "Require " + arg0 + " (" + keys.filter((arg0) => modules[arg0].isInitialized).length + " modules)", diff);
+      const obj = isTracingDefault;
     } else {
       const _HermesInternal2 = HermesInternal;
       isTracingDefault.mark("\u{1F3C3}", "Require " + arg0, diff);
+      const obj3 = isTracingDefault;
     }
     obj2 = modules;
   }
-  return fn();
+  return arg1();
 };

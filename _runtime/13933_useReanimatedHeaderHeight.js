@@ -2,7 +2,7 @@
 
 // Module 13933 (useReanimatedHeaderHeight)
 import noopDefault from "noop" /* 13929 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 
 export default function useReanimatedHeaderHeight() {

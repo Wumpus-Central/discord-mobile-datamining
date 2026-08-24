@@ -10,18 +10,19 @@ import GuildIconSizes from "GuildIconSizes" /* 7188 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { marginBottom: 16, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = { guildIcon: null, title: null, description: null, container: null };
+createCacheKey = { marginBottom: 16, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 8, textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { alignItems: "center", justifyContent: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddAlert.tsx");
 
 export default function GuildDirectoryAddAlert(arg0) {
   ({ onClose, guild, directoryGuildName } = arg0);
@@ -30,6 +31,7 @@ export default function GuildDirectoryAddAlert(arg0) {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["X0WK+6"]);
   obj[1] = onClose;
+  obj = { style: tmp.container, children: null };
   obj = { style: tmp.guildIcon, guild, size: null };
   const tmp2 = componentDidMountDefault;
   obj[2] = GuildIconSizes.GuildIconSizes.XLARGE;

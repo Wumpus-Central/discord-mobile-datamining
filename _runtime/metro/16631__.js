@@ -4,21 +4,22 @@
 
 export default (promise) => {
   let fn = arg1;
+  fn = arg1;
   if (!arg1) {
     fn = () => {
 
     };
   }
-  return promise.then((result) => {
-    closure_0 = result;
-    return new Promise((fn) => {
-      fn(callback());
-    }).then((result) => closure_0);
+  return promise.then((arg0) => {
+    closure_0 = arg0;
+    return new Promise((arg0) => {
+      arg0(callback());
+    }).then(() => closure_0);
   }, (arg0) => {
     closure_0 = arg0;
-    return new Promise((fn) => {
-      fn(callback());
-    }).then((result) => {
+    return new Promise((arg0) => {
+      arg0(callback());
+    }).then(() => {
       throw closure_0;
     });
   });

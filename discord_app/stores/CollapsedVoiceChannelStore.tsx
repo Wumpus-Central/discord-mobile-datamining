@@ -4,13 +4,13 @@
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
 function handleConnectionOpen() {
   obj = DISCORD_EPOCHDefault;
   const keys = obj.keys(obj);
-  const item = keys.forEach((item, index) => {
-    if (null == channel.getChannel(item)) {
+  const item = keys.forEach((arg0) => {
+    if (null == channel.getChannel(arg0)) {
       delete tmp[tmp2];
     }
   });
@@ -54,6 +54,6 @@ obj = {
   }
 };
 const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
+const result = require("set").fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
 
 export default collapsedVoiceChannelStore;

@@ -1,8 +1,8 @@
 // === Module 5390: appDatabaseManager ===
 
 // Module 5390 (appDatabaseManager)
-import obj132 from "obj132" /* 2 */;
-import set from "set" /* 5391 */;
+import set from "set" /* 2 */;
+import set2 from "set" /* 5391 */;
 
 const items = [
   {
@@ -118,7 +118,7 @@ const items = [
     }
   }
 ];
-const appDatabaseManager = new set.AppDatabaseManager("MobileAppDatabaseManager", [], items);
-const result = obj132.fileFinishedImporting("modules/app_database/managers/MobileAppDatabaseManager.tsx");
+const appDatabaseManager = new set2.AppDatabaseManager("MobileAppDatabaseManager", [], items);
+const result = set.fileFinishedImporting("modules/app_database/managers/MobileAppDatabaseManager.tsx");
 
 export default appDatabaseManager;

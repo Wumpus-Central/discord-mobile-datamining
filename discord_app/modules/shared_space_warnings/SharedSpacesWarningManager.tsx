@@ -1,18 +1,18 @@
 // === Module 13282: handleChannelSelect ===
 
 // Module 13282 (handleChannelSelect)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import keys from "keys" /* 691 */;
 import initializeDefault from "initialize" /* 5038 */;
 import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13284 */;
 import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13288 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "createRTCConnection" /* 4539 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
 import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13283 */;
-import init from "init" /* 13281 */;
+import closure_10 from "init" /* 13281 */;
 
-require = fn;
+require = arg1;
 function handleChannelSelect(channelId) {
   channelId = channelId.channelId;
   if (null != channelId) {
@@ -20,9 +20,9 @@ function handleChannelSelect(channelId) {
     if (null != channel) {
       if (channel.isGroupDM()) {
         const recipients = channel.recipients;
-        const found = recipients.filter((item, index) => closure_4.isBlocked(item));
+        const found = recipients.filter((arg0) => closure_4.isBlocked(arg0));
         const recipients1 = channel.recipients;
-        const found1 = recipients1.filter((item, index) => closure_4.isIgnored(item));
+        const found1 = recipients1.filter((arg0) => closure_4.isIgnored(arg0));
         if (tmp) {
           let blockedUserWarningDismissed = channel.blockedUserWarningDismissed;
           if (!blockedUserWarningDismissed) {
@@ -34,7 +34,8 @@ function handleChannelSelect(channelId) {
             blockedUserWarningDismissed = num2 > Date.now() - closure_11;
           }
           if (!blockedUserWarningDismissed) {
-            const obj = { channelId: null, blockedUserIds: null, ignoredUserIds: null };
+            let obj = showGdmBlockedUserModal;
+            obj = { channelId: null, blockedUserIds: null, ignoredUserIds: null };
             obj[0] = channelId;
             obj[1] = found;
             obj[2] = found1;
@@ -66,10 +67,10 @@ function handleAppStateChanged(state) {
           let everyResult = num3 > Date.now() - HOUR;
           if (!everyResult) {
             const _Array = Array;
-            everyResult = Array.from(set).every((item, index) => {
+            everyResult = Array.from(set).every((arg0) => {
               let flag = false;
               {
-                let num = callback(item);
+                let num = callback(arg0);
                 if (num == null) {
                   num = 0;
                 }
@@ -95,9 +96,9 @@ function handleAppStateChanged(state) {
   }
 }
 ({ getChannelDismissTimestamp: c5, getUserDismissTimestamp: closure_6, getGlobalDismissTimestamp: error, isBlockedWarningQueued: closure_8, dequeueBlockWarning: c9 } = useSharedSpacesWarningStore);
-let closure_11 = 3 * obj132Default.Millis.DAY;
-let closure_12 = 2 * obj132Default.Millis.DAY;
-const HOUR = obj132Default.Millis.HOUR;
+let closure_11 = 3 * setDefault.Millis.DAY;
+let closure_12 = 2 * setDefault.Millis.DAY;
+const HOUR = setDefault.Millis.HOUR;
 initializeDefault;
 class SharedSpacesWarningManager extends tmp3 {
   constructor() {
@@ -128,12 +129,13 @@ SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin
       }
       if (!tmp6) {
         const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, id);
+        const obj = showVoiceChannelBlockedUserWarning;
       }
     }
   }
 };
 const sharedSpacesWarningManager = new SharedSpacesWarningManager();
-let result = require("obj132").fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningManager.tsx");
+let result = require("set").fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningManager.tsx");
 
 export default sharedSpacesWarningManager;
 export const voiceBlockedWarningInCooldownForUsers = function voiceBlockedWarningInCooldownForUsers(arg0) {
@@ -144,10 +146,10 @@ export const voiceBlockedWarningInCooldownForUsers = function voiceBlockedWarnin
   let everyResult = num > Date.now() - HOUR;
   if (!everyResult) {
     const _Array = Array;
-    everyResult = Array.from(arg0).every((item, index) => {
+    everyResult = Array.from(arg0).every((arg0) => {
       let flag = false;
       {
-        let num = callback(item);
+        let num = callback(arg0);
         if (num == null) {
           num = 0;
         }

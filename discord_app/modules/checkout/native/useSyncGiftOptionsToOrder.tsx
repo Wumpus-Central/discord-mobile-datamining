@@ -2,13 +2,13 @@
 
 // Module 10364 (useSyncGiftOptionsToOrder)
 import timestampDefault from "timestamp" /* 3 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 let closure_4 = new timestampDefault("useSyncGiftOptionsToOrder");
 const tmp2 = new timestampDefault("useSyncGiftOptionsToOrder");
-let result = require("obj132").fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");
+let result = require("set").fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");
 
 export default function useSyncGiftOptionsToOrder(arg0, arg1) {
   closure_0 = arg0;
@@ -53,29 +53,29 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
         closure_7.current = 0;
       }
       if (!ref3.current) {
-        if (ref.current !== table) {
+        if (ref.current !== tmp5) {
           if (null != ref8.current) {
             const _clearTimeout = clearTimeout;
-            clearTimeout(ref8.current);
-            ref8.current = null;
+            clearTimeout(tmp15.current);
+            tmp15.current = null;
           }
           tmp11.current = true;
-          ref7.current = table;
-          callback(table[3]);
-          let obj = { orderId: null, giftInfo: null, expectedRevision: null };
+          tmp9.current = tmp5;
+          let obj = callback(table[3]);
+          obj = { orderId: null, giftInfo: null, expectedRevision: null };
           obj[0] = id;
           obj = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
-          ({ recipient_id: obj3[0], gift_style: obj3[1], emoji_id: obj3[2], emoji_name: obj3[3], sound_id: obj3[4], reward_sku_ids: obj3[5], custom_message: obj3[6] } = table);
+          ({ recipient_id: obj3[0], gift_style: obj3[1], emoji_id: obj3[2], emoji_name: obj3[3], sound_id: obj3[4], reward_sku_ids: obj3[5], custom_message: obj3[6] } = tmp5);
           obj[1] = obj;
           obj[2] = ref4.current;
           const updateOrderResult = obj.updateOrder(obj);
-          const nextPromise = obj.updateOrder(obj).then((result) => {
-            closure_5.current = result;
+          const nextPromise = obj.updateOrder(obj).then((current) => {
+            closure_5.current = current;
             closure_2.current = closure_1;
             closure_7.current = 0;
           });
-          obj.updateOrder(obj).then((result) => {
-            closure_5.current = result;
+          obj.updateOrder(obj).then((current) => {
+            closure_5.current = current;
             closure_2.current = closure_1;
             closure_7.current = 0;
           }).catch((error) => {
@@ -89,9 +89,9 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
             if (ref.current !== ref2.current) {
               if (0 === ref3.current) {
                 callback((arg0) => arg0 + 1);
-              } else if (ref3.current < 3) {
+              } else if (tmp3.current < 3) {
                 const _setTimeout = setTimeout;
-                closure_9.current = setTimeout(() => callback((arg0) => arg0 + 1), 500 * 2 ** (ref3.current - 1));
+                closure_9.current = setTimeout(() => callback((arg0) => arg0 + 1), 500 * 2 ** (tmp3.current - 1));
               } else {
                 callback2(false);
               }
@@ -99,8 +99,8 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
               callback2(true);
             }
           });
-          const catchPromise = obj.updateOrder(obj).then((result) => {
-            closure_5.current = result;
+          const catchPromise = obj.updateOrder(obj).then((current) => {
+            closure_5.current = current;
             closure_2.current = closure_1;
             closure_7.current = 0;
           }).catch((error) => {
@@ -114,6 +114,7 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
           callback(true);
         }
       }
+      tmp9 = ref7;
     } else {
       callback(true);
     }

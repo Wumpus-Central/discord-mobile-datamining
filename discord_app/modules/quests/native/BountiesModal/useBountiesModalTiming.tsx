@@ -1,13 +1,13 @@
 // === Module 14372: BountyVideoEndMode ===
 
 // Module 14372 (BountyVideoEndMode)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
 
-const require = fn;
+const require = arg1;
 let obj = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP" };
-let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
 
 export const BountyVideoEndMode = obj;
 export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
@@ -167,6 +167,6 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   if (isCompleted) {
     isCompleted = !tmp21;
   }
-  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp4, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback3, handleVideoResumed: callback4, handleReplay: callback2, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp6, maxVideoProgressSeconds: tmp10, videoDuration: tmp12 };
+  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp4, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback3, handleVideoResumed: callback4, handleReplay: callback2, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp8, maxVideoProgressSeconds: tmp10, videoDuration: tmp12 };
   return obj;
 };

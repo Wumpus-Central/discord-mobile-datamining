@@ -1,28 +1,23 @@
 // === Module 15210: NavigatorWithCaptchaHook ===
 
 // Module 15210 (NavigatorWithCaptchaHook)
-import PlatformTypes from "PlatformTypes" /* 501 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1643 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
 import createStackNavigator from "createStackNavigator" /* 6371 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
-import context2 from "context" /* 8610 */;
 import BackgroundImageDefault from "BackgroundImage" /* 8612 */;
-import trackRegTransition from "trackRegTransition" /* 15220 */;
 import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15261 */;
 import registerAsset from "registerAsset" /* 15262 */;
 import usePortraitOrientationOnlyDefault from "usePortraitOrientationOnly" /* 15267 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AuthStates } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import headerTitle from "headerTitle" /* 15211 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function NavigatorWithCaptchaHook() {
   obj = useIsHCaptchaModalOpenTracking;
   const isHCaptchaModalOpenTracking = obj.useIsHCaptchaModalOpenTracking();
@@ -43,10 +38,12 @@ function NavigatorWithCaptchaHook() {
     if (name == null) {
       name = null;
     }
-    callback(name);
+    closure_0(name);
     callback(false);
   }, []);
   obj = { backgroundImageSource: null, backgroundImageCover: true };
+  const tmp15 = closure_10;
+  const tmp16 = closure_9;
   const tmp8 = callback(importAllResult.useState(AuthStates.WELCOME), 2);
   obj[0] = registerAsset;
   const children = [callback2(BackgroundImageDefault, obj), ];
@@ -86,11 +83,11 @@ function NavigatorWithCaptchaHook() {
     obj6[0] = closure_12;
     obj6[1] = tmp6.cardContainer;
     let transparent = null;
-    if (tmp9 === AuthStates.WELCOME) {
+    if (tmp9 === tmp7.WELCOME) {
       transparent = tmp6.transparent;
     }
     obj6[2] = transparent;
-    obj6[6] = AuthStates.WELCOME;
+    obj6[6] = tmp7.WELCOME;
     obj6[7] = closure_5.dismiss;
     obj6[8] = callback;
     obj6[9] = tmp10[0] ? tmp6.wideHeader : tmp6.wideHeaderFlat;
@@ -103,32 +100,32 @@ function NavigatorWithCaptchaHook() {
     obj7[1] = tmp4(712).space.PX_24;
     obj7[2] = tmp4(712).space.PX_16;
     obj6[10] = obj7;
-    obj5[1] = callback2(NavigationStack.Navigator, obj6);
-    obj2[1] = callback2(closure_6, obj5);
-    obj[1] = callback2(closure_6, obj2);
-    let tmp17Result = callback2(context2.WideAuthScrollContext.Provider, obj);
-    tmpResult = PlatformTypes;
+    obj5[1] = tmp17(tmp(6312).Navigator, obj6);
+    obj2[1] = tmp17(closure_6, obj5);
+    obj[1] = tmp17(closure_6, obj2);
+    let tmp17Result = tmp17(tmp(8610).WideAuthScrollContext.Provider, obj);
+    tmpResult = tmp(501);
   } else {
     const obj8 = { screens: null, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteName: null, onWillFocus: null, headerStyle: null };
     obj8[0] = headerTitle;
     ({ transparent: obj4[1], transparent: obj4[2] } = tmp6);
-    const intl = getSystemLocale.intl;
-    obj8[3] = intl.string(getSystemLocale.t["13/7kX"]);
-    obj8[4] = AuthStates.WELCOME;
+    const intl = tmp(1236).intl;
+    obj8[3] = intl.string(tmp(1236).t["13/7kX"]);
+    obj8[4] = tmp7.WELCOME;
     obj8[5] = closure_5.dismiss;
     obj8[6] = { borderBottomWidth: 0 };
-    tmp17Result = callback2(NavigationStack.Navigator, obj8);
+    tmp17Result = tmp17(tmp(6312).Navigator, obj8);
   }
   children[1] = tmp17Result;
-  return callback(closure_9, { children });
+  return tmp15(tmp16, { children });
 }
 let c4 = importAllResult;
 ({ Keyboard: c5, View: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 headerTitle = headerTitle.getAllAuthScreens();
 headerTitle = Object.entries(headerTitle);
-let closure_12 = Object.fromEntries(headerTitle.map((item, index) => {
-  [tmp, tmp2] = item;
+let closure_12 = Object.fromEntries(headerTitle.map((arg0) => {
+  [tmp, tmp2] = arg0;
   const items = [tmp, ];
   obj = {};
   let merged = Object.assign(tmp2);
@@ -141,7 +138,7 @@ let closure_12 = Object.fromEntries(headerTitle.map((item, index) => {
   let tmp6 = null;
   if (tmp !== AuthStates.MFA) {
     tmp6 = null;
-    if (tmp !== AuthStates.WELCOME) {
+    if (tmp !== tmp5.WELCOME) {
       obj = { headerLeft: null };
       obj[0] = function headerLeft(arg0) {
         function backImage() {
@@ -157,7 +154,7 @@ let closure_12 = Object.fromEntries(headerTitle.map((item, index) => {
           obj = {};
           const merged1 = Object.assign(arg0);
           obj.backImage = backImage;
-          headerLeftResult = closure_1_8(trackRegTransition.BackButtonWithTracking, obj);
+          headerLeftResult = closure_1_8(closure_1_0(closure_1_2[7]).BackButtonWithTracking, obj);
         }
         return headerLeftResult;
       };
@@ -188,12 +185,13 @@ obj = { transparent: { backgroundColor: "transparent" }, cardContainer: { flex: 
 headerTitle = { backgroundColor: "transparent", borderRadius: ThemesDefault.radii.lg, maxWidth: 600, alignSelf: "center", width: "100%", maxHeight: "90%", overflow: "hidden", height: 520 };
 obj[3] = headerTitle;
 obj[4] = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-const createCacheKey = { borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[5] = createCacheKey;
 let closure_14 = createCacheKey.createStyles(obj);
 const context = importAllResult.createContext(() => {
 
 });
+let obj2 = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
     callback2(15263).initialize();
@@ -202,9 +200,9 @@ const memoResult = importAllResult.memo(function Auth() {
   const layoutEffect = importAllResult.useLayoutEffect(() => callback(5066).trackAppUIViewed(), []);
   usePortraitOrientationOnlyDefault();
   closure_0 = importAllResult.useRef(undefined);
-  return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(dependencyMap[7]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });
+  return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(closure_1_2[7]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });
 });
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/Auth.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/Auth.tsx");
 
 export default memoResult;
 export const TrackRegistrationContext = context;

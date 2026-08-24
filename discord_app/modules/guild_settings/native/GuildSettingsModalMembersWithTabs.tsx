@@ -2,25 +2,27 @@
 
 // Module 15825
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+let obj = { container: null, content: null, tabContainer: null };
+obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[0] = obj;
 obj[1] = { flex: 1 };
 obj[2] = { marginTop: 12, minHeight: 32 };
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
+  closure_1 = undefined;
   let num;
   let stateFromStores;
   let stateFromStores1;
@@ -71,21 +73,21 @@ const memoResult = importAllResult.memo((guildId) => {
     }
     obj[2] = tmp6;
     obj1 = { guildId, applicationStatus: null };
-    let tmp4Result = callback(num[15]);
+    let tmp4Result = tmp4(tmp2[15]);
     obj1[1] = guildId(num[16]).GuildJoinRequestApplicationStatuses.SUBMITTED;
     obj[3] = closure_1_9(tmp4Result, obj1);
     items[1] = obj;
     const obj2 = { label: null, id: null, page: null };
-    const intl3 = guildId(num[12]).intl;
+    const intl3 = tmp(tmp2[12]).intl;
     obj2[0] = intl3.string(guildId(num[12]).t.bSZkla);
     obj2[1] = guildId(num[13]).MemberSafetyPageTab.REJECTED;
     const obj3 = { guildId, applicationStatus: null };
-    tmp4Result = callback(num[15]);
+    tmp4Result = tmp4(tmp2[15]);
     obj3[1] = guildId(num[16]).GuildJoinRequestApplicationStatuses.REJECTED;
     obj2[2] = closure_1_9(tmp4Result, obj3);
     items[2] = obj2;
     const obj4 = { label: null, id: null, page: null };
-    const intl4 = guildId(num[12]).intl;
+    const intl4 = tmp(tmp2[12]).intl;
     obj4[0] = intl4.string(guildId(num[12]).t.aURgY2);
     obj4[1] = guildId(num[13]).MemberSafetyPageTab.APPROVED;
     const obj5 = { guildId, applicationStatus: guildId(num[16]).GuildJoinRequestApplicationStatuses.APPROVED };
@@ -126,7 +128,7 @@ const memoResult = importAllResult.memo((guildId) => {
       headerRight() {
         let tmp = null;
         if (0 === closure_0) {
-          tmp = callback();
+          tmp = closure_1_6();
         }
         return tmp;
       }
@@ -159,6 +161,6 @@ const memoResult = importAllResult.memo((guildId) => {
   obj[1] = items8;
   return callback2(navigation, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWithTabs.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWithTabs.tsx");
 
 export default memoResult;

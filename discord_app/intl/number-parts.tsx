@@ -1,9 +1,9 @@
 // === Module 10257: numberParts ===
 
 // Module 10257 (numberParts)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("intl/number-parts.tsx");
+const result = set.fileFinishedImporting("intl/number-parts.tsx");
 const obj = Object.create(null);
 obj[0] = { group: " ", decimal: "," };
 obj[1] = { group: " ", decimal: "," };

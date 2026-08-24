@@ -7,10 +7,10 @@ import PhoneCallIcon from "PhoneCallIcon" /* 8508 */;
 import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8510 */;
 import _modDef12703 from "module_12703" /* 12703 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate" /* 4969 */;
+import closure_4 from "handleThreadCreateOrUpdate" /* 4969 */;
 import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
 import { setIsChannelDetailsSearchActive as closure_8 } from "useChannelDetailsStore" /* 8505 */;
 import ME from "ME" /* 676 */;
 import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
@@ -18,7 +18,7 @@ import { jsx } from "jsxProd" /* 21 */;
 import { createElement } from "noop" /* 19 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function JoinCallButton() {
   return jsx(PhoneCallIcon.PhoneCallIcon, { size: "sm", color: ThemesDefault.unsafe_rawColors.GREEN_360 });
 }
@@ -29,6 +29,7 @@ function ChannelActionButtons(channel) {
   channel = channel.channel;
   const screenIndex = channel.screenIndex;
   let items1;
+  let conversationsHeaderButton;
   const tmp = callback();
   let obj = channel(items1[15]);
   const canSearchForumPosts = obj.useCanSearchForumPosts(channel);
@@ -47,7 +48,7 @@ function ChannelActionButtons(channel) {
   const stateFromStores2 = obj4.useStateFromStores(items3, () => !screenIndex(items1[19]).isEmpty(closure_1_7.getVoiceStatesForChannel(channel.id)));
   let fn = screenIndex(items1[20])(channel);
   const tmp4 = screenIndex(items1[14])(channel);
-  const conversationsHeaderButton = channel(items1[21]).useConversationsHeaderButton(channel);
+  conversationsHeaderButton = channel(items1[21]).useConversationsHeaderButton(channel);
   let obj6 = channel(items1[21]);
   if (!tmp13) {
     const type = channel.type;
@@ -56,16 +57,16 @@ function ChannelActionButtons(channel) {
       obj[0] = tmp2(tmp3[24]);
       obj[1] = tmp5(tmp3[25]).MagnifyingGlassIcon;
       obj[2] = function onPress() {
-        screenIndex(items1[26]);
-        const obj = { channel };
+        let obj = screenIndex(items1[26]);
+        obj = { channel };
         obj.open(obj);
       };
       const intl4 = tmp5(tmp3[23]).intl;
       obj[3] = intl4.string(tmp5(tmp3[23]).t["5h0QOP"]);
       items1.push(obj);
     } else {
-      if (constants.GUILD_FORUM !== type) {
-        if (constants.GUILD_MEDIA !== type) {
+      if (tmp15.GUILD_FORUM !== type) {
+        if (tmp15.GUILD_MEDIA !== type) {
           if (null != conversationsHeaderButton) {
             items1.push(conversationsHeaderButton);
           }
@@ -77,27 +78,27 @@ function ChannelActionButtons(channel) {
             closure_1_8(channel.id, true, "initial");
             obj1 = channel(items1[28]);
             if (obj1.isIOS()) {
-              let tmp2Result = channel(items1[29]);
+              let tmp2Result = tmp2(tmp3[29]);
               const chatInputRef = tmp2Result.getChatInputRef(obj.id, screenIndex);
               if (chatInputRef != null) {
                 chatInputRef.blur();
               }
             }
             const guildId = obj.getGuildId();
-            tmp2Result = channel(items1[30]);
+            tmp2Result = tmp2(tmp3[30]);
             const channelDetailsSearchContext = tmp2Result.getChannelDetailsSearchContext(obj.id, guildId, obj.isThread());
             const isThreadResult = obj.isThread();
             obj = { searchContext: channelDetailsSearchContext, searchLocation: closure_1_12.CHANNEL_HEADER };
             screenIndex(items1[31]).trackSearchOpened(obj);
             const obj6 = screenIndex(items1[31]);
             if (tmp2Result1.isSwipeToMemberListEnabled()) {
-              const ComponentDispatch = channel(items1[33]).ComponentDispatch;
+              const ComponentDispatch = tmp2(tmp3[33]).ComponentDispatch;
               obj = { source: "channel-header-search", channelId: null, screenIndex: null };
               obj[1] = obj.id;
               obj[2] = screenIndex;
               ComponentDispatch.dispatch(closure_1_11.SHOW_CHANNEL_DETAILS, obj);
             } else {
-              const rootNavigationRef = channel(items1[34]).getRootNavigationRef();
+              const rootNavigationRef = tmp2(tmp3[34]).getRootNavigationRef();
               if (null != rootNavigationRef) {
                 if (rootNavigationRef.isReady()) {
                   obj1 = { channelId: null, search: true, source: "channel-header-search" };
@@ -105,9 +106,7 @@ function ChannelActionButtons(channel) {
                   rootNavigationRef.navigate("sidebar", obj1);
                 }
               }
-              const tmp2Result2 = channel(items1[34]);
             }
-            tmp2Result1 = channel(items1[32]);
           };
           const intl2 = tmp5(tmp3[23]).intl;
           obj[3] = intl2.string(tmp5(tmp3[23]).t["5h0QOP"]);
@@ -131,13 +130,13 @@ function ChannelActionButtons(channel) {
     }
     if (!tmp7) {
       let hasItem = THREADED_CHANNEL_TYPES.has(channel.type);
-      let tmp23 = !hasItem;
+      let tmp22 = !hasItem;
       if (!hasItem) {
-        tmp23 = stateFromStores;
+        tmp22 = stateFromStores;
       }
-      if (tmp23) {
+      if (tmp22) {
         const GUILD_THREADS_ONLY = constants2.GUILD_THREADS_ONLY;
-        tmp23 = !GUILD_THREADS_ONLY.has(channel.type);
+        tmp22 = !GUILD_THREADS_ONLY.has(channel.type);
       }
       if (hasItem) {
         hasItem = !tmp4;
@@ -146,7 +145,7 @@ function ChannelActionButtons(channel) {
         hasItem = !channel.isForumLikeChannel();
       }
       if (hasItem) {
-        hasItem = tmp23;
+        hasItem = tmp22;
       }
       tmp7 = !hasItem;
     }
@@ -163,9 +162,9 @@ function ChannelActionButtons(channel) {
     }
     obj3 = { style: null, children: null };
     obj3[0] = tmp.actionWrapper;
-    obj3[1] = items1.map((item, index) => {
-      closure_0 = item;
-      if (item === conversationsHeaderButton) {
+    obj3[1] = items1.map((accessibilityLabel) => {
+      closure_0 = accessibilityLabel;
+      if (accessibilityLabel === conversationsHeaderButton) {
         let obj = { isLast: null, children: null };
         obj[0] = tmp;
         obj[1] = function children(arg0) {
@@ -179,15 +178,15 @@ function ChannelActionButtons(channel) {
               onPress(arg0);
             }
           };
-          return closure_1_13(screenIndex(items1[39]), obj);
+          return closure_1_13(closure_1_1(closure_1_2[39]), obj);
         };
-        let tmp9 = jsx(channel(items1[38]).ConversationCoachmark, { isLast: null, children: null }, item.accessibilityLabel);
+        let tmp9 = closure_1_13(channel(items1[38]).ConversationCoachmark, obj, accessibilityLabel.accessibilityLabel);
       } else {
         obj = { noMargin: null };
         obj[0] = tmp;
-        let merged = Object.assign(item);
-        obj.key = item.accessibilityLabel;
-        tmp9 = createElement(screenIndex(items1[39]), { noMargin: null });
+        let merged = Object.assign(accessibilityLabel);
+        obj.key = accessibilityLabel.accessibilityLabel;
+        tmp9 = closure_1_14(screenIndex(items1[39]), obj);
         const tmp5 = screenIndex(items1[39]);
       }
       return tmp9;
@@ -202,17 +201,14 @@ function ChannelActionButtons(channel) {
     obj4[2] = fn;
     const intl = tmp5(tmp3[23]).intl;
     const string = intl.string;
-    let t = tmp5(tmp3[23]).t;
     if (stateFromStores1) {
-      t = t["4ry6yi"];
-      let stringResult = string(t);
+      let stringResult = string(_4ry6yi);
     } else {
-      stringResult = string(t.My50nf);
+      stringResult = string(_4ry6yi.My50nf);
     }
     obj4[3] = stringResult;
     obj4 = items1.push(obj4);
   }
-  tmp13 = channel.isVocalThread() && canJoinThreadVoice && stateFromStores2;
 }
 function WrappedChannelNavButtons(channelId) {
   channelId = channelId.channelId;
@@ -239,7 +235,7 @@ function WrappedChannelNavButtons(channelId) {
 noopAll;
 ({ ChannelTypes: c9, ChannelTypesSets: c10, ComponentActions: unpackModuleId } = ME);
 let closure_15 = createCacheKey.createStyles({ actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" } });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelActions.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelActions.tsx");
 
 export default function ChannelActions(channelId) {
   channelId = channelId.channelId;
@@ -275,7 +271,7 @@ export default function ChannelActions(channelId) {
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = jsx(channelId(12701).ForumChannelCloseSearchButton, { channelId: null });
+    let tmp4Result = tmp4(channelId(12701).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
@@ -283,13 +279,13 @@ export default function ChannelActions(channelId) {
         obj1[0] = channelId;
         obj1[1] = screenIndex;
         obj1[2] = showCreateThread;
-        tmp4Result = <WrappedChannelNavButtons channelId={null} screenIndex={null} showCreateThread={null} />;
+        tmp4Result = tmp4(WrappedChannelNavButtons, obj1);
       }
     }
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = jsx(_modDef12703, { channelId: null, screenIndex: null });
+    tmp4Result = tmp4(_modDef12703, obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

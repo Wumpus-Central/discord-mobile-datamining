@@ -8,7 +8,7 @@ const tmp2 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NOR
 let closure_1 = tmp2;
 const PX_16 = ThemesDefault.space.PX_16;
 const PX_12 = ThemesDefault.space.PX_12;
-const result = require("obj132").fileFinishedImporting("modules/chat/native/placeholder/getChatPlaceholderRowHeight.tsx");
+const result = require("set").fileFinishedImporting("modules/chat/native/placeholder/getChatPlaceholderRowHeight.tsx");
 
 export default function getChatPlaceholderRowHeight(arg0) {
   return PX_24 + Math.max(closure_1, PX_16 + arg0 * (PX_16 + PX_12));

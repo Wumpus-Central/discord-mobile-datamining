@@ -2,11 +2,11 @@
 
 // Module 1592 (useNavigationState)
 import useEffectDefault from "useEffect" /* 1522 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 const context = importAllResult.createContext(undefined);
 
@@ -57,6 +57,8 @@ export const useNavigationState = function useNavigationState(fn) {
 };
 export const NavigationStateListenerProvider = function NavigationStateListenerProvider(getState) {
   getState = getState.getState;
+  importDefault = undefined;
+  dependencyMap = undefined;
   ({ state, children } = getState);
   importDefault = importAllResult.useRef([]);
   const tmp = useEffectDefault((arg0) => {
@@ -65,7 +67,7 @@ export const NavigationStateListenerProvider = function NavigationStateListenerP
     current.push(arg0);
     return () => {
       const current = closure_1_1.current;
-      closure_1_1.current = current.filter((item, index) => item !== closure_0);
+      closure_1_1.current = current.filter((arg0) => arg0 !== closure_0);
     };
   });
   dependencyMap = tmp;
@@ -73,7 +75,7 @@ export const NavigationStateListenerProvider = function NavigationStateListenerP
   const items = [state];
   const clientLayoutEffect = obj.useClientLayoutEffect(() => {
     const current = ref.current;
-    const item = current.forEach((item, index) => item());
+    const item = current.forEach((arg0) => arg0());
   }, items);
   const items1 = [getState, tmp];
   obj = { value: importAllResult.useMemo(() => ({ getState, subscribe: closure_2 }), items1), children };

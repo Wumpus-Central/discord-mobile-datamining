@@ -1,10 +1,10 @@
 // === Module 7297: compareChannelsByScoreAndPosition ===
 
 // Module 7297 (compareChannelsByScoreAndPosition)
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_0 from "ensureGuildLoaded" /* 1391 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
 
 export default function compareChannelsByScoreAndPosition(score, score2) {
   if (score.score !== score2.score) {

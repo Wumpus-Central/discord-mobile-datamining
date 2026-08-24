@@ -3,12 +3,12 @@
 // Module 173 (_createNativeObserver2)
 import nullthrowsDefault from "nullthrows" /* 70 */;
 import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
+import closure_4 from "_classPrivateFieldBase" /* 90 */;
 import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 
-let PerformanceObserver = fn;
+let PerformanceObserver = arg1;
 function _createNativeObserver2() {
   const self = this;
   callback2(this, closure_11)[closure_11] = false;
@@ -17,11 +17,11 @@ function _createNativeObserver2() {
     const takeRecordsResult = closure_1_5.takeRecords(observer, true);
     if (takeRecordsResult) {
       if (0 !== takeRecordsResult.length) {
-        const tmp11 = new closure_1_7(takeRecordsResult.map(observer(dependencyMap[6]).rawToPerformanceEntry));
+        const tmp11 = new closure_1_7(takeRecordsResult.map(observer(closure_1_2[6]).rawToPerformanceEntry));
         let num2 = 0;
         if (!closure_1_4(self, closure_1_11)[closure_1_11]) {
           num2 = obj.getDroppedEntriesCount(observer);
-          closure_1_4(self, closure_1_11)[closure_1_11] = true;
+          tmp12(tmp13, tmp14)[tmp14] = true;
         }
         obj = { droppedEntriesCount: null };
         obj[0] = num2;
@@ -94,7 +94,7 @@ let items = [
     key: "getEntriesByType",
     value: function getEntriesByType(arg0) {
       closure_0 = arg0;
-      return callback2(this, closure_6)[closure_6].filter((item, index) => item.entryType === closure_0);
+      return callback2(this, closure_6)[closure_6].filter((entryType) => entryType.entryType === closure_0);
     }
   },
   {
@@ -104,13 +104,13 @@ let items = [
       closure_0 = arg0;
       closure_1 = arg1;
       if (undefined === arg1) {
-        let found = callback2(self, closure_6)[closure_6].filter((item, index) => item.name === closure_0);
+        let found = callback2(self, closure_6)[closure_6].filter((name) => name.name === closure_0);
         const arr2 = callback2(self, closure_6)[closure_6];
       } else {
-        found = callback2(self, closure_6)[closure_6].filter((item, index) => {
-          let tmp = item.name === closure_0;
+        found = callback2(self, closure_6)[closure_6].filter((name) => {
+          let tmp = name.name === closure_0;
           if (tmp) {
-            tmp = item.entryType === closure_1;
+            tmp = name.entryType === closure_1;
           }
           return tmp;
         });
@@ -156,20 +156,20 @@ obj = {
     const self = this;
     callback2(this, closure_13)[closure_13](entryTypes);
     if (null == callback2(this, closure_8)[closure_8]) {
-      callback2(self, closure_8);
-      const tmpResult = callback2(self, closure_12);
-      tmpResult[closure_8] = tmpResult[closure_12]();
+      let tmpResult = tmp(self, tmp4);
+      tmpResult = tmp(self, closure_12);
+      tmpResult[tmp4] = tmpResult[closure_12]();
     }
     const tmp2 = callback2(this, closure_13);
     const tmp9Result = nullthrowsDefault(callback2(self, closure_8)[closure_8]);
     if (entryTypes.entryTypes) {
-      callback2(self, closure_10)[closure_10] = "multiple";
+      tmp(self, closure_10)[closure_10] = "multiple";
       let obj = { entryTypes: null };
       entryTypes = entryTypes.entryTypes;
       obj[0] = entryTypes.map(PerformanceObserver(170).performanceEntryTypeToRaw);
       importDefaultResult2Result.observe(tmp9Result, obj);
     } else if (entryTypes.type) {
-      callback2(self, closure_10)[closure_10] = "single";
+      tmp(self, closure_10)[closure_10] = "single";
       obj = { type: null, buffered: null, durationThreshold: null };
       obj[0] = PerformanceObserver(170).performanceEntryTypeToRaw(entryTypes.type);
       ({ buffered: obj[1], durationThreshold: obj[2] } = entryTypes);
@@ -184,7 +184,7 @@ const items1 = [
     key: "disconnect",
     value: function disconnect() {
       if (null != callback2(this, closure_8)[closure_8]) {
-        importDefaultResult2Result.disconnect(callback2(this, closure_8)[closure_8]);
+        importDefaultResult2Result.disconnect(callback2(this, tmp2)[tmp2]);
       }
     }
   },
@@ -194,7 +194,7 @@ const items1 = [
       const items = [];
       let mapped = items;
       if (null != callback2(this, closure_8)[closure_8]) {
-        const takeRecordsResult = importDefaultResult2Result.takeRecords(callback2(this, closure_8)[closure_8], true);
+        const takeRecordsResult = importDefaultResult2Result.takeRecords(callback2(this, tmp2)[tmp2], true);
         let tmp5 = takeRecordsResult;
         if (takeRecordsResult) {
           tmp5 = takeRecordsResult.length > 0;

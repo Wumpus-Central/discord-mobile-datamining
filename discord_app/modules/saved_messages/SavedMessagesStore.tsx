@@ -5,9 +5,10 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
 import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8489 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function getTimeSafe(dueAt) {
   if (null == dueAt) {
     return c3;
@@ -86,6 +87,7 @@ function handleGuild() {
       c6 = true;
     }
     tmp = !c6;
+    const tmp3 = !c6;
   }
   return tmp;
 }
@@ -93,9 +95,9 @@ let c3 = 10000000000000;
 const secondaryIndexMap = new require("version").SecondaryIndexMap((saveData) => {
   const items = [SavedMessageSortTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
-    let BOOKMARK = SavedMessageSortTypes.SavedMessageSortTypes.REMINDER;
+    let BOOKMARK = tmp(8489).SavedMessageSortTypes.REMINDER;
   } else {
-    BOOKMARK = SavedMessageSortTypes.SavedMessageSortTypes.BOOKMARK;
+    BOOKMARK = tmp(8489).SavedMessageSortTypes.BOOKMARK;
   }
   items[1] = BOOKMARK;
   return items;
@@ -143,8 +145,11 @@ prototype["getMostRecentOverdueDueAt"] = function getMostRecentOverdueDueAt() {
   const timestamp = Date.now();
   const values = secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.REMINDER);
   for (const item10021 of values) {
+    let tmp3 = getTimeSafe;
     let tmp4 = getTimeSafe(item10021.saveData.dueAt);
+    let tmp5 = tmp4;
     if (tmp4 > timestamp) {
+      let tmp6 = obj;
       obj.return();
       break;
     } else {
@@ -188,10 +193,10 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
     map.clear();
     set1.clear();
     while (tmp4 !== undefined) {
+      let tmp6 = upsertSavedMessage;
       let tmp7 = upsertSavedMessage(tmp5);
       continue;
     }
-    tmp4 = arg0.savedMessages[Symbol.iterator]();
   },
   SAVED_MESSAGE_CREATE: function handleCreate(savedMessage) {
     upsertSavedMessage(savedMessage.savedMessage);
@@ -234,13 +239,13 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
     while (tmp2 !== undefined) {
+      let tmp4 = nullifyMessageObject;
       let obj = { messageId: null, channelId: null };
       obj[0] = tmp3;
       obj[1] = tmp;
       let tmp5 = nullifyMessageObject(obj);
       continue;
     }
-    tmp2 = arg0.ids[Symbol.iterator]();
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
@@ -259,8 +264,9 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
           const obj = {};
           const merged = Object.assign(value);
           obj.message = createMinimalMessageRecord.updateMessageRecord(value.message, message);
-          const result = secondaryIndexMap.set(combined, obj);
+          const result = obj3.set(combined, obj);
         }
+        obj3 = secondaryIndexMap;
       }
     }
     return false;
@@ -278,6 +284,7 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
           c6 = true;
         }
         tmp4 = tmp9;
+        const tmp8 = null != value && value.size > 0;
       }
       tmp2 = tmp4;
     }
@@ -293,6 +300,7 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
       let flag2 = false;
       const tmp3 = channels[Symbol.iterator]();
       while (tmp3 !== undefined) {
+        let tmp7 = isChannelRelevant;
         if (isChannelRelevant(tmp5.id)) {
           c6 = true;
           flag2 = true;
@@ -312,6 +320,7 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
           c6 = true;
         }
         tmp4 = tmp9;
+        const tmp8 = null != value && value.size > 0;
       }
       tmp2 = tmp4;
     }
@@ -343,7 +352,7 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
     set.add(savedMessage.savedMessage.saveData.messageId);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/saved_messages/SavedMessagesStore.tsx");
+let result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesStore.tsx");
 
 export default savedMessagesStore;
 export const getComparator = function getComparator(dueAt) {

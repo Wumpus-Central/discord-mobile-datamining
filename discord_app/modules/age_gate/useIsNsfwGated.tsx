@@ -1,11 +1,11 @@
 // === Module 8512: useIsNsfwGated ===
 
 // Module 8512 (useIsNsfwGated)
-import initialize from "initialize" /* 5253 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "initialize" /* 5253 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");
 
 export default function useIsNsfwGated(nsfw) {
   const _require = nsfw;

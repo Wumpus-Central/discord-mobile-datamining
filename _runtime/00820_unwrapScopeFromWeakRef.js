@@ -5,19 +5,19 @@ import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function unwrapScopeFromWeakRef(deref) {
-  if (deref) {
-    if (typeof deref === "object") {
-      if ("deref" in deref) {
-        if (typeof deref.deref === "function") {
+function unwrapScopeFromWeakRef(obj) {
+  if (obj) {
+    if (typeof obj === "object") {
+      if ("deref" in obj) {
+        if (typeof obj.deref === "function") {
           try {
-            return deref.deref();
+            return obj.deref();
           } catch (err) {
           }
         }
       }
     }
-    return deref;
+    return obj;
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -40,6 +40,8 @@ arg5.setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2
       } catch (err) {
       }
     })(arg2));
+    const obj = addNonEnumerableProperty;
     const result1 = addNonEnumerableProperty.addNonEnumerableProperty(arg0, _sentryScope, arg1);
+    const obj2 = addNonEnumerableProperty;
   }
 };

@@ -1,7 +1,7 @@
 // === Module 14776: toggle ===
 
 // Module 14776 (toggle)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import MobileUserSettings from "MobileUserSettings" /* 8198 */;
@@ -16,6 +16,15 @@ const toggle = createToggle.createToggle({
   useValue: explicitContentFromProto.RenderReactions.useSetting,
   onValueChange: explicitContentFromProto.RenderReactions.updateSetting
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/EmojiReactionsOnMessagesSetting.tsx");
+const obj = {
+  useTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["zge/fP"]);
+  },
+  parent: MobileUserSettings.MobileUserSettings.CHAT,
+  useValue: explicitContentFromProto.RenderReactions.useSetting,
+  onValueChange: explicitContentFromProto.RenderReactions.updateSetting
+};
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/EmojiReactionsOnMessagesSetting.tsx");
 
 export default toggle;

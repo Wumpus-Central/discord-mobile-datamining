@@ -1,16 +1,16 @@
 // === Module 14131: SettingsAgeGroupResetAlert ===
 
 // Module 14131 (SettingsAgeGroupResetAlert)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let c6 = "settings-age-group-reset";
-const result = require("obj132").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx");
 
 export default function SettingsAgeGroupResetAlert() {
-  function _handleConfirm(dependencyMap) {
+  function _handleConfirm(arg0) {
     const self = this;
     const tmp = closure_1_3(function*() {
       if (c3 === 2) {

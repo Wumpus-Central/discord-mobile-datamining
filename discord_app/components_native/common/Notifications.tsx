@@ -4,12 +4,12 @@
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import NotificationWrapperDefault from "NotificationWrapper" /* 10045 */;
-import handleAlertMessage from "handleAlertMessage" /* 10013 */;
+import closure_3 from "handleAlertMessage" /* 10013 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("components_native/common/Notifications.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/Notifications.tsx");
 
 export default function Notifications() {
   let obj = initialize;

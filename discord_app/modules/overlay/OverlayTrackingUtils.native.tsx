@@ -1,9 +1,9 @@
 // === Module 7368: useOverlayTrackedGames ===
 
 // Module 7368 (useOverlayTrackedGames)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
+const result = set.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
 
 export function useOverlayTrackedGames() {
   return [];

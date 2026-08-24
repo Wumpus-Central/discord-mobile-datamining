@@ -12,26 +12,30 @@ import isPublicSystemMessage from "isPublicSystemMessage" /* 8253 */;
 import registerAssetDefault from "registerAsset" /* 10837 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { borderRadius: ThemesDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
+createCacheKey = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[3] = { marginLeft: 8 };
 createCacheKey[4] = { marginTop: 8 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
+const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
 
 export default function PublicGuildAnnouncementProfile() {
   const tmp = callback3();
-  const obj = { style: tmp.avatar, source: null };
+  let obj = { startExpanded: true, children: null };
+  obj = { style: tmp.content, children: null };
+  obj = { style: tmp.avatar, source: null };
   let obj3 = isPublicSystemMessage;
   obj[1] = obj3.getPublicSystemMessageAvatar();
   const items = [callback(preloadDefault, obj), , , ];
   obj1 = { style: tmp.nameWrapper, children: null };
+  const tmp2 = preloadDefault;
   const items1 = [callback(Button.Icon, { source: registerAssetDefault, disableColor: true }), ];
   obj3 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;

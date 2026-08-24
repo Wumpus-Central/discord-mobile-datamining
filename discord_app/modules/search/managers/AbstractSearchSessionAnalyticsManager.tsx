@@ -1,11 +1,11 @@
 // === Module 11533: getSession ===
 
 // Module 11533 (getSession)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import v1 from "v1" /* 514 */;
 import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
 
-let result = obj132.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
+let result = set.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
 class AbstractSearchSessionAnalyticsManager {
   constructor() {
     obj = Object.create(new.target.prototype);

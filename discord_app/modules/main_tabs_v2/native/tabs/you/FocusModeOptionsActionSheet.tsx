@@ -2,15 +2,15 @@
 
 // Module 15639 (label)
 import noopAll from "noop" /* 19 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let obj = {
-  duration: 30 * obj132Default.Millis.MINUTE,
+  duration: 30 * setDefault.Millis.MINUTE,
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.RxJGbL);
@@ -18,7 +18,7 @@ let obj = {
 };
 let items = [obj, , , , , ];
 obj = {
-  duration: obj132Default.Millis.HOUR,
+  duration: setDefault.Millis.HOUR,
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.UMWBZr);
@@ -26,7 +26,7 @@ obj = {
 };
 items[1] = obj;
 obj = {
-  duration: 3 * obj132Default.Millis.HOUR,
+  duration: 3 * setDefault.Millis.HOUR,
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.QmYWtu);
@@ -34,14 +34,21 @@ obj = {
 };
 items[2] = obj;
 items[3] = {
-  duration: 8 * obj132Default.Millis.HOUR,
+  duration: 8 * setDefault.Millis.HOUR,
+  label() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.EpAXPC);
+  }
+};
+obj1 = {
+  duration: 8 * setDefault.Millis.HOUR,
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.EpAXPC);
   }
 };
 items[4] = {
-  duration: obj132Default.Millis.DAY,
+  duration: setDefault.Millis.DAY,
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["755t4q"]);
@@ -53,7 +60,14 @@ obj3[1] = function label() {
   return intl.string(getSystemLocale.t["46dqJY"]);
 };
 items[5] = obj3;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");
+const obj2 = {
+  duration: setDefault.Millis.DAY,
+  label() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["755t4q"]);
+  }
+};
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");
 
 export default function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
@@ -74,14 +88,14 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     };
     const intl4 = tmp(1236).intl;
     obj[4] = intl4.string(tmp(1236).t.rk35Gm);
-    tmp4Result = callback(tmp(6291).TableRow, obj);
+    tmp4Result = tmp4(tmp(6291).TableRow, obj);
   }
   obj1 = { children: null };
   items = [tmp4Result, ];
-  items[1] = items.map((item, index) => {
-    const duration = item.duration;
-    const label = item.label;
-    return closure_1_2(onSelect(dependencyMap[7]).TableRow, {
+  items[1] = items.map((duration) => {
+    duration = duration.duration;
+    const label = duration.label;
+    return closure_1_2(onSelect(closure_1_1[7]).TableRow, {
       accessibilityLabel: label(),
       accessibilityHint: label(),
       onPress() {
@@ -92,6 +106,6 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     }, "" + duration);
   });
   obj[2] = items;
-  obj1[0] = callback2(onSelect(6286).TableRowGroup, obj);
-  return callback(onSelect(7175).ActionSheet, obj1);
+  obj1[0] = closure_3(onSelect(6286).TableRowGroup, obj);
+  return closure_2(onSelect(7175).ActionSheet, obj1);
 };

@@ -1,13 +1,13 @@
 // === Module 12058: useMediaItemSpoilerState ===
 
 // Module 12058 (useMediaItemSpoilerState)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 let closure_4 = { code: "function useMediaItemSpoilerStateTsx1(){const{runOnJS,setSpoilerActive,hasSpoiler}=this.__closure;runOnJS(setSpoilerActive)(hasSpoiler);}" };
 let closure_5 = { code: "function useMediaItemSpoilerStateTsx2(){const{spoilerOpacity}=this.__closure;return{opacity:spoilerOpacity.get()};}" };
-let result = require("obj132").fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
 
 export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index) {
   const _require = index;
@@ -33,11 +33,11 @@ export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index)
     if (state) {
       num = 1;
     }
-    { duration: 200, easing: index(state[5]).STANDARD_EASING };
+    obj = { duration: 200, easing: tmp2(tmp3[5]).STANDARD_EASING };
     const fn = function t() {
-      index(state[3]).runOnJS(closure_2)(closure_1);
+      closure_1_0(closure_1_1[3]).runOnJS(closure_2)(closure_1);
     };
-    obj = { runOnJS: index(state[3]).runOnJS, setSpoilerActive: closure_2, hasSpoiler: state };
+    obj = { runOnJS: tmp2(tmp3[3]).runOnJS, setSpoilerActive: closure_2, hasSpoiler: state };
     fn.__closure = obj;
     fn.__workletHash = 15930548853488;
     fn.__initData = closure_1_4;

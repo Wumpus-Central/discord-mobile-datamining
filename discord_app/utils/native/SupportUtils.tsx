@@ -1,10 +1,10 @@
 // === Module 14845: _emailSupport ===
 
 // Module 14845 (_emailSupport)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
 
-const require = fn;
+const require = arg1;
 function _emailSupport() {
   const self = this;
   const tmp = callback(function*() {
@@ -83,7 +83,7 @@ function _emailSupport() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("utils/native/SupportUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/native/SupportUtils.tsx");
 
 export const emailSupport = function emailSupport() {
   const self = this;

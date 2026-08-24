@@ -1,12 +1,12 @@
 // === Module 16149: onInitializeSync ===
 
 // Module 16149 (onInitializeSync)
-import obj132 from "obj132" /* 500 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import reset from "reset" /* 4045 */;
+import closure_2 from "reset" /* 4045 */;
+import set from "set" /* 2 */;
 
-require = fn;
+const require = arg1;
 function onInitializeSync() {
   let priceChange = null;
   c4 = false;
@@ -32,11 +32,10 @@ function onInitializeSync() {
       c4 = true;
     }
   }
-  obj = obj132;
 }
 let items = [, , ];
 ({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = require("ME").SubscriptionStatusTypes);
-const set = new Set(items);
+let set = new Set(items);
 let c4 = false;
 let c5 = null;
 const Store = initializeDefault.Store;
@@ -62,6 +61,6 @@ Object.defineProperty(prototype, "priceChangeRecord", {
 });
 GooglePlayPriceChangeStore.displayName = "GooglePlayPriceChangeStore";
 const googlePlayPriceChangeStore = new GooglePlayPriceChangeStore(dispatcherDefault, {});
-const result = require("obj132").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx");
 
 export default googlePlayPriceChangeStore;

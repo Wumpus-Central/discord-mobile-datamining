@@ -2,29 +2,29 @@
 
 // Module 4397 (properlyBoxed)
 
-export default function properlyBoxed(call) {
+export default function properlyBoxed(fn) {
   c0 = true;
   c1 = true;
-  if (typeof call === "function") {
+  if (typeof fn === "function") {
     try {
-      call = call.call;
-      const fn = (arg0, arg1, obj) => {
+      const call = fn.call;
+      fn = (arg0, arg1, obj) => {
         if (typeof obj !== "object") {
           c0 = false;
         }
       };
       if (typeof call === "unknown") {
-        call(fn);
+        fn(fn);
       } else {
         call("f", fn);
       }
-      const call2 = call.call;
+      const call2 = fn.call;
       const items = [null];
       const fn2 = function() {
         closure_1 = typeof this === "string";
       };
       if (typeof call2 === "unknown") {
-        call(fn2, "x");
+        fn(fn2, "x");
       } else {
         call2(items, fn2, "x");
       }

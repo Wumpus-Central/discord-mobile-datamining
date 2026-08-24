@@ -3,7 +3,7 @@
 // Module 7471 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import init from "init" /* 7472 */;
+import closure_2 from "init" /* 7472 */;
 
 let closure_3 = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -69,7 +69,7 @@ Object.defineProperty(prototype, "displayTools", {
   set: undefined
 });
 Object.defineProperty(prototype, "showDevWidget", {
-  get: function showDevWidget(closure_2) {
+  get: function showDevWidget(arg0) {
     let showDevWidget = closure_2.isDeveloper;
     if (showDevWidget) {
       showDevWidget = closure_3.showDevWidget;
@@ -85,7 +85,7 @@ Object.defineProperty(prototype, "devWidgetPosition", {
   set: undefined
 });
 Object.defineProperty(prototype, "sortedScreenKeys", {
-  get: function sortedScreenKeys(dependencyMap) {
+  get: function sortedScreenKeys(arg0) {
     return closure_3.sortedScreenKeys;
   },
   set: undefined
@@ -101,7 +101,7 @@ const devToolsSettingsStore = new DevToolsSettingsStore(dispatcherDefault, {
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/devtools/DevToolsSettingsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/DevToolsSettingsStore.tsx");
 
 export default devToolsSettingsStore;
 export const DEVTOOLS_SIDEBAR_MIN_WIDTH = 460;

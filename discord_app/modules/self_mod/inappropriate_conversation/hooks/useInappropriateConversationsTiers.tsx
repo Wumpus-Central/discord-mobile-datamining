@@ -4,17 +4,18 @@
 import initialize from "initialize" /* 589 */;
 import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10575 */;
 import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
 
 export const useInappropriateConversationsTiers = function useInappropriateConversationsTiers(channel) {
   let obj = InappropriateConversationExperiment;
   const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
   const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = initialize;
   const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
   let isStaffResult;
   if (stateFromStores != null) {
@@ -38,6 +39,7 @@ export const useInappropriateConversationsTiers = function useInappropriateConve
         }
         obj[1] = type1 === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2;
         tmp4 = obj;
+        const tmp6 = SafetyWarningTypes;
       }
     }
   }

@@ -6,7 +6,7 @@ import Input from "Input" /* 8072 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
   ({ label, accessibilityLabel, status } = errorMessage);
   const id = importAllResult.useId();
@@ -46,6 +46,6 @@ const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
   obj.children = jsx(TextField.TextField, { ref });
   return jsx(Input.Input, { ref });
 });
-const result = require("obj132").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
 
 export const TextInput = forwardRefResult;

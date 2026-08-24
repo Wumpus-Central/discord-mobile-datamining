@@ -1,12 +1,12 @@
 // === Module 7468: result ===
 
 // Module 7468 (result)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import AdCreativeType from "AdCreativeType" /* 7469 */;
 
-require = fn;
-let result = 6 * obj132Default.Millis.HOUR;
-const result1 = require("obj132").fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
+require = arg1;
+let result = 6 * setDefault.Millis.HOUR;
+const result1 = require("set").fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
 
 export const MAX_RESPONSE_TTL_MS = result;
 export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creative) {
@@ -16,9 +16,9 @@ export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creati
     const type = creative.type;
     if (AdCreativeType.AdCreativeType.QUEST === type) {
       return creative.questId;
-    } else if (AdCreativeType.AdCreativeType.BOUNTY === type) {
+    } else if (tmp(7469).AdCreativeType.BOUNTY === type) {
       return creative.bounty.id;
-    } else if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type) {
+    } else if (tmp(7469).AdCreativeType.QUEST_HOME_HERO === type) {
       return creative.questHomeHero.id;
     }
   }

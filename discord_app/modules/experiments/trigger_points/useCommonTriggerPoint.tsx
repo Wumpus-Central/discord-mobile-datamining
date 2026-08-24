@@ -1,12 +1,12 @@
 // === Module 12846: useCommonTriggerPoint ===
 
 // Module 12846 (useCommonTriggerPoint)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import getHash from "getHash" /* 4288 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getHash" /* 4288 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/experiments/trigger_points/useCommonTriggerPoint.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/useCommonTriggerPoint.tsx");
 
 export const useCommonTriggerPoint = function useCommonTriggerPoint(OpenNitroTriggerPoint) {
   const _require = OpenNitroTriggerPoint;

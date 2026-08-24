@@ -14,9 +14,9 @@ if (!module_13681) {
     return () => {
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+        let applyArgumentsResult = HermesBuiltin.applyArguments(tmp2);
       } else {
-        applyArgumentsResult = apply(closure_0, arguments);
+        applyArgumentsResult = apply(tmp2, arguments);
       }
       return applyArgumentsResult;
     };

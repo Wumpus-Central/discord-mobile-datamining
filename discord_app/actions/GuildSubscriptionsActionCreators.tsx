@@ -1,34 +1,40 @@
 // === Module 7276: subscribeMembers ===
 
 // Module 7276 (subscribeMembers)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import reset from "reset" /* 7264 */;
 
-let result = obj132.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
+let result = set.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 
 export const subscribeMembers = function subscribeMembers(guildId, userIds) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD", guildId, userIds };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD", guildId, userIds };
   obj.dispatch(obj);
 };
 export const unsubscribeMembers = function unsubscribeMembers(guildId, userIds) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE", guildId, userIds };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE", guildId, userIds };
   obj.dispatch(obj);
 };
 export const subscribeToMemberUpdates = function subscribeToMemberUpdates(guildId) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES", guildId };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES", guildId };
   obj.dispatch(obj);
 };
 export const unsubscribeFromMemberUpdates = function unsubscribeFromMemberUpdates(guildId) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES", guildId };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES", guildId };
   obj.dispatch(obj);
 };
 export const subscribeGuild = function subscribeGuild(id) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS", guildId: id };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_SUBSCRIPTIONS", guildId: id };
   obj.dispatch(obj);
 };
 export const subscribeChannel = function subscribeChannel(guildId, channelId, ranges) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges };
   obj.dispatch(obj);
 };
 export const subscribeChannelDimensions = function subscribeChannelDimensions(arg0) {
@@ -55,10 +61,13 @@ export const subscribeChannelDimensions = function subscribeChannelDimensions(ar
   let result = rounded * reset.MINIMUM_RANGE;
   if (result <= bound2) {
     do {
+      let tmp14 = require;
+      let tmp15 = dependencyMap;
       let sum1 = result + (reset.MINIMUM_RANGE - 1);
       let items2 = [result, sum1];
       let arr = items.push(items2);
       result = sum1 + 1;
+      let tmp11 = dependencyMap;
     } while (result <= bound2);
   }
   dispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges: items });

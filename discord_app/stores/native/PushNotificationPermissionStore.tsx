@@ -4,9 +4,13 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import NativeModulesDefault from "NativeModules" /* 11579 */;
+import set from "set" /* 2 */;
 
-let obj = { MESSAGE_SENT: 0, [0]: "MESSAGE_SENT", INVITE_ACCEPTED: 1, [1]: "INVITE_ACCEPTED", FRIEND_REQUEST_SENT: 2, [2]: "FRIEND_REQUEST_SENT", DM_SPACE: 3, [3]: "DM_SPACE", CHANNEL_BANNER: 5, [5]: "CHANNEL_BANNER", POST_REACTION_BANNER: 6, [6]: "POST_REACTION_BANNER", GUILD_OPEN_BOTTOM_SHEET: 7, [7]: "GUILD_OPEN_BOTTOM_SHEET", CALL_DISCONNECT_BOTTOM_SHEET: 8, [8]: "CALL_DISCONNECT_BOTTOM_SHEET" };
-obj = { permissionState: obj.INIT, promptLastSeen: { [obj.MESSAGE_SENT]: null, [obj.INVITE_ACCEPTED]: null, [obj.FRIEND_REQUEST_SENT]: null, [obj.DM_SPACE]: null, [obj.CHANNEL_BANNER]: null, [obj.POST_REACTION_BANNER]: null, [obj.GUILD_OPEN_BOTTOM_SHEET]: null, [obj.CALL_DISCONNECT_BOTTOM_SHEET]: null }, eligiblePromptTypes: new Set([]) };
+let obj = { INIT: 0, [0]: "INIT", REQUESTED: 1, [1]: "REQUESTED", PROMPT_SEEN: 2, [2]: "PROMPT_SEEN", PROMPT_SKIPPED: 3, [3]: "PROMPT_SKIPPED" };
+obj = { MESSAGE_SENT: 0, [0]: "MESSAGE_SENT", INVITE_ACCEPTED: 1, [1]: "INVITE_ACCEPTED", FRIEND_REQUEST_SENT: 2, [2]: "FRIEND_REQUEST_SENT", DM_SPACE: 3, [3]: "DM_SPACE", CHANNEL_BANNER: 5, [5]: "CHANNEL_BANNER", POST_REACTION_BANNER: 6, [6]: "POST_REACTION_BANNER", GUILD_OPEN_BOTTOM_SHEET: 7, [7]: "GUILD_OPEN_BOTTOM_SHEET", CALL_DISCONNECT_BOTTOM_SHEET: 8, [8]: "CALL_DISCONNECT_BOTTOM_SHEET" };
+obj = { permissionState: obj.INIT, promptLastSeen: { [obj.MESSAGE_SENT]: null, [obj.INVITE_ACCEPTED]: null, [obj.FRIEND_REQUEST_SENT]: null, [obj.DM_SPACE]: null, [obj.CHANNEL_BANNER]: null, [obj.POST_REACTION_BANNER]: null, [obj.GUILD_OPEN_BOTTOM_SHEET]: null, [obj.CALL_DISCONNECT_BOTTOM_SHEET]: null }, eligiblePromptTypes: null };
+let set = new Set([]);
+obj[2] = set;
 let c6 = null;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class PushNotificationPermissionStore extends DeviceSettingsStore {
@@ -37,8 +41,8 @@ prototype["initialize"] = function initialize(promptLastSeen) {
     eligiblePromptTypes = [];
   }
   HermesBuiltin.arraySpread(eligiblePromptTypes, tmp8);
-  obj.eligiblePromptTypes = new Set(items.filter((item, index) => item !== constants2.POST_REACTION_BANNER));
-  const set = new Set(items.filter((item, index) => item !== constants2.POST_REACTION_BANNER));
+  obj.eligiblePromptTypes = new Set(items.filter((arg0) => arg0 !== constants2.POST_REACTION_BANNER));
+  const set = new Set(items.filter((arg0) => arg0 !== constants2.POST_REACTION_BANNER));
   NativeModulesDefault.checkPermissions((sound) => {
     ({ alert: _alert, badge } = sound);
     if (!_alert) {
@@ -125,8 +129,7 @@ const pushNotificationPermissionStore = new PushNotificationPermissionStore(disp
     authorizationStatus = authorizationStatus.authorizationStatus;
   }
 });
-let set = new Set([]);
-const result = require("obj132").fileFinishedImporting("stores/native/PushNotificationPermissionStore.tsx");
+const result = set.fileFinishedImporting("stores/native/PushNotificationPermissionStore.tsx");
 
 export default pushNotificationPermissionStore;
 export const PermissionStateType = obj;

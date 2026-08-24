@@ -2,28 +2,29 @@
 
 // Module 8917 (GuildEventRsvpPickerActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { GuildScheduledEventUserResponses as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, buttonWrapper: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/action_sheets/GuildEventRsvpPickerActionSheet.tsx");
+let obj1 = { marginTop: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/action_sheets/GuildEventRsvpPickerActionSheet.tsx");
 
 export default function GuildEventRsvpPickerActionSheet(event) {
   event = event.event;
   ({ recurrenceId: importDefault, guildId: dependencyMap, onRsvp: closure_3 } = event);
   let first;
   closure_5 = undefined;
-  const tmp = callback4();
+  let tmp = callback4();
   const tmp4 = callback(first.useState(event(8789).ResponseOptions.SERIES), 2);
   first = tmp4[0];
   let obj = event(8789);
@@ -41,25 +42,26 @@ export default function GuildEventRsvpPickerActionSheet(event) {
     const intl = tmp2(1236).intl;
     stringResult = intl.string(tmp2(1236).t["8MPCVr"]);
   }
-  { header: callback2(tmp2(6949).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  obj = { header: callback2(tmp2(6949).BottomSheetTitleHeader, { title: stringResult }), children: null };
   obj = { bottom: true, style: tmp.container, children: null };
   obj1 = { defaultValue: first, onChange: tmp4[1], hasIcons: false, children: null };
   const responseOptions = event(8789).getResponseOptions();
-  obj1[3] = responseOptions.map((item, index) => callback2(event(table[13]).TableRadioRow, { value: item.value, label: item.name }, item.value));
+  obj1[3] = responseOptions.map((value) => callback2(event(table[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
   const items = [callback2(event(8101).TableRadioGroup, obj1), ];
-  let obj2 = { style: tmp.buttonWrapper, children: null };
+  const obj2 = { style: tmp.buttonWrapper, children: null };
   const obj3 = {
     onPress() {
       let tmp3 = null;
-      if (first !== event(dependencyMap[7]).ResponseOptions.SERIES) {
+      if (first !== event(closure_1_2[7]).ResponseOptions.SERIES) {
         tmp3 = closure_1;
       }
-      event(dependencyMap[15]).updateRsvp(event.id, tmp3, closure_2, closure_5);
+      event(closure_1_2[15]).updateRsvp(event.id, tmp3, closure_2, closure_5);
       if (callback != null) {
         callback();
       }
-      const tmpResult = event(dependencyMap[15]);
-      ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+      const tmp = event;
+      const tmpResult = event(closure_1_2[15]);
+      closure_1_1(closure_1_2[16]).hideActionSheet();
     },
     text: null
   };

@@ -1,11 +1,11 @@
 // === Module 665: getSystemLocale ===
 
 // Module 665 (getSystemLocale)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import enforcing from "enforcing" /* 666 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
 
 export const getSystemLocale = function getSystemLocale() {
   const tmp3 = get_ActivityIndicator;

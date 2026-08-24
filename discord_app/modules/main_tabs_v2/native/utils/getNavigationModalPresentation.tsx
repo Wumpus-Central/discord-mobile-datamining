@@ -4,9 +4,9 @@
 import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
 import useIsWindowLarge from "useIsWindowLarge" /* 7925 */;
 import handleOrientationChange from "handleOrientationChange" /* 8671 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   const _module1 = useIsWindowLarge;
   let str2 = "modal";
   if (_module1.getIsWindowLarge()) {
@@ -21,8 +21,8 @@ if (obj132.isAndroid()) {
   }
 }
 let obj = { presentation: str, lockOrientation: null };
-obj[1] = !obj132.isAndroid();
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
+obj[1] = !set.isAndroid();
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
 export default function getNavigationModalPresentation() {
   let tmp = arg0;
@@ -51,12 +51,13 @@ export default function getNavigationModalPresentation() {
       if (null != orientationLock) {
         str2 = "portrait";
       } else {
-        const orientation = handleOrientationChange.getOrientation();
-        const tmp5Result = handleOrientationChange;
+        const orientation = tmp5(8671).getOrientation();
+        const tmp5Result = tmp5(8671);
       }
       str4 = str2;
     }
     tmp4 = str4;
+    const obj2 = handleOrientationChange;
   }
   obj[1] = tmp4;
   return obj;

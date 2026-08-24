@@ -2,19 +2,19 @@
 
 // Module 14062 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 589 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
 export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
   const items = [closure_3, closure_2];
   return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
-    return guildsArray.filter((item, index) => {
-      selfMember = selfMember.getSelfMember(item.id);
-      let guildSupportsTagsResult = callback(table[3]).guildSupportsTags(item);
+    return guildsArray.filter((id) => {
+      selfMember = selfMember.getSelfMember(id.id);
+      let guildSupportsTagsResult = callback(table[3]).guildSupportsTags(id);
       if (guildSupportsTagsResult) {
         let joinedAt;
         if (selfMember != null) {
@@ -26,7 +26,7 @@ export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWit
         guildSupportsTagsResult = true !== selfMember.isPending;
       }
       if (guildSupportsTagsResult) {
-        const profile = item.profile;
+        const profile = id.profile;
         let tag;
         if (profile != null) {
           tag = profile.tag;

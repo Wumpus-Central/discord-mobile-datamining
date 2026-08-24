@@ -4,11 +4,11 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import DevToolsFocusedPidsTrackMode from "DevToolsFocusedPidsTrackMode" /* 4522 */;
-import handleLoadMessages from "handleLoadMessages" /* 4505 */;
-import gameFromServer from "gameFromServer" /* 4509 */;
-import setLibraryApplications from "setLibraryApplications" /* 4512 */;
+import closure_2 from "handleLoadMessages" /* 4505 */;
+import closure_3 from "gameFromServer" /* 4509 */;
+import closure_4 from "setLibraryApplications" /* 4512 */;
 
-require = fn;
+require = arg1;
 const Store = initializeDefault.Store;
 class RunningGameStore extends Store {
 }
@@ -123,7 +123,7 @@ prototype["isSystemServiceInitialized"] = function isSystemServiceInitialized() 
 };
 RunningGameStore.displayName = "RunningGameStore";
 const runningGameStore = new RunningGameStore(dispatcherDefault, {});
-const result = require("obj132").fileFinishedImporting("modules/game_detection/RunningGameStore.native.tsx");
+const result = require("set").fileFinishedImporting("modules/game_detection/RunningGameStore.native.tsx");
 
 export default runningGameStore;
 export function gameKey() {

@@ -4,9 +4,9 @@
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import base64Decode from "base64Decode" /* 13765 */;
 import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import c4 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
@@ -109,10 +109,10 @@ if (typeof global.crypto.getRandomValues !== "function") {
     } else {
       const byteLength = uint8Array.byteLength;
       if (NativeModules.RNGetRandomValues) {
-        const RNGetRandomValues = NativeModules.RNGetRandomValues;
+        const RNGetRandomValues = tmp24.RNGetRandomValues;
         let randomBase64 = RNGetRandomValues.getRandomBase64(byteLength);
-      } else if (NativeModules.ExpoRandom) {
-        const ExpoRandom2 = NativeModules.ExpoRandom;
+      } else if (tmp24.ExpoRandom) {
+        const ExpoRandom2 = tmp24.ExpoRandom;
         randomBase64 = ExpoRandom2.getRandomBase64String(byteLength);
       } else if (QuotaExceededError.ExpoModules) {
         const ExpoRandom = QuotaExceededError.ExpoModules.ExpoRandom;

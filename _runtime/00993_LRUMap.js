@@ -2,7 +2,7 @@
 
 // Module 993 (LRUMap)
 import _readOnlyError from "_readOnlyError" /* 377 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import LRUMap from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -15,7 +15,6 @@ class LRUMap {
     return;
   }
 }
-_classCallCheck = LRUMap;
 let items = [
   {
     key: "size",
@@ -83,7 +82,7 @@ let items = [
     value: function values() {
       const items = [];
       const _cache = this._cache;
-      const item = _cache.forEach((item, index) => items.push(item));
+      const item = _cache.forEach((arg0) => items.push(arg0));
       return items;
     }
   }

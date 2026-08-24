@@ -2,7 +2,7 @@
 
 // Module 1692 (valueSetter)
 const global = arg0;
-function valueSetter(iter, closure_1, flag) {
+function valueSetter(iter, value, flag) {
   const _global = iter;
   if (flag === undefined) {
     flag = false;
@@ -14,10 +14,10 @@ function valueSetter(iter, closure_1, flag) {
     _animation.cancelled = true;
     iter._animation = null;
   }
-  if (typeof lib === "function") {
-    obj = lib;
-    if (typeof lib === "function") {
-      obj = lib();
+  if (typeof value === "function") {
+    obj = value;
+    if (typeof value === "function") {
+      obj = value();
     }
     if (iter._value === obj.current) {
       if (!obj.isHigherOrder) {
@@ -52,7 +52,6 @@ function valueSetter(iter, closure_1, flag) {
           const animationFrame = requestAnimationFrame(step);
         }
       }
-      tmp = obj.timestamp || 0;
     };
     iter._animation = obj;
     if (timestamp < tmp8) {
@@ -75,9 +74,10 @@ function valueSetter(iter, closure_1, flag) {
         let animationFrame = requestAnimationFrame(step);
       }
     }
+    const obj2 = _global;
     tmp8 = obj.timestamp || 0;
   } else {
-    iter._value = lib;
+    iter._value = value;
   }
 }
 valueSetter.__closure = {};

@@ -11,19 +11,23 @@ import registerAssetDefault from "registerAsset" /* 11948 */;
 import registerAssetDefault2 from "registerAsset" /* 13322 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 };
+createCacheKey = { avatarContainer: { display: "flex", paddingTop: 24 }, defaultLogoStyle: null, uploadedAvatarStyle: null, avatarWrapper: null, uploadAvatarWrapper: null, uploadAvatarIcon: null };
+createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 200, height: 200, borderRadius: 100, position: "relative" };
 createCacheKey[3] = { borderColor: ThemesDefault.colors.BORDER_MUTED, borderStyle: "dashed", borderWidth: 2, borderRadius: ThemesDefault.radii.round, width: 200, height: 200, justifyContent: "center", alignItems: "center", position: "relative", overflow: "visible" };
+let obj1 = { borderColor: ThemesDefault.colors.BORDER_MUTED, borderStyle: "dashed", borderWidth: 2, borderRadius: ThemesDefault.radii.round, width: 200, height: 200, justifyContent: "center", alignItems: "center", position: "relative", overflow: "visible" };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, tintColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", right: 10, top: 10, width: 40, height: 40, flex: 1, justifyContent: "center" };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, tintColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", right: 10, top: 10, width: 40, height: 40, flex: 1, justifyContent: "center" };
 createCacheKey[5] = { tintColor: ThemesDefault.colors.WHITE, alignSelf: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/avatar/native/components/TouchableUploadAvatar.tsx");
+let obj3 = { tintColor: ThemesDefault.colors.WHITE, alignSelf: "center" };
+const result = require("set").fileFinishedImporting("modules/avatar/native/components/TouchableUploadAvatar.tsx");
 
 export default function TouchableUploadAvatar(onSelectAvatar) {
   ({ avatarSource, showPendingAvatar } = onSelectAvatar);

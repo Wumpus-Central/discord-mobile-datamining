@@ -1,11 +1,11 @@
 // === Module 7603: ? ===
 
 // Module 7603
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import HeaderRecord from "HeaderRecord" /* 6773 */;
 
 ({ FindResultDirections: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
-const result = obj132.fileFinishedImporting("modules/autocompleter/findNextSelectedResult.tsx");
+const result = set.fileFinishedImporting("modules/autocompleter/findNextSelectedResult.tsx");
 function findNextSelectedResult(DOWN, closure_23, items) {
   if (0 === items.length) {
     return 0;
@@ -36,6 +36,7 @@ function findNextSelectedResult(DOWN, closure_23, items) {
       num2 = length;
     }
     tmp13Result = callback(DOWN, num2, items, tmp);
+    const tmp13 = callback;
   }
 }
 

@@ -2,9 +2,7 @@
 
 // Module 539 (getSideChannelWeakMap)
 import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod541 from "module_541" /* 541 */;
 import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import addNumericSeparator from "addNumericSeparator" /* 575 */;
 import _mod577 from "module_577" /* 577 */;
 
 let tmp = getEvalledConstructor("%WeakMap%", true);
@@ -18,13 +16,13 @@ if (tmp) {
     let obj = {
       assert(arg0) {
         if (!obj.has(arg0)) {
-          let tmp3 = _mod541;
-          tmp3 = new tmp3("Side channel does not contain " + addNumericSeparator(arg0));
+          let tmp3 = closure_1_0(closure_1_1[2]);
+          tmp3 = new tmp3("Side channel does not contain " + closure_1_0(closure_1_1[3])(arg0));
           throw tmp3;
         }
       },
       delete(obj) {
-        if (map) {
+        if (obj) {
           if (obj) {
             if (closure_0) {
               return closure_1_6(tmp, obj);
@@ -32,14 +30,14 @@ if (tmp) {
           }
           return false;
         }
-        if (_mod577) {
-          if (map) {
-            return map.delete(obj);
+        if (closure_1_0(closure_1_1[4])) {
+          if (closure_1) {
+            return obj.delete(obj);
           }
         }
       },
       get(obj) {
-        if (map) {
+        if (obj) {
           if (obj) {
             if (typeof obj === "object") {
               if (closure_0) {
@@ -49,9 +47,9 @@ if (tmp) {
             }
           }
         }
-        value = map;
-        if (map) {
-          value = map.get(obj);
+        value = closure_1;
+        if (closure_1) {
+          value = obj.get(obj);
         }
       },
       has(obj) {
@@ -82,10 +80,10 @@ if (tmp) {
             closure_1_4(tmp6, obj, arg1);
           }
         }
-        if (_mod577) {
+        if (closure_1_0(closure_1_1[4])) {
           obj = closure_1;
           if (!closure_1) {
-            const tmp4 = _mod577();
+            const tmp4 = closure_1_0(closure_1_1[4])();
             closure_1 = tmp4;
             obj = tmp4;
           }

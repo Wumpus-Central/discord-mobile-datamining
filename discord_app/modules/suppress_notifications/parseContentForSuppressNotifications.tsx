@@ -1,10 +1,10 @@
 // === Module 7437: regExp ===
 
 // Module 7437 (regExp)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const regExp = new RegExp("^" + "@silent" + "(\\s|$)");
-const result = obj132.fileFinishedImporting("modules/suppress_notifications/parseContentForSuppressNotifications.tsx");
+const result = set.fileFinishedImporting("modules/suppress_notifications/parseContentForSuppressNotifications.tsx");
 
 export default function parseContentForSuppressNotifications(str) {
   if (null == str) {
@@ -14,9 +14,8 @@ export default function parseContentForSuppressNotifications(str) {
     const items1 = [false, str];
     items2 = items1;
   } else {
-    items2 = [true, ];
+    items2 = [true, str.substring(7).trim()];
     str = str.substring(7);
-    items2[1] = str.trim();
   }
   return items2;
 };

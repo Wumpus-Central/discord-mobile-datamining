@@ -1,18 +1,18 @@
 // === Module 1140: getStatics ===
 
 // Module 1140 (getStatics)
-function getStatics($$typeof) {
-  let tmp = typeof $$typeof === "object";
-  if (typeof $$typeof === "object") {
-    tmp = null !== $$typeof;
+function getStatics(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
   if (tmp) {
-    tmp = $$typeof.$$typeof === forResult1;
+    tmp = obj.$$typeof === forResult1;
   }
   if (tmp) {
     return obj;
   } else {
-    $$typeof = $$typeof.$$typeof;
+    const $$typeof = obj.$$typeof;
     let tmp3 = $$typeof;
     if ($$typeof) {
       tmp3 = obj[$$typeof];
@@ -26,8 +26,9 @@ function getStatics($$typeof) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_0 = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
 let closure_1 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
+let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
 const forResult1 = Symbol.for("react.memo");
-let obj = {};
+obj = {};
 obj[Symbol.for("react.forward_ref")] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
 obj[forResult1] = obj;
 let closure_6 = defineProperty.bind(Object);
@@ -76,7 +77,7 @@ function hoistNonReactStatics(arg0, str) {
           }
           if (!tmp24) {
             if (!callback3(arg0, tmp18)) {
-              const tmp26Result = callback3(str, tmp18);
+              const tmp26Result = tmp26(str, tmp18);
               if (tmp26Result) {
                 try {
                   callback(arg0, tmp18, tmp30);
@@ -84,6 +85,7 @@ function hoistNonReactStatics(arg0, str) {
                 }
               }
             }
+            tmp26 = callback3;
           }
         }
       }

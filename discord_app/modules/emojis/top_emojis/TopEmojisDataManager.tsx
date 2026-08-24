@@ -3,10 +3,10 @@
 // Module 16558 (handleInteraction)
 import initializeDefault from "initialize" /* 5038 */;
 import maybeFetchTopEmojisByGuild from "maybeFetchTopEmojisByGuild" /* 9304 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import closure_2 from "handleConnectionOpen" /* 4197 */;
 import { EmojiInteractionPoint } from "set" /* 1925 */;
 
-require = fn;
+require = arg1;
 initializeDefault;
 class TopEmojisDataManager extends tmp2 {
   constructor() {
@@ -20,9 +20,10 @@ TopEmojisDataManager.prototype["handleInteraction"] = function handleInteraction
   if (items.includes(interaction.interaction)) {
     guildId = guildId.getGuildId();
     const result = maybeFetchTopEmojisByGuild.maybeFetchTopEmojisByGuild(guildId);
+    const obj = maybeFetchTopEmojisByGuild;
   }
 };
 const topEmojisDataManager = new TopEmojisDataManager();
-let result = require("obj132").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisDataManager.tsx");
+let result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisDataManager.tsx");
 
 export default topEmojisDataManager;

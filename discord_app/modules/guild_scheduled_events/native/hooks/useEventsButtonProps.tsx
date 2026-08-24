@@ -1,22 +1,21 @@
 // === Module 11548: useEventsButtonProps ===
 
 // Module 11548 (useEventsButtonProps)
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import useGuildEventsDefault from "useGuildEvents" /* 8891 */;
-import noop from "noop" /* 19 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
 import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
 export default function useEventsButtonProps(id) {
   const _require = id;
   let obj = _require(589);
   const items = [closure_4];
   const items1 = [id.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, ReadStateTypes.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, ReadStateTypes.GUILD_EVENT) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, closure_1_6.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, closure_1_6.GUILD_EVENT) }), items1);
   ({ hasUnread, mentionCount } = stateFromStoresObject);
   const items2 = [closure_5];
   const eventsMuted = _require(589).useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
@@ -25,17 +24,18 @@ export default function useEventsButtonProps(id) {
   const items4 = [id.id];
   const handlePress = React.useCallback(() => {
     if (obj.shouldShowMembershipVerificationGate(id.id)) {
-      let tmpResult = id(dependencyMap[7]);
-      let result = tmpResult.openMemberVerificationModal(id.id);
+      let tmpResult = tmp(tmp2[7]);
+      let result = tmpResult.openMemberVerificationModal(tmp3.id);
     } else {
-      tmpResult = id(dependencyMap[8]);
-      result = tmpResult.openGuildEventListActionSheet(id);
+      tmpResult = tmp(tmp2[8]);
+      result = tmpResult.openGuildEventListActionSheet(tmp3);
     }
     return result;
   }, items3);
   const handleLongPress = React.useCallback(() => {
-    const obj = { guildId: id.id };
-    obj.openLazy(id(dependencyMap[11])(dependencyMap[10], dependencyMap.paths), "UpcomingEventsLongPress-" + id.id, obj);
+    let obj = closure_1_1(closure_1_2[9]);
+    obj = { guildId: id.id };
+    obj.openLazy(id(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), "UpcomingEventsLongPress-" + id.id, obj);
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1236).intl;

@@ -1,14 +1,14 @@
 // === Module 8907: createStageChannelForEvent ===
 
 // Module 8907 (createStageChannelForEvent)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function createStageChannelForEvent(guild, name, arg2) {
   const self = this;
   const apply = _createStageChannelForEvent.apply;
@@ -361,7 +361,7 @@ function _setEventAsActive() {
   return applyArgumentsResult;
 }
 ({ GuildScheduledEventEntityTypes: error, GuildScheduledEventPrivacyLevel: closure_8 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");
 
 export { createStageChannelForEvent };
 export { findOrCreateEventChannel };

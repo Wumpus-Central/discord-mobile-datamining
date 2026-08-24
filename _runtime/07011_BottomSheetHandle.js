@@ -61,7 +61,7 @@ const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
     style.children
   ];
   obj[6] = items2;
-  return callback(closure_4, obj);
+  return closure_6(closure_4, obj);
 });
 memoResult.displayName = "BottomSheetHandle";
 

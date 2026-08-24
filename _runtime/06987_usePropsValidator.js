@@ -14,9 +14,9 @@ export const usePropsValidator = (index) => {
   let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
   topInset(() => {
     if (snapPoints) {
-      let value = snapPoints;
-      if ("get" in snapPoints) {
-        value = snapPoints.get();
+      let value = obj;
+      if ("get" in obj) {
+        value = obj.get();
       }
       let items = value;
     } else {
@@ -27,21 +27,20 @@ export const usePropsValidator = (index) => {
       tmp5 = enableDynamicSizing;
     }
     snapPoints(enableDynamicSizing[1])(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
-    const mapped = items.map((item, index) => {
-      let parsed = item;
-      if (typeof item !== "number") {
+    const mapped = items.map((num) => {
+      let parsed = num;
+      if (typeof num !== "number") {
         const _Number = Number;
-        parsed = Number.parseInt(item.replace("%", ""), 10);
+        parsed = Number.parseInt(num.replace("%", ""), 10);
       }
       let tmp4 = parsed > 0;
       if (!tmp4) {
         tmp4 = parsed === callback(table[2]).INITIAL_SNAP_POINT;
       }
-      callback2(table[1])(tmp4, "Snap point '" + item + "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.");
-      const tmp3 = callback2(table[1]);
+      callback2(table[1])(tmp4, "Snap point '" + num + "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.");
     });
     let tmp9 = "value" in items;
-    let tmp2Result = snapPoints(enableDynamicSizing[1]);
+    let tmp2Result = tmp2(tmp3[1]);
     if (!tmp9) {
       tmp9 = items.length > 0;
     }
@@ -50,20 +49,20 @@ export const usePropsValidator = (index) => {
     }
     tmp2Result(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
     let tmp13 = typeof index === "number";
-    tmp2Result = snapPoints(enableDynamicSizing[1]);
+    tmp2Result = tmp2(tmp3[1]);
     if (typeof index !== "number") {
-      tmp13 = undefined === index;
+      tmp13 = undefined === tmp12;
     }
     tmp2Result(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
     let tmp16 = enableDynamicSizing;
     let tmp4 = snapPoints(enableDynamicSizing[1]);
     if (!enableDynamicSizing) {
-      tmp16 = typeof index !== "number";
+      tmp16 = typeof tmp12 !== "number";
     }
     if (!tmp16) {
-      let tmp17 = index >= -1;
+      let tmp17 = tmp12 >= -1;
       if (tmp17) {
-        tmp17 = index <= items.length - 1;
+        tmp17 = tmp12 <= items.length - 1;
       }
       tmp16 = tmp17;
     }
@@ -80,6 +79,5 @@ export const usePropsValidator = (index) => {
       tmp23 = undefined === bottomInset;
     }
     snapPoints(enableDynamicSizing[1])(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
-    const tmp2Result3 = snapPoints(enableDynamicSizing[1]);
   }, items);
 };

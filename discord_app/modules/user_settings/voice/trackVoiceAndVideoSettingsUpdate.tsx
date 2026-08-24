@@ -1,12 +1,12 @@
 // === Module 9658: trackVoiceAndVideoDebuggingSettingsUpdated ===
 
 // Module 9658 (trackVoiceAndVideoDebuggingSettingsUpdated)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx");
 
 export default function trackVoiceAndVideoDebuggingSettingsUpdated(arg0, arg1, arg2, location_stack) {
   let obj = expandEventPropertiesDefault;

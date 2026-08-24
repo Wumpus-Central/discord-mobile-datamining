@@ -1,12 +1,12 @@
 // === Module 9100: XBOX_DISCORD_OCID ===
 
 // Module 9100 (XBOX_DISCORD_OCID)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const discord7937464 = "discord7937464";
 let c1 = "www.xbox.com";
 const msxbox = "msxbox";
-const result = obj132.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
 
 export const XBOX_DISCORD_OCID = "discord7937464";
 export const XBOX_GAME_PASS_STORE_HOSTNAME = "www.xbox.com";

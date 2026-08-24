@@ -1,11 +1,11 @@
 // === Module 12290: getApplicationAssetUrl ===
 
 // Module 12290 (getApplicationAssetUrl)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 
-let result = obj132.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
+let result = set.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 
 export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1, asset_id, width) {
   if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -18,9 +18,11 @@ export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1,
     const _URL = URL;
     const _HermesInternal = HermesInternal;
     str5 = new URL("" + sendRequest.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp");
+    const obj = sendRequest;
   }
   if (null != width) {
     const searchParams = str5.searchParams;
+    const obj2 = handleImageLoad;
     const result = searchParams.set("size", handleImageLoad.getBestMediaProxySize(width).toString());
     const str11 = handleImageLoad.getBestMediaProxySize(width);
   }

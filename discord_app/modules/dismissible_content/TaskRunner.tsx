@@ -1,9 +1,9 @@
 // === Module 1386: schedule ===
 
 // Module 1386 (schedule)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/dismissible_content/TaskRunner.tsx");
+const result = set.fileFinishedImporting("modules/dismissible_content/TaskRunner.tsx");
 class TaskRunner {
 }
 const prototype = TaskRunner.prototype;

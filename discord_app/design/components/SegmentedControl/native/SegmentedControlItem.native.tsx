@@ -6,9 +6,8 @@ import ThemesDefault from "Themes" /* 712 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
-import "createCacheKey";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -25,13 +24,15 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
 createCacheKey = { inactive: ThemesDefault.colors.TEXT_MUTED, active: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, pressed: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let closure_9 = createCacheKey.createStyleProperties(createCacheKey);
 let closure_10 = { code: "function SegmentedControlItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,SPRING_CONFIG,'animate-always')};}" };
-const result = require("obj132").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlItem.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlItem.native.tsx");
 
 export const SegmentedControlItem = function SegmentedControlItem(index) {
   index = index.index;
   const pressed = index.pressed;
   const variant = index.variant;
-  const activeIndex = index.state.activeIndex;
+  let activeIndex;
+  closure_3 = undefined;
+  activeIndex = index.state.activeIndex;
   ({ label, itemCount, icon, onPress, onPressIn, onPressOut, style } = index);
   const tmp = callback(variant);
   let tmp2 = callback2();
@@ -43,14 +44,15 @@ export const SegmentedControlItem = function SegmentedControlItem(index) {
     let active = inactive.inactive;
     const value = pressed.get();
     if (value === index) {
-      active = inactive.pressed;
+      active = tmp.pressed;
     } else if (tmp2) {
-      active = inactive.inactive;
-    } else if (tmp5 === index) {
-      active = inactive.active;
+      active = tmp.inactive;
+    } else if (tmp5 === tmp4) {
+      active = tmp.active;
     }
     const obj = { color: null };
     tmp2 = pressed.get() >= 0;
+    tmp4 = index;
     obj[0] = index(activeIndex[7]).withSpring(active, closure_1_7, "animate-always");
     return obj;
   };
@@ -79,8 +81,8 @@ export const SegmentedControlItem = function SegmentedControlItem(index) {
   }
   obj3[4] = num2;
   obj3[5] = label;
-  items1[1] = callback(index(activeIndex[10]).Text, obj3);
+  items1[1] = closure_5(index(activeIndex[10]).Text, obj3);
   obj2[1] = items1;
-  obj[7] = callback2(closure_4, obj2);
-  return callback(closure_3, obj);
+  obj[7] = closure_6(closure_4, obj2);
+  return closure_5(closure_3, obj);
 };

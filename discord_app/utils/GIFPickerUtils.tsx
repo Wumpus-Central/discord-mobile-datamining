@@ -1,12 +1,12 @@
 // === Module 10197: isKlipyProvider ===
 
 // Module 10197 (isKlipyProvider)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import GIF_PROVIDER from "GIF_PROVIDER" /* 10196 */;
 
 const SearchTypes = ME.SearchTypes;
-const result = obj132.fileFinishedImporting("utils/GIFPickerUtils.tsx");
+const result = set.fileFinishedImporting("utils/GIFPickerUtils.tsx");
 
 export const isKlipyProvider = function isKlipyProvider(arg0) {
   return arg0 === GIF_PROVIDER.GIF_PROVIDER_EMBED_NAME;

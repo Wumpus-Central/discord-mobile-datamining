@@ -58,12 +58,13 @@ if (typeof apply === "function") {
       if (!tmp3) {
         const call = toString.call;
         if (typeof call === "unknown") {
-          toString();
+          tmp4();
           flag = true;
         } else {
           call(fn);
           flag = true;
         }
+        tmp4 = toString;
       }
       return flag;
     } catch (err) {
@@ -168,6 +169,7 @@ if (typeof apply === "function") {
         }
         if (tmp5) {
           tmp5 = !/^\[object HTML/.test(tmp4);
+          obj = /^\[object HTML/;
         }
         let tmp6 = !tmp5;
         if (!tmp5) {

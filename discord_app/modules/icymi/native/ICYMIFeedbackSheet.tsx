@@ -7,9 +7,9 @@ import DEFAULT_UX_VARIATION from "DEFAULT_UX_VARIATION" /* 9065 */;
 import closeActionSheetDefault from "closeActionSheet" /* 10832 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-let result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
 
 export default function ICYMIFeedbackSheet() {
   let obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, otherKey: "other", trackOpen: null, feedbackReasons: null, trackReport: null };

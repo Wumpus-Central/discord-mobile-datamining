@@ -2,18 +2,19 @@
 
 // Module 16709 (prototype)
 import initializeDefault from "initialize" /* 5038 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd" /* 4041 */;
-import reset from "reset" /* 4045 */;
-import addEntitlement from "addEntitlement" /* 5357 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "handlePaymentSourceCreateEnd" /* 4041 */;
+import closure_5 from "reset" /* 4045 */;
+import closure_6 from "addEntitlement" /* 5357 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let require = fn;
+let require = arg1;
 ({ PREMIUM_SUBSCRIPTION_APPLICATION: error, PremiumTypes: closure_8 } = GuildFeatures);
 initializeDefault;
 let prototype = function SubscriptionManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       const result = applyArgumentsResult.maybeFetchSubscriptions();
@@ -121,6 +122,8 @@ let prototype = function SubscriptionManager() {
       premiumType = null;
     }
     const obj2 = applyArgumentsResult(table[7]);
+    const tmp = applyArgumentsResult;
+    const tmp2 = table;
     let hasHadPremiumResult = null != currentUser;
     isFetchingMostRecentSubscription = isFetchingMostRecentSubscription.getIsFetchingMostRecentSubscription();
     if (hasHadPremiumResult) {
@@ -133,10 +136,9 @@ let prototype = function SubscriptionManager() {
       hasHadPremiumResult = !isFetchingMostRecentSubscription;
     }
     if (hasHadPremiumResult) {
-      const mostRecentSubscription = applyArgumentsResult(table[8]).fetchMostRecentSubscription();
-      const tmpResult = applyArgumentsResult(table[8]);
+      const mostRecentSubscription = tmp(tmp2[8]).fetchMostRecentSubscription();
+      const tmpResult = tmp(tmp2[8]);
     }
-    isPremiumAtMostResult = applyArgumentsResult(table[7]).isPremiumAtMost(premiumType, TIER_1.TIER_1);
   };
   require = applyArgumentsResult;
   applyArgumentsResult.maybeFetchCountryCode = callback(function*() {
@@ -272,6 +274,6 @@ let prototype = function SubscriptionManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
 
 export default prototype;

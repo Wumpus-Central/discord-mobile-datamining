@@ -7,11 +7,12 @@ import generateBlockedGroupRowData from "generateBlockedGroupRowData" /* 8160 */
 import generateMessageRowData from "generateMessageRowData" /* 8162 */;
 import generateSeparatorRowData from "generateSeparatorRowData" /* 12800 */;
 import generateLoadingRowData from "generateLoadingRowData" /* 12801 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
 import Changeset from "Changeset" /* 8158 */;
 
-require = fn;
+require = arg1;
 ({ RowType: c4, SeparatorType: c5, LoadingType: closure_6 } = Changeset);
+let obj = { constrainedWidth: 0, animatingStickerMessageId: null, forcedTheme: null, shouldObscureSpoiler: true, shouldDisableInteractiveComponents: true };
 const merged = Object.assign(require("UserOption").DEFAULT_OPTIONS);
 class RowManager {
   constructor() {
@@ -33,14 +34,14 @@ prototype["generate"] = function generate(rowType) {
     theme = theme.theme;
   }
   if (constants.BLOCKED_GROUP !== rowType) {
-    if (constants.IGNORED_GROUP !== rowType) {
-      if (constants.SUSPENDED_USER_GROUP !== rowType) {
-        if (constants.MESSAGE === rowType) {
+    if (tmp2.IGNORED_GROUP !== rowType) {
+      if (tmp2.SUSPENDED_USER_GROUP !== rowType) {
+        if (tmp2.MESSAGE === rowType) {
           return generateMessageRowData.generateMessageRowData(rowType, self.options, theme);
         } else {
           if (constants2.DAY !== rowType) {
-            if (constants2.UNREAD !== rowType) {
-              if (constants2.SUMMARY !== rowType) {
+            if (tmp12.UNREAD !== rowType) {
+              if (tmp12.SUMMARY !== rowType) {
                 if (constants3.LOAD_BEFORE !== rowType) {
                   if (constants3.LOAD_AFTER !== rowType) {
                     isDiscordFrontendDevelopment.assertNever(rowType);
@@ -57,6 +58,6 @@ prototype["generate"] = function generate(rowType) {
   }
   return generateBlockedGroupRowData.generateBlockedGroupRowData(rowType, theme, self);
 };
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
 
 export default RowManager;

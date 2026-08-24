@@ -6,19 +6,19 @@ import RNIapAmazonModuleAll from "RNIapAmazonModule" /* 7715 */;
 import NativeModulesAll from "NativeModules" /* 7716 */;
 import fetchJsonOrThrowAll from "fetchJsonOrThrow" /* 7717 */;
 import syncAll from "sync" /* 7718 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-require = fn;
+require = arg1;
 ({ NativeModules, Platform } = get_ActivityIndicator);
 ({ RNIapIos, RNIapIosSk2, RNIapModule: c4, RNIapAmazonModule: c5 } = NativeModules);
 const subs = require("module_7708").ProductType.subs;
 const inapp = require("module_7708").ProductType.inapp;
 function addSubscriptionPlatform(arr) {
   closure_0 = arg1;
-  return arr.map((item, index) => {
+  return arr.map((arg0) => {
     const obj = {};
-    const merged = Object.assign(item);
+    const merged = Object.assign(arg0);
     obj.platform = closure_0;
     return obj;
   });
@@ -40,10 +40,13 @@ export const setup = () => {
   }
   if ("STOREKIT1_MODE" === str) {
     _mod7709.storekit1Mode();
+    const obj4 = _mod7709;
   } else if ("STOREKIT2_MODE" === str) {
     _mod7709.storekit2Mode();
+    const obj3 = _mod7709;
   } else if ("STOREKIT_HYBRID_MODE" === str) {
     _mod7709.storekitHybridMode();
+    const obj2 = _mod7709;
   }
 };
 export const initConnection = () => {
@@ -68,11 +71,12 @@ export const getProducts = (skus) => {
   if (length) {
     closure_1 = callback(function*() {
       closure_1 = tmp5;
-      const obj3 = skus(7709);
+      closure_0 = tmp2;
+      const obj3 = closure_1_0(7709);
       const androidModule = obj3.getAndroidModule();
-      yield androidModule.getItemsByType(closure_1_7, skus);
-      closure_0 = arr.map(skus(7714).singleProductAndroidMap);
-      const obj = skus(7709);
+      yield androidModule.getItemsByType(closure_1_7, closure_1_0);
+      closure_0 = arg1.map(closure_1_0(7714).singleProductAndroidMap);
+      const obj = closure_1_0(7709);
       return obj.fillProductsWithAdditionalData(closure_0);
     });
     let rejectResult = (function android() {
@@ -99,22 +103,23 @@ export const getSubscriptions = (skus) => {
   }
   if (length) {
     closure_1 = callback(function*() {
-      const androidModuleType = skus(7709).getAndroidModuleType();
-      const obj10 = skus(7709);
-      const androidModule = skus(7709).getAndroidModule();
-      closure_1 = yield androidModule.getItemsByType(closure_1_6, skus);
-      if ("android" === skus) {
-        return closure_1_8(closure_1, skus(7708).SubscriptionPlatform.android);
+      let androidModuleType = tmp2;
+      androidModuleType = closure_1_0(7709).getAndroidModuleType();
+      const obj10 = closure_1_0(7709);
+      const androidModule = closure_1_0(7709).getAndroidModule();
+      closure_1 = yield androidModule.getItemsByType(closure_1_6, closure_1_0);
+      if ("android" === closure_1_0) {
+        return closure_1_8(closure_1, closure_1_0(7708).SubscriptionPlatform.android);
       }
       if ("amazon" !== tmp35) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        error = new Error("getSubscriptions received unknown platform " + skus + ". Verify the logic in getAndroidModuleType");
+        error = new Error("getSubscriptions received unknown platform " + closure_1_0 + ". Verify the logic in getAndroidModuleType");
         throw error;
       }
-      const obj2 = skus(7709);
+      const obj2 = closure_1_0(7709);
       dependencyMap = yield obj2.fillProductsWithAdditionalData(dependencyMap);
-      return closure_1_8(dependencyMap, skus(7708).SubscriptionPlatform.amazon);
+      return closure_1_8(dependencyMap, closure_1_0(7708).SubscriptionPlatform.amazon);
     });
     let rejectResult = (function android() {
       const self = this;
@@ -137,6 +142,7 @@ export const getPurchaseHistory = () => {
     obj = {};
   }
   ({ alsoPublishToEventListener, automaticallyFinishRestoredTransactions, onlyIncludeActiveItems } = obj);
+  closure_0 = undefined;
   closure_0 = callback(function*() {
     if (c3 === 2) {
       c3 = 3;
@@ -172,7 +178,7 @@ export const getPurchaseHistory = () => {
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_5.getAvailableItems();
+              obj1[0] = obj11.getAvailableItems();
               return obj1;
             } else {
               c2 = 2;
@@ -181,6 +187,7 @@ export const getPurchaseHistory = () => {
               obj2[0] = closure_1_4.getPurchaseHistoryByType(closure_1_7);
               return obj2;
             }
+            obj11 = closure_1_5;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -246,12 +253,13 @@ export const getPurchaseHistory = () => {
     return applyArgumentsResult;
   })();
 };
-export const getAvailablePurchases = (arg0) => {
+export const getAvailablePurchases = () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
   ({ alsoPublishToEventListener, automaticallyFinishRestoredTransactions, onlyIncludeActiveItems } = obj);
+  closure_0 = undefined;
   closure_0 = callback(function*() {
     if (c3 === 2) {
       c3 = 3;
@@ -287,7 +295,7 @@ export const getAvailablePurchases = (arg0) => {
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_5.getAvailableItems();
+              obj1[0] = obj11.getAvailableItems();
               return obj1;
             } else {
               c2 = 2;
@@ -296,6 +304,7 @@ export const getAvailablePurchases = (arg0) => {
               obj2[0] = closure_1_4.getAvailableItemsByType(closure_1_7);
               return obj2;
             }
+            obj11 = closure_1_5;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -389,10 +398,10 @@ export const requestPurchase = (arg0) => {
           obj[0] = arg1;
           return obj;
         } else if (closure_1_0(closure_1_2[3]).isAmazon) {
-          if ("sku" in closure_1_0) {
+          if ("sku" in tmp32) {
             c1 = 3;
             obj1 = { value: null, done: true };
-            obj1[0] = closure_1_5.buyItemByType(closure_1_0.sku, "");
+            obj1[0] = closure_1_5.buyItemByType(tmp32.sku, "");
             return obj1;
           } else {
             const _Error2 = Error;
@@ -400,9 +409,9 @@ export const requestPurchase = (arg0) => {
             throw error;
           }
         } else {
-          if ("skus" in closure_1_0) {
-            if (closure_1_0.skus.length) {
-              ({ skus, obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, isOfferPersonalized } = closure_1_0);
+          if ("skus" in tmp32) {
+            if (tmp32.skus.length) {
+              ({ skus, obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, isOfferPersonalized } = tmp32);
               c0 = isOfferPersonalized;
               if (isOfferPersonalized == null) {
                 c0 = false;
@@ -462,10 +471,10 @@ export const requestSubscription = (arg0) => {
           obj[0] = arg1;
           return obj;
         } else if (closure_1_0(closure_1_2[3]).isAmazon) {
-          if ("sku" in closure_1_0) {
+          if ("sku" in tmp37) {
             let str7 = "";
-            if ("prorationModeAmazon" in closure_1_0) {
-              let str8 = closure_1_0.prorationModeAmazon;
+            if ("prorationModeAmazon" in tmp37) {
+              let str8 = tmp37.prorationModeAmazon;
               if (!str8) {
                 str8 = "";
               }
@@ -473,7 +482,7 @@ export const requestSubscription = (arg0) => {
             }
             c1 = 3;
             obj1 = { value: null, done: true };
-            obj1[0] = closure_1_5.buyItemByType(closure_1_0.sku, str7);
+            obj1[0] = closure_1_5.buyItemByType(tmp37.sku, str7);
             return obj1;
           } else {
             const _Error2 = Error;
@@ -481,20 +490,20 @@ export const requestSubscription = (arg0) => {
             throw error;
           }
         } else {
-          if ("subscriptionOffers" in closure_1_0) {
-            if (0 !== closure_1_0.subscriptionOffers.length) {
-              ({ subscriptionOffers, purchaseTokenAndroid, replacementModeAndroid } = closure_1_0);
+          if ("subscriptionOffers" in tmp37) {
+            if (0 !== tmp37.subscriptionOffers.length) {
+              ({ subscriptionOffers, purchaseTokenAndroid, replacementModeAndroid } = tmp37);
               if (undefined === replacementModeAndroid) {
                 replacementModeAndroid = -1;
               }
-              ({ obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, isOfferPersonalized } = closure_1_0);
+              ({ obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, isOfferPersonalized } = tmp37);
               let mapped;
               if (subscriptionOffers != null) {
-                mapped = subscriptionOffers.map((item, index) => item.sku);
+                mapped = subscriptionOffers.map((sku) => sku.sku);
               }
               let mapped1;
               if (subscriptionOffers != null) {
-                mapped1 = subscriptionOffers.map((item, index) => item.offerToken);
+                mapped1 = subscriptionOffers.map((offerToken) => offerToken.offerToken);
               }
               c0 = isOfferPersonalized;
               if (isOfferPersonalized == null) {
@@ -599,11 +608,12 @@ export const finishTransaction = (arg0) => {
     return applyArgumentsResult;
   })();
 };
-export const deepLinkToSubscriptions = (isAmazonDevice) => {
-  ({ sku: require, isAmazonDevice } = isAmazonDevice);
+export const deepLinkToSubscriptions = (arg0) => {
+  ({ sku: require, isAmazonDevice } = arg0);
   if (isAmazonDevice === undefined) {
     isAmazonDevice = true;
   }
+  closure_2 = undefined;
   closure_2 = callback(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -633,9 +643,9 @@ export const deepLinkToSubscriptions = (isAmazonDevice) => {
           let result = closure_1_2;
           let tmp14;
           if (v0(closure_1_2[3]).isAmazon) {
-            tmp14 = isAmazonDevice(result[5]);
+            tmp14 = closure_1_1(result[5]);
             obj1 = { isAmazonDevice: null };
-            obj1[0] = isAmazonDevice;
+            obj1[0] = closure_1_1;
             result = tmp14.deepLinkToSubscriptionsAmazon(obj1);
             v0 = 3;
           } else {
@@ -646,7 +656,7 @@ export const deepLinkToSubscriptions = (isAmazonDevice) => {
             }
             const tmp4 = v0;
           }
-          obj = isAmazonDevice(result[6]);
+          obj = closure_1_1(result[6]);
           const obj2 = { sku: null };
           obj2[0] = tmp4;
           const result1 = obj.deepLinkToSubscriptionsAndroid(obj2);
@@ -671,8 +681,7 @@ export const deepLinkToSubscriptions = (isAmazonDevice) => {
 export const getStorefront = () => {
   closure_0 = callback(function*() {
     closure_0 = {};
-    yield closure_1_4.getStorefront();
-    closure_0.countryCode = countryCode;
+    closure_0.countryCode = yield closure_1_4.getStorefront();
     closure_0.currency = null;
     return closure_0;
   });

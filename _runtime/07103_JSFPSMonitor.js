@@ -2,7 +2,7 @@
 
 // Module 7103 (JSFPSMonitor)
 import _createClassDefault from "_createClass" /* 7051 */;
-import _classCallCheck from "_classCallCheck" /* 7050 */;
+import closure_2 from "_classCallCheck" /* 7050 */;
 
 const JSFPSMonitor = arg1;
 class JSFPSMonitor {
@@ -21,21 +21,21 @@ class JSFPSMonitor {
       const result = (Date.now() - self.startTime) / 1000;
       let num = 0;
       if (0 < result) {
-        num = self.frameCount / result;
+        num = obj.frameCount / result;
       }
       self.averageFPS = num;
-      const timeWindow = self.timeWindow;
+      const timeWindow = obj.timeWindow;
       timeWindow.frameCount = timeWindow.frameCount + 1;
-      const result1 = (Date.now() - self.timeWindow.startTime) / 1000;
+      const result1 = (Date.now() - obj.timeWindow.startTime) / 1000;
       if (1 <= result1) {
-        const result2 = self.timeWindow.frameCount / result1;
+        const result2 = obj.timeWindow.frameCount / result1;
         const _Math = Math;
-        self.minFPS = Math.min(self.minFPS, result2);
+        obj.minFPS = Math.min(obj.minFPS, result2);
         const _Math2 = Math;
-        self.maxFPS = Math.max(self.maxFPS, result2);
-        self.timeWindow.frameCount = 0;
+        obj.maxFPS = Math.max(obj.maxFPS, result2);
+        obj.timeWindow.frameCount = 0;
         const _Date = Date;
-        self.timeWindow.startTime = Date.now();
+        obj.timeWindow.startTime = Date.now();
       }
       self.measureLoop();
     };

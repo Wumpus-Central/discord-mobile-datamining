@@ -1,12 +1,12 @@
 // === Module 1901: parseSkuIdFromServerData ===
 
 // Module 1901 (parseSkuIdFromServerData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1900 */;
 
 let c2 = "media/v1/collectibles-shop";
-let result = obj132.fileFinishedImporting("modules/collectibles/utils/CollectiblesAssetUtils.tsx");
+let result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesAssetUtils.tsx");
 
 export const parseSkuIdFromServerData = parseSkuIdFromServerData.parseSkuIdFromServerData;
 export const CollectiblesItemAssetFormat = { ANIMATED: "animated", STATIC: "static", VIDEO: "video" };
@@ -26,7 +26,7 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
       }
       _HermesInternal = _HermesInternal.HermesInternal;
       str = "/";
-      let combined = c2 + "/" + skuId + "/" + str9 + assetFormat;
+      let combined = tmp4 + "/" + skuId + "/" + str9 + assetFormat;
     } else {
       let str3 = "";
       if (`/`) {
@@ -34,7 +34,8 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
         str3 = "" + assetId + "/";
       }
       const _HermesInternal3 = HermesInternal;
-      combined = "https://cdn.discordapp.com/" + c2 + "/" + skuId + "/" + str3 + assetFormat;
+      combined = "https://cdn.discordapp.com/" + tmp4 + "/" + skuId + "/" + str3 + assetFormat;
     }
+    const obj = isDiscordFrontendDevelopment;
   }
 };

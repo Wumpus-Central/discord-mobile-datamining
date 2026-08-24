@@ -9,12 +9,12 @@ import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 6315 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6316 */;
 import Background from "Background" /* 6319 */;
 import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 class HeaderBackImage {
   constructor() {
     tmp = closure_8();
@@ -23,9 +23,12 @@ class HeaderBackImage {
   }
 }
 function CloseButton(onPress) {
+  let fn = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let fn;
-  const _require = createCacheKey();
+  let _require;
+  closure_1 = undefined;
+  fn = undefined;
+  _require = createCacheKey();
   let obj = _require(fn[10]);
   closure_1 = obj.useNavigation();
   if (fn == null) {
@@ -90,12 +93,13 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj.accessibilityLabel = tmp5;
-  return callback(Background.HeaderBackButton, obj);
+  return closure_6(Background.HeaderBackButton, obj);
 }
 noopAll;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+createCacheKey = { fauxHeaderWrapper: null, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 let merged = Object.assign(require("Text").TextStyleSheet["redesign/heading-18/bold"]);
@@ -107,16 +111,19 @@ createCacheKey[4] = { flexDirection: "column", justifyContent: "center", alignIt
 createCacheKey[5] = { marginTop: -2 };
 const obj2 = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, fontSize: 16, letterSpacing: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[6] = { width: 24, height: 24, tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const obj3 = { width: 24, height: 24, tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[7] = { width: 22, height: 22, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/NavigatorHeader.native.tsx");
+const obj4 = { width: 22, height: 22, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/NavigatorHeader.native.tsx");
 
 export const useStyles = createCacheKey;
 export const NavigatorHeader = function NavigatorHeader(subtitle) {
   subtitle = subtitle.subtitle;
   ({ title, icon } = subtitle);
   const tmp = createCacheKey();
-  let obj = { style: tmp.navigatorHeaderTitleContainer, children: null };
+  let obj = { style: tmp.navigatorHeaderContainer, children: null };
+  obj = { style: tmp.navigatorHeaderTitleContainer, children: null };
   const items = [icon, callback(Text.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title })];
   obj[1] = items;
   const items1 = [callback2(closure_4, obj), , ];
@@ -145,7 +152,7 @@ export function getHeaderCloseButton(pop) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.onPress = closure_0;
-    return closure_1_6(CloseButton, obj);
+    return closure_1_6(closure_1_10, obj);
   };
 }
 export function getHeaderConditionalBackButton(handleBack) {
@@ -232,7 +239,7 @@ export function getHeaderConditionalBackButton(handleBack) {
       }
       return applyArgumentsResult;
     };
-    return closure_1_6(CustomHeaderBackButton, obj);
+    return closure_1_6(closure_1_11, obj);
   };
 }
 export function getHeaderBackButton(onClose, arg1) {
@@ -249,13 +256,13 @@ export function getHeaderBackButton(onClose, arg1) {
       if (onPress != null) {
         tmp();
       }
-      if (!flag) {
+      if (!closure_1_1) {
         if (onPress != null) {
           tmp3();
         }
       }
     };
-    return closure_1_6(CustomHeaderBackButton, obj);
+    return closure_1_6(closure_1_11, obj);
   };
 }
 export function getHeaderTextButton(intl, callback) {
@@ -266,7 +273,7 @@ export function getHeaderTextButton(intl, callback) {
     const merged = Object.assign(arg0);
     obj.text = closure_0;
     obj.onPress = closure_1;
-    return closure_1_6(HeaderTextButton, obj);
+    return closure_1_6(closure_1_12, obj);
   };
 }
 export function getHeaderNoTitle() {
@@ -275,8 +282,9 @@ export function getHeaderNoTitle() {
 export const FauxHeader = function FauxHeader(arg0) {
   ({ children, style } = arg0);
   const top = useSafeAreaInsetsDefault().top;
+  let obj = { style: null, children: null };
   const items = [createCacheKey().fauxHeaderWrapper, , ];
-  const obj = { paddingTop: top, height: top + NAV_BAR_HEIGHT.NAV_BAR_HEIGHT };
+  obj = { paddingTop: top, height: top + NAV_BAR_HEIGHT.NAV_BAR_HEIGHT };
   items[1] = obj;
   items[2] = style;
   obj[0] = items;

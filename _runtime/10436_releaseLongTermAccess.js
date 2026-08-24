@@ -3,7 +3,8 @@
 // Module 10436 (releaseLongTermAccess)
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
-importDefaultResult((arg0) => {
+let closure_0 = arg1;
+closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c1 = 0;
   return (function*(arg0) {
@@ -45,7 +46,7 @@ importDefaultResult((arg0) => {
     }
   })();
 });
-let closure_0 = importDefaultResult((arg0) => {
+closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c1 = 0;
   return (function*(arg0) {

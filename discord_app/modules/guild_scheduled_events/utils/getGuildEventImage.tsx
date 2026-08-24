@@ -1,12 +1,12 @@
 // === Module 12401: getGuildEventImageURL ===
 
 // Module 12401 (getGuildEventImageURL)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 
 const Endpoints = ME.Endpoints;
-let result = obj132.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
+let result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
 
 export default function getGuildEventImageURL(image, size) {
   if (null == image.image) {
@@ -16,6 +16,7 @@ export default function getGuildEventImageURL(image, size) {
     if (null == size) {
       const _window = window;
       result = window.screen.width * handleImageLoad.getDevicePixelRatio();
+      const obj = handleImageLoad;
     }
     const _window2 = window;
     const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(result);

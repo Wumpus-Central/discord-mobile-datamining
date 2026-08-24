@@ -3,7 +3,7 @@
 // Module 6328 (Color)
 import keys2 from "keys" /* 6329 */;
 import hasOwnProperty from "hasOwnProperty" /* 6333 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 class Color {
   constructor(arg0, arg1) {
@@ -214,6 +214,8 @@ let iter = keys[Symbol.iterator]();
 const nextResult = iter.next();
 while (iter !== undefined) {
   let items = [];
+  let tmp3 = items;
+  let num = 0;
   let arraySpreadResult = HermesBuiltin.arraySpread(keys2[nextResult].labels, 0);
   class Color {
     constructor(arg0, arg1) {
@@ -433,6 +435,7 @@ function getset(cmyk, arg1, arg2) {
   for (const item10014 of tmp) {
     let tmp4 = dependencyMap[item10014];
     if (!tmp4) {
+      let tmp5 = item10014;
       let items1 = [];
       tmp3[tmp2] = items1;
       tmp4 = items1;
@@ -555,7 +558,7 @@ obj = {
     const color = this.color;
     closure_0 = Math.max(num, 0);
     const items = [];
-    ({ valpha: arr2[HermesBuiltin.arraySpread(arr2, arr.map(arr, (item, index) => Number(item.toFixed(closure_0))), 0)], model } = this);
+    ({ valpha: arr2[HermesBuiltin.arraySpread(arr2, arr.map(arr, (toFixed) => Number(toFixed.toFixed(closure_0))), 0)], model } = this);
     return Color(items, model);
   },
   alpha(alphaResult, arg1) {
@@ -600,6 +603,7 @@ obj = {
     } else {
       const self = this;
       keywordResult = keys2[this.model].keyword(this.color);
+      obj = keys2[this.model];
     }
     return keywordResult;
   },
@@ -641,12 +645,16 @@ obj = {
     const items = [];
     const entries = color.entries();
     while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
       let result = tmp5[1] / 255;
       let tmp7 = result;
       if (result <= 0.04045) {
+        let tmp10 = result;
         let result1 = tmp7 / 12.92;
       } else {
+        let tmp8 = result;
+        let num = 2.4;
         result1 = ((tmp7 + 0.055) / 1.055) ** 2.4;
       }
       items[tmp5[0]] = result1;
@@ -749,32 +757,32 @@ obj = {
     hslResult.color[0] = sum;
     return hslResult;
   },
-  mix(gradientSecondaryBackground, hexResult, closure_5, rgb) {
+  mix(gradientSecondaryBackground, hexResult, arg2, rgb) {
     if (gradientSecondaryBackground) {
       if (gradientSecondaryBackground.rgb) {
         const self = this;
-        const color = gradientSecondaryBackground.rgb();
-        const color2 = this.rgb();
+        const rgbResult = gradientSecondaryBackground.rgb();
+        const rgbResult1 = this.rgb();
         let num = 0.5;
         if (undefined !== hexResult) {
           num = hexResult;
         }
         const diff = 2 * num - 1;
-        const diff1 = color.alpha() - color2.alpha();
+        const diff1 = rgbResult.alpha() - rgbResult1.alpha();
         let result = diff;
         if (diff * diff1 !== -1) {
           result = (diff + diff1) / (1 + diff * diff1);
         }
         const result1 = (result + 1) / 2;
         const diff2 = 1 - result1;
-        const result2 = result1 * color.red();
-        const result3 = diff2 * color2.red();
-        const result4 = result1 * color.green();
-        const result5 = diff2 * color2.green();
-        const result6 = result1 * color.blue();
-        const result7 = diff2 * color2.blue();
-        const result8 = color.alpha() * num;
-        return Color.rgb(result2 + result3, result4 + result5, result6 + result7, result8 + color2.alpha() * (1 - num));
+        const result2 = result1 * rgbResult.red();
+        const result3 = diff2 * rgbResult1.red();
+        const result4 = result1 * rgbResult.green();
+        const result5 = diff2 * rgbResult1.green();
+        const result6 = result1 * rgbResult.blue();
+        const result7 = diff2 * rgbResult1.blue();
+        const result8 = rgbResult.alpha() * num;
+        return Color.rgb(result2 + result3, result4 + result5, result6 + result7, result8 + rgbResult1.alpha() * (1 - num));
       }
     }
     error = new Error("Argument to \"mix\" was not a Color instance, but rather an instance of " + typeof gradientSecondaryBackground);
@@ -792,11 +800,11 @@ function _loop(item10136) {
       const self = this;
       const items = [...arguments];
       if (this.model === item10136) {
-        let tmp8Result = Color(self);
+        let tmp8Result = closure_1_6(self);
       } else if (items.length > 0) {
-        tmp8Result = Color(items, item10136);
+        tmp8Result = closure_1_6(items, tmp);
       } else {
-        const rawResult = item10136(channels[1])[self.model][item10136].raw(self.color);
+        const rawResult = item10136(channels[1])[self.model][tmp].raw(self.color);
         const _Array = Array;
         let tmp2 = rawResult;
         if (!Array.isArray(rawResult)) {
@@ -805,8 +813,9 @@ function _loop(item10136) {
         }
         const items2 = [];
         items2[HermesBuiltin.arraySpread(tmp2, 0)] = self.valpha;
-        tmp8Result = Color(items2, item10136);
-        obj = item10136(channels[1])[self.model][item10136];
+        tmp8Result = closure_1_6(items2, tmp);
+        obj = item10136(channels[1])[self.model][tmp];
+        const tmp8 = closure_1_6;
       }
       return tmp8Result;
     };
@@ -818,6 +827,7 @@ function _loop(item10136) {
         first = items;
         if (0 < channels) {
           do {
+            let tmp2 = num;
             if (typeof items[num] !== "number") {
               items[num] = 0;
             }
@@ -826,7 +836,7 @@ function _loop(item10136) {
           } while (num < tmp4);
         }
       }
-      return Color(first, closure_0);
+      return closure_1_6(first, closure_0);
     };
   }
 }

@@ -6,16 +6,16 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useAlertStore2 from "useAlertStore" /* 4657 */;
 import Stack from "Stack" /* 4733 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _toArray from "_toArray" /* 853 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_toArray" /* 853 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import context3 from "module_0" /* 0 */;
 
-require = fn;
+require = arg1;
 function getAlertModalItemKey(key) {
   return key.key;
 }
@@ -37,7 +37,7 @@ function dismissTopAlert() {
     tmpResult.dismissAlert(key);
     tmpResult = tmp(705);
     tmpResult.batchUpdates(() => {
-      const useAlertStore = callback(context2[10]).useAlertStore;
+      const useAlertStore = callback(closure_1_2[10]).useAlertStore;
       return useAlertStore.setState({ alerts: callback });
     });
   }
@@ -58,10 +58,10 @@ function AlertModalBackdrop() {
   });
   let fn = function t() {
     let value = closure_2.get();
-    if (typeof withAlertModalSpring !== "function") {
+    if (typeof closure_1_26 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = { opacity: context(closure_2[25]).withSpring(value, createCacheKey, "animate-always", fn) };
+    let obj = { opacity: context(closure_2[25]).withSpring(value, closure_1_14, "animate-always", fn) };
     fn = (arg0) => {
       let tmp = true === arg0;
       if (tmp) {
@@ -69,11 +69,11 @@ function AlertModalBackdrop() {
       }
       if (tmp) {
         const value = closure_1.get();
-        tmp = value === context(closure_1_2[9]).TransitionStates.YEETED;
+        tmp = value === closure_1_0(closure_1_2[9]).TransitionStates.YEETED;
       }
       if (tmp) {
-        context(closure_1_2[11]).runOnJS(closure_0)();
-        const obj = context(closure_1_2[11]);
+        closure_1_0(closure_1_2[11]).runOnJS(closure_0)();
+        const obj = closure_1_0(closure_1_2[11]);
       }
     };
     return obj;
@@ -91,7 +91,7 @@ function AlertModalBackdrop() {
   obj[2] = tmp10;
   const intl = tmp5(1236).intl;
   obj[3] = intl.string(context(1236).t.Xkfav5);
-  return callback(context(4723).Backdrop, obj);
+  return closure_10(context(4723).Backdrop, obj);
 }
 class AlertModal {
   constructor(arg0) {
@@ -135,8 +135,8 @@ class AlertModal {
     items[0] = context1;
     effect = closure_6.useEffect(() => {
       if (0 === context1) {
-        context(context2[20]);
-        const obj = { ref: null, delay: 300 };
+        let obj = context(context2[20]);
+        obj = { ref: null, delay: 300 };
         obj[0] = ref;
         const result = obj.setAccessibilityFocus(obj);
       }
@@ -164,11 +164,11 @@ class AlertModal {
           }
           if (tmp) {
             const value = closure_6.get();
-            tmp = value === context(context2[9]).TransitionStates.YEETED;
+            tmp = value === closure_1_0(closure_1_2[9]).TransitionStates.YEETED;
           }
           if (tmp) {
-            context(context2[11]).runOnJS(closure_0)();
-            const obj = context(context2[11]);
+            closure_1_0(closure_1_2[11]).runOnJS(closure_0)();
+            const obj = closure_1_0(closure_1_2[11]);
           }
         };
         obj3 = require("CONFIG_NEVER_ANIMATE");
@@ -255,15 +255,15 @@ class AlertModal {
         tmp4 = false === first.dismissable;
       }
       if (!tmp4) {
-        let tmpResult = tmp(context2[10]);
+        let tmpResult = tmp(tmp2[10]);
         let key;
         if (first != null) {
           key = first.key;
         }
         tmpResult.dismissAlert(key);
-        tmpResult = tmp(context2[15]);
+        tmpResult = tmp(tmp2[15]);
         tmpResult.batchUpdates(() => {
-          const useAlertStore = callback(context2[10]).useAlertStore;
+          const useAlertStore = callback(closure_1_2[10]).useAlertStore;
           return useAlertStore.setState({ alerts: callback });
         });
       }
@@ -352,11 +352,12 @@ function useSharedAnimationState() {
   const fn2 = function t(arg0) {
     if (arg0 === context(sharedValue[9]).TransitionStates.YEETED) {
       if (1 === sharedValue.get()) {
-        const result = sharedValue.set(0);
+        const result = obj.set(0);
       } else {
         context(sharedValue[11]).runOnJS(context1)();
         const tmpResult = context(sharedValue[11]);
       }
+      obj = sharedValue;
     } else {
       const result1 = sharedValue.set(1);
     }
@@ -488,7 +489,8 @@ class AlertActionButton {
 }
 ({ View: error, StyleSheet: closure_8, ScrollView: c9 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = { backgroundColor: ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT, margin: 16, width: "100%", maxWidth: 400, height: "100%", borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj = { root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 }, content: null, overflow: null, body: null, contentText: null };
+obj = { backgroundColor: ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT, margin: 16, width: "100%", maxWidth: 400, height: "100%", borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
 obj[1] = obj;
 obj[2] = { width: "100%", height: "100%", overflow: "hidden", padding: 24, position: "relative" };
@@ -523,8 +525,8 @@ const memoResult = importAllResult.memo(() => {
   } else {
     items = [{ type: "backdrop", key: "backdrop" }];
     const substr = alertStore.slice(0, 3);
-    const item = substr.forEach((item, index) => {
-      items.push({ type: "alert", alert: item, key: item.key, index });
+    const item = substr.forEach((alert, index) => {
+      items.push({ type: "alert", alert, key: alert.key, index });
     });
   }
   const items1 = [items];
@@ -538,7 +540,7 @@ const memoResult = importAllResult.memo(() => {
   const items3 = [sharedValue];
   const callback = importAllResult.useCallback((children) => {
     let obj = { style: closure_1_8.absoluteFillObject, children: null };
-    { onDismiss: dismissTopAlert, children: closure_1_10(closure_1_7, obj) };
+    obj = { onDismiss: closure_1_21, children: closure_1_10(closure_1_7, obj) };
     obj = { style: items.root, pointerEvents: "box-none", children };
     obj[1] = closure_1_10(items(items[14]).Dialog, obj);
     return closure_1_10(sharedValue(items[13]), obj);
@@ -547,13 +549,15 @@ const memoResult = importAllResult.memo(() => {
     if ("alert" === type.type) {
       let node = type.alert.node;
     } else {
-      node = closure_1_10(AlertModalBackdrop, {});
+      node = closure_1_10(closure_1_23, {});
     }
     let num = -1;
     if ("alert" === type.type) {
       num = type.index;
     }
-    const obj = { value: value2, children: null };
+    let obj = { value: sharedValue, children: null };
+    obj = { value: value3, children: null };
+    obj = { value: value2, children: null };
     obj1 = { value: num, children: closure_1_10(closure_1_18.Provider, { value, children: closure_1_10(closure_1_6.Suspense, { fallback: null, children: node }) }) };
     obj[1] = closure_1_10(closure_1_17.Provider, obj1);
     obj[1] = closure_1_10(closure_1_15.Provider, obj);
@@ -563,14 +567,14 @@ const memoResult = importAllResult.memo(() => {
   obj = { wrapChildren: callback, items, renderItem: callback1, getItemKey: getAlertModalItemKey };
   return callback4(items(items[9]).TransitionGroup, obj);
 });
-let result = require("obj132").fileFinishedImporting("design/components/AlertModal/native/AlertModal.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/AlertModal/native/AlertModal.native.tsx");
 
 export const AlertModalContainer = memoResult;
 export const useDismissModalCallback = function useDismissModalCallback() {
   const context = importAllResult.useContext(closure_18);
   const items = [context];
   return importAllResult.useCallback(() => {
-    context(dependencyMap[10]).dismissAlert(context);
+    context(closure_1_2[10]).dismissAlert(context);
   }, items);
 };
 export { AlertModal };
@@ -588,7 +592,9 @@ export const showConfirmModal = function showConfirmModal(arg0) {
     variant = "destructive";
   }
   ({ onConfirm, onCancel, onCloseCallback, dismissable } = arg0);
-  const obj = { children: null };
+  let obj = useAlertStore2;
+  obj = { title, content, extraContent, actions: null };
+  obj = { children: null };
   const items = [callback4(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }), callback4(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel })];
   obj[0] = items;
   obj[3] = callback5(closure_12, obj);

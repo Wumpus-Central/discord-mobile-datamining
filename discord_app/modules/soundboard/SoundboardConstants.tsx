@@ -1,13 +1,13 @@
 // === Module 4781: MAX_LENGTH_SOUND_NAME ===
 
 // Module 4781 (MAX_LENGTH_SOUND_NAME)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const obj = { SUCCESS: 0, [0]: "SUCCESS", INTERRUPTED: 1, [1]: "INTERRUPTED" };
 const items = [, ];
 ({ SUCCESS: arr[0], INTERRUPTED: arr[1] } = obj);
-const set = new Set(items);
-const result = obj132.fileFinishedImporting("modules/soundboard/SoundboardConstants.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/soundboard/SoundboardConstants.tsx");
 
 export const MAX_LENGTH_SOUND_NAME = 32;
 export const MAX_SOUND_FILE_SIZE_KILO_BYTES = 512;

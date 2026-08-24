@@ -1,21 +1,21 @@
 // === Module 13353: GuildFeatures ===
 
 // Module 13353 (GuildFeatures)
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 let items = [, , ];
 ({ ROLE_SUBSCRIPTIONS_ENABLED: arr[0], CREATOR_MONETIZABLE: arr[1], CREATOR_MONETIZABLE_PROVISIONAL: arr[2] } = GuildFeatures);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx");
 
 export const hasEnabledMonetization = function hasEnabledMonetization(arg0) {
   closure_0 = arg0;
   let someResult = null != arg0;
   if (someResult) {
-    someResult = items.some((item, index) => {
+    someResult = items.some((arg0) => {
       features = features.features;
-      return features.has(item);
+      return features.has(arg0);
     });
   }
   return someResult;
@@ -40,7 +40,7 @@ export const useGuildEligibleForTierTemplates = function useGuildEligibleForTier
     let flag;
     if (guild != null) {
       const features = guild.features;
-      flag = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
+      flag = features.has(closure_1_3.ROLE_SUBSCRIPTIONS_ENABLED);
     }
     if (flag == null) {
       flag = false;

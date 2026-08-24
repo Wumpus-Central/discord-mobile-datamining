@@ -4,18 +4,18 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import registerAssetDefault from "registerAsset" /* 9841 */;
 import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: c4 } = XBOX_URL_BASE);
-const createCacheKey = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
+createCacheKey = { externalLinkIcon: null };
+createCacheKey = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
 
 export default function XboxInstallAlert(arg0) {
   const _require = callback();
@@ -31,7 +31,7 @@ export default function XboxInstallAlert(arg0) {
   obj.cancelText = intl4.string(_require(1236).t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(lib(dependencyMap[7]).Icon, { source: registerAssetDefault, style: lib.externalLinkIcon });
+    return closure_1_5(lib(closure_1_2[7]).Icon, { source: closure_1_1(closure_1_2[8]), style: lib.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = lib(500);
@@ -42,7 +42,6 @@ export default function XboxInstallAlert(arg0) {
     } else {
       openURL(closure_4);
     }
-    const tmp2 = callback(4090);
   };
   return jsx(componentDidMountDefault, {});
 };

@@ -1,11 +1,11 @@
 // === Module 8579: Label ===
 
 // Module 8579 (Label)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
 
 export default function Label(style) {
   const children = style.children;
@@ -15,11 +15,11 @@ export default function Label(style) {
   const effect = React.useEffect(() => {
     let tmp2 = null != nodeText;
     if (tmp2) {
-      tmp2 = "" !== nodeText;
+      tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = nodeText(dependencyMap[3]).AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(nodeText);
+      const AccessibilityAnnouncer = nodeText(closure_1_1[3]).AccessibilityAnnouncer;
+      AccessibilityAnnouncer.announce(tmp);
     }
   }, items);
   return jsx(nodeText(4734).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });

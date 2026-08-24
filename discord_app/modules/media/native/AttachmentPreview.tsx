@@ -1,12 +1,11 @@
 // === Module 10139: AttachmentIcon ===
 
 // Module 10139 (AttachmentIcon)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import Text from "Text" /* 4734 */;
 import preloadDefault from "preload" /* 5449 */;
-import VideoComponent from "VideoComponent" /* 9018 */;
 import registerAssetDefault from "registerAsset" /* 10140 */;
 import registerAssetDefault2 from "registerAsset" /* 10141 */;
 import registerAssetDefault3 from "registerAsset" /* 10142 */;
@@ -26,7 +25,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 class AttachmentIcon {
   constructor(arg0) {
     fileName = global.fileName;
@@ -36,14 +35,14 @@ class AttachmentIcon {
     obj = {
       style: tmp.attachmentFileIcon,
       source: closure_3.useMemo(() => {
-            const obj = fileName(dependencyMap[19]);
+            const obj = fileName(closure_1_2[19]);
             let str = fileName;
             if (fileName == null) {
               str = "";
             }
-            let tmp2 = createCacheKey[obj.classifyFileName(obj, str)];
+            let tmp2 = closure_1_9[obj.classifyFileName(obj, str)];
             if (tmp2 == null) {
-              tmp2 = registerAssetDefault12;
+              tmp2 = closure_1_1(closure_1_2[16]);
             }
             return tmp2;
           }, items)
@@ -77,13 +76,14 @@ function FilenameText(fileName) {
     str3 = "UNKNOWN";
     if (null != match[1]) {
       str3 = match[1].toUpperCase();
+      const str4 = match[1];
     }
   }
   obj1 = { children: null };
   obj[4] = str3;
   items[1] = callback(Text.Text, obj);
   obj1[0] = items;
-  return callback2(closure_5, obj1);
+  return closure_7(closure_5, obj1);
 }
 function DefaultAttachmentPreview(fileName) {
   fileName = fileName.fileName;
@@ -98,7 +98,8 @@ function DefaultAttachmentPreview(fileName) {
 let c3 = importAllResult;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: ThemesDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: ThemesDefault.space.PX_8 };
+let obj = { fileInfoAttachmentPreviewFile: null, attachmentFileIcon: null, attachmentFileName: null, videoIcon: null };
+obj = { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: ThemesDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
 obj[1] = { height: 32, width: 24 };
 obj[2] = { paddingRight: 4, paddingLeft: 4, maxWidth: 136 };
@@ -107,7 +108,8 @@ let closure_8 = createCacheKey.createStyles(obj);
 createCacheKey = { archive: registerAssetDefault, acrobat: registerAssetDefault2, ae: registerAssetDefault3, ai: registerAssetDefault4, audio: registerAssetDefault5, code: registerAssetDefault6, document: registerAssetDefault7, image: registerAssetDefault8, photoshop: registerAssetDefault9, sketch: registerAssetDefault10, spreadsheet: registerAssetDefault11, unknown: registerAssetDefault12, video: registerAssetDefault13, webcode: registerAssetDefault14 };
 let closure_13 = importAllResult.memo((borderRadius) => {
   ({ uri, width, height, style, fileName } = borderRadius);
-  let obj = { width, height, borderRadius: borderRadius.borderRadius };
+  let obj = { uri, width, height };
+  obj = { width, height, borderRadius: borderRadius.borderRadius };
   let isMatch = null != fileName;
   if (isMatch) {
     isMatch = "" !== fileName;
@@ -117,19 +119,21 @@ let closure_13 = importAllResult.memo((borderRadius) => {
     isMatch = obj2.test(fileName);
   }
   if (isMatch) {
-    let isIOSResult = obj132.isIOS();
+    let isIOSResult = set.isIOS();
     if (isIOSResult) {
       isIOSResult = uri.startsWith("ph://");
     }
     if (!isIOSResult) {
-      let isAndroidResult = obj132.isAndroid();
+      let isAndroidResult = tmp2(500).isAndroid();
       if (isAndroidResult) {
         isAndroidResult = uri.startsWith("content://");
       }
       isIOSResult = isAndroidResult;
-      const tmp2Result = obj132;
+      const tmp2Result = tmp2(500);
     }
     isMatch = isIOSResult;
+    const obj4 = set;
+    tmp2 = require;
   }
   obj = { style: items, children: null };
   items = [obj, style, { overflow: "hidden" }];
@@ -138,7 +142,7 @@ let closure_13 = importAllResult.memo((borderRadius) => {
     const items1 = [obj, style];
     obj1[0] = items1;
     obj1[1] = obj;
-    obj[1] = callback(preloadDefault, obj1);
+    obj[1] = tmp6(preloadDefault, obj1);
     let tmp10 = obj;
   } else {
     obj2 = { style: null, source: null, localImageSource: null };
@@ -146,12 +150,12 @@ let closure_13 = importAllResult.memo((borderRadius) => {
     obj2[0] = items2;
     obj2[1] = obj;
     obj2[2] = obj;
-    obj[1] = callback(Button.ThumbnailImage, obj2);
+    obj[1] = tmp6(Button.ThumbnailImage, obj2);
     tmp10 = obj;
   }
-  return callback(closure_5, tmp10);
+  return closure_6(closure_5, tmp10);
 });
-const result = require("obj132").fileFinishedImporting("modules/media/native/AttachmentPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/media/native/AttachmentPreview.tsx");
 
 export default function AttachmentPreview(height) {
   ({ uri, isVideo, width } = height);
@@ -191,10 +195,10 @@ export default function AttachmentPreview(height) {
     let tmp9 = callback(closure_13, obj);
   } else {
     if (!isVideo) {
-      let obj2 = obj132;
+      let obj2 = set;
       if (obj2.isIOS()) {
-        let tmp6 = dependencyMap;
-        let CirclePlayIcon = require;
+        let tmp6 = tmp8;
+        let CirclePlayIcon = tmp7;
       }
       tmp9 = defaultPreview;
       if (isVideo) {
@@ -210,14 +214,15 @@ export default function AttachmentPreview(height) {
           const obj3 = { uri: null };
           obj3[0] = uri;
           obj1[1] = obj3;
-          obj[1] = callback(VideoComponent.VideoComponent, obj1);
+          obj[1] = callback(tmp7(9018).VideoComponent, obj1);
           tmp9 = callback(closure_5, obj);
         }
-        tmp7Result = obj132;
+        tmp7Result = tmp7(500);
       }
+      tmp8 = dependencyMap;
     } else {
       tmp6 = dependencyMap;
-      obj1 = obj132;
+      obj1 = set;
       CirclePlayIcon = require;
     }
     if (flag) {

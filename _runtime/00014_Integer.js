@@ -1265,15 +1265,15 @@ class BigInteger {
         str3 = "-";
       }
       value = iter.value;
-      mapped = value.map((item, index) => {
+      mapped = value.map((arg0) => {
         let arr = closure_0;
         if (!closure_0) {
           arr = closure_1_1;
         }
-        if (item < arr.length) {
-          let text = arr[item];
+        if (arg0 < arr.length) {
+          let text = arr[arg0];
         } else {
-          text = `${"<" + item}>`;
+          text = `${"<" + arg0}>`;
         }
         return text;
       });
@@ -1723,15 +1723,15 @@ class SmallInteger {
         str2 = "-";
       }
       value = iter.value;
-      mapped = value.map((item, index) => {
+      mapped = value.map((arg0) => {
         let arr = closure_0;
         if (!closure_0) {
           arr = closure_1_1;
         }
-        if (item < arr.length) {
-          let text = arr[item];
+        if (arg0 < arr.length) {
+          let text = arr[arg0];
         } else {
-          text = `${"<" + item}>`;
+          text = `${"<" + arg0}>`;
         }
         return text;
       });
@@ -1947,7 +1947,7 @@ function arrayToSmall(array) {
   if (array.length < 4) {
     if (array.length !== Integer.length) {
       let num3 = -1;
-      if (array.length > Integer.length) {
+      if (array.length > arr.length) {
         num3 = 1;
       }
       let num = num3;
@@ -1955,12 +1955,12 @@ function arrayToSmall(array) {
       let diff2 = array.length - 1;
       num = 0;
       if (0 <= diff2) {
-        while (array[diff2] === Integer[diff2]) {
+        while (array[diff2] === arr[diff2]) {
           diff2 = diff2 - 1;
           num = 0;
         }
         let num2 = -1;
-        if (array[diff2] > Integer[diff2]) {
+        if (array[diff2] > arr[diff2]) {
           num2 = 1;
         }
         num = num2;
@@ -1991,6 +1991,7 @@ function addAny(substr1, substr) {
     if (0 < substr.length) {
       do {
         let sum = substr1[num11] + substr[num11] + num10;
+        let tmp14 = num11;
         let num14 = 0;
         if (sum >= 10000000) {
           num14 = 1;
@@ -2033,6 +2034,7 @@ function addAny(substr1, substr) {
     if (0 < substr1.length) {
       do {
         let sum2 = substr[num2] + substr1[num2] + num3;
+        let tmp2 = num2;
         let num = 0;
         if (sum2 >= 10000000) {
           num = 1;
@@ -2077,6 +2079,7 @@ function subtract(arg0, arg1) {
   if (0 < arg1.length) {
     do {
       let diff = arg0[num2] - num - arg1[num2];
+      let tmp2 = num2;
       let num4 = 0;
       let sum = diff;
       if (diff < 0) {
@@ -2130,6 +2133,7 @@ function subtractSmall(value, arg1, sign) {
       let sum = value[num] + tmp2;
       let _Math = Math;
       let result = sum % 10000000;
+      let tmp6 = num;
       let sum1 = result;
       let rounded = Math.floor(sum / 10000000);
       if (result < 0) {
@@ -2146,8 +2150,8 @@ function subtractSmall(value, arg1, sign) {
     if (sign) {
       tmp9 = -tmp8;
     }
-    Object.create(SmallInteger.prototype);
-    let obj = { value: tmp9, sign: tmp9 < 0, isSmall: true };
+    let obj = Object.create(SmallInteger.prototype);
+    obj = { value: tmp9, sign: tmp9 < 0, isSmall: true };
     obj1 = obj;
   } else {
     obj = Object.create(BigInteger.prototype);
@@ -2167,6 +2171,7 @@ function multiplyLong(value, value2) {
     } while (num < sum);
   }
   for (let num2 = 0; num2 < length; num2 = num2 + 1) {
+    let tmp3 = num2;
     for (let num3 = 0; num3 < length2; num3 = num3 + 1) {
       let sum1 = num2 + num3;
       let sum2 = tmp2 * value2[num3] + arr[sum1];
@@ -2220,7 +2225,7 @@ function multiplyKaratsuba(substr, substr2) {
     const result = 2 * rounded;
     items1 = [];
     let diff1 = result - 1;
-    let tmp24Result = addAny(tmp22, items.concat(subtract(subtract(multiplyKaratsuba(addAny(substr1, substr), addAny(substr3, substr2)), tmp22), tmp23)));
+    let tmp24Result = tmp24(tmp22, items.concat(subtract(subtract(multiplyKaratsuba(addAny(substr1, substr), addAny(substr3, substr2)), tmp22), tmp23)));
     if (0 < result) {
       do {
         arr = items1.push(0);
@@ -2228,7 +2233,7 @@ function multiplyKaratsuba(substr, substr2) {
         diff1 = diff1 - 1;
       } while (0 < tmp9);
     }
-    tmp24Result = addAny(tmp24Result, items1.concat(tmp23));
+    tmp24Result = tmp24(tmp24Result, items1.concat(tmp23));
     const diff2 = tmp24Result.length - 1;
     let tmp11 = diff2;
     let tmp12 = diff2;
@@ -2244,8 +2249,8 @@ function multiplyKaratsuba(substr, substr2) {
     return tmp24Result;
   }
 }
-function multiplySmallAndArray(absolute, value, sign) {
-  if (absolute < 10000000) {
+function multiplySmallAndArray(arg0, value, sign) {
+  if (arg0 < 10000000) {
     const _Array = Array;
     const array = new Array(length);
     let num4 = 0;
@@ -2254,7 +2259,7 @@ function multiplySmallAndArray(absolute, value, sign) {
     let num7 = 0;
     if (0 < value.length) {
       do {
-        let sum = value[num5] * absolute + num4;
+        let sum = value[num5] * arg0 + num4;
         let _Math4 = Math;
         let rounded = Math.floor(sum / 10000000);
         array[num5] = sum - rounded * 10000000;
@@ -2276,25 +2281,26 @@ function multiplySmallAndArray(absolute, value, sign) {
       } while (num6 > 0);
     }
   } else {
-    if (absolute < 10000000) {
-      const items = [absolute];
+    if (arg0 < 10000000) {
+      const items = [arg0];
       let items2 = items;
-    } else if (absolute < 100000000000000) {
-      items1 = [absolute % 10000000, ];
+    } else if (arg0 < 100000000000000) {
+      items1 = [arg0 % 10000000, ];
       const _Math3 = Math;
-      items1[1] = Math.floor(absolute / 10000000);
+      items1[1] = Math.floor(arg0 / 10000000);
       items2 = items1;
     } else {
-      items2 = [absolute % 10000000, , ];
+      items2 = [arg0 % 10000000, , ];
       const _Math = Math;
-      items2[1] = Math.floor(absolute / 10000000) % 10000000;
+      items2[1] = Math.floor(arg0 / 10000000) % 10000000;
       const _Math2 = Math;
-      items2[2] = Math.floor(absolute / 100000000000000);
+      items2[2] = Math.floor(arg0 / 100000000000000);
     }
     tmp15Result = multiplyLong(value, items2);
+    const tmp15 = multiplyLong;
   }
-  Object.create(BigInteger.prototype);
-  const obj = { value: tmp15Result, sign, isSmall: false };
+  let obj = Object.create(BigInteger.prototype);
+  obj = { value: tmp15Result, sign, isSmall: false };
   return obj;
 }
 function square(squareResult) {
@@ -2311,6 +2317,7 @@ function square(squareResult) {
   for (let num2 = 0; num2 < length; num2 = num2 + 1) {
     let tmp2 = squareResult[num2];
     let diff = 0 - tmp2 * tmp2;
+    let tmp4 = num2;
     let tmp5 = diff;
     let sum3 = num2;
     if (num2 < length) {
@@ -2341,473 +2348,510 @@ function square(squareResult) {
   arr.length = tmp12 + 1;
   return arr;
 }
-function divModAny(self, closure_19) {
+function divModAny(value, closure_19) {
   let diff4;
   const iter = parseValue(closure_19);
   if (closure_2) {
-    let result = self.value / iter.value;
-    let obj = Object.create(NativeBigInt.prototype);
-    obj.value = result;
-    const items = [obj, ];
-    const result1 = self.value % iter.value;
-    obj = Object.create(NativeBigInt.prototype);
-    obj.value = result1;
-    items[1] = obj;
+    let result = NativeBigInt;
+    result = value.value / iter.value;
+    result = Object.create(NativeBigInt.prototype);
+    result.value = result;
+    const items = [result, ];
+    result = value.value % iter.value;
+    result = Object.create(NativeBigInt.prototype);
+    result.value = result;
+    items[1] = result;
     return items;
   } else {
-    result = self.value;
-    let value = iter.value;
+    result = value.value;
+    value = iter.value;
     if (0 === value) {
+      result = globalThis;
       const _Error = Error;
-      error = new Error("Cannot divide by zero");
-      throw error;
+      result = new.target;
+      result = new.target;
+      result = new Error("Cannot divide by zero");
+      throw result;
     } else {
       const isSmall = iter.isSmall;
-      if (self.isSmall) {
+      if (value.isSmall) {
         if (isSmall) {
-          const result2 = result / value;
-          if (result2 > 0) {
+          result = SmallInteger;
+          result = result / value;
+          if (result > 0) {
+            result = globalThis;
             const _Math19 = Math;
-            let rounded = Math.floor(result2);
+            result = Math.floor(result);
           } else {
+            result = globalThis;
             const _Math18 = Math;
-            rounded = Math.ceil(result2);
+            result = Math.ceil(result);
           }
-          Object.create(SmallInteger.prototype);
-          const obj2 = { value: rounded, sign: rounded < 0, isSmall: true };
-          items1 = [obj2, ];
+          result = Object.create(result.prototype);
+          let obj = { value: result, sign: result < 0, isSmall: true };
+          items1 = [obj, ];
           result = result % value;
-          Object.create(SmallInteger.prototype);
+          result = Object.create(result.prototype);
           value = { value: result, sign: result < 0, isSmall: true };
           items1[1] = value;
+          result = items1;
         } else {
-          const items2 = [Integer[0], self];
+          result = Integer;
+          const items2 = [Integer[0], value];
           return items2;
         }
-      } else if (!isSmall) {
-        if (result.length !== value.length) {
-          let num6 = -1;
-          if (result.length > value.length) {
-            num6 = 1;
-          }
-          let num4 = num6;
-        } else {
-          let diff = result.length - 1;
-          num4 = 0;
-          if (0 <= diff) {
-            while (result[diff] === value[diff]) {
-              diff = diff - 1;
-              num4 = 0;
-            }
-            let num5 = -1;
-            if (result[diff] > value[diff]) {
-              num5 = 1;
-            }
-            num4 = num5;
-          }
-        }
-        let num7 = -1;
-        if (-1 === num4) {
-          const items3 = [Integer[0], self];
-          return items3;
-        } else if (0 === num4) {
-          if (self.sign === iter.sign) {
-            num7 = 1;
-          }
-          const items4 = [Integer[num7], Integer[0]];
-          return items4;
-        } else {
-          if (result.length + value.length <= 200) {
-            ({ length: length4, length: length5 } = value);
-            const _Array2 = Array;
-            let array = new Array(length5);
-            for (let num19 = 0; num19 < length5; num19 = num19 + 1) {
-              array[num19] = 0;
-            }
-            const _Math7 = Math;
-            const rounded1 = Math.ceil(10000000 / (2 * value[length4 - 1]));
-            const _Array3 = Array;
-            array = new Array(length6);
-            let num22 = 0;
-            let num23 = 0;
-            let num24 = 0;
-            let num25 = 0;
-            if (0 < result.length) {
-              do {
-                let sum = result[num23] * rounded1 + num22;
-                let _Math8 = Math;
-                let rounded2 = Math.floor(sum / 10000000);
-                array[num23] = sum - rounded2 * 10000000;
-                num23 = num23 + 1;
-                num22 = rounded2;
-                num24 = rounded2;
-                num25 = num23;
-              } while (num23 < length6);
-            }
-            if (num24 > 0) {
-              do {
-                array[num25] = num24 % 10000000;
-                let _Math9 = Math;
-                let sum1 = num25 + 1;
-                num24 = Math.floor(num24 / 10000000);
-                num25 = sum1;
-              } while (num24 > 0);
-            }
-            const _Array4 = Array;
-            const array1 = new Array(length7);
-            let num26 = 0;
-            let num27 = 0;
-            let num28 = 0;
-            let num29 = 0;
-            if (0 < value.length) {
-              do {
-                let sum2 = value[num27] * rounded1 + num26;
-                let _Math10 = Math;
-                let rounded3 = Math.floor(sum2 / 10000000);
-                array1[num27] = sum2 - rounded3 * 10000000;
-                num27 = num27 + 1;
-                num26 = rounded3;
-                num28 = rounded3;
-                num29 = num27;
-              } while (num27 < length7);
-            }
-            if (num28 > 0) {
-              do {
-                array1[num29] = num28 % 10000000;
-                let _Math11 = Math;
-                let sum3 = num29 + 1;
-                num28 = Math.floor(num28 / 10000000);
-                num29 = sum3;
-              } while (num28 > 0);
-            }
-            if (array.length <= result.length) {
-              array.push(0);
-            }
-            array1.push(0);
-            let diff1 = length3 - length4;
-            if (diff1 >= 0) {
-              do {
-                let num31 = 9999999;
-                if (array[diff1 + length4] !== tmp58) {
-                  let _Math12 = Math;
-                  num31 = Math.floor((array[diff1 + length4] * 10000000 + array[diff1 + length4 - 1]) / tmp58);
-                }
-                let length8 = array1.length;
-                let num32 = 0;
-                let num33 = 0;
-                let num34 = 0;
-                let num35 = 0;
-                if (0 < length8) {
-                  do {
-                    let sum4 = num34 + num31 * array1[num32];
-                    let _Math13 = Math;
-                    let rounded4 = Math.floor(sum4 / 10000000);
-                    let sum5 = num33 + (array[diff1 + num32] - (sum4 - rounded4 * 10000000));
-                    if (sum5 < 0) {
-                      array[diff1 + num32] = sum5 + 10000000;
-                      let num36 = num7;
-                    } else {
-                      array[diff1 + num32] = sum5;
-                      num36 = 0;
-                    }
-                    num32 = num32 + 1;
-                    num33 = num36;
-                    num34 = rounded4;
-                    num35 = num36;
-                  } while (num32 < length8);
-                }
-                let tmp65 = num31;
-                let tmp66 = num31;
-                if (0 !== num35) {
-                  do {
-                    let diff2 = tmp65 - 1;
-                    let num37 = 0;
-                    let num38 = 0;
-                    let num39 = 0;
-                    if (0 < length8) {
-                      do {
-                        let sum6 = num38 + (array[diff1 + num37] - 10000000 + array1[num37]);
-                        if (sum6 < 0) {
-                          array[diff1 + num37] = sum6 + 10000000;
-                          let num40 = 0;
-                        } else {
-                          array[diff1 + num37] = sum6;
-                          num40 = 1;
-                        }
-                        num37 = num37 + 1;
-                        num38 = num40;
-                        num39 = num40;
-                      } while (num37 < length8);
-                    }
-                    num35 = num35 + num39;
-                    tmp65 = diff2;
-                    tmp66 = diff2;
-                  } while (0 !== num35);
-                }
-                array[diff1] = tmp66;
-                diff1 = diff1 - 1;
-              } while (diff1 >= 0);
-            }
-            const _Array5 = Array;
-            const array2 = new Array(length9);
-            for (let num41 = 0; num41 < length9; num41 = num41 + 1) {
-              array2[num41] = 0;
-            }
-            let diff3 = length9 - 1;
-            let num42 = 0;
-            let num43 = 0;
-            if (0 <= diff3) {
-              do {
-                let sum7 = num42 * 10000000 + array[diff3];
-                let result3 = sum7 / rounded1;
-                if (0 < result3) {
-                  let _Math15 = Math;
-                  let rounded5 = Math.floor(result3);
-                } else {
-                  let _Math14 = Math;
-                  rounded5 = Math.ceil(result3);
-                }
-                num42 = sum7 - rounded5 * rounded1;
-                array2[diff3] = rounded5 | 0;
-                diff3 = diff3 - 1;
-                num43 = num42;
-              } while (0 <= diff3);
-            }
-            const items5 = [array2, num43 | 0];
-            const items6 = [arrayToSmall(array), arrayToSmall(items5[0])];
-            let items9 = items6;
-          } else {
-            let length2 = result.length;
-            const items7 = [];
-            let items8 = [];
-            let tmp32 = items8;
-            if (length2) {
-              do {
-                diff4 = length2 - 1;
-                let arr1 = items8.unshift(result[diff4]);
-                let diff5 = items8.length - 1;
-                let tmp9 = diff5;
-                let tmp10 = diff5;
-                if (0 === items8[diff5]) {
-                  do {
-                    let diff6 = tmp9 - 1;
-                    tmp9 = diff6;
-                    tmp10 = diff6;
-                    tmp12 = items8[diff6];
-                  } while (0 === tmp12);
-                }
-                items8.length = tmp10 + 1;
-                if (items8.length !== value.length) {
-                  let num10 = num7;
-                  if (items8.length > value.length) {
-                    num10 = 1;
-                  }
-                  let num8 = num10;
-                } else {
-                  let diff7 = items8.length - 1;
-                  num8 = 0;
-                  if (0 <= diff7) {
-                    while (items8[diff7] === value[diff7]) {
-                      diff7 = diff7 - 1;
-                      num8 = 0;
-                    }
-                    let num9 = num7;
-                    if (items8[diff7] > value[diff7]) {
-                      num9 = 1;
-                    }
-                    num8 = num9;
-                  }
-                }
-                if (num8 < 0) {
-                  let arr2 = items7.push(0);
-                  let tmp30 = items8;
-                } else {
-                  let length12 = items8.length;
-                  let sum8 = items8[length12 - 1] * 10000000 + items8[length12 - 2];
-                  let result4 = sum8;
-                  let sum9 = value[length11 - 1] * 10000000 + value[length11 - 2];
-                  if (length12 > length11) {
-                    result4 = (sum8 + 1) * 10000000;
-                  }
-                  let _Math4 = Math;
-                  let rounded6 = Math.ceil(result4 / sum9);
-                  while (true) {
-                    length = value.length;
-                    let _Array = Array;
-                    let array3 = new Array(length);
-                    let num11 = 0;
-                    let num12 = 0;
-                    let num13 = 0;
-                    let num14 = 0;
-                    if (0 < length) {
-                      do {
-                        let sum10 = value[num12] * rounded6 + num11;
-                        let _Math5 = Math;
-                        let rounded7 = Math.floor(sum10 / 10000000);
-                        array3[num12] = sum10 - rounded7 * 10000000;
-                        num12 = num12 + 1;
-                        num11 = rounded7;
-                        num13 = rounded7;
-                        num14 = num12;
-                      } while (num12 < length);
-                    }
-                    if (num13 > 0) {
-                      do {
-                        array3[num14] = num13 % 10000000;
-                        let _Math6 = Math;
-                        let sum11 = num14 + 1;
-                        num13 = Math.floor(num13 / 10000000);
-                        num14 = sum11;
-                      } while (num13 > 0);
-                    }
-                    if (array3.length !== items8.length) {
-                      let num17 = num7;
-                      if (array3.length > items8.length) {
-                        num17 = 1;
-                      }
-                      let num15 = num17;
-                    } else {
-                      let diff8 = array3.length - 1;
-                      num15 = 0;
-                      if (0 <= diff8) {
-                        while (array3[diff8] === items8[diff8]) {
-                          diff8 = diff8 - 1;
-                          num15 = 0;
-                        }
-                        let num16 = num7;
-                        if (array3[diff8] > items8[diff8]) {
-                          num16 = 1;
-                        }
-                        num15 = num16;
-                      }
-                    }
-                    let tmp27 = rounded6;
-                    if (num15 <= 0) {
-                      break;
-                    } else {
-                      rounded6 = rounded6 - 1;
-                      tmp27 = rounded6;
-                      if (!rounded6) {
-                        break;
-                      }
-                    }
-                  }
-                  let arr3 = items7.push(tmp27);
-                  tmp30 = subtract(items8, array3);
-                }
-                items8 = tmp30;
-                tmp32 = tmp30;
-                length2 = diff4;
-              } while (diff4);
-            }
-            const reversed = items7.reverse();
-            items9 = [arrayToSmall(items7), arrayToSmall(tmp32)];
-          }
-          const first = items9[0];
-          const sign = self.sign;
-          if (typeof first === "number") {
-            let tmp85 = first;
-            if (tmp83) {
-              tmp85 = -first;
-            }
-            Object.create(SmallInteger.prototype);
-            const obj5 = { value: tmp85, sign: tmp85 < 0, isSmall: true };
-            let obj7 = obj5;
-          } else {
-            Object.create(BigInteger.prototype);
-            obj7 = { value: first, sign: tmp83, isSmall: false };
-          }
-          if (typeof items9[1] === "number") {
-            let tmp88 = tmp84;
-            if (sign) {
-              tmp88 = -tmp84;
-            }
-            Object.create(SmallInteger.prototype);
-            const obj9 = { value: tmp88, sign: tmp88 < 0, isSmall: true };
-            let obj11 = obj9;
-          } else {
-            Object.create(BigInteger.prototype);
-            obj11 = { value: tmp84, sign, isSmall: false };
-          }
-          const items10 = [obj7, obj11];
-          return items10;
-        }
-      } else if (1 === value) {
-        const items11 = [self, Integer[0]];
-        return items11;
-      } else if (-1 == value) {
-        const items12 = [self.negate(), Integer[0]];
-        return items12;
       } else {
-        const _Math20 = Math;
-        const absolute = Math.abs(value);
-        if (absolute < 10000000) {
-          const _Array6 = Array;
-          const array4 = new Array(length10);
-          for (let num44 = 0; num44 < length10; num44 = num44 + 1) {
-            array4[num44] = 0;
-          }
-          let diff9 = length10 - 1;
-          let num45 = 0;
-          let num46 = 0;
-          if (0 <= diff9) {
-            do {
-              let sum12 = num45 * 10000000 + result[diff9];
-              let result5 = sum12 / absolute;
-              if (0 < result5) {
-                let _Math17 = Math;
-                let rounded8 = Math.floor(result5);
-              } else {
-                let _Math16 = Math;
-                rounded8 = Math.ceil(result5);
-              }
-              num45 = sum12 - rounded8 * absolute;
-              array4[diff9] = rounded8 | 0;
-              diff9 = diff9 - 1;
-              num46 = num45;
-            } while (0 <= diff9);
-          }
-          const items13 = [array4, num46 | 0];
-          const tmp93Result = arrayToSmall(items13[0]);
-          let tmp106 = tmp105;
-          if (self.sign) {
-            tmp106 = -tmp105;
-          }
-          if (typeof tmp93Result === "number") {
-            let tmp107 = tmp93Result;
-            if (self.sign !== iter.sign) {
-              tmp107 = -tmp93Result;
+        result = value;
+        if (!isSmall) {
+          if (result.length !== value.length) {
+            let num6 = -1;
+            if (result.length > value.length) {
+              num6 = 1;
             }
-            Object.create(SmallInteger.prototype);
-            const obj13 = { value: tmp107, sign: tmp107 < 0, isSmall: true };
-            const items14 = [obj13, ];
-            Object.create(SmallInteger.prototype);
-            const obj15 = { value: tmp106, sign: tmp106 < 0, isSmall: true };
-            items14[1] = obj15;
-            let items15 = items14;
+            let num4 = num6;
           } else {
-            Object.create(BigInteger.prototype);
-            const obj17 = { value: tmp93Result, sign: self.sign !== iter.sign, isSmall: false };
-            items15 = [obj17, ];
-            Object.create(SmallInteger.prototype);
-            const obj19 = { value: tmp106, sign: tmp106 < 0, isSmall: true };
-            items15[1] = obj19;
+            let diff = result.length - 1;
+            num4 = 0;
+            if (0 <= diff) {
+              while (result[diff] === value[diff]) {
+                diff = diff - 1;
+                num4 = 0;
+              }
+              let num5 = -1;
+              if (result[diff] > value[diff]) {
+                num5 = 1;
+              }
+              num4 = num5;
+            }
           }
-          return items15;
-        } else if (absolute < 10000000) {
-          const items16 = [absolute];
-          let items18 = items16;
-        } else if (absolute < 100000000000000) {
-          const items17 = [absolute % 10000000, ];
-          const _Math3 = Math;
-          items17[1] = Math.floor(absolute / 10000000);
-          items18 = items17;
+          let num7 = -1;
+          if (-1 === num4) {
+            const items3 = [Integer[0], value];
+            return items3;
+          } else if (0 === num4) {
+            if (value.sign === iter.sign) {
+              num7 = 1;
+            }
+            const items4 = [Integer[num7], Integer[0]];
+            return items4;
+          } else {
+            if (result.length + value.length <= 200) {
+              ({ length: length4, length: length5 } = value);
+              const _Array2 = Array;
+              let array = new Array(length5);
+              for (let num19 = 0; num19 < length5; num19 = num19 + 1) {
+                array[num19] = 0;
+              }
+              const _Math7 = Math;
+              const rounded = Math.ceil(10000000 / (2 * value[length4 - 1]));
+              const _Array3 = Array;
+              array = new Array(length6);
+              let num22 = 0;
+              let num23 = 0;
+              let num24 = 0;
+              let num25 = 0;
+              if (0 < result.length) {
+                do {
+                  let sum = result[num23] * rounded + num22;
+                  let _Math8 = Math;
+                  let rounded1 = Math.floor(sum / 10000000);
+                  array[num23] = sum - rounded1 * 10000000;
+                  num23 = num23 + 1;
+                  num22 = rounded1;
+                  num24 = rounded1;
+                  num25 = num23;
+                } while (num23 < length6);
+              }
+              if (num24 > 0) {
+                do {
+                  array[num25] = num24 % 10000000;
+                  let _Math9 = Math;
+                  let sum1 = num25 + 1;
+                  num24 = Math.floor(num24 / 10000000);
+                  num25 = sum1;
+                } while (num24 > 0);
+              }
+              const _Array4 = Array;
+              const array1 = new Array(length7);
+              let num26 = 0;
+              let num27 = 0;
+              let num28 = 0;
+              let num29 = 0;
+              if (0 < value.length) {
+                do {
+                  let sum2 = value[num27] * rounded + num26;
+                  let _Math10 = Math;
+                  let rounded2 = Math.floor(sum2 / 10000000);
+                  array1[num27] = sum2 - rounded2 * 10000000;
+                  num27 = num27 + 1;
+                  num26 = rounded2;
+                  num28 = rounded2;
+                  num29 = num27;
+                } while (num27 < length7);
+              }
+              if (num28 > 0) {
+                do {
+                  array1[num29] = num28 % 10000000;
+                  let _Math11 = Math;
+                  let sum3 = num29 + 1;
+                  num28 = Math.floor(num28 / 10000000);
+                  num29 = sum3;
+                } while (num28 > 0);
+              }
+              if (array.length <= result.length) {
+                array.push(0);
+              }
+              array1.push(0);
+              let diff1 = length3 - length4;
+              if (diff1 >= 0) {
+                do {
+                  let tmp60 = diff1;
+                  let num31 = 9999999;
+                  if (array[diff1 + length4] !== tmp58) {
+                    let _Math12 = Math;
+                    num31 = Math.floor((array[diff1 + length4] * 10000000 + array[diff1 + length4 - 1]) / tmp58);
+                  }
+                  let length8 = array1.length;
+                  let num32 = 0;
+                  let num33 = 0;
+                  let num34 = 0;
+                  let num35 = 0;
+                  if (0 < length8) {
+                    do {
+                      let sum4 = num34 + num31 * array1[num32];
+                      let _Math13 = Math;
+                      let rounded3 = Math.floor(sum4 / 10000000);
+                      let sum5 = num33 + (array[diff1 + num32] - (sum4 - rounded3 * 10000000));
+                      let tmp64 = num32;
+                      if (sum5 < 0) {
+                        array[diff1 + num32] = sum5 + 10000000;
+                        let num36 = num7;
+                      } else {
+                        array[diff1 + num32] = sum5;
+                        num36 = 0;
+                      }
+                      num32 = num32 + 1;
+                      num33 = num36;
+                      num34 = rounded3;
+                      num35 = num36;
+                    } while (num32 < length8);
+                  }
+                  let tmp65 = num31;
+                  let tmp66 = num31;
+                  if (0 !== num35) {
+                    do {
+                      let diff2 = tmp65 - 1;
+                      let tmp68 = num35;
+                      let num37 = 0;
+                      let num38 = 0;
+                      let num39 = 0;
+                      if (0 < length8) {
+                        do {
+                          let sum6 = num38 + (array[diff1 + num37] - 10000000 + array1[num37]);
+                          let tmp70 = num37;
+                          if (sum6 < 0) {
+                            array[diff1 + num37] = sum6 + 10000000;
+                            let num40 = 0;
+                          } else {
+                            array[diff1 + num37] = sum6;
+                            num40 = 1;
+                          }
+                          num37 = num37 + 1;
+                          num38 = num40;
+                          num39 = num40;
+                        } while (num37 < length8);
+                      }
+                      num35 = num35 + num39;
+                      tmp65 = diff2;
+                      tmp66 = diff2;
+                    } while (0 !== num35);
+                  }
+                  array[diff1] = tmp66;
+                  diff1 = diff1 - 1;
+                } while (diff1 >= 0);
+              }
+              const _Array5 = Array;
+              const array2 = new Array(length9);
+              for (let num41 = 0; num41 < length9; num41 = num41 + 1) {
+                array2[num41] = 0;
+              }
+              let diff3 = length9 - 1;
+              let num42 = 0;
+              let num43 = 0;
+              if (0 <= diff3) {
+                do {
+                  let sum7 = num42 * 10000000 + array[diff3];
+                  let result1 = sum7 / rounded;
+                  let tmp79 = diff3;
+                  if (0 < result1) {
+                    let _Math15 = Math;
+                    let rounded4 = Math.floor(result1);
+                  } else {
+                    let _Math14 = Math;
+                    rounded4 = Math.ceil(result1);
+                  }
+                  num42 = sum7 - rounded4 * rounded;
+                  array2[diff3] = rounded4 | 0;
+                  diff3 = diff3 - 1;
+                  num43 = num42;
+                } while (0 <= diff3);
+              }
+              const items5 = [array2, num43 | 0];
+              const items6 = [arrayToSmall(array), arrayToSmall(items5[0])];
+              let items9 = items6;
+            } else {
+              let length2 = result.length;
+              const items7 = [];
+              let items8 = [];
+              result = globalThis;
+              let tmp32 = items8;
+              if (length2) {
+                do {
+                  diff4 = length2 - 1;
+                  let arr1 = items8.unshift(result[diff4]);
+                  let diff5 = items8.length - 1;
+                  let tmp8 = items8;
+                  let tmp9 = diff5;
+                  let tmp10 = diff5;
+                  if (0 === items8[diff5]) {
+                    do {
+                      let diff6 = tmp9 - 1;
+                      tmp9 = diff6;
+                      tmp10 = diff6;
+                      tmp12 = items8[diff6];
+                    } while (0 === tmp12);
+                  }
+                  items8.length = tmp10 + 1;
+                  if (items8.length !== value.length) {
+                    let num10 = num7;
+                    if (items8.length > value.length) {
+                      num10 = 1;
+                    }
+                    let num8 = num10;
+                  } else {
+                    let diff7 = items8.length - 1;
+                    num8 = 0;
+                    if (0 <= diff7) {
+                      let tmp14 = diff7;
+                      while (items8[diff7] === value[diff7]) {
+                        diff7 = diff7 - 1;
+                        num8 = 0;
+                      }
+                      let num9 = num7;
+                      if (items8[diff7] > value[diff7]) {
+                        num9 = 1;
+                      }
+                      num8 = num9;
+                    }
+                  }
+                  if (num8 < 0) {
+                    let arr2 = items7.push(0);
+                    let tmp30 = items8;
+                  } else {
+                    let length12 = items8.length;
+                    result = items8[length12 - 1] * 10000000 + items8[length12 - 2];
+                    let result2 = result;
+                    result = value[length11 - 1] * 10000000 + value[length11 - 2];
+                    if (length12 > length11) {
+                      result2 = (result + 1) * 10000000;
+                    }
+                    let _Math4 = Math;
+                    let rounded5 = Math.ceil(result2 / result);
+                    while (true) {
+                      length = value.length;
+                      let _Array = Array;
+                      let tmp17 = new.target;
+                      let tmp18 = new.target;
+                      let tmp19 = length;
+                      let array3 = new Array(length);
+                      let tmp20 = array3;
+                      let tmp21 = rounded5;
+                      let num11 = 0;
+                      let num12 = 0;
+                      let num13 = 0;
+                      let num14 = 0;
+                      if (0 < length) {
+                        do {
+                          let sum8 = value[num12] * rounded5 + num11;
+                          let _Math5 = Math;
+                          let rounded6 = Math.floor(sum8 / 10000000);
+                          array3[num12] = sum8 - rounded6 * 10000000;
+                          num12 = num12 + 1;
+                          num11 = rounded6;
+                          num13 = rounded6;
+                          num14 = num12;
+                        } while (num12 < length);
+                      }
+                      if (num13 > 0) {
+                        do {
+                          array3[num14] = num13 % 10000000;
+                          let _Math6 = Math;
+                          let sum9 = num14 + 1;
+                          num13 = Math.floor(num13 / 10000000);
+                          num14 = sum9;
+                        } while (num13 > 0);
+                      }
+                      if (array3.length !== items8.length) {
+                        let num17 = num7;
+                        if (array3.length > items8.length) {
+                          num17 = 1;
+                        }
+                        let num15 = num17;
+                      } else {
+                        let diff8 = array3.length - 1;
+                        num15 = 0;
+                        if (0 <= diff8) {
+                          let tmp26 = diff8;
+                          while (array3[diff8] === items8[diff8]) {
+                            diff8 = diff8 - 1;
+                            num15 = 0;
+                          }
+                          let num16 = num7;
+                          if (array3[diff8] > items8[diff8]) {
+                            num16 = 1;
+                          }
+                          num15 = num16;
+                        }
+                      }
+                      let tmp27 = rounded5;
+                      if (num15 <= 0) {
+                        break;
+                      } else {
+                        rounded5 = rounded5 - 1;
+                        tmp27 = rounded5;
+                        if (!rounded5) {
+                          break;
+                        }
+                      }
+                    }
+                    let arr3 = items7.push(tmp27);
+                    let tmp29 = subtract;
+                    tmp30 = subtract(items8, array3);
+                  }
+                  items8 = tmp30;
+                  tmp32 = tmp30;
+                  length2 = diff4;
+                } while (diff4);
+              }
+              const reversed = items7.reverse();
+              items9 = [arrayToSmall(items7), arrayToSmall(tmp32)];
+            }
+            const first = items9[0];
+            const sign = value.sign;
+            if (typeof first === "number") {
+              let tmp85 = first;
+              if (tmp83) {
+                tmp85 = -first;
+              }
+              obj = Object.create(SmallInteger.prototype);
+              obj1 = { value: tmp85, sign: tmp85 < 0, isSmall: true };
+              let obj2 = obj1;
+            } else {
+              result = BigInteger;
+              result = Object.create(BigInteger.prototype);
+              obj2 = { value: first, sign: tmp83, isSmall: false };
+            }
+            if (typeof items9[1] === "number") {
+              let tmp88 = tmp84;
+              if (sign) {
+                tmp88 = -tmp84;
+              }
+              Object.create(SmallInteger.prototype);
+              const obj4 = { value: tmp88, sign: tmp88 < 0, isSmall: true };
+              let obj5 = obj4;
+            } else {
+              result = BigInteger;
+              result = Object.create(BigInteger.prototype);
+              obj5 = { value: tmp84, sign, isSmall: false };
+            }
+            const items10 = [obj2, obj5];
+            return items10;
+          }
+        } else if (1 === value) {
+          const items11 = [value, ];
+          result = Integer;
+          items11[1] = Integer[0];
+          return items11;
+        } else if (-1 == value) {
+          const items12 = [value.negate(), ];
+          result = Integer;
+          items12[1] = Integer[0];
+          return items12;
         } else {
-          items18 = [absolute % 10000000, , ];
-          const _Math = Math;
-          items18[1] = Math.floor(absolute / 10000000) % 10000000;
-          const _Math2 = Math;
-          items18[2] = Math.floor(absolute / 100000000000000);
+          result = globalThis;
+          const _Math20 = Math;
+          result = Math.abs(value);
+          if (result < 10000000) {
+            const _Array6 = Array;
+            const array4 = new Array(length10);
+            for (let num44 = 0; num44 < length10; num44 = num44 + 1) {
+              array4[num44] = 0;
+            }
+            let diff9 = length10 - 1;
+            let num45 = 0;
+            let num46 = 0;
+            if (0 <= diff9) {
+              do {
+                result = num45 * 10000000 + result[diff9];
+                result = result / result;
+                result = diff9;
+                if (0 < result) {
+                  let _Math17 = Math;
+                  result = Math.floor(result);
+                } else {
+                  let _Math16 = Math;
+                  result = Math.ceil(result);
+                }
+                num45 = result - result * result;
+                array4[diff9] = result | 0;
+                diff9 = diff9 - 1;
+                num46 = num45;
+              } while (0 <= diff9);
+            }
+            const items13 = [array4, num46 | 0];
+            result = arrayToSmall(items13[0]);
+            result = items13[1];
+            if (value.sign) {
+              result = -result;
+            }
+            if (typeof result === "number") {
+              if (value.sign !== iter.sign) {
+                result = -result;
+              }
+              result = SmallInteger;
+              result = Object.create(SmallInteger.prototype);
+              const obj6 = { value: result, sign: result < 0, isSmall: true };
+              const items14 = [obj6, ];
+              result = Object.create(SmallInteger.prototype);
+              const obj7 = { value: result, sign: result < 0, isSmall: true };
+              items14[1] = obj7;
+              let items15 = items14;
+            } else {
+              result = BigInteger;
+              result = Object.create(BigInteger.prototype);
+              const obj8 = { value: result, sign: value.sign !== iter.sign, isSmall: false };
+              items15 = [obj8, ];
+              result = SmallInteger;
+              result = Object.create(SmallInteger.prototype);
+              const obj9 = { value: result, sign: result < 0, isSmall: true };
+              items15[1] = obj9;
+            }
+            return items15;
+          } else if (result < 10000000) {
+            const items16 = [result];
+            let items18 = items16;
+          } else if (result < 100000000000000) {
+            const items17 = [result % 10000000, ];
+            const _Math3 = Math;
+            items17[1] = Math.floor(result / 10000000);
+            items18 = items17;
+          } else {
+            items18 = [result % 10000000, , ];
+            const _Math = Math;
+            items18[1] = Math.floor(result / 10000000) % 10000000;
+            const _Math2 = Math;
+            items18[2] = Math.floor(result / 100000000000000);
+          }
         }
       }
     }
@@ -2834,7 +2878,9 @@ function millerRabinTest(absResult1, items) {
   let num3 = 0;
   if (0 < items.length) {
     while (true) {
+      let tmp4 = num3;
       if (!absResult1.lesser(items[num3])) {
+        let tmp5 = Integer;
         let obj4 = Integer(items[num3]);
         let modPowResult = obj4.modPow(tmp, absResult1);
         if (!modPowResult.isUnit()) {
@@ -2845,6 +2891,7 @@ function millerRabinTest(absResult1, items) {
             } else {
               let squareResult = modPowResult.square();
               let modResult = squareResult.mod(absResult1);
+              let tmp7 = diff1;
               while (!modResult.isUnit()) {
                 if (!modResult.equals(prevResult)) {
                   diff1 = diff1 - 1;
@@ -2870,7 +2917,7 @@ function millerRabinTest(absResult1, items) {
   }
   return true;
 }
-function bitwise(isNegative, arg1, fn) {
+function bitwise(isNegative, arg1, arg2) {
   const obj = parseValue(arg1);
   const isNegativeResult = isNegative.isNegative();
   const isNegativeResult1 = obj.isNegative();
@@ -2887,23 +2934,26 @@ function bitwise(isNegative, arg1, fn) {
   let tmp4 = notResult;
   if (!notResult.isZero()) {
     while (true) {
+      let tmp6 = closure_19;
+      let tmp5 = divModAny;
       let tmp7 = divModAny(tmp4, closure_19);
       let obj4 = tmp7[1];
       let toJSNumberResult = obj4.toJSNumber();
+      let tmp9 = tmp3;
       let diff = toJSNumberResult;
       if (isNegativeResult) {
-        diff = closure_19 - 1 - toJSNumberResult;
+        diff = tmp6 - 1 - toJSNumberResult;
       }
-      let tmp5Result = divModAny(tmp3, closure_19);
+      let tmp5Result = tmp5(tmp3, tmp6);
       let obj5 = tmp5Result[1];
       let toJSNumberResult1 = obj5.toJSNumber();
       let diff1 = toJSNumberResult1;
       if (isNegativeResult1) {
-        diff1 = closure_19 - 1 - toJSNumberResult1;
+        diff1 = tmp6 - 1 - toJSNumberResult1;
       }
       let first = tmp7[0];
       let first1 = tmp5Result[0];
-      let arr = items.push(fn(diff, diff1));
+      let arr = items.push(arg2(diff, diff1));
       tmp3 = first1;
       tmp4 = first;
       if (!first.isZero()) {
@@ -2929,7 +2979,7 @@ function bitwise(isNegative, arg1, fn) {
   if (isNegativeResult1) {
     num2 = 1;
   }
-  if (0 !== fn(num, num2)) {
+  if (0 !== arg2(num, num2)) {
     let tmp16 = Integer(-1);
   } else {
     tmp16 = Integer(0);
@@ -2939,7 +2989,9 @@ function bitwise(isNegative, arg1, fn) {
   let tmp19 = tmp16;
   if (0 <= diff2) {
     do {
+      let tmp20 = closure_19;
       let multiplyResult = addResult.multiply(closure_19);
+      let tmp21 = Integer;
       addResult = multiplyResult.add(Integer(items[diff2]));
       diff2 = diff2 - 1;
       tmp19 = addResult;
@@ -2994,10 +3046,15 @@ function gcd(absResult, absResult1) {
       if (absResult1.isEven()) {
         while (true) {
           let value = iter2.value;
+          let tmp5 = obj7;
+          let tmp6 = iter;
+          let tmp7 = iter2;
           if (typeof value === "number") {
+            let tmp10 = c21;
             let tmp9 = value | c21;
           } else if (typeof value === "bigint") {
             let _BigInt = BigInt;
+            let tmp8 = c21;
             tmp9 = value | BigInt(c21);
           } else {
             tmp9 = value[0] + value[1] * 10000000 | 1073758208;
@@ -3005,13 +3062,16 @@ function gcd(absResult, absResult1) {
           value = iter.value;
           let tmp11 = tmp9 & -tmp9;
           if (typeof value === "number") {
+            let tmp14 = c21;
             let tmp13 = value | c21;
           } else if (typeof value === "bigint") {
             let _BigInt2 = BigInt;
+            let tmp12 = c21;
             tmp13 = value | BigInt(c21);
           } else {
             tmp13 = value[0] + value[1] * 10000000 | 1073758208;
           }
+          let tmp16 = parseValue;
           let tmp15 = tmp13 & -tmp13;
           let obj8 = parseValue(tmp11);
           let tmp17 = parseValue(tmp15);
@@ -3046,10 +3106,13 @@ function gcd(absResult, absResult1) {
     if (obj6.isEven()) {
       do {
         value = iter3.value;
+        let tmp20 = iter3;
         if (typeof value === "number") {
+          let tmp23 = c21;
           let tmp22 = value | c21;
         } else if (typeof value === "bigint") {
           let _BigInt3 = BigInt;
+          let tmp21 = c21;
           tmp22 = value | BigInt(c21);
         } else {
           tmp22 = value[0] + value[1] * 10000000 | 1073758208;
@@ -3062,14 +3125,18 @@ function gcd(absResult, absResult1) {
     }
     do {
       let iter4 = obj11;
+      let tmp24 = obj12;
       let tmp25 = obj11;
       if (obj11.isEven()) {
         do {
           let value1 = iter4.value;
+          let tmp26 = iter4;
           if (typeof value1 === "number") {
+            let tmp29 = c21;
             let tmp28 = value1 | c21;
           } else if (typeof value1 === "bigint") {
             let _BigInt4 = BigInt;
+            let tmp27 = c21;
             tmp28 = value1 | BigInt(c21);
           } else {
             tmp28 = value1[0] + value1[1] * 10000000 | 1073758208;
@@ -3097,8 +3164,8 @@ function gcd(absResult, absResult1) {
   }
   const obj3 = parseValue(absResult1);
 }
-function toBase(self, items) {
-  let obj = Integer(items);
+function toBase(self, arg1) {
+  let obj = Integer(arg1);
   if (obj.isZero()) {
     if (self.isZero()) {
       obj = { value: null, isNegative: false };
@@ -3156,7 +3223,7 @@ function toBase(self, items) {
       }
       return obj4;
     } else {
-      items = [];
+      const items = [];
       obj2 = absResult;
       if (absResult.isNegative()) {
         while (true) {
@@ -3174,6 +3241,7 @@ function toBase(self, items) {
           if (nextResult.isNegative()) {
             continue;
           } else {
+            let num3 = 0;
             obj2 = nextResult;
             obj3 = nextResult;
             if (nextResult.compareAbs(obj) < 0) {
@@ -3297,6 +3365,7 @@ function parseStringValue(arr) {
             do {
               arr = items.push(+str2.slice(diff1, length));
               let num10 = diff1 - 7;
+              let tmp23 = length;
               if (num10 < 0) {
                 num10 = 0;
               }
@@ -3328,45 +3397,47 @@ function parseStringValue(arr) {
     }
   }
 }
-function parseValue(value) {
-  if (typeof value === "number") {
+function parseValue(result) {
+  if (typeof result === "number") {
     if (closure_2) {
       const _BigInt = BigInt;
       let obj = Object.create(NativeBigInt.prototype);
-      obj.value = BigInt(value);
-      const BigIntResult = BigInt(value);
+      obj.value = BigInt(result);
+      let tmp6 = obj;
+      const BigIntResult = BigInt(result);
     } else {
-      let tmp4 = -9007199254740992 < value;
+      let tmp4 = -9007199254740992 < result;
       if (tmp4) {
-        tmp4 = value < 9007199254740992;
+        tmp4 = result < 9007199254740992;
       }
       if (!tmp4) {
-        const tmp6 = parseStringValue(value.toString());
+        tmp6 = parseStringValue(result.toString());
       }
     }
-    if (value > 0) {
+    if (result > 0) {
       const _Math2 = Math;
-      let rounded = Math.floor(value);
+      let rounded = Math.floor(result);
     } else {
       const _Math = Math;
-      rounded = Math.ceil(value);
+      rounded = Math.ceil(result);
     }
-    if (value !== rounded) {
+    if (result !== rounded) {
       const _Error = Error;
-      error = new Error(value + " is not an integer.");
+      error = new Error(result + " is not an integer.");
       throw error;
     } else {
-      Object.create(SmallInteger.prototype);
-      obj = { value, sign: value < 0, isSmall: true };
+      obj = Object.create(SmallInteger.prototype);
+      obj = { value: result, sign: result < 0, isSmall: true };
+      tmp6 = obj;
     }
   } else {
-    if (typeof value === "string") {
-      let tmp2 = parseStringValue(value);
+    if (typeof result === "string") {
+      let tmp2 = parseStringValue(result);
     } else {
-      tmp2 = value;
-      if (typeof value === "bigint") {
+      tmp2 = result;
+      if (typeof result === "bigint") {
         obj1 = Object.create(NativeBigInt.prototype);
-        obj1.value = value;
+        obj1.value = result;
         tmp2 = obj1;
       }
     }
@@ -3804,6 +3875,7 @@ while (true) {
       return first;
     }
   }
+  let tmp = num;
   if (0 < num) {
     class Integer {
       constructor(arg0, arg1, arg2, arg3) {
@@ -5071,15 +5143,15 @@ while (true) {
           str3 = "-";
         }
         value = iter.value;
-        mapped = value.map((item, index) => {
+        mapped = value.map((arg0) => {
           let arr = closure_0;
           if (!closure_0) {
             arr = closure_1_1;
           }
-          if (item < arr.length) {
-            let text = arr[item];
+          if (arg0 < arr.length) {
+            let text = arr[arg0];
           } else {
-            text = `${"<" + item}>`;
+            text = `${"<" + arg0}>`;
           }
           return text;
         });
@@ -5450,10 +5522,10 @@ Integer.randBetween = function randBetween(arg0, absResult1, arg2) {
     const _Math = Math;
     random = Math.random;
   }
-  parseValue(tmp2);
-  const tmpResult = parseValue(tmp3);
+  let tmpResult = tmp(tmp2);
+  tmpResult = tmp(tmp3);
   const tmpResult1 = parseValue(tmp2);
-  let tmpResult2 = parseValue(tmp3);
+  let tmpResult2 = tmp(tmp3);
   if (tmpResult1.greater(tmpResult2)) {
     tmpResult2 = tmpResult1;
   }
@@ -5468,6 +5540,7 @@ Integer.randBetween = function randBetween(arg0, absResult1, arg2) {
     let flag2 = true;
     if (0 < value.length) {
       do {
+        let tmp8 = num3;
         let flag3 = flag2;
         let num4 = 10000000;
         if (flag2) {

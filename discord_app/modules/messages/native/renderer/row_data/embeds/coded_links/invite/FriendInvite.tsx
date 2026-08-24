@@ -1,18 +1,16 @@
 // === Module 12763: createFriendInvite ===
 
 // Module 12763 (createFriendInvite)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
 import InviteSendStates from "InviteSendStates" /* 4371 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
 
 const Image = get_ActivityIndicator.Image;
 const InviteTypes = InviteSendStates.InviteTypes;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
 
 export const createFriendInvite = function createFriendInvite(inviter) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(arg3));
@@ -21,10 +19,10 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   const t = getSystemLocale.t;
   if (arg1) {
     let str = string(t.eQyu1F);
-    let tmp5 = require;
+    let tmp5 = tmp4;
   } else {
     str = string(t.PYJHW6);
-    tmp5 = require;
+    tmp5 = tmp4;
   }
   let str2 = "";
   if (null != inviter.inviter) {
@@ -32,7 +30,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = nameFromUserDefault;
+    let tmpResult = tmp(4219);
     str3 = tmpResult.getUserTag(inviter.inviter);
   }
   let isFriendResult = null != inviter.inviter;
@@ -46,7 +44,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str4 = "";
   if (null != inviter.inviter) {
-    tmpResult = getAvatarURLDefault;
+    tmpResult = tmp(1435);
     str4 = Image.resolveAssetSource(tmpResult.getUserAvatarSource(inviter.inviter)).uri;
   }
   const inviter2 = inviter.inviter;

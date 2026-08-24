@@ -1,7 +1,7 @@
 // === Module 15547: withEqualityFn ===
 
 // Module 15547 (withEqualityFn)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
 import identity from "identity" /* 700 */;
 
@@ -25,10 +25,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     const tmp = callback2();
     callback2 = tmp;
     for (const key10006 in arg0) {
+      let tmp5 = key10006;
       if (tmp[key10006] === arg0[key10006]) {
         continue;
       } else {
-        obj = callback(dependencyMap[3]);
+        let tmp2 = callback;
+        let tmp3 = closure_1_2;
+        obj = callback(closure_1_2[3]);
         let batchUpdatesResult = obj.batchUpdates(() => {
           obj = {};
           const merged = Object.assign(closure_1);
@@ -41,7 +44,8 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj[10] = function dropStart(newDropSpec) {
     const callback = newDropSpec;
     ({ dropSpecs, gestureState } = gestureState());
-    callback2(dependencyMap[4]);
+    obj = callback2(closure_1_2[4]);
+    obj = { category: "GuildsBarGesture", message: "dropStart started", data: null };
     obj = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
     obj[2] = obj;
     obj.addBreadcrumb(obj);
@@ -50,7 +54,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(dependencyMap[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "text" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "text" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -64,18 +68,19 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           const result = obj.set(obj);
         }
       }, 0);
-      const obj4 = callback(dependencyMap[3]);
     }
     const tmp = gestureState();
+    tmp2 = closure_1_2;
   };
   obj[11] = function dropComplete() {
     ({ gestureState, dragDropInProgress, dropSpecs, dragSpecs } = callback2());
-    callback2(dependencyMap[4]);
+    obj = callback2(closure_1_2[4]);
+    obj = { category: "GuildsBarGesture", message: "dropComplete started", data: null };
     obj = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj[2] = obj;
     obj.addBreadcrumb(obj);
     if (null != dropSpecs) {
-      callback(dependencyMap[3]).batchUpdates(() => callback({ dropSpecs: "r" }));
+      callback(closure_1_2[3]).batchUpdates(() => callback({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_5);
       if (null == dragSpecs) {
@@ -88,13 +93,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         obj1.mode = null;
         const result1 = gestureState.set(obj1);
       }
-      const obj4 = callback(dependencyMap[3]);
+      const obj4 = callback(closure_1_2[3]);
     }
-    const tmp = callback2();
   };
   return obj;
 });
-let result = obj132.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
+let result = set.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 
 export default withEqualityFn;
 export const INITIAL_GESTURE_STATE = obj;
@@ -129,11 +133,12 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
         if (dropSpecs != null) {
           id1 = dropSpecs.dragNode.id;
         }
-        tmp5 = id1 === closure_0;
+        tmp5 = id1 === tmp4;
       }
       tmp2 = tmp5;
+      tmp4 = closure_0;
     }
-    let tmp8 = !closure_1;
+    let tmp8 = !tmp;
     if (!closure_1) {
       let id2;
       if (overSpecs != null) {
@@ -210,16 +215,26 @@ export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
           num = 0;
           if ("self" !== overSpecs.state) {
             num = 0;
-            if (dragSpecs.node.type === GuildsNodeType.GUILD) {
+            if (dragSpecs.node.type === closure_1_3.GUILD) {
               if (dragSpecs.node.parentId === closure_0) {
-                if (overSpecs.node.parentId !== closure_0) {
-                  if (overSpecs.node.id !== closure_0) {
+                let num3 = 0;
+                if (overSpecs.node.parentId !== tmp3) {
+                  if (overSpecs.node.id !== tmp3) {
                     dragSpecs = dragSpecs.itemSize;
+                    num3 = -1 * dragSpecs;
                   } else {
                     overSpecs = "after";
+                    num3 = 0;
                   }
                 }
-              } else if (overSpecs.node.parentId === closure_0) {
+                let num2 = num3;
+              } else if (overSpecs.node.parentId === tmp3) {
+                num2 = dragSpecs.itemSize;
+              } else {
+                num2 = 0;
+                if (overSpecs.node.id === tmp3) {
+                  num2 = 0;
+                }
               }
             }
           }

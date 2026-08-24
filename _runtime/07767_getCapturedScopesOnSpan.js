@@ -13,6 +13,8 @@ arg5.getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
 arg5.setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2) {
   if (arg0) {
     const result = addNonEnumerableProperty.addNonEnumerableProperty(arg0, _sentryIsolationScope, arg2);
+    const obj = addNonEnumerableProperty;
     const result1 = addNonEnumerableProperty.addNonEnumerableProperty(arg0, _sentryScope, arg1);
+    const obj2 = addNonEnumerableProperty;
   }
 };

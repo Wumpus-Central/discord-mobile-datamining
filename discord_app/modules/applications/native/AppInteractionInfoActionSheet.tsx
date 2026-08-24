@@ -1,18 +1,18 @@
 // === Module 10890: AppInteractionInfoActionSheet ===
 
 // Module 10890 (AppInteractionInfoActionSheet)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createdAt from "createdAt" /* 1930 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createdAt" /* 1930 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" }, itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 } });
-const result = require("obj132").fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
 
 export default function AppInteractionInfoActionSheet(message) {
   message = message.message;
@@ -156,9 +156,9 @@ export default function AppInteractionInfoActionSheet(message) {
     obj18[2] = intl3.string(tmp10(1236).t["04gxNg"]);
     items11[1] = callback(tmp10(4734).Text, obj18);
     obj16[1] = items11;
-    items10[1] = callback2(id, obj16);
+    items10[1] = tmp31(id, obj16);
     obj14[1] = items10;
-    obj13[1] = callback2(id, obj14);
+    obj13[1] = tmp31(id, obj14);
     tmp32 = callback(tmp10(5433).PressableOpacity, obj13);
   }
   items9[1] = tmp32;

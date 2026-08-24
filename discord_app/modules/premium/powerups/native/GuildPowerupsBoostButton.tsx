@@ -1,23 +1,24 @@
 // === Module 11756: GuildPowerupsBoostButton ===
 
 // Module 11756 (GuildPowerupsBoostButton)
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate" /* 4267 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostButton.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostButton.tsx");
 
 export const GuildPowerupsBoostButton = function GuildPowerupsBoostButton(guildId) {
   guildId = guildId.guildId;
+  let stateFromStores1;
   let obj = guildId(589);
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(guildId));
   const items1 = [closure_6];
-  const stateFromStores1 = guildId(589).useStateFromStores(items1, () => boostSlots.boostSlots);
+  stateFromStores1 = guildId(589).useStateFromStores(items1, () => boostSlots.boostSlots);
   const obj2 = guildId(589);
   const tmp = guildId;
   const tmp5 = stateFromStores1;
@@ -32,7 +33,7 @@ export const GuildPowerupsBoostButton = function GuildPowerupsBoostButton(guildI
   const items3 = [stateFromStores1];
   const memo = React.useMemo(() => {
     const values = Object.values(stateFromStores1);
-    return values.find((item, index) => item.isAvailable());
+    return values.find((isAvailable) => isAvailable.isAvailable());
   }, items3);
   let tmp10 = null;
   if (null != stateFromStores) {

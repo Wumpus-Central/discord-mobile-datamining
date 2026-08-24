@@ -1,13 +1,13 @@
 // === Module 7300: useGuildIdsToFetchSoundsFor ===
 
 // Module 7300 (useGuildIdsToFetchSoundsFor)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate" /* 4780 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "handleSoundCreateOrUpdate" /* 4780 */;
 
 const useMemo = noop.useMemo;
-const result = obj132.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");
+const result = set.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");
 
 export const useGuildIdsToFetchSoundsFor = function useGuildIdsToFetchSoundsFor() {
   const items = [closure_3];
@@ -18,11 +18,11 @@ export const useGuildIdsToFetchSoundsFor = function useGuildIdsToFetchSoundsFor(
   const items2 = [stateFromStoresArray, stateFromStores];
   return useMemo(() => {
     stateFromStoresArray = stateFromStores;
-    return stateFromStoresArray.filter((item, index) => null == closure_0.get(item));
+    return stateFromStoresArray.filter((arg0) => null == closure_0.get(arg0));
   }, items2);
 };
 export const getGuildIdsToFetchSoundsFor = function getGuildIdsToFetchSoundsFor() {
   guildIds = guildIds.getGuildIds();
   const sounds2 = sounds.getSounds();
-  return guildIds.filter((item, index) => null == closure_0.get(item));
+  return guildIds.filter((arg0) => null == closure_0.get(arg0));
 };

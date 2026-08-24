@@ -1,28 +1,31 @@
 // === Module 4594: copyObject ===
 
 // Module 4594 (copyObject)
-import baseAssignValue from "baseAssignValue" /* 804 */;
-import assignValue from "assignValue" /* 4595 */;
 
-
-export default function copyObject(resizeMode, arg1, height, fn) {
-  let obj = height;
-  if (!height) {
+export default function copyObject(arg0, arg1, arg2, arg3) {
+  let obj = arg2;
+  if (!arg2) {
     obj = {};
   }
   for (let num = 0; num < length; num = num + 1) {
     let tmp = arg1[num];
+    let tmp2 = num;
     let tmp3;
-    if (fn) {
-      tmp3 = fn(obj[tmp], resizeMode[tmp], tmp, obj, resizeMode);
+    if (arg3) {
+      let tmp4 = tmp;
+      let tmp5 = obj;
+      let tmp6 = arg0;
+      tmp3 = arg3(obj[tmp], arg0[tmp], tmp, obj, arg0);
     }
     if (undefined === tmp3) {
-      tmp3 = resizeMode[tmp];
+      tmp3 = arg0[tmp];
     }
-    if (height) {
-      let tmp10 = assignValue(obj, tmp, tmp3);
+    let tmp7 = require;
+    let tmp8 = dependencyMap;
+    if (arg2) {
+      let tmp10 = tmp7(4595)(obj, tmp, tmp3);
     } else {
-      let tmp9 = baseAssignValue(obj, tmp, tmp3);
+      let tmp9 = tmp7(804)(obj, tmp, tmp3);
     }
   }
   return obj;

@@ -7,7 +7,7 @@ import ViewDefault from "View" /* 108 */;
 import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
 import useTextPressabilityDefault from "useTextPressability" /* 298 */;
 import { jsx } from "jsxProd" /* 21 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 291 */;
+import closure_3 from "_isNativeReflectConstruct" /* 291 */;
 
 noopAll;
 class Button {

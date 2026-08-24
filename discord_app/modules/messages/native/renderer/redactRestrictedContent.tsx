@@ -1,7 +1,7 @@
 // === Module 8318: nodeToText ===
 
 // Module 8318 (nodeToText)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 function nodeToText(content) {
   let str = "";
@@ -14,14 +14,18 @@ function nodeToText(content) {
         const mapped = content.map(nodeToText);
         let str2 = mapped.join("");
       } else if (typeof content.content === "string") {
-      } else if (null != content.content) {
-        str2 = nodeToText(content.content);
+        str2 = content.content;
+      } else {
+        str2 = "";
+        if (null != content.content) {
+          str2 = nodeToText(content.content);
+        }
       }
     }
   }
   return str;
 }
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/redactRestrictedContent.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/redactRestrictedContent.tsx");
 function redactRestrictedContent(content) {
   if (null != content) {
     if (typeof content !== "string") {
@@ -64,22 +68,33 @@ function redactRestrictedContent(content) {
             const _Array2 = Array;
             if (Array.isArray(content)) {
               const mapped = content.map(nodeToText);
-              const str7 = mapped.join("");
+              let str7 = mapped.join("");
             } else if (typeof content.content === "string") {
-            } else if (null != content.content) {
-              const content1 = content.content;
-              if (null != content1) {
-                if (typeof content1 === "string") {
-                } else {
-                  const _Array3 = Array;
-                  if (Array.isArray(content1)) {
-                    const mapped1 = content1.map(nodeToText);
-                    let str6 = mapped1.join("");
-                  } else if (typeof content1.content === "string") {
-                  } else if (null != content1.content) {
-                    str6 = nodeToText(content1.content);
+              str7 = content.content;
+            } else {
+              str7 = "";
+              if (null != content.content) {
+                const content1 = content.content;
+                let str5 = "";
+                if (null != content1) {
+                  if (typeof content1 === "string") {
+                    str5 = content1;
+                  } else {
+                    const _Array3 = Array;
+                    if (Array.isArray(content1)) {
+                      const mapped1 = content1.map(nodeToText);
+                      let str6 = mapped1.join("");
+                    } else if (typeof content1.content === "string") {
+                      str6 = content1.content;
+                    } else {
+                      str6 = "";
+                      if (null != content1.content) {
+                        str6 = nodeToText(content1.content);
+                      }
+                    }
                   }
                 }
+                str7 = str5;
               }
             }
           }

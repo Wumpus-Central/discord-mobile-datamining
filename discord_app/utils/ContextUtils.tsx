@@ -1,10 +1,10 @@
 // === Module 7399: createDefinedContext ===
 
 // Module 7399 (createDefinedContext)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("obj132").fileFinishedImporting("utils/ContextUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/ContextUtils.tsx");
 
 export default function createDefinedContext() {
   context = context.createContext(undefined);
@@ -27,7 +27,7 @@ export default function createDefinedContext() {
         error = new Error("Context was used outside of defined provider.");
         throw error;
       } else {
-        return (children) => <context.Provider value={context}>{children.children}</context.Provider>;
+        return (children) => closure_2_1(context.Provider, { value: context, children: children.children });
       }
     }
   ];

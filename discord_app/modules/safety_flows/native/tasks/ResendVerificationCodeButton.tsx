@@ -1,21 +1,23 @@
 // === Module 17095: ResendVerificationCodeButton ===
 
 // Module 17095 (ResendVerificationCodeButton)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx");
 
 export default function ResendVerificationCodeButton(flowId) {
   flowId = flowId.flowId;
   const setLoading = flowId.setLoading;
+  let first;
+  let callback;
   const tmp = callback2(React.useState(0), 2);
-  const first = tmp[0];
-  const callback = tmp[1];
+  first = tmp[0];
+  callback = tmp[1];
   const items = [first];
   const effect = React.useEffect(() => {
     if (first > 0) {
@@ -56,7 +58,7 @@ export default function ResendVerificationCodeButton(flowId) {
               return obj;
             } else {
               closure_0 = tmp4;
-              if (first > 0) {
+              if (closure_1_2 > 0) {
                 c4 = 3;
               } else {
                 v0(true);
@@ -64,19 +66,19 @@ export default function ResendVerificationCodeButton(flowId) {
                 v0 = 3;
                 c4 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = flowId(first[5]).resendVerificationCode(flowId);
+                obj1[0] = closure_1_0(closure_1_2[5]).resendVerificationCode(closure_1_0);
                 return obj1;
               }
             }
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               v02 = 1;
-              let obj2 = v0(first[7]);
+              let obj2 = v0(closure_1_2[7]);
               obj2 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null, icon: null, IconComponent: null, iconColor: "icon-feedback-critical" };
-              const intl = flowId(first[8]).intl;
-              obj2[1] = intl.string(v0(first[9])["3AXMYu"]);
-              obj2[2] = v0(first[10]);
-              obj2[3] = flowId(first[11]).XLargeIcon;
+              const intl = closure_1_0(closure_1_2[8]).intl;
+              obj2[1] = intl.string(v0(closure_1_2[9])["3AXMYu"]);
+              obj2[2] = v0(closure_1_2[10]);
+              obj2[3] = closure_1_0(closure_1_2[11]).XLargeIcon;
               obj2.open(obj2);
             } else if (arg0 === 1) {
               c4 = 3;
@@ -89,7 +91,7 @@ export default function ResendVerificationCodeButton(flowId) {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj = flowId(first[6]);
+              obj = closure_1_0(closure_1_2[6]);
               obj.showVerificationSent();
               v02(30);
               v02 = 1;

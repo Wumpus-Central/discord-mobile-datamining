@@ -1,7 +1,7 @@
 // === Module 6004: NitroSupergraphicLogo ===
 
 // Module 6004 (NitroSupergraphicLogo)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
@@ -10,7 +10,7 @@ import metadataDefault from "metadata" /* 6005 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/NitroSupergraphicLogo.native.tsx");
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroSupergraphicLogo.native.tsx");
 
 export const NitroSupergraphicLogo = function NitroSupergraphicLogo(color) {
   let ICON_STRONG = color.color;
@@ -44,6 +44,7 @@ export const NitroSupergraphicLogo = function NitroSupergraphicLogo(color) {
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  const items = [{ width: num * num3, height: num2 * num3 }, tmp6];
+  obj1 = { fadeDuration: 0, source: { uri: metadataDefault }, style: items, accessible, accessibilityLabel, resizeMode };
+  items = [{ width: num * num3, height: num2 * num3 }, tmp6];
   return <Image fadeDuration={0} source={{ uri: metadataDefault }} style={items} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
 };

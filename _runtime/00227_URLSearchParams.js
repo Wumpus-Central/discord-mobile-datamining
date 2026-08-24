@@ -3,7 +3,7 @@
 // Module 227 (URLSearchParams)
 import _createClassDefault from "_createClass" /* 42 */;
 import URLSearchParams from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_1 from "_classCallCheck" /* 41 */;
 
 class URLSearchParams {
   constructor(arg0) {
@@ -17,25 +17,25 @@ class URLSearchParams {
         str2 = global.replace(/^\?/, "");
         str3 = "&";
         parts = str2.split("&");
-        item = parts.forEach((item, index) => {
-          if (item) {
-            const parts = item.split("=");
-            const tmp2 = self(parts.map((item, index) => decodeURIComponent(item.replace(/\+/g, " "))), 2);
+        item = parts.forEach((str) => {
+          if (str) {
+            const parts = str.split("=");
+            const tmp2 = self(parts.map((str) => decodeURIComponent(str.replace(/\+/g, " "))), 2);
             self.append(tmp2[0], tmp2[1]);
           }
         });
       } else {
         _Array = Array;
         if (Array.isArray(global)) {
-          item1 = global.forEach((item, index) => {
-            [tmp, tmp2] = item;
+          item1 = global.forEach((arg0) => {
+            [tmp, tmp2] = arg0;
             return self.append(tmp, tmp2);
           });
         } else if (typeof global === "object") {
           _Object = Object;
           entries = Object.entries(global);
-          item2 = entries.forEach((item, index) => {
-            [tmp, tmp2] = item;
+          item2 = entries.forEach((arg0) => {
+            [tmp, tmp2] = arg0;
             return self.append(tmp, tmp2);
           });
         }
@@ -143,47 +143,71 @@ let items = [
             }
           } else {
             while (true) {
+              let num = 2;
               c9 = 2;
               let tmp3 = c6;
               if (0 === c6) {
                 if (arg0 === 1) {
+                  let num7 = 3;
                   c9 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
+                  let num6 = 3;
                   c9 = 3;
                   obj = { value: null, done: true };
                   obj[0] = arg1;
                   return obj;
                 } else {
                   closure_5 = tmp3;
+                  let tmp26 = _searchParams;
                   _searchParams = undefined;
+                  closure_1 = undefined;
                   let values = _searchParams.values();
+                  let tmp28 = values;
                   closure_1 = values[Symbol.iterator]();
+                  let tmp12 = values;
+                  let tmp13 = closure_1;
                   if (closure_1 === undefined) {
+                    let num5 = 3;
                     c9 = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
                   } else {
+                    let tmp15 = closure_5;
                     c8 = 1;
                     _searchParams = tmp14;
+                    let tmp16 = _searchParams;
+                    closure_4 = _searchParams;
+                    let tmp17 = _searchParams;
                     closure_4 = _searchParams;
                     closure_3 = _searchParams[Symbol.iterator]();
                   }
                 }
               } else if (1 === tmp3) {
+                let tmp9 = closure_7;
+                let tmp10 = closure_7;
                 c8 = 0;
+                let tmp11 = closure_1;
                 closure_1.return();
                 throw closure_7;
               } else if (2 === tmp3) {
+                let tmp6 = closure_7;
+                let tmp7 = closure_7;
                 c8 = 1;
+                let tmp8 = closure_3;
                 closure_3.return();
                 throw closure_7;
               } else if (arg0 === 1) {
+                let num3 = 3;
                 c9 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
+                c8 = 1;
+                let tmp4 = closure_3;
                 closure_3.return();
                 c8 = 0;
+                let tmp5 = closure_1;
                 closure_1.return();
+                let num2 = 3;
                 c9 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
@@ -191,12 +215,16 @@ let items = [
               } else {
                 c8 = 1;
               }
+              let tmp18 = closure_4;
+              let tmp19 = closure_3;
               if (closure_3 === undefined) {
                 c8 = 0;
               } else {
+                let tmp21 = closure_5;
                 c8 = 2;
                 closure_1 = tmp20;
                 c6 = 3;
+                let num4 = 1;
                 c9 = 1;
                 obj1 = { value: null, done: false };
                 obj1[0] = closure_1;
@@ -232,13 +260,16 @@ let items = [
             }
           } else {
             while (true) {
+              let num = 2;
               c10 = 2;
               let tmp5 = c9;
               if (0 === c9) {
                 if (arg0 === 1) {
+                  let num7 = 3;
                   c10 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
+                  let num6 = 3;
                   c10 = 3;
                   obj = { value: null, done: true };
                   obj[0] = arg1;
@@ -246,39 +277,67 @@ let items = [
                 } else {
                   closure_6 = tmp;
                   closure_5 = tmp2;
-                  let dependencyMap;
+                  let tmp27 = dependencyMap;
+                  dependencyMap = undefined;
+                  closure_1 = undefined;
+                  closure_2 = undefined;
                   let lib;
                   closure_4 = undefined;
                   closure_2 = dependencyMap;
+                  let tmp28 = dependencyMap;
+                  closure_2 = dependencyMap;
                   closure_1 = dependencyMap[Symbol.iterator]();
+                  let tmp14 = closure_2;
+                  let tmp15 = closure_1;
                   if (closure_1 === undefined) {
+                    let num5 = 3;
                     c10 = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
                   } else {
+                    let tmp29 = closure_5;
+                    let tmp30 = closure_6;
                     c8 = 1;
                     dependencyMap = tmp16;
+                    let tmp31 = dependencyMap;
+                    let tmp32 = dependencyMap;
                     closure_1 = dependencyMap(dependencyMap, 2);
+                    let tmp33 = closure_1;
                     closure_2 = closure_1[0];
+                    let tmp34 = closure_1;
                     lib = closure_1[1];
+                    let tmp35 = lib;
+                    closure_4 = lib;
+                    let tmp36 = lib;
                     closure_4 = lib;
                     lib = lib[Symbol.iterator]();
                   }
                 }
               } else if (1 === tmp5) {
+                let tmp11 = closure_7;
+                let tmp12 = closure_7;
                 c8 = 0;
+                let tmp13 = closure_1;
                 closure_1.return();
                 throw closure_7;
               } else if (2 === tmp5) {
+                let tmp8 = closure_7;
+                let tmp9 = closure_7;
                 c8 = 1;
+                let tmp10 = lib;
                 lib.return();
                 throw closure_7;
               } else if (arg0 === 1) {
+                let num3 = 3;
                 c10 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
+                c8 = 1;
+                let tmp6 = lib;
                 lib.return();
                 c8 = 0;
+                let tmp7 = closure_1;
                 closure_1.return();
+                let num2 = 3;
                 c10 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
@@ -286,14 +345,20 @@ let items = [
               } else {
                 c8 = 1;
               }
+              let tmp17 = closure_4;
+              let tmp18 = lib;
               if (lib === undefined) {
                 c8 = 0;
               } else {
+                let tmp20 = closure_5;
                 c8 = 2;
                 closure_4 = tmp19;
+                let tmp21 = closure_2;
                 let items = [closure_2, ];
+                let tmp22 = closure_4;
                 items[1] = closure_4;
                 c9 = 3;
+                let num4 = 1;
                 c10 = 1;
                 obj1 = { value: null, done: false };
                 obj1[0] = items;
@@ -307,17 +372,20 @@ let items = [
   },
   {
     key: "forEach",
-    value: function forEach(fn) {
+    value: function forEach(arg0) {
       while (tmp !== undefined) {
+        let tmp3 = URLSearchParams;
         let tmp4 = URLSearchParams(tmp2, 2);
         [tmp5, tmp6] = tmp4;
+        let tmp7 = tmp6;
+        let tmp8 = tmp6;
         for (const item10018 of tmp6) {
+          let tmp9 = tmp5;
           let tmp10 = arg0(item10018, tmp5, this);
           continue;
         }
         continue;
       }
-      tmp = this._searchParams[Symbol.iterator]();
     }
   },
   {
@@ -340,9 +408,13 @@ obj = {
   value() {
     const items = [];
     while (tmp !== undefined) {
+      let tmp3 = URLSearchParams;
       let tmp4 = URLSearchParams(tmp2, 2);
       [tmp5, tmp6] = tmp4;
+      let tmp7 = tmp6;
+      let tmp8 = tmp6;
       for (const item10018 of tmp6) {
+        let tmp9 = tmp5;
         let items1 = [tmp5, item10018];
         let arr = items.push(items1);
         continue;
@@ -357,12 +429,12 @@ items[13] = {
   key: "toString",
   value: function toString() {
     const _searchParams = this._searchParams;
-    let mapped = Array.from(_searchParams.entries()).map((item, index) => {
-      [, arr] = item;
-      const mapped = arr.map((item, index) => {
+    let mapped = Array.from(_searchParams.entries()).map((arg0) => {
+      [, arr] = arg0;
+      const mapped = arr.map((arg0) => {
         const replaced = encodeURIComponent(closure_0).replace(/%20/g, "+");
         const str = encodeURIComponent(closure_0);
-        return "" + replaced + "=" + encodeURIComponent(item).replace(/%20/g, "+");
+        return "" + replaced + "=" + encodeURIComponent(arg0).replace(/%20/g, "+");
       });
       return mapped.join("&");
     });

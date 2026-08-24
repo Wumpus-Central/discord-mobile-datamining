@@ -9,10 +9,10 @@ import _modDef8115 from "module_8115" /* 8115 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { Fonts } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = fn;
+require = arg1;
 class EmptyState {
   constructor(arg0) {
     ({ source, title, callToAction } = global);
@@ -76,7 +76,8 @@ class EmptyState {
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { container: { alignItems: "center", justifyContent: "center", padding: 16 }, title: null, body: null, image: null, cta: null };
+createCacheKey = {};
 let merged = Object.assign(importDefaultResult(Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
 createCacheKey.textAlign = "center";
 createCacheKey.marginBottom = 8;
@@ -89,7 +90,7 @@ createCacheKey[3] = { marginBottom: 32 };
 createCacheKey[4] = { alignSelf: "center", marginTop: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("obj132").fileFinishedImporting("design/void/RefreshEmptyState/native/RefreshEmptyState.tsx");
+const result = require("set").fileFinishedImporting("design/void/RefreshEmptyState/native/RefreshEmptyState.tsx");
 
 export default EmptyState;
 export const ThemedEmptyState = function ThemedEmptyState(darkSource) {

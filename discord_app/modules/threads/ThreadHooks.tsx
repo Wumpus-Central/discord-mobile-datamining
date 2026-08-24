@@ -1,30 +1,29 @@
 // === Module 7234: useCanUnarchiveThread ===
 
 // Module 7234 (useCanUnarchiveThread)
-import applyDefault from "apply" /* 12 */;
 import fromStringAll from "fromString" /* 506 */;
 import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
 import useIsRemoteDefault from "useIsRemote" /* 7235 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_4 from "_slicedToArray" /* 32 */;
 import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import rebuild from "rebuild" /* 5251 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_9 from "rebuild" /* 5251 */;
 import ME from "ME" /* 676 */;
 import importDefaultResult from "createExperiment" /* 4287 */;
 
-const require = fn;
+const require = arg1;
 function useCanUnarchiveThread(channel) {
   let _require = channel;
   const items = [closure_8];
   let stateFromStores = _require(589).useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES_IN_THREADS, closure_0);
+      canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES_IN_THREADS, tmp);
     }
     if (canResult) {
-      canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES, closure_0);
+      canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES, tmp);
     }
     return canResult;
   });
@@ -34,12 +33,12 @@ function useCanUnarchiveThread(channel) {
   _require = channel;
   const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
     channel = null;
-    if (null != parent_id) {
-      channel = closure_1_7.getChannel(parent_id.parent_id);
+    if (null != closure_0) {
+      channel = closure_1_7.getChannel(tmp.parent_id);
     }
     let canResult = null != channel;
     if (canResult) {
-      canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES_IN_THREADS, parent_id);
+      canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES_IN_THREADS, tmp);
     }
     if (canResult) {
       canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES, channel);
@@ -78,7 +77,7 @@ function useCanUnarchiveThread(channel) {
 function canUnarchiveThread(parent_id) {
   let canResult = null != parent_id;
   if (canResult) {
-    canResult = closure_8.can(constants.SEND_MESSAGES_IN_THREADS, parent_id);
+    canResult = obj.can(constants.SEND_MESSAGES_IN_THREADS, parent_id);
   }
   let channel = null;
   if (null != parent_id) {
@@ -86,7 +85,7 @@ function canUnarchiveThread(parent_id) {
   }
   let canResult1 = null != channel;
   if (canResult1) {
-    canResult1 = closure_8.can(constants.SEND_MESSAGES_IN_THREADS, channel);
+    canResult1 = obj.can(constants.SEND_MESSAGES_IN_THREADS, channel);
   }
   if (canResult) {
     canResult = canResult1;
@@ -115,7 +114,7 @@ function canUnarchiveThread(parent_id) {
 ({ Permissions: c10, MessageFlags: unpackModuleId, ChannelTypes: closure_12 } = ME);
 let items = [{ id: 1, label: "On", config: { enabled: true } }];
 const importDefaultResultResult = importDefaultResult({ id: "2022-07_voice_in_threads", label: "Voice in Threads", kind: "guild", defaultConfig: { enabled: false }, treatments: items });
-const result = require("obj132").fileFinishedImporting("modules/threads/ThreadHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/threads/ThreadHooks.tsx");
 
 export const VoiceInThreadsExperiment = importDefaultResultResult;
 export const useCanStartPublicThread = function useCanStartPublicThread(type) {
@@ -127,7 +126,8 @@ export const useCanStartPublicThread = function useCanStartPublicThread(type) {
     if (forumLikeChannel.isForumLikeChannel()) {
       let SEND_MESSAGES = closure_1_10.SEND_MESSAGES;
     } else {
-      SEND_MESSAGES = fromStringAll.combine(closure_1_10.CREATE_PUBLIC_THREADS, closure_1_10.READ_MESSAGE_HISTORY);
+      SEND_MESSAGES = closure_1_2(closure_1_3[9]).combine(closure_1_10.CREATE_PUBLIC_THREADS, closure_1_10.READ_MESSAGE_HISTORY);
+      const obj = closure_1_2(closure_1_3[9]);
     }
     return closure_1_8.can(SEND_MESSAGES, forumLikeChannel);
   }, items1)) {
@@ -152,6 +152,7 @@ export const computeCanStartPublicThread = function computeCanStartPublicThread(
     let SEND_MESSAGES = constants.SEND_MESSAGES;
   } else {
     SEND_MESSAGES = fromStringAll.combine(constants.CREATE_PUBLIC_THREADS, constants.READ_MESSAGE_HISTORY);
+    const obj = fromStringAll;
   }
   let flag = false;
   if (closure_8.can(SEND_MESSAGES, channel)) {
@@ -216,7 +217,8 @@ export const useCanStartThread = function useCanStartThread(channel) {
     if (forumLikeChannel.isForumLikeChannel()) {
       let SEND_MESSAGES = closure_1_10.SEND_MESSAGES;
     } else {
-      SEND_MESSAGES = fromStringAll.combine(closure_1_10.CREATE_PUBLIC_THREADS, closure_1_10.READ_MESSAGE_HISTORY);
+      SEND_MESSAGES = closure_1_2(closure_1_3[9]).combine(closure_1_10.CREATE_PUBLIC_THREADS, closure_1_10.READ_MESSAGE_HISTORY);
+      const obj = closure_1_2(closure_1_3[9]);
     }
     return closure_1_8.can(SEND_MESSAGES, forumLikeChannel);
   }, items1)) {
@@ -248,7 +250,7 @@ export const useCanViewThreadForMessage = function useCanViewThreadForMessage(ha
   const _require = hasFlag;
   const items = [closure_7];
   const items1 = [hasFlag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_7.getChannel(stateFromStores(dependencyMap[11]).castMessageIdAsChannelId(hasFlag.id)), items1);
+  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_7.getChannel(stateFromStores(closure_1_3[11]).castMessageIdAsChannelId(hasFlag.id)), items1);
   const obj = _require(589);
   const items2 = [closure_8];
   const items3 = [stateFromStores];
@@ -256,6 +258,7 @@ export const useCanViewThreadForMessage = function useCanViewThreadForMessage(ha
   let hasFlagResult = hasFlag.hasFlag(constants2.HAS_THREAD);
   if (hasFlagResult) {
     hasFlagResult = null != stateFromStores && stateFromStores1;
+    const tmp5 = null != stateFromStores && stateFromStores1;
   }
   return hasFlagResult;
 };
@@ -266,17 +269,17 @@ export const useHasActiveThreads = function useHasActiveThreads(channel) {
     const activeJoinedThreadsForParent = closure_1_9.getActiveJoinedThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
     activeJoinedRelevantThreadsForParent = closure_1_9.getActiveJoinedRelevantThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
     const activeUnjoinedThreadsForParent = closure_1_9.getActiveUnjoinedThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
-    let obj = applyDefault(activeJoinedRelevantThreadsForParent);
-    const someResult = obj.some((item, index) => closure_8.can(constants.VIEW_CHANNEL, item.channel));
-    const someResult1 = applyDefault(activeJoinedThreadsForParent).some((item, index) => {
-      let canResult = !(item.channel.id in activeJoinedRelevantThreadsForParent);
+    let obj = closure_1_1(closure_1_3[12])(activeJoinedRelevantThreadsForParent);
+    const someResult = obj.some((channel) => closure_8.can(constants.VIEW_CHANNEL, channel.channel));
+    const someResult1 = closure_1_1(closure_1_3[12])(activeJoinedThreadsForParent).some((channel) => {
+      let canResult = !(channel.channel.id in activeJoinedRelevantThreadsForParent);
       if (canResult) {
-        canResult = closure_1_8.can(closure_1_10.VIEW_CHANNEL, item.channel);
+        canResult = closure_1_8.can(closure_1_10.VIEW_CHANNEL, channel.channel);
       }
       return canResult;
     });
-    const obj2 = applyDefault(activeJoinedThreadsForParent);
-    let someResult2 = applyDefault(activeUnjoinedThreadsForParent).some((item, index) => closure_8.can(constants.VIEW_CHANNEL, item));
+    const obj2 = closure_1_1(closure_1_3[12])(activeJoinedThreadsForParent);
+    let someResult2 = closure_1_1(closure_1_3[12])(activeUnjoinedThreadsForParent).some((arg0) => closure_8.can(constants.VIEW_CHANNEL, arg0));
     let tmp7 = someResult;
     if (!someResult) {
       tmp7 = someResult1;
@@ -393,12 +396,12 @@ export const getIsActiveChannelOrUnarchivableThread = function getIsActiveChanne
   }
   return tmp;
 };
-export const computeIsReadOnlyThread = function computeIsReadOnlyThread(channel) {
-  if (channel.isMediaThread()) {
+export const computeIsReadOnlyThread = function computeIsReadOnlyThread(messageChannel) {
+  if (messageChannel.isMediaThread()) {
     return true;
   } else {
-    const canResult = closure_8.can(constants.MANAGE_THREADS, channel);
-    return channel.isArchivedLockedThread() && !closure_8.can(constants.MANAGE_THREADS, channel);
+    const canResult = closure_8.can(constants.MANAGE_THREADS, messageChannel);
+    return messageChannel.isArchivedLockedThread() && !closure_8.can(constants.MANAGE_THREADS, messageChannel);
   }
 };
 export const useIsThreadModerator = function useIsThreadModerator(channel) {

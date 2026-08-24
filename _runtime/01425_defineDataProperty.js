@@ -3,7 +3,6 @@
 // Module 1425 (defineDataProperty)
 import _mod541 from "module_541" /* 541 */;
 import _mod542 from "module_542" /* 542 */;
-import _mod562 from "module_562" /* 562 */;
 import flag from "flag" /* 564 */;
 
 
@@ -82,7 +81,7 @@ export default function defineDataProperty(obj, str) {
       configurable = !tmp5;
     } else {
       if (!tmp6) {
-        const tmp13 = new _mod562("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
+        const tmp13 = new tmp7(562)("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
         throw tmp13;
       }
       obj[str] = arg2;

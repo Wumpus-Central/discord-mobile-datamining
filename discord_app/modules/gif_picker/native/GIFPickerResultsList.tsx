@@ -1,23 +1,24 @@
 // === Module 10208: GIFPickerResultsList ===
 
 // Module 10208 (GIFPickerResultsList)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-const createCacheKey = { marginHorizontal: -require("transformFavoriteGifUrl").GIF_PICKER_GUTTER_SPACING / 2 };
+const require = arg1;
+createCacheKey = { list: null };
+createCacheKey = { marginHorizontal: -require("transformFavoriteGifUrl").GIF_PICKER_GUTTER_SPACING / 2 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { length: 20 };
 let arr = Array.from(obj1);
-let closure_7 = arr.map((item, index) => {
+let closure_7 = arr.map(() => {
 
 });
 arr = Array.from(obj1);
-let closure_8 = arr.map((item, index) => ({ width: 100, height: Math.floor(91 * Math.random()) + 90 }));
-const result = require("obj132").fileFinishedImporting("modules/gif_picker/native/GIFPickerResultsList.tsx");
+let closure_8 = arr.map(() => ({ width: 100, height: Math.floor(91 * Math.random()) + 90 }));
+const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerResultsList.tsx");
 
 export default function GIFPickerResultsList(columnWidth) {
   columnWidth = columnWidth.columnWidth;
@@ -43,7 +44,7 @@ export default function GIFPickerResultsList(columnWidth) {
     }
     return src;
   }, []);
-  let tmp = callback();
+  const tmp = callback();
   [tmp6, c0] = callback(React.useState(() => new Set()), 2);
   React = tmp6;
   const items1 = [tmp6, selectedGifSrc];
@@ -51,12 +52,11 @@ export default function GIFPickerResultsList(columnWidth) {
     changed = changed.changed;
     changed((items) => {
       const set = new Set(items);
-      const item = set.forEach((item, index) => {
-        index = item.index;
+      const item = set.forEach((index) => {
+        index = index.index;
         if (tmp) {
           set.add(index);
         }
-        tmp = null !== index && item.isViewable;
       });
       return set;
     });
@@ -69,7 +69,7 @@ export default function GIFPickerResultsList(columnWidth) {
       const size = closure_1_8[index];
       let obj = { height: null };
       obj[0] = callback(size.width, size.height).height;
-      return jsx(_undefined(selectedGifSrc[6]).GIFPickerItemPlaceholder, { height: null });
+      return closure_1_5(_undefined(selectedGifSrc[6]).GIFPickerItemPlaceholder, obj);
     } else {
       const height = callback(item.width, item.height).height;
       const viewedItemIndexes = extraData.viewedItemIndexes;
@@ -84,12 +84,12 @@ export default function GIFPickerResultsList(columnWidth) {
           tmp8 = item.src === extraData.selectedGifSrc;
         }
         obj[4] = tmp8;
-        let tmp15Result = jsx(onPressGIF(selectedGifSrc[6]), { height: null, index: null, item: null, onPressGIF: null, selected: null });
+        let tmp15Result = tmp15(onPressGIF(selectedGifSrc[6]), obj);
         const tmp6 = onPressGIF(selectedGifSrc[6]);
       } else {
         obj = { height: null };
         obj[0] = height;
-        tmp15Result = jsx(_undefined(selectedGifSrc[6]).GIFPickerItemPlaceholder, { height: null });
+        tmp15Result = tmp15(_undefined(selectedGifSrc[6]).GIFPickerItemPlaceholder, obj);
       }
       return tmp15Result;
     }

@@ -1,11 +1,11 @@
 // === Module 11320: useDelayedSwapToActivityActionLeave ===
 
 // Module 11320 (useDelayedSwapToActivityActionLeave)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/hooks/useDelayedSwapToActivityActionLeave.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useDelayedSwapToActivityActionLeave.tsx");
 
 export const useDelayedSwapToActivityActionLeave = function useDelayedSwapToActivityActionLeave(activityAction) {
   closure_0 = activityAction;

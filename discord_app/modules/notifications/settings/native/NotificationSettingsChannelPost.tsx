@@ -2,14 +2,13 @@
 
 // Module 10112 (NotificationSettingsChannelPost)
 import noopAll from "noop" /* 19 */;
-import _modDef6798 from "module_6798" /* 6798 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-let result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannelPost.tsx");
+let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannelPost.tsx");
 
 export const NotificationSettingsChannelPost = function NotificationSettingsChannelPost(channel) {
   const _require = channel;
@@ -18,6 +17,7 @@ export const NotificationSettingsChannelPost = function NotificationSettingsChan
   const items = [closure_4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ muted: closure_1_4.isChannelMuted(closure_1, closure_2), guildMuted: closure_1_4.isMuted(closure_1), newForumThreadsCreated: closure_1_4.getNewForumThreadsCreated(channel.channel) }));
   ({ muted, newForumThreadsCreated } = stateFromStoresObject);
+  obj = { style: channel.style, children: null };
   obj = { title: null, hasIcons: false, children: null };
   const intl = _require(1236).intl;
   obj[0] = intl.string(_require(1236).t.bK11jO);
@@ -30,7 +30,7 @@ export const NotificationSettingsChannelPost = function NotificationSettingsChan
   }
   obj1[2] = muted;
   obj1[3] = function onPress() {
-    const result = _modDef6798.setForumThreadsCreated(channel.channel, !newForumThreadsCreated);
+    const result = closure_1_1(closure_1_2[8]).setForumThreadsCreated(channel.channel, !newForumThreadsCreated);
   };
   obj[2] = jsx(_require(8558).TableCheckboxRow, { label: null, checked: null, disabled: null, onPress: null });
   obj[1] = jsx(_require(6286).TableRowGroup, { title: null, hasIcons: false, children: null });

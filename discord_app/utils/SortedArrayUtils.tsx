@@ -1,11 +1,11 @@
 // === Module 4998: insertionIndex ===
 
 // Module 4998 (insertionIndex)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("utils/SortedArrayUtils.tsx");
+const result = set.fileFinishedImporting("utils/SortedArrayUtils.tsx");
 
-export const insertionIndex = function insertionIndex(arg0, key, fn) {
+export const insertionIndex = function insertionIndex(arg0, arg1, arg2) {
   let sum;
   let tmp4;
   let length = arg0.length;
@@ -14,9 +14,10 @@ export const insertionIndex = function insertionIndex(arg0, key, fn) {
   if (0 < length) {
     do {
       let tmp = num + length >>> 1;
+      let tmp2 = length;
       sum = num;
       tmp4 = tmp;
-      if (fn(arg0[tmp], key) < 0) {
+      if (arg2(arg0[tmp], arg1) < 0) {
         sum = tmp + 1;
         tmp4 = length;
       }
@@ -27,7 +28,7 @@ export const insertionIndex = function insertionIndex(arg0, key, fn) {
   }
   return num2;
 };
-export const insert = function insert(arr, key, fn) {
+export const insert = function insert(arr) {
   let sum;
   let tmp4;
   let length = arr.length;
@@ -36,9 +37,10 @@ export const insert = function insert(arr, key, fn) {
   if (0 < length) {
     do {
       let tmp = num + length >>> 1;
+      let tmp2 = length;
       sum = num;
       tmp4 = tmp;
-      if (fn(arr[tmp], key) < 0) {
+      if (arg2(arr[tmp], arg1) < 0) {
         sum = tmp + 1;
         tmp4 = length;
       }
@@ -47,5 +49,5 @@ export const insert = function insert(arr, key, fn) {
       num2 = sum;
     } while (sum < tmp4);
   }
-  arr.splice(num2, 0, key);
+  arr.splice(num2, 0, arg1);
 };

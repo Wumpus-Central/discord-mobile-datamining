@@ -4,7 +4,7 @@
 import importDefaultResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let context = importDefaultResult.createContext({});
 let closure_5 = { code: "function pnpm_indexTsx1(index,dimensions){const{itemDimensions}=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};}" };
 let closure_6 = { code: "function pnpm_indexTsx2(dimensions){const{containerSize}=this.__closure;containerSize.value=dimensions;}" };
@@ -32,6 +32,7 @@ export const GlobalStateProvider = (arg0) => {
   fn2.__closure = { containerSize: sharedValue };
   fn2.__workletHash = 5978604737778;
   fn2.__initData = closure_6;
+  obj = { value: null, children: null };
   obj = {};
   let merged = Object.assign(value);
   obj.layout = { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: fn, updateContainerSize: fn2 };

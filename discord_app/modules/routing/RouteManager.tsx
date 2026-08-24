@@ -1,12 +1,12 @@
 // === Module 12640: initialize ===
 
 // Module 12640 (initialize)
-import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
-import getMatchData from "getMatchData" /* 12641 */;
+import closure_2 from "_handleConnectionOpen" /* 4495 */;
+import closure_3 from "getMatchData" /* 12641 */;
 import { Routes } from "ME" /* 676 */;
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-let obj132 = fn;
+let set = arg1;
 class RouteManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -27,19 +27,19 @@ class RouteManager {
       obj.connected = isConnectedResult;
       if (tmp2) {
         obj.routeChangeCount = 0;
-        obj.executeRouteRewrites(obj(dependencyMap[3]).getHistory().location, "REPLACE");
-        const obj2 = obj(dependencyMap[3]);
+        obj.executeRouteRewrites(obj(closure_1_1[3]).getHistory().location, "REPLACE");
+        const obj2 = obj(closure_1_1[3]);
       }
     };
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj(dependencyMap[4]);
+          obj = obj(closure_1_1[4]);
           if (!obj.convertRouteToNavigation(pathname)) {
-            tmp2(dependencyMap[3]).replaceWith(Routes.ME);
-            const tmp2Result = tmp2(dependencyMap[3]);
+            tmp2(tmp3[3]).replaceWith(closure_1_4.ME);
           }
           tmp2 = obj;
+          tmp3 = closure_1_1;
         }
       }
       const state = closure_1_3.getState();
@@ -55,23 +55,22 @@ class RouteManager {
         } catch (err) {
         }
       }
-      const nextResult = iter.next();
     };
     obj.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
       if (-1 !== obj.timer) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(obj.timer);
+        clearTimeout(tmp.timer);
       }
       if (null != path.path) {
         const _setTimeout = setTimeout;
-        obj.timer = setTimeout(obj.flushRoute, 200);
+        tmp.timer = setTimeout(tmp.flushRoute, 200);
       }
     };
     obj.flushRoute = function flushRoute() {
       clearTimeout(obj.timer);
       const state = closure_1_3.getState();
       if (null != state.path) {
-        obj = obj(dependencyMap[3]);
+        obj = obj(closure_1_1[3]);
         obj.transitionTo(state.path);
       }
     };
@@ -81,11 +80,11 @@ class RouteManager {
 const prototype = RouteManager.prototype;
 prototype["initialize"] = function initialize() {
   this.cleanup();
-  const history = obj132(1222).getHistory();
+  const history = set(1222).getHistory();
   this.unlistenHistory = history.listen(this.handleRouteChange);
-  const obj = obj132(1222);
+  const obj = set(1222);
   const state = closure_3.getState();
-  state.resetPath(obj132(1222).getHistory().location.pathname);
+  state.resetPath(set(1222).getHistory().location.pathname);
   this.unlistenKeyboardChange = closure_3.subscribe(this.handleKeybindRouteChange);
   closure_2.addChangeListener(this.handleConnectionChange);
 };
@@ -95,17 +94,22 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
     const rewrites = this.rewrites;
     let obj = rewrites[Symbol.iterator]();
     while (obj !== undefined) {
-      let obj2 = obj132(1222);
+      let tmp11 = set;
+      let tmp12 = dependencyMap;
+      let obj2 = set(1222);
       let tmp9Result = tmp9(location, REPLACE);
+      let tmp14 = tmp9Result;
       if (null != tmp9Result) {
-        let tmp11Result = obj132(7733);
+        let tmp11Result = tmp11(7733);
+        obj = { message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route", data: null };
         obj = { replacePath: null, previousPath: null };
         obj[0] = tmp9Result.path;
         obj[1] = obj2.getHistory().location.pathname;
         obj[1] = obj;
         let addBreadcrumbResult = tmp11Result.addBreadcrumb(obj);
-        tmp11Result = obj132(1222);
+        tmp11Result = tmp11(1222);
         let replaceWithResult = tmp11Result.replaceWith(tmp9Result.path, tmp9Result.state);
+        let tmp17 = obj;
         obj.return();
         let flag = true;
         return true;
@@ -135,8 +139,8 @@ prototype["cleanup"] = function cleanup() {
 prototype["addRouteChangeListener"] = function addRouteChangeListener(hideLaunchPad) {
   const self = this;
   if (null != this.unlistenHistory) {
-    hideLaunchPad(obj132(self[3]).getHistory().location, "REPLACE");
-    const obj = obj132(self[3]);
+    hideLaunchPad(set(self[3]).getHistory().location, "REPLACE");
+    const obj = set(self[3]);
   }
   const listeners = this.listeners;
   listeners.add(hideLaunchPad);
@@ -145,15 +149,15 @@ prototype["addRouteChangeListener"] = function addRouteChangeListener(hideLaunch
 prototype["addRouteRewriter"] = function addRouteRewriter(voiceRouteRewriter) {
   const self = this;
   if (null != this.unlistenHistory) {
-    const obj = obj132(self[3]);
-    const tmp = obj132;
+    const obj = set(self[3]);
+    const tmp = set;
     const tmp2 = self;
-    const tmp3 = voiceRouteRewriter(obj.getHistory().location, obj132(self[3]).getHistory().action);
+    const tmp3 = voiceRouteRewriter(obj.getHistory().location, set(self[3]).getHistory().action);
     if (null != tmp3) {
       tmp(tmp2[3]).replaceWith(tmp3.path, tmp3.state);
       const tmpResult = tmp(tmp2[3]);
     }
-    const obj2 = obj132(self[3]);
+    const obj2 = set(self[3]);
   }
   const rewrites = this.rewrites;
   rewrites.add(voiceRouteRewriter);
@@ -168,16 +172,16 @@ prototype["removeRouteRewriter"] = function removeRouteRewriter(closure_0) {
   rewrites.delete(closure_0);
 };
 prototype["getHistory"] = function getHistory() {
-  return obj132(1222).getHistory();
+  return set(1222).getHistory();
 };
-obj132 = Object.create(RouteManager.prototype);
-obj132.rewrites = new Set();
-let set = new Set();
-obj132.listeners = new Set();
-obj132.routeChangeCount = 0;
-obj132.timer = -1;
-obj132.connected = false;
-obj132.handleConnectionChange = function handleConnectionChange() {
+set = Object.create(RouteManager.prototype);
+set = new Set();
+set.rewrites = set;
+set.listeners = new Set();
+set.routeChangeCount = 0;
+set.timer = -1;
+set.connected = false;
+set.handleConnectionChange = function handleConnectionChange() {
   const isConnectedResult = closure_1_2.isConnected();
   let tmp2 = isConnectedResult;
   if (isConnectedResult) {
@@ -186,19 +190,19 @@ obj132.handleConnectionChange = function handleConnectionChange() {
   obj.connected = isConnectedResult;
   if (tmp2) {
     obj.routeChangeCount = 0;
-    obj.executeRouteRewrites(obj(dependencyMap[3]).getHistory().location, "REPLACE");
-    const obj2 = obj(dependencyMap[3]);
+    obj.executeRouteRewrites(obj(closure_1_1[3]).getHistory().location, "REPLACE");
+    const obj2 = obj(closure_1_1[3]);
   }
 };
-obj132.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
+set.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj(dependencyMap[4]);
+      obj = obj(closure_1_1[4]);
       if (!obj.convertRouteToNavigation(pathname)) {
-        tmp2(dependencyMap[3]).replaceWith(Routes.ME);
-        const tmp2Result = tmp2(dependencyMap[3]);
+        tmp2(tmp3[3]).replaceWith(closure_1_4.ME);
       }
       tmp2 = obj;
+      tmp3 = closure_1_1;
     }
   }
   const state = closure_1_3.getState();
@@ -214,26 +218,25 @@ obj132.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
     } catch (err) {
     }
   }
-  const nextResult = iter.next();
 };
-obj132.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
+set.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
   if (-1 !== obj.timer) {
     const _clearTimeout = clearTimeout;
-    clearTimeout(obj.timer);
+    clearTimeout(tmp.timer);
   }
   if (null != path.path) {
     const _setTimeout = setTimeout;
-    obj.timer = setTimeout(obj.flushRoute, 200);
+    tmp.timer = setTimeout(tmp.flushRoute, 200);
   }
 };
-obj132.flushRoute = function flushRoute() {
+set.flushRoute = function flushRoute() {
   clearTimeout(obj.timer);
   const state = closure_1_3.getState();
   if (null != state.path) {
-    obj = obj(dependencyMap[3]);
+    obj = obj(closure_1_1[3]);
     obj.transitionTo(state.path);
   }
 };
-let result = obj132.fileFinishedImporting("modules/routing/RouteManager.tsx");
+let result = set.fileFinishedImporting("modules/routing/RouteManager.tsx");
 
-export default obj132;
+export default set;

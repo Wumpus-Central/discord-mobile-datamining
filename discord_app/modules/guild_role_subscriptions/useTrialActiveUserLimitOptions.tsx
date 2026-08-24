@@ -1,10 +1,10 @@
 // === Module 16970: useTrialActiveUserLimitOptions ===
 
 // Module 16970 (useTrialActiveUserLimitOptions)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx");
 
 export default function useTrialActiveUserLimitOptions() {
   return React.useMemo(() => {

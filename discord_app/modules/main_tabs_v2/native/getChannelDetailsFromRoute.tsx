@@ -1,10 +1,10 @@
 // === Module 13923: getChannelDetailsFromRoute ===
 
 // Module 13923 (getChannelDetailsFromRoute)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import coerceMainRoute from "coerceMainRoute" /* 4229 */;
 
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
 
 export default function getChannelDetailsFromRoute(currentRoute) {
   let flag = arg1;
@@ -39,4 +39,6 @@ export default function getChannelDetailsFromRoute(currentRoute) {
     const items3 = [undefined, undefined];
     return items3;
   }
+  const obj = coerceMainRoute;
+  const tmp = require;
 };

@@ -3,12 +3,12 @@
 // Module 15309 (_sendWave)
 import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9736 */;
 import _modDef9887 from "module_9887" /* 9887 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-const require = fn;
+const require = arg1;
 function _sendWave() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -171,16 +171,18 @@ function _sendWave() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  const obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
+  let obj = _modDef9887;
+  obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  const obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
+  let obj = _modDef9887;
+  obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };
 export const sendWave = function sendWave(id, arg1, arg2) {
@@ -195,6 +197,7 @@ export const sendWave = function sendWave(id, arg1, arg2) {
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
   let obj = handleRelationshipAddErrorDefault;
+  obj = { userId: user.id, context: obj, type: "HermesInternal", fromFriendSuggestion: null };
   obj = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.addRelationship(obj);
 };

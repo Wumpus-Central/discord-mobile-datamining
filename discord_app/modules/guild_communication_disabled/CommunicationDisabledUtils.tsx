@@ -1,15 +1,15 @@
 // === Module 4010: isCommunicationDisabled ===
 
 // Module 4010 (isCommunicationDisabled)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
 
-export const isCommunicationDisabled = function isCommunicationDisabled(communicationDisabledUserMap) {
-  let tmp = null != communicationDisabledUserMap;
+export const isCommunicationDisabled = function isCommunicationDisabled(arg0) {
+  let tmp = null != arg0;
   if (tmp) {
     const _Date = Date;
-    const date = new Date(communicationDisabledUserMap);
+    const date = new Date(arg0);
     const _Date2 = Date;
     const date1 = new Date();
     tmp = date > date1;

@@ -8,14 +8,15 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_5 = createCacheKey.createStyles((paddingTop) => {
-  const obj = { flexDirection: "row", alignItems: "center", height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 };
+  let obj = { bar: null };
+  obj = { flexDirection: "row", alignItems: "center", height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 };
   obj[0] = obj;
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayHeaderWrapper.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayHeaderWrapper.tsx");
 
 export const MediaModalOverlayHeaderWrapper = function MediaModalOverlayHeaderWrapper(arg0) {
   ({ children, style } = arg0);

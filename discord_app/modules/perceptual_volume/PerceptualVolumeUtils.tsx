@@ -1,9 +1,9 @@
 // === Module 4783: perceptualToAmplitude ===
 
 // Module 4783 (perceptualToAmplitude)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-let result = obj132.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
+let result = set.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
 
 export const perceptualToAmplitude = function perceptualToAmplitude(arg0) {
   let num = arg1;

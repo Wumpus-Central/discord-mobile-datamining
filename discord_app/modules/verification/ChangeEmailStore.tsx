@@ -1,13 +1,13 @@
 // === Module 8563: ChangeEmailFields ===
 
 // Module 8563 (ChangeEmailFields)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import keys from "keys" /* 644 */;
 
 let closure_2 = { errors: null, emailToken: null };
 let obj = keys.create(() => closure_2);
-const result = obj132.fileFinishedImporting("modules/verification/ChangeEmailStore.tsx");
+const result = set.fileFinishedImporting("modules/verification/ChangeEmailStore.tsx");
 
 export const ChangeEmailFields = { EMAIL: "email", EMAIL_TOKEN: "email_token", PASSWORD: "password" };
 export const useChangeEmailStore = obj;
@@ -15,6 +15,7 @@ export const setChangeEmailError = function setChangeEmailError(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   _require(705).batchUpdates(() => closure_1_3.setState((errors) => {
+    obj = { errors: null };
     obj = {};
     const merged = Object.assign(errors.errors);
     obj[closure_0] = closure_1;
@@ -35,7 +36,8 @@ export const useChangeEmailError = function useChangeEmailError(arg0) {
     }),
     (arg0) => {
       closure_1 = arg0;
-      callback(dependencyMap[1]).batchUpdates(() => closure_1_3.setState((errors) => {
+      callback(closure_1_1[1]).batchUpdates(() => closure_1_3.setState((errors) => {
+        obj = { errors: null };
         obj = {};
         const merged = Object.assign(errors.errors);
         obj[closure_0] = closure_1;

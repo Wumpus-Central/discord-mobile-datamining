@@ -7,14 +7,14 @@ import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
 import resolveThemeDefault from "resolveTheme" /* 1345 */;
 import updateBackgroundColorDefault from "updateBackgroundColor" /* 1373 */;
 import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
-import initialize from "initialize" /* 1303 */;
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_3 from "initialize" /* 1303 */;
+import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
 import SystemThemeState from "SystemThemeState" /* 1305 */;
 import { UserSettingsDelay } from "MAX_FAVORITES" /* 685 */;
 import { ThemeTypes } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function handleThemeChange() {
   const tmp3 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
   let flag = tmp3 !== closure_13;
@@ -62,7 +62,7 @@ prototype["getState"] = function getState() {
   return { theme: this.theme, preferences: THEME_PREFERENCES_MOBILE, syncedClientThemes: closure_14, syncedThemesEnabled: c15, status: UNSET };
 };
 Object.defineProperty(prototype, "theme", {
-  get: function theme(dependencyMap, items) {
+  get: function theme(arg0, items) {
     return closure_13;
   },
   set: undefined
@@ -100,6 +100,7 @@ const items = [
     if (null != preferences.preferences) {
       tmp = preferences;
       if (preferences.preferences[constants.DARK] === ThemeTypes.DARK) {
+        obj = {};
         const merged = Object.assign(preferences);
         obj = {};
         const merged1 = Object.assign(preferences.preferences);
@@ -130,6 +131,7 @@ obj = {
       dispatcherDefault.wait(() => {
         callback(table[11]).dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } });
       });
+      obj = dispatcherDefault;
     }
     const tmp13 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
     let flag = tmp13 !== closure_13;
@@ -150,10 +152,11 @@ obj = {
       let flag = tmp7 !== closure_13;
       if (flag) {
         closure_13 = tmp7;
-        updateBackgroundColorDefault(closure_13);
+        tmp2(1373)(closure_13);
         flag = true;
       }
       tmp = flag;
+      tmp2 = importDefault;
     }
     return tmp;
   },
@@ -253,6 +256,6 @@ obj = {
   }
 };
 const themeStore = new ThemeStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/ThemeStore.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/ThemeStore.tsx");
 
 export default themeStore;

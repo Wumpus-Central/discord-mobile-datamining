@@ -1,13 +1,12 @@
 // === Module 4844: requestAuthorization ===
 
 // Module 4844 (requestAuthorization)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import initialize from "initialize" /* 4845 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 4845 */;
 import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ NativePermissionTypes: c5, NativePermissionStates: closure_6, NativePermissionStatus: error } = NativePermissionStatus);
 let NativePermissionBaseUtils;
 class NativePermissionBaseUtils {
@@ -46,9 +45,9 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       }
       callback = tmp10;
       if (callback) {
-        DENIED = closure_1_6.ACCEPTED;
+        DENIED = tmp14.ACCEPTED;
       } else {
-        DENIED = closure_1_6.DENIED;
+        DENIED = tmp14.DENIED;
       }
       const obj = callback(DENIED[5]);
       obj.setPermission(closure_0, DENIED);
@@ -70,29 +69,30 @@ prototype["hasPermission"] = function hasPermission(arg0, arg1) {
   return this.hasPermissionCore(arg0, NativePermissionBaseUtils.defaultNativePermissionsRequestOptions(arg1));
 };
 prototype["showAlert"] = function showAlert(closure_1_0, arg1, arg2) {
-  const self = this;
-  const _require = require;
-  const intl = getSystemLocale.intl;
-  const intl2 = getSystemLocale.intl;
-  const combined = "" + intl.string(getSystemLocale.t["68G7fD"]) + ". " + intl2.string(getSystemLocale.t["5Jvu1R"]);
+  let self = this;
+  self = this;
+  const _require = closure_1_0;
+  const intl = _require(1236).intl;
+  const intl2 = _require(1236).intl;
+  const combined = "" + intl.string(_require(1236).t["68G7fD"]) + ". " + intl2.string(_require(1236).t["5Jvu1R"]);
   let obj = { [closure_5.CAMERA]: combined, [closure_5.HEADSET_CAMERA]: combined };
-  const intl3 = getSystemLocale.intl;
-  const stringResult = intl.string(getSystemLocale.t["68G7fD"]);
-  const intl4 = getSystemLocale.intl;
-  obj[constants.AUDIO] = "" + intl3.string(getSystemLocale.t.xisTfe) + ". " + intl4.string(getSystemLocale.t["5Jvu1R"]);
-  const intl5 = getSystemLocale.intl;
-  const stringResult1 = intl3.string(getSystemLocale.t.xisTfe);
-  const intl6 = getSystemLocale.intl;
-  obj[constants.PHOTOS] = "" + intl5.string(getSystemLocale.t.jQHU4M) + ". " + intl6.string(getSystemLocale.t["5Jvu1R"]);
-  const intl7 = getSystemLocale.intl;
-  const stringResult2 = intl5.string(getSystemLocale.t.jQHU4M);
-  const intl8 = getSystemLocale.intl;
-  obj[constants.INPUT_MONITORING] = "" + intl7.string(getSystemLocale.t.UIBqsS) + ". " + intl8.string(getSystemLocale.t["5Jvu1R"]);
-  const intl9 = getSystemLocale.intl;
-  const stringResult3 = intl7.string(getSystemLocale.t.UIBqsS);
-  const intl10 = getSystemLocale.intl;
-  obj[constants.CONTACTS] = "" + intl9.string(getSystemLocale.t.kTtf7o) + ". " + intl10.string(getSystemLocale.t["5Jvu1R"]);
-  if (null != obj[require]) {
+  const intl3 = _require(1236).intl;
+  const stringResult = intl.string(_require(1236).t["68G7fD"]);
+  const intl4 = _require(1236).intl;
+  obj[constants.AUDIO] = "" + intl3.string(_require(1236).t.xisTfe) + ". " + intl4.string(_require(1236).t["5Jvu1R"]);
+  const intl5 = _require(1236).intl;
+  const stringResult1 = intl3.string(_require(1236).t.xisTfe);
+  const intl6 = _require(1236).intl;
+  obj[constants.PHOTOS] = "" + intl5.string(_require(1236).t.jQHU4M) + ". " + intl6.string(_require(1236).t["5Jvu1R"]);
+  const intl7 = _require(1236).intl;
+  const stringResult2 = intl5.string(_require(1236).t.jQHU4M);
+  const intl8 = _require(1236).intl;
+  obj[constants.INPUT_MONITORING] = "" + intl7.string(_require(1236).t.UIBqsS) + ". " + intl8.string(_require(1236).t["5Jvu1R"]);
+  const intl9 = _require(1236).intl;
+  const stringResult3 = intl7.string(_require(1236).t.UIBqsS);
+  const intl10 = _require(1236).intl;
+  obj[constants.CONTACTS] = "" + intl9.string(_require(1236).t.kTtf7o) + ". " + intl10.string(_require(1236).t["5Jvu1R"]);
+  if (null != obj[closure_1_0]) {
     obj = { title: null, body: null, onConfirm: null, cancelText: null, confirmText: null };
     const intl11 = tmp(1236).intl;
     obj[0] = intl11.string(tmp(1236).t.u1Gxpu);
@@ -106,7 +106,6 @@ prototype["showAlert"] = function showAlert(closure_1_0, arg1, arg2) {
     obj[4] = intl13.string(tmp(1236).t["XgZk+u"]);
     self.openAlertModal(obj);
   }
-  const stringResult4 = intl9.string(getSystemLocale.t.kTtf7o);
 };
 NativePermissionBaseUtils["defaultNativePermissionsRequestOptions"] = function defaultNativePermissionsRequestOptions(arg0) {
   let obj = { showAuthorizationError: true };
@@ -119,6 +118,6 @@ NativePermissionBaseUtils["defaultNativePermissionsRequestOptions"] = function d
   }
   return tmp;
 };
-const result = require("obj132").fileFinishedImporting("modules/native_permissions/NativePermissionBaseUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/native_permissions/NativePermissionBaseUtils.tsx");
 
 export { NativePermissionBaseUtils };

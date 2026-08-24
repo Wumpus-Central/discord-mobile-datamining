@@ -7,12 +7,12 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import TableSwitchRow from "TableSwitchRow" /* 7178 */;
 import UserSettingsVoice from "UserSettingsVoice" /* 12547 */;
 import dispatcherDefault from "dispatcher" /* 12555 */;
-import getUserAgnosticState from "getUserAgnosticState" /* 12548 */;
+import closure_3 from "getUserAgnosticState" /* 12548 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
 
 export default function UserSettingsVoiceOverlay() {
   let obj = defaultAreStatesEqual;

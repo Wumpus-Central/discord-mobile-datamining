@@ -6,10 +6,10 @@ import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewOverlay.tsx");
 
 export default function GuildThemePreviewOverlay(arg0) {
   let obj = {};
@@ -19,6 +19,7 @@ export default function GuildThemePreviewOverlay(arg0) {
   obj.height = "100%";
   obj.viewBox = "0 0 259.862 154.514";
   obj.fill = "none";
+  obj = { children: null };
   const items = [callback(inlineStyles.Path, { d: "M20.8821 7.1867C20.8821 3.21759 24.0659 0 27.9932 0H84.8821V154.514H20.8821V7.1867Z", fill: "black", fillOpacity: "0.1" }), callback(inlineStyles.Path, { d: "M248.055 0.225335H85.0491V154.266H248.055V0.225335Z", fill: "black", fillOpacity: "0.25" }), , , , , , , , , , , , , ];
   obj = { opacity: "0.2", children: null };
   const items1 = [callback(inlineStyles.Path, { d: "M99.2224 43.2126C103.136 43.2126 106.31 40.0048 106.31 36.0479C106.31 32.091 103.136 28.8832 99.2224 28.8832C95.3082 28.8832 92.1351 32.091 92.1351 36.0479C92.1351 40.0048 95.3082 43.2126 99.2224 43.2126Z", fill: "white" }), callback(inlineStyles.Path, { d: "M125.795 31.1038H112.802C111.824 31.1038 111.031 31.9059 111.031 32.8951C111.031 33.8842 111.824 34.6863 112.802 34.6863H125.795C126.774 34.6863 127.567 33.8842 127.567 32.8951C127.567 31.9059 126.774 31.1038 125.795 31.1038Z", fill: "white" }), callback(inlineStyles.Path, { d: "M111.031 39.7954C111.031 39.1359 111.559 38.6011 112.212 38.6011H163.004C163.656 38.6011 164.185 39.1359 164.185 39.7954C164.185 40.4547 163.656 40.9895 163.004 40.9895H112.212C111.559 40.9895 111.031 40.4547 111.031 39.7954Z", fill: "white" }), callback(inlineStyles.Path, { d: "M99.2224 67.095C103.136 67.095 106.31 63.8872 106.31 59.9303C106.31 55.9734 103.136 52.7656 99.2224 52.7656C95.3082 52.7656 92.1351 55.9734 92.1351 59.9303C92.1351 63.8872 95.3082 67.095 99.2224 67.095Z", fill: "white" }), callback(inlineStyles.Path, { d: "M130.52 54.9867H112.802C111.824 54.9867 111.031 55.7886 111.031 56.7777C111.031 57.7671 111.824 58.569 112.802 58.569H130.52C131.499 58.569 132.292 57.7671 132.292 56.7777C132.292 55.7886 131.499 54.9867 130.52 54.9867Z", fill: "white" }), callback(inlineStyles.Path, { d: "M111.031 63.6776C111.031 63.0181 111.559 62.4833 112.212 62.4833H137.017C137.67 62.4833 138.198 63.0181 138.198 63.6776C138.198 64.3369 137.67 64.8717 137.017 64.8717H112.212C111.559 64.8717 111.031 64.3369 111.031 63.6776Z", fill: "white" }), callback(inlineStyles.Path, { d: "M99.2224 90.9774C103.136 90.9774 106.31 87.7696 106.31 83.8127C106.31 79.8558 103.136 76.6481 99.2224 76.6481C95.3082 76.6481 92.1351 79.8558 92.1351 83.8127C92.1351 87.7696 95.3082 90.9774 99.2224 90.9774Z", fill: "white" }), callback(inlineStyles.Path, { d: "M143.514 78.8689H112.802C111.824 78.8689 111.031 79.671 111.031 80.6601C111.031 81.6493 111.824 82.4514 112.802 82.4514H143.514C144.492 82.4514 145.286 81.6493 145.286 80.6601C145.286 79.671 144.492 78.8689 143.514 78.8689Z", fill: "white" }), callback(inlineStyles.Path, { d: "M111.031 87.5598C111.031 86.9005 111.559 86.3657 112.212 86.3657H158.279C158.931 86.3657 159.46 86.9005 159.46 87.5598C159.46 88.2193 158.931 88.7541 158.279 88.7541H112.212C111.559 88.7541 111.031 88.2193 111.031 87.5598Z", fill: "white" })];

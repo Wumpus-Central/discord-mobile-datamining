@@ -1,7 +1,7 @@
 // === Module 14034: DisplayNameStylesColorSwatch ===
 
 // Module 14034 (DisplayNameStylesColorSwatch)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
@@ -13,11 +13,12 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
-let obj = { width: 24, height: 24, borderRadius: ThemesDefault.radii.xs };
+let obj = { colorSwatch: null, gummySwatch: null };
+obj = { width: 24, height: 24, borderRadius: ThemesDefault.radii.xs };
 obj[0] = obj;
 obj[1] = { flexDirection: "row", overflow: "hidden" };
 let closure_5 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
+const result = set.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
 
 export default function DisplayNameStylesColorSwatch(colors) {
   colors = colors.colors;
@@ -36,7 +37,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
   }
   if (colors.length >= 2) {
     obj1 = { colors: null, start: null, end: null, style: null };
-    obj1[0] = colors.map((item, index) => callback(table[7]).int2hex(item));
+    obj1[0] = colors.map((color) => callback(table[7]).int2hex(color));
     obj1[1] = { x: 0, y: 0 };
     obj1[2] = { x: 1, y: 0 };
     obj1[3] = tmp.colorSwatch;
@@ -55,4 +56,5 @@ export default function DisplayNameStylesColorSwatch(colors) {
     obj2[0] = items1;
     return <View style={null} />;
   }
+  const tmp2 = require;
 };

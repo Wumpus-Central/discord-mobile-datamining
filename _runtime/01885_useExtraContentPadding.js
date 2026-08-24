@@ -58,16 +58,22 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
           if (0 !== diff) {
             const obj2 = scrollViewRef(extraContentPadding[4]);
             const isScrollAtEndResult = obj2.isScrollAtEnd(scroll.value, layout.value.height, size.value.height, inverted);
-            if (tmp14Result.shouldShiftContent(keyboardLiftBehavior, isScrollAtEndResult)) {
+            if (tmp14Result.shouldShiftContent(tmp20, isScrollAtEndResult)) {
               const _Math = Math;
-              if (inverted) {
-                callback(max(scroll.value - diff, -bound1));
+              if (tmp16) {
+                callback(max(iter.value - diff, -bound1));
               } else {
                 const _Math2 = Math;
-                callback(Math.min(scroll.value + diff, max(size.value.height - layout.value.height + bound1, 0)));
+                callback(Math.min(iter.value + diff, max(iter3.value.height - iter2.value.height + bound1, 0)));
               }
             }
+            iter2 = layout;
+            iter3 = size;
+            const tmp14 = scrollViewRef;
             tmp14Result = scrollViewRef(extraContentPadding[4]);
+            const tmp15 = extraContentPadding;
+            tmp16 = inverted;
+            tmp20 = keyboardLiftBehavior;
           }
         }
       }

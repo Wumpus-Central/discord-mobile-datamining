@@ -1,7 +1,7 @@
 // === Module 4350: _playHaptic ===
 
 // Module 4350 (_playHaptic)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 
 function _playHaptic() {
@@ -40,12 +40,16 @@ function _playHaptic() {
             if (obj.isEnabled()) {
               c2 = 3;
               obj1 = { value: null, done: true };
-              obj1[0] = callback(table[2]).triggerPattern(callback, table);
+              obj1[0] = tmp6(tmp7[2]).triggerPattern(tmp4, tmp5);
               return obj1;
             } else {
               c2 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             }
+            tmp4 = callback;
+            tmp5 = table;
+            tmp6 = callback;
+            tmp7 = table;
           }
         } catch (tmp8) {
           c2 = tmp;

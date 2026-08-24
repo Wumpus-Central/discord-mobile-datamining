@@ -3,10 +3,10 @@
 // Module 8391 (useMaybeFetchCollectiblesCategories)
 import initialize from "initialize" /* 589 */;
 import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 8392 */;
-import getUserAgnosticState from "getUserAgnosticState" /* 4737 */;
+import closure_2 from "getUserAgnosticState" /* 4737 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
 
 export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   paymentGateway = undefined;

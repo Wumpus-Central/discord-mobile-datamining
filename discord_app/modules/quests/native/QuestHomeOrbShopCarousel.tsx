@@ -5,13 +5,14 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import noop from "noop" /* 8029 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 7452 */;
+import closure_6 from "set" /* 7452 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function ListEdgeSpacer() {
   const style = { width: PX_16 };
   return callback(View, { style });
@@ -21,7 +22,8 @@ function ItemSeparator() {
   return callback(View, { style });
 }
 function QuestHomeOrbShopCarouselHeading(orbAmount) {
-  let obj = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
+  let obj = { style: null, children: null };
+  obj = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   obj = { variant: "text-md/semibold", children: null };
   const intl = getSystemLocale.intl;
@@ -54,7 +56,7 @@ const PX_12 = ThemesDefault.space.PX_12;
 let closure_12 = require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_WIDTH + PX_12;
 let closure_15 = Array.from({ length: require("MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL").MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 let obj = { length: require("MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL").MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
-let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestHomeOrbShopCarousel.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestHomeOrbShopCarousel.tsx");
 
 export default function QuestHomeOrbShopCarousel(orbShopProducts) {
   orbShopProducts = orbShopProducts.orbShopProducts;
@@ -65,10 +67,12 @@ export default function QuestHomeOrbShopCarousel(orbShopProducts) {
   }
   let first;
   let React;
+  let length;
+  closure_6 = undefined;
   const tmp = first(React.useState(0), 2);
   first = tmp[0];
   React = tmp[1];
-  const length = orbShopProducts.length;
+  length = orbShopProducts.length;
   closure_6 = React.useRef(false);
   const items = [obtainableOrbRewards, orbShopProducts.length, flag];
   const effect = React.useEffect(() => {
@@ -81,8 +85,8 @@ export default function QuestHomeOrbShopCarousel(orbShopProducts) {
     }
     if (!current) {
       ref.current = true;
-      orbShopProducts(flag[16]);
-      const obj = { obtainableOrbRewards: null, carouselSize: null, isPlaceholderCarousel: false };
+      let obj = orbShopProducts(flag[16]);
+      obj = { obtainableOrbRewards: null, carouselSize: null, isPlaceholderCarousel: false };
       obj[0] = obtainableOrbRewards;
       obj[1] = orbShopProducts.length;
       const result = obj.trackQuestHomeOrbShopCarouselViewed(obj);
@@ -95,9 +99,9 @@ export default function QuestHomeOrbShopCarousel(orbShopProducts) {
       let result = flag;
       let obj = orbShopProducts(flag[16]);
       if (rounded > tmp2) {
-        let LEFT = orbShopProducts(result[17]).HorizontalScrollingDirection.RIGHT;
+        let LEFT = tmp3(result[17]).HorizontalScrollingDirection.RIGHT;
       } else {
-        LEFT = orbShopProducts(result[17]).HorizontalScrollingDirection.LEFT;
+        LEFT = tmp3(result[17]).HorizontalScrollingDirection.LEFT;
       }
       obj = { scrollingDirection: null, carouselPosition: null, carouselSize: null };
       obj[0] = LEFT;
@@ -118,7 +122,8 @@ export default function QuestHomeOrbShopCarousel(orbShopProducts) {
         tmp7 = null;
       }
     }
-    let obj = { marginTop: null };
+    let obj = { style: null, children: null };
+    obj = { marginTop: null };
     obj[0] = obtainableOrbRewards(flag[6]).space.PX_48;
     obj[0] = obj;
     obj = { orbRewardAmount: null };
@@ -146,7 +151,8 @@ export default function QuestHomeOrbShopCarousel(orbShopProducts) {
     obj2[0] = callback(orbShopProducts(flag[19]).LayerScope, obj3);
     items2[1] = callback(length, obj2);
     obj[1] = items2;
-    callback(length, obj);
+    closure_9(length, obj);
+    const tmp9 = closure_9;
   }
   return tmp7;
 };
@@ -160,7 +166,10 @@ export const useQuestHomeOrbShopCarouselData = function useQuestHomeOrbShopCarou
   const stateFromStores = orbAmount(589).useStateFromStores(items, () => {
     let num = 0;
     for (const item10007 of tmp) {
+      let tmp2 = closure_1_6;
       if (!closure_1_6.isBountyCompleted(item10007.id)) {
+        let tmp3 = num;
+        let tmp4 = orbAmount;
         num = num + orbAmount;
       }
       continue;

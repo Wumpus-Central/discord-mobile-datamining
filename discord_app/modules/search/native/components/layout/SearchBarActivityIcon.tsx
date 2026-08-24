@@ -4,16 +4,17 @@
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import handleReaction from "handleReaction" /* 4971 */;
-import prototype from "prototype" /* 11510 */;
+import closure_5 from "handleReaction" /* 4971 */;
+import closure_6 from "prototype" /* 11510 */;
 import { SEARCH_MESSAGE_TAB_SENTINEL as closure_7 } from "MessageEmbedTypes" /* 8507 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let obj = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj = { spinnerColor: null, spinner: null, icon: null };
+obj = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[0] = obj;
 obj[1] = { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" };
 obj[2] = { marginLeft: 12, marginRight: 4 };
@@ -25,12 +26,13 @@ let closure_14 = { code: "function SearchBarActivityIconTsx1(){const{interpolate
 let closure_15 = { code: "function SearchBarActivityIconTsx2(){const{interpolate,fadeAnimationState,ANIMATION_STATE_INPUT}=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[1,0])};}" };
 const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchContext) {
   searchContext = searchContext.searchContext;
+  let stateFromStores;
   let sharedValue;
   const tmp = callback2();
   let obj = searchContext(sharedValue[8]);
   items = [closure_6, closure_5];
   const items1 = [searchContext];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = obj.useStateFromStores(items, () => {
     const searchResultsQuery = closure_1_6.getSearchResultsQuery(searchContext);
     const isInitialFetchComplete = closure_1_5.getIsInitialFetchComplete(searchContext(sharedValue[9]).getSearchTabFetchId(searchContext, closure_1_7, searchResultsQuery));
     let tmp3 = !isInitialFetchComplete;
@@ -50,11 +52,10 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   const effect = importAllResult.useEffect(() => {
     const withTiming = searchContext(sharedValue[11]).withTiming;
     if (stateFromStores) {
-      const result = set(withTiming(createCacheKey.END));
+      const result = set(withTiming(tmp3.END));
     } else {
-      const result1 = set(withTiming(createCacheKey.START));
+      const result1 = set(withTiming(tmp3.START));
     }
-    const tmp2 = searchContext(sharedValue[11]);
   }, items2);
   let obj2 = searchContext(sharedValue[10]);
   class E {
@@ -72,7 +73,7 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   const animatedStyle = obj2.useAnimatedStyle(E);
   let obj4 = searchContext(sharedValue[10]);
   const fn = function v() {
-    const obj = { opacity: searchContext(sharedValue[10]).interpolate(sharedValue.get(), items, [1, 0]) };
+    const obj = { opacity: searchContext(sharedValue[10]).interpolate(sharedValue.get(), closure_1_13, [1, 0]) };
     return obj;
   };
   obj = { interpolate: searchContext(sharedValue[10]).interpolate, fadeAnimationState: sharedValue, ANIMATION_STATE_INPUT: items };
@@ -96,8 +97,8 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   obj3[1] = callback(searchContext(sharedValue[12]).MagnifyingGlassIcon, obj4);
   items4[1] = callback(stateFromStores(sharedValue[10]).View, obj3);
   obj5[0] = items4;
-  return callback(closure_9, obj5);
+  return closure_10(closure_9, obj5);
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/layout/SearchBarActivityIcon.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/layout/SearchBarActivityIcon.tsx");
 
 export default memoResult;

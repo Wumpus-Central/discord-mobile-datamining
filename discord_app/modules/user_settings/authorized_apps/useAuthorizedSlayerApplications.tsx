@@ -1,12 +1,12 @@
 // === Module 15014: useAuthorizedSlayerApplications ===
 
 // Module 15014 (useAuthorizedSlayerApplications)
-import noop from "noop" /* 19 */;
-import recomputeFromAppTokens from "recomputeFromAppTokens" /* 5289 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "recomputeFromAppTokens" /* 5289 */;
 import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
 
 export default function useAuthorizedSlayerApplications(arg0, arg1) {
   const _require = arg0;
@@ -17,9 +17,9 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
   const items1 = [closure_4];
   stateFromStores1 = _require(stateFromStores1[2]).useStateFromStores(items1, () => {
     if (closure_0) {
-      let newestTokensForNonChildrenApplications = closure_1_4.getNewestTokensForNonChildrenApplications();
+      let newestTokensForNonChildrenApplications = obj.getNewestTokensForNonChildrenApplications();
     } else {
-      newestTokensForNonChildrenApplications = closure_1_4.getNewestTokens();
+      newestTokensForNonChildrenApplications = obj.getNewestTokens();
     }
     return newestTokensForNonChildrenApplications;
   });
@@ -29,8 +29,8 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
     if (null == stateFromStores1) {
       let items = [];
     } else {
-      const found = stateFromStores1.filter((item, index) => callback(table[3]).isSocialLayerSDKAuthorization(item.application, item.scopes));
-      items = found.map((item, index) => item.application);
+      const found = stateFromStores1.filter((application) => callback(table[3]).isSocialLayerSDKAuthorization(application.application, application.scopes));
+      items = found.map((application) => application.application);
     }
     return items;
   }, items2);

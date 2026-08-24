@@ -5,12 +5,13 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function WebsiteGameStoreLinkButton(data) {
   data = data.data;
   const trackAction = data.trackAction;
+  dependencyMap = undefined;
   dependencyMap = trackAction(9099)(trackAction(4090).openURL);
   return callback(data(4745).Button, {
     variant: "secondary",
@@ -25,16 +26,18 @@ function WebsiteGameStoreLinkButton(data) {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { flexDirection: "column", gap: ThemesDefault.space.PX_8 };
+createCacheKey = { container: null };
+createCacheKey = { flexDirection: "column", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileStoreLinks.tsx");
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileStoreLinks.tsx");
 
 export default function GameProfileStoreLinks(websiteButtons) {
   ({ game, trackAction } = websiteButtons);
   websiteButtons = websiteButtons.websiteButtons;
-  const tmp = callback3();
   let name;
+  const tmp = callback3();
+  name = undefined;
   if (game != null) {
     name = game.name;
   }
@@ -64,7 +67,7 @@ export default function GameProfileStoreLinks(websiteButtons) {
         obj3[2] = intl.string(trackAction(name[8]).t["/hMurx"]);
         obj3[3] = function onPress() {
           let obj = trackAction(name[9]);
-          { key: trackAction(name[10]).ACTION_SHEET_KEY, content: closure_1_4(websiteButtons(name[10]), obj) };
+          obj = { key: trackAction(name[10]).ACTION_SHEET_KEY, content: closure_1_4(websiteButtons(name[10]), obj) };
           obj = { gameName: name, websiteButtons, trackAction };
           return obj.showActionSheet(obj);
         };

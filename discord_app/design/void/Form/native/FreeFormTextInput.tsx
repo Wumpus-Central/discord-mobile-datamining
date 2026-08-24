@@ -10,9 +10,9 @@ import registerAssetDefault from "registerAsset" /* 8578 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function ClearButton(onPress) {
   let obj = { style: { borderRadius: 20, padding: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl = getSystemLocale.intl;
@@ -26,15 +26,19 @@ function ClearButton(onPress) {
 let c3 = importAllResult;
 ({ TouchableWithoutFeedback: c4, View: c5, TouchableOpacity: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
+let obj = { container: null, onPress: null, input: null, error: null, closeIcon: null, placeholder: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
 obj[0] = obj;
 obj[1] = { flexDirection: "row" };
-const createCacheKey = { flex: 1, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = { flex: 1, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj[2] = createCacheKey;
 obj[3] = { borderColor: ThemesDefault.unsafe_rawColors.RED_400 };
+let obj2 = { borderColor: ThemesDefault.unsafe_rawColors.RED_400 };
 obj[4] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
+const obj3 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
 obj[5] = { color: ThemesDefault.colors.TEXT_MUTED };
 let closure_9 = createCacheKey.createStyles(obj);
+const obj4 = { color: ThemesDefault.colors.TEXT_MUTED };
 const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   ({ renderLeadingComponent, renderTrailingComponent, onChangeText } = editable);
   ({ onFocus: importDefault, onBlur: dependencyMap, value, onPress } = editable);
@@ -52,18 +56,19 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
     WITH_CONTENT = onChangeText(1297).ClearButtonVisibility.WITH_CONTENT;
   }
   const merged = Object.assign(editable, Object.create(null));
+  ref = undefined;
   const tmp4 = callback2();
   ref = onPress.useRef(null);
   const imperativeHandle = onPress.useImperativeHandle(ref, () => ref.current);
   let flag2 = true;
   if (onChangeText(1297).ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
-    if (onChangeText(1297).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
+    if (tmp7(1297).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
       let tmp9 = null != value;
       if (tmp9) {
         tmp9 = "" !== value;
       }
       flag2 = tmp9;
-    } else if (onChangeText(1297).ClearButtonVisibility.NEVER === WITH_CONTENT) {
+    } else if (tmp7(1297).ClearButtonVisibility.NEVER === WITH_CONTENT) {
       flag2 = false;
     }
   }
@@ -171,7 +176,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   }
   obj1.importantForAccessibility = str4;
   obj1.accessibilityElementsHidden = !flag;
-  items1[1] = callback(onChangeText(1297).TextInput, obj1);
+  items1[1] = closure_7(onChangeText(1297).TextInput, obj1);
   let result1;
   if (renderTrailingComponent != null) {
     result1 = renderTrailingComponent();
@@ -187,13 +192,13 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
       }
       return tmpResult;
     };
-    tmp15Result = callback(ClearButton, obj2);
+    tmp15Result = tmp15(ClearButton, obj2);
   }
   items1[3] = tmp15Result;
   obj[1] = items1;
-  obj[7] = callback2(ref, obj);
-  return callback(null != onPress ? closure_6 : flag, obj);
+  obj[7] = closure_8(ref, obj);
+  return closure_7(null != onPress ? closure_6 : flag, obj);
 });
-let result = require("obj132").fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
+let result = require("set").fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
 
 export default forwardRefResult;

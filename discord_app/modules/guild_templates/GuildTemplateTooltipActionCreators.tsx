@@ -2,11 +2,11 @@
 
 // Module 7286
 import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 
 export default {
   checkGuildTemplateDirty(closure_0) {
@@ -68,7 +68,8 @@ export default {
     })();
   },
   hideGuildTemplateDirtyTooltip(guildId) {
-    const obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
+    let obj = dispatcherDefault;
+    obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
     obj.dispatch(obj);
   },
   hideGuildTemplatePromotionTooltip() {

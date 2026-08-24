@@ -2,12 +2,12 @@
 
 // Module 15400 (useFavoritesGuildHideAction)
 import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import noop from "noop" /* 19 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
 import { Routes } from "ME" /* 676 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
   let obj = hasAccess(9979);
@@ -16,14 +16,13 @@ export default function useFavoritesGuildHideAction() {
   obj = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
   const callback = React.useCallback(() => {
     if (hasAccess) {
-      const result = hasAccess(dependencyMap[4]).setFavoritesGuildVisibility(false, "server_context_menu");
-      const obj = hasAccess(dependencyMap[4]);
+      const result = hasAccess(closure_1_2[4]).setFavoritesGuildVisibility(false, "server_context_menu");
+      const obj = hasAccess(closure_1_2[4]);
     }
     if (obj2.isFavoritesGuildId(closure_1_4.getGuildId())) {
-      hasAccess(dependencyMap[6]).transitionTo(Routes.ME);
-      const obj3 = hasAccess(dependencyMap[6]);
+      hasAccess(closure_1_2[6]).transitionTo(closure_1_5.ME);
+      const obj3 = hasAccess(closure_1_2[6]);
     }
-    obj2 = hasAccess(dependencyMap[5]);
   }, items);
   const intl = hasAccess(1236).intl;
   if (hasAccess) {

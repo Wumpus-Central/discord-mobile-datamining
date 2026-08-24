@@ -2,20 +2,20 @@
 
 // Module 15267 (usePortraitOrientationOnly)
 import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
 export default function usePortraitOrientationOnly() {
   const tmp = useWideAuthViewDefault();
   closure_0 = tmp;
   const items = [tmp];
   const effect = React.useEffect(() => {
-    const isIpadOSResult = callback(dependencyMap[1]).isIpadOS();
+    const isIpadOSResult = callback(closure_1_2[1]).isIpadOS();
     let tmp4 = !isIpadOSResult;
     if (!isIpadOSResult) {
-      let tmpResult = tmp(dependencyMap[2]);
+      let tmpResult = tmp(tmp2[2]);
       tmp4 = !tmpResult.isMetaQuest();
     }
     if (tmp4) {
@@ -23,7 +23,7 @@ export default function usePortraitOrientationOnly() {
     }
     callback = tmp4;
     if (tmp4) {
-      tmpResult = tmp(dependencyMap[4]);
+      tmpResult = tmp(tmp2[4]);
       tmpResult.lockOrientation("PORTRAIT", false);
     }
     return () => {

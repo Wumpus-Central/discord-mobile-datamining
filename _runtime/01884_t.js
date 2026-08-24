@@ -3,9 +3,9 @@
 // Module 1884 (t)
 import cancelAnimation from "cancelAnimation" /* 1654 */;
 
-require = fn;
+require = arg1;
 const dependencyMap = arg6;
-fn = function t(arg0) {
+const fn = function t(arg0, arg1, arg2) {
   let interpolateResult = arg0;
   if (0 !== arg2) {
     interpolateResult = arg0;
@@ -14,6 +14,7 @@ fn = function t(arg0) {
       const _Math = Math;
       const items1 = [0, Math.max(arg1 - arg2, 0)];
       interpolateResult = cancelAnimation.interpolate(arg0, items, items1);
+      const obj = cancelAnimation;
     }
   }
   return interpolateResult;

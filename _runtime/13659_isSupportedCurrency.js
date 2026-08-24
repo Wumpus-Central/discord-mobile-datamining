@@ -30,7 +30,9 @@ arg5.getSupportedCurrencies = function getSupportedCurrencies(locale) {
   const currencies = _mod13660.currencies;
   for (let num = 0; num < currencies.length; num = num + 1) {
     let arr3 = currencies[num];
+    let tmp = num;
     if (3 === arr3.length) {
+      let tmp8 = isSupportedCurrency;
       if (isSupportedCurrency(arr3, locale)) {
         let arr = items.push(arr3);
       }
@@ -43,6 +45,8 @@ arg5.getSupportedCurrencies = function getSupportedCurrencies(locale) {
         if (index <= index1) {
           do {
             let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
+            let tmp5 = isSupportedCurrency;
+            let tmp6 = index;
             if (isSupportedCurrency(sum, locale)) {
               arr = items.push(sum);
             }

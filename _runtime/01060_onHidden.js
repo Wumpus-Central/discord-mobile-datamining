@@ -9,7 +9,7 @@ arg5.onHidden = (arg0) => {
   function onHiddenOrPageHide(type) {
     let tmp = "pagehide" !== type.type;
     if (tmp) {
-      const _document = callback(dependencyMap[0]).WINDOW.document;
+      const _document = callback(closure_1_1[0]).WINDOW.document;
       let visibilityState;
       if (_document != null) {
         visibilityState = _document.visibilityState;

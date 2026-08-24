@@ -1,10 +1,10 @@
 // === Module 9444: _calculateScrollOffset ===
 
 // Module 9444 (_calculateScrollOffset)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 function _calculateScrollOffset() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -49,18 +49,18 @@ function _calculateScrollOffset() {
                 obj1[0] = lib2(closure_1_2[3]).space.PX_16;
                 return obj1;
               } else {
-                const type = lib.type;
+                const type = iter.type;
                 if ("toRef" === type) {
                   let obj3 = lib(closure_1_2[4]);
                   c5 = 1;
                   c6 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = obj3.measureViewRefInWindow(lib.ref);
+                  obj2[0] = obj3.measureViewRefInWindow(iter.ref);
                   return obj2;
                 } else if ("toValue" === type) {
                   c6 = 3;
                   obj3 = { value: null, done: true };
-                  obj3[0] = lib.value;
+                  obj3[0] = iter.value;
                   return obj3;
                 } else if ("toBottom" === type) {
                   const _Number = Number;
@@ -113,14 +113,15 @@ function _calculateScrollOffset() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
+const result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
 
 export default function useSafeAreaAvoidingInputs(insets) {
   insets = insets.insets;
   const inputs = insets.inputs;
   const scrollViewRef = insets.scrollViewRef;
+  let callback;
   let onFocus;
-  const callback = onFocus.useRef(inputs);
+  callback = onFocus.useRef(inputs);
   const items = [inputs];
   const effect = onFocus.useEffect(() => {
     closure_3.current = inputs;
@@ -164,8 +165,8 @@ export default function useSafeAreaAvoidingInputs(insets) {
             closure_6 = undefined;
             current2 = ref.current;
             let current = ref2.current;
-            found = current.find((item, index) => {
-              const current = item.ref.current;
+            found = current.find((ref) => {
+              const current = ref.ref.current;
               let isFocusedResult;
               if (current != null) {
                 isFocusedResult = current.isFocused();
@@ -177,7 +178,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                 ref = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = insets(ref[4]).measureViewRefInWindow(found.ref);
+                obj1[0] = closure_1_0(ref[4]).measureViewRefInWindow(found.ref);
                 return obj1;
               }
             }
@@ -193,11 +194,11 @@ export default function useSafeAreaAvoidingInputs(insets) {
             return obj2;
           } else {
             ref = arg1;
-            let obj6 = insets(ref[4]);
+            let obj6 = closure_1_0(ref[4]);
             ref = 2;
             c3 = 1;
             const obj3 = { value: null, done: false };
-            obj3[0] = obj6.measureViewRefInView(inputs.ref, insets);
+            obj3[0] = obj6.measureViewRefInView(closure_1_1.ref, closure_1_0);
             return obj3;
           }
         } else {
@@ -215,7 +216,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                 ref = 3;
                 c3 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = insets(ref[4]).measureViewInWindow(insets);
+                obj5[0] = closure_1_0(ref[4]).measureViewInWindow(closure_1_0);
                 return obj5;
               }
             }
@@ -283,7 +284,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
           })(obj);
           if (null != closure_6) {
             (function scrollToTargetY(closure_2, closure_6) {
-              const current = ref.current;
+              const current = closure_2.current;
               let scrollToResult;
               if (current != null) {
                 const scrollTo = current.scrollTo;
@@ -294,7 +295,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                 }
               }
               if (scrollToResult == null) {
-                current2 = ref.current;
+                current2 = closure_2.current;
                 if (current2 != null) {
                   const scrollToOffset = current2.scrollToOffset;
                   if (scrollToOffset != null) {

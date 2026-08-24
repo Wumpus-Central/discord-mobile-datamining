@@ -8,14 +8,14 @@ import PressableBase from "PressableBase" /* 5433 */;
 import ButtonBadgeDefault from "ButtonBadge" /* 12700 */;
 import registerAssetDefault from "registerAsset" /* 13314 */;
 import registerAssetDefault2 from "registerAsset" /* 15362 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function getFriendInviteCode() {
   const self = this;
   const apply = _getFriendInviteCode.apply;
@@ -34,10 +34,10 @@ function _getFriendInviteCode() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw code;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = code;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -48,15 +48,15 @@ function _getFriendInviteCode() {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw code;
+            throw arg1;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = code;
+            obj[0] = arg1;
             return obj;
           } else {
             closure_1 = tmp3;
-            code = tmp7;
+            let code = tmp7;
             code = undefined;
             c3 = 1;
             c4 = 2;
@@ -76,15 +76,15 @@ function _getFriendInviteCode() {
           return obj2;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw code;
+          throw arg1;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
           const obj3 = { value: null, done: true };
-          obj3[0] = code;
+          obj3[0] = arg1;
           return obj3;
         } else {
-          code = code.code;
+          code = arg1.code;
           c3 = 0;
           c5 = 3;
           obj = { value: null, done: true };
@@ -273,15 +273,19 @@ function _handleLink() {
 let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const sum = require("ButtonBadge").ICON_ACTION_BUTTON_SIZE + ThemesDefault.space.PX_16;
-let obj = { height: sum, paddingHorizontal: ThemesDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
+let obj = { container: null, title: null, actions: null, actionIcon: null };
+obj = { height: sum, paddingHorizontal: ThemesDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
 obj[0] = obj;
-const createCacheKey = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.md, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12 };
+createCacheKey = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.md, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12 };
 obj[1] = createCacheKey;
 obj[2] = { paddingHorizontal: ThemesDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
+let obj2 = { paddingHorizontal: ThemesDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
 obj[3] = { marginEnd: 0, marginStart: ThemesDefault.space.PX_8 };
 let closure_9 = createCacheKey.createStyles(obj);
+let obj3 = { marginEnd: 0, marginStart: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo(function MessagesItemAddFriendsWidget() {
   const tmp = callback4();
+  let obj = { style: tmp.container, collapsable: false, children: null };
   const callback = importAllResult.useCallback(() => {
     let obj = callback(table[13]);
     const rootNavigationRef = obj.getRootNavigationRef();
@@ -294,7 +298,7 @@ const memoResult = importAllResult.memo(function MessagesItemAddFriendsWidget() 
       }
     }
   }, []);
-  let obj = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
+  obj = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.afcl67);
   obj[2] = callback;
@@ -310,6 +314,7 @@ const memoResult = importAllResult.memo(function MessagesItemAddFriendsWidget() 
   obj2[4] = intl3.string(getSystemLocale.t.Ej3B3Y);
   const items1 = [callback2(ButtonBadgeDefault, obj2), ];
   const obj3 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
+  const tmp3 = ButtonBadgeDefault;
   obj3[2] = registerAssetDefault2;
   obj3[3] = handleLink;
   const intl4 = getSystemLocale.intl;
@@ -320,7 +325,7 @@ const memoResult = importAllResult.memo(function MessagesItemAddFriendsWidget() 
   obj[2] = items;
   return callback3(View, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx");
 
 export default memoResult;
 export const MESSAGES_ITEM_ADD_FRIENDS_WIDGET_HEIGHT = sum;

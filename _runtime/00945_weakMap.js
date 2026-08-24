@@ -3,9 +3,8 @@
 // Module 945 (weakMap)
 import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
 import extractClientInfo from "extractClientInfo" /* 938 */;
-import _mod940 from "module_940" /* 940 */;
 import extractPromptResultAttributes from "extractPromptResultAttributes" /* 946 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const weakMap = new WeakMap();
@@ -15,9 +14,12 @@ export const cleanupPendingSpansForTransport = function cleanupPendingSpansForTr
   if (value) {
     const tmp2 = value[Symbol.iterator]();
     while (tmp2 !== undefined) {
-      let tmp7 = _slicedToArray(tmp4, 2)[1];
+      let tmp6 = callback;
+      let tmp7 = callback(tmp4, 2)[1];
       let span = tmp7.span;
       let obj = { code: null, message: "cancelled" };
+      let tmp8 = require;
+      let tmp9 = dependencyMap;
       obj[0] = getSpanStatusFromHttpCode.SPAN_STATUS_ERROR;
       let setStatusResult = span.setStatus(obj);
       let span2 = tmp7.span;
@@ -43,32 +45,37 @@ export const completeSpanWithResults = function completeSpanWithResults(closure_
     if ("initialize" === method) {
       const result1 = extractClientInfo.extractSessionDataFromInitializeResponse(protocolVersion);
       setAttributesResult = {};
+      const obj5 = extractClientInfo;
+      const tmp10 = require;
       const merged = Object.assign(extractClientInfo.buildServerAttributesFromInfo(result1.serverInfo));
       protocolVersion = result1.protocolVersion;
       if (protocolVersion) {
-        setAttributesResult[_mod940.MCP_PROTOCOL_VERSION_ATTRIBUTE] = result1.protocolVersion;
+        setAttributesResult[tmp10(940).MCP_PROTOCOL_VERSION_ATTRIBUTE] = result1.protocolVersion;
       }
       setAttributesResult = span.setAttributes(setAttributesResult);
       span.end();
       value.delete(id);
+      const obj6 = extractClientInfo;
     } else {
       setAttributesResult = self;
       if ("tools/call" !== method) {
         if ("prompts/get" === method) {
           span.setAttributes(extractPromptResultAttributes.extractPromptResultAttributes(protocolVersion, setAttributesResult.recordOutputs));
+          const obj7 = extractPromptResultAttributes;
         }
       }
     }
     setAttributesResult = span.setAttributes(extractPromptResultAttributes.extractToolResultAttributes(protocolVersion, setAttributesResult.recordOutputs));
+    const obj3 = extractPromptResultAttributes;
   }
 };
-export const storeSpanForRequest = function storeSpanForRequest(self, id, startInactiveSpanResult, method) {
+export const storeSpanForRequest = function storeSpanForRequest(arg0, id, startInactiveSpanResult, method) {
   let obj = weakMap;
-  let value = weakMap.get(self);
+  let value = weakMap.get(arg0);
   if (!value) {
     const _Map = Map;
     const map = new Map();
-    const result = obj.set(self, map);
+    const result = obj.set(arg0, map);
     value = map;
   }
   obj = { span: startInactiveSpanResult, method, startTime: Date.now() };

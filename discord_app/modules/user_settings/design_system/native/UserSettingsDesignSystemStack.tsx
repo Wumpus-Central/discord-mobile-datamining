@@ -8,23 +8,25 @@ import Text from "Text" /* 4734 */;
 import PressableCard from "PressableCard" /* 6292 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function StackBlock() {
   return callback(closure_2, { style: callback3().block });
 }
 noopAll;
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 80, flex: 1 };
+createCacheKey = { container: { padding: 16, flex: 1, alignItems: "center" }, block: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 80, flex: 1 };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemStack.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemStack.tsx");
 
 export default function UserSettingsDesignSystemStack() {
-  { style: callback3().container, children: null };
-  const obj = { spacing: 16, children: null };
+  let obj = { children: null };
+  obj = { style: callback3().container, children: null };
+  obj = { spacing: 16, children: null };
   obj1 = { children: null };
   const obj2 = { children: null };
   const items = [callback(Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "By default, stacks are vertical and have a spacing of 8." }), ];

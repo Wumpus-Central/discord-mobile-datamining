@@ -4,25 +4,28 @@
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1993 */;
-import registerAssetDefault from "registerAsset" /* 13038 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { alignSelf: "center", marginTop: 50, marginBottom: require("GuildBoostingMarketingPersistentCta").VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" };
+createCacheKey = { wrapper: null, content: null, heading: null, list: null, listItem: null, questionWrapper: null, questionWrapperExpanded: null, question: null, questionIcon: null, questionIconExpanded: null, answer: null };
+createCacheKey = { alignSelf: "center", marginTop: 50, marginBottom: require("GuildBoostingMarketingPersistentCta").VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
 createCacheKey[2] = { marginBottom: 20, textAlign: "center" };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
 createCacheKey[3] = { borderTopColor: ThemesDefault.colors.BORDER_MUTED, borderTopWidth: 1 };
+let obj2 = { borderTopColor: ThemesDefault.colors.BORDER_MUTED, borderTopWidth: 1 };
 createCacheKey[4] = { borderBottomColor: ThemesDefault.colors.BORDER_MUTED, borderBottomWidth: 1 };
 createCacheKey[5] = { display: "flex", flexDirection: "row", paddingVertical: 10 };
 createCacheKey[6] = { paddingBottom: 6 };
 createCacheKey[7] = { flexGrow: 1, flexShrink: 1, paddingRight: 8 };
+const obj3 = { borderBottomColor: ThemesDefault.colors.BORDER_MUTED, borderBottomWidth: 1 };
 createCacheKey[8] = { flexGrow: 0, flexShrink: 0, tintColor: ThemesDefault.colors.ICON_MUTED };
 let items = [{ rotate: "45deg" }];
 createCacheKey[9] = { transform: items };
@@ -121,22 +124,35 @@ let items1 = [
     }
   }
 ];
-const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx");
+const obj4 = { flexGrow: 0, flexShrink: 0, tintColor: ThemesDefault.colors.ICON_MUTED };
+const obj5 = {
+  getQuestion() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.C4J8UB);
+  },
+  getAnswer() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.nhkk6k);
+  }
+};
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx");
 
 export default function GuildBoostingMarketingFaq() {
   let tmp = callback4();
   const _require = tmp;
   [importDefault, dependencyMap] = callback(React.useState(null), 2);
-  let obj = { style: tmp.heading, variant: "heading-xxl/bold", children: null };
+  let obj = { style: tmp.wrapper, children: null };
+  obj = { style: tmp.content, children: null };
+  obj = { style: tmp.heading, variant: "heading-xxl/bold", children: null };
   const intl = _require(1236).intl;
   obj[2] = intl.string(_require(1236).t.HPJ6Nj);
   let items = [callback2(_require(4734).Heading, obj), ];
   const tmp2 = callback(React.useState(null), 2);
   items[1] = callback2(View, {
     style: tmp.list,
-    children: items1.map((item, index) => {
-      const lib = index;
-      let tmp = closure_1 === index;
+    children: items1.map((getQuestion) => {
+      const lib = arg1;
+      let tmp = closure_1 === arg1;
       let obj = { style: lib.listItem, children: null };
       const items = [lib.questionWrapper, ];
       let questionWrapperExpanded = tmp;
@@ -163,9 +179,9 @@ export default function GuildBoostingMarketingFaq() {
       if (tmp) {
         str = "interactive-text-active";
       }
-      obj = { color: str, style: tmp4.question, variant: "text-md/normal", children: item.getQuestion() };
-      items1 = [closure_1_7(lib(dependencyMap[10]).Text, obj), ];
-      obj1 = { source: registerAssetDefault, style: null };
+      obj = { color: str, style: tmp4.question, variant: "text-md/normal", children: getQuestion.getQuestion() };
+      items1 = [closure_1_7(lib(closure_1_2[10]).Text, obj), ];
+      obj1 = { source: closure_1_1(closure_1_2[13]), style: null };
       const items2 = [lib.questionIcon, ];
       let questionIconExpanded = tmp;
       if (tmp) {
@@ -173,18 +189,18 @@ export default function GuildBoostingMarketingFaq() {
       }
       items2[1] = questionIconExpanded;
       obj1[1] = items2;
-      items1[1] = closure_1_7(lib(dependencyMap[12]).Icon, obj1);
+      items1[1] = closure_1_7(lib(closure_1_2[12]).Icon, obj1);
       obj[4] = items1;
-      const items3 = [closure_1_8(lib(dependencyMap[11]).PressableOpacity, obj), ];
+      const items3 = [closure_1_8(lib(closure_1_2[11]).PressableOpacity, obj), ];
       if (tmp) {
         const obj2 = { style: null, color: "interactive-text-active", variant: "text-sm/normal", children: null };
         obj2[0] = tmp4.answer;
-        obj2[3] = item.getAnswer();
-        tmp = closure_1_7(tmp5(dependencyMap[10]).Text, obj2);
+        obj2[3] = getQuestion.getAnswer();
+        tmp = tmp7(tmp5(tmp6[10]).Text, obj2);
       }
       items3[1] = tmp;
       obj[1] = items3;
-      return closure_1_8(View, obj, index);
+      return closure_1_8(closure_1_5, obj, arg1);
     })
   });
   obj[1] = items;

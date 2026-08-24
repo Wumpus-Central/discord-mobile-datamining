@@ -1,13 +1,13 @@
 // === Module 12350: FriendsListItemActionType ===
 
 // Module 12350 (FriendsListItemActionType)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let obj = { ROW_CLICKED: "row_clicked", MESSAGE_CLICKED: "message_clicked", VIDEO_CALL_CLICKED: "video_call_clicked", VOICE_CALL_CLICKED: "voice_call_clicked", REMOVE_FRIEND_CLICKED: "remove_friend_clicked", CONTEXT_MENU_INTERACTED: "context_menu_interacted" };
-const result = obj132.fileFinishedImporting("modules/people/PeopleListTracking.tsx");
+const result = set.fileFinishedImporting("modules/people/PeopleListTracking.tsx");
 
 export const FriendsListItemActionType = obj;
 export const trackFriendsListItemClicked = function trackFriendsListItemClicked(arg0) {

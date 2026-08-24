@@ -1,14 +1,14 @@
 // === Module 4833: apexExperiment ===
 
 // Module 4833 (apexExperiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { 1: null, 2: { enableClipsV3: true, enableClipsV3ML: false } };
 obj[2] = { enableClipsV3: true, enableClipsV3ML: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-04-clips-v3-runtime", defaultConfig: { enableClipsV3: false, enableClipsV3ML: false }, variations: obj });
 let c1 = null;
-const result = obj132.fileFinishedImporting("modules/clips/ClipsV3RuntimeExperiment.tsx");
+const result = set.fileFinishedImporting("modules/clips/ClipsV3RuntimeExperiment.tsx");
 
 export const ClipsV3RuntimeExperiment = apexExperiment;
 export const isClipsV3Enabled = function isClipsV3Enabled(location) {

@@ -3,7 +3,7 @@
 // Module 4042 (handlePaymentSourceUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import createFromServer from "createFromServer" /* 4043 */;
+import closure_0 from "createFromServer" /* 4043 */;
 
 function handlePaymentSourceUpdate(paymentSource) {
   paymentSource = paymentSource.paymentSource;
@@ -81,9 +81,13 @@ const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
     closure_1 = {};
     let id = null;
     for (const item10009 of paymentSources) {
+      let tmp2 = closure_1;
+      let tmp3 = closure_0;
+      let tmp = item10009;
       closure_1[item10009.id] = closure_0.createFromServer(item10009);
       if (item10009.default) {
-        id = item10009.id;
+        let tmp4 = item10009;
+        id = tmp.id;
       }
       continue;
     }
@@ -115,6 +119,6 @@ const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
     c3 = false;
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
+const result = require("set").fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
 
 export default paymentSourceStore;

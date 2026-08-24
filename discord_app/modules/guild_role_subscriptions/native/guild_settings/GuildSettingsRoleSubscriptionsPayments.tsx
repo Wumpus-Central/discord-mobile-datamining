@@ -6,7 +6,7 @@ import UnavailableNoticeDefault from "UnavailableNotice" /* 15790 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 const forwardRefResult = importAllResult.forwardRef(() => {
   const obj = { title: null, description: null, brightTitle: true };
   const intl = getSystemLocale.intl;
@@ -15,6 +15,6 @@ const forwardRefResult = importAllResult.forwardRef(() => {
   obj[1] = intl2.string(getSystemLocale.t.pRuzXJ);
   return jsx(UnavailableNoticeDefault, { title: null, description: null, brightTitle: true });
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
 
 export default forwardRefResult;

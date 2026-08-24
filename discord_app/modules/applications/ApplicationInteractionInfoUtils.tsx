@@ -1,10 +1,10 @@
 // === Module 8445: canViewInteractionInfo ===
 
 // Module 8445 (canViewInteractionInfo)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 
-const result = obj132.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
+const result = set.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
 export const canViewInteractionInfo = function canViewInteractionInfo(message) {
   return null != message.interactionMetadata;

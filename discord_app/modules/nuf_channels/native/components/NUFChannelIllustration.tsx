@@ -2,16 +2,17 @@
 
 // Module 12649 (NUFChannelIllustration)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { width: "90%", height: 12, borderTopLeftRadius: ThemesDefault.radii.lg, borderTopRightRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { container: { width: "100%", maxWidth: 275, position: "relative", display: "flex", justifyContent: "center", alignItems: "center", marginTop: 24, marginBottom: 24 }, card: { padding: 0, width: "100%" }, cardBackground: null, header: null, content: null, message: null, messageAvatar: null, messageContent: null, starMedium: null, starSmall: null, starGreen: null, starBlue: null, starPink: null, starPurple: null };
+createCacheKey = { width: "90%", height: 12, borderTopLeftRadius: ThemesDefault.radii.lg, borderTopRightRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { paddingVertical: 12, paddingHorizontal: 16, display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
 createCacheKey[4] = { height: 150, paddingVertical: 8, paddingHorizontal: 16, display: "flex", justifyContent: "flex-end", overflow: "hidden" };
@@ -26,7 +27,8 @@ createCacheKey[12] = { position: "absolute", bottom: -18, right: -22 };
 createCacheKey[13] = { position: "absolute", bottom: -30, right: -2 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function NUFChannelIllustrationTsx1(){const{interpolate,messageListAnimation}=this.__closure;return{transform:[{translateY:interpolate(messageListAnimation.get(),[0,1],[50,0])}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelIllustration.tsx");
+let obj1 = { paddingVertical: 12, paddingHorizontal: 16, display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
+let result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelIllustration.tsx");
 
 export default function NUFChannelIllustration() {
   const tmp = callback3();
@@ -80,7 +82,8 @@ export default function NUFChannelIllustration() {
   }, items1);
   let obj2 = _require(4115);
   const fn = function b() {
-    const obj = { translateY: lib(4115).interpolate(sharedValue.get(), [0, 1], [50, 0]) };
+    let obj = { transform: null };
+    obj = { translateY: lib(4115).interpolate(sharedValue.get(), [0, 1], [50, 0]) };
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -121,17 +124,19 @@ export default function NUFChannelIllustration() {
   const items9 = [callback2(closure_5, obj7), ];
   const obj9 = { style: tmp.content, children: null };
   const obj4 = { source: first(12655), style: items6 };
+  const obj5 = { style: tmp.cardBackground };
   obj9[1] = callback(first(4115).View, {
     style: animatedStyle,
-    children: first.map((item, index) => {
-      let obj = { source: item.avatar, style: lib.messageAvatar };
+    children: first.map((children) => {
+      let obj = { style: lib.message, children: null };
+      obj = { source: children.avatar, style: lib.messageAvatar };
       const items = [closure_1_7(closure_1_6, obj), ];
       obj = { style: lib.messageContent, children: null };
-      const items1 = [closure_1_7(lib(4734).Text, { variant: "text-md/semibold", allowFontScaling: false, children: item.name }), closure_1_7(lib(4734).Text, { variant: "text-md/medium", allowFontScaling: false, children: item.message })];
+      const items1 = [closure_1_7(lib(4734).Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }), closure_1_7(lib(4734).Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message })];
       obj[1] = items1;
       items[1] = closure_1_8(closure_1_5, obj);
       obj[1] = items;
-      return closure_1_8(closure_1_5, obj, item.message);
+      return closure_1_8(closure_1_5, obj, children.message);
     })
   });
   items9[1] = callback(closure_5, obj9);

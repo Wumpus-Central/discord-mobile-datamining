@@ -1,10 +1,11 @@
 // === Module 4544: ParticipantTypes ===
 
 // Module 4544 (ParticipantTypes)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const obj = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };
-const result = obj132.fileFinishedImporting("modules/calls/CallConstants.tsx");
+let obj = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };
+obj = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };
+const result = set.fileFinishedImporting("modules/calls/CallConstants.tsx");
 
 export const ParticipantTypes = obj;
 export const ContextMenuTileTypes = { STREAM: "STREAM", USER: "USER", ACTIVITY: "ACTIVITY" };

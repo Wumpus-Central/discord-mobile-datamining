@@ -1,14 +1,14 @@
 // === Module 12467: getIsTabletActivitySurface ===
 
 // Module 12467 (getIsTabletActivitySurface)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 
 let closure_2 = DCDDeviceManager.isIpadOS();
 let closure_3 = isMetaQuest.isMetaQuest();
-const result = obj132.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");
+const result = set.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");
 
 export function getIsTabletActivitySurface() {
   let tmp = closure_2;
@@ -37,7 +37,8 @@ export const setOrientationLockState = function setOrientationLockState(embedded
     }
   }
   if (null != arg1) {
-    const obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null };
+    let obj = dispatcherDefault;
+    obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null };
     obj[1] = embeddedActivityConfig.id;
     obj[2] = tmp;
     obj.dispatch(obj);

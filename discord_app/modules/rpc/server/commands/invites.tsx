@@ -1,16 +1,18 @@
 // === Module 13845: items ===
 
 // Module 13845 (items)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 import sum from "sum" /* 505 */;
 import createRPCCommand from "createRPCCommand" /* 13846 */;
 
-const require = fn;
+const require = arg1;
 ({ RPCCommands, RPCErrors: closure_6 } = sum);
 let obj = {};
+obj = { scope: null, handler: null };
+obj = {};
 const items = [require("set").OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, require("set").OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
 obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
@@ -136,6 +138,6 @@ obj[1] = function handler(arg0) {
   })();
 };
 obj[RPCCommands.INVITE_USER_EMBEDDED] = createRPCCommand.createRPCCommand(RPCCommands.INVITE_USER_EMBEDDED, obj);
-const result = require("obj132").fileFinishedImporting("modules/rpc/server/commands/invites.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/server/commands/invites.tsx");
 
 export default obj;

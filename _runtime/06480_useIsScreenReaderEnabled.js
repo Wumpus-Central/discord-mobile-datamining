@@ -1,8 +1,8 @@
 // === Module 6480: useIsScreenReaderEnabled ===
 
 // Module 6480 (useIsScreenReaderEnabled)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_1 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { AccessibilityInfo } from "get ActivityIndicator" /* 17 */;
 
@@ -12,7 +12,7 @@ export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
   const tmp = callback(callback3(false), 2);
   closure_0 = tmp[1];
   callback2(() => {
-    callback(function*() {
+    callback = callback(function*() {
       closure_1 = tmp3;
       c3 = 1;
       yield closure_2_4.isScreenReaderEnabled();
@@ -42,8 +42,8 @@ export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
       }
       return applyArgumentsResult;
     })();
-    callback = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
-      lib(event);
+    callback = closure_1_4.addEventListener("screenReaderChanged", (arg0) => {
+      lib(arg0);
     });
     return () => {
       lib.remove();

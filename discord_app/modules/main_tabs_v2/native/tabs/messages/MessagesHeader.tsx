@@ -9,17 +9,18 @@ import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { SearchTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const PX_16 = ThemesDefault.space.PX_16;
 const PX_8 = ThemesDefault.space.PX_8;
-let obj = { position: "relative", padding: PX_16, paddingBottom: ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
+let obj = { headerPanel: null, headerPanelTitle: null, headerPanelButtons: null, headerBorder: null };
+obj = { position: "relative", padding: PX_16, paddingBottom: ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
 obj[0] = obj;
-const createCacheKey = { paddingBottom: PX_8, flexDirection: "row", gap: ThemesDefault.space.PX_8, justifyContent: "space-between" };
+createCacheKey = { paddingBottom: PX_8, flexDirection: "row", gap: ThemesDefault.space.PX_8, justifyContent: "space-between" };
 obj[1] = createCacheKey;
 obj[2] = { height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, gap: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 let obj3 = {};
@@ -34,6 +35,7 @@ let obj2 = { height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, gap: Theme
 const memoResult = importAllResult.memo(function MessagesHeader(height) {
   height = height.height;
   const scrollPosition = height.scrollPosition;
+  dependencyMap = undefined;
   const tmp = callback2();
   dependencyMap = tmp;
   const tmp4 = scrollPosition(1367)("MessagesHeader");
@@ -42,7 +44,7 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     const items = [headerPanel.headerPanel, { height }];
     return items;
   }, items);
-  height(4115);
+  let obj = height(4115);
   const fn = function c() {
     let obj = height(headerPanel[10]);
     let num = 0;
@@ -52,7 +54,7 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     obj = { opacity: obj.withSpring(num) };
     return obj;
   };
-  let obj = { withSpring: height(4744).withSpring, scrollPosition };
+  obj = { withSpring: height(4744).withSpring, scrollPosition };
   fn.__closure = obj;
   fn.__workletHash = 17233409273245;
   fn.__initData = closure_11;
@@ -143,19 +145,20 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   items2[2] = callback(height(4745).Button, obj7);
   items2[3] = callback(height(8035).IconButton, obj);
   obj5[1] = items2;
-  items1[1] = callback(closure_4, obj5);
+  items1[1] = closure_7(closure_4, obj5);
   const items3 = [tmp.headerBorder, animatedStyle];
   items1[2] = callback(scrollPosition(4115).View, { style: items3 });
   items1[3] = tmp13;
   obj2[1] = items1;
-  return callback(closure_4, obj2);
+  return closure_7(closure_4, obj2);
 });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx");
 
 export default memoResult;
 export const getMessagesHeaderHeight = function getMessagesHeaderHeight(fontScale, closure_2) {
   const bound = Math.min(fontScale, 1.75);
   const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM, closure_2);
+  const obj = useIsMobileVisualRefreshExperimentEnabled;
   const sum = map.scaleTextLineHeight("redesign/heading-18/bold", bound) + PX_8;
   return sum + MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;
 };

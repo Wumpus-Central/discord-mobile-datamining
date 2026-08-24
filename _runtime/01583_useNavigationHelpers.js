@@ -1,10 +1,10 @@
 // === Module 1583: useNavigationHelpers ===
 
 // Module 1583 (useNavigationHelpers)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { PrivateValueStore } from "PrivateValueStore" /* 1504 */;
 
-const require = fn;
+const require = arg1;
 
 export const useNavigationHelpers = function useNavigationHelpers(id) {
   id = id.id;
@@ -13,8 +13,10 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
   const getState = id.getState;
   const emitter = id.emitter;
   const router = id.router;
-  const context = onUnhandledAction.useContext(id(onAction[2]).NavigationContext);
-  const ref = onUnhandledAction.useRef(null);
+  let context;
+  let ref;
+  context = onUnhandledAction.useContext(id(onAction[2]).NavigationContext);
+  ref = onUnhandledAction.useRef(null);
   ref.current = { state: id.state, base: getState() };
   const insertionEffect = onUnhandledAction.useInsertionEffect(() => {
     ref.current = null;
@@ -25,22 +27,22 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
     const merged = Object.assign(router.actionCreators);
     const merged1 = Object.assign(id(onAction[3]).CommonActions);
     const keys = Object.keys(obj);
-    const reduced = keys.reduce((acc, item, index) => {
-      closure_0 = item;
-      acc[item] = () => {
+    const reduced = keys.reduce((arg0, arg1) => {
+      closure_0 = arg1;
+      arg0[arg1] = () => {
         const items = [...HermesBuiltin.copyRestArgs()];
-        const applyResult = item[item].apply(items);
+        const applyResult = table[table].apply(items);
         let applyResultResult = applyResult;
         if (typeof applyResult === "function") {
           applyResultResult = applyResult(closure_1_3());
         }
-        if (!obj(applyResultResult)) {
+        if (!closure_1_1(applyResultResult)) {
           if (closure_1_2 != null) {
             closure_1_2(applyResultResult);
           }
         }
       };
-      return acc;
+      return arg0;
     }, {});
     obj = {};
     const merged2 = Object.assign(context);
@@ -66,9 +68,10 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
       if (!flag) {
         let canGoBackResult;
         if (closure_6 != null) {
-          canGoBackResult = closure_6.canGoBack();
+          canGoBackResult = obj2.canGoBack();
         }
         flag = canGoBackResult;
+        obj2 = closure_6;
       }
       if (!flag) {
         flag = false;
@@ -98,7 +101,7 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
         }
         return tmp2;
       } else {
-        return context;
+        return closure_1_6;
       }
     };
     obj.getState = function getState() {

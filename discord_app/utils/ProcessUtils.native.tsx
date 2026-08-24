@@ -1,7 +1,7 @@
 // === Module 5422: getHermesInstrumentedStatsSummary ===
 
 // Module 5422 (getHermesInstrumentedStatsSummary)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ElectronProcessType from "ElectronProcessType" /* 5423 */;
 
@@ -17,8 +17,8 @@ let closure_1 = function getHermesInstrumentedStatsSummary() {
             if (typeof tmp3 === "object") {
               const _Object = Object;
               const entries = Object.entries(instrumentedStats);
-              const found = entries.filter((item, index) => {
-                [, tmp] = item;
+              const found = entries.filter((arg0) => {
+                [, tmp] = arg0;
                 let isFiniteResult = typeof tmp === "number";
                 if (typeof tmp === "number") {
                   const _Number = Number;
@@ -27,8 +27,8 @@ let closure_1 = function getHermesInstrumentedStatsSummary() {
                 return isFiniteResult;
               });
               const substr = found.slice(0, 6);
-              const mapped = substr.map((item, index) => {
-                [tmp, tmp2] = item;
+              const mapped = substr.map((arg0) => {
+                [tmp, tmp2] = arg0;
                 return "" + tmp + "=" + tmp2;
               });
               let joined;
@@ -70,7 +70,7 @@ class ProcessUtilsIOS extends ProcessUtils {
     }
     timerId = setInterval(() => {
       if (prop != null) {
-        const getCurrentCpuUsagePercent = prop.getCurrentCpuUsagePercent;
+        const getCurrentCpuUsagePercent = tmp2.getCurrentCpuUsagePercent;
         if (getCurrentCpuUsagePercent != null) {
           let currentCpuUsagePercent = getCurrentCpuUsagePercent((arg0) => {
             let tmp3;
@@ -82,7 +82,7 @@ class ProcessUtilsIOS extends ProcessUtils {
         }
       }
       if (prop != null) {
-        const getCumulativeCpuUsage = prop.getCumulativeCpuUsage;
+        const getCumulativeCpuUsage = tmp2.getCumulativeCpuUsage;
         if (getCumulativeCpuUsage != null) {
           currentCpuUsagePercent = getCumulativeCpuUsage((arg0) => {
             if (arg0 >= 0) {
@@ -97,7 +97,7 @@ class ProcessUtilsIOS extends ProcessUtils {
         }
       }
       if (prop != null) {
-        const getCurrentMemoryUsageKb = prop.getCurrentMemoryUsageKb;
+        const getCurrentMemoryUsageKb = tmp2.getCurrentMemoryUsageKb;
         if (getCurrentMemoryUsageKb != null) {
           currentCpuUsagePercent = getCurrentMemoryUsageKb((arg0) => {
             let tmp3;
@@ -231,7 +231,7 @@ if (prop != null) {
 }
 let timerId = setInterval(() => {
   if (prop != null) {
-    const getCurrentCpuUsagePercent = prop.getCurrentCpuUsagePercent;
+    const getCurrentCpuUsagePercent = tmp2.getCurrentCpuUsagePercent;
     if (getCurrentCpuUsagePercent != null) {
       let currentCpuUsagePercent = getCurrentCpuUsagePercent((arg0) => {
         let tmp3;
@@ -243,7 +243,7 @@ let timerId = setInterval(() => {
     }
   }
   if (prop != null) {
-    const getCumulativeCpuUsage = prop.getCumulativeCpuUsage;
+    const getCumulativeCpuUsage = tmp2.getCumulativeCpuUsage;
     if (getCumulativeCpuUsage != null) {
       currentCpuUsagePercent = getCumulativeCpuUsage((arg0) => {
         if (arg0 >= 0) {
@@ -258,7 +258,7 @@ let timerId = setInterval(() => {
     }
   }
   if (prop != null) {
-    const getCurrentMemoryUsageKb = prop.getCurrentMemoryUsageKb;
+    const getCurrentMemoryUsageKb = tmp2.getCurrentMemoryUsageKb;
     if (getCurrentMemoryUsageKb != null) {
       currentCpuUsagePercent = getCurrentMemoryUsageKb((arg0) => {
         let tmp3;
@@ -275,6 +275,6 @@ let timerId = setInterval(() => {
   }
   currentCpuUsagePercent.hermesInstrumentedStatsSummary = tmp4;
 }, 1000);
-const result = obj132.fileFinishedImporting("utils/ProcessUtils.native.tsx");
+const result = set.fileFinishedImporting("utils/ProcessUtils.native.tsx");
 
 export default tmp;

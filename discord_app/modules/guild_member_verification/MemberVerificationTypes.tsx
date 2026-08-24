@@ -1,10 +1,10 @@
 // === Module 4200: MAX_RESULTS_PER_PAGE ===
 
 // Module 4200 (MAX_RESULTS_PER_PAGE)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const obj = { TERMS: "TERMS", TEXT_INPUT: "TEXT_INPUT", PARAGRAPH: "PARAGRAPH", MULTIPLE_CHOICE: "MULTIPLE_CHOICE", VERIFICATION: "VERIFICATION" };
-const result = obj132.fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
+const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
 
 export const MAX_RESULTS_PER_PAGE = 25;
 export const MAX_VISIBLE_PAGES = 4;
@@ -20,10 +20,10 @@ export const isTermsFormField = function isTermsFormField(field_type) {
   return tmp;
 };
 export const hasNonTermsFormField = function hasNonTermsFormField(formFields) {
-  return null != formFields && formFields.some((item, index) => {
-    let tmp = null != item;
+  return null != formFields && formFields.some((field_type) => {
+    let tmp = null != field_type;
     if (tmp) {
-      tmp = item.field_type === constants.TERMS;
+      tmp = field_type.field_type === constants.TERMS;
     }
     return !tmp;
   });

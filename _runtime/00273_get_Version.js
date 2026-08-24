@@ -1,7 +1,7 @@
 // === Module 273: get Version ===
 
 // Module 273 (get Version)
-const importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 let obj = { __constants: null, OS: "android" };
 Object.defineProperty(obj, "Version", {
@@ -14,8 +14,8 @@ Object.defineProperty(obj, "constants", {
   get: function() {
     const self = this;
     if (null == this.__constants) {
-      self.__constants = importDefault(274).getConstants();
-      const obj = importDefault(274);
+      self.__constants = module(274).getConstants();
+      const obj = module(274);
     }
     return self.__constants;
   },

@@ -2,7 +2,6 @@
 
 // Module 9977 (_addChannelToFavorites)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import messagesProxyDefault from "messagesProxy" /* 3079 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
@@ -10,10 +9,10 @@ import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
 import StarIcon from "StarIcon" /* 9410 */;
 import StarOutlineIcon from "StarOutlineIcon" /* 9412 */;
 import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 9982 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function _addChannelToFavorites() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -159,7 +158,7 @@ function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.openLazy(asyncRequireImpl(9983, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
-let result = require("obj132").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
+let result = require("set").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
 
 export default function buildFavoritesSectionButtons(isExperimentEnabled) {
   ({ channelId: require, dismissBetaTag: importDefault } = isExperimentEnabled);
@@ -191,31 +190,36 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
             return applyArgumentsResult;
           })(closure_0);
         };
-      } else if (!tmp4) {
-        obj = { label: null, IconComponent: null, trailing: null, onPress: null };
-        const intl2 = getSystemLocale.intl;
-        obj[0] = intl2.string(messagesProxyDefault.G9fGlP);
-        obj[1] = StarOutlineIcon.StarOutlineIcon;
-        let tmp15;
-        if (tmp5) {
-          obj1 = { size: null };
-          obj1[0] = Button.BetaSizes.SMALL;
-          tmp15 = jsx(Button.BetaTag, { size: null });
+        let tmp11 = obj;
+      } else {
+        tmp11 = null;
+        if (!tmp4) {
+          obj = { label: null, IconComponent: null, trailing: null, onPress: null };
+          const intl2 = getSystemLocale.intl;
+          obj[0] = intl2.string(messagesProxyDefault.G9fGlP);
+          obj[1] = StarOutlineIcon.StarOutlineIcon;
+          let tmp15;
+          if (tmp5) {
+            obj1 = { size: null };
+            obj1[0] = tmp12(1297).BetaSizes.SMALL;
+            tmp15 = jsx(tmp12(1297).BetaTag, { size: null });
+          }
+          obj[2] = tmp15;
+          obj[3] = function onPress() {
+            callback();
+            (function addChannelToFavorites(closure_0) {
+              const self = this;
+              const apply = closure_5.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            })(closure_0);
+          };
+          tmp11 = obj;
         }
-        obj[2] = tmp15;
-        obj[3] = function onPress() {
-          callback();
-          (function addChannelToFavorites(closure_0) {
-            const self = this;
-            const apply = closure_5.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })(closure_0);
-        };
       }
     }
   }

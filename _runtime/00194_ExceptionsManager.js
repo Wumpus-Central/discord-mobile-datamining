@@ -18,11 +18,11 @@ const obj = {
   },
   reportException(isFatal) {
     if (closure_0.reportException) {
-      closure_0.reportException(isFatal);
+      obj.reportException(isFatal);
     } else if (isFatal.isFatal) {
-      closure_0.reportFatalException(isFatal.message, isFatal.stack, isFatal.id);
+      obj2.reportFatalException(isFatal.message, isFatal.stack, isFatal.id);
     } else {
-      closure_0.reportSoftException(isFatal.message, isFatal.stack, isFatal.id);
+      obj2.reportSoftException(isFatal.message, isFatal.stack, isFatal.id);
     }
   }
 };

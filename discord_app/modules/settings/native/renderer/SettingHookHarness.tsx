@@ -1,12 +1,12 @@
 // === Module 13997: map ===
 
 // Module 13997 (map)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import zustandStore from "zustandStore" /* 13994 */;
+import closure_4 from "zustandStore" /* 13994 */;
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 let closure_6 = [];
 const map = new Map();
@@ -19,9 +19,11 @@ const memoResult = importAllResult.memo(function SettingHookHarness() {
   let num = 0;
   if (0 < entries.length) {
     while (true) {
+      let tmp = callback;
       let tmp2 = callback(entries[num], 2);
       [tmp3, obj2] = tmp2;
       let usePredicate = obj2.usePredicate;
+      let tmp4 = num;
       let predicate;
       if (usePredicate != null) {
         predicate = usePredicate();
@@ -31,13 +33,16 @@ const memoResult = importAllResult.memo(function SettingHookHarness() {
         if (!field.has(tmp3)) {
           let arr = items.push(tmp3);
         }
+        let tmp10 = NodeType;
         if (obj2.type !== NodeType.GUILD_SELECTOR) {
+          let tmp11 = map;
           let result = map.set(tmp3, obj2.useTitle());
           let useSearchTerms = obj2.useSearchTerms;
           let searchTerms;
           if (useSearchTerms != null) {
             searchTerms = useSearchTerms();
           }
+          let tmp14 = map1;
           if (searchTerms == null) {
             searchTerms = closure_6;
           }
@@ -61,17 +66,16 @@ const memoResult = importAllResult.memo(function SettingHookHarness() {
     if (set.length > 0) {
       const _Set = Set;
       set = new Set(closure_1_4.getField("blocklist"));
-      const item = arr.forEach((item, index) => set.add(item));
-      const item1 = items1.forEach((item, index) => set.delete(item));
+      const item = set.forEach((arg0) => set.add(arg0));
+      const item1 = items1.forEach((arg0) => set.delete(arg0));
       const obj = { blocklist: null };
       obj[0] = set;
       closure_1_4.setState(obj);
     }
-    arr = set;
   });
   return null;
 });
-let result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
+let result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
 
 export default memoResult;
 export const getCachedSettingTitle = function getCachedSettingTitle(setting) {

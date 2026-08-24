@@ -4,15 +4,15 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleReaction from "handleReaction" /* 4971 */;
-import search from "search" /* 11536 */;
-import setAutocompleteOptions from "setAutocompleteOptions" /* 11537 */;
-import teardown from "teardown" /* 11538 */;
-import prototype2 from "prototype" /* 11510 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleReaction" /* 4971 */;
+import closure_5 from "search" /* 11536 */;
+import closure_6 from "setAutocompleteOptions" /* 11537 */;
+import closure_7 from "teardown" /* 11538 */;
+import closure_8 from "prototype" /* 11510 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 
-require = fn;
+require = arg1;
 function handleSearchQuery(searchContext) {
   searchContext = searchContext.searchContext;
   let obj = SearchTokenTypes;
@@ -39,13 +39,13 @@ function computeLayoutForState(value) {
     let channel = obj.isTextInputValueEmpty(searchContext);
     closure_4 = obj.hasUserAddedTags(searchContext);
     closure_5 = obj.isTagsEmpty(searchContext);
+    const searchResultsQuery = obj.getSearchResultsQuery(searchContext);
     const queryString = obj.getQueryString(searchContext);
     if (isInitialSearchQueryResult) {
       let arr = table[searchContext.type];
     } else {
       arr = table2[searchContext.type];
     }
-    const searchResultsQuery = obj.getSearchResultsQuery(searchContext);
     channel = channel.getChannel(_require(11511).getChannelIdFromSearchContext(searchContext));
     let flag;
     if (channel != null) {
@@ -54,8 +54,8 @@ function computeLayoutForState(value) {
     if (flag == null) {
       flag = false;
     }
-    const found = arr.filter((item, index) => {
-      if (reduced.MEMBERS === item) {
+    const found = arr.filter((arg0) => {
+      if (reduced.MEMBERS === arg0) {
         let tmp4 = !flag;
         if (!flag) {
           let tmp5 = closure_2;
@@ -70,9 +70,9 @@ function computeLayoutForState(value) {
         }
         return tmp4;
       } else {
-        if (reduced.RECENT !== item) {
-          if (reduced.GUILD_CHANNELS !== item) {
-            if (reduced.PEOPLE !== item) {
+        if (tmp.RECENT !== arg0) {
+          if (tmp.GUILD_CHANNELS !== arg0) {
+            if (tmp.PEOPLE !== arg0) {
               return true;
             }
           }
@@ -82,36 +82,36 @@ function computeLayoutForState(value) {
     });
     let tmp6Result = tmp6(11511);
     autocompleteVisible = tmp6Result.getSearchContextId(searchContext);
-    const reduced = found.reduce((acc, item, index) => {
-      if (reduced.MEMBERS === item) {
-        acc[item] = searchResultsQuery.getCount(closure_8);
-      } else if (reduced.GUILD_CHANNELS === item) {
-        acc[item] = count.getCount(closure_8);
-      } else if (reduced.PEOPLE === item) {
-        acc[item] = flag.getCount(closure_8);
+    const reduced = found.reduce((arg0, closure_1) => {
+      if (reduced.MEMBERS === closure_1) {
+        arg0[closure_1] = searchResultsQuery.getCount(closure_8);
+      } else if (tmp.GUILD_CHANNELS === closure_1) {
+        arg0[closure_1] = count.getCount(closure_8);
+      } else if (tmp.PEOPLE === closure_1) {
+        arg0[closure_1] = flag.getCount(closure_8);
       } else {
-        acc[item] = totalCount.getTotalCount(value(isInitialSearchQueryResult[8]).getSearchTabFetchId(searchContext, item, searchResultsQuery));
+        arg0[closure_1] = totalCount.getTotalCount(value(isInitialSearchQueryResult[8]).getSearchTabFetchId(searchContext, closure_1, searchResultsQuery));
         const obj = value(isInitialSearchQueryResult[8]);
       }
-      return acc;
+      return arg0;
     }, {});
     let flag2 = true;
     visibleTabCounts = null;
     visibleTabs = found;
     if (!isInitialSearchQueryResult) {
       if (searchResultsQuery !== queryString) {
-        visibleTabs = found.filter((item, index) => {
+        visibleTabs = found.filter((arg0) => {
           let wasInitialSearchQuery = value.wasInitialSearchQuery;
           if (!wasInitialSearchQuery) {
             const visibleTabs = tmp.visibleTabs;
-            wasInitialSearchQuery = visibleTabs.includes(item);
+            wasInitialSearchQuery = visibleTabs.includes(arg0);
           }
           return wasInitialSearchQuery;
         });
         flag2 = false;
         visibleTabCounts = null;
-      } else if (found.every((item, index) => null != reduced[item])) {
-        visibleTabs = found.filter((item, index) => 0 !== reduced[item]);
+      } else if (found.every((arg0) => null != reduced[arg0])) {
+        visibleTabs = found.filter((arg0) => 0 !== reduced[arg0]);
         flag2 = false;
         visibleTabCounts = reduced;
       } else {
@@ -156,6 +156,7 @@ function computeLayoutForAll() {
   let flag = false;
   const values = map.values();
   while (tmp2 !== undefined) {
+    let tmp4 = computeLayoutForState;
     if (computeLayoutForState(tmp3)) {
       flag = true;
     }
@@ -219,6 +220,6 @@ const searchTabsLayoutStore = new SearchTabsLayoutStore(dispatcherDefault, {
     return map.delete(id.id);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/stores/SearchTabsLayoutStore.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchTabsLayoutStore.tsx");
 
 export default searchTabsLayoutStore;

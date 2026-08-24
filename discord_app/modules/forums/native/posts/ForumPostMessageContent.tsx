@@ -7,10 +7,10 @@ import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 1120
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ text: { alignSelf: "flex-start" } });
-const result = require("obj132").fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
 
 export default function ForumPostMessageContent(senderModifier) {
   let num = senderModifier.lineClamp;

@@ -2,21 +2,22 @@
 
 // Module 15585 (areHomeDrawerGuildTypingStatesEqual)
 import shallowEqual from "shallowEqual" /* 643 */;
-import storeThread from "storeThread" /* 4023 */;
+import closure_3 from "storeThread" /* 4023 */;
 import { isThread } from "createChannelRecord" /* 1395 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleTypingStart from "handleTypingStart" /* 11152 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleTypingStart" /* 11152 */;
 
-require = fn;
+require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
   let result = typingChannelId.typingChannelId === typingChannelId2.typingChannelId && typingChannelId.typingChannelName === typingChannelId2.typingChannelName;
   if (result) {
     result = shallowEqual.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
+    const obj = shallowEqual;
   }
   return result;
 }
 let closure_7 = { typingChannelId: "Array", typingChannelName: "ct", typingUserIds: [] };
-let result = require("obj132").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
+let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
   const _require = id;
@@ -30,8 +31,8 @@ export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
     const typingUsersByGuild = closure_1_6.getTypingUsersByGuild(closure_0);
     let obj = isHomeDrawerChannelMuted(isHomeDrawerChannelInChannelList[8]);
     const keys = obj.keys(typingUsersByGuild);
-    const found = keys.find((item, index) => {
-      const basicChannel = closure_1_5.getBasicChannel(item);
+    const found = keys.find((id) => {
+      const basicChannel = closure_1_5.getBasicChannel(id);
       let tmp2 = null != basicChannel;
       if (tmp2) {
         tmp2 = !callback(basicChannel);
@@ -39,7 +40,7 @@ export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
       if (tmp2) {
         let tmp5 = closure_1_4(basicChannel.type);
         if (tmp5) {
-          tmp5 = !closure_1_3.hasJoined(item);
+          tmp5 = !closure_1_3.hasJoined(id);
         }
         let tmp7 = !tmp5;
         if (!tmp5) {

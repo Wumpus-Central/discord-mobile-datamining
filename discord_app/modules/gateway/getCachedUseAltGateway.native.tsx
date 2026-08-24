@@ -1,12 +1,12 @@
 // === Module 13195: getCachedUseAltGateway ===
 
 // Module 13195 (getCachedUseAltGateway)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import enforcingDefault from "enforcing" /* 502 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
-const result = obj132.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
+const result = set.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
 
 export default function getCachedUseAltGateway() {
   if (obj.isAndroid()) {
@@ -15,6 +15,7 @@ export default function getCachedUseAltGateway() {
       flag2 = false;
     }
     let flag = flag2;
+    const obj2 = enforcingDefault;
   } else {
     flag = NativeModules.DCDFastConnectManager.useAltGateway;
     if (flag == null) {

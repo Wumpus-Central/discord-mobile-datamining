@@ -5,13 +5,13 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import _transformMetadataToCamelCase from "_transformMetadataToCamelCase" /* 11048 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _transformClientActionToApiAction(type) {
   const obj = { type: type.type, metadata: _transformMetadataToCamelCase._transformMetadataToSnakeCase(type.metadata) };
   return obj;
@@ -37,7 +37,7 @@ function _transformClientRuleToApiRule(id) {
   if (exemptRoles == null) {
     exemptRoles = [];
   }
-  obj[11] = Array.from(exemptRoles).filter((item, index) => null != closure_1_4.getRole(guildId.guildId, item));
+  obj[11] = Array.from(exemptRoles).filter((arg0) => null != closure_1_4.getRole(guildId.guildId, arg0));
   return obj;
 }
 function _transformApiActionToClientAction(type) {
@@ -60,6 +60,7 @@ function _transformApiRuletoClientRule(id) {
   if (exempt_channels == null) {
     exempt_channels = [];
   }
+  const obj3 = _transformMetadataToCamelCase;
   obj[10] = new Set(exempt_channels);
   let exempt_roles = id.exempt_roles;
   if (exempt_roles == null) {
@@ -297,22 +298,26 @@ function _executeAlertAction() {
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else if (closure_1_6.can(closure_1_9.MANAGE_MESSAGES, closure_1)) {
-              const HTTP = callback(530).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = closure_1_8.GUILD_AUTOMOD_ALERT_ACTION(closure_1.guild_id);
-              const obj2 = { message_id: null, channel_id: null, alert_action_type: null };
-              obj2[0] = callback;
-              obj2[1] = closure_1.id;
-              obj2[2] = dependencyMap;
-              obj1[1] = obj2;
-              let obj3 = callback(530);
-              obj1[2] = obj3.rejectWithMigratedError();
-              c4 = 1;
-              c3 = 1;
-              obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
+            } else {
+              if (closure_1_6.can(closure_1_9.MANAGE_MESSAGES, closure_1)) {
+                const HTTP = callback(530).HTTP;
+                obj1 = { url: null, body: null, rejectWithError: null };
+                obj1[0] = closure_1_8.GUILD_AUTOMOD_ALERT_ACTION(tmp15.guild_id);
+                const obj2 = { message_id: null, channel_id: null, alert_action_type: null };
+                obj2[0] = tmp14;
+                obj2[1] = tmp15.id;
+                obj2[2] = tmp16;
+                obj1[1] = obj2;
+                let obj3 = callback(530);
+                obj1[2] = obj3.rejectWithMigratedError();
+                c4 = 1;
+                c3 = 1;
+                obj3 = { value: null, done: false };
+                obj3[0] = HTTP.post(obj1);
+                return obj3;
+              }
+              tmp14 = callback;
+              tmp16 = dependencyMap;
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -342,7 +347,7 @@ function _executeAlertAction() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: error, Endpoints: closure_8, Permissions: c9 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/guild_automod/GuildAutomodActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodActionCreators.tsx");
 
 export const validateAutomodRule = function validateAutomodRule() {
   const self = this;
@@ -384,7 +389,7 @@ export const deleteAutomodRule = function deleteAutomodRule() {
   }
   return applyArgumentsResult;
 };
-export const fetchAutomodRules = function fetchAutomodRules(callback) {
+export const fetchAutomodRules = function fetchAutomodRules(arg0) {
   const self = this;
   const apply = _fetchAutomodRules.apply;
   if (typeof apply === "unknown") {
@@ -415,8 +420,8 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
   }
   if (canResult) {
     const result = _require(11041).openConfirmRemoveMentionRaid(() => {
-      callback(5042);
-      let obj = { feedback_type: callback(5242).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
+      let obj = callback(5042);
+      obj = { feedback_type: callback(5242).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
       obj.trackWithMetadata(closure_1_7.GUILD_AUTOMOD_FEEDBACK, obj);
       const HTTP = callback(530).HTTP;
       obj = { url: closure_1_8.GUILD_AUTOMOD_CLEAR_MENTION_RAID(callback), rejectWithError: true };
@@ -427,6 +432,7 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
   }
 };
 export const clearMentionRaidDetected = function clearMentionRaidDetected(guildId) {
-  const obj = { type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS", guildId };
+  let obj = dispatcherDefault;
+  obj = { type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS", guildId };
   obj.dispatch(obj);
 };

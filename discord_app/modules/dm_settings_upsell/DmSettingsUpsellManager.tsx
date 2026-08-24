@@ -1,7 +1,7 @@
 // === Module 16553: handleDmSettingsUpsellShow ===
 
 // Module 16553 (handleDmSettingsUpsellShow)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
 import initializeDefault from "initialize" /* 5038 */;
@@ -20,7 +20,7 @@ DmSettingsUpsellManager.prototype["handleDmSettingsUpsellShow"] = function handl
   const result = _modDef16554.openDmSettingsUpsellModal(guildId.guildId);
 };
 const dmSettingsUpsellManager = new DmSettingsUpsellManager();
-let result = obj132.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
+let result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
 
 export default dmSettingsUpsellManager;
 export const acknowledgeDmSettingsUpsell = function acknowledgeDmSettingsUpsell(guildId) {

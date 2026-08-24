@@ -3,7 +3,7 @@
 // Module 88 (Dimensions)
 import EventEmitterDefault from "EventEmitter" /* 89 */;
 import getConstantsDefault from "getConstants" /* 100 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_isNativeReflectConstruct" /* 92 */;
 
@@ -62,6 +62,13 @@ const items = [
   }
 ];
 const importDefaultResultResult = importDefaultResult(Dimensions, null, items);
+let obj = {
+  key: "get",
+  value: function get(arg0) {
+    Dimensions(38)(dependencyMap[arg0], `No dimension set for key ${arg0}`);
+    return dependencyMap[arg0];
+  }
+};
 const tmp3 = new EventEmitterDefault();
 importDefaultResult1.addListener("didUpdateDimensions", (arg0) => {
   const result = importDefaultResultResult.set(arg0);

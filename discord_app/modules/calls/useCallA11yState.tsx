@@ -1,11 +1,11 @@
 // === Module 15297: useCallA11yState ===
 
 // Module 15297 (useCallA11yState)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import callConnect from "callConnect" /* 4496 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "callConnect" /* 4496 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/calls/useCallA11yState.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/calls/useCallA11yState.tsx");
 
 export default function useCallA11yState(arg0) {
   const _require = arg0;

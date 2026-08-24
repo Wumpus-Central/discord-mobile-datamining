@@ -1,10 +1,10 @@
 // === Module 8941: useUserProfileAnalyticsProperties ===
 
 // Module 8941 (useUserProfileAnalyticsProperties)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
 
-let result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
 
 export default function useUserProfileAnalyticsProperties(userId) {
   userId = userId.userId;
@@ -39,8 +39,8 @@ export default function useUserProfileAnalyticsProperties(userId) {
     let tmp2 = null != displayProfile;
     if (tmp2) {
       let result;
-      if (displayProfile != null) {
-        result = displayProfile.hasPremiumCustomization();
+      if (obj2 != null) {
+        result = obj2.hasPremiumCustomization();
       }
       tmp2 = result;
     }
@@ -48,7 +48,7 @@ export default function useUserProfileAnalyticsProperties(userId) {
     obj[5] = null != displayProfile && displayProfile.hasThemeColors();
     let prop;
     if (displayProfile != null) {
-      prop = displayProfile.popoutAnimationParticleType;
+      prop = obj2.popoutAnimationParticleType;
     }
     obj[6] = null != prop;
     let avatarDecoration;
@@ -71,22 +71,22 @@ export default function useUserProfileAnalyticsProperties(userId) {
   memo1 = obj.useMemo(() => {
     let nick;
     if (guildMember != null) {
-      nick = guildMember.nick;
+      nick = tmp.nick;
     }
     const obj = { has_nickname: Boolean(nick), has_guild_member_avatar: null, has_guild_member_banner: null, has_guild_member_bio: null };
     let avatar;
     if (guildMember != null) {
-      avatar = guildMember.avatar;
+      avatar = tmp.avatar;
     }
     obj[1] = Boolean(avatar);
     let result;
     if (displayProfile != null) {
-      result = displayProfile.isUsingGuildMemberBanner();
+      result = obj2.isUsingGuildMemberBanner();
     }
     obj[2] = result;
     let result1;
     if (displayProfile != null) {
-      result1 = displayProfile.isUsingGuildMemberBio();
+      result1 = obj2.isUsingGuildMemberBio();
     }
     obj[3] = result1;
     return obj;

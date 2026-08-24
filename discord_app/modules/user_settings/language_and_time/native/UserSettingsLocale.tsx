@@ -2,15 +2,15 @@
 
 // Module 14731 (handleLanguageChange)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { setAppLocale } from "_setAppLocale" /* 1995 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import closure_7 from "_getSystemLocale" /* 1994 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 function handleLanguageChange() {
   const self = this;
   const apply = _handleLanguageChange.apply;
@@ -93,33 +93,34 @@ function _handleLanguageChange() {
   return applyArgumentsResult;
 }
 ({ Image: c4, ScrollView: c5 } = get_ActivityIndicator);
-let obj = { padding: ThemesDefault.space.PX_16 };
+let obj = { content: null, flagImage: null };
+obj = { padding: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { width: 27, height: 18 };
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function UserSettingsLocale() {
   const tmp = callback2();
   const _require = tmp;
-  _require(589);
+  let obj = _require(589);
   const items = [closure_7];
-  let obj = { contentContainerStyle: tmp.content, children: null };
+  obj = { contentContainerStyle: tmp.content, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   obj = { bottom: true, children: null };
   obj1 = { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null };
   const availableLocales = _require(1236).getAvailableLocales();
-  obj1[3] = availableLocales.map((item, index) => {
-    ({ name, value } = item);
+  obj1[3] = availableLocales.map((localizedName) => {
+    ({ name, value } = localizedName);
     let obj = { value, label: name, subLabel: null, icon: null };
-    const intl = lib(dependencyMap[12]).intl;
-    obj[2] = intl.string(item.localizedName);
-    obj = { style: lib.flagImage, source: lib(dependencyMap[14]).flags[value] };
-    obj[3] = <closure_1_4 style={lib.flagImage} source={lib(dependencyMap[14]).flags[value]} />;
-    return jsx(lib(dependencyMap[13]).TableRadioRow, { style: lib.flagImage, source: lib(dependencyMap[14]).flags[value] }, name);
+    const intl = lib(closure_1_2[12]).intl;
+    obj[2] = intl.string(localizedName.localizedName);
+    obj = { style: lib.flagImage, source: lib(closure_1_2[14]).flags[value] };
+    obj[3] = closure_1_8(closure_1_4, obj);
+    return closure_1_8(lib(closure_1_2[13]).TableRadioRow, obj, name);
   });
   obj[1] = jsx(_require(8101).TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
   obj[1] = jsx(_require(6803).SafeAreaPaddingView, { bottom: true, children: null });
   return <closure_5 bottom>{null}</closure_5>;
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/language_and_time/native/UserSettingsLocale.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/language_and_time/native/UserSettingsLocale.tsx");
 
 export default memoResult;

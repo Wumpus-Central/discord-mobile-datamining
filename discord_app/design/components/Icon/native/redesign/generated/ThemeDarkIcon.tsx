@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 10524 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx");
 
 export const ThemeDarkIcon = function ThemeDarkIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

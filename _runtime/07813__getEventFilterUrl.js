@@ -1,8 +1,6 @@
 // === Module 7813: _getEventFilterUrl ===
 
 // Module 7813 (_getEventFilterUrl)
-import consoleSandbox from "consoleSandbox" /* 7738 */;
-import addContextToFrame from "addContextToFrame" /* 7749 */;
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7766 */;
 import setupIntegration from "setupIntegration" /* 7794 */;
 
@@ -21,6 +19,7 @@ function _getEventFilterUrl(arg0) {
         if (0 <= diff) {
           while (true) {
             tmp2 = items[diff];
+            let tmp3 = diff;
             if (tmp2) {
               if ("<anonymous>" !== tmp2.filename) {
                 if ("[native code]" !== tmp2.filename) {
@@ -38,10 +37,10 @@ function _getEventFilterUrl(arg0) {
     return tmp4;
   } catch (err) {
     if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      const logger = consoleSandbox.logger;
+      const logger = tmp6(7738).logger;
       const _HermesInternal = HermesInternal;
-      logger.error("Cannot extract url for event " + addContextToFrame.getEventDescription(tmp));
-      const tmp6Result = addContextToFrame;
+      logger.error("Cannot extract url for event " + tmp6(7749).getEventDescription(tmp));
+      const tmp6Result = tmp6(7749);
     }
     return null;
   }
@@ -77,12 +76,12 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
           }
         })(type)) {
           let flag6 = true;
-          if (obj(dependencyMap[1]).DEBUG_BUILD) {
-            const logger6 = obj(dependencyMap[2]).logger;
+          if (obj(closure_1_1[1]).DEBUG_BUILD) {
+            const logger6 = obj(closure_1_1[2]).logger;
             const _HermesInternal6 = HermesInternal;
-            logger6.warn("Event dropped due to being internal Sentry Error.\nEvent: " + obj(dependencyMap[3]).getEventDescription(type));
+            logger6.warn("Event dropped due to being internal Sentry Error.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
             flag6 = true;
-            const obj12 = obj(dependencyMap[3]);
+            const obj12 = obj(closure_1_1[3]);
           }
         }
         let tmp77 = null;
@@ -116,7 +115,7 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
               return items;
             } catch (err) {
             }
-          })(type).some((item, index) => items2(closure_1_1[4]).stringMatchesSomePattern(item, items2));
+          })(type).some((arg0) => items2(closure_1_1[4]).stringMatchesSomePattern(arg0, items2));
           const obj3 = (function _getPossibleEventMessages(message) {
             items = [];
             if (message.message) {
@@ -143,12 +142,12 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
       }
       if (flag) {
         flag6 = true;
-        if (obj(dependencyMap[1]).DEBUG_BUILD) {
-          const logger5 = obj(dependencyMap[2]).logger;
+        if (obj(closure_1_1[1]).DEBUG_BUILD) {
+          const logger5 = obj(closure_1_1[2]).logger;
           const _HermesInternal5 = HermesInternal;
-          logger5.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + obj(dependencyMap[3]).getEventDescription(type));
+          logger5.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
           flag6 = true;
-          const obj11 = obj(dependencyMap[3]);
+          const obj11 = obj(closure_1_1[3]);
         }
       } else {
         let flag2 = false;
@@ -163,17 +162,17 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
                 let tmp11 = !message;
                 if (!message) {
                   const values = type.exception.values;
-                  tmp11 = !values.some((item, index) => {
-                    let stacktrace = item.stacktrace;
+                  tmp11 = !values.some((stacktrace) => {
+                    stacktrace = stacktrace.stacktrace;
                     if (!stacktrace) {
-                      let type = item.type;
+                      let type = stacktrace.type;
                       if (type) {
-                        type = "Error" !== item.type;
+                        type = "Error" !== stacktrace.type;
                       }
                       stacktrace = type;
                     }
                     if (!stacktrace) {
-                      stacktrace = item.value;
+                      stacktrace = stacktrace.value;
                     }
                     return stacktrace;
                   });
@@ -185,12 +184,12 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
         }
         if (flag2) {
           flag6 = true;
-          if (obj(dependencyMap[1]).DEBUG_BUILD) {
-            const logger4 = obj(dependencyMap[2]).logger;
+          if (obj(closure_1_1[1]).DEBUG_BUILD) {
+            const logger4 = obj(closure_1_1[2]).logger;
             const _HermesInternal4 = HermesInternal;
-            logger4.warn("Event dropped due to not having an error message, error type or stacktrace.\nEvent: " + obj(dependencyMap[3]).getEventDescription(type));
+            logger4.warn("Event dropped due to not having an error message, error type or stacktrace.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
             flag6 = true;
-            const obj10 = obj(dependencyMap[3]);
+            const obj10 = obj(closure_1_1[3]);
           }
         } else {
           let flag3 = false;
@@ -200,75 +199,69 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
               const transaction = type.transaction;
               let result = transaction;
               if (result) {
-                result = obj(dependencyMap[4]).stringMatchesSomePattern(transaction, items3);
-                const obj4 = obj(dependencyMap[4]);
+                result = obj(closure_1_1[4]).stringMatchesSomePattern(transaction, items3);
+                const obj4 = obj(closure_1_1[4]);
               }
               flag3 = result;
             }
           }
           if (flag3) {
             flag6 = true;
-            if (obj(dependencyMap[1]).DEBUG_BUILD) {
-              const logger3 = obj(dependencyMap[2]).logger;
+            if (obj(closure_1_1[1]).DEBUG_BUILD) {
+              const logger3 = obj(closure_1_1[2]).logger;
               const _HermesInternal3 = HermesInternal;
-              logger3.warn("Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " + obj(dependencyMap[3]).getEventDescription(type));
+              logger3.warn("Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
               flag6 = true;
-              const obj9 = obj(dependencyMap[3]);
+              const obj9 = obj(closure_1_1[3]);
             }
           } else {
             let flag4 = false;
             if (items1.length) {
-              const tmp16 = _getEventFilterUrl(type);
+              const tmp16 = closure_1_3(type);
               let result1 = tmp16;
               if (result1) {
-                result1 = obj(dependencyMap[4]).stringMatchesSomePattern(tmp16, items1);
-                const obj5 = obj(dependencyMap[4]);
+                result1 = obj(closure_1_1[4]).stringMatchesSomePattern(tmp16, items1);
+                const obj5 = obj(closure_1_1[4]);
               }
               flag4 = result1;
             }
             if (flag4) {
               flag6 = true;
-              if (obj(dependencyMap[1]).DEBUG_BUILD) {
-                const logger2 = obj(dependencyMap[2]).logger;
-                const eventDescription = obj(dependencyMap[3]).getEventDescription(type);
+              if (obj(closure_1_1[1]).DEBUG_BUILD) {
+                const logger2 = obj(closure_1_1[2]).logger;
+                const eventDescription = obj(closure_1_1[3]).getEventDescription(type);
                 const _HermesInternal2 = HermesInternal;
-                logger2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + _getEventFilterUrl(type));
+                logger2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + closure_1_3(type));
                 flag6 = true;
-                const obj8 = obj(dependencyMap[3]);
+                const obj8 = obj(closure_1_1[3]);
               }
             } else {
               let flag5 = true;
               if (items.length) {
-                const tmp21 = _getEventFilterUrl(type);
+                const tmp21 = closure_1_3(type);
                 let result2 = !tmp21;
                 if (tmp21) {
-                  result2 = obj(dependencyMap[4]).stringMatchesSomePattern(tmp21, items);
-                  const obj6 = obj(dependencyMap[4]);
+                  result2 = obj(closure_1_1[4]).stringMatchesSomePattern(tmp21, items);
+                  const obj6 = obj(closure_1_1[4]);
                 }
                 flag5 = result2;
               }
               flag6 = false;
               if (!flag5) {
                 flag6 = true;
-                if (obj(dependencyMap[1]).DEBUG_BUILD) {
-                  const logger = obj(dependencyMap[2]).logger;
-                  const eventDescription1 = obj(dependencyMap[3]).getEventDescription(type);
+                if (obj(closure_1_1[1]).DEBUG_BUILD) {
+                  const logger = obj(closure_1_1[2]).logger;
+                  const eventDescription1 = obj(closure_1_1[3]).getEventDescription(type);
                   let _HermesInternal = HermesInternal;
-                  logger.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + _getEventFilterUrl(type));
+                  logger.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + closure_1_3(type));
                   flag6 = true;
-                  const obj7 = obj(dependencyMap[3]);
+                  const obj7 = obj(closure_1_1[3]);
                 }
               }
             }
           }
         }
       }
-      tmp10 = undefined === obj.ignoreInternal || obj.ignoreInternal;
-      tmp2 = options.allowUrls || [];
-      tmp4 = options.denyUrls || [];
-      tmp6 = options.ignoreErrors || [];
-      tmp7 = obj.disableErrorDefaults ? [] : closure_1_2;
-      tmp9 = options.ignoreTransactions || [];
     }
   };
   return obj;

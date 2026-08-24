@@ -5,10 +5,10 @@ import _mod1307 from "module_1307" /* 1307 */;
 import create from "create" /* 7633 */;
 import create2 from "create" /* 7641 */;
 import create3 from "create" /* 7643 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
-require = fn;
+require = arg1;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", NORMAL: 1, [1]: "NORMAL", LARGE_TILTED: 2, [2]: "LARGE_TILTED" };
 class GiftCustomizationBanner$Type extends MessageType {
   constructor() {
@@ -81,6 +81,7 @@ class GiftCustomizationBanner$Type extends MessageType {
 }
 let prototype = GiftCustomizationBanner$Type.prototype;
 prototype["create"] = function create(arr) {
+  obj = { assetUrl: "", desktopBody: "", mobileBody: "", backgroundAssetUrl: "", assetVariant: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -96,9 +97,10 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    const LocalizedString = create.LocalizedString;
+    obj.mobileBodyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), arg2, obj.mobileBodyLocalized);
   }
   return obj;
 };
@@ -234,9 +236,9 @@ items[10] = {
     return callback(7633).LocalizedString;
   }
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, tmp, T, GiftCustomizationBanner$Type, prototype, items, fn, dependencyMap);
+prototype = new prototype("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, tmp, T, GiftCustomizationBanner$Type, prototype, items, arg1, dependencyMap);
 // ThrowIfThisInitialized (0x7c)
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_customization_banner.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_customization_banner.tsx");
 
 export const GiftCustomizationBanner_AssetVariant = obj;
 export const GiftCustomizationBanner = prototype;

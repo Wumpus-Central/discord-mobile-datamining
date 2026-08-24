@@ -1,17 +1,17 @@
 // === Module 17094: onTaskComplete ===
 
 // Module 17094 (onTaskComplete)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/safety_flows/native/tasks/VerifyEmailScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/VerifyEmailScreen.tsx");
 
 export default function _default() {
-  onTaskComplete(first[4]);
+  let obj = onTaskComplete(first[4]);
   obj1 = onTaskComplete(first[5]);
   onTaskComplete = obj1.useOnTaskComplete();
   importDefault = React.useRef("");
@@ -59,11 +59,11 @@ export default function _default() {
                 closure_1_5(true);
                 obj1 = { verification_code: null, type: null };
                 obj1[0] = current;
-                obj1[1] = onTaskComplete(first[6]).TaskInputType.VerificationCode;
+                obj1[1] = closure_1_0(closure_1_2[6]).TaskInputType.VerificationCode;
                 ref = 2;
                 c4 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = onTaskComplete(obj1);
+                obj2[0] = closure_1_0(obj1);
                 return obj2;
               }
             }
@@ -73,10 +73,10 @@ export default function _default() {
             v0 = 0;
             v0(false);
             callback(false);
-            obj1 = ref(first[7]);
+            obj1 = ref(closure_1_2[7]);
             const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null };
-            const intl = onTaskComplete(first[8]).intl;
-            obj3[1] = intl.string(ref(first[9]).PfbG6H);
+            const intl = closure_1_0(closure_1_2[8]).intl;
+            obj3[1] = intl.string(ref(closure_1_2[9]).PfbG6H);
             obj1.open(obj3);
           } else if (arg0 === 1) {
             c4 = 3;
@@ -112,9 +112,8 @@ export default function _default() {
     if (!tmp) {
       callback();
     }
-    tmp = 6 !== first.length || first1;
   }, items2);
-  let obj = { title: null, action: null, onAction: null, submitting: null, children: null };
+  obj = { title: null, action: null, onAction: null, submitting: null, children: null };
   let intl = onTaskComplete(first[8]).intl;
   obj[0] = intl.string(importDefault(first[9])["Qm6K/s"]);
   const intl2 = onTaskComplete(first[8]).intl;
@@ -143,8 +142,8 @@ export default function _default() {
   obj4[1] = flow_id;
   items4[1] = callback(importDefault(first[15]), obj4);
   obj2[1] = items4;
-  items3[1] = callback(onTaskComplete(first[11]).Stack, obj2);
+  items3[1] = closure_7(onTaskComplete(first[11]).Stack, obj2);
   obj[1] = items3;
-  obj[4] = callback(onTaskComplete(first[11]).Stack, obj);
+  obj[4] = closure_7(onTaskComplete(first[11]).Stack, obj);
   return callback(tmp12, obj);
 };

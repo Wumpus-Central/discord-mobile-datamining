@@ -1,9 +1,9 @@
 // === Module 662: encodeProperties ===
 
 // Module 662 (encodeProperties)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/analytics-utils/encodeProperties.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/encodeProperties.tsx");
 
 export const encodeProperties = function encodeProperties(arg0) {
   try {

@@ -1,14 +1,14 @@
 // === Module 14449: useYouBarHorizontalMargin ===
 
 // Module 14449 (useYouBarHorizontalMargin)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import map from "map" /* 4097 */;
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
 
 ({ YOU_BAR_MARGIN_IOS: c3, YOU_BAR_MARGIN: c4, YOU_BAR_FLOATING_OFFSET_MINIMUM: c5 } = CONNECTION_BANNER_HEIGHT);
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
 
 export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
   if (useSafeAreaInsetsDefault().bottom > 0) {

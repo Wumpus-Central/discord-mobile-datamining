@@ -47,6 +47,8 @@ arg5.objCreate = Object.create || ((arg0, obj) => {
   F.prototype = arg0;
   obj = Object.create(F.prototype);
   for (const key10008 in arg1) {
+    let tmp5 = key10008;
+    let tmp6 = require;
     class F {
       constructor() {
         return;
@@ -62,6 +64,7 @@ arg5.objCreate = Object.create || ((arg0, obj) => {
     if (!hopResult) {
       continue;
     } else {
+      let tmp3 = fn;
       let tmp4 = fn(obj, key10008, arg1[key10008]);
       class F {
         constructor() {

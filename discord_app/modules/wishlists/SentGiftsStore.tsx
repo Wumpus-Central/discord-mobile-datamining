@@ -3,7 +3,7 @@
 // Module 10369 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_0 from "_slicedToArray" /* 32 */;
 
 let closure_1 = { sentGifts: {} };
 const PersistedStore = initializeDefault.PersistedStore;
@@ -51,17 +51,21 @@ prototype["cleanupExpiredGifts"] = function cleanupExpiredGifts() {
   const entries = Object.entries(closure_1.sentGifts);
   const date = new Date();
   while (tmp5 !== undefined) {
+    let tmp7 = callback;
     let tmp8 = callback(tmp6, 2);
     let _Date = Date;
+    let tmp9 = new.target;
+    let tmp10 = new.target;
     let date1 = new Date(tmp8[1].expiresAt);
+    let tmp12 = date1;
     if (date1 < date) {
+      let tmp13 = closure_1;
       let sentGifts = closure_1.sentGifts;
       let first = tmp8[0];
       delete tmp2[tmp];
     }
     continue;
   }
-  tmp5 = entries[Symbol.iterator]();
 };
 SentGiftsStore.displayName = "SentGiftsStore";
 SentGiftsStore.persistKey = "SentGiftsStore";
@@ -73,6 +77,6 @@ const sentGiftsStore = new SentGiftsStore(dispatcherDefault, {
     closure_1.sentGifts[combined] = { skuId: skuId.skuId, recipientId: skuId.recipientId, sentAt: date.toISOString(), expiresAt: new Date(date.getTime() + 172800000).toISOString() };
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/wishlists/SentGiftsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/SentGiftsStore.tsx");
 
 export default sentGiftsStore;

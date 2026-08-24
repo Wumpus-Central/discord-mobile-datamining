@@ -1,12 +1,12 @@
 // === Module 10870: useExplicitMediaActions ===
 
 // Module 10870 (useExplicitMediaActions)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaActions.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaActions.tsx");
 
 export const useExplicitMediaActions = function useExplicitMediaActions(onError) {
   onError = onError.onError;
@@ -57,7 +57,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
                 c4 = 3;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = report();
+                obj1[0] = closure_1_2();
                 return obj1;
               }
             }
@@ -65,7 +65,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
             if (2 === tmp8) {
               v0 = 1;
               callback = closure_2;
-              aPIError = new onError(onSuccess[3]).APIError(callback);
+              aPIError = new closure_1_0(closure_1_1[3]).APIError(callback);
               if (aPIError != null) {
                 tmp25(aPIError);
               }

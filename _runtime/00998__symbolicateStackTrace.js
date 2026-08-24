@@ -1,7 +1,7 @@
 // === Module 998: _symbolicateStackTrace ===
 
 // Module 998 (_symbolicateStackTrace)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function _symbolicateStackTrace() {
@@ -42,18 +42,21 @@ function _symbolicateStackTrace() {
               closure_0 = undefined;
               const obj10 = callback(closure_1_2[1]);
               const tmp23 = closure_0;
+              const tmp24 = callback;
+              const tmp25 = callback;
+              const tmp26 = closure_1_2;
               if (defaultResult.bundleLoadedFromServer) {
                 const _fetch = closure_0.fetch;
                 let fetch = _fetch;
                 if (_fetch == null) {
-                  fetch = callback(closure_1_2[2]).fetch;
+                  fetch = tmp25(tmp26[2]).fetch;
                 }
                 obj1 = { method: "POST", headers: null, body: null };
                 obj1[1] = { "Content-Type": "application/json" };
                 const _JSON = JSON;
                 const obj2 = { stack: null, extraData: null };
                 obj2[0] = tmp23;
-                obj2[1] = callback;
+                obj2[1] = tmp24;
                 const text = `${tmp27.url}symbolicate`;
                 obj1[2] = JSON.stringify(obj2);
                 c4 = 1;

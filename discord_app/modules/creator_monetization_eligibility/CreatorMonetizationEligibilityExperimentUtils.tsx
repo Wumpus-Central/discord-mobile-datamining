@@ -2,13 +2,14 @@
 
 // Module 7227 (set)
 import initialize from "initialize" /* 589 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd" /* 4041 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "handlePaymentSourceCreateEnd" /* 4041 */;
 import { GuildFeatures } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-require = fn;
-const set = new Set(["US"]);
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
+require = arg1;
+let set = new Set(["US"]);
+const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
 
 export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserInCreatorMonetizationEligibleCountry() {
   const items = [closure_2, closure_3];

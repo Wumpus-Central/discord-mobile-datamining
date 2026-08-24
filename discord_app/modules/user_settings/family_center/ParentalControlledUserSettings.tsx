@@ -1,7 +1,7 @@
 // === Module 14182: result ===
 
 // Module 14182 (result)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import shallowEqualDefault from "shallowEqual" /* 643 */;
 import ME from "ME" /* 676 */;
 import create from "create" /* 1306 */;
@@ -117,8 +117,9 @@ const result9 = defineParentalControlledSetting.defineParentalControlledSetting(
   } else {
     ({ amount, currency } = arg0);
     const SpendingLimitSettings = create.SpendingLimitSettings;
+    let obj = { oneTimePurchaseLimit: null };
     const SpendingLimit = create.SpendingLimit;
-    const obj = { amount: null, currency: null };
+    obj = { amount: null, currency: null };
     const _String = String;
     obj[0] = String(amount);
     obj[1] = currency;
@@ -126,7 +127,8 @@ const result9 = defineParentalControlledSetting.defineParentalControlledSetting(
     return SpendingLimitSettings.create(obj);
   }
 }, { comparator: spendingLimitEqual.spendingLimitEqual });
-const result10 = obj132.fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettings.tsx");
+const obj1 = { comparator: spendingLimitEqual.spendingLimitEqual };
+const result10 = set.fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettings.tsx");
 
 export const ParentalControlledExplicitContent = result;
 export const ParentalControlledLegacyExplicitContent = result1;

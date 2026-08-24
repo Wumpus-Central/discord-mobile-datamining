@@ -1,7 +1,7 @@
 // === Module 5263: enqueue ===
 
 // Module 5263 (enqueue)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 class ModalDispatchQueue {
   constructor() {
@@ -29,6 +29,6 @@ prototype["flush"] = function flush() {
 };
 let obj = Object.create(ModalDispatchQueue.prototype);
 obj[0] = [];
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
 
 export default obj;

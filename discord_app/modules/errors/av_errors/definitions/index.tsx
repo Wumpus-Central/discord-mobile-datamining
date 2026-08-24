@@ -1,7 +1,7 @@
 // === Module 17053: ErrorDefinitions ===
 
 // Module 17053 (ErrorDefinitions)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import mapped from "mapped" /* 9668 */;
 import AVErrorNoAudioInputDetectedDefinition from "AVErrorNoAudioInputDetectedDefinition" /* 17054 */;
 import AVErrorNoInputDevicesDefinition from "AVErrorNoInputDevicesDefinition" /* 17056 */;
@@ -39,6 +39,6 @@ obj[mapped.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT] = AVErrorVideoStreamRece
 obj[mapped.AVError.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM] = AVErrorVideoStreamSenderReadyTimeoutNoStreamDefinition.AVErrorVideoStreamSenderReadyTimeoutNoStreamDefinition;
 obj[mapped.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM] = AVErrorVideoStreamReceiverReadyTimeoutNoStreamDefinition.AVErrorVideoStreamReceiverReadyTimeoutNoStreamDefinition;
 obj[mapped.AVError.CAMERA_SEND_LOW_FPS] = AVErrorCameraSendLowFPSDefinition.AVErrorCameraSendLowFPSDefinition;
-const result = obj132.fileFinishedImporting("modules/errors/av_errors/definitions/index.tsx");
+const result = set.fileFinishedImporting("modules/errors/av_errors/definitions/index.tsx");
 
 export const ErrorDefinitions = obj;

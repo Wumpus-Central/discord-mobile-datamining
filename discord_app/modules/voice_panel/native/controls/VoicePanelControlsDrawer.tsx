@@ -3,16 +3,16 @@
 // Module 16421 (renderChat)
 import ThemesDefault from "Themes" /* 712 */;
 import memoResult1Default from "memoResult1" /* 11437 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import VoicePanelModes from "VoicePanelModes" /* 11440 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function renderChat(shown) {
-  { collapsable: false, style: absoluteFill.absoluteFill, children: callback(memoResult1Default, obj) };
+  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(memoResult1Default, obj) };
   obj = { shown };
   return callback(closure_6, obj);
 }
@@ -20,12 +20,14 @@ let c4 = importAllResult;
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ MODE_CHANGE_PHYSICS: error, VoicePanelModes: closure_8 } = VoicePanelModes);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { flex: 1, zIndex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+let obj = { drawer: null };
+obj = { flex: 1, zIndex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((shown) => {
   shown = shown.shown;
   const renderContent = shown.renderContent;
+  dependencyMap = undefined;
   let ref;
   let obj = importAllResult;
   [tmp2, tmp3] = ref(importAllResult.useState(!shown), 2);
@@ -70,12 +72,15 @@ const memoResult1 = importAllResult.memo(function VoicePanelControlsDrawer(gestu
   ({ tab, sharedTab, wrapperSpecs } = gestureSpecs);
   gestureSpecs = gestureSpecs.gestureSpecs;
   const openTab = gestureSpecs.openTab;
+  let mode;
   let windowDimensions;
+  let safeArea;
+  c6 = undefined;
   let obj = windowDimensions;
   const context = windowDimensions.useContext(gestureSpecs(openTab[10]));
-  const mode = context.mode;
+  mode = context.mode;
   windowDimensions = context.windowDimensions;
-  const safeArea = context.safeArea;
+  safeArea = context.safeArea;
   const tmp = gestureSpecs;
   const tmp4 = callback2();
   [tmp6, tmp7] = mode(windowDimensions.useState(null == tab), 2);
@@ -158,21 +163,21 @@ const memoResult1 = importAllResult.memo(function VoicePanelControlsDrawer(gestu
   if (!tmp6) {
     tmp17 = "chat" === tab;
   }
-  const items3 = [callback(closure_12, { shown: tmp17, renderContent: renderChat }), , ];
+  const items3 = [closure_9(closure_12, { shown: tmp17, renderContent: renderChat }), , ];
   let tmp18 = !tmp6;
   if (!tmp6) {
     tmp18 = "settings" === tab;
   }
-  items3[1] = callback(closure_12, { shown: tmp18, renderContent: callback });
+  items3[1] = closure_9(closure_12, { shown: tmp18, renderContent: callback });
   let tmp19 = !tmp6;
   if (!tmp6) {
     tmp19 = "app_launcher" === tab;
   }
-  items3[2] = callback(closure_12, { shown: tmp19, renderContent: callback1 });
+  items3[2] = closure_9(closure_12, { shown: tmp19, renderContent: callback1 });
   obj1[1] = items3;
-  return callback2(tmp(openTab[11]).View, obj1);
+  return closure_10(tmp(openTab[11]).View, obj1);
 });
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx");
 
 export default memoResult1;
 export const LazyContentFreezer = memoResult;

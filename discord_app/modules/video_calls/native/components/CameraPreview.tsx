@@ -1,27 +1,33 @@
 // === Module 8681: CameraPreview ===
 
 // Module 8681 (CameraPreview)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import getParticipants from "getParticipants" /* 4773 */;
+import closure_7 from "participantFromServer" /* 1390 */;
+import closure_8 from "getParticipants" /* 4773 */;
 import { useBestActiveChatInputContainerHeight as closure_9 } from "updateChatInputContainerHeight" /* 8682 */;
-import reset from "reset" /* 4652 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import initialize from "initialize" /* 8683 */;
+import closure_10 from "reset" /* 4652 */;
+import closure_11 from "fetchFingerprint" /* 1218 */;
+import closure_12 from "initialize" /* 8683 */;
 import { useChannelCallStore } from "VoiceChatDrawerState" /* 8669 */;
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
 import ParticipantTypes from "ParticipantTypes" /* 4544 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function CameraPreview(arg0) {
   ({ channel, participantScreenIsFocused } = arg0);
   let ref = participantScreenIsFocused;
+  let stateFromStores;
+  dependencyMap = undefined;
   let reveal;
   let React;
+  closure_5 = undefined;
+  closure_6 = undefined;
+  let bottom;
+  let top;
   let callback;
   let screenOrientation;
   let first;
@@ -32,22 +38,22 @@ function CameraPreview(arg0) {
   ({ nonSelfPipParticipant, selfParticipant } = arg0);
   obj = ref(589);
   const items = [closure_12];
-  const stateFromStores = obj.useStateFromStores(items, () => lib.isReactingToThermalState());
+  stateFromStores = obj.useStateFromStores(items, () => lib.isReactingToThermalState());
   const tmp6 = reveal(stateFromStores(8684)(), 2);
   dependencyMap = tmp7;
   obj1 = React;
   reveal = React.useContext(ref(8678).RevealContext).reveal;
   let tmp8 = stateFromStores(8693)();
   React = tmp8;
-  const tmp9 = callback();
+  let tmp9 = callback();
   closure_5 = tmp9;
   const tmp10 = stateFromStores(8679)(channel.id);
   closure_6 = tmp10;
   let obj2 = ref(8944);
   const isScreenLandscape = obj2.useIsScreenLandscape();
   const rect = stateFromStores(1629)();
-  const bottom = rect.bottom;
-  const top = rect.top;
+  bottom = rect.bottom;
+  top = rect.top;
   ({ left, right } = rect);
   let obj3 = ref(8690);
   obj = { channelId: channel.id };
@@ -93,15 +99,16 @@ function CameraPreview(arg0) {
     let sum1 = bottom + closure_1_16;
     if (ref) {
       if (reveal) {
-        sum = ref(6370).NAV_BAR_HEIGHT + tmp + closure_1_16;
+        sum = ref(6370).NAV_BAR_HEIGHT + tmp + tmp2;
       }
-      if (reveal) {
-        sum1 = closure_4 + bottom + closure_1_16;
+      if (tmp9) {
+        sum1 = closure_4 + tmp4 + tmp2;
       }
       let sum2 = sum1;
       let tmp8 = sum;
+      tmp9 = reveal;
     } else {
-      sum2 = closure_5 + bottom + closure_1_16;
+      sum2 = closure_5 + tmp4 + tmp2;
       tmp8 = sum;
     }
     lib(tmp8);
@@ -156,9 +163,9 @@ function CameraPreview(arg0) {
   const obj6 = { style: items8, pointerEvents: "box-none", children: null };
   items8 = [{ flex: 1, marginLeft: left + c15, marginRight: right + c15 }, animatedStyle];
   const obj8 = { channel, preferredPosition: tmp6[0], onMove: tmp6[1], isInCallScreen: true, marginTop: first, marginBottom: first1, children: null };
-  tmp4(8685);
+  let tmp4Result = tmp4(8685);
   const obj9 = { ref, disabled: null, trigger: null, rows: null, onOpen: null, onClose: null };
-  const tmp4Result = tmp4(12432);
+  tmp4Result = tmp4(12432);
   if (isViewingActivity) {
     isViewingActivity = stateFromStores;
   }
@@ -181,7 +188,7 @@ function CameraPreview(arg0) {
   obj5[2] = callback2(stateFromStores(4115).View, obj6, str);
   items7[1] = callback2(closure_6, obj5);
   obj10[0] = items7;
-  return callback(closure_22, obj10);
+  return closure_23(closure_22, obj10);
 }
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ VoiceChatDrawerState: closure_14, VOICE_CALL_OVERLAY_HORIZONTAL_MARGIN: closure_15, VOICE_CALL_OVERLAY_VERTICAL_MARGIN: closure_16, VoiceCallOverlayType: closure_17 } = BOX_MODE_ACTIONSHEET_WIDTH);
@@ -191,7 +198,7 @@ let closure_24 = { code: "function CameraPreviewTsx1(){const{closeFunc,runOnJS}=
 let obj = { duration: 250, easing: require("Button").STANDARD_EASING };
 let closure_26 = { HIDE_PIP: "HIDE_PIP", HANDLE_THERMAL_EVENT: "HANDLE_THERMAL_EVENT" };
 let closure_27 = { code: "function CameraPreviewTsx2(){const{withTiming,marginTopState,TIMING_CONFIG,marginBottomState}=this.__closure;return{marginTop:withTiming(marginTopState,TIMING_CONFIG),marginBottom:withTiming(marginBottomState,TIMING_CONFIG)};}" };
-let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/CameraPreview.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/CameraPreview.tsx");
 
 export default function CameraPreviewContainer(channel) {
   channel = channel.channel;
@@ -203,22 +210,23 @@ export default function CameraPreviewContainer(channel) {
   if (flag2 === undefined) {
     flag2 = false;
   }
+  dependencyMap = undefined;
   closure_3 = undefined;
   let id;
   const tmp3 = flag(8674)(channel);
   dependencyMap = tmp3;
   obj = channel(589);
-  const items = [closure_8, id, closure_10];
+  const items = [closure_8, closure_11, closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => {
     id = closure_1_11.getId();
     const currentUserActiveStream = closure_1_10.getCurrentUserActiveStream();
     let tmp2 = null != currentUserActiveStream;
     if (tmp2) {
-      tmp2 = currentUserActiveStream.state === ApplicationStreamStates.ACTIVE;
+      tmp2 = currentUserActiveStream.state === closure_1_18.ACTIVE;
     }
     closure_1 = tmp2;
     const streamParticipants = closure_1_8.getStreamParticipants(id.id);
-    const found = streamParticipants.find((item, index) => item.user.id === closure_0 && closure_1);
+    const found = streamParticipants.find((user) => user.user.id === closure_0 && closure_1);
     if (null != id2) {
       if (null != found) {
         if (id2.id === found.id) {
@@ -239,10 +247,10 @@ export default function CameraPreviewContainer(channel) {
     let found = null;
     if (null != currentEmbeddedActivity) {
       const participants = closure_1_8.getParticipants(currentEmbeddedActivity.id);
-      found = participants.find((item, index) => {
-        currentEmbeddedActivity(closure_1_2[37]);
+      found = participants.find((id) => {
+        obj = currentEmbeddedActivity(closure_1_2[37]);
         obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: currentEmbeddedActivity.compositeInstanceId };
-        return item.id === obj.getEmbeddedActivityParticipantId(obj);
+        return id.id === obj.getEmbeddedActivityParticipantId(obj);
       });
     }
     return found;
@@ -273,7 +281,7 @@ export default function CameraPreviewContainer(channel) {
   obj = { channelId: channel.id };
   const isViewingActivity = tmp4Result.useIsViewingActivity(obj);
   const obj3 = channel(589);
-  const items2 = [closure_8, id];
+  const items2 = [closure_8, closure_11];
   const stateFromStores2 = channel(589).useStateFromStores(items2, () => {
     id = closure_1_11.getId();
     const participant = closure_1_8.getParticipant(id.id, id);
@@ -290,8 +298,8 @@ export default function CameraPreviewContainer(channel) {
       let tmp6 = null != closure_2;
       if (tmp6) {
         let id1;
-        if (closure_2 != null) {
-          id1 = closure_2.id;
+        if (tmp5 != null) {
+          id1 = tmp5.id;
         }
         tmp6 = id1 !== id;
       }
@@ -300,10 +308,10 @@ export default function CameraPreviewContainer(channel) {
           const participants = closure_1_8.getParticipants(obj2.id);
           let found = participants;
           if (participants.length <= 4) {
-            found = participants.filter((item, index) => {
-              let tmp = closure_1_20(item);
+            found = participants.filter((user) => {
+              let tmp = closure_1_20(user);
               if (tmp) {
-                tmp = item.user.id === id;
+                tmp = user.user.id === id;
               }
               return !tmp;
             });
@@ -322,21 +330,21 @@ export default function CameraPreviewContainer(channel) {
     }
   });
   const tmp4Result1 = channel(589);
-  const items3 = [id, closure_8];
+  const items3 = [closure_11, closure_8];
   id = channel.id;
   const stateFromStores3 = channel(589).useStateFromStores(items3, () => {
     const tmp2 = closure_1_20(closure_2);
     let type;
     if (closure_2 != null) {
-      type = closure_2.type;
+      type = tmp.type;
     }
     if (tmp2) {
       let streamId;
-      if (closure_2 != null) {
-        streamId = closure_2.streamId;
+      if (tmp != null) {
+        streamId = tmp.streamId;
       }
       if (null != streamId) {
-        let found = closure_2;
+        let found = tmp;
       }
       let streamId1;
       if (found != null) {
@@ -350,11 +358,11 @@ export default function CameraPreviewContainer(channel) {
     }
     if (tmp2) {
       id = undefined;
-      if (closure_2 != null) {
-        id = closure_2.user.id;
+      if (tmp != null) {
+        id = tmp.user.id;
       }
       if (id !== closure_1_11.getId()) {
-        const participant = closure_1_8.getParticipant(channel.id, closure_2.user.id);
+        const participant = closure_1_8.getParticipant(channel.id, tmp.user.id);
         let localVideoDisabled;
         if (participant != null) {
           localVideoDisabled = participant.localVideoDisabled;
@@ -365,11 +373,10 @@ export default function CameraPreviewContainer(channel) {
         }
       }
     }
-    if (tmp4) {
+    if (type === closure_1_19.USER) {
       const streamParticipants = closure_1_8.getStreamParticipants(channel.id);
-      found = streamParticipants.find((item, index) => item.user.id === user.user.id);
+      found = streamParticipants.find((user) => user.user.id === user.user.id);
     }
-    tmp4 = type === closure_1_19.USER;
   });
   const tmp4Result2 = channel(589);
   const items4 = [closure_8];
@@ -387,7 +394,7 @@ export default function CameraPreviewContainer(channel) {
   let tmp20 = null;
   if (null != tmp19) {
     tmp20 = null;
-    if (tmp19.user.id !== id.getId()) {
+    if (tmp19.user.id !== obj2.getId()) {
       if (!flag) {
         let id2;
         if (stateFromStores5 != null) {
@@ -441,5 +448,4 @@ export default function CameraPreviewContainer(channel) {
   } else {
     tmp25 = null;
   }
-  const tmp4Result5 = channel(589);
 };

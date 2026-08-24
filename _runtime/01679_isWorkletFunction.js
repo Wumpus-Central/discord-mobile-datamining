@@ -1,10 +1,10 @@
 // === Module 1679: isWorkletFunction ===
 
 // Module 1679 (isWorkletFunction)
-function isWorkletFunction(closure_1_11) {
-  let __workletHash = typeof unpackModuleId === "function";
-  if (typeof unpackModuleId === "function") {
-    __workletHash = unpackModuleId.__workletHash;
+function isWorkletFunction(onUpdate) {
+  let __workletHash = typeof onUpdate === "function";
+  if (typeof onUpdate === "function") {
+    __workletHash = onUpdate.__workletHash;
   }
   return __workletHash;
 }

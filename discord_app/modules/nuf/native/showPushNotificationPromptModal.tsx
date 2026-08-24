@@ -1,20 +1,21 @@
 // === Module 15264: showPushNotificationPromptModal ===
 
 // Module 15264 (showPushNotificationPromptModal)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import _modDef5260 from "module_5260" /* 5260 */;
-import set from "set" /* 11578 */;
+import set2 from "set" /* 11578 */;
 import NewUserTypes from "NewUserTypes" /* 11878 */;
 
-const PermissionStateType = set.PermissionStateType;
+const PermissionStateType = set2.PermissionStateType;
 let closure_4 = NewUserTypes.NUF_NOTIFICATION_MODAL_KEY;
-let result = obj132.fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
+let result = set.fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  const obj = {
+  let obj = _modDef5260;
+  obj = {
     onComplete() {
-      _modDef5260.popWithKey(closure_1_4);
+      closure_1_1(closure_1_2[2]).popWithKey(closure_1_4);
       onComplete();
     }
   };

@@ -6,10 +6,10 @@ import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/images/BoostGemPixel.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/images/BoostGemPixel.tsx");
 
 export default function BoostGemPixel(style) {
   let num = style.width;

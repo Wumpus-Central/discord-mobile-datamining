@@ -6,9 +6,9 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/InvitesDisabledAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/InvitesDisabledAlertModal.tsx");
 
 export default function InvitesDisabledAlertModal() {
   let obj = { title: null, content: null, actions: null };
@@ -16,6 +16,7 @@ export default function InvitesDisabledAlertModal() {
   obj[0] = intl.string(getSystemLocale.t.LpUfEt);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.QRXqzO);
+  obj = { children: null };
   obj = { text: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.BddRzS);

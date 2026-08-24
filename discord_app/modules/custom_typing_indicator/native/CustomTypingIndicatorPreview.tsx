@@ -10,17 +10,17 @@ import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 14
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ row: { height: 32 } });
-const result = require("obj132").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorPreview.tsx");
 
 export default function CustomTypingIndicatorPreview(name) {
   const config = name.config;
   let obj = getRandomCustomTypingIndicatorEmojis;
   const customTypingIndicatorSuggestionWithNameMessage = obj.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion);
-  { direction: "horizontal", spacing: 8, align: "center", justify: "center", style: callback3().row, children: null };
+  obj = { direction: "horizontal", spacing: 8, align: "center", justify: "center", style: callback3().row, children: null };
   const items = [callback(CustomTypingIndicatorGlyphDefault, { config, size: 24 }), ];
   obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl = getSystemLocale.intl;

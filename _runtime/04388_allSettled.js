@@ -18,11 +18,10 @@ export default function allSettled(arg0) {
   } else {
     return callback(this, tmp(4395)(tmp(4392)(arg0), (arg0) => {
       try {
-        return promise.then((result) => ({ status: "fulfilled", value: result }), (reason) => ({ status: "rejected", reason }));
+        return promise.then((value) => ({ status: "fulfilled", value }), (reason) => ({ status: "rejected", reason }));
       } catch (tmp3) {
         return closure_1_3(tmp, tmp3);
       }
-      promise = self(dependencyMap[6])(self, arg0);
     }));
   }
 };

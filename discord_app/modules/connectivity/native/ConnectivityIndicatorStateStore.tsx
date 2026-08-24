@@ -5,11 +5,11 @@ import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import awaitOnlineDefault from "awaitOnline" /* 1474 */;
-import handleClearCaches from "handleClearCaches" /* 5067 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import getState from "getState" /* 7383 */;
+import closure_2 from "handleClearCaches" /* 5067 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "reinjectEphemerals" /* 4994 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "getState" /* 7383 */;
 import { AppStates } from "ME" /* 676 */;
 
 function updateState() {
@@ -30,6 +30,7 @@ function updateState() {
         }
         if (obj.HIDDEN === tmp) {
           if (tmp9.OFFLINE === UNKNOWN) {
+            obj = { delayed: null };
             obj = { state: null, delayMs: null };
             obj[0] = tmp13.NO_CONNECTION;
             obj[1] = c12;
@@ -154,8 +155,9 @@ function updateState() {
         let _HermesInternal = HermesInternal;
         closure_8.verbose("state changed immediately from " + tmp + " to " + closure_13);
         if (connectivityIndicatorStateStore != null) {
-          connectivityIndicatorStateStore.emitChange();
+          obj21.emitChange();
         }
+        obj21 = connectivityIndicatorStateStore;
       }
       tmp28 = null !== c14 && c14 === immediate;
     }
@@ -176,9 +178,10 @@ function updateState() {
         if (closure_13 !== state) {
           const _HermesInternal = HermesInternal;
           closure_1_8.verbose("state changed after a delay from " + tmp + " to " + closure_13);
-          if (connectivityIndicatorStateStore != null) {
-            connectivityIndicatorStateStore.emitChange();
+          if (closure_1_23 != null) {
+            obj.emitChange();
           }
+          obj = closure_1_23;
         }
       }, delayed.delayMs);
     } else {
@@ -223,7 +226,7 @@ function handleAuthStoreChanged() {
 function handleAppStateUpdate() {
   const state = store.getState();
   if (AppStates.ACTIVE === state) {
-    if (state === AppStates.BACKGROUND) {
+    if (state === tmp2.BACKGROUND) {
       c19 = true;
       if (null != timeout) {
         const _clearTimeout2 = clearTimeout;
@@ -236,14 +239,14 @@ function handleAppStateUpdate() {
         callback();
       }, 5000);
     }
-  } else if (AppStates.BACKGROUND === state) {
+  } else if (tmp2.BACKGROUND === state) {
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       timeout = null;
     }
   } else {
-    const INACTIVE = AppStates.INACTIVE;
+    const INACTIVE = tmp2.INACTIVE;
   }
   updateState();
   return false;
@@ -280,10 +283,12 @@ prototype["initialize"] = function initialize() {
     c16 = true;
     callback();
   });
+  obj = awaitOnlineDefault;
   awaitOnlineDefault.addOnlineCallback(() => {
     c16 = false;
     callback();
   });
+  const obj2 = awaitOnlineDefault;
   closure_16 = !awaitOnlineDefault.isOnline();
   closure_15 = closure_3.isAuthenticated();
   updateState();
@@ -308,7 +313,7 @@ obj = {
 };
 connectivityIndicatorStateStore = new ConnectivityIndicatorStateStore(dispatcherDefault, obj);
 const tmp2 = new timestampDefault("ConnectivityIndicatorStateStore");
-const result = require("obj132").fileFinishedImporting("modules/connectivity/native/ConnectivityIndicatorStateStore.tsx");
+const result = require("set").fileFinishedImporting("modules/connectivity/native/ConnectivityIndicatorStateStore.tsx");
 
 export default connectivityIndicatorStateStore;
 export const ConnectivityIndicatorState = obj;

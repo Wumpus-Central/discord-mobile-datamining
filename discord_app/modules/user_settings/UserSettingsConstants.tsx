@@ -1,9 +1,9 @@
 // === Module 685: MAX_FAVORITES ===
 
 // Module 685 (MAX_FAVORITES)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/user_settings/UserSettingsConstants.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/UserSettingsConstants.tsx");
 
 export const MAX_FAVORITES = 250;
 export const MAX_FAVORITE_GIFS_SIZE = 762880;

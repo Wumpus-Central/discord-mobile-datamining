@@ -4,9 +4,9 @@
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
 
 export default function UserProfileLegacyUsernameSwitch(username) {
   const pendingLegacyUsernameDisabled = username.pendingLegacyUsernameDisabled;
@@ -24,11 +24,11 @@ export default function UserProfileLegacyUsernameSwitch(username) {
   obj[2] = intl2.formatToPlainString(setting(1236).t.aYhclf, { username: username.legacyUsername });
   obj[3] = function onValueChange(arg0) {
     if (!arg0 === setting) {
-      const result = setting(dependencyMap[5]).resetPendingLegacyUsernameDisabled();
-      const obj3 = setting(dependencyMap[5]);
+      const result = setting(closure_1_1[5]).resetPendingLegacyUsernameDisabled();
+      const obj3 = setting(closure_1_1[5]);
     } else {
-      setting(dependencyMap[6]);
-      const obj = { legacyUsernameDisabled: null };
+      let obj = setting(closure_1_1[6]);
+      obj = { legacyUsernameDisabled: null };
       obj[0] = !arg0;
       obj.setPendingChanges(obj);
     }

@@ -2,11 +2,11 @@
 
 // Module 4567 (start)
 import sleep from "sleep" /* 4548 */;
-import ApplicationStreamPresets from "ApplicationStreamPresets" /* 4562 */;
+import closure_2 from "ApplicationStreamPresets" /* 4562 */;
 import { StreamLayouts } from "ME" /* 676 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");
 class VideoStreamStats {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -19,16 +19,16 @@ class VideoStreamStats {
     obj._automaticQualityChanges = 0;
     obj._incrementLayout = function _incrementLayout(_lastLayout, arg1) {
       if (null == obj._layoutBuckets[_lastLayout]) {
-        obj._layoutBuckets[_lastLayout] = 0;
+        tmp._layoutBuckets[_lastLayout] = 0;
       }
-      const _layoutBuckets = obj._layoutBuckets;
+      const _layoutBuckets = tmp._layoutBuckets;
       _layoutBuckets[_lastLayout] = _layoutBuckets[_lastLayout] + arg1;
     };
     obj._sampleStats = function _sampleStats() {
       const state = closure_1_2.getState();
       obj._streamSettingsChanged = state.resolution !== obj._targetResolution || tmp2 !== obj._targetFPS;
     };
-    obj._isSender = fn;
+    obj._isSender = arg1;
     interval = new require("start").Interval();
     obj._statInterval = interval;
     obj._lastLayout = global;
@@ -62,6 +62,7 @@ prototype["layoutChange"] = function layoutChange(_lastLayout) {
       self._layoutChanges = self._layoutChanges + 1;
       self._lastLayout = _lastLayout;
       self._lastLayoutChanged = nowResult;
+      const obj = sleep;
     }
   }
 };

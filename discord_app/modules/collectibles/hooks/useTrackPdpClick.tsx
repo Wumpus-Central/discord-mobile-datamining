@@ -1,11 +1,11 @@
 // === Module 9267: useTrackPdpClick ===
 
 // Module 9267 (useTrackPdpClick)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
 
 export const useTrackPdpClick = function useTrackPdpClick(skuId) {
   skuId = skuId.skuId;
@@ -33,6 +33,5 @@ export const useTrackPdpClick = function useTrackPdpClick(skuId) {
     }
     obj = { sku_id: tmp, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: skuId(analyticsLocations[4]).getAnalyticsShopDiscountSource(shopDiscountSource) };
     obj.track(sessionId.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj);
-    const obj3 = skuId(analyticsLocations[4]);
   }, items);
 };

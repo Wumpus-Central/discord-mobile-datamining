@@ -1,10 +1,10 @@
 // === Module 13204: items ===
 
 // Module 13204 (items)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import obj1322 from "obj132" /* 500 */;
+import set2 from "set" /* 500 */;
 import get from "get" /* 4842 */;
 import supportsZstd from "supportsZstd" /* 13205 */;
 import enforcing from "enforcing" /* 13206 */;
@@ -281,11 +281,12 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
   const self = this;
   this.close();
   this._socketId = _socketId._socketId;
+  const obj = supportsZstd;
   const supportsZstdResult = supportsZstd.supportsZstd();
-  const isAndroidResult = obj1322.isAndroid();
+  const isAndroidResult = set2.isAndroid();
   if (supportsZstdResult) {
     if (isAndroidResult) {
-      const _default2 = enforcing.default;
+      const _default2 = tmp2(13206).default;
       if (_default2 != null) {
         const result = _default2.enableZstdStreamSupport(self._socketId);
       }
@@ -294,7 +295,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
       const result1 = DCDCompressionManager2.enableZstdStreamSupport(self._socketId, 0);
     }
   } else if (isAndroidResult) {
-    const _default = enforcing.default;
+    const _default = tmp2(13206).default;
     if (_default != null) {
       const result2 = _default.enableZlibStreamSupport(self._socketId);
     }
@@ -328,7 +329,7 @@ prototype5["close"] = function close() {
   this._socketId = null;
   if (null !== _socketId) {
     if (obj.isAndroid()) {
-      const _default = enforcing.default;
+      const _default = tmp(13206).default;
       if (_default != null) {
         const result = _default.disableZlibStreamSupport(_socketId);
       }
@@ -336,7 +337,8 @@ prototype5["close"] = function close() {
       const DCDCompressionManager = NativeModules.DCDCompressionManager;
       const result1 = DCDCompressionManager.disableZlibStreamSupport(_socketId);
     }
-    obj = obj1322;
+    obj = set2;
+    tmp = require;
   }
 };
 items.push(fn4);
@@ -366,7 +368,7 @@ prototype6["close"] = function close() {
 
 };
 items.push(NullGatewayCompressionHandler);
-let result = obj132.fileFinishedImporting("modules/gateway/GatewayCompressionHandler.tsx");
+let result = set.fileFinishedImporting("modules/gateway/GatewayCompressionHandler.tsx");
 
 export const getCompressionHandler = function getCompressionHandler(closure_10) {
   const ProcessArgs = get.ProcessArgs;
@@ -374,8 +376,14 @@ export const getCompressionHandler = function getCompressionHandler(closure_10) 
     return new NullGatewayCompressionHandler(closure_10);
   } else {
     for (const item10014 of items) {
+      let tmp3 = item10014;
       if (item10014.canUse()) {
+        let tmp4 = new.target;
+        let tmp5 = new.target;
+        let tmp6 = arg0;
         let item10014 = new item10014(arg0);
+        let tmp8 = item10014;
+        let tmp9 = obj;
         obj.return();
         return item10014;
       }

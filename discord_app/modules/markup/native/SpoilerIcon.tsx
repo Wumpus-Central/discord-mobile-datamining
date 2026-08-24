@@ -5,10 +5,10 @@ import noopAll from "noop" /* 19 */;
 import inlineStyles from "inlineStyles" /* 6571 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/markup/native/SpoilerIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/markup/native/SpoilerIcon.tsx");
 
 export default function Spoiler(width) {
   let num = width.width;

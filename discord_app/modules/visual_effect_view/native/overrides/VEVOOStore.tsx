@@ -1,13 +1,13 @@
 // === Module 4726: useVisualEffectViewOverrides ===
 
 // Module 4726 (useVisualEffectViewOverrides)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import keys from "keys" /* 644 */;
 
 let closure_2 = {};
 let closure_3 = keys.create(() => closure_2);
-const result = obj132.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOStore.tsx");
+const result = set.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOStore.tsx");
 
 export const useVisualEffectViewOverrides = function useVisualEffectViewOverrides() {
   return state();

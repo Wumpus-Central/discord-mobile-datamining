@@ -1,13 +1,12 @@
 // === Module 4996: mergeMessage ===
 
 // Module 4996 (mergeMessage)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4306 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import insertionIndexAll from "insertionIndex" /* 4998 */;
 import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 4999 */;
 import ME from "ME" /* 676 */;
 
@@ -110,7 +109,7 @@ prototype["removeMany"] = function removeMany(arg0) {
     delete tmp2[tmp];
   });
   const _messages = this._messages;
-  this._messages = _messages.filter((item, index) => -1 === closure_0.indexOf(item.id));
+  this._messages = _messages.filter((id) => -1 === closure_0.indexOf(id.id));
 };
 prototype["replace"] = function replace(arg0, id) {
   const self = this;
@@ -122,10 +121,10 @@ prototype["replace"] = function replace(arg0, id) {
     _messages[_messages2.indexOf(tmp3)] = id;
   }
 };
-prototype["update"] = function update(arg0, fn) {
+prototype["update"] = function update(arg0, arg1) {
   const self = this;
   if (null != this._map[arg0]) {
-    const tmp3 = fn(tmp);
+    const tmp3 = arg1(tmp);
     self._map[tmp.id] = tmp3;
     ({ _messages: _messages2, _messages } = self);
     _messages[_messages2.indexOf(tmp)] = tmp3;
@@ -141,8 +140,9 @@ prototype["forEach"] = function forEach(arg0, arg1) {
   const _messages = this._messages;
   const item = _messages.forEach(arg0, arg1);
 };
-prototype["cache"] = function cache(dependencyMap, arg1) {
-  const self = this;
+prototype["cache"] = function cache(_array, arg1) {
+  let self = this;
+  self = this;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -150,23 +150,23 @@ prototype["cache"] = function cache(dependencyMap, arg1) {
   if (0 === self.length) {
     self._wasAtEdge = flag;
   }
-  if (self._messages.length + dependencyMap.length > closure_6) {
+  if (self._messages.length + _array.length > closure_6) {
     self._wasAtEdge = false;
-    if (dependencyMap.length > closure_6) {
-      const slice = dependencyMap.slice;
+    if (_array.length > tmp) {
+      const slice = _array.slice;
       if (self._isCacheBefore) {
-        self._messages = slice(dependencyMap.length - closure_6);
+        self._messages = slice(_array.length - tmp);
       } else {
-        self._messages = slice(0, closure_6);
+        self._messages = slice(0, tmp);
       }
       self._map = {};
       const _messages = self._messages;
-      const item = _messages.forEach((item, index) => {
-        self._map[item.id] = item;
-        return item;
+      const item = _messages.forEach((id) => {
+        self._map[id.id] = id;
+        return id;
       });
     } else {
-      const diff = closure_6 - dependencyMap.length;
+      const diff = tmp - _array.length;
       const _messages1 = self._messages;
       const slice2 = _messages1.slice;
       if (self._isCacheBefore) {
@@ -179,18 +179,18 @@ prototype["cache"] = function cache(dependencyMap, arg1) {
   }
   const items = [];
   if (self._isCacheBefore) {
-    HermesBuiltin.arraySpread(dependencyMap, HermesBuiltin.arraySpread(self._messages, 0));
+    HermesBuiltin.arraySpread(_array, HermesBuiltin.arraySpread(self._messages, 0));
     let tmp7 = items;
   } else {
-    HermesBuiltin.arraySpread(self._messages, HermesBuiltin.arraySpread(dependencyMap, 0));
+    HermesBuiltin.arraySpread(self._messages, HermesBuiltin.arraySpread(_array, 0));
     tmp7 = items;
   }
   self._messages = tmp7;
   self._map = {};
   const _messages2 = self._messages;
-  const item1 = _messages2.forEach((item, index) => {
-    self._map[item.id] = item;
-    return item;
+  const item1 = _messages2.forEach((id) => {
+    self._map[id.id] = id;
+    return id;
   });
 };
 prototype["extractAll"] = function extractAll() {
@@ -199,7 +199,8 @@ prototype["extractAll"] = function extractAll() {
   return this._messages;
 };
 prototype["extract"] = function extract(arg0) {
-  const self = this;
+  let self = this;
+  self = this;
   const _Math = Math;
   if (this._isCacheBefore) {
     const maxResult = _Math.max(self.length - arg0, 0);
@@ -213,7 +214,7 @@ prototype["extract"] = function extract(arg0) {
     const _messages3 = self._messages;
     _messages3.splice(0, arg0);
   }
-  const item = substr.forEach((item, index) => {
+  const item = substr.forEach((arg0) => {
     delete tmp3[tmp2];
     return tmp;
   });
@@ -265,16 +266,16 @@ ChannelMessages["hasPresent"] = function hasPresent(arg0) {
 ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
   let tmp2 = ChannelMessages._channelMessages[channelId];
   if (null == tmp2) {
-    if (typeof ChannelMessages !== "function") {
+    if (typeof tmp !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = Object.create(ChannelMessages.prototype);
+    let obj = Object.create(tmp.prototype);
     obj[2] = GuildThemeSourcePreference.JumpType.ANIMATED;
     obj[21] = [];
     if (typeof MessageCache !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    obj = Object.create(MessageCache.prototype);
+    obj = Object.create(tmp6.prototype);
     obj._messages = [];
     obj._map = {};
     obj._wasAtEdge = false;
@@ -291,7 +292,7 @@ ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
     obj[23] = obj1;
     obj[24] = {};
     obj.channelId = channelId;
-    ChannelMessages._channelMessages[channelId] = obj;
+    tmp._channelMessages[channelId] = obj;
     tmp2 = obj;
   }
   return tmp2;
@@ -312,7 +313,7 @@ ChannelMessages["clearCache"] = function clearCache(arg0) {
 ChannelMessages["commit"] = function commit(channelId) {
   ChannelMessages._channelMessages[channelId.channelId] = channelId;
 };
-prototype2["mutate"] = function mutate(ready, flag) {
+prototype2["mutate"] = function mutate(obj, flag) {
   if (flag === undefined) {
     flag = false;
   }
@@ -320,13 +321,13 @@ prototype2["mutate"] = function mutate(ready, flag) {
   if (typeof ChannelMessages !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let obj = Object.create(ChannelMessages.prototype);
+  obj = Object.create(ChannelMessages.prototype);
   obj[2] = GuildThemeSourcePreference.JumpType.ANIMATED;
   obj[21] = [];
   if (typeof MessageCache !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  obj = Object.create(MessageCache.prototype);
+  obj = Object.create(tmp3.prototype);
   obj._messages = [];
   obj._map = {};
   obj._wasAtEdge = false;
@@ -375,61 +376,61 @@ prototype2["mutate"] = function mutate(ready, flag) {
     cloneResult1 = _before;
   }
   obj._before = cloneResult1;
-  if (ready instanceof Function) {
+  if (obj instanceof Function) {
     ({ ready: tmp2.ready, jumpType: tmp2.jumpType, jumpTargetId: tmp2.jumpTargetId, jumpTargetOffset: tmp2.jumpTargetOffset, jumpSequenceId: tmp2.jumpSequenceId, jumped: tmp2.jumped, jumpedToPresent: tmp2.jumpedToPresent, jumpFlash: tmp2.jumpFlash, jumpReturnTargetId: tmp2.jumpReturnTargetId, onJumpComplete: tmp2.onJumpComplete, focusTargetId: tmp2.focusTargetId, focusSequenceId: tmp2.focusSequenceId, hasMoreBefore: tmp2.hasMoreBefore, hasMoreAfter: tmp2.hasMoreAfter, loadingMore: tmp2.loadingMore, revealedMessageId: tmp2.revealedMessageId, cached: tmp2.cached, hasFetched: tmp2.hasFetched, error: tmp2.error, initialScrollSequenceId: tmp2.initialScrollSequenceId, suppressRowAnimationSequenceId: tmp2.suppressRowAnimationSequenceId } = self);
-    ready(obj);
-  } else if (typeof ready === "object") {
-    if (undefined !== ready.ready) {
-      ready = true === ready.ready;
+    obj(obj);
+  } else if (typeof obj === "object") {
+    if (undefined !== obj.ready) {
+      let ready = true === obj.ready;
     } else {
       ready = self.ready;
     }
     obj.ready = ready;
-    obj.jumpType = undefined !== ready.jumpType ? ready.jumpType : self.jumpType;
-    obj.jumpTargetId = undefined !== ready.jumpTargetId ? ready.jumpTargetId : self.jumpTargetId;
-    obj.jumpTargetOffset = undefined !== ready.jumpTargetOffset ? ready.jumpTargetOffset : self.jumpTargetOffset;
-    obj.jumpSequenceId = undefined !== ready.jumpSequenceId ? ready.jumpSequenceId : self.jumpSequenceId;
-    if (undefined !== ready.jumped) {
-      let jumped = true === ready.jumped;
+    obj.jumpType = undefined !== obj.jumpType ? obj.jumpType : self.jumpType;
+    obj.jumpTargetId = undefined !== obj.jumpTargetId ? obj.jumpTargetId : self.jumpTargetId;
+    obj.jumpTargetOffset = undefined !== obj.jumpTargetOffset ? obj.jumpTargetOffset : self.jumpTargetOffset;
+    obj.jumpSequenceId = undefined !== obj.jumpSequenceId ? obj.jumpSequenceId : self.jumpSequenceId;
+    if (undefined !== obj.jumped) {
+      let jumped = true === obj.jumped;
     } else {
       jumped = self.jumped;
     }
     obj.jumped = jumped;
-    if (undefined !== ready.jumpedToPresent) {
-      let jumpedToPresent = true === ready.jumpedToPresent;
+    if (undefined !== obj.jumpedToPresent) {
+      let jumpedToPresent = true === obj.jumpedToPresent;
     } else {
       jumpedToPresent = self.jumpedToPresent;
     }
     obj.jumpedToPresent = jumpedToPresent;
-    if (undefined !== ready.jumpFlash) {
-      let jumpFlash = true === ready.jumpFlash;
+    if (undefined !== obj.jumpFlash) {
+      let jumpFlash = true === obj.jumpFlash;
     } else {
       jumpFlash = self.jumpFlash;
     }
     obj.jumpFlash = jumpFlash;
-    obj.jumpReturnTargetId = undefined !== ready.jumpReturnTargetId ? ready.jumpReturnTargetId : self.jumpReturnTargetId;
-    obj.focusTargetId = undefined !== ready.focusTargetId ? ready.focusTargetId : self.focusTargetId;
-    obj.focusSequenceId = undefined !== ready.focusSequenceId ? ready.focusSequenceId : self.focusSequenceId;
-    if (undefined !== ready.hasMoreBefore) {
-      let hasMoreBefore = true === ready.hasMoreBefore;
+    obj.jumpReturnTargetId = undefined !== obj.jumpReturnTargetId ? obj.jumpReturnTargetId : self.jumpReturnTargetId;
+    obj.focusTargetId = undefined !== obj.focusTargetId ? obj.focusTargetId : self.focusTargetId;
+    obj.focusSequenceId = undefined !== obj.focusSequenceId ? obj.focusSequenceId : self.focusSequenceId;
+    if (undefined !== obj.hasMoreBefore) {
+      let hasMoreBefore = true === obj.hasMoreBefore;
     } else {
       hasMoreBefore = self.hasMoreBefore;
     }
     obj.hasMoreBefore = hasMoreBefore;
-    if (undefined !== ready.hasMoreAfter) {
-      let hasMoreAfter = true === ready.hasMoreAfter;
+    if (undefined !== obj.hasMoreAfter) {
+      let hasMoreAfter = true === obj.hasMoreAfter;
     } else {
       hasMoreAfter = self.hasMoreAfter;
     }
     obj.hasMoreAfter = hasMoreAfter;
-    obj.loadingMore = undefined !== ready.loadingMore ? ready.loadingMore : self.loadingMore;
-    obj.revealedMessageId = undefined !== ready.revealedMessageId ? ready.revealedMessageId : self.revealedMessageId;
-    obj.cached = undefined !== ready.cached ? ready.cached : self.cached;
-    obj.hasFetched = undefined !== ready.hasFetched ? ready.hasFetched : self.hasFetched;
-    obj.error = undefined !== ready.error ? ready.error : self.error;
-    obj.onJumpComplete = undefined !== ready.onJumpComplete ? ready.onJumpComplete : self.onJumpComplete;
-    obj.initialScrollSequenceId = undefined !== ready.initialScrollSequenceId ? ready.initialScrollSequenceId : self.initialScrollSequenceId;
-    obj.suppressRowAnimationSequenceId = undefined !== ready.suppressRowAnimationSequenceId ? ready.suppressRowAnimationSequenceId : self.suppressRowAnimationSequenceId;
+    obj.loadingMore = undefined !== obj.loadingMore ? obj.loadingMore : self.loadingMore;
+    obj.revealedMessageId = undefined !== obj.revealedMessageId ? obj.revealedMessageId : self.revealedMessageId;
+    obj.cached = undefined !== obj.cached ? obj.cached : self.cached;
+    obj.hasFetched = undefined !== obj.hasFetched ? obj.hasFetched : self.hasFetched;
+    obj.error = undefined !== obj.error ? obj.error : self.error;
+    obj.onJumpComplete = undefined !== obj.onJumpComplete ? obj.onJumpComplete : self.onJumpComplete;
+    obj.initialScrollSequenceId = undefined !== obj.initialScrollSequenceId ? obj.initialScrollSequenceId : self.initialScrollSequenceId;
+    obj.suppressRowAnimationSequenceId = undefined !== obj.suppressRowAnimationSequenceId ? obj.suppressRowAnimationSequenceId : self.suppressRowAnimationSequenceId;
   }
   return obj;
 };
@@ -493,11 +494,11 @@ prototype2["findOldest"] = function findOldest(isTermsFormField) {
   const self = this;
   let found = applyDefault.find(this._before._messages, isTermsFormField);
   if (found == null) {
-    let tmpResult = applyDefault;
+    let tmpResult = tmp(12);
     found = tmpResult.find(self._array, isTermsFormField);
   }
   if (found == null) {
-    tmpResult = applyDefault;
+    tmpResult = tmp(12);
     found = tmpResult.find(self._after._messages, isTermsFormField);
   }
   return found;
@@ -506,11 +507,11 @@ prototype2["findNewest"] = function findNewest(arg0) {
   const self = this;
   let findLastResult = applyDefault.findLast(this._after._messages, arg0);
   if (findLastResult == null) {
-    let tmpResult = applyDefault;
+    let tmpResult = tmp(12);
     findLastResult = tmpResult.findLast(self._array, arg0);
   }
   if (findLastResult == null) {
-    tmpResult = applyDefault;
+    tmpResult = tmp(12);
     findLastResult = tmpResult.findLast(self._before._messages, arg0);
   }
   return findLastResult;
@@ -519,7 +520,7 @@ prototype2["map"] = function map(arg0, arg1) {
   const _array = this._array;
   return _array.map(arg0, arg1);
 };
-prototype2["first"] = function first(closure_2, closure_22, _exports2, _exports, closure_0, closure_1, closure_23) {
+prototype2["first"] = function first(closure_4, closure_2, _exports2, firstResult, arg4, _exports2, firstResult2) {
   return this._array[0];
 };
 prototype2["last"] = function last() {
@@ -567,7 +568,7 @@ prototype2["getAfter"] = function getAfter(id) {
     return tmp3;
   }
 };
-prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, fn) {
+prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, arg2) {
   const self = this;
   const value = this.get(arg0);
   if (null == value) {
@@ -584,9 +585,10 @@ prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, fn) {
         let tmp4 = sum;
         if (-1 === arg1) {
           while (true) {
-            let tmp5 = null == fn;
+            let tmp5 = null == arg2;
+            let tmp6 = tmp4;
             if (!tmp5) {
-              tmp5 = fn(self._array[tmp4]);
+              tmp5 = arg2(self._array[tmp4]);
             }
             if (tmp5) {
               let arr = items.push(self._array[tmp4]);
@@ -615,7 +617,7 @@ prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, fn) {
     }
   }
 };
-prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, fn) {
+prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, arg2) {
   const self = this;
   const value = this.get(arg0);
   if (null == value) {
@@ -632,9 +634,10 @@ prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, fn) {
         let tmp4 = diff;
         if (-1 === arg1) {
           while (true) {
-            let tmp5 = null == fn;
+            let tmp5 = null == arg2;
+            let tmp6 = tmp4;
             if (!tmp5) {
-              tmp5 = fn(self._array[tmp4]);
+              tmp5 = arg2(self._array[tmp4]);
             }
             if (tmp5) {
               let arr = items.unshift(self._array[tmp4]);
@@ -663,7 +666,7 @@ prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, fn) {
     }
   }
 };
-prototype2["hasAnyAfter"] = function hasAnyAfter(id, fn, arg2) {
+prototype2["hasAnyAfter"] = function hasAnyAfter(id, arg1, arg2) {
   let num = arg2;
   if (arg2 === undefined) {
     num = -1;
@@ -682,7 +685,7 @@ prototype2["hasAnyAfter"] = function hasAnyAfter(id, fn, arg2) {
       if (sum < self.length) {
         let tmp4 = sum;
         if (-1 === num) {
-          while (!fn(self._array[tmp4])) {
+          while (!arg1(self._array[tmp4])) {
             let sum1 = tmp4 + 1;
             if (sum1 < self.length) {
               tmp4 = sum1;
@@ -728,10 +731,10 @@ prototype2["indexOf"] = function indexOf(arg0) {
   closure_0 = arg0;
   c1 = -1;
   const _array = this._array;
-  const found = _array.find((item, index) => {
-    let flag = item.id === closure_0;
+  const found = _array.find((id) => {
+    let flag = id.id === closure_0;
     if (flag) {
-      closure_1 = index;
+      closure_1 = arg1;
       flag = true;
     }
     return flag;
@@ -770,10 +773,10 @@ prototype2["hasAfterCached"] = function hasAfterCached(after) {
   }
   return false;
 };
-prototype2["update"] = function update(arg0, fn) {
+prototype2["update"] = function update(arg0, arg1) {
   const self = this;
   closure_0 = arg0;
-  closure_1 = fn;
+  closure_1 = arg1;
   closure_2 = tmp;
   if (null == this._map[arg0]) {
     let _before = self._before;
@@ -794,7 +797,7 @@ prototype2["update"] = function update(arg0, fn) {
     }
     return mutation;
   } else {
-    closure_3 = fn(tmp);
+    closure_3 = arg1(tmp);
     return self.mutate((_map) => {
       _map._map[id.id] = closure_3;
       ({ _array: _array2, _array } = _map);
@@ -832,7 +835,7 @@ prototype2["remove"] = function remove(arg0) {
   return this.mutate((_array) => {
     delete tmp2[tmp];
     _array = _array._array;
-    _array._array = _array.filter((item, index) => item.id !== closure_0);
+    _array._array = _array.filter((id) => id.id !== closure_0);
     const _before = _array._before;
     _before.remove(closure_0);
     const _after = _array._after;
@@ -840,17 +843,18 @@ prototype2["remove"] = function remove(arg0) {
   }, true);
 };
 prototype2["removeMany"] = function removeMany(arr) {
-  const self = this;
+  let self = this;
+  self = this;
   closure_0 = arr;
   let self2 = this;
-  if (arr.some((item, index) => self.has(item))) {
+  if (arr.some((arg0) => self.has(arg0))) {
     self2 = self.mutate((_array) => {
       closure_0 = _array;
-      self(dependencyMap[3]).each(closure_0, (arg0) => {
+      self(closure_1_3[3]).each(closure_0, (arg0) => {
         delete tmp2[tmp];
       });
       _array = _array._array;
-      _array._array = _array.filter((item, index) => -1 === _array.indexOf(item.id));
+      _array._array = _array.filter((id) => -1 === _array.indexOf(id.id));
       const _before = _array._before;
       _before.removeMany(closure_0);
       const _after = _array._after;
@@ -873,21 +877,21 @@ prototype2["merge"] = function merge(arg0) {
     _merge._merge(closure_0, flag, flag2);
   }, true);
 };
-prototype2["_merge"] = function _merge(arr, closure_0, flag2) {
-  const self = this;
-  let flag = closure_0;
-  if (closure_0 === undefined) {
+prototype2["_merge"] = function _merge(arr, flag, flag2) {
+  let self = this;
+  self = this;
+  if (flag === undefined) {
     flag = false;
   }
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const found = arr.filter((item, index) => {
-    self._map[item.id] = item;
+  const found = arr.filter((id) => {
+    self._map[id.id] = id;
     let flag = null == tmp2;
     if (!flag) {
       ({ _array: _array2, _array } = self);
-      _array[_array2.indexOf(tmp2)] = item;
+      _array[_array2.indexOf(tmp2)] = id;
       flag = false;
     }
     return flag;
@@ -904,6 +908,7 @@ prototype2["_merge"] = function _merge(arr, closure_0, flag2) {
     self._array = tmp7;
   } else {
     flag ? self._before : self._after.clear();
+    const obj = flag ? self._before : self._after;
   }
 };
 prototype2["mergeDelta"] = function mergeDelta(new_messages, modified_messages, deleted_message_ids) {
@@ -925,12 +930,12 @@ prototype2["mergeDelta"] = function mergeDelta(new_messages, modified_messages, 
     const _after = _before._after;
     _after.clear();
     const set = new Set(items2);
-    const item = set.forEach((item, index) => set.add(item.id));
-    const item1 = items1.forEach((item, index) => set.add(item.id));
+    const item = set.forEach((id) => set.add(id.id));
+    const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
-    const found = _array.filter((item, index) => !set.has(item.id));
-    const mapped = set.map((item, index) => set(4803).createMessageRecord(item));
-    const combined = found.concat(mapped, items1.map((item, index) => set(4803).createMessageRecord(item)));
+    const found = _array.filter((id) => !set.has(id.id));
+    const mapped = set.map((message) => set(4803).createMessageRecord(message));
+    const combined = found.concat(mapped, items1.map((message) => set(4803).createMessageRecord(message)));
     _before._array = combined.sort((id, id2) => callback(11).compare(id.id, id2.id));
   });
 };
@@ -944,9 +949,9 @@ prototype2["reset"] = function reset(arg0) {
     closure_0 = _before;
     _before._array = closure_0;
     _before._map = {};
-    const item = closure_0.forEach((item, index) => {
-      _map._map[item.id] = item;
-      return item;
+    const item = closure_0.forEach((id) => {
+      _map._map[id.id] = id;
+      return id;
     });
     _before = _before._before;
     _before.clear();
@@ -959,6 +964,7 @@ prototype2["truncateTop"] = function truncateTop(closure_4, flag) {
     flag = true;
   }
   const self = this;
+  c0 = undefined;
   const diff = this._array.length - closure_4;
   c0 = diff;
   let self2 = this;
@@ -1030,7 +1036,7 @@ prototype2["jumpToMessage"] = function jumpToMessage(arg0) {
     jumpSequenceId.jumpedToPresent = false;
     let ANIMATED = closure_4;
     if (closure_4 == null) {
-      ANIMATED = require(returnTargetId[4]).JumpType.ANIMATED;
+      ANIMATED = closure_1_0(returnTargetId[4]).JumpType.ANIMATED;
     }
     jumpSequenceId.jumpType = ANIMATED;
     jumpSequenceId.jumpTargetId = closure_0;
@@ -1140,9 +1146,10 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
             _map._map[messageRecord1.id] = messageRecord1;
             if (null != _map._map[messageRecord1.id]) {
               ({ _array: _array2, _array } = _map);
-              _array[_array2.indexOf(tmp2)] = messageRecord1;
+              _array[_array2.indexOf(tmp2)] = tmp;
             } else {
-              insertionIndexAll.insert(_map._array, messageRecord1, (id, id2) => callback(table[5]).compare(id.id, id2.id));
+              closure_1_2(closure_1_3[7]).insert(_map._array, tmp, (id, id2) => callback(table[5]).compare(id.id, id2.id));
+              const obj = closure_1_2(closure_1_3[7]);
             }
           }, true);
         }
@@ -1157,6 +1164,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
         return truncateTopResult;
       }
       obj2 = DISCORD_EPOCHDefault;
+      const tmp8 = importDefault;
     }
     const items = [messageRecord1];
     mutation = self.merge(items);
@@ -1166,12 +1174,12 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
 prototype2["receivePushNotification"] = function receivePushNotification(closure_1, closure_2) {
   const self = this;
   let value = null;
-  if (null != importDefault.nonce) {
-    value = self.get(importDefault.nonce, true);
+  if (null != closure_1.nonce) {
+    value = self.get(closure_1.nonce, true);
   }
   if (null != value) {
     return self;
-  } else if (null != self.get(importDefault.id, true)) {
+  } else if (null != self.get(closure_1.id, true)) {
     return self;
   } else {
     let obj = isIOSPushNotificationRawPayloadFixExperimentEnabled;
@@ -1183,7 +1191,7 @@ prototype2["receivePushNotification"] = function receivePushNotification(closure
     obj = { ready: true, cached: null };
     obj[1] = tmp5;
     const mutation = self.mutate(obj);
-    const items = [mergeMessage(self, importDefault)];
+    const items = [mergeMessage(self, closure_1)];
     return mutation.merge(items);
   }
 };
@@ -1280,7 +1288,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
   const self = this;
   let obj = applyDefault(items);
   const reversed = obj.reverse();
-  const valueResult = reversed.map((item, index) => callback(table[2]).createMessageRecord(item)).value();
+  const valueResult = reversed.map((message) => callback(table[2]).createMessageRecord(message)).value();
   if (flag) {
     if (null == jump) {
       if (self.ready) {
@@ -1397,9 +1405,9 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
     }
   }
   const _array = self._array;
-  const found = _array.filter((item, index) => item.state === constants.SENDING);
+  const found = _array.filter((state) => state.state === constants.SENDING);
   const _array1 = self._array;
-  const found1 = _array1.filter((item, index) => item.state === constants.SEND_FAILED);
+  const found1 = _array1.filter((state) => state.state === constants.SEND_FAILED);
   const resetResult = self.reset(valueResult);
   if (tmp4) {
     if (!flag) {
@@ -1433,21 +1441,20 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
   }
   logger.info("loadComplete: resetting state for channelId=" + self.channelId + ", sending.length=" + found.length);
   mergeResult = resetResult;
-  const iter = reversed.map((item, index) => callback(table[2]).createMessageRecord(item));
-  tmp4 = found.length > 0 || found1.length > 0;
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
-  const self = this;
+  let self = this;
+  self = this;
   let obj = reversed(5000);
   const result = obj.requireSortedDescending(messages);
-  const mapped = messages.map((item, index) => mergeMessage(self, item));
+  const mapped = messages.map((arg0) => closure_1_10(self, arg0));
   reversed = mapped.reverse();
   const _array = this._array;
-  const found = _array.filter((item, index) => {
-    closure_0 = item;
-    return !closure_0.some((item, index) => item.id === item.id);
+  const found = _array.filter((arg0) => {
+    closure_0 = arg0;
+    return !closure_0.some((id) => id.id === id.id);
   });
-  const item = found.forEach((item, index) => insertionIndexAll.insert(reversed, item, (id, id2) => callback(table[5]).compare(id.id, id2.id)));
+  const item = found.forEach((arg0) => closure_1_2(closure_1_3[7]).insert(reversed, arg0, (id, id2) => callback(table[5]).compare(id.id, id2.id)));
   let cached = !stale;
   if (!stale) {
     cached = self.cached;
@@ -1464,9 +1471,9 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
 };
 ChannelMessages._channelMessages = {};
 let tmp3 = new timestampDefault("ChannelMessages");
-let result = obj132.fileFinishedImporting("lib/ChannelMessages.tsx");
+let result = set2.fileFinishedImporting("lib/ChannelMessages.tsx");
 
 export default ChannelMessages;
 export const flatMapChannelMessages = function flatMapChannelMessages(arr) {
-  return arr.flatMap((item, index) => item._array);
+  return arr.flatMap((_array) => _array._array);
 };

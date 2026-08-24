@@ -1,18 +1,18 @@
 // === Module 7084: asyncGeneratorStep ===
 
 // Module 7084 (asyncGeneratorStep)
-function asyncGeneratorStep(arg0, fn, fn2) {
+function asyncGeneratorStep(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
   try {
     const iter = arg0[arg5](arg6);
     const value = iter.value;
     if (iter.done) {
-      fn(value);
+      arg1(value);
     } else {
       const resolved = Promise.resolve(value);
       resolved.then(arg3, arg4);
     }
   } catch (tmp13) {
-    fn2(tmp13);
+    arg2(tmp13);
   }
 }
 

@@ -1,11 +1,11 @@
 // === Module 10911: ? ===
 
 // Module 10911
-import recomputeGuild from "recomputeGuild" /* 4977 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_0 from "recomputeGuild" /* 4977 */;
+import closure_1 from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
+const result = require("set").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 
 export default (getGuildId) => {
   const guildId = getGuildId.getGuildId();

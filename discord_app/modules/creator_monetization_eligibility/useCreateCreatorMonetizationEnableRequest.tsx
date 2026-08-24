@@ -1,11 +1,11 @@
 // === Module 16932: useCreateCreatorMonetizationEnableRequest ===
 
 // Module 16932 (useCreateCreatorMonetizationEnableRequest)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/useCreateCreatorMonetizationEnableRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreateCreatorMonetizationEnableRequest.tsx");
 
 export default function useCreateCreatorMonetizationEnableRequest(arg0) {
   closure_0 = arg0;

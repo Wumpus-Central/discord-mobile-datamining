@@ -51,7 +51,7 @@ class Promise {
       tmp13 = new.target;
       tmp14 = new.target;
       constructor = new self.constructor((arg0, arg1) => {
-        let obj = Object.create(Promise.prototype);
+        let obj = Object.create(closure_1_3.prototype);
         if (typeof obj !== "object") {
           const _TypeError = TypeError;
           const typeError = new TypeError("Promises must be constructed via new");
@@ -63,7 +63,7 @@ class Promise {
           obj._A = null;
           // // eliminated: always false
           obj.then(arg0, arg1);
-          Object.create(Handler.prototype);
+          obj = Object.create(closure_1_6.prototype);
           obj = {};
           let tmp11 = null;
           if (typeof closure_1 === "function") {
@@ -72,11 +72,11 @@ class Promise {
           obj.onFulfilled = tmp11;
           let tmp12 = null;
           if (typeof closure_2 === "function") {
-            tmp12 = closure_2;
+            tmp12 = tmp9;
           }
           obj.onRejected = tmp12;
           obj.promise = obj;
-          handle(self, obj);
+          closure_1_4(self, obj);
         }
       });
       tmp16 = constructor;
@@ -134,7 +134,7 @@ function handle(_y, _A) {
     } while (3 === _y);
   }
   if (Promise._B) {
-    Promise._B(tmp2);
+    obj._B(tmp2);
   }
   if (0 === tmp2._y) {
     if (0 === tmp2._x) {
@@ -176,62 +176,67 @@ function handle(_y, _A) {
           let promise = tmp2.promise;
           promise._y = 2;
           promise._z = _A;
-          if (Promise._C) {
-            Promise._C(promise, tmp15);
+          if (closure_1_3._C) {
+            obj._C(promise, tmp15);
           }
           if (1 === promise._x) {
-            handle(promise, promise._A);
+            closure_1_4(promise, promise._A);
             promise._A = null;
           }
           if (2 === promise._x) {
             let num6 = 0;
             if (0 < promise._A.length) {
               do {
-                let tmp20 = handle(promise, promise._A[num6]);
+                let tmp19 = closure_1_4;
+                let tmp20 = closure_1_4(promise, promise._A[num6]);
                 num6 = num6 + 1;
                 length2 = promise._A.length;
               } while (num6 < length2);
             }
             promise._A = null;
           }
+          obj = closure_1_3;
         } else {
-          resolve(tmp2.promise, tmp11);
+          closure_1_5(tmp2.promise, tmp11);
         }
       } else if (1 === tmp._y) {
-        resolve(tmp2.promise, tmp._z);
+        closure_1_5(tmp2.promise, tmp._z);
       } else {
         promise = tmp2.promise;
         _z = tmp._z;
         promise._y = 2;
         promise._z = _z;
-        if (Promise._C) {
-          Promise._C(promise, _z);
+        if (closure_1_3._C) {
+          obj2._C(promise, _z);
         }
         if (1 === promise._x) {
-          handle(promise, promise._A);
+          closure_1_4(promise, promise._A);
           promise._A = null;
         }
         if (2 === promise._x) {
           let num2 = 0;
           if (0 < promise._A.length) {
             do {
-              let tmp8 = handle(promise, promise._A[num2]);
+              let tmp7 = closure_1_4;
+              let tmp8 = closure_1_4(promise, promise._A[num2]);
               num2 = num2 + 1;
               length = promise._A.length;
             } while (num2 < length);
           }
           promise._A = null;
         }
+        obj2 = closure_1_3;
       }
     });
   }
+  obj = Promise;
 }
-function resolve(_x, _z) {
+function resolve(_x, self) {
   let length;
   let length2;
   let length3;
   let length4;
-  if (_z === _x) {
+  if (self === _x) {
     const _TypeError = TypeError;
     const typeError = new TypeError("A promise cannot be resolved with itself.");
     _x._y = 2;
@@ -247,6 +252,7 @@ function resolve(_x, _z) {
       let num18 = 0;
       if (0 < _x._A.length) {
         do {
+          let tmp34 = handle;
           let tmp35 = handle(_x, _x._A[num18]);
           num18 = num18 + 1;
           length4 = _x._A.length;
@@ -255,16 +261,16 @@ function resolve(_x, _z) {
       _x._A = null;
     }
   } else {
-    if (_z) {
-      if (typeof _z === "object") {
-        const obj = (function getThen(_z) {
+    if (self) {
+      if (typeof self === "object") {
+        const obj = (function getThen(self) {
           try {
-            return _z.then;
+            return self.then;
           } catch (tmp2) {
             closure_1 = tmp2;
             return closure_2;
           }
-        })(_z);
+        })(self);
         if (obj === closure_2) {
           _x._y = 2;
           _x._z = c1;
@@ -279,6 +285,7 @@ function resolve(_x, _z) {
             let num13 = 0;
             if (0 < _x._A.length) {
               do {
+                let tmp22 = handle;
                 let tmp23 = handle(_x, _x._A[num13]);
                 num13 = num13 + 1;
                 length3 = _x._A.length;
@@ -288,9 +295,9 @@ function resolve(_x, _z) {
           }
         } else {
           if (obj === _x.then) {
-            if (_z instanceof Promise) {
+            if (self instanceof Promise) {
               _x._y = 3;
-              _x._z = _z;
+              _x._z = self;
               if (1 === _x._x) {
                 handle(_x, _x._A);
                 _x._A = null;
@@ -299,6 +306,7 @@ function resolve(_x, _z) {
                 let num10 = 0;
                 if (0 < _x._A.length) {
                   do {
+                    let tmp14 = handle;
                     let tmp15 = handle(_x, _x._A[num10]);
                     num10 = num10 + 1;
                     length2 = _x._A.length;
@@ -309,13 +317,13 @@ function resolve(_x, _z) {
             }
           }
           if (typeof obj === "function") {
-            doResolve(obj.bind(_z), _x);
+            doResolve(obj.bind(self), _x);
           }
         }
       }
     }
     _x._y = 1;
-    _x._z = _z;
+    _x._z = self;
     if (1 === _x._x) {
       handle(_x, _x._A);
       _x._A = null;
@@ -324,6 +332,7 @@ function resolve(_x, _z) {
       let num6 = 0;
       if (0 < _x._A.length) {
         do {
+          let tmp6 = handle;
           let tmp7 = handle(_x, _x._A[num6]);
           num6 = num6 + 1;
           length = _x._A.length;
@@ -360,7 +369,7 @@ function doResolve(arg0, _x) {
     _x._y = 2;
     _x._z = c1;
     if (Promise._C) {
-      Promise._C(_x, tmp4);
+      obj._C(_x, tmp4);
     }
     if (1 === _x._x) {
       handle(_x, _x._A);
@@ -370,6 +379,7 @@ function doResolve(arg0, _x) {
       let num3 = 0;
       if (0 < _x._A.length) {
         do {
+          let tmp9 = handle;
           let tmp10 = handle(_x, _x._A[num3]);
           num3 = num3 + 1;
           length = _x._A.length;
@@ -377,6 +387,7 @@ function doResolve(arg0, _x) {
       }
       _x._A = null;
     }
+    obj = Promise;
   }
 }
 let c1 = null;

@@ -1,29 +1,31 @@
 // === Module 16521: ExistingUserAgeGate ===
 
 // Module 16521 (ExistingUserAgeGate)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import handleRequiredAction from "handleRequiredAction" /* 1385 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "handleRequiredAction" /* 1385 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import result from "result" /* 1221 */;
 import { ExistingUserAgeGateScreens as closure_11 } from "ExistingUserAgeGateScreens" /* 16519 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ AgeGateAnalyticAction: c9, AgeGateSource: c10 } = result);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = createCacheKey.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 8, textAlign: "center" }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, inputGroup: { marginBottom: 16, width: "100%" }, buttonWrapper: { width: "100%" } });
-result = require("obj132").fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGate.tsx");
+result = require("set").fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGate.tsx");
 
 export default function ExistingUserAgeGate(onSuccess) {
   onSuccess = onSuccess.onSuccess;
   const onClose = onSuccess.onClose;
   const source = onSuccess.source;
+  let navigation;
+  let stateFromStores;
   let React;
   let first;
   c7 = undefined;
@@ -104,7 +106,7 @@ export default function ExistingUserAgeGate(onSuccess) {
                 } else {
                   message = closure_1.message;
                 }
-                callback(message);
+                closure_7(message);
                 callback(false);
                 _true = true;
                 let obj2 = closure_1_1(closure_1_2[13]);
@@ -112,6 +114,7 @@ export default function ExistingUserAgeGate(onSuccess) {
                 obj2[0] = closure_1_2;
                 obj2[1] = closure_1_9.AGE_GATE_FAILURE;
                 obj2.track(closure_1_12.AGE_GATE_ACTION, obj2);
+                const tmp16 = closure_7;
               }
               const obj3 = { onClose: null, underageMessage: null, existingUser: true };
               obj3[0] = closure_1_1(closure_1_2[18]).pop;
@@ -196,10 +199,11 @@ export default function ExistingUserAgeGate(onSuccess) {
                 v0 = 1;
                 c0 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_10(closure_1_6);
+                obj2[0] = closure_1_10(tmp18);
                 return obj2;
               }
               const obj6 = v0(closure_1_2[19])();
+              tmp18 = closure_1_6;
             }
           } else if (arg0 === 1) {
             c0 = 3;
@@ -229,10 +233,10 @@ export default function ExistingUserAgeGate(onSuccess) {
   }
   let tmp = callback2();
   let obj = onSuccess(source[11]);
-  const navigation = obj.useNavigation();
+  navigation = obj.useNavigation();
   obj1 = onSuccess(source[12]);
   const items = [c8];
-  const stateFromStores = obj1.useStateFromStores(items, () => _undefined2.getCurrentUser());
+  stateFromStores = obj1.useStateFromStores(items, () => _undefined2.getCurrentUser());
   let tmp7 = source === submitBirthday.NSFW_SERVER;
   ({ NSFW_CHANNEL, NSFW_VOICE_CHANNEL, FAMILY_CENTER } = submitBirthday);
   if (!tmp7) {
@@ -263,7 +267,7 @@ export default function ExistingUserAgeGate(onSuccess) {
   const effect1 = React.useEffect(() => {
     let nsfwAllowed;
     if (stateFromStores != null) {
-      nsfwAllowed = stateFromStores.nsfwAllowed;
+      nsfwAllowed = tmp.nsfwAllowed;
     }
     if (false === nsfwAllowed) {
       if (closure_5) {
@@ -272,7 +276,7 @@ export default function ExistingUserAgeGate(onSuccess) {
     }
     let nsfwAllowed1;
     if (stateFromStores != null) {
-      nsfwAllowed1 = stateFromStores.nsfwAllowed;
+      nsfwAllowed1 = tmp.nsfwAllowed;
     }
     if (null != nsfwAllowed1) {
       onSuccess();
@@ -280,8 +284,8 @@ export default function ExistingUserAgeGate(onSuccess) {
   }, items3);
   const items4 = [source];
   const effect2 = React.useEffect(() => {
-    onClose(source[13]);
-    const obj = { source, action: stateFromStores1.AGE_GATE_OPEN };
+    let obj = onClose(source[13]);
+    obj = { source, action: stateFromStores1.AGE_GATE_OPEN };
     obj.track(_submitBirthdayWithAgeConfirmation.AGE_GATE_ACTION, obj);
   }, items4);
   if (source !== NSFW_CHANNEL) {
@@ -355,12 +359,12 @@ export default function ExistingUserAgeGate(onSuccess) {
       obj4[1] = callback(tmp2(tmp3[24]).Button, obj5);
       items5[3] = callback(first, obj4);
       obj[2] = items5;
-      return callback(tmp2(tmp3[21]).SafeAreaPaddingView, obj);
+      return closure_15(tmp2(tmp3[21]).SafeAreaPaddingView, obj);
     }
   }
   const intl2 = tmp2(tmp3[14]).intl;
-  let obj6 = onClose(tmp3[15]);
+  let obj6 = { helpURL: null };
+  obj6 = onClose(tmp3[15]);
   obj6[0] = obj6.getArticleURL(constants.AGE_GATE);
   stringResult = intl2.format(tmp2(tmp3[14]).t.n3QjDE, obj6);
-  const tmp2Result = onSuccess(source[12]);
 };

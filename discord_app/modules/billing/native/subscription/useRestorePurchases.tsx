@@ -2,13 +2,13 @@
 
 // Module 14556 (useRestorePurchases)
 import timestampDefault from "timestamp" /* 3 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
 let closure_5 = new timestampDefault("useRestorePurchases");
 const tmp2 = new timestampDefault("useRestorePurchases");
-const result = require("obj132").fileFinishedImporting("modules/billing/native/subscription/useRestorePurchases.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useRestorePurchases.tsx");
 
 export default function useRestorePurchases() {
   let obj = arg0;
@@ -19,6 +19,8 @@ export default function useRestorePurchases() {
   if (flag === undefined) {
     flag = true;
   }
+  closure_1 = undefined;
+  closure_2 = undefined;
   function _restore(closure_4, arg1) {
     const self = this;
     const tmp = callback(function*() {

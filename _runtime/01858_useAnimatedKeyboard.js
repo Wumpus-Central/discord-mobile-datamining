@@ -16,9 +16,9 @@ arg5.useAnimatedKeyboard = () => {
   const obj2 = height(state[0]);
   const fn = function u(height) {
     if (height.height > 0) {
-      let CLOSING = obj.OPENING;
+      let CLOSING = closure_1_2.OPENING;
     } else {
-      CLOSING = obj.CLOSING;
+      CLOSING = closure_1_2.CLOSING;
     }
     const result = state.set(CLOSING);
   };
@@ -39,9 +39,9 @@ arg5.useAnimatedKeyboard = () => {
   fn3.__initData = closure_5;
   const fn4 = function n(height) {
     if (height.height > 0) {
-      let CLOSED = obj.OPEN;
+      let CLOSED = closure_1_2.OPEN;
     } else {
-      CLOSED = obj.CLOSED;
+      CLOSED = closure_1_2.CLOSED;
     }
     const result = state.set(CLOSED);
     const result1 = height.set(height.height);

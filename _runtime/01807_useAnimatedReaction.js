@@ -6,7 +6,7 @@ import noop from "noop" /* 19 */;
 let useEffect = noop.useEffect;
 let closure_3 = { code: "function pnpm_useAnimatedReactionTs1(){const{prepare,react,previous}=this.__closure;const input=prepare();react(input,previous.value);previous.value=input;}" };
 
-export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items) {
+export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items1) {
   const _require = fn;
   dependencyMap = fn2;
   useEffect = _require(1806).useSharedValue(null);
@@ -15,9 +15,11 @@ export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items) 
     __closure = {};
   }
   const values = Object.values(__closure);
+  let arr2 = values;
   const obj = _require(1806);
+  let tmp = _require;
   let tmp3 = _require(1657).shouldBeUseWeb() && !values.length;
-  let arr2 = items;
+  arr2 = items1;
   if (tmp3) {
     let length;
     if (arr2 != null) {
@@ -30,7 +32,7 @@ export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items) 
     if (__closure1 == null) {
       __closure1 = {};
     }
-    items = [, ];
+    const items = [, ];
     let arraySpreadResult = HermesBuiltin.arraySpread(Object.values(__closure1), 0);
     let __closure2 = fn2.__closure;
     if (__closure2 == null) {

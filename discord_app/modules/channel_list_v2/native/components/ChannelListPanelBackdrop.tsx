@@ -2,32 +2,35 @@
 
 // Module 15502 (ChannelListPanelBackdrop)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { DM_WIDTH } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
+createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = ThemesDefault.colors.PANEL_BG;
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
 
 export default function ChannelListPanelBackdrop(children) {
   const style = children.style;
   const contentInset = children.contentInset;
+  dependencyMap = undefined;
+  let mobileQuestDockHeight;
   const tmp = callback();
   dependencyMap = tmp;
   let obj = style(15288);
   const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
   obj1 = style(14443);
-  const mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
+  mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
   let items = [tmp, contentInset, mobileQuestDockHeight, style];
   obj = {
     style: mobileQuestDockHeight.useMemo(() => {
@@ -77,10 +80,10 @@ export default function ChannelListPanelBackdrop(children) {
     ScreenAlignedThemedGradientSliding = contentInset(tmp9);
   }
   obj = { offsetX: DM_WIDTH, offsetY: contentInset(1629)().top };
-  const items1 = [callback(ScreenAlignedThemedGradientSliding, obj), , ];
+  const items1 = [closure_6(ScreenAlignedThemedGradientSliding, obj), , ];
   obj1 = { pointerEvents: "none", style: tmp.panelTint };
-  items1[1] = callback(closure_4, obj1);
-  items1[2] = callback(closure_4, { style: tmp.listWrapper, children: children.children });
+  items1[1] = closure_6(closure_4, obj1);
+  items1[2] = closure_6(closure_4, { style: tmp.listWrapper, children: children.children });
   obj[1] = items1;
-  return callback2(closure_4, obj);
+  return closure_7(closure_4, obj);
 };

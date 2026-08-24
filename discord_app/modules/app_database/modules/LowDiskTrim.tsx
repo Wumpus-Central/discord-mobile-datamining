@@ -50,6 +50,6 @@ obj.actions = {
   }
 };
 importDefaultResult.addChangeListener(() => obj.handleFileSystemStoreChanged());
-let result = require("obj132").fileFinishedImporting("modules/app_database/modules/LowDiskTrim.tsx");
+let result = require("set").fileFinishedImporting("modules/app_database/modules/LowDiskTrim.tsx");
 
 export default obj;

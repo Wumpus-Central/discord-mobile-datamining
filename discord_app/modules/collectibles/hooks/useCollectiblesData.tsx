@@ -1,12 +1,12 @@
 // === Module 8387: useCollectiblesData ===
 
 // Module 8387 (useCollectiblesData)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
-import map from "map" /* 5324 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "map" /* 5324 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
 
 export default function useCollectiblesData(arg0) {
   const _require = arg0;

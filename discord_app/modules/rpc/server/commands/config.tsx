@@ -1,7 +1,7 @@
 // === Module 13842: ? ===
 
 // Module 13842
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import prototypeDefault from "prototype" /* 8752 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
@@ -10,14 +10,14 @@ import ME from "ME" /* 676 */;
 
 ({ TransportTypes: obj1, RPC_AUTHENTICATED_SCOPE } = RPC_SCOPE_CONFIG);
 const RPCErrors = ME.RPCErrors;
-const result = obj132.fileFinishedImporting("modules/rpc/server/commands/config.tsx");
+const result = set.fileFinishedImporting("modules/rpc/server/commands/config.tsx");
 
 export default {
   [ME.RPCCommands.SET_CONFIG]: {
     scope: RPC_AUTHENTICATED_SCOPE,
     validation(boolean) {
-      createRpcJoiSchemaObjectDefault(boolean);
-      const obj = { use_interactive_pip: boolean.boolean() };
+      let obj = createRpcJoiSchemaObjectDefault(boolean);
+      obj = { use_interactive_pip: boolean.boolean() };
       return obj.required().keys(obj);
     },
     handler(socket) {

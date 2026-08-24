@@ -1,7 +1,7 @@
 // === Module 13824: inferImportanceFromBehavior ===
 
 // Module 13824 (inferImportanceFromBehavior)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 13825 */;
@@ -13,7 +13,7 @@ function inferImportanceFromBehavior(visibility) {
       if ("hidden" === visibility.visibility) {
         let HIGH = constants.MIN;
       } else {
-        HIGH = visibility.sound ? constants.DEFAULT : constants.LOW;
+        HIGH = visibility.sound ? tmp2.DEFAULT : tmp2.LOW;
       }
     }
     return HIGH;
@@ -47,7 +47,7 @@ function formatSetting(item10022, arg1) {
         if ("hidden" === behavior.visibility) {
           let HIGH = constants.MIN;
         } else {
-          HIGH = behavior.sound ? constants.DEFAULT : constants.LOW;
+          HIGH = behavior.sound ? tmp.DEFAULT : tmp.LOW;
         }
       }
     }
@@ -85,18 +85,30 @@ function buildChannelsAndMapping() {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let notifSetting = nextResult.notifSetting;
+        let tmp16 = table2;
         let tmp17 = table2[nextResult.notifType];
         if (null != tmp17) {
+          let tmp40 = tmp18;
+          let tmp19 = tmp17;
           for (const item10055 of tmp17) {
+            let tmp21 = notifSetting;
             if (item10055 !== notifSetting) {
+              let tmp22 = item10055;
               let value = map2.get(tmp20);
               let tmp24 = value;
               if (null != value) {
+                let tmp25 = value;
                 value = map1.get(tmp24.string_id);
                 let tmp27 = value;
                 if (null != value) {
+                  let tmp28 = value;
+                  let tmp29 = callback2;
+                  let tmp30 = value;
                   if (tmp27 !== callback2(tmp24.behavior)) {
+                    let tmp31 = notifSetting;
+                    let tmp32 = value;
                     let result2 = map.set(notifSetting, tmp27);
+                    let tmp34 = obj4;
                     obj4.return();
                     break;
                   }
@@ -114,18 +126,19 @@ function buildChannelsAndMapping() {
   let items = [];
   map = new Map();
   for (const item10022 of settings) {
+    let tmp2 = formatSetting;
     let arr = items.push(formatSetting(item10022, obj2.get(item10022.id)));
     let result = map.set(item10022.id, item10022.string_id);
     continue;
   }
   obj = {
-    mapping: mappings.flatMap((item, index) => {
-      const value = map.get(item.notifSetting);
+    mapping: mappings.flatMap((notifSetting) => {
+      const value = map.get(notifSetting.notifSetting);
       if (null == value) {
         let items = [];
       } else {
         items = { type: null, channel: null };
-        items[0] = item.notifType;
+        items[0] = notifSetting.notifType;
         items[1] = value;
       }
       return items;
@@ -137,7 +150,7 @@ function buildChannelsAndMapping() {
 }
 ({ NOTIF_CATEGORIES: c3, NOTIF_SETTING_MAPPING: c4, NOTIF_SETTINGS: c5 } = items2);
 let closure_6 = { NONE: 0, [0]: "NONE", MIN: 1, [1]: "MIN", LOW: 2, [2]: "LOW", DEFAULT: 3, [3]: "DEFAULT", HIGH: 4, [4]: "HIGH" };
-let result = obj132.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
+let result = set.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
 
 export default {
   clear() {
@@ -163,12 +176,13 @@ export default {
       if (null != registerAndroidNotifTypeMappings) {
         ({ channels, inheritedImportances, mapping } = buildChannelsAndMapping());
         const tmp4 = buildChannelsAndMapping();
+        obj = { message: "Registering declarative notification categories", data: null };
         obj = { channels: null, inheritedImportances: null };
-        obj[0] = channels.map((item, index) => item.id);
+        obj[0] = channels.map((id) => id.id);
         const _Array = Array;
         const tmpResult = _modDef1208;
-        obj[1] = Array.from(inheritedImportances.entries()).map((item, index) => {
-          [tmp, tmp2] = item;
+        obj[1] = Array.from(inheritedImportances.entries()).map((arg0) => {
+          [tmp, tmp2] = arg0;
           return "NotifSettings#" + tmp + " -> " + tmp2;
         });
         obj[1] = obj;

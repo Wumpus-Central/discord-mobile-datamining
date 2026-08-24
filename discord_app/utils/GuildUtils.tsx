@@ -1,14 +1,14 @@
 // === Module 6777: getGuildNameSuggestion ===
 
 // Module 6777 (getGuildNameSuggestion)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import nameFromUserAll from "nameFromUser" /* 4219 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import importDefaultResult from "priv" /* 1405 */;
 
-require = fn;
+require = arg1;
 function getGuildNameSuggestion(truncateUsername) {
   currentUser = currentUser.getCurrentUser();
   let obj = nameFromUserAll;
@@ -34,20 +34,25 @@ function getGuildNameSuggestion(truncateUsername) {
   return str;
 }
 let obj = { maxAge: null };
-obj[0] = obj132Default.Millis.MINUTE;
+obj[0] = setDefault.Millis.MINUTE;
 importDefaultResult = new importDefaultResult(obj);
 const error = importDefaultResult;
 obj = {
   getGuildNameSuggestion,
   requestMembers(arr) {
     closure_0 = arg1;
+    let num = arg2;
+    if (arg2 === undefined) {
+      num = 10;
+    }
+    closure_1 = undefined;
     const isArray = Array.isArray(arr);
     let items = [];
     closure_1 = items;
     if (isArray) {
-      let item = arr.forEach((item, index) => {
-        let str = item;
-        if (item == null) {
+      let item = arr.forEach((arg0) => {
+        let str = arg0;
+        if (arg0 == null) {
           str = "";
         }
         const combined = "" + str + ":" + closure_0;
@@ -56,7 +61,7 @@ obj = {
           const result = closure_1_7.set(combined, true);
         }
         if (null == value) {
-          arr = arr.push(item);
+          arr = arr.push(arg0);
         }
       });
       let flag2 = false;
@@ -69,12 +74,13 @@ obj = {
       let combined = "" + str + ":" + arg1;
       let value = importDefaultResult.get(combined);
       if (null == value) {
-        let result = importDefaultResult.set(combined, true);
+        let result = obj.set(combined, true);
       }
       flag2 = false;
       if (null == value) {
         flag2 = true;
       }
+      obj = importDefaultResult;
     }
     if (items.length > 0) {
       if (isArray) {
@@ -95,8 +101,8 @@ obj = {
           } else {
             const _Array = Array;
             if (Array.isArray(arr2)) {
-              const item = arr2.forEach((item, index) => {
-                const guild = closure_1_5.getGuild(item);
+              const item = arr2.forEach((arg0) => {
+                const guild = closure_1_5.getGuild(arg0);
                 if (null != guild) {
                   items.push(guild.id);
                 }
@@ -109,8 +115,8 @@ obj = {
             }
           }
           if (items.length > 0) {
-            const members = arr(dependencyMap[4]).requestMembers(items, arr.toLocaleLowerCase(), num);
-            const obj = arr(dependencyMap[4]);
+            const members = arr(closure_1_3[4]).requestMembers(items, arr.toLocaleLowerCase(), num);
+            const obj = arr(closure_1_3[4]);
           }
         }, 200);
       }
@@ -133,8 +139,8 @@ obj = {
         } else {
           const _Array = Array;
           if (Array.isArray(arr2)) {
-            const item = arr2.forEach((item, index) => {
-              const guild = closure_1_5.getGuild(item);
+            const item = arr2.forEach((arg0) => {
+              const guild = closure_1_5.getGuild(arg0);
               if (null != guild) {
                 items.push(guild.id);
               }
@@ -147,14 +153,14 @@ obj = {
           }
         }
         if (items.length > 0) {
-          const members = arr(dependencyMap[4]).requestMembers(items, arr.toLocaleLowerCase(), num);
-          const obj = arr(dependencyMap[4]);
+          const members = arr(closure_1_3[4]).requestMembers(items, arr.toLocaleLowerCase(), num);
+          const obj = arr(closure_1_3[4]);
         }
       }, 200);
     }
   }
 };
-let result = require("obj132").fileFinishedImporting("utils/GuildUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/GuildUtils.tsx");
 
 export default obj;
 export { getGuildNameSuggestion };

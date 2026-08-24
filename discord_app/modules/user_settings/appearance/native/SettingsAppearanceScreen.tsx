@@ -2,15 +2,15 @@
 
 // Module 14608
 import importAllResult from "noop" /* 19 */;
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled" /* 4195 */;
-import initialize from "initialize" /* 1303 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
+import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
+import closure_5 from "initialize" /* 1303 */;
+import closure_6 from "handleThemeChange" /* 1302 */;
 import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14609 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ DEFAULT_FONT_SCALE_STORE_STATE: error, useFontScaleStore: closure_8 } = DEFAULT_FONT_SCALE_STORE_STATE);
 const memoResult = importAllResult.memo(() => {
@@ -34,6 +34,8 @@ const memoResult = importAllResult.memo(() => {
     obj[1] = str;
     return obj;
   });
+  _require = undefined;
+  nativeStackNavigation = undefined;
   ({ theme, gradientPresetId } = stateFromStoresObject);
   const tmp3 = callback();
   _require = tmp3;
@@ -42,28 +44,29 @@ const memoResult = importAllResult.memo(() => {
   let items1 = [nativeStackNavigation, , , , ];
   ({ fontScale: arr2[1], isClassicChatFontScaleEnabled: arr2[2], persistedFontScale: arr2[3], persistedIsClassicChatFontScaleEnabled: arr2[4] } = tmp3);
   const effect = importAllResult.useEffect(() => {
-    let obj = lib(dependencyMap[9]);
+    let obj = lib(closure_1_2[9]);
     if (obj.isAndroid()) {
       if (lib.persistedFontScale === lib.fontScale) {
-        if (lib.persistedIsClassicChatFontScaleEnabled === lib.isClassicChatFontScaleEnabled) {
+        if (tmp3.persistedIsClassicChatFontScaleEnabled === tmp3.isClassicChatFontScaleEnabled) {
           nativeStackNavigation.setOptions({ headerRight: "r" });
         }
       }
       obj = { headerRight: null };
-      const intl = lib(dependencyMap[11]).intl;
-      obj[0] = lib(dependencyMap[10]).getRenderHeaderTextButton(intl.string(lib(dependencyMap[11]).t["R3BPH+"]), () => nativeStackNavigation(closure_1_2[12]).setCustomFontScale(closure_0.fontScale, closure_0.isClassicChatFontScaleEnabled));
+      const intl = tmp(tmp2[11]).intl;
+      obj[0] = tmp(tmp2[10]).getRenderHeaderTextButton(intl.string(tmp(tmp2[11]).t["R3BPH+"]), () => closure_1_1(closure_1_2[12]).setCustomFontScale(closure_0.fontScale, closure_0.isClassicChatFontScaleEnabled));
       nativeStackNavigation.setOptions(obj);
-      const tmpResult = lib(dependencyMap[10]);
+      const tmpResult = tmp(tmp2[10]);
     }
   }, items1);
   const effect1 = importAllResult.useEffect(() => () => {
     callback(table[13]).batchUpdates(() => state.setState(closure_7));
   }, []);
   const node = importAllResult.useMemo(() => {
-    lib(10669);
+    let obj = lib(10669);
+    obj = { sections: null };
     const items = [constants.MOBILE_VISUAL_REFRESH];
     const items1 = [{ settings: items }, , , , , , , , , ];
-    const obj = { label: null, settings: null };
+    obj = { label: null, settings: null };
     const intl = lib(1236).intl;
     obj[0] = intl.string(lib(1236).t.Ksh3ik);
     const items2 = [, , , , ];
@@ -109,6 +112,6 @@ const memoResult = importAllResult.memo(() => {
   let obj2 = _require(1500);
   return jsx(nativeStackNavigation(13991), { node }, "" + theme + "-" + gradientPresetId);
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 
 export default memoResult;

@@ -1,28 +1,29 @@
 // === Module 12372: InstantInviteQRCodeActionSheet ===
 
 // Module 12372 (InstantInviteQRCodeActionSheet)
-import dispatcherDefault from "dispatcher" /* 709 */;
 import ThemesDefault from "Themes" /* 712 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
 import frozenDefault from "frozen" /* 12373 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ InstantInviteSources: error, RelationshipTypes: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { padding: ThemesDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_24 };
+createCacheKey = { container: null, iconContainer: null, icon: null, code: null };
+createCacheKey = { padding: ThemesDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" };
 createCacheKey[2] = { padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg + ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[3] = { alignSelf: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteQRCodeActionSheet.tsx");
+let obj1 = { padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg + ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.WHITE };
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteQRCodeActionSheet.tsx");
 
 export default function InstantInviteQRCodeActionSheet(location) {
   const tmp = callback2();
@@ -41,8 +42,9 @@ export default function InstantInviteQRCodeActionSheet(location) {
   if (null != channel) {
     const guild = store.getGuild(channel.guild_id);
     if (null != guild) {
+      let obj = { visible: null, plainText: null };
       const intl5 = tmp6(1236).intl;
-      const obj = { name: null };
+      obj = { name: null };
       obj[0] = guild.name;
       obj[0] = intl5.format(tmp6(1236).t.VK3zyF, obj);
       const intl6 = tmp6(1236).intl;
@@ -61,6 +63,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
         obj2[0] = obj7.getGuild(channel2.guild_id);
         obj2[1] = tmp6(7188).GuildIconSizes.LARGE;
         tmp13 = callback(GuildIconSizesDefault, obj2);
+        const tmp16 = GuildIconSizesDefault;
       }
     }
     presentFriendRequestAcceptedToast = tmp6(4093).presentFriendRequestAcceptedToast;
@@ -72,9 +75,9 @@ export default function InstantInviteQRCodeActionSheet(location) {
           handleRelationshipAdd(relationship.user);
         }
       }
-      const subscription = dispatcherDefault.subscribe("RELATIONSHIP_ADD", handleRelationshipAdd);
+      const subscription = closure_1_1(closure_1_2[11]).subscribe("RELATIONSHIP_ADD", handleRelationshipAdd);
       return () => {
-        dispatcherDefault.unsubscribe("RELATIONSHIP_ADD", handleRelationshipAdd);
+        closure_2_1(closure_2_2[11]).unsubscribe("RELATIONSHIP_ADD", handleRelationshipAdd);
       };
     }, items1);
     const obj3 = { header: null, children: null };
@@ -99,22 +102,22 @@ export default function InstantInviteQRCodeActionSheet(location) {
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.icon;
       obj8[1] = tmp13;
-      obj7[1] = callback(View, obj8);
-      tmp19Result = callback(View, obj7);
+      obj7[1] = tmp19(tmp21, obj8);
+      tmp19Result = tmp19(tmp21, obj7);
     }
     const obj9 = { children: null };
     items2[1] = tmp19Result;
     obj9[0] = items2;
-    const items3 = [callback(View, obj9), ];
+    const items3 = [closure_10(View, obj9), ];
     tmp19Result = null != tmp12;
     if (tmp19Result) {
       const obj10 = { variant: "text-md/normal", children: null };
       obj10[1] = tmp12.visible;
-      tmp19Result = callback(tmp6(4734).Text, obj10);
+      tmp19Result = tmp19(tmp6(4734).Text, obj10);
     }
     items3[1] = tmp19Result;
     obj5[1] = items3;
-    obj3[1] = callback(View, obj5);
+    obj3[1] = closure_10(View, obj5);
     return callback(tmp6(7175).ActionSheet, obj3);
   }
   tmp12 = null;
@@ -133,5 +136,4 @@ export default function InstantInviteQRCodeActionSheet(location) {
       tmp12 = obj11;
     }
   }
-  const tmp6Result = tmp6(589);
 };

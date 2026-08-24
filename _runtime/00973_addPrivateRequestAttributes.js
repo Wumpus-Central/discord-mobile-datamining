@@ -4,7 +4,7 @@
 import _mod958 from "module_958" /* 958 */;
 import truncateTextByBytes from "truncateTextByBytes" /* 961 */;
 import contentUnionToMessages from "contentUnionToMessages" /* 975 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function addPrivateRequestAttributes(setAttributes, config) {
   let systemInstruction = "config" in config && config.config && typeof config.config === "object";
@@ -27,18 +27,21 @@ function addPrivateRequestAttributes(setAttributes, config) {
     const items2 = [];
     HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.history, "user"), 0);
     HermesBuiltin.apply(items2, items);
+    const obj2 = contentUnionToMessages;
   }
   if ("contents" in config) {
     const push3 = items.push;
     const items3 = [];
     HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.contents, "user"), 0);
     HermesBuiltin.apply(items3, items);
+    const obj3 = contentUnionToMessages;
   }
   if ("message" in config) {
     const push4 = items.push;
     const items4 = [];
     HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.message, "user"), 0);
     HermesBuiltin.apply(items4, items);
+    const obj4 = contentUnionToMessages;
   }
   if (tmp33) {
     obj = {};
@@ -46,27 +49,27 @@ function addPrivateRequestAttributes(setAttributes, config) {
     const _JSON = JSON;
     obj[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes.truncateGenAiMessages(items));
     setAttributes.setAttributes(obj);
+    const obj6 = truncateTextByBytes;
   }
-  tmp33 = Array.isArray(items) && items.length;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const extractModel = function extractModel(model, model2) {
+export const extractModel = function extractModel(model, obj) {
   if ("model" in model) {
     if (typeof model.model === "string") {
       return model.model;
     }
   }
-  if (model2) {
-    if (typeof model2 === "object") {
-      if ("model" in model2) {
-        if (typeof model2.model === "string") {
-          return model2.model;
+  if (obj) {
+    if (typeof obj === "object") {
+      if ("model" in obj) {
+        if (typeof obj.model === "string") {
+          return obj.model;
         }
       }
-      if ("modelVersion" in model2) {
-        if (typeof model2.modelVersion === "string") {
-          return model2.modelVersion;
+      if ("modelVersion" in obj) {
+        if (typeof obj.modelVersion === "string") {
+          return obj.modelVersion;
         }
       }
     }
@@ -81,6 +84,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
     sendDefaultPii = client.getOptions().sendDefaultPii;
   }
   const BooleanResult = Boolean(sendDefaultPii);
+  obj = { recordInputs: BooleanResult, recordOutputs: BooleanResult };
   const merged = Object.assign(arg1);
   _require = "";
   obj = {
@@ -91,6 +95,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
       if (typeof value === "function") {
         if (tmpResult.shouldInstrument(methodPath)) {
           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
+            str = methodPath;
             table = self;
             closure_2 = table;
             closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
@@ -145,8 +150,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           if (Array.isArray(config.tools)) {
                             const tools = config.tools;
                             let _JSON = JSON;
-                            obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((item, index) => item.functionDeclarations));
-                            const flatMapResult = tools.flatMap((item, index) => item.functionDeclarations);
+                            obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations));
+                            const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
                           }
                         }
                         tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
@@ -217,6 +222,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 obj1[0] = "" + finalOperationName + " " + str15 + " stream-response";
                 obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                 obj1[2] = obj;
+                closure_0 = undefined;
                 closure_0 = callback((arg0) => {
                   closure_0 = arg0;
                   c5 = 0;
@@ -341,23 +347,23 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                     callback(arg0, recordInputs);
                   }
                   return str(table[11]).handleCallbackErrors(() => callback.apply(closure_1_1, closure_1), (arg0) => {
-                    callback(closure_1_1[10]);
-                    const obj = { function: callback };
+                    let obj = callback(closure_1_1[10]);
+                    obj = { function: callback };
                     obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.google_genai", data: obj } });
                   }, () => {
 
-                  }, (modelVersion) => {
+                  }, (obj) => {
                     if (!closure_2_3) {
-                      let obj = closure_0;
+                      obj = closure_0;
                       recordOutputs = recordOutputs.recordOutputs;
-                      if (modelVersion) {
-                        if (typeof modelVersion === "object") {
-                          if (modelVersion.modelVersion) {
-                            const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
+                      if (obj) {
+                        if (typeof obj === "object") {
+                          if (obj.modelVersion) {
+                            const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, obj.modelVersion);
                           }
-                          if (modelVersion.usageMetadata) {
-                            if (typeof modelVersion.usageMetadata === "object") {
-                              const usageMetadata = modelVersion.usageMetadata;
+                          if (obj.usageMetadata) {
+                            if (typeof obj.usageMetadata === "object") {
+                              const usageMetadata = obj.usageMetadata;
                               if (typeof usageMetadata.promptTokenCount === "number") {
                                 obj = {};
                                 obj[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
@@ -377,9 +383,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           }
                           if (recordOutputs) {
                             let _Array = Array;
-                            if (Array.isArray(modelVersion.candidates)) {
-                              if (modelVersion.candidates.length > 0) {
-                                const candidates = modelVersion.candidates;
+                            if (Array.isArray(obj.candidates)) {
+                              if (obj.candidates.length > 0) {
+                                const candidates = obj.candidates;
                                 let mapped = candidates.map(() => { ... });
                                 let found = mapped.filter(() => { ... });
                                 if (found.length > 0) {
@@ -391,8 +397,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             }
                           }
                           if (recordOutputs) {
-                            if (modelVersion.functionCalls) {
-                              const functionCalls = modelVersion.functionCalls;
+                            if (obj.functionCalls) {
+                              const functionCalls = obj.functionCalls;
                               const _Array2 = Array;
                               let isArray = Array.isArray(functionCalls);
                               if (isArray) {
@@ -423,7 +429,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               if (tmp) {
                 proxy = tmp;
                 if (typeof tmp === "object") {
-                  closure_2_0(closure_2_1[2]).CHAT_PATH;
+                  str = closure_2_0(closure_2_1[2]).CHAT_PATH;
                   str = undefined;
                   closure_1 = undefined;
                   if (str === undefined) {
@@ -438,6 +444,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                     if (typeof value === "function") {
                       if (tmpResult.shouldInstrument(methodPath)) {
                         if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
+                          str = methodPath;
                           table = self;
                           closure_2 = table;
                           closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
@@ -564,6 +571,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               obj1[0] = "" + finalOperationName + " " + str15 + " stream-response";
                               obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                               obj1[2] = obj;
+                              closure_0 = undefined;
                               closure_0 = callback(/* F115363 */ function() { ... });
                               let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
                               const tmp4Result2 = tmp4(tmp5[3]);
@@ -591,7 +599,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             if (tmp) {
                               proxy = tmp;
                               if (typeof tmp === "object") {
-                                closure_2_0(closure_2_1[2]).CHAT_PATH;
+                                str = closure_2_0(closure_2_1[2]).CHAT_PATH;
                                 str = undefined;
                                 closure_1 = undefined;
                                 if (str === undefined) {
@@ -601,6 +609,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 let obj = { get: null };
                                 obj[0] = function get() { ... };
                                 proxy = new Proxy(tmp, obj);
+                                let tmp10 = closure_1;
                               }
                             }
                             return proxy;
@@ -733,6 +742,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               obj1[0] = "" + finalOperationName + " " + str15 + " stream-response";
                               obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                               obj1[2] = obj;
+                              closure_0 = undefined;
                               closure_0 = callback(/* F115363 */ function() { ... });
                               let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
                               const tmp4Result2 = tmp4(tmp5[3]);
@@ -778,6 +788,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             if (typeof value === "function") {
                               if (tmpResult.shouldInstrument(methodPath)) {
                                 if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
+                                  str = methodPath;
                                   table = self;
                                   closure_2 = table;
                                   closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
@@ -816,18 +827,21 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   obj1 = { get: null };
                                   obj1[0] = function get() { ... };
                                   bindResult = new Proxy(value, obj1);
+                                  let tmp23 = table;
                                 }
                               }
                             }
                             return bindResult;
                           };
                           bindResult = new Proxy(value, obj1);
+                          let tmp23 = table;
                         }
                       }
                     }
                     return bindResult;
                   };
                   proxy = new Proxy(tmp, obj);
+                  let tmp10 = closure_1;
                 }
               }
               return proxy;
@@ -888,8 +902,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           if (Array.isArray(config.tools)) {
                             const tools = config.tools;
                             let _JSON = JSON;
-                            obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((item, index) => item.functionDeclarations));
-                            const flatMapResult = tools.flatMap((item, index) => item.functionDeclarations);
+                            obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations));
+                            const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
                           }
                         }
                         tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
@@ -960,6 +974,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 obj1[0] = "" + finalOperationName + " " + str15 + " stream-response";
                 obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                 obj1[2] = obj;
+                closure_0 = undefined;
                 closure_0 = callback((arg0) => {
                   closure_0 = arg0;
                   c5 = 0;
@@ -1084,23 +1099,23 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                     callback(arg0, recordInputs);
                   }
                   return str(table[11]).handleCallbackErrors(() => callback.apply(closure_1_1, closure_1), (arg0) => {
-                    callback(closure_1_1[10]);
-                    const obj = { function: callback };
+                    let obj = callback(closure_1_1[10]);
+                    obj = { function: callback };
                     obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.google_genai", data: obj } });
                   }, () => {
 
-                  }, (modelVersion) => {
+                  }, (obj) => {
                     if (!closure_2_3) {
-                      let obj = closure_0;
+                      obj = closure_0;
                       recordOutputs = recordOutputs.recordOutputs;
-                      if (modelVersion) {
-                        if (typeof modelVersion === "object") {
-                          if (modelVersion.modelVersion) {
-                            const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
+                      if (obj) {
+                        if (typeof obj === "object") {
+                          if (obj.modelVersion) {
+                            const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, obj.modelVersion);
                           }
-                          if (modelVersion.usageMetadata) {
-                            if (typeof modelVersion.usageMetadata === "object") {
-                              const usageMetadata = modelVersion.usageMetadata;
+                          if (obj.usageMetadata) {
+                            if (typeof obj.usageMetadata === "object") {
+                              const usageMetadata = obj.usageMetadata;
                               if (typeof usageMetadata.promptTokenCount === "number") {
                                 obj = {};
                                 obj[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
@@ -1120,9 +1135,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           }
                           if (recordOutputs) {
                             let _Array = Array;
-                            if (Array.isArray(modelVersion.candidates)) {
-                              if (modelVersion.candidates.length > 0) {
-                                const candidates = modelVersion.candidates;
+                            if (Array.isArray(obj.candidates)) {
+                              if (obj.candidates.length > 0) {
+                                const candidates = obj.candidates;
                                 let mapped = candidates.map(() => { ... });
                                 let found = mapped.filter(() => { ... });
                                 if (found.length > 0) {
@@ -1134,8 +1149,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             }
                           }
                           if (recordOutputs) {
-                            if (modelVersion.functionCalls) {
-                              const functionCalls = modelVersion.functionCalls;
+                            if (obj.functionCalls) {
+                              const functionCalls = obj.functionCalls;
                               const _Array2 = Array;
                               let isArray = Array.isArray(functionCalls);
                               if (isArray) {
@@ -1184,6 +1199,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               if (typeof value === "function") {
                 if (tmpResult.shouldInstrument(methodPath)) {
                   if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
+                    str = methodPath;
                     table = self;
                     closure_2 = table;
                     closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
@@ -1238,8 +1254,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   if (Array.isArray(config.tools)) {
                                     const tools = config.tools;
                                     let _JSON = JSON;
-                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((item, index) => item.functionDeclarations));
-                                    const flatMapResult = tools.flatMap((item, index) => item.functionDeclarations);
+                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations));
+                                    const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
                                   }
                                 }
                                 tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
@@ -1310,6 +1326,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         obj1[0] = "" + finalOperationName + " " + str15 + " stream-response";
                         obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                         obj1[2] = obj;
+                        closure_0 = undefined;
                         closure_0 = callback((arg0) => {
                           closure_0 = arg0;
                           c5 = 0;
@@ -1358,7 +1375,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       if (tmp) {
                         proxy = tmp;
                         if (typeof tmp === "object") {
-                          closure_2_0(closure_2_1[2]).CHAT_PATH;
+                          str = closure_2_0(closure_2_1[2]).CHAT_PATH;
                           str = undefined;
                           closure_1 = undefined;
                           if (str === undefined) {
@@ -1373,6 +1390,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             if (typeof value === "function") {
                               if (tmpResult.shouldInstrument(methodPath)) {
                                 if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
+                                  str = methodPath;
                                   table = self;
                                   closure_2 = table;
                                   closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
@@ -1411,12 +1429,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   obj1 = { get: null };
                                   obj1[0] = function get() { ... };
                                   bindResult = new Proxy(value, obj1);
+                                  let tmp23 = table;
                                 }
                               }
                             }
                             return bindResult;
                           };
                           proxy = new Proxy(tmp, obj);
+                          let tmp10 = closure_1;
                         }
                       }
                       return proxy;
@@ -1477,8 +1497,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   if (Array.isArray(config.tools)) {
                                     const tools = config.tools;
                                     let _JSON = JSON;
-                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((item, index) => item.functionDeclarations));
-                                    const flatMapResult = tools.flatMap((item, index) => item.functionDeclarations);
+                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations));
+                                    const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
                                   }
                                 }
                                 tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
@@ -1549,6 +1569,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         obj1[0] = "" + finalOperationName + " " + str15 + " stream-response";
                         obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                         obj1[2] = obj;
+                        closure_0 = undefined;
                         closure_0 = callback((arg0) => {
                           closure_0 = arg0;
                           c5 = 0;
@@ -1615,6 +1636,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       if (typeof value === "function") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
+                            str = methodPath;
                             table = self;
                             closure_2 = table;
                             closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
@@ -1741,6 +1763,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 obj1[0] = "" + finalOperationName + " " + str15 + " stream-response";
                                 obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                 obj1[2] = obj;
+                                closure_0 = undefined;
                                 closure_0 = callback(/* F115363 */ function() { ... });
                                 let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
                                 const tmp4Result2 = tmp4(tmp5[3]);
@@ -1768,7 +1791,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               if (tmp) {
                                 proxy = tmp;
                                 if (typeof tmp === "object") {
-                                  closure_2_0(closure_2_1[2]).CHAT_PATH;
+                                  str = closure_2_0(closure_2_1[2]).CHAT_PATH;
                                   str = undefined;
                                   closure_1 = undefined;
                                   if (str === undefined) {
@@ -1778,6 +1801,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   let obj = { get: null };
                                   obj[0] = function get() { ... };
                                   proxy = new Proxy(tmp, obj);
+                                  let tmp10 = closure_1;
                                 }
                               }
                               return proxy;
@@ -1910,6 +1934,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 obj1[0] = "" + finalOperationName + " " + str15 + " stream-response";
                                 obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                 obj1[2] = obj;
+                                closure_0 = undefined;
                                 closure_0 = callback(/* F115363 */ function() { ... });
                                 let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
                                 const tmp4Result2 = tmp4(tmp5[3]);
@@ -1955,6 +1980,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               if (typeof value === "function") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
                                   if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
+                                    str = methodPath;
                                     table = self;
                                     closure_2 = table;
                                     closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
@@ -1993,24 +2019,28 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     obj1 = { get: null };
                                     obj1[0] = function get() { ... };
                                     bindResult = new Proxy(value, obj1);
+                                    let tmp23 = table;
                                   }
                                 }
                               }
                               return bindResult;
                             };
                             bindResult = new Proxy(value, obj1);
+                            let tmp23 = table;
                           }
                         }
                       }
                       return bindResult;
                     };
                     bindResult = new Proxy(value, obj1);
+                    let tmp23 = table;
                   }
                 }
               }
               return bindResult;
             };
             bindResult = new Proxy(value, obj1);
+            let tmp23 = table;
           }
         }
       }

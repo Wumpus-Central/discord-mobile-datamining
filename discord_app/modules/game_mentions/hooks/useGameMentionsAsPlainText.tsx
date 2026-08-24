@@ -1,14 +1,14 @@
 // === Module 9287: useGameMentionsAsPlainText ===
 
 // Module 9287 (useGameMentionsAsPlainText)
-import noop from "noop" /* 19 */;
-import handleLoadMessages from "handleLoadMessages" /* 4505 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleLoadMessages" /* 4505 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import regExp from "regExp" /* 6810 */;
 
-const require = fn;
+const require = arg1;
 ({ extractGameMentionIds: c5, GAME_MENTION_RAW_RE_GLOBAL: closure_6 } = regExp);
-const result = require("obj132").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");
+const result = require("set").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");
 
 export const useGameMentionsAsPlainText = function useGameMentionsAsPlainText(state) {
   const _require = state;
@@ -35,16 +35,16 @@ export const useGameMentionsAsPlainText = function useGameMentionsAsPlainText(st
         return str.replace(closure_1_6, (arg0, closure_0) => {
           const game = closure_1_3.getGame(closure_0);
           if (obj.isGameProfileObscured(game, nsfwAllowed)) {
-            const intl2 = nsfwAllowed(memo[8]).intl;
-            let stringResult = intl2.string(nsfwAllowed(memo[8]).t["11pdXZ"]);
+            const intl2 = tmp2(tmp3[8]).intl;
+            let stringResult = intl2.string(tmp2(tmp3[8]).t["11pdXZ"]);
           } else {
             stringResult = undefined;
             if (game != null) {
               stringResult = game.name;
             }
             if (stringResult == null) {
-              const intl = nsfwAllowed(memo[8]).intl;
-              stringResult = intl.string(nsfwAllowed(memo[8]).t["11pdXZ"]);
+              const intl = tmp2(tmp3[8]).intl;
+              stringResult = intl.string(tmp2(tmp3[8]).t["11pdXZ"]);
             }
           }
           return stringResult;

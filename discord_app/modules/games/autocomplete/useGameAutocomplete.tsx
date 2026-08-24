@@ -3,14 +3,35 @@
 // Module 7600 (fetchStore)
 import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH" /* 6900 */;
 import _fetchGameAutocomplete from "_fetchGameAutocomplete" /* 7601 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import importDefaultResult from "set" /* 6899 */;
 import { QueryIds } from "ME" /* 676 */;
 import initialize from "initialize" /* 589 */;
 
-require = fn;
+require = arg1;
 let c4 = importDefaultResult;
+initialize = {
+  getQueryId(c0) {
+    return QueryIds.GAME_AUTOCOMPLETE(GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.normalizeGameAutocompleteQuery(c0));
+  },
+  get(arg0) {
+    let results = importDefaultResult.getResults(arg0);
+    if (results == null) {
+      results = null;
+    }
+    return results;
+  },
+  load(arg0) {
+    return _fetchGameAutocomplete.fetchGameAutocomplete(arg0);
+  },
+  getIsLoading(arg0) {
+    return importDefaultResult.isFetching(arg0);
+  },
+  retryConfig: initialize,
+  staleAfter: 3600,
+  failureStaleAfter: 60
+};
 initialize = {
   retryableErrors: function isRetryableError(status) {
     status = status.status;
@@ -30,7 +51,7 @@ initialize = {
   }
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, initialize);
-let result = require("obj132").fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
+let result = require("set").fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
 
 export const GAME_AUTOCOMPLETE_DEBOUNCE_MS = 200;
 export const GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS = 500;
@@ -49,7 +70,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
   const effect = React.useEffect(() => {
     if (timeout !== ref.current) {
       if (null != tmp) {
-        if (null != ref.current) {
+        if (null != tmp2.current) {
           const _Date2 = Date;
           function emit() {
             closure_3.current = Date.now();
@@ -67,7 +88,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
       }
       const _Date = Date;
       ref2.current = Date.now();
-      ref.current = tmp;
+      tmp2.current = tmp;
       _undefined(tmp);
     }
   }, items);

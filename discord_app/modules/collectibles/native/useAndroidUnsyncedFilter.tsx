@@ -1,13 +1,13 @@
 // === Module 14430: useAndroidUnsyncedFilter ===
 
 // Module 14430 (useAndroidUnsyncedFilter)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import getUserAgnosticState from "getUserAgnosticState" /* 4737 */;
-import updateProduct from "updateProduct" /* 5319 */;
+import closure_3 from "getUserAgnosticState" /* 4737 */;
+import closure_4 from "updateProduct" /* 5319 */;
 
 noop.useCallback;
-const result = obj132.fileFinishedImporting("modules/collectibles/native/useAndroidUnsyncedFilter.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/native/useAndroidUnsyncedFilter.tsx");
 
 export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
   const items = [closure_4];
@@ -23,7 +23,7 @@ export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
       if (!stateFromStores1) {
         found = arr;
         if (!stateFromStores) {
-          found = arr.filter((item, index) => callback(table[5]).isGPlaySynced(item));
+          found = arr.filter((variants) => callback(table[5]).isGPlaySynced(variants));
         }
       }
     }

@@ -13,6 +13,7 @@ if (!fn) {
   fn = (obj, arr) => {
     obj = {};
     for (const key10007 in arg0) {
+      let tmp6 = key10007;
       let _Object2 = Object;
       let call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {

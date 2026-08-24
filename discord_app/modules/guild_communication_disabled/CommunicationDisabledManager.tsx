@@ -1,13 +1,13 @@
 // === Module 11631: clearGuildMemberTimeout ===
 
 // Module 11631 (clearGuildMemberTimeout)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
 import initializeDefault from "initialize" /* 5038 */;
 import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import trackCommunicationDisabled2 from "trackCommunicationDisabled" /* 1990 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
 function clearGuildMemberTimeout(closure_2, closure_1) {
   member = member.getMember(closure_2, closure_1);
@@ -50,6 +50,7 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         obj1 = { type: "GUILD_MEMBER_UPDATE" };
         const merged3 = Object.assign(obj);
         dispatcherDefault.dispatch(obj1);
+        const obj4 = dispatcherDefault;
       }
       obj6 = isCommunicationDisabled;
     }
@@ -70,13 +71,12 @@ prototype["_initialize"] = function _initialize() {
   const interval = setInterval(() => {
     communicationDisabledUserMap = communicationDisabledUserMap.getCommunicationDisabledUserMap();
     const keys = Object.keys(communicationDisabledUserMap);
-    const item = keys.forEach((item, index) => {
-      const tmp = closure_1_3(item);
-      const tmp2 = closure_1_4(item);
-      if (!obj.isCommunicationDisabled(communicationDisabledUserMap[item])) {
+    const item = keys.forEach((arg0) => {
+      const tmp = closure_1_3(arg0);
+      const tmp2 = closure_1_4(arg0);
+      if (!obj.isCommunicationDisabled(communicationDisabledUserMap[arg0])) {
         closure_1_8(tmp, tmp2);
       }
-      obj = communicationDisabledUserMap(closure_1_2[2]);
     });
   }, 10000);
 };
@@ -84,6 +84,6 @@ prototype["_terminate"] = function _terminate() {
   clearInterval(c7);
 };
 const communicationDisabledManager = new CommunicationDisabledManager();
-const result = obj132.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
+const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
 
 export default communicationDisabledManager;

@@ -2,22 +2,25 @@
 
 // Module 15966 (FriendsScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import recountRelationshipTypes from "recountRelationshipTypes" /* 5406 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "recountRelationshipTypes" /* 5406 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { paddingTop: ThemesDefault.space.PX_8, flex: 1 };
+createCacheKey = { container: null, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_8, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 createCacheKey[2] = { justifyContent: "center", flexGrow: 1 };
+let obj1 = { marginHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 createCacheKey[3] = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, width: "100%" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreen.tsx");
+let obj2 = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, width: "100%" };
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreen.tsx");
 
 export default function FriendsScreen() {
   let obj = navigation(analyticsLocations[7]);
@@ -91,10 +94,10 @@ export default function FriendsScreen() {
       obj = { title: null, fullHeight: true, containerStyle: null, illustration: null, children: null };
       const intl3 = navigation(analyticsLocations[19]).intl;
       obj[0] = intl3.string(navigation(analyticsLocations[19]).t["oi+B4p"]);
-      obj[2] = lib.emptyContainer;
+      obj[2] = tmp3.emptyContainer;
       obj[3] = navigation(analyticsLocations[22]).WumpusCouchSpotIllustration;
       obj = { style: null, children: null };
-      const items1 = [lib.buttonContainer, ];
+      const items1 = [tmp3.buttonContainer, ];
       obj1 = { paddingBottom: null };
       obj1[0] = bottom;
       items1[1] = obj1;
@@ -106,14 +109,13 @@ export default function FriendsScreen() {
         return navigation.navigate("friends", { screen: "add-friends", params: { sourcePage: "Friends Screen" } });
       };
       obj[1] = pendingIgnored(navigation(analyticsLocations[23]).Button, obj2);
-      obj[4] = pendingIgnored(incoming, obj);
+      obj[4] = pendingIgnored(tmp2, obj);
       items[1] = pendingIgnored(lib(analyticsLocations[21]), obj);
       obj[1] = items;
-      return tmp(incoming, obj);
+      return tmp(tmp2, obj);
     } else {
       const obj3 = { style: null, children: null };
-      obj3[0] = lib.requestsButtonContainer;
-      let v1IEawz = navigation;
+      obj3[0] = tmp3.requestsButtonContainer;
       let obj6 = analyticsLocations;
       let obj4 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
       const obj5 = { source: null };
@@ -122,18 +124,17 @@ export default function FriendsScreen() {
       obj4[3] = pendingIgnored(navigation(analyticsLocations[20]).TableRow.Arrow, {});
       const intl5 = navigation(analyticsLocations[19]).intl;
       obj4[4] = intl5.string(navigation(analyticsLocations[19]).t.fyA115);
-      if (incoming + outgoing > 0) {
-        const intl2 = v1IEawz(obj6[19]).intl;
-        v1IEawz = v1IEawz(obj6[19]).t["1IEawz"];
+      if (tmp4 + tmp5 > 0) {
+        const intl2 = _1IEawz(obj6[19]).intl;
         obj6 = { incoming: null, outgoing: null };
-        obj6[0] = incoming;
-        obj6[1] = outgoing;
-        let formatToPlainStringResult = intl2.formatToPlainString(v1IEawz, obj6);
+        obj6[0] = tmp4;
+        obj6[1] = tmp5;
+        let formatToPlainStringResult = intl2.formatToPlainString(_1IEawz, obj6);
       } else {
-        const intl = v1IEawz(obj6[19]).intl;
+        const intl = _1IEawz(obj6[19]).intl;
         const obj7 = { spam: null };
         obj7[0] = tmp6;
-        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(obj6[19]).t.e6BtLq, obj7);
+        formatToPlainStringResult = intl.formatToPlainString(_1IEawz(obj6[19]).t.e6BtLq, obj7);
       }
       obj4[5] = formatToPlainStringResult;
       obj4[6] = function onPress() {
@@ -143,9 +144,9 @@ export default function FriendsScreen() {
           navigation.navigate("friends", { screen: "spam-requests" });
         }
       };
-      obj4 = pendingIgnored(navigation(analyticsLocations[20]).TableRow, obj4);
+      obj4 = tmp15(navigation(analyticsLocations[20]).TableRow, obj4);
       obj3[1] = obj4;
-      pendingIgnored(incoming, obj3);
+      pendingIgnored(tmp2, obj3);
     }
   }, items4);
   obj = { value: analyticsLocations, children: null };

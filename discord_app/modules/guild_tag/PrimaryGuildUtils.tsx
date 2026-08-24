@@ -1,9 +1,9 @@
 // === Module 1932: isUserPrimaryGuildEqual ===
 
 // Module 1932 (isUserPrimaryGuildEqual)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
 
 export const isUserPrimaryGuildEqual = function isUserPrimaryGuildEqual(primaryGuild, primary_guild) {
   if (null != primaryGuild) {

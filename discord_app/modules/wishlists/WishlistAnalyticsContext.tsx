@@ -6,7 +6,7 @@ import { jsx } from "jsxProd" /* 21 */;
 
 let c0 = importAllResult;
 const context = importAllResult.createContext(null);
-const result = require("obj132").fileFinishedImporting("modules/wishlists/WishlistAnalyticsContext.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/WishlistAnalyticsContext.tsx");
 
 export const WishlistAnalyticsContext = context;
 export const useWishlistAnalyticsContext = function useWishlistAnalyticsContext() {
@@ -15,5 +15,5 @@ export const useWishlistAnalyticsContext = function useWishlistAnalyticsContext(
 export const WishlistAnalyticsProvider = function WishlistAnalyticsProvider(children) {
   const merged = Object.assign(importAllResult.useContext(context));
   const merged1 = Object.assign(children.newValue);
-  return <context.Provider value={{}}>{children.children}</context.Provider>;
+  return <context.Provider value={{}}>{arg0.children}</context.Provider>;
 };

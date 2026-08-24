@@ -1,7 +1,6 @@
 // === Module 1034: triggerHandlers ===
 
 // Module 1034 (triggerHandlers)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1035 */;
 
 require = arg1;
@@ -18,9 +17,9 @@ function triggerHandlers(arg0, arg1) {
         tmp14(arg1);
       } catch (tmp17) {
         if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-          const debug = registerSpanErrorInstrumentation.debug;
-          debug.error(tmp2 + tmp6 + tmp3 + registerSpanErrorInstrumentation.getFunctionName(tmp7) + tmp4, tmp17);
-          const tmp18Result = registerSpanErrorInstrumentation;
+          const debug = tmp18(817).debug;
+          debug.error(tmp2 + tmp6 + tmp3 + tmp18(817).getFunctionName(tmp7) + tmp4, tmp17);
+          const tmp18Result = tmp18(817);
         }
       }
     }
@@ -30,7 +29,7 @@ function triggerHandlers(arg0, arg1) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_6 = {};
 let closure_7 = {};
-arg5.addClsInstrumentationHandler = function addClsInstrumentationHandler(fn, arg1) {
+arg5.addClsInstrumentationHandler = function addClsInstrumentationHandler(arg0, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -39,8 +38,8 @@ arg5.addClsInstrumentationHandler = function addClsInstrumentationHandler(fn, ar
     flag = false;
   }
   closure_6.cls = closure_6.cls || [];
-  let cls = closure_6.cls;
-  cls.push(fn);
+  let cls = tmp2.cls;
+  cls.push(arg0);
   if (!closure_7.cls) {
     let obj = cls(1036);
     tmp5.cls = true;
@@ -52,14 +51,14 @@ arg5.addClsInstrumentationHandler = function addClsInstrumentationHandler(fn, ar
   if (closure_2) {
     obj = { metric: null };
     obj[0] = tmp;
-    fn(obj);
+    arg0(obj);
   }
   let tmp10;
   if (flag) {
     tmp10 = onCLSResult;
   }
   cls = "cls";
-  dependencyMap = fn;
+  dependencyMap = arg0;
   closure_2 = tmp10;
   return () => {
     if (closure_2) {
@@ -75,7 +74,7 @@ arg5.addClsInstrumentationHandler = function addClsInstrumentationHandler(fn, ar
 };
 arg5.addInpInstrumentationHandler = function addInpInstrumentationHandler(_onInp) {
   closure_6.inp = closure_6.inp || [];
-  let inp = closure_6.inp;
+  let inp = tmp2.inp;
   inp.push(_onInp);
   if (!closure_7.inp) {
     let obj = inp(1055);
@@ -87,7 +86,7 @@ arg5.addInpInstrumentationHandler = function addInpInstrumentationHandler(_onInp
   }
   if (closure_5) {
     obj = { metric: null };
-    obj[0] = closure_5;
+    obj[0] = tmp;
     _onInp(obj);
   }
   inp = "inp";
@@ -104,7 +103,7 @@ arg5.addInpInstrumentationHandler = function addInpInstrumentationHandler(_onInp
     }
   };
 };
-arg5.addLcpInstrumentationHandler = function addLcpInstrumentationHandler(fn, arg1) {
+arg5.addLcpInstrumentationHandler = function addLcpInstrumentationHandler(arg0, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -113,8 +112,8 @@ arg5.addLcpInstrumentationHandler = function addLcpInstrumentationHandler(fn, ar
     flag = false;
   }
   closure_6.lcp = closure_6.lcp || [];
-  let lcp = closure_6.lcp;
-  lcp.push(fn);
+  let lcp = tmp2.lcp;
+  lcp.push(arg0);
   if (!closure_7.lcp) {
     let obj = lcp(1051);
     tmp5.lcp = true;
@@ -125,15 +124,15 @@ arg5.addLcpInstrumentationHandler = function addLcpInstrumentationHandler(fn, ar
   }
   if (closure_3) {
     obj = { metric: null };
-    obj[0] = closure_3;
-    fn(obj);
+    obj[0] = tmp;
+    arg0(obj);
   }
   let tmp10;
   if (flag) {
     tmp10 = onLCPResult;
   }
   lcp = "lcp";
-  dependencyMap = fn;
+  dependencyMap = arg0;
   closure_2 = tmp10;
   return () => {
     if (closure_2) {
@@ -149,7 +148,7 @@ arg5.addLcpInstrumentationHandler = function addLcpInstrumentationHandler(fn, ar
 };
 arg5.addPerformanceInstrumentationHandler = function addPerformanceInstrumentationHandler(event, handleEntries) {
   closure_6[event] = closure_6[event] || [];
-  let arr = closure_6[event];
+  let arr = tmp[event];
   arr = arr.push(handleEntries);
   if (!closure_7[event]) {
     let _require = event;
@@ -158,7 +157,7 @@ arg5.addPerformanceInstrumentationHandler = function addPerformanceInstrumentati
       obj.durationThreshold = 0;
     }
     _require(1046).observe(event, (entries) => {
-      triggerHandlers(closure_0, { entries });
+      closure_1_8(closure_0, { entries });
     }, obj);
     tmp4[event] = true;
     const obj2 = _require(1046);
@@ -177,10 +176,10 @@ arg5.addPerformanceInstrumentationHandler = function addPerformanceInstrumentati
     }
   };
 };
-arg5.addTtfbInstrumentationHandler = function addTtfbInstrumentationHandler(fn) {
+arg5.addTtfbInstrumentationHandler = function addTtfbInstrumentationHandler(arg0) {
   closure_6.ttfb = closure_6.ttfb || [];
-  let ttfb = closure_6.ttfb;
-  ttfb.push(fn);
+  let ttfb = tmp2.ttfb;
+  ttfb.push(arg0);
   if (!closure_7.ttfb) {
     let obj = ttfb(1054);
     obj.onTTFB((metric) => {
@@ -191,11 +190,11 @@ arg5.addTtfbInstrumentationHandler = function addTtfbInstrumentationHandler(fn) 
   }
   if (closure_4) {
     obj = { metric: null };
-    obj[0] = closure_4;
-    fn(obj);
+    obj[0] = tmp;
+    arg0(obj);
   }
   ttfb = "ttfb";
-  dependencyMap = fn;
+  dependencyMap = arg0;
   return () => {
     if (closure_2) {
       tmp();
@@ -208,6 +207,6 @@ arg5.addTtfbInstrumentationHandler = function addTtfbInstrumentationHandler(fn) 
     }
   };
 };
-arg5.isPerformanceEventTiming = function isPerformanceEventTiming(item) {
-  return "duration" in item;
+arg5.isPerformanceEventTiming = function isPerformanceEventTiming(interactionId) {
+  return "duration" in interactionId;
 };

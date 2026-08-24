@@ -2,10 +2,10 @@
 
 // Module 11829 (_fetchWelcomeScreen)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _fetchWelcomeScreen() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -21,6 +21,7 @@ function _fetchWelcomeScreen() {
       obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
       obj1[0] = c4.GUILD_WELCOME_SCREEN(callback);
       yield HTTP.get(obj1);
+      c4 = 0;
       let obj4 = lib(709);
       obj4.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
       lib = yield "HermesInternal";
@@ -90,14 +91,15 @@ function _saveWelcomeScreen() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 
 export const welcomeScreenViewed = function welcomeScreenViewed(closure_0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  const obj = { type: "WELCOME_SCREEN_VIEW", guildId: closure_0, isLurking: flag };
+  let obj = dispatcherDefault;
+  obj = { type: "WELCOME_SCREEN_VIEW", guildId: closure_0, isLurking: flag };
   obj.dispatch(obj);
 };
 export const fetchWelcomeScreen = function fetchWelcomeScreen(closure_0) {
@@ -117,7 +119,8 @@ export const clearWelcomeScreenSettings = function clearWelcomeScreenSettings() 
   dispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
 };
 export const updateSettings = function updateSettings(settings) {
-  const obj = { type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings };
+  let obj = dispatcherDefault;
+  obj = { type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings };
   obj.dispatch(obj);
 };
 export const saveWelcomeScreen = function saveWelcomeScreen() {

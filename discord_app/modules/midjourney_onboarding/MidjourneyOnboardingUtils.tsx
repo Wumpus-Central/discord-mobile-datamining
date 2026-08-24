@@ -2,13 +2,13 @@
 
 // Module 13319 (isMidjourneyOnboardingFlow)
 import initialize from "initialize" /* 589 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "handleConnectionOpen" /* 4197 */;
 import MIDJOURNEY_GUILD_ID from "MIDJOURNEY_GUILD_ID" /* 13320 */;
 
-require = fn;
+require = arg1;
 ({ MIDJOURNEY_BOT_ID: c4, MIDJOURNEY_GUILD_ID: c5 } = MIDJOURNEY_GUILD_ID);
-const result = require("obj132").fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx");
 
 export const isMidjourneyOnboardingFlow = function isMidjourneyOnboardingFlow() {
   let obj = arg0;
@@ -56,12 +56,12 @@ export const useIsMidjourneyOnboardingFlow = function useIsMidjourneyOnboardingF
   }, []);
 };
 export const isEligibleForMidjourneyRedirect = function isEligibleForMidjourneyRedirect(closure_1_0) {
-  let isDMResult = require.isDM();
+  let isDMResult = closure_1_0.isDM();
   if (isDMResult) {
-    isDMResult = 1 === require.rawRecipients.length;
+    isDMResult = 1 === closure_1_0.rawRecipients.length;
   }
   if (isDMResult) {
-    isDMResult = require.rawRecipients[0].id === closure_4;
+    isDMResult = closure_1_0.rawRecipients[0].id === closure_4;
   }
   if (isDMResult) {
     let guildStore = {}.guildStore;
@@ -88,8 +88,8 @@ export const isEligibleForMidjourneyRedirect = function isEligibleForMidjourneyR
 };
 export const hasRedirectedToGuild = function hasRedirectedToGuild(closure_1_4) {
   closure_0 = closure_1_4;
-  return new Promise((fn) => {
-    closure_0 = fn;
+  return new Promise((arg0, arg1) => {
+    closure_0 = arg0;
     closure_1 = arg1;
     function handleSelectedGuildUpdate() {
       if (closure_2_3.getGuildId() === callback) {
@@ -108,7 +108,7 @@ export const hasRedirectedToGuild = function hasRedirectedToGuild(closure_1_4) {
       }, 3000);
       closure_1_3.addChangeListener(handleSelectedGuildUpdate);
     } else {
-      fn();
+      arg0();
     }
   });
 };

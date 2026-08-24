@@ -2,10 +2,9 @@
 
 // Module 278 (_isNativeReflectConstruct)
 import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 189 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 189 */;
 
 require = arg1;
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
   showErrorDialog(error) {
@@ -14,7 +13,7 @@ arg5.default = {
       try {
         error.componentStack = error.componentStack;
         error.isComponentError = true;
-        _isNativeReflectConstructDefault.handleException(error, false);
+        module(189).handleException(error, false);
         return false;
       } catch (err) {
       }

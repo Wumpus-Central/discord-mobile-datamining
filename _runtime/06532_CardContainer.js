@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const styles = StyleSheet.create({ container: { flex: 1 }, header: { zIndex: 1 }, scene: { flex: 1 } });
@@ -13,6 +13,7 @@ const styles = StyleSheet.create({ container: { flex: 1 }, header: { zIndex: 1 }
 export const CardContainer = importAllResult.memo(function CardContainerInner(active) {
   active = active.active;
   ({ focused, getPreviousScene, headerHeight, isParentHeaderShown, layout, onCloseRoute: dependencyMap, onOpenRoute: closure_2, onGestureCancel: closure_3, onGestureEnd: closure_4, onGestureStart: closure_5, onTransitionEnd: closure_6, onTransitionStart: closure_7, scene } = active);
+  let ref;
   c10 = undefined;
   c11 = undefined;
   c12 = undefined;
@@ -21,7 +22,7 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
   closure_15 = undefined;
   let obj = importAllResult;
   ({ interpolationIndex, index, opening, closing, gesture, modal, getFocusedRoute, hasAbsoluteFloatHeader, onHeaderHeightChange, isNextScreenTransparent, detachCurrentScreen, preloaded, renderHeader, safeAreaInsetBottom, safeAreaInsetLeft, safeAreaInsetRight, safeAreaInsetTop } = active);
-  const ref = importAllResult.useRef(null);
+  ref = importAllResult.useRef(null);
   obj1 = active(1501);
   let num = importAllResult.useContext(active(6319).HeaderHeightContext);
   let tmp4 = focused;
@@ -50,7 +51,7 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
     active = addListenerResult;
     return () => {
       if (closure_0) {
-        const next = scene.progress.next;
+        const next = closure_1_8.progress.next;
         if (next != null) {
           const removeListener = next.removeListener;
           if (removeListener != null) {
@@ -109,15 +110,15 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
     overlay: cardOverlay,
     overlayEnabled: cardOverlayEnabled,
     shadowEnabled: cardShadowEnabled,
-    onTransition(closure_1_2) {
-      const closing = closure_1_2.closing;
+    onTransition(closing) {
+      closing = closing.closing;
       const current = ref.current;
       if (current != null) {
         current.setInert(closing);
       }
       if (c12 != null) {
         let obj = { gesture: null, active: null, closing: null };
-        obj[0] = closure_1_2.gesture;
+        obj[0] = closing.gesture;
         obj[1] = active;
         obj[2] = closing;
         tmp2(obj);
@@ -136,7 +137,7 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
       _undefined2();
       callback3({ route: scene.descriptor.route });
     },
-    onGestureEnd(arg0, arg1) {
+    onGestureEnd() {
       callback4({ route: scene.descriptor.route });
     },
     gestureEnabled: null,
@@ -193,7 +194,7 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
     obj5[4] = getFocusedRoute;
     obj5[5] = headerHeight;
     obj5[6] = onHeaderHeightChange;
-    obj5[7] = container.header;
+    obj5[7] = tmp21.header;
     renderHeaderResult = renderHeader(obj5);
   }
   const items4 = [renderHeaderResult, ];
@@ -209,15 +210,16 @@ export const CardContainer = importAllResult.memo(function CardContainerInner(ac
     }
     headerHeight = num;
   }
+  const tmp22 = closure_5;
   tmp2Result1 = active(1501);
   const descriptor = scene.descriptor;
-  obj8[1] = callback(active(6319).HeaderHeightContext.Provider, { value: headerHeight, children: descriptor.render() });
-  obj7[1] = callback(active(6319).HeaderShownContext.Provider, obj8);
-  obj6[1] = callback(active(6319).HeaderBackContext.Provider, obj7);
-  items4[1] = callback(closure_3, obj6);
+  obj8[1] = closure_4(active(6319).HeaderHeightContext.Provider, { value: headerHeight, children: descriptor.render() });
+  obj7[1] = closure_4(active(6319).HeaderShownContext.Provider, obj8);
+  obj6[1] = closure_4(active(6319).HeaderBackContext.Provider, obj7);
+  items4[1] = closure_4(closure_3, obj6);
   obj4[1] = items4;
-  obj3[1] = callback2(active(6522).ModalPresentationContext.Provider, obj4);
-  obj1[29] = callback(closure_3, obj3);
-  obj[6] = callback(active(6535).Card, obj1);
-  return callback(active(6534).CardA11yWrapper, obj);
+  obj3[1] = tmp22(active(6522).ModalPresentationContext.Provider, obj4);
+  obj1[29] = closure_4(closure_3, obj3);
+  obj[6] = closure_4(active(6535).Card, obj1);
+  return closure_4(active(6534).CardA11yWrapper, obj);
 });

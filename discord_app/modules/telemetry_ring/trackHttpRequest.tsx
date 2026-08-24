@@ -1,14 +1,13 @@
 // === Module 16496: trackHttpRequest ===
 
 // Module 16496 (trackHttpRequest)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import apexExperiment from "apexExperiment" /* 16497 */;
 import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 16498 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
+const result = set.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
 
 export default function trackHttpRequest(url) {
   let obj = {};
@@ -28,5 +27,4 @@ export default function trackHttpRequest(url) {
     expandEventPropertiesDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
     const tmp3Result = expandEventPropertiesDefault;
   }
-  obj2 = apexExperiment;
 };

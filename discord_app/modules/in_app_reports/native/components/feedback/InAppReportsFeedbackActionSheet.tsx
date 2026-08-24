@@ -2,21 +2,17 @@
 
 // Module 16574 (InAppReportsFeedbackActionSheet)
 import noopAll from "noop" /* 19 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
-import shuffleProblems from "shuffleProblems" /* 10814 */;
 import closeActionSheetDefault from "closeActionSheet" /* 10832 */;
 import getInAppReportsFeedbackOptionsDefault from "getInAppReportsFeedbackOptions" /* 16575 */;
 import newGetEnglishMessageText from "newGetEnglishMessageText" /* 16576 */;
-import trackInAppReportsFeedbackDefault from "trackInAppReportsFeedback" /* 16577 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { FeedbackType } from "FeedbackRating" /* 10811 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-let result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx");
 
 export default function InAppReportsFeedbackActionSheet(arg0) {
   ({ reportId: require, reportType: importDefault } = arg0);
@@ -35,8 +31,9 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
   obj[6] = items;
   obj[7] = result;
   obj[8] = function trackOpen() {
-    const obj = { report_id: closure_0, report_type: closure_1 };
-    obj.track(AnalyticEvents.IAR_FEEDBACK_MODAL_VIEWED, obj);
+    let obj = closure_1_1(closure_1_2[8]);
+    obj = { report_id: closure_0, report_type: closure_1 };
+    obj.track(closure_1_3.IAR_FEEDBACK_MODAL_VIEWED, obj);
   };
   obj[9] = function trackReport(arg0) {
     ({ rating, reason, feedback, dontShowAgain } = arg0);
@@ -56,14 +53,16 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
       flag = false;
     }
     obj[5] = flag;
-    trackInAppReportsFeedbackDefault(obj);
+    closure_1_1(closure_1_2[9])(obj);
     if (dontShowAgain) {
       obj = { feedbackType: null, location: "InAppReportsFeedbackActionSheet" };
-      obj[0] = FeedbackType.IN_APP_REPORTS;
-      shuffleProblems.processOptOut(obj);
+      obj[0] = closure_1_4.IN_APP_REPORTS;
+      closure_1_0(tmp2[10]).processOptOut(obj);
+      const obj2 = closure_1_0(tmp2[10]);
     }
     if (null != rating) {
-      presentAddedFriendToast.presentFeedbackSent();
+      closure_1_0(tmp2[11]).presentFeedbackSent();
+      const obj4 = closure_1_0(tmp2[11]);
     }
   };
   return jsx(closeActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });

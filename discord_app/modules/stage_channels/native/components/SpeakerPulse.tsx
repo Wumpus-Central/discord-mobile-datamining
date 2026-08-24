@@ -2,32 +2,35 @@
 
 // Module 13479 (SpeakerPulse)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let c9 = 0.16;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.WHITE };
+createCacheKey = { pulse: null, border: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.STATUS_SPEAKING };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { code: "function SpeakerPulseTsx1(){const{animatedInnerOpacity}=this.__closure;return{opacity:animatedInnerOpacity.get()};}" };
 let closure_12 = { code: "function SpeakerPulseTsx2(){const{animatedOuterOpacity}=this.__closure;return{opacity:animatedOuterOpacity.get()};}" };
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
+const obj1 = { backgroundColor: ThemesDefault.colors.STATUS_SPEAKING };
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
 
 export default function SpeakerPulse(style) {
   style = style.style;
   let stateFromStores;
+  let sharedValue;
   let sharedValue1;
   const tmp = callback3();
   let obj = stateFromStores(sharedValue1[6]);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => !useReducedMotion.useReducedMotion, []);
-  const sharedValue = stateFromStores(sharedValue1[7]).useSharedValue(c9);
+  sharedValue = stateFromStores(sharedValue1[7]).useSharedValue(c9);
   let obj2 = stateFromStores(sharedValue1[7]);
   sharedValue1 = stateFromStores(sharedValue1[7]).useSharedValue(c9);
   const items1 = [stateFromStores, sharedValue, sharedValue1];

@@ -1,16 +1,17 @@
 // === Module 11054: logMediaAttachmentPlaybackStarted ===
 
 // Module 11054 (logMediaAttachmentPlaybackStarted)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/media/MediaAnalytics.tsx");
+const result = set.fileFinishedImporting("modules/media/MediaAnalytics.tsx");
 
 export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlaybackStarted(messageChannel, found, totalDurationSecs, messageId, startDurationSecs, id) {
   let tmp = totalDurationSecs;
-  const obj = { guild_id: messageChannel.guild_id, channel_id: messageChannel.id, channel_type: messageChannel.type, type: found.content_type, flags: found.flags, size: found.size, duration: totalDurationSecs, message_id: messageId, attachment_id: found.id, start_duration_secs: null, sender_user_id: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { guild_id: messageChannel.guild_id, channel_id: messageChannel.id, channel_type: messageChannel.type, type: found.content_type, flags: found.flags, size: found.size, duration: totalDurationSecs, message_id: messageId, attachment_id: found.id, start_duration_secs: null, sender_user_id: null };
   if (totalDurationSecs == null) {
     tmp = startDurationSecs;
   }
@@ -20,7 +21,8 @@ export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlay
 };
 export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlaybackEnded(messageId, totalDurationSecs, endDurationSecs, id, durationListeningSecs, found) {
   let tmp = totalDurationSecs;
-  const obj = { message_id: messageId, total_duration_secs: totalDurationSecs, end_duration_secs: null, sender_user_id: null, duration_listening_secs: null, type: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { message_id: messageId, total_duration_secs: totalDurationSecs, end_duration_secs: null, sender_user_id: null, duration_listening_secs: null, type: null };
   if (totalDurationSecs == null) {
     tmp = endDurationSecs;
   }

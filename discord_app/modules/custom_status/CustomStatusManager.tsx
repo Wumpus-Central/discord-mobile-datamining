@@ -2,10 +2,10 @@
 
 // Module 16551 (timeout)
 import initializeDefault from "initialize" /* 5038 */;
-import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
+import closure_3 from "filterPlayingActivities" /* 7250 */;
 import ME from "ME" /* 676 */;
 
-let require = fn;
+let require = arg1;
 ({ AnalyticsObjects: c4, StatusTypes: c5 } = ME);
 const timeout = new require("start").Timeout();
 const timeout1 = new require("start").Timeout();
@@ -62,8 +62,9 @@ let prototype = function CustomStatusManager() {
         }
       }
       if (null != closure_8) {
-        closure_8.stop();
+        obj.stop();
       }
+      obj = closure_8;
     }
   };
   applyArgumentsResult.manageExpiringStatus = function manageExpiringStatus() {
@@ -81,7 +82,8 @@ let prototype = function CustomStatusManager() {
           const diff = time - date1.getTime();
           if (diff > 0) {
             closure_6.start(diff, () => {
-              const obj = { object: constants.CUSTOM_STATUS_MANAGER };
+              obj = { nextStatus: constants2.ONLINE, analyticsContext: { location: obj } };
+              obj = { object: constants.CUSTOM_STATUS_MANAGER };
               callback(table[5])(obj);
             }, true);
           } else {
@@ -149,6 +151,6 @@ let prototype = function CustomStatusManager() {
 class prototype extends tmp6 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
+let result = require("set").fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
 
 export default prototype;

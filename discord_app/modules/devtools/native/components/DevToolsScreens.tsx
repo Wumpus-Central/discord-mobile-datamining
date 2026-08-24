@@ -30,9 +30,10 @@ import getSelectedGuildChannel from "getSelectedGuildChannel" /* 15179 */;
 import effectName from "effectName" /* 15180 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-let obj = {
+let obj = { analytics: null, buildOverride: null, experiments: null, loggingFlags: null, cacheStats: null, generatedTestUsers: null, dataStorage: null, designSystems: null, dismissibleContent: null, gameCommunityUpsell: null, i18n: null, otatest: null, profiling: null, quickActions: null, revenuePlayground: null, surveyOverride: null, toggles: null, ageVerification: null, components: null, shop: null, shopProductPreview: null, actionSheets: null, accountLinking: null, performanceTesting: null, inAppNotificationTesting: null };
+obj = {
   headerTitle: "Analytics",
   Icon: require("ClipboardListIcon").ClipboardListIcon,
   render() {
@@ -391,7 +392,7 @@ const obj25 = {
     return jsx(effectName.default, {});
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
 
 export const DevToolsScreens = obj;
 export const PerformanceTestingScreens = obj24;

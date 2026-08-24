@@ -3,10 +3,10 @@
 // Module 7496 (getStats)
 import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
 import getSamples from "getSamples" /* 7490 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("lib/SystemResources.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("lib/SystemResources.tsx");
 class SystemResources {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -52,6 +52,8 @@ prototype["getStats"] = function getStats() {
 prototype["takeSample"] = function takeSample() {
   const self = this;
   const cumulativeCPUUsage = getHermesInstrumentedStatsSummaryDefault.getCumulativeCPUUsage();
+  const obj = getHermesInstrumentedStatsSummaryDefault;
+  const tmp = importDefault;
   const currentMemoryUsageKB = getHermesInstrumentedStatsSummaryDefault.getCurrentMemoryUsageKB();
   if (null != cumulativeCPUUsage) {
     let flag = true;
@@ -87,10 +89,10 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
       HermesBuiltin.throwTypeError();
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
-        throw batteryLevel;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = batteryLevel;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -101,11 +103,11 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
         if (0 === c1) {
           if (arg0 === 1) {
             v0 = 3;
-            throw batteryLevel;
+            throw arg1;
           } else if (arg0 === 2) {
             v0 = 3;
             obj = { value: null, done: true };
-            obj[0] = batteryLevel;
+            obj[0] = arg1;
             return obj;
           } else {
             c3 = 1;
@@ -122,18 +124,18 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
           return { value: null, done: true };
         } else if (arg0 === 1) {
           v0 = 3;
-          throw batteryLevel;
+          throw arg1;
         } else if (arg0 === 2) {
           c3 = 0;
           v0 = 3;
           obj2 = { value: null, done: true };
-          obj2[0] = batteryLevel;
+          obj2[0] = arg1;
           return obj2;
         } else {
           c3 = 0;
           v0 = 3;
           obj = { value: null, done: true };
-          obj[0] = batteryLevel.batteryLevel;
+          obj[0] = arg1.batteryLevel;
           return obj;
         }
       } catch (tmp10) {
@@ -156,10 +158,10 @@ prototype["setLastBattery"] = function setLastBattery() {
       HermesBuiltin.throwTypeError();
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw lastBattery;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = lastBattery;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -170,30 +172,30 @@ prototype["setLastBattery"] = function setLastBattery() {
         if (0 === c1) {
           if (arg0 === 1) {
             c2 = 3;
-            throw lastBattery;
+            throw arg1;
           } else if (arg0 === 2) {
             c2 = 3;
             obj = { value: null, done: true };
-            obj[0] = lastBattery;
+            obj[0] = arg1;
             return obj;
           } else {
-            closure_0 = self;
+            closure_0 = closure_1_0;
             c1 = 1;
             c2 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = self.getCurrentBattery();
+            obj1[0] = closure_1_0.getCurrentBattery();
             return obj1;
           }
         } else if (arg0 === 1) {
           c2 = 3;
-          throw lastBattery;
+          throw arg1;
         } else if (arg0 === 2) {
           c2 = 3;
           obj = { value: null, done: true };
-          obj[0] = lastBattery;
+          obj[0] = arg1;
           return obj;
         } else {
-          closure_0.lastBattery = lastBattery;
+          closure_0.lastBattery = arg1;
           c2 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
         }
@@ -239,7 +241,7 @@ prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
             c2 = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = self.getCurrentBattery();
+            obj1[0] = closure_1_0.getCurrentBattery();
             return obj1;
           }
         } else if (arg0 === 1) {

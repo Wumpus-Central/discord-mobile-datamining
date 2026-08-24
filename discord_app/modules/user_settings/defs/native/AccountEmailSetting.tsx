@@ -4,11 +4,11 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _modDef8561 from "module_8561" /* 8561 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import "createToggle";
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["w/qqKK"]);
@@ -31,6 +31,6 @@ let createToggle = {
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
 
 export default createToggle;

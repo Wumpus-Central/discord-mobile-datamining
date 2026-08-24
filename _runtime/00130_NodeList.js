@@ -2,10 +2,10 @@
 
 // Module 130 (NodeList)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
-const NodeList = fn;
+const NodeList = arg1;
 let closure_3 = { value: {}, writable: false };
 class NodeList {
   constructor(arg0) {
@@ -66,6 +66,11 @@ const items = [
             if (typeof call === "unknown") {
               let tmp3 = call(tmp2, num, self);
             } else {
+              let tmp5 = call;
+              let tmp6 = arg1;
+              let tmp7 = tmp2;
+              let tmp8 = num;
+              let tmp9 = self;
               let callResult = call(arg1, tmp2, tmp, self);
             }
           }

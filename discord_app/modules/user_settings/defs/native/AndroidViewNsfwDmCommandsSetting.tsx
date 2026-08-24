@@ -1,13 +1,9 @@
 // === Module 14197: toggle ===
 
 // Module 14197 (toggle)
-import obj132 from "obj132" /* 2 */;
-import obj1322 from "obj132" /* 500 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 5254 */;
 import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
 import MobileUserSettings from "MobileUserSettings" /* 8198 */;
 import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8454 */;
@@ -32,20 +28,22 @@ const toggle = createToggle.createToggle({
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        obj[0] = tmp(5254).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
         const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
+        const obj2 = openIncodeAgeVerificationModalDefault;
       }
     }
-    const ViewNsfwCommands = explicitContentFromProto.ViewNsfwCommands;
+    const ViewNsfwCommands = tmp(4066).ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
     let shouldAgeVerifyForSettingsToggles = shouldShowAgeGateForVoiceChannel.useShouldAgeVerifyForSettingsToggles();
+    const obj = shouldShowAgeGateForVoiceChannel;
     let flag = useNSFWAllowed.useNSFWAllowed();
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = useAgeVerificationRunner;
+    let tmpResult = tmp(4992);
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }
@@ -53,13 +51,60 @@ const toggle = createToggle.createToggle({
       shouldAgeVerifyForSettingsToggles = flag;
     }
     if (shouldAgeVerifyForSettingsToggles) {
-      tmpResult = obj1322;
+      tmpResult = tmp(500);
       shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
     }
     return shouldAgeVerifyForSettingsToggles;
   }
 });
-let result = obj132.fileFinishedImporting("modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx");
+let obj = {
+  useTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.VGWIAo);
+  },
+  useDescription() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["J4zza/"]);
+  },
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: function useViewNsfwDmCommandsSettingValue() {
+    return resolveNsfwTogglesWithDefaults.useViewNsfwCommandsOrDefault();
+  },
+  onValueChange: function handleValueChange(arg0) {
+    let obj = shouldShowAgeGateForVoiceChannel;
+    if (obj.shouldAgeVerifyForSettingsToggles()) {
+      if (arg0) {
+        obj = { entryPoint: null };
+        obj[0] = tmp(5254).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
+        const obj2 = openIncodeAgeVerificationModalDefault;
+      }
+    }
+    const ViewNsfwCommands = tmp(4066).ViewNsfwCommands;
+    ViewNsfwCommands.updateSetting(arg0);
+  },
+  usePredicate() {
+    let shouldAgeVerifyForSettingsToggles = shouldShowAgeGateForVoiceChannel.useShouldAgeVerifyForSettingsToggles();
+    const obj = shouldShowAgeGateForVoiceChannel;
+    let flag = useNSFWAllowed.useNSFWAllowed();
+    if (flag == null) {
+      flag = true;
+    }
+    let tmpResult = tmp(4992);
+    if (shouldAgeVerifyForSettingsToggles) {
+      shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
+    }
+    if (!shouldAgeVerifyForSettingsToggles) {
+      shouldAgeVerifyForSettingsToggles = flag;
+    }
+    if (shouldAgeVerifyForSettingsToggles) {
+      tmpResult = tmp(500);
+      shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
+    }
+    return shouldAgeVerifyForSettingsToggles;
+  }
+};
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx");
 
 export default toggle;
 export const AndroidViewNsfwDmCommandsSettingV2 = toggle;

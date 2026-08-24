@@ -2,10 +2,10 @@
 
 // Module 11488 (_onAddDirectoryGuildEntry)
 import noopAll from "noop" /* 19 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function _onAddDirectoryGuildEntry() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -82,8 +82,8 @@ function _onAddDirectoryGuildEntry() {
             obj = callback(4656);
             const obj4 = { importer: null };
             obj4[0] = function importer() {
-              return _undefined(paths[6])(paths[5], paths.paths).then((result) => {
-                closure_0 = result.default;
+              return _undefined(paths[6])(paths[5], paths.paths).then((arg0) => {
+                closure_0 = arg0.default;
                 return () => { ... };
               });
             };
@@ -110,7 +110,7 @@ function _onAddDirectoryGuildEntry() {
   return applyArgumentsResult;
 }
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/GuildDirectoryUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/GuildDirectoryUtils.tsx");
 
 export const onAddDirectoryGuildEntry = function onAddDirectoryGuildEntry(arg0) {
   const self = this;

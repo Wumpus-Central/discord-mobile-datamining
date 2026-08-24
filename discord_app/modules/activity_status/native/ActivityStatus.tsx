@@ -1,20 +1,20 @@
 // === Module 9893: ActivityStatus ===
 
 // Module 9893 (ActivityStatus)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import sortActivity from "sortActivity" /* 4559 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "sortActivity" /* 4559 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { DOT_UNICODE } from "TOOLTIP_DELAY_MS" /* 9894 */;
 import { ActivityTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
-const result = require("obj132").fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
 
 export default function ActivityStatus(guildId) {
   const userId = guildId.userId;
@@ -30,19 +30,20 @@ export default function ActivityStatus(guildId) {
   if (flag === undefined) {
     flag = false;
   }
+  let stateFromStores1;
   const tmp = callback2();
   let obj = userId(589);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getUser(userId));
   obj1 = userId(589);
   const items1 = [closure_5];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getActivities(userId));
+  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getActivities(userId));
   const voiceChannel = stateFromStores1(9896)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = React.useMemo(() => {
     let found;
     if (stateFromStores1 != null) {
-      found = stateFromStores1.find((item, index) => item.type === constants.CUSTOM_STATUS);
+      found = arr.find((type) => type.type === constants.CUSTOM_STATUS);
     }
     if (null == found) {
       return null;
@@ -65,6 +66,7 @@ export default function ActivityStatus(guildId) {
       }
       return tmp4;
     }
+    arr = stateFromStores1;
   }, items2);
   let obj2 = userId(9287);
   let state;
@@ -72,6 +74,7 @@ export default function ActivityStatus(guildId) {
     state = memo.state;
   }
   const gameMentionsAsPlainText = obj2.useGameMentionsAsPlainText(state);
+  const tmp2 = userId;
   const tmp6 = stateFromStores1(9895)(userId);
   const items3 = [closure_6];
   if (tmp2Result.useStateFromStores(items3, () => closure_1_6.isBlockedOrIgnored(userId))) {
@@ -99,12 +102,13 @@ export default function ActivityStatus(guildId) {
       obj[4] = tmp12;
       obj[5] = tmp13;
       let tmp18Result = callback(tmp5(9897), obj);
+      const tmp18 = callback;
       const tmp5Result = tmp5(9897);
     } else {
       let found1;
       if (stateFromStores1 != null) {
-        found1 = stateFromStores1.find((item, index) => {
-          const type = item.type;
+        found1 = stateFromStores1.find((type) => {
+          type = type.type;
           return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
         });
       }
@@ -161,7 +165,9 @@ export default function ActivityStatus(guildId) {
         const obj4 = { children: null };
         items7[1] = tmp27;
         obj4[0] = items7;
-        tmp23Result = callback(closure_11, obj4);
+        tmp23Result = closure_12(closure_11, obj4);
+        const tmp23 = closure_12;
+        const tmp24 = closure_11;
       }
       tmp21 = tmp23Result;
     }
@@ -182,7 +188,7 @@ export default function ActivityStatus(guildId) {
     items8[1] = tmp31;
     items8[2] = tmp21;
     obj5[1] = items8;
-    return callback(View, obj5);
+    return closure_12(View, obj5);
   }
   tmp2Result = userId(589);
 };

@@ -3,7 +3,7 @@
 // Module 9389
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9390 */;
 import importAllResult from "noop" /* 19 */;
-import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
+import closure_4 from "getEmojiToGroupId" /* 6727 */;
 import { EmojiCategoryTypes } from "EmojiCategoryTypes" /* 6731 */;
 import { IMAGE_SIZE } from "IMAGE_SIZE" /* 9301 */;
 import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1338 */;
@@ -13,7 +13,7 @@ import BottomSheetModal from "BottomSheetModal" /* 6952 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { flex: 1 } });
@@ -34,6 +34,8 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   const onLongPressEmoji = analyticsLocations.onLongPressEmoji;
   const onShowNitroUpsell = analyticsLocations.onShowNitroUpsell;
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
+  ref = undefined;
+  let callback;
   let callback1;
   ({ paddingTop, paddingBottom } = analyticsLocations);
   ref = data.useRef(null);
@@ -48,7 +50,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
       Commands.refreshEmojis(ref.current);
     }
   }, items);
-  const callback = data.useCallback((arg0) => {
+  callback = data.useCallback((arg0) => {
     if (null != ref.current) {
       const Commands = analyticsLocations(categoryIndexActive[8]).Commands;
       Commands.scrollingEnabled(tmp.current, arg0);
@@ -143,7 +145,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
         flag = true;
       }
       if (null != ref.current) {
-        const Commands = analyticsLocations(categoryIndexActive[8]).Commands;
+        const Commands = closure_1_0(closure_1_2[8]).Commands;
         Commands.scrollToHeaderIndex(tmp.current, animated.index, flag);
       }
     },
@@ -180,6 +182,6 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   obj1[0] = items8;
   return useTier0UpsellContent(onShowNitroUpsell, obj1);
 });
-let result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
+let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
 
 export default forwardRefResult;

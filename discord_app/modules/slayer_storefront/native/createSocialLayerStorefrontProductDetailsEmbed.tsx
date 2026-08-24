@@ -2,20 +2,18 @@
 
 // Module 10723 (createSocialLayerStorefrontProductDetailsEmbed)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3271 */;
 import getPrice from "getPrice" /* 7200 */;
 import useSKUPrice from "useSKUPrice" /* 7205 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 10724 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import addApplication from "addApplication" /* 4478 */;
-import addSku from "addSku" /* 4521 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "addApplication" /* 4478 */;
+import closure_6 from "addSku" /* 4521 */;
 import { PaymentGateways } from "ME" /* 676 */;
 import { InviteTypes } from "InviteSendStates" /* 4371 */;
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
 export const createSocialLayerStorefrontProductDetailsEmbed = function createSocialLayerStorefrontProductDetailsEmbed(theme) {
   ({ skuId, guildOrApplication } = theme);
@@ -27,13 +25,13 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
     applicationId = value.applicationId;
   }
   application = application.getApplication(applicationId);
-  const tmp3 = getEmbedThemeColorsDefault(theme.theme);
+  const isFetchingResult = obj.isFetching(skuId);
   let result = null != applicationId;
-  obj.didFetchingSkuFail(skuId);
+  const tmp3 = getEmbedThemeColorsDefault(theme.theme);
   if (result) {
     result = obj2.isFetchingApplication(applicationId);
   }
-  null != applicationId && application.didFetchingApplicationFail(applicationId);
+  const didFetchingSkuFailResult = obj.didFetchingSkuFail(skuId);
   let name;
   if (application != null) {
     name = application.name;
@@ -48,9 +46,10 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (isSocialLayerApplicationDefault(application)) {
+        if (tmp(10724)(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(value);
+            const obj4 = useSKUPrice;
             const str4 = getPrice.getCardImageURL(value);
             str = undefined;
             if (str4 != null) {
@@ -65,17 +64,17 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             obj.headerColor = colors.headerColor;
             obj.titleText = value.name;
             obj.titleColor = colors.titleColor;
-            const intl2 = getSystemLocale.intl;
+            const intl2 = tmp12(1236).intl;
             obj.subtitle = intl2.string(getSystemLocale.t.V91tvy);
             obj.subtitleColor = colors.subtitleColor;
             obj.thumbnailUrl = str;
             obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-            const intl3 = getSystemLocale.intl;
+            const intl3 = tmp12(1236).intl;
             const string = intl3.string;
             if (result1) {
-              let stringResult = string(getSystemLocale.t.boqtTA);
+              let stringResult = string(tmp12(1236).t.boqtTA);
             } else {
-              stringResult = string(messagesProxyDefault.BKf0MM);
+              stringResult = string(tmp(3271).BKf0MM);
             }
             obj.acceptLabelText = stringResult;
             let prop;
@@ -113,21 +112,29 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
     country = storeFront.country;
   }
   let items = [isEligibleForSocialLayerStorefrontMobilePurchasing, stateFromStores];
-  const tmp6 = first(React.useMemo(() => {
+  let tmp6 = first(React.useMemo(() => {
     let items = [];
     const items1 = [, ];
     if (isEligibleForSocialLayerStorefrontMobilePurchasing) {
       items1[0] = items;
       items1[1] = [];
-      let reduced = stateFromStores.reduce((acc, item, index) => {
-        [arr, arr2] = acc;
-        const iter = item.codedLinks[Symbol.iterator]();
+      let reduced = stateFromStores.reduce((arg0, arg1) => {
+        [arr, arr2] = arg0;
+        const iter = arg1.codedLinks[Symbol.iterator]();
         while (iter !== undefined) {
           ({ type, code } = nextResult);
+          let tmp2 = type;
+          let tmp3 = callback;
+          let tmp4 = table;
           if (type === callback(table[14]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+            let tmp8 = code;
             arr = arr.push(code.split("-"));
-          } else if (type === callback(table[14]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
-            arr = arr2.push(code.split("-"));
+          } else {
+            let tmp5 = type;
+            if (tmp2 === tmp3(tmp4[14]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+              let tmp6 = code;
+              arr = arr2.push(code.split("-"));
+            }
           }
           continue;
         }
@@ -146,27 +153,43 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
   let items1 = [first, tmp6[1], country];
   const effect = React.useEffect(() => {
     while (tmp2 !== undefined) {
+      let tmp4 = first;
       let tmp5 = first(tmp3, 2);
       first = tmp5[0];
       let tmp7 = first;
       let tmp8 = tmp5[1];
+      let tmp9 = closure_1_6;
       let isFetchingResult = null != closure_1_6.get(first);
       if (!isFetchingResult) {
+        let tmp11 = closure_1_6;
+        let tmp12 = first;
         isFetchingResult = closure_1_6.isFetching(tmp7);
       }
       if (!isFetchingResult) {
+        let tmp13 = closure_1_6;
+        let tmp14 = first;
         isFetchingResult = closure_1_6.didFetchingSkuFail(tmp7);
       }
       if (!isFetchingResult) {
-        stateFromStores(country[15]);
-        let obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
+        let tmp15 = stateFromStores;
+        let tmp16 = country;
+        let obj = stateFromStores(country[15]);
+        let tmp17 = tmp8;
+        let tmp18 = first;
+        obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
+        let tmp19 = stateFromStores;
+        let tmp20 = country;
         let obj3 = stateFromStores(country[16]);
         obj[0] = obj3.isAndroid();
+        let tmp21 = country;
         obj[1] = country;
+        let tmp22 = stateFromStores;
+        let tmp23 = country;
         let obj4 = stateFromStores(country[16]);
         let APPLE;
         if (obj4.isIOS()) {
-          APPLE = PaymentGateways.APPLE;
+          let tmp25 = closure_1_7;
+          APPLE = closure_1_7.APPLE;
         }
         obj[2] = APPLE;
         let socialLayerStorefrontSku = obj.fetchSocialLayerStorefrontSku(tmp8, tmp7, obj);
@@ -174,51 +197,66 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
       continue;
     }
     for (const item10057 of closure_4) {
+      let tmp27 = first;
       let tmp28 = first(item10057, 2);
       let first1 = tmp28[0];
       let tmp30 = first1;
       let tmp31 = tmp28[1];
+      let tmp32 = closure_1_6;
       let isFetchingResult1 = null != closure_1_6.get(first1);
       if (!isFetchingResult1) {
+        let tmp34 = closure_1_6;
+        let tmp35 = first1;
         isFetchingResult1 = closure_1_6.isFetching(tmp30);
       }
       if (!isFetchingResult1) {
+        let tmp36 = closure_1_6;
+        let tmp37 = first1;
         isFetchingResult1 = closure_1_6.didFetchingSkuFail(tmp30);
       }
       if (!isFetchingResult1) {
+        let tmp38 = stateFromStores;
+        let tmp39 = country;
         let obj5 = stateFromStores(country[15]);
+        let tmp40 = tmp31;
+        let tmp41 = first1;
         obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
+        let tmp42 = stateFromStores;
+        let tmp43 = country;
         let obj7 = stateFromStores(country[16]);
         obj[0] = obj7.isAndroid();
+        let tmp44 = country;
         obj[1] = country;
+        let tmp45 = stateFromStores;
+        let tmp46 = country;
         let obj8 = stateFromStores(country[16]);
         let APPLE1;
         if (obj8.isIOS()) {
-          APPLE1 = PaymentGateways.APPLE;
+          let tmp48 = closure_1_7;
+          APPLE1 = closure_1_7.APPLE;
         }
         obj[2] = APPLE1;
         let socialLayerStorefrontSkuForApplication = obj5.fetchSocialLayerStorefrontSkuForApplication(tmp31, tmp30, obj);
       }
       continue;
     }
-    tmp2 = first[Symbol.iterator]();
   }, items1);
   const obj2 = isEligibleForSocialLayerStorefrontMobilePurchasing(country[13]);
   const items2 = [closure_6];
   const items3 = [tmp6[1], first];
   const stateFromStoresArray = tmp(country[17]).useStateFromStoresArray(items2, () => {
     const items = [
-      ...first.map((item, index) => {
-        [tmp] = item;
+      ...first.map((arg0) => {
+        [tmp] = arg0;
         return store.get(tmp);
       }),
-      ...closure_4.map((item, index) => {
-        [tmp] = item;
+      ...closure_4.map((arg0) => {
+        [tmp] = arg0;
         return store.get(tmp);
       })
     ];
     const found = items.filter(stateFromStores(country[18]).isNotNullish);
-    const items1 = [...new Set(found.map((item, index) => item.applicationId))];
+    const items1 = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items1;
   }, items3);
   tmp4(country[19])(stateFromStoresArray);

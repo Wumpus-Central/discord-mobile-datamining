@@ -1,12 +1,12 @@
 // === Module 8735: _getCachedOrFetchActivityApplicationForLaunch ===
 
 // Module 8735 (_getCachedOrFetchActivityApplicationForLaunch)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import addApplication from "addApplication" /* 4478 */;
-import createExecutable from "createExecutable" /* 4479 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "addApplication" /* 4478 */;
+import closure_5 from "createExecutable" /* 4479 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
 
-const require = fn;
+const require = arg1;
 function _getCachedOrFetchActivityApplicationForLaunch() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -93,7 +93,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
               if (application != null) {
                 application1 = application.application;
               }
-              if (callback(application1)) {
+              if (tmp39(application1)) {
                 let application2;
                 if (application != null) {
                   application2 = application.application;
@@ -110,6 +110,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
                 obj7[0] = obj2.fetchApplication(callback);
                 return obj7;
               }
+              tmp39 = closure_8;
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -145,7 +146,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
 function isUsableApplicationRecord(embeddedActivityConfig) {
   return null != embeddedActivityConfig && null != embeddedActivityConfig.embeddedActivityConfig;
 }
-const result = require("obj132").fileFinishedImporting("modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx");
 
 export default function getCachedOrFetchActivityApplicationForLaunch() {
   const self = this;

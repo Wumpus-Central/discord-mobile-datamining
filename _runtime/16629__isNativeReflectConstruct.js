@@ -4,13 +4,14 @@
 import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 16630 */;
 import Events from "Events" /* 16634 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import "_classCallCheck";
+import closure_3 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import "_possibleConstructorReturn";
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 const PQueue = require;
+let closure_1 = dependencyMap;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,14 +31,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let closure_2 = asyncGeneratorStep;
 function empty() {
 
 }
 const timeoutError = new _isNativeReflectConstruct2.TimeoutError();
-let closure_1;
-let closure_2;
-let _classCallCheck;
-let c4;
+closure_1 = undefined;
+closure_2 = undefined;
+closure_3 = undefined;
+closure_4 = undefined;
 class PQueue {
   constructor(arg0) {
     self = this;
@@ -179,7 +181,8 @@ const items = [
   {
     key: "_isIntervalPaused",
     value: function _isIntervalPaused() {
-      const self = this;
+      let self = this;
+      self = this;
       if (undefined === this._intervalId) {
         const diff = self._intervalEnd - tmp;
         if (diff < 0) {
@@ -241,7 +244,8 @@ const items = [
   {
     key: "_initializeIntervalIfNeeded",
     value: function _initializeIntervalIfNeeded() {
-      const self = this;
+      let self = this;
+      self = this;
       let _isIntervalIgnored = this._isIntervalIgnored;
       if (!_isIntervalIgnored) {
         _isIntervalIgnored = undefined !== self._intervalId;
@@ -290,15 +294,15 @@ const items = [
     get() {
       return this._concurrency;
     },
-    set(_concurrency) {
-      if (typeof _concurrency === "number") {
-        if (_concurrency >= 1) {
+    set(num) {
+      if (typeof num === "number") {
+        if (num >= 1) {
           const self = this;
-          this._concurrency = _concurrency;
+          this._concurrency = num;
           this._processQueue();
         }
       }
-      const typeError = new TypeError("Expected `concurrency` to be a number from 1 and up, got `" + _concurrency + "` (" + typeof _concurrency + ")");
+      const typeError = new TypeError("Expected `concurrency` to be a number from 1 and up, got `" + num + "` (" + typeof num + ")");
       throw typeError;
     }
   },
@@ -316,7 +320,7 @@ const items = [
 
 ];
 obj = { key: "add", value: null };
-c4 = asyncGeneratorStep(function(arg0) {
+closure_4 = asyncGeneratorStep(function(arg0) {
   let self = this;
   closure_1 = arg0;
   closure_2 = arg1;
@@ -372,6 +376,7 @@ c4 = asyncGeneratorStep(function(arg0) {
         } else {
           closure_0 = closure_4;
           const promise = new Promise((arg0, arg1) => {
+            closure_0 = arg0;
             closure_1 = arg1;
             closure_0 = obj1(function*() {
               if (c5 === 2) {
@@ -406,7 +411,7 @@ c4 = asyncGeneratorStep(function(arg0) {
                       c3 = 1;
                       if (undefined !== lib._timeout) {
                         const resolved = Promise.resolve(dependencyMap());
-                        if (undefined === obj1.timeout) {
+                        if (undefined === closure_2_2.timeout) {
                           let timeout = lib._timeout;
                         } else {
                           timeout = tmp23.timeout;
@@ -498,7 +503,7 @@ obj[1] = function add(arg0) {
 };
 items[11] = obj;
 obj = { key: "addAll", value: null };
-_classCallCheck = asyncGeneratorStep(function(arg0, arg1) {
+closure_3 = asyncGeneratorStep(function(arg0, arg1) {
   let self = this;
   closure_1 = arg0;
   closure_2 = arg1;
@@ -597,7 +602,7 @@ _classCallCheck = asyncGeneratorStep(function(arg0, arg1) {
 });
 obj[1] = function addAll(arg0, arg1) {
   const self = this;
-  const apply = _classCallCheck.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

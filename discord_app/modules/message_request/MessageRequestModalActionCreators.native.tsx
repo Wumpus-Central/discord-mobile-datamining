@@ -1,7 +1,7 @@
 // === Module 11614: openAcceptMessageRequestConfirmModal ===
 
 // Module 11614 (openAcceptMessageRequestConfirmModal)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
@@ -13,11 +13,12 @@ import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MESSAGE_REQUEST_ACCEPT_CO
 
 let closure_3 = MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL;
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/message_request/MessageRequestModalActionCreators.native.tsx");
+const result = set.fileFinishedImporting("modules/message_request/MessageRequestModalActionCreators.native.tsx");
 
 export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRequestConfirmModal(arg0) {
   ({ channelId, onConfirm, onCancel } = arg0);
-  let obj = { type: closure_3, channel_id: channelId };
+  let obj = expandEventPropertiesDefault;
+  obj = { type: closure_3, channel_id: channelId };
   obj.track(AnalyticEvents.OPEN_MODAL, obj);
   obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
   const intl = getSystemLocale.intl;

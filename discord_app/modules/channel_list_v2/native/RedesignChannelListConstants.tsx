@@ -1,7 +1,7 @@
 // === Module 10055: hairlineWidth ===
 
 // Module 10055 (hairlineWidth)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import map from "map" /* 9288 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
@@ -15,7 +15,7 @@ let c4 = "text-sm/semibold";
 let c5 = "text-sm/semibold";
 const hairlineWidth = get_ActivityIndicator.StyleSheet.hairlineWidth;
 const frozen = Object.freeze({ waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 25 });
-const result = obj132.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelListConstants.tsx");
+const result = set.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelListConstants.tsx");
 
 export const CHANNEL_SUBTITLE_TEXT_VARIANT = "text-xs/medium";
 export const CHANNEL_PADDING_VERTICAL = 8;

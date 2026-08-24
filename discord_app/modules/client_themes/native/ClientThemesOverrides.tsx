@@ -2,12 +2,12 @@
 
 // Module 8501 (useGradientBottom)
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let closure_4 = createCacheKey.createStyles({ none: { backgroundColor: "transparent" } });
-const result = require("obj132").fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
+const result = require("set").fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
 
 export const useGradientBottom = function useGradientBottom() {
   gradientValue = gradientValue(4194).useGradientValue(gradientValue(4194).GradientPercentage.END);

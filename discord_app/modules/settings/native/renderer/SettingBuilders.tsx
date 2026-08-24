@@ -1,11 +1,11 @@
 // === Module 10669: createToggle ===
 
 // Module 10669 (createToggle)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
 
 const NodeType = GUILD_SELECT_ALL_SERVERS_OPTION_ID.NodeType;
-const result = obj132.fileFinishedImporting("modules/settings/native/renderer/SettingBuilders.tsx");
+const result = set.fileFinishedImporting("modules/settings/native/renderer/SettingBuilders.tsx");
 
 export const createToggle = function createToggle(createToggle) {
   const merged = Object.assign(createToggle);

@@ -2,12 +2,12 @@
 
 // Module 8303 (useChangelog)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import noop from "noop" /* 19 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 4771 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 4771 */;
 import { ChangelogLoadState } from "CHANGELOG_MODAL_KEY" /* 1978 */;
 
-require = fn;
+require = arg1;
 function useChangelog(changelogId, stateFromStores) {
   const _require = changelogId;
   closure_1 = stateFromStores;
@@ -17,20 +17,20 @@ function useChangelog(changelogId, stateFromStores) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     changelog = null;
     if (null != closure_0) {
-      changelog = closure_1_5.getChangelog(closure_0, closure_1);
+      changelog = closure_1_5.getChangelog(tmp, closure_1);
     }
     let changelog1 = null;
     if (null != closure_0) {
-      changelog1 = closure_1_5.getChangelog(closure_0, "en-US");
+      changelog1 = closure_1_5.getChangelog(tmp, "en-US");
     }
-    let changelogLoadStatus = null != closure_0;
+    let changelogLoadStatus = null != tmp;
     if (changelogLoadStatus) {
-      changelogLoadStatus = closure_1_5.getChangelogLoadStatus(closure_0, "en-US");
+      changelogLoadStatus = closure_1_5.getChangelogLoadStatus(tmp, "en-US");
     }
     const obj = { changelog, loadState: null, defaultChangelog: null, defaultLoadState: null };
-    let changelogLoadStatus1 = null != closure_0;
+    let changelogLoadStatus1 = null != tmp;
     if (changelogLoadStatus1) {
-      changelogLoadStatus1 = closure_1_5.getChangelogLoadStatus(closure_0, closure_1);
+      changelogLoadStatus1 = closure_1_5.getChangelogLoadStatus(tmp, closure_1);
     }
     obj[1] = changelogLoadStatus1;
     obj[2] = changelog1;
@@ -47,7 +47,7 @@ function useChangelog(changelogId, stateFromStores) {
       tmp2 = null == changelog;
     }
     if (tmp2) {
-      tmp2 = loadState === ChangelogLoadState.NOT_LOADED;
+      tmp2 = loadState === closure_1_6.NOT_LOADED;
     }
     if (tmp2) {
       changelog = stateFromStores(changelog[5]).fetchChangelog(closure_0, stateFromStores);
@@ -75,7 +75,7 @@ function useChangelog(changelogId, stateFromStores) {
   }
   return obj1;
 }
-const result = require("obj132").fileFinishedImporting("modules/changelog/useCurrentChangelog.tsx");
+const result = require("set").fileFinishedImporting("modules/changelog/useCurrentChangelog.tsx");
 
 export { useChangelog };
 export const useCurrentChangelog = function useCurrentChangelog() {
@@ -84,6 +84,9 @@ export const useCurrentChangelog = function useCurrentChangelog() {
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const items1 = [closure_5];
   const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => closure_5.latestChangelogId());
+  const obj2 = defaultAreStatesEqual;
+  const tmp = require;
+  const tmp4 = closure_5;
   const items2 = [closure_5];
   const stateFromStores2 = defaultAreStatesEqual.useStateFromStores(items2, () => closure_5.getConfig());
   let tmp7 = null != stateFromStores2;
@@ -99,7 +102,8 @@ export const useCurrentChangelog = function useCurrentChangelog() {
   if (tmp9) {
     tmp9 = null == stateFromStores1;
   }
-  const items3 = [closure_5];
+  const obj3 = defaultAreStatesEqual;
+  const items3 = [tmp4];
   const stateFromStores3 = defaultAreStatesEqual.useStateFromStores(items3, () => closure_5.overrideId());
   const tmpResult = defaultAreStatesEqual;
   ({ changelog, loaded } = useChangelog(stateFromStores1, stateFromStores));

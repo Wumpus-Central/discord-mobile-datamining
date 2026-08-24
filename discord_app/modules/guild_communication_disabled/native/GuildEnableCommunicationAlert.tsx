@@ -2,28 +2,30 @@
 
 // Module 11023 (GuildEnableCommunicationAlert)
 import noopAll from "noop" /* 19 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import getFriendlyDurationString from "getFriendlyDurationString" /* 1992 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: error, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8 } = getFriendlyDurationString);
 ({ AnalyticEvents: c9, Fonts } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
+createCacheKey = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let closure_12 = createCacheKey.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: createCacheKey });
-const result = require("obj132").fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
 
 export default function GuildEnableCommunicationAlert(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const merged = Object.assign(guildId, Object.create(null));
+  dependencyMap = undefined;
+  closure_3 = undefined;
   function _handleConfirmRemoveTimeout(arg0, arg1) {
     const self = this;
     const tmp = callback(function*() {
@@ -97,8 +99,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   dependencyMap = tmp2;
   closure_3 = _handleConfirmRemoveTimeout(userId(8200)(userId, guildId), 1)[0];
   userId(4761)(() => {
-    userId(countdown[11]);
-    const obj = { type: closure_1_7, guild_id: guildId, other_user_id: userId };
+    let obj = userId(countdown[11]);
+    obj = { type: closure_1_7, guild_id: guildId, other_user_id: userId };
     obj.track(closure_1_9.OPEN_MODAL, obj);
   });
   let obj = {};
@@ -126,9 +128,13 @@ export default function GuildEnableCommunicationAlert(guildId) {
     }
     return applyArgumentsResult;
   };
+  obj = { style: tmp2.body, children: null };
   obj = { style: tmp2.description, variant: "text-sm/medium", children: null };
   const intl4 = tmp9(1236).intl;
   user = user.getUser(userId);
+  const tmp11 = closure_11;
+  const tmp12 = View;
+  const tmp3 = userId;
   const tmp7 = userId(4763);
   let str = userId(4796).getName(guildId, null, user);
   if (str == null) {
@@ -140,19 +146,19 @@ export default function GuildEnableCommunicationAlert(guildId) {
       let num = 0;
       if (null != closure_3) {
         const _Date = Date;
-        num = new Date(closure_3);
+        num = new Date(tmp);
       }
       return closure_1_10(userId(countdown[19]), { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
-  const items = [callback(guildId(4734).Text, obj), ];
+  const items = [closure_10(guildId(4734).Text, obj), ];
   let obj2 = { style: items1, variant: "text-sm/medium", children: null };
   items1 = [, ];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   const intl5 = tmp9(1236).intl;
   obj2[2] = intl5.format(guildId(1236).t.KtENkK, { link: closure_8 });
-  items[1] = callback(guildId(4734).Text, obj2);
+  items[1] = closure_10(guildId(4734).Text, obj2);
   obj[1] = items;
-  obj.children = callback2(View, obj);
-  return callback(tmp7, obj);
+  obj.children = tmp11(tmp12, obj);
+  return closure_10(tmp7, obj);
 };

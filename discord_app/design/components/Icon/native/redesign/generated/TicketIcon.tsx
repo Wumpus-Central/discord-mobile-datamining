@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 14554 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/TicketIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/TicketIcon.tsx");
 
 export const TicketIcon = function TicketIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

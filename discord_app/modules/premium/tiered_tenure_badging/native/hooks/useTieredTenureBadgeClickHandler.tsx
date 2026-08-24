@@ -1,16 +1,16 @@
 // === Module 9466: useTieredTenureBadgeClickHandler ===
 
 // Module 9466 (useTieredTenureBadgeClickHandler)
-import noop from "noop" /* 19 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import { DEFAULT_PREMIUM_BADGE_ID } from "DEFAULT_PREMIUM_BADGE_ID" /* 9467 */;
 import ME from "ME" /* 676 */;
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: error, UserSettingsSections: closure_8 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx");
 
 export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeClickHandler(id, userId, themeType) {
   const _require = id;
@@ -44,7 +44,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   let callback = null;
   if (tmp4) {
     callback = isPremiumSubscriber.useCallback(() => {
-      if (themeType === UserProfileThemeTypes.YOU_SCREEN) {
+      if (themeType === closure_1_9.YOU_SCREEN) {
         let obj = { screen: null };
         obj[0] = closure_1_8.PREMIUM;
         id(themeType[9]).openUserSettings(obj);
@@ -52,7 +52,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
         const obj3 = id(themeType[9]);
       } else {
         tmp2 = themeType;
-        userId(themeType[10]);
+        obj = userId(themeType[10]);
         const tmp4 = id(themeType[12])(themeType[11], themeType.paths);
         obj = { userId: null };
         obj[0] = userId;

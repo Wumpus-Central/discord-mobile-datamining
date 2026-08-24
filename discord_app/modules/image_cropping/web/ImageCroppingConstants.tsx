@@ -1,13 +1,13 @@
 // === Module 8380: UploadTypes ===
 
 // Module 8380 (UploadTypes)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import VideoFilterType from "VideoFilterType" /* 8381 */;
 
 const BACKGROUND_REPLACEMENT_SIZE = VideoFilterType.BACKGROUND_REPLACEMENT_SIZE;
 const result = BACKGROUND_REPLACEMENT_SIZE.width / BACKGROUND_REPLACEMENT_SIZE.height;
 const result1 = 432 / result;
-const result2 = obj132.fileFinishedImporting("modules/image_cropping/web/ImageCroppingConstants.tsx");
+const result2 = set.fileFinishedImporting("modules/image_cropping/web/ImageCroppingConstants.tsx");
 
 export const UploadTypes = { AVATAR: "AVATAR", BANNER: "BANNER", GUILD_BANNER: "GUILD_BANNER", VIDEO_BACKGROUND: "VIDEO_BACKGROUND", SCHEDULED_EVENT_IMAGE: "SCHEDULED_EVENT_IMAGE", HOME_HEADER: "HOME_HEADER", AVATAR_DECORATION: "AVATAR_DECORATION", GUILD_ICON: "GUILD_ICON", PERSONAL_WIDGET_COVER: "PERSONAL_WIDGET_COVER", PERSONAL_WIDGET_FIELD: "PERSONAL_WIDGET_FIELD" };
 export const EDITING_CONTAINER_WIDTH = 432;

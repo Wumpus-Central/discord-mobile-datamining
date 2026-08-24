@@ -3,19 +3,23 @@
 // Module 4365 (getFirstEligibleUserExperiment)
 import applyDefault from "apply" /* 12 */;
 import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import getHash from "getHash" /* 4288 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "getHash" /* 4288 */;
 import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
 
-require = fn;
+require = arg1;
 function getFirstEligibleUserExperiment(arg0) {
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = authStore;
     let tmp2 = nextResult;
     let userExperimentDescriptor = authStore.getUserExperimentDescriptor(nextResult);
+    let tmp5 = userExperimentDescriptor;
     if (null != userExperimentDescriptor) {
+      let tmp6 = nextResult;
       let items = [tmp2, userExperimentDescriptor];
+      let tmp7 = iter;
       iter.return();
       return items;
     }
@@ -23,7 +27,7 @@ function getFirstEligibleUserExperiment(arg0) {
   return null;
 }
 ({ ExperimentTypes: c5, ExperimentBuckets: closure_6 } = ExperimentBuckets);
-let result = require("obj132").fileFinishedImporting("utils/ExperimentUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/ExperimentUtils.tsx");
 
 export default {
   getFirstEligibleUserExperiment,
@@ -90,20 +94,21 @@ export default {
   getRecentExperimentBuckets(arg0, arg1) {
     closure_0 = arg1;
     const entries = Object.entries(arg0);
-    return entries.reduce((acc, item, index) => {
-      [tmp, tmp2] = item;
+    return entries.reduce((arg0, arg1) => {
+      [tmp, tmp2] = arg1;
       let tmp3 = (function isRecentExperiment(str, closure_0) {
         try {
-          [tmp4, tmp5] = callback("-".split("-"), 2);
+          [tmp4, tmp5] = callback(str.split("-"), 2);
           if (null == tmp5) {
             return false;
           } else {
             const _Date = Date;
             const _HermesInternal = HermesInternal;
-            const date = new Date("" + tmp4 + "-" + tmp5.slice(0, 2) + "-01");
+            const date = new Date("" + tmp4 + "-" + arr.slice(0, 2) + "-01");
             return date > closure_0;
           }
-          const tmp3 = callback("-".split("-"), 2);
+          arr = tmp5;
+          const tmp3 = callback(str.split("-"), 2);
         } catch (err) {
           return false;
         }
@@ -112,9 +117,9 @@ export default {
         tmp3 = tmp2 > closure_1_6.CONTROL;
       }
       if (tmp3) {
-        acc[tmp] = tmp2;
+        arg0[tmp] = tmp2;
       }
-      return acc;
+      return arg0;
     }, {});
   }
 };

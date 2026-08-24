@@ -2,12 +2,12 @@
 
 // Module 4085 (sanitizeURLPart)
 import timestampDefault from "timestamp" /* 3 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
-import setContent from "setContent" /* 4086 */;
+import closure_5 from "setContent" /* 4086 */;
 import { WebBrowserType } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function sanitizeURLPart(str) {
   let replaced = str;
   if (null != str) {
@@ -76,60 +76,60 @@ function _handleURL() {
                 if (null != obj.sanitizeUrl(lib)) {
                   let SAFARI = constants.SAFARI;
                   if (lib.startsWith("https:")) {
-                    const browserManagerSelectedBrowser = lib(flag[12]).getBrowserManagerSelectedBrowser();
+                    const browserManagerSelectedBrowser = lib(tmp2[12]).getBrowserManagerSelectedBrowser();
                     let tmp10 = callback;
                     if (callback == null) {
                       tmp10 = browserManagerSelectedBrowser;
                     }
                     let tmp11 = flag2;
                     if (flag2) {
-                      tmp11 = tmp10 === constants.IN_APP;
+                      tmp11 = tmp10 === tmp5.IN_APP;
                     }
                     SAFARI = tmp10;
                     if (tmp11) {
-                      if (browserManagerSelectedBrowser !== constants.IN_APP) {
+                      if (browserManagerSelectedBrowser !== tmp5.IN_APP) {
                         SAFARI = browserManagerSelectedBrowser;
                       } else {
-                        lib(flag[13]).isIOS() ? constants.SAFARI : constants.CHROME;
-                        const tmp8Result = lib(flag[13]);
+                        tmp8(tmp2[13]).isIOS() ? tmp5.SAFARI : tmp5.CHROME;
+                        const tmp8Result = tmp8(tmp2[13]);
                       }
                     }
-                    const obj3 = lib(flag[12]);
+                    const obj3 = lib(tmp2[12]);
+                    tmp8 = lib;
                   }
                   if (constants.IN_APP === SAFARI) {
-                    const result = lib(flag[12]).browserManagerOpenUrl(lib, constants.IN_APP);
-                    result.catch((error) => {
-                      const intl = closure_1_0(flag[11]).intl;
-                      closure_1_0(flag[10]).presentFailedToast("" + intl.string(closure_1_0(flag[11]).t.HryVrx) + " " + closure_0);
+                    const result = lib(tmp2[12]).browserManagerOpenUrl(lib, tmp5.IN_APP);
+                    result.catch(() => {
+                      const intl = closure_1_0(closure_1_2[11]).intl;
+                      closure_1_0(closure_1_2[10]).presentFailedToast("" + intl.string(closure_1_0(closure_1_2[11]).t.HryVrx) + " " + closure_0);
                     });
-                    const obj7 = lib(flag[12]);
-                    let isIOSResult = lib(flag[13]).isIOS();
+                    const obj7 = lib(tmp2[12]);
+                    let isIOSResult = lib(tmp2[13]).isIOS();
                     if (isIOSResult) {
                       isIOSResult = tmp53.isOpen();
                     }
                     if (isIOSResult) {
-                      callback(flag[14]).hideAllActionSheets();
-                      const tmpResult = callback(flag[14]);
+                      callback(tmp2[14]).hideAllActionSheets();
+                      const tmpResult = callback(tmp2[14]);
                     }
-                    const obj8 = lib(flag[13]);
-                  } else if (constants.CHROME === SAFARI) {
-                    const result1 = lib(flag[12]).browserManagerOpenUrl(lib, constants.CHROME);
-                    result1.catch((error) => {
-                      const intl = closure_1_0(flag[11]).intl;
-                      closure_1_0(flag[10]).presentFailedToast("" + intl.string(closure_1_0(flag[11]).t.HryVrx) + " " + closure_0);
+                    const obj8 = lib(tmp2[13]);
+                  } else if (tmp5.CHROME === SAFARI) {
+                    const result1 = lib(tmp2[12]).browserManagerOpenUrl(lib, tmp5.CHROME);
+                    result1.catch(() => {
+                      const intl = closure_1_0(closure_1_2[11]).intl;
+                      closure_1_0(closure_1_2[10]).presentFailedToast("" + intl.string(closure_1_0(closure_1_2[11]).t.HryVrx) + " " + closure_0);
                     });
-                    const obj6 = lib(flag[12]);
+                    const obj6 = lib(tmp2[12]);
                   } else {
-                    const SAFARI2 = constants.SAFARI;
-                    const result2 = lib(flag[12]).browserManagerOpenUrl(lib, constants.SAFARI);
-                    const obj5 = lib(flag[12]);
+                    const SAFARI2 = tmp5.SAFARI;
+                    const result2 = lib(tmp2[12]).browserManagerOpenUrl(lib, tmp5.SAFARI);
+                    const obj5 = lib(tmp2[12]);
                   }
                 } else {
-                  let intl = lib(flag[11]).intl;
-                  lib(flag[10]).presentFailedToast(intl.string(lib(flag[11]).t.XiqzAp));
-                  const obj2 = lib(flag[10]);
+                  let intl = lib(tmp2[11]).intl;
+                  lib(tmp2[10]).presentFailedToast(intl.string(lib(tmp2[11]).t.XiqzAp));
+                  const obj2 = lib(tmp2[10]);
                 }
-                obj = callback(flag[9]);
               };
               c7 = 1;
               v0 = 1;
@@ -174,8 +174,8 @@ function _handleURL() {
                     const obj4 = { value: null, done: false };
                     obj4[0] = (function tryHandleUniversalLink(closure_0) {
                       return new Promise((closure_0) => {
-                        const result = closure_1_1(flag[5]).tryOpenUrlAsUniversalLink(closure_0);
-                        const obj = closure_1_1(flag[5]);
+                        const result = closure_1_1(closure_1_2[5]).tryOpenUrlAsUniversalLink(closure_0);
+                        const obj = closure_1_1(closure_1_2[5]);
                         result.then(() => { ... }).catch(() => { ... });
                       });
                     })(closure_0);
@@ -209,12 +209,15 @@ function _handleURL() {
                       const iter = lib(flag[6]).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
                       while (iter !== undefined) {
                         ({ regex, protocol } = nextResult);
+                        let tmp2 = arr;
                         let match = regex.exec(arr);
                         let tmp4;
                         if (match != null) {
                           tmp4 = match[1];
                         }
                         if (null != tmp4) {
+                          let tmp6 = protocol;
+                          let tmp7 = tmp4;
                           let sum = protocol + tmp5;
                           arr = sum;
                           lib = sum;
@@ -229,18 +232,17 @@ function _handleURL() {
                         if ("https" !== first) {
                           logger.info("tryHandleCustomScheme", arr);
                           let promise = new Promise((closure_0) => {
-                            const obj = closure_1_1(flag[5]);
-                            const tryOpenSchemeResult = closure_1_1(flag[5]).tryOpenScheme(closure_0);
-                            closure_1_1(flag[5]).tryOpenScheme(closure_0).then(() => { ... }).catch(() => { ... });
+                            const obj = closure_1_1(closure_1_2[5]);
+                            const tryOpenSchemeResult = closure_1_1(closure_1_2[5]).tryOpenScheme(closure_0);
+                            closure_1_1(closure_1_2[5]).tryOpenScheme(closure_0).then(() => { ... }).catch(() => { ... });
                           });
                         }
                         return promise;
                       }
-                      promise = new Promise((fn) => {
+                      promise = new Promise((arg0) => {
                         logger.info("URL is not a custom scheme.");
-                        fn(false);
+                        arg0(false);
                       });
-                      nextResult = iter.next();
                     })(closure_0);
                     return obj6;
                   }
@@ -279,16 +281,18 @@ function _handleURL() {
                         let regex = nextResult.regex;
                         let _loopResult = _loop(nextResult.protocol);
                         if (0 !== _loopResult) {
+                          let tmp4 = _loopResult;
                           if (tmp3) {
+                            let tmp5 = iter;
                             iter.return();
                             return _loopResult.v;
                           }
                         }
                         continue;
                       }
-                      return new Promise((fn) => {
+                      return new Promise((arg0) => {
                         logger.info("URL is not whitelisted.");
-                        fn(false);
+                        arg0(false);
                       });
                     })(closure_0);
                     return obj8;
@@ -335,7 +339,7 @@ function _handleURL() {
 }
 let closure_7 = new timestampDefault("handleURL");
 let tmp2 = new timestampDefault("handleURL");
-let result = require("obj132").fileFinishedImporting("modules/links/native/handleURL.tsx");
+let result = require("set").fileFinishedImporting("modules/links/native/handleURL.tsx");
 
 export default function handleURL(arg0, arg1) {
   const self = this;

@@ -2,19 +2,19 @@
 
 // Module 4046 (createSubscriptionItemFromServer)
 import toJSDefault from "toJS" /* 1931 */;
-import createFromServer from "createFromServer" /* 4047 */;
-import createFromServer2 from "createFromServer" /* 4048 */;
+import closure_3 from "createFromServer" /* 4047 */;
+import closure_4 from "createFromServer" /* 4048 */;
 import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
 import set from "set" /* 4050 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-const require = fn;
+const require = arg1;
 function createSubscriptionItemFromServer(id) {
   return { id: id.id, planId: id.plan_id, quantity: id.quantity };
 }
 toJSDefault;
 ({ PaymentGateways: c5, SubscriptionStatusTypes: closure_6, SubscriptionStatusTypesSets: error, SubscriptionTypes: closure_8 } = ME);
-({ SubscriptionPauseReason: c9, SubscriptionPauseReasonSets: c10 } = require("set"));
+({ SubscriptionPauseReason: c9, SubscriptionPauseReasonSets: c10 } = set);
 ({ PREMIUM_PLANS: unpackModuleId, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = GuildFeatures);
 let SubscriptionRecord;
 class SubscriptionRecord extends tmp2 {
@@ -60,12 +60,12 @@ class SubscriptionRecord extends tmp2 {
     }
     tmp7.planId = tmp10;
     items = global.items;
-    tmp7.additionalPlans = items.filter((item, index) => item.planId !== basePlanIdForSubscriptionItems);
+    tmp7.additionalPlans = items.filter((planId) => planId.planId !== basePlanIdForSubscriptionItems);
     tmp16 = null != renewalMutations && null != tmp9;
     if (tmp16) {
       renewalMutations.planId = tmp9;
       items1 = renewalMutations.items;
-      renewalMutations.additionalPlans = items1.filter((item, index) => item.planId !== planId2);
+      renewalMutations.additionalPlans = items1.filter((planId) => planId.planId !== planId2);
     }
     return tmp7;
   }
@@ -80,6 +80,7 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
   }
   obj[3] = date1;
   const date = new Date(id.created_at);
+  const tmp = SubscriptionRecord;
   obj[4] = new Date(id.current_period_start);
   const date2 = new Date(id.current_period_start);
   obj[5] = new Date(id.current_period_end);
@@ -133,12 +134,12 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
     fromServer = closure_3.createFromServer(id.price_change);
   }
   obj.priceChange = fromServer;
-  return new SubscriptionRecord(obj);
+  return new tmp(obj);
 };
 prototype["getCurrentSubscriptionPlanIdForGroup"] = function getCurrentSubscriptionPlanIdForGroup(items) {
   closure_0 = items;
   items = this.items;
-  const found = items.find((item, index) => items.includes(item.planId));
+  const found = items.find((planId) => items.includes(planId.planId));
   let planId;
   if (found != null) {
     planId = found.planId;
@@ -222,8 +223,8 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
   get: function isOnPlatformMatchingExternalPaymentGateway() {
     let isPurchasedViaApple = this.isPurchasedViaApple;
     if (isPurchasedViaApple) {
-      isPurchasedViaApple = require(500) /* obj132 */.isIOS();
-      const obj = require(500) /* obj132 */;
+      isPurchasedViaApple = require(500) /* set */.isIOS();
+      const obj = require(500) /* set */;
     }
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
@@ -254,17 +255,17 @@ Object.defineProperty(prototype, "hasExternalPlanChange", {
 Object.defineProperty(prototype, "hasPremiumNitroMonthly", {
   get: function hasPremiumNitroMonthly() {
     const items = this.items;
-    return null != items.find((item, index) => item.planId === PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+    return null != items.find((planId) => planId.planId === PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isBoostOnly", {
   get: function isBoostOnly() {
     let items = this.items;
-    return items.every((item, index) => {
+    return items.every((planId) => {
       const items = [, ];
       ({ PREMIUM_MONTH_GUILD: arr[0], PREMIUM_YEAR_GUILD: arr[1] } = closure_13);
-      return items.includes(item.planId);
+      return items.includes(planId.planId);
     });
   },
   set: undefined
@@ -406,14 +407,14 @@ Object.defineProperty(prototype, "premiumSince", {
 Object.defineProperty(prototype, "hasAnyPremiumNitro", {
   get: function hasAnyPremiumNitro() {
     const items = this.items;
-    return items.some((item, index) => set.has(item.planId));
+    return items.some((planId) => set.has(planId.planId));
   },
   set: undefined
 });
 Object.defineProperty(prototype, "hasAnyPremiumGroup", {
   get: function hasAnyPremiumGroup() {
     const items = this.items;
-    return items.some((item, index) => item.planId === constants.PREMIUM_GROUP_MONTH);
+    return items.some((planId) => planId.planId === constants.PREMIUM_GROUP_MONTH);
   },
   set: undefined
 });
@@ -422,11 +423,11 @@ prototype["hasPremiumAtLeast"] = function hasPremiumAtLeast(TIER_2) {
   let someResult = this.isPremium;
   if (someResult) {
     const items = this.items;
-    someResult = items.some((item, index) => TIER_2(dependencyMap[10]).isPremiumAtLeast(closure_1_12[item.planId].premiumType, TIER_2));
+    someResult = items.some((arg0) => TIER_2(closure_1_2[10]).isPremiumAtLeast(closure_1_12[arg0.planId].premiumType, TIER_2));
   }
   return someResult;
 };
-const result = require("obj132").fileFinishedImporting("records/SubscriptionRecord.tsx");
+const result = set.fileFinishedImporting("records/SubscriptionRecord.tsx");
 
 export default SubscriptionRecord;
 export { SubscriptionRecord };

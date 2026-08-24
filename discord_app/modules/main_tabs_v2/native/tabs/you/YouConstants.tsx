@@ -1,11 +1,11 @@
 // === Module 15630: YOU_SCREEN_ID ===
 
 // Module 15630 (YOU_SCREEN_ID)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouConstants.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouConstants.tsx");
 
 export const YOU_SCREEN_ID = "you-screen-native-id";
 export const YOU_BANNER_IMAGE_HEIGHT = 150;

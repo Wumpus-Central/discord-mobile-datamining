@@ -4,10 +4,10 @@
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 5038 */;
 import noop from "noop" /* 13188 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import initialize from "initialize" /* 13268 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "initialize" /* 13268 */;
 
-require = fn;
+require = arg1;
 initializeDefault;
 class MultiAccountManager extends tmp2 {
   constructor() {
@@ -34,7 +34,7 @@ class MultiAccountManager extends tmp2 {
             obj.onSwitchError(currentUser);
             obj2 = obj;
           }
-          obj = applyArgumentsResult(dependencyMap[4]);
+          obj = applyArgumentsResult(closure_1_2[4]);
           const result = obj.setAccountSwitchUserId(null);
           obj2.onSwitchComplete();
         }
@@ -60,6 +60,6 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
   const result = noop.setAccountSwitchUserId(targetUserId.targetUserId);
 };
-let result = require("obj132").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
+let result = require("set").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
 
 export default MultiAccountManager;

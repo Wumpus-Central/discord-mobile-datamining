@@ -4,36 +4,29 @@
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2917 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
 import Text from "Text" /* 4734 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
 import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5356 */;
-import contextDefault from "context" /* 7139 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7393 */;
 import usePremiumPlanPriceDefault from "usePremiumPlanPrice" /* 7934 */;
-import getPremiumGroupInviteEmbedText from "getPremiumGroupInviteEmbedText" /* 8268 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8400 */;
 import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9328 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9329 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9330 */;
 import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9332 */;
 import PremiumFeatureListDefault from "PremiumFeatureList" /* 9337 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import addSubscriptionPlan from "addSubscriptionPlan" /* 4044 */;
-import reset from "reset" /* 4045 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "addSubscriptionPlan" /* 4044 */;
+import closure_7 from "reset" /* 4045 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { Fonts } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ AnalyticsPages, AnalyticsSections, AnalyticsObjectTypes } = ME);
 ({ ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK: closure_8, DISCOUNT_DURATION_FALLBACK: c9, DISCOUNT_PERCENTAGE_FALLBACK: c10, PRICE_PLACEHOLDER: unpackModuleId, PremiumSubscriptionSKUToPremiumType: closure_12, PremiumTypes } = GuildFeatures);
@@ -41,8 +34,9 @@ noopAll;
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let items = [, ];
 ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
-const set = new Set(items);
-const createCacheKey = { display: "flex", justifyContent: "flex-start", width: "100%", padding: 24, backgroundColor: "transparent", overflow: "hidden", borderRadius: ThemesDefault.radii.lg };
+let set = new Set(items);
+createCacheKey = { containerWrapper: { position: "relative" }, card: null, logoContainer: null, logo: null, priceContainer: null, discountPriceText: null, featureList: null, featureLabel: null, featureRow: null, featureIcon: null, button: null, currentPlanLabel: null, trialSubTextContainer: null, trialSubText: null, pill: null, buttonIcon: null };
+createCacheKey = { display: "flex", justifyContent: "flex-start", width: "100%", padding: 24, backgroundColor: "transparent", overflow: "hidden", borderRadius: ThemesDefault.radii.lg };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 8 };
 createCacheKey[3] = { marginRight: 4 };
@@ -85,7 +79,7 @@ function PriceText(fractionalPremiumInfo) {
     if (null != discountOffer) {
       obj = { variant: "text-md/normal", color: "text-overlay-light", style: null, children: null };
       obj[2] = tmp.discountPriceText;
-      const intl5 = getSystemLocale.intl;
+      const intl5 = tmp7(1236).intl;
       obj = { discountedPrice: null, numMonths: null, regularPrice: null };
       obj[0] = discountedPriceString;
       const discount = discountOffer.discount;
@@ -98,8 +92,8 @@ function PriceText(fractionalPremiumInfo) {
       }
       obj[1] = num2;
       obj[2] = formatRateResult;
-      obj[3] = intl5.format(getSystemLocale.t.sJTwHQ, obj);
-      return callback2(Text.Text, obj);
+      obj[3] = intl5.format(tmp7(1236).t.sJTwHQ, obj);
+      return callback2(tmp7(4734).Text, obj);
     }
   }
   if (null != activeDiscountInfo) {
@@ -110,7 +104,7 @@ function PriceText(fractionalPremiumInfo) {
           const planIdFromItems = premiumSubscription.planIdFromItems;
           let tmp21 = null != planIdFromItems;
           if (tmp21) {
-            let tmp7Result = getPremiumPlanItem;
+            let tmp7Result = tmp7(4039);
             tmp21 = tmp7Result.getPremiumType(planIdFromItems) === premiumType;
           }
           flag = tmp21;
@@ -121,7 +115,7 @@ function PriceText(fractionalPremiumInfo) {
             hasActiveTrial = premiumSubscription.hasActiveTrial;
           }
           if (!hasActiveTrial) {
-            const intl2 = getSystemLocale.intl;
+            const intl2 = tmp7(1236).intl;
             let percentage = activeDiscountInfo.percentage;
             if (percentage == null) {
               percentage = closure_8;
@@ -129,14 +123,14 @@ function PriceText(fractionalPremiumInfo) {
             obj1 = { percent: null, regularPrice: null, renewalDate: null };
             obj1[0] = percentage;
             obj1[1] = formatRateResult;
-            tmp7Result = getPremiumPlanItem;
+            tmp7Result = tmp7(4039);
             obj1[2] = tmp7Result.getExpectedRenewalDate(premiumSubscription, fractionalPremiumInfo.fractionalPremiumInfo);
-            let formatResult = intl2.format(getSystemLocale.t.z2oQtA, obj1);
+            let formatResult = intl2.format(tmp7(1236).t.z2oQtA, obj1);
           }
           const obj2 = { variant: "text-md/normal", color: "text-overlay-light", style: null, children: null };
           obj2[2] = tmp.discountPriceText;
           obj2[3] = formatResult;
-          return callback2(Text.Text, obj2);
+          return callback2(tmp7(4734).Text, obj2);
         }
       }
       if (premiumSubscription.hasAnyPremiumGroup) {
@@ -146,8 +140,8 @@ function PriceText(fractionalPremiumInfo) {
           prop = metadata.active_discount_expires_at;
         }
         if (null != prop) {
-          let priceString1 = getPremiumGroupInviteEmbedText.getPriceString(premiumSubscription);
-          const intl4 = getSystemLocale.intl;
+          let priceString1 = tmp7(8268).getPriceString(premiumSubscription);
+          const intl4 = tmp7(1236).intl;
           let num = activeDiscountInfo.percentage;
           if (num == null) {
             num = 0;
@@ -162,10 +156,10 @@ function PriceText(fractionalPremiumInfo) {
           }
           obj3[2] = priceString1;
           formatResult = intl4.format(messagesProxyDefault.FwjZzr, obj3);
-          const tmp7Result1 = getPremiumGroupInviteEmbedText;
+          const tmp7Result1 = tmp7(8268);
         }
       }
-      const intl3 = getSystemLocale.intl;
+      const intl3 = tmp7(1236).intl;
       let percentage2 = activeDiscountInfo.percentage;
       if (percentage2 == null) {
         percentage2 = closure_10;
@@ -178,14 +172,14 @@ function PriceText(fractionalPremiumInfo) {
       }
       obj4[1] = duration;
       obj4[2] = formatRateResult;
-      formatResult = intl3.format(getSystemLocale.t["3ZiutU"], obj4);
+      formatResult = intl3.format(tmp7(1236).t["3ZiutU"], obj4);
     }
   }
   if (null != subscriptionTrial) {
     if (premiumType === table[subscriptionTrial.skuId]) {
       const obj5 = { variant: "text-md/normal", color: "text-overlay-light", style: null, children: null };
       obj5[2] = tmp.discountPriceText;
-      const intl = getSystemLocale.intl;
+      const intl = tmp7(1236).intl;
       let interval;
       if (subscriptionTrial != null) {
         interval = subscriptionTrial.interval;
@@ -198,7 +192,7 @@ function PriceText(fractionalPremiumInfo) {
       }
       const obj7 = { trialPeriod: null, price: null };
       obj6[1] = intervalCount;
-      obj7[0] = getPremiumPlanItem.formatIntervalDuration(obj6);
+      obj7[0] = tmp7(4039).formatIntervalDuration(obj6);
       let priceString2;
       if (tmp4 != null) {
         priceString2 = tmp4.priceString;
@@ -207,9 +201,10 @@ function PriceText(fractionalPremiumInfo) {
         priceString2 = closure_11;
       }
       obj7[1] = priceString2;
-      obj5[3] = intl.format(getSystemLocale.t["xOX9/9"], obj7);
-      let tmp11Result = callback2(Text.Text, obj5);
-      const tmp7Result2 = getPremiumPlanItem;
+      obj5[3] = intl.format(tmp7(1236).t["xOX9/9"], obj7);
+      let tmp11Result = callback2(tmp7(4734).Text, obj5);
+      const tmp16 = callback2;
+      const tmp7Result2 = tmp7(4039);
     }
     return tmp11Result;
   }
@@ -223,11 +218,9 @@ function PriceText(fractionalPremiumInfo) {
   }
   const items = [callback2(Text.Text, { variant: "text-md/bold", color: "text-overlay-light", children: priceString3 }), callback2(Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: " / " + intervalStringAsNoun })];
   obj8[2] = items;
-  tmp11Result = callback(View, obj8);
-  const obj9 = { variant: "text-md/normal", color: "text-overlay-light", children: " / " + intervalStringAsNoun };
+  tmp11Result = closure_19(View, obj8);
 }
-const importDefaultResult1 = importDefaultResult;
-let result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCard.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCard.tsx");
 
 export default function PremiumFeaturesCard(premiumType) {
   premiumType = premiumType.premiumType;
@@ -264,6 +257,7 @@ export default function PremiumFeaturesCard(premiumType) {
   const premiumDiscountOffer = obj1.usePremiumDiscountOffer();
   let obj2 = premiumType(8276);
   const activeDiscountInfo = obj2.useActiveDiscountInfo();
+  const tmp6 = _modDef38;
   let obj3 = premiumType(7417);
   let subscriptionTrial;
   const premiumTrialOfferPremiumType = obj3.usePremiumTrialOfferPremiumType();
@@ -284,7 +278,7 @@ export default function PremiumFeaturesCard(premiumType) {
   const result = tmp8Result.formatIntervalDuration(obj);
   const intl = tmp8(1236).intl;
   const stringResult = intl.string(premiumType(1236).t.J61px0);
-  analyticsLocations = contextDefault().analyticsLocations;
+  analyticsLocations = tmp4(7139)().analyticsLocations;
   tmp8Result = tmp8(589);
   let items = [premiumBundleWithPredicate];
   const tmp19 = callback(tmp8Result.useStateFromStoresArray(items, () => {
@@ -370,12 +364,12 @@ export default function PremiumFeaturesCard(premiumType) {
   const obj4 = { style: tmp3.logoContainer, children: null };
   const tmp8Result5 = premiumType(7687);
   if (flag3) {
-    let tmp37Result = callback2(PremiumGroupWordmarkDefault, { width: 185, height: 20, alwaysWhite: true });
+    let tmp37Result = tmp37(tmp4(9329), { width: 185, height: 20, alwaysWhite: true });
   } else {
     const obj5 = { premiumType: null, style: null };
     obj5[0] = premiumType;
     obj5[1] = tmp3.logo;
-    tmp37Result = callback2(PremiumFeaturesLogoDefault, obj5);
+    tmp37Result = tmp37(tmp4(9330), obj5);
   }
   obj4[1] = tmp37Result;
   const items5 = [callback2(analyticsLocations, obj4), callback2(PremiumFeaturesWumpusDefault, { premiumType }), , , ];
@@ -399,7 +393,7 @@ export default function PremiumFeaturesCard(premiumType) {
     obj6[5] = premiumType;
     obj6[6] = first;
     obj6[7] = tmp12;
-    tmp37Result = callback2(PriceText, obj6);
+    tmp37Result = tmp37(PriceText, obj6);
   }
   let tmp37Result1 = premiumType === premiumTrialOfferPremiumType;
   items5[2] = tmp37Result;
@@ -407,7 +401,7 @@ export default function PremiumFeaturesCard(premiumType) {
   if (hideButton) {
     items5[4] = !hideButton;
     obj3[1] = items5;
-    const items6 = [callback(tmp36, obj3), ];
+    const items6 = [tmp35(tmp36, obj3), ];
     if (tmp37Result1) {
       const obj8 = { accessible: true, style: null, children: null };
       obj8[1] = tmp3.trialSubTextContainer;
@@ -425,14 +419,14 @@ export default function PremiumFeaturesCard(premiumType) {
       }
       obj10[1] = priceString;
       obj9[2] = intl6.format(tmp8(1236).t.pC4tcv, obj10);
-      obj8[2] = callback2(tmp8(4734).Text, obj9);
-      tmp37Result1 = callback2(tmp36, obj8);
+      obj8[2] = tmp37(tmp8(4734).Text, obj9);
+      tmp37Result1 = tmp37(tmp36, obj8);
     }
     items6[1] = tmp37Result1;
     obj2[2] = items6;
-    items4[1] = callback(tmp4Result, obj2);
+    items4[1] = tmp35(tmp4Result, obj2);
     obj[2] = items4;
-    return callback(tmp36, obj);
+    return tmp35(tmp36, obj);
   } else {
     if (tmp32) {
       const obj11 = { style: null, accessible: true, accessibilityRole: "text", children: null };
@@ -440,7 +434,7 @@ export default function PremiumFeaturesCard(premiumType) {
       const obj12 = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
       const intl5 = tmp8(1236).intl;
       obj12[2] = intl5.string(tmp8(1236).t["j+wlhy"]);
-      obj11[3] = callback2(tmp8(4734).Text, obj12);
+      obj11[3] = tmp37(tmp8(4734).Text, obj12);
       let obj13 = obj11;
     } else {
       obj13 = { style: null, children: null };
@@ -451,8 +445,8 @@ export default function PremiumFeaturesCard(premiumType) {
         if (null != premiumDiscountOffer) {
           const obj15 = { style: null, color: null, size: "sm" };
           obj15[0] = tmp3.buttonIcon;
-          obj15[1] = ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT;
-          const tmp37Result2 = callback2(tmp8(7988).NitroWheelIcon, obj15);
+          obj15[1] = tmp4(712).colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT;
+          const tmp37Result2 = tmp37(tmp8(7988).NitroWheelIcon, obj15);
         }
         obj14[1] = tmp37Result2;
         let str;
@@ -469,9 +463,9 @@ export default function PremiumFeaturesCard(premiumType) {
         obj14[6] = !stateFromStores1;
         obj14[7] = tmp24;
         obj14[8] = function onPress() {
-          return openPremiumPlanSelectionActionSheetDefault({ analyticsLocation: closure_1_22, analyticsLocations, premiumType: premiumBundleWithPredicate.premiumTier, applicationId: closure_1, onPaymentSuccess: closure_2, onPaymentDismiss: closure_3 });
+          return closure_1_1(closure_1_2[41])({ analyticsLocation: closure_1_22, analyticsLocations, premiumType: premiumBundleWithPredicate.premiumTier, applicationId: closure_1, onPaymentSuccess: closure_2, onPaymentDismiss: closure_3 });
         };
-        obj13[1] = callback2(tmp43, obj14);
+        obj13[1] = tmp37(tmp43, obj14);
       } else if (tmp31) {
         const intl4 = tmp8(1236).intl;
         const obj16 = { percent: null };
@@ -485,7 +479,6 @@ export default function PremiumFeaturesCard(premiumType) {
         formatToPlainStringResult = intl2.string(tmp8(1236).t["8x0jKT"]);
       }
     }
-    callback2(tmp36, obj13);
+    tmp37(tmp36, obj13);
   }
-  tmp4Result = PremiumFeaturesBackgroundDefault;
 };

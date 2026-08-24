@@ -8,6 +8,7 @@ import reactParserForAll from "reactParserFor" /* 6902 */;
 import importDefaultResult from "apply" /* 12 */;
 
 let closure_3 = ["url", "autolink", "link", "mailto", "tel"];
+let obj = { enableBuildOverrides: false, enableEmojiClick: true };
 let closure_5 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault({ enableBuildOverrides: true })];
   const items1 = [parseLinkDefault.RULES, ];
@@ -30,10 +31,12 @@ let closure_7 = importDefaultResult.once(() => {
   obj.shouldStopPropagation = true;
   const merged1 = Object.assign({});
   const items = [MarkupTextDefault(obj), ];
+  obj = { codeBlock: null };
   obj = { react: parseLinkDefault.RULES.text.react };
   obj[0] = obj;
   items[1] = obj;
   const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES, ];
+  const tmp = MarkupTextDefault;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
@@ -46,10 +49,12 @@ let closure_8 = importDefaultResult.once(() => {
   obj.shouldStopPropagation = true;
   const merged1 = Object.assign({ emojiFocusable: false });
   const items = [MarkupTextDefault(obj), ];
+  obj = { codeBlock: null };
   obj = { react: parseLinkDefault.RULES.text.react };
   obj[0] = obj;
   items[1] = obj;
   const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES, ];
+  const tmp = MarkupTextDefault;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
@@ -60,6 +65,7 @@ let closure_9 = importDefaultResult.once(() => {
   obj.enableEmojiClick = false;
   const items = [MarkupTextDefault(obj)];
   const items1 = [parseLinkDefault.VOICE_CHANNEL_STATUS_RULES, ];
+  const tmp = MarkupTextDefault;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
@@ -120,7 +126,7 @@ let closure_17 = importDefaultResult.once(() => {
   const items2 = [combineMarkupRulesDefault(items1), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "list", "heading", "subtext", ...closure_3];
   return tmp.omit.apply(items2);
 });
-let obj = { text: parseLinkDefault.RULES.text };
+obj = { text: parseLinkDefault.RULES.text };
 const importDefaultResult12 = importDefaultResult;
 let closure_18 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback()));
 const importDefaultResult13 = importDefaultResult;
@@ -240,6 +246,6 @@ obj.parseAutoModerationSystemMessageToAST = function parseAutoModerationSystemMe
   return callback30()(...items);
 };
 const importDefaultResult29 = importDefaultResult;
-const result = require("obj132").fileFinishedImporting("modules/markup/MarkupUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/markup/MarkupUtils.tsx");
 
 export default obj;

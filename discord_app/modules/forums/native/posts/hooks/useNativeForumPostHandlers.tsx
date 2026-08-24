@@ -1,19 +1,19 @@
 // === Module 10160: useNativeForumPostHandlers ===
 
 // Module 10160 (useNativeForumPostHandlers)
-import noop from "noop" /* 19 */;
-import setContent from "setContent" /* 4086 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import handleLoadThreadsSuccess from "handleLoadThreadsSuccess" /* 7239 */;
-import handleLoadThreadsSuccess2 from "handleLoadThreadsSuccess" /* 7274 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "setContent" /* 4086 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "handleLoadThreadsSuccess" /* 7239 */;
+import closure_9 from "handleLoadThreadsSuccess" /* 7274 */;
 import ME from "ME" /* 676 */;
 import { OpenThreadAnalyticsLocations as closure_14 } from "AbortCodes" /* 1235 */;
 
-const require = fn;
+const require = arg1;
 ({ AnalyticsObjectTypes: c10, AnalyticsPages: unpackModuleId, AnalyticsSections: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostHandlers.tsx");
+let result = require("set").fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostHandlers.tsx");
 
 export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
@@ -21,6 +21,7 @@ export default function useNativeForumPostHandlers(threadId) {
   if (NORMAL === undefined) {
     NORMAL = threadId(callback1[9]).ReactionTypes.NORMAL;
   }
+  callback1 = undefined;
   const items = [threadId];
   const items1 = [threadId];
   const callback = React.useCallback((containerRef) => {
@@ -28,36 +29,39 @@ export default function useNativeForumPostHandlers(threadId) {
     if (initialIndex === undefined) {
       initialIndex = 0;
     }
-    const channel = closure_1_5.getChannel(threadId);
+    let channel;
+    channel = closure_1_5.getChannel(threadId);
     NORMAL(callback1[10])(null != channel, "[Forum Post Handlers] Thread cannot be null.");
     let obj = threadId(callback1[11]);
     const channelName = obj.computeChannelName(channel, closure_1_7, closure_1_6, false);
     const channelIcon = threadId(callback1[12]).getChannelIcon(channel);
-    const mapped = mediaItems.map((item, index) => {
-      const src = item.src;
-      let obj = channel(callback1[13]);
+    const mapped = mediaItems.map((src) => {
+      src = src.src;
+      let obj = channel(closure_1_2[13]);
       let str = obj.toURLSafe(src);
       let tmp = null != str;
-      if (item.srcIsAnimated) {
+      if (src.srcIsAnimated) {
         if (tmp) {
           const formatted = str.pathname.toLowerCase();
           let endsWithResult = formatted.endsWith(".webp");
           if (!endsWithResult) {
             const formatted1 = str.pathname.toLowerCase();
             endsWithResult = formatted1.endsWith(".avif");
+            const str8 = str.pathname;
           }
           tmp = endsWithResult;
+          const str6 = str.pathname;
         }
         if (tmp) {
-          let isAttachmentUrlResult = item.type === threadId(callback1[14]).ForumPostMediaTypes.ATTACHMENT;
+          let isAttachmentUrlResult = src.type === closure_1_0(closure_1_2[14]).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentUrlResult) {
-            let tmp6Result = threadId(callback1[15]);
+            let tmp6Result = tmp6(closure_1_2[15]);
             isAttachmentUrlResult = tmp6Result.isAttachmentUrl(str);
           }
           if (!isAttachmentUrlResult) {
-            let result = item.type === threadId(callback1[14]).ForumPostMediaTypes.EMBED;
+            let result = src.type === tmp6(closure_1_2[14]).ForumPostMediaTypes.EMBED;
             if (result) {
-              tmp6Result = threadId(callback1[15]);
+              tmp6Result = tmp6(closure_1_2[15]);
               result = tmp6Result.isExternalProxiedAttachmentUrl(str);
             }
             isAttachmentUrlResult = result;
@@ -74,12 +78,14 @@ export default function useNativeForumPostHandlers(threadId) {
             const result2 = searchParams3.set("format", "webp");
           }
           str = str.toString();
+          const str12 = str.pathname;
         }
       } else {
         let endsWithResult1 = tmp;
         if (tmp) {
           const formatted3 = str.pathname.toLowerCase();
           endsWithResult1 = formatted3.endsWith(".avif");
+          const str2 = str.pathname;
         }
         str = src;
         if (endsWithResult1) {
@@ -95,7 +101,7 @@ export default function useNativeForumPostHandlers(threadId) {
       }
       obj[2] = tmp16;
       obj[3] = channel.id;
-      ({ mediaIndex: obj8[4], width: obj8[5], height: obj8[6], type: obj8[7], attachmentId: obj8[8] } = item);
+      ({ mediaIndex: obj8[4], width: obj8[5], height: obj8[6], type: obj8[7], attachmentId: obj8[8] } = src);
       return obj;
     });
     const obj2 = threadId(callback1[12]);
@@ -105,18 +111,18 @@ export default function useNativeForumPostHandlers(threadId) {
   callback1 = React.useCallback(() => {
     let obj = threadId(callback1[17]);
     if (obj.isAndroid()) {
-      let tmpResult = threadId(callback1[18]);
-      const result = tmpResult.triggerHapticFeedback(NORMAL(callback1[19]).IMPACT_LIGHT);
+      let tmpResult = tmp(tmp2[18]);
+      const result = tmpResult.triggerHapticFeedback(NORMAL(tmp2[19]).IMPACT_LIGHT);
     }
     const channel = closure_1_5.getChannel(threadId);
     NORMAL(callback1[10])(null != channel, "[Forum Post Handlers] Thread cannot be null.");
     const channel1 = closure_1_5.getChannel(channel.parent_id);
     NORMAL(callback1[10])(null != channel1, "[Forum Post Handlers] Parent channel cannot be null.");
-    tmpResult = threadId(callback1[20]);
+    tmpResult = tmp(tmp2[20]);
+    obj = { guildId: channel1.guild_id, channelId: channel1.id, postId: threadId, location: obj };
     obj = { page: closure_1_11.GUILD_CHANNEL, section: closure_1_12.FORUM_CHANNEL_POST };
     const result1 = tmpResult.trackForumPostClicked(obj);
     threadId(callback1[21]).transitionToThread(channel, { source: closure_1_14.FORUM, navigationReplace: false });
-    const tmpResult1 = threadId(callback1[21]);
   }, items1);
   const items2 = [callback1, threadId];
   const items3 = [threadId];
@@ -129,8 +135,8 @@ export default function useNativeForumPostHandlers(threadId) {
     const message = messageState.message;
     if (messageState.loaded) {
       if (null != message) {
-        threadId(callback1[20]);
-        let obj = { guildId: null, channelId: null, postId: null, location: null };
+        let obj = threadId(tmp3[20]);
+        obj = { guildId: null, channelId: null, postId: null, location: null };
         ({ guild_id: obj2[0], id: obj2[1] } = channel1);
         obj[2] = threadId;
         obj = { page: null, section: null };
@@ -140,8 +146,8 @@ export default function useNativeForumPostHandlers(threadId) {
         const result = obj.trackForumPostClicked(obj);
         obj1 = { source: null, navigationReplace: false };
         obj1[0] = closure_1_14.FORUM;
-        const result1 = threadId(callback1[21]).transitionToThreadMessage(channel, message.id, obj1);
-        const obj4 = threadId(callback1[21]);
+        const result1 = threadId(tmp3[21]).transitionToThreadMessage(channel, message.id, obj1);
+        const obj4 = threadId(tmp3[21]);
       }
     }
     callback1();
@@ -158,11 +164,10 @@ export default function useNativeForumPostHandlers(threadId) {
       tmp8 = null == closure_1_7.getUser(channel.ownerId);
     }
     if (!tmp8) {
-      threadId(callback1[22]).dismissKeyboard();
-      NORMAL(callback1[23])(channel, channel1);
-      const obj2 = threadId(callback1[22]);
+      threadId(tmp3[22]).dismissKeyboard();
+      NORMAL(tmp3[23])(channel, channel1);
+      const obj2 = threadId(tmp3[22]);
     }
-    const tmp6 = NORMAL(callback1[10]);
   }, items3);
   const items5 = [threadId];
   const callback4 = React.useCallback((arg0) => {
@@ -182,31 +187,31 @@ export default function useNativeForumPostHandlers(threadId) {
         obj[0] = locationAnalyticsObject;
         obj[1] = closure_1_10.CANT_ADD_OR_REMOVE;
         obj[3] = obj;
-        threadId(callback1[24]).handleViewReactions(obj);
-        const obj2 = threadId(callback1[24]);
+        threadId(tmp3[24]).handleViewReactions(obj);
+        const obj2 = threadId(tmp3[24]);
       }
     }
     let tmp6 = null != reaction;
     if (tmp6) {
       tmp6 = reaction.burst_count > 0;
     }
-    obj = threadId(callback1[25]);
+    obj = threadId(tmp3[25]);
     const result = obj.handleAddOrRemoveReaction(firstMessage.id, channel, reaction, tmp6, reactionLocation);
   }, items4);
   const items6 = [threadId];
   const callback5 = React.useCallback((emoji) => {
     const firstMessage = closure_1_8.getMessage(threadId).firstMessage;
     NORMAL(callback1[10])(null != firstMessage, "[Forum Post Handlers] Message cannot be null.");
-    threadId(callback1[24]);
-    const obj = { messageId: firstMessage.id, channelId: threadId, emoji: emoji.emoji, reactions: firstMessage.reactions };
+    let obj = threadId(callback1[24]);
+    obj = { messageId: firstMessage.id, channelId: threadId, emoji: emoji.emoji, reactions: firstMessage.reactions };
     obj.handleViewReactions(obj);
   }, items5);
   const items7 = [threadId, NORMAL];
   const callback6 = React.useCallback(() => {
     const firstMessage = closure_1_8.getMessage(threadId).firstMessage;
     NORMAL(callback1[10])(null != firstMessage, "[Forum Post Handlers] Message cannot be null.");
-    threadId(callback1[24]);
-    const obj = { messageId: firstMessage.id, channelId: threadId, reactions: firstMessage.reactions };
+    let obj = threadId(callback1[24]);
+    obj = { messageId: firstMessage.id, channelId: threadId, reactions: firstMessage.reactions };
     obj.handleViewReactions(obj);
   }, items6);
   return {

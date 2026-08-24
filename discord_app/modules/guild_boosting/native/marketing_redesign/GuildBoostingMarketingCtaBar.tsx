@@ -1,24 +1,25 @@
 // === Module 13008: GuildBoostingMarketingCtaBar ===
 
 // Module 13008 (GuildBoostingMarketingCtaBar)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate" /* 4267 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "handleGuildBoostsUpdate" /* 4267 */;
 import ME from "ME" /* 676 */;
 import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import Button from "Button" /* 1297 */;
 
-const require = fn;
+const require = arg1;
 ({ AnalyticsObjects: closure_8, AnalyticsPages: c9, AnalyticsSections: c10 } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = 10 * obj132Default.Millis.SECOND;
-const createCacheKey = { alignSelf: "center", borderRadius: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 10, height: 48, width: 48 };
+let closure_14 = 10 * setDefault.Millis.SECOND;
+createCacheKey = { heading: { alignSelf: "center", marginBottom: 24, maxWidth: 395, paddingHorizontal: 16, textAlign: "center" }, headerContent: { paddingHorizontal: 16, paddingTop: 32, position: "relative", zIndex: 2 }, guildIcon: null, guildIconText: null, guildName: null, guildBoostCountWrapper: null, totalBoostCountWrapper: null, guildBoostCountIcon: null, guildBoostCount: null, guildBoostCurrentUserCountWrapper: null, guildBoostCurrentUserCount: null, cta: null, ctaPrimary: null, ctaSecondary: null, giftIcon: null, gradient: null, headerWave: null, headerStars: null, boostingUnavailablePill: null };
+createCacheKey = { alignSelf: "center", borderRadius: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 10, height: 48, width: 48 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[4] = { alignSelf: "center", maxWidth: "50%", textAlign: "center" };
@@ -28,6 +29,7 @@ createCacheKey[7] = { flexGrow: 0, flexShrink: 0, marginRight: 3 };
 createCacheKey[8] = { flexGrow: 0, flexShrink: 1, opacity: 0.6 };
 createCacheKey[9] = { position: "absolute", top: 3, width: "100%" };
 createCacheKey[10] = { alignSelf: "center" };
+let obj1 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[11] = { alignSelf: "center", borderRadius: ThemesDefault.radii.xl, maxWidth: 300, width: "90%" };
 const merged = Object.assign(Button.generateBoxShadowStyle(require("Button").EIGHT_DP_ELEVATION_SHADOW_PARAMS));
 createCacheKey[12] = {};
@@ -39,7 +41,9 @@ createCacheKey[17] = { height: "75%", left: "5%", opacity: 0.9, position: "absol
 createCacheKey[18] = { marginTop: -13, marginBottom: 23 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
 let closure_16 = { code: "function GuildBoostingMarketingCtaBarTsx1(){const{withTiming,isVisible}=this.__closure;return{opacity:withTiming(isVisible?1:0,{duration:250})};}" };
-const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingCtaBar.tsx");
+let obj2 = { alignSelf: "center", borderRadius: ThemesDefault.radii.xl, maxWidth: 300, width: "90%" };
+let obj3 = {};
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingCtaBar.tsx");
 
 export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const tmp = callback3();
@@ -60,7 +64,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const items2 = [stateFromStores1, guild.id];
   const memo = stateFromStores1.useMemo(() => {
     const keys = Object.keys(stateFromStores1);
-    return keys.filter((item, index) => {
+    return keys.filter((arg0) => {
       let tmp2 = null != tmp.premiumGuildSubscription;
       if (tmp2) {
         tmp2 = tmp.premiumGuildSubscription.guildId === id.id;
@@ -134,13 +138,13 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     }
   }
   const obj3 = { onLayout, angle: 160, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, useAngle: true, style: null, children: null };
-  tmp4(4756);
+  let tmp4Result = tmp4(4756);
   const items4 = [first(712).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_1, first(712).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_2, first(712).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_3, first(712).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_4, first(712).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_5];
   obj3[3] = items4;
   obj3[4] = [0, 0.3221, 0.429, 0.7606, 1];
   obj3[6] = tmp.gradient;
   obj4 = { angle: 0, angleCenter: { x: 0.5, y: 0.5 }, colors: ["rgba(0, 0, 0, 0.7)", "rgba(0, 0, 0, 0)"], locations: [0.12, 0.5], useAngle: true, style: tmp.gradient, children: null };
-  const tmp4Result = tmp4(4756);
+  tmp4Result = tmp4(4756);
   const items5 = [callback(first(13009), { guild }), , , ];
   const obj5 = { style: tmp.headerContent, children: null };
   obj6 = { style: tmp.heading, color: "text-overlay-light", variant: "display-sm", children: null };
@@ -149,6 +153,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const items6 = [callback(_require(4734).Heading, obj6), , , , ];
   obj7 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
   const isPremiumResult = obj7.isPremium(stateFromStores);
+  const tmp23 = callback2;
   obj7[3] = _require(7188).GuildIconSizes.LARGE;
   items6[1] = callback(first(7188), obj7);
   const obj8 = {
@@ -162,6 +167,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const obj10 = { style: tmp.guildBoostCountWrapper, children: null };
   const obj11 = { style: items8, children: null };
   items8 = [animatedStyle1, tmp.totalBoostCountWrapper];
+  const obj9 = { style: tmp.guildName, color: "text-overlay-light", variant: "text-md/bold", children: guild.name };
   const tmp4Result1 = first(7188);
   const items9 = [callback(_require(1297).Icon, { style: tmp.guildBoostCountIcon, source: first(12933), color: first(712).unsafe_rawColors.GUILD_BOOSTING_PINK, size: _require(1297).Icon.Sizes.SMALL }), ];
   const obj13 = { style: tmp.guildBoostCount, accessibilityRole: "header", variant: "text-sm/bold", color: "text-overlay-light", children: null };
@@ -204,6 +210,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     obj20[2] = function onPress() {
       let obj = callback(6710);
       obj.closeApplyBoostModal();
+      obj = { analyticsLocation: obj, analyticsLocations };
       obj = { page: closure_1_9.PREMIUM_GUILD_USER_MODAL, section: closure_1_10.HEADER, object: closure_1_8.BUTTON_CTA };
       callback(10295).openGiftModal(obj);
     };
@@ -211,14 +218,15 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     obj21[0] = tmp7(1297).Icon.Sizes.SMALL;
     obj21[1] = tmp4(13014);
     obj21[2] = tmp.giftIcon;
-    obj20[3] = callback(tmp7(1297).Icon, obj21);
+    obj20[3] = tmp25(tmp7(1297).Icon, obj21);
     let obj22 = obj20;
   } else {
     obj22 = { variant: "secondary", text: null, onPress: null, grow: true };
     const intl4 = tmp7(1236).intl;
     obj22[1] = intl4.string(tmp7(1236).t.pj0XBN);
     obj22[2] = function onPress() {
-      const obj = { page: closure_1_9.PREMIUM_GUILD_USER_MODAL, section: closure_1_10.HEADER, object: closure_1_8.BUTTON_CTA };
+      obj = { analyticsLocation: obj, analyticsLocations };
+      obj = { page: closure_1_9.PREMIUM_GUILD_USER_MODAL, section: closure_1_10.HEADER, object: closure_1_8.BUTTON_CTA };
       first(9325)(obj);
     };
   }
@@ -226,5 +234,5 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   obj19[1] = callback(_require(4745).Button, obj22);
   items14[1] = callback(memo, obj19);
   obj23[0] = items14;
-  return callback2(memo, obj23);
+  return tmp23(memo, obj23);
 };

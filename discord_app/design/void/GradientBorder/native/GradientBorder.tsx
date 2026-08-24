@@ -4,12 +4,12 @@
 import ThemesDefault from "Themes" /* 712 */;
 import t from "t" /* 4486 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 class GradientBorder {
   constructor(arg0) {
     ({ children, borderWidth } = global);
@@ -93,6 +93,6 @@ class GradientBorder {
 ({ HorizontalGradient: c5, VerticalGradient: closure_6 } = ME);
 let obj = { HORIZONTAL: "horizontal", VERTICAL: "vertical", DIAGONAL: "diagonal", ANTI_DIAGONAL: "anti-diagonal" };
 GradientBorder.Direction = obj;
-const result = require("obj132").fileFinishedImporting("design/void/GradientBorder/native/GradientBorder.tsx");
+const result = require("set").fileFinishedImporting("design/void/GradientBorder/native/GradientBorder.tsx");
 
 export default GradientBorder;

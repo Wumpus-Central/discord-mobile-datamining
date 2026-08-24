@@ -14,7 +14,9 @@ arg5.captureFeedback = function captureFeedback(arg0) {
   let currentScope = arg2;
   if (arg2 === undefined) {
     currentScope = getClient.getCurrentScope();
+    const obj3 = getClient;
   }
+  obj = { contexts: null, type: "feedback", level: "info", tags: null };
   obj = { feedback: addNonEnumerableProperty.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId }) };
   ({ message, name, email, url, source, associatedEventId, tags } = arg0);
   obj[0] = obj;

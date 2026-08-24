@@ -3,16 +3,14 @@
 // Module 14889 (pressable)
 import initialize from "initialize" /* 589 */;
 import tDefault from "t" /* 3975 */;
-import DownloadIcon from "DownloadIcon" /* 4324 */;
 import _checkForNewerBuildAll from "_checkForNewerBuild" /* 13366 */;
-import RefreshIcon2 from "RefreshIcon" /* 13952 */;
 import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
-import checkForNewerBuild from "checkForNewerBuild" /* 13770 */;
+import closure_4 from "checkForNewerBuild" /* 13770 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createToggle";
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     return "Internal Build Update";
   },
@@ -20,9 +18,9 @@ let createToggle = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [closure_4];
     if (obj.useStateFromStores(items, () => null !== closure_4.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = DownloadIcon.DownloadIcon;
+      let RefreshIcon = tmp(4324).DownloadIcon;
     } else {
-      RefreshIcon = RefreshIcon2.RefreshIcon;
+      RefreshIcon = tmp(13952).RefreshIcon;
     }
     return <RefreshIcon />;
   },
@@ -36,6 +34,7 @@ let createToggle = {
       }
       return build;
     });
+    const obj = initialize;
     const items1 = [closure_4];
     const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_4.latestFetchedBuild().lastCheck);
     if (null != stateFromStores) {
@@ -52,12 +51,14 @@ let createToggle = {
     return str;
   },
   usePredicate: function useHasInternalBuildUpdateSetting() {
+    const obj = useStaffOrDeveloperSettingPredicate;
     return closure_4.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   },
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = closure_4.latestFetchedBuild().newBuild;
     if (null !== newBuild) {
       _checkForNewerBuildAll.openBuildInstaller(newBuild);
+      const obj2 = _checkForNewerBuildAll;
     } else {
       closure_4.checkForNewerBuild();
     }
@@ -65,6 +66,6 @@ let createToggle = {
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx");
 
 export default createToggle;

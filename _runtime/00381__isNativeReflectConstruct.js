@@ -3,11 +3,11 @@
 // Module 381 (_isNativeReflectConstruct)
 import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 366 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
+import closure_7 from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
@@ -64,6 +64,9 @@ let obj = {
     for (let num = 0; num < length; num = num + 1) {
       let tmp = keys[num];
       let obj2 = self._style[tmp];
+      let tmp2 = AnimatedStyle;
+      let tmp3 = dependencyMap;
+      let tmp4 = num;
       if (obj2 instanceof AnimatedStyle(367)) {
         obj[tmp] = obj2.__getValue();
       } else {
@@ -88,18 +91,23 @@ let items = [
       let tmp;
       const keys = Object.keys(arg0);
       let num = 0;
-      if (0 < length) {
+      if (0 < keys.length) {
         while (true) {
           tmp = keys[num];
           obj = this._style[tmp];
+          let tmp2 = num;
           if ("transform" === tmp) {
+            let tmp3 = AnimatedStyle;
+            let tmp4 = dependencyMap;
             if (obj instanceof AnimatedStyle(383)) {
               break;
             }
           }
+          let tmp5 = AnimatedStyle;
+          let tmp6 = dependencyMap;
           if (obj instanceof AnimatedStyle(382)) {
             arg0[tmp] = obj.__getValueWithStaticObject(arg0[tmp]);
-          } else if (obj instanceof AnimatedStyle(367)) {
+          } else if (obj instanceof tmp5(367)) {
             arg0[tmp] = obj.__getValue();
           }
           num = num + 1;
@@ -107,7 +115,6 @@ let items = [
         const _Array = Array;
         arg0[tmp] = obj.__getValueWithStaticTransforms(Array.isArray(arg0[tmp]) ? arg0[tmp] : []);
       }
-      length = keys.length;
     }
   },
   {
@@ -201,11 +208,13 @@ obj = {
       const _Object = Object;
       const keys = Object.keys(arg0);
       let num = 0;
-      if (0 < length) {
+      if (0 < keys.length) {
         while (true) {
           let tmp = keys[num];
           tmp2 = arg0[tmp];
+          let tmp3 = num;
           if (null != D) {
+            let tmp4 = fn;
             if (!fn(D, tmp)) {
               obj[tmp] = tmp2;
             }
@@ -216,16 +225,20 @@ obj = {
               break;
             }
           }
+          let tmp5 = AnimatedStyle;
+          let tmp6 = dependencyMap;
           let fromResult = tmp2;
           if (!(tmp2 instanceof AnimatedStyle(367))) {
+            let tmp8 = AnimatedStyle;
+            let tmp9 = dependencyMap;
             obj = AnimatedStyle(382);
             fromResult = obj.from(tmp2);
           }
           if (null == fromResult) {
             obj[tmp] = tmp2;
           } else {
-            items.push(tmp);
-            let arr = items1.push(fromResult);
+            let arr = items.push(tmp);
+            arr = items1.push(fromResult);
             obj[tmp] = fromResult;
           }
         }
@@ -259,12 +272,12 @@ obj = {
         } else {
           constructResult = obj5.apply(obj, items3);
         }
-        const tmp29Result = callback(obj, constructResult);
+        const tmp29Result = closure_5(obj, constructResult);
         tmp29Result._nodeKeys = tmp19;
         tmp29Result._nodes = arr2;
         tmp29Result._style = tmp20;
+        const tmp29 = closure_5;
       }
-      length = keys.length;
       const tmp18 = callback(items2, 3);
     }
   }
@@ -272,9 +285,9 @@ obj = {
 let items1 = [obj];
 let fn = Object.hasOwn;
 if (fn == null) {
-  fn = (arg0, key10009) => {
+  fn = (arg0, arg1) => {
     const call = hasOwnProperty.call;
-    return typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009);
+    return typeof call === "unknown" ? hasOwnProperty(arg1) : call(arg0, arg1);
   };
 }
 

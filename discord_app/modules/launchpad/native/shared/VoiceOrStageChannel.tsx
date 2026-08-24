@@ -1,21 +1,21 @@
 // === Module 16211: handleVoiceOrStageChannelConnectPress ===
 
 // Module 16211 (handleVoiceOrStageChannelConnectPress)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getActiveStageChannelIds from "getActiveStageChannelIds" /* 4989 */;
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
-import getVoiceStatesForGuild from "getVoiceStatesForGuild" /* 4545 */;
+import closure_6 from "getActiveStageChannelIds" /* 4989 */;
+import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_8 from "_getSystemLocale" /* 1994 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_10 from "getVoiceStatesForGuild" /* 4545 */;
 import { Routes } from "ME" /* 676 */;
 import { getThemedRippleConfig } from "semanticColor" /* 1301 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function handleVoiceOrStageChannelConnectPress() {
   const self = this;
   const apply = _handleVoiceOrStageChannelConnectPress.apply;
@@ -150,8 +150,10 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   let obj4 = _require(6708);
   const stageParticipantsCount = obj4.useStageParticipantsCount(channel.id, _require(6703).StageChannelParticipantNamedIndex.AUDIENCE);
   let userLimit = stageParticipantsCount + voiceStates.length;
+  _require = channel;
   callback = undefined;
   let obj5 = importAllResult;
+  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -236,16 +238,16 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     }
     return applyArgumentsResult;
   }, []);
-  {
+  obj = {
     onPress: importAllResult.useCallback(() => {
       if (null != lib.guild_id) {
-        lib(dependencyMap[20]).transitionToGuild(lib.guild_id);
-        const obj = lib(dependencyMap[20]);
+        lib(closure_1_2[20]).transitionToGuild(tmp.guild_id);
+        const obj = lib(closure_1_2[20]);
       }
-      callback(dependencyMap[21])();
+      callback(closure_1_2[21])();
       callback(lib);
     }, items1),
-    onLongPress: importAllResult.useCallback(() => lib(dependencyMap[22]).openChannelLongPressActionSheet(lib.id), items2)
+    onLongPress: importAllResult.useCallback(() => lib(closure_1_2[22]).openChannelLongPressActionSheet(lib.id), items2)
   };
   items1 = [channel, callback];
   items2 = [channel.id];
@@ -265,7 +267,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   if (channel.isGuildStageVoice()) {
     arr8 = speakerVoiceStates;
   }
-  const mapped = arr8.map((item, index) => item.user);
+  const mapped = arr8.map((user) => user.user);
   const tmp17 = callback(16205)();
   let tmp5Result = tmp5(4751);
   const fontScale = tmp5Result.useFontScale();
@@ -276,13 +278,13 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   const items6 = [isConnectedToVoiceChannel, subtitle];
   ({ isSubscriptionGated, needSubscriptionToAccess } = callback(6817)(channel.id));
   const effect = obj5.useEffect(() => {
-    let tmp2 = null != callback && typeof callback !== "string";
+    let tmp2 = null != callback && typeof tmp !== "string";
     if (tmp2) {
-      tmp2 = "voice" === callback.type;
+      tmp2 = "voice" === tmp.type;
     }
     if (tmp2) {
-      const messagePreviewASTCache = lib(dependencyMap[38]).messagePreviewASTCache;
-      messagePreviewASTCache.del(callback.text);
+      const messagePreviewASTCache = lib(closure_1_2[38]).messagePreviewASTCache;
+      messagePreviewASTCache.del(tmp.text);
     }
   }, items6);
   let tmpResult = tmp(16197);
@@ -352,7 +354,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     }
     items8[1] = tmp31Result;
     obj1.children = items8;
-    return tmpResult(callback(tmp5(5433).PressableHighlight, obj1));
+    return tmpResult(closure_15(tmp5(5433).PressableHighlight, obj1));
   } else {
     const intl = tmp5(1236).intl;
     obj9 = { channelName: null };
@@ -377,7 +379,6 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     obj12[2] = userLimit;
     formatToPlainStringResult = intl2.formatToPlainString(tmp5(1236).t.rhh6Ev, obj12);
   }
-  const tmp20 = callback(6817)(channel.id);
 });
 const memoResult = importAllResult.memo(function VoiceOrStageChannel(channel) {
   channel = channel.channel;
@@ -389,14 +390,14 @@ const memoResult = importAllResult.memo(function VoiceOrStageChannel(channel) {
     channel,
     voiceStates: stateFromStores,
     speakerVoiceStates: channel(589).useStateFromStoresArray(items1, () => {
-      const mutableParticipants = closure_1_6.getMutableParticipants(channel.id, channel(dependencyMap[32]).StageChannelParticipantNamedIndex.SPEAKER);
-      const found = mutableParticipants.filter((item, index) => item.type === callback(table[32]).StageChannelParticipantTypes.VOICE);
-      return found.map(channel(dependencyMap[46]).transformParticipantToSortedVoiceState);
+      const mutableParticipants = closure_1_6.getMutableParticipants(channel.id, channel(closure_1_2[32]).StageChannelParticipantNamedIndex.SPEAKER);
+      const found = mutableParticipants.filter((type) => type.type === callback(table[32]).StageChannelParticipantTypes.VOICE);
+      return found.map(channel(closure_1_2[46]).transformParticipantToSortedVoiceState);
     }),
     subtitle: channel.customSubtitle
   };
   return callback2(closure_20, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/VoiceOrStageChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/launchpad/native/shared/VoiceOrStageChannel.tsx");
 
 export default memoResult;

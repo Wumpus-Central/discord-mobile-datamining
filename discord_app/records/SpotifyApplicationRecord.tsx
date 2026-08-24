@@ -27,7 +27,7 @@ const tmp6 = new "getWhiteIconURL"({}, tmp2, tmp);
 // ThrowIfThisInitialized (0x7c)
 tmp6.id = "spotify";
 tmp6.name = value.name;
-const result = require("obj132").fileFinishedImporting("records/SpotifyApplicationRecord.tsx");
+const result = require("set").fileFinishedImporting("records/SpotifyApplicationRecord.tsx");
 
 export default SpotifyApplicationRecord;
 export const SPOTIFY_APPLICATION_ID = "spotify";

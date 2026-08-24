@@ -6,9 +6,9 @@ import ReactionTypes from "ReactionTypes" /* 7510 */;
 import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7573 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx");
 
 export default function BurstReactionAnimationPreview(arg0) {
   ({ channelId, emoji, messageId, reactionType } = arg0);

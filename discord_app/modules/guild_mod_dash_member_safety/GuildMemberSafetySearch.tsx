@@ -3,9 +3,10 @@
 // Module 5243 (hasStringMatch)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import isEqualDefault from "isEqual" /* 4632 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import set from "set" /* 2 */;
 
-const require = fn;
+const require = arg1;
 function hasStringMatch(str, str2) {
   let hasItem = null != str;
   if (hasItem) {
@@ -14,10 +15,13 @@ function hasStringMatch(str, str2) {
   }
   return hasItem;
 }
-let obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: new Set(), selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedJoinSourceType: "accessible", selectedSourceInviteCode: "location", selectedSort: "View" };
-let closure_4 = Object.freeze(obj);
+let obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessible", selectedSourceInviteCode: "location", selectedSort: "View" };
 let set = new Set();
-const result = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx");
+obj[5] = set;
+obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
+obj[7] = { optionId: 0, afterDate: null, beforeDate: null };
+let closure_4 = Object.freeze(obj);
+const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx");
 class GuildMemberSafetySearch {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -81,6 +85,7 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
       [tmp21, tmp22] = callback(joinedAtTimestamp(table[1]).splitQuery(query), 2);
       for (const item10006 of tmp22) {
         if (arg0.userId === item10006) {
+          let tmp2 = obj4;
           obj4.return();
           let flag = true;
           return true;
@@ -88,7 +93,9 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
       }
       const obj = tmp21[Symbol.iterator]();
       while (obj !== undefined) {
+        let tmp7 = callback2;
         if (callback2(userId.nick, tmp5)) {
+          let tmp8 = obj;
           obj.return();
           let flag2 = true;
           return true;
@@ -98,14 +105,18 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
         return false;
       } else {
         for (const item10027 of tmp21) {
+          let tmp11 = callback2;
           if (callback2(tmp25, item10027)) {
+            let tmp12 = obj5;
             obj5.return();
             let flag3 = true;
             return true;
           }
         }
         for (const item10037 of tmp21) {
+          let tmp15 = callback2;
           if (callback2(tmp24, item10037)) {
+            let tmp16 = obj2;
             obj2.return();
             let flag4 = true;
             return true;
@@ -124,9 +135,9 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
       let everyResult = 0 !== selectedRoleIds.size;
       if (everyResult) {
         const _Array = Array;
-        everyResult = Array.from(selectedRoleIds).every((item, index) => {
+        everyResult = Array.from(selectedRoleIds).every((arg0) => {
           const roles = joinedAtTimestamp.roles;
-          return roles.includes(item);
+          return roles.includes(arg0);
         });
         const arr = Array.from(selectedRoleIds);
       }
@@ -141,12 +152,14 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
           let tmp12 = null != selectedAccountAgeOption.afterDate;
           if (tmp12) {
             tmp12 = DISCORD_EPOCHDefault.extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
+            const obj2 = DISCORD_EPOCHDefault;
           }
           let tmp15 = !tmp12;
           if (!tmp12) {
             let tmp16 = null != selectedAccountAgeOption.beforeDate;
             if (tmp16) {
               tmp16 = DISCORD_EPOCHDefault.extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
+              let obj3 = DISCORD_EPOCHDefault;
             }
             let tmp19 = !tmp16;
             if (!tmp16) {

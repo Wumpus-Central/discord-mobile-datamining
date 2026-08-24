@@ -1,12 +1,12 @@
 // === Module 11117: _handleForwardBreadcrumb ===
 
 // Module 11117 (_handleForwardBreadcrumb)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _handleForwardBreadcrumb() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -50,9 +50,9 @@ function _handleForwardBreadcrumb() {
               guild = undefined;
               let constants;
               if (null != lib.messageReference) {
-                guild_id = lib.messageReference.guild_id;
-                channel_id = lib.messageReference.channel_id;
-                message_id = lib.messageReference.message_id;
+                guild_id = tmp60.messageReference.guild_id;
+                channel_id = tmp60.messageReference.channel_id;
+                message_id = tmp60.messageReference.message_id;
                 store = store.getChannel(channel_id);
                 guild = false;
                 if (null == store) {
@@ -152,7 +152,7 @@ function _handleForwardBreadcrumb() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: closure_6, AnalyticsObjects: error, Routes: closure_8 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");
+const result = require("set").fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");
 
 export default function handleForwardBreadcrumb() {
   const self = this;

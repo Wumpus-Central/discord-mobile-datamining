@@ -1,10 +1,10 @@
 // === Module 4572: on ===
 
 // Module 4572 (on)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import EventEmitter from "EventEmitter" /* 652 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
 class TypedEventEmitter {
   constructor() {
     obj = Object.create(new.target.prototype);

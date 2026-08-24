@@ -7,7 +7,11 @@ import requiredArgs from "requiredArgs" /* 3473 */;
 if (!_typeof) {
   let obj = { default: null };
   obj[0] = _typeof;
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
 }
+_typeof = tmp3;
 if (!_typeof) {
   obj = { default: null };
   obj[0] = _typeof;

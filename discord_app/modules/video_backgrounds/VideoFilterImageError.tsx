@@ -1,7 +1,7 @@
 // === Module 9663: prototype ===
 
 // Module 9663 (prototype)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
@@ -23,13 +23,13 @@ const prototype = function VideoFilterImageError(arg0, arg1) {
     tmp7 = code === constants.ASSET_SIZE;
   }
   if (tmp7) {
-    const intl2 = getSystemLocale.intl;
-    tmp3.message = intl2.string(getSystemLocale.t.mrlScX);
+    const intl2 = tmp4(1236).intl;
+    tmp3.message = intl2.string(tmp4(1236).t.mrlScX);
   }
   return tmp3;
 }.prototype;
 class prototype extends V8APIError {
 }
-const result = obj132.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
+const result = set.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
 
 export default prototype;

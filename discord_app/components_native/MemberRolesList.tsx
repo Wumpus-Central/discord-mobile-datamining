@@ -3,14 +3,14 @@
 // Module 11039 (MemberRolesList)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 let closure_6 = createCacheKey.createStyles({ wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
-const result = require("obj132").fileFinishedImporting("components_native/MemberRolesList.tsx");
+const result = require("set").fileFinishedImporting("components_native/MemberRolesList.tsx");
 
 export default function MemberRolesList(userRoles) {
   userRoles = userRoles.userRoles;
@@ -23,7 +23,7 @@ export default function MemberRolesList(userRoles) {
   if (null != userRoles) {
     tmp2Result = tmp4;
     if (userRoles.length > 0) {
-      const found = stateFromStores.filter((item, index) => userRoles.includes(item.id));
+      const found = stateFromStores.filter((id) => userRoles.includes(id.id));
       const sorted = found.sort((tags, tags2) => {
         tags = tags.tags;
         let guild_connections;
@@ -52,7 +52,7 @@ export default function MemberRolesList(userRoles) {
       obj = { style: null, children: null };
       const items1 = [tmp.wrapper, userRoles.style];
       obj[0] = items1;
-      obj[1] = sorted.map((item, index) => jsx(guild(dependencyMap[6]), { role: item, guildId: guild.id }, item.id));
+      obj[1] = sorted.map((id) => closure_1_5(guild(closure_1_2[6]), { role: id, guildId: guild.id }, id.id));
       tmp2Result = <View style={null}>{null}</View>;
     }
   }

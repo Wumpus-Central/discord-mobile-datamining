@@ -1,16 +1,16 @@
 // === Module 10219: useStickerCategories ===
 
 // Module 10219 (useStickerCategories)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { useStickerPickerStore } from "useStickerPickerStore" /* 10220 */;
 import { GuildNSFWContentLevel } from "ME" /* 676 */;
 import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/stickers/native/StickersUtils.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/stickers/native/StickersUtils.tsx");
 
 export const useStickerCategories = function useStickerCategories(channel) {
   stickerPackCategories = stickerPackCategories(guilds[7]).useStickerPackCategories(channel);
@@ -18,9 +18,9 @@ export const useStickerCategories = function useStickerCategories(channel) {
   guilds = guilds.getGuilds();
   const items = [guilds, stickerPackCategories, currentUser];
   return React.useMemo(() => {
-    const found = stickerPackCategories.filter((item, index) => item.stickers.length > 0);
-    const found1 = found.filter((item, index) => {
-      let tmp2 = item.type !== stickerPackCategories(guilds[8]).StickerCategoryTypes.GUILD;
+    const found = stickerPackCategories.filter((stickers) => stickers.stickers.length > 0);
+    const found1 = found.filter((type) => {
+      let tmp2 = type.type !== closure_1_0(closure_1_2[8]).StickerCategoryTypes.GUILD;
       if (!tmp2) {
         let nsfwAllowed;
         if (lib != null) {
@@ -33,22 +33,23 @@ export const useStickerCategories = function useStickerCategories(channel) {
       }
       if (!tmp2) {
         tmp2 = tmp.nsfwLevel !== closure_1_8.AGE_RESTRICTED && tmp.nsfwLevel !== tmp6.EXPLICIT;
+        const tmp7 = tmp.nsfwLevel !== closure_1_8.AGE_RESTRICTED && tmp.nsfwLevel !== tmp6.EXPLICIT;
       }
       return tmp2;
     });
-    return found1.map((item, index) => {
-      if (item.type !== callback(4964).StickerCategoryTypes.FAVORITE) {
-        if (item.type !== callback(4964).StickerCategoryTypes.RECENT) {
-          return item;
+    return found1.map((type) => {
+      if (type.type !== callback(4964).StickerCategoryTypes.FAVORITE) {
+        if (type.type !== tmp(4964).StickerCategoryTypes.RECENT) {
+          return type;
         }
       }
-      if (item.type === callback(4964).StickerCategoryTypes.FAVORITE) {
+      if (type.type === callback(4964).StickerCategoryTypes.FAVORITE) {
         let tmp4 = lib(10221);
       } else {
         tmp4 = lib(10222);
       }
       const obj = {};
-      const merged = Object.assign(item);
+      const merged = Object.assign(type);
       obj.icon = tmp4;
       return obj;
     });
@@ -70,8 +71,8 @@ export const openStickerPickerToPackId = function openStickerPickerToPackId(arg0
     const current = ref.current;
     if (current != null) {
       const obj = { type: null, context: null };
-      obj[0] = ref(dependencyMap[11]).KeyboardTypes.EXPRESSION;
-      obj[1] = ExpressionPickerViewType.STICKER;
+      obj[0] = ref(closure_1_2[11]).KeyboardTypes.EXPRESSION;
+      obj[1] = closure_1_9.STICKER;
       current.openCustomKeyboard(obj);
     }
   }, 1);

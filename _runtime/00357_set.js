@@ -70,12 +70,13 @@ if (result) {
       closure_0 = tmp10;
       obj[tmp10] = () => {
         const items = [...arguments];
+        closure_1 = undefined;
         const tmp = callback(70)(importDefaultResult)[items];
         closure_1 = tmp;
         if (!c8) {
           if (0 === arr.length) {
             if (result1) {
-              arr = arr2.push(() => callback(...items));
+              arr = arr.push(() => callback(...items));
               const _clearImmediate = clearImmediate;
               clearImmediate(immediate);
               const _setImmediate = setImmediate;
@@ -86,7 +87,6 @@ if (result) {
               HermesBuiltin.apply(items1, undefined);
             }
           }
-          arr2 = arr;
         }
         arr = arr.push(() => callback(...items));
       };
@@ -96,11 +96,11 @@ if (result) {
   }
 }
 obj = {
-  addAnimatedEventToView(c4, closure_0, item) {
-    const result = obj.addAnimatedEventToView(c4, closure_0, item);
+  addAnimatedEventToView(c4, closure_0, arg2) {
+    const result = obj.addAnimatedEventToView(c4, closure_0, arg2);
   },
-  connectAnimatedNodes(__getNativeTagResult, __makeNative) {
-    obj.connectAnimatedNodes(__getNativeTagResult, __makeNative);
+  connectAnimatedNodes(__getNativeTagResult, arg1) {
+    obj.connectAnimatedNodes(__getNativeTagResult, arg1);
   },
   connectAnimatedNodeToShadowNodeFamily(self, nodeFromPublicInstance) {
     const connectAnimatedNodeToShadowNodeFamily = obj.connectAnimatedNodeToShadowNodeFamily;
@@ -113,11 +113,11 @@ obj = {
   },
   createAnimatedNode(newNodeTag, __getNativeConfigResult) {
     if (__getNativeConfigResult.disableBatchingForNativeCreate) {
-      if (importDefaultResult != null) {
-        const animatedNode = importDefaultResult.createAnimatedNode(newNodeTag, __getNativeConfigResult);
+      if (closure_4 != null) {
+        const animatedNode = obj.createAnimatedNode(newNodeTag, __getNativeConfigResult);
       }
     } else {
-      const animatedNode1 = importDefaultResult.createAnimatedNode(newNodeTag, __getNativeConfigResult);
+      const animatedNode1 = obj.createAnimatedNode(newNodeTag, __getNativeConfigResult);
     }
   },
   disableQueue() {
@@ -135,8 +135,8 @@ obj = {
   disconnectAnimatedNodeFromView(self, connectedViewTag) {
     const result = obj.disconnectAnimatedNodeFromView(self, connectedViewTag);
   },
-  disconnectAnimatedNodes(__getNativeTagResult, __isNative) {
-    const result = obj.disconnectAnimatedNodes(__getNativeTagResult, __isNative);
+  disconnectAnimatedNodes(__getNativeTagResult, arg1) {
+    const result = obj.disconnectAnimatedNodes(__getNativeTagResult, arg1);
   },
   dropAnimatedNode(__nativeTag) {
     obj.dropAnimatedNode(__nativeTag);
@@ -148,18 +148,18 @@ obj = {
     const result = obj.flattenAnimatedNodeOffset(self);
   },
   flushQueue: result ? (() => {
-    callback(38)(importDefaultResult, "Native animated module is not available");
+    callback(38)(closure_4, "Native animated module is not available");
     c11 = null;
     if (0 !== closure_10.length) {
       if (!closure_14) {
-        let tmpResult = callback(92);
+        let tmpResult = tmp(92);
         closure_14 = tmpResult.addListener("onNativeAnimatedModuleGetValue", (value) => {
           if (table[value.tag]) {
             tmp3(value.value);
             delete tmp[tmp2];
           }
         });
-        tmpResult = callback(92);
+        tmpResult = tmp(92);
         closure_15 = tmpResult.addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
           let tmp3 = arg0;
           if (!Array.isArray(arg0)) {
@@ -168,29 +168,34 @@ obj = {
           }
           for (const item10014 of tmp3) {
             let animationId = item10014.animationId;
+            let tmp5 = animationId;
+            let tmp6 = table2;
             let tmp7 = table2[animationId];
             if (tmp7) {
+              let tmp9 = tmp7;
+              let tmp10 = item10014;
               let tmp8Result = tmp8(tmp4);
+              let tmp12 = animationId;
               delete tmp2[tmp];
             }
             continue;
           }
         });
       }
-      if (importDefaultResult != null) {
-        const queueAndExecuteBatchedOperations = importDefaultResult.queueAndExecuteBatchedOperations;
+      if (tmp3 != null) {
+        const queueAndExecuteBatchedOperations = tmp3.queueAndExecuteBatchedOperations;
         if (queueAndExecuteBatchedOperations != null) {
-          const result = queueAndExecuteBatchedOperations(closure_10);
+          const result = queueAndExecuteBatchedOperations(tmp5);
         }
       }
-      closure_10.length = 0;
+      tmp5.length = 0;
     }
   }) : (() => {
-    callback(38)(importDefaultResult, "Native animated module is not available");
+    callback(38)(closure_4, "Native animated module is not available");
     c11 = null;
     if (0 !== arr.length) {
-      if (importDefaultResult != null) {
-        const startOperationBatch = importDefaultResult.startOperationBatch;
+      if (tmp != null) {
+        const startOperationBatch = tmp.startOperationBatch;
         if (startOperationBatch != null) {
           startOperationBatch();
         }
@@ -198,17 +203,19 @@ obj = {
       let num2 = 0;
       if (0 < arr.length) {
         do {
+          let tmp4 = arr;
           let tmp5 = arr[num2]();
           num2 = num2 + 1;
         } while (num2 < length);
       }
       arr.length = 0;
-      if (importDefaultResult != null) {
-        const finishOperationBatch = importDefaultResult.finishOperationBatch;
+      if (closure_4 != null) {
+        const finishOperationBatch = tmp6.finishOperationBatch;
         if (finishOperationBatch != null) {
           finishOperationBatch();
         }
       }
+      tmp6 = closure_4;
     }
   }),
   getValue: result ? ((arg0, arg1) => {
@@ -238,6 +245,7 @@ obj = {
     if (!result1) {
       set.add(combined);
       c8 = true;
+      obj = importAllResult1;
       if (tmp6) {
         const _clearImmediate = clearImmediate;
         clearImmediate(closure_11);
@@ -271,10 +279,10 @@ obj = {
       }
     }
   },
-  updateAnimatedNodeConfig(self, self2) {
+  updateAnimatedNodeConfig(arg0, self) {
     const updateAnimatedNodeConfig = obj.updateAnimatedNodeConfig;
     if (updateAnimatedNodeConfig != null) {
-      const result = updateAnimatedNodeConfig(self, self2);
+      const result = updateAnimatedNodeConfig(arg0, self);
     }
   }
 };
@@ -325,20 +333,20 @@ obj1.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
   }
   flag = useNativeDriver.useNativeDriver || false;
 };
-obj1.transformDataType = function transformDataType(item) {
-  if (typeof item !== "string") {
-    return item;
-  } else if (item.endsWith("deg")) {
+obj1.transformDataType = function transformDataType(str) {
+  if (typeof str !== "string") {
+    return str;
+  } else if (str.endsWith("deg")) {
     const _parseFloat2 = parseFloat;
     const _Math = Math;
-    let result = (parseFloat(item) || 0) * Math.PI / 180;
-    const tmp5 = parseFloat(item) || 0;
+    let result = (parseFloat(str) || 0) * Math.PI / 180;
+    const tmp5 = parseFloat(str) || 0;
   } else {
-    result = item;
-    if (item.endsWith("rad")) {
+    result = str;
+    if (str.endsWith("rad")) {
       const _parseFloat = parseFloat;
-      result = parseFloat(item) || 0;
-      const tmp3 = parseFloat(item) || 0;
+      result = parseFloat(str) || 0;
+      const tmp3 = parseFloat(str) || 0;
     }
   }
 };

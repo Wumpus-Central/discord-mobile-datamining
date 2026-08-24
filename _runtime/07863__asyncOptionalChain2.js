@@ -1,11 +1,11 @@
 // === Module 7863: _asyncOptionalChain2 ===
 
 // Module 7863 (_asyncOptionalChain2)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 function _asyncOptionalChain2() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0) => {
+  const tmp = callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
@@ -42,11 +42,11 @@ function _asyncOptionalChain2() {
               closure_4 = undefined;
               let callback;
               c1 = undefined;
-              closure_2 = length[0];
+              closure_2 = closure_0[0];
               c3 = 1;
-              if (c3 < length.length) {
-                closure_4 = length[c3];
-                callback = length[c3 + 1];
+              if (c3 < closure_0.length) {
+                closure_4 = closure_0[c3];
+                callback = closure_0[c3 + 1];
                 c3 = c3 + 2;
                 if ("optionalAccess" === closure_4) {
                   if (null == closure_2) {

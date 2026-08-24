@@ -1,11 +1,11 @@
 // === Module 16230: useScreenNameSharedValue ===
 
 // Module 16230 (useScreenNameSharedValue)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 const unknown = "unknown";
-let result = require("obj132").fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
+let result = require("set").fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
 
 export default function useScreenNameSharedValue() {
   let rootNavigationRef = sharedValue(4230).getRootNavigationRef();
@@ -32,8 +32,8 @@ export default function useScreenNameSharedValue() {
   const effect = React.useEffect(() => {
     function handleStateChange() {
       if (null != rootNavigationRef) {
-        if (rootNavigationRef.isReady()) {
-          const currentRoute = rootNavigationRef.getCurrentRoute();
+        if (obj.isReady()) {
+          const currentRoute = obj.getCurrentRoute();
           let str;
           if (currentRoute != null) {
             str = currentRoute.name;
@@ -45,14 +45,14 @@ export default function useScreenNameSharedValue() {
         }
       }
     }
-    const rootNavigationRef = sharedValue(dependencyMap[1]).getRootNavigationRef();
+    const rootNavigationRef = sharedValue(closure_1_1[1]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = sharedValue(dependencyMap[1]);
+    const obj = sharedValue(closure_1_1[1]);
   }, items);
   return sharedValue;
 };

@@ -1,9 +1,9 @@
 // === Module 4011: getEmbeddedActivityLocationChannelId ===
 
 // Module 4011 (getEmbeddedActivityLocationChannelId)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
 
 export const getEmbeddedActivityLocationChannelId = function getEmbeddedActivityLocationChannelId(_location) {
   if (null != _location) {

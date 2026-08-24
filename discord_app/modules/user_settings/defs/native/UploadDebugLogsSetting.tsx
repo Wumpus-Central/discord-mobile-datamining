@@ -2,14 +2,14 @@
 
 // Module 14846 (_handleUploadDebugLogSettingPress)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
 import { DebugLogCategory } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import keys from "keys" /* 644 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
+require = arg1;
 function _handleUploadDebugLogSettingPress() {
   const self = this;
   const tmp = callback(function*() {
@@ -154,6 +154,6 @@ keys = {
   }
 };
 keys = createToggle.createPressable(keys);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");
 
 export default keys;

@@ -1,14 +1,14 @@
 // === Module 11868: useBackHandlerSkipPhoneScreens ===
 
 // Module 11868 (useBackHandlerSkipPhoneScreens)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6318 */;
 import ContactSyncLandingPage from "ContactSyncLandingPage" /* 11851 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const ContactSyncScenes = ContactSyncLandingPage.ContactSyncScenes;
-const result = obj132.fileFinishedImporting("modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx");
+const result = set.fileFinishedImporting("modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx");
 
 export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   const _require = arg0;
@@ -19,7 +19,7 @@ export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
     } else {
       let arr = state;
       const items = [, , ];
-      ({ ADD_PHONE: arr2[0], VERIFY_PHONE: arr2[1], VERIFY_PASSWORD: arr2[2] } = ContactSyncScenes);
+      ({ ADD_PHONE: arr2[0], VERIFY_PHONE: arr2[1], VERIFY_PASSWORD: arr2[2] } = closure_1_3);
       const routes = state.getState().routes;
       if (routes.length <= 2) {
         arr = arr.pop();

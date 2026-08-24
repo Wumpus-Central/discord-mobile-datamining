@@ -2,16 +2,17 @@
 
 // Module 10113 (NOTIFICATION_MAX_WIDTH)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
+import set from "set" /* 10030 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
-import set from "set" /* 10030 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-({ MIN_SWIPE_VELOCITY: c4, STARTED_SWIPE_THRESHOLD: c5, NOTIFICATION_MAX_WIDTH } = require("set"));
+const require = arg1;
+({ MIN_SWIPE_VELOCITY: c4, STARTED_SWIPE_THRESHOLD: c5, NOTIFICATION_MAX_WIDTH } = set);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { shadow: null, container: null };
+createCacheKey = {};
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 createCacheKey.backgroundColor = ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
 createCacheKey.borderRadius = ThemesDefault.radii.lg;
@@ -26,7 +27,7 @@ let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
 let closure_11 = { code: "function NotificationTsx1(){const{withSpring,scale,ON_PRESS_SPRING_CONFIG}=this.__closure;return{transform:[{scale:withSpring(scale.get(),ON_PRESS_SPRING_CONFIG)}]};}" };
 let closure_12 = { code: "function NotificationTsx2(finished){const{runOnJS,handleDismissNotification}=this.__closure;if(finished){runOnJS(handleDismissNotification)('timeout');}}" };
-let result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/Notification.tsx");
+let result = set.fileFinishedImporting("modules/in_app_notifications/native/Notification.tsx");
 
 export const NotificationPressable = function NotificationPressable(notification) {
   notification = notification.notification;
@@ -36,7 +37,15 @@ export const NotificationPressable = function NotificationPressable(notification
   ({ icon, children, accessoryLabelNode, rightAccessory, header } = notification);
   let merged = Object.assign(notification, Object.create(null));
   let guildId;
+  let channelId;
+  let messageId;
+  let type;
+  let notificationGestureY;
+  let velocityY;
   let handleDismissNotification;
+  let initialized;
+  let panning;
+  let sharedValue;
   let sharedValue1;
   closure_14 = undefined;
   let callback2;
@@ -48,18 +57,18 @@ export const NotificationPressable = function NotificationPressable(notification
     return { type: notification.type };
   }, items);
   guildId = memo.guildId;
-  const channelId = memo.channelId;
-  const messageId = memo.messageId;
-  const type = memo.type;
+  channelId = memo.channelId;
+  messageId = memo.messageId;
+  type = memo.type;
   let obj = notification(onSettingsPress[7]);
   const inAppNotificationContext = obj.useInAppNotificationContext();
-  const notificationGestureY = inAppNotificationContext.notificationGestureY;
-  const velocityY = inAppNotificationContext.velocityY;
+  notificationGestureY = inAppNotificationContext.notificationGestureY;
+  velocityY = inAppNotificationContext.velocityY;
   handleDismissNotification = inAppNotificationContext.handleDismissNotification;
-  const initialized = inAppNotificationContext.initialized;
-  const panning = inAppNotificationContext.panning;
+  initialized = inAppNotificationContext.initialized;
+  panning = inAppNotificationContext.panning;
   obj1 = notification(onSettingsPress[8]);
-  const sharedValue = obj1.useSharedValue(1);
+  sharedValue = obj1.useSharedValue(1);
   const items1 = [sharedValue];
   const items2 = [sharedValue];
   const callback = guildId.useCallback(() => sharedValue.set(0.95), items1);
@@ -91,14 +100,14 @@ export const NotificationPressable = function NotificationPressable(notification
       if (!panning) {
         if (closure_14) {
           const value = sharedValue1.get();
-          notification(onSettingsPress[10]);
-          let obj = { duration: null, easing: null };
+          let obj = notification(onSettingsPress[10]);
+          obj = { duration: null, easing: null };
           obj[0] = value / 100 * tmp;
           obj[1] = notification(onSettingsPress[8]).Easing.linear;
           const fn = function s(arg0) {
             if (arg0) {
-              notification(onSettingsPress[8]).runOnJS(closure_9)("timeout");
-              const obj = notification(onSettingsPress[8]);
+              closure_1_0(closure_1_2[8]).runOnJS(closure_9)("timeout");
+              const obj = closure_1_0(closure_1_2[8]);
             }
           };
           obj = { runOnJS: null, handleDismissNotification: null };
@@ -109,7 +118,7 @@ export const NotificationPressable = function NotificationPressable(notification
           fn.__initData = sharedValue;
           const result = sharedValue1.set(obj.withTiming(0, obj, "animate-always", fn));
           return () => {
-            notification(onSettingsPress[8]).cancelAnimation(closure_13);
+            closure_1_0(closure_1_2[8]).cancelAnimation(closure_13);
           };
         }
       }
@@ -125,10 +134,10 @@ export const NotificationPressable = function NotificationPressable(notification
     return tmp;
   }, items4);
   const items5 = [callback2, type, notification.inAppNotificationId, guildId, channelId, messageId, sharedValue1, notification.duration !== Infinity];
-  callback3 = guildId.useCallback((IAR_MODAL_OPEN, fn) => {
+  callback3 = guildId.useCallback((IAR_MODAL_OPEN) => {
     if (!callback2()) {
-      onPress(onSettingsPress[11]);
-      const obj = { type: null, notif_guild_id: null, notif_channel_id: null, message_id: null, in_app_notification_id: null, percent: null };
+      let obj = onPress(onSettingsPress[11]);
+      obj = { type: null, notif_guild_id: null, notif_channel_id: null, message_id: null, in_app_notification_id: null, percent: null };
       obj[0] = type;
       obj[1] = guildId;
       obj[2] = channelId;
@@ -138,14 +147,15 @@ export const NotificationPressable = function NotificationPressable(notification
       if (closure_14) {
         let value = sharedValue1;
         if (typeof sharedValue1 !== "number") {
-          value = sharedValue1.get();
+          value = obj3.get();
         }
         rounded = Math.floor(value);
+        obj3 = sharedValue1;
       }
       obj[5] = rounded;
       obj.trackWithMetadata(IAR_MODAL_OPEN, obj);
-      if (fn != null) {
-        fn();
+      if (arg1 != null) {
+        arg1();
       }
     }
   }, items5);

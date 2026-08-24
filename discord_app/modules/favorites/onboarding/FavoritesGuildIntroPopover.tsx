@@ -3,15 +3,15 @@
 // Module 9988 (hasOfferedFavoritesGuildOnboarding)
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9989 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import withContent from "withContent" /* 1383 */;
-import withContent2 from "withContent" /* 1383 */;
-import initializeFromUserSettings from "initializeFromUserSettings" /* 1394 */;
+import closure_7 from "withContent" /* 1383 */;
+import closure_8 from "initializeFromUserSettings" /* 1394 */;
 import { NOOP } from "ME" /* 676 */;
 import keys from "keys" /* 644 */;
 
-require = fn;
+require = arg1;
 let c4 = importAllResult;
 ({ isContentShown: c5, useIsContentShown: closure_6 } = withContent);
 let closure_10 = keys.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
@@ -59,9 +59,8 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
     }
   }
   items1 = [];
-  tmp6 = callback4((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
 });
-const result = require("obj132").fileFinishedImporting("modules/favorites/onboarding/FavoritesGuildIntroPopover.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/onboarding/FavoritesGuildIntroPopover.tsx");
 
 export default memoResult;
 export function hasOfferedFavoritesGuildOnboarding() {

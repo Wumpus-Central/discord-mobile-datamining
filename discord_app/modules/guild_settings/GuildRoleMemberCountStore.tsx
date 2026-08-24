@@ -80,7 +80,7 @@ const guildRoleMemberCountStore = new GuildRoleMemberCountStore(dispatcherDefaul
   GUILD_ROLE_CREATE: function handleGuildRoleCreate(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = {};
+      tmp[guildId] = {};
     }
     dependencyMap[guildId][guildId.role.id] = 0;
   },
@@ -90,6 +90,6 @@ const guildRoleMemberCountStore = new GuildRoleMemberCountStore(dispatcherDefaul
     delete tmp2[tmp];
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/GuildRoleMemberCountStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/GuildRoleMemberCountStore.tsx");
 
 export default guildRoleMemberCountStore;

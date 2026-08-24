@@ -1,11 +1,11 @@
 // === Module 12457: useStreamError ===
 
 // Module 12457 (useStreamError)
-import isAVErrorContextOfType from "isAVErrorContextOfType" /* 12440 */;
+import closure_2 from "isAVErrorContextOfType" /* 12440 */;
 
-const require = fn;
-let closure_3 = { [fn(9668).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [fn(9668).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [fn(9668).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [fn(9668).AVError.STREAM_SEND_LOW_FPS]: 2, [fn(9668).AVError.STREAM_VIEW_LOW_FPS]: 2, [fn(9668).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
-const result = require("obj132").fileFinishedImporting("modules/go_live/useStreamError.tsx");
+const require = arg1;
+let closure_3 = { [arg1(9668).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [arg1(9668).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [arg1(9668).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [arg1(9668).AVError.STREAM_SEND_LOW_FPS]: 2, [arg1(9668).AVError.STREAM_VIEW_LOW_FPS]: 2, [arg1(9668).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
+const result = require("set").fileFinishedImporting("modules/go_live/useStreamError.tsx");
 
 export default function useStreamError(id) {
   id = id.id;
@@ -13,13 +13,13 @@ export default function useStreamError(id) {
   const items1 = [id];
   return id(589).useStateFromStores(items, () => {
     const activeErrors = closure_1_2.getActiveErrors();
-    const found = Array.from(activeErrors.values()).filter((item, index) => {
-      let tmp = "streamKey" in item;
+    const found = Array.from(activeErrors.values()).filter((streamKey) => {
+      let tmp = "streamKey" in streamKey;
       if (tmp) {
-        tmp = item.streamKey === closure_0;
+        tmp = streamKey.streamKey === closure_0;
       }
       if (tmp) {
-        tmp = null != closure_1_3[item.type];
+        tmp = null != closure_1_3[streamKey.type];
       }
       return tmp;
     });

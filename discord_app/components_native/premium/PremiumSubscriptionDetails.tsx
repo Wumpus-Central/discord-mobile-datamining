@@ -2,13 +2,10 @@
 
 // Module 7880 (handleCancelSubscription)
 import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import Text from "Text" /* 4734 */;
 import contextDefault from "context" /* 7139 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7378 */;
 import launchPremiumPlanSelect from "launchPremiumPlanSelect" /* 7380 */;
 import registerAssetDefault from "registerAsset" /* 7613 */;
 import registerAssetDefault2 from "registerAsset" /* 7664 */;
@@ -44,20 +41,18 @@ import registerAssetDefault31 from "registerAsset" /* 7902 */;
 import registerAssetDefault32 from "registerAsset" /* 7903 */;
 import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 7904 */;
 import createSubscriptionInvoicePreview from "createSubscriptionInvoicePreview" /* 7916 */;
-import SubscriptionRenewalMutationsNoticeDefault from "SubscriptionRenewalMutationsNotice" /* 7917 */;
-import SubscriptionAccountHoldNoticeDefault from "SubscriptionAccountHoldNotice" /* 7918 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import updateProduct from "updateProduct" /* 5319 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "updateProduct" /* 5319 */;
 import ME from "ME" /* 676 */;
 import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function handleCancelSubscription() {
   const self = this;
   const apply = _handleCancelSubscription.apply;
@@ -111,10 +106,10 @@ function _handleCancelSubscription() {
               const result = callback(7658).trackPremiumSubscriptionCancellationFlowStep(obj1);
               let isPurchasedViaApple;
               if (callback != null) {
-                isPurchasedViaApple = callback.isPurchasedViaApple;
+                isPurchasedViaApple = tmp15.isPurchasedViaApple;
               }
               if (isPurchasedViaApple) {
-                let tmp18Result = callback(7705);
+                let tmp18Result = tmp18(7705);
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
@@ -122,12 +117,12 @@ function _handleCancelSubscription() {
                 return obj2;
               } else {
                 let isPurchasedViaGoogle;
-                if (callback != null) {
-                  isPurchasedViaGoogle = callback.isPurchasedViaGoogle;
+                if (tmp15 != null) {
+                  isPurchasedViaGoogle = tmp15.isPurchasedViaGoogle;
                 }
                 if (isPurchasedViaGoogle) {
-                  tmp18Result = callback(4039);
-                  closure_1_8.openURL(tmp18Result.getExternalSubscriptionMethodUrl(callback.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
+                  tmp18Result = tmp18(4039);
+                  closure_1_8.openURL(tmp18Result.getExternalSubscriptionMethodUrl(tmp15.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
                 }
               }
               const obj7 = callback(7658);
@@ -207,22 +202,22 @@ function _onResubscribeClick() {
                 obj1 = { requestIdentifier: null, subscriptionId: null };
                 const obj9 = lib(7390);
                 obj1[0] = lib(514).v4();
-                obj1[1] = lib.id;
+                obj1[1] = tmp25.id;
                 dependencyMap = 1;
                 c3 = 1;
                 let obj2 = { value: null, done: false };
                 obj2[0] = obj9.resubscribeGenericSubscription(obj1, true);
                 return obj2;
-              } else if (lib.isPurchasedViaApple) {
+              } else if (tmp25.isPurchasedViaApple) {
                 obj6 = lib(7705);
                 dependencyMap = 3;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
                 obj3[0] = obj6.manageSubscription();
                 return obj3;
-              } else if (lib.isPurchasedViaGoogle) {
+              } else if (tmp25.isPurchasedViaGoogle) {
                 let obj5 = lib(4039);
-                closure_1_8.openURL(obj5.getExternalSubscriptionMethodUrl(lib.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
+                closure_1_8.openURL(obj5.getExternalSubscriptionMethodUrl(tmp25.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
               }
             }
           } else if (1 === tmp5) {
@@ -304,12 +299,12 @@ class PremiumSubscriptionHeader {
     items1[0] = closure_11;
     stateFromStores1 = obj3.useStateFromStores(items1, () => {
       if (subscription.isOnPlatformMatchingExternalPaymentGateway) {
-        if (subscription.isACOM) {
+        if (tmp.isACOM) {
           return null;
         } else {
-          if (null != subscription.paymentGatewayPlanId) {
-            if ("" !== subscription.paymentGatewayPlanId) {
-              return closure_1_11.getProduct(subscription.paymentGatewayPlanId);
+          if (null != tmp.paymentGatewayPlanId) {
+            if ("" !== tmp.paymentGatewayPlanId) {
+              return closure_1_11.getProduct(tmp.paymentGatewayPlanId);
             }
           }
           const _Error = Error;
@@ -379,7 +374,7 @@ class PremiumSubscriptionHeader {
     }
     tmp22 = !tmp21;
     if (!tmp21) {
-      tmp2Result3 = require("obj132");
+      tmp2Result3 = require("set");
       isAndroidResult = tmp2Result3.isAndroid();
       tmp24 = !isAndroidResult;
       if (isAndroidResult) {
@@ -461,7 +456,7 @@ class PremiumSubscriptionHeader {
                   c1 = 2;
                   c4 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_28(subscription);
+                  obj1[0] = closure_1_28(closure_1_0);
                   return obj1;
                 }
               } else if (1 === tmp7) {
@@ -532,16 +527,16 @@ class PremiumSubscriptionHeader {
           let obj = subscription(_undefined[44]);
           const result = obj.trackPremiumSubscriptionCancellationStarted(closure_0, analyticsLocations);
           if (obj2.isBoostOnlySubscription(closure_0)) {
-            let tmp6ResultResult = handleCancelSubscription(closure_0, analyticsLocations);
+            let tmp6ResultResult = closure_1_26(tmp, analyticsLocations);
           } else {
             obj = { subscription: null, mode: null, onContinue: null };
-            obj[0] = closure_0;
-            obj[1] = subscription(_undefined[47]).WhatYouLoseMode.CANCEL;
+            obj[0] = tmp;
+            obj[1] = subscription(tmp4[47]).WhatYouLoseMode.CANCEL;
             obj[2] = function onContinue(arg0) {
               return closure_1_26(closure_0, closure_1, arg0);
             };
-            tmp6ResultResult = callback(_undefined[46])(obj);
-            const tmp6Result = callback(_undefined[46]);
+            tmp6ResultResult = callback(tmp4[46])(obj);
+            const tmp6Result = callback(tmp4[46]);
           }
           return tmp6ResultResult;
         };
@@ -562,9 +557,9 @@ class PremiumSubscriptionHeader {
       obj15[0] = function onPress() {
         if (subscription.status === closure_1_14.ACCOUNT_HOLD) {
           let obj = subscription(_undefined[11]);
-          closure_1_8.openURL(obj.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
+          closure_1_8.openURL(obj.getExternalSubscriptionMethodUrl(tmp.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
         } else {
-          const hasActiveTrial = subscription.hasActiveTrial;
+          const hasActiveTrial = tmp.hasActiveTrial;
           obj = { navigation: null, analyticsLocation: null, analyticsLocations: null, showCurrentPlan: null, predicate: null };
           obj[0] = tmp2;
           obj = { page: null, section: null };
@@ -575,11 +570,13 @@ class PremiumSubscriptionHeader {
           obj[3] = !hasActiveTrial;
           let prop;
           if (hasActiveTrial) {
-            prop = subscription(_undefined[49]).excludeNitroOnlyPlansForActiveTrial;
+            prop = tmp10(tmp11[49]).excludeNitroOnlyPlansForActiveTrial;
           }
           obj[4] = prop;
           const result = subscription(_undefined[48]).launchPremiumPlanSelect(obj);
           const obj2 = subscription(_undefined[48]);
+          tmp10 = subscription;
+          tmp11 = _undefined;
         }
       };
       if (subscription.status === tmp17.ACCOUNT_HOLD) {
@@ -600,7 +597,9 @@ class PremiumSubscriptionHeader {
 ({ Image: closure_6, ImageBackground: error, Linking: closure_8, View: c9 } = get_ActivityIndicator);
 ({ AnalyticsPages: closure_12, AnalyticsSections: map1, SubscriptionStatusTypes: closure_14, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-let obj = { width: 51, height: 36 };
+let obj = { height: 35, width: 49 };
+obj = { height: 36, width: 51 };
+obj = { width: 51, height: 36 };
 let obj1 = { fontSize: 14, marginTop: 10, color: ThemesDefault.unsafe_rawColors.WHITE };
 let obj3 = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, header: { padding: 16 }, wumpusImg: { marginRight: 10 }, logoContainer: { flexDirection: "row", alignItems: "center" }, container: null, buttonContainer: null, buttonWrapper: null, cancelLink: null, desktopSubtext: null };
 let obj2 = { fontSize: 14, marginTop: 10, color: ThemesDefault.unsafe_rawColors.BLACK };
@@ -663,7 +662,7 @@ obj17[createCacheKey.ACTIVE] = registerAssetDefault22;
 obj17[createCacheKey.ERROR] = registerAssetDefault23;
 obj17[createCacheKey.RESUB] = registerAssetDefault24;
 obj12[require("getPremiumPlanItem").Branding.PREMIUM_GUILD] = obj17;
-let closure_22 = { [fn(4039).Branding.BUNDLE]: { [createCacheKey.ACTIVE]: obj, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [fn(4039).Branding.TIER_0]: { [createCacheKey.ACTIVE]: { height: 35, width: 29 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [fn(4039).Branding.TIER_1]: { [createCacheKey.ACTIVE]: { height: 35, width: 49 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [fn(4039).Branding.TIER_2]: { [createCacheKey.ACTIVE]: { height: 37, width: 49 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [fn(4039).Branding.PREMIUM_GUILD]: { [createCacheKey.ACTIVE]: { width: 51, height: 36 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj } };
+let closure_22 = { [arg1(4039).Branding.BUNDLE]: { [createCacheKey.ACTIVE]: obj, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4039).Branding.TIER_0]: { [createCacheKey.ACTIVE]: { height: 35, width: 29 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4039).Branding.TIER_1]: { [createCacheKey.ACTIVE]: { height: 35, width: 49 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4039).Branding.TIER_2]: { [createCacheKey.ACTIVE]: { height: 37, width: 49 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4039).Branding.PREMIUM_GUILD]: { [createCacheKey.ACTIVE]: { width: 51, height: 36 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj } };
 const obj18 = {};
 const obj19 = {};
 obj19[createCacheKey.ACTIVE] = registerAssetDefault25;
@@ -690,15 +689,17 @@ obj23[createCacheKey.ACTIVE] = registerAssetDefault31;
 obj23[createCacheKey.ERROR] = registerAssetDefault31;
 obj23[createCacheKey.RESUB] = registerAssetDefault32;
 obj18[require("getPremiumPlanItem").Branding.PREMIUM_GUILD] = obj23;
-let closure_24 = { [fn(4039).Branding.BUNDLE]: { height: 33, width: 205 }, [fn(4039).Branding.TIER_0]: { height: 32, width: 59 }, [fn(4039).Branding.TIER_1]: { height: 16, width: 156 }, [fn(4039).Branding.TIER_2]: { height: 32, width: 78 }, [fn(4039).Branding.PREMIUM_GUILD]: { height: 17, width: 184 } };
+let closure_24 = { [arg1(4039).Branding.BUNDLE]: { height: 33, width: 205 }, [arg1(4039).Branding.TIER_0]: { height: 32, width: 59 }, [arg1(4039).Branding.TIER_1]: { height: 16, width: 156 }, [arg1(4039).Branding.TIER_2]: { height: 32, width: 78 }, [arg1(4039).Branding.PREMIUM_GUILD]: { height: 17, width: 184 } };
 let closure_25 = { [createCacheKey.ACTIVE]: obj1, [createCacheKey.ERROR]: obj1, [createCacheKey.RESUB]: obj2 };
-let result = require("obj132").fileFinishedImporting("components_native/premium/PremiumSubscriptionDetails.tsx");
+let obj4 = { marginTop: 8, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let result = require("set").fileFinishedImporting("components_native/premium/PremiumSubscriptionDetails.tsx");
 
 export default function PremiumSubscriptionDetails(subscription) {
   subscription = subscription.subscription;
   ({ style, onClickManagePremiumGuild } = subscription);
   const tmp = callback5();
-  let obj = { subscriptionId: subscription.id, renewal: true, analyticsLocations: contextDefault().analyticsLocations, analyticsLocation: QUICK_SWITCHERDefault.PREMIUM_SUBSCRIPTION_DETAILS };
+  let obj = createSubscriptionInvoicePreview;
+  obj = { subscriptionId: subscription.id, renewal: true, analyticsLocations: contextDefault().analyticsLocations, analyticsLocation: QUICK_SWITCHERDefault.PREMIUM_SUBSCRIPTION_DETAILS };
   const first = callback(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
   let tmp7Result = null;
   if (null != first) {
@@ -706,9 +707,9 @@ export default function PremiumSubscriptionDetails(subscription) {
     obj[0] = style;
     obj1 = { style: null, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
     obj1[0] = tmp.title;
-    const intl = getSystemLocale.intl;
-    obj1[4] = intl.string(getSystemLocale.t.ITurwY);
-    const items = [callback3(Text.Text, obj1), , , , ];
+    const intl = tmp4(1236).intl;
+    obj1[4] = intl.string(tmp4(1236).t.ITurwY);
+    const items = [callback3(tmp4(4734).Text, obj1), , , , ];
     let tmp9Result = null != subscription.renewalMutations;
     if (tmp9Result) {
       tmp9Result = subscription.status !== constants3.CANCELED;
@@ -717,14 +718,14 @@ export default function PremiumSubscriptionDetails(subscription) {
       const obj2 = { subscription: null, renewalMutations: null };
       obj2[0] = subscription;
       obj2[1] = subscription.renewalMutations;
-      tmp9Result = callback3(SubscriptionRenewalMutationsNoticeDefault, obj2);
+      tmp9Result = tmp9(tmp2(7917), obj2);
     }
     items[1] = tmp9Result;
     tmp9Result = subscription.status === constants3.ACCOUNT_HOLD;
     if (tmp9Result) {
       const obj3 = { subscription: null };
       obj3[0] = subscription;
-      tmp9Result = callback3(SubscriptionAccountHoldNoticeDefault, obj3);
+      tmp9Result = tmp9(tmp2(7918), obj3);
     }
     items[2] = tmp9Result;
     const obj4 = { subscription: null, renewalInvoicePreview: null, onClickManagePremiumGuild: null };
@@ -734,11 +735,13 @@ export default function PremiumSubscriptionDetails(subscription) {
     items[3] = callback3(PremiumSubscriptionHeader, obj4);
     const obj5 = { style: null, variant: "text-sm/medium", children: null };
     obj5[0] = tmp.desktopSubtext;
-    const intl2 = getSystemLocale.intl;
-    obj5[2] = intl2.string(getSystemLocale.t["MTG+3O"]);
-    items[4] = callback3(Text.Text, obj5);
+    const intl2 = tmp4(1236).intl;
+    obj5[2] = intl2.string(tmp4(1236).t["MTG+3O"]);
+    items[4] = callback3(tmp4(4734).Text, obj5);
     obj[1] = items;
-    tmp7Result = callback(closure_9, obj);
+    tmp7Result = closure_17(closure_9, obj);
+    const tmp7 = closure_17;
+    const tmp8 = closure_9;
   }
   return tmp7Result;
 };
@@ -777,10 +780,12 @@ export const handleManageSubscription = function handleManageSubscription(subscr
     obj[3] = !hasActiveTrial;
     let prop;
     if (hasActiveTrial) {
-      prop = getPremiumBundledItemsFromProductId.excludeNitroOnlyPlansForActiveTrial;
+      prop = tmp9(7378).excludeNitroOnlyPlansForActiveTrial;
     }
     obj[4] = prop;
     const result = launchPremiumPlanSelect.launchPremiumPlanSelect(obj);
+    const obj2 = launchPremiumPlanSelect;
+    tmp9 = require;
   }
 };
 export { onResubscribeClick };

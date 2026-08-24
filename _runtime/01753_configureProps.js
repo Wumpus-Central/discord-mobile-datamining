@@ -2,18 +2,26 @@
 
 // Module 1753 (configureProps)
 import addLogBoxLog from "addLogBoxLog" /* 1658 */;
-import t from "t" /* 1665 */;
 import _mod1667 from "module_1667" /* 1667 */;
 import isReanimated3 from "isReanimated3" /* 1698 */;
 import isJest from "isJest" /* 1657 */;
 
 function configureProps() {
   for (const key10008 in _mod1667.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST) {
+    let tmp8 = key10008;
+    let tmp9 = require;
+    let tmp10 = dependencyMap;
     if (!(key10008 in _mod1667.PropsAllowlists.UI_THREAD_PROPS_WHITELIST)) {
       continue;
     } else {
+      let tmp = globalThis;
       let _HermesInternal = HermesInternal;
-      let reanimatedError = new t.ReanimatedError("Property `" + key10008 + "` was whitelisted both as UI and native prop. Please remove it from one of the lists.");
+      let str = "` was whitelisted both as UI and native prop. Please remove it from one of the lists.";
+      let str2 = "Property `";
+      let tmp2 = new.target;
+      let tmp3 = new.target;
+      let reanimatedError = new tmp9(1665).ReanimatedError("Property `" + key10008 + "` was whitelisted both as UI and native prop. Please remove it from one of the lists.");
+      let tmp5 = reanimatedError;
       throw reanimatedError;
     }
   }
@@ -44,21 +52,21 @@ export const addWhitelistedUIProps = function addWhitelistedUIProps(arg0) {
 export const configureReanimatedLogger = function configureReanimatedLogger(level) {
   addLogBoxLog.updateLoggerConfig(level);
   if (!closure_2) {
-    isReanimated3.executeOnUIRuntimeSync(addLogBoxLog.updateLoggerConfig)(level);
-    const tmpResult = isReanimated3;
+    tmp(1698).executeOnUIRuntimeSync(tmp(1658).updateLoggerConfig)(level);
+    const tmpResult = tmp(1698);
   }
 };
 export const adaptViewConfig = function adaptViewConfig(viewConfig) {
   const uiViewClassName = viewConfig.uiViewClassName;
   let obj = set;
   if (!set.has(uiViewClassName)) {
+    obj = {};
     const _Object = Object;
     const keys = Object.keys(viewConfig.validAttributes);
-    const item = keys.forEach((item, index) => {
+    const item = keys.forEach((arg0) => {
       if (!tmp3) {
-        obj[item] = true;
+        obj[arg0] = true;
       }
-      tmp3 = item in obj(dependencyMap[1]).PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST || item in obj(dependencyMap[1]).PropsAllowlists.UI_THREAD_PROPS_WHITELIST;
     });
     const _Object2 = Object;
     obj = {};

@@ -1,10 +1,10 @@
 // === Module 8638: useFastestListComputedStyles ===
 
 // Module 8638 (useFastestListComputedStyles)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 
-const result = require("obj132").fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
+const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
 
 export default function useFastestListComputedStyles(style) {
   style = style.style;
@@ -20,7 +20,7 @@ export default function useFastestListComputedStyles(style) {
     } else {
       obj = { flex: 1 };
     }
-    const flattenResult = StyleSheet.flatten(obj);
+    const flattenResult = closure_1_1.flatten(obj);
     let num;
     if (flattenResult != null) {
       num = flattenResult.marginStart;

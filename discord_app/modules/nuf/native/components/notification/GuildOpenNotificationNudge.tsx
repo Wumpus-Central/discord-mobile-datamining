@@ -2,24 +2,24 @@
 
 // Module 15780 (GuildOpenNotificationNudge)
 import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 15781 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
-import set from "set" /* 11578 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "handleConnectionOpen" /* 4197 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_9 from "set" /* 11578 */;
 import { PermissionPromptType } from "set" /* 11578 */;
 import EventActionType from "EventActionType" /* 11582 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ EventActionLocation: unpackModuleId, NotificationNudgeSurface: closure_12 } = EventActionType);
 ({ UserNotificationSettings: map1, ZERO_STRING_GUILD_ID: closure_14 } = ME);
 let c16 = "guild-open-notification-nudge-key";
 let closure_17 = { cooldownDurationMs: 5184000000 };
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx");
 
 export default function GuildOpenNotificationNudge(guildId) {
   guildId = guildId.guildId;
@@ -85,8 +85,8 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   stateFromStores3 = stateFromStores(589).useStateFromStores(items3, () => {
     let result = null != stateFromStores;
     if (result) {
-      const guild = closure_1_6.getGuild(stateFromStores);
-      result = stateFromStores(ref[15]).isBlockedByOnboarding(guild, selfMember.getSelfMember(stateFromStores));
+      const guild = closure_1_6.getGuild(tmp);
+      result = stateFromStores(ref[15]).isBlockedByOnboarding(guild, selfMember.getSelfMember(tmp));
       const obj = stateFromStores(ref[15]);
     }
     return result;
@@ -162,7 +162,7 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     }
     if (tmp2) {
       let obj = stateFromStores(ref[19]);
-      const result = obj.setPushPermissionReactivationSeen(PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET);
+      const result = obj.setPushPermissionReactivationSeen(closure_1_10.GUILD_OPEN_BOTTOM_SHEET);
       obj = { guildId: null, markAsDismissed: null };
       obj[0] = stateFromStores;
       obj[1] = closure_5;
@@ -170,5 +170,4 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
       const obj2 = stateFromStores3(ref[20]);
     }
   }, items6);
-  const obj8 = stateFromStores(589);
 };

@@ -2,21 +2,22 @@
 
 // Module 15916 (BaseMessagesScreen)
 import _modDef11531 from "module_11531" /* 11531 */;
-import noop from "noop" /* 19 */;
-import handleReaction from "handleReaction" /* 4971 */;
-import prototype from "prototype" /* 11510 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleReaction" /* 4971 */;
+import closure_5 from "prototype" /* 11510 */;
 import { SearchResultContentEntityTypes as closure_6 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
 
 export default function BaseMessagesScreen(data) {
   data = data.data;
   const searchContext = data.searchContext;
   const tab = data.tab;
   const isFocused = data.isFocused;
-  let isNextPageLoading;
+  let isNextPageLoading = data.isFirstPageLoading;
+  isNextPageLoading = undefined;
   let isHistoricalIndexing;
   let documentsIndexed;
   let hasError;
@@ -113,7 +114,8 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;
   ({ searchContext, channelId, index } = messageId);
   message = message.getMessage(messageId);
-  const obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
+  let obj = _modDef11531;
+  obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
   let id;
   if (message != null) {
     const author = message.author;

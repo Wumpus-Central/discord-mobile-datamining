@@ -2,10 +2,10 @@
 
 // Module 6353 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_objectWithoutProperties" /* 109 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -66,8 +66,9 @@ let items = [
       ({ maskElement, children } = props);
       const tmp = callback(props, MaskedView);
       if (importAllResult.isValidElement(maskElement)) {
+        let obj = {};
         const merged = Object.assign(tmp);
-        let obj = { pointerEvents: "none", style: null, children: null };
+        obj = { pointerEvents: "none", style: null, children: null };
         obj[1] = absoluteFill.absoluteFill;
         obj[2] = maskElement;
         const items = [callback4(closure_6, obj), children];

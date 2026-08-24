@@ -1,7 +1,7 @@
 // === Module 11852: setStoredContacts ===
 
 // Module 11852 (setStoredContacts)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import Storage4 from "Storage" /* 595 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -17,7 +17,7 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", (arg0) => {
   const Storage = _require(595).Storage;
   const result = Storage.set(V2_DCD_CONTACTS_STORAGE_KEY, arg0);
   _require(705).batchUpdates(() => {
-    obj.setState((arg0) => {
+    closure_1_7.setState((arg0) => {
       obj = {};
       const merged = Object.assign(arg0);
       obj.storedContacts = closure_0;
@@ -26,6 +26,7 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", (arg0) => {
   });
   obj = _require(705);
   dispatcherDefault.wait(() => {
+    obj = closure_1_1(closure_1_2[2]);
     obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
     return obj.dispatch(obj);
   });
@@ -44,21 +45,20 @@ Storage2.asyncGet("ContactSyncDMListCTADismissed", (arg0) => {
     _require = true;
   }
   _require(705).batchUpdates(() => closure_1_7.setState({ dmListCTADismissed: c0 }));
-  const tmpResult = _require(705);
 });
 const Storage3 = Storage4.Storage;
 Storage3.asyncGet("ContactSyncUpsellCTADismissed", (arg0) => {
   const _require = arg0;
   _require(705).batchUpdates(() => closure_1_7.setState({ upsellCTADismissed: closure_0 }));
 });
-let result = obj132.fileFinishedImporting("modules/contact_sync/native/ContactSyncPersistedStore.tsx");
+let result = set.fileFinishedImporting("modules/contact_sync/native/ContactSyncPersistedStore.tsx");
 
 export const setStoredContacts = function setStoredContacts(arg0) {
   const _require = arg0;
   const Storage = _require(595).Storage;
   const result = Storage.set(V2_DCD_CONTACTS_STORAGE_KEY, arg0);
   _require(705).batchUpdates(() => {
-    obj.setState((arg0) => {
+    closure_1_7.setState((arg0) => {
       obj = {};
       const merged = Object.assign(arg0);
       obj.storedContacts = closure_0;
@@ -67,6 +67,7 @@ export const setStoredContacts = function setStoredContacts(arg0) {
   });
   obj = _require(705);
   dispatcherDefault.wait(() => {
+    obj = closure_1_1(closure_1_2[2]);
     obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
     return obj.dispatch(obj);
   });
@@ -77,7 +78,7 @@ export const deleteStoredContacts = function deleteStoredContacts() {
   if (str == null) {
     str = "";
   }
-  const Storage2 = Storage4.Storage;
+  const Storage2 = tmp(595).Storage;
   Storage2.remove(V2_DCD_CONTACTS_STORAGE_KEY);
   batchUpdates.batchUpdates(() => {
     state.setState((arg0) => {

@@ -2,12 +2,11 @@
 
 // Module 7719 (purchaseUpdatedListener)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import NativeModules from "NativeModules" /* 7707 */;
 import _mod7709 from "module_7709" /* 7709 */;
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 
-export const purchaseUpdatedListener = (arg0) => {
+export const purchaseUpdatedListener = (arg0, arg1) => {
   let fn = arg0;
   const _require = arg0;
   dependencyMap = arg1;
@@ -22,25 +21,28 @@ export const purchaseUpdatedListener = (arg0) => {
   if (_require(7709).isAndroid) {
     const androidModule = tmp(7709).getAndroidModule();
     const tmpResult = tmp(7709);
-    androidModule.startListening().catch((error) => {
+    androidModule.startListening().catch((arg0) => {
       if (closure_1) {
-        tmp(error);
+        tmp(arg0);
       } else {
-        throw error;
+        throw arg0;
       }
     });
     const startListeningResult = androidModule.startListening();
   }
   return obj2.addListener("purchase-updated", fn);
 };
-export const purchaseErrorListener = (arg0) => new NativeEventEmitter(_mod7709.getNativeModule()).addListener("purchase-error", arg0);
+export const purchaseErrorListener = (arg0) => {
+  const obj = _mod7709;
+  return new NativeEventEmitter(_mod7709.getNativeModule()).addListener("purchase-error", arg0);
+};
 export const promotedProductListener = (arg0) => {
   let addListenerResult = null;
   if (_mod7709.isIos) {
-    let tmpResult = NativeModules;
+    let tmpResult = tmp(7707);
     addListenerResult = null;
     if (!tmpResult.isIosStorekit2()) {
-      tmpResult = _mod7709;
+      tmpResult = tmp(7709);
       const obj3 = new NativeEventEmitter(tmpResult.getIosModule());
       addListenerResult = obj3.addListener("iap-promoted-product", arg0);
     }
@@ -50,10 +52,10 @@ export const promotedProductListener = (arg0) => {
 export const transactionListener = (arg0) => {
   let addListenerResult = null;
   if (_mod7709.isIos) {
-    let tmpResult = NativeModules;
+    let tmpResult = tmp(7707);
     addListenerResult = null;
     if (tmpResult.isIosStorekit2()) {
-      tmpResult = _mod7709;
+      tmpResult = tmp(7709);
       const obj3 = new NativeEventEmitter(tmpResult.getIosModule());
       addListenerResult = obj3.addListener("iap-transaction-updated", arg0);
     }

@@ -1,11 +1,11 @@
 // === Module 14297: AuthorizedAppScreen ===
 
 // Module 14297 (AuthorizedAppScreen)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
 
 export default function AuthorizedAppScreen() {
   let obj = settingNavigationRoute(7385);

@@ -1,7 +1,7 @@
 // === Module 14189: useGoreContentNonFriendsDmSettingValue ===
 
 // Module 14189 (useGoreContentNonFriendsDmSettingValue)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
 import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5025 */;
@@ -16,14 +16,15 @@ function useGoreContentNonFriendsDmSettingValue() {
   return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentNonFriendDm)();
 }
 function onGoreContentNonFriendsDmOnPress() {
-  let obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
+  let obj = resolveGoreSettingWithDefaults;
+  obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["16/3Bi"]);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t["Yh+HX1"]);
   obj[2] = function handlePress(goreContentNonFriendDm) {
-    callback(table[3]);
-    const obj = { goreContentNonFriendDm };
+    let obj = callback(table[3]);
+    obj = { goreContentNonFriendDm };
     return obj.updateGoreContentSetting(obj);
   };
   obj[3] = obj.getGoreContentSettingOrDefault().goreContentNonFriendDm;
@@ -48,7 +49,26 @@ const pressable = createToggle.createPressable({
   },
   useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
 });
-let result = obj132.fileFinishedImporting("modules/user_settings/defs/native/GoreMediaFiltersNonFriendsDMsSetting.tsx");
+let obj = {
+  useTitle: function getTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Yh+HX1"]);
+  },
+  parent: MobileUserSettings.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
+  useTrailing: useGoreContentNonFriendsDmSettingValue,
+  onPress: onGoreContentNonFriendsDmOnPress,
+  useSearchTerms() {
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const intl2 = getSystemLocale.intl;
+    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
+    const intl3 = getSystemLocale.intl;
+    items[2] = intl3.string(getSystemLocale.t["K0OWP+"]);
+    return items;
+  },
+  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
+};
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/GoreMediaFiltersNonFriendsDMsSetting.tsx");
 
 export default pressable;
 export { useGoreContentNonFriendsDmSettingValue };

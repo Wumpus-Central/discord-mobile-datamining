@@ -10,11 +10,11 @@ import registerAssetDefault from "registerAsset" /* 17077 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = { image: { alignSelf: "center", marginTop: 32 }, body: { marginTop: 16 } };
-const result = require("obj132").fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
+const result = require("set").fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
 
 export default function StreamFullAlert(arg0) {
   let obj = mapped;
@@ -23,16 +23,17 @@ export default function StreamFullAlert(arg0) {
   if (errorInfo != null) {
     errorCode = errorInfo.errorCode;
   }
-  const intl = getSystemLocale.intl;
+  const intl = tmp(1236).intl;
   obj = {};
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.ejOT95, { errorCode });
   const merged = Object.assign(arg0);
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp(1236).intl;
   obj.title = intl2.string(getSystemLocale.t.GzjdO5);
   obj = { variant: "text-md/normal", style: closure_6.body, children: null };
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp(1236).intl;
   obj[2] = intl3.string(getSystemLocale.t.VVZDBL);
   const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult }), ];
+  obj1 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };
   const tmp6 = componentDidMountDefault;
   items[2] = callback(Image, { source: registerAssetDefault, style: closure_6.image });
   obj.children = items;

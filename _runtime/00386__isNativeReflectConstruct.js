@@ -3,10 +3,10 @@
 // Module 386 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import AnimationDefault from "Animation" /* 379 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
+import closure_1 from "_classCallCheck" /* 41 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import closure_4 from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 const DecayAnimation = global;
@@ -67,6 +67,8 @@ let items = [
     key: "start",
     value: function start(_lastValue, _onUpdate, arg2, arg3, self) {
       self = this;
+      self = this;
+      self = this;
       const tmp = callback3(callback2(self.prototype), "start", this);
       closure_1 = tmp;
       let fn = tmp;
@@ -107,7 +109,8 @@ let items = [
   {
     key: "stop",
     value: function stop() {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback3(callback2(self.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);

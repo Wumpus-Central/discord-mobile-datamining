@@ -15,7 +15,7 @@ prototype["isHandoffAvailable"] = function isHandoffAvailable() {
   return false;
 };
 Object.defineProperty(prototype, "user", {
-  get: function user(channel) {
+  get: function user(xuio0C) {
     return null;
   },
   set: undefined
@@ -28,6 +28,6 @@ Object.defineProperty(prototype, "key", {
 });
 BrowserHandoffStore.displayName = "BrowserHandoffStore";
 const browserHandoffStore = new BrowserHandoffStore(dispatcherDefault, {});
-const result = require("obj132").fileFinishedImporting("stores/BrowserHandoffStore.native.tsx");
+const result = require("set").fileFinishedImporting("stores/BrowserHandoffStore.native.tsx");
 
 export default browserHandoffStore;

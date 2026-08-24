@@ -1,12 +1,12 @@
 // === Module 11741: GuildPowerupsMultiPerkCard ===
 
 // Module 11741 (GuildPowerupsMultiPerkCard)
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
 
 export default function GuildPowerupsMultiPerkCard(guildId) {
   guildId = guildId.guildId;
@@ -33,6 +33,7 @@ export default function GuildPowerupsMultiPerkCard(guildId) {
       badge = badge.badge;
       obj[7] = badge;
       jsx(listing(11740), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
+      const tmp6 = jsx;
     }
   }
   return tmp5;

@@ -34,10 +34,10 @@ function getMatchRanking(arg0, arg1, keepDiacritics) {
       NO_MATCH = obj.NO_MATCH;
     } else {
       let parts = str2.split(" ");
-      let item = parts.forEach((item, index) => {
-        const parts = item.split("-");
-        item = parts.forEach((item, index) => {
-          closure_0 = closure_0 + item.substr(0, 1);
+      let item = parts.forEach((str) => {
+        const parts = str.split("-");
+        const item = parts.forEach((str) => {
+          closure_0 = closure_0 + str.substr(0, 1);
         });
       });
       if ("".includes(formatted)) {
@@ -46,7 +46,7 @@ function getMatchRanking(arg0, arg1, keepDiacritics) {
         let num4 = 0;
         let num5 = 0;
         let num6 = -1;
-        if (0 < length) {
+        if (0 < str2.length) {
           while (str2[num4] !== tmp5) {
             let sum = num4 + 1;
             num4 = sum;
@@ -64,13 +64,16 @@ function getMatchRanking(arg0, arg1, keepDiacritics) {
           let tmp17 = num6;
           let tmp18 = num5;
           let tmp19 = num6;
-          if (1 < length3) {
+          if (1 < formatted.length) {
             while (true) {
               let length2 = str2.length;
+              let tmp9 = tmp16;
+              let tmp10 = num8;
               let tmp11 = tmp17;
               let sum2 = tmp16;
               let num7 = -1;
               if (tmp17 < length2) {
+                let tmp13 = tmp11;
                 while (str2[tmp11] !== tmp8) {
                   let sum1 = tmp11 + 1;
                   tmp11 = sum1;
@@ -93,9 +96,7 @@ function getMatchRanking(arg0, arg1, keepDiacritics) {
             NO_MATCH = obj.NO_MATCH;
           }
           NO_MATCH = obj.MATCHES + tmp18 / formatted.length * (1 / (tmp19 - num6));
-          length3 = formatted.length;
         }
-        length = str2.length;
       }
     }
   }
@@ -133,7 +134,12 @@ if (_extends) {
           ({ rank: rank2, keyIndex: keyIndex2 } = arg1);
           if (rank === rank2) {
             if (keyIndex === keyIndex2) {
-              const num2 = tmp(arg0, arg1);
+              let num2 = tmp(arg0, arg1);
+            } else {
+              num2 = 1;
+              if (keyIndex < keyIndex2) {
+                num2 = -1;
+              }
             }
           } else {
             let num = 1;
@@ -144,18 +150,21 @@ if (_extends) {
           }
         });
       }
-      return fn(valueResult.reduce(function reduceItemsToRanked(acc, item, index) {
+      return fn(valueResult.reduce(function reduceItemsToRanked(arr) {
         let str3;
-        let arr = closure_2;
+        arr = closure_2;
         if (closure_2) {
           const items = [];
           let num4 = 0;
-          if (0 < length) {
+          if (0 < arr.length) {
             while (true) {
               let tmp6 = arr[num4];
+              let tmp7 = num4;
               if (typeof tmp6 === "string") {
                 let defaultResult = closure_1_5;
               } else {
+                let tmp27 = query;
+                let tmp28 = closure_1_5;
                 defaultResult = query.default({}, closure_1_5, tmp6);
               }
               str3 = tmp6;
@@ -166,16 +175,16 @@ if (_extends) {
                 break;
               } else {
                 let str3Result = null;
-                if (null != item) {
+                if (null != arg1) {
                   let _Object = Object;
                   let call = hasOwnProperty.call;
-                  if (typeof call === "unknown" ? hasOwnProperty(str3) : call(item, str3)) {
-                    str3Result = item[str3];
+                  if (typeof call === "unknown" ? hasOwnProperty(str3) : call(arg1, str3)) {
+                    str3Result = arg1[str3];
                   } else {
                     str3Result = null;
                     if (str3.includes(".")) {
                       let parts = str3.split(".");
-                      let items1 = [item];
+                      let items1 = [arg1];
                       let length2 = parts.length;
                       let num5 = 0;
                       let arr5 = items1;
@@ -185,11 +194,15 @@ if (_extends) {
                           let tmp11 = parts[num5];
                           let items2 = [];
                           let length3 = arr5.length;
+                          let tmp12 = num5;
+                          let tmp13 = arr5;
                           let num6 = 0;
                           let tmp14 = items2;
                           if (0 < length3) {
                             do {
                               let tmp15 = arr5[num6];
+                              let tmp16 = num6;
+                              let tmp17 = items2;
                               let combined = items2;
                               if (null != tmp15) {
                                 let _Object2 = Object;
@@ -247,18 +260,19 @@ if (_extends) {
                     items4 = items5;
                   }
                 }
+                let tmp21 = items4;
               }
             }
-            str3Result = str3(item);
+            str3Result = str3(arg1);
           }
           obj = { rankedValue: null, rank: null, keyIndex: -1, keyThreshold: null };
-          obj[0] = item;
+          obj[0] = arg1;
           obj[1] = closure_1_2.NO_MATCH;
-          obj[3] = obj.threshold;
-          let reduced = items.reduce((acc, item, index) => {
-            ({ rank, rankedValue, keyIndex, keyThreshold } = acc);
-            ({ itemValue, attributes } = item);
-            const tmp = baseSort(itemValue, closure_0, closure_1);
+          obj[3] = tmp2.threshold;
+          let reduced = items.reduce((arg0, arg1, arg2) => {
+            ({ rank, rankedValue, keyIndex, keyThreshold } = arg0);
+            ({ itemValue, attributes } = arg1);
+            const tmp = closure_1_4(itemValue, closure_0, closure_1);
             ({ minRanking, maxRanking, threshold } = attributes);
             if (tmp >= minRanking) {
               minRanking = tmp;
@@ -267,19 +281,18 @@ if (_extends) {
               }
             }
             if (minRanking > rank) {
-              keyIndex = index;
+              keyIndex = arg2;
               rankedValue = itemValue;
               keyThreshold = threshold;
               rank = minRanking;
             }
             return { rankedValue, rank, keyIndex, keyThreshold };
           }, obj);
-          length = arr.length;
         } else {
           reduced = { rankedValue: null, rank: null, keyIndex: -1, keyThreshold: null };
-          reduced[0] = item;
-          reduced[1] = baseSort(item, tmp, obj);
-          reduced[3] = obj.threshold;
+          reduced[0] = arg1;
+          reduced[1] = baseSort(arg1, tmp, tmp2);
+          reduced[3] = tmp2.threshold;
         }
         let keyThreshold = reduced.keyThreshold;
         if (undefined === keyThreshold) {
@@ -287,12 +300,12 @@ if (_extends) {
         }
         if (reduced.rank >= keyThreshold) {
           obj1 = { item: null, index: null };
-          obj1[0] = item;
-          obj1[1] = index;
-          acc.push(query.default({}, reduced, obj1));
+          obj1[0] = arg1;
+          obj1[1] = arg2;
+          arr.push(query.default({}, reduced, obj1));
         }
-        return acc;
-      }, [])).map((item, index) => item.item);
+        return arr;
+      }, [])).map((item) => item.item);
     }
     _module1 = tmp4;
     obj = { CASE_SENSITIVE_EQUAL: 7, EQUAL: 6, STARTS_WITH: 5, WORD_STARTS_WITH: 4, CONTAINS: 3, ACRONYM: 2, MATCHES: 1, NO_MATCH: 0 };

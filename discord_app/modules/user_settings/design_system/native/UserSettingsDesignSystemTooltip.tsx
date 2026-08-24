@@ -4,20 +4,22 @@
 import Text from "Text" /* 4734 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
 import Layer from "Layer" /* 7126 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function Content() {
   let obj = React;
   const tmp2 = first2(React.useState(false), 2);
   const first = tmp2[0];
+  let first1 = first;
   dependencyMap = tmp2[1];
+  first1 = undefined;
   const tmp4 = first2(React.useState(false), 2);
-  const first1 = tmp4[0];
+  first1 = tmp4[0];
   const effect = React.useEffect(() => {
     const obj = first1(8671);
     if (first1) {
@@ -54,6 +56,7 @@ function Content() {
   }, items1);
   obj1 = first1(9270);
   const tooltip = obj1.useTooltip(ref, memo);
+  obj = { children: null };
   obj = { style: tmp.container, children: callback2(first1(4745).Button, obj1) };
   obj1 = {
     ref,
@@ -80,11 +83,11 @@ class TooltipNote {
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1 } });
-let result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx");
 
 export default function UserSettingsDesignSystemTooltip() {
-  { style: callback4().flex, bottom: true, children: null };
-  const obj = { children: callback2(Content, {}) };
+  let obj = { style: callback4().flex, bottom: true, children: null };
+  obj = { children: callback2(Content, {}) };
   obj[2] = callback2(Layer.LayerScope, obj);
   return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };

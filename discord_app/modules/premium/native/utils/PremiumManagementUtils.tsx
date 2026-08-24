@@ -1,7 +1,7 @@
 // === Module 7374: defaultMobileWebNitroManagementSuccessCallback ===
 
 // Module 7374 (defaultMobileWebNitroManagementSuccessCallback)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import jsxProd from "jsxProd" /* 21 */;
 import sum from "sum" /* 505 */;
@@ -14,6 +14,7 @@ function defaultMobileWebNitroManagementSuccessCallback() {
 }
 function defaultMobileWebNitroManagementFailureCallback(arg0) {
   logger.error("Failed to open mobile web Nitro Management page, error response: ", arg0);
+  obj = _modDef4656;
   obj = { title: null, body: null, hideActionSheet: true };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.NrBVjw);
@@ -27,7 +28,7 @@ const jsx = jsxProd.jsx;
 let closure_6 = new timestampDefault("PremiumManagementUtils");
 let obj = { IN_APP: "manage_in_app", IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY: "manage_in_external_mobile_payment_gateway", IN_WEB: "manage_in_web" };
 const tmp2 = new timestampDefault("PremiumManagementUtils");
-let result = obj132.fileFinishedImporting("modules/premium/native/utils/PremiumManagementUtils.tsx");
+let result = set.fileFinishedImporting("modules/premium/native/utils/PremiumManagementUtils.tsx");
 
 export const MobileWebDestinationTypes = { PREMIUM_MANAGEMENT: "premium_management" };
 export const PremiumManagementMethod = obj;
@@ -89,11 +90,11 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 obj[0] = { justifyContent: "flex-start" };
                 obj[1] = function onPress() {
                   if (null != _null) {
-                    _null(dependencyMap[8]);
+                    obj = _null(closure_1_2[8]);
                     obj = { loadId: null };
-                    obj[0] = _null.loadId;
-                    const tmp4 = null != _null.onSuccessCallback ? _null.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
-                    const tmp5 = null != _null.onFailureCallback ? _null.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
+                    obj[0] = tmp.loadId;
+                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : closure_1_8;
+                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : closure_1_9;
                     const result = obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
                   }
                 };
@@ -101,14 +102,15 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 const t = tmp13(1236).t;
                 obj[2] = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
                 jsx(tmp13(7377).LinkButton, { containerStyle: null, onPress: null, text: null, variant: "text-sm/semibold" });
+                const tmp9 = jsx;
               } else {
                 function manageExternalNitroSubscription() {
                   if (null != _null) {
-                    _null(dependencyMap[8]);
+                    obj = _null(closure_1_2[8]);
                     obj = { loadId: null };
-                    obj[0] = _null.loadId;
-                    const tmp4 = null != _null.onSuccessCallback ? _null.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
-                    const tmp5 = null != _null.onFailureCallback ? _null.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
+                    obj[0] = tmp.loadId;
+                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : closure_1_8;
+                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : closure_1_9;
                     return obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
                   }
                 }

@@ -2,15 +2,15 @@
 
 // Module 13543 (Badge)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
 import PX_16 from "PX_16" /* 1299 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-let require = fn;
+let require = arg1;
 class Badge {
   constructor(arg0) {
     value = global.value;
@@ -134,39 +134,43 @@ class Badge {
 }
 ({ BADGE_MASK_SIZE: closure_6, BADGE_MASK_UNREAD_SIZE: error, BADGE_PADDING, BADGE_SIZE } = PX_16);
 const BADGE_SIZE_UNREAD = PX_16.BADGE_SIZE_UNREAD;
+createCacheKey = { badgeMask: createCacheKey, badge: null, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
 createCacheKey = { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 };
 createCacheKey[1] = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: ThemesDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 let obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: ThemesDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
-obj132 = obj132.isAndroid();
+set = set.isAndroid();
 const space = ThemesDefault.space;
-obj2[3] = obj132 ? space.PX_12 : space.PX_16;
+obj2[3] = set ? space.PX_12 : space.PX_16;
 obj2[4] = require("ME").Fonts.PRIMARY_BOLD;
 let str;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   str = "center";
 }
 obj2[6] = str;
 createCacheKey[2] = obj2;
 const obj3 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: ThemesDefault.colors.WHITE };
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   const obj4 = { lineHeight: null, textAlignVertical: "center" };
   obj4[0] = ThemesDefault.space.PX_12;
-  obj132 = obj4;
+  set = obj4;
 } else {
-  obj132 = {};
+  set = {};
 }
-Object.assign(obj132);
+set = Object.assign(set);
 obj3.textAlign = "center";
 createCacheKey[3] = obj3;
-obj132 = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: ThemesDefault.colors.WHITE };
-createCacheKey[4] = obj132;
+set = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: ThemesDefault.colors.WHITE };
+createCacheKey[4] = set;
+let obj1 = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: ThemesDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-obj132 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-createCacheKey[6] = obj132;
+set = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+createCacheKey[6] = set;
+const obj7 = { backgroundColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
 createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+const obj9 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = obj132.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
+const result = set.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 
 export default Badge;
 export const MaskedBadge = function MaskedBadge(maskStyle) {
@@ -178,6 +182,7 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
   if (flag === undefined) {
     flag = false;
   }
+  closure_3 = undefined;
   const tmp = callback();
   closure_3 = tmp;
   let items = [tmp, maskStyle, flag, value];

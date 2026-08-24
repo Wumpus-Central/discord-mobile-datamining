@@ -4,17 +4,17 @@
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import isSubscriptionGated from "isSubscriptionGated" /* 1981 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_5 from "participantFromServer" /* 1390 */;
+import closure_6 from "isSubscriptionGated" /* 1981 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_9 from "generateOldThreadCutoff" /* 4772 */;
+import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
 import hairlineWidth from "hairlineWidth" /* 10055 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ CHANNEL_MARGIN_VERTICAL: unpackModuleId, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = hairlineWidth);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -23,14 +23,15 @@ let closure_15 = createCacheKey.createStyles((arg0, arg1) => {
   if (arg2 === undefined) {
     flag = false;
   }
-  let obj = { position: "relative", marginVertical: closure_11, marginHorizontal: 8, borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };
+  let obj = { container: null, selected: null, selectedBorder: null, row: null, rowWithSubtitle: null, channelLabel: null, channelLabelText: null };
+  obj = { position: "relative", marginVertical: closure_11, marginHorizontal: 8, borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
   obj[1] = obj;
   obj1 = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: null, borderRadius: null };
   let BORDER_MUTED;
   if (!flag) {
-    BORDER_MUTED = ThemesDefault.colors.BORDER_MUTED;
+    BORDER_MUTED = tmp(712).colors.BORDER_MUTED;
   }
   obj1[6] = BORDER_MUTED;
   obj1[7] = ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS;
@@ -54,9 +55,10 @@ const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   ({ muted, selected, subtitle, isSuggestedSection } = channel);
   let id;
+  let guild_id;
   let tmp3 = callback2(muted, selected, isSuggestedSection(id[16])("TextChannel"));
   id = channel.id;
-  const guild_id = channel.guild_id;
+  guild_id = channel.guild_id;
   const ref = guild_id.useRef(null);
   let obj = channel(id[17]);
   const items = [closure_7, closure_6, closure_8, closure_9, closure_10, closure_5];
@@ -69,10 +71,10 @@ const memoResult = importAllResult.memo((channel) => {
     let num = 0;
     if (null != channel) {
       num = 0;
-      if (null != channel.id) {
+      if (null != tmp2.id) {
         num = 0;
-        if ("" !== channel.id) {
-          const embeddedActivitiesForChannel = closure_1_5.getEmbeddedActivitiesForChannel(channel.id);
+        if ("" !== tmp2.id) {
+          const embeddedActivitiesForChannel = closure_1_5.getEmbeddedActivitiesForChannel(tmp2.id);
           let num2;
           if (embeddedActivitiesForChannel != null) {
             num2 = embeddedActivitiesForChannel.length;
@@ -118,7 +120,7 @@ const memoResult = importAllResult.memo((channel) => {
   tmp5Result = tmp5(tmp2[24]);
   const isActivitiesInTextEnabled = tmp5Result.useIsActivitiesInTextEnabled(id);
   if (channel.isRulesChannel) {
-    let channelIcon = isSuggestedSection(tmp2[12]);
+    let channelIcon = tmp(tmp2[12]);
     let BookCheckIcon = tmp5(tmp2[13]).BookCheckIcon;
   } else {
     channelIcon = tmp5(tmp2[14]).getChannelIcon(channel, { isRulesChannel: false });
@@ -172,24 +174,24 @@ const memoResult = importAllResult.memo((channel) => {
     obj5.children = tmp5(tmp2[31]).getChannelSubtitleData(subtitle).subtitle;
     items10[1] = tmp16(tmp5(tmp2[26]).Text, obj5);
     obj4[1] = items10;
-    tmp19Result = callback(View, obj4);
+    tmp19Result = tmp19(tmp25, obj4);
     const tmp5Result6 = tmp5(tmp2[31]);
   }
   items9[1] = tmp19Result;
   items9[2] = callback(isSuggestedSection(id[32]), { channel, isChannelSelected: selected, muted, isSubscriptionGated, needSubscriptionToAccess, enableActivities: isActivitiesInTextEnabled });
   obj3[2] = items9;
-  items7[1] = callback(View, obj3);
+  items7[1] = closure_14(View, obj3);
   obj[8] = items7;
-  children[1] = callback(channel(id[29]).AnimatedPressableHighlight, obj);
+  children[1] = closure_14(channel(id[29]).AnimatedPressableHighlight, obj);
   if (selected) {
     const obj6 = { targetRef: null, channelType: null };
     obj6[0] = ref;
     obj6[1] = channel.type;
-    selected = tmp16(isSuggestedSection(tmp2[33]), obj6);
+    selected = tmp16(tmp(tmp2[33]), obj6);
   }
   children[2] = selected;
-  return callback(tmpResult, { children });
+  return closure_14(tmpResult, { children });
 });
-let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/items/TextChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/TextChannel.tsx");
 
 export default memoResult;

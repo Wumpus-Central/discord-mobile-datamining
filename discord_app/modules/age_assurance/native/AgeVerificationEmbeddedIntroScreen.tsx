@@ -4,17 +4,18 @@
 import ThemesDefault from "Themes" /* 712 */;
 import messagesProxyDefault from "messagesProxy" /* 2853 */;
 import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 6697 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { marginTop: ThemesDefault.space.PX_16, textAlign: "center" };
+createCacheKey = { header: { textAlign: "center" }, helpLink: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16, textAlign: "center" };
 createCacheKey[1] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AgeVerificationEmbeddedIntroScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationEmbeddedIntroScreen.tsx");
 
 export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   ({ entryPoint, navigation } = arg0);
@@ -24,8 +25,9 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   const items = [navigation];
   const isSuspendedUser = obj.useIsSuspendedUser();
   const callback = React.useCallback(() => {
-    navigation.navigate(navigation(dependencyMap[6]).AgeVerificationGetStartedModalScenes.GOOGLE_WALLET_VERIFICATION);
+    navigation.navigate(navigation(closure_1_2[6]).AgeVerificationGetStartedModalScenes.GOOGLE_WALLET_VERIFICATION);
   }, items);
+  obj = { children: null };
   obj = { children: null };
   obj1 = { align: "center", justify: "center", spacing: 24, children: null };
   const obj2 = { align: "center", justify: "center", spacing: 16, children: null };

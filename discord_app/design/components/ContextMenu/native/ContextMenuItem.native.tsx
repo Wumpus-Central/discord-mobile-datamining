@@ -3,27 +3,30 @@
 // Module 13530 (ContextMenuItem)
 import ThemesDefault from "Themes" /* 712 */;
 import CONTEXT_MENU_LONG_PRESS_DURATION_MS from "CONTEXT_MENU_LONG_PRESS_DURATION_MS" /* 9960 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
 let closure_7 = createCacheKey.createStyles((arg0) => {
-  let obj = { padding: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_PADDING, minHeight: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
+  let obj = { container: null, containerRefresh: null, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
+  obj = { padding: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_PADDING, minHeight: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
   obj[0] = obj;
   obj[1] = { justifyContent: "flex-start" };
   obj = { borderTopLeftRadius: ThemesDefault.radii.lg, borderTopRightRadius: ThemesDefault.radii.lg };
   obj[2] = obj;
   obj[3] = { borderBottomLeftRadius: ThemesDefault.radii.lg, borderBottomRightRadius: ThemesDefault.radii.lg };
+  obj1 = { borderBottomLeftRadius: ThemesDefault.radii.lg, borderBottomRightRadius: ThemesDefault.radii.lg };
   obj[4] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+  const obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   if ("destructive" === arg0) {
-    let TEXT_STRONG = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_STRONG = tmp2(712).colors.TEXT_FEEDBACK_CRITICAL;
   } else {
-    TEXT_STRONG = ThemesDefault.colors.TEXT_STRONG;
+    TEXT_STRONG = tmp2(712).colors.TEXT_STRONG;
   }
   obj[6] = { width: 20, height: 20, tintColor: TEXT_STRONG };
   obj[7] = { flexShrink: 1 };
@@ -33,7 +36,7 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
 let closure_8 = { code: "function ContextMenuItemNativeTsx1(){const{pan}=this.__closure;return pan.get();}" };
 let closure_9 = { code: "function ContextMenuItemNativeTsx2(_current,previous){const{measure,ref,index,INDEX_BOUNDS_OFFSET,itemMeasurements,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET}=this.__closure;if(previous==null||_current===previous)return;const measurements=measure(ref);if(measurements!=null){const{pageX:pageX,pageY:pageY,width:width,height:height}=measurements;const offset=index*INDEX_BOUNDS_OFFSET;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_X_OFFSET]=pageX;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_Y_OFFSET]=pageY;itemMeasurements.get()[offset+INDEX_BOUNDS_WIDTH_OFFSET]=width;itemMeasurements.get()[offset+INDEX_BOUNDS_HEIGHT_OFFSET]=height;}}" };
 let closure_10 = { code: "function ContextMenuItemNativeTsx3(){const{activeIndex,index,pressed,withSpring,backgroundColor,SUBTLE_SPRING}=this.__closure;const isActive=activeIndex.get()===index||pressed.get()===1;return{backgroundColor:withSpring(isActive?backgroundColor:'transparent',SUBTLE_SPRING,'animate-always')};}" };
-let result = require("obj132").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuItem.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuItem.native.tsx");
 
 export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   ({ IconComponent, trailingIndicator, iconSource, start, end, index } = accessibilityRole);
@@ -46,17 +49,21 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   if (str === undefined) {
     str = "button";
   }
+  let animatedRef;
   let pan;
+  let itemMeasurements;
+  let activeIndex;
+  let sharedValue;
   let backgroundColor;
   let obj = index(pan[3]);
-  const animatedRef = obj.useAnimatedRef();
+  animatedRef = obj.useAnimatedRef();
   const tmp4 = callback(variant);
   const tmp6 = animatedRef(pan[7])("ContextMenuItem");
   pan = state.pan;
-  const itemMeasurements = state.itemMeasurements;
-  const activeIndex = state.activeIndex;
+  itemMeasurements = state.itemMeasurements;
+  activeIndex = state.activeIndex;
   obj1 = index(pan[3]);
-  const sharedValue = obj1.useSharedValue(0);
+  sharedValue = obj1.useSharedValue(0);
   let obj2 = index(pan[3]);
   class U {
     constructor() {
@@ -72,15 +79,15 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
         const measureResult = index(pan[3]).measure(animatedRef);
         if (null != measureResult) {
           ({ pageX, pageY, width, height } = measureResult);
-          const result = index * index(pan[8]).INDEX_BOUNDS_OFFSET;
+          const result = index * tmp2(tmp3[8]).INDEX_BOUNDS_OFFSET;
           let value = itemMeasurements.get();
-          value[result + index(pan[8]).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
+          value[result + tmp2(tmp3[8]).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
           value = itemMeasurements.get();
-          value[result + index(pan[8]).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
+          value[result + tmp2(tmp3[8]).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
           const value1 = itemMeasurements.get();
-          value1[result + index(pan[8]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
+          value1[result + tmp2(tmp3[8]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
           const value2 = itemMeasurements.get();
-          value2[result + index(pan[8]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+          value2[result + tmp2(tmp3[8]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
         }
         const obj = index(pan[3]);
       }

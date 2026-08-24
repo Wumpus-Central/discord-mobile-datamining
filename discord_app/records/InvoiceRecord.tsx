@@ -4,7 +4,7 @@
 import toJSDefault from "toJS" /* 1931 */;
 import coalesceInvoiceItems from "coalesceInvoiceItems" /* 4049 */;
 
-require = fn;
+require = arg1;
 toJSDefault;
 let BaseInvoiceRecord;
 class BaseInvoiceRecord extends tmp2 {
@@ -22,7 +22,7 @@ class BaseInvoiceRecord extends tmp2 {
 const prototype = BaseInvoiceRecord.prototype;
 BaseInvoiceRecord["createFromServer"] = function createFromServer(currency) {
   ({ total, subtotal, tax, invoice_items } = currency);
-  let mapped = invoice_items.map((item, index) => ({ skuId: item.sku_id, quantity: item.quantity, description: item.description }));
+  let mapped = invoice_items.map((skuId) => ({ skuId: skuId.sku_id, quantity: skuId.quantity, description: skuId.description }));
   if (typeof BaseInvoiceRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -49,24 +49,24 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
     return null;
   } else {
     const line_items = invoice_preview.line_items;
-    const mapped = line_items.map((item, index) => {
-      billing_facet = item;
+    const mapped = line_items.map((unit_price) => {
+      billing_facet = unit_price;
       const order_line_items = billing_facet.order_line_items;
-      const found = order_line_items.find((item, index) => item.id === item.ref_order_line_item_id);
+      const found = order_line_items.find((id) => id.id === unit_price.ref_order_line_item_id);
       let tmp2 = null;
       if (null != found) {
         let obj = { skuId: null, unitPrice: null, quantity: null };
         obj[0] = found.sku_id;
         obj = { amount: null, currency: null };
-        obj[0] = item.unit_price;
+        obj[0] = unit_price.unit_price;
         obj[1] = invoice_preview.currency;
         obj[1] = obj;
-        obj[2] = item.quantity;
+        obj[2] = unit_price.quantity;
         tmp2 = obj;
       }
       return tmp2;
     });
-    let found = mapped.filter((item, index) => null != item);
+    let found = mapped.filter((arg0) => null != arg0);
     ({ total, subtotal, tax, currency } = invoice_preview);
     if (typeof BaseInvoiceRecord !== "function") {
       HermesBuiltin.throwTypeError();
@@ -87,7 +87,7 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
 prototype["getInvoicePreviewLineItemForSku"] = function getInvoicePreviewLineItemForSku(arg0) {
   closure_0 = arg0;
   const invoiceItems = this.invoiceItems;
-  let found = invoiceItems.find((item, index) => item.skuId === closure_0);
+  let found = invoiceItems.find((skuId) => skuId.skuId === closure_0);
   if (found == null) {
     found = null;
   }
@@ -125,18 +125,20 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   let mapped;
   if (invoice_items != null) {
     mapped = invoice_items.map(coalesceInvoiceItems.createInvoiceItemFromServer);
+    const tmp3 = require;
   }
   obj[1] = mapped;
   ({ total: obj[2], subtotal: obj[3], currency: obj[4], tax: obj[5], tax_inclusive: obj[6] } = body);
   obj[7] = new Date(body.subscription_period_start);
   const date = new Date(body.subscription_period_start);
+  const tmp = InvoiceRecord;
   const tmp6 = new.target;
   obj[8] = new Date(body.subscription_period_end);
   ({ status: obj[9], orbs_reward: obj[10], checkout_context: obj[11] } = body);
-  if (typeof InvoiceRecord !== "function") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp8 = new InvoiceRecord(obj, require, Date, Date, tmp6);
+  const tmp8 = new InvoiceRecord(obj, tmp3, Date, Date, tmp6);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp8.id, invoiceItems } = obj);
   if (invoiceItems == null) {
@@ -151,6 +153,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   let mapped;
   if (invoice_items != null) {
     mapped = invoice_items.map(coalesceInvoiceItems.createInvoiceItemFromServer);
+    const tmp3 = require;
   }
   const obj = { id: "", invoiceItems: mapped, total: invoice_items.amount, subtotal: invoice_items.subtotal, currency: invoice_items.currency, tax: invoice_items.tax, taxInclusive: invoice_items.tax_inclusive, subscriptionPeriodStart: new Date(0), subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null };
   const date = new Date(0);
@@ -163,7 +166,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   if (typeof InvoiceRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp9 = new InvoiceRecord(obj, require, tmp5, tmp7, orbs_reward, InvoiceRecord);
+  const tmp9 = new InvoiceRecord(obj, tmp3, tmp5, tmp7, orbs_reward, InvoiceRecord);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp9.id, invoiceItems } = obj);
   if (invoiceItems == null) {
@@ -176,7 +179,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
 prototype2["findInvoiceItemByPlanId"] = function findInvoiceItemByPlanId(id) {
   closure_0 = id;
   const invoiceItems = this.invoiceItems;
-  let found = invoiceItems.find((item, index) => item.subscriptionPlanId === closure_0);
+  let found = invoiceItems.find((subscriptionPlanId) => subscriptionPlanId.subscriptionPlanId === closure_0);
   if (found == null) {
     found = null;
   }
@@ -184,7 +187,7 @@ prototype2["findInvoiceItemByPlanId"] = function findInvoiceItemByPlanId(id) {
 };
 prototype2["getDiscountIdIfExists"] = function getDiscountIdIfExists() {
   const invoiceItems = this.invoiceItems;
-  const found = invoiceItems.find((item, index) => item.discounts.length > 0);
+  const found = invoiceItems.find((discounts) => discounts.discounts.length > 0);
   if (null != found) {
     if (0 !== found.discounts.length) {
       const first = found.discounts[0];
@@ -194,7 +197,7 @@ prototype2["getDiscountIdIfExists"] = function getDiscountIdIfExists() {
     }
   }
 };
-const result = require("obj132").fileFinishedImporting("records/InvoiceRecord.tsx");
+const result = require("set").fileFinishedImporting("records/InvoiceRecord.tsx");
 
 export default InvoiceRecord;
 export { BaseInvoiceRecord };

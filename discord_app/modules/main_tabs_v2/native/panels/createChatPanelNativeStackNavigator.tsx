@@ -2,20 +2,22 @@
 
 // Module 15209 (ChatPanelNativeStackNavigator)
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function ChatPanelNativeStackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let state;
   let descriptors;
+  let navigation;
+  let state2;
   let obj = state(descriptors[2]);
   const navigationBuilder = obj.useNavigationBuilder(state(descriptors[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   state = navigationBuilder.state;
   descriptors = navigationBuilder.descriptors;
-  const navigation = navigationBuilder.navigation;
+  navigation = navigationBuilder.navigation;
   let items = [state, descriptors];
   ({ describe, NavigationContent } = navigationBuilder);
   const memo = navigation.useMemo(() => {
@@ -32,7 +34,11 @@ function ChatPanelNativeStackNavigator(arg0) {
     if (0 < state.routes.length) {
       do {
         let tmp2 = state.routes[num];
+        let tmp3 = state;
+        let tmp4 = descriptors;
         let obj3 = state(descriptors[3]);
+        let tmp5 = num;
+        let tmp6 = num2;
         if (null != obj3.coerceChannelRoute(tmp2)) {
           let arr = items1.push(tmp2);
           let sum = num2;
@@ -61,7 +67,7 @@ function ChatPanelNativeStackNavigator(arg0) {
     }
     return { state, filteredDescriptors };
   }, items);
-  const state2 = memo.state;
+  state2 = memo.state;
   let items1 = [navigation, , ];
   ({ index: arr2[1], key: arr2[2] } = state2);
   const accessibilityPatchedDescriptors = state(descriptors[4]).useAccessibilityPatchedDescriptors(memo.filteredDescriptors);
@@ -83,7 +89,7 @@ function ChatPanelNativeStackNavigator(arg0) {
             }
             if (tmp2) {
               const obj = {};
-              const StackActions = state(descriptors[2]).StackActions;
+              const StackActions = closure_2_0(closure_2_1[2]).StackActions;
               const merged = Object.assign(StackActions.popToTop());
               obj.target = closure_1_3.key;
               closure_1_2.dispatch(obj);
@@ -94,6 +100,7 @@ function ChatPanelNativeStackNavigator(arg0) {
     }
     return addListenerResult;
   }, items1);
+  obj = { children: null };
   obj = {};
   const merged1 = Object.assign(merged);
   obj.state = state2;
@@ -103,7 +110,7 @@ function ChatPanelNativeStackNavigator(arg0) {
   obj[0] = state2(state(descriptors[5]).NativeStackView, obj);
   return state2(NavigationContent, obj);
 }
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx");
 
 export default function createChatPanelNativeStackNavigator(arg0) {
   return createStandardNavigationFactories.createNavigatorFactory(ChatPanelNativeStackNavigator)(arg0);

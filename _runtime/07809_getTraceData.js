@@ -2,16 +2,8 @@
 
 // Module 7809 (getTraceData)
 import errorCallback from "errorCallback" /* 7734 */;
-import consoleSandbox from "consoleSandbox" /* 7738 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 7743 */;
-import regExp from "regExp" /* 7750 */;
-import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 7751 */;
-import getMainCarrier from "getMainCarrier" /* 7756 */;
-import getAsyncContextStrategy from "getAsyncContextStrategy" /* 7757 */;
 import getClient from "getClient" /* 7765 */;
-import getDynamicSamplingContextFromSpan from "getDynamicSamplingContextFromSpan" /* 7774 */;
-import "__SENTRY_DEBUG__";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7766 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
 import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
 
 errorCallback;
@@ -22,45 +14,46 @@ export const getTraceData = function getTraceData() {
     obj = {};
   }
   const client = getClient.getClient();
+  const obj2 = getClient;
   if (obj3.isEnabled()) {
     if (client) {
-      let tmpResult = getMainCarrier;
+      let tmpResult = tmp(7756);
       const mainCarrier = tmpResult.getMainCarrier();
-      tmpResult = getAsyncContextStrategy;
+      tmpResult = tmp(7757);
       const asyncContextStrategy = tmpResult.getAsyncContextStrategy(mainCarrier);
       if (asyncContextStrategy.getTraceData) {
         return asyncContextStrategy.getTraceData(obj);
       } else {
-        const currentScope = getClient.getCurrentScope();
+        const currentScope = tmp(7765).getCurrentScope();
         let span = obj.span;
         if (!span) {
-          span = spanTimeInputToSeconds.getActiveSpan();
-          const tmpResult2 = spanTimeInputToSeconds;
+          span = tmp(7743).getActiveSpan();
+          const tmpResult2 = tmp(7743);
         }
         if (span) {
-          let spanToTraceHeaderResult = spanTimeInputToSeconds.spanToTraceHeader(span);
-          const tmpResult3 = spanTimeInputToSeconds;
+          let spanToTraceHeaderResult = tmp(7743).spanToTraceHeader(span);
+          const tmpResult3 = tmp(7743);
         } else {
           const propagationContext = currentScope.getPropagationContext();
           ({ traceId, sampled, spanId } = propagationContext);
-          spanToTraceHeaderResult = regExp.generateSentryTraceHeader(traceId, spanId, sampled);
-          const tmpResult4 = regExp;
+          spanToTraceHeaderResult = tmp(7750).generateSentryTraceHeader(traceId, spanId, sampled);
+          const tmpResult4 = tmp(7750);
         }
-        const tmpResult5 = getDynamicSamplingContextFromSpan;
+        const tmpResult5 = tmp(7774);
         if (span) {
           let dynamicSamplingContextFromSpan = tmpResult5.getDynamicSamplingContextFromSpan(span);
         } else {
           dynamicSamplingContextFromSpan = tmpResult5.getDynamicSamplingContextFromScope(client, currentScope);
         }
-        const tmpResult1 = getClient;
-        const result = baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = regExp.TRACEPARENT_REGEXP;
+        const tmpResult1 = tmp(7765);
+        const result = tmp(7751).dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const TRACEPARENT_REGEXP = tmp(7750).TRACEPARENT_REGEXP;
         if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
           obj = { "sentry-trace": null, baggage: null };
           obj[0] = spanToTraceHeaderResult;
           obj[1] = result;
         } else {
-          const logger = consoleSandbox.logger;
+          const logger = tmp(7738).logger;
           logger.warn("Invalid sentry-trace data. Cannot generate trace data");
           obj = {};
         }

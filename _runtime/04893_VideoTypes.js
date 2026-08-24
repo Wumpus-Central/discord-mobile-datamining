@@ -2,7 +2,7 @@
 
 // Module 4893 (VideoTypes)
 import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_0 from "_classCallCheck" /* 41 */;
 
 class VideoTypes {
   constructor() {

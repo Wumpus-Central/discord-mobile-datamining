@@ -2,7 +2,6 @@
 
 // Module 832 (isMatchingPattern)
 import isInstanceOf from "isInstanceOf" /* 827 */;
-import createStackParser from "createStackParser" /* 833 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -16,11 +15,11 @@ arg5.isMatchingPattern = function isMatchingPattern(arr, test) {
   if (!isStringResult) {
     return isStringResult;
   } else {
-    let tmpResult = isInstanceOf;
+    let tmpResult = tmp(827);
     if (tmpResult.isRegExp(test)) {
       let isMatch = test.test(arr);
     } else {
-      tmpResult = isInstanceOf;
+      tmpResult = tmp(827);
       isMatch = tmpResult.isString(test);
       if (isMatch) {
         if (flag) {
@@ -40,14 +39,15 @@ arg5.safeJoin = function safeJoin(__v_isVNode) {
       try {
         const push = items.push;
         if (obj.isVueViewModel(tmp2)) {
-          let arr = push(createStackParser.getVueInternalName(tmp2));
-          const tmp4Result = createStackParser;
+          let arr = push(tmp4(833).getVueInternalName(tmp2));
+          const tmp4Result = tmp4(833);
         } else {
           const _String = String;
           arr = push(String(tmp2));
         }
         num = num + 1;
         obj = isInstanceOf;
+        tmp4 = require;
       } catch (err) {
         arr.push(tmp);
       }
@@ -102,27 +102,29 @@ arg5.stringMatchesSomePattern = function stringMatchesSomePattern(arg0) {
   if (arg2 === undefined) {
     flag = false;
   }
-  return items.some((item, index) => {
+  return items.some((test) => {
+    if (flag === undefined) {
+      flag = false;
+    }
     const isStringResult = callback(flag[0]).isString(callback);
     if (!isStringResult) {
       return isStringResult;
     } else {
-      let tmpResult = callback(tmp2[0]);
-      if (tmpResult.isRegExp(item)) {
-        let isMatch = item.test(callback);
+      let tmpResult = tmp(tmp2[0]);
+      if (tmpResult.isRegExp(test)) {
+        let isMatch = test.test(obj);
       } else {
-        tmpResult = callback(tmp2[0]);
-        isMatch = tmpResult.isString(item);
+        tmpResult = tmp(tmp2[0]);
+        isMatch = tmpResult.isString(test);
         if (isMatch) {
           if (flag) {
-            let hasItem = callback === item;
+            let hasItem = obj === test;
           } else {
-            hasItem = callback.includes(item);
+            hasItem = obj.includes(test);
           }
         }
       }
     }
-    const obj2 = callback(flag[0]);
   });
 };
 arg5.truncate = function truncate(str) {

@@ -2,11 +2,13 @@
 
 // Module 1520 (useSyncState)
 import useEffectDefault from "useEffect" /* 1522 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 
 export const useSyncState = function useSyncState(arg0) {
+  let current = arg0;
+  importDefault = undefined;
   dependencyMap = [];
   const React = false;
   c4 = false;
@@ -23,21 +25,21 @@ export const useSyncState = function useSyncState(arg0) {
       }
       return deepFreezeResult;
     },
-    setState(closure_30) {
-      closure_1 = current(arr[1]).deepFreeze(closure_30);
+    setState(arg0) {
+      closure_1 = current(arr[1]).deepFreeze(arg0);
       if (c4) {
         c5 = true;
       } else {
-        const item = arr.forEach((item, index) => item());
+        const item = arr.forEach((arg0) => arg0());
       }
-      const obj = current(arr[1]);
     },
-    batchUpdates(fn) {
-      fn();
+    batchUpdates(arg0) {
+      c4 = true;
+      arg0();
       c4 = false;
       if (c5) {
         c5 = false;
-        const item = arr.forEach((item, index) => item());
+        const item = arr.forEach((arg0) => arg0());
       }
     },
     subscribe(arg0) {
@@ -50,7 +52,7 @@ export const useSyncState = function useSyncState(arg0) {
       };
     }
   };
-  let current = React.useRef(obj).current;
+  current = React.useRef(obj).current;
   const syncExternalStore = React.useSyncExternalStore(current.subscribe, current.getState, current.getState);
   const debugValue = React.useDebugValue(syncExternalStore);
   importDefault = React.useRef([]);

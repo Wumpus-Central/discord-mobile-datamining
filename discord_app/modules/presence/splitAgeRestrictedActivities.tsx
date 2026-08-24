@@ -1,11 +1,11 @@
 // === Module 13309: splitAgeRestrictedActivities ===
 
 // Module 13309 (splitAgeRestrictedActivities)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isAgeRestrictedClassificationReference from "isAgeRestrictedClassificationReference" /* 4785 */;
 import apexExperiment from "apexExperiment" /* 13310 */;
 
-const result = obj132.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
+const result = set.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 
 export default function splitAgeRestrictedActivities(arg0, arg1) {
   const ContentClassificationPresenceFilterExperiment = apexExperiment.ContentClassificationPresenceFilterExperiment;
@@ -16,10 +16,14 @@ export default function splitAgeRestrictedActivities(arg0, arg1) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp5 = nextResult;
+      let tmp6 = require;
+      let tmp7 = dependencyMap;
       let obj2 = isAgeRestrictedClassificationReference;
       if (obj2.isAgeRestrictedClassificationReference(nextResult.content_classification)) {
+        let tmp10 = nextResult;
         let arr = items1.push(tmp5);
       } else {
+        let tmp8 = nextResult;
         arr = items.push(tmp5);
       }
       continue;

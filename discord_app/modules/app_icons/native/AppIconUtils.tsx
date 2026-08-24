@@ -5,15 +5,15 @@ import timestampDefault from "timestamp" /* 3 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
 import openUserSettings from "openUserSettings" /* 7360 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import items from "items" /* 7946 */;
 import ME from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-require = fn;
+require = arg1;
 function fetchCurrentAppIcon() {
   const self = this;
   const apply = _fetchCurrentAppIcon.apply;
@@ -32,10 +32,10 @@ function _fetchCurrentAppIcon() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw id;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = id;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -46,11 +46,11 @@ function _fetchCurrentAppIcon() {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw id;
+            throw arg1;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = id;
+            obj[0] = arg1;
             return obj;
           } else {
             closure_1 = tmp3;
@@ -78,18 +78,18 @@ function _fetchCurrentAppIcon() {
           return obj2;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw id;
+          throw arg1;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
           obj3 = { value: null, done: true };
-          obj3[0] = id;
+          obj3[0] = arg1;
           return obj3;
         } else {
           c3 = 0;
           c5 = 3;
           obj = { value: null, done: true };
-          obj[0] = id.id;
+          obj[0] = arg1.id;
           return obj;
         }
       } catch (tmp18) {
@@ -174,7 +174,7 @@ function _setAppIcon() {
 ({ getDefaultIcon: closure_6, getOfficialAlternateIcons: error, getLimitedAlternateIcons: closure_8 } = items);
 ({ AnalyticEvents: c9, UserSettingsSections: c10 } = ME);
 let closure_12 = new timestampDefault("AppIconUtils");
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   let DCDIconManager = require("enforcing").default;
 } else {
   DCDIconManager = require("get ActivityIndicator").NativeModules.DCDIconManager;
@@ -247,7 +247,7 @@ function useCurrentAppIcon() {
   });
   return tmp[0];
 }
-const result = obj132.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");
+const result = set.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");
 
 export { fetchCurrentAppIcon };
 export { useCurrentAppIcon };
@@ -349,23 +349,24 @@ export const useAppIcons = function useAppIcons() {
       let v0 = 3;
     } else if (arg0 === 1) {
       v0 = 3;
-      throw arr;
+      throw arg1;
     } else if (arg0 !== 2) {
-      arr.map((item, index) => item.id);
-      arr = closure_1_7();
-      const callback2 = arr.filter((item, index) => closure_0.includes(item.id));
-      closure_2 = closure_1_8().filter((item, index) => closure_0.includes(item.id));
+      let callback = arg1.map((id) => id.id);
+      const callback2 = closure_1_7().filter((id) => closure_0.includes(id.id));
+      const arr = closure_1_7();
+      closure_2 = closure_1_8().filter((id) => closure_0.includes(id.id));
       callback2(closure_2);
-      let callback = 0;
+      callback = 0;
       const items = [v0()];
       const sum = callback + 1;
+      callback = sum;
       callback = HermesBuiltin.arraySpread(callback2, sum);
       callback(items);
       c4 = 0;
       const arr2 = closure_1_8();
     }
     c4 = 0;
-    return arr;
+    return arg1;
   }), []);
   useMountLayoutEffectDefault(() => {
     dependencyMap();
@@ -377,7 +378,8 @@ export const useAppIcons = function useAppIcons() {
   return { officialAppIcons, limitedTimeAppIcons, currentAppIcon: currentAppIcon[0] };
 };
 export const navigateToAppIconSettings = function navigateToAppIconSettings() {
-  const obj = { screen: constants.APP_ICONS };
+  let obj = openUserSettings;
+  obj = { screen: constants.APP_ICONS };
   obj.openUserSettings(obj);
 };
 export const isAppIconsSupported = function isAppIconsSupported() {

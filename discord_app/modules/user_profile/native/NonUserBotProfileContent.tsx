@@ -13,7 +13,7 @@ import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ PROFILE_CONTENT_BOTTOM_PADDING: c4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: c5 } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 const memoResult = importAllResult.memo(function NonUserBotProfileContent(scrollPosition) {
@@ -91,9 +91,9 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     }
     function handleCopyUsername() {
       trackUserProfileAction({ action: "COPY_USERNAME" });
-      trackUserProfileAction(dependencyMap[15]).copy(closure_1);
-      const obj = trackUserProfileAction(dependencyMap[15]);
-      const result = trackUserProfileAction(dependencyMap[16]).presentUsernameCopied();
+      trackUserProfileAction(closure_1_2[15]).copy(closure_1);
+      const obj = trackUserProfileAction(closure_1_2[15]);
+      const result = trackUserProfileAction(closure_1_2[16]).presentUsernameCopied();
     }
     const obj6 = { children: null };
     obj5[3] = pronouns;
@@ -105,7 +105,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj5[8] = handleCopyUsername;
     obj5[9] = function onPressPronouns() {
       trackUserProfileAction({ action: "PRESS_PRONOUNS" });
-      trackUserProfileAction(dependencyMap[16]).presentUserPronouns();
+      trackUserProfileAction(closure_1_2[16]).presentUserPronouns();
     };
     obj4[1] = callback(tmpResult, obj5);
     const items3 = [callback(View, obj4), ];
@@ -123,14 +123,14 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj7[1] = callback(tmp(9548), obj8);
     items3[1] = callback(View, obj7);
     obj2[1] = items3;
-    items1[1] = callback(View, obj2);
+    items1[1] = closure_8(View, obj2);
     obj[1] = items1;
-    items[1] = callback(tmp(4115).View, obj);
+    items[1] = closure_8(tmp(4115).View, obj);
     obj6[0] = items;
-    return callback(closure_9, obj6);
+    return closure_8(closure_9, obj6);
   }
   const tmp4Result = trackUserProfileAction(8979);
 });
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
 
 export default memoResult;

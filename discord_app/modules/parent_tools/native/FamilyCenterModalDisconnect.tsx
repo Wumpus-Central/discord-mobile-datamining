@@ -7,13 +7,13 @@ import nameFromUserDefault from "nameFromUser" /* 4219 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 import registerAssetDefault from "registerAsset" /* 8143 */;
 import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 14279 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function FamilyCenterModalDisconnectScreen(otherUser) {
   otherUser = otherUser.otherUser;
   importDefault = undefined;
@@ -83,6 +83,7 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
       _undefined2(arg0);
     }
   }, items2);
+  obj = { style: tmp.header, children: null };
   obj = { otherUser, iconSrc: null };
   const stringResult2 = intl9.string(messagesProxyDefault.sCbKs4);
   obj[1] = registerAssetDefault;
@@ -139,22 +140,28 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   return callback2(otherUser(5440).ModalScreen, obj7);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey = { header: null, title: null, subtitle: null, warning: null, body: null };
+createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
+let obj1 = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+let obj2 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[4] = { marginBottom: ThemesDefault.space.PX_24 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDisconnect.tsx");
+let obj4 = { marginBottom: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDisconnect.tsx");
 
 export default function FamilyCenterModalDisconnect(otherUser) {
   otherUser = otherUser.otherUser;
   const items = [otherUser];
   const memo = React.useMemo(() => {
-    const obj = {
+    let obj = { DISCONNECT: null };
+    obj = {
       headerShown: true,
-      headerLeft: otherUser(dependencyMap[25]).getHeaderCloseButton(_modDef5260.pop),
+      headerLeft: otherUser(closure_1_2[25]).getHeaderCloseButton(closure_1_1(closure_1_2[6]).pop),
       headerTitle() {
         return null;
       },

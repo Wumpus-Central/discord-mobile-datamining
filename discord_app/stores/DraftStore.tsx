@@ -5,12 +5,12 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4826 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleConnectionOpen" /* 4826 */;
 
-const require = fn;
+const require = arg1;
 function handleChanged(type) {
   ({ channelId, draft, draftType } = type);
   const channel = store2.getChannel(channelId);
@@ -95,7 +95,6 @@ function deleteDraft(arg0, arg1) {
       if (obj2.isEmpty(tmp11)) {
         delete tmp2[tmp];
       }
-      obj2 = applyDefault;
     }
   }
 }
@@ -118,26 +117,41 @@ class DraftStore extends PersistedStore {
 }
 const prototype = DraftStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
+  obj = arg0;
+  if (arg0 == null) {
+    obj = {};
+  }
   (function pruneEmptyDrafts() {
     obj = callback(11);
     const entries = obj.entries(obj);
     while (tmp2 !== undefined) {
+      let tmp4 = callback2;
       let tmp5 = callback2(tmp3, 2);
       let first = tmp5[0];
+      let tmp7 = callback;
+      let tmp8 = dependencyMap;
       let obj2 = callback(11);
       let entries1 = obj2.entries(tmp5[1]);
+      let tmp10 = entries1;
+      let tmp11 = entries1;
       for (const item10033 of entries1) {
+        let tmp12 = callback2;
         let tmp13 = callback2(item10033, 2);
         let first1 = tmp13[0];
         let tmp16 = tmp13[1][ChannelMessage.ChannelMessage];
         let tmp17 = tmp16;
         if (null != tmp16) {
+          let tmp18 = tmp16;
           let tmp19 = "" !== tmp17.draft;
           if (tmp19) {
+            let tmp20 = tmp16;
             let str = tmp17.draft;
             tmp19 = "" !== str.trim();
           }
           if (!tmp19) {
+            let tmp21 = callback3;
+            let tmp22 = first1;
+            let tmp23 = first;
             let tmp24 = callback3(first1, tmp15.ChannelMessage, first);
           }
         }
@@ -145,7 +159,6 @@ prototype["initialize"] = function initialize(arg0) {
       }
       continue;
     }
-    tmp2 = entries[Symbol.iterator]();
   })();
   this.waitFor(closure_4, closure_5, closure_6);
 };
@@ -153,7 +166,8 @@ prototype["getState"] = function getState() {
   return closure_9;
 };
 prototype["getThreadDraftWithParentMessageId"] = function getThreadDraftWithParentMessageId(arg0) {
-  const self = this;
+  let self = this;
+  self = this;
   closure_0 = arg0;
   const id = store.getId();
   if (null != id) {
@@ -164,8 +178,8 @@ prototype["getThreadDraftWithParentMessageId"] = function getThreadDraftWithPare
       tmp3 = obj;
     }
     const keys = self(11).keys(tmp3);
-    const found = keys.find((item, index) => {
-      const threadSettings = self.getThreadSettings(item);
+    const found = keys.find((channelId) => {
+      const threadSettings = self.getThreadSettings(channelId);
       let parentMessageId;
       if (threadSettings != null) {
         parentMessageId = threadSettings.parentMessageId;
@@ -212,8 +226,8 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1370).isNotNullish).toPairs().map((item, index) => {
-      [tmp, ] = item;
+    }).pickBy(_require(1370).isNotNullish).toPairs().map((arg0) => {
+      [tmp, ] = arg0;
       return { channelId, timestamp, draft };
     });
     const toPairsResult = applyDefault(tmp3).mapValues((arg0) => {
@@ -245,7 +259,7 @@ prototype["getDraft"] = function getDraft(id, ChannelMessage) {
     return "";
   }
 };
-prototype["getThreadSettings"] = function getThreadSettings(closure_0) {
+prototype["getThreadSettings"] = function getThreadSettings(channelId) {
   const id = store.getId();
   if (null == id) {
     return null;
@@ -257,7 +271,7 @@ prototype["getThreadSettings"] = function getThreadSettings(closure_0) {
       tmp3 = obj;
     }
     let tmp7 = null;
-    if (null != tmp3[closure_0]) {
+    if (null != tmp3[channelId]) {
       tmp7 = tmp6[obj.ThreadSettings];
     }
     return tmp7;
@@ -287,10 +301,12 @@ const items = [
       return {};
     } else {
       for (const key10005 in arg0) {
+        let tmp3 = key10005;
         if (!("timestamp" in arg0[key10005])) {
           continue;
         } else {
           obj = {};
+          let tmp2 = obj;
           obj[obj.ChannelMessage] = arg0[key10005];
           arg0[key10005] = obj;
           continue;
@@ -305,8 +321,10 @@ const items = [
     if (null != obj) {
       if (null != id) {
         obj = {};
+        obj = {};
         obj[id] = obj;
         for (const key10009 in arg0) {
+          let tmp3 = key10009;
           obj[key10009] = arg0[key10009];
           continue;
         }
@@ -334,6 +352,8 @@ obj = {
           tmp8 = obj;
         }
         for (const key10019 in tmp8) {
+          let tmp11 = key10019;
+          let tmp12 = store2;
           if (null != store2.getChannel(key10019)) {
             continue;
           } else {
@@ -368,6 +388,8 @@ obj = {
           tmp6 = obj;
         }
         for (const key10013 in tmp6) {
+          let tmp9 = key10013;
+          let tmp10 = store2;
           if (null != store2.getChannel(key10013)) {
             continue;
           } else {
@@ -431,7 +453,7 @@ obj = {
               }
               if (null != tmp15[channel.parent_id]) {
                 delete tmp7[tmp6];
-                let tmp26Result = applyDefault;
+                let tmp26Result = tmp26(12);
                 if (tmp26Result.isEmpty(tmp17)) {
                   delete tmp4[tmp5];
                 }
@@ -448,7 +470,7 @@ obj = {
               }
               if (null != tmp20[channel.parent_id]) {
                 delete tmp3[tmp4];
-                tmp26Result = applyDefault;
+                tmp26Result = tmp26(12);
                 if (tmp26Result.isEmpty(tmp22)) {
                   delete tmp[tmp2];
                 }
@@ -556,7 +578,7 @@ obj = {
   }
 };
 const draftStore = new DraftStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("stores/DraftStore.tsx");
+const result = require("set").fileFinishedImporting("stores/DraftStore.tsx");
 
 export default draftStore;
 export const DraftType = obj;

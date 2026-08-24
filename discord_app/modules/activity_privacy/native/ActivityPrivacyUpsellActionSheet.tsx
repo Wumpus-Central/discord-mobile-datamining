@@ -1,11 +1,11 @@
 // === Module 15050: ActivityPrivacyUpsellActionSheet ===
 
 // Module 15050 (ActivityPrivacyUpsellActionSheet)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/activity_privacy/native/ActivityPrivacyUpsellActionSheet.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/activity_privacy/native/ActivityPrivacyUpsellActionSheet.tsx");
 
 export default function ActivityPrivacyUpsellActionSheet(direction) {
   direction = direction.direction;
@@ -14,7 +14,7 @@ export default function ActivityPrivacyUpsellActionSheet(direction) {
   const items = [direction, affectedGuildIds];
   ({ title, subtitle, confirmText, toastContent } = upsellStrings);
   const onConfirm = React.useCallback(() => {
-    const result = direction(dependencyMap[2]).applyBulkGuildRestrictionChange(direction, affectedGuildIds);
+    const result = direction(closure_1_2[2]).applyBulkGuildRestrictionChange(direction, affectedGuildIds);
   }, items);
   return jsx(affectedGuildIds(14210), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm });
 };

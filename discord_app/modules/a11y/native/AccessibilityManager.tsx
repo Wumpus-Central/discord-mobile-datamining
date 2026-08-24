@@ -7,15 +7,15 @@ import uDefault from "u" /* 10561 */;
 import AccessibilityFeatureFlagsDefault from "AccessibilityFeatureFlags" /* 13811 */;
 import A11Y_FEATURE_MAP from "A11Y_FEATURE_MAP" /* 13812 */;
 import updateSaturation from "updateSaturation" /* 13814 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { SystemTheme } from "SystemThemeState" /* 1305 */;
 
-require = fn;
+require = arg1;
 ({ AccessibilityInfo: c4, Appearance: c5 } = get_ActivityIndicator);
-let result = require("obj132").fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
+let result = require("set").fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 
 export default {
   init() {
@@ -25,14 +25,16 @@ export default {
     this.updateMotionSettings();
     closure_6.addChangeListener(this.updateNativeColors);
     closure_6.addChangeListener(this.updateMotionSettings);
+    let obj = AccessibilityFeatureFlagsDefault;
     const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", this.updateMotionSettings);
     closure_5.addChangeListener(this.updateSystemAppearance);
-    const listener = closure_4.addEventListener("screenReaderChanged", (event) => {
-      const result = self.updateScreenReaderEnabled(event);
+    const listener = closure_4.addEventListener("screenReaderChanged", (arg0) => {
+      const result = self.updateScreenReaderEnabled(arg0);
     });
+    const obj2 = dispatcherDefault;
     const subscription1 = dispatcherDefault.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
-      callback(table[7]);
-      const obj = { colorblind_enabled: colorblindMode.colorblindMode };
+      let obj = callback(table[7]);
+      obj = { colorblind_enabled: colorblindMode.colorblindMode };
       obj.track(constants.LOCAL_SETTINGS_UPDATED, obj);
     });
     let result = this.startAnnouncementQueue();
@@ -109,26 +111,26 @@ export default {
     let DARK = SystemTheme.NO_PREFERENCE;
     colorScheme = colorScheme.colorScheme;
     if ("light" === colorScheme) {
-      DARK = SystemTheme.LIGHT;
+      DARK = tmp.LIGHT;
     } else if ("dark" === colorScheme) {
-      DARK = SystemTheme.DARK;
+      DARK = tmp.DARK;
     }
     setSystemTheme.setSystemTheme(DARK);
   },
   startAnnouncementQueue() {
     const set = new Set();
-    const listener = closure_4.addEventListener("announcementFinished", (event) => {
-      if (!event.success) {
-        if (!set.has(event.announcement)) {
-          set.add(event.announcement);
+    const listener = closure_4.addEventListener("announcementFinished", (success) => {
+      if (!success.success) {
+        if (!set.has(success.announcement)) {
+          set.add(success.announcement);
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const AccessibilityAnnouncer = event(closure_1_2[12]).AccessibilityAnnouncer;
-            AccessibilityAnnouncer.announce(event.announcement);
+            const AccessibilityAnnouncer = success(closure_1_2[12]).AccessibilityAnnouncer;
+            AccessibilityAnnouncer.announce(success.announcement);
           }, 150);
         }
       }
-      event.delete(event.announcement);
+      success.delete(success.announcement);
     });
   }
 };

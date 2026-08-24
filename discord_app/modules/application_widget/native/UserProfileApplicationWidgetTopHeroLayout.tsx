@@ -4,30 +4,33 @@
 import ThemesDefault from "Themes" /* 712 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6352 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HorizontalGradient } from "ME" /* 676 */;
 import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 const sum = CARD_PADDING + 8;
 let closure_10 = ["transparent", "black"];
-const createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_12, minHeight: 140 };
+createCacheKey = { root: { position: "relative" }, contentRow: null, heroText: null, heroImageColumn: null, heroImageSkeleton: null, heroImagePositioner: null, heroImageMask: null, heroImageFadeGradient: null, heroImageMaskRemainder: null };
+createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_12, minHeight: 140 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, minWidth: 120, gap: ThemesDefault.space.PX_4, justifyContent: "center" };
 createCacheKey[3] = { flex: 1, alignItems: "flex-end" };
+let obj1 = { flex: 1, minWidth: 120, gap: ThemesDefault.space.PX_4, justifyContent: "center" };
 createCacheKey[4] = { width: 86, height: 86, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { position: "absolute", left: "50%", right: -CARD_PADDING, top: -sum, bottom: 0, overflow: "hidden" };
 createCacheKey[6] = { flex: 1, flexDirection: "row" };
 createCacheKey[7] = { width: 130 };
 createCacheKey[8] = { flex: 1, backgroundColor: "black" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx");
+let obj2 = { width: 86, height: 86, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx");
 
 export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   ({ topConfig, resolveFieldValue, numberFormat } = header);
@@ -49,6 +52,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   }
   const items = [_require(12190).ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
+  obj = { style: tmp.root, children: null };
   const items1 = [header.header, , ];
   obj = { style: tmp.contentRow, children: null };
   obj1 = { style: tmp.heroText, children: null };
@@ -60,7 +64,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   if (tmp14Result) {
     obj3 = { style: null };
     obj3[0] = tmp.heroImageSkeleton;
-    tmp14Result = callback2(tmp4(12278).ImageSkeleton, obj3);
+    tmp14Result = tmp14(tmp4(12278).ImageSkeleton, obj3);
   }
   obj2[1] = tmp14Result;
   items3[1] = callback2(closure_6, obj2);
@@ -88,22 +92,23 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       ({ START: obj14[0], END: obj14[1] } = HorizontalGradient);
       obj8[2] = closure_10;
       obj8[3] = tmp.heroImageFadeGradient;
-      const items4 = [callback2(LinearGradientDefault, obj8), ];
+      const items4 = [tmp14(LinearGradientDefault, obj8), ];
       const obj9 = { style: null };
       obj9[0] = tmp.heroImageMaskRemainder;
-      items4[1] = callback2(closure_6, obj9);
+      items4[1] = tmp14(tmp13, obj9);
       obj7[1] = items4;
-      obj5[2] = callback3(closure_6, obj7);
+      obj5[2] = tmp12(tmp13, obj7);
       const obj10 = { source: null, style: null };
       const obj11 = { uri: null };
       obj11[0] = fieldValue.media.url;
       obj10[0] = obj11;
       obj10[1] = { width: "100%", height: "100%" };
-      obj5[3] = callback2(closure_5, obj10);
-      tmp14Result = callback2(_isNativeReflectConstructDefault, obj5);
+      obj5[3] = tmp14(closure_5, obj10);
+      tmp14Result = tmp14(_isNativeReflectConstructDefault, obj5);
+      const tmp20 = _isNativeReflectConstructDefault;
     }
     obj4[3] = tmp14Result;
-    tmp14Result1 = callback2(closure_6, obj4);
+    tmp14Result1 = tmp14(tmp13, obj4);
   }
   items1[2] = tmp14Result1;
   obj[1] = items1;

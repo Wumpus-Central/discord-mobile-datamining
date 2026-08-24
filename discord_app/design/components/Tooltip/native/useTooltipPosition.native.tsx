@@ -1,9 +1,9 @@
 // === Module 9273: useTooltipPosition ===
 
 // Module 9273 (useTooltipPosition)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("design/components/Tooltip/native/useTooltipPosition.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Tooltip/native/useTooltipPosition.native.tsx");
 
 export default function useTooltipPosition(arg0, arg1, arg2, arg3) {
   const React = arg0;

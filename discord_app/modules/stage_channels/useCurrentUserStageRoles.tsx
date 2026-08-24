@@ -1,11 +1,11 @@
 // === Module 12489: useCurrentUserStageRoles ===
 
 // Module 12489 (useCurrentUserStageRoles)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import buildStageChannelUserRoles from "buildStageChannelUserRoles" /* 4990 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "buildStageChannelUserRoles" /* 4990 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");
 
 export default function useCurrentUserStageRoles(arg0) {
   const _require = arg0;

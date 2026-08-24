@@ -2,9 +2,9 @@
 
 // Module 5293 (isRecentlyActiveChannelsEnabled)
 import useDesignToggleDefault from "useDesignToggle" /* 5295 */;
-import getUserAgnosticState from "getUserAgnosticState" /* 5294 */;
+import closure_2 from "getUserAgnosticState" /* 5294 */;
 
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx");
 
 export const isRecentlyActiveChannelsEnabled = function isRecentlyActiveChannelsEnabled() {
   return closure_2.get("enable_recently_active");

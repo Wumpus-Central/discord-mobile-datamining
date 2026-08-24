@@ -1,10 +1,10 @@
 // === Module 16911: formatDurationFromDays ===
 
 // Module 16911 (formatDurationFromDays)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
 
 export default function formatDurationFromDays(days) {
   if (days > 0) {

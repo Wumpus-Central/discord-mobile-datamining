@@ -1,25 +1,25 @@
 // === Module 8891: useGuildEvents ===
 
 // Module 8891 (useGuildEvents)
-import obj132Default from "obj132" /* 687 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import setDefault from "set" /* 687 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
 import scheduledEventSort from "scheduledEventSort" /* 4370 */;
-import scheduledEventSort2 from "scheduledEventSort" /* 4370 */;
-import initialize from "initialize" /* 8892 */;
+import closure_9 from "scheduledEventSort" /* 4370 */;
+import closure_10 from "initialize" /* 8892 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ isGuildScheduledEventActive: error, StaticGuildEventIndexes: closure_8 } = scheduledEventSort);
 ({ GuildScheduledEventEntityTypes: unpackModuleId, GuildScheduledEventStatus: closure_12 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = ME);
 let closure_15 = [];
-let closure_16 = 15 * obj132Default.Millis.MINUTE;
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEvents.tsx");
+let closure_16 = 15 * setDefault.Millis.MINUTE;
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEvents.tsx");
 
 export default function useGuildEvents(arg0, arg1) {
   const _require = arg0;
@@ -36,8 +36,8 @@ export default function useGuildEvents(arg0, arg1) {
         GUILD_EVENT_UPCOMINGResult = closure_1_8.GUILD_EVENT_UPCOMING(guild.id);
       }
       const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(GUILD_EVENT_UPCOMINGResult);
-      found = guildScheduledEventsByIndex.filter((item, index) => {
-        const channel_id = item.channel_id;
+      found = guildScheduledEventsByIndex.filter((channel_id) => {
+        channel_id = channel_id.channel_id;
         if (null == channel_id) {
           return true;
         } else {
@@ -88,10 +88,10 @@ export const useActiveEventsByChannel = function useActiveEventsByChannel(arg0) 
   const items2 = [stateFromStoresArray];
   return React.useMemo(() => {
     const map = new Map();
-    const item = stateFromStoresArray.forEach((item, index) => {
-      const channel_id = item.channel_id;
+    const item = stateFromStoresArray.forEach((channel_id) => {
+      channel_id = channel_id.channel_id;
       if (null != channel_id) {
-        const result = map.set(channel_id, item);
+        const result = map.set(channel_id, channel_id);
       }
     });
     return map;
@@ -103,13 +103,13 @@ export const useGuildUpcomingEvents = function useGuildUpcomingEvents(arg0) {
   const items1 = [arg0];
   return _require(589).useStateFromStoresArray(items, () => {
     const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_UPCOMING(closure_0));
-    return guildScheduledEventsByIndex.filter((item, index) => {
-      if (item.entity_type !== constants.NONE) {
-        if (item.status === constants2.SCHEDULED) {
-          if (null == item.channel_id) {
+    return guildScheduledEventsByIndex.filter((entity_type) => {
+      if (entity_type.entity_type !== constants.NONE) {
+        if (entity_type.status === constants2.SCHEDULED) {
+          if (null == entity_type.channel_id) {
             return true;
           } else {
-            basicChannel = basicChannel.getBasicChannel(item.channel_id);
+            basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
             let canBasicChannelResult = null != basicChannel;
             if (canBasicChannelResult) {
               canBasicChannelResult = closure_6.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
@@ -131,13 +131,13 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
   const items1 = [arg0];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_UPCOMING(closure_0));
-    return guildScheduledEventsByIndex.filter((item, index) => {
-      if (item.entity_type !== constants.NONE) {
-        if (item.status === constants2.SCHEDULED) {
-          if (null == item.channel_id) {
+    return guildScheduledEventsByIndex.filter((entity_type) => {
+      if (entity_type.entity_type !== constants.NONE) {
+        if (entity_type.status === constants2.SCHEDULED) {
+          if (null == entity_type.channel_id) {
             return true;
           } else {
-            basicChannel = basicChannel.getBasicChannel(item.channel_id);
+            basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
             let canBasicChannelResult = null != basicChannel;
             if (canBasicChannelResult) {
               canBasicChannelResult = closure_6.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
@@ -161,12 +161,12 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
     if (null == stateFromStoresArray) {
       let reduced = {};
     } else {
-      reduced = stateFromStoresArray.reduce((acc, item, index) => {
-        callback(table[11]);
-        const obj = {};
-        const nextRecurrenceIdInEvent = obj.getNextRecurrenceIdInEvent(item);
-        const merged = Object.assign(acc);
-        obj[item.id] = interestedInEventRecurrence.isInterestedInEventRecurrence(item.id, nextRecurrenceIdInEvent);
+      reduced = stateFromStoresArray.reduce((arg0, id) => {
+        let obj = callback(table[11]);
+        obj = {};
+        const nextRecurrenceIdInEvent = obj.getNextRecurrenceIdInEvent(id);
+        const merged = Object.assign(arg0);
+        obj[id.id] = interestedInEventRecurrence.isInterestedInEventRecurrence(id.id, nextRecurrenceIdInEvent);
         return obj;
       }, {});
     }
@@ -194,10 +194,18 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
             let tmp9 = stateFromStoresObject[tmp8.id];
             let tmp10 = stateFromStoresObject1[tmp8.id];
             let flag = stateFromStoresObject2[tmp8.id];
+            let tmp11 = num;
             if (flag == null) {
               flag = false;
             }
+            let tmp12 = _require;
+            let tmp13 = stateFromStoresArray;
             let obj6 = _require(stateFromStoresArray[12]);
+            let tmp14 = obj6;
+            let tmp15 = tmp8;
+            let tmp16 = tmp9;
+            let tmp17 = tmp10;
+            let tmp18 = flag;
             nextShownUpcomingEventNoticeType = obj6.getNextShownUpcomingEventNoticeType(tmp8, tmp9, tmp10, flag);
             if (null != nextShownUpcomingEventNoticeType) {
               break;
@@ -213,7 +221,6 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
       }
     }
   }
-  const obj5 = _require(stateFromStoresArray[10]);
 };
 export const useGuildActiveEvent = function useGuildActiveEvent(guild_id) {
   const _require = guild_id;
@@ -221,13 +228,13 @@ export const useGuildActiveEvent = function useGuildActiveEvent(guild_id) {
   const items1 = [guild_id];
   return _require(589).useStateFromStores(items, () => {
     const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_ACTIVE(closure_0));
-    return guildScheduledEventsByIndex.find((item, index) => {
-      if (item.entity_type !== constants.NONE) {
-        if (callback(item)) {
-          if (null == item.channel_id) {
+    return guildScheduledEventsByIndex.find((entity_type) => {
+      if (entity_type.entity_type !== constants.NONE) {
+        if (callback(entity_type)) {
+          if (null == entity_type.channel_id) {
             return true;
           } else {
-            basicChannel = basicChannel.getBasicChannel(item.channel_id);
+            basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
             let canBasicChannelResult = null != basicChannel;
             if (canBasicChannelResult) {
               canBasicChannelResult = closure_6.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
@@ -252,7 +259,7 @@ export const useFirstActiveEventChannel = function useFirstActiveEventChannel(id
   const items1 = [id];
   return _require(589).useStateFromStores(items, () => {
     const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_ACTIVE(closure_0));
-    const found = guildScheduledEventsByIndex.find((item, index) => null != channel.getChannel(item.channel_id));
+    const found = guildScheduledEventsByIndex.find((channel_id) => null != channel.getChannel(channel_id.channel_id));
     let channel_id;
     if (found != null) {
       channel_id = found.channel_id;
@@ -281,8 +288,8 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
     return items;
   }, items1);
   const items2 = [stateFromStores];
-  return React.useMemo(() => stateFromStores.filter((item, index) => {
-    const eventSchedule = callback(8791).getEventSchedule(item);
+  return React.useMemo(() => stateFromStores.filter((status) => {
+    const eventSchedule = callback(8791).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
     const obj = callback(8791);
     let toISOStringResult1;
@@ -291,7 +298,7 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
       toISOStringResult1 = endTime.toISOString();
     }
     const eventTimeData = obj2.getEventTimeData(startTime.toISOString(), toISOStringResult1);
-    let withinStartWindow = item.status !== constants.ACTIVE;
+    let withinStartWindow = status.status !== constants.ACTIVE;
     if (withinStartWindow) {
       withinStartWindow = eventTimeData.withinStartWindow;
     }

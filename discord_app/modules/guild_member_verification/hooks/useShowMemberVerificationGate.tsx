@@ -2,11 +2,11 @@
 
 // Module 6858 (shouldShowMembershipVerificationGate)
 import isValidFormResponse from "isValidFormResponse" /* 6859 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
+require = arg1;
 function shouldShowMembershipVerificationGate(guildId, items) {
   let tmp = items;
   if (items === undefined) {
@@ -33,11 +33,12 @@ function shouldShowMembershipVerificationGate(guildId, items) {
     }
     if (flag) {
       flag = isValidFormResponse.guildHasVerificationGate(guild);
+      const obj4 = isValidFormResponse;
     }
     return flag;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
 
 export { shouldShowMembershipVerificationGate };
 export const useShowMemberVerificationGate = function useShowMemberVerificationGate(guild_id) {
@@ -48,7 +49,7 @@ export const useShowMemberVerificationGate = function useShowMemberVerificationG
     let tmp2 = null != closure_0;
     if (tmp2) {
       const items = [closure_1_3, closure_1_4, closure_1_2];
-      tmp2 = shouldShowMembershipVerificationGate(tmp, items);
+      tmp2 = closure_1_5(tmp, items);
     }
     return tmp2;
   }, items1);

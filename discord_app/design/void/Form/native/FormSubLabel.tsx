@@ -5,9 +5,9 @@ import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4734 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormSubLabel.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormSubLabel.tsx");
 
 export default function FormSubLabel(color) {
   color = color.color;

@@ -3,29 +3,29 @@
 // Module 7847 (flatten)
 arg5.flatten = function flatten(arr) {
   const items = [];
-  const item = arr.forEach((item, index) => {
-    if (Array.isArray(item)) {
-      item = item.forEach((item, index) => {
-        if (Array.isArray(item)) {
-          item = item.forEach((item, index) => {
-            if (Array.isArray(item)) {
-              item = item.forEach((item, index) => {
-                if (Array.isArray(item)) {
-                  item = item.forEach(() => { ... });
+  const item = arr.forEach((arr) => {
+    if (Array.isArray(arr)) {
+      let item = arr.forEach((arr) => {
+        if (Array.isArray(arr)) {
+          let item = arr.forEach((arr) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach(() => { ... });
                 } else {
-                  arr = arr.push(item);
+                  arr = arr.push(arr);
                 }
               });
             } else {
-              arr = arr.push(item);
+              arr = arr.push(arr);
             }
           });
         } else {
-          arr = arr.push(item);
+          arr = arr.push(arr);
         }
       });
     } else {
-      arr = arr.push(item);
+      arr = arr.push(arr);
     }
   });
   return items;

@@ -1,7 +1,7 @@
 // === Module 4728: map ===
 
 // Module 4728 (map)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
@@ -9,7 +9,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 let closure_3 = new timestampDefault("RequireNativeComponentOrDefault");
 const map = new Map();
 const tmp3 = new timestampDefault("RequireNativeComponentOrDefault");
-let result = obj132.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
+let result = set.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
 
 export default function requireNativeComponentOrDefault(warnWhenMissing) {
   ({ componentName, componentFoundInstance, componentMissingFallbackInstance } = warnWhenMissing);
@@ -25,9 +25,9 @@ export default function requireNativeComponentOrDefault(warnWhenMissing) {
       if (componentFoundInstance == null) {
         componentFoundInstance = callback(componentName);
       }
-      const result = map.set(componentName, componentFoundInstance);
+      const result = obj.set(componentName, componentFoundInstance);
     }
-    let value = map.get(componentName);
+    let value = obj.get(componentName);
   } else {
     value = componentMissingFallbackInstance;
     if (flag) {

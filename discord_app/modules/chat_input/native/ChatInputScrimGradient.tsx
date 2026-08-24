@@ -2,7 +2,6 @@
 
 // Module 11426 (ChatInputScrimGradient)
 import noopAll from "noop" /* 19 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4097 */;
 import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4194 */;
@@ -10,10 +9,10 @@ import LinearGradientDefault from "LinearGradient" /* 4756 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/ChatInputScrimGradient.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputScrimGradient.tsx");
 
 export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase) {
   ({ gradientHeight, inline } = scrimBase);
@@ -24,6 +23,8 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   let obj = getGradientColorByPercentage;
   const gradientValue = obj.useGradientValue(getGradientColorByPercentage.GradientPercentage.END);
   const token = map.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWER);
+  const obj2 = map;
+  const tmp4 = importDefault;
   if (gradientHeight == null) {
     gradientHeight = obj3.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT);
   }
@@ -33,12 +34,12 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   if (scrimBase == null) {
     scrimBase = token;
   }
-  let tmpResult = int2hslRaw;
+  let tmpResult = tmp(688);
   let hex2rgbResult = tmpResult.hex2rgb(scrimBase, 1);
   if (hex2rgbResult == null) {
     hex2rgbResult = scrimBase;
   }
-  tmpResult = int2hslRaw;
+  tmpResult = tmp(688);
   let str = tmpResult.hex2rgb(scrimBase, 0);
   if (str == null) {
     str = "transparent";
@@ -52,7 +53,7 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   const items = [str, hex2rgbResult];
   const items1 = [callback(LinearGradientDefault, { colors: items, style: { height: gradientHeight }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1] }), callback(View, { style: { flex: 1, backgroundColor: hex2rgbResult } })];
   obj[2] = items1;
-  return callback(View, obj);
+  return closure_5(View, obj);
 };
 export const useChatInputFloatingOverlayStyle = function useChatInputFloatingOverlayStyle() {
   const obj = { marginTop: -map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2, overflow: "visible" };

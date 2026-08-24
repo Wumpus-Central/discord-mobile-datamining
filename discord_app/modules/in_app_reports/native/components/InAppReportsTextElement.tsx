@@ -3,15 +3,15 @@
 // Module 8155 (TextElement)
 import Text from "Text" /* 4734 */;
 import createRulesAll from "createRules" /* 4764 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, body: { marginBottom: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsTextElement.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsTextElement.tsx");
 
 export default function TextElement(element) {
   const data = element.element.data;
@@ -40,7 +40,9 @@ export default function TextElement(element) {
       }
       items[1] = tmp10;
       obj[1] = items;
-      let tmp5Result = callback(View, obj);
+      let tmp5Result = closure_6(View, obj);
+      const tmp5 = closure_6;
+      const tmp6 = View;
     } else {
       tmp5Result = null;
     }

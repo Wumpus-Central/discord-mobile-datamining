@@ -1,12 +1,12 @@
 // === Module 11378: useRequest ===
 
 // Module 11378 (useRequest)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("hooks/useRequest.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("hooks/useRequest.tsx");
 
 export default function useRequest(arg0) {
   closure_0 = arg0;
@@ -95,6 +95,7 @@ export default function useRequest(arg0) {
                   tmp37 = new closure_1_1(closure_1_2[4])(lib);
                 }
                 closure_1_2(tmp37);
+                const tmp26 = closure_1_2;
               }
             } else if (arg0 === 1) {
               c6 = 3;

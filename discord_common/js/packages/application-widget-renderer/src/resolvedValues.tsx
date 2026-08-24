@@ -1,7 +1,7 @@
 // === Module 12193: resolveFieldValue ===
 
 // Module 12193 (resolveFieldValue)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 12194 */;
 
 function resolveFieldValue(image, items, applicationAssets) {
@@ -57,7 +57,7 @@ function resolveFieldValue(image, items, applicationAssets) {
     return tmp6;
   } else if (image.value_type === tmp19(12195).ApplicationWidgetFieldValueType.APPLICATION_ASSET) {
     if (items.includes(obj.MEDIA)) {
-      const found = applicationAssets.find((item, index) => item.key === image.value);
+      const found = applicationAssets.find((key) => key.key === image.value);
       let tmp5 = null;
       if (null != found) {
         obj = { type: null, media: null, presentationType: null };
@@ -85,10 +85,10 @@ const items1 = [obj.NUMBER];
 const items2 = [obj.MEDIA];
 const items3 = [obj.NUMBER];
 let closure_3 = { [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.TEXT]: items, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.NUMBER]: items1, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.IMAGE]: items2, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.DURATION]: items3 };
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx");
 
 export const ResolvedValueType = obj;
 export function bindResolveFieldValue(resolutionContext) {
   closure_0 = resolutionContext;
-  return (image, items) => resolveFieldValue(image, items, closure_0);
+  return (arg0, arg1) => closure_1_4(arg0, arg1, closure_0);
 }

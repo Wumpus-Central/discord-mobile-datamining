@@ -9,29 +9,35 @@ import Text from "Text" /* 4734 */;
 import Layer from "Layer" /* 7126 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
 import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9233 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = { top: 14, bottom: 14, left: 14, right: 14 };
-const createCacheKey = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.round, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey = { pillBase: null, pillDark: null, pillLight: null, text: null };
+createCacheKey = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.round, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT };
+let obj1 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
+const obj2 = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
 createCacheKey[3] = { marginLeft: ThemesDefault.space.PX_8, textTransform: "uppercase" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 function BadgeWithTooltip(tooltipPosition) {
   tooltipPosition = tooltipPosition.tooltipPosition;
+  let first;
+  dependencyMap = undefined;
   let callback;
+  callback = undefined;
   const tmp3 = callback4();
   const ref = callback.useRef(null);
   const tmp5 = callback(callback.useState(false), 2);
-  const first = tmp5[0];
+  first = tmp5[0];
   dependencyMap = tmp5[1];
   const intl = tooltipPosition(1236).intl;
   const stringResult = intl.string(tooltipPosition(1236).t["L9B+ZZ"]);
@@ -64,7 +70,8 @@ function BadgeWithTooltip(tooltipPosition) {
   }
   const intl2 = tmp7(1236).intl;
   const stringResult1 = intl2.string(tooltipPosition(1236).t["1m6qcO"]);
-  const items2 = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
+  obj = { ref, onPress: callback1, hitSlop: closure_9, accessibilityRole: "button", accessibilityLabel: stringResult1, accessibilityHint: stringResult, style: items2, children: null };
+  items2 = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
   const items3 = [callback2(tooltipPosition(7988).NitroWheelIcon, { size: "xs", color: str }), ];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult1 };
   items3[1] = callback2(tooltipPosition(4734).Text, obj);
@@ -79,16 +86,18 @@ function StaticBadge() {
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
-  const intl = getSystemLocale.intl;
+  const intl = tmp4(1236).intl;
   const stringResult = intl.string(getSystemLocale.t["1m6qcO"]);
-  const items = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
+  obj = { accessibilityLabel: stringResult, style: items, children: null };
+  items = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
   const items1 = [callback2(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: str }), ];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult };
   items1[1] = callback2(Text.Text, obj);
   obj[2] = items1;
   return callback3(closure_6, obj);
 }
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/FramesEarlyAccessBadge.tsx");
+const obj3 = { marginLeft: ThemesDefault.space.PX_8, textTransform: "uppercase" };
+const result = require("set").fileFinishedImporting("modules/collectibles/native/FramesEarlyAccessBadge.tsx");
 
 export default function _default(tooltipPosition) {
   let str = tooltipPosition.tooltipPosition;
@@ -107,16 +116,16 @@ export default function _default(tooltipPosition) {
   if (!obj.useIsProfileFramesEarlyAccessPhase(tooltipPosition.location)) {
     return null;
   } else if (flag2) {
-    let tmp3Result = callback(StaticBadge, {});
+    let tmp3Result = tmp3(StaticBadge, {});
   } else if (flag) {
     obj = { tooltipPosition: null };
     obj[0] = str;
-    tmp3Result = callback(BadgeWithTooltip, obj);
+    tmp3Result = tmp3(BadgeWithTooltip, obj);
   } else {
     obj = { zIndex: 3, children: null };
     obj1 = { tooltipPosition: null };
     obj1[0] = str;
-    obj[1] = callback(BadgeWithTooltip, obj1);
-    tmp3Result = callback(Layer.LayerScope, obj);
+    obj[1] = tmp3(BadgeWithTooltip, obj1);
+    tmp3Result = tmp3(Layer.LayerScope, obj);
   }
 };

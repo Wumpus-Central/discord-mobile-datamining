@@ -4,26 +4,27 @@
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef8636 from "module_8636" /* 8636 */;
-import LinkedChannelInviteDefault from "LinkedChannelInvite" /* 9948 */;
 import registerAssetDefault from "registerAsset" /* 9973 */;
 import registerAssetDefault2 from "registerAsset" /* 9974 */;
 import _modDef16038 from "module_16038" /* 16038 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8133 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "normalizeChannelPropertyForCompare" /* 8133 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import { ChannelSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+createCacheKey = { content: null, gap: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("components_native/channel_settings/ChannelSettingsInstantInvites.tsx");
+let obj1 = { height: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsInstantInvites.tsx");
 
 export default function ConnectedChannelSettingsInstantInvites() {
   let tmp = callback2();
@@ -73,7 +74,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   const stateFromStoresArray = _require(589).useStateFromStoresArray(items4, () => {
     if (null != closure_2) {
       const sortedLinkedChannelsForGuild = closure_1_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
-      let found = sortedLinkedChannelsForGuild.filter((item, index) => item.id === id.id);
+      let found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
     } else {
       found = [];
     }
@@ -81,7 +82,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   });
   const items5 = [memo, stateFromStoresArray];
   memo1 = memo.useMemo(() => {
-    const items = [...memo.map((item, index) => ({ type: "invite", data: item })), ...stateFromStoresArray.map((item, index) => ({ type: "channel", data: item }))];
+    const items = [...memo.map((data) => ({ type: "invite", data })), ...stateFromStoresArray.map((data) => ({ type: "channel", data }))];
     return items;
   }, items5);
   const items6 = [memo1.length];
@@ -93,7 +94,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
     if ("invite" === memo1[arg1].type) {
       let obj = { invite: null };
       obj[0] = tmp.data;
-      let tmp5 = closure_1_9(LinkedChannelInviteDefault, obj);
+      let tmp5 = closure_1_9(closure_1_1(9948), obj);
     } else {
       obj = { channel: null };
       obj[0] = tmp.data;
@@ -141,6 +142,5 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }
   items8[1] = tmpResult;
   obj2[1] = items8;
-  tmp16Result = callback(stateFromStoresArray, obj2);
-  const obj4 = _require(589);
+  tmp16Result = closure_10(stateFromStoresArray, obj2);
 };

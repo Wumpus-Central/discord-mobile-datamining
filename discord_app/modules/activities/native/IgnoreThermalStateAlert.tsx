@@ -6,11 +6,11 @@ import componentDidMountDefault from "componentDidMount" /* 4763 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" } });
-let result = require("obj132").fileFinishedImporting("modules/activities/native/IgnoreThermalStateAlert.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/native/IgnoreThermalStateAlert.tsx");
 
 export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
@@ -24,7 +24,7 @@ export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfir
     if (onConfirm != null) {
       tmp();
     }
-    const result = onConfirm(dependencyMap[5]).disregardSeriousThermalState();
+    const result = onConfirm(closure_1_2[5]).disregardSeriousThermalState();
   };
   const intl2 = onConfirm(1236).intl;
   obj.confirmText = intl2.string(onConfirm(1236).t.oEAioF);

@@ -3,14 +3,15 @@
 // Module 12613
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getParticipants from "getParticipants" /* 4773 */;
+import closure_4 from "getParticipants" /* 4773 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
-let obj = { flex: 1, borderRadius: ThemesDefault.radii.sm };
+const require = arg1;
+let obj = { container: { flex: 1, marginHorizontal: 4, marginVertical: 4 }, media: null };
+obj = { flex: 1, borderRadius: ThemesDefault.radii.sm };
 obj[1] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((channel) => {
@@ -49,6 +50,6 @@ const memoResult = importAllResult.memo((channel) => {
   }
   return tmp8;
 });
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
 
 export default memoResult;

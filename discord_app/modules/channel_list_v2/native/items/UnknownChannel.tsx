@@ -12,16 +12,18 @@ import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function handlePress() {
-  const obj = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, icon: null };
+  let obj = dispatcherDefault;
+  obj = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, icon: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["/ZjyYE"]);
   obj[2] = registerAssetDefault;
   obj.open(obj);
 }
 let c3 = importAllResult;
-let obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+let obj = { container: null };
+obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((channel) => {
@@ -30,7 +32,7 @@ const memoResult = importAllResult.memo((channel) => {
   const items = [channel.id];
   const tmp = callback();
   callback = importAllResult.useCallback(() => {
-    const result = channel(dependencyMap[10]).openChannelLongPressActionSheet(channel.id);
+    const result = channel(closure_1_2[10]).openChannelLongPressActionSheet(channel.id);
   }, items);
   const obj = { onPress: handlePress, onLongPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
   const tmp2 = computeChannelNameDefault(channel);
@@ -42,6 +44,6 @@ const memoResult = importAllResult.memo((channel) => {
   obj[8] = UnreadSetting.ONLY_MENTIONS;
   return jsx(getChannelModeDefault, { onPress: handlePress, onLongPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
 });
-let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 
 export default memoResult;

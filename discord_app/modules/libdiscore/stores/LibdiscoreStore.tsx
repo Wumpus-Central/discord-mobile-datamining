@@ -5,7 +5,7 @@ import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import { Store } from "initialize" /* 589 */;
 
-const require = fn;
+const require = arg1;
 function identity(arg0) {
   return arg0;
 }
@@ -16,7 +16,7 @@ class SecondaryIndexMetadata {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     obj = Object.create(new.target.prototype);
     obj.type = global;
-    obj.kkvDatabase = fn;
+    obj.kkvDatabase = arg1;
     obj.k1key = importDefault;
     obj.k2key = importAll;
     obj.shouldIndex = module;
@@ -53,7 +53,7 @@ class KVDatabase {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj.kkvDatabase = global;
-    obj.partition = fn;
+    obj.partition = arg1;
     return obj;
   }
 }
@@ -97,9 +97,9 @@ prototype2["version"] = function version() {
   }
   return partitionVersionResult;
 };
-prototype2["memoized"] = function memoized(fn) {
+prototype2["memoized"] = function memoized(arg0, arg1) {
   const kkvDatabase = this.kkvDatabase;
-  return kkvDatabase.memoizedSinglePartition(this.partition, fn, arg1);
+  return kkvDatabase.memoizedSinglePartition(this.partition, arg0, arg1);
 };
 let KKVDatabase;
 class KKVDatabase {
@@ -205,6 +205,7 @@ prototype3["getManyRecords"] = function getManyRecords(guildId, selectedRoleIds)
     while (tmp4 !== undefined) {
       let tmp8 = tmp.root[tmp6];
       if (null != tmp8) {
+        let tmp10 = tmp8;
         let arr = items.push(tmp9);
       }
       continue;
@@ -255,6 +256,7 @@ prototype3["mapPartitions"] = function mapPartitions(toSerializedPartition) {
   const items = [];
   const root = this.state.root;
   for (const key10008 in root) {
+    let tmp = key10008;
     let obj = { partitionKey: null, values: null };
     obj[0] = key10008;
     obj[1] = arg0(root[key10008].root, key10008);
@@ -263,13 +265,13 @@ prototype3["mapPartitions"] = function mapPartitions(toSerializedPartition) {
   }
   return items;
 };
-prototype3["memoizedPartition"] = function memoizedPartition(fn) {
+prototype3["memoizedPartition"] = function memoizedPartition(arg0) {
   const self = this;
-  closure_1 = fn;
+  closure_1 = arg0;
   let tmp = arg1;
   closure_2 = Symbol();
   if (undefined === arg1) {
-    tmp = fn("", {});
+    tmp = arg0("", {});
   }
   closure_0 = tmp;
   return (arg0) => {
@@ -282,21 +284,21 @@ prototype3["memoizedPartition"] = function memoizedPartition(fn) {
       const call = hasOwnProperty.call;
       if (!(typeof call === "unknown" ? hasOwnProperty(closure_2) : call(memoized, closure_2))) {
         const tmp6 = callback(arg0, tmp.root);
-        memoized[closure_2] = tmp6;
+        memoized[tmp2] = tmp6;
         tmp3 = tmp6;
       }
       return tmp3;
     }
   };
 };
-prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partition, fn, arg2) {
+prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partition, arg1, arg2) {
   const self = this;
   closure_1 = partition;
-  closure_2 = fn;
+  closure_2 = arg1;
   let tmp = arg2;
   closure_3 = Symbol();
   if (undefined === arg2) {
-    tmp = fn(self);
+    tmp = arg1(self);
   }
   closure_0 = tmp;
   return () => {
@@ -309,7 +311,7 @@ prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partiti
       const call = hasOwnProperty.call;
       if (!(typeof call === "unknown" ? hasOwnProperty(closure_3) : call(memoized, closure_3))) {
         const tmp6 = callback(tmp.root);
-        memoized[closure_3] = tmp6;
+        memoized[tmp2] = tmp6;
         tmp3 = tmp6;
       }
       return tmp3;
@@ -326,7 +328,7 @@ prototype3["memoized"] = function memoized(arg0) {
     const call = hasOwnProperty.call;
     if (!(typeof call === "unknown" ? hasOwnProperty(closure_0) : call(memoized, closure_0))) {
       const tmp5 = callback(self.state.root);
-      memoized[closure_0] = tmp5;
+      memoized[tmp2] = tmp5;
       tmp3 = tmp5;
     }
     return tmp3;
@@ -493,37 +495,56 @@ prototype3["updateSecondaryIndexes"] = function updateSecondaryIndexes(items, it
   while (iter !== undefined) {
     let obj = nextResult;
     if (undefined !== items2) {
+      let tmp2 = items2;
       let iter2 = items2[Symbol.iterator]();
+      let tmp3 = items2;
       let nextResult1 = iter2.next();
+      let tmp5 = iter2;
       while (iter2 !== undefined) {
+        let tmp6 = nextResult;
         let k1Key = obj.getK1Key(nextResult1);
         let tmp8 = k1Key;
         let k2Key = obj.getK2Key(nextResult1);
         let tmp10 = null != k1Key;
         if (tmp10) {
+          let tmp11 = k2Key;
           tmp10 = null != k2Key;
         }
         if (tmp10) {
+          let tmp12 = nextResult;
           let kkvDatabase = obj.kkvDatabase;
+          let tmp13 = k1Key;
+          let tmp14 = k2Key;
           let removeRecordResult = kkvDatabase.removeRecord(tmp8, k2Key, nextVersionResult);
         }
         continue;
       }
     }
     if (undefined !== items) {
+      let tmp16 = items;
       let iter3 = items[Symbol.iterator]();
+      let tmp17 = items;
       let nextResult2 = iter3.next();
+      let tmp19 = iter3;
       while (iter3 !== undefined) {
+        let tmp21 = nextResult;
         let tmp20 = nextResult2;
         let k1Key1 = obj.getK1Key(nextResult2);
         let tmp23 = k1Key1;
         let k2Key1 = obj.getK2Key(nextResult2);
         let tmp25 = null != k1Key1;
         if (tmp25) {
+          let tmp26 = k2Key1;
           tmp25 = null != k2Key1;
         }
         if (tmp25) {
+          let tmp27 = nextResult;
           let kkvDatabase2 = obj.kkvDatabase;
+          let tmp28 = k1Key1;
+          let tmp29 = k2Key1;
+          let tmp30 = nextResult2;
+          let tmp31 = kkvDatabase2;
+          let tmp32 = nextVersionResult;
           let setRecordResult = kkvDatabase2.setRecord(tmp23, k2Key1, tmp20, nextVersionResult);
         }
         continue;
@@ -534,8 +555,8 @@ prototype3["updateSecondaryIndexes"] = function updateSecondaryIndexes(items, it
 };
 class LibdiscoreStore extends Store {
   constructor(arg0) {
-    str = fn;
-    if (fn === undefined) {
+    str = arg1;
+    if (arg1 === undefined) {
       str = "typescript";
     }
     closure_0 = undefined;
@@ -548,7 +569,7 @@ class LibdiscoreStore extends Store {
         closure_0 = arg0[key10008];
         fn = (arg0) => {
           if (lib.wrappedState == null) {
-            lib.wrappedState = lib.stateWrapper();
+            obj.wrappedState = obj.stateWrapper();
           }
           lib(arg0, lib.wrappedState);
           if (lib._nextVersion === lib._nextVersion) {
@@ -605,7 +626,7 @@ prototype4["connectWithLibdiscore"] = function connectWithLibdiscore(FLUX_API) {
     obj[0] = self.getName();
     const _Object = Object;
     const keys = Object.keys(self.state.databases);
-    obj[1] = keys.map((item, index) => ({ name: item, type: "kkv" }));
+    obj[1] = keys.map((name) => ({ name, type: "kkv" }));
     const connectStoreResult = FLUX_API.connectStore(obj);
     self.applyChanges(connectStoreResult.initialState);
     if ("typescript-libdiscore-dual-read" === self.mode) {
@@ -615,61 +636,87 @@ prototype4["connectWithLibdiscore"] = function connectWithLibdiscore(FLUX_API) {
   }
 };
 prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
-  const self = this;
+  let self = this;
+  self = this;
   closure_2 = Symbol("didValidatePartition");
   closure_0 = { root: {}, derived: { length: 0, memoized: {} } };
   this.addChangeListener(() => {
     const shadowDatabases = self.shadowDatabases;
     if (null != shadowDatabases) {
-      if (!self.dualReadValidationDisabled) {
+      if (!tmp.dualReadValidationDisabled) {
         for (const key10013 in tmp.state.databases) {
+          let tmp8 = key10013;
           let obj2 = _self;
           let obj3 = _self.state.databases[key10013];
           let obj4 = shadowDatabases[key10013];
           if (null == obj4) {
+            let tmp6 = closure_1_5;
             let _HermesInternal2 = HermesInternal;
             let warnResult = closure_1_5.warn("Shadow database " + key10013 + " not found for dual-read validation");
             continue;
           } else {
             let callback = obj3.getAllPartitions();
             let _self = obj4.getAllPartitions();
+            let tmp3 = callback;
+            let tmp4 = table;
             let obj = callback(table[3]);
             let _HermesInternal = HermesInternal;
-            let result = obj.runDualReadValidation("" + obj2.getName() + ":" + key10013, "Kkv", (fn) => {
+            let result = obj.runDualReadValidation("" + obj2.getName() + ":" + key10013, "Kkv", (arg0) => {
               const keys = Object.keys(table);
               const keys1 = Object.keys(table2);
               const iter = keys[Symbol.iterator]();
               const nextResult = iter.next();
               while (iter !== undefined) {
+                let tmp5 = table;
                 let tmp6 = table[nextResult];
                 let _Object = Object;
                 let call = hasOwnProperty.call;
+                let tmp7 = table2;
                 let tmp4 = nextResult;
-                if (typeof call === "unknown" ? hasOwnProperty(nextResult) : call(table2, nextResult)) {
-                  let tmp14 = table2[tmp4];
+                let tmp8 = table2;
+                if (typeof call === "unknown" ? hasOwnProperty(nextResult) : call(tmp7, nextResult)) {
+                  let tmp12 = tmp7;
+                  let tmp13 = nextResult;
+                  let tmp14 = tmp8[tmp4];
                   let tmp15 = tmp14;
+                  let tmp16 = tmp6;
+                  let tmp17 = closure_1_2;
                   let tmp18 = tmp6.derived.memoized[closure_1_2];
+                  let tmp20 = tmp14.derived.memoized[closure_1_2];
                   if (null == tmp18) {
-                    let tmp25 = fn(tmp6, tmp15);
+                    let tmp23 = tmp6;
+                    let tmp24 = tmp14;
+                    let tmp25 = arg0(tmp6, tmp15);
                     let obj = {};
-                    tmp6.derived.memoized[closure_1_2] = obj;
-                    tmp15.derived.memoized[closure_1_2] = obj;
+                    tmp6.derived.memoized[tmp17] = obj;
+                    tmp15.derived.memoized[tmp17] = obj;
+                  } else {
+                    let tmp21 = tmp18;
+                    let tmp22 = tmp20;
                   }
                 } else {
-                  let tmp11 = fn(tmp6, table);
+                  let tmp9 = tmp6;
+                  let tmp10 = table;
+                  let tmp11 = arg0(tmp6, table);
                 }
                 continue;
               }
               for (const item10064 of keys1) {
                 let _Object2 = Object;
                 let call2 = hasOwnProperty2.call;
+                let tmp27 = table;
+                let tmp26 = item10064;
                 if (typeof call2 === "unknown") {
                   let hasOwnProperty2Result = hasOwnProperty2(item10064);
                 } else {
-                  hasOwnProperty2Result = call2(table, item10064);
+                  hasOwnProperty2Result = call2(tmp27, item10064);
                 }
                 if (!hasOwnProperty2Result) {
-                  let tmp33 = arg0(table, table2[item10064]);
+                  let tmp29 = table2;
+                  let tmp30 = table2;
+                  let tmp31 = item10064;
+                  let tmp32 = table;
+                  let tmp33 = arg0(table, table2[tmp26]);
                 }
                 continue;
               }
@@ -689,7 +736,7 @@ prototype4["addKKVDatabase"] = function addKKVDatabase(guildStickers, createGuil
     HermesBuiltin.throwTypeError();
   }
   let tmp3 = createGuildRoleRecordFromRust;
-  let obj = Object.create(KKVDatabase.prototype);
+  let obj = Object.create(tmp.prototype);
   obj[0] = [];
   obj.nextVersion = nextVersion.bind(this);
   obj.state = obj.emptyState();
@@ -702,10 +749,10 @@ prototype4["addKKVDatabase"] = function addKKVDatabase(guildStickers, createGuil
   const result = recordCreators.set(guildStickers, tmp4);
   if (null != self.shadowDatabases) {
     const nextVersion2 = self.nextVersion;
-    if (typeof KKVDatabase !== "function") {
+    if (typeof tmp !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    obj = Object.create(KKVDatabase.prototype);
+    obj = Object.create(tmp.prototype);
     obj[0] = [];
     obj.nextVersion = nextVersion2.bind(self);
     obj.state = obj.emptyState();
@@ -726,7 +773,7 @@ prototype4["addKVDatabase"] = function addKVDatabase(guilds, createGuildRecordFr
     HermesBuiltin.throwTypeError();
   }
   let tmp3 = createGuildRecordFromRust;
-  let obj = Object.create(KKVDatabase.prototype);
+  let obj = Object.create(tmp.prototype);
   obj[0] = [];
   obj.nextVersion = nextVersion.bind(this);
   obj.state = obj.emptyState();
@@ -740,10 +787,10 @@ prototype4["addKVDatabase"] = function addKVDatabase(guilds, createGuildRecordFr
   const result = recordCreators.set(guilds, tmp5);
   if (null != self.shadowDatabases) {
     const nextVersion2 = self.nextVersion;
-    if (typeof KKVDatabase !== "function") {
+    if (typeof tmp !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    obj = Object.create(KKVDatabase.prototype);
+    obj = Object.create(tmp.prototype);
     obj[0] = [];
     obj.nextVersion = nextVersion2.bind(self);
     obj.state = obj.emptyState();
@@ -766,6 +813,7 @@ prototype4["applyChanges"] = function applyChanges(databaseChanges) {
 };
 prototype4["clearAllDatabases"] = function clearAllDatabases() {
   for (const key10004 in this.state.databases) {
+    let tmp2 = key10004;
     let obj = tmp.state.databases[key10004];
     let clearResult = obj.clear();
     continue;
@@ -800,21 +848,37 @@ prototype4["executeDatabaseChange"] = function executeDatabaseChange(arg0, arg1)
       let iter = nextResult;
       let opcode = nextResult.opcode;
       if ("removePartition" === opcode) {
+        let tmp23 = nextResult;
         let removePartitionResult = obj2.removePartition(iter.partitionKey, nextVersionResult);
       } else if ("setPartition" === opcode) {
+        let tmp17 = nextResult;
         let partition = iter.partition;
         let tmp18 = partition;
+        let tmp19 = partition;
         for (const key10048 in partition) {
+          let tmp33 = key10048;
+          let tmp34 = partition;
           tmp18[key10048] = value(tmp18[key10048]);
           continue;
         }
+        let tmp20 = nextResult;
+        let tmp21 = partition;
         let setPartitionResult = obj2.setPartition(iter.partitionKey, tmp18, nextVersionResult);
       } else if ("updateRecord" === opcode) {
+        let tmp12 = nextResult;
+        let tmp13 = obj2;
+        let tmp14 = value;
+        let tmp15 = nextVersionResult;
         let updateRecordResult = obj2.updateRecord(iter.partitionKey, iter.clusteringKey, iter.value, value, nextVersionResult);
       } else if ("setRecord" === opcode) {
+        let tmp7 = nextResult;
         let partitionKey = iter.partitionKey;
+        let tmp8 = obj2;
+        let tmp9 = partitionKey;
+        let tmp10 = nextVersionResult;
         let setRecordResult = obj2.setRecord(partitionKey, iter.clusteringKey, value(iter.value), nextVersionResult);
       } else if ("removeRecord" === opcode) {
+        let tmp5 = nextResult;
         let removeRecordResult = obj2.removeRecord(iter.partitionKey, iter.clusteringKey, nextVersionResult);
       } else if ("clearDatabase" === opcode) {
         let clearResult = obj2.clear();
@@ -829,7 +893,7 @@ prototype4["nextVersion"] = function nextVersion() {
   return +this._nextVersion;
 };
 let tmp2 = new timestampDefault("LibdiscoreStore");
-let result = require("obj132").fileFinishedImporting("modules/libdiscore/stores/LibdiscoreStore.tsx");
+let result = require("set").fileFinishedImporting("modules/libdiscore/stores/LibdiscoreStore.tsx");
 
 export { KVDatabase };
 export { KKVDatabase };

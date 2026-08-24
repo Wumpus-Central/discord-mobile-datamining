@@ -1,21 +1,21 @@
 // === Module 11818: WakeLock ===
 
 // Module 11818 (WakeLock)
-import enforcingDefault from "enforcing" /* 11819 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/device/native/WakeLock.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/device/native/WakeLock.tsx");
 
 export default function WakeLock(wakeLockKey) {
   wakeLockKey = wakeLockKey.wakeLockKey;
   const items = [wakeLockKey];
   const effect = React.useEffect(() => {
     if (obj.isAndroid()) {
-      const lock = enforcingDefault.requestLock(wakeLockKey);
+      const lock = closure_1_1(closure_1_2[3]).requestLock(wakeLockKey);
+      let obj2 = closure_1_1(closure_1_2[3]);
     } else {
-      let ScreenWakeLockManager = NativeModules.ScreenWakeLockManager;
+      let ScreenWakeLockManager = closure_1_4.ScreenWakeLockManager;
       const lock1 = ScreenWakeLockManager.requestLock(wakeLockKey);
     }
     return () => {
@@ -26,7 +26,6 @@ export default function WakeLock(wakeLockKey) {
         const ScreenWakeLockManager = closure_1_4.ScreenWakeLockManager;
         ScreenWakeLockManager.releaseLock(closure_0);
       }
-      obj = wakeLockKey(closure_1_2[2]);
     };
   }, items);
   return null;
@@ -36,9 +35,10 @@ export const useWakeLock = function useWakeLock(VoiceMessageOverlay) {
   const items = [VoiceMessageOverlay];
   const effect = React.useEffect(() => {
     if (obj.isAndroid()) {
-      const lock = enforcingDefault.requestLock(wakeLockKey);
+      const lock = closure_1_1(closure_1_2[3]).requestLock(wakeLockKey);
+      let obj2 = closure_1_1(closure_1_2[3]);
     } else {
-      let ScreenWakeLockManager = NativeModules.ScreenWakeLockManager;
+      let ScreenWakeLockManager = closure_1_4.ScreenWakeLockManager;
       const lock1 = ScreenWakeLockManager.requestLock(wakeLockKey);
     }
     return () => {
@@ -49,7 +49,6 @@ export const useWakeLock = function useWakeLock(VoiceMessageOverlay) {
         const ScreenWakeLockManager = closure_1_4.ScreenWakeLockManager;
         ScreenWakeLockManager.releaseLock(closure_0);
       }
-      obj = wakeLockKey(closure_1_2[2]);
     };
   }, items);
 };

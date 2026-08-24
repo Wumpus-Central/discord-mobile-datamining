@@ -1,7 +1,7 @@
 // === Module 7186: ARBITRARY_LARGE_OFFSET ===
 
 // Module 7186 (ARBITRARY_LARGE_OFFSET)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import Button from "Button" /* 1297 */;
 import ICON_SIZE from "ICON_SIZE" /* 7187 */;
 
@@ -9,7 +9,7 @@ const XXLARGE = Button.AvatarSizes.XXLARGE;
 const tmp2 = Button.AVATAR_SIZE_MAP[XXLARGE];
 const sum = tmp2 + 12;
 const result = tmp2 / 2;
-const result1 = obj132.fileFinishedImporting("modules/user_profile/native/Constants.tsx");
+const result1 = set.fileFinishedImporting("modules/user_profile/native/Constants.tsx");
 
 export const ARBITRARY_LARGE_OFFSET = 250;
 export const PROFILE_SIDE_PADDING = 16;

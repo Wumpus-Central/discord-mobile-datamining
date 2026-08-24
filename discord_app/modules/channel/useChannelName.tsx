@@ -2,15 +2,16 @@
 
 // Module 4984 (computeChannelName)
 import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import getHash from "getHash" /* 4288 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "getHash" /* 4288 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
-function computeChannelName(channel, closure_9, closure_7, flag, arg4) {
-  if (flag === undefined) {
+const require = arg1;
+function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
+  let flag = arg3;
+  if (arg3 === undefined) {
     flag = false;
   }
   let flag2 = arg4;
@@ -32,15 +33,16 @@ function computeChannelName(channel, closure_9, closure_7, flag, arg4) {
         return combined;
       } else {
         const recipients = channel.recipients;
-        const mapped = recipients.map(currentUser.getUser);
+        const mapped = recipients.map(closure_9.getUser);
         const first = callback(mapped.filter(_require(1370).isNotNullish), 1)[0];
         if (null == first) {
           return "???";
         } else {
           if (!first.isProvisional) {
-            let str17 = nickname.getNickname(first.id);
+            let str17 = closure_7.getNickname(first.id);
             if (str17 == null) {
               str17 = nameFromUserDefault.getName(first);
+              const obj3 = nameFromUserDefault;
             }
             if (str17 == null) {
               str17 = "???";
@@ -54,18 +56,18 @@ function computeChannelName(channel, closure_9, closure_7, flag, arg4) {
           globalName = first.globalName;
         }
       }
-    } else if (constants.GROUP_DM === type) {
+    } else if (tmp3.GROUP_DM === type) {
       if ("" !== str) {
         return str;
       } else {
         const recipients1 = channel.recipients;
-        _require = nickname;
-        const mapped1 = recipients1.map(currentUser.getUser);
+        _require = closure_7;
+        const mapped1 = recipients1.map(closure_9.getUser);
         const found = mapped1.filter(_require(1370).isNotNullish);
-        const mapped2 = found.map((item, index) => {
-          nickname = nickname.getNickname(item.id);
+        const mapped2 = found.map((id) => {
+          nickname = nickname.getNickname(id.id);
           if (nickname == null) {
-            nickname = closure_1_1(closure_1_2[6]).getName(item);
+            nickname = closure_1_1(closure_1_2[6]).getName(id);
             const obj = closure_1_1(closure_1_2[6]);
           }
           return nickname;
@@ -75,16 +77,17 @@ function computeChannelName(channel, closure_9, closure_7, flag, arg4) {
         } else {
           const intl2 = tmp25(1236).intl;
           const obj = { name: null };
-          obj[0] = nameFromUserDefault.getName(currentUser.getCurrentUser());
+          obj[0] = nameFromUserDefault.getName(closure_9.getCurrentUser());
           joined = intl2.formatToPlainString(tmp25(1236).t["9Uk8PF"], obj);
+          const obj2 = nameFromUserDefault;
         }
       }
     } else {
-      if (constants.GUILD_ANNOUNCEMENT !== type) {
-        if (constants.GUILD_TEXT !== type) {
-          if (constants.GUILD_FORUM !== type) {
-            if (constants.GUILD_MEDIA !== type) {
-              if (constants.GUILD_CATEGORY === type) {
+      if (tmp3.GUILD_ANNOUNCEMENT !== type) {
+        if (tmp3.GUILD_TEXT !== type) {
+          if (tmp3.GUILD_FORUM !== type) {
+            if (tmp3.GUILD_MEDIA !== type) {
+              if (tmp3.GUILD_CATEGORY === type) {
                 if (channel.id === closure_8) {
                   const intl = _require(1236).intl;
                   let stringResult = intl.string(_require(1236).t.GSfOoo);
@@ -98,11 +101,11 @@ function computeChannelName(channel, closure_9, closure_7, flag, arg4) {
                 }
                 return stringResult;
               } else {
-                if (constants.PUBLIC_THREAD !== type) {
-                  if (constants.PRIVATE_THREAD !== type) {
-                    if (constants.ANNOUNCEMENT_THREAD !== type) {
-                      if (constants.GUILD_VOICE !== type) {
-                        if (constants.GUILD_STAGE_VOICE !== type) {
+                if (tmp3.PUBLIC_THREAD !== type) {
+                  if (tmp3.PRIVATE_THREAD !== type) {
+                    if (tmp3.ANNOUNCEMENT_THREAD !== type) {
+                      if (tmp3.GUILD_VOICE !== type) {
+                        if (tmp3.GUILD_STAGE_VOICE !== type) {
                           return str;
                         }
                       }
@@ -139,7 +142,7 @@ function computeChannelName(channel, closure_9, closure_7, flag, arg4) {
   }
 }
 ({ ChannelTypes: error, NULL_STRING_CHANNEL_ID: closure_8 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/channel/useChannelName.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/useChannelName.tsx");
 
 export default function useChannelName(arg0) {
   const _require = arg0;
@@ -151,7 +154,7 @@ export default function useChannelName(arg0) {
   return _require(589).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      tmp2 = computeChannelName(closure_0, closure_1_6, closure_1_5, flag);
+      tmp2 = closure_1_9(tmp, closure_1_6, closure_1_5, flag);
     }
     return tmp2;
   });
@@ -160,10 +163,10 @@ export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroup
   const _require = arg2;
   const mapped = arr.map(getUser.getUser);
   const found = mapped.filter(_require(1370).isNotNullish);
-  const mapped1 = found.map((item, index) => {
-    nickname = nickname.getNickname(item.id);
+  const mapped1 = found.map((id) => {
+    nickname = nickname.getNickname(id.id);
     if (nickname == null) {
-      nickname = closure_1_1(closure_1_2[6]).getName(item);
+      nickname = closure_1_1(closure_1_2[6]).getName(id);
       const obj = closure_1_1(closure_1_2[6]);
     }
     return nickname;
@@ -175,6 +178,7 @@ export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroup
     const obj = { name: null };
     obj[0] = nameFromUserDefault.getName(getUser.getCurrentUser());
     joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
+    const obj2 = nameFromUserDefault;
   }
   return joined;
 };
@@ -183,10 +187,10 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   const _require = arg2;
   const mapped = recipients.map(getUser.getUser);
   const found = mapped.filter(_require(1370).isNotNullish);
-  const mapped1 = found.map((item, index) => {
-    nickname = nickname.getNickname(item.id);
+  const mapped1 = found.map((id) => {
+    nickname = nickname.getNickname(id.id);
     if (nickname == null) {
-      nickname = closure_1_1(closure_1_2[6]).getName(item);
+      nickname = closure_1_1(closure_1_2[6]).getName(id);
       const obj = closure_1_1(closure_1_2[6]);
     }
     return nickname;
@@ -198,6 +202,7 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
     const obj = { name: null };
     obj[0] = nameFromUserDefault.getName(getUser.getCurrentUser());
     joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
+    const obj2 = nameFromUserDefault;
   }
   return joined;
 };
@@ -213,11 +218,11 @@ export const useComputedGroupDmName = function useComputedGroupDmName(arg0) {
         const recipients = obj.recipients;
         callback = closure_1_5;
         const mapped = recipients.map(closure_1_6.getUser);
-        const found = mapped.filter(callback(dependencyMap[5]).isNotNullish);
-        const mapped1 = found.map((item, index) => {
-          nickname = nickname.getNickname(item.id);
+        const found = mapped.filter(callback(closure_1_2[5]).isNotNullish);
+        const mapped1 = found.map((id) => {
+          nickname = nickname.getNickname(id.id);
           if (nickname == null) {
-            nickname = closure_1_1(closure_1_2[6]).getName(item);
+            nickname = closure_1_1(closure_1_2[6]).getName(id);
             const obj = closure_1_1(closure_1_2[6]);
           }
           return nickname;
@@ -225,11 +230,13 @@ export const useComputedGroupDmName = function useComputedGroupDmName(arg0) {
         if (mapped1.length > 0) {
           let joined = mapped1.join(", ");
         } else {
-          const intl = tmp3(dependencyMap[7]).intl;
+          const intl = tmp3(tmp4[7]).intl;
           obj = { name: null };
-          obj[0] = nameFromUserDefault.getName(closure_1_6.getCurrentUser());
-          joined = intl.formatToPlainString(tmp3(dependencyMap[7]).t["9Uk8PF"], obj);
+          obj[0] = closure_1_1(tmp4[6]).getName(obj2.getCurrentUser());
+          joined = intl.formatToPlainString(tmp3(tmp4[7]).t["9Uk8PF"], obj);
+          const obj4 = closure_1_1(tmp4[6]);
         }
+        obj2 = closure_1_6;
       }
     }
     return tmp;
@@ -252,6 +259,5 @@ export const escapeChannelName = function escapeChannelName(channelName) {
   return channelName.replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
 };
 export const unescapeChannelName = function unescapeChannelName(str) {
-  str = str.replace(/\\"/g, "\"");
-  return str.replace(/\\\\/g, "\\");
+  return str.replace(/\\"/g, "\"").replace(/\\\\/g, "\\");
 };

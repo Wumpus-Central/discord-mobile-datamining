@@ -3,18 +3,13 @@
 // Module 8560 (BaseIdentityVerificationField)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4326 */;
 import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 8597 */;
-import EnvelopeIcon2 from "EnvelopeIcon" /* 8658 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function BaseIdentityVerificationField(icon) {
   icon = icon.icon;
   ({ label, passesVerification, onPress } = icon);
@@ -32,38 +27,39 @@ function BaseIdentityVerificationField(icon) {
   obj = { style: null, children: null };
   if (passesVerification) {
     obj[0] = tmp.verifiedContainer;
-    obj[1] = callback(CheckmarkLargeIcon.CheckmarkLargeIcon, { color: "status-positive" });
+    obj[1] = tmp6(tmp7(4326).CheckmarkLargeIcon, { color: "status-positive" });
     let tmp9 = obj;
   } else {
     obj[0] = tmp.ctaButton;
     obj1 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
-    const intl = getSystemLocale.intl;
-    obj1[3] = intl.string(getSystemLocale.t["13ofGu"]);
+    const intl = tmp7(1236).intl;
+    obj1[3] = intl.string(tmp7(1236).t["13ofGu"]);
     obj1[4] = onPress;
-    obj[1] = callback(Button.Button, obj1);
+    obj[1] = tmp6(tmp7(4745).Button, obj1);
     tmp9 = obj;
   }
   items[2] = callback(View, tmp9);
   obj[1] = items;
-  return callback(View, obj);
+  return closure_5(View, obj);
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { padding: 8, marginTop: 8, borderRadius: ThemesDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { container: null, icon: null, label: null, verifiedContainer: null, ctaButton: null };
+createCacheKey = { padding: 8, marginTop: 8, borderRadius: ThemesDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginLeft: 4, marginRight: 8 };
 createCacheKey[2] = { flex: 1, marginLeft: 4, lineHeight: 20 };
 createCacheKey[3] = { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" };
 createCacheKey[4] = { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
 
 export default function IdentityVerificationField(arg0) {
   ({ platform, passesVerification } = arg0);
   if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL === platform) {
-    const intl3 = getSystemLocale.intl;
+    const intl3 = tmp(1236).intl;
     const string2 = intl3.string;
-    let INsLgA = getSystemLocale.t;
+    let INsLgA = tmp(1236).t;
     if (passesVerification) {
       INsLgA = INsLgA.INsLgA;
       let string2Result = string2(INsLgA);
@@ -71,10 +67,10 @@ export default function IdentityVerificationField(arg0) {
       string2Result = string2(INsLgA.c6EUJI);
     }
   } else {
-    if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE === platform) {
-      const intl2 = getSystemLocale.intl;
+    if (tmp(4200).UserVerificationFieldPlatforms.PHONE === platform) {
+      const intl2 = tmp(1236).intl;
       const string = intl2.string;
-      const t = getSystemLocale.t;
+      const t = tmp(1236).t;
       if (passesVerification) {
         let stringResult = string(t["xO2XI/"]);
       } else {
@@ -82,24 +78,24 @@ export default function IdentityVerificationField(arg0) {
       }
       let stringResult1 = stringResult;
     } else {
-      const intl = getSystemLocale.intl;
-      stringResult1 = intl.string(getSystemLocale.t.mhv8BM);
+      const intl = tmp(1236).intl;
+      stringResult1 = intl.string(tmp(1236).t.mhv8BM);
     }
-    if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = EnvelopeIcon2.EnvelopeIcon;
-    } else if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = MobilePhoneIcon.MobilePhoneIcon;
+    if (tmp(4200).UserVerificationFieldPlatforms.EMAIL === platform) {
+      let EnvelopeIcon = tmp(8658).EnvelopeIcon;
+    } else if (tmp(4200).UserVerificationFieldPlatforms.PHONE === platform) {
+      EnvelopeIcon = tmp(8597).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = EnvelopeIcon2.EnvelopeIcon;
+      EnvelopeIcon = tmp(8658).EnvelopeIcon;
     }
-    if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL === platform) {
+    if (tmp(4200).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
         callback2(paths[10]).open();
       };
     } else {
-      fn = MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE === platform ? (() => {
-        callback2(paths[11]);
-        const obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
+      fn = tmp(4200).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
+        let obj = callback2(paths[11]);
+        obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
         obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);
       }) : (() => {
 

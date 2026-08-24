@@ -3,11 +3,11 @@
 // Module 7348 (useKeyboardBlurring)
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1496 */;
+import closure_8 from "subscribeToKeyboardUIStore" /* 1496 */;
 import { KeyboardThemes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ Pressable: c4, TextInput: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -24,11 +24,13 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
           current.blur();
         }
       }
-      tmp = systemKeyboardOpen === systemKeyboardOpen || systemKeyboardOpen;
     });
   }, items);
+  let isScreenReaderEnabled;
+  let defaultValue;
   value = value.value;
-  const defaultValue = value.defaultValue;
+  isScreenReaderEnabled = value;
+  defaultValue = value.defaultValue;
   const items1 = [ref, value, defaultValue];
   const effect1 = importAllResult.useEffect(() => {
     const current = ref.current;
@@ -51,8 +53,9 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
       current.setNativeProps(obj);
     }
   });
+  isScreenReaderEnabled = undefined;
   obj1 = ref(defaultValue[7]);
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   const items2 = [ref];
   const items3 = [isScreenReaderEnabled];
   const callback = importAllResult.useCallback(() => {
@@ -75,6 +78,7 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
   }, items3);
   ref(defaultValue[9]);
   if (null != value.keyboardAppearance) {
+    obj = {};
     obj = { value: "r", defaultValue: "accessibilityRole" };
     let tmp6Result = tmp6(tmp3[10]);
     let merged = Object.assign(tmp6Result.mergeProps(value, tmp4, obj));
@@ -101,16 +105,18 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
       obj2[2] = memo;
       items4[1] = callback(closure_4, obj2);
       obj1[1] = items4;
-      tmp21Result = callback(closure_7, obj1);
+      tmp21Result = closure_11(closure_7, obj1);
+      const tmp21 = closure_11;
+      const tmp22 = closure_7;
+      const tmp23 = closure_4;
     }
     return tmp21Result;
   } else {
     value.keyboardAppearance = tmp6(tmp3[10]).isThemeDark(tmp12) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
     const tmp6Result1 = tmp6(tmp3[10]);
   }
-  tmp4 = isScreenReaderEnabled(defaultValue[8])(value);
 });
-const result = require("obj132").fileFinishedImporting("design/components/Input/native/NativeTextInput.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Input/native/NativeTextInput.native.tsx");
 
 export const useKeyboardBlurring = function useKeyboardBlurring(ref) {
   closure_0 = ref;
@@ -125,7 +131,6 @@ export const useKeyboardBlurring = function useKeyboardBlurring(ref) {
           current.blur();
         }
       }
-      tmp = systemKeyboardOpen === systemKeyboardOpen || systemKeyboardOpen;
     });
   }, items);
 };

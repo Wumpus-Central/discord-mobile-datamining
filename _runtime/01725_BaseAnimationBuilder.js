@@ -2,7 +2,7 @@
 
 // Module 1725 (BaseAnimationBuilder)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const BaseAnimationBuilder = arg1;
 let closure_3 = { code: "function pnpm_BaseAnimationBuilderTs1(delay,animation){const{withDelay,reduceMotion}=this.__closure;return withDelay(delay,animation,reduceMotion);}" };
@@ -100,7 +100,7 @@ const items = [
       const reduceMotion = self.getReduceMotion();
       if (tmp) {
         const fn2 = function n(arg0, arg1) {
-          return reduceMotion(dependencyMap[4]).withDelay(arg0, arg1, reduceMotion);
+          return reduceMotion(closure_1_1[4]).withDelay(arg0, arg1, reduceMotion);
         };
         let obj = { withDelay: null, reduceMotion: null };
         obj[0] = reduceMotion(1726).withDelay;
@@ -111,7 +111,7 @@ const items = [
         let fn = fn2;
       } else {
         fn = function t(arg0, arg1) {
-          arg1.reduceMotion = reduceMotion(dependencyMap[5]).getReduceMotionFromConfig(reduceMotion);
+          arg1.reduceMotion = reduceMotion(closure_1_1[5]).getReduceMotionFromConfig(reduceMotion);
           return arg1;
         };
         obj = { getReduceMotionFromConfig: null, reduceMotion: null };

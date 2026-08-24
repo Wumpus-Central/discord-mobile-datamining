@@ -1,12 +1,12 @@
 // === Module 12490: useStageChannelConnectAction ===
 
 // Module 12490 (useStageChannelConnectAction)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import useStageChannelIsLiveDefault from "useStageChannelIsLive" /* 8060 */;
 import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 12489 */;
 
 const obj = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
-const result = obj132.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
 
 export default function useStageChannelConnectAction(arg0) {
   if (!tmp) {
@@ -16,7 +16,6 @@ export default function useStageChannelConnectAction(arg0) {
     return NORMAL;
   }
   NORMAL = obj.NORMAL;
-  tmp = useStageChannelIsLiveDefault(arg0);
 };
 export const ChannelConnectAction = obj;
 export const useStageChannelStartEvent = function useStageChannelStartEvent(id) {

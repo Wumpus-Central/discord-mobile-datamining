@@ -3,15 +3,15 @@
 // Module 9970 (InviteRolesDisplay)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { marginTop: 8 }, label: { marginBottom: 4 }, rolesRow: { flexDirection: "row", flexWrap: "wrap" } });
-const result = require("obj132").fileFinishedImporting("modules/instant_invite/native/InviteRolesDisplay.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/InviteRolesDisplay.tsx");
 
 export default function InviteRolesDisplay(roleIds) {
   roleIds = roleIds.roleIds;
@@ -21,8 +21,8 @@ export default function InviteRolesDisplay(roleIds) {
   const items = [closure_4];
   const items1 = [roleIds, guildId];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    const mapped = roleIds.map((item, index) => closure_1_4.getRole(closure_1, item));
-    return mapped.filter((item, index) => null != item);
+    const mapped = roleIds.map((arg0) => closure_1_4.getRole(closure_1, arg0));
+    return mapped.filter((arg0) => null != arg0);
   }, items1);
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
@@ -35,7 +35,7 @@ export default function InviteRolesDisplay(roleIds) {
     const items2 = [callback(tmp2(4734).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.rolesRow;
-    obj1[1] = stateFromStoresArray.map((item, index) => closure_1_5(guildId(dependencyMap[8]), { role: item, guildId }, item.id));
+    obj1[1] = stateFromStoresArray.map((id) => closure_1_5(guildId(closure_1_2[8]), { role: id, guildId }, id.id));
     items2[1] = callback(View, obj1);
     obj[1] = items2;
     tmp4 = callback2(View, obj);

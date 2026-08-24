@@ -10,7 +10,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function CountryCodeSelector(alpha2) {
   let str = alpha2.alpha2;
   ({ show, countryCode, onPress } = alpha2);
@@ -48,7 +48,8 @@ function CountryCodeSelector(alpha2) {
 }
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { borderLeftWidth: 1, borderLeftColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, marginHorizontal: 12, marginVertical: -4 };
+let obj = { label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 }, selectorOuterContainer: { overflow: "hidden" }, selectorContainer: { flex: 1, flexDirection: "row" }, selectorPressable: { justifyContent: "center" }, selectorText: { alignSelf: "center" }, separator: null };
+obj = { borderLeftWidth: 1, borderLeftColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, marginHorizontal: 12, marginVertical: -4 };
 obj[8] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
@@ -56,6 +57,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ({ onPressCountrySelector: closure_3, forceMode } = arg0);
   ({ style, textInputStyle } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
+  let callback;
+  let obj;
   let callback3;
   function handleChangeText(value) {
     let str = "";
@@ -67,8 +70,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     }
   }
   const tmp2 = callback3();
-  let obj = require(countryCode[8]);
-  const callback = obj.shouldShowCountryCodeSelector(forceMode, value);
+  obj = require(countryCode[8]);
+  callback = obj.shouldShowCountryCodeSelector(forceMode, value);
   obj = { handleChangeText, value };
   callback3 = importAllResult.useRef(obj);
   const effect = importAllResult.useEffect(() => {
@@ -84,13 +87,13 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj1 = { style: null, children: null };
     obj1[0] = tmp2.label;
     obj1[1] = label;
-    tmp9 = callback(importDefault(countryCode[9]), obj1);
+    tmp9 = callback(importDefault(tmp4[9]), obj1);
   }
   const items1 = [tmp9, , , ];
   const obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.renderLeadingComponent = function renderLeadingComponent() {
-    return callback2(CountryCodeSelector, { show: callback2, alpha2: closure_1, countryCode, onPress: closure_3 });
+    return callback2(closure_1_8, { show: callback2, alpha2: closure_1, countryCode, onPress: closure_3 });
   };
   obj2.error = null != error;
   obj2.ref = ref;
@@ -116,7 +119,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp2.error;
     obj3[1] = error;
-    tmp12Result = tmp12(importDefault(countryCode[11]), obj3);
+    tmp12Result = tmp12(importDefault(tmp4[11]), obj3);
   }
   items1[2] = tmp12Result;
   tmp12Result = null;
@@ -124,12 +127,12 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     const obj4 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
     obj4[0] = tmp2.hint;
     obj4[3] = hint;
-    tmp12Result = tmp12(require(countryCode[7]).Text, obj4);
+    tmp12Result = tmp12(tmp3(tmp4[7]).Text, obj4);
   }
   items1[3] = tmp12Result;
   obj[1] = items1;
   return obj(forceMode, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/phone/native/FormPhoneOrEmail.tsx");
+const result = require("set").fileFinishedImporting("modules/phone/native/FormPhoneOrEmail.tsx");
 
 export default forwardRefResult;

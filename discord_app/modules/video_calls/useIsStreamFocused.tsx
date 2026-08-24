@@ -1,11 +1,11 @@
 // === Module 12481: useIsStreamFocused ===
 
 // Module 12481 (useIsStreamFocused)
-import getParticipants from "getParticipants" /* 4773 */;
+import closure_2 from "getParticipants" /* 4773 */;
 import { isStreamParticipant } from "ParticipantTypes" /* 4544 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
 
 export const useIsStreamFocused = function useIsStreamFocused(id) {
   const _require = id;

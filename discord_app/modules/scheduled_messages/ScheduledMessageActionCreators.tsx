@@ -1,11 +1,11 @@
 // === Module 11171: _uploadAttachments ===
 
 // Module 11171 (_uploadAttachments)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _uploadAttachments() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -72,7 +72,7 @@ function _uploadAttachments() {
             } else {
               c3 = 3;
               obj = { value: null, done: true };
-              obj[0] = closure_1.map((item, index) => cloudUploader(table[4]).getAttachmentPayload(item, index));
+              obj[0] = closure_1.map((closure_0, closure_1) => cloudUploader(table[4]).getAttachmentPayload(closure_0, closure_1));
               return obj;
             }
           }
@@ -568,7 +568,7 @@ function _getScheduledMessages() {
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = closure_1_5.SCHEDULED_MESSAGES;
     yield HTTP.get(obj1);
-    body = body.body;
+    const body = arg1.body;
     return body.map(callback(11173).convertServerScheduledMessageSend);
   });
   closure_11 = tmp;
@@ -632,7 +632,7 @@ function _fetchScheduledMessages() {
   return applyArgumentsResult;
 }
 ({ Endpoints: c5, MessageFlags: closure_6 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
 
 export const createScheduledMessage = function createScheduledMessage(arg0) {
   const self = this;

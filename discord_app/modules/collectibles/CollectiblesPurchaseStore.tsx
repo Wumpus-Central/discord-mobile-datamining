@@ -5,7 +5,7 @@ import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-require = fn;
+require = arg1;
 let map = new Map();
 let c4 = false;
 let c5;
@@ -60,8 +60,8 @@ prototype["getPurchase"] = function getPurchase(skuId) {
   return value;
 };
 prototype["getPurchases"] = function getPurchases(arr) {
-  const mapped = arr.map((item, index) => closure_3.get(item));
-  return mapped.filter((item, index) => null != item);
+  const mapped = arr.map((arg0) => closure_3.get(arg0));
+  return mapped.filter((arg0) => null != arg0);
 };
 CollectiblesPurchaseStore.displayName = "CollectiblesPurchaseStore";
 const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefault, {
@@ -76,8 +76,8 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
       if (!obj.isEqual(items, purchases.purchases)) {
         const _Map = Map;
         purchases = purchases.purchases;
-        map = new Map(purchases.map((item, index) => {
-          const items = [item.skuId, item];
+        map = new Map(purchases.map((skuId) => {
+          const items = [skuId.skuId, skuId];
           return items;
         }));
       }
@@ -105,8 +105,8 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
         if (!obj.isEqual(items, purchases.purchases)) {
           const _Map = Map;
           purchases = purchases.purchases;
-          map = new Map(purchases.map((item, index) => {
-            const items = [item.skuId, item];
+          map = new Map(purchases.map((skuId) => {
+            const items = [skuId.skuId, skuId];
             return items;
           }));
         }
@@ -128,6 +128,6 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
     c8 = false;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesPurchaseStore.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesPurchaseStore.tsx");
 
 export default collectiblesPurchaseStore;

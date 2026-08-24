@@ -1,10 +1,10 @@
 // === Module 13429: _fetchGuildForPopout ===
 
 // Module 13429 (_fetchGuildForPopout)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _fetchGuildForPopout() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -54,7 +54,7 @@ function _fetchGuildForPopout() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/guild_profile/GuildPopoutActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_profile/GuildPopoutActionCreators.tsx");
 
 export const fetchGuildForPopout = function fetchGuildForPopout(id) {
   const self = this;

@@ -10,13 +10,13 @@ import openImagePickerUnhandled from "openImagePickerUnhandled" /* 4838 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 9019 */;
 import ShieldIcon from "ShieldIcon" /* 9834 */;
 import registerAssetDefault from "registerAsset" /* 9835 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import Button from "Button" /* 1297 */;
 
-require = fn;
+require = arg1;
 function ExplicitMediaFalsePositivePreviewEmbed(embed) {
   embed = embed.embed;
   if (undefined !== embed.video) {
@@ -49,7 +49,8 @@ function ExplicitMediaFalsePositivePreviewAttachment(attachment) {
 function ExplicitMediaFalsePositivePreview(url) {
   url = url.url;
   const tmp = callback2();
-  let obj = { style: items, children: null };
+  let obj = openImagePickerUnhandled;
+  obj = { style: items, children: null };
   items = [, ];
   ({ mediaContainer: arr[0], elevationShadow: arr[1] } = tmp);
   if (obj.isVideo(url)) {
@@ -58,7 +59,7 @@ function ExplicitMediaFalsePositivePreview(url) {
     obj1 = { uri: null };
     obj1[0] = url;
     obj[4] = obj1;
-    let tmp3Result = callback(_isNativeReflectConstructDefault, obj);
+    let tmp3Result = tmp3(_isNativeReflectConstructDefault, obj);
   } else {
     const obj2 = { style: null, source: null };
     const items1 = [, ];
@@ -67,24 +68,29 @@ function ExplicitMediaFalsePositivePreview(url) {
     const obj3 = { uri: null };
     obj3[0] = url;
     obj2[1] = obj3;
-    tmp3Result = callback(closure_5, obj2);
+    tmp3Result = tmp3(closure_5, obj2);
   }
   obj[1] = tmp3Result;
-  return callback(closure_4, obj);
+  return closure_7(closure_4, obj);
 }
 ({ View: c4, Image: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { padding: ThemesDefault.space.PX_16 };
+createCacheKey = { content: null, contentContainer: null, heading: null, mediaContainer: null, elevationShadow: null, image: null, media: null, footer: null };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { justifyContent: "center", textAlign: "center", alignItems: "center" };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { width: "100%", padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xs, marginTop: ThemesDefault.space.PX_8, aspectRatio: "4 / 3" };
 createCacheKey[4] = Button.generateBoxShadowStyle(require("Button").FOUR_DP_ELEVATION_SHADOW_PARAMS);
 createCacheKey[5] = { resizeMode: "contain" };
+let obj2 = { width: "100%", padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xs, marginTop: ThemesDefault.space.PX_8, aspectRatio: "4 / 3" };
 createCacheKey[6] = { flex: 1, borderRadius: ThemesDefault.radii.xs };
+let obj3 = { flex: 1, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[7] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx");
+let obj4 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx");
 
 export const handleSuccess = function handleSuccess(arg0) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
@@ -107,8 +113,8 @@ export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalse
   const items = [channelId, messageId, analyticsContext];
   const items1 = [channelId, messageId, analyticsContext, onConfirmPress];
   const callback = analyticsContext.useCallback(() => {
-    channelId(onConfirmPress[14]);
-    const obj = { action: channelId(onConfirmPress[14]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL, channelId, messageId, context: analyticsContext };
+    let obj = channelId(onConfirmPress[14]);
+    obj = { action: channelId(onConfirmPress[14]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL, channelId, messageId, context: analyticsContext };
     const result = obj.trackMediaRedactionAction(obj);
     messageId(onConfirmPress[8]).hideActionSheet();
   }, items);
@@ -117,16 +123,17 @@ export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalse
     if (onConfirmPress != null) {
       tmp();
     }
-    channelId(onConfirmPress[14]);
-    const obj = { action: channelId(onConfirmPress[14]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM, channelId, messageId, context: analyticsContext };
+    let obj = channelId(onConfirmPress[14]);
+    obj = { action: channelId(onConfirmPress[14]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM, channelId, messageId, context: analyticsContext };
     const result = obj.trackMediaRedactionAction(obj);
   }, items1);
   const effect = analyticsContext.useEffect(() => {
-    channelId(onConfirmPress[14]);
-    const obj = { action: channelId(onConfirmPress[14]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED, channelId, messageId, context: analyticsContext };
+    let obj = channelId(onConfirmPress[14]);
+    obj = { action: channelId(onConfirmPress[14]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED, channelId, messageId, context: analyticsContext };
     const result = obj.trackMediaRedactionAction(obj);
   }, items2);
-  let obj = { style: tmp.heading, variant: "heading-lg/bold", children: null };
+  let obj = { style: tmp.content, contentContainerStyle: tmp.contentContainer, children: null };
+  obj = { style: tmp.heading, variant: "heading-lg/bold", children: null };
   const intl = channelId(onConfirmPress[12]).intl;
   obj[2] = intl.string(channelId(onConfirmPress[12]).t.TPpVkI);
   const items3 = [callback(channelId(onConfirmPress[16]).Text, obj), , , ];
@@ -151,21 +158,21 @@ export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalse
   const obj4 = { children: null };
   items3[3] = tmp5Result;
   obj[2] = items3;
-  const items4 = [callback2(closure_6, obj), ];
+  const items4 = [closure_8(closure_6, obj), ];
   const obj5 = { style: tmp.footer, children: null };
   const obj6 = { variant: "primary", size: "md", disabled: isReportFalsePositiveLoading, loading: isReportFalsePositiveLoading, text: null, onPress: null };
-  const intl3 = tmp6(onConfirmPress[12]).intl;
+  const intl3 = tmp6(tmp7[12]).intl;
   obj6[4] = intl3.string(channelId(onConfirmPress[12]).t["cY+Oob"]);
   obj6[5] = callback1;
   const items5 = [callback(channelId(onConfirmPress[17]).Button, obj6), ];
   const obj7 = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl4 = tmp6(onConfirmPress[12]).intl;
+  const intl4 = tmp6(tmp7[12]).intl;
   obj7[2] = intl4.string(channelId(onConfirmPress[12]).t["ETE/oC"]);
   obj7[3] = callback;
   items5[1] = callback(channelId(onConfirmPress[17]).Button, obj7);
   obj5[1] = items5;
-  items4[1] = callback2(closure_4, obj5);
+  items4[1] = closure_8(closure_4, obj5);
   obj4[0] = items4;
-  obj3[1] = callback2(closure_4, obj4);
+  obj3[1] = closure_8(closure_4, obj4);
   return callback(channelId(onConfirmPress[15]).BottomSheet, obj3);
 };

@@ -5,7 +5,7 @@ import noopAll from "noop" /* 19 */;
 import context from "context" /* 1537 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 
 export const ThemeProvider = function ThemeProvider(arg0) {

@@ -2,11 +2,11 @@
 
 // Module 14650 (useSyncedModeThemeName)
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_4 } from "ThemeTypes" /* 1348 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
 
 export const useSyncedModeThemeName = function useSyncedModeThemeName(DARK) {
   const _require = DARK;
@@ -14,14 +14,14 @@ export const useSyncedModeThemeName = function useSyncedModeThemeName(DARK) {
   const items = [closure_3];
   return _require(589).useStateFromStores(items, () => {
     const syncedClientTheme = closure_1_3.getSyncedClientTheme(DARK);
-    const themeName = DARK(dependencyMap[4]).getThemeName(closure_1_3.themePreferenceForSystemTheme(DARK), callback);
+    const themeName = DARK(closure_1_2[4]).getThemeName(closure_1_3.themePreferenceForSystemTheme(DARK), callback);
     let prop;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null != prop) {
-      const intl = DARK(dependencyMap[5]).intl;
-      let stringResult = intl.string(callback(dependencyMap[6]).yl1iMm);
+      const intl = DARK(tmp3[5]).intl;
+      let stringResult = intl.string(callback(tmp3[6]).yl1iMm);
     } else {
       let prop1;
       if (syncedClientTheme != null) {

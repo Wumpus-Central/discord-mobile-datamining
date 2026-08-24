@@ -2,13 +2,13 @@
 
 // Module 15699 (ContactSuggestionActions)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import { Easing, Easing as Easing2, Easing as Easing3, Easing as Easing4 } from "module_4115" /* 4115 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { duration: 200, easing: null };
 obj[1] = Easing.in(require("module_4115").Easing.quad);
@@ -27,7 +27,8 @@ let closure_15 = { code: "function ContactSuggestionActionsTsx3(){const{added}=t
 let closure_16 = { code: "function ContactSuggestionActionsTsx4(added){const{animate,runOnJS,finishAnimationCallback,scale,withTiming,SCALE_CONFIG,opacity,OPACITY_CONFIG,buttonOpacity,right,withSpring,SPRING_CONFIG,withDelay,OPACITY_OUT_CONFIG,TRANSLATE_OUT_CONFIG}=this.__closure;if(!animate){runOnJS(finishAnimationCallback)();return;}if(added){scale.set(withTiming(1,SCALE_CONFIG));opacity.set(withTiming(1,OPACITY_CONFIG));buttonOpacity.set(withTiming(0,OPACITY_CONFIG));right.set(withSpring(12,SPRING_CONFIG,'respect-motion-settings',function(finished){if(!finished)return;opacity.set(withDelay(1000,withTiming(0,OPACITY_OUT_CONFIG)));scale.set(withDelay(1000,withTiming(0.5,SCALE_CONFIG)));right.set(withDelay(1000,withTiming(-8,TRANSLATE_OUT_CONFIG,'respect-motion-settings',function(finished){if(finished)runOnJS(finishAnimationCallback)();})));}));}else{buttonOpacity.set(1);scale.set(0.5);opacity.set(0);right.set(30);}}" };
 let closure_17 = { code: "function ContactSuggestionActionsTsx5(finished){const{opacity,withDelay,withTiming,OPACITY_OUT_CONFIG,scale,SCALE_CONFIG,right,TRANSLATE_OUT_CONFIG,runOnJS,finishAnimationCallback}=this.__closure;if(!finished)return;opacity.set(withDelay(1000,withTiming(0,OPACITY_OUT_CONFIG)));scale.set(withDelay(1000,withTiming(0.5,SCALE_CONFIG)));right.set(withDelay(1000,withTiming(-8,TRANSLATE_OUT_CONFIG,'respect-motion-settings',function(finished){if(finished)runOnJS(finishAnimationCallback)();})));}" };
 let closure_18 = { code: "function ContactSuggestionActionsTsx6(finished){const{runOnJS,finishAnimationCallback}=this.__closure;if(finished)runOnJS(finishAnimationCallback)();}" };
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionActions.tsx");
+let obj3 = { position: "absolute", top: 4, zIndex: 2, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 };
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionActions.tsx");
 
 export const ContactSuggestionActions = function ContactSuggestionActions(user) {
   user = user.user;
@@ -39,16 +40,20 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
     str = "sm";
   }
   const animate = user.animate;
+  let sharedValue;
+  let sharedValue1;
+  let sharedValue2;
+  let sharedValue3;
   let callback;
   const tmp = callback();
   obj = user(onAddSuggestion[3]);
-  const sharedValue = obj.useSharedValue(30);
+  sharedValue = obj.useSharedValue(30);
   obj1 = user(onAddSuggestion[3]);
-  const sharedValue1 = obj1.useSharedValue(0.5);
+  sharedValue1 = obj1.useSharedValue(0.5);
   let obj2 = user(onAddSuggestion[3]);
-  const sharedValue2 = obj2.useSharedValue(0);
+  sharedValue2 = obj2.useSharedValue(0);
   let obj3 = user(onAddSuggestion[3]);
-  const sharedValue3 = obj3.useSharedValue(1);
+  sharedValue3 = obj3.useSharedValue(1);
   let items = [onFinishAnimation, user];
   callback = onFinishAnimation.useCallback(() => {
     if (null != onFinishAnimation) {
@@ -60,7 +65,7 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
   }, items);
   let obj4 = user(onAddSuggestion[3]);
   let fn = function b() {
-    { right: sharedValue.get(), opacity: sharedValue2.get(), transform: null };
+    obj = { right: sharedValue.get(), opacity: sharedValue2.get(), transform: null };
     obj = { scale: sharedValue1.get() };
     const items = [obj];
     obj[2] = items;
@@ -91,7 +96,6 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
       const result3 = sharedValue1.set(1);
       const result4 = sharedValue3.set(0);
     }
-    obj = user(onAddSuggestion[6]);
   }, items1);
   let obj6 = user(onAddSuggestion[3]);
   const fn2 = function k() {
@@ -131,13 +135,13 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
           tmp31 = closure_1_11;
           fn = function n(arg0) {
             if (arg0) {
-              obj = user(onAddSuggestion[3]);
-              const result = closure_7.set(obj.withDelay(1000, user(onAddSuggestion[7]).withTiming(0, sharedValue3)));
-              const obj2 = user(onAddSuggestion[7]);
-              const obj3 = user(onAddSuggestion[3]);
-              const result1 = closure_6.set(obj3.withDelay(1000, user(onAddSuggestion[7]).withTiming(0.5, callback)));
-              const obj4 = user(onAddSuggestion[7]);
-              const obj6 = user(onAddSuggestion[7]);
+              obj = closure_1_0(closure_1_2[3]);
+              const result = closure_7.set(obj.withDelay(1000, closure_1_0(closure_1_2[7]).withTiming(0, closure_1_8)));
+              const obj2 = closure_1_0(closure_1_2[7]);
+              const obj3 = closure_1_0(closure_1_2[3]);
+              const result1 = closure_6.set(obj3.withDelay(1000, closure_1_0(closure_1_2[7]).withTiming(0.5, closure_1_9)));
+              const obj4 = closure_1_0(closure_1_2[7]);
+              const obj6 = closure_1_0(closure_1_2[7]);
               const fn = function n(arg0) {
                 if (arg0) {
                   closure_1_0(closure_1_2[3]).runOnJS(closure_9)();
@@ -145,13 +149,13 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
                 }
               };
               obj = { runOnJS: null, finishAnimationCallback: null };
-              obj[0] = user(onAddSuggestion[3]).runOnJS;
+              obj[0] = closure_1_0(closure_1_2[3]).runOnJS;
               obj[1] = closure_9;
               fn.__closure = obj;
               fn.__workletHash = 5242616772399;
               fn.__initData = closure_1_18;
-              const result2 = closure_5.set(user(onAddSuggestion[3]).withDelay(1000, obj6.withTiming(-8, closure_1_10, "respect-motion-settings", fn)));
-              const obj5 = user(onAddSuggestion[3]);
+              const result2 = closure_5.set(closure_1_0(closure_1_2[3]).withDelay(1000, obj6.withTiming(-8, closure_1_10, "respect-motion-settings", fn)));
+              const obj5 = closure_1_0(closure_1_2[3]);
             }
           };
           obj = { opacity: null, withDelay: null, withTiming: null, OPACITY_OUT_CONFIG: null, scale: null, SCALE_CONFIG: null, right: null, TRANSLATE_OUT_CONFIG: null, runOnJS: null, finishAnimationCallback: null };

@@ -1,7 +1,7 @@
 // === Module 4007: isIterable ===
 
 // Module 4007 (isIterable)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_0 from "_slicedToArray" /* 32 */;
 
 function isIterable(arg0) {
 
@@ -25,11 +25,16 @@ function compareEntries(arr, arr2) {
   } else {
     const obj2 = map[Symbol.iterator]();
     while (obj2 !== undefined) {
-      let tmp11 = _slicedToArray(tmp8, 2);
+      let tmp10 = callback;
+      let tmp11 = callback(tmp8, 2);
       [tmp12, tmp14] = tmp11;
+      let tmp13 = tmp12;
       if (map1.has(tmp12)) {
         let _Object = Object;
+        let tmp15 = tmp14;
+        let tmp16 = tmp12;
       }
+      let tmp17 = obj2;
       obj2.return();
       let flag = false;
       return false;
@@ -116,11 +121,13 @@ export const shallow = function shallow(current, current2) {
             }
           }
           flag = iter6.done && iter5.done;
-        } else if (typeof hasIterableEntries !== "function") {
+          const tmp9 = iter6.done && iter5.done;
+        } else if (typeof tmp8 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         flag = compareEntries(current, current2);
         tmp6 = closure_1;
+        tmp8 = hasIterableEntries;
       }
     }
     isResult = tmp2;

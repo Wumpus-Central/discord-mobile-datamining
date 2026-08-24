@@ -2,10 +2,10 @@
 
 // Module 338 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import closure_5 from "_possibleConstructorReturn" /* 93 */;
+import closure_6 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -76,9 +76,12 @@ let items = [
       ({ style, importantForAccessibility } = props);
       ({ children, imageStyle, imageRef } = props);
       const size = ImageBackground(148)(style);
+      let obj = { accessibilityIgnoresInvertColors: true, importantForAccessibility, style, ref: this._captureRef, children: null };
       const tmp = callback(props, closure_2);
-      let obj = {};
+      const tmp2 = closure_8;
+      obj = {};
       const tmp3 = ImageBackground(108);
+      const tmp4 = closure_7;
       const merged = Object.assign(tmp);
       obj.importantForAccessibility = importantForAccessibility;
       const items = [ImageBackground(254).absoluteFill, , ];
@@ -96,9 +99,9 @@ let items = [
       items[2] = imageStyle;
       obj.style = items;
       obj.ref = imageRef;
-      const items1 = [callback2(ImageBackground(328), obj), children];
+      const items1 = [tmp4(ImageBackground(328), obj), children];
       obj[4] = items1;
-      return callback3(tmp3, obj);
+      return tmp2(tmp3, obj);
     }
   }
 ];

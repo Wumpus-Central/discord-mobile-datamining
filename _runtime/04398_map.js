@@ -3,15 +3,10 @@
 // Module 4398 (map)
 import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
 import ToObject from "ToObject" /* 4399 */;
-import isString from "isString" /* 4401 */;
 import ToUint32 from "ToUint32" /* 4402 */;
 import ToString from "ToString" /* 4414 */;
 import apply from "apply" /* 4426 */;
-import ArraySpeciesCreate from "ArraySpeciesCreate" /* 4427 */;
-import Get from "Get" /* 4437 */;
 import HasProperty from "HasProperty" /* 4450 */;
-import Call from "Call" /* 4451 */;
-import CreateDataPropertyOrThrow from "CreateDataPropertyOrThrow" /* 4452 */;
 
 const ObjectResult = Object("a");
 let tmp2 = "a" !== ObjectResult[0];
@@ -26,7 +21,7 @@ export default function map(arg0) {
   let arr = tmp3;
   if (closure_2) {
     arr = tmp3;
-    if (isString(tmp3)) {
+    if (tmp(4401)(tmp3)) {
       arr = callback(tmp3, "");
     }
   }
@@ -35,14 +30,17 @@ export default function map(arg0) {
     if (arguments.length > 1) {
       const tmp11 = arguments[1];
     }
-    const tmp12 = ArraySpeciesCreate(tmp3, tmp5);
+    const tmp12 = tmp(4427)(tmp3, tmp5);
     for (let num2 = 0; num2 < tmp5; num2 = num2 + 1) {
+      let tmp13 = require;
+      let tmp14 = dependencyMap;
       let tmp15 = ToString(num2);
+      let tmp16 = num2;
       if (HasProperty(tmp3, tmp15)) {
-        let tmp17 = Get(tmp3, tmp15);
+        let tmp17 = tmp13(4437)(tmp3, tmp15);
         let items = [tmp17, num2, tmp3];
-        let tmp18 = Call(arg0, tmp11, items);
-        let tmp19 = CreateDataPropertyOrThrow(tmp12, tmp15, tmp18);
+        let tmp18 = tmp13(4451)(arg0, tmp11, items);
+        let tmp19 = tmp13(4452)(tmp12, tmp15, tmp18);
       }
     }
     return tmp12;

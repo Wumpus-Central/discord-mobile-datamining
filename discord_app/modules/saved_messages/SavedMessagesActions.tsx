@@ -1,11 +1,11 @@
 // === Module 10874: _upsertSavedMessage ===
 
 // Module 10874 (_upsertSavedMessage)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import getTimeSafe from "getTimeSafe" /* 10850 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "getTimeSafe" /* 10850 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _upsertSavedMessage() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -162,13 +162,13 @@ function _fetchAndUpdateSavedMessages() {
           body = arg1;
           dependencyMap = 0;
           const results = body.body.results;
-          callback = results.map((item, index) => {
+          callback = results.map((message) => {
             let messageRecord = null;
-            if (null != item.message) {
+            if (null != message.message) {
               let obj = callback(4803);
-              messageRecord = obj.createMessageRecord(item.message);
+              messageRecord = obj.createMessageRecord(message.message);
             }
-            obj = { message: messageRecord, saveData: callback(8489).savedMessageDataToClient(item.save_data) };
+            obj = { message: messageRecord, saveData: callback(8489).savedMessageDataToClient(message.save_data) };
             return obj;
           });
           obj10 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };
@@ -198,7 +198,7 @@ function _fetchAndUpdateSavedMessages() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/saved_messages/SavedMessagesActions.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesActions.tsx");
 
 export const upsertSavedMessage = function upsertSavedMessage() {
   const self = this;

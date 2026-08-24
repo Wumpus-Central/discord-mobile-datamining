@@ -4,9 +4,9 @@
 import initializeDefault from "initialize" /* 589 */;
 import Storage3 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
 
-require = fn;
+require = arg1;
 function updateExistingSettings() {
   const settings = closure_2.settings;
   const textAndImages = settings.textAndImages;
@@ -42,6 +42,10 @@ class UserSettingsOverridesStore extends PersistedStore {
 }
 const prototype = UserSettingsOverridesStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
+  let obj = arg0;
+  if (arg0 == null) {
+    obj = {};
+  }
   const items = [closure_2];
   this.syncWith(items, updateExistingSettings);
 };
@@ -106,9 +110,12 @@ const userSettingsOverridesStore = new UserSettingsOverridesStore(dispatcherDefa
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
+        let tmp11 = tmp9;
+        let tmp12 = table;
         if (obj[tmp9] === table[tmp9]) {
           continue;
         } else {
+          let tmp10 = closure_3;
           delete tmp2[tmp3];
           flag = true;
           continue;
@@ -125,6 +132,7 @@ const userSettingsOverridesStore = new UserSettingsOverridesStore(dispatcherDefa
   },
   USER_SETTINGS_OVERRIDE_CLEAR: function handleClearSettingsOverride(arg0) {
     for (const item10006 of tmp3) {
+      let tmp4 = closure_3;
       delete tmp[tmp2];
       continue;
     }
@@ -136,6 +144,6 @@ const userSettingsOverridesStore = new UserSettingsOverridesStore(dispatcherDefa
     closure_3 = {};
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/UserSettingsOverridesStore.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsOverridesStore.tsx");
 
 export default userSettingsOverridesStore;

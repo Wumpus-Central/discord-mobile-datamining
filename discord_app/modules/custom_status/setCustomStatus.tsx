@@ -1,7 +1,7 @@
 // === Module 9295: setCustomStatus ===
 
 // Module 9295 (setCustomStatus)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import tDefault from "t" /* 3975 */;
@@ -11,7 +11,7 @@ import getClearAfterDurationDefault from "getClearAfterDuration" /* 9296 */;
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
+const result = set.fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
 
 export default function setCustomStatus(arg0) {
   ({ text, emojiInfo, clearAfter, analyticsContext, createdAtMs, prompt: _prompt, analyticsLocations } = arg0);

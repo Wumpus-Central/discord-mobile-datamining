@@ -8,7 +8,6 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import Form from "Form" /* 8083 */;
 import _handleToggleVideo from "_handleToggleVideo" /* 9647 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 9672 */;
 import stopScreenshareDefault from "stopScreenshare" /* 10931 */;
 import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12135 */;
 import VolumeSliderDefault from "VolumeSlider" /* 12139 */;
@@ -17,13 +16,13 @@ import registerAssetDefault from "registerAsset" /* 12576 */;
 import registerAssetDefault2 from "registerAsset" /* 12577 */;
 import useDeafStatesDefault from "useDeafStates" /* 12578 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import reset from "reset" /* 4652 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_5 from "reset" /* 4652 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function ExpandedControlItemIcon(iconSource) {
   iconSource = iconSource.iconSource;
   const tmp = callback3();
@@ -37,15 +36,16 @@ function ExpandedControlItemIcon(iconSource) {
     const tmp10 = callback(Button.Icon, obj);
     let tmp6 = tmp10;
     if (iconSource.showIconSparkle) {
+      obj = { children: null };
       const items = [tmp10, , ];
       obj = { style: null, source: null };
       obj[0] = tmp.sparkle2;
       obj[1] = registerAssetDefault;
-      items[1] = callback(closure_4, obj);
+      items[1] = tmp7(closure_4, obj);
       obj1 = { style: null, source: null };
       obj1[0] = tmp.sparkle;
       obj1[1] = registerAssetDefault2;
-      items[2] = callback(closure_4, obj1);
+      items[2] = tmp7(closure_4, obj1);
       obj[0] = items;
       tmp6 = callback2(closure_3, obj);
     }
@@ -71,20 +71,22 @@ function ExpandedControlItem(iconSource) {
     obj[4] = onSwitchValueChange;
     trailing = callback(Form.FormSwitch, obj);
   }
-  { disabled, leading: callback(ExpandedControlItemIcon, { iconSource: iconSource.iconSource, showIconSparkle }), label: callback(Form.FormLabel, obj), onPress, trailing };
+  obj = { disabled, leading: callback(ExpandedControlItemIcon, { iconSource: iconSource.iconSource, showIconSparkle }), label: callback(Form.FormLabel, obj), onPress, trailing };
   obj = { text: label, style: callback3().formColor };
   return callback(Form.FormRow, obj);
 }
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-const createCacheKey = { tintColor: ThemesDefault.colors.ICON_STRONG };
+createCacheKey = { formTintColor: null, formColor: null, sparkle: null, sparkle2: null };
+createCacheKey = { tintColor: ThemesDefault.colors.ICON_STRONG };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[2] = { position: "absolute", bottom: -4, right: "70%" };
 createCacheKey[3] = { position: "absolute", right: -5, height: 10, width: 10 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/FocusedExpandedControls.tsx");
+let obj1 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/FocusedExpandedControls.tsx");
 
 export const StreamVolumeItem = function StreamVolumeItem() {
   let obj = initialize;
@@ -105,9 +107,10 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (stateFromStores != null) {
     ownerId = stateFromStores.ownerId;
   }
+  const tmp6 = useMuteAwareLocalVolumeDefault;
   ({ effectiveVolume, handleVolumeChange } = useMuteAwareLocalVolumeDefault(ownerId, MediaEngineContextTypes.STREAM));
   obj = { text: null, style: null };
-  const intl = getSystemLocale.intl;
+  const intl = tmp2(1236).intl;
   obj[0] = intl.string(getSystemLocale.t.pEAl4b);
   const items1 = [tmp.formColor, { marginBottom: 16 }];
   obj[1] = items1;
@@ -118,14 +121,14 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (tmp2Result.isAndroid()) {
     fn = () => true;
   }
-  obj = { onResponderGrant: fn, value: effectiveVolume, onValueChange: handleVolumeChange, color: ThemesDefault.unsafe_rawColors.WHITE, maxTrackTintColor: ThemesDefault.unsafe_rawColors.PRIMARY_300 };
+  obj = { onResponderGrant: fn, value: effectiveVolume, onValueChange: handleVolumeChange, color: tmp5(712).unsafe_rawColors.WHITE, maxTrackTintColor: tmp5(712).unsafe_rawColors.PRIMARY_300 };
   items2[1] = callback(tmp5Result, obj);
   { children: null }[0] = items2;
   let tmp9Result = null;
   if (null != stateFromStores) {
     obj1 = { label: null };
     obj1[0] = tmp11;
-    tmp9Result = callback(Form.FormRow, obj1);
+    tmp9Result = tmp9(tmp2(8083).FormRow, obj1);
   }
   return tmp9Result;
 };
@@ -134,7 +137,7 @@ export const AudioRouteButton = function AudioRouteButton(arg0) {
   let obj = _handleToggleVideo;
   obj = {
     onPress() {
-      const result = showAudioOutputSelector.showAudioOutputSelector(closure_0, closure_1);
+      const result = closure_1_0(closure_1_2[18]).showAudioOutputSelector(closure_0, closure_1);
     },
     iconSource: obj.useMaskedSpeakerStates().routeSource,
     label: null
@@ -149,7 +152,7 @@ export const ScreenshareButton = function ScreenshareButton(arg0) {
   const isFeatureEnabled = tmp.isFeatureEnabled;
   disabled = !isFeatureEnabled;
   ({ onPress, imgSource, text } = tmp);
-  return callback(ExpandedControlItem, { disabled, onPress, iconSource, label });
+  return closure_8(ExpandedControlItem, { disabled, onPress, iconSource, label });
 };
 export const DeafenButton = function DeafenButton(disabled) {
   let flag = disabled.disabled;
@@ -159,7 +162,7 @@ export const DeafenButton = function DeafenButton(disabled) {
   let obj = NOOP;
   const deafHandler = obj.createDeafHandler(useDeafStatesDefault(disabled.channel));
   obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12579 : 12580), label: null };
-  const intl = getSystemLocale.intl;
+  const intl = tmp4(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.wjcRFX);
   return callback(ExpandedControlItem, obj);
 };

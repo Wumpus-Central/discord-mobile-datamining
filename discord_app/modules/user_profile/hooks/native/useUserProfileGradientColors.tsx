@@ -1,11 +1,11 @@
 // === Module 8980: useUserProfileGradientColors ===
 
 // Module 8980 (useUserProfileGradientColors)
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
 
 export const useUserProfileGradientColors = function useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground) {
   const _require = primaryColor;

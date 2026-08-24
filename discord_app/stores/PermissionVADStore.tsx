@@ -3,12 +3,12 @@
 // Module 13772 (handleUpdateVADPermission)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
 import ME from "ME" /* 676 */;
 
 function handleUpdateVADPermission() {
@@ -27,6 +27,7 @@ function handleUpdateVADPermission() {
     }
     if (!canResult) {
       canResult = null == voiceState || voiceState.suppress || null != voiceState.requestToSpeakTimestamp;
+      const tmp12 = null == voiceState || voiceState.suppress || null != voiceState.requestToSpeakTimestamp;
     }
     flag = canResult;
   }
@@ -36,6 +37,7 @@ function handleUpdateVADPermission() {
     obj[1] = flag;
     dispatcherDefault.dispatch(obj);
     flag2 = true;
+    const obj2 = dispatcherDefault;
   }
   return flag2;
 }
@@ -68,8 +70,8 @@ const permissionVADStore = new PermissionVADStore(dispatcherDefault, {
   IMPERSONATE_STOP: handleUpdateVADPermission,
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.some((item, index) => {
-      let tmp = item.userId === id.getId();
+    return voiceStates.some((userId) => {
+      let tmp = userId.userId === id.getId();
       if (tmp) {
         tmp = callback();
       }
@@ -83,6 +85,6 @@ const permissionVADStore = new PermissionVADStore(dispatcherDefault, {
     c11 = true;
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/PermissionVADStore.tsx");
+const result = require("set").fileFinishedImporting("stores/PermissionVADStore.tsx");
 
 export default permissionVADStore;

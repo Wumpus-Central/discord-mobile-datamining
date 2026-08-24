@@ -1,10 +1,10 @@
 // === Module 13838: getCurrentEmbeddedActivityChannel ===
 
 // Module 13838 (getCurrentEmbeddedActivityChannel)
-import participantFromServer from "participantFromServer" /* 1390 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_0 from "participantFromServer" /* 1390 */;
+import closure_1 from "ensureGuildLoaded" /* 1391 */;
 
-const result = require("obj132").fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx");
 
 export default function getCurrentEmbeddedActivityChannel() {
   return channel.getChannel(connectedActivityChannelId.getConnectedActivityChannelId());

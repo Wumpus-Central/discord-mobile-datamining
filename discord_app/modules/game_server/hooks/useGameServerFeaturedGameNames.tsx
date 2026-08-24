@@ -1,12 +1,12 @@
 // === Module 11746: useGameServerFeaturedGameNames ===
 
 // Module 11746 (useGameServerFeaturedGameNames)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
 import str11 from "str11" /* 4263 */;
 
 ({ MINECRAFT_GAME_ID: obj1, HYTALE_GAME_ID: c3 } = str11);
-const result = obj132.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
+const result = set.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
 
 export default function useGameServerFeaturedGameNames() {
   let obj = importDefaultResult1;

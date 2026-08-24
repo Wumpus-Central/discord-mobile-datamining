@@ -9,7 +9,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles((arg0) => {
   const labelPressable = { paddingBottom: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
@@ -57,6 +57,6 @@ const forwardRefResult = importAllResult.forwardRef((grow) => {
   }
   return tmp9;
 });
-const result = require("obj132").fileFinishedImporting("design/components/Button/native/IconButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Button/native/IconButton.native.tsx");
 
 export const IconButton = forwardRefResult;

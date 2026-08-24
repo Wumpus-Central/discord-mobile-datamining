@@ -2,19 +2,16 @@
 
 // Module 13349 (GuildSettingsPickerBottomSheet)
 import noopAll from "noop" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _modDef8874 from "module_8874" /* 8874 */;
 import GuildPickerDefault from "GuildPicker" /* 13354 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ content: { paddingHorizontal: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/guild_settings_picker/native/GuildSettingsPickerBottomSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings_picker/native/GuildSettingsPickerBottomSheet.tsx");
 class GuildSettingsPickerBottomSheet {
   constructor(arg0) {
     feature = global.feature;
@@ -32,7 +29,8 @@ class GuildSettingsPickerBottomSheet {
     obj2 = {
       guildId,
       onChange(guildId) {
-            const obj = { feature, section: closure_1, subsection: closure_2, guildId };
+            let obj = closure_1_1(closure_1_2[10]);
+            obj = { feature, section: closure_1, subsection: closure_2, guildId };
             obj.openLazy(() => Promise.resolve(closure_7), "GuildSettingsPickerBottomSheet", obj);
           },
       isGuildIncluded: isGuildSupported
@@ -45,9 +43,10 @@ class GuildSettingsPickerBottomSheet {
       text: selectGuildCta,
       disabled: null == guildId,
       onPress() {
-            _modDef38(null != guildId, "Guild ID must not be null on click");
-            _modDef8874.open(guildId, closure_1, undefined, closure_2);
-            ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+            closure_1_1(closure_1_2[12])(null != guildId, "Guild ID must not be null on click");
+            closure_1_1(closure_1_2[13]).open(guildId, closure_1, undefined, closure_2);
+            const obj = closure_1_1(closure_1_2[13]);
+            closure_1_1(closure_1_2[10]).hideActionSheet();
           }
     };
     items[5] = jsx(guildId, obj3);

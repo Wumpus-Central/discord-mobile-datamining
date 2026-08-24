@@ -1,11 +1,11 @@
 // === Module 16858: realizedOperatorFor ===
 
 // Module 16858 (realizedOperatorFor)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import OperatorTypes2 from "OperatorTypes" /* 5225 */;
 
 const OperatorTypes = OperatorTypes2.OperatorTypes;
-const result = obj132.fileFinishedImporting("modules/connections/RoleConnectionRequirementUtils.tsx");
+const result = set.fileFinishedImporting("modules/connections/RoleConnectionRequirementUtils.tsx");
 
 export const realizedOperatorFor = function realizedOperatorFor(operator) {
   let GREATER_THAN = operator;

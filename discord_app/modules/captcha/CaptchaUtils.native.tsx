@@ -3,11 +3,11 @@
 // Module 16499
 import initialize from "initialize" /* 589 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import setContent from "setContent" /* 4086 */;
+import closure_3 from "setContent" /* 4086 */;
 import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10480 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
 
 export default {
   showCaptcha(options) {
@@ -33,6 +33,10 @@ export default {
     obj2.openLazy(_require(2007)(16500, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
     c1 = undefined;
     c2 = undefined;
     c3 = undefined;
@@ -41,15 +45,15 @@ export default {
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      _undefined(_undefined2[3]);
+      obj = _undefined(_undefined2[3]);
       obj = {
         sitekey: closure_1,
         captchaService: _undefined2,
         onCaptchaVerify(captcha_key, captcha_rqtoken) {
           return callback({ captcha_key, captcha_rqtoken, captcha_session_id: closure_1_3 });
         },
-        onReject(dependencyMap) {
-          if (dependencyMap === obj(10478).CaptchaError.CANCEL) {
+        onReject(arg0) {
+          if (arg0 === obj(10478).CaptchaError.CANCEL) {
             const captchaCancelError = new obj(10478).CaptchaCancelError();
             callback2(captchaCancelError);
           } else {

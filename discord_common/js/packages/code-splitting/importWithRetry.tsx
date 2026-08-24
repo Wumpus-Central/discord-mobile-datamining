@@ -1,9 +1,9 @@
 // === Module 4059: _importWithRetry ===
 
 // Module 4059 (_importWithRetry)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_1 from "asyncGeneratorStep" /* 5 */;
 
-const require = fn;
+const require = arg1;
 function _importWithRetry() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -165,7 +165,7 @@ function pausedPromise(arg0) {
 function awaitOnline() {
   return Promise.resolve();
 }
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/code-splitting/importWithRetry.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/code-splitting/importWithRetry.tsx");
 
 export { awaitOnline };
 export function setAwaitOnline(arg0) {

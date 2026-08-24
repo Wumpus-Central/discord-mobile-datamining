@@ -3,12 +3,13 @@
 // Module 11376 (PollDurationRadioGroup)
 import ActionSheet from "ActionSheet" /* 7175 */;
 import usePollDurationOptionsDefault from "usePollDurationOptions" /* 11375 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function PollDurationRadioGroup(onChange) {
   onChange = onChange.onChange;
+  importDefault = undefined;
   const tmp = usePollDurationOptionsDefault();
   importDefault = tmp;
   const items = [tmp, onChange];
@@ -24,13 +25,13 @@ function PollDurationRadioGroup(onChange) {
   obj[2] = callback;
   obj[3] = onChange.selectedDuration;
   const entries = Object.entries(tmp);
-  obj[4] = entries.map((item, index) => {
-    [tmp, tmp2] = item;
+  obj[4] = entries.map((arg0) => {
+    [tmp, tmp2] = arg0;
     return callback(onChange(table[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
   });
   return jsx(onChange(8101).TableRadioGroup, { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null });
 }
-const result = require("obj132").fileFinishedImporting("modules/polls/native/PollDurationActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/native/PollDurationActionSheet.tsx");
 
 export default function PollDurationActionSheet(arg0) {
   ({ selectedDuration, onChange } = arg0);

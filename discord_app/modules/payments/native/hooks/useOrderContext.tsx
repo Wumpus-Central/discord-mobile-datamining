@@ -1,10 +1,10 @@
 // === Module 9627: useOrderContext ===
 
 // Module 9627 (useOrderContext)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("modules/payments/native/hooks/useOrderContext.tsx");
+const result = require("set").fileFinishedImporting("modules/payments/native/hooks/useOrderContext.tsx");
 
 export const useOrderContext = function useOrderContext(initialOrder, NativeGiftContext) {
   let tmp = first(React.useState(initialOrder), 2);

@@ -66,30 +66,41 @@ function getSlope(arg0, arg1, arg2) {
 getSlope.__closure = { A, B, C };
 getSlope.__workletHash = 7144143660854;
 getSlope.__initData = { code: "function getSlope_Pnpm_BezierTs5(aT,aA1,aA2){const{A,B,C}=this.__closure;return 3.0*A(aA1,aA2)*aT*aT+2.0*B(aA1,aA2)*aT+C(aA1);}" };
-function binarySubdivide(arg0, sum, arg2, closure_0, closure_2) {
-  let tmp = sum;
+function binarySubdivide(arg0, arg1, arg2, arg3, arg4) {
+  let sum;
+  let tmp = arg1;
   let tmp2 = arg2;
   let num = 0;
   while (true) {
+    let tmp3 = calcBezier;
     sum = tmp + (tmp2 - tmp) / 2;
+    let tmp5 = num;
     let tmp6 = tmp2;
+    let tmp7 = tmp;
     if (typeof calcBezier !== "function") {
+      let str = "Trying to call a non-function";
       let throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
+    let tmp8 = closure_4;
     if (typeof closure_4 !== "function") {
+      let str2 = "Trying to call a non-function";
       let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
     }
-    let result = 3 * closure_2;
-    let result1 = 3 * closure_0;
+    let tmp11 = closure_5;
+    let result = 3 * arg4;
+    let result1 = 3 * arg3;
     if (typeof closure_5 !== "function") {
+      let str3 = "Trying to call a non-function";
       let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
-    let result2 = 3 * closure_2;
-    let result3 = 6 * closure_0;
+    let tmp14 = closure_6;
+    let result2 = 3 * arg4;
+    let result3 = 6 * arg3;
     if (typeof closure_6 !== "function") {
+      let str4 = "Trying to call a non-function";
       let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
     }
-    let diff = (((1 - result + result1) * sum + (result2 - result3)) * sum + 3 * closure_0) * sum - arg0;
+    let diff = (((1 - result + result1) * sum + (result2 - result3)) * sum + 3 * arg3) * sum - arg0;
     let tmp16 = sum;
     if (0 < diff) {
       tmp6 = sum;
@@ -112,43 +123,58 @@ function binarySubdivide(arg0, sum, arg2, closure_0, closure_2) {
 binarySubdivide.__closure = { calcBezier, SUBDIVISION_PRECISION: 0.0000001, SUBDIVISION_MAX_ITERATIONS: 10 };
 binarySubdivide.__workletHash = 16502327865282;
 binarySubdivide.__initData = { code: "function binarySubdivide_Pnpm_BezierTs6(aX,aA,aB,mX1,mX2){const{calcBezier,SUBDIVISION_PRECISION,SUBDIVISION_MAX_ITERATIONS}=this.__closure;let currentX;let currentT;let i=0;do{currentT=aA+(aB-aA)/2.0;currentX=calcBezier(currentT,mX1,mX2)-aX;if(currentX>0.0){aB=currentT;}else{aA=currentT;}}while(Math.abs(currentX)>SUBDIVISION_PRECISION&&++i<SUBDIVISION_MAX_ITERATIONS);return currentT;}" };
-function newtonRaphsonIterate(arg0, sum2, closure_0, closure_2) {
-  let tmp = sum2;
+function newtonRaphsonIterate(arg0, arg1, arg2, arg3) {
+  let tmp = arg1;
   let num = 0;
   while (true) {
+    let tmp2 = getSlope;
+    let tmp3 = num;
+    let tmp4 = tmp;
     if (typeof getSlope !== "function") {
+      let str = "Trying to call a non-function";
       let throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
+    let tmp5 = closure_4;
     if (typeof closure_4 !== "function") {
+      let str2 = "Trying to call a non-function";
       let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
     }
-    let result = 3 * (1 - 3 * closure_2 + 3 * closure_0) * tmp * tmp;
+    let result = 3 * (1 - 3 * arg3 + 3 * arg2) * tmp * tmp;
+    let tmp7 = closure_5;
     if (typeof closure_5 !== "function") {
+      let str3 = "Trying to call a non-function";
       let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
-    let result1 = 2 * (3 * closure_2 - 6 * closure_0) * tmp;
+    let result1 = 2 * (3 * arg3 - 6 * arg2) * tmp;
+    let tmp9 = closure_6;
     if (typeof closure_6 !== "function") {
+      let str4 = "Trying to call a non-function";
       let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
     }
-    let sum = result + result1 + 3 * closure_0;
+    let sum = result + result1 + 3 * arg2;
     if (0 === sum) {
       break;
     } else {
+      let tmp18 = calcBezier;
       if (typeof calcBezier !== "function") {
+        let str5 = "Trying to call a non-function";
         let throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
       }
-      if (typeof closure_4 !== "function") {
+      if (typeof tmp5 !== "function") {
+        let str6 = "Trying to call a non-function";
         let throwTypeErrorResult5 = HermesBuiltin.throwTypeError();
       }
-      let result2 = (1 - 3 * closure_2 + 3 * closure_0) * tmp;
-      if (typeof closure_5 !== "function") {
+      let result2 = (1 - 3 * arg3 + 3 * arg2) * tmp;
+      if (typeof tmp7 !== "function") {
+        let str7 = "Trying to call a non-function";
         let throwTypeErrorResult6 = HermesBuiltin.throwTypeError();
       }
-      let result3 = (result2 + (3 * closure_2 - 6 * closure_0)) * tmp;
-      if (typeof closure_6 !== "function") {
+      let result3 = (result2 + (3 * arg3 - 6 * arg2)) * tmp;
+      if (typeof tmp9 !== "function") {
+        let str8 = "Trying to call a non-function";
         let throwTypeErrorResult7 = HermesBuiltin.throwTypeError();
       }
-      let diff = tmp - ((result3 + 3 * closure_0) * tmp - arg0) / sum;
+      let diff = tmp - ((result3 + 3 * arg2) * tmp - arg0) / sum;
       num = num + 1;
       tmp = diff;
       if (num < 4) {
@@ -249,6 +275,7 @@ class Bezier {
                 num3 = sum1;
                 num4 = sum;
                 while (10 !== sum1) {
+                  let tmp4 = dependencyMap;
                   num = sum1;
                   num2 = sum;
                   num3 = sum1;
@@ -260,30 +287,30 @@ class Bezier {
               }
               const diff = num3 - 1;
               const result = (arg0 - dependencyMap[diff]) / (dependencyMap[diff + 1] - dependencyMap[diff]) * closure_3;
-              if (typeof getSlope !== "function") {
+              if (typeof closure_1_8 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               if (typeof closure_1_4 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              const result1 = 3 * closure_2;
-              const result2 = 3 * closure_0;
+              const result1 = 3 * tmp8;
+              const result2 = 3 * tmp7;
               if (typeof getTForX !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              const result3 = 3 * closure_2;
-              const result4 = 6 * closure_0;
+              const result3 = 3 * tmp8;
+              const result4 = 6 * tmp7;
               if (typeof closure_1_6 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const sum2 = num4 + result;
-              const sum3 = 3 * (1 - result1 + result2) * sum2 * sum2 + 2 * (result3 - result4) * sum2 + 3 * closure_0;
+              const sum3 = 3 * (1 - result1 + result2) * sum2 * sum2 + 2 * (result3 - result4) * sum2 + 3 * tmp7;
               if (sum3 >= closure_2) {
-                let tmp15 = newtonRaphsonIterate(arg0, sum2, closure_0, closure_2);
+                let tmp15 = closure_1_10(arg0, sum2, tmp7, tmp8);
               } else {
                 tmp15 = sum2;
                 if (0 !== sum3) {
-                  tmp15 = binarySubdivide(arg0, num4, num4 + closure_3, closure_0, closure_2);
+                  tmp15 = closure_1_9(arg0, num4, num4 + closure_3, tmp7, tmp8);
                 }
               }
               return tmp15;
@@ -313,21 +340,21 @@ class Bezier {
                   let num4 = 1;
                   if (1 !== arg0) {
                     const tmp12 = getTForX(arg0);
-                    if (typeof calcBezier !== "function") {
+                    if (typeof closure_1_7 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     if (typeof closure_1_4 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    const result = (1 - 3 * closure_3 + 3 * closure_1) * tmp12;
+                    const result = (1 - 3 * tmp13 + 3 * tmp) * tmp12;
                     if (typeof getTForX !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    const result1 = (result + (3 * closure_3 - 6 * closure_1)) * tmp12;
+                    const result1 = (result + (3 * tmp13 - 6 * tmp)) * tmp12;
                     if (typeof closure_1_6 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    num4 = (result1 + 3 * closure_1) * tmp12;
+                    num4 = (result1 + 3 * tmp) * tmp12;
                   }
                   num = num4;
                 }

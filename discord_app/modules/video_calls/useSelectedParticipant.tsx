@@ -1,10 +1,10 @@
 // === Module 8674: useSelectedParticipant ===
 
 // Module 8674 (useSelectedParticipant)
-import getParticipants from "getParticipants" /* 4773 */;
+import closure_2 from "getParticipants" /* 4773 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/useSelectedParticipant.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_calls/useSelectedParticipant.tsx");
 
 export default function useSelectedParticipant(arg0) {
   const _require = arg0;

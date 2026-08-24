@@ -1,12 +1,12 @@
 // === Module 10803: openPinnedMessages ===
 
 // Module 10803 (openPinnedMessages)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
 import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
 
 let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
-const result = obj132.fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
 
 export default function openPinnedMessages(arg0, arg1) {
   let obj = getRootNavigationRef;
@@ -18,5 +18,4 @@ export default function openPinnedMessages(arg0, arg1) {
     obj[2] = arg1;
     rootNavigationRef.navigate("sidebar", obj);
   }
-  tmp = null != rootNavigationRef && rootNavigationRef.isReady();
 };

@@ -5,19 +5,19 @@ import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
 import _modDef8461 from "module_8461" /* 8461 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
 import ME from "ME" /* 676 */;
 import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8459 */;
 import { getDisableCommunicationDurationOptions as closure_11 } from "getFriendlyDurationString" /* 1992 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-require = fn;
+require = arg1;
 function getOptionValue(arr) {
   closure_0 = arg1;
-  const iter = arr.find((item, index) => item.name === size);
+  const iter = arr.find((name) => name.name === size);
   let value;
   if (iter != null) {
     value = iter.value;
@@ -27,7 +27,8 @@ function getOptionValue(arr) {
 let c3 = importDefaultResult;
 ({ Permissions: error, MARKDOWN_SPOILER_WRAPPER: closure_8, ME: c9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = ME);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = ROLL_DURATION_MS);
-let obj = { id: BuiltInSectionId.BUILT_IN, type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.BUILT_IN };
+let obj = {};
+obj = { id: BuiltInSectionId.BUILT_IN, type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj, "name", {
   get: () => {
     const intl = require(1236) /* getSystemLocale */.intl;
@@ -80,7 +81,7 @@ const items1 = [obj2];
 obj1.options = items1;
 obj1.execute = function execute(arr) {
   const message = "message";
-  const iter = arr.find((item, index) => item.name === size);
+  const iter = arr.find((name) => name.name === size);
   let str;
   if (iter != null) {
     str = iter.value;
@@ -127,7 +128,7 @@ const items2 = [obj4];
 obj3.options = items2;
 obj3.execute = function execute(arr) {
   const message = "message";
-  const iter = arr.find((item, index) => item.name === size);
+  const iter = arr.find((name) => name.name === size);
   let str;
   if (iter != null) {
     str = iter.value;
@@ -174,7 +175,7 @@ const items3 = [obj6];
 obj5.options = items3;
 obj5.execute = function execute(arr) {
   const message = "message";
-  const iter = arr.find((item, index) => item.name === size);
+  const iter = arr.find((name) => name.name === size);
   let str;
   if (iter != null) {
     str = iter.value;
@@ -234,7 +235,7 @@ obj7.predicate = function predicate(channel) {
 };
 obj7.execute = function execute(arr) {
   const message = "message";
-  const iter = arr.find((item, index) => item.name === size);
+  const iter = arr.find((name) => name.name === size);
   let content;
   if (iter != null) {
     content = iter.value;
@@ -281,7 +282,7 @@ const items5 = [obj10];
 obj9.options = items5;
 obj9.execute = function execute(arr) {
   const message = "message";
-  const iter = arr.find((item, index) => item.name === size);
+  const iter = arr.find((name) => name.name === size);
   let str;
   if (iter != null) {
     str = iter.value;
@@ -328,7 +329,7 @@ const items6 = [obj12];
 obj11.options = items6;
 obj11.execute = function execute(arr) {
   const message = "message";
-  const iter = arr.find((item, index) => item.name === size);
+  const iter = arr.find((name) => name.name === size);
   let str;
   if (iter != null) {
     str = iter.value;
@@ -379,6 +380,8 @@ obj13.predicate = function predicate(channel) {
   let tmp = null != channel && !channel.isPrivate();
   if (tmp) {
     tmp = closure_5.can(constants.CHANGE_NICKNAME, channel) || closure_5.can(constants.MANAGE_NICKNAMES, channel);
+    const obj = closure_5;
+    const tmp2 = constants;
     const tmp3 = closure_5.can(constants.CHANGE_NICKNAME, channel) || closure_5.can(constants.MANAGE_NICKNAMES, channel);
   }
   return tmp;
@@ -388,7 +391,7 @@ obj13.execute = function execute(arr) {
   if (null != guild) {
     if (null != channel) {
       const new_nick = "new_nick";
-      const iter = arr.find((item, index) => item.name === size);
+      const iter = arr.find((name) => name.name === size);
       let str;
       if (iter != null) {
         str = iter.value;
@@ -465,6 +468,7 @@ obj15.predicate = function predicate(channel) {
   let canStartPublicThread = null != channel;
   if (canStartPublicThread) {
     canStartPublicThread = useCanUnarchiveThread.computeCanStartPublicThread(channel);
+    const obj = useCanUnarchiveThread;
   }
   return canStartPublicThread;
 };
@@ -727,7 +731,7 @@ obj18.execute = function execute(arr, guild) {
   if (null != guild) {
     if (null != channel) {
       user = "user";
-      const iter = arr.find((item, index) => item.name === size);
+      const iter = arr.find((name) => name.name === size);
       str = undefined;
       if (iter != null) {
         str = iter.value;
@@ -745,7 +749,7 @@ obj18.execute = function execute(arr, guild) {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })().catch((error) => {
+        })().catch(() => {
           const intl = user(channel[10]).intl;
           guild(channel[20]).sendBotMessage(channel.id, intl.string(user(channel[10]).t.l0gNlp));
         });
@@ -997,7 +1001,7 @@ obj21.execute = function execute(arr, guild) {
   if (null != guild) {
     if (null != channel) {
       user = "user";
-      const iter = arr.find((item, index) => item.name === size);
+      const iter = arr.find((name) => name.name === size);
       str = undefined;
       if (iter != null) {
         str = iter.value;
@@ -1015,7 +1019,7 @@ obj21.execute = function execute(arr, guild) {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })().catch((error) => {
+        })().catch(() => {
           const intl = user(channel[10]).intl;
           guild(channel[20]).sendBotMessage(channel.id, intl.string(user(channel[10]).t.w2J6Qs));
         });
@@ -1088,10 +1092,10 @@ Object.defineProperty(obj27, "displayDescription", {
 });
 obj27.required = true;
 Object.defineProperty(obj27, "choices", {
-  get: () => callback2().map((item, index) => {
+  get: () => callback2().map((arg0) => {
     const obj = {};
-    const merged = Object.assign(item);
-    ({ label: obj.name, label: obj.displayName } = item);
+    const merged = Object.assign(arg0);
+    ({ label: obj.name, label: obj.displayName } = arg0);
     return obj;
   }),
   set: undefined
@@ -1176,7 +1180,7 @@ obj25.execute = function execute(arr, guild) {
                   } else {
                     obj1 = { guildId: null, userId: null, communicationDisabledUntilTimestamp: null, duration: null, reason: null };
                     obj1[0] = tmp41.id;
-                    obj1[1] = closure_1_3;
+                    obj1[1] = tmp15;
                     const obj8 = closure_1_1(closure_1_2[22]);
                     const obj10 = closure_1_1(closure_1_2[26])();
                     obj1[2] = closure_1_1(closure_1_2[26])().add(tmp11, "s").toISOString();
@@ -1189,6 +1193,9 @@ obj25.execute = function execute(arr, guild) {
                     return obj2;
                   }
                   tmp13 = user;
+                  tmp15 = closure_1_3;
+                  const tmp8 = closure_1_13;
+                  const tmp9 = closure_1_0;
                 }
               }
               c5 = 3;
@@ -1227,7 +1234,7 @@ obj25.execute = function execute(arr, guild) {
   if (null != guild) {
     if (null != channel) {
       user = "user";
-      const iter = arr.find((item, index) => item.name === size);
+      const iter = arr.find((name) => name.name === size);
       let value;
       if (iter != null) {
         value = iter.value;
@@ -1243,7 +1250,7 @@ obj25.execute = function execute(arr, guild) {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })().catch((error) => {
+        })().catch(() => {
           const intl = user(channel[10]).intl;
           guild(channel[20]).sendBotMessage(channel.id, intl.string(user(channel[10]).t["+mWyVq"]));
         });
@@ -1359,11 +1366,11 @@ obj29.execute = function execute(arr, channel) {
               v0 = 1;
               c0 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = obj1.openPrivateChannel(obj1).then((result) => {
-                const channel = closure_1_4.getChannel(result);
+              obj2[0] = obj1.openPrivateChannel(obj1).then((arg0) => {
+                const channel = closure_1_4.getChannel(arg0);
                 v1(closure_1_2[28])(null != channel, "Newly created PrivateChannel is null");
-                v1(closure_1_2[20]);
-                const obj = { location: closure_1_12.PRIVATE_MESSAGE_COMMAND };
+                let obj = v1(closure_1_2[20]);
+                obj = { location: closure_1_12.PRIVATE_MESSAGE_COMMAND };
                 obj.sendMessage(channel.id, v1(closure_1_2[21]).parse(channel, closure_2), true, obj);
               });
               return obj2;
@@ -1397,14 +1404,14 @@ obj29.execute = function execute(arr, channel) {
   }
   if (null != channel) {
     message = "user";
-    const iter2 = arr.find((item, index) => item.name === size);
+    const iter2 = arr.find((name) => name.name === size);
     let value;
     if (iter2 != null) {
       value = iter2.value;
     }
     c1 = value;
     message = "message";
-    const iter = arr.find((item, index) => item.name === size);
+    const iter = arr.find((name) => name.name === size);
     str2 = undefined;
     if (iter != null) {
       str2 = iter.value;
@@ -1421,7 +1428,7 @@ obj29.execute = function execute(arr, channel) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })().catch((error) => {
+    })().catch(() => {
       const intl = message(str2[10]).intl;
       _undefined(str2[20]).sendBotMessage(message.id, intl.string(message(str2[10]).t["3XaE95"]));
     });
@@ -1486,14 +1493,14 @@ Object.defineProperty(obj34, "displayDescription", {
   },
   set: undefined
 });
-obj34.choices = ALLOWED_DICE_SIDES.map((item, index) => ({ name: "D" + item, displayName: "D" + item, value: item }));
+obj34.choices = ALLOWED_DICE_SIDES.map((value) => ({ name: "D" + value, displayName: "D" + value, value }));
 items13[1] = obj34;
 obj32.options = items13;
 obj32.execute = function execute(arr, channel) {
   channel = channel.channel;
   if (null != channel) {
     let size = "count";
-    const iter2 = arr.find((item, index) => item.name === size);
+    const iter2 = arr.find((name) => name.name === size);
     let num;
     if (iter2 != null) {
       num = iter2.value;
@@ -1502,7 +1509,7 @@ obj32.execute = function execute(arr, channel) {
       num = 1;
     }
     size = "size";
-    const iter = arr.find((item, index) => item.name === size);
+    const iter = arr.find((name) => name.name === size);
     let num2;
     if (iter != null) {
       num2 = iter.value;
@@ -1517,11 +1524,11 @@ obj32.execute = function execute(arr, channel) {
   }
 };
 items[sum10 + 1] = obj32;
-const found = items.filter((item, index) => {
+const found = items.filter((untranslatedName) => {
   items = ["gif", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"];
-  return items.includes(item.untranslatedName);
+  return items.includes(untranslatedName.untranslatedName);
 });
-const result = require("obj132").fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
 export const PLATFORM_COMMANDS = require("get untranslatedDescription").default;
 export const BUILT_IN_SECTIONS = obj;
@@ -1531,22 +1538,22 @@ export const getBuiltInCommands = function getBuiltInCommands(commandTypes, arg1
   closure_0 = commandTypes;
   importDefault = arg2;
   enabled = importDefault(enabled[30]).getConfig({ location: "getBuiltInCommands" }).enabled;
-  return arg1 ? items : found.filter((item, index) => {
-    let hasItem = commandTypes.includes(item.type);
+  return arg1 ? items : found.filter((type) => {
+    let hasItem = commandTypes.includes(type.type);
     if (hasItem) {
       let tmp3 = !closure_1;
       if (closure_1) {
-        tmp3 = item.inputType === commandTypes(enabled[9]).ApplicationCommandInputType.BUILT_IN_TEXT;
+        tmp3 = type.inputType === commandTypes(enabled[9]).ApplicationCommandInputType.BUILT_IN_TEXT;
       }
       if (!tmp3) {
-        tmp3 = item.inputType === commandTypes(enabled[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION;
+        tmp3 = type.inputType === commandTypes(enabled[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION;
       }
       hasItem = tmp3;
     }
     if (hasItem) {
       let tmp8 = enabled;
       if (!enabled) {
-        tmp8 = "roll-dice" !== item.untranslatedName;
+        tmp8 = "roll-dice" !== type.untranslatedName;
       }
       hasItem = tmp8;
     }

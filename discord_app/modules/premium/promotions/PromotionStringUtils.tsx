@@ -6,12 +6,12 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1993 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import addSubscriptionPlan from "addSubscriptionPlan" /* 4044 */;
+import closure_3 from "addSubscriptionPlan" /* 4044 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-require = fn;
+require = arg1;
 ({ PremiumSubscriptionSKUs: c4, SubscriptionPlans: c5 } = GuildFeatures);
-const result = require("obj132").fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
 
 export const useFormatStringWithCommonPremiumParams = function useFormatStringWithCommonPremiumParams(body) {
   let str = "...";
@@ -21,6 +21,7 @@ export const useFormatStringWithCommonPremiumParams = function useFormatStringWi
     if (stateFromStores) {
       try {
         const defaultPrice = getPremiumPlanItemDefault.getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+        const obj2 = getPremiumPlanItemDefault;
         str = formatSingleCurrencyPrice.formatPrice(defaultPrice.amount, defaultPrice.currency);
         const tmpResult = formatSingleCurrencyPrice;
       } catch (err) {

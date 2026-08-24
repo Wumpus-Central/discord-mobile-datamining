@@ -1,7 +1,7 @@
 // === Module 4961: ? ===
 
 // Module 4961
-const importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 let obj = { INCHES: 2, CENTIMETERS: 3, MILLIMETERS: 4 };
 let c3 = 25.4;
@@ -67,8 +67,8 @@ arg5.default = {
                                                     sqrtResult = Math.sqrt(tmp3 + result ** 2);
                                                     result2 = 4933 / result3[1];
                                                     result3 = result2 * (43.27 / sqrtResult);
-                                                  } else if (constants.CENTIMETERS !== value1) {
-                                                    if (constants.MILLIMETERS === value1) {
+                                                  } else if (tmp6.CENTIMETERS !== value1) {
+                                                    if (tmp6.MILLIMETERS === value1) {
                                                       tmp7 = closure_5;
                                                     }
                                                   }
@@ -88,10 +88,10 @@ arg5.default = {
                                 if (value4) {
                                   obj = { value: null, description: null };
                                   obj[0] = value4;
-                                  obj[1] = importDefault(4933).FocalLengthIn35mmFilm(value4);
+                                  obj[1] = module(4933).FocalLengthIn35mmFilm(value4);
                                   obj.FocalLength35efl = obj;
                                   flag = true;
-                                  const obj3 = importDefault(4933);
+                                  const obj3 = module(4933);
                                 }
                                 const tmp9 = (function getScaleFactorTo35mmEquivalent(value, value4) {
                                   if (value) {

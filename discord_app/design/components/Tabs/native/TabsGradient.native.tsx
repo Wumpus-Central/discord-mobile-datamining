@@ -2,13 +2,13 @@
 
 // Module 11938 (TabsGradient)
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { HorizontalGradient } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
 let closure_8 = { mass: 1, damping: 30, stiffness: 250 };
@@ -17,33 +17,37 @@ let closure_10 = { code: "function TabsGradientNativeTsx1(){const{withSpring,vis
 let closure_11 = { code: "function TabsGradientNativeTsx2(){const{itemDimensions,state}=this.__closure;const items=itemDimensions.get();const itemWidths=items.reduce(function(s,layout){var _layout$width;return s+((_layout$width=layout===null||layout===void 0?void 0:layout.width)!==null&&_layout$width!==void 0?_layout$width:0);},0);const itemsSpacing=items.length*state.itemSpacing;return itemWidths+itemsSpacing;}" };
 let closure_12 = { code: "function TabsGradientNativeTsx3(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()>0&&totalItemWidth.get()>pageWidth;}" };
 let closure_13 = { code: "function TabsGradientNativeTsx4(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()<totalItemWidth.get()-pageWidth&&totalItemWidth.get()>pageWidth;}" };
-const result = require("obj132").fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
 
 export default function TabsGradient(state) {
   state = state.state;
   let derivedValue2 = state;
   const colors = state.colors;
-  const scrollOffset = state.scrollOffset;
-  const itemDimensions = state.itemDimensions;
-  const pageWidth = state.pageWidth;
+  let scrollOffset;
+  let itemDimensions;
+  let pageWidth;
+  let derivedValue;
+  scrollOffset = state.scrollOffset;
+  itemDimensions = state.itemDimensions;
+  pageWidth = state.pageWidth;
   let obj = derivedValue2(colors[3]);
   const fn = function f() {
     const value = itemDimensions.get();
-    return value.reduce((acc, item, index) => {
+    return value.reduce((arg0, width) => {
       let num;
-      if (item != null) {
-        num = item.width;
+      if (width != null) {
+        num = width.width;
       }
       if (num == null) {
         num = 0;
       }
-      return acc + num;
+      return arg0 + num;
     }, 0) + value.length * derivedValue2.itemSpacing;
   };
   fn.__closure = { itemDimensions, state };
   fn.__workletHash = 456613763143;
   fn.__initData = closure_11;
-  const derivedValue = obj.useDerivedValue(fn);
+  derivedValue = obj.useDerivedValue(fn);
   obj1 = derivedValue2(colors[3]);
   const fn2 = function y() {
     let tmp = scrollOffset.get() > 0;

@@ -5,17 +5,17 @@ import ThemesDefault from "Themes" /* 712 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import usePlaceholderWidth from "usePlaceholderWidth" /* 11227 */;
 import CommandRowIconDefault from "CommandRowIcon" /* 11282 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import getIndexKey from "getIndexKey" /* 8448 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME" /* 5246 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
   if (flag === undefined) {
@@ -30,6 +30,7 @@ function PlaceholderCommandRow(isFirstRow) {
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
   obj1 = usePlaceholderWidth;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
+  obj = { label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null };
   obj = { style: null };
   const items = [tmp.loadingTextPlaceholder, ];
   obj1 = { width: "" + placeholderWidth + "%" };
@@ -65,8 +66,8 @@ class CommandRow {
       command,
       context,
       beforeExecuteCommand() {
-            callback(dependencyMap[15]);
-            const obj = { command: callback, location: closure_4, triggerSection: callback(dependencyMap[15]).getCommandTriggerSection(closure_3), sectionName };
+            let obj = callback(closure_1_3[15]);
+            obj = { command: callback, location: closure_4, triggerSection: callback(closure_1_3[15]).getCommandTriggerSection(closure_3), sectionName };
             return obj.trackCommandSelected(obj);
           },
       onExecuteCommand,
@@ -117,14 +118,14 @@ class CommandRow {
                   obj1[1] = channel;
                   obj1[2] = lib.integration_types;
                   const obj2 = { entrypoint: null, location: null, sectionName: null };
-                  obj2[0] = entrypoint;
+                  obj2[0] = closure_1_6;
                   obj2[1] = closure_1_4;
-                  obj2[2] = sectionName;
+                  obj2[2] = closure_1_5;
                   obj1[3] = obj2;
                   c2 = 1;
                   c3 = 1;
                   const obj3 = { value: null, done: false };
-                  obj3[0] = lib(dependencyMap[16]).installApplicationOnDemandIfNeeded(obj1);
+                  obj3[0] = lib(closure_2_3[16]).installApplicationOnDemandIfNeeded(obj1);
                   return obj3;
                 }
               } else if (arg0 === 1) {
@@ -173,8 +174,8 @@ class CommandRow {
       let tmp;
       if (!hasOptions) {
         const obj = { name: "send", label: null };
-        const intl = callback(dependencyMap[17]).intl;
-        obj[1] = intl.string(callback(dependencyMap[17]).t.TXNS7S);
+        const intl = callback(closure_1_3[17]).intl;
+        obj[1] = intl.string(callback(closure_1_3[17]).t.TXNS7S);
         const items = [obj];
         tmp = items;
       }
@@ -207,24 +208,32 @@ class CommandRow {
 const DEFAULT_CONTENT_PADDING = APP_LAUNCHER_BUILT_IN_SECTION_ICON.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = APP_LAUNCHER_BUILT_IN_SECTION_ICON.useAppLauncherNavigation;
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createCacheKey = { height: require("xl").EXPANDED_HEADER_HEIGHT - require("xl").SHEET_HANDLE_CONTAINER_HEIGHT };
+createCacheKey = { headerSpacer: null, list: null, commandsHeaderContainer: null, commandsHeaderTextContainer: null, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+createCacheKey = { height: require("xl").EXPANDED_HEADER_HEIGHT - require("xl").SHEET_HANDLE_CONTAINER_HEIGHT };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: DEFAULT_CONTENT_PADDING };
 createCacheKey[2] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 };
 createCacheKey[3] = { alignItems: "center", flexDirection: "row", gap: 8 };
 createCacheKey[4] = { borderRadius: ThemesDefault.radii.lg };
+let obj1 = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
+let obj2 = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
 createCacheKey[6] = { marginLeft: ThemesDefault.space.PX_4 };
+let obj3 = { marginLeft: ThemesDefault.space.PX_4 };
 createCacheKey[7] = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center" };
+let obj4 = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
 createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 createCacheKey[11] = { alignItems: "center" };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
 let obj7 = { PLACEHOLDER: 0, [0]: "PLACEHOLDER", COMMAND: 1, [1]: "COMMAND" };
 const array = new Array(6);
 let closure_18 = array.fill({ type: obj7.PLACEHOLDER });
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailContent.tsx");
+let obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+let obj8 = { type: obj7.PLACEHOLDER };
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailContent.tsx");
 
 export default function AppDetailContent(context) {
   context = context.context;
@@ -234,6 +243,11 @@ export default function AppDetailContent(context) {
   const entrypoint = context.entrypoint;
   const onCommandExecuted = context.onCommandExecuted;
   const onAauth2Cancel = context.onAauth2Cancel;
+  closure_7 = undefined;
+  let chatInputRef;
+  let keyboardCloseReasonRef;
+  let filterSection;
+  let sectionDescriptors;
   let loading;
   let callback2;
   commands = undefined;
@@ -247,9 +261,10 @@ export default function AppDetailContent(context) {
   closure_7 = tmp;
   let obj = context(sectionName[13]);
   const requiredAppLauncherContext = obj.useRequiredAppLauncherContext();
-  const chatInputRef = requiredAppLauncherContext.chatInputRef;
-  const keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
-  installOnDemand(sectionName[19]);
+  chatInputRef = requiredAppLauncherContext.chatInputRef;
+  keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
+  obj1 = installOnDemand(sectionName[19]);
+  obj = { context, filters: null, options: null, allowFetch: true };
   obj = { commandTypes: null };
   let items = [context(sectionName[20]).ApplicationCommandType.CHAT];
   obj[0] = items;
@@ -257,8 +272,8 @@ export default function AppDetailContent(context) {
   obj1 = { placeholderCount: 0, limit: loading, includeFrecency: true, allowApplicationState: installOnDemand, installOnDemand, applicationId: application.id };
   obj[2] = obj1;
   const discovery = obj1.useDiscovery(obj);
-  const filterSection = discovery.filterSection;
-  const sectionDescriptors = discovery.sectionDescriptors;
+  filterSection = discovery.filterSection;
+  sectionDescriptors = discovery.sectionDescriptors;
   loading = discovery.loading;
   const tmp7 = application(sectionName[21])({ sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection });
   ({ setSortOrder: c13, commands } = tmp7);
@@ -288,7 +303,7 @@ export default function AppDetailContent(context) {
     } else if (loading) {
       items = found;
     } else {
-      items = commands.map((item, index) => ({ type: constants.COMMAND, command: item }));
+      items = commands.map((command) => ({ type: constants.COMMAND, command }));
     }
     return items;
   }, items1);
@@ -303,8 +318,8 @@ export default function AppDetailContent(context) {
     if (arg2 === undefined) {
       APP_LAUNCHER_APPLICATION_VIEW = context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
     }
-    context(sectionName[24]);
-    const obj = { location: APP_LAUNCHER_APPLICATION_VIEW, context, command, section, sectionDescriptors, query: "", navigation: closure_15, installOnDemand, sectionName, entrypoint, onCommandExecuted };
+    let obj = context(sectionName[24]);
+    obj = { location: APP_LAUNCHER_APPLICATION_VIEW, context, command, section, sectionDescriptors, query: "", navigation: closure_15, installOnDemand, sectionName, entrypoint, onCommandExecuted };
     const result = obj.handleApplicationCommandSelected(obj);
   }, items3);
   const items4 = [chatInputRef, keyboardCloseReasonRef, onCommandExecuted];
@@ -318,7 +333,7 @@ export default function AppDetailContent(context) {
       onCommandExecuted();
     }
   }, items4);
-  found = sectionDescriptors.find((item, index) => item.id === application.id);
+  found = sectionDescriptors.find((id) => id.id === application.id);
   const items5 = [callback, commands.length, context, callback1, found, installOnDemand, sectionName];
   const sum = application(sectionName[18])().bottom + keyboardCloseReasonRef;
   c19 = sum;
@@ -344,7 +359,7 @@ export default function AppDetailContent(context) {
       obj[7] = context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
       obj[8] = installOnDemand;
       obj[9] = sectionName;
-      return _undefined(CommandRow, obj);
+      return _undefined(closure_1_20, obj);
     } else {
       return null;
     }
@@ -353,21 +368,21 @@ export default function AppDetailContent(context) {
     let obj = context(sectionName[25]);
     let isAndroidResult = obj.isAndroid();
     if (isAndroidResult) {
-      let tmpResult = context(sectionName[22]);
+      let tmpResult = tmp(tmp2[22]);
       isAndroidResult = tmpResult.isApplicationMonetizedWithIAP(application);
     }
-    tmpResult = context(sectionName[22]);
+    tmpResult = tmp(tmp2[22]);
     const result = tmpResult.isApplicationAdSupported(application);
     let tmp6 = null;
     if (result) {
       obj = { style: null, children: null };
       obj[0] = closure_7.monetizationDisclosureStyle;
-      const items = [_undefined(context(sectionName[26]).BillIcon, { size: "sm", color: "icon-muted" }), ];
+      const items = [_undefined(tmp(tmp2[26]).BillIcon, { size: "sm", color: "icon-muted" }), ];
       obj = { style: null, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       obj[0] = closure_7.monetizationDisclosureTextStyle;
-      const intl = context(sectionName[17]).intl;
-      obj[4] = intl.string(context(sectionName[17]).t["5khEk8"]);
-      items[1] = _undefined(context(sectionName[27]).Text, obj);
+      const intl = tmp(tmp2[17]).intl;
+      obj[4] = intl.string(tmp(tmp2[17]).t["5khEk8"]);
+      items[1] = _undefined(tmp(tmp2[27]).Text, obj);
       obj[1] = items;
       tmp6 = commands(onAauth2Cancel, obj);
     }
@@ -375,12 +390,12 @@ export default function AppDetailContent(context) {
     if (isAndroidResult) {
       obj1 = { style: null, children: null };
       obj1[0] = closure_7.monetizationDisclosureStyle;
-      const items1 = [_undefined(context(sectionName[28]).ShopIcon, { size: "sm", color: "icon-muted" }), ];
+      const items1 = [_undefined(tmp(tmp2[28]).ShopIcon, { size: "sm", color: "icon-muted" }), ];
       const obj2 = { style: null, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       obj2[0] = closure_7.monetizationDisclosureTextStyle;
-      const intl2 = context(sectionName[17]).intl;
-      obj2[4] = intl2.string(context(sectionName[17]).t["8z5B2U"]);
-      items1[1] = _undefined(context(sectionName[27]).Text, obj2);
+      const intl2 = tmp(tmp2[17]).intl;
+      obj2[4] = intl2.string(tmp(tmp2[17]).t["8z5B2U"]);
+      items1[1] = _undefined(tmp(tmp2[27]).Text, obj2);
       obj1[1] = items1;
       tmp11 = commands(onAauth2Cancel, obj1);
     }
@@ -407,6 +422,8 @@ export default function AppDetailContent(context) {
   tmp4Result = tmp4(tmp3[29]);
   const appLauncherFlashListProps = tmp4Result.useAppLauncherFlashListProps();
   const items9 = [callback2(onAauth2Cancel, { style: tmp.headerSpacer }), , , , , , ];
+  let obj2 = { sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection };
+  let obj3 = { style: tmp.headerSpacer };
   const tmp2Result = application(sectionName[29]);
   tmp9 = null == tmp8;
   if (tmp4Result1.isEmbeddedApp(application)) {
@@ -478,8 +495,8 @@ export default function AppDetailContent(context) {
       if (canSort) {
         const obj12 = { sortOrder: null, onSortOptionPress: null };
         obj12[0] = tmp7.sortOrder;
-        obj12[1] = function onSortOptionPress(closure_1_2) {
-          _undefined(installOnDemand);
+        obj12[1] = function onSortOptionPress(arg0) {
+          _undefined(arg0);
         };
         canSort = tmp26(tmp2(tmp3[34]), obj12);
       }
@@ -504,25 +521,26 @@ export default function AppDetailContent(context) {
       showsAddCTA: tmp11,
       onAddAppMenuClick(installAppProps) {
         installAppProps = installAppProps.installAppProps;
-        let obj = application(sectionName[35]);
+        let obj;
+        obj = application(sectionName[35]);
         obj.hideActionSheet();
         keyboardCloseReasonRef.current = context(sectionName[13]).AppLauncherKeyboardCloseReason.OAUTH_MODAL;
         const current = chatInputRef.current;
         if (current != null) {
           current.closeCustomKeyboard();
         }
-        obj = { location: context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU, application_id: application.id, section_name: sectionName, source: entrypoint };
+        obj = { location: tmp3(tmp[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU, application_id: application.id, section_name: sectionName, source: entrypoint };
         if (null == installAppProps.customInstallUrl) {
-          let tmp3Result = context(sectionName[36]);
+          let tmp3Result = tmp3(tmp[36]);
           tmp3Result.trackWithMetadata(sectionDescriptors.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj);
         }
-        tmp3Result = context(sectionName[37]);
+        tmp3Result = tmp3(tmp[37]);
         obj = {};
         const merged = Object.assign(installAppProps);
         obj.source = "app_launcher_app_details";
         obj.oauth2Callback = function oauth2Callback(canceled) {
           if (canceled.canceled) {
-            if (onAauth2Cancel != null) {
+            if (closure_1_6 != null) {
               tmp7();
             }
           } else if (null != tmp) {

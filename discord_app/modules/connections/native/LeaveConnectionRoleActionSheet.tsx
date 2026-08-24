@@ -10,15 +10,17 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
 
 export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const tmp = callback3();
-  const obj = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj = { children: null };
+  obj = { style: tmp.container, children: null };
+  obj = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.vytvJF);
   const items = [callback(Text.Text, obj), , ];

@@ -1,7 +1,7 @@
 // === Module 4201: initialize ===
 
 // Module 4201 (initialize)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage3 from "Storage" /* 595 */;
 import ME2 from "ME" /* 676 */;
@@ -79,6 +79,6 @@ obj = {
   }
 };
 const defaultRouteStore = new DefaultRouteStore(dispatcherDefault, obj);
-const result = obj132.fileFinishedImporting("stores/DefaultRouteStore.tsx");
+const result = set.fileFinishedImporting("stores/DefaultRouteStore.tsx");
 
 export default defaultRouteStore;

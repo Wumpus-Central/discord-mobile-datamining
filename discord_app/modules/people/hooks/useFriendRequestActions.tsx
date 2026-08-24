@@ -1,9 +1,9 @@
 // === Module 12348: useFriendRequestActions ===
 
 // Module 12348 (useFriendRequestActions)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
-let result = require("obj132").fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
+let result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
 
 export const useFriendRequestActions = function useFriendRequestActions(userId) {
   userId = userId.userId;
@@ -17,8 +17,8 @@ export const useFriendRequestActions = function useFriendRequestActions(userId) 
   let obj = { acceptFriendRequest: null, cancelFriendRequest: null };
   const items1 = [applicationId, isGameRelationship, _location, onCancel, onConfirm, onFinally, userId];
   const callback = isGameRelationship.useCallback(() => {
-    userId(applicationId[1]);
-    const obj = { userId, applicationId: null, location: null };
+    let obj = userId(applicationId[1]);
+    obj = { userId, applicationId: null, location: null };
     let tmp = null;
     if (isGameRelationship) {
       tmp = applicationId;
@@ -28,8 +28,8 @@ export const useFriendRequestActions = function useFriendRequestActions(userId) 
     obj.cancelFriendRequest(obj);
   }, items);
   obj[0] = isGameRelationship.useCallback(() => {
-    userId(applicationId[1]);
-    const obj = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
+    let obj = userId(applicationId[1]);
+    obj = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
     let tmp = null;
     if (isGameRelationship) {
       tmp = applicationId;

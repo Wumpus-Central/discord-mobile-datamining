@@ -1,11 +1,11 @@
 // === Module 4981: useAudienceRequestToSpeakState ===
 
 // Module 4981 (useAudienceRequestToSpeakState)
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_2 from "updateVoiceState" /* 4542 */;
 
-const require = fn;
+const require = arg1;
 const obj = { NONE: 0, [0]: "NONE", REQUESTED_TO_SPEAK: 1, [1]: "REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK: 2, [2]: "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK", ON_STAGE: 3, [3]: "ON_STAGE" };
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
 
 export default function useAudienceRequestToSpeakState(arg0, arg1) {
   const _require = arg0;
@@ -17,29 +17,29 @@ export default function useAudienceRequestToSpeakState(arg0, arg1) {
       if (null != closure_1) {
         const voiceStateForChannel = closure_1_2.getVoiceStateForChannel(tmp8, tmp);
         if (null == voiceStateForChannel) {
-          let NONE = obj.NONE;
+          let NONE = closure_1_3.NONE;
         } else {
           if (voiceStateForChannel.suppress) {
             if (null != voiceStateForChannel.requestToSpeakTimestamp) {
-              NONE = obj.REQUESTED_TO_SPEAK;
+              NONE = closure_1_3.REQUESTED_TO_SPEAK;
             }
           }
           if (!voiceStateForChannel.suppress) {
             if (null != voiceStateForChannel.requestToSpeakTimestamp) {
-              NONE = obj.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+              NONE = closure_1_3.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
             }
           }
           if (!voiceStateForChannel.suppress) {
             if (null == voiceStateForChannel.requestToSpeakTimestamp) {
-              let NONE2 = obj.ON_STAGE;
+              let NONE2 = closure_1_3.ON_STAGE;
             }
           }
-          NONE2 = obj.NONE;
+          NONE2 = closure_1_3.NONE;
         }
       }
       return NONE;
     }
-    NONE = obj.NONE;
+    NONE = closure_1_3.NONE;
   }, items1);
 };
 export const RequestToSpeakStates = obj;

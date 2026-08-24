@@ -1,14 +1,14 @@
 // === Module 11704: useGuildPowerupOnActivate ===
 
 // Module 11704 (useGuildPowerupOnActivate)
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate" /* 4267 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "handleGuildBoostsUpdate" /* 4267 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
 
-const require = fn;
+const require = arg1;
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: error } = BoostedGuildTiers);
-let result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
 
 export default function useGuildPowerupOnActivate(arg0, arg1) {
   const _require = arg0;
@@ -40,13 +40,13 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
             } else {
               PERK = shouldUseMobileWebRedirectCheckout.PERK;
             }
-            let obj = callback2(onToggle[10]);
+            let obj = callback2(tmp18[10]);
             obj.hideActionSheet(callback(onToggle[11]).GUILD_POWERUPS_BOTTOM_SHEET_KEY);
             if (availableGuildBoostSlots.length > 0) {
-              let tmp17Result = tmp17(onToggle[12]);
+              let tmp17Result = tmp17(tmp18[12]);
               obj = { guildBoostSlots: null, guildId: null, intent: null, onResult: null };
               obj[0] = availableGuildBoostSlots.slice(0, diff);
-              obj[1] = stateFromStores.id;
+              obj[1] = tmp.id;
               obj[2] = PERK;
               obj[3] = function onResult(arg0) {
                 if (arg0) {
@@ -55,13 +55,13 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               };
               tmp17Result.openTransferModal(obj);
             } else if (shouldUseMobileWebRedirectCheckout) {
-              handleMobileWebRedirectCheckout(analyticsLocations, stateFromStores.id);
+              handleMobileWebRedirectCheckout(analyticsLocations, tmp.id);
             } else {
-              tmp17Result = tmp17(onToggle[13]);
+              tmp17Result = tmp17(tmp18[13]);
               obj = { source: null, analyticsLocations: null, guildId: null, onBack: null, onPaymentSuccess: null, onPaymentDismiss: null };
               obj[0] = { page: "Guild Powerups", section: "Powerup Activation" };
               obj[1] = analyticsLocations;
-              obj[2] = stateFromStores.id;
+              obj[2] = tmp.id;
               obj[3] = function onBack() {
                 return PERK(5260).popWithKey(diff(7381).PREMIUM_KEY);
               };
@@ -71,7 +71,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                 if (availableGuildBoostSlots.length >= diff) {
                   obj = { guildBoostSlots: null, guildId: null, intent: null, onResult: null };
                   obj[0] = availableGuildBoostSlots.slice(0, PERK.cost);
-                  obj[1] = stateFromStores.id;
+                  obj[1] = closure_1_3.id;
                   obj[2] = PERK;
                   obj[3] = function onResult(arg0) {
                     if (arg0) {

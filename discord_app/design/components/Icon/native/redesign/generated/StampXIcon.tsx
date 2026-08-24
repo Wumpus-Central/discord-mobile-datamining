@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 10908 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/StampXIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/StampXIcon.tsx");
 
 export const StampXIcon = function StampXIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

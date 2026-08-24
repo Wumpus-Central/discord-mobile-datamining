@@ -72,6 +72,6 @@ prototype["getExpiresAt"] = function getExpiresAt() {
 prototype["toString"] = function toString() {
   return this.code;
 };
-const result = require("obj132").fileFinishedImporting("records/InviteRecord.tsx");
+const result = require("set").fileFinishedImporting("records/InviteRecord.tsx");
 
 export default InviteRecord;

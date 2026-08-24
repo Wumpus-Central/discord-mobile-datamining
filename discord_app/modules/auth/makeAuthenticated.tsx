@@ -2,17 +2,21 @@
 
 // Module 15963 (makeAuthenticated)
 import noopAll from "noop" /* 19 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
 import { LoginStates } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/auth/makeAuthenticated.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/makeAuthenticated.tsx");
 
 export const makeAuthenticated = function makeAuthenticated(displayName) {
   closure_0 = displayName;
   closure_1 = arg1;
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = { passProps: true };
+  }
   let str = displayName.displayName;
   if (str == null) {
     str = displayName.name;

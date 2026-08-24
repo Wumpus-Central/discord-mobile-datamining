@@ -4,11 +4,12 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import callbackDefault from "callback" /* 5223 */;
-import toString from "toString" /* 5222 */;
+import closure_3 from "toString" /* 5222 */;
+import set from "set" /* 2 */;
 
-const require = fn;
+const require = arg1;
 const items = [require("ME").PlatformTypes.CONTACTS];
-const set = new Set(items);
+let set = new Set(items);
 let c5 = true;
 let closure_6 = [];
 let closure_7 = [];
@@ -38,17 +39,17 @@ prototype["getLocalAccounts"] = function getLocalAccounts() {
 prototype["getAccount"] = function getAccount(accountId, SPOTIFY) {
   closure_0 = accountId;
   closure_1 = SPOTIFY;
-  return closure_6.find((item, index) => {
-    let tmp2 = null == closure_0 || item.id === tmp;
+  return closure_6.find((id) => {
+    let tmp2 = null == closure_0 || id.id === tmp;
     if (tmp2) {
-      tmp2 = item.type === closure_1;
+      tmp2 = id.type === closure_1;
     }
     return tmp2;
   });
 };
 prototype["getLocalAccount"] = function getLocalAccount(CONTACTS) {
   closure_0 = CONTACTS;
-  return closure_7.find((item, index) => item.type === closure_0);
+  return closure_7.find((type) => type.type === closure_0);
 };
 prototype["isSuggestedAccountType"] = function isSuggestedAccountType(arg0) {
   return table2[arg0] || false;
@@ -66,47 +67,48 @@ ConnectedAccountsStore.displayName = "ConnectedAccountsStore";
 const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(connectedAccounts) {
     connectedAccounts = connectedAccounts.connectedAccounts;
-    const mapped = connectedAccounts.map((item, index) => new closure_3(item));
-    closure_6 = mapped.filter((item, index) => {
-      const hasItem = set.has(item.type);
+    const mapped = connectedAccounts.map((arg0) => new closure_3(arg0));
+    closure_6 = mapped.filter((type) => {
+      const hasItem = set.has(type.type);
       let isSupportedResult = !hasItem;
       if (!hasItem) {
-        isSupportedResult = callback(table[2]).isSupported(item.type);
+        isSupportedResult = callback(table[2]).isSupported(type.type);
         const obj = callback(table[2]);
       }
       return isSupportedResult;
     });
-    closure_7 = mapped.filter((item, index) => set.has(item.type));
+    closure_7 = mapped.filter((type) => set.has(type.type));
     c5 = false;
   },
   USER_CONNECTIONS_UPDATE: function handleConnectionsUpdate(local) {
     if (local.local) {
       if (null != local.accounts) {
         const accounts = local.accounts;
-        const mapped = accounts.map((item, index) => {
+        const mapped = accounts.map((integrations) => {
           let obj = {};
-          let merged = Object.assign(item);
-          const integrations = item.integrations;
-          obj.integrations = integrations.map((item, index) => {
-            const merged = Object.assign(item);
-            const obj = {};
-            const merged1 = Object.assign(item.guild);
+          let merged = Object.assign(integrations);
+          integrations = integrations.integrations;
+          obj.integrations = integrations.map((guild) => {
+            let obj = {};
+            const merged = Object.assign(guild);
+            obj = {};
+            const merged1 = Object.assign(guild.guild);
             obj.features = [];
             obj.guild = callback(table[3]).fromGuildBasic(obj);
             return obj;
           });
           return new closure_3(obj);
         });
-        closure_6 = mapped.filter((item, index) => {
-          const hasItem = set.has(item.type);
+        closure_6 = mapped.filter((type) => {
+          const hasItem = set.has(type.type);
           let isSupportedResult = !hasItem;
           if (!hasItem) {
-            isSupportedResult = callback(table[2]).isSupported(item.type);
+            isSupportedResult = callback(table[2]).isSupported(type.type);
             const obj = callback(table[2]);
           }
           return isSupportedResult;
         });
-        closure_7 = mapped.filter((item, index) => set.has(item.type));
+        closure_7 = mapped.filter((type) => set.has(type.type));
         c5 = false;
       }
     }
@@ -117,10 +119,10 @@ const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
   },
   USER_CONNECTION_UPDATE: function handleUserConnectionUpdate(arg0) {
     ({ platformType: require, id: importDefault, revoked, accessToken } = arg0);
-    const found = closure_6.find((item, index) => {
-      let tmp = item.id === closure_1;
+    const found = closure_6.find((id) => {
+      let tmp = id.id === closure_1;
       if (tmp) {
-        tmp = item.type === closure_0;
+        tmp = id.type === closure_0;
       }
       return tmp;
     });
@@ -147,6 +149,6 @@ const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
     callbackDefault.callback(provider, { code, state, openid_params });
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/ConnectedAccountsStore.tsx");
+const result = set.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");
 
 export default connectedAccountsStore;

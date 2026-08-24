@@ -1,7 +1,7 @@
 // === Module 15289: withEqualityFn ===
 
 // Module 15289 (withEqualityFn)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import isIterable from "isIterable" /* 4006 */;
 import identity from "identity" /* 700 */;
@@ -29,14 +29,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     const result2 = gestureState.set(obj);
   };
   obj[6] = function updateMaxX(width, left) {
-    callback({ maxX: width.width - left.left - left.right - DM_WIDTH - 8 + 8 });
+    callback({ maxX: width.width - left.left - left.right - closure_1_2 - 8 + 8 });
   };
   obj[7] = function noteInteraction(arg0, arg1) {
     callback2().lastInteractionAt.current = Date.now();
   };
   return obj;
 }, isIterable.shallow);
-let result = obj132.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
+let result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;
 export const computeMaxX = function computeMaxX(width, left) {

@@ -1,7 +1,7 @@
 // === Module 1619: useLinkTo ===
 
 // Module 1619 (useLinkTo)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -15,7 +15,8 @@ export const useLinkTo = function useLinkTo() {
       error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
       throw error;
     } else {
-      context.dispatch(buildAction(arg0));
+      obj.dispatch(buildAction(arg0));
     }
+    obj = context;
   }, items);
 };

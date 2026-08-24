@@ -3,17 +3,19 @@
 // Module 7126 (Layer)
 import useInitialValueDefault from "useInitialValue" /* 7127 */;
 import add from "add" /* 7128 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
+  let context;
+  dependencyMap = undefined;
   let callback;
-  const context = React.useContext(zIndex(7128).LayerContext);
+  context = React.useContext(zIndex(7128).LayerContext);
   dependencyMap = callback(React.useState({}), 2)[1];
   callback = React.useRef(null);
   const items = [context];
@@ -38,12 +40,12 @@ function Layer(zIndex) {
     },
     onLayout: NOOP,
     pointerEvents: "box-none",
-    children: items1.map((item, index) => callback(React.Fragment, { children: item.component }, item.key))
+    children: items1.map((children) => callback(React.Fragment, { children: children.component }, children.key))
   });
 }
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
 
 export const LayerScope = function LayerScope(arg0) {
   ({ children, zIndex } = arg0);

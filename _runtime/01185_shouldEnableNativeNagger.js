@@ -10,6 +10,7 @@ export const shouldEnableNativeNagger = function shouldEnableNativeNagger(enable
   let tmp = enableNativeNagger;
   if (typeof enableNativeNagger !== "boolean") {
     tmp = !isHermesEnabled.isExpoGo();
+    const obj = isHermesEnabled;
   }
   return tmp;
 };

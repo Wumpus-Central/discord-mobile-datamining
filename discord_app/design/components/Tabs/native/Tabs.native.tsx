@@ -2,14 +2,14 @@
 
 // Module 11783 (defaultCountFormatter)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = fn;
+const require = arg1;
 function defaultCountFormatter(toLocaleString) {
   return toLocaleString.toLocaleString(locale.locale);
 }
@@ -19,16 +19,18 @@ let closure_8 = importDefaultResult.createAnimatedComponent(ScrollView);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 let closure_11 = createCacheKey.createStyles((gap) => {
-  let obj = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
+  let obj = { container: null, controlsContainer: null, indicatorContainer: null, indicator: null };
+  obj = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
   obj[0] = obj;
   obj = { marginHorizontal: ThemesDefault.space.PX_16, flexDirection: "row", gap };
   obj[1] = obj;
   obj[2] = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: ThemesDefault.space.PX_16 };
   if ("gradient-background" === arg1) {
-    let TEXT_BRAND = ThemesDefault.colors.TEXT_STRONG;
+    let TEXT_BRAND = tmp(712).colors.TEXT_STRONG;
   } else {
-    TEXT_BRAND = ThemesDefault.colors.TEXT_BRAND;
+    TEXT_BRAND = tmp(712).colors.TEXT_BRAND;
   }
+  obj1 = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: ThemesDefault.space.PX_16 };
   obj[3] = { height: 2, backgroundColor: TEXT_BRAND, borderTopStartRadius: ThemesDefault.radii.xs, borderTopEndRadius: ThemesDefault.radii.xs };
   return obj;
 });
@@ -40,7 +42,7 @@ let closure_17 = { code: "function TabsNativeTsx5(event){const{scrollOffset,onSc
 let closure_18 = { code: "function TabsNativeTsx6(){const{onEndDrag}=this.__closure;var _onEndDrag;(_onEndDrag=onEndDrag)===null||_onEndDrag===void 0||_onEndDrag();}" };
 let closure_19 = { code: "function TabsNativeTsx7(){const{scrollOffset,activeIndex,itemDimensions}=this.__closure;return{scrollOffset:scrollOffset.get(),activeIndex:activeIndex.get(),itemDimensions:itemDimensions.get()};}" };
 let closure_20 = { code: "function TabsNativeTsx8(props,prevState){const{cheapWorkletShallowEqual,itemSpacing,pageWidth,runOnJS,scrollToOffset,AUTO_SCROLL_BUFFER}=this.__closure;var _itemDimensions$activ,_itemDimensions$activ2,_itemDimensions$activ3;if(props.activeIndex===(prevState===null||prevState===void 0?void 0:prevState.activeIndex))return;if(cheapWorkletShallowEqual(props,prevState!==null&&prevState!==void 0?prevState:undefined))return;const{scrollOffset:scrollOffset,activeIndex:activeIndex,itemDimensions:itemDimensions}=props;const width=itemDimensions.reduce(function(sum,item){var _item$width;return sum+((_item$width=item===null||item===void 0?void 0:item.width)!==null&&_item$width!==void 0?_item$width:0);},0);const itemOffset=((_itemDimensions$activ=(_itemDimensions$activ2=itemDimensions[activeIndex])===null||_itemDimensions$activ2===void 0?void 0:_itemDimensions$activ2.x)!==null&&_itemDimensions$activ!==void 0?_itemDimensions$activ:0)+(activeIndex-1)*itemSpacing;const itemWidth=(_itemDimensions$activ3=itemDimensions[activeIndex])===null||_itemDimensions$activ3===void 0?void 0:_itemDimensions$activ3.width;if(width===0||itemOffset==null||itemWidth==null)return;if(scrollOffset+pageWidth<itemOffset+itemWidth){runOnJS(scrollToOffset)(itemOffset+AUTO_SCROLL_BUFFER);}else if(itemOffset<scrollOffset){runOnJS(scrollToOffset)(itemOffset-AUTO_SCROLL_BUFFER);}}" };
-let result = require("obj132").fileFinishedImporting("design/components/Tabs/native/Tabs.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Tabs/native/Tabs.native.tsx");
 
 export { defaultCountFormatter };
 export const Tabs = function Tabs(state) {
@@ -57,26 +59,40 @@ export const Tabs = function Tabs(state) {
   const onScrollWorklet = state.onScrollWorklet;
   const onEndDrag = state.onEndDrag;
   const variant = state.variant;
+  let activeIndex;
+  let scrollOffset;
+  let scrollOverflow;
+  let items;
+  let itemDimensions;
+  itemSpacing = undefined;
+  let pageWidth;
+  let pressedIndex;
+  let setActiveIndex;
+  let useReducedMotion;
+  closure_17 = undefined;
+  let sharedValue;
+  let length;
+  let ref;
   let derivedValue;
   let derivedValue1;
   let derivedValue2;
   let callback1;
-  const activeIndex = state.activeIndex;
-  const scrollOffset = state.scrollOffset;
-  const scrollOverflow = state.scrollOverflow;
-  let items = state.items;
-  const itemDimensions = state.itemDimensions;
+  activeIndex = state.activeIndex;
+  scrollOffset = state.scrollOffset;
+  scrollOverflow = state.scrollOverflow;
+  items = state.items;
+  itemDimensions = state.itemDimensions;
   itemSpacing = state.itemSpacing;
-  const pageWidth = state.pageWidth;
-  const pressedIndex = state.pressedIndex;
-  const setActiveIndex = state.setActiveIndex;
-  const useReducedMotion = state.useReducedMotion;
+  pageWidth = state.pageWidth;
+  pressedIndex = state.pressedIndex;
+  setActiveIndex = state.setActiveIndex;
+  useReducedMotion = state.useReducedMotion;
   const tmp = itemDimensions(itemSpacing, variant);
   closure_17 = tmp;
   let obj = state(formatCount[4]);
-  const sharedValue = obj.useSharedValue(pageWidth);
-  const length = items.length;
-  const ref = simultaneousHandlers.useRef(null);
+  sharedValue = obj.useSharedValue(pageWidth);
+  length = items.length;
+  ref = simultaneousHandlers.useRef(null);
   const items1 = [sharedValue];
   const callback = simultaneousHandlers.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
@@ -134,14 +150,14 @@ export const Tabs = function Tabs(state) {
     if (pressedIndex.get() < 0) {
       if (scrollOverflow.get() < 0) {
         const obj4 = state(formatCount[4]);
-        const interpolateResult = obj4.interpolate(scrollOverflow.get(), [-50, 0], [0.9, 1], "clamp");
+        const interpolateResult = obj4.interpolate(obj3.get(), [-50, 0], [0.9, 1], "clamp");
         let sum = value + -derivedValue1.get() * (1 - interpolateResult) / 2;
         num = interpolateResult;
       } else {
         sum = value;
-        if (scrollOverflow.get() > 0) {
+        if (obj3.get() > 0) {
           const obj11 = state(formatCount[4]);
-          const interpolateResult1 = obj11.interpolate(scrollOverflow.get(), [50, 0], [0.9, 1], "clamp");
+          const interpolateResult1 = obj11.interpolate(obj3.get(), [50, 0], [0.9, 1], "clamp");
           sum = value + derivedValue1.get() * (1 - interpolateResult1) / 2;
           num = interpolateResult1;
         }
@@ -162,11 +178,14 @@ export const Tabs = function Tabs(state) {
       obj1 = derivedValue;
       value = obj.get();
       if (value < derivedValue.get()) {
+        let num2 = 1 + scrollOverflow;
         let diff = value - 0.02 * derivedValue1.get();
       } else {
         const value1 = obj.get();
+        num2 = 1;
         diff = value;
         if (value1 > obj1.get()) {
+          num2 = 1 + scrollOverflow;
           diff = value + 0.02 * derivedValue1.get();
         }
       }
@@ -235,15 +254,15 @@ export const Tabs = function Tabs(state) {
           num = 0;
           tmp4 = itemDimensions[activeIndex];
           num2 = undefined;
-          reduced = itemDimensions.reduce((acc, item, index) => {
+          reduced = itemDimensions.reduce((arg0, width) => {
             let num;
-            if (item != null) {
-              num = item.width;
+            if (width != null) {
+              num = width.width;
             }
             if (num == null) {
               num = 0;
             }
-            return acc + num;
+            return arg0 + num;
           }, 0);
           if (tmp4 != null) {
             num2 = tmp4.x;
@@ -288,10 +307,10 @@ export const Tabs = function Tabs(state) {
   const items4 = [simultaneousHandlers];
   const memo = simultaneousHandlers.useMemo(() => variant(onScrollWorklet, {
     style: controlsContainer.controlsContainer,
-    children: items.map((item, index) => {
-      const count = item.count;
+    children: items.map((count, index) => {
+      count = count.count;
       closure_0 = index;
-      ({ label, id } = item);
+      ({ label, id } = count);
       const obj = { index, itemCount: closure_19, label, count: null, state: null, grow: null, pressed: null, selected: null, onPress: null, onPressIn: null, onPressOut: null, variant: null };
       let tmp2;
       if (null != count) {
@@ -312,7 +331,7 @@ export const Tabs = function Tabs(state) {
         const result = closure_14.set(-1);
       };
       obj[11] = closure_6;
-      return variant(state(formatCount[9]).TabItem, obj, id);
+      return closure_1_6(closure_1_0(closure_1_2[9]).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

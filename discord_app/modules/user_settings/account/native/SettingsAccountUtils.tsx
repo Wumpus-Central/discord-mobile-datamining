@@ -2,11 +2,11 @@
 
 // Module 14102 (useIs2FAEnabled)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
 
 export const useIs2FAEnabled = function useIs2FAEnabled() {
   const items = [closure_3];

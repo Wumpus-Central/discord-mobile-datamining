@@ -10,7 +10,7 @@ import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-require = fn;
+require = arg1;
 toJSDefault;
 ({ LOCAL_BOT_ID: c4, NON_USER_BOT_DISCRIMINATOR: c5, PREMIUM_TYPE_NONE: closure_6, UserFlags: error } = ME);
 ({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: c9, PurchasedFlags: c10 } = GuildFeatures);
@@ -233,13 +233,13 @@ class UserRecord extends tmp2 {
             if (arg0 <= 1073741824) {
               return ((tmp3.flags | tmp2.publicFlags) & arg0) === arg0;
             } else {
-              const deserializer = tmp7(tmp3[9]);
+              let tmp7Result = tmp7(tmp3[9]);
               const tmp6Result = tmp6(tmp5.flags);
-              const deserializer2 = tmp7(tmp3[9]);
-              const deserializeResult = deserializer.deserialize(tmp4.publicFlags);
-              tmp7(tmp3[9]);
-              const tmp7Result = tmp7(tmp3[9]);
-              return tmp7Result.has(tmp7Result.combine(tmp6Result, deserializeResult), deserializer2.deserialize(arg0));
+              tmp7Result = tmp7(tmp3[9]);
+              const deserializeResult = tmp7Result.deserialize(tmp4.publicFlags);
+              const deserializeResult1 = tmp7Result.deserialize(arg0);
+              const tmp7Result1 = tmp7(tmp3[9]);
+              return tmp7Result1.has(tmp7(tmp3[9]).combine(tmp6Result, deserializeResult), deserializeResult1);
             }
           }
     };
@@ -271,10 +271,10 @@ class UserRecord extends tmp2 {
       value() {
             let hasFlagResult = obj2.hasFlag(closure_1_7.STAFF);
             if (!hasFlagResult) {
-              hasFlagResult = obj.hasFlag(closure_1_7.COLLABORATOR);
+              hasFlagResult = obj.hasFlag(tmp.COLLABORATOR);
             }
             if (!hasFlagResult) {
-              hasFlagResult = obj.hasFlag(closure_1_7.RESTRICTED_COLLABORATOR);
+              hasFlagResult = obj.hasFlag(tmp.RESTRICTED_COLLABORATOR);
             }
             return hasFlagResult;
           }
@@ -328,6 +328,7 @@ prototype["getAvatarURL"] = function getAvatarURL(arg0, closure_2, flag, SUPPORT
       obj[4] = closure_2;
       obj[5] = SUPPORTS_WEBP;
       let guildMemberAvatarURLSimple = getAvatarURLDefault.getGuildMemberAvatarURLSimple(obj);
+      const obj2 = getAvatarURLDefault;
     }
     return guildMemberAvatarURLSimple;
   }
@@ -372,8 +373,8 @@ prototype["getAvatarSource"] = function getAvatarSource(arg0, flag) {
     closure_0 = tmp;
     if (null != this.guildMemberAvatars[arg0]) {
       return importDefault(self[11]).getAnimatableSourceWithFallback(flag, (canAnimate) => {
-        callback(self[11]);
-        const obj = { guildId: callback, avatar: closure_0, userId: self.id, canAnimate, size: closure_2 };
+        let obj = callback(self[11]);
+        obj = { guildId: callback, avatar: closure_0, userId: self.id, canAnimate, size: closure_2 };
         return obj.makeSource(callback(self[11]).getGuildMemberAvatarURLSimple(obj));
       });
     }
@@ -424,9 +425,9 @@ prototype["hasHadPremium"] = function hasHadPremium(arg0) {
   const hasPurchasedFlagResult2 = this.hasPurchasedFlag(closure_10.PREMIUM_TIER_2);
   if (closure_9.TIER_0 === tmp) {
     return hasPurchasedFlagResult;
-  } else if (closure_9.TIER_1 === tmp) {
+  } else if (tmp5.TIER_1 === tmp) {
     return hasPurchasedFlagResult1;
-  } else if (closure_9.TIER_2 === tmp) {
+  } else if (tmp5.TIER_2 === tmp) {
     return hasPurchasedFlagResult2;
   } else {
     let tmp6 = hasPurchasedFlagResult;
@@ -508,14 +509,14 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    let tmp6 = prop === require(1940) /* create */.PremiumSubscriptionType.NONE_UNSPECIFIED;
+    let tmp6 = prop === tmp(1940).PremiumSubscriptionType.NONE_UNSPECIFIED;
     if (!tmp6) {
       const premiumState2 = self.premiumState;
       let prop1;
       if (premiumState2 != null) {
         prop1 = premiumState2.premiumSubscriptionType;
       }
-      tmp6 = prop1 === require(1940) /* create */.PremiumSubscriptionType.BOOST_ONLY;
+      tmp6 = prop1 === tmp(1940).PremiumSubscriptionType.BOOST_ONLY;
     }
     isPremiumResult = tmp6;
   }
@@ -525,7 +526,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState3 != null) {
       premiumSource = premiumState3.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1940) /* create */.PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === tmp(1940).PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -538,10 +539,10 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1940) /* create */.PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === tmp(1940).PremiumSource.FRACTIONAL_NITRO;
   }
   if (isPremiumResult) {
-    isPremiumResult = self.premiumState.premiumSubscriptionType !== require(1940) /* create */.PremiumSubscriptionType.TIER_2;
+    isPremiumResult = self.premiumState.premiumSubscriptionType !== tmp(1940).PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
@@ -634,7 +635,7 @@ Object.defineProperty(prototype, "avatarDecoration", {
   }
 });
 Object.defineProperty(prototype, "nameplate", {
-  get: function nameplate(closure_1_2) {
+  get: function nameplate(arg0) {
     const collectibles = this.collectibles;
     let nameplate;
     if (collectibles != null) {
@@ -659,7 +660,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
   set: undefined
 });
 const userRecord = new UserRecord({ id: "0" });
-let result = require("obj132").fileFinishedImporting("records/UserRecord.tsx");
+let result = require("set").fileFinishedImporting("records/UserRecord.tsx");
 
 export default UserRecord;
 export const PLACEHOLDER_USER_RECORD = userRecord;

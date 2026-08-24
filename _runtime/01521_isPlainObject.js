@@ -13,6 +13,6 @@ arg5.isPlainObject = function isPlainObject(obj) {
   }
   return tmp;
 };
-arg5.deepFreeze = function deepFreeze(closure_30) {
-  return closure_30;
+arg5.deepFreeze = function deepFreeze(arg0) {
+  return arg0;
 };

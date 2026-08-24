@@ -1,30 +1,32 @@
 // === Module 15626: useYouBarCoachmark ===
 
 // Module 15626 (useYouBarCoachmark)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
-const require = fn;
+const require = arg1;
 let closure_6 = [];
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx");
 
 export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
   isQuestRendered = isQuestRendered.isQuestRendered;
   const visibleContent = isQuestRendered;
   let markAsDismissed;
+  let isFocused;
+  let stateFromStores;
   const animatedRef = visibleContent(markAsDismissed[6]).useAnimatedRef();
   let obj = visibleContent(markAsDismissed[6]);
   const isInPrivateProfilesExperiment = visibleContent(markAsDismissed[7]).useIsInPrivateProfilesExperiment("PrivateProfileCoachmark");
   markAsDismissed = isInPrivateProfilesExperiment;
   const obj2 = visibleContent(markAsDismissed[7]);
-  const isFocused = visibleContent(markAsDismissed[8]).useIsFocused();
+  isFocused = visibleContent(markAsDismissed[8]).useIsFocused();
   const obj3 = visibleContent(markAsDismissed[8]);
   let items = [closure_4];
-  const stateFromStores = visibleContent(markAsDismissed[9]).useStateFromStores(items, () => {
-    visibleContent(markAsDismissed[10]);
-    const obj = { from: "authed", unit: visibleContent(markAsDismissed[11]).TimeUnits.DAYS };
+  stateFromStores = visibleContent(markAsDismissed[9]).useStateFromStores(items, () => {
+    let obj = visibleContent(markAsDismissed[10]);
+    obj = { from: "authed", unit: visibleContent(markAsDismissed[11]).TimeUnits.DAYS };
     const tmp = obj.getFirstInstallTimeElapsed(obj) >= 10;
     return null != guildId.getGuildId() && obj.getFirstInstallTimeElapsed(obj) >= 10;
   });

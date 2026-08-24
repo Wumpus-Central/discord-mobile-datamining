@@ -3,13 +3,12 @@
 // Module 10099 (NotificationSettingsMessageNotification)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 10101 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 class NotificationSettingsMessageNotification {
   constructor(arg0) {
     closure_0 = global;
@@ -18,7 +17,7 @@ class NotificationSettingsMessageNotification {
     tmp3 = closure_2;
     obj = require("getPushNotificationSelectOptions");
     pushNotificationSelectOptions = obj.getPushNotificationSelectOptions();
-    found = pushNotificationSelectOptions.find((item, index) => item.value === onPress.setting);
+    found = pushNotificationSelectOptions.find((value) => value.value === onPress.setting);
     tmp5 = jsxs;
     tmp6 = View;
     obj = { style: global.style, children: null };
@@ -70,14 +69,15 @@ class NotificationSettingsMessageNotification {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
+createCacheKey = { card: null, cta: null, label: null, header: null, headerTitle: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginTop: 4 };
 createCacheKey[2] = { textAlign: "center", marginTop: 8 };
 createCacheKey[3] = { marginBottom: 8 };
 createCacheKey[4] = { marginBottom: 4 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotification.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotification.tsx");
 
 export default NotificationSettingsMessageNotification;
 export const NotificationSettingsGuildMessageNotification = function NotificationSettingsGuildMessageNotification(style) {
@@ -87,8 +87,9 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     style: style.style,
     setting: _require(10098).useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
-      const obj = { guildId: style.guildId };
-      obj.openLazy(style(dependencyMap[13])(dependencyMap[12], dependencyMap.paths), "MessageNotificationGuildActionSheet", obj);
+      let obj = closure_1_1(closure_1_2[11]);
+      obj = { guildId: style.guildId };
+      obj.openLazy(style(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "MessageNotificationGuildActionSheet", obj);
     }
   };
   return callback(NotificationSettingsMessageNotification, obj);
@@ -100,8 +101,9 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
     style: style.style,
     setting: _require(10090).useChannelPresetSettings(style.channel).notification,
     onCustomize() {
-      const obj = { channel: style.channel };
-      obj.openLazy(style(dependencyMap[13])(dependencyMap[15], dependencyMap.paths), "MessageNotificationChannelActionSheet", obj);
+      let obj = closure_1_1(closure_1_2[11]);
+      obj = { channel: style.channel };
+      obj.openLazy(style(closure_1_2[13])(closure_1_2[15], closure_1_2.paths), "MessageNotificationChannelActionSheet", obj);
     }
   };
   return callback(NotificationSettingsMessageNotification, obj);

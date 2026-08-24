@@ -1,7 +1,7 @@
 // === Module 11716: GuildPowerupsMultiPerkCard ===
 
 // Module 11716 (GuildPowerupsMultiPerkCard)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import nDefault from "n" /* 689 */;
 import ThemesDefault from "Themes" /* 712 */;
@@ -23,6 +23,7 @@ function GuildPowerupsMultiPerkCard(arg0) {
   ({ guildId, powerup, isNewPerk, forceStaticImage } = arg0);
   let _require;
   importDefault = undefined;
+  dependencyMap = undefined;
   let obj = _require(1364);
   const tmp4 = callback2(obj.isThemeLight(useThemeDefault()));
   const tmp5 = useHasAllocateBoostPermissionDefault(guildId);
@@ -70,39 +71,40 @@ function GuildPowerupsMultiPerkCard(arg0) {
     str = "";
   }
   obj1 = { imageUrl: str, isAnimated: !forceStaticImage, style: tmp4.image };
-  const items2 = [callback(tmp3Result, obj1), ];
+  const items2 = [closure_4(tmp3Result, obj1), ];
   if (isNewPerk) {
     obj2 = { text: null, style: null };
     const intl = tmp(1236).intl;
     obj2[0] = intl.string(tmp(1236).t.y2b7CA);
     obj2[1] = tmp4.badge;
-    isNewPerk = callback(tmp(1297).TextBadge, obj2);
+    isNewPerk = tmp18(tmp(1297).TextBadge, obj2);
   }
   items2[1] = isNewPerk;
   obj[1] = items2;
-  const items3 = [callback2(View, obj), ];
+  const items3 = [closure_5(View, obj), ];
   const obj3 = { style: tmp4.bodyContainer, children: null };
   const obj4 = { style: tmp4.titleContainer, children: null };
   const tmp11 = useGuildPowerupOnActivateDefault(guildId, powerup);
-  const items4 = [callback(_require(4734).Text, { variant: "heading-md/semibold", color: useGuildPowerupColorConfigDefault(result).textColor, children: powerup.title }), ];
+  const tmp17 = "removing" === type2 && tmp4.imageContainerRemoving;
+  const items4 = [closure_4(_require(4734).Text, { variant: "heading-md/semibold", color: useGuildPowerupColorConfigDefault(result).textColor, children: powerup.title }), ];
   if (null != calculatePowerupCardStatus) {
     const obj6 = { status: null };
     obj6[0] = calculatePowerupCardStatus;
-    let tmp18Result = callback(tmp(11693).GuildPowerupCardFooterStatus, obj6);
+    let tmp18Result = tmp18(tmp(11693).GuildPowerupCardFooterStatus, obj6);
   } else {
     const obj7 = { cost: null };
     obj7[0] = powerup.cost;
-    tmp18Result = callback(tmp(11693).GuildPowerupCardFooterCost, obj7);
+    tmp18Result = tmp18(tmp(11693).GuildPowerupCardFooterCost, obj7);
   }
   items4[1] = tmp18Result;
   obj4[1] = items4;
-  const items5 = [callback2(View, obj4), ];
+  const items5 = [closure_5(View, obj4), ];
   if (!tmp5) {
     items5[1] = tmp5;
     obj3[1] = items5;
-    items3[1] = callback2(View, obj3);
+    items3[1] = tmp12(tmp13, obj3);
     obj[1] = items3;
-    return callback2(View, obj);
+    return tmp12(tmp13, obj);
   } else {
     const obj8 = { disabled: null, loading: null, variant: null, text: null, onPress: null };
     obj8[0] = disabled;
@@ -122,14 +124,14 @@ function GuildPowerupsMultiPerkCard(arg0) {
         _undefined();
       }
     };
-    tmp18Result = callback(tmp(4745).Button, obj8);
+    tmp18Result = tmp18(tmp(4745).Button, obj8);
   }
-  const obj5 = { variant: "heading-md/semibold", color: useGuildPowerupColorConfigDefault(result).textColor, children: powerup.title };
 }
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((arg0) => {
-  let obj = { gap: ThemesDefault.space.PX_8 };
+  let obj = { container: null, cardsContainer: null, titleContainer: null, bodyContainer: null, imageContainer: null, imageContainerActive: null, imageContainerExpiring: null, imageContainerRemoving: null, image: null, disabled: null, badge: null };
+  obj = { gap: ThemesDefault.space.PX_8 };
   obj[0] = obj;
   obj = { gap: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16 };
   obj[1] = obj;
@@ -140,17 +142,18 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   if (arg0) {
     str = "#000000";
   }
+  const tmp3 = nDefault;
   const tmp3Result = nDefault(str);
   obj1[4] = nDefault(str).alpha(0.04).hex();
   obj[4] = obj1;
   const obj2 = { borderColor: null };
-  let tmpResult = nDefault;
+  let tmpResult = tmp(689);
   const alphaResult = nDefault(str).alpha(0.04);
   const tmpResultResult = tmpResult(ThemesDefault.unsafe_rawColors.GREEN_360);
   obj2[0] = tmpResult(ThemesDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
   obj[5] = obj2;
   const obj3 = { borderColor: null };
-  tmpResult = nDefault;
+  tmpResult = tmp(689);
   const alphaResult1 = tmpResult(ThemesDefault.unsafe_rawColors.GREEN_360).alpha(0.35);
   const tmpResult1Result = tmpResult(ThemesDefault.unsafe_rawColors.YELLOW_300);
   obj3[0] = tmpResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
@@ -167,15 +170,18 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj[10] = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
   return obj;
 });
-let obj = { gap: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16 };
+let obj = { cardsContainer: null, disabledReasonContainer: null };
+obj = { gap: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
 let closure_7 = createCacheKey.createStyles(obj);
-let result = obj132.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkBottomSheet.tsx");
+let obj1 = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
+let result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkBottomSheet.tsx");
 
 export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
   guildId = guildId.guildId;
   const listing = guildId.listing;
+  importDefault = undefined;
   const tmp = callback3();
   const tmp4 = usePowerupGroupConfigDefault(guildId, listing);
   importDefault = tmp4;
@@ -183,6 +189,7 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
   if (null != tmp4) {
     let obj = { scrollable: true, startExpanded: true, onDismiss: null, children: null };
     obj[2] = guildId.onDismiss;
+    obj = { contentContainerStyle: null, children: null };
     obj = { paddingBottom: null };
     obj[0] = useSafeAreaInsetsDefault().bottom;
     obj[0] = obj;
@@ -194,18 +201,20 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
       obj2[0] = tmp.disabledReasonContainer;
       const obj3 = { text: null };
       obj3[0] = tmp4.disabledReason;
-      obj2[1] = callback(tmp2(11714), obj3);
-      tmp6Result = callback(View, obj2);
+      obj2[1] = tmp6(tmp2(11714), obj3);
+      tmp6Result = tmp6(View, obj2);
     }
     items[1] = tmp6Result;
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.cardsContainer;
     const powerups = listing.powerups;
-    obj4[1] = powerups.map((item, index) => closure_1_4(GuildPowerupsMultiPerkCard, { guildId, powerup: item, forceStaticImage: forceStaticImages.forceStaticImages }, item.skuId));
+    obj4[1] = powerups.map((powerup) => closure_1_4(closure_1_8, { guildId, powerup, forceStaticImage: forceStaticImages.forceStaticImages }, powerup.skuId));
     items[2] = callback(View, obj4);
     obj[1] = items;
-    obj[3] = callback2(guildId(6952).BottomSheetScrollView, obj);
-    tmp6Result = callback(guildId(6950).BottomSheet, obj);
+    obj[3] = closure_5(guildId(6952).BottomSheetScrollView, obj);
+    tmp6Result = tmp6(guildId(6950).BottomSheet, obj);
+    obj1 = { title: null, description: null };
+    const tmp8 = closure_5;
   }
   return tmp6Result;
 };

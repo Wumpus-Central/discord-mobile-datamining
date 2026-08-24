@@ -4,11 +4,11 @@
 import timestampDefault from "timestamp" /* 3 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 
-const require = fn;
-const MINUTE = obj132Default.Millis.MINUTE;
-const result = require("obj132").fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");
+const require = arg1;
+const MINUTE = setDefault.Millis.MINUTE;
+const result = require("set").fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");
 class GuildMemberSubscriptions {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -108,11 +108,12 @@ prototype["checkForLeaks"] = function checkForLeaks(arg0, arg1) {
   }
 };
 prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
-  const self = this;
+  let self = this;
+  self = this;
   if (!obj.isEmpty(this._unsubscriptions)) {
     let item = applyDefault.forEach(self._unsubscriptions, (arg0, arg1) => {
       const _self = tmp3;
-      const item = applyDefault.forEach(arg0, (arg0, arg1) => {
+      const item = closure_1_1(closure_1_2[4]).forEach(arg0, (arg0, arg1) => {
         let num = table[arg1];
         if (num == null) {
           num = 0;
@@ -122,6 +123,7 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
           delete tmp[tmp2];
         }
       });
+      const arr = closure_1_1(closure_1_2[4]);
       if (obj2.isEmpty(_self._subscriptions[arg1])) {
         const _subscriptions = obj._subscriptions;
         delete tmp[tmp2];
@@ -131,7 +133,6 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
     self._unsubscriptions = {};
     const tmpResult = applyDefault;
   }
-  obj = applyDefault;
 };
 
 export default GuildMemberSubscriptions;

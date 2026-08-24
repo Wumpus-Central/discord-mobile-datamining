@@ -1,9 +1,9 @@
 // === Module 4748: SUBTLE_SPRING ===
 
 // Module 4748 (SUBTLE_SPRING)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
+const result = set.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
 
 export const SUBTLE_SPRING = { mass: 1, damping: 27, stiffness: 300 };
 export const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };

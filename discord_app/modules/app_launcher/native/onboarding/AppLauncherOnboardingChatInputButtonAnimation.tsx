@@ -14,17 +14,18 @@ import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingCont
 import _mod11238 from "module_11238" /* 11238 */;
 import _mod11406 from "module_11406" /* 11406 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   const sum = MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT + MINIMUM_HIT_AREA.SMALL_BUTTON_PADDING + 2;
-  let obj = { zIndex: 3, borderWidth: 1.5, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", width: sum, height: sum, marginLeft: 4 };
+  let obj = { fakeButton: null, glowMask: null, glowLottie: null, trinketsLottie: null, glowAnimation: null };
+  obj = { zIndex: 3, borderWidth: 1.5, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", width: sum, height: sum, marginLeft: 4 };
   obj[0] = obj;
   obj = { zIndex: 1, position: "absolute", borderRadius: ThemesDefault.radii.round, top: 0, left: 0, width: sum, height: sum, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginLeft: 4 };
   obj[1] = obj;
@@ -61,7 +62,7 @@ createCacheKey = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming
 ExitingAnimation.__closure = createCacheKey;
 ExitingAnimation.__workletHash = 1065249287738;
 ExitingAnimation.__initData = { code: "function ExitingAnimation_AppLauncherOnboardingChatInputButtonAnimationTsx2(){const{withTiming,timingStandard}=this.__closure;const initialValues={opacity:1};const animations={opacity:withTiming(0,timingStandard)};return{initialValues:initialValues,animations:animations};}" };
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/onboarding/AppLauncherOnboardingChatInputButtonAnimation.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/AppLauncherOnboardingChatInputButtonAnimation.tsx");
 
 export const APP_LAUNCHER_ONBOARDING_CHAT_INPUT_BUTTON_ANIMATION_DURATION_MS = 7000;
 export const AppLauncherOnboardingChatInputButtonAnimation = function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
@@ -72,6 +73,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj1 = useGradientBottom;
   const gradientBottom = obj1.useGradientBottom();
   useAppLauncherOnboardingContentDefault({ channelId: channelId.channelId });
+  obj = { children: null };
   obj = { entering: EnteringAnimation, exiting: ExitingAnimation, style: items1, collapsable: false, children: null };
   items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod11406, autoPlay: !stateFromStores };
@@ -82,6 +84,8 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj[4] = items2;
   const items4 = [callback2(_modDef4115.View, obj), ];
   const obj3 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
+  const obj2 = { collapsable: false, style: tmp.fakeButton };
+  const tmp5 = playDefault;
   obj3[2] = _mod11238;
   obj3[3] = !stateFromStores;
   items4[1] = callback(playDefault, obj3);

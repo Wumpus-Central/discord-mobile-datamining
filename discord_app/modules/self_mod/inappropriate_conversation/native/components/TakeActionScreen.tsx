@@ -2,43 +2,49 @@
 
 // Module 15176 (TakeActionButtons)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { useState } from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: unpackModuleId, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1, TOAST_CHECKMARK_ICON_COLOR: closure_14 } = LOCATION_CONTEXT_MOBILE);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createCacheKey = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, toastContainer: null, helplineGroup: null, textCenter: null };
+createCacheKey = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { display: "flex", alignSelf: "stretch", gap: ThemesDefault.space.PX_4 };
 createCacheKey[3] = { textAlign: "center" };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/TakeActionScreen.tsx");
+let obj2 = { display: "flex", alignSelf: "stretch", gap: ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/TakeActionScreen.tsx");
 
 export default function TakeActionButtons(senderId) {
   senderId = senderId.senderId;
   const channelId = senderId.channelId;
   ({ isReported, setReported } = senderId);
   const trackAnalyticsEvent = senderId.trackAnalyticsEvent;
+  let callback;
+  let lastChannelMessage;
   useState = undefined;
+  closure_7 = undefined;
   closure_8 = undefined;
   const tmp = callback2();
-  let callback = tmp;
+  callback = tmp;
   let obj = senderId(setReported[10]);
   const items = [closure_8];
   const items1 = [senderId];
   const stateFromStores = obj.useStateFromStores(items, () => blocked.isBlocked(senderId), items1);
   obj1 = senderId(setReported[11]);
-  const lastChannelMessage = obj1.useLastChannelMessage(channelId);
+  lastChannelMessage = obj1.useLastChannelMessage(channelId);
   let obj2 = senderId(setReported[12]);
   const shouldShowHelplineLink = obj2.useShouldShowHelplineLink();
   [tmp8, c6] = callback(useState(false), 2);
@@ -48,17 +54,17 @@ export default function TakeActionButtons(senderId) {
   const items2 = [senderId, channelId, trackAnalyticsEvent];
   const shouldShowThroughlineLink = obj4.useShouldShowThroughlineLink();
   callback = lastChannelMessage.useCallback(() => {
-    channelId(setReported[14]);
-    const obj = { location: closure_1_10 };
-    obj.blockUser(senderId, obj).then((result) => {
-      result = channelId(setReported[15]).showBlockSuccessToast(closure_0, closure_1);
+    let obj = channelId(setReported[14]);
+    obj = { location: closure_1_10 };
+    obj.blockUser(senderId, obj).then(() => {
+      const result = closure_1_1(closure_1_2[15]).showBlockSuccessToast(closure_0, closure_1);
     });
     trackAnalyticsEvent(senderId(setReported[16]).CtaEventTypes.USER_TAKEOVER_MODAL_BLOCK);
   }, items2);
   const items3 = [senderId, channelId, trackAnalyticsEvent];
   const callback1 = lastChannelMessage.useCallback(() => {
-    channelId(setReported[14]);
-    const obj = { location: closure_1_10 };
+    let obj = channelId(setReported[14]);
+    obj = { location: closure_1_10 };
     obj.unblockUser(senderId, obj);
     const result = channelId(setReported[15]).showUnblockSuccessToast(senderId, channelId);
     trackAnalyticsEvent(senderId(setReported[16]).CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
@@ -92,16 +98,16 @@ export default function TakeActionButtons(senderId) {
             return obj;
           } else {
             closure_0 = tmp4;
-            if (null != closure_1_9.getUser(senderId)) {
+            if (null != closure_1_9.getUser(closure_1_0)) {
               closure_1_6(true);
-              let obj2 = senderId(8136);
+              let obj2 = closure_1_0(8136);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj2.submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              obj1[0] = obj2.submitReportForInappropriateConversationSafetyAlert(closure_1_5, () => {
                 dependencyMap(true);
-                v1(4094);
-                const obj = { key: closure_1_13, content: null, IconComponent: null, iconColor: null, containerStyle: null };
+                let obj = v1(4094);
+                obj = { key: closure_1_13, content: null, IconComponent: null, iconColor: null, containerStyle: null };
                 const intl = tmp4(1236).intl;
                 obj[1] = intl.string(tmp4(1236).t.gn2c6X);
                 obj[2] = tmp4(4335).CircleCheckIcon;
@@ -124,7 +130,7 @@ export default function TakeActionButtons(senderId) {
           callback2(false);
           obj = v0(6553);
           const result = obj.showReportSuccessToast(closure_0, v0);
-          callback(senderId(10582).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          callback(closure_1_0(10582).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
         }
         dependencyMap = 3;
         obj2 = { value: null, done: true };
@@ -136,6 +142,7 @@ export default function TakeActionButtons(senderId) {
       }
     }
   }), items4);
+  obj = { style: tmp.container, children: null };
   obj = { variant: "primary", size: "lg", icon: channelId(setReported[23]), text: null, grow: true, onPress: null };
   let intl = senderId(setReported[19]).intl;
   const string = intl.string;
@@ -150,11 +157,11 @@ export default function TakeActionButtons(senderId) {
     callback = callback1;
   }
   obj[5] = callback;
-  const items5 = [callback(senderId(setReported[22]).Button, obj), , ];
-  obj1 = { variant: "secondary", size: "lg", icon: tmp15(setReported[24]), loading: tmp8, disabled: isReported, text: null, grow: true, onPress: null };
-  const intl2 = tmp2(setReported[19]).intl;
+  const items5 = [closure_15(senderId(setReported[22]).Button, obj), , ];
+  obj1 = { variant: "secondary", size: "lg", icon: tmp15(tmp3[24]), loading: tmp8, disabled: isReported, text: null, grow: true, onPress: null };
+  const intl2 = tmp2(tmp3[19]).intl;
   const string2 = intl2.string;
-  const t2 = tmp2(setReported[19]).t;
+  const t2 = tmp2(tmp3[19]).t;
   if (isReported) {
     let string2Result = string2(t2.QvwOJ6);
   } else {
@@ -164,37 +171,37 @@ export default function TakeActionButtons(senderId) {
   obj1[7] = function onPress() {
     blocked();
   };
-  items5[1] = callback(senderId(setReported[22]).Button, obj1);
+  items5[1] = closure_15(senderId(setReported[22]).Button, obj1);
   if (shouldShowHelplineLink) {
     obj2 = { variant: "secondary", size: "lg", icon: null, text: null, grow: true, onPress: null };
-    obj2[2] = tmp15(setReported[25]);
-    const intl6 = tmp2(setReported[19]).intl;
-    obj2[3] = intl6.string(tmp2(setReported[19]).t.sZf6cz);
+    obj2[2] = tmp15(tmp3[25]);
+    const intl6 = tmp2(tmp3[19]).intl;
+    obj2[3] = intl6.string(tmp2(tmp3[19]).t.sZf6cz);
     obj2[5] = function onPress() {
       trackAnalyticsEvent(senderId(setReported[16]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL);
     };
-    let tmp12Result = callback(tmp2(setReported[22]).Button, obj2);
+    let tmp12Result = tmp14(tmp2(tmp3[22]).Button, obj2);
   } else {
     obj3 = { style: null, children: null };
     obj3[0] = tmp.helplineGroup;
-    const Button = tmp2(setReported[22]).Button;
+    const Button = tmp2(tmp3[22]).Button;
     obj4 = { variant: "secondary", size: "lg", icon: null, text: null, grow: true, onPress: null };
-    obj4[2] = tmp15(setReported[26]);
-    const intl3 = tmp2(setReported[19]).intl;
+    obj4[2] = tmp15(tmp3[26]);
+    const intl3 = tmp2(tmp3[19]).intl;
     const string3 = intl3.string;
-    const t3 = tmp2(setReported[19]).t;
+    const t3 = tmp2(tmp3[19]).t;
     if (shouldShowThroughlineLink) {
       obj4[3] = string3(t3.HQ2nKl);
       obj4[5] = function onPress() {
         channelId(setReported[27]).openURL(closure_1_12);
         trackAnalyticsEvent(senderId(setReported[16]).CtaEventTypes.USER_TAKEOVER_MODAL_THROUGHLINE);
       };
-      const items6 = [callback(Button, obj4), ];
+      const items6 = [tmp14(Button, obj4), ];
       const obj5 = { variant: "text-xs/medium", color: "text-default", style: null, children: null };
       obj5[2] = tmp.textCenter;
-      const intl5 = tmp2(setReported[19]).intl;
-      obj5[3] = intl5.string(tmp2(setReported[19]).t["PMeb/r"]);
-      items6[1] = callback(tmp2(setReported[28]).Text, obj5);
+      const intl5 = tmp2(tmp3[19]).intl;
+      obj5[3] = intl5.string(tmp2(tmp3[19]).t["PMeb/r"]);
+      items6[1] = tmp14(tmp2(tmp3[28]).Text, obj5);
       obj3[1] = items6;
       let tmp18 = obj3;
     } else {
@@ -203,18 +210,18 @@ export default function TakeActionButtons(senderId) {
         channelId(setReported[27]).openURL(closure_1_11);
         trackAnalyticsEvent(senderId(setReported[16]).CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR);
       };
-      const items7 = [callback(Button, obj4), ];
+      const items7 = [tmp14(Button, obj4), ];
       const obj6 = { variant: "text-xs/medium", color: "text-default", style: null, children: null };
       obj6[2] = tmp.textCenter;
-      const intl4 = tmp2(setReported[19]).intl;
-      obj6[3] = intl4.string(tmp2(setReported[19]).t.XNwhxC);
-      items7[1] = callback(tmp2(setReported[28]).Text, obj6);
+      const intl4 = tmp2(tmp3[19]).intl;
+      obj6[3] = intl4.string(tmp2(tmp3[19]).t.XNwhxC);
+      items7[1] = tmp14(tmp2(tmp3[28]).Text, obj6);
       obj3[1] = items7;
       tmp18 = obj3;
     }
-    tmp12Result = callback2(tmp13, tmp18);
+    tmp12Result = tmp12(tmp13, tmp18);
   }
   items5[2] = tmp12Result;
   obj[1] = items5;
-  return callback2(closure_7, obj);
+  return closure_16(closure_7, obj);
 };

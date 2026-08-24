@@ -1,12 +1,12 @@
 // === Module 11424: useChatInputFloatingWidth ===
 
 // Module 11424 (useChatInputFloatingWidth)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG as closure_3 } from "TextAreaCta" /* 11149 */;
 
-const require = fn;
+const require = arg1;
 let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
 
 export default function useChatInputFloatingWidth(expanded) {
   expanded = expanded.expanded;
@@ -37,7 +37,6 @@ export default function useChatInputFloatingWidth(expanded) {
       num2 = 1;
     }
     const result1 = sharedValue.set(expanded(collapsedWidth[3]).withTiming(num2, num, "respect-motion-settings"));
-    const obj = expanded(collapsedWidth[3]);
   }, items);
   obj = { animatedStyle: expanded(collapsedWidth[2]).useAnimatedStyle(fn) };
   fn = function p() {

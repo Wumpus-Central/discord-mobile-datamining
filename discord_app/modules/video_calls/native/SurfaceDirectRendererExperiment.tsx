@@ -1,14 +1,14 @@
 // === Module 12446: ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT ===
 
 // Module 12446 (ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import "ApexExperiment";
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
-const require = fn;
-const ApexExperiment = { 1: null };
+const require = arg1;
+ApexExperiment = { 1: null };
 ApexExperiment[1] = { enableSurfaceDirectRenderer: true };
 let closure_3 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: ApexExperiment });
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/SurfaceDirectRendererExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/SurfaceDirectRendererExperiment.tsx");
 
 export const ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT = "2026-03-surface-direct-renderer";
 export const isSurfaceDirectRendererExperimentEnabled = function isSurfaceDirectRendererExperimentEnabled() {

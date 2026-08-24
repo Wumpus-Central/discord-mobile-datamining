@@ -8,12 +8,12 @@ import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "MESSAGES_ITEM_CHANNEL_PRESS
 import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15296 */;
 import _modDef15305 from "module_15305" /* 15305 */;
 import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15306 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 let c4 = importAllResult;
 let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
   ({ channelId: require, placeholderHeight } = arg0);
@@ -62,14 +62,15 @@ const memoResult1 = importAllResult.memo((channelId) => {
   return <closure_7 />;
 });
 const memoResult2 = importAllResult.memo((arg0) => {
-  const obj = {};
+  let obj = toNativeHorizontalOffset;
+  obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
   const merged = Object.assign(arg0);
   obj.isPressed = tmp2;
   obj.setIsPressed = tmp3;
   return <closure_7 />;
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx");
 
 export const getMessagesItemChannelSizes = function getMessagesItemChannelSizes(fontScale) {
   let obj = map;

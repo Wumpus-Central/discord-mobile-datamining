@@ -3,7 +3,7 @@
 // Module 268 (MutationObserver)
 import _createClassDefault from "_createClass" /* 42 */;
 import notifyMutationObserversAll from "notifyMutationObservers" /* 269 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const MutationObserver = importDefault;
@@ -95,7 +95,8 @@ const items = [
                   } else {
                     const self = this;
                     const result = this._getOrCreateMutationObserverId();
-                    const obj = { mutationObserverId: null, target: null, subtree: null };
+                    let obj = notifyMutationObserversAll;
+                    obj = { mutationObserverId: null, target: null, subtree: null };
                     obj[0] = result;
                     obj[1] = arg0;
                     let subtree;
@@ -123,8 +124,10 @@ const items = [
       const _mutationObserverId = this._mutationObserverId;
       if (null != _mutationObserverId) {
         notifyMutationObserversAll.unobserveAll(_mutationObserverId);
+        const obj = notifyMutationObserversAll;
         notifyMutationObserversAll.unregisterObserver(_mutationObserverId);
         tmp._mutationObserverId = null;
+        const obj2 = notifyMutationObserversAll;
       }
     }
   },
@@ -137,6 +140,7 @@ const items = [
         const registerObserverResult = notifyMutationObserversAll.registerObserver(self, self._callback);
         self._mutationObserverId = registerObserverResult;
         _mutationObserverId = registerObserverResult;
+        const obj = notifyMutationObserversAll;
       }
       return _mutationObserverId;
     }

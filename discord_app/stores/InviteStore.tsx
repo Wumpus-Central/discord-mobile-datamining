@@ -1,13 +1,13 @@
 // === Module 4359: updateInvite ===
 
 // Module 4359 (updateInvite)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import readSnowflake from "readSnowflake" /* 4360 */;
 
-function updateInvite(code, fn) {
+function updateInvite(code, arg1) {
   let str = code;
   if (code == null) {
     str = "";
@@ -24,7 +24,7 @@ function updateInvite(code, fn) {
     obj[0] = InviteStates.RESOLVING;
     obj[1] = result.baseCode;
   }
-  fn(obj);
+  arg1(obj);
   map = new Map(map);
   const result1 = map.set(str, obj);
   const guild = obj.guild;
@@ -43,11 +43,11 @@ function handleInviteResolveFailure(code) {
   updateInvite(code.code, (arg0) => {
     if ("banned" in banned) {
       if (banned.banned) {
-        let EXPIRED = InviteStates.BANNED;
+        let EXPIRED = closure_1_2.BANNED;
       }
       arg0.state = EXPIRED;
     }
-    EXPIRED = InviteStates.EXPIRED;
+    EXPIRED = closure_1_2.EXPIRED;
   });
 }
 const InviteStates = ME.InviteStates;
@@ -87,7 +87,7 @@ const inviteStore = new InviteStore(dispatcherDefault, {
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(code) {
     closure_0 = code;
     updateInvite(code.code, (arg0) => {
-      arg0.state = InviteStates.RESOLVED;
+      arg0.state = closure_1_2.RESOLVED;
       arg0.guild = code.invite.guild;
       arg0.channel = code.invite.channel;
       arg0.inviter = code.invite.inviter;
@@ -96,7 +96,7 @@ const inviteStore = new InviteStore(dispatcherDefault, {
         prop = null;
       }
       arg0.approximate_member_count = prop;
-      let prop1 = code.invite.approximate_presence_count;
+      let prop1 = tmp.invite.approximate_presence_count;
       if (prop1 == null) {
         prop1 = null;
       }
@@ -123,14 +123,14 @@ const inviteStore = new InviteStore(dispatcherDefault, {
   FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreate(invite) {
     closure_0 = invite;
     updateInvite(invite.invite.code, (arg0) => {
-      arg0.state = InviteStates.RESOLVED;
+      arg0.state = closure_1_2.RESOLVED;
       arg0.inviter = invite.invite.inviter;
     });
   },
   FRIEND_INVITE_REVOKE_SUCCESS: function handleFriendInviteRevokeSuccess(invites) {
     invites = invites.invites;
-    const item = invites.forEach((item, index) => {
-      callback(item.code, (arg0) => {
+    const item = invites.forEach((code) => {
+      callback(code.code, (arg0) => {
         arg0.state = constants.EXPIRED;
       });
     });
@@ -138,7 +138,7 @@ const inviteStore = new InviteStore(dispatcherDefault, {
   INSTANT_INVITE_CREATE_SUCCESS: function handleInstantInviteCreate(invite) {
     closure_0 = invite;
     updateInvite(invite.invite.code, (arg0) => {
-      arg0.state = InviteStates.RESOLVED;
+      arg0.state = closure_1_2.RESOLVED;
       arg0.guild = invite.invite.guild;
       arg0.channel = invite.invite.channel;
       arg0.inviter = invite.invite.inviter;
@@ -147,7 +147,7 @@ const inviteStore = new InviteStore(dispatcherDefault, {
         prop = null;
       }
       arg0.approximate_member_count = prop;
-      let prop1 = invite.invite.approximate_presence_count;
+      let prop1 = tmp.invite.approximate_presence_count;
       if (prop1 == null) {
         prop1 = null;
       }
@@ -170,7 +170,7 @@ const inviteStore = new InviteStore(dispatcherDefault, {
   INVITE_ACCEPT_SUCCESS: function handleAcceptInviteSuccess(code) {
     closure_0 = code;
     updateInvite(code.code, (channel) => {
-      channel.state = InviteStates.ACCEPTED;
+      channel.state = closure_1_2.ACCEPTED;
       channel.guild = code.invite.guild;
       channel.new_member = code.invite.new_member;
       const merged = Object.assign(channel.channel);
@@ -213,6 +213,6 @@ const inviteStore = new InviteStore(dispatcherDefault, {
     }
   }
 });
-let result = obj132.fileFinishedImporting("stores/InviteStore.tsx");
+let result = set.fileFinishedImporting("stores/InviteStore.tsx");
 
 export default inviteStore;

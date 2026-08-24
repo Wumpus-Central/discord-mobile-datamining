@@ -1,13 +1,13 @@
 // === Module 7627: useIsEligibleForBogoOffer ===
 
 // Module 7627 (useIsEligibleForBogoOffer)
-import noop from "noop" /* 19 */;
-import reset from "reset" /* 4045 */;
-import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "reset" /* 4045 */;
+import closure_4 from "createEmptyPromotionsByType" /* 7628 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
 export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
   const items = [closure_4];

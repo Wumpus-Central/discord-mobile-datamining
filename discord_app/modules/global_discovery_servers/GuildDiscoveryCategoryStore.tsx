@@ -1,7 +1,7 @@
 // === Module 15726: getPrimaryCategories ===
 
 // Module 15726 (getPrimaryCategories)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -22,9 +22,9 @@ prototype["getPrimaryCategories"] = function getPrimaryCategories() {
   return closure_8;
 };
 prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
-  const mapped = closure_6.map((item, index) => {
-    closure_0 = item;
-    return closure_9.find((item, index) => item.categoryId === closure_0);
+  const mapped = closure_6.map((arg0) => {
+    closure_0 = arg0;
+    return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
   const obj = { categoryId: closure_5, name: null };
   const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
@@ -34,9 +34,9 @@ prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
   return items;
 };
 prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() {
-  const mapped = closure_6.map((item, index) => {
-    closure_0 = item;
-    return closure_9.find((item, index) => item.categoryId === closure_0);
+  const mapped = closure_6.map((arg0) => {
+    closure_0 = arg0;
+    return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
   const obj = { categoryId: closure_5, name: null };
   const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
@@ -74,8 +74,8 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(dispatcherDe
       }
       return num;
     });
-    const item = sorted.forEach((item, index) => {
-      ({ id, name } = item);
+    const item = sorted.forEach((arg0) => {
+      ({ id, name } = arg0);
       if (id !== closure_1_3) {
         if (id !== closure_1_4) {
           if (true === tmp) {
@@ -107,18 +107,18 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(dispatcherDe
     const locale = categories.locale;
   }
 });
-const result = obj132.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
+const result = set.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
 
 export default guildDiscoveryCategoryStore;
 export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(arr, arr2) {
-  const mapped = arr.map((item, index) => {
+  const mapped = arr.map((arg0) => {
     const items = [, ];
-    ({ categoryId: arr[0], name: arr[1] } = item);
+    ({ categoryId: arr[0], name: arr[1] } = arg0);
     return items;
   });
-  return applyDefault.isEqual(mapped, arr2.map((item, index) => {
+  return applyDefault.isEqual(mapped, arr2.map((arg0) => {
     const items = [, ];
-    ({ categoryId: arr[0], name: arr[1] } = item);
+    ({ categoryId: arr[0], name: arr[1] } = arg0);
     return items;
   }));
 };

@@ -1,21 +1,20 @@
 // === Module 14426: useGetProductsFromSkus ===
 
 // Module 14426 (useGetProductsFromSkus)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import uniqByDefault from "uniqBy" /* 14427 */;
-import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
 
 noop.useCallback;
-const result = obj132.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");
 
 export default function useGetProductsFromSkus() {
   const items = [closure_4];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => products.products);
   const items1 = [stateFromStores];
   return useCallback((arr) => {
-    const mapped = arr.map((item, index) => {
-      const value = closure_0.get(item);
+    const mapped = arr.map((arg0) => {
+      const value = closure_0.get(arg0);
       let productByStoreListingId = value;
       if (null != value) {
         productByStoreListingId = value;
@@ -25,6 +24,6 @@ export default function useGetProductsFromSkus() {
       }
       return productByStoreListingId;
     });
-    return uniqByDefault(mapped.filter((item, index) => null != item), "storeListingId");
+    return closure_1_1(closure_1_2[3])(mapped.filter((arg0) => null != arg0), "storeListingId");
   }, items1);
 };

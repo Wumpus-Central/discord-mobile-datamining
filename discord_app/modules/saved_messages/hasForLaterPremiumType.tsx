@@ -3,11 +3,11 @@
 // Module 8485 (hasForLaterPremiumType)
 import initialize from "initialize" /* 589 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/saved_messages/hasForLaterPremiumType.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/saved_messages/hasForLaterPremiumType.tsx");
 
 export default function hasForLaterPremiumType() {
   currentUser = currentUser.getCurrentUser();

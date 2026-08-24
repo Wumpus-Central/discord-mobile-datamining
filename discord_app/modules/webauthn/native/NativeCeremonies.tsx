@@ -2,10 +2,10 @@
 
 // Module 8586 (_promptForRegisterCredential)
 import timestampDefault from "timestamp" /* 3 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
-const require = fn;
+const require = arg1;
 function _promptForRegisterCredential() {
   const self = this;
   const tmp = callback(() => {
@@ -126,7 +126,7 @@ let closure_4 = new timestampDefault("WebAuthnUtils");
 let obj = {};
 Object.defineProperty(obj, "hasAndroidPasskeySupport", {
   get: () => {
-    let isAndroidResult = require(500) /* obj132 */.isAndroid();
+    let isAndroidResult = require(500) /* set */.isAndroid();
     if (isAndroidResult) {
       const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
       let registerPasskey;
@@ -141,7 +141,7 @@ Object.defineProperty(obj, "hasAndroidPasskeySupport", {
 });
 Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
   get: () => {
-    let isAndroidResult = require(500) /* obj132 */.isAndroid();
+    let isAndroidResult = require(500) /* set */.isAndroid();
     if (isAndroidResult) {
       isAndroidResult = !require(1625) /* isMetaQuest */.isMetaQuest();
       const tmpResult = require(1625) /* isMetaQuest */;
@@ -154,7 +154,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
   let isAndroidResult = authenticatePasskey(500).isAndroid();
   if (isAndroidResult) {
-    const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
+    const DCDSecurityKeyManager = tmp.DCDSecurityKeyManager;
     authenticatePasskey = undefined;
     if (DCDSecurityKeyManager != null) {
       authenticatePasskey = DCDSecurityKeyManager.authenticatePasskey;
@@ -162,7 +162,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
     isAndroidResult = null != authenticatePasskey;
   }
   if (isAndroidResult) {
-    authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticatePasskey;
+    authenticatePasskey = tmp.DCDSecurityKeyManager.authenticatePasskey;
   }
   return callback(() => {
     closure_0 = [...arguments];
@@ -268,9 +268,11 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   });
 };
 obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredentialManagerPasskey(setError) {
+  setError = NativeModules.DCDSecurityKeyManager.registerPasskey;
   setError = undefined;
+  let setRegistering;
   setError = setError.setError;
-  const setRegistering = setError.setRegistering;
+  setRegistering = setError.setRegistering;
   if (undefined !== setError) {
     setError("");
   }
@@ -309,20 +311,22 @@ obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredential
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  })(fn).then(setError.onRegisterSuccess).catch((error) => {
+  })(fn).then(setError.onRegisterSuccess).catch((arg0) => {
     if (undefined === setError) {
-      throw error;
+      throw arg0;
     } else {
       const intl = setError(setRegistering[4]).intl;
       tmp(intl.string(setError(setRegistering[4]).t.xSCvBf));
-      throw error;
+      throw arg0;
     }
   }).finally(() => setRegistering(false));
 };
 obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setError) {
+  setError = NativeModules.DCDSecurityKeyManager.register;
   setError = undefined;
+  let setRegistering;
   setError = setError.setError;
-  const setRegistering = setError.setRegistering;
+  setRegistering = setError.setRegistering;
   if (undefined !== setError) {
     setError("");
   }
@@ -361,24 +365,26 @@ obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setErro
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  })(fn).then(setError.onRegisterSuccess).catch((error) => {
+  })(fn).then(setError.onRegisterSuccess).catch((arg0) => {
     if (undefined === setError) {
-      throw error;
+      throw arg0;
     } else {
       const intl = setError(setRegistering[4]).intl;
       tmp(intl.string(setError(setRegistering[4]).t.xSCvBf));
-      throw error;
+      throw arg0;
     }
   }).finally(() => setRegistering(false));
 };
 obj.registerPasskey = function registerPasskey(setError) {
   const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
   if (obj.isAndroid()) {
+    setError = DCDSecurityKeyManager.registerPasskey;
     setError = undefined;
+    let setRegistering;
     const setError2 = setError.setError;
     setError = setError2;
     const setRegistering2 = setError.setRegistering;
-    let setRegistering = setRegistering2;
+    setRegistering = setRegistering2;
     if (undefined !== setError2) {
       setError2("");
     }
@@ -417,13 +423,13 @@ obj.registerPasskey = function registerPasskey(setError) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(fn).then(setError.onRegisterSuccess).catch((error) => {
+    })(fn).then(setError.onRegisterSuccess).catch((arg0) => {
       if (undefined === setError) {
-        throw error;
+        throw arg0;
       } else {
         const intl = setError(setRegistering[4]).intl;
         tmp(intl.string(setError(setRegistering[4]).t.xSCvBf));
-        throw error;
+        throw arg0;
       }
     }).finally(() => setRegistering(false));
     const catchPromise = (function promptForRegisterCredential(fn) {
@@ -435,17 +441,18 @@ obj.registerPasskey = function registerPasskey(setError) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(fn).then(setError.onRegisterSuccess).catch((error) => {
+    })(fn).then(setError.onRegisterSuccess).catch((arg0) => {
       if (undefined === setError) {
-        throw error;
+        throw arg0;
       } else {
         const intl = setError(setRegistering[4]).intl;
         tmp(intl.string(setError(setRegistering[4]).t.xSCvBf));
-        throw error;
+        throw arg0;
       }
     });
   } else {
     setError = undefined;
+    setRegistering = undefined;
     setError = setError.setError;
     setRegistering = setError.setRegistering;
     if (undefined !== setError) {
@@ -481,13 +488,13 @@ obj.registerPasskey = function registerPasskey(setError) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(DCDSecurityKeyManager.register).then(setError.onRegisterSuccess).catch((error) => {
+    })(DCDSecurityKeyManager.register).then(setError.onRegisterSuccess).catch((arg0) => {
       if (undefined === setError) {
-        throw error;
+        throw arg0;
       } else {
         const intl = setError(setRegistering[4]).intl;
         tmp(intl.string(setError(setRegistering[4]).t.xSCvBf));
-        throw error;
+        throw arg0;
       }
     }).finally(() => setRegistering(false));
     const catchPromise1 = (function promptForRegisterCredential(fn) {
@@ -499,13 +506,13 @@ obj.registerPasskey = function registerPasskey(setError) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(DCDSecurityKeyManager.register).then(setError.onRegisterSuccess).catch((error) => {
+    })(DCDSecurityKeyManager.register).then(setError.onRegisterSuccess).catch((arg0) => {
       if (undefined === setError) {
-        throw error;
+        throw arg0;
       } else {
         const intl = setError(setRegistering[4]).intl;
         tmp(intl.string(setError(setRegistering[4]).t.xSCvBf));
-        throw error;
+        throw arg0;
       }
     });
   }
@@ -517,8 +524,9 @@ obj.registerSecurityKey = function registerSecurityKey(setError, fn) {
     register = NativeModules.DCDSecurityKeyManager.register;
   }
   setError = undefined;
+  let setRegistering;
   setError = setError.setError;
-  const setRegistering = setError.setRegistering;
+  setRegistering = setError.setRegistering;
   if (undefined !== setError) {
     setError("");
   }
@@ -552,17 +560,17 @@ obj.registerSecurityKey = function registerSecurityKey(setError, fn) {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  })(register).then(setError.onRegisterSuccess).catch((error) => {
+  })(register).then(setError.onRegisterSuccess).catch((arg0) => {
     if (undefined === setError) {
-      throw error;
+      throw arg0;
     } else {
       const intl = setError(setRegistering[4]).intl;
       tmp(intl.string(setError(setRegistering[4]).t.xSCvBf));
-      throw error;
+      throw arg0;
     }
   }).finally(() => setRegistering(false));
 };
 const tmp2 = new timestampDefault("WebAuthnUtils");
-let result = require("obj132").fileFinishedImporting("modules/webauthn/native/NativeCeremonies.tsx");
+let result = require("set").fileFinishedImporting("modules/webauthn/native/NativeCeremonies.tsx");
 
 export default obj;

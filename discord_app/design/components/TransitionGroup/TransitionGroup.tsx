@@ -1,8 +1,8 @@
 // === Module 4668: wrapChildrenDefault ===
 
 // Module 4668 (wrapChildrenDefault)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 function wrapChildrenDefault(arg0) {
@@ -61,7 +61,7 @@ class TransitionGroup {
               value = current.get(closure_0);
             }
             if (null != value) {
-              if (value.state === lazyCleanUpDelay.YEETED) {
+              if (value.state === closure_2_3.YEETED) {
                 const current2 = closure_1_6.current;
                 if (current2 != null) {
                   current2.delete(closure_0);
@@ -78,13 +78,13 @@ class TransitionGroup {
             }
           }
           obj = { item: null, children: null, state: null, cleanUp: null, renderItem: null };
-          obj[0] = callback;
-          obj[1] = map(tmp2, callback, MOUNTED, _cleanUp2);
+          obj[0] = tmp;
+          obj[1] = map(tmp2, tmp, MOUNTED, _cleanUp2);
           obj[2] = MOUNTED;
           obj[3] = _cleanUp2;
           obj[4] = map;
         } else {
-          if (value.item === callback) {
+          if (value.item === tmp) {
             if (value.renderItem === map) {
               let tmp6 = value;
             }
@@ -97,8 +97,8 @@ class TransitionGroup {
             state = value.state;
           }
           obj = { item: null, children: null, state: null, cleanUp: null, renderItem: null };
-          obj[0] = callback;
-          obj[1] = map(tmp2, callback, state, value.cleanUp);
+          obj[0] = tmp;
+          obj[1] = map(tmp2, tmp, state, value.cleanUp);
           obj[2] = state;
           obj[3] = value.cleanUp;
           obj[4] = map;
@@ -112,24 +112,37 @@ class TransitionGroup {
         continue;
       }
       for (const item10035 of set) {
+        let tmp7 = item10035;
         let value = map.get(item10035);
         let tmp9 = value;
         if (null != value) {
+          let tmp24 = value;
+          let tmp25 = lazyCleanUpDelay;
           if (tmp9.state === lazyCleanUpDelay.YEETED) {
+            let tmp10 = value;
+            let tmp11 = map;
             if (tmp9.renderItem === map) {
-              let result = map.set(item10035, tmp9);
+              let tmp12 = item10035;
+              let tmp13 = value;
+              let result = map.set(tmp7, tmp9);
             }
           }
+          let tmp15 = value;
           obj = { item: null, children: null, state: null, cleanUp: null, renderItem: null };
           obj[0] = tmp9.item;
-          obj[1] = map(item10035, tmp9.item, lazyCleanUpDelay.YEETED, tmp9.cleanUp);
-          obj[2] = lazyCleanUpDelay.YEETED;
+          let tmp16 = map;
+          let tmp17 = item10035;
+          obj[1] = map(tmp7, tmp9.item, tmp25.YEETED, tmp9.cleanUp);
+          obj[2] = tmp25.YEETED;
           obj[3] = tmp9.cleanUp;
           obj[4] = map;
           if (null != obj.children) {
-            let result1 = map.set(item10035, tmp18);
+            let tmp21 = item10035;
+            let tmp22 = obj;
+            let result1 = map.set(tmp7, tmp18);
           } else {
-            let deleteResult = map.delete(item10035);
+            let tmp19 = item10035;
+            let deleteResult = map.delete(tmp7);
           }
         }
         continue;
@@ -168,7 +181,7 @@ function getSingleItemKey() {
 }
 let obj = { MOUNTED: 0, [0]: "MOUNTED", ENTERED: 1, [1]: "ENTERED", YEETED: 2, [2]: "YEETED" };
 let closure_4 = {};
-let result = require("obj132").fileFinishedImporting("design/components/TransitionGroup/TransitionGroup.tsx");
+let result = require("set").fileFinishedImporting("design/components/TransitionGroup/TransitionGroup.tsx");
 
 export const TransitionStates = obj;
 export { TransitionGroup };
@@ -183,5 +196,5 @@ export const TransitionItem = function TransitionItem(item) {
       items1 = [];
     }
     return items1;
-  }, items)} renderItem={item.renderItem} getItemKey={getSingleItemKey} />;
+  }, items)} renderItem={arg0.renderItem} getItemKey={getSingleItemKey} />;
 };

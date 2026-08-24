@@ -1,13 +1,13 @@
 // === Module 7016: memo ===
 
 // Module 7016 (memo)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
 import noop from "noop" /* 19 */;
-import noop2 from "noop" /* 19 */;
+import closure_12 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
 ({ useCallback: closure_6, useImperativeHandle: error, useMemo: closure_8, useRef: c9, useState: c10, createElement: unpackModuleId, forwardRef, memo } = noop);
 let closure_14 = { mount: false, data: "Array" };
@@ -81,8 +81,8 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
   }, items);
   closure_21 = tmp17;
   function resetVariables() {
-    callback(DEFAULT_STACK_BEHAVIOR[8]);
-    const obj = { component: closure_15.name, method: resetVariables.name };
+    let obj = callback(DEFAULT_STACK_BEHAVIOR[8]);
+    obj = { component: closure_15.name, method: resetVariables.name };
     obj.print(obj);
     closure_15.current = -1;
     closure_17.current = -1;
@@ -182,7 +182,7 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
     closure_0 = arg0;
     const animationFrame = requestAnimationFrame(() => {
       closure_1_9({ mount: true, data: closure_0 });
-      mountSheet(closure_1_21, closure_0, DEFAULT_STACK_BEHAVIOR);
+      closure_1_10(closure_1_21, closure_0, closure_1_2);
     });
   }, items2);
   const items3 = [willUnmountSheet, tmp19, tmp17, tmp5];
@@ -236,9 +236,9 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
     }
   }, []);
   const items5 = [tmp17, tmp19, willUnmountSheet];
-  const tmp21 = num(function handlePortalRender(fn) {
+  const tmp21 = num(function handlePortalRender(arg0) {
     if (ref4.current) {
-      fn();
+      arg0();
     }
   }, []);
   const items6 = [onChange];
@@ -310,6 +310,7 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
     obj2[0] = unmountSheet(name(tmp12[9]), obj, tmp27Result);
     obj[5] = removePortal(Fragment, obj2, tmp17);
     tmp27Result = tmp27(tmp11(tmp12[6]).Portal, obj, tmp17);
+    const tmp28 = unmountSheet;
     const tmp30 = name(tmp12[9]);
   }
   return tmp27Result;

@@ -5,13 +5,14 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 noopAll;
-let createCacheKey = { justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round };
+createCacheKey = { iconWrapper: null };
+createCacheKey = { justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherOptionIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherOptionIcon.tsx");
 
 export default function AppLauncherOptionIcon(wrapperSize) {
   let num = wrapperSize.wrapperSize;

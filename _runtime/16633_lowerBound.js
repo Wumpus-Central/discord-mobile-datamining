@@ -1,7 +1,7 @@
 // === Module 16633: lowerBound ===
 
 // Module 16633 (lowerBound)
-arg5.default = function lowerBound(arg0, key, fn) {
+arg5.default = function lowerBound(arg0) {
   let diff;
   let length = arg0.length;
   let num = 0;
@@ -10,9 +10,10 @@ arg5.default = function lowerBound(arg0, key, fn) {
     do {
       let tmp = length / 2 | 0;
       let sum = num + tmp;
+      let tmp3 = length;
       let sum1 = num;
       diff = tmp;
-      if (fn(arg0[sum], key) <= 0) {
+      if (arg2(arg0[sum], arg1) <= 0) {
         sum1 = sum + 1;
         diff = length - (tmp + 1);
       }

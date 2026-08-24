@@ -158,6 +158,7 @@ ISODayParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
   _setPrototypeOf(ISODayParser, Parser);
 }
+_createSuperInternal = ISODayParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -270,6 +271,7 @@ if (0 < items.length) {
   do {
     let tmp7 = items[num];
     let flag = tmp7.enumerable;
+    let tmp8 = num;
     if (!flag) {
       flag = false;
     }

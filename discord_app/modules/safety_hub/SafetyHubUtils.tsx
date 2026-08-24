@@ -6,17 +6,17 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import tDefault from "t" /* 3975 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
 import ContentIdType from "ContentIdType" /* 5439 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
 import SafetyHubView from "SafetyHubView" /* 5438 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function parseMessageEmbedForProps(fields) {
   if (null != fields.fields) {
     fields = fields.fields;
-    const reduced = fields.reduce((acc, item, index) => {
-      acc[item.rawName] = item.rawValue;
-      return acc;
+    const reduced = fields.reduce((arg0, rawName) => {
+      arg0[rawName.rawName] = rawName.rawValue;
+      return arg0;
     }, {});
     let str = reduced[constants3.HEADER];
     if (str == null) {
@@ -25,18 +25,18 @@ function parseMessageEmbedForProps(fields) {
     const obj = { header: null, icon: null, body: null, ctas: null, timestamp: null, theme: null, learn_more_link: null, classification_id: null };
     obj[0] = str;
     obj[1] = reduced[constants3.ICON_TYPE];
-    let str2 = reduced[constants3.BODY];
+    let str2 = reduced[tmp2.BODY];
     if (str2 == null) {
       str2 = "";
     }
     obj[2] = str2;
-    let str3 = reduced[constants3.CTAS];
+    let str3 = reduced[tmp2.CTAS];
     if (str3 == null) {
       str3 = "";
     }
     const parts = str3.split(",");
-    obj[3] = parts.filter((item, index) => "" !== item);
-    let num = reduced[constants3.TIMESTAMP];
+    obj[3] = parts.filter((arg0) => "" !== arg0);
+    let num = reduced[tmp2.TIMESTAMP];
     if (num == null) {
       num = 0;
     }
@@ -49,7 +49,7 @@ function parseMessageEmbedForProps(fields) {
 }
 ({ AppealIngestionSignal: c4, SafetySystemNotificationCtaType: c5, SafetySystemNotificationEmbedKeys: closure_6 } = SafetyHubView);
 ({ AbortCodes: error, MessageAttachmentFlags: closure_8 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
   return tDefault().to(tDefault(timestamp));
@@ -58,8 +58,8 @@ export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachmen
   if (obj.isImageFile(filename.filename)) {
     let num = constants5.IS_SPOILER;
   } else {
-    urlMatchesFileExtension;
     num = 0;
+    const tmpResult = urlMatchesFileExtension;
   }
   return num;
 };
@@ -73,18 +73,18 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
     let obj = { text: null, type: null, key: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["8/GdRB"]);
-    obj[1] = constants2.LEARN_MORE_LINK;
+    obj[1] = tmp.LEARN_MORE_LINK;
     if (learn_more_link == null) {
       str2 = "";
     }
     obj[2] = str2;
     return obj;
-  } else if (constants2.POLICY_VIOLATION_DETAIL === arg0) {
+  } else if (tmp.POLICY_VIOLATION_DETAIL === arg0) {
     let str = classification_id;
     obj = { text: null, type: null, key: null };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t.QsqdXC);
-    obj[1] = constants2.POLICY_VIOLATION_DETAIL;
+    obj[1] = tmp.POLICY_VIOLATION_DETAIL;
     if (classification_id == null) {
       str = "";
     }
@@ -92,12 +92,12 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
     return obj;
   }
 };
-export const isFlaggedContentEmpty = function isFlaggedContentEmpty(type) {
-  let tmp = type.type !== ContentIdType.ContentIdType.MESSAGE;
+export const isFlaggedContentEmpty = function isFlaggedContentEmpty(first) {
+  let tmp = first.type !== ContentIdType.ContentIdType.MESSAGE;
   if (!tmp) {
-    let tmp2 = "" === type.content;
+    let tmp2 = "" === first.content;
     if (tmp2) {
-      tmp2 = 0 === type.attachments.length;
+      tmp2 = 0 === first.attachments.length;
     }
     tmp = tmp2;
   }

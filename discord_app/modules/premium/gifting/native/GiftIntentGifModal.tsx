@@ -2,17 +2,17 @@
 
 // Module 10995 (_sendGiftIntentGif)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function _sendGiftIntentGif() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -144,12 +144,15 @@ function GiftIntentGifModalBody(channelId) {
   channelId = channelId.channelId;
   const giftIntentType = channelId.giftIntentType;
   const onClose = channelId.onClose;
+  let stateFromStores;
+  let ref;
   let first;
+  closure_6 = undefined;
   const tmp = callback3();
   let obj = channelId(onClose[15]);
   const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(channelId));
-  const ref = first.useRef(null);
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(channelId));
+  ref = first.useRef(null);
   const tmp7 = stateFromStores(first.useState(null), 2);
   first = tmp7[0];
   closure_6 = tmp7[1];
@@ -168,7 +171,8 @@ function GiftIntentGifModalBody(channelId) {
       return tmp2;
     });
   }, []);
-  const items2 = [tmp.container, { paddingBottom: giftIntentType(onClose[14])().insets.bottom }];
+  obj = { style: items2, children: null };
+  items2 = [tmp.container, { paddingBottom: giftIntentType(onClose[14])().insets.bottom }];
   obj = { style: tmp.messageContainer, children: null };
   const callback1 = first.useCallback(() => {
     let tmp2 = null != stateFromStores;
@@ -245,35 +249,40 @@ function GiftIntentGifModalBody(channelId) {
   obj6[3] = onClose;
   items4[1] = callback2(channelId(onClose[20]).Button, obj6);
   obj4[1] = items4;
-  items3[2] = callback(closure_6, obj4);
+  items3[2] = closure_11(closure_6, obj4);
   obj[1] = items3;
-  return callback(closure_6, obj);
+  return closure_11(closure_6, obj);
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, messageContainer: null, pickerContainer: null, footer: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { flex: 1 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let closure_15 = { GIFT_INTENT_GIF: "GIFT_INTENT_GIF" };
-const result = require("obj132").fileFinishedImporting("modules/premium/gifting/native/GiftIntentGifModal.tsx");
+let obj2 = { gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/premium/gifting/native/GiftIntentGifModal.tsx");
 
 export default function GiftIntentGifModal(arg0) {
   ({ channelId: require, giftIntentType: importDefault, onDismiss } = arg0);
+  closure_3 = undefined;
   const items = [onDismiss];
   closure_3 = React.useCallback(() => {
-    let arr = importDefault(onDismiss[21]);
+    let arr = closure_1_1(onDismiss[21]);
     arr = arr.pop();
     if (onDismiss != null) {
       onDismiss();
     }
   }, items);
   const tmp = importDefault(onDismiss[22])(() => {
-    const obj = { title: null, headerLeft: null, render: null };
-    const intl = require(onDismiss[17]).intl;
-    obj[0] = intl.string(require(onDismiss[17]).t.PQRuGc);
-    obj[1] = require(onDismiss[23]).getHeaderCloseButton(closure_3);
+    let obj = {};
+    obj = { title: null, headerLeft: null, render: null };
+    const intl = closure_1_0(onDismiss[17]).intl;
+    obj[0] = intl.string(closure_1_0(onDismiss[17]).t.PQRuGc);
+    obj[1] = closure_1_0(onDismiss[23]).getHeaderCloseButton(closure_3);
     obj[2] = function render() {
       return closure_1_10(closure_1_14, { channelId: closure_0, giftIntentType: closure_1, onClose: closure_3 });
     };
@@ -283,10 +292,11 @@ export default function GiftIntentGifModal(arg0) {
   return callback2(require(onDismiss[24]).Navigator, {
     initialRouteName: constants.GIFT_INTENT_GIF,
     screens: importDefault(onDismiss[22])(() => {
-      const obj = { title: null, headerLeft: null, render: null };
-      const intl = require(onDismiss[17]).intl;
-      obj[0] = intl.string(require(onDismiss[17]).t.PQRuGc);
-      obj[1] = require(onDismiss[23]).getHeaderCloseButton(closure_3);
+      let obj = {};
+      obj = { title: null, headerLeft: null, render: null };
+      const intl = closure_1_0(onDismiss[17]).intl;
+      obj[0] = intl.string(closure_1_0(onDismiss[17]).t.PQRuGc);
+      obj[1] = closure_1_0(onDismiss[23]).getHeaderCloseButton(closure_3);
       obj[2] = function render() {
         return closure_1_10(closure_1_14, { channelId: closure_0, giftIntentType: closure_1, onClose: closure_3 });
       };

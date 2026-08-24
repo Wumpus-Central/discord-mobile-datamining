@@ -1,7 +1,7 @@
 // === Module 4562: ApplicationStreamPresets ===
 
 // Module 4562 (ApplicationStreamPresets)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
@@ -100,6 +100,6 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
     return flag;
   }
 });
-const result = obj132.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
+const result = set.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
 
 export default applicationStreamingSettingsStore;

@@ -1,20 +1,21 @@
 // === Module 11603: usePendingGameProfileReturn ===
 
 // Module 11603 (usePendingGameProfileReturn)
-import noop from "noop" /* 19 */;
-import handleLoadMessages from "handleLoadMessages" /* 4505 */;
-import getSimilarGames from "getSimilarGames" /* 9098 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleLoadMessages" /* 4505 */;
+import closure_5 from "getSimilarGames" /* 9098 */;
 import { AVATAR_SIZE } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");
 
 export default function usePendingGameProfileReturn(channelId) {
   channelId = channelId.channelId;
+  let stateFromStores;
   let stateFromStores1;
   let obj = channelId(stateFromStores1[4]);
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = obj.useStateFromStores(items, () => {
     const pendingReturn = closure_1_5.getPendingReturn();
     let tmp2 = null;
     if (null != pendingReturn) {
@@ -28,11 +29,11 @@ export default function usePendingGameProfileReturn(channelId) {
   const items1 = [stateFromStores];
   const callback = React.useCallback(() => {
     if (null != stateFromStores) {
-      stateFromStores(stateFromStores1[5]);
-      const obj = { gameId: null, source: null, initialScrollOffset: null };
-      obj[0] = stateFromStores.gameId;
+      let obj = stateFromStores(stateFromStores1[5]);
+      obj = { gameId: null, source: null, initialScrollOffset: null };
+      obj[0] = tmp.gameId;
       obj[1] = channelId(stateFromStores1[6]).GameProfileSources.AnnouncementChannelReturn;
-      obj[2] = stateFromStores.initialScrollOffset;
+      obj[2] = tmp.initialScrollOffset;
       obj.returnToGameProfile(obj);
     }
   }, items1);
@@ -40,11 +41,11 @@ export default function usePendingGameProfileReturn(channelId) {
   stateFromStores1 = channelId(stateFromStores1[4]).useStateFromStores(items2, () => {
     let gameId;
     if (stateFromStores != null) {
-      gameId = stateFromStores.gameId;
+      gameId = tmp.gameId;
     }
     let game = null;
     if (null != gameId) {
-      game = closure_1_4.getGame(stateFromStores.gameId);
+      game = closure_1_4.getGame(tmp.gameId);
     }
     return game;
   });
@@ -58,7 +59,7 @@ export default function usePendingGameProfileReturn(channelId) {
     if (stateFromStores1 != null) {
       id = stateFromStores1.id;
     }
-    return null != id ? (() => stateFromStores(stateFromStores1[5]).clearGameProfilePendingReturn(id.id)) : undefined;
+    return null != id ? (() => closure_1_1(closure_1_2[5]).clearGameProfilePendingReturn(id.id)) : undefined;
   }, items3);
   if (stateFromStores1 != null) {
     const name = stateFromStores1.name;

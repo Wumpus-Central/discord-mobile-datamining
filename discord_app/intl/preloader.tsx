@@ -1,9 +1,9 @@
 // === Module 2006: _preloadAllIntlMessageFiles ===
 
 // Module 2006 (_preloadAllIntlMessageFiles)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-const require = fn;
+const require = arg1;
 function _preloadAllIntlMessageFiles() {
   const self = this;
   const tmp = callback(function*() {
@@ -53,7 +53,7 @@ function _preloadAllIntlMessageFiles() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("intl/preloader.tsx");
+const result = require("set").fileFinishedImporting("intl/preloader.tsx");
 
 export const preloadAllIntlMessageFiles = function preloadAllIntlMessageFiles() {
   const self = this;

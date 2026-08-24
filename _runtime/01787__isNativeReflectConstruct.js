@@ -3,9 +3,9 @@
 // Module 1787 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import LinearTransition from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_classCallCheck" /* 41 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
@@ -55,7 +55,9 @@ class LinearTransition {
       const callbackV = delayFunction.callbackV;
       const delay = delayFunction.getDelay();
       const fn = function t(currentOriginX) {
-        const obj = { originX: delayFunction(delay, first(currentOriginX.targetOriginX, closure_2)), originY: delayFunction(delay, first(currentOriginX.targetOriginY, closure_2)), width: delayFunction(delay, first(currentOriginX.targetWidth, closure_2)), height: delayFunction(delay, first(currentOriginX.targetHeight, closure_2)) };
+        obj = { initialValues: obj, animations: null, callback: null };
+        obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
+        obj = { originX: delayFunction(delay, first(currentOriginX.targetOriginX, closure_2)), originY: delayFunction(delay, first(currentOriginX.targetOriginY, closure_2)), width: delayFunction(delay, first(currentOriginX.targetWidth, closure_2)), height: delayFunction(delay, first(currentOriginX.targetHeight, closure_2)) };
         obj[1] = obj;
         obj[2] = callbackV;
         return obj;

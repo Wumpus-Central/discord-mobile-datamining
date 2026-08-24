@@ -4,26 +4,29 @@
 import noopAll from "noop" /* 19 */;
 import itemsDefault from "items" /* 16013 */;
 import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 16015 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import getMarketingBySurface from "getMarketingBySurface" /* 5351 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "getMarketingBySurface" /* 5351 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function CoachmarkVariant(shopButtonRef) {
   ({ marketing, navigateToShop } = shopButtonRef);
   shopButtonRef = shopButtonRef.shopButtonRef;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let obj = navigateToShop(7366);
   const tmp = callback(obj.useSelectedVersionedDismissibleContent(navigateToShop(1377).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING, marketing.version, undefined, true), 2);
   importDefault = tmp2;
   const tmp3 = tmp[0] === navigateToShop(1377).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
   dependencyMap = tmp3;
+  obj = { children: null };
   obj = { ref: shopButtonRef, IconComponent: navigateToShop(11316).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
   const intl = navigateToShop(1236).intl;
   obj[2] = intl.string(navigateToShop(1236).t.pWG4ze);
   obj[3] = function onPress() {
     if (closure_2) {
-      callback(ContentDismissActionType.TAKE_ACTION);
+      callback(closure_1_5.TAKE_ACTION);
     }
     navigateToShop();
   };
@@ -34,7 +37,7 @@ function CoachmarkVariant(shopButtonRef) {
 }
 noopAll;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/CollectiblesShopEntryButton.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopEntryButton.tsx");
 
 export default function CollectiblesShopEntryButton(navigateToShop) {
   navigateToShop = navigateToShop.navigateToShop;
@@ -63,17 +66,17 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
     function content(visibleContent) {
       visibleContent = visibleContent.visibleContent;
       const markAsDismissed = visibleContent.markAsDismissed;
-      const obj = { ref: markAsDismissed, IconComponent: navigateToShop(dependencyMap[8]).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
-      const intl = navigateToShop(dependencyMap[9]).intl;
-      obj[2] = intl.string(navigateToShop(dependencyMap[9]).t.pWG4ze);
+      const obj = { ref: markAsDismissed, IconComponent: navigateToShop(closure_1_2[8]).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+      const intl = navigateToShop(closure_1_2[9]).intl;
+      obj[2] = intl.string(navigateToShop(closure_1_2[9]).t.pWG4ze);
       obj[3] = function onPress() {
         visibleContent();
         if (null != visibleContent) {
-          markAsDismissed(ContentDismissActionType.PRIMARY);
+          markAsDismissed(closure_2_5.PRIMARY);
         }
       };
       obj[4] = null != visibleContent;
-      return closure_1_6(shopButtonRef(dependencyMap[7]), obj);
+      return closure_1_6(shopButtonRef(closure_1_2[7]), obj);
     }
     if (tmp4) {
       let type1;
@@ -95,7 +98,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
       }
       obj[1] = num;
       obj[2] = content;
-      let tmp15Result = callback2(tmp(10261).SelectedVersionedDismissibleContent, obj);
+      let tmp15Result = tmp15(tmp(10261).SelectedVersionedDismissibleContent, obj);
     } else {
       let type2;
       if (stateFromStores != null) {
@@ -113,7 +116,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         obj1 = { contentTypes: null, children: null };
         obj1[0] = items2;
         obj1[1] = content;
-        tmp15Result = callback2(tmp7, obj1);
+        tmp15Result = tmp15(tmp7, obj1);
       }
       items2 = [];
       tmp7 = shopButtonRef(10261);

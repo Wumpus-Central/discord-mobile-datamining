@@ -1,13 +1,13 @@
 // === Module 14810: apexExperiment ===
 
 // Module 14810 (apexExperiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const obj = { 1: null, 2: { showSettingsToggle: true } };
 obj[2] = { showSettingsToggle: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-friend-is-online-v3", defaultConfig: { showSettingsToggle: false }, variations: obj });
-const result = obj132.fileFinishedImporting("modules/notifications/friend_online/FriendOnlineNotificationExperiment.tsx");
+const result = set.fileFinishedImporting("modules/notifications/friend_online/FriendOnlineNotificationExperiment.tsx");
 
 export default apexExperiment;
 export const useFriendOnlineNotificationExperiment = function useFriendOnlineNotificationExperiment(tabsV2Settings) {

@@ -1,11 +1,11 @@
 // === Module 15719: ? ===
 
 // Module 15719
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
 
 export default {
   customScoreGuild(arg0) {
@@ -47,7 +47,7 @@ export default {
                 obj2[0] = closure_1_0;
                 let mapped;
                 if (v0 != null) {
-                  mapped = v0.map((item, index) => ({ channel_id: item.channelId, score: item.score }));
+                  mapped = v0.map((channelId) => ({ channel_id: channelId.channelId, score: channelId.score }));
                 }
                 obj2[1] = mapped;
                 obj2[2] = closure_1_2;

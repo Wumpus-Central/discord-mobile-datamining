@@ -1,7 +1,7 @@
 // === Module 17030: fadeIn ===
 
 // Module 17030 (fadeIn)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 5038 */;
 import createSoundForPack from "createSoundForPack" /* 10040 */;
 
@@ -19,13 +19,12 @@ function fadeIn() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_1_2.volume = callback(dependencyMap[1])(closure_3, 0, 0.5);
+      closure_1_2.volume = callback(closure_1_1[1])(closure_3, 0, 0.5);
     }
     clearInterval(closure_5);
     if (tmp9) {
       undefined();
     }
-    tmp9 = 0 === rounded1 && false;
   }, 100);
 }
 function handlePauseMusic() {
@@ -49,10 +48,10 @@ function handlePauseMusic() {
     clearInterval(closure_5);
     let tmp10 = 0 === rounded1;
     if (tmp10) {
-      tmp10 = null != callback;
+      tmp10 = null != tmp;
     }
     if (tmp10) {
-      callback();
+      tmp();
     }
   }, 100);
 }
@@ -77,10 +76,10 @@ function handleStopMusic() {
     clearInterval(closure_5);
     let tmp10 = 0 === rounded1;
     if (tmp10) {
-      tmp10 = null != callback;
+      tmp10 = null != tmp;
     }
     if (tmp10) {
-      callback();
+      tmp();
     }
   }, 100);
 }
@@ -97,6 +96,6 @@ let prototype = function InappropriateConversationsManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = obj132.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx");
+const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx");
 
 export default prototype;

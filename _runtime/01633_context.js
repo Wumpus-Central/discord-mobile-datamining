@@ -1,12 +1,12 @@
 // === Module 1633: context ===
 
 // Module 1633 (context)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ Dimensions: c4, StyleSheet } = get_ActivityIndicator);
 let context = importAllResult.createContext(null);
@@ -52,6 +52,9 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     obj[3] = store.get("window").height;
     frame = obj;
   }
+  const tmp2 = context;
+  const tmp4 = context1;
+  const tmp7 = callback;
   const tmp8 = callback(importAllResult.useState(insets), 2);
   [tmp13, c1] = callback(obj.useState(frame), 2);
   callback = obj.useCallback((nativeEvent) => {
@@ -97,8 +100,8 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     const obj2 = { value: null, children: null };
     obj2[0] = tmp9;
     obj2[1] = children;
-    obj1[1] = <tmp2.Provider value={null}>{null}</tmp2.Provider>;
-    tmp15Result = <tmp4.Provider value={null}>{null}</tmp4.Provider>;
+    obj1[1] = tmp15(tmp2.Provider, obj2);
+    tmp15Result = tmp15(tmp4.Provider, obj1);
   }
   obj.children = tmp15Result;
   return jsx(_require(1634).NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
@@ -150,7 +153,7 @@ export const withSafeAreaInsets = function withSafeAreaInsets(arg0) {
       const merged = Object.assign(arg0);
       obj.insets = context;
       obj.ref = ref;
-      return <closure_0 />;
+      return closure_1_5(closure_0, obj);
     }
   });
 };

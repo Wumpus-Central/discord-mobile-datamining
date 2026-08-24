@@ -1,7 +1,7 @@
 // === Module 10320: usePropsErrorBoundary ===
 
 // Module 10320 (usePropsErrorBoundary)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
 
 export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {

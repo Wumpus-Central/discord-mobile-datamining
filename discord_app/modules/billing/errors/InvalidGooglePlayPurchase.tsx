@@ -9,6 +9,6 @@ const prototype = function InvalidGooglePlayPurchase() {
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("obj132").fileFinishedImporting("modules/billing/errors/InvalidGooglePlayPurchase.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/errors/InvalidGooglePlayPurchase.tsx");
 
 export default prototype;

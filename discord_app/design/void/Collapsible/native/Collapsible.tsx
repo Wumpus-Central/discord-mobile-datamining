@@ -2,34 +2,39 @@
 
 // Module 13460 (Collapsible)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = { stiffness: 150, overshootClamping: true };
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { collapsible: { position: "relative", overflow: "hidden" }, collapsibleContent: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function CollapsibleTsx1(){const{withSpring,totalHeight,EXPAND_SPRING}=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};}" };
-const result = require("obj132").fileFinishedImporting("design/void/Collapsible/native/Collapsible.tsx");
+const result = require("set").fileFinishedImporting("design/void/Collapsible/native/Collapsible.tsx");
 
 export default function Collapsible(isExpanded) {
   isExpanded = isExpanded.isExpanded;
+  let first;
+  importDefault = undefined;
+  let first1;
   let callback;
   let first2;
+  closure_5 = undefined;
   c6 = undefined;
   ({ children, collapsibleContent, style } = isExpanded);
   const tmp = callback2();
   let obj = first2;
   const tmp2 = callback(first2.useState(false), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   importDefault = tmp4;
   const tmp5 = callback(first2.useState(0), 2);
-  const first1 = tmp5[0];
+  first1 = tmp5[0];
   callback = tmp5[1];
   const tmp7 = callback(first2.useState(0), 2);
   first2 = tmp7[0];
@@ -88,7 +93,7 @@ export default function Collapsible(isExpanded) {
     obj4[2] = collapsibleContent;
     items3[1] = c6(closure_5, obj4);
     obj1[1] = items3;
-    obj[1] = callback(importDefault(first1[6]).View, obj1);
+    obj[1] = closure_7(importDefault(first1[6]).View, obj1);
     return c6(closure_5, obj);
   } else {
     num = 0;

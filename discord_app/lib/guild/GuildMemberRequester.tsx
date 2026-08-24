@@ -1,7 +1,7 @@
 // === Module 6705: acknowledge ===
 
 // Module 6705 (acknowledge)
-import obj132 from "obj132" /* 2 */;
+import set3 from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 
 class GuildMemberRequestState {
@@ -27,42 +27,45 @@ prototype["acknowledge"] = function acknowledge(arg0) {
   const _pendingRequests = this._pendingRequests;
   _pendingRequests.delete(arg0);
 };
-prototype["flushRequests"] = function flushRequests(fn) {
-  const self = this;
+prototype["flushRequests"] = function flushRequests(arg0) {
+  let self = this;
+  self = this;
   if (0 !== this._pendingRequests.size) {
     const items = [];
     let _pendingRequests = self._pendingRequests;
-    const item = _pendingRequests.forEach((item, index) => {
-      if (!self._guildMemberExists(item)) {
-        const _unacknowledgedRequests = self._unacknowledgedRequests;
-        _unacknowledgedRequests.add(item);
-        const _sentRequests = self._sentRequests;
-        _sentRequests.add(item);
-        items.push(item);
+    const item = _pendingRequests.forEach((arg0) => {
+      if (!self._guildMemberExists(arg0)) {
+        const _unacknowledgedRequests = tmp._unacknowledgedRequests;
+        _unacknowledgedRequests.add(arg0);
+        const _sentRequests = tmp._sentRequests;
+        _sentRequests.add(arg0);
+        items.push(arg0);
       }
     });
     if (items.length > 0) {
-      fn(self._guildId, items);
+      arg0(self._guildId, items);
     }
     _pendingRequests = self._pendingRequests;
     _pendingRequests.clear();
   }
 };
 prototype["requestUnacknowledged"] = function requestUnacknowledged() {
-  const self = this;
+  let self = this;
+  self = this;
   let tmp = 0 !== this._unacknowledgedRequests.size;
   if (tmp) {
     const prop = self._unacknowledgedRequests;
-    const item = prop.forEach((item, index) => {
-      if (self._guildMemberExists(item)) {
-        const _unacknowledgedRequests = self._unacknowledgedRequests;
-        _unacknowledgedRequests.delete(item);
+    const item = prop.forEach((arg0) => {
+      if (self._guildMemberExists(arg0)) {
+        const _unacknowledgedRequests = tmp._unacknowledgedRequests;
+        _unacknowledgedRequests.delete(arg0);
       } else {
-        const _pendingRequests = self._pendingRequests;
-        _pendingRequests.add(item);
+        const _pendingRequests = tmp._pendingRequests;
+        _pendingRequests.add(arg0);
       }
     });
     tmp = 0 !== self._pendingRequests.size && undefined;
+    const tmp3 = 0 !== self._pendingRequests.size && undefined;
   }
   return tmp;
 };
@@ -80,7 +83,7 @@ prototype["request"] = function request(arg0) {
   }
   return false;
 };
-const result = obj132.fileFinishedImporting("lib/guild/GuildMemberRequester.tsx");
+const result = set3.fileFinishedImporting("lib/guild/GuildMemberRequester.tsx");
 class GuildMemberRequester {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -141,6 +144,7 @@ prototype2["_getGuildState"] = function _getGuildState(_guildId) {
     obj._guildMemberExists = (arg0) => _guildMemberExists(closure_0, arg0);
     self._guildStates[_guildId] = obj;
     tmp = obj;
+    const tmp16 = GuildMemberRequestState;
   }
   return tmp;
 };

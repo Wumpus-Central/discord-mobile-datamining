@@ -1,10 +1,10 @@
 // === Module 10191: useExpressionPickerInsets ===
 
 // Module 10191 (useExpressionPickerInsets)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { EXPRESSION_FOOTER_HEIGHT } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
+const result = require("set").fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
 
 export default function useExpressionPickerInsets(hasCategories) {
   let bottom;

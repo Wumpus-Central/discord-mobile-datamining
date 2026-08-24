@@ -2,17 +2,17 @@
 
 // Module 6401 (convertToHandlerTag)
 import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6398 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-require = fn;
-function convertToHandlerTag(handlerTag) {
-  if (typeof handlerTag === "number") {
-    return handlerTag;
-  } else if (handlerTag instanceof _isNativeReflectConstruct.BaseGesture) {
-    let num = handlerTag.handlerTag;
+require = arg1;
+function convertToHandlerTag(num) {
+  if (typeof num === "number") {
+    return num;
+  } else if (num instanceof _isNativeReflectConstruct.BaseGesture) {
+    num = num.handlerTag;
   } else {
-    const current = handlerTag.current;
+    const current = num.current;
     num = undefined;
     if (current != null) {
       num = current.handlerTag;
@@ -38,7 +38,7 @@ export const extractGestureRelations = function extractGestureRelations(item1000
   if (requireToFail != null) {
     const mapped = requireToFail.map(convertToHandlerTag);
     if (mapped != null) {
-      found = mapped.filter((item, index) => item > 0);
+      found = mapped.filter((arg0) => arg0 > 0);
     }
   }
   if (found == null) {
@@ -50,7 +50,7 @@ export const extractGestureRelations = function extractGestureRelations(item1000
   if (simultaneousWith != null) {
     const mapped1 = simultaneousWith.map(convertToHandlerTag);
     if (mapped1 != null) {
-      found1 = mapped1.filter((item, index) => item > 0);
+      found1 = mapped1.filter((arg0) => arg0 > 0);
     }
   }
   if (found1 == null) {
@@ -62,7 +62,7 @@ export const extractGestureRelations = function extractGestureRelations(item1000
   if (item10007.config.blocksHandlers != null) {
     const mapped2 = blocksHandlers.map(convertToHandlerTag);
     if (mapped2 != null) {
-      found2 = mapped2.filter((item, index) => item > 0);
+      found2 = mapped2.filter((arg0) => arg0 > 0);
     }
   }
   if (found2 == null) {

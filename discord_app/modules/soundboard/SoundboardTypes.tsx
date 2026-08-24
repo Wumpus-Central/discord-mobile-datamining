@@ -1,9 +1,9 @@
 // === Module 6824: SoundButtonOverlay ===
 
 // Module 6824 (SoundButtonOverlay)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/soundboard/SoundboardTypes.tsx");
+const result = set.fileFinishedImporting("modules/soundboard/SoundboardTypes.tsx");
 
 export const SoundButtonOverlay = { NONE: 0, [0]: "NONE", PLAY: 1, [1]: "PLAY", ADD: 2, [2]: "ADD", SOUNDMOJI: 3, [3]: "SOUNDMOJI" };
 export const AnalyticsSoundType = { ENTRY: "entry_sound", EXIT: "exit_sound", DEFAULT: "default" };
@@ -25,10 +25,10 @@ export const soundboardSoundFromAPI = function soundboardSoundFromAPI(body, c0) 
   obj.available = flag;
   return obj;
 };
-export const soundboardSoundToAPI = function soundboardSoundToAPI(item) {
-  ({ soundId, guildId, emojiId, emojiName, userId } = item);
+export const soundboardSoundToAPI = function soundboardSoundToAPI(arg0) {
+  ({ soundId, guildId, emojiId, emojiName, userId } = arg0);
   const obj = {};
-  const merged = Object.assign(Object.assign(item, Object.create(null)));
+  const merged = Object.assign(Object.assign(arg0, Object.create(null)));
   obj.sound_id = soundId;
   obj.guild_id = guildId;
   obj.emoji_id = emojiId;

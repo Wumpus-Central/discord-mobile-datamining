@@ -1,14 +1,14 @@
 // === Module 12337: useCanDM ===
 
 // Module 12337 (useCanDM)
-import recountRelationshipTypes from "recountRelationshipTypes" /* 5406 */;
-import initialize from "initialize" /* 4022 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_2 from "recountRelationshipTypes" /* 5406 */;
+import closure_3 from "initialize" /* 4022 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useCanDM.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useCanDM.tsx");
 
 export default function useCanDM(arg0, arg1) {
   const _require = arg0;
@@ -36,10 +36,11 @@ export default function useCanDM(arg0, arg1) {
     if (tmp) {
       let isFriendResult = closure_1_6.isFriend(callback);
       if (!isFriendResult) {
-        isFriendResult = null != closure_1_5.memberOf(callback).find((item, index) => !closure_4.includes(item));
-        const memberOfResult = closure_1_5.memberOf(callback);
+        isFriendResult = null != closure_1_5.memberOf(tmp4).find((arg0) => !closure_4.includes(arg0));
+        const memberOfResult = closure_1_5.memberOf(tmp4);
       }
       tmp = isFriendResult;
+      tmp4 = callback;
     }
     if (!tmp) {
       let setting = gameFriendsForUser.getGameFriendsForUser(callback).length > 0;
@@ -52,7 +53,7 @@ export default function useCanDM(arg0, arg1) {
     return tmp;
   });
 };
-export const canDm = function canDm(closure_0, guildId) {
+export const canDm = function canDm(userId, guildId) {
   let isLurkingResult = null != guildId;
   id = id.getId();
   if (isLurkingResult) {
@@ -60,20 +61,20 @@ export const canDm = function canDm(closure_0, guildId) {
   }
   const RestrictedGuildIds = _require(4066).RestrictedGuildIds;
   _require = RestrictedGuildIds.getSetting();
-  let isFriendResult = friend.isFriend(closure_0);
+  let isFriendResult = friend.isFriend(userId);
   let tmp8 = !tmp4;
-  if (id !== closure_0) {
+  if (id !== userId) {
     tmp8 = !isLurkingResult;
   }
   if (tmp8) {
     if (!isFriendResult) {
-      isFriendResult = null != closure_5.memberOf(closure_0).find((item, index) => !closure_0.includes(item));
-      const memberOfResult = closure_5.memberOf(closure_0);
+      isFriendResult = null != closure_5.memberOf(userId).find((arg0) => !closure_0.includes(arg0));
+      const memberOfResult = closure_5.memberOf(userId);
     }
     tmp8 = isFriendResult;
   }
   if (!tmp8) {
-    let setting = gameFriendsForUser.getGameFriendsForUser(closure_0).length > 0;
+    let setting = gameFriendsForUser.getGameFriendsForUser(userId).length > 0;
     if (setting) {
       const AllowGameFriendDmsInDiscord = _require(4066).AllowGameFriendDmsInDiscord;
       setting = AllowGameFriendDmsInDiscord.getSetting();

@@ -8,18 +8,20 @@ import Button from "Button" /* 4745 */;
 import ButtonGroup from "ButtonGroup" /* 6687 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 6693 */;
 import Background from "Background" /* 6950 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, header: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
+let obj1 = { paddingVertical: ThemesDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
 
 export default function PersonalizationDisclaimerActionSheet() {
   const tmp = callback3();
@@ -27,7 +29,8 @@ export default function PersonalizationDisclaimerActionSheet() {
     const obj = callback(4090);
     obj.openURL(callback(1993).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
-  let obj = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };
+  let obj = { contentStyles: tmp.container, children: null };
+  obj = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.euks4U);
   const items = [callback(Text.Text, obj), ];

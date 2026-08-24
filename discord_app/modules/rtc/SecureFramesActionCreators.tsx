@@ -2,14 +2,14 @@
 
 // Module 9711 (savePersistentCodesEnabled)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "updateVoiceState" /* 4542 */;
 import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_7 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function savePersistentCodesEnabled() {
   const self = this;
   const apply = _savePersistentCodesEnabled.apply;
@@ -193,19 +193,19 @@ function _updatePersistentCodesEnabled() {
                 const intl = callback(1236).intl;
                 const string = intl.string;
                 const t = callback(1236).t;
-                if (callback) {
+                if (tmp18) {
                   let stringResult = string(t.DRFN1B);
-                  let tmp10 = callback;
+                  let tmp10 = tmp8;
                 } else {
                   stringResult = string(t.q29xJz);
-                  tmp10 = callback;
+                  tmp10 = tmp8;
                 }
                 obj1 = { title: null, subtitle: null, confirmText: null, onConfirm: null };
                 obj1[0] = stringResult;
                 const intl2 = tmp10(1236).intl;
                 const string2 = intl2.string;
                 let intl3 = tmp10(1236).t;
-                if (callback) {
+                if (tmp18) {
                   let string2Result = string2(intl3.y015ZY);
                 } else {
                   string2Result = string2(intl3.E66FQn);
@@ -283,7 +283,7 @@ function _updatePersistentCodesEnabled() {
                 dependencyMap = 1;
                 v0 = 1;
                 obj2 = { value: null, done: false };
-                obj2[0] = closure_1_9(callback);
+                obj2[0] = closure_1_9(tmp18);
                 return obj2;
               }
             }
@@ -315,7 +315,7 @@ function _updatePersistentCodesEnabled() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");
 
 export default {
   clearUploadedKeyVersions() {
@@ -332,27 +332,33 @@ export default {
     return applyArgumentsResult;
   },
   addUploadedKeyVersion(closure_0) {
-    const obj = { type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD", keyVersion: closure_0 };
+    let obj = dispatcherDefault;
+    obj = { type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD", keyVersion: closure_0 };
     obj.dispatch(obj);
   },
   createSecureFramesVerifiedKey(userId, key) {
-    const obj = { type: "SECURE_FRAMES_VERIFIED_KEY_CREATE", userId, key };
+    let obj = dispatcherDefault;
+    obj = { type: "SECURE_FRAMES_VERIFIED_KEY_CREATE", userId, key };
     obj.dispatch(obj);
   },
   deleteSecureFramesVerifiedKey(closure_0, closure_1) {
-    const obj = { type: "SECURE_FRAMES_VERIFIED_KEY_DELETE", userId: closure_0, serializedKey: closure_1 };
+    let obj = dispatcherDefault;
+    obj = { type: "SECURE_FRAMES_VERIFIED_KEY_DELETE", userId: closure_0, serializedKey: closure_1 };
     obj.dispatch(obj);
   },
   deleteSecureFramesUserVerifiedKeys(closure_0) {
-    const obj = { type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE", userId: closure_0 };
+    let obj = dispatcherDefault;
+    obj = { type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE", userId: closure_0 };
     obj.dispatch(obj);
   },
   createSecureFramesTransientKey(userId, key) {
-    const obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE", userId, key };
+    let obj = dispatcherDefault;
+    obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE", userId, key };
     obj.dispatch(obj);
   },
   deleteSecureFramesTransientKey(userId) {
-    const obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId };
+    let obj = dispatcherDefault;
+    obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId };
     obj.dispatch(obj);
   }
 };

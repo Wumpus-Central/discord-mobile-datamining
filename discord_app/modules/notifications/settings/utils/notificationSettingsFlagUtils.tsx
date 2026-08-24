@@ -1,12 +1,12 @@
 // === Module 10091: resetGuildUnreadFlags ===
 
 // Module 10091 (resetGuildUnreadFlags)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import hasFlagAll from "hasFlag" /* 1403 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 
 ({ GuildNotificationSettingsFlags: obj1, ChannelNotificationSettingsFlags: c3 } = MAX_FAVORITES);
-const result = obj132.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx");
+const result = set.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx");
 
 export const resetGuildUnreadFlags = function resetGuildUnreadFlags(setting) {
   return hasFlagAll.removeFlags(setting, constants.UNREADS_ALL_MESSAGES, constants.UNREADS_ONLY_MENTIONS);

@@ -11,7 +11,10 @@ function _extends() {
   let tmp = Object.assign || ((arg0) => {
     for (let num = 1; num < arguments.length; num = num + 1) {
       let tmp = arguments[num];
+      let tmp2 = tmp;
+      let tmp3 = num;
       for (const key10012 in tmp) {
+        let tmp5 = key10012;
         let _Object = Object;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
@@ -119,8 +122,11 @@ function resolveToLocation(arg0, arg1) {
 function normalizeToLocation(arg0, arg1) {
 
 }
+function forwardRefShim(arg0) {
+  return arg0;
+}
 let forwardRef = noop.forwardRef;
-const forwardRefShim = forwardRef;
+forwardRefShim = forwardRef;
 if (undefined === forwardRef) {
   forwardRef = forwardRefShim;
 }
@@ -135,6 +141,7 @@ let closure_10 = forwardRef((innerRef) => {
     const keys = Object.keys(innerRef);
     for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
       let tmp2 = keys[num3];
+      let tmp3 = num3;
       if (0 > items.indexOf(tmp2)) {
         obj[tmp2] = innerRef[tmp2];
       }
@@ -193,6 +200,7 @@ const forwardRefResult = forwardRef((component) => {
     const keys = Object.keys(component);
     for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
       let tmp2 = keys[num3];
+      let tmp3 = num3;
       if (0 > items.indexOf(tmp2)) {
         obj[tmp2] = component[tmp2];
       }
@@ -201,23 +209,23 @@ const forwardRefResult = forwardRef((component) => {
   return noop.createElement(Component2(component[5]).__RouterContext.Consumer, null, (history) => {
     const callback = history;
     if (!history) {
-      invariant(false);
+      closure_1_3(false);
     }
     history = history.history;
-    if (typeof resolveToLocation !== "function") {
+    if (typeof closure_1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let tmp4Result = callback;
-    if (typeof callback === "function") {
-      tmp4Result = callback(history.location);
+    let tmp4Result = tmp4;
+    if (typeof closure_3 === "function") {
+      tmp4Result = tmp4(history.location);
     }
     let _location = history.location;
-    if (typeof normalizeToLocation !== "function") {
+    if (typeof closure_1_7 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     _location = tmp4Result;
     if (typeof tmp4Result === "string") {
-      let obj2 = callback(component[4]);
+      const obj2 = callback(component[4]);
       _location = obj2.createLocation(tmp4Result, null, null, _location);
     }
     let str = "";
@@ -227,21 +235,24 @@ const forwardRefResult = forwardRef((component) => {
     obj = {
       href: str,
       navigate() {
-        if (typeof resolveToLocation !== "function") {
+        if (typeof closure_2_6 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        let tmpResult = closure_1_3;
+        let tmpResult = tmp;
         if (typeof closure_1_3 === "function") {
-          tmpResult = closure_1_3(history.location);
+          tmpResult = tmp(history.location);
         }
         const path = history(component[4]).createPath(history.location);
         obj = history(component[4]);
-        if (typeof normalizeToLocation !== "function") {
+        const tmp2 = history;
+        const tmp4 = history;
+        const tmp5 = component;
+        if (typeof closure_2_7 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let _location = tmpResult;
         if (typeof tmpResult === "string") {
-          const tmp4Result = history(component[4]);
+          const tmp4Result = tmp4(tmp5[4]);
           _location = tmp4Result.createLocation(tmpResult, null, null, undefined);
         }
         if (!closure_1_2) {
@@ -251,10 +262,9 @@ const forwardRefResult = forwardRef((component) => {
           const replaced = replace(tmpResult);
         }
         replace = history.replace;
-        obj2 = history(component[4]);
       }
     };
-    const tmp7 = _extends({}, obj, obj);
+    const tmp7 = closure_1_4({}, obj, obj);
     if (closure_1_8 !== closure_1_9) {
       let tmp9 = callback;
       if (!callback) {
@@ -268,8 +278,11 @@ const forwardRefResult = forwardRef((component) => {
   });
 });
 const unpackModuleId = forwardRefResult;
+function forwardRefShim$1(arg0) {
+  return arg0;
+}
 let forwardRef2 = noop.forwardRef;
-const forwardRefShim$1 = forwardRef2;
+forwardRefShim$1 = forwardRef2;
 if (undefined === forwardRef2) {
   forwardRef2 = forwardRefShim$1;
 }
@@ -293,10 +306,10 @@ export const HashRouter = e;
 export const Link = forwardRefResult;
 export const NavLink = forwardRef2((aria_current) => {
   Component2 = arg1;
-  const prop = aria_current["aria-current"];
+  aria_current = aria_current["aria-current"];
   let str = "page";
-  if (undefined !== prop) {
-    str = prop;
+  if (undefined !== aria_current) {
+    str = aria_current;
   }
   const activeClassName = aria_current.activeClassName;
   let str2 = "active";
@@ -312,28 +325,29 @@ export const NavLink = forwardRef2((aria_current) => {
     const _Object = Object;
     const keys = Object.keys(aria_current);
     for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
-      let tmp3 = keys[num3];
-      if (0 > items.indexOf(tmp3)) {
-        obj[tmp3] = aria_current[tmp3];
+      let tmp2 = keys[num3];
+      let tmp3 = num3;
+      if (0 > items.indexOf(tmp2)) {
+        obj[tmp2] = aria_current[tmp2];
       }
     }
   }
   return str2.createElement(Component2(str[5]).__RouterContext.Consumer, null, (location) => {
     if (!location) {
-      invariant(false);
+      closure_1_3(false);
     }
     let _location = closure_7;
     if (!closure_7) {
       _location = location.location;
     }
-    if (typeof resolveToLocation !== "function") {
+    if (typeof closure_1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let tmp4Result = callback;
-    if (typeof callback === "function") {
-      tmp4Result = callback(_location);
+    let tmp4Result = tmp4;
+    if (typeof closure_11 === "function") {
+      tmp4Result = tmp4(_location);
     }
-    if (typeof normalizeToLocation !== "function") {
+    if (typeof closure_1_7 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     _location = tmp4Result;
@@ -347,7 +361,7 @@ export const NavLink = forwardRef2((aria_current) => {
     }
     let matchPathResult = null;
     if (replaced) {
-      callback(str[5]);
+      obj = callback(str[5]);
       obj = { path: null, exact: null, sensitive: null, strict: null };
       obj[0] = replaced;
       obj[1] = closure_5;
@@ -376,10 +390,10 @@ export const NavLink = forwardRef2((aria_current) => {
         for (let num = 0; num < length; num = num + 1) {
           arr[num] = arguments[num];
         }
-        const found = arr.filter((item, index) => item);
+        const found = arr.filter((arg0) => arg0);
         return found.join(" ");
       })(tmp17Result, str2);
-      tmp21 = _extends({}, tmp19Result, closure_3);
+      tmp21 = closure_1_4({}, tmp19Result, closure_3);
     }
     let tmp27 = tmp16;
     if (tmp14Result) {
@@ -388,8 +402,8 @@ export const NavLink = forwardRef2((aria_current) => {
     if (!tmp27) {
       tmp27 = null;
     }
-    const tmp26Result = _extends({ "aria-current": tmp27, className: tmp22, style: tmp21, to: _location }, obj);
-    if (forwardRefShim$1 !== obj) {
+    const tmp26Result = closure_1_4({ "aria-current": tmp27, className: tmp22, style: tmp21, to: _location }, obj);
+    if (closure_1_12 !== obj) {
       let tmp30 = callback;
       if (!callback) {
         tmp30 = closure_12;

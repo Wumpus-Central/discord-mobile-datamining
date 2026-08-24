@@ -1,17 +1,17 @@
 // === Module 10674: getActivitySessionKey ===
 
 // Module 10674 (getActivitySessionKey)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/activities/utils/getActivitySessionKey.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getActivitySessionKey.tsx");
 
-export const getActivitySessionKey = function getActivitySessionKey(activity) {
-  if (null == activity.application_id) {
+export const getActivitySessionKey = function getActivitySessionKey(application_id) {
+  if (null == application_id.application_id) {
     return null;
   } else {
-    let session_id = activity.session_id;
+    let session_id = application_id.session_id;
     if (session_id == null) {
-      const secrets = activity.secrets;
+      const secrets = application_id.secrets;
       let join;
       if (secrets != null) {
         join = secrets.join;
@@ -19,7 +19,7 @@ export const getActivitySessionKey = function getActivitySessionKey(activity) {
       session_id = join;
     }
     if (session_id == null) {
-      const party = activity.party;
+      const party = application_id.party;
       let id;
       if (party != null) {
         id = party.id;
@@ -27,7 +27,7 @@ export const getActivitySessionKey = function getActivitySessionKey(activity) {
       session_id = id;
     }
     if (session_id == null) {
-      const timestamps = activity.timestamps;
+      const timestamps = application_id.timestamps;
       let start;
       if (timestamps != null) {
         start = timestamps.start;
@@ -35,14 +35,14 @@ export const getActivitySessionKey = function getActivitySessionKey(activity) {
       let StringResult = null;
       if (null != start) {
         const _String = String;
-        StringResult = String(activity.timestamps.start);
+        StringResult = String(application_id.timestamps.start);
       }
       session_id = StringResult;
     }
     let combined = null;
     if (null != session_id) {
       const _HermesInternal = HermesInternal;
-      combined = "" + activity.application_id + ":" + session_id;
+      combined = "" + application_id.application_id + ":" + session_id;
     }
     return combined;
   }

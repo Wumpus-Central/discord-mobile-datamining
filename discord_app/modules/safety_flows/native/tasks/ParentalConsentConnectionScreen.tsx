@@ -2,25 +2,27 @@
 
 // Module 17099 (ParentalConsentConnectionScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "freshTeenActivityWithMap" /* 5296 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_9 } from "items" /* 5297 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
-const createCacheKey = { marginTop: ThemesDefault.space.PX_24 };
+createCacheKey = { body: null, cardSection: null, cardTitle: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_24, textAlign: "center" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionScreen.tsx");
+let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_24, textAlign: "center" };
+let result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionScreen.tsx");
 
 export default function ParentalConsentConnectionScreen() {
   const tmp = callback();
@@ -58,7 +60,7 @@ export default function ParentalConsentConnectionScreen() {
   if (stateFromStores1) {
     const _Object = Object;
     const values = Object.values(stateFromStores);
-    let someResult = values.some((item, index) => null != item);
+    let someResult = values.some((arg0) => null != arg0);
   } else {
     someResult = arr.length > 0;
   }
@@ -143,11 +145,11 @@ export default function ParentalConsentConnectionScreen() {
             closure_1_5(true);
             c3 = 2;
             obj1 = { type: null };
-            obj1[0] = onTaskComplete(str2[20]).TaskInputType.Empty;
+            obj1[0] = closure_1_0(closure_1_2[20]).TaskInputType.Empty;
             v0 = 3;
             c4 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = onTaskComplete(obj1);
+            obj2[0] = closure_1_0(obj1);
             return obj2;
           }
         } else if (1 === tmp8) {
@@ -157,10 +159,10 @@ export default function ParentalConsentConnectionScreen() {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            obj1 = v0(str2[21]);
+            obj1 = v0(closure_1_2[21]);
             const obj3 = { key: "SAFETY_FLOWS_PARENTAL_CONSENT_CONNECTION_ERROR", content: null };
-            const intl = onTaskComplete(str2[22]).intl;
-            obj3[1] = intl.string(v0(str2[23])["+QRSxc"]);
+            const intl = closure_1_0(closure_1_2[22]).intl;
+            obj3[1] = intl.string(v0(closure_1_2[23])["+QRSxc"]);
             obj1.open(obj3);
             c3 = 0;
             callback(false);
@@ -192,8 +194,8 @@ export default function ParentalConsentConnectionScreen() {
     }
   }), items6);
   const callback2 = obj9.useCallback(() => {
-    getLinkCode(str2[24]);
-    let obj = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: null, body: null };
+    let obj = getLinkCode(str2[24]);
+    obj = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: null, body: null };
     const intl = onTaskComplete(str2[22]).intl;
     obj[3] = intl.string(getLinkCode(str2[23]).dMMSA0);
     const intl2 = onTaskComplete(str2[22]).intl;
@@ -202,12 +204,12 @@ export default function ParentalConsentConnectionScreen() {
     obj.openLazy(onTaskComplete(str2[26])(str2[25], str2.paths), closure_1_9, obj);
   }, items7);
   obj = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
-  tmp5(tmp3[27]);
+  let tmp5Result = tmp5(tmp3[27]);
   let intl = tmp2(tmp3[22]).intl;
   obj[0] = intl.string(getLinkCode(str2[23]).dMMSA0);
   let intl2 = tmp2(tmp3[22]).intl;
   const format = intl2.format;
-  const tmp5Result = tmp5(tmp3[23]);
+  tmp5Result = tmp5(tmp3[23]);
   if (tmp16) {
     obj = { pendingCount: null, link: null };
     obj[0] = length;
@@ -221,7 +223,7 @@ export default function ParentalConsentConnectionScreen() {
   obj[1] = formatResult;
   obj[3] = tmp27;
   obj2 = { spacing: tmp5(tmp3[9]).space.PX_16, children: null };
-  const items8 = [callback(getLinkCode(str2[30]), {}), ];
+  const items8 = [closure_10(getLinkCode(str2[30]), {}), ];
   let tmp30Result = tmp16;
   if (tmp16) {
     let obj3 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
@@ -234,12 +236,12 @@ export default function ParentalConsentConnectionScreen() {
     obj3[2] = tmp38;
     obj3[3] = tmp27;
     obj3[4] = callback1;
-    tmp30Result = callback(tmp2(tmp3[31]).ModalActionButton, obj3);
+    tmp30Result = tmp30(tmp2(tmp3[31]).ModalActionButton, obj3);
   }
   const tmp14Result = tmp14(obj9.useState(false), 2);
   items8[1] = tmp30Result;
   obj2[1] = items8;
-  obj[4] = callback(onTaskComplete(str2[28]).ModalFooter, { children: callback2(onTaskComplete(str2[29]).Stack, obj2) });
+  obj[4] = closure_10(onTaskComplete(str2[28]).ModalFooter, { children: closure_11(onTaskComplete(str2[29]).Stack, obj2) });
   const obj5 = { spacing: getLinkCode(str2[9]).space.PX_16, style: tmp.body, children: null };
   if (tmp16) {
     const obj6 = { pendingRequests: null, linkedUsersProcessed: null, expiresAt: null, onRefreshLinkCode: null, onShare: null, onInviteAnotherGuardian: null };
@@ -249,7 +251,7 @@ export default function ParentalConsentConnectionScreen() {
     obj6[3] = getLinkCode;
     obj6[4] = callback;
     obj6[5] = callback2;
-    tmp30Result = callback(tmp5(tmp3[32]), obj6);
+    tmp30Result = tmp30(tmp5(tmp3[32]), obj6);
   } else {
     const obj7 = { style: null, children: null };
     obj7[0] = tmp.cardSection;
@@ -257,16 +259,16 @@ export default function ParentalConsentConnectionScreen() {
     obj8[0] = tmp.cardTitle;
     const intl4 = tmp2(tmp3[22]).intl;
     obj8[3] = intl4.string(tmp5(tmp3[34]).pojgfk);
-    const items9 = [callback(tmp2(tmp3[33]).Text, obj8), ];
+    const items9 = [tmp30(tmp2(tmp3[33]).Text, obj8), ];
     obj9 = { shareActions: "full", linkCode: null, expiresAt: null, onRefresh: null };
     obj9[1] = tmp21;
     obj9[2] = parsed;
     obj9[3] = getLinkCode;
-    items9[1] = callback(tmp2(tmp3[35]).ConnectGuardianCard, obj9);
+    items9[1] = tmp30(tmp2(tmp3[35]).ConnectGuardianCard, obj9);
     obj7[1] = items9;
-    tmp30Result = callback2(View, obj7);
+    tmp30Result = tmp36(View, obj7);
   }
   obj5[2] = tmp30Result;
-  obj[5] = callback(onTaskComplete(str2[29]).Stack, obj5);
-  return callback(tmp5Result, obj);
+  obj[5] = closure_10(onTaskComplete(str2[29]).Stack, obj5);
+  return closure_10(tmp5Result, obj);
 };

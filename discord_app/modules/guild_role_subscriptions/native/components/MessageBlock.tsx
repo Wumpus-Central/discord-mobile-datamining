@@ -8,7 +8,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 let obj = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
 let closure_6 = createCacheKey.createStyles((arg0) => {
@@ -33,19 +33,19 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj1.width = "100%";
   obj[0] = obj1;
   if (obj.RED === arg0) {
-    let TEXT_FEEDBACK_WARNING = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_FEEDBACK_WARNING = tmp6(712).colors.TEXT_FEEDBACK_CRITICAL;
   } else if (tmp.YELLOW === arg0) {
-    TEXT_FEEDBACK_WARNING = ThemesDefault.colors.TEXT_FEEDBACK_WARNING;
+    TEXT_FEEDBACK_WARNING = tmp6(712).colors.TEXT_FEEDBACK_WARNING;
   }
   obj[1] = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
 
 export default function MessageBlock(children) {
   const tmp = callback(children.color);
-  { style: tmp.container, children: jsx(Button.LegacyText, obj) };
+  obj = { style: tmp.container, children: jsx(Button.LegacyText, obj) };
   obj = { style: tmp.text, children: children.children };
-  return <View style={tmp.text}>{children.children}</View>;
+  return <View style={tmp.text}>{arg0.children}</View>;
 };
 export const MessageBlockColors = obj;

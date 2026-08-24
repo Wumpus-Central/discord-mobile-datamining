@@ -1,9 +1,9 @@
 // === Module 8866: useAccessibilityPress ===
 
 // Module 8866 (useAccessibilityPress)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
+const result = require("set").fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
 
 export default function useAccessibilityPress(stateFromStores) {
   const React = stateFromStores;
@@ -15,8 +15,16 @@ export default function useAccessibilityPress(stateFromStores) {
   }, items);
   const items1 = [arg1];
   return React.useMemo(() => {
-    const obj = { name: "activate", label: closure_1 };
-    const items = [obj];
+    let obj = {
+      onAccessibilityAction(nativeEvent) {
+        if ("activate" === nativeEvent.nativeEvent.actionName) {
+          ref.current();
+        }
+      },
+      accessibilityActions: items
+    };
+    obj = { name: "activate", label: closure_1 };
+    items = [obj];
     return obj;
   }, items1);
 };

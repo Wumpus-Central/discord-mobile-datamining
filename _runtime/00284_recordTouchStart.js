@@ -91,6 +91,8 @@ arg5.default = {
           if (0 < items.length) {
             while (true) {
               let tmp7 = items[num2];
+              let tmp8 = num2;
+              let arr2 = items;
               if (null != tmp7) {
                 if (tmp7.touchActive) {
                   break;

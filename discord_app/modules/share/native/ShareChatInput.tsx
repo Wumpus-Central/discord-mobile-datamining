@@ -2,32 +2,35 @@
 
 // Module 12044 (ShareChatInput)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
-import obj132 from "obj132" /* 500 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { flex: 1, flexDirection: "row", backgroundColor: ThemesDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey = { container: null, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
+createCacheKey = { flex: 1, flexDirection: "row", backgroundColor: ThemesDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, maxHeight: 80 };
 const obj2 = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_NORMAL, color: ThemesDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
 let num = 2;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   num = 0;
 }
 obj2[4] = ThemesDefault.space.PX_8 + num;
 obj2[5] = ThemesDefault.space.PX_8;
 createCacheKey[2] = obj2;
+const obj1 = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, maxHeight: 80 };
 createCacheKey[3] = { color: ThemesDefault.colors.TEXT_MUTED };
+const obj3 = { color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[4] = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, alignSelf: "flex-end" };
-obj132 = { borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
-createCacheKey[5] = obj132;
+set = { borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+createCacheKey[5] = set;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = obj132.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
+const result = set.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
 
 export default function ShareChatInput(onFocus) {
   onFocus = onFocus.onFocus;
@@ -56,9 +59,12 @@ export default function ShareChatInput(onFocus) {
   if (focused) {
     focused = tmp.focused;
   }
+  let obj = { style: items2, children: null };
   items2[1] = focused;
-  let obj = { ref: inputRef, maxLength: tmp4, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, onSubmitEditing: null, onSelectionChange: null, style: null, value: null, onChange: null, onFocus: null, onBlur: null, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: null, editable: null };
+  obj = { ref: inputRef, maxLength: tmp4, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, onSubmitEditing: null, onSelectionChange: null, style: null, value: null, onChange: null, onFocus: null, onBlur: null, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: null, editable: null };
   const tmp5 = callback(React.useState(false), 2);
+  const tmp8 = closure_7;
+  const tmp9 = View;
   const intl = onFocus(1236).intl;
   obj[2] = intl.string(onFocus(1236).t.ZroO3G);
   obj[3] = tmp.inputPlaceholder.color;
@@ -83,5 +89,5 @@ export default function ShareChatInput(onFocus) {
   obj[5] = callback2(onFocus(7939).ReactionIcon, { size: "md" });
   items3[1] = callback2(onFocus(5433).PressableOpacity, obj);
   obj[1] = items3;
-  return callback(View, obj);
+  return tmp8(tmp9, obj);
 };

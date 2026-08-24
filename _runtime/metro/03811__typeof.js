@@ -3,6 +3,7 @@
 // Module 3811 (_typeof)
 import Parser2 from "Parser" /* 3778 */;
 
+let _createSuperInternal = require;
 let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -56,7 +57,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 const Parser = Parser2.Parser;
-let _createSuperInternal;
+_createSuperInternal = undefined;
 class ISOTimezoneWithZParser {
   constructor() {
     if (this instanceof closure_1) {
@@ -148,6 +149,7 @@ ISOTimezoneWithZParser.prototype = Object.create(prototype, { constructor: obj }
 if (Parser) {
   _setPrototypeOf(ISOTimezoneWithZParser, Parser);
 }
+_createSuperInternal = ISOTimezoneWithZParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -239,6 +241,7 @@ if (0 < items.length) {
   do {
     let tmp5 = items[num];
     let flag = tmp5.enumerable;
+    let tmp6 = num;
     if (!flag) {
       flag = false;
     }

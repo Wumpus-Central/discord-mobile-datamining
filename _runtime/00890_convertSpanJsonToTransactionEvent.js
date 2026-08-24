@@ -7,7 +7,9 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
-  const obj = {};
+  let obj = { type: "transaction", timestamp: beforeSendSpanResult.timestamp, start_timestamp: beforeSendSpanResult.start_timestamp, transaction: beforeSendSpanResult.description, contexts: null, measurements: null };
+  obj = { trace_id: beforeSendSpanResult.trace_id, span_id: beforeSendSpanResult.span_id, parent_span_id: beforeSendSpanResult.parent_span_id, op: beforeSendSpanResult.op, status: beforeSendSpanResult.status, origin: beforeSendSpanResult.origin, data: null };
+  obj = {};
   const merged = Object.assign(beforeSendSpanResult.data);
   let profile_id = beforeSendSpanResult.profile_id;
   if (profile_id) {

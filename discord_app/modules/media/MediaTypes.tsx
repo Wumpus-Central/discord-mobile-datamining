@@ -1,11 +1,10 @@
 // === Module 4810: messageAttachmentToUnfurledMediaItem ===
 
 // Module 4810 (messageAttachmentToUnfurledMediaItem)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
 
 function messageAttachmentToUnfurledMediaItem(flags) {
@@ -26,7 +25,7 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   if (tmpResult.hasFlag(num3, MessageAttachmentFlags.IS_ANIMATED)) {
     num4 = obj.IS_ANIMATED | 0;
   }
-  obj = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: PermissionOverwriteType.UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
+  obj = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1954).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
   let tmp6;
   if (null != flags.content_scan_version) {
     obj = { version: null, flags: null };
@@ -39,8 +38,9 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   return obj;
 }
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;
-let obj = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
-const result = obj132.fileFinishedImporting("modules/media/MediaTypes.tsx");
+let obj = { EXPLICIT: 1, [1]: "EXPLICIT", GORE: 2, [2]: "GORE", SELF_HARM: 4, [4]: "SELF_HARM" };
+obj = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
+const result = set.fileFinishedImporting("modules/media/MediaTypes.tsx");
 
 export const ContentScanFlags = obj;
 export const ImageEncoder = { NATIVE: "native", JPEGLI: "jpegli", JPEG_IOS: "jpeg_ios", PASSTHROUGH: "passthrough" };
@@ -89,15 +89,16 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
   const merged = Object.assign(messageAttachmentToUnfurledMediaItem(found2));
   let str = "IMAGE";
   if (!obj2.isImageFile(found2.filename)) {
-    tmp2Result = urlMatchesFileExtension;
     let str2 = "INVALID";
     if (tmp2Result.isVideoFile(found2.filename)) {
       str2 = "VIDEO";
     }
     str = str2;
+    tmp2Result = urlMatchesFileExtension;
   }
   obj.type = str;
   obj.alt = found2.description;
+  obj = { message: tmp2Result, identifier: obj };
   obj = { type: "attachment", attachmentId: found2.id, filename: found2.filename, title: found2.title, size: found2.size };
   obj.sourceMetadata = obj;
   return obj;
@@ -124,8 +125,8 @@ export const getMediaItemDisplayUrl = function getMediaItemDisplayUrl(type) {
   } else {
     if ("VIDEO" === type.type) {
       if (null != type.proxyUrl) {
-        isDiscordProxiedAssetUrlDefault.toURLSafe(type.proxyUrl);
-        let str = null;
+        let str = isDiscordProxiedAssetUrlDefault.toURLSafe(type.proxyUrl);
+        str = null;
         if (null != str) {
           const searchParams = str.searchParams;
           searchParams.append("format", "webp");

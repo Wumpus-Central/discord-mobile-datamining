@@ -1,12 +1,12 @@
 // === Module 4241: defaultStatesAreEqual ===
 
 // Module 4241 (defaultStatesAreEqual)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
 }
-const result = obj132.fileFinishedImporting("lib/ZustandStore.tsx");
+const result = set.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   const _require = arg0;
@@ -30,11 +30,11 @@ export const createZustandStore = function createZustandStore(arg0) {
       }
       return store(arg0, tmp);
     },
-    getState(fn) {
+    getState(arg0) {
       const state = store.getState();
       let tmp2 = state;
-      if (null != fn) {
-        tmp2 = fn(state);
+      if (null != arg0) {
+        tmp2 = arg0(state);
       }
       return tmp2;
     },

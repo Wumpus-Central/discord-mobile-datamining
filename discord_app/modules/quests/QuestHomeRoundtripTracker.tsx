@@ -1,11 +1,11 @@
 // === Module 14520: clearTimeoutTimer ===
 
 // Module 14520 (clearTimeoutTimer)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import setDefault from "set" /* 5006 */;
-import set from "set" /* 5011 */;
+import set2 from "set" /* 5011 */;
 import _modDef10501 from "module_10501" /* 10501 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
@@ -22,11 +22,12 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
   }
 };
 prototype["sendMetric"] = function sendMetric(timeout, duration) {
-  let obj = { timeout, duration };
+  let obj = expandEventPropertiesDefault;
+  obj = { timeout, duration };
   obj.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, obj);
   if (Math.random() <= 0.1) {
     obj = { name: null, tags: null };
-    obj[0] = set.MetricEvents.QUEST_HOME_ROUNDTRIP;
+    obj[0] = set2.MetricEvents.QUEST_HOME_ROUNDTRIP;
     const _HermesInternal = HermesInternal;
     const items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;
@@ -37,7 +38,8 @@ prototype["sendMetric"] = function sendMetric(timeout, duration) {
   }
 };
 prototype["startTracking"] = function startTracking() {
-  const self = this;
+  let self = this;
+  self = this;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -87,6 +89,6 @@ prototype["clearTracking"] = function clearTracking() {
   this.clearTimeoutTimer();
   this.startTime = null;
 };
-const result = obj132.fileFinishedImporting("modules/quests/QuestHomeRoundtripTracker.tsx");
+const result = set.fileFinishedImporting("modules/quests/QuestHomeRoundtripTracker.tsx");
 
 export default Object.create(QuestHomeRoundtripTracker.prototype);

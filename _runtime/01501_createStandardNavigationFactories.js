@@ -19,10 +19,12 @@ import useRoutePath from "useRoutePath" /* 1621 */;
 import useScrollToTop from "useScrollToTop" /* 1622 */;
 
 for (const key10013 in require("module_1502")) {
+  let tmp2 = key10013;
   arg5[key10013] = require("module_1502")[key10013];
   continue;
 }
 for (const key10017 in require("BaseNavigationContainer")) {
+  let tmp3 = key10017;
   arg5[key10017] = require("BaseNavigationContainer")[key10017];
   continue;
 }

@@ -6,7 +6,7 @@ import _createClassDefault from "_createClass" /* 42 */;
 import measureDefault from "measure" /* 68 */;
 import PressabilityPerformanceEventEmitterDefault from "PressabilityPerformanceEventEmitter" /* 293 */;
 import SoundManagerDefault from "SoundManager" /* 294 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_4 from "_classCallCheck" /* 41 */;
 
 const Pressability = arg1;
 let closure_5 = Object.freeze({ NOT_RESPONDER: { DELAY: "ERROR", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "ERROR", RESPONDER_TERMINATED: "ERROR", ENTER_PRESS_RECT: "ERROR", LEAVE_PRESS_RECT: "ERROR", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_IN: { DELAY: "RESPONDER_ACTIVE_PRESS_IN", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_OUT: { DELAY: "RESPONDER_ACTIVE_PRESS_OUT", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_LONG_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_LONG_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, ERROR: { DELAY: "NOT_RESPONDER", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "NOT_RESPONDER", LEAVE_PRESS_RECT: "NOT_RESPONDER", LONG_PRESS_DETECTED: "NOT_RESPONDER" } });
@@ -102,6 +102,20 @@ const items = [
     value: function _createEventHandlers() {
       const self = this;
       let obj = {
+        onBlur(arg0) {
+          const onBlur = self._config.onBlur;
+          if (null != onBlur) {
+            onBlur(arg0);
+          }
+        },
+        onFocus(arg0) {
+          const onFocus = self._config.onFocus;
+          if (null != onFocus) {
+            onFocus(arg0);
+          }
+        }
+      };
+      obj = {
         onStartShouldSetResponder() {
           return !self._config.disabled;
         },
@@ -119,18 +133,18 @@ const items = [
           const bound = Math.max(0, num);
           if (bound > 0) {
             const _setTimeout = setTimeout;
-            self._pressDelayTimeout = setTimeout(() => {
-              self._receiveSignal("DELAY", closure_0);
+            obj._pressDelayTimeout = setTimeout(() => {
+              closure_1_2._receiveSignal("DELAY", closure_0);
             }, bound);
           } else {
-            self._receiveSignal("DELAY", persist);
+            obj._receiveSignal("DELAY", persist);
           }
-          let delayLongPress = self._config.delayLongPress;
+          let delayLongPress = obj._config.delayLongPress;
           if (delayLongPress == null) {
             delayLongPress = 500 - bound;
           }
           self._longPressDelayTimeout = setTimeout(() => {
-            self._handleLongPress(closure_0);
+            closure_1_2._handleLongPress(closure_0);
           }, Math.max(10, delayLongPress) + bound);
           return true === self._config.blockNativeResponder;
         },
@@ -139,9 +153,9 @@ const items = [
           if (null != onPressMove) {
             onPressMove(nativeEvent);
           }
-          const _responderRegion = self._responderRegion;
+          const _responderRegion = obj._responderRegion;
           if (null != _responderRegion) {
-            if (typeof getTouchFromPressEvent !== "function") {
+            if (typeof closure_1_14 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             ({ changedTouches, touches } = nativeEvent.nativeEvent);
@@ -150,20 +164,20 @@ const items = [
                 nativeEvent = touches[0];
               }
               if (null == nativeEvent) {
-                const result = self._cancelLongPressDelayTimeout();
-                self._receiveSignal("LEAVE_PRESS_RECT", nativeEvent);
+                const result = obj._cancelLongPressDelayTimeout();
+                obj._receiveSignal("LEAVE_PRESS_RECT", nativeEvent);
               } else {
-                if (null != self._touchActivatePosition) {
+                if (null != obj._touchActivatePosition) {
                   const _Math = Math;
-                  if (Math.hypot(self._touchActivatePosition.pageX - nativeEvent.pageX, self._touchActivatePosition.pageY - nativeEvent.pageY) > closure_1_13) {
-                    const result1 = self._cancelLongPressDelayTimeout();
+                  if (Math.hypot(obj._touchActivatePosition.pageX - nativeEvent.pageX, obj._touchActivatePosition.pageY - nativeEvent.pageY) > closure_1_13) {
+                    const result1 = obj._cancelLongPressDelayTimeout();
                   }
                 }
-                if (self._isTouchWithinResponderRegion(nativeEvent, _responderRegion)) {
-                  self._receiveSignal("ENTER_PRESS_RECT", nativeEvent);
+                if (obj._isTouchWithinResponderRegion(nativeEvent, _responderRegion)) {
+                  obj._receiveSignal("ENTER_PRESS_RECT", nativeEvent);
                 } else {
-                  const result2 = self._cancelLongPressDelayTimeout();
-                  self._receiveSignal("LEAVE_PRESS_RECT", nativeEvent);
+                  const result2 = obj._cancelLongPressDelayTimeout();
+                  obj._receiveSignal("LEAVE_PRESS_RECT", nativeEvent);
                 }
               }
             }
@@ -235,7 +249,7 @@ const items = [
             self._isHovered = true;
             const result = self._cancelHoverOutDelayTimeout();
             if (null != onHoverIn) {
-              let num = self._config.delayHoverIn;
+              let num = tmp._config.delayHoverIn;
               if (num == null) {
                 num = 0;
               }
@@ -243,17 +257,18 @@ const items = [
               if (bound > 0) {
                 persist.persist();
                 const _setTimeout = setTimeout;
-                self._hoverInDelayTimeout = setTimeout(() => {
+                tmp._hoverInDelayTimeout = setTimeout(() => {
                   ({ clientX, clientY } = persist.nativeEvent);
                   const obj = {};
                   const merged = Object.assign(persist);
                   obj.nativeEvent = { clientX, clientY, pageX: clientX, pageY: clientY, timestamp: persist.timeStamp };
-                  onHoverIn(obj);
+                  closure_1_1(obj);
                 }, bound);
               } else {
                 ({ clientX, clientY } = persist.nativeEvent);
+                let obj = {};
                 let merged = Object.assign(persist);
-                let obj = { clientX: null, clientY: null, pageX: null, pageY: null, timestamp: null };
+                obj = { clientX: null, clientY: null, pageX: null, pageY: null, timestamp: null };
                 obj[0] = clientX;
                 obj[1] = clientY;
                 obj[2] = clientX;
@@ -290,6 +305,7 @@ const items = [
                   }, bound);
                 } else {
                   ({ clientX, clientY } = persist.nativeEvent);
+                  obj = {};
                   let merged = Object.assign(persist);
                   obj = { clientX: null, clientY: null, pageX: null, pageY: null, timestamp: null };
                   obj[0] = clientX;
@@ -324,6 +340,7 @@ const items = [
       importDefault = nativeEvent;
       if (null != nativeEvent.nativeEvent.timestamp) {
         PressabilityPerformanceEventEmitterDefault.emitEvent(() => ({ signal: closure_0, nativeTimestamp: nativeEvent.nativeEvent.timestamp }));
+        const obj = PressabilityPerformanceEventEmitterDefault;
       }
       const self = this;
       const _touchState = this._touchState;
@@ -345,12 +362,13 @@ const items = [
           const result = self._performTransitionSideEffects(_touchState, tmp5, arg0, nativeEvent);
           self._touchState = tmp5;
         }
+        const tmp9 = _modDef38;
       }
     }
   },
   {
     key: "_performTransitionSideEffects",
-    value: function _performTransitionSideEffects(_touchState, closure_5, arg2, nativeEvent) {
+    value: function _performTransitionSideEffects(_touchState, arg1, arg2, nativeEvent) {
       let tmp = "RESPONDER_TERMINATED" === arg2;
       if (!tmp) {
         tmp = "RESPONDER_RELEASE" === arg2;
@@ -362,7 +380,7 @@ const items = [
       }
       let tmp4 = "NOT_RESPONDER" === _touchState;
       if (tmp4) {
-        tmp4 = "RESPONDER_INACTIVE_PRESS_IN" === closure_5;
+        tmp4 = "RESPONDER_INACTIVE_PRESS_IN" === arg1;
       }
       if (typeof isActivationSignal !== "function") {
         HermesBuiltin.throwTypeError();
@@ -376,9 +394,9 @@ const items = [
         if (typeof isActivationSignal !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        let tmp8 = "RESPONDER_ACTIVE_PRESS_OUT" === closure_5;
+        let tmp8 = "RESPONDER_ACTIVE_PRESS_OUT" === arg1;
         if (!tmp8) {
-          tmp8 = "RESPONDER_ACTIVE_PRESS_IN" === closure_5;
+          tmp8 = "RESPONDER_ACTIVE_PRESS_IN" === arg1;
         }
         tmp7 = tmp8;
       }
@@ -417,9 +435,9 @@ const items = [
       if (typeof isActiveSignal !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let tmp18 = "RESPONDER_ACTIVE_PRESS_IN" === closure_5;
+      let tmp18 = "RESPONDER_ACTIVE_PRESS_IN" === arg1;
       if (!tmp18) {
-        tmp18 = "RESPONDER_ACTIVE_LONG_PRESS_IN" === closure_5;
+        tmp18 = "RESPONDER_ACTIVE_LONG_PRESS_IN" === arg1;
       }
       if (!tmp17) {
         if (tmp18) {
@@ -453,6 +471,7 @@ const items = [
               if (!tmp26) {
                 if (true !== tmp24) {
                   SoundManagerDefault.playTouchSound();
+                  const obj = SoundManagerDefault;
                 }
                 onPress(nativeEvent);
               }
@@ -544,6 +563,7 @@ const items = [
       if (null != this._responderID) {
         if (typeof self._responderID === "number") {
           measureDefault.measure(self._responderID, self._measureCallback);
+          const obj = measureDefault;
         } else {
           const _responderID = self._responderID;
           _responderID.measureAsyncOnUI(self._measureCallback);

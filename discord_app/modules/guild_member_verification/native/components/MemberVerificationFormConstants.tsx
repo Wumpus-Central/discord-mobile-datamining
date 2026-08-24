@@ -1,11 +1,11 @@
 // === Module 8525: BANNER_RATIO_HEIGHT_16_9 ===
 
 // Module 8525 (BANNER_RATIO_HEIGHT_16_9)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 
 let c2 = 0.5625;
-const result = obj132.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");
+const result = set.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");
 
 export const BANNER_RATIO_HEIGHT_16_9 = 0.5625;
 export const AVATAR_SIZE = 76;

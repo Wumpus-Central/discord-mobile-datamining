@@ -1,10 +1,10 @@
 // === Module 11717: useGuildPowerupColorConfig ===
 
 // Module 11717 (useGuildPowerupColorConfig)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 
-const result = obj132.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
 
 export default function useGuildPowerupColorConfig(arg0) {
   if (arg0) {

@@ -2,18 +2,17 @@
 
 // Module 11958 (useFavoritesGuildCategoryAddAction)
 import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11959 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx");
 
 export default function useFavoritesGuildCategoryAddAction(id) {
   const _require = id;
   const items = [id.id];
   const callback = React.useCallback(() => {
-    openFavoritesGuildAddChannelModalDefault({ parentId: id.id, source: "favorites_add_to_category" });
+    closure_1_1(closure_1_2[2])({ parentId: id.id, source: "favorites_add_to_category" });
   }, items);
   let obj = _require(1913);
   let tmp4 = null;

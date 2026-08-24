@@ -10,20 +10,19 @@ import isMentioned from "isMentioned" /* 4819 */;
 import isMentionedDefault from "isMentioned" /* 4819 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
 import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 5386 */;
-import hasFlag from "hasFlag" /* 4031 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "hasFlag" /* 4031 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "reinjectEphemerals" /* 4994 */;
+import closure_7 from "generateOldThreadCutoff" /* 4772 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "handleConnectionOpen" /* 4197 */;
+import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { Storage } from "Storage" /* 595 */;
 
-require = fn;
+require = arg1;
 function findOrCreateMessageRecord(channel_id) {
   if (channel_id instanceof closure_3) {
     return channel_id;
@@ -31,6 +30,7 @@ function findOrCreateMessageRecord(channel_id) {
     let message = store2.getMessage(channel_id.channel_id, channel_id.id);
     if (null == message) {
       message = createMinimalMessageRecord.createMessageRecord(channel_id);
+      const obj = createMinimalMessageRecord;
     }
     return message;
   }
@@ -50,7 +50,7 @@ function hasMentionNotificationEnabled(channel_id) {
           const result = obj.resolvedMessageNotifications(basicChannel);
           if (constants3.ALL_MESSAGES === result) {
             return true;
-          } else if (constants3.ONLY_MENTIONS === result) {
+          } else if (tmp5.ONLY_MENTIONS === result) {
             const result1 = obj.isSuppressEveryoneEnabled(basicChannel.guild_id);
             const result2 = obj.isSuppressRolesEnabled(basicChannel.guild_id);
             const currentUser = authStore.getCurrentUser();
@@ -65,7 +65,7 @@ function hasMentionNotificationEnabled(channel_id) {
             }
             return tmp10;
           } else {
-            const NO_MESSAGES = constants3.NO_MESSAGES;
+            const NO_MESSAGES = tmp5.NO_MESSAGES;
             return false;
           }
         }
@@ -100,12 +100,13 @@ function parseMessage(message, channelId) {
       }
       id = id.getId();
       if (!blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message)) {
-        if (!shouldRemoveSelfMentionDefault(message, id)) {
+        if (!tmp2(5386)(message, id)) {
           let tmp12 = message;
           if (!(message instanceof closure_3)) {
             message = store2.getMessage(message.channel_id, message.id);
             if (null == message) {
               message = createMinimalMessageRecord.createMessageRecord(message);
+              const obj2 = createMinimalMessageRecord;
             }
             tmp12 = message;
           }
@@ -115,7 +116,7 @@ function parseMessage(message, channelId) {
           obj[2] = !closure_23.everyoneFilter;
           obj[3] = !closure_23.roleFilter;
           let tmp20 = null;
-          if (isMentionedDefault(obj)) {
+          if (tmp2(4819)(obj)) {
             let tmp2ResultResult = c26;
             if (c26) {
               tmp2ResultResult = closure_7.ackMessageId(channel.id) !== tmp12.id;
@@ -126,8 +127,8 @@ function parseMessage(message, channelId) {
               obj[1] = id;
               obj[2] = closure_10.isSuppressEveryoneEnabled(channel.getGuildId());
               obj[3] = closure_10.isSuppressRolesEnabled(channel.getGuildId());
-              tmp2ResultResult = isMentionedDefault(obj);
-              const tmp2Result = isMentionedDefault;
+              tmp2ResultResult = tmp2(4819)(obj);
+              const tmp2Result = tmp2(4819);
             }
             tmp20 = tmp12;
             if (tmp2ResultResult) {
@@ -153,25 +154,26 @@ function deleteMessage(arg0) {
     obj[0] = applyDefault.filter(closure_18, (id) => id.id === id);
     ({ addedMessages, deletedMessages } = obj);
     if (null != addedMessages) {
-      const item = addedMessages.forEach((item, index) => {
-        if (null == dependencyMap[item.getChannelId(item)]) {
-          dependencyMap[item.getChannelId()] = 0;
+      const item = addedMessages.forEach((getChannelId) => {
+        if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+          dependencyMap[getChannelId.getChannelId()] = 0;
         }
-        const channelId = item.getChannelId();
+        const channelId = getChannelId.getChannelId();
         dependencyMap[channelId] = dependencyMap[channelId] + 1;
       });
     }
     if (null != deletedMessages) {
-      const item1 = deletedMessages.forEach((item, index) => {
-        if (null != dependencyMap[item.getChannelId(item)]) {
+      const item1 = deletedMessages.forEach((getChannelId) => {
+        if (null != dependencyMap[getChannelId.getChannelId(getChannelId)]) {
           const _Math = Math;
-          const channelId = item.getChannelId();
-          dependencyMap[channelId] = Math.max(0, dependencyMap[item.getChannelId(item)] - 1);
+          const channelId = getChannelId.getChannelId();
+          dependencyMap[channelId] = Math.max(0, dependencyMap[getChannelId.getChannelId(getChannelId)] - 1);
         }
       });
     }
+    const arr2 = applyDefault;
+    const tmp7 = importDefault;
     closure_18 = applyDefault.filter(closure_18, (id) => id.id !== id);
-    const tmp7Result = applyDefault;
   }
 }
 function handleMessageDelete(id) {
@@ -182,23 +184,25 @@ function handleMessageDelete(id) {
     obj[0] = applyDefault.filter(closure_18, (id) => id.id === id);
     ({ addedMessages, deletedMessages } = obj);
     if (null != addedMessages) {
-      const item = addedMessages.forEach((item, index) => {
-        if (null == dependencyMap[item.getChannelId(item)]) {
-          dependencyMap[item.getChannelId()] = 0;
+      const item = addedMessages.forEach((getChannelId) => {
+        if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+          dependencyMap[getChannelId.getChannelId()] = 0;
         }
-        const channelId = item.getChannelId();
+        const channelId = getChannelId.getChannelId();
         dependencyMap[channelId] = dependencyMap[channelId] + 1;
       });
     }
     if (null != deletedMessages) {
-      const item1 = deletedMessages.forEach((item, index) => {
-        if (null != dependencyMap[item.getChannelId(item)]) {
+      const item1 = deletedMessages.forEach((getChannelId) => {
+        if (null != dependencyMap[getChannelId.getChannelId(getChannelId)]) {
           const _Math = Math;
-          const channelId = item.getChannelId();
-          dependencyMap[channelId] = Math.max(0, dependencyMap[item.getChannelId(item)] - 1);
+          const channelId = getChannelId.getChannelId();
+          dependencyMap[channelId] = Math.max(0, dependencyMap[getChannelId.getChannelId(getChannelId)] - 1);
         }
       });
     }
+    const arr = applyDefault;
+    const tmp4 = importDefault;
     closure_18 = applyDefault.filter(closure_18, (id) => id.id !== id);
     const tmp4Result = applyDefault;
   }
@@ -232,8 +236,8 @@ function handleSetRecentMentionsFilters(arg0) {
   closure_20 = {};
   items = [];
   if (tmp4) {
-    const item = items.forEach((item, index) => {
-      const tmp = parseMessage(item);
+    const item = items.forEach((arg0) => {
+      const tmp = closure_1_29(arg0);
       if (null != tmp) {
         items.push(tmp);
         closure_20[tmp.id] = true;
@@ -241,11 +245,11 @@ function handleSetRecentMentionsFilters(arg0) {
     });
   }
   closure_19 = {};
-  const item1 = items.forEach((item, index) => {
-    if (null == dependencyMap[item.getChannelId(item)]) {
-      dependencyMap[item.getChannelId()] = 0;
+  const item1 = items.forEach((getChannelId) => {
+    if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+      dependencyMap[getChannelId.getChannelId()] = 0;
     }
-    const channelId = item.getChannelId();
+    const channelId = getChannelId.getChannelId();
     dependencyMap[channelId] = dependencyMap[channelId] + 1;
   });
   if (0 === items.length) {
@@ -256,24 +260,24 @@ function handleRelationshipUpdate() {
   const obj = { deletedMessages: applyDefault.filter(closure_18, (message) => closure_8.isBlockedOrIgnoredForMessage(message)) };
   ({ addedMessages, deletedMessages } = obj);
   if (null != addedMessages) {
-    const item = addedMessages.forEach((item, index) => {
-      if (null == dependencyMap[item.getChannelId(item)]) {
-        dependencyMap[item.getChannelId()] = 0;
+    const item = addedMessages.forEach((getChannelId) => {
+      if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+        dependencyMap[getChannelId.getChannelId()] = 0;
       }
-      const channelId = item.getChannelId();
+      const channelId = getChannelId.getChannelId();
       dependencyMap[channelId] = dependencyMap[channelId] + 1;
     });
   }
   if (null != deletedMessages) {
-    const item1 = deletedMessages.forEach((item, index) => {
-      if (null != dependencyMap[item.getChannelId(item)]) {
+    const item1 = deletedMessages.forEach((getChannelId) => {
+      if (null != dependencyMap[getChannelId.getChannelId(getChannelId)]) {
         const _Math = Math;
-        const channelId = item.getChannelId();
-        dependencyMap[channelId] = Math.max(0, dependencyMap[item.getChannelId(item)] - 1);
+        const channelId = getChannelId.getChannelId();
+        dependencyMap[channelId] = Math.max(0, dependencyMap[getChannelId.getChannelId(getChannelId)] - 1);
       }
     });
   }
-  closure_18 = closure_18.filter((item, index) => !closure_8.isBlockedOrIgnoredForMessage(item));
+  closure_18 = closure_18.filter((message) => !closure_8.isBlockedOrIgnoredForMessage(message));
 }
 function handleDeleteChannel(channel) {
   channel = channel.channel;
@@ -290,20 +294,20 @@ function handleDeleteChannel(channel) {
   });
   ({ addedMessages, deletedMessages } = { deletedMessages: items });
   if (null != addedMessages) {
-    const item = addedMessages.forEach((item, index) => {
-      if (null == dependencyMap[item.getChannelId(item)]) {
-        dependencyMap[item.getChannelId()] = 0;
+    const item = addedMessages.forEach((getChannelId) => {
+      if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+        dependencyMap[getChannelId.getChannelId()] = 0;
       }
-      const channelId = item.getChannelId();
+      const channelId = getChannelId.getChannelId();
       dependencyMap[channelId] = dependencyMap[channelId] + 1;
     });
   }
   if (null != deletedMessages) {
-    const item1 = deletedMessages.forEach((item, index) => {
-      if (null != dependencyMap[item.getChannelId(item)]) {
+    const item1 = deletedMessages.forEach((getChannelId) => {
+      if (null != dependencyMap[getChannelId.getChannelId(getChannelId)]) {
         const _Math = Math;
-        const channelId = item.getChannelId();
-        dependencyMap[channelId] = Math.max(0, dependencyMap[item.getChannelId(item)] - 1);
+        const channelId = getChannelId.getChannelId();
+        dependencyMap[channelId] = Math.max(0, dependencyMap[getChannelId.getChannelId(getChannelId)] - 1);
       }
     });
   }
@@ -378,13 +382,13 @@ Object.defineProperty(prototype, "guildFilter", {
   set: undefined
 });
 Object.defineProperty(prototype, "everyoneFilter", {
-  get: function everyoneFilter(closure_2) {
+  get: function everyoneFilter(arg0) {
     return closure_23.everyoneFilter;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "roleFilter", {
-  get: function roleFilter(closure_2) {
+  get: function roleFilter(arg0) {
     return closure_23.roleFilter;
   },
   set: undefined
@@ -427,20 +431,20 @@ obj = {
     let mapped = applyDefault.map(messages, findOrCreateMessageRecord);
     ({ addedMessages, deletedMessages } = { addedMessages: mapped });
     if (null != addedMessages) {
-      const item = addedMessages.forEach((item, index) => {
-        if (null == dependencyMap[item.getChannelId(item)]) {
-          dependencyMap[item.getChannelId()] = 0;
+      const item = addedMessages.forEach((getChannelId) => {
+        if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+          dependencyMap[getChannelId.getChannelId()] = 0;
         }
-        const channelId = item.getChannelId();
+        const channelId = getChannelId.getChannelId();
         dependencyMap[channelId] = dependencyMap[channelId] + 1;
       });
     }
     if (null != deletedMessages) {
-      const item1 = deletedMessages.forEach((item, index) => {
-        if (null != dependencyMap[item.getChannelId(item)]) {
+      const item1 = deletedMessages.forEach((getChannelId) => {
+        if (null != dependencyMap[getChannelId.getChannelId(getChannelId)]) {
           const _Math = Math;
-          const channelId = item.getChannelId();
-          dependencyMap[channelId] = Math.max(0, dependencyMap[item.getChannelId(item)] - 1);
+          const channelId = getChannelId.getChannelId();
+          dependencyMap[channelId] = Math.max(0, dependencyMap[getChannelId.getChannelId(getChannelId)] - 1);
         }
       });
     }
@@ -449,6 +453,8 @@ obj = {
     } else {
       closure_20 = {};
     }
+    const arr = applyDefault;
+    const tmp = importDefault;
     const item2 = applyDefault.forEach(mapped, (id) => {
       closure_20[id.id] = true;
     });
@@ -473,29 +479,32 @@ obj = {
     size = size.size;
     ({ addedMessages, deletedMessages } = { deletedMessages: substr.slice(size) });
     if (null != addedMessages) {
-      const item = addedMessages.forEach((item, index) => {
-        if (null == dependencyMap[item.getChannelId(item)]) {
-          dependencyMap[item.getChannelId()] = 0;
+      const item = addedMessages.forEach((getChannelId) => {
+        if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+          dependencyMap[getChannelId.getChannelId()] = 0;
         }
-        const channelId = item.getChannelId();
+        const channelId = getChannelId.getChannelId();
         dependencyMap[channelId] = dependencyMap[channelId] + 1;
       });
     }
     if (null != deletedMessages) {
-      const item1 = deletedMessages.forEach((item, index) => {
-        if (null != dependencyMap[item.getChannelId(item)]) {
+      const item1 = deletedMessages.forEach((getChannelId) => {
+        if (null != dependencyMap[getChannelId.getChannelId(getChannelId)]) {
           const _Math = Math;
-          const channelId = item.getChannelId();
-          dependencyMap[channelId] = Math.max(0, dependencyMap[item.getChannelId(item)] - 1);
+          const channelId = getChannelId.getChannelId();
+          dependencyMap[channelId] = Math.max(0, dependencyMap[getChannelId.getChannelId(getChannelId)] - 1);
         }
       });
     }
     let sum = size;
     if (size < substr.length) {
       do {
+        let tmp6 = closure_20;
+        let tmp7 = substr;
         let id = substr[sum].id;
         delete tmp2[tmp];
         sum = sum + 1;
+        let tmp8 = substr;
         length = substr.length;
       } while (sum < length);
     }
@@ -503,7 +512,6 @@ obj = {
     if (substr.length > substr.length) {
       c22 = true;
     }
-    const obj = { deletedMessages: substr.slice(size) };
   },
   CHANNEL_SELECT: function handleChannelSelect() {
     if (closure_23.guildFilter !== RecentMentionsFilters.THIS_SERVER) {
@@ -538,20 +546,20 @@ obj = {
     });
     ({ addedMessages, deletedMessages } = { deletedMessages: items });
     if (null != addedMessages) {
-      const item = addedMessages.forEach((item, index) => {
-        if (null == dependencyMap[item.getChannelId(item)]) {
-          dependencyMap[item.getChannelId()] = 0;
+      const item = addedMessages.forEach((getChannelId) => {
+        if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+          dependencyMap[getChannelId.getChannelId()] = 0;
         }
-        const channelId = item.getChannelId();
+        const channelId = getChannelId.getChannelId();
         dependencyMap[channelId] = dependencyMap[channelId] + 1;
       });
     }
     if (null != deletedMessages) {
-      const item1 = deletedMessages.forEach((item, index) => {
-        if (null != dependencyMap[item.getChannelId(item)]) {
+      const item1 = deletedMessages.forEach((getChannelId) => {
+        if (null != dependencyMap[getChannelId.getChannelId(getChannelId)]) {
           const _Math = Math;
-          const channelId = item.getChannelId();
-          dependencyMap[channelId] = Math.max(0, dependencyMap[item.getChannelId(item)] - 1);
+          const channelId = getChannelId.getChannelId();
+          dependencyMap[channelId] = Math.max(0, dependencyMap[getChannelId.getChannelId(getChannelId)] - 1);
         }
       });
     }
@@ -560,7 +568,8 @@ obj = {
     message = message.message;
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
+      let obj = isMentioned;
+      obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
       obj[0] = message;
       obj[1] = currentUser.id;
       if (obj.isRawMessageMentioned(obj)) {
@@ -576,20 +585,20 @@ obj = {
           obj[0] = items;
           ({ addedMessages, deletedMessages } = obj);
           if (null != addedMessages) {
-            const item = addedMessages.forEach((item, index) => {
-              if (null == dependencyMap[item.getChannelId(item)]) {
-                dependencyMap[item.getChannelId()] = 0;
+            const item = addedMessages.forEach((getChannelId) => {
+              if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
+                dependencyMap[getChannelId.getChannelId()] = 0;
               }
-              const channelId = item.getChannelId();
+              const channelId = getChannelId.getChannelId();
               dependencyMap[channelId] = dependencyMap[channelId] + 1;
             });
           }
           if (null != deletedMessages) {
-            const item1 = deletedMessages.forEach((item, index) => {
-              if (null != dependencyMap[item.getChannelId(item)]) {
+            const item1 = deletedMessages.forEach((getChannelId) => {
+              if (null != dependencyMap[getChannelId.getChannelId(getChannelId)]) {
                 const _Math = Math;
-                const channelId = item.getChannelId();
-                dependencyMap[channelId] = Math.max(0, dependencyMap[item.getChannelId(item)] - 1);
+                const channelId = getChannelId.getChannelId();
+                dependencyMap[channelId] = Math.max(0, dependencyMap[getChannelId.getChannelId(getChannelId)] - 1);
               }
             });
           }
@@ -627,7 +636,7 @@ obj = {
   }
 };
 const recentMentionsStore = new RecentMentionsStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("modules/inbox/RecentMentionsStore.tsx");
+let result = require("set").fileFinishedImporting("modules/inbox/RecentMentionsStore.tsx");
 
 export default recentMentionsStore;
 export { hasMentionNotificationEnabled };

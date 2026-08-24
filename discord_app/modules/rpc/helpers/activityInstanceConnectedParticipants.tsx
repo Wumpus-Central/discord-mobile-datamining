@@ -1,11 +1,11 @@
 // === Module 13834: activityInstanceConnectedParticipants ===
 
 // Module 13834 (activityInstanceConnectedParticipants)
-import participantFromServer from "participantFromServer" /* 1390 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
 
-const require = fn;
+const require = arg1;
 let obj = { [RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_SCOPE_CONFIG.RPC_AUTHENTICATED_SCOPE];
 obj = {
@@ -56,7 +56,7 @@ obj = {
     };
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
 
 export const activityInstanceConnectedParticipants = function activityInstanceConnectedParticipants() {
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();

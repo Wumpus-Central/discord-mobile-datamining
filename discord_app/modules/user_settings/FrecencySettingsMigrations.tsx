@@ -1,7 +1,7 @@
 // === Module 13831: readFavoriteGIFs ===
 
 // Module 13831 (readFavoriteGIFs)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage4 from "Storage" /* 595 */;
@@ -45,22 +45,22 @@ function readFavoriteGIFs(arg0) {
   if (null != state) {
     if (0 !== state.favorites.length) {
       const favorites = state.favorites;
-      const mapped = favorites.map((item, index) => {
+      const mapped = favorites.map((format) => {
         const FavoriteGIF = v1(state[3]).FavoriteGIF;
         let obj = FavoriteGIF.create();
-        const format = item.format;
+        format = format.format;
         if (constants.IMAGE === format) {
-          let NONE = v1(state[3]).GIFType.IMAGE;
+          let NONE = tmp(tmp2[3]).GIFType.IMAGE;
         } else if (tmp4.VIDEO === format) {
-          NONE = v1(state[3]).GIFType.VIDEO;
+          NONE = tmp(tmp2[3]).GIFType.VIDEO;
         } else {
-          const format2 = item.format;
-          NONE = v1(state[3]).GIFType.NONE;
+          const format2 = format.format;
+          NONE = tmp(tmp2[3]).GIFType.NONE;
         }
         obj.format = NONE;
-        ({ src: tmp3.src, width: tmp3.width, height: tmp3.height } = item);
-        obj.order = state.favorites.length - index + v1;
-        obj = { url: item.url, favorite: obj };
+        ({ src: tmp3.src, width: tmp3.width, height: tmp3.height } = format);
+        obj.order = state.favorites.length - arg1 + v1;
+        obj = { url: format.url, favorite: obj };
         return obj;
       });
     }
@@ -135,17 +135,18 @@ let items = [
         if (state.favorites.length > 0) {
           const FavoriteStickers = create.FavoriteStickers;
           favoriteStickers.favoriteStickers = FavoriteStickers.create();
-          let tmpResult = applyDefault;
+          let tmpResult = tmp(12);
           favoriteStickers.favoriteStickers.stickerIds = tmpResult.uniq(state.favorites).slice(0, closure_3);
           flag = true;
           const uniqResult = tmpResult.uniq(state.favorites);
         }
-        tmpResult = applyDefault;
+        tmpResult = tmp(12);
         if (tmpResult.size(state.usageHistory) > 0) {
           const StickerFrecency = create.StickerFrecency;
           favoriteStickers.stickerFrecency = StickerFrecency.create();
           favoriteStickers.stickerFrecency.stickers = b64ToProto.serializeUsageHistory(state.usageHistory, 100);
           flag = true;
+          const obj3 = b64ToProto;
         }
         return flag;
       }
@@ -178,17 +179,18 @@ let items = [
         if (tmp3) {
           const FavoriteEmojis = create.FavoriteEmojis;
           favoriteEmojis.favoriteEmojis = FavoriteEmojis.create();
-          let tmpResult = applyDefault;
+          let tmpResult = tmp(12);
           favoriteEmojis.favoriteEmojis.emojis = tmpResult.uniq(state.favorites).slice(0, closure_3);
           flag = true;
           const uniqResult = tmpResult.uniq(state.favorites);
         }
-        tmpResult = applyDefault;
+        tmpResult = tmp(12);
         if (tmpResult.size(state.usageHistory) > 0) {
           const EmojiFrecency = create.EmojiFrecency;
           favoriteEmojis.emojiFrecency = EmojiFrecency.create();
           favoriteEmojis.emojiFrecency.emojis = b64ToProto.serializeUsageHistory(state.usageHistory, 100);
           flag = true;
+          const obj3 = b64ToProto;
         }
         return flag;
       }
@@ -219,9 +221,9 @@ let items = [
       } else {
         const values = applyDefault(favoriteGifs.favoriteGifs.gifs).values();
         const obj = applyDefault(favoriteGifs.favoriteGifs.gifs);
-        const item = values.sortBy("order").forEach((item, index) => {
-          const sum = arr.length + 1 + index;
-          item.order = sum;
+        const item = values.sortBy("order").forEach((arg0, arg1) => {
+          const sum = arr.length + 1 + arg1;
+          arg0.order = sum;
           return sum;
         });
         const FavoriteGIFs4 = arr(1341).FavoriteGIFs;
@@ -234,16 +236,29 @@ let items = [
           let arr2 = url;
           let favorite = nextResult.favorite;
           let tmp9 = favorite;
+          let tmp10 = num;
           favorite.order = arr.length - num;
           num = num + 1;
           if (url in favoriteGifs.favoriteGifs.gifs) {
+            let tmp22 = url;
+            let tmp23 = favorite;
             favoriteGifs.favoriteGifs.gifs[arr2].order = tmp9.order;
           } else {
+            let tmp11 = arr;
+            let tmp12 = dependencyMap;
             let FavoriteGIF = arr(1341).FavoriteGIF;
+            let tmp13 = favorite;
+            let tmp14 = url;
             let sum = FavoriteGIF.toBinary(tmp9).length + arr2.length + 7;
             let tmp3 = sum;
+            let tmp16 = length;
+            let tmp17 = closure_4;
             if (length + sum <= closure_4) {
+              let tmp18 = length;
+              let tmp19 = tmp3;
               length = length + tmp3;
+              let tmp20 = url;
+              let tmp21 = favorite;
               favoriteGifs.favoriteGifs.gifs[arr2] = tmp9;
             }
           }
@@ -256,8 +271,10 @@ let items = [
             let num3 = 0;
             let keys = Object.keys();
             if (keys !== undefined) {
+              let tmp29 = num3;
               let tmp30 = keys[tmp3];
               while (tmp30 !== undefined) {
+                let tmp40 = tmp30;
                 let gifs = favoriteGifs.favoriteGifs.gifs;
                 delete tmp[tmp2];
                 num3 = num3 + 1;
@@ -266,8 +283,12 @@ let items = [
                 }
               }
             }
+            let tmp31 = arr;
+            let tmp32 = dependencyMap;
             let FavoriteGIFs3 = arr(1341).FavoriteGIFs;
             length3 = FavoriteGIFs3.toBinary(favoriteGifs.favoriteGifs).length;
+            let tmp33 = length3;
+            let tmp34 = closure_4;
           } while (length3 > closure_4);
         }
         return true;
@@ -291,9 +312,11 @@ let items = [
           applicationCommandFrecency.applicationCommandFrecency = ApplicationCommandFrecency.create();
           applicationCommandFrecency.applicationCommandFrecency.applicationCommands = b64ToProto.serializeUsageHistory(state.usageHistory, 500);
           flag = true;
+          const obj = b64ToProto;
         }
         return flag;
       }
+      const tmp = importDefault;
     },
     cleanup() {
       const Storage = Storage4.Storage;
@@ -316,12 +339,12 @@ let items = [
           arg0.favoriteSoundboardSounds = FavoriteSoundboardSounds.create();
           tmpResult = tmp(11);
           const keys = tmpResult.keys(state.favoriteSounds);
-          let item = keys.forEach((item, index) => {
-            item = new Set(state.favoriteSounds[item]).forEach((item, index) => {
+          let item = keys.forEach((arg0) => {
+            const item = new Set(state.favoriteSounds[arg0]).forEach((arg0) => {
               const favoriteSoundboardSounds = obj.favoriteSoundboardSounds;
               if (favoriteSoundboardSounds != null) {
                 const soundIds = favoriteSoundboardSounds.soundIds;
-                soundIds.push(item);
+                soundIds.push(arg0);
               }
             });
           });
@@ -344,6 +367,8 @@ let items = [
         return false;
       } else {
         for (const key10010 in value) {
+          let tmp8 = key10010;
+          let tmp9 = ID_REGEX;
           if (ID_REGEX.test(key10010)) {
             continue;
           } else {
@@ -380,11 +405,12 @@ let items = [
           const EmojiFrecency2 = create.EmojiFrecency;
           EmojiFrecency2.mergePartial(obj, emojiFrecency.emojiFrecency);
           if (null != emojiFrecency.emojiReactionFrecency) {
-            const EmojiFrecency3 = create.EmojiFrecency;
+            const EmojiFrecency3 = tmp3(1341).EmojiFrecency;
             EmojiFrecency3.mergePartial(obj, emojiFrecency.emojiReactionFrecency);
           }
           emojiFrecency.emojiReactionFrecency = obj;
           flag = true;
+          tmp3 = require;
         }
         return flag;
       }
@@ -405,6 +431,7 @@ let items = [
             let flag = flag3;
             flag2 = flag3;
             while (keys[tmp] !== undefined) {
+              let tmp8 = tmp2;
               let tmp9 = favoriteGifs.favoriteGifs.gifs[tmp2];
               flag3 = flag;
               if (null == tmp9) {
@@ -416,13 +443,15 @@ let items = [
                   tmp9.src = "https:" + tmp9.src;
                   flag = true;
                 }
+                let tmp3 = require;
+                let tmp4 = dependencyMap;
                 let isMatch = tmp9.format !== create.GIFType.IMAGE;
                 if (isMatch) {
                   let obj = /\.(webp|avif|gif)(\?|$)/i;
                   isMatch = obj.test(tmp9.src);
                 }
                 if (isMatch) {
-                  tmp9.format = create.GIFType.IMAGE;
+                  tmp9.format = tmp3(1341).GIFType.IMAGE;
                   flag = true;
                 }
                 flag3 = flag;
@@ -441,6 +470,6 @@ let items = [
     }
   }
 ];
-const result = obj132.fileFinishedImporting("modules/user_settings/FrecencySettingsMigrations.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/FrecencySettingsMigrations.tsx");
 
 export default items;

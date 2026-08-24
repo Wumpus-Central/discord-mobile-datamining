@@ -1,10 +1,10 @@
 // === Module 6922: DomainMigrationEventType ===
 
 // Module 6922 (DomainMigrationEventType)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 let obj = { MIGRATION_SOURCE_DOMAIN: 0, [0]: "MIGRATION_SOURCE_DOMAIN", MIGRATION_DESTINATION_DOMAIN: 1, [1]: "MIGRATION_DESTINATION_DOMAIN" };
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx");
 
 export const DomainMigrationEventType = { SKIP_MIGRATION: 0, [0]: "SKIP_MIGRATION", SEND_DATA: 1, [1]: "SEND_DATA", DATA_MIGRATED: 2, [2]: "DATA_MIGRATED", DATA_MIGRATED_CONFIRMED: 3, [3]: "DATA_MIGRATED_CONFIRMED" };
 export const DomainMigrationMessageFrom = obj;

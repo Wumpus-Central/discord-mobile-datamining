@@ -1,8 +1,8 @@
 // === Module 7759: ScopeClass ===
 
 // Module 7759 (ScopeClass)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const ScopeClass = require;
@@ -34,7 +34,7 @@ let items = [
     value: function clone() {
       const self = this;
       let obj = Object.create(ScopeClass.prototype);
-      _classCallCheck(obj, ScopeClass);
+      callback2(obj, ScopeClass);
       obj._notifyingListeners = false;
       obj._scopeListeners = [];
       obj._eventProcessors = [];
@@ -79,8 +79,8 @@ let items = [
       const merged4 = Object.assign(self._propagationContext);
       obj._propagationContext = {};
       ({ _client: tmp._client, _lastEventId: tmp._lastEventId } = self);
-      ScopeClass(7760);
-      const tmp3Result = ScopeClass(7760);
+      let tmp3Result = tmp3(7760);
+      tmp3Result = tmp3(7760);
       tmp3Result._setSpanForScope(obj, tmp3Result._getSpanForScope(self));
       return obj;
     }
@@ -263,12 +263,12 @@ let items = [
   },
   {
     key: "update",
-    value: function update(requestSession) {
+    value: function update(fn) {
       const self = this;
-      if (requestSession) {
-        let obj = requestSession;
-        if (typeof requestSession === "function") {
-          obj = requestSession(self);
+      if (fn) {
+        let obj = fn;
+        if (typeof fn === "function") {
+          obj = fn(self);
         }
         if (obj instanceof closure_4) {
           const items = [obj.getScopeData(), obj.getRequestSession()];
@@ -276,13 +276,13 @@ let items = [
         } else {
           obj1 = ScopeClass(7745);
           if (obj1.isPlainObject(obj)) {
-            const items1 = [requestSession, requestSession.requestSession];
+            const items1 = [fn, fn.requestSession];
             items2 = items1;
           } else {
             items2 = [];
           }
         }
-        [obj3, tmp6] = _slicedToArray(items2, 2);
+        [obj3, tmp6] = callback(items2, 2);
         if (!obj) {
           obj = {};
         }
@@ -513,12 +513,13 @@ let items = [
   {
     key: "_notifyScopeListeners",
     value: function _notifyScopeListeners() {
-      const self = this;
+      let self = this;
+      self = this;
       if (!this._notifyingListeners) {
         self._notifyingListeners = true;
         const _scopeListeners = self._scopeListeners;
-        const item = _scopeListeners.forEach((item, index) => {
-          item(self);
+        const item = _scopeListeners.forEach((arg0) => {
+          arg0(self);
         });
         self._notifyingListeners = false;
       }

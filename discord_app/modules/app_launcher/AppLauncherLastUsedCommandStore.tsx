@@ -2,10 +2,10 @@
 
 // Module 11297 (initialize)
 import initializeDefault from "initialize" /* 589 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-let closure_0 = 10 * obj132Default.Millis.MINUTE;
+let closure_0 = 10 * setDefault.Millis.MINUTE;
 let closure_1 = { lastUsedCommandId: null, lastUsedTimeMs: null };
 const PersistedStore = initializeDefault.PersistedStore;
 class AppLauncherLastUsedCommandStore extends PersistedStore {
@@ -23,12 +23,12 @@ prototype["getLastUsedCommandId"] = function getLastUsedCommandId() {
   let lastUsedCommandId = null;
   if (null != lastUsedTimeMs.lastUsedTimeMs) {
     lastUsedCommandId = null;
-    if (null != lastUsedTimeMs.lastUsedCommandId) {
-      if (tmp > lastUsedTimeMs.lastUsedTimeMs + closure_0) {
-        lastUsedTimeMs.lastUsedCommandId = null;
-        lastUsedTimeMs.lastUsedTimeMs = null;
+    if (null != tmp2.lastUsedCommandId) {
+      if (tmp > tmp2.lastUsedTimeMs + closure_0) {
+        tmp2.lastUsedCommandId = null;
+        tmp2.lastUsedTimeMs = null;
       }
-      lastUsedCommandId = lastUsedTimeMs.lastUsedCommandId;
+      lastUsedCommandId = tmp2.lastUsedCommandId;
     }
   }
   return lastUsedCommandId;
@@ -41,6 +41,6 @@ const appLauncherLastUsedCommandStore = new AppLauncherLastUsedCommandStore(disp
     closure_1.lastUsedTimeMs = Date.now();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/AppLauncherLastUsedCommandStore.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherLastUsedCommandStore.tsx");
 
 export default appLauncherLastUsedCommandStore;

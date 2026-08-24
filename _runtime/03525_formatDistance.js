@@ -25,12 +25,14 @@ export default function formatDistance(arg0, arg1, addSuffix) {
           if ("1" !== str.substr(-2, 1)) {
             const _String3 = String;
             let replaced = one.dual.replace("{{count}}", String(arg1));
+            const str5 = one.dual;
           }
           str = String(arg1);
         }
       }
       const _String2 = String;
       replaced = one.other.replace("{{count}}", String(arg1));
+      const str3 = one.other;
     }
     if (null == addSuffix) {
       const standalone = one.one.standalone;

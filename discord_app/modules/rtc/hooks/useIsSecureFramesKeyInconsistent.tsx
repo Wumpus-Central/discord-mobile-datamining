@@ -1,12 +1,12 @@
 // === Module 9718: useIsSecureFramesKeyInconsistent ===
 
 // Module 9718 (useIsSecureFramesKeyInconsistent)
-import noop from "noop" /* 19 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import initialize from "initialize" /* 4558 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "createRTCConnection" /* 4539 */;
+import closure_4 from "initialize" /* 4558 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx");
 
 export const useIsSecureFramesKeyInconsistent = function useIsSecureFramesKeyInconsistent(userId) {
   userId = userId.userId;
@@ -18,10 +18,12 @@ export const useIsSecureFramesKeyInconsistent = function useIsSecureFramesKeyInc
 };
 export const useAlertIfSecureFramesKeyInconsistent = function useAlertIfSecureFramesKeyInconsistent(channelId) {
   channelId = channelId.channelId;
-  const userId = channelId.userId;
+  let userId = channelId;
+  userId = channelId.userId;
   const nickname = channelId.nickname;
   const onAlertOpen = channelId.onAlertOpen;
   let stateFromStores;
+  closure_5 = undefined;
   let items = [onAlertOpen, stateFromStores];
   stateFromStores = userId(userId[3]).useStateFromStores(items, () => {
     const items = [onAlertOpen, stateFromStores];
@@ -33,13 +35,13 @@ export const useAlertIfSecureFramesKeyInconsistent = function useAlertIfSecureFr
     if (stateFromStores) {
       if (null == ref.current) {
         const _setTimeout = setTimeout;
-        ref.current = setTimeout(() => {
+        tmp.current = setTimeout(() => {
           callback();
-          current(userId[4]);
-          const obj = { userId: closure_1, channelId: current, nickname: closure_2 };
+          let obj = current(closure_1_1[4]);
+          obj = { userId: closure_1, channelId: current, nickname: closure_2 };
           const result = obj.showSecureFramesKeyInconsistentAlert(obj);
         }, 1000);
-        let tmp3 = ref;
+        let tmp3 = tmp;
       }
       const current = tmp3.current;
       return () => {

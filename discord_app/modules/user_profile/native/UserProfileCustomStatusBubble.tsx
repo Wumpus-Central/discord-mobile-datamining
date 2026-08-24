@@ -1,21 +1,21 @@
 // === Module 9286: EmojiImage ===
 
 // Module 9286 (EmojiImage)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import Text from "Text" /* 4734 */;
 import preloadDefault from "preload" /* 5449 */;
 import EmojiDefault from "Emoji" /* 6930 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function EmojiImage(id) {
   ({ size, animated } = id);
   if (animated === undefined) {
@@ -23,15 +23,17 @@ function EmojiImage(id) {
   }
   const AnimateEmoji = explicitContentFromProto.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  const items = [{ height: size, width: size }, id.style];
+  let obj = { style: items, source: null, resizeMode: "contain" };
+  items = [{ height: size, width: size }, id.style];
+  const tmp2 = closure_8;
   const tmp3 = preloadDefault;
-  let obj = { id: id.emojiId, animated: null, size: null };
+  obj = { id: id.emojiId, animated: null, size: null };
   const obj2 = getAvatarURLDefault;
   obj = { uri: obj2.getEmojiURL(obj) };
   obj[1] = Boolean(animated) && setting;
   obj[2] = EMOJI_URL_BASE_SIZE;
   obj[1] = obj;
-  return callback(tmp3, obj);
+  return tmp2(tmp3, obj);
 }
 function TextStatusContent(arg0) {
   ({ emoji, lineHeight, isPlaceholderText } = arg0);
@@ -69,7 +71,7 @@ function TextStatusContent(arg0) {
       obj4[0] = obj5;
       items[1] = callback(closure_6, obj4);
       obj[0] = items;
-      let tmp7Result = callback2(closure_9, obj);
+      let tmp7Result = tmp7(closure_9, obj);
     } else {
       let name;
       if (emoji != null) {
@@ -85,14 +87,14 @@ function TextStatusContent(arg0) {
         obj7[0] = obj8;
         items1[1] = callback(closure_6, obj7);
         obj6[0] = items1;
-        tmp7Result = callback2(closure_9, obj6);
+        tmp7Result = tmp7(closure_9, obj6);
       }
     }
     const items2 = [tmp7Result, text];
     obj[5] = items2;
-    return callback2(Text.Text, obj);
+    return closure_10(Text.Text, obj);
   } else {
-    obj1 = obj132;
+    obj1 = set;
     obj1.isAndroid() ? { fontFamily: "ggsans-NormalItalic, NotoSans-NormalItalic" } : { fontStyle: "italic" };
   }
 }
@@ -106,7 +108,8 @@ function EmojiOnlyStatusContent(arg0) {
   }
   let emojiURL;
   if (null != id) {
-    let obj = { id: null, animated: null, size: null };
+    let obj = getAvatarURLDefault;
+    obj = { id: null, animated: null, size: null };
     obj[0] = emoji.id;
     let animated;
     if (emoji != null) {
@@ -121,6 +124,7 @@ function EmojiOnlyStatusContent(arg0) {
   obj1 = { textEmojiStyle: { fontSize: size }, fastImageStyle: { width: size, height: size }, src: emojiURL, name: null };
   let str;
   const tmp = callback2();
+  const tmp12 = closure_6;
   if (emoji != null) {
     str = emoji.name;
   }
@@ -128,8 +132,8 @@ function EmojiOnlyStatusContent(arg0) {
     str = "";
   }
   obj1[3] = str;
-  obj[1] = callback(EmojiDefault, obj1);
-  return callback(closure_6, obj);
+  obj[1] = closure_8(EmojiDefault, obj1);
+  return closure_8(tmp12, obj);
 }
 let c4 = importAllResult;
 ({ PixelRatio: c5, View: closure_6 } = get_ActivityIndicator);
@@ -139,10 +143,10 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   const colors = ThemesDefault.colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.CUSTOM_STATUS_BUBBLE_BG;
-    let tmp4 = importDefault;
+    let tmp4 = tmp;
   } else {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp4 = importDefault;
+    tmp4 = tmp;
   }
   obj = { backgroundColor: BACKGROUND_SURFACE_HIGH, borderColor: null, borderWidth: 1 };
   const colors2 = tmp4(712).colors;
@@ -165,7 +169,7 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 let closure_12 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-let closure_13 = { [fn(7186).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+let closure_13 = { [arg1(7186).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 let closure_16 = createCacheKey.createStyles(() => ({ container: { alignItems: "center" } }));
 const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   ({ customStatusActivity, themeType, editEnabled } = showFullStatus);
@@ -285,7 +289,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   }
   obj1 = { text: null };
   let items = [name, str4];
-  const found = items.filter((item, index) => null != item);
+  const found = items.filter((arg0) => null != arg0);
   obj1[0] = found.join(" ");
   const items1 = [style, ];
   let tmp25;
@@ -334,10 +338,10 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   }
   function handlePressAddOrEditStatus() {
     trackUserProfileAction({ action: "PRESS_EDIT_CUSTOM_STATUS" });
-    let obj = importDefault(textVariant[17]);
+    let obj = closure_1_1(textVariant[17]);
     obj.hideActionSheet();
     obj = { analyticsLocations: null, prompt: null };
-    const items = [importDefault(textVariant[19]).USER_PROFILE_CUSTOM_STATUS_BUBBLE];
+    const items = [closure_1_1(textVariant[19]).USER_PROFILE_CUSTOM_STATUS_BUBBLE];
     obj[0] = items;
     obj[1] = closure_1;
     const result = callback(textVariant[18]).openEditCustomStatusModal(obj);
@@ -418,12 +422,14 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
         }
         obj[4] = rounded;
         obj[5] = scaledTextLineHeight;
-        let tmp7Result = str4(TextStatusContent, obj);
+        let tmp7Result = str4(closure_1_15, obj);
+        const tmp7 = str4;
+        const tmp8 = closure_1_15;
       } else if (closure_6) {
         obj = { emoji: null, size: null };
         obj[0] = previewEmoji;
         obj[1] = emojiOnlyEmojiSize;
-        tmp7Result = str4(EmojiOnlyStatusContent, obj);
+        tmp7Result = str4(closure_1_17, obj);
       }
       return tmp7Result;
     }
@@ -472,6 +478,6 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   obj2[1] = items3;
   return closure_10(closure_6, obj2);
 });
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");
 
 export default forwardRefResult;

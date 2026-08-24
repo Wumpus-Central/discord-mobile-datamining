@@ -6,12 +6,12 @@ import start from "start" /* 4259 */;
 import _modDef4975 from "module_4975" /* 4975 */;
 import initializeDefault from "initialize" /* 5038 */;
 import trackInviteDefault from "trackInvite" /* 7427 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
-import getVoiceStatesForGuild from "getVoiceStatesForGuild" /* 4545 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "updateVoiceState" /* 4542 */;
+import closure_6 from "getVoiceStatesForGuild" /* 4545 */;
 
-require = fn;
+require = arg1;
 function disconnect() {
   currentClientVoiceChannelId = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
   let flag = false;
@@ -33,14 +33,15 @@ function disconnect() {
     flag = tmp4;
   }
   if (flag) {
-    const currentClientVoiceChannelId1 = obj.getCurrentClientVoiceChannelId(null);
+    const currentClientVoiceChannelId1 = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
     if (null != currentClientVoiceChannelId1) {
       const intl = getSystemLocale.intl;
       trackInviteDefault.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }));
+      const obj3 = trackInviteDefault;
       const voiceChannel = _modDef4975.selectVoiceChannel(null);
+      const obj4 = _modDef4975;
     }
   }
-  obj = currentClientVoiceChannelId;
 }
 let c7 = 180000;
 initializeDefault;
@@ -75,7 +76,7 @@ let prototype = function CallIdleManager() {
     }
     if (flag) {
       const idleTimeout = applyArgumentsResult.idleTimeout;
-      idleTimeout.start(closure_1_7, disconnect, true);
+      idleTimeout.start(closure_1_7, closure_1_8, true);
     }
   };
   applyArgumentsResult.handleVoiceStateUpdates = function handleVoiceStateUpdates() {
@@ -100,7 +101,7 @@ let prototype = function CallIdleManager() {
     }
     const idleTimeout = applyArgumentsResult.idleTimeout;
     if (flag) {
-      idleTimeout.start(closure_1_7, disconnect, false);
+      idleTimeout.start(closure_1_7, closure_1_8, false);
     } else {
       idleTimeout.stop();
     }
@@ -111,6 +112,6 @@ let prototype = function CallIdleManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/voice_calls/CallIdleManager.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_calls/CallIdleManager.tsx");
 
 export default prototype;

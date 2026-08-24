@@ -4,19 +4,19 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14001 */;
 import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14066 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import closure_6 from "_objectWithoutProperties" /* 109 */;
+import closure_7 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import zustandStore from "zustandStore" /* 9537 */;
-import handleFormOpen from "handleFormOpen" /* 8370 */;
+import closure_10 from "zustandStore" /* 9537 */;
+import closure_11 from "handleFormOpen" /* 8370 */;
 import { ProfileCustomizationSubsection } from "MAX_FAVORITES" /* 685 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 let closure_3 = ["handleSubmit"];
 let closure_4 = ["guild", "handleSubmit"];
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14 } = ME);
@@ -63,9 +63,9 @@ const memoResult = importAllResult.memo(() => {
   }
   const field = callback.useField("subsection");
   _require = { autoFocusElement };
-  const mapped = items.map((item, index) => {
-    ({ id, renderPage } = item);
-    return { label: item.renderLabel(), id, page: renderPage(closure_0) };
+  const mapped = items.map((renderLabel) => {
+    ({ id, renderPage } = renderLabel);
+    return { label: renderLabel.renderLabel(), id, page: renderPage(closure_0) };
   });
   let tmp2Result = tmp2(tmp3[18]);
   obj = { items: mapped, pageWidth: tmp7, defaultIndex: null, onPageChange: null, onPageChangeStart: null };
@@ -83,7 +83,7 @@ const memoResult = importAllResult.memo(() => {
   };
   obj[4] = function onPageChangeStart(arg0, arg1) {
     const obj = { hasEdits: stateFromStores, resetPending: callback(nativeStackNavigation[20]).resetAllPending, onHasEdits: callback(nativeStackNavigation[21]).dismissKeyboard, onConfirm: arg1 };
-    return importDefault(nativeStackNavigation[19])(obj);
+    return closure_1_1(nativeStackNavigation[19])(obj);
   };
   const segmentedControlState = tmp2Result.useSegmentedControlState(obj);
   const activeIndex = segmentedControlState.activeIndex;
@@ -105,7 +105,7 @@ const memoResult = importAllResult.memo(() => {
   closure_9 = tmp20;
   const items1 = [field, handleSubmit, handleSubmit2];
   callback = obj1.useCallback(() => {
-    if (field === ProfileCustomizationSubsection.GUILD) {
+    if (field === closure_1_12.GUILD) {
       let tmp2 = handleSubmit2();
     } else {
       tmp2 = handleSubmit();
@@ -114,8 +114,8 @@ const memoResult = importAllResult.memo(() => {
   }, items1);
   const items2 = [first.subSection];
   const effect = obj1.useEffect(() => {
-    importDefault(nativeStackNavigation[25]);
-    const obj = { settings_type: "user", subsection: first.subSection, destination_pane: closure_1_14.SETTINGS_CUSTOMIZE_PROFILE };
+    let obj = closure_1_1(nativeStackNavigation[25]);
+    obj = { settings_type: "user", subsection: first.subSection, destination_pane: closure_1_14.SETTINGS_CUSTOMIZE_PROFILE };
     obj.trackWithMetadata(closure_1_13.SETTINGS_PANE_VIEWED, obj);
   }, items2);
   const items3 = [guild];
@@ -131,7 +131,75 @@ const memoResult = importAllResult.memo(() => {
   }, []);
   const items4 = [token, nativeStackNavigation, stateFromStores, tmp20, callback];
   const layoutEffect = obj1.useLayoutEffect(() => {
-    let obj = { backgroundColor: closure_0 };
+    obj = {
+      contentStyle: obj,
+      headerShadowVisible: false,
+      headerRight: closure_9 ? (() => callback2(callback(table[27]).HeaderSubmittingIndicator, {})) : ((arg0) => {
+        let obj = {};
+        const merged = Object.assign(arg0);
+        const intl = closure_1_0(closure_1_2[11]).intl;
+        obj.label = intl.string(closure_1_0(closure_1_2[11]).t["R3BPH+"]);
+        obj.disabled = !closure_8;
+        obj.onPress = closure_1_5(function*() {
+          if (navigation === 2) {
+            navigation = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: "HermesInternal" };
+            }
+          } else {
+            try {
+              navigation = 2;
+              if (0 === c1) {
+                if (arg0 === 1) {
+                  navigation = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  navigation = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  closure_0 = tmp4;
+                  c1 = 1;
+                  navigation = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_1_10();
+                  return obj1;
+                }
+              } else if (arg0 === 1) {
+                navigation = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                navigation = 3;
+                const obj2 = { value: null, done: true };
+                obj2[0] = arg1;
+                return obj2;
+              } else {
+                if (false !== arg1) {
+                  const delayedCall = new closure_1_0(navigation[29]).DelayedCall(closure_1_0(navigation[23]).RESET_DELAY_MS + 50, navigation.goBack);
+                  delayedCall.delay();
+                }
+                navigation = 3;
+                return { value: "HermesInternal", done: "HermesInternal" };
+              }
+            } catch (tmp14) {
+              navigation = tmp;
+              throw tmp14;
+            }
+          }
+        });
+        return closure_1_15(closure_1_0(closure_1_2[28]).HeaderTextButton, obj);
+      })
+    };
+    obj = { backgroundColor: closure_0 };
     nativeStackNavigation.setOptions(obj);
   }, items4);
   const callback1 = obj1.useCallback((nativeEvent) => {
@@ -148,10 +216,10 @@ const memoResult = importAllResult.memo(() => {
       resetPending: callback(nativeStackNavigation[20]).resetAllPending,
       onHasEdits: callback(nativeStackNavigation[21]).dismissKeyboard,
       onConfirm() {
-        return nativeStackNavigation.dispatch(action);
+        return closure_1_2.dispatch(action);
       }
     };
-    importDefault(nativeStackNavigation[19])(obj);
+    closure_1_1(nativeStackNavigation[19])(obj);
   });
   obj = { style: tmp.container, onLayout: callback1, children: null };
   obj1 = { style: tmp.controls, children: callback(tmp2(tmp3[31]).Tabs, { state: segmentedControlState }) };
@@ -159,6 +227,17 @@ const memoResult = importAllResult.memo(() => {
   obj[2] = items5;
   return callback2(closure_9, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx");
+let obj = {
+  renderLabel() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["2p07FR"]);
+  },
+  id: "edit-user-profile",
+  renderPage(autoFocusElement) {
+    return callback(UserSettingsEditUserProfileDefault, { autoFocusElement: autoFocusElement.autoFocusElement });
+  },
+  subSection: ProfileCustomizationSubsection.USER_PROFILE
+};
+const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx");
 
 export default memoResult;

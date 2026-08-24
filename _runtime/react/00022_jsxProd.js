@@ -17,6 +17,7 @@ function jsxProd(type, key) {
     if (keys !== undefined) {
       tmp3 = obj;
       while (keys[tmp] !== undefined) {
+        let tmp8 = tmp6;
         if ("key" === tmp6) {
           continue;
         } else {

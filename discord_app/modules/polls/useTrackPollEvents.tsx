@@ -1,11 +1,11 @@
 // === Module 11382: useTrackPollCreationEvents ===
 
 // Module 11382 (useTrackPollCreationEvents)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
 
 export const useTrackPollCreationEvents = function useTrackPollCreationEvents(answers, allowMultiSelect) {
   closure_0 = answers;
@@ -16,8 +16,8 @@ export const useTrackPollCreationEvents = function useTrackPollCreationEvents(an
       answers = 0;
       c1 = 0;
       c2 = 0;
-      const item = answers.forEach((item, index) => {
-        const image = item.image;
+      const item = answers.forEach((image) => {
+        image = image.image;
         if (null != image) {
           if (null != image.emoji) {
             closure_1 = closure_1 + 1;
@@ -28,9 +28,9 @@ export const useTrackPollCreationEvents = function useTrackPollCreationEvents(an
           }
         }
       });
-      allowMultiSelect(dependencyMap[2]);
-      const obj = { answers_count: answers.length, attachments_count: answers, emojis_count: c1, stickers_count: c2, allow_multiselect: c1, layout_type: answers(dependencyMap[3]).PollLayoutTypes.DEFAULT };
-      obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, obj);
+      let obj = allowMultiSelect(closure_1_2[2]);
+      obj = { answers_count: answers.length, attachments_count: answers, emojis_count: c1, stickers_count: c2, allow_multiselect: c1, layout_type: answers(closure_1_2[3]).PollLayoutTypes.DEFAULT };
+      obj.trackWithMetadata(closure_1_4.POLL_CREATION_CANCELLED, obj);
     }, items)
   };
 };

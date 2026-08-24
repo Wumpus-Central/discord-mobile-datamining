@@ -2,15 +2,16 @@
 
 // Module 14163 (BlockedUserRow)
 import noopAll from "noop" /* 19 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
   analyticsLocations = analyticsLocations(7139)().analyticsLocations;
-  let obj = { user: userRecord, guildId: "Array", size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32 };
+  let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
+  obj = { user: userRecord, guildId: "Array", size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32 };
   obj[0] = jsx(userRecord(1297).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32 });
   let tmp4 = null != userRecord;
   if (tmp4) {
@@ -41,24 +42,23 @@ function BlockedUserRow(userRecord) {
   obj[6] = items;
   obj[7] = function onAccessibilityAction(nativeEvent) {
     if ("unblock" === nativeEvent.nativeEvent.actionName) {
-      analyticsLocations(dependencyMap[3]).unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
-      const obj = analyticsLocations(dependencyMap[3]);
+      analyticsLocations(closure_1_2[3]).unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
     }
   };
   obj[8] = function onPress() {
-    return analyticsLocations(dependencyMap[8])({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
+    return analyticsLocations(closure_1_2[8])({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
   };
   obj1 = { size: "sm", variant: "secondary", text: null, onPress: null };
   const intl2 = tmp3(1236).intl;
   obj1[2] = intl2.string(userRecord(1236).t["PR/xUz"]);
   obj1[3] = function onPress() {
-    analyticsLocations(dependencyMap[3]).unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
+    analyticsLocations(closure_1_2[3]).unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
   obj[9] = jsx(userRecord(4745).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
   return jsx(userRecord(6291).TableRow, { name: "unblock", label: null });
 }
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUserRowV2.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUserRowV2.tsx");
 
 export default function ConnectedBlockedUserRow(userId) {
   userId = userId.userId;

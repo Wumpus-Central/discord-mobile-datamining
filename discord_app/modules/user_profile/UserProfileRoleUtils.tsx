@@ -1,10 +1,10 @@
 // === Module 7184: sortRolesByVerification ===
 
 // Module 7184 (sortRolesByVerification)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import compareGuildRoles from "compareGuildRoles" /* 1987 */;
 
-const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
 
 export const sortRolesByVerification = function sortRolesByVerification(tags, tags2) {
   tags = tags.tags;
@@ -20,6 +20,7 @@ export const sortRolesByVerification = function sortRolesByVerification(tags, ta
   if (undefined === guild_connections) {
     if (tmp3) {
       let num2 = compareGuildRoles.compareGuildRoles(tags, tags2);
+      const obj = compareGuildRoles;
     } else {
       num2 = -1;
     }

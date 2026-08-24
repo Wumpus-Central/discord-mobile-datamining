@@ -1,9 +1,9 @@
 // === Module 15920: getAdjustedPlaceholderCount ===
 
 // Module 15920 (getAdjustedPlaceholderCount)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");
+const result = set.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");
 
 export const getAdjustedPlaceholderCount = function getAdjustedPlaceholderCount(numResults) {
   ({ numColumns, placeholderCount } = numResults);

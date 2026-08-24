@@ -1,8 +1,8 @@
 // === Module 1594: usePreventRemove ===
 
 // Module 1594 (usePreventRemove)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
 

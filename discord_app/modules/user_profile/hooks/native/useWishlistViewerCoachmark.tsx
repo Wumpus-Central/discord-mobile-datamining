@@ -1,11 +1,11 @@
 // === Module 12302: useWishlistViewerCoachmark ===
 
 // Module 12302 (useWishlistViewerCoachmark)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx");
 
 export const useWishlistViewerCoachmark = function useWishlistViewerCoachmark(isCurrentUser) {
   isCurrentUser = isCurrentUser.isCurrentUser;
@@ -20,8 +20,8 @@ export const useWishlistViewerCoachmark = function useWishlistViewerCoachmark(is
     }
     items = [];
   }, items);
-  isCurrentUser(shouldShowWishlistTab[3]);
-  const obj = { isVisible: tmp3 === isCurrentUser(shouldShowWishlistTab[2]).DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK, markAsDismissed: tmp4 };
+  let obj = isCurrentUser(shouldShowWishlistTab[3]);
+  obj = { isVisible: tmp3 === isCurrentUser(shouldShowWishlistTab[2]).DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK, markAsDismissed: tmp4 };
   [tmp3, tmp4] = callback(obj.useSelectedDismissibleContent(memo), 2);
   return obj;
 };

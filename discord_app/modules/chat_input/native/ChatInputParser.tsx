@@ -1,12 +1,12 @@
 // === Module 11164: addRule ===
 
 // Module 11164 (addRule)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const processColor = get_ActivityIndicator.processColor;
-const result = obj132.fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");
+const result = set.fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");
 class ChatInputParser {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -24,38 +24,40 @@ prototype["removeRule"] = function removeRule(arg0) {
 prototype["parse"] = function parse(arg0, arg1) {
   importDefault = arg0;
   dependencyMap = arg1;
-  return applyDefault.valuesIn(this.rules).reduce((acc, item, index) => {
-    closure_0 = item;
-    return acc.concat(item.matchFunction(closure_0, closure_1).map((item, index) => {
-      let obj = item;
-      if (typeof item.deleteNodeOnBackspace === "function") {
-        let deleteNodeOnBackspace = obj.deleteNodeOnBackspace(item);
+  let obj = applyDefault;
+  return applyDefault.valuesIn(this.rules).reduce((arr, matchFunction) => {
+    closure_0 = matchFunction;
+    return arr.concat(matchFunction.matchFunction(closure_0, closure_1).map((arg0) => {
+      let obj = matchFunction;
+      if (typeof matchFunction.deleteNodeOnBackspace === "function") {
+        let deleteNodeOnBackspace = obj.deleteNodeOnBackspace(arg0);
       } else {
         deleteNodeOnBackspace = obj.deleteNodeOnBackspace;
       }
       if (typeof obj.editDisabled === "function") {
-        let editDisabled = obj.editDisabled(item);
+        let editDisabled = obj.editDisabled(arg0);
       } else {
         editDisabled = obj.editDisabled;
       }
       obj = { type: obj.type, style: null, deleteNodeOnBackspace: null, editDisabled: null };
-      let style;
+      let style = obj.style;
+      style = undefined;
       if (style != null) {
-        style = style(item);
+        style = style(arg0);
       }
       obj[1] = style;
       obj[2] = deleteNodeOnBackspace;
       obj[3] = editDisabled;
-      const merged = Object.assign(item);
+      const merged = Object.assign(arg0);
       return obj;
     }));
   }, []);
 };
 
 export default ChatInputParser;
-export const convertToNativeStyle = (autocomplete) => {
-  ({ backgroundColor, borderRadius } = autocomplete);
-  const merged = Object.assign(autocomplete, Object.create(null));
+export const convertToNativeStyle = (color) => {
+  ({ backgroundColor, borderRadius } = color);
+  const merged = Object.assign(color, Object.create(null));
   let tmp2 = null;
   if (null != backgroundColor) {
     tmp2 = null;
@@ -66,7 +68,7 @@ export const convertToNativeStyle = (autocomplete) => {
       tmp2 = obj;
     }
   }
-  obj = { color: processColor(autocomplete.color), backgroundStyle: tmp2 };
+  obj = { color: processColor(color.color), backgroundStyle: tmp2 };
   const merged1 = Object.assign(merged);
   return obj;
 };

@@ -1,18 +1,19 @@
 // === Module 12675: id ===
 
 // Module 12675 (id)
-import getParticipants from "getParticipants" /* 4773 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import callConnect from "callConnect" /* 4496 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
+import closure_3 from "getParticipants" /* 4773 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "callConnect" /* 4496 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
 import ME from "ME" /* 676 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 
-const require = fn;
+const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: closure_8 } = ME);
+let obj = {};
 const merged = Object.assign({ initialized: false, callId: "Array" });
-let obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
-const result = require("obj132").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
+obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
+const result = require("set").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
 export default function _default() {
   let tmp = arg0;
@@ -29,6 +30,7 @@ export default function _default() {
     flag2 = false;
   }
   let id;
+  dependencyMap = undefined;
   let stateFromStores;
   id = id.getId();
   obj = _require(589);
@@ -38,22 +40,22 @@ export default function _default() {
     const call = closure_1_5.getCall(closure_0);
     if (null != call) {
       const ringing = call.ringing;
-      let found = ringing.filter((item, index) => item !== closure_1);
+      let found = ringing.filter((arg0) => arg0 !== closure_1);
     } else {
       found = [];
     }
-    let initialized = obj.initialized;
+    let initialized = closure_1_10.initialized;
     if (!initialized) {
       initialized = found.length > 0;
     }
-    obj.initialized = initialized;
+    closure_1_10.initialized = initialized;
     return found;
   }, items1);
   const participants = stateFromStores.getParticipants(tmp);
-  let found = participants.filter((item, index) => {
-    let tmp = item.type !== ParticipantTypes.ACTIVITY;
+  let found = participants.filter((type) => {
+    let tmp = type.type !== closure_1_9.ACTIVITY;
     if (tmp) {
-      tmp = item.user.id !== id;
+      tmp = type.user.id !== id;
     }
     return tmp;
   });
@@ -70,15 +72,15 @@ export default function _default() {
       channelId = channelId.channelId;
     }
     if (channelId === closure_0) {
-      obj.initialized = true;
+      closure_1_10.initialized = true;
       return closure_1_8.RTC_CONNECTED;
     } else {
       if (!tmp2) {
-        obj.initialized = false;
+        closure_1_10.initialized = false;
       }
-      obj.callId = stateFromStores;
+      closure_1_10.callId = stateFromStores;
       const state = closure_1_6.getState();
-      let initialized = obj.initialized;
+      let initialized = closure_1_10.initialized;
       if (!initialized) {
         let tmp10 = state !== closure_1_8.DISCONNECTED;
         if (tmp10) {
@@ -86,7 +88,7 @@ export default function _default() {
         }
         initialized = tmp10;
       }
-      obj.initialized = initialized;
+      closure_1_10.initialized = initialized;
       return state;
     }
   }, items4);

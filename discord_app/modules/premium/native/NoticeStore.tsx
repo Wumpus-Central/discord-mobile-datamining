@@ -5,11 +5,11 @@ import initializeDefault from "initialize" /* 589 */;
 import Storage4 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import tDefault from "t" /* 3975 */;
-import emitChanges from "emitChanges" /* 7421 */;
+import closure_3 from "emitChanges" /* 7421 */;
 import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 import { NoticeTypes } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function clearDismissUntil(arg0) {
   const Storage = Storage4.Storage;
   Storage.remove(`${closure_8[arg0]}-untilAtLeast`);
@@ -50,24 +50,38 @@ function updateNotice() {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
+    let tmp4 = NoticeTypes;
     if (nextResult === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING) {
+      let tmp9 = store;
+      let tmp10 = PremiumSubscriptionSKUs;
       items = [PremiumSubscriptionSKUs.TIER_2];
       if (store.getAlmostExpiringTrialOffersForReminder(items).length > 0) {
-        if (!isNoticeDismissed(NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING)) {
+        let tmp11 = isNoticeDismissed;
+        if (!isNoticeDismissed(tmp4.PREMIUM_TIER_2_TRIAL_ENDING)) {
+          let tmp12 = nextResult;
           c6 = tmp3;
+          let tmp13 = iter;
           iter.return();
           break;
         }
       }
-    } else if (tmp3 === NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING) {
-      let items1 = [PremiumSubscriptionSKUs.TIER_0];
-      if (store.getAlmostExpiringTrialOffersForReminder(items1).length > 0) {
-        if (!isNoticeDismissed(NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING)) {
-          c6 = tmp3;
-          iter.return();
+    } else {
+      let tmp5 = nextResult;
+      if (tmp3 === tmp4.PREMIUM_TIER_0_TRIAL_ENDING) {
+        let tmp14 = store;
+        let tmp15 = PremiumSubscriptionSKUs;
+        let items1 = [PremiumSubscriptionSKUs.TIER_0];
+        if (store.getAlmostExpiringTrialOffersForReminder(items1).length > 0) {
+          let tmp6 = isNoticeDismissed;
+          if (!isNoticeDismissed(tmp4.PREMIUM_TIER_0_TRIAL_ENDING)) {
+            let tmp7 = nextResult;
+            c6 = tmp3;
+            let tmp8 = iter;
+            iter.return();
+            break;
+          }
           break;
         }
-        break;
       }
     }
     continue;
@@ -102,12 +116,18 @@ const noticeStore = new NoticeStore(dispatcherDefault, {
       const iter = dependencyMap[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
+        let tmp4 = table2;
         let tmp5 = table2[nextResult];
         let tmp3 = nextResult;
         if (null != tmp5) {
+          let tmp7 = callback;
+          let tmp8 = table;
           let Storage = callback(table[3]).Storage;
+          let tmp9 = tmp5;
           let removeResult = Storage.remove(tmp6);
         }
+        let tmp11 = callback2;
+        let tmp12 = nextResult;
         let tmp13 = callback2(tmp3);
         continue;
       }
@@ -137,6 +157,6 @@ const noticeStore = new NoticeStore(dispatcherDefault, {
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/premium/native/NoticeStore.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/NoticeStore.tsx");
 
 export default noticeStore;

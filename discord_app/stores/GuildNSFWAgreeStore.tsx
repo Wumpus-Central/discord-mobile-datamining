@@ -6,7 +6,7 @@ import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
 
-require = fn;
+require = arg1;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";
 let closure_3 = {};
 const Store = initializeDefault.Store;
@@ -28,8 +28,10 @@ prototype["didAgree"] = function didAgree(arg0) {
     let tmp5 = !result;
     if (!result) {
       tmp5 = table[arg0] || false;
+      const tmp7 = table[arg0] || false;
     }
     tmp = tmp5;
+    const obj = shouldShowAgeGateForVoiceChannel;
   }
   return tmp;
 };
@@ -41,6 +43,6 @@ const guildNSFWAgreeStore = new GuildNSFWAgreeStore(dispatcherDefault, {
     const result = Storage.set(GuildNSFWAgreeStore, closure_3);
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/GuildNSFWAgreeStore.tsx");
+let result = require("set").fileFinishedImporting("stores/GuildNSFWAgreeStore.tsx");
 
 export default guildNSFWAgreeStore;

@@ -2,20 +2,20 @@
 
 // Module 16686 (onPostConnectionOpen)
 import failsDefault from "fails" /* 584 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 5038 */;
 import trackInviteDefault from "trackInvite" /* 7427 */;
 import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 7609 */;
-import dropChannelIfEmpty from "dropChannelIfEmpty" /* 4995 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import getCurrentTime from "getCurrentTime" /* 8290 */;
+import closure_3 from "dropChannelIfEmpty" /* 4995 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "getCurrentTime" /* 8290 */;
 import { MessageTypes } from "ME" /* 676 */;
 
-require = fn;
-let closure_8 = 10 * obj132Default.Millis.SECOND;
-let closure_9 = 5 * obj132Default.Millis.MINUTE;
+require = arg1;
+let closure_8 = 10 * setDefault.Millis.SECOND;
+let closure_9 = 5 * setDefault.Millis.MINUTE;
 initializeDefault;
 class GiftIntentReconcilingManager extends tmp2 {
   constructor() {
@@ -97,8 +97,8 @@ prototype["attemptReconcileFetch"] = function attemptReconcileFetch() {
   if (!tmp2) {
     self.isReconciling = true;
     const andReconcileGiftIntentDismissals = fetchAndReconcileGiftIntentDismissals.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
+    const obj = fetchAndReconcileGiftIntentDismissals;
   }
-  tmp2 = store.getLastKnownGiftIntentDismissedAtMs() >= serverDismissalTimestampMs || self.isReconciling;
 };
 prototype["onReconcileSuccess"] = function onReconcileSuccess(dismissals) {
   this.onReconcileSettled(true);
@@ -129,27 +129,45 @@ prototype["removeRemotelyDismissedGiftIntentCards"] = function removeRemotelyDis
     if (value == null) {
       num = 0;
     }
+    let tmp5 = dismissedAtMs;
     let result = lastReconciledDismissalAtMs2.set(targetId, Math.max(num, dismissedAtMs));
+    let tmp7 = value;
     if (null != tmp4) {
+      let tmp20 = dismissedAtMs;
+      let tmp21 = value;
       if (dismissedAtMs > tmp4) {
+        let tmp22 = dMFromUserId;
+        let tmp23 = targetId;
         dMFromUserId = dMFromUserId.getDMFromUserId(tmp2);
         let tmp25 = dMFromUserId;
         if (null != dMFromUserId) {
+          let tmp26 = messages;
+          let tmp27 = dMFromUserId;
           messages = messages.getMessages(tmp25);
+          let tmp29 = messages;
+          let tmp8 = messages;
           for (const item10031 of messages) {
+            let tmp9 = item10031;
+            let tmp10 = MessageTypes;
             let tmp11 = item10031.type === MessageTypes.GIFTING_PROMPT;
             if (tmp11) {
-              let giftingPrompt = item10031.giftingPrompt;
+              let tmp12 = item10031;
+              let giftingPrompt = tmp9.giftingPrompt;
               let recipientUserId;
               if (giftingPrompt != null) {
                 recipientUserId = giftingPrompt.recipientUserId;
               }
+              let tmp14 = targetId;
               tmp11 = recipientUserId === tmp2;
             }
             if (tmp11) {
+              let tmp15 = importDefault;
+              let tmp16 = dependencyMap;
               let obj = dispatcherDefault;
               obj = { type: "MESSAGE_DELETE", id: null, channelId: null };
-              obj[1] = item10031.id;
+              let tmp17 = item10031;
+              obj[1] = tmp9.id;
+              let tmp18 = dMFromUserId;
               obj[2] = tmp25;
               let dispatchResult = obj.dispatch(obj);
             }
@@ -188,7 +206,8 @@ prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSy
     this.heldGiftingPromptSystemMessage = true;
     let flag = false;
   } else {
-    const obj = { giftIntentType: null, recipientUserId: null, giftIntentSecondaryAction: null };
+    let obj = trackInviteDefault;
+    obj = { giftIntentType: null, recipientUserId: null, giftIntentSecondaryAction: null };
     obj[0] = FRIEND_ANNIVERSARY;
     obj[1] = closure_0;
     obj[2] = SEND_MESSAGE;
@@ -197,6 +216,6 @@ prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSy
   }
   return flag;
 };
-let result = require("obj132").fileFinishedImporting("modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx");
 
 export default GiftIntentReconcilingManager;

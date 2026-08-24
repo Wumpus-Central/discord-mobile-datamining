@@ -2,12 +2,12 @@
 
 // Module 15967 (getIncomingFriendRequestCount)
 import initialize from "initialize" /* 589 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import recountRelationshipTypes from "recountRelationshipTypes" /* 5406 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "recountRelationshipTypes" /* 5406 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
 
 export const getIncomingFriendRequestCount = function getIncomingFriendRequestCount(items) {
   [obj, obj2] = callback(items, 2);

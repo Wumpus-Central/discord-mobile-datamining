@@ -3,9 +3,9 @@
 // Module 1960 (fromDatabaseTransaction)
 import combineKey from "combineKey" /* 1961 */;
 import TableId from "TableId" /* 1962 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-require = fn;
+require = arg1;
 let TableTransaction;
 class TableTransaction {
   constructor(arg0, arg1, arg2) {
@@ -28,7 +28,7 @@ class TableTransaction {
           },
       trimChannel(key) {
             const transaction = obj.transaction;
-            obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(self[1]).combineKey(obj.prefix, key), limit: arg1 };
+            obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(closure_1_1[1]).combineKey(obj.prefix, key), limit: arg1 };
             transaction.add(obj);
           },
       trimChannelsIn(arg0, arg1) {
@@ -63,7 +63,7 @@ class TableTransaction {
           }
     };
     obj.prefix = global;
-    obj.tableId = fn;
+    obj.tableId = arg1;
     obj.transaction = importDefault;
     return obj;
   }
@@ -91,7 +91,7 @@ TableTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(p
     },
     trimChannel(key) {
       const transaction = obj.transaction;
-      obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(self[1]).combineKey(obj.prefix, key), limit: arg1 };
+      obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(closure_1_1[1]).combineKey(obj.prefix, key), limit: arg1 };
       transaction.add(obj);
     },
     trimChannelsIn(arg0, arg1) {
@@ -144,6 +144,7 @@ prototype["put"] = function put(key) {
     obj[0] = combineKey.combineKey(prefix, key.key);
     ({ data: obj2[1], generation: obj2[2] } = key);
     tmp3 = obj;
+    const obj3 = combineKey;
   }
   obj[2] = tmp3;
   obj[3] = Replace === TableId.ConflictOptions.Replace;
@@ -159,14 +160,14 @@ prototype["putAll"] = function putAll(arr) {
   prefix = this.prefix;
   let mapped = arr;
   if (0 !== prefix.length) {
-    mapped = arr.map((item, index) => {
-      let tmp2 = item;
+    mapped = arr.map((key) => {
+      let tmp2 = key;
       if (0 !== prefix.length) {
         const obj = { key: null, data: null, generation: null };
-        obj[0] = prefix(dependencyMap[1]).combineKey(tmp, item.key);
-        ({ data: obj[1], generation: obj[2] } = item);
+        obj[0] = prefix(closure_1_1[1]).combineKey(tmp, key.key);
+        ({ data: obj[1], generation: obj[2] } = key);
         tmp2 = obj;
-        const obj2 = prefix(dependencyMap[1]);
+        const obj2 = prefix(closure_1_1[1]);
       }
       return tmp2;
     });
@@ -208,7 +209,7 @@ prototype["deleteGeneration"] = function deleteGeneration(items) {
   const obj = { type: "kv.delete_generation", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items), generation: arg2, comparer: arg1 };
   transaction.add(obj);
 };
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Table.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Table.tsx");
 class Table {
   constructor(arg0, arg1, arg2, arg3) {
     obj = Object.create(new.target.prototype);
@@ -221,7 +222,7 @@ class Table {
           }
     };
     obj.prefix = global;
-    obj.tableId = fn;
+    obj.tableId = arg1;
     obj.database = importDefault;
     tmp2 = null;
     obj.defaultDebugTag = tmp2;
@@ -330,6 +331,7 @@ prototype2["put"] = function put(key) {
     obj[0] = combineKey.combineKey(prefix, key.key);
     ({ data: obj2[1], generation: obj2[2] } = key);
     tmp3 = obj;
+    const obj3 = combineKey;
   }
   obj[2] = tmp3;
   obj[3] = Replace === TableId.ConflictOptions.Replace;
@@ -345,14 +347,14 @@ prototype2["putAll"] = function putAll(arr) {
   prefix = this.prefix;
   let mapped = arr;
   if (0 !== prefix.length) {
-    mapped = arr.map((item, index) => {
-      let tmp2 = item;
+    mapped = arr.map((key) => {
+      let tmp2 = key;
       if (0 !== prefix.length) {
         const obj = { key: null, data: null, generation: null };
-        obj[0] = prefix(dependencyMap[1]).combineKey(tmp, item.key);
-        ({ data: obj[1], generation: obj[2] } = item);
+        obj[0] = prefix(closure_1_1[1]).combineKey(tmp, key.key);
+        ({ data: obj[1], generation: obj[2] } = key);
         tmp2 = obj;
-        const obj2 = prefix(dependencyMap[1]);
+        const obj2 = prefix(closure_1_1[1]);
       }
       return tmp2;
     });
@@ -399,10 +401,10 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
   const database = this.database;
   return database.transaction((transaction) => {
     ({ prefix, tableId } = self);
-    if (typeof TableTransaction !== "function") {
+    if (typeof closure_1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = Object.create(TableTransaction.prototype);
+    let obj = Object.create(closure_1_3.prototype);
     obj.messages = {
       trimOrphans(arg0) {
         if (1 === obj.prefix.length) {
@@ -420,7 +422,7 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
       },
       trimChannel(key) {
         const transaction = obj.transaction;
-        obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(self[1]).combineKey(obj.prefix, key), limit: arg1 };
+        obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(closure_1_1[1]).combineKey(obj.prefix, key), limit: arg1 };
         transaction.add(obj);
       },
       trimChannelsIn(arg0, arg1) {
@@ -483,7 +485,7 @@ prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
     },
     trimChannel(key) {
       const transaction = obj.transaction;
-      obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(self[1]).combineKey(obj.prefix, key), limit: arg1 };
+      obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(closure_1_1[1]).combineKey(obj.prefix, key), limit: arg1 };
       transaction.add(obj);
     },
     trimChannelsIn(arg0, arg1) {

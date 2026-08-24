@@ -1,11 +1,12 @@
 // === Module 9846: set ===
 
 // Module 9846 (set)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const obj = { ALL: new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]) };
-const set = new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]);
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/ConsoleHandoffType.tsx");
+const obj = { ALL: null };
+let set = new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]);
+obj[0] = set;
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ConsoleHandoffType.tsx");
 
 export const ConsoleHandoffType = { TRANSFER_EXISTING_CALL: "TRANSFER_EXISTING_CALL", CREATE_NEW_CALL: "CREATE_NEW_CALL" };
 export const ConsoleHandoffTypeSets = obj;

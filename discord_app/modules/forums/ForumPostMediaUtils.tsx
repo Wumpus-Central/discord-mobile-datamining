@@ -4,16 +4,15 @@
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import flattenComponents from "flattenComponents" /* 4805 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
-import noop from "noop" /* 19 */;
-import updateState from "updateState" /* 7271 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "updateState" /* 7271 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "reinjectEphemerals" /* 4994 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function isMediaAttachment(filename) {
   let flag = false;
   if (null != filename) {
@@ -29,6 +28,7 @@ function isMediaAttachment(filename) {
       tmp3 = width > 0;
     }
     flag = tmp3;
+    obj = urlMatchesFileExtension;
   }
   if (!flag) {
     let tmp4 = null != filename;
@@ -36,6 +36,7 @@ function isMediaAttachment(filename) {
       let isVideoFileResult = null != filename;
       if (isVideoFileResult) {
         isVideoFileResult = urlMatchesFileExtension.isVideoFile(filename.filename);
+        const obj2 = urlMatchesFileExtension;
       }
       if (isVideoFileResult) {
         isVideoFileResult = null != filename.proxy_url;
@@ -75,22 +76,22 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
     if (null != attachments) {
       if (null != attachments1) {
         const found = attachments1.filter(isMediaAttachment);
-        const mapped = found.map((item, index) => {
-          ({ proxy_url, flags, width, height } = item);
+        const mapped = found.map((flags) => {
+          ({ proxy_url, flags, width, height } = flags);
           if (null != width) {
             if (null != height) {
               const isVideoFileResult = callback(table[6]).isVideoFile(tmp3);
-              let hasFlagResult = null != item.flags;
+              let hasFlagResult = null != flags.flags;
               if (hasFlagResult) {
-                let tmp12Result = callback(table[8]);
-                hasFlagResult = tmp12Result.hasFlag(item.flags, constants.IS_THUMBNAIL);
+                let tmp12Result = tmp12(tmp13[8]);
+                hasFlagResult = tmp12Result.hasFlag(flags.flags, constants.IS_THUMBNAIL);
               }
               let str = proxy_url;
               if (proxy_url == null) {
                 str = tmp;
               }
               if (isVideoFileResult) {
-                str = callback2(table[9]).toURLSafe(proxy_url);
+                str = callback2(tmp13[9]).toURLSafe(proxy_url);
                 if (null == str) {
                   return null;
                 } else {
@@ -98,14 +99,14 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
                   searchParams.append("format", "webp");
                   str = str.toString();
                 }
-                const obj2 = callback2(table[9]);
+                const obj2 = callback2(tmp13[9]);
               }
               obj = { type: null, src: null, width: null, height: null, spoiler: null, flags: null, contentScanVersion: null, alt: null, isVideo: null, isThumbnail: null, attachmentId: null, mediaIndex: null, srcIsAnimated: null };
               obj[0] = constants2.ATTACHMENT;
               obj[1] = str;
               obj[2] = width;
               obj[3] = height;
-              tmp12Result = callback(table[8]);
+              tmp12Result = tmp12(tmp13[8]);
               let num = flags;
               if (flags == null) {
                 num = 0;
@@ -116,14 +117,15 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
               obj[7] = tmp2;
               obj[8] = isVideoFileResult;
               obj[9] = hasFlagResult;
-              obj[10] = item.id;
-              obj[11] = index;
+              obj[10] = flags.id;
+              obj[11] = arg1;
               const obj6 = callback(table[6]);
-              let num2 = item.flags;
+              const tmp11 = constants;
+              let num2 = flags.flags;
               if (num2 == null) {
                 num2 = 0;
               }
-              obj[12] = callback(table[8]).hasFlag(num2, constants.IS_ANIMATED);
+              obj[12] = callback(table[8]).hasFlag(num2, tmp11.IS_ANIMATED);
               return obj;
             }
           }
@@ -164,13 +166,13 @@ function useForumPostEmbeds(embeds, flag) {
     if (setting) {
       if (tmp4) {
         if (null != embeds1) {
-          const mapped = embeds1.map((item, index) => {
-            let thumbnail = item.image;
+          const mapped = embeds1.map((image) => {
+            let thumbnail = image.image;
             if (thumbnail == null) {
-              thumbnail = item.thumbnail;
+              thumbnail = image.thumbnail;
             }
             if (tmp) {
-              thumbnail = item.images[0];
+              thumbnail = image.images[0];
             }
             if (null != thumbnail) {
               if (null != thumbnail.url) {
@@ -178,7 +180,7 @@ function useForumPostEmbeds(embeds, flag) {
                 let isVideoUrlResult = null != proxyURL;
                 ({ height, width } = thumbnail);
                 if (isVideoUrlResult) {
-                  obj = callback(dependencyMap[6]);
+                  obj = callback(closure_1_2[6]);
                   isVideoUrlResult = obj.isVideoUrl(proxyURL);
                 }
                 obj = { type: null, src: null, height: null, width: null, spoiler: null, flags: null, contentScanVersion: null, isVideo: null, mediaIndex: null, srcIsAnimated: null };
@@ -194,26 +196,24 @@ function useForumPostEmbeds(embeds, flag) {
                 obj[2] = height;
                 obj[3] = width;
                 obj[4] = callback;
-                ({ flags: obj2[5], contentScanVersion: obj2[6] } = item);
+                ({ flags: obj2[5], contentScanVersion: obj2[6] } = image);
                 obj[7] = isVideoUrlResult;
-                obj[8] = index;
+                obj[8] = arg1;
                 if (flags == null) {
                   flags = 0;
                 }
-                obj[9] = callback(dependencyMap[8]).hasFlag(flags, closure_1_9.IS_ANIMATED);
+                obj[9] = callback(closure_1_2[8]).hasFlag(flags, closure_1_9.IS_ANIMATED);
                 return obj;
               }
             }
-            tmp = null == thumbnail && null != item.images;
           });
-          let found = mapped.filter(tmp(1370).isNotNullish);
+          let found = mapped.filter(_require(1370).isNotNullish);
         }
         return found;
       }
     }
     found = [];
   }
-  tmp = _require;
 }
 function useForumPostMediaProperties(firstResult, flag) {
   const InlineAttachmentMedia = explicitContentFromProto.InlineAttachmentMedia;
@@ -226,17 +226,17 @@ function useForumPostMediaProperties(firstResult, flag) {
     if (tmp4) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = flattenComponents;
-        const flattenComponentsResult = flattenComponents.flattenComponents(components);
-        const arr = Array.from(flattenComponents.flattenComponents(components).values());
-        items1 = Array.from(flattenComponents.flattenComponents(components).values()).flatMap((item, index) => {
-          const type = item.type;
+        const tmpResult = tmp(4805);
+        const flattenComponentsResult = tmp(4805).flattenComponents(components);
+        const arr = Array.from(tmp(4805).flattenComponents(components).values());
+        items1 = Array.from(tmp(4805).flattenComponents(components).values()).flatMap((type) => {
+          type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = item);
+            ({ media, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            let tmpResult = callback(table[13]);
+            let tmpResult = tmp(tmp2[13]);
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
@@ -259,17 +259,17 @@ function useForumPostMediaProperties(firstResult, flag) {
                 version = contentScanMetadata.version;
               }
               obj[5] = version;
-              tmpResult = callback(table[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+              tmpResult = tmp(tmp2[8]);
+              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
               obj[8] = "VIDEO" === unfurledMediaItemType;
               obj[10] = media;
               tmp6 = obj;
             }
             return tmp6;
-          } else if (callback(table[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = item.items;
-            return items.map((item, index) => {
-              ({ media, spoiler } = item);
+          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            const items = type.items;
+            return items.map((arg0) => {
+              ({ media, spoiler } = arg0);
               if (spoiler == null) {
                 spoiler = false;
               }
@@ -296,26 +296,26 @@ function useForumPostMediaProperties(firstResult, flag) {
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = callback(table[8]).hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
                 tmp4 = obj;
-                const tmpResult = callback(table[8]);
+                const tmpResult = tmp(tmp2[8]);
               }
               return tmp4;
             });
           } else {
             return null;
           }
-        }).filter(isDiscordFrontendDevelopment.isNotNullish);
-        const flatMapResult = Array.from(flattenComponents.flattenComponents(components).values()).flatMap((item, index) => {
-          const type = item.type;
+        }).filter(tmp(1370).isNotNullish);
+        const flatMapResult = Array.from(tmp(4805).flattenComponents(components).values()).flatMap((type) => {
+          type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = item);
+            ({ media, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            let tmpResult = callback(table[13]);
+            let tmpResult = tmp(tmp2[13]);
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
@@ -338,17 +338,17 @@ function useForumPostMediaProperties(firstResult, flag) {
                 version = contentScanMetadata.version;
               }
               obj[5] = version;
-              tmpResult = callback(table[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+              tmpResult = tmp(tmp2[8]);
+              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
               obj[8] = "VIDEO" === unfurledMediaItemType;
               obj[10] = media;
               tmp6 = obj;
             }
             return tmp6;
-          } else if (callback(table[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = item.items;
-            return items.map((item, index) => {
-              ({ media, spoiler } = item);
+          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            const items = type.items;
+            return items.map((arg0) => {
+              ({ media, spoiler } = arg0);
               if (spoiler == null) {
                 spoiler = false;
               }
@@ -375,11 +375,11 @@ function useForumPostMediaProperties(firstResult, flag) {
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = callback(table[8]).hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
                 tmp4 = obj;
-                const tmpResult = callback(table[8]);
+                const tmpResult = tmp(tmp2[8]);
               }
               return tmp4;
             });
@@ -396,7 +396,7 @@ function useForumPostMediaProperties(firstResult, flag) {
 }
 ({ MessageAttachmentFlags: closure_8, MessageEmbedMediaFlags: c9 } = ME);
 let obj = { EMBED: "embed", ATTACHMENT: "attachment", COMPONENT: "component" };
-const result = require("obj132").fileFinishedImporting("modules/forums/ForumPostMediaUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/ForumPostMediaUtils.tsx");
 
 export const getEmbedColor = function getEmbedColor(firstResult, flag) {
   if (null != firstResult) {
@@ -434,6 +434,7 @@ export const isValidVideoAttachment = function isValidVideoAttachment(filename) 
     let isVideoFileResult = null != filename;
     if (isVideoFileResult) {
       isVideoFileResult = urlMatchesFileExtension.isVideoFile(filename.filename);
+      obj = urlMatchesFileExtension;
     }
     if (isVideoFileResult) {
       isVideoFileResult = null != filename.proxy_url;
@@ -454,17 +455,17 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
     if (tmp3) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = flattenComponents;
-        const flattenComponentsResult = flattenComponents.flattenComponents(components);
-        const arr = Array.from(flattenComponents.flattenComponents(components).values());
-        let found = Array.from(flattenComponents.flattenComponents(components).values()).flatMap((item, index) => {
-          const type = item.type;
+        const tmpResult = tmp(4805);
+        const flattenComponentsResult = tmp(4805).flattenComponents(components);
+        const arr = Array.from(tmp(4805).flattenComponents(components).values());
+        let found = Array.from(tmp(4805).flattenComponents(components).values()).flatMap((type) => {
+          type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = item);
+            ({ media, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            let tmpResult = callback(table[13]);
+            let tmpResult = tmp(tmp2[13]);
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
@@ -487,17 +488,17 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                 version = contentScanMetadata.version;
               }
               obj[5] = version;
-              tmpResult = callback(table[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+              tmpResult = tmp(tmp2[8]);
+              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
               obj[8] = "VIDEO" === unfurledMediaItemType;
               obj[10] = media;
               tmp6 = obj;
             }
             return tmp6;
-          } else if (callback(table[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = item.items;
-            return items.map((item, index) => {
-              ({ media, spoiler } = item);
+          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            const items = type.items;
+            return items.map((arg0) => {
+              ({ media, spoiler } = arg0);
               if (spoiler == null) {
                 spoiler = false;
               }
@@ -524,26 +525,26 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = callback(table[8]).hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
                 tmp4 = obj;
-                const tmpResult = callback(table[8]);
+                const tmpResult = tmp(tmp2[8]);
               }
               return tmp4;
             });
           } else {
             return null;
           }
-        }).filter(isDiscordFrontendDevelopment.isNotNullish);
-        const flatMapResult = Array.from(flattenComponents.flattenComponents(components).values()).flatMap((item, index) => {
-          const type = item.type;
+        }).filter(tmp(1370).isNotNullish);
+        const flatMapResult = Array.from(tmp(4805).flattenComponents(components).values()).flatMap((type) => {
+          type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = item);
+            ({ media, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            let tmpResult = callback(table[13]);
+            let tmpResult = tmp(tmp2[13]);
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
@@ -566,17 +567,17 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                 version = contentScanMetadata.version;
               }
               obj[5] = version;
-              tmpResult = callback(table[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+              tmpResult = tmp(tmp2[8]);
+              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
               obj[8] = "VIDEO" === unfurledMediaItemType;
               obj[10] = media;
               tmp6 = obj;
             }
             return tmp6;
-          } else if (callback(table[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = item.items;
-            return items.map((item, index) => {
-              ({ media, spoiler } = item);
+          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            const items = type.items;
+            return items.map((arg0) => {
+              ({ media, spoiler } = arg0);
               if (spoiler == null) {
                 spoiler = false;
               }
@@ -603,11 +604,11 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = callback(table[8]).hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
                 tmp4 = obj;
-                const tmpResult = callback(table[8]);
+                const tmpResult = tmp(tmp2[8]);
               }
               return tmp4;
             });
@@ -627,16 +628,17 @@ export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(fi
   if (hasSpoilerEmbeds === undefined) {
     flag = false;
   }
+  closure_1 = undefined;
   const tmp = useForumPostMediaProperties(firstMessage, flag);
   closure_1 = tmp;
   let items = [stateFromStores1, tmp];
   return React.useMemo(() => {
-    if (null == stateFromStores1) {
+    if (null == closure_0) {
       return [];
     } else {
       let arr = closure_1;
-      if (stateFromStores1.isMediaChannel()) {
-        const found = arr.find((item, index) => item.isThumbnail);
+      if (obj.isMediaChannel()) {
+        const found = arr.find((isThumbnail) => isThumbnail.isThumbnail);
         if (null != found) {
           const items = [found];
           arr = items;
@@ -646,6 +648,7 @@ export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(fi
         return arr;
       }
     }
+    obj = closure_0;
   }, items);
 };
 export { useForumPostMediaProperties };
@@ -660,17 +663,17 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
     if (tmp5) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = flattenComponents;
-        const flattenComponentsResult = flattenComponents.flattenComponents(components);
-        const arr = Array.from(flattenComponents.flattenComponents(components).values());
-        items = Array.from(flattenComponents.flattenComponents(components).values()).flatMap((item, index) => {
-          const type = item.type;
+        const tmpResult = tmp(4805);
+        const flattenComponentsResult = tmp(4805).flattenComponents(components);
+        const arr = Array.from(tmp(4805).flattenComponents(components).values());
+        items = Array.from(tmp(4805).flattenComponents(components).values()).flatMap((type) => {
+          type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = item);
+            ({ media, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            let tmpResult = callback(table[13]);
+            let tmpResult = tmp(tmp2[13]);
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
@@ -693,17 +696,17 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                 version = contentScanMetadata.version;
               }
               obj[5] = version;
-              tmpResult = callback(table[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+              tmpResult = tmp(tmp2[8]);
+              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
               obj[8] = "VIDEO" === unfurledMediaItemType;
               obj[10] = media;
               tmp6 = obj;
             }
             return tmp6;
-          } else if (callback(table[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = item.items;
-            return items.map((item, index) => {
-              ({ media, spoiler } = item);
+          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            const items = type.items;
+            return items.map((arg0) => {
+              ({ media, spoiler } = arg0);
               if (spoiler == null) {
                 spoiler = false;
               }
@@ -730,26 +733,26 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = callback(table[8]).hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
                 tmp4 = obj;
-                const tmpResult = callback(table[8]);
+                const tmpResult = tmp(tmp2[8]);
               }
               return tmp4;
             });
           } else {
             return null;
           }
-        }).filter(isDiscordFrontendDevelopment.isNotNullish);
-        const flatMapResult = Array.from(flattenComponents.flattenComponents(components).values()).flatMap((item, index) => {
-          const type = item.type;
+        }).filter(tmp(1370).isNotNullish);
+        const flatMapResult = Array.from(tmp(4805).flattenComponents(components).values()).flatMap((type) => {
+          type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = item);
+            ({ media, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            let tmpResult = callback(table[13]);
+            let tmpResult = tmp(tmp2[13]);
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
@@ -772,17 +775,17 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                 version = contentScanMetadata.version;
               }
               obj[5] = version;
-              tmpResult = callback(table[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+              tmpResult = tmp(tmp2[8]);
+              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
               obj[8] = "VIDEO" === unfurledMediaItemType;
               obj[10] = media;
               tmp6 = obj;
             }
             return tmp6;
-          } else if (callback(table[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = item.items;
-            return items.map((item, index) => {
-              ({ media, spoiler } = item);
+          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            const items = type.items;
+            return items.map((arg0) => {
+              ({ media, spoiler } = arg0);
               if (spoiler == null) {
                 spoiler = false;
               }
@@ -809,11 +812,11 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = callback(table[8]).hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
                 tmp4 = obj;
-                const tmpResult = callback(table[8]);
+                const tmpResult = tmp(tmp2[8]);
               }
               return tmp4;
             });
@@ -848,17 +851,17 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
     if (tmp5) {
       if (null != components) {
         const _Array = Array;
-        let tmpResult = flattenComponents;
-        const flattenComponentsResult = flattenComponents.flattenComponents(components);
-        const arr = Array.from(flattenComponents.flattenComponents(components).values());
-        items = Array.from(flattenComponents.flattenComponents(components).values()).flatMap((item, index) => {
-          const type = item.type;
+        let tmpResult = tmp(4805);
+        const flattenComponentsResult = tmp(4805).flattenComponents(components);
+        const arr = Array.from(tmp(4805).flattenComponents(components).values());
+        items = Array.from(tmp(4805).flattenComponents(components).values()).flatMap((type) => {
+          type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = item);
+            ({ media, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            let tmpResult = callback(table[13]);
+            let tmpResult = tmp(tmp2[13]);
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
@@ -881,17 +884,17 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                 version = contentScanMetadata.version;
               }
               obj[5] = version;
-              tmpResult = callback(table[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+              tmpResult = tmp(tmp2[8]);
+              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
               obj[8] = "VIDEO" === unfurledMediaItemType;
               obj[10] = media;
               tmp6 = obj;
             }
             return tmp6;
-          } else if (callback(table[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = item.items;
-            return items.map((item, index) => {
-              ({ media, spoiler } = item);
+          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            const items = type.items;
+            return items.map((arg0) => {
+              ({ media, spoiler } = arg0);
               if (spoiler == null) {
                 spoiler = false;
               }
@@ -918,26 +921,26 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = callback(table[8]).hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
                 tmp4 = obj;
-                const tmpResult = callback(table[8]);
+                const tmpResult = tmp(tmp2[8]);
               }
               return tmp4;
             });
           } else {
             return null;
           }
-        }).filter(isDiscordFrontendDevelopment.isNotNullish);
-        const flatMapResult = Array.from(flattenComponents.flattenComponents(components).values()).flatMap((item, index) => {
-          const type = item.type;
+        }).filter(tmp(1370).isNotNullish);
+        const flatMapResult = Array.from(tmp(4805).flattenComponents(components).values()).flatMap((type) => {
+          type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = item);
+            ({ media, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            let tmpResult = callback(table[13]);
+            let tmpResult = tmp(tmp2[13]);
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
@@ -960,17 +963,17 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                 version = contentScanMetadata.version;
               }
               obj[5] = version;
-              tmpResult = callback(table[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+              tmpResult = tmp(tmp2[8]);
+              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
               obj[8] = "VIDEO" === unfurledMediaItemType;
               obj[10] = media;
               tmp6 = obj;
             }
             return tmp6;
-          } else if (callback(table[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = item.items;
-            return items.map((item, index) => {
-              ({ media, spoiler } = item);
+          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            const items = type.items;
+            return items.map((arg0) => {
+              ({ media, spoiler } = arg0);
               if (spoiler == null) {
                 spoiler = false;
               }
@@ -997,11 +1000,11 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = callback(table[8]).hasFlag(media.flags, callback(table[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
                 tmp4 = obj;
-                const tmpResult = callback(table[8]);
+                const tmpResult = tmp(tmp2[8]);
               }
               return tmp4;
             });
@@ -1024,7 +1027,7 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
     message = message.getMessage(channel.id, DISCORD_EPOCHDefault.castChannelIdAsMessageId(channel.id));
     let tmp8 = null != message;
     if (tmp8) {
-      let tmp2 = uploads.length > 0 && null != uploads.find((item, index) => item.isImage || item.isVideo) && channel.isForumPost();
+      let tmp2 = uploads.length > 0 && null != uploads.find((isImage) => isImage.isImage || isImage.isVideo) && channel.isForumPost();
       if (tmp2) {
         currentUser = currentUser.getCurrentUser();
         id = undefined;
@@ -1040,11 +1043,11 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
         let tmp7 = 0 === message.attachments.length;
         if (!tmp7) {
           const attachments = message.attachments;
-          tmp7 = null == attachments.find((item, index) => {
+          tmp7 = null == attachments.find((filename) => {
             let flag = false;
-            if (null != item) {
-              ({ height, width } = item);
-              let tmp3 = callback(4811).isImageFile(item.filename) && null != height;
+            if (null != filename) {
+              ({ height, width } = filename);
+              let tmp3 = callback(4811).isImageFile(filename.filename) && null != height;
               if (tmp3) {
                 tmp3 = height > 0;
               }
@@ -1058,15 +1061,15 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
               obj = callback(4811);
             }
             if (!flag) {
-              let tmp4 = null != item;
+              let tmp4 = null != filename;
               if (tmp4) {
-                let isVideoFileResult = null != item;
+                let isVideoFileResult = null != filename;
                 if (isVideoFileResult) {
-                  isVideoFileResult = callback(4811).isVideoFile(item.filename);
+                  isVideoFileResult = callback(4811).isVideoFile(filename.filename);
                   const obj2 = callback(4811);
                 }
                 if (isVideoFileResult) {
-                  isVideoFileResult = null != item.proxy_url;
+                  isVideoFileResult = null != filename.proxy_url;
                 }
                 tmp4 = isVideoFileResult;
               }
@@ -1083,11 +1086,11 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
   }
 };
 export const messageContainsGifOrVideo = function messageContainsGifOrVideo(media) {
-  return media.reduce((acc, item, index) => {
-    obj = { containsVideo: acc.containsVideo || item.isVideo, containsGif: null };
-    let containsGif = acc.containsGif;
+  return media.reduce((containsVideo, isVideo) => {
+    obj = { containsVideo: containsVideo.containsVideo || isVideo.isVideo, containsGif: null };
+    let containsGif = containsVideo.containsGif;
     if (!containsGif) {
-      containsGif = callback(table[6]).isAnimatedImageUrl(item.src);
+      containsGif = callback(table[6]).isAnimatedImageUrl(isVideo.src);
       const obj2 = callback(table[6]);
     }
     obj[1] = containsGif;

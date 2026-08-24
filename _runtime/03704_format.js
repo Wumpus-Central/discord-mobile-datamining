@@ -215,28 +215,29 @@ export default function format(arg0, arg1, locale) {
                 obj[2] = locale;
                 obj[3] = defaultResult3;
                 let match = str.match(closure_12);
-                const mapped = match.map((item, index) => {
-                  const first = item[0];
+                const mapped = match.map((arg0) => {
+                  const first = arg0[0];
                   if ("p" === first) {
-                    let tmp2 = dateLongFormatter.default[first](item, locale.formatLong);
+                    let tmp2 = closure_1_6.default[first](arg0, locale.formatLong);
                   } else {
-                    tmp2 = item;
+                    tmp2 = arg0;
                   }
                   return tmp2;
                 });
                 const match1 = mapped.join("").match(closure_11);
-                const mapped1 = match1.map((item, index) => {
-                  let str = item;
-                  if ("''" === item) {
+                const mapped1 = match1.map((arg0) => {
+                  let str = arg0;
+                  if ("''" === arg0) {
                     return "'";
                   } else if ("'" === str[0]) {
                     const match = str.match(closure_1_13);
                     if (match) {
                       str = match[1].replace(closure_1_14, "'");
+                      const str4 = match[1];
                     }
                     return str;
                   } else if (obj.default[str6]) {
-                    let tmp9 = null != locale && locale.useAdditionalWeekYearTokens;
+                    let tmp9 = null != closure_2 && tmp7.useAdditionalWeekYearTokens;
                     if (!tmp9) {
                       tmp9 = !callback(3719).isProtectedWeekYearToken(str);
                     }
@@ -244,7 +245,7 @@ export default function format(arg0, arg1, locale) {
                       const _String = String;
                       callback(3719).throwProtectedError(str, dependencyMap, String(callback));
                     }
-                    let tmp18 = null != locale && locale.useAdditionalDayOfYearTokens;
+                    let tmp18 = null != tmp7 && tmp7.useAdditionalDayOfYearTokens;
                     if (!tmp18) {
                       tmp18 = !callback(3719).isProtectedDayOfYearToken(str);
                     }

@@ -1,10 +1,10 @@
 // === Module 10281: useMediaKeyboardItemsPerRow ===
 
 // Module 10281 (useMediaKeyboardItemsPerRow)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
 
 export const useMediaKeyboardItemsPerRow = function useMediaKeyboardItemsPerRow() {
   const tmp2 = itemsPageSizeRef(4233)();

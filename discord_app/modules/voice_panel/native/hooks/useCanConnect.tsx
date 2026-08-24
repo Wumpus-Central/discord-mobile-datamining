@@ -1,14 +1,14 @@
 // === Module 16344: useCanConnect ===
 
 // Module 16344 (useCanConnect)
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "updateVoiceState" /* 4542 */;
 import { Permissions } from "sum" /* 505 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
 
 export default function useCanConnect(arg0) {
   const _require = arg0;
@@ -20,15 +20,15 @@ export default function useCanConnect(arg0) {
     if (tmp) {
       let isPrivateResult = channel.isPrivate();
       if (!isPrivateResult) {
-        isPrivateResult = closure_1_4.can(Permissions.CONNECT, channel);
+        isPrivateResult = closure_1_4.can(closure_1_6.CONNECT, channel);
       }
       tmp = isPrivateResult;
     }
     const obj = { canConnect: tmp, isAtMaxCapacity: null };
     let isChannelFullResult = null == channel;
     if (!isChannelFullResult) {
-      isChannelFullResult = callback(dependencyMap[6]).isChannelFull(channel, closure_1_5, closure_1_3);
-      const obj3 = callback(dependencyMap[6]);
+      isChannelFullResult = callback(closure_1_1[6]).isChannelFull(channel, closure_1_5, closure_1_3);
+      const obj3 = callback(closure_1_1[6]);
     }
     obj[1] = isChannelFullResult;
     return obj;

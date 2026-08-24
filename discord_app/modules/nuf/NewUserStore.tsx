@@ -36,6 +36,6 @@ const newUserStore = new NewUserStore(dispatcherDefault, {
     newUserStore.persist();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/nuf/NewUserStore.tsx");
+const result = require("set").fileFinishedImporting("modules/nuf/NewUserStore.tsx");
 
 export default newUserStore;

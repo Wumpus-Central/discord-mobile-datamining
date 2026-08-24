@@ -2,21 +2,22 @@
 
 // Module 10646 (GiftCodeRedeemStart)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import updateGiftCode from "updateGiftCode" /* 10641 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import addSku from "addSku" /* 4521 */;
+import closure_8 from "updateGiftCode" /* 10641 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "addSku" /* 4521 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ ImageBackground: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ AnalyticEvents: unpackModuleId, GiftCodeModalStates: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, body: null, bodyWithMessage: null, nameplateContainer: null, nameplateContainerOffCenter: null, message: null, text: null, footer: null, confettiBackground: null, emojiContainer: null, imageWrapper: null, collectiblesAsset: null, collectiblesAssetBundle: null, giftCardAsset: null, linkAccountIcon: null };
+createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 };
 createCacheKey[2] = { flex: 0 };
@@ -33,7 +34,7 @@ createCacheKey[12] = { margin: 20, alignSelf: "stretch", minHeight: 250, alignIt
 createCacheKey[13] = { marginTop: 20, marginBottom: 40 };
 createCacheKey[14] = { marginRight: 4 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemStart.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemStart.tsx");
 
 export default function GiftCodeRedeemStart(giftCode) {
   giftCode = giftCode.giftCode;
@@ -42,6 +43,8 @@ export default function GiftCodeRedeemStart(giftCode) {
   const soundId = giftCode.soundId;
   const emojiName = giftCode.emojiName;
   const user = giftCode.user;
+  closure_5 = undefined;
+  closure_6 = undefined;
   closure_7 = undefined;
   closure_8 = undefined;
   let stateFromStores1;
@@ -54,7 +57,7 @@ export default function GiftCodeRedeemStart(giftCode) {
   c16 = undefined;
   let tmp = callback();
   closure_5 = tmp;
-  const tmp2 = str;
+  let tmp2 = str;
   const tmp3 = soundId;
   let obj = str(soundId[15]);
   closure_6 = obj.useNavigation();
@@ -114,7 +117,7 @@ export default function GiftCodeRedeemStart(giftCode) {
   let tmp5Result = tmp5(tmp3[26]);
   analyticsLocations = tmp5Result(tmp5(tmp3[27]).GIFT_CODE_MODAL).analyticsLocations;
   obj = { analyticsLocations, skuId: giftCode.skuId, applicationId: giftCode.applicationId, canStartAuthorization };
-  user.useRef(obj);
+  callback = user.useRef(obj);
   const items3 = [canStartAuthorization];
   const effect = user.useEffect(() => {
     ref.current.canStartAuthorization = canStartAuthorization;
@@ -131,9 +134,10 @@ export default function GiftCodeRedeemStart(giftCode) {
         obj[2] = applicationId;
         obj[4] = hasAlreadyLinked;
         obj[5] = canStartAuthorization;
-        customMessage(soundId[28]).track(hasAlreadyLinked.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj);
-        const obj2 = customMessage(soundId[28]);
+        customMessage(tmp2[28]).track(hasAlreadyLinked.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj);
+        const obj2 = customMessage(tmp2[28]);
       }
+      tmp2 = soundId;
     }
   }, items4);
   const items5 = [stateFromStores1];
@@ -142,12 +146,11 @@ export default function GiftCodeRedeemStart(giftCode) {
       const socialLayerStorefrontConfig = str(soundId[29]).fetchSocialLayerStorefrontConfig();
       const tmpResult = str(soundId[29]);
     }
-    obj = str(soundId[9]);
   }, items5);
   const items6 = [giftCode, customMessage, emojiName, soundId];
   const effect3 = user.useEffect(() => {
-    str(soundId[8]);
-    const obj = { step: canStartAuthorization.CONFIRM, giftCode: str, customMessage, emojiName, soundId };
+    let obj = str(soundId[8]);
+    obj = { step: canStartAuthorization.CONFIRM, giftCode: str, customMessage, emojiName, soundId };
     obj.trackStep(obj);
   }, items6);
   const items7 = [soundId, giftCode.giftStyle];
@@ -157,8 +160,8 @@ export default function GiftCodeRedeemStart(giftCode) {
       tmp = null != soundId;
     }
     if (tmp) {
-      str(soundId[30]);
-      const obj = { soundId: null, volume: 1 };
+      let obj = str(soundId[30]);
+      obj = { soundId: null, volume: 1 };
       obj[0] = soundId;
       obj.playSoundLocally(null, obj);
     }
@@ -269,8 +272,8 @@ export default function GiftCodeRedeemStart(giftCode) {
           const intl6 = tmp2(tmp3[10]).intl;
           obj15[0] = intl6.string(tmp2(tmp3[10]).t["3nWhcJ"]);
           obj15[2] = function onPress() {
-            str(soundId[8]);
-            let obj = { step: canStartAuthorization.ERROR, giftCode: str, customMessage, emojiName, soundId };
+            let obj = str(soundId[8]);
+            obj = { step: canStartAuthorization.ERROR, giftCode: str, customMessage, emojiName, soundId };
             obj.trackStep(obj);
             obj = { message: closure_7 };
           };
@@ -288,8 +291,8 @@ export default function GiftCodeRedeemStart(giftCode) {
                   obj17[2] = tmp.linkAccountIcon;
                   obj16[2] = tmp30(tmp2(tmp3[46]).ExperimentalGameControllerLinkIcon, obj17);
                   obj16[3] = function onPress() {
-                    customMessage(soundId[28]);
-                    let obj = { location_stack: analyticsLocations, sku_id: str.skuId, application_id: str.applicationId, is_gift: true };
+                    let obj = customMessage(soundId[28]);
+                    obj = { location_stack: analyticsLocations, sku_id: str.skuId, application_id: str.applicationId, is_gift: true };
                     obj.track(hasAlreadyLinked.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, obj);
                     obj = { analyticsLocations };
                     startAuthorization(obj);
@@ -320,21 +323,21 @@ export default function GiftCodeRedeemStart(giftCode) {
           }
           obj19[1] = stringResult;
           obj19[3] = function onPress() {
-            customMessage(soundId[47]);
-            let obj = {
+            let obj = customMessage(soundId[47]);
+            obj = {
               code: str.code,
               onRedeemed() {
-                str(soundId[8]);
-                let obj = { step: canStartAuthorization.SUCCESS, giftCode: closure_0, customMessage: closure_1, emojiName: closure_3, soundId: closure_2 };
+                let obj = closure_1_0(closure_1_2[8]);
+                obj = { step: closure_1_12.SUCCESS, giftCode: closure_0, customMessage: closure_1, emojiName: closure_3, soundId: closure_2 };
                 obj.trackStep(obj);
                 obj = { giftCode: closure_0 };
               },
               onError(error) {
-                str(soundId[8]);
-                let obj = { step: canStartAuthorization.ERROR, giftCode: closure_0, customMessage: closure_1, emojiName: closure_3, soundId: closure_2 };
+                let obj = closure_1_0(closure_1_2[8]);
+                obj = { step: closure_1_12.ERROR, giftCode: closure_0, customMessage: closure_1, emojiName: closure_3, soundId: closure_2 };
                 obj.trackStep(obj);
-                obj = { message: str(soundId[8]).getGiftCodeRedeemError(error, closure_4) };
-                const obj4 = str(soundId[8]);
+                obj = { message: closure_1_0(closure_1_2[8]).getGiftCodeRedeemError(error, closure_4) };
+                const obj4 = closure_1_0(closure_1_2[8]);
               }
             };
             obj.redeemGiftCode(obj);
@@ -401,7 +404,7 @@ export default function GiftCodeRedeemStart(giftCode) {
       if (!closure_8) {
         prop = closure_5.nameplateContainerOffCenter;
       }
-      { style: items, children: startAuthorization(str(soundId[41]).NameplatePreview, obj) };
+      obj = { style: items, children: tmp(str(soundId[41]).NameplatePreview, obj) };
       items[1] = prop;
       obj = { user, nameplate };
       return startAuthorization(closure_6, obj);
@@ -412,7 +415,7 @@ export default function GiftCodeRedeemStart(giftCode) {
       if (!closure_8) {
         prop = closure_5.nameplateContainerOffCenter;
       }
-      { style: items, children: startAuthorization(str(soundId[41]).NameplatePreview, obj) };
+      obj = { style: items, children: tmp(str(soundId[41]).NameplatePreview, obj) };
       items[1] = prop;
       obj = { user, nameplate };
       return startAuthorization(closure_6, obj);

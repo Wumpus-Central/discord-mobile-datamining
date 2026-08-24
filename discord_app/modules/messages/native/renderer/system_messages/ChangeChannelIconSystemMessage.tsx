@@ -1,16 +1,14 @@
 // === Module 8206: createChangeChannelIconSystemMessage ===
 
 // Module 8206 (createChangeChannelIconSystemMessage)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import resultDefault from "result" /* 8178 */;
 import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
 import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import MessageAccessibilityAction from "MessageAccessibilityAction" /* 8191 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx");
 
 export const createChangeChannelIconSystemMessage = function createChangeChannelIconSystemMessage(message) {
   message = message.message;
@@ -31,9 +29,9 @@ export const createChangeChannelIconSystemMessage = function createChangeChannel
     flag = false;
   }
   const tmp8 = createCommonMessageDefault(message);
-  const intl = getSystemLocale.intl;
+  const intl = tmp4(1236).intl;
   const formatToParts = intl.formatToParts;
-  const t = getSystemLocale.t;
+  const t = tmp4(1236).t;
   if (flag) {
     obj = { username: null, usernameOnClick: null, onEditGroup: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -63,9 +61,9 @@ export const createChangeChannelIconSystemMessage = function createChangeChannel
     const obj3 = { accessibilityActions: null };
     const items = [];
     const obj4 = { label: null, name: null };
-    const intl2 = getSystemLocale.intl;
-    obj4[0] = intl2.string(getSystemLocale.t["5Q9+/L"]);
-    obj4[1] = MessageAccessibilityAction.MessageAccessibilityAction.EDIT_GDM;
+    const intl2 = tmp4(1236).intl;
+    obj4[0] = intl2.string(tmp4(1236).t["5Q9+/L"]);
+    obj4[1] = tmp4(8191).MessageAccessibilityAction.EDIT_GDM;
     items[HermesBuiltin.arraySpread(accessibilityActions, 0)] = obj4;
     obj3[0] = items;
     tmp12 = obj3;

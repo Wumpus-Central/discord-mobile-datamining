@@ -1,13 +1,13 @@
 // === Module 10034: canReportRaid ===
 
 // Module 10034 (canReportRaid)
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import computeAlertSettings from "computeAlertSettings" /* 10014 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "computeAlertSettings" /* 10014 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: c4, Permissions: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
 
 export const canReportRaid = function canReportRaid(guild, closure_1_6) {
   let obj = closure_1_6;
@@ -16,13 +16,13 @@ export const canReportRaid = function canReportRaid(guild, closure_1_6) {
   }
   let canResult = obj.can(constants.BAN_MEMBERS, guild);
   if (!canResult) {
-    canResult = obj.can(constants.KICK_MEMBERS, guild);
+    canResult = obj.can(tmp.KICK_MEMBERS, guild);
   }
   if (!canResult) {
-    canResult = obj.can(constants.MODERATE_MEMBERS, guild);
+    canResult = obj.can(tmp.MODERATE_MEMBERS, guild);
   }
   if (!canResult) {
-    canResult = obj.can(constants.MANAGE_GUILD, guild);
+    canResult = obj.can(tmp.MANAGE_GUILD, guild);
   }
   return canResult;
 };
@@ -32,7 +32,7 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   const items1 = [guild];
   const stateFromStores = _require(589).useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
-      return closure_1_2.can(closure_1_5.BAN_MEMBERS, closure_0) || closure_1_2.can(closure_1_5.KICK_MEMBERS, closure_0) || closure_1_2.can(closure_1_5.MODERATE_MEMBERS, closure_0) || closure_1_2.can(closure_1_5.MANAGE_GUILD, closure_0);
+      return obj.can(closure_1_5.BAN_MEMBERS, tmp) || obj.can(closure_1_5.KICK_MEMBERS, tmp) || obj.can(closure_1_5.MODERATE_MEMBERS, tmp) || obj.can(closure_1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
   const obj = _require(589);

@@ -1,24 +1,25 @@
 // === Module 10235: StickerOptionsActionSheet ===
 
 // Module 10235 (StickerOptionsActionSheet)
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/stickers/native/StickerOptionsActionSheet.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/stickers/native/StickerOptionsActionSheet.tsx");
 
 export default function StickerOptionsActionSheet(stickerUrl) {
   stickerUrl = stickerUrl.stickerUrl;
   const items = [stickerUrl];
   const callback = React.useCallback(() => {
-    stickerUrl(dependencyMap[2]).copy(stickerUrl);
-    const obj = stickerUrl(dependencyMap[2]);
-    const result = stickerUrl(dependencyMap[3]).presentCopiedToClipboard();
-    const obj2 = stickerUrl(dependencyMap[3]);
-    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+    stickerUrl(closure_1_2[2]).copy(stickerUrl);
+    const obj = stickerUrl(closure_1_2[2]);
+    const result = stickerUrl(closure_1_2[3]).presentCopiedToClipboard();
+    const obj2 = stickerUrl(closure_1_2[3]);
+    closure_1_1(closure_1_2[4]).hideActionSheet();
   }, items);
-  let obj = { icon: jsx(stickerUrl(4318).LinkIcon, {}), label: null, onPress: null };
+  let obj = { children: null };
+  obj = { hasIcons: true, children: null };
+  obj = { icon: jsx(stickerUrl(4318).LinkIcon, {}), label: null, onPress: null };
   const intl = stickerUrl(1236).intl;
   obj[1] = intl.string(stickerUrl(1236).t.B1ubHx);
   obj[2] = callback;

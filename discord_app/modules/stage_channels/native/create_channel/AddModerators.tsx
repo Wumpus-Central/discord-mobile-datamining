@@ -2,22 +2,23 @@
 
 // Module 8870 (AddModerators)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import { RowType } from "RowType" /* 8064 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { addMembersContainer: null, moderatorDescriptionContainer: null, errorMessage: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { margin: 16 };
 createCacheKey[2] = { margin: 16, marginBottom: 0 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/create_channel/AddModerators.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/create_channel/AddModerators.tsx");
 
 export default function AddModerators(guildId) {
   guildId = guildId.guildId;
@@ -25,6 +26,8 @@ export default function AddModerators(guildId) {
   let merged = Object.assign(guildId, Object.create(null));
   let navigation;
   let first;
+  let React;
+  let first1;
   let callback;
   const tmp3 = callback2();
   let obj = guildId(navigation[8]);
@@ -33,15 +36,15 @@ export default function AddModerators(guildId) {
   merged(navigation[9])(null != guild, "Guild must not be null");
   const tmp10 = first(merged(navigation[10])(guildId.onChannelCreated), 3);
   first = tmp10[0];
-  const React = tmp13;
+  React = tmp13;
   const tmp14 = first(React.useState({}), 2);
-  const first1 = tmp14[0];
+  first1 = tmp14[0];
   let items = [tmp10[2], first1, merged, guildId];
   callback = React.useCallback(() => {
     const values = Object.values(first1);
-    const found = values.filter((item, index) => null != item.row.id);
-    const mapped = found.map((item, index) => {
-      const row = item.row;
+    const found = values.filter((row) => null != row.row.id);
+    const mapped = found.map((row) => {
+      row = row.row;
       if (row.rowType === constants.ROLE) {
         let moderatorOverwrite = callback(4986).createModeratorOverwrite(row.id, callback(1954).PermissionOverwriteType.ROLE);
         const obj2 = callback(4986);
@@ -61,7 +64,7 @@ export default function AddModerators(guildId) {
     }
     HermesBuiltin.arraySpread(overwrites, tmp4);
     obj.overwrites = items;
-    return callback(obj);
+    return closure_4(obj);
   }, items);
   const items1 = [callback, navigation, first1, first];
   const layoutEffect = React.useLayoutEffect(() => {
@@ -73,8 +76,9 @@ export default function AddModerators(guildId) {
       stringResult = intl.string(guildId(navigation[13]).t["5Wxrcd"]);
     }
     guildId = stringResult;
-    navigation.setOptions({ headerRight: first ? (() => callback(stringResult(table[14]).HeaderSubmittingIndicator, {})) : (() => closure_2_8(guildId(navigation[15]).HeaderActionButton, { text: closure_0, onPress: callback })) });
+    navigation.setOptions({ headerRight: first ? (() => callback(stringResult(table[14]).HeaderSubmittingIndicator, {})) : (() => closure_2_8(guildId(navigation[15]).HeaderActionButton, { text: closure_0, onPress: closure_1_6 })) });
   }, items1);
+  obj = { style: tmp3.addMembersContainer, children: null };
   obj = { style: tmp3.moderatorDescriptionContainer, children: null };
   obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl = guildId(navigation[13]).intl;
@@ -98,5 +102,5 @@ export default function AddModerators(guildId) {
   obj4[5] = tmp14[1];
   items2[2] = callback(merged(navigation[18]), obj4);
   obj[1] = items2;
-  return callback(first1, obj);
+  return closure_9(first1, obj);
 };

@@ -1,13 +1,13 @@
 // === Module 8762: checkRpcVersion ===
 
 // Module 8762 (checkRpcVersion)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import prototypeDefault from "prototype" /* 8752 */;
 import ME from "ME" /* 676 */;
 
 ({ RPC_VERSION: obj1, RPCCloseCodes: c3 } = ME);
-const result = obj132.fileFinishedImporting("modules/rpc/transports/BaseSocket.tsx");
+const result = set.fileFinishedImporting("modules/rpc/transports/BaseSocket.tsx");
 class BaseSocket {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);

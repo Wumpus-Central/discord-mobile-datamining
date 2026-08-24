@@ -4,22 +4,22 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import Text from "Text" /* 4734 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ View: obj1, Image: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { container: null, emptyImage: null, emptyTitle: null, emptyBody: null };
+createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, maxWidth: 300, maxHeight: 200 };
 createCacheKey[2] = { marginTop: 20, textTransform: "uppercase" };
 createCacheKey[3] = { textAlign: "center", marginTop: 8 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
+const result = require("set").fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
 
 export default function EmptyState(Illustration) {
   const tmp = callback2();
@@ -33,11 +33,13 @@ export default function EmptyState(Illustration) {
     tmp8Result = null;
     if (tmp6) {
       obj = { resizeMode: "contain", source: null, style: null };
-      obj[1] = AccessibilityAnnouncer.isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource;
+      obj[1] = tmp2(1363).isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource;
       const items1 = [tmp.emptyImage, Illustration.imageStyle];
       obj[2] = items1;
       tmp8Result = callback(closure_3, obj);
-      const tmp2Result = AccessibilityAnnouncer;
+      const tmp2Result = tmp2(1363);
+      const tmp8 = callback;
+      const tmp9 = closure_3;
     }
     tmp6 = null != Illustration.lightSource && null != Illustration.darkSource;
   }
@@ -52,7 +54,7 @@ export default function EmptyState(Illustration) {
     const items4 = [tmp.emptyTitle, tmp11];
     obj2[3] = items4;
     obj2[4] = title;
-    tmp14 = callback(Text.Text, obj2);
+    tmp14 = callback(tmp2(4734).Text, obj2);
   }
   items3[1] = tmp14;
   let tmp16 = null;
@@ -61,10 +63,10 @@ export default function EmptyState(Illustration) {
     const items5 = [tmp.emptyBody, bodyStyle];
     obj3[3] = items5;
     obj3[4] = body;
-    tmp16 = callback(Text.Text, obj3);
+    tmp16 = callback(tmp2(4734).Text, obj3);
   }
   items3[2] = tmp16;
   items3[3] = children;
   obj1[2] = items3;
-  return callback(closure_2, obj1);
+  return closure_5(closure_2, obj1);
 };

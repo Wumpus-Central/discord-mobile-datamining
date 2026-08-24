@@ -1,10 +1,10 @@
 // === Module 11606: useChangelogIdFromChannel ===
 
 // Module 11606 (useChangelogIdFromChannel)
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import closure_2 from "reinjectEphemerals" /* 4994 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/changelog/useChangelogIdFromChannel.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/changelog/useChangelogIdFromChannel.tsx");
 
 export default function useChangelogIdFromChannel(arg0) {
   const _require = arg0;

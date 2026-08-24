@@ -1,10 +1,10 @@
 // === Module 7107: useRecyclingState ===
 
 // Module 7107 (useRecyclingState)
-import _slicedToArray from "_slicedToArray" /* 7041 */;
+import closure_2 from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c3, useMemo: c4, useRef: c5 } = noop);
 
 export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {

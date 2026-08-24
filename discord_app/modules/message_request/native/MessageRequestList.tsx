@@ -2,29 +2,32 @@
 
 // Module 16091 (PendingMessageRequestRow)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function PendingMessageRequestRow(isRestricted) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isRestricted);
   let flag = isRestricted.isRestricted;
   if (flag === undefined) {
     flag = false;
   }
+  let str;
+  let channel;
+  let id;
   c5 = undefined;
   c6 = undefined;
   const tmp = callback2();
-  let str = messageRequest.user;
-  const channel = messageRequest.channel;
-  const id = channel.id;
+  str = messageRequest.user;
+  channel = messageRequest.channel;
+  id = channel.id;
   const items = [id, hasSingleMessageRequest];
   const callback = channel.useCallback(() => {
-    hasSingleMessageRequest(str[7]);
-    const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+    let obj = hasSingleMessageRequest(str[7]);
+    obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
     const intl = callback(str[6]).intl;
     obj[1] = intl.string(callback(str[6]).t["EDYbS+"]);
     obj[2] = hasSingleMessageRequest(str[8]);
@@ -32,10 +35,10 @@ function PendingMessageRequestRow(isRestricted) {
   }, []);
   const callback1 = channel.useCallback(() => {
     if (hasSingleMessageRequest) {
-      require(str[9]).transitionToChannel(id);
+      closure_1_0(str[9]).transitionToChannel(id);
       let arr = hasSingleMessageRequest(str[10]);
       arr = arr.pop();
-      const obj = require(str[9]);
+      const obj = closure_1_0(str[9]);
     }
   }, items);
   let obj = require(str[11]);
@@ -55,21 +58,22 @@ function PendingMessageRequestRow(isRestricted) {
     tmp7 = isOptimisticRejected;
   }
   function handleSelectRow() {
-    hasSingleMessageRequest(str[12]);
-    const obj = { is_spam: false, channel_id: channel.id, other_user_id: str.id };
-    obj.track(AnalyticEvents.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
+    let obj = hasSingleMessageRequest(str[12]);
+    obj = { is_spam: false, channel_id: channel.id, other_user_id: str.id };
+    obj.track(closure_1_7.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
     callback();
   }
+  obj = { onPress: handleSelectRow, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, style: null, children: null };
   obj = { name: constants.ACCEPT_MESSAGE_REQUEST, label: null };
-  let intl = require(tmp5[6]).intl;
+  let intl = tmp4(tmp5[6]).intl;
   obj[1] = intl.string(require(str[6]).t.hSLLWi);
   const items1 = [obj, , ];
   obj1 = { name: constants.IGNORE_MESSAGE_REQUEST, label: null };
-  const intl2 = require(tmp5[6]).intl;
+  const intl2 = tmp4(tmp5[6]).intl;
   obj1[1] = intl2.string(require(str[6]).t.fIBuSD);
   items1[1] = obj1;
   const obj2 = { name: constants.PREVIEW_MESSAGE_REQUEST, label: null };
-  const intl3 = require(tmp5[6]).intl;
+  const intl3 = tmp4(tmp5[6]).intl;
   obj2[1] = intl3.string(require(str[6]).t.HjgsKJ);
   items1[2] = obj2;
   obj[2] = items1;
@@ -77,14 +81,14 @@ function PendingMessageRequestRow(isRestricted) {
     const actionName = nativeEvent.nativeEvent.actionName;
     if (closure_1_11.ACCEPT_MESSAGE_REQUEST === actionName) {
       _undefined(channel.id);
-    } else if (closure_1_11.IGNORE_MESSAGE_REQUEST === actionName) {
+    } else if (tmp.IGNORE_MESSAGE_REQUEST === actionName) {
       _undefined2(channel.id);
-    } else if (closure_1_11.PREVIEW_MESSAGE_REQUEST === actionName) {
-      hasSingleMessageRequest(str[12]);
-      const obj = { is_spam: false, channel_id: null, other_user_id: null };
+    } else if (tmp.PREVIEW_MESSAGE_REQUEST === actionName) {
+      let obj = hasSingleMessageRequest(str[12]);
+      obj = { is_spam: false, channel_id: null, other_user_id: null };
       obj[1] = channel.id;
       obj[2] = str.id;
-      obj.track(AnalyticEvents.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
+      obj.track(closure_1_7.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
       callback();
     }
   };
@@ -92,7 +96,7 @@ function PendingMessageRequestRow(isRestricted) {
   const obj3 = { style: tmp.rowContainer, children: null };
   const items2 = [callback(hasSingleMessageRequest(str[14]), { channel: messageRequest.channel, otherUser: messageRequest.user, isRestricted: flag }), ];
   const obj5 = { style: tmp.actionContainer, children: null };
-  const intl4 = require(tmp5[6]).intl;
+  const intl4 = tmp4(tmp5[6]).intl;
   str = undefined;
   if (str != null) {
     str = str.toString();
@@ -106,13 +110,13 @@ function PendingMessageRequestRow(isRestricted) {
     if (!isUserProfileLoading) {
       if (!isOptimisticAccepted) {
         const obj7 = { size: null, disableColor: true, source: null };
-        obj7[0] = require(tmp5[15]).Icon.Sizes.SMALL;
-        obj7[2] = hasSingleMessageRequest(tmp5[16]);
-        let tmp10Result = tmp10(require(tmp5[15]).Icon, obj7);
+        obj7[0] = tmp4(tmp5[15]).Icon.Sizes.SMALL;
+        obj7[2] = tmp11(tmp5[16]);
+        let tmp10Result = tmp10(tmp4(tmp5[15]).Icon, obj7);
       }
       obj6[5] = tmp10Result;
-      const items4 = [tmp10(require(tmp5[13]).PressableOpacity, obj6), ];
-      const intl5 = require(tmp5[6]).intl;
+      const items4 = [tmp10(tmp4(tmp5[13]).PressableOpacity, obj6), ];
+      const intl5 = tmp4(tmp5[6]).intl;
       let str1;
       if (str != null) {
         str1 = str.toString();
@@ -123,30 +127,30 @@ function PendingMessageRequestRow(isRestricted) {
       function handleRejectMessageRequest() {
         _undefined2(channel.id);
       }
-      obj8[1] = intl5.formatToPlainString(require(tmp5[6]).t["C9Xe6+"], obj9);
+      obj8[1] = intl5.formatToPlainString(tmp4(tmp5[6]).t["C9Xe6+"], obj9);
       obj8[2] = handleRejectMessageRequest;
       obj8[3] = tmp7;
       obj8[4] = tmp.actionButton;
       if (!isRejectLoading) {
         if (!isOptimisticRejected) {
           const obj10 = { size: null, disableColor: true, source: null };
-          obj10[0] = require(tmp5[15]).Icon.Sizes.SMALL;
-          obj10[2] = hasSingleMessageRequest(tmp5[17]);
-          tmp10Result = tmp10(require(tmp5[15]).Icon, obj10);
+          obj10[0] = tmp4(tmp5[15]).Icon.Sizes.SMALL;
+          obj10[2] = tmp11(tmp5[17]);
+          tmp10Result = tmp10(tmp4(tmp5[15]).Icon, obj10);
         }
         obj8[5] = tmp10Result;
-        items4[1] = tmp10(require(tmp5[13]).PressableOpacity, obj8);
+        items4[1] = tmp10(tmp4(tmp5[13]).PressableOpacity, obj8);
         obj5[1] = items4;
-        items2[1] = callback(tmp9, obj5);
+        items2[1] = tmp8(tmp9, obj5);
         obj3[1] = items2;
-        const items5 = [callback(tmp9, obj3), ];
+        const items5 = [tmp8(tmp9, obj3), ];
         let tmp10Result1 = null;
         if (!isRestricted.isLastRow) {
-          tmp10Result1 = tmp10(require(tmp5[18]).FormDivider, { iconPush: true, outer: true });
+          tmp10Result1 = tmp10(tmp4(tmp5[18]).FormDivider, { iconPush: true, outer: true });
         }
         items5[1] = tmp10Result1;
         obj[5] = items5;
-        return callback(require(tmp5[13]).PressableOpacity, obj);
+        return tmp8(tmp4(tmp5[13]).PressableOpacity, obj);
       }
       const obj11 = { style: null };
       obj11[0] = tmp.activityIndicator;
@@ -157,23 +161,30 @@ function PendingMessageRequestRow(isRestricted) {
 }
 ({ ActivityIndicator: c4, View: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 };
+createCacheKey = { sectionContainer: null, rowContainer: null, actionContainer: null, actionButton: null, acceptButton: null, acceptButtonRestricted: null, pressableRow: null, activityIndicator: null, list: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 };
 createCacheKey[2] = { flexDirection: "row", alignItems: "flex-start", height: "100%" };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 createCacheKey[4] = { marginRight: 16 };
 createCacheKey[5] = { marginRight: 12 };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 createCacheKey[6] = { borderRadius: ThemesDefault.radii.md };
 createCacheKey[7] = { height: 16, width: 16 };
+let obj2 = { borderRadius: ThemesDefault.radii.md };
 createCacheKey[8] = { flex: 1, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { ACCEPT_MESSAGE_REQUEST: "accept-message-request", IGNORE_MESSAGE_REQUEST: "ignore-message-request", PREVIEW_MESSAGE_REQUEST: "preview-message-request" };
-const result = require("obj132").fileFinishedImporting("modules/message_request/native/MessageRequestList.tsx");
+let obj3 = { flex: 1, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestList.tsx");
 
 export default function MessageRequestList(goToMessageRequestPreview) {
   goToMessageRequestPreview = goToMessageRequestPreview.goToMessageRequestPreview;
+  importDefault = undefined;
   let arr;
+  closure_3 = undefined;
+  closure_4 = undefined;
   const tmp = callback2();
   importDefault = tmp;
   const bottom = importDefault(arr[19])().bottom;
@@ -229,7 +240,7 @@ export default function MessageRequestList(goToMessageRequestPreview) {
         obj[2] = item.channel.id === id;
         obj[3] = closure_3;
         obj[4] = closure_4;
-        return closure_1_8(PendingMessageRequestRow, obj, item.channel.id);
+        return closure_1_8(closure_1_12, obj, item.channel.id);
       }
     };
     obj[4] = items;

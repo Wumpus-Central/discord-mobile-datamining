@@ -1,14 +1,13 @@
 // === Module 4841: isEnabled ===
 
 // Module 4841 (isEnabled)
-import obj132 from "obj132" /* 2 */;
-import obj1322 from "obj132" /* 500 */;
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
 import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
 import NativePermissionsRequestOptions from "NativePermissionsRequestOptions" /* 4840 */;
-import get from "get" /* 4842 */;
 
 const NativePermissionTypes = NativePermissionStatus.NativePermissionTypes;
 const InputModes = ME.InputModes;
@@ -17,13 +16,13 @@ class NativePermissionManager extends tmp2 {
 }
 const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
-  let isDesktopResult = obj1322.isDesktop();
+  let isDesktopResult = set2.isDesktop();
   if (isDesktopResult) {
-    isDesktopResult = obj1322.isMac();
-    const tmpResult = obj1322;
+    isDesktopResult = tmp(500).isMac();
+    const tmpResult = tmp(500);
   }
   if (isDesktopResult) {
-    const ProcessArgs = get.ProcessArgs;
+    const ProcessArgs = tmp(4842).ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;
@@ -31,11 +30,13 @@ prototype["isEnabled"] = function isEnabled() {
 prototype["_initialize"] = function _initialize() {
   if (this.isEnabled()) {
     const subscription = dispatcherDefault.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
+    const obj = dispatcherDefault;
   }
 };
 prototype["_terminate"] = function _terminate() {
   if (this.isEnabled()) {
     dispatcherDefault.unsubscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
+    const obj = dispatcherDefault;
   }
 };
 prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
@@ -45,6 +46,6 @@ prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
   }
 };
 const nativePermissionManager = new NativePermissionManager();
-const result = obj132.fileFinishedImporting("modules/native_permissions/NativePermissionManager.tsx");
+const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionManager.tsx");
 
 export default nativePermissionManager;

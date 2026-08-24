@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import optOutEligibilityCheck from "optOutEligibilityCheck" /* 16562 */;
 
-require = fn;
+require = arg1;
 let closure_2 = {};
 const Store = initializeDefault.Store;
 class HotspotStore extends Store {
@@ -33,6 +33,6 @@ const hotspotStore = new HotspotStore(dispatcherDefault, {
     delete tmp[tmp2];
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
+const result = require("set").fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
 
 export default hotspotStore;

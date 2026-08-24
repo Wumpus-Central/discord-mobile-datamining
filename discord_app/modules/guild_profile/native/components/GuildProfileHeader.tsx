@@ -2,35 +2,38 @@
 
 // Module 9516 (styles)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
 import { getBadgeTooltip } from "getBadgeTooltip" /* 9517 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let createCacheKey = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+createCacheKey = { header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, members: null, memberCount: null, dot: null, dotOnline: null, established: null, nameRow: null, guildName: null, guildIcon: null };
+createCacheKey = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { display: "flex", flexDirection: "row", gap: 8 };
 createCacheKey[3] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 };
 createCacheKey[4] = { width: 8, height: 8, borderRadius: 4, backgroundColor: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
+let obj1 = { width: 8, height: 8, borderRadius: 4, backgroundColor: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
 createCacheKey[5] = { width: 8, height: 8, borderRadius: 4, backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE };
 createCacheKey[6] = { display: "flex" };
 createCacheKey[7] = { marginTop: 4, display: "flex", flexDirection: "row", alignItems: "center" };
 createCacheKey[8] = { flexShrink: 1 };
 createCacheKey[9] = { marginLeft: 8, height: 24, width: 24 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileHeader.tsx");
+let obj2 = { width: 8, height: 8, borderRadius: 4, backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE };
+const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileHeader.tsx");
 
 export default function GuildProfileHeader(icon) {
   const profile = icon.profile;
   let id;
   let stateFromStores1;
-  const tmp = createCacheKey();
+  let tmp = createCacheKey();
   let obj = profile(stateFromStores1[9]);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
@@ -43,21 +46,20 @@ export default function GuildProfileHeader(icon) {
   const callback = React.useCallback(() => {
     let obj = profile(stateFromStores1[12]);
     const fromGuildProfileResult = obj.fromGuildProfile(profile);
+    const tmp = stateFromStores1;
     const guildTraits = profile(stateFromStores1[13]).getGuildTraits(fromGuildProfileResult);
     const obj2 = profile(stateFromStores1[13]);
     const obj3 = profile(stateFromStores1[14]);
-    ({ tooltipTitle, tooltipSubtitle } = getBadgeTooltip(profile(stateFromStores1[14]).getBadgeCategory(guildTraits), guildTraits.visibility));
+    ({ tooltipTitle, tooltipSubtitle } = closure_1_8(profile(stateFromStores1[14]).getBadgeCategory(guildTraits), guildTraits.visibility));
     if (!tmp5) {
       if (tooltipSubtitle == null) {
         tooltipSubtitle = tooltipTitle;
       }
       obj = { key: "guild-badge-tooltip", content: null };
       obj[1] = tooltipSubtitle;
-      id(stateFromStores1[15]).open(obj);
-      const obj4 = id(stateFromStores1[15]);
+      id(tmp[15]).open(obj);
+      const obj4 = id(tmp[15]);
     }
-    const tmp4 = getBadgeTooltip(profile(stateFromStores1[14]).getBadgeCategory(guildTraits), guildTraits.visibility);
-    tmp5 = null == tooltipTitle && null == tooltipSubtitle;
   }, items1);
   let obj4 = profile(stateFromStores1[9]);
   const items2 = [closure_7, closure_6];
@@ -71,6 +73,7 @@ export default function GuildProfileHeader(icon) {
     return null != joinedAt;
   }, items3);
   const items4 = [id, stateFromStores1];
+  obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarBackground, children: null };
   const callback1 = React.useCallback(() => {
     if (stateFromStores1) {
@@ -83,7 +86,7 @@ export default function GuildProfileHeader(icon) {
   }, items4);
   obj1 = { icon: icon.guildIconSource, size: null, animate: true, value: null, selected: false };
   let fromGuildProfileResult = obj3.fromGuildProfile(profile);
-  let tmp5 = id;
+  const tmp5 = id;
   obj1[1] = profile(stateFromStores1[18]).GuildIconSizes.XXLARGE;
   obj1[3] = profile.name;
   obj[1] = callback(id(stateFromStores1[18]), obj1);
@@ -98,7 +101,7 @@ export default function GuildProfileHeader(icon) {
   obj4 = { onPress: callback, children: tmp13(tmp5(tmp3[21]), obj5) };
   items6[1] = callback(profile(stateFromStores1[20]).PressableHighlight, obj4);
   obj2[1] = items6;
-  items5[1] = callback(View, obj2);
+  items5[1] = closure_10(View, obj2);
   const obj6 = { style: tmp.members, children: null };
   const obj7 = { style: tmp.memberCount, children: null };
   const items7 = [callback(View, { style: tmp.dotOnline }), ];
@@ -107,7 +110,7 @@ export default function GuildProfileHeader(icon) {
   obj9[2] = intl.format(profile(stateFromStores1[22]).t["LC+S+m"], { membersOnline: profile.onlineCount });
   items7[1] = callback(profile(stateFromStores1[19]).Text, obj9);
   obj7[1] = items7;
-  const items8 = [callback(View, obj7), ];
+  const items8 = [closure_10(View, obj7), ];
   const obj11 = { style: tmp.memberCount, children: null };
   const items9 = [callback(View, { style: tmp.dot }), ];
   const obj13 = { variant: "text-md/medium", color: "text-default", children: null };
@@ -115,9 +118,9 @@ export default function GuildProfileHeader(icon) {
   obj13[2] = intl2.format(profile(stateFromStores1[22]).t.zRl6XR, { count: profile.memberCount });
   items9[1] = callback(profile(stateFromStores1[19]).Text, obj13);
   obj11[1] = items9;
-  items8[1] = callback(View, obj11);
+  items8[1] = closure_10(View, obj11);
   obj6[1] = items8;
-  items5[2] = callback(View, obj6);
+  items5[2] = closure_10(View, obj6);
   const obj15 = { style: tmp.established, children: null };
   const obj16 = { variant: "text-md/medium", color: "text-muted", children: null };
   const intl3 = tmp2(tmp3[22]).intl;
@@ -125,6 +128,6 @@ export default function GuildProfileHeader(icon) {
   obj15[1] = callback(profile(stateFromStores1[19]).Text, obj16);
   items5[3] = callback(View, obj15);
   obj[1] = items5;
-  return callback(View, obj);
+  return closure_10(View, obj);
 };
 export const useStyles = createCacheKey;

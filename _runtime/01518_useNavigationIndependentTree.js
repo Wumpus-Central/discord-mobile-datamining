@@ -2,7 +2,7 @@
 
 // Module 1518 (useNavigationIndependentTree)
 import NavigationIndependentTreeContext from "NavigationIndependentTreeContext" /* 1519 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 require = arg1;
 

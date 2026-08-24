@@ -6,10 +6,10 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getNicknameDefault from "getNickname" /* 4796 */;
 import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 9450 */;
 import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9450 */;
-import sortActivity from "sortActivity" /* 4559 */;
+import closure_3 from "sortActivity" /* 4559 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function UserRow(user) {
   user = user.user;
   const channel = user.channel;
@@ -29,7 +29,7 @@ function UserRow(user) {
   return jsx(user(6291).TableRow, { user, avatarDecoration, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
 }
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx");
 
 export default function UserProfileActivityVoiceChannelUsers(arg0) {
   ({ channel: require, onPressUser: importDefault } = arg0);
@@ -45,9 +45,15 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
     },
     renderItem(item) {
       item = item.item;
-      return <UserRow key={item.id} user={item} channel={item} onPress={function onPress() {
-        return closure_1_1(item.id);
-      }} start={item.start} end={item.end} />;
+      return closure_1_4(closure_1_5, {
+        user: item,
+        channel: item,
+        onPress() {
+          return closure_1_1(item.id);
+        },
+        start: item.start,
+        end: item.end
+      }, item.id);
     }
   };
   obj[3] = jsx(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, {
@@ -57,9 +63,15 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
     },
     renderItem(item) {
       item = item.item;
-      return <UserRow key={item.id} user={item} channel={item} onPress={function onPress() {
-        return closure_1_1(item.id);
-      }} start={item.start} end={item.end} />;
+      return closure_1_4(closure_1_5, {
+        user: item,
+        channel: item,
+        onPress() {
+          return closure_1_1(item.id);
+        },
+        start: item.start,
+        end: item.end
+      }, item.id);
     }
   });
   return jsx(UserProfileStackedActionSheetDefault, {
@@ -69,9 +81,15 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
     },
     renderItem(item) {
       item = item.item;
-      return <UserRow key={item.id} user={item} channel={item} onPress={function onPress() {
-        return closure_1_1(item.id);
-      }} start={item.start} end={item.end} />;
+      return closure_1_4(closure_1_5, {
+        user: item,
+        channel: item,
+        onPress() {
+          return closure_1_1(item.id);
+        },
+        start: item.start,
+        end: item.end
+      }, item.id);
     }
   });
 };

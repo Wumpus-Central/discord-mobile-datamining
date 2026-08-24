@@ -1,13 +1,13 @@
 // === Module 8777: set ===
 
 // Module 8777 (set)
-import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
 import getHostname from "getHostname" /* 8778 */;
+import set from "set" /* 2 */;
 
 const SPOTIFY_HOSTNAMES = SPOTIFY_APP_PROTOCOL.SPOTIFY_HOSTNAMES;
 const MaskedLinkStore = "MaskedLinkStore";
@@ -72,6 +72,7 @@ prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
             let hasItem = SPOTIFY_HOSTNAMES.includes(hostname);
             if (!hasItem) {
               hasItem = isDiscordProxiedAssetUrlDefault.isDiscordHostname(hostname);
+              const obj2 = isDiscordProxiedAssetUrlDefault;
             }
             if (!hasItem) {
               hasItem = set.has(hostname);
@@ -109,6 +110,7 @@ const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
               let hasItem = SPOTIFY_HOSTNAMES.includes(hostname);
               if (!hasItem) {
                 hasItem = isDiscordProxiedAssetUrlDefault.isDiscordHostname(hostname);
+                const obj2 = isDiscordProxiedAssetUrlDefault;
               }
               if (!hasItem) {
                 hasItem = set.has(hostname);
@@ -122,13 +124,12 @@ const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
     if (flag) {
       return false;
     } else {
-      set.add(getHostname.getHostname(url));
-      const Storage = Storage2.Storage;
+      set.add(tmp(8778).getHostname(url));
+      const Storage = tmp(595).Storage;
       obj = { trustedDomains: null, trustedProtocols: null };
       obj[0] = set;
       obj[1] = set1;
       const result = Storage.set(MaskedLinkStore, obj);
-      const tmpResult = getHostname;
     }
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function handleAddTrustedProtocol(url) {
@@ -137,16 +138,15 @@ const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
     if (set1.has(obj.getProtocol(url))) {
       return false;
     } else {
-      set1.add(getHostname.getProtocol(url));
-      const Storage = Storage2.Storage;
+      set1.add(tmp(8778).getProtocol(url));
+      const Storage = tmp(595).Storage;
       obj = { trustedDomains: null, trustedProtocols: null };
       obj[0] = set;
       obj[1] = set1;
       const result = Storage.set(MaskedLinkStore, obj);
-      const tmpResult = getHostname;
     }
   }
 });
-let result = obj132.fileFinishedImporting("stores/MaskedLinkStore.tsx");
+let result = set.fileFinishedImporting("stores/MaskedLinkStore.tsx");
 
 export default maskedLinkStore;

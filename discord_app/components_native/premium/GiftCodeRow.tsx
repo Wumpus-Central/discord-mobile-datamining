@@ -6,21 +6,25 @@ import resolveGiftCodeDefault from "resolveGiftCode" /* 10642 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-let require = fn;
+let require = arg1;
 ({ View: c3, TouchableWithoutFeedback: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: null, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
+let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
 createCacheKey[3] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
+let obj2 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { marginLeft: 12 };
 createCacheKey[6] = { flexShrink: 1 };
 createCacheKey[7] = { marginBottom: 8, flexDirection: "row", alignItems: "center" };
 createCacheKey[8] = { fontSize: 12, lineHeight: 16 };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_8 };
 createCacheKey[9] = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
 createCacheKey[10] = { borderWidth: 0 };
 createCacheKey[11] = { flexShrink: 0, flexGrow: 1 };
@@ -33,15 +37,14 @@ class GiftCodeRow extends PureComponent {
     applyArgumentsResult.handleShare = function handleShare() {
       ({ giftCode, sku } = applyArgumentsResult.props);
       if (tmp) {
-        let obj = applyArgumentsResult(dependencyMap[8]);
+        let obj = applyArgumentsResult(closure_1_2[8]);
         obj.trackGiftCodeCopy(giftCode, sku);
         obj = { url: null };
-        const obj2 = applyArgumentsResult(dependencyMap[9]);
-        obj[0] = applyArgumentsResult(dependencyMap[8]).getGiftCodeURL(giftCode.code);
-        obj2.showShareActionSheet(obj, AnalyticsSections.GIFT_CODE_ROW);
-        const obj4 = applyArgumentsResult(dependencyMap[8]);
+        const obj2 = applyArgumentsResult(closure_1_2[9]);
+        obj[0] = applyArgumentsResult(closure_1_2[8]).getGiftCodeURL(giftCode.code);
+        obj2.showShareActionSheet(obj, closure_1_5.GIFT_CODE_ROW);
+        const obj4 = applyArgumentsResult(closure_1_2[8]);
       }
-      tmp = null != giftCode && null != sku;
     };
     return applyArgumentsResult;
   }
@@ -51,7 +54,8 @@ prototype["handleRevoke"] = function handleRevoke(code) {
   resolveGiftCodeDefault.revokeGiftCode(code);
 };
 prototype["render"] = function render() {
-  const self = this;
+  let self = this;
+  self = this;
   const tmp = callback2(this.context);
   importDefault = tmp;
   const props = this.props;
@@ -67,8 +71,9 @@ prototype["render"] = function render() {
   if (props.isFirst) {
     firstRow = tmp.firstRow;
   }
+  let obj = { style: items, children: null };
   items[2] = firstRow;
-  let obj = { style: null, children: null };
+  obj = { style: null, children: null };
   if (isRefreshEnabled) {
     obj[0] = tmp.giftCodeInput;
     obj = { children: null };
@@ -88,11 +93,11 @@ prototype["render"] = function render() {
     obj4[1] = intl2.string(giftCode(self[13]).t.h5EvZM);
     obj4[2] = self.handleShare;
     obj3[1] = callback(giftCode(self[12]).Button, obj4);
-    items1[1] = callback(closure_3, obj3);
+    items1[1] = callback(tmp3, obj3);
     obj1[1] = items1;
-    obj[0] = callback(closure_3, obj1);
+    obj[0] = tmp2(tmp3, obj1);
     obj[1] = callback(giftCode(self[10]).InputFieldContainer, obj);
-    let tmp2Result = callback(closure_3, obj);
+    let tmp2Result = callback(tmp3, obj);
     let tmp8 = self;
     let tmp10 = giftCode;
     let tmp6 = callback;
@@ -114,9 +119,9 @@ prototype["render"] = function render() {
     obj7[1] = intl.string(giftCode(self[13]).t.h5EvZM);
     obj7[2] = self.handleShare;
     obj6[1] = callback(giftCode(self[12]).Button, obj7);
-    items3[1] = callback(closure_3, obj6);
+    items3[1] = callback(tmp3, obj6);
     obj[1] = items3;
-    tmp2Result = callback(closure_3, obj);
+    tmp2Result = tmp2(tmp3, obj);
     tmp10 = giftCode;
   }
   const items5 = [tmp2Result, ];
@@ -129,7 +134,7 @@ prototype["render"] = function render() {
     const expiresAt = giftCode.expiresAt;
     obj10[0] = expiresAt.diff(importDefault(tmp8[14])(), "h");
     obj10[1] = function revokeHook(children) {
-      {
+      obj = {
         accessibilityRole: "button",
         onPress() {
           return closure_2.handleRevoke(code.code);
@@ -147,9 +152,10 @@ prototype["render"] = function render() {
   obj8[1] = tmp6Result;
   items5[1] = tmp6(closure_3, obj8);
   obj[1] = items5;
-  return callback(closure_3, obj);
+  return closure_7(closure_3, obj);
 };
 GiftCodeRow.contextType = require("ManaContext").ThemeContext;
-const result = require("obj132").fileFinishedImporting("components_native/premium/GiftCodeRow.tsx");
+let obj4 = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
+const result = require("set").fileFinishedImporting("components_native/premium/GiftCodeRow.tsx");
 
 export default GiftCodeRow;

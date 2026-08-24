@@ -1,7 +1,7 @@
 // === Module 1474: awaitOnline ===
 
 // Module 1474 (awaitOnline)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import notifyListeners from "notifyListeners" /* 1475 */;
 
 let closure_2 = [];
@@ -9,27 +9,27 @@ let c3 = false;
 const obj = {};
 const merged = Object.assign(notifyListeners.default);
 obj.awaitOnline = function awaitOnline() {
-  return new Promise((fn) => {
+  return new Promise((arg0) => {
     if (_default.isOnline()) {
-      return fn();
+      return arg0();
     } else {
-      function whenOnline(closure_1) {
-        const item = closure_1_2.forEach((item, index) => item());
+      function whenOnline(arg0) {
+        const item = closure_1_2.forEach((arg0) => arg0());
         closure_1_2.length = 0;
         c3 = false;
         whenOnline(closure_1_1[0]).default.removeOnlineCallback(whenOnline);
       }
-      arr = arr.push(fn);
+      arr = arr.push(arg0);
       if (!c3) {
         c3 = true;
-        tmp(table[0]).default.addOnlineCallback(whenOnline);
-        const _default2 = tmp(table[0]).default;
+        tmp(tmp2[0]).default.addOnlineCallback(whenOnline);
       }
     }
     _default = whenOnline(table[0]).default;
     tmp = whenOnline;
+    tmp2 = table;
   });
 };
-const result = obj132.fileFinishedImporting("utils/NetworkUtils.tsx");
+const result = set.fileFinishedImporting("utils/NetworkUtils.tsx");
 
 export default obj;

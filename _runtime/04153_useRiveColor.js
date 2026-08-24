@@ -4,9 +4,9 @@
 import c from "c" /* 4135 */;
 import RiveColor2 from "RiveColor" /* 4143 */;
 import useRiveProperty from "useRiveProperty" /* 4148 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-require = fn;
+require = arg1;
 require("noop").useCallback;
 const f29193 = (colorProperty) => colorProperty.colorProperty(arg1);
 
@@ -32,7 +32,7 @@ export const useRiveColor = function useRiveColor(FillColor, instance) {
     const fn = function p(str) {
       let fromHexStringResult = str;
       if (typeof str === "string") {
-        const RiveColor = tmp6(dependencyMap[4]).RiveColor;
+        const RiveColor = tmp6(closure_1_1[4]).RiveColor;
         fromHexStringResult = RiveColor.fromHexString(str);
       }
       tmp6(fromHexStringResult.toInt());

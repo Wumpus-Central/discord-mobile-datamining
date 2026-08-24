@@ -2,10 +2,10 @@
 
 // Module 16100 (useMessageRequestsCount)
 import initialize from "initialize" /* 589 */;
-import processChannel from "processChannel" /* 4799 */;
+import closure_2 from "processChannel" /* 4799 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
 
 export const useMessageRequestsCount = function useMessageRequestsCount() {
   const items = [closure_2];

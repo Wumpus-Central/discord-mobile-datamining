@@ -1,13 +1,14 @@
 // === Module 5336: fromServer ===
 
 // Module 5336 (fromServer)
-import fromServer from "fromServer" /* 5304 */;
+import closure_2 from "fromServer" /* 5304 */;
 import { createCollectiblesItemsFromServerResponse as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
 import { CollectiblesVariantProductRecord as closure_4 } from "fromServer" /* 5303 */;
 import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_5 } from "items" /* 678 */;
 import { PREMIUM_TYPE_NONE } from "ME" /* 676 */;
 
-const prototype = function CollectiblesPurchaseRecord(arg0) {
+let prototype;
+prototype = function CollectiblesPurchaseRecord(arg0) {
   ({ skuId: tmp.skuId, name: tmp.name, type: tmp.type, premiumType: tmp.premiumType, items: tmp.items, categorySkuId: tmp.categorySkuId, isCategoryReward: tmp.isCategoryReward, prices: tmp.prices, bundledProducts: tmp.bundledProducts, googleSkuIds: tmp.googleSkuIds, variants: tmp.variants, eligibleOffers: tmp.eligibleOffers, baseVariantName: tmp.baseVariantName, baseVariantSkuId: tmp.baseVariantSkuId, variantLabel: tmp.variantLabel, variantValue: tmp.variantValue, purchasedAt: tmp.purchasedAt, purchaseType: tmp.purchaseType, expiresAt: tmp.expiresAt } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
@@ -20,7 +21,7 @@ prototype["fromServer"] = function fromServer(sku_id) {
   if (premium_type !== PREMIUM_TYPE_NONE) {
     tmp3 = premium_type;
   }
-  const someResult = closure_5.some((item, index) => item.rewardSkuId === sku_id);
+  const someResult = closure_5.some((rewardSkuId) => rewardSkuId.rewardSkuId === sku_id);
   let mapped;
   const tmp5 = sku_id(4517)(prices);
   if (bundled_products != null) {
@@ -66,6 +67,6 @@ prototype["fromServer"] = function fromServer(sku_id) {
   obj.expiresAt = date1;
   return obj;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/CollectiblesPurchaseRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesPurchaseRecord.tsx");
 
 export default prototype;

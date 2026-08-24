@@ -1,9 +1,9 @@
 // === Module 13846: createRPCCommand ===
 
 // Module 13846 (createRPCCommand)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
 export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;

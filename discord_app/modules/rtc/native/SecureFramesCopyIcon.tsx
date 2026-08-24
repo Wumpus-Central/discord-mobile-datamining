@@ -1,16 +1,17 @@
 // === Module 9724: SecureFramesCopyIcon ===
 
 // Module 9724 (SecureFramesCopyIcon)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/rtc/native/SecureFramesCopyIcon.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesCopyIcon.tsx");
 
 export default function SecureFramesCopyIcon(chunks) {
   chunks = chunks.chunks;
+  let memo;
   const items = [chunks];
-  const memo = React.useMemo(() => chunks.join(" "), items);
+  memo = React.useMemo(() => chunks.join(" "), items);
   const items1 = [memo];
   const callback = React.useCallback(() => {
     const result = chunks(memo[2]).presentCopiedToClipboard();

@@ -1,10 +1,10 @@
 // === Module 11790: getListSummaryLabel ===
 
 // Module 11790 (getListSummaryLabel)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("utils/ListUtils.tsx");
+const result = set.fileFinishedImporting("utils/ListUtils.tsx");
 
 export const getListSummaryLabel = function getListSummaryLabel(names, length) {
   let first = names;
@@ -28,6 +28,7 @@ export const getListSummaryLabel = function getListSummaryLabel(names, length) {
     const intl2 = getSystemLocale.intl;
     [obj2[0], obj2[1], obj2[2]] = first;
     formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["/KSOKY"], { first: null, second: null, third: null });
+    obj1 = { first: null, second: null, third: null };
   } else {
     const intl = getSystemLocale.intl;
     obj = { first: null, second: null, third: null, count: null };

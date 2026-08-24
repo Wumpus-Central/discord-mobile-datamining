@@ -17,38 +17,38 @@ import { EmojiCategories } from "EmojiCategoryTypes" /* 6731 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 const memoResult = importAllResult.memo(function EmojiPickerCategoryIcon(id) {
   id = id.id;
   if (EmojiCategories.TOP_GUILD_EMOJI === id) {
     return jsx(TrophyIcon.TrophyIcon, {});
-  } else if (EmojiCategories.FAVORITES === id) {
+  } else if (tmp.FAVORITES === id) {
     return jsx(StarIcon.StarIcon, {});
-  } else if (EmojiCategories.RECENT === id) {
+  } else if (tmp.RECENT === id) {
     return jsx(ClockIcon.ClockIcon, {});
-  } else if (EmojiCategories.PEOPLE === id) {
+  } else if (tmp.PEOPLE === id) {
     return jsx(ReactionIcon.ReactionIcon, {});
-  } else if (EmojiCategories.NATURE === id) {
+  } else if (tmp.NATURE === id) {
     return jsx(NatureIcon.NatureIcon, {});
-  } else if (EmojiCategories.FOOD === id) {
+  } else if (tmp.FOOD === id) {
     return jsx(FoodIcon.FoodIcon, {});
-  } else if (EmojiCategories.ACTIVITY === id) {
+  } else if (tmp.ACTIVITY === id) {
     return jsx(GameControllerIcon.GameControllerIcon, {});
-  } else if (EmojiCategories.TRAVEL === id) {
+  } else if (tmp.TRAVEL === id) {
     return jsx(BicycleIcon.BicycleIcon, {});
-  } else if (EmojiCategories.OBJECTS === id) {
+  } else if (tmp.OBJECTS === id) {
     return jsx(ObjectIcon.ObjectIcon, {});
-  } else if (EmojiCategories.SYMBOLS === id) {
+  } else if (tmp.SYMBOLS === id) {
     return jsx(HeartIcon.HeartIcon, {});
-  } else if (EmojiCategories.FLAGS === id) {
+  } else if (tmp.FLAGS === id) {
     return jsx(FlagIcon.FlagIcon, {});
   } else {
-    if (EmojiCategories.CUSTOM !== id) {
-      const PREMIUM_UPSELL = EmojiCategories.PREMIUM_UPSELL;
+    if (tmp.CUSTOM !== id) {
+      const PREMIUM_UPSELL = tmp.PREMIUM_UPSELL;
     }
     return jsx(NitroWheelIcon.NitroWheelIcon, {});
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");
 
 export default memoResult;

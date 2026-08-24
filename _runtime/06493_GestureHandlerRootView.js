@@ -13,10 +13,12 @@ const styles = StyleSheet.create({ container: { flex: 1 } });
 export default function GestureHandlerRootView(style) {
   let container = style.style;
   const merged = Object.assign(style, Object.create(null));
+  const tmp3 = noopDefault;
   if (container == null) {
     container = container.container;
   }
-  const obj = { style: container };
+  let obj = { value: true, children: null };
+  obj = { style: container };
   const merged1 = Object.assign(merged);
   obj.moduleId = globalThis._RNGH_MODULE_ID;
   obj[1] = jsx(__INTERNAL_VIEW_CONFIGDefault, { style: container });

@@ -4,29 +4,35 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { getAgeVerificationGetStartedSteps as closure_6 } from "set" /* 5427 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { SafetyHubLinks } from "SafetyHubView" /* 5438 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16, flex: 1 };
+createCacheKey = { getStartedContainer: null, getStartedHeaderContainer: null, ageGroupLearnMoreContainer: null, getStartedHeaderText: null, getStartedRequestTextContainer: null, getStartedFooterContainer: null, getStartedRequestText: null, getStartedFooterButtonsContainer: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let obj1 = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { alignItems: "center", marginTop: -ThemesDefault.space.PX_8 };
 createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { alignItems: "center" };
+let obj2 = { alignItems: "center", marginTop: -ThemesDefault.space.PX_8 };
 createCacheKey[5] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_48 };
+let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_48 };
 createCacheKey[6] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj4 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { gap: ThemesDefault.space.PX_8 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIntroScreen.tsx");
+let obj5 = { gap: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIntroScreen.tsx");
 
 export default function GetStartedScreen(onComplete) {
   const modalSessionId = onComplete.modalSessionId;
@@ -38,6 +44,7 @@ export default function GetStartedScreen(onComplete) {
   ({ initiateAgeVerification: c1, loading } = initiateAgeVerification);
   obj1 = modalSessionId(6691);
   const isManualAgeVerificationHidden = obj1.useIsManualAgeVerificationHidden("age_verification_get_started_modal");
+  obj = { children: null };
   obj = { style: tmp.getStartedContainer, children: null };
   obj1 = { style: tmp.getStartedHeaderContainer, children: null };
   const items = [callback3(modalSessionId(5447).ShieldSpotIllustration, {}), , ];
@@ -53,17 +60,17 @@ export default function GetStartedScreen(onComplete) {
   const items1 = [callback4(closure_5, obj1), , ];
   const obj4 = {
     hasIcons: true,
-    children: callback2(modalSessionId).map((item, index) => {
-      const description = item.description;
-      let obj = { index: index + 1, tip: callback(modalSessionId(4734).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: item.title }), description: null };
+    children: callback2(modalSessionId).map((children) => {
+      const description = children.description;
+      let obj = { index: arg1 + 1, tip: callback(modalSessionId(4734).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title }), description: null };
       let tmpResult = null;
       if (null != description) {
         obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
         obj[2] = description;
-        tmpResult = callback(modalSessionId(4734).Text, obj);
+        tmpResult = tmp(modalSessionId(4734).Text, obj);
       }
       obj[2] = tmpResult;
-      return callback(_undefined(6692), obj, index);
+      return callback(_undefined(6692), obj, arg1);
     })
   };
   items1[1] = callback3(modalSessionId(6286).TableRowGroup, obj4);
@@ -72,10 +79,10 @@ export default function GetStartedScreen(onComplete) {
   const intl = modalSessionId(1236).intl;
   obj6[2] = intl.format(modalSessionId(1236).t["L+FgkZ"], {
     handleOnHelpUrlHook() {
-      const obj = _undefined(dependencyMap[17]);
-      obj.openUrl(_undefined(dependencyMap[18]).getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
-      const obj2 = _undefined(dependencyMap[18]);
-      const result = modalSessionId(dependencyMap[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(dependencyMap[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(dependencyMap[19]).AgeVerificationModalCta.LEARN_MORE);
+      const obj = _undefined(closure_1_2[17]);
+      obj.openUrl(_undefined(closure_1_2[18]).getArticleURL(closure_1_7.TIGGER_PAWTECT_LEARN_MORE));
+      const obj2 = _undefined(closure_1_2[18]);
+      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(closure_1_2[19]).AgeVerificationModalCta.LEARN_MORE);
     }
   });
   obj5[1] = callback3(modalSessionId(4734).Text, obj6);
@@ -94,13 +101,13 @@ export default function GetStartedScreen(onComplete) {
     const intl2 = tmp4(1236).intl;
     const obj11 = { handleOnRequestHook: null };
     obj11[0] = function handleOnRequestHook() {
-      _undefined(dependencyMap[17]).openUrl(SafetyHubLinks.APPEALS_LINK);
-      const obj = _undefined(dependencyMap[17]);
-      const result = modalSessionId(dependencyMap[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(dependencyMap[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(dependencyMap[19]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
+      _undefined(closure_1_2[17]).openUrl(closure_1_8.APPEALS_LINK);
+      const obj = _undefined(closure_1_2[17]);
+      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(closure_1_2[19]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
     };
     obj10[3] = intl2.format(tmp4(1236).t.pJAxgQ, obj11);
-    obj9[1] = callback3(tmp4(4734).Text, obj10);
-    tmp9Result = callback3(closure_5, obj9);
+    obj9[1] = tmp9(tmp4(4734).Text, obj10);
+    tmp9Result = tmp9(tmp10, obj9);
   }
   const obj12 = { children: null };
   const items4 = [tmp9Result, ];
@@ -162,6 +169,16 @@ export default function GetStartedScreen(onComplete) {
     }
   });
   const arr3 = callback2(modalSessionId);
+  const obj7 = {
+    handleOnHelpUrlHook() {
+      const obj = _undefined(closure_1_2[17]);
+      obj.openUrl(_undefined(closure_1_2[18]).getArticleURL(closure_1_7.TIGGER_PAWTECT_LEARN_MORE));
+      const obj2 = _undefined(closure_1_2[18]);
+      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(closure_1_2[19]).AgeVerificationModalCta.LEARN_MORE);
+    }
+  };
+  const tmp2 = importDefault;
+  const tmp8 = closure_11;
   obj14[4] = callback3(modalSessionId(6693).LinkExternalSmallIcon, { color: ThemesDefault.colors.WHITE });
   obj14[5] = loading;
   obj13[1] = callback3(modalSessionId(4745).Button, obj14);
@@ -169,5 +186,5 @@ export default function GetStartedScreen(onComplete) {
   obj8[1] = items4;
   items2[1] = callback4(closure_5, obj8);
   obj12[0] = items2;
-  return callback4(closure_11, obj12);
+  return callback4(tmp8, obj12);
 };

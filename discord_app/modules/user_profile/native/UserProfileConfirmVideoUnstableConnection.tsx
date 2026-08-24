@@ -6,10 +6,10 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx");
 
 export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   let obj = { title: null, content: null, actions: null };
@@ -17,6 +17,7 @@ export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   obj[0] = intl.string(getSystemLocale.t.m2Hyj0);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.EhaK6B);
+  obj = { children: null };
   obj = { text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.ND1my3);

@@ -1,7 +1,6 @@
 // === Module 13712: isForced ===
 
 // Module 13712 (isForced)
-import _mod13677 from "module_13677" /* 13677 */;
 import all from "all" /* 13699 */;
 
 const re2 = /#|\.prototype\./;
@@ -18,11 +17,12 @@ function isForced(arg0, arg1) {
     } else {
       let tmp7Result = dependencyMap;
       if (all(arg1)) {
-        tmp7Result = _mod13677;
+        tmp7Result = tmp7(13677);
         let tmp7ResultResult = tmp7Result(arg1);
       } else {
         tmp7ResultResult = arg1;
       }
+      tmp7 = require;
     }
   }
   return tmp3;

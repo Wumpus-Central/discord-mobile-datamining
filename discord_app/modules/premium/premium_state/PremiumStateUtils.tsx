@@ -1,9 +1,9 @@
 // === Module 1937: parseServerPremiumState ===
 
 // Module 1937 (parseServerPremiumState)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/premium/premium_state/PremiumStateUtils.tsx");
+const result = set.fileFinishedImporting("modules/premium/premium_state/PremiumStateUtils.tsx");
 
 export const parseServerPremiumState = function parseServerPremiumState(premium_state) {
   let tmp = null;

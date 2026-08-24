@@ -1,12 +1,12 @@
 // === Module 7373: _launchGuildBoostFlowOrAlert ===
 
 // Module 7373 (_launchGuildBoostFlowOrAlert)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import reset from "reset" /* 4045 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "reset" /* 4045 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-const require = fn;
+const require = arg1;
 function _launchGuildBoostFlowOrAlert() {
   const self = this;
   let tmp = callback((arg0) => {
@@ -75,8 +75,8 @@ function _launchGuildBoostFlowOrAlert() {
                 externalManagementMessage = obj3.getExternalManagementMessage(premiumTypeSubscription);
                 if (null != externalManagementMessage) {
                   (function alertUnableToManageSub(closure_7, c0) {
-                    _null(_undefined2[4]);
-                    let obj = { title: null, body: null };
+                    let obj = _null(_undefined2[4]);
+                    obj = { title: null, body: null };
                     const intl = _undefined(_undefined2[5]).intl;
                     obj[0] = intl.string(_undefined(_undefined2[5]).t["8P7MX0"]);
                     obj[1] = closure_7;
@@ -192,7 +192,7 @@ function _launchGuildBoostFlowOrAlert() {
 }
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: error, PremiumTypes: closure_8, SubscriptionIntervalTypes: c9 } = GuildFeatures);
-let result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
 
 export const launchGuildBoostFlowOrAlert = function launchGuildBoostFlowOrAlert(arg0) {
   const self = this;

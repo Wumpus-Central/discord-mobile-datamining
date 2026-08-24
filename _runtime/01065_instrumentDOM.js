@@ -10,18 +10,19 @@ function instrumentDOM() {
   if (WINDOW2.WINDOW.document) {
     const bindResult = tmp(817).triggerHandlers.bind(null, "dom");
     require = bindResult;
+    require = bindResult;
     dependencyMap = true;
-    const fn = (event) => {
-      if (event) {
-        if (!event._sentryCaptured) {
+    const fn = (_sentryCaptured) => {
+      if (_sentryCaptured) {
+        if (!_sentryCaptured._sentryCaptured) {
           const tmp = (function getEventTarget(target) {
             try {
               return target.target;
             } catch (err) {
               return null;
             }
-          })(event);
-          let tmp2 = "keypress" === event.type;
+          })(_sentryCaptured);
+          let tmp2 = "keypress" === _sentryCaptured.type;
           if (tmp2) {
             let tagName;
             if (tmp != null) {
@@ -42,19 +43,19 @@ function instrumentDOM() {
           }
           if (!tmp2) {
             let obj = callback(flag[0]);
-            const result = obj.addNonEnumerableProperty(event, "_sentryCaptured", true);
+            const result = obj.addNonEnumerableProperty(_sentryCaptured, "_sentryCaptured", true);
             let tmp10 = tmp;
             if (tmp) {
               tmp10 = !tmp._sentryId;
             }
             if (tmp10) {
-              callback(tmp8[0]);
-              const tmp7Result = callback(tmp8[0]);
+              let tmp7Result = tmp7(tmp8[0]);
+              tmp7Result = tmp7(tmp8[0]);
               const result1 = tmp7Result.addNonEnumerableProperty(tmp, "_sentryId", tmp7Result.uuid4());
             }
             let str6 = "input";
-            if ("keypress" !== event.type) {
-              str6 = event.type;
+            if ("keypress" !== _sentryCaptured.type) {
+              str6 = _sentryCaptured.type;
             }
             if (!(function isSimilarToLastCapturedEvent(type) {
               if (type.type !== closure_3) {
@@ -70,13 +71,13 @@ function instrumentDOM() {
                 } catch (err) {
                 }
               }
-            })(event)) {
+            })(_sentryCaptured)) {
               obj = { event: null, name: null, global: null };
-              obj[0] = event;
+              obj[0] = _sentryCaptured;
               obj[1] = str6;
               obj[2] = flag;
               callback(obj);
-              type = event.type;
+              type = _sentryCaptured.type;
               _sentryId = undefined;
               if (tmp) {
                 _sentryId = tmp._sentryId;
@@ -84,7 +85,7 @@ function instrumentDOM() {
             }
             const _clearTimeout = clearTimeout;
             clearTimeout(timeout);
-            const WINDOW = callback(tmp8[1]).WINDOW;
+            const WINDOW = tmp7(tmp8[1]).WINDOW;
             timeout = WINDOW.setTimeout(() => {
               c4 = undefined;
               c3 = undefined;
@@ -98,8 +99,8 @@ function instrumentDOM() {
     const _document2 = tmp(1039).WINDOW.document;
     const listener1 = _document2.addEventListener("keypress", fn, false);
     const items = ["EventTarget", "Node"];
-    const item = items.forEach((item, index) => {
-      const tmp3 = bindResult(_true[1]).WINDOW[item];
+    const item = items.forEach((arg0) => {
+      const tmp3 = bindResult(_true[1]).WINDOW[arg0];
       let prototype;
       if (tmp3 != null) {
         prototype = tmp3.prototype;
@@ -112,7 +113,7 @@ function instrumentDOM() {
         }
       }
       if (hasOwnPropertyResult) {
-        let tmpResult = bindResult(_true[0]);
+        let tmpResult = tmp(tmp2[0]);
         tmpResult.fill(prototype, "addEventListener", (arg0) => {
           closure_0 = arg0;
           return function(arg0, arg1, arg2) {
@@ -130,11 +131,11 @@ function instrumentDOM() {
                 }
                 prop[arg0] = obj;
                 if (!obj.handler) {
-                  const tmp4 = closure_2_6(callback);
+                  const tmp4 = closure_2_6(closure_0);
                   tmp.handler = tmp4;
-                  const call = callback.call;
+                  const call = closure_0.call;
                   if (typeof call === "unknown") {
-                    callback(arg0, tmp4, arg2);
+                    tmp6(arg0, tmp4, arg2);
                   } else {
                     call(self, arg0, tmp4, arg2);
                   }
@@ -143,16 +144,16 @@ function instrumentDOM() {
               } catch (err) {
               }
             }
-            const call2 = callback.call;
+            const call2 = closure_0.call;
             if (typeof call2 === "unknown") {
-              let call2Result = callback(arg0, arg1, arg2);
+              let call2Result = tmp9(arg0, arg1, arg2);
             } else {
               call2Result = call2(self, arg0, arg1, arg2);
             }
             return call2Result;
           };
         });
-        tmpResult = bindResult(_true[0]);
+        tmpResult = tmp(tmp2[0]);
         tmpResult.fill(prototype, "removeEventListener", (arg0) => {
           closure_0 = arg0;
           return function(arg0, arg1, arg2) {
@@ -172,10 +173,10 @@ function instrumentDOM() {
                       delete tmp3[tmp];
                     }
                   } else {
-                    const call = callback.call;
+                    const call = closure_0.call;
                     let handler = tmp7.handler;
                     if (typeof call === "unknown") {
-                      handler = callback(arg0, handler, arg2);
+                      handler = tmp9(arg0, handler, arg2);
                     } else {
                       call(self, arg0, handler, arg2);
                     }
@@ -187,9 +188,9 @@ function instrumentDOM() {
               } catch (err) {
               }
             }
-            const call2 = callback.call;
+            const call2 = closure_0.call;
             if (typeof call2 === "unknown") {
-              let call2Result = callback(arg0, arg1, arg2);
+              let call2Result = tmp12(arg0, arg1, arg2);
             } else {
               call2Result = call2(self, arg0, arg1, arg2);
             }
@@ -207,17 +208,17 @@ function makeDOMEventHandler(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  return (event) => {
-    if (event) {
-      if (!event._sentryCaptured) {
+  return (_sentryCaptured) => {
+    if (_sentryCaptured) {
+      if (!_sentryCaptured._sentryCaptured) {
         const tmp = (function getEventTarget(target) {
           try {
             return target.target;
           } catch (err) {
             return null;
           }
-        })(event);
-        let tmp2 = "keypress" === event.type;
+        })(_sentryCaptured);
+        let tmp2 = "keypress" === _sentryCaptured.type;
         if (tmp2) {
           let tagName;
           if (tmp != null) {
@@ -238,19 +239,19 @@ function makeDOMEventHandler(arg0) {
         }
         if (!tmp2) {
           let obj = callback(flag[0]);
-          const result = obj.addNonEnumerableProperty(event, "_sentryCaptured", true);
+          const result = obj.addNonEnumerableProperty(_sentryCaptured, "_sentryCaptured", true);
           let tmp10 = tmp;
           if (tmp) {
             tmp10 = !tmp._sentryId;
           }
           if (tmp10) {
-            callback(tmp8[0]);
-            const tmp7Result = callback(tmp8[0]);
+            let tmp7Result = tmp7(tmp8[0]);
+            tmp7Result = tmp7(tmp8[0]);
             const result1 = tmp7Result.addNonEnumerableProperty(tmp, "_sentryId", tmp7Result.uuid4());
           }
           let str6 = "input";
-          if ("keypress" !== event.type) {
-            str6 = event.type;
+          if ("keypress" !== _sentryCaptured.type) {
+            str6 = _sentryCaptured.type;
           }
           if (!(function isSimilarToLastCapturedEvent(type) {
             if (type.type !== closure_3) {
@@ -266,13 +267,13 @@ function makeDOMEventHandler(arg0) {
               } catch (err) {
               }
             }
-          })(event)) {
+          })(_sentryCaptured)) {
             obj = { event: null, name: null, global: null };
-            obj[0] = event;
+            obj[0] = _sentryCaptured;
             obj[1] = str6;
             obj[2] = flag;
             callback(obj);
-            type = event.type;
+            type = _sentryCaptured.type;
             _sentryId = undefined;
             if (tmp) {
               _sentryId = tmp._sentryId;
@@ -280,7 +281,7 @@ function makeDOMEventHandler(arg0) {
           }
           const _clearTimeout = clearTimeout;
           clearTimeout(timeout);
-          const WINDOW = callback(tmp8[1]).WINDOW;
+          const WINDOW = tmp7(tmp8[1]).WINDOW;
           timeout = WINDOW.setTimeout(() => {
             c4 = undefined;
             c3 = undefined;
@@ -293,6 +294,7 @@ function makeDOMEventHandler(arg0) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addClickKeypressInstrumentationHandler = function addClickKeypressInstrumentationHandler(arg0) {
   registerSpanErrorInstrumentation.addHandler("dom", arg0);
+  const obj = registerSpanErrorInstrumentation;
   registerSpanErrorInstrumentation.maybeInstrument("dom", instrumentDOM);
 };
 arg5.instrumentDOM = instrumentDOM;

@@ -1,24 +1,23 @@
 // === Module 4851: ? ===
 
 // Module 4851
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isActionPickSupported from "isActionPickSupported" /* 4852 */;
 import launchCamera from "launchCamera" /* 4853 */;
 import openPickerDefault from "openPicker" /* 4855 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
 import { ThemeTypes } from "sum" /* 505 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/image/native/ImagePicker.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/image/native/ImagePicker.tsx");
 
 export default {
   launchImageLibrary(mediaType) {
     if ("any" !== mediaType.mediaType) {
       let str = mediaType.mediaType;
     } else {
-      let obj = obj132;
+      let obj = set;
       str = "mixed";
     }
     let selections = mediaType.selections;
@@ -29,9 +28,10 @@ export default {
     if (obj2.isIOS()) {
       str2 = "pageSheet";
     }
-    obj2 = obj132;
+    let tmp4Result = tmp4(4852);
+    obj2 = set;
     const tmp3 = !mediaType.disableNewIOSPicker;
-    const tmp4Result = launchCamera;
+    tmp4Result = tmp4(4853);
     obj = {};
     const merged = Object.assign(mediaType);
     obj.mediaType = str;
@@ -40,7 +40,6 @@ export default {
     obj.useNewIOSPicker = tmp3;
     obj.forceGetContent = !tmp4Result.isActionPickSupported();
     tmp4Result.launchImageLibrary(obj, arg1);
-    const tmp6 = !tmp4Result.isActionPickSupported();
   },
   launchImageLibraryAsync(arg0) {
     closure_0 = arg0;
@@ -49,7 +48,7 @@ export default {
       if ("any" !== lib.mediaType) {
         let str = tmp.mediaType;
       } else {
-        let obj = lib(dependencyMap[2]);
+        let obj = lib(closure_1_2[2]);
         str = "mixed";
       }
       let selections = tmp.selections;
@@ -63,10 +62,10 @@ export default {
       const fn = (arg0) => {
         callback(arg0);
       };
-      tmp5(dependencyMap[3]);
-      obj2 = lib(dependencyMap[2]);
+      let tmp5Result = tmp5(tmp6[3]);
+      obj2 = lib(closure_1_2[2]);
       const tmp4 = !lib.disableNewIOSPicker;
-      const tmp5Result = tmp5(dependencyMap[4]);
+      tmp5Result = tmp5(tmp6[4]);
       obj = {};
       const merged = Object.assign(tmp);
       obj.mediaType = str;
@@ -75,7 +74,6 @@ export default {
       obj.useNewIOSPicker = tmp4;
       obj.forceGetContent = !tmp5Result.isActionPickSupported();
       tmp5Result.launchImageLibrary(obj, fn);
-      const tmp7 = !tmp5Result.isActionPickSupported();
     });
   },
   launchCamera(arg0, arg1) {
@@ -85,7 +83,7 @@ export default {
     closure_0 = arg0;
     return new Promise((arg0) => {
       const callback = arg0;
-      callback(dependencyMap[4]).launchCamera(callback, (arg0) => {
+      callback(closure_1_2[4]).launchCamera(callback, (arg0) => {
         callback(arg0);
       });
     });
@@ -105,7 +103,8 @@ export default {
     const semanticColor4 = internal5.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_BRAND);
     const internal6 = ThemesDefault.internal;
     const semanticColor5 = internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_DEFAULT);
-    const obj = { mediaType: "photo", path: uri, width, height, includeBase64, mimeType, freeStyleCropEnabled, cropperStatusBarLight: theme === ThemeTypes.LIGHT, cropperNavigationBarLight: theme === ThemeTypes.LIGHT, cropperActiveWidgetColor: semanticColor2, cropperInactiveWidgetColor: semanticColor3, cropperControlsColor: semanticColor1, cropperControlsBarColor: semanticColor, cropperChooseColor: semanticColor4, cropperChooseText: null, cropperCancelColor: null, cropperCancelText: null, cropperToolbarColor: null, cropperToolbarWidgetColor: null, cropperToolbarTitle: null, cropperRotateByAngleAccessibilityLabel: null, cropperResetRotationAccessibilityLabel: null, cropperClampButtonAccessibilityLabel: null };
+    let obj = openPickerDefault;
+    obj = { mediaType: "photo", path: uri, width, height, includeBase64, mimeType, freeStyleCropEnabled, cropperStatusBarLight: theme === ThemeTypes.LIGHT, cropperNavigationBarLight: theme === ThemeTypes.LIGHT, cropperActiveWidgetColor: semanticColor2, cropperInactiveWidgetColor: semanticColor3, cropperControlsColor: semanticColor1, cropperControlsBarColor: semanticColor, cropperChooseColor: semanticColor4, cropperChooseText: null, cropperCancelColor: null, cropperCancelText: null, cropperToolbarColor: null, cropperToolbarWidgetColor: null, cropperToolbarTitle: null, cropperRotateByAngleAccessibilityLabel: null, cropperResetRotationAccessibilityLabel: null, cropperClampButtonAccessibilityLabel: null };
     const intl = getSystemLocale.intl;
     obj[14] = intl.string(getSystemLocale.t["1Qm822"]);
     obj[15] = semanticColor5;

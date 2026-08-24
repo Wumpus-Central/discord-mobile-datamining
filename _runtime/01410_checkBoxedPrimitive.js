@@ -11,7 +11,7 @@ function checkBoxedPrimitive(obj, closure_6) {
     return false;
   } else {
     try {
-      callback(obj);
+      closure_6(obj);
       return true;
     } catch (err) {
       return false;
@@ -114,9 +114,9 @@ if (typeof SharedArrayBuffer !== "undefined") {
   _SharedArrayBuffer = SharedArrayBuffer;
 }
 const items = ["isProxy", "isExternal", "isModuleNamespaceObject"];
-const item = items.forEach((item, index) => {
-  closure_0 = item;
-  Object.defineProperty(exports, item, {
+const item = items.forEach((arg0) => {
+  closure_0 = arg0;
+  Object.defineProperty(exports, arg0, {
     enumerable: false,
     value() {
       error = new Error(closure_0 + " is not supported in userland");
@@ -135,6 +135,7 @@ export const isPromise = function isPromise(obj) {
   }
   if (!tmp) {
     tmp = null !== obj && typeof obj === "object" && typeof obj.then === "function" && typeof obj.catch === "function";
+    const tmp3 = null !== obj && typeof obj === "object" && typeof obj.then === "function" && typeof obj.catch === "function";
   }
   return tmp;
 };
@@ -153,9 +154,10 @@ export const isArrayBufferView = function isArrayBufferView(arg0) {
     if (typeof DataView === "undefined") {
       isViewResult = typeof DataView !== "undefined";
     } else if (isDataViewToString.working) {
-      const tmp2 = "[object DataView]" === bindResult(arg0);
+      let tmp2 = "[object DataView]" === bindResult(arg0);
     } else {
       const _DataView2 = DataView;
+      tmp2 = arg0 instanceof DataView;
     }
   }
 };
@@ -199,8 +201,10 @@ export const isMap = function isMap(arg0) {
     let tmp3 = arg0;
     if (isMapToString.working) {
       tmp3 = bindResult(tmp3);
+      let tmp = "[object Map]" === tmp3;
     } else {
       const _Map = Map;
+      tmp = tmp3 instanceof Map;
     }
   }
 };
@@ -211,8 +215,10 @@ export const isSet = function isSet(arg0) {
     let tmp3 = arg0;
     if (isSetToString.working) {
       tmp3 = bindResult(tmp3);
+      let tmp = "[object Set]" === tmp3;
     } else {
       const _Set = Set;
+      tmp = tmp3 instanceof Set;
     }
   }
 };
@@ -223,8 +229,10 @@ export const isWeakMap = function isWeakMap(arg0) {
     let tmp3 = arg0;
     if (isWeakMapToString.working) {
       tmp3 = bindResult(tmp3);
+      let tmp = "[object WeakMap]" === tmp3;
     } else {
       const _WeakMap = WeakMap;
+      tmp = tmp3 instanceof WeakMap;
     }
   }
 };
@@ -238,8 +246,10 @@ export const isArrayBuffer = function isArrayBuffer(arg0) {
     let tmp3 = arg0;
     if (isArrayBufferToString.working) {
       tmp3 = bindResult(tmp3);
+      let tmp = "[object ArrayBuffer]" === tmp3;
     } else {
       const _ArrayBuffer = ArrayBuffer;
+      tmp = tmp3 instanceof ArrayBuffer;
     }
   }
 };
@@ -250,8 +260,10 @@ export const isDataView = function isDataView(arg0) {
     let tmp3 = arg0;
     if (isDataViewToString.working) {
       tmp3 = bindResult(tmp3);
+      let tmp = "[object DataView]" === tmp3;
     } else {
       const _DataView = DataView;
+      tmp = tmp3 instanceof DataView;
     }
   }
 };
@@ -262,11 +274,14 @@ export const isSharedArrayBuffer = function isSharedArrayBuffer(arg0) {
   } else {
     if (undefined === isSharedArrayBufferToString.working) {
       tmp = new tmp();
-      isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp);
+      tmp3.working = "[object SharedArrayBuffer]" === bindResult(tmp);
     }
     let tmp9 = arg0;
     if (isSharedArrayBufferToString.working) {
       tmp9 = bindResult(tmp9);
+      let tmp10 = "[object SharedArrayBuffer]" === tmp9;
+    } else {
+      tmp10 = tmp9 instanceof tmp;
     }
   }
 };
@@ -311,21 +326,21 @@ export const isSymbolObject = function isSymbolObject(arg0) {
 export const isBoxedPrimitive = function isBoxedPrimitive(arg0) {
   let tmpResult = checkBoxedPrimitive(arg0, closure_6);
   if (!tmpResult) {
-    tmpResult = checkBoxedPrimitive(arg0, closure_7);
+    tmpResult = tmp(arg0, closure_7);
   }
   if (!tmpResult) {
-    tmpResult = checkBoxedPrimitive(arg0, closure_8);
+    tmpResult = tmp(arg0, closure_8);
   }
   if (!tmpResult) {
     tmpResult = closure_3;
     if (closure_3) {
-      tmpResult = checkBoxedPrimitive(arg0, closure_9);
+      tmpResult = tmp(arg0, closure_9);
     }
   }
   if (!tmpResult) {
     let tmpResult1 = closure_4;
     if (closure_4) {
-      tmpResult1 = checkBoxedPrimitive(arg0, closure_10);
+      tmpResult1 = tmp(arg0, closure_10);
     }
     tmpResult = tmpResult1;
   }
@@ -345,18 +360,22 @@ export const isAnyArrayBuffer = function isAnyArrayBuffer(arg0) {
         } else {
           if (undefined === isSharedArrayBufferToString.working) {
             tmp5 = new tmp5();
-            isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp5);
+            tmp7.working = "[object SharedArrayBuffer]" === bindResult(tmp5);
           }
           if (isSharedArrayBufferToString.working) {
             tmp15 = bindResult(tmp15);
+            let tmp13 = "[object SharedArrayBuffer]" === tmp15;
+          } else {
+            tmp13 = tmp15 instanceof tmp5;
           }
         }
       }
       tmp = tmp17;
     } else if (isArrayBufferToString.working) {
-      const tmp2 = "[object ArrayBuffer]" === bindResult(tmp15);
+      let tmp2 = "[object ArrayBuffer]" === bindResult(tmp15);
     } else {
       const _ArrayBuffer = ArrayBuffer;
+      tmp2 = tmp15 instanceof ArrayBuffer;
     }
   }
   return tmp;

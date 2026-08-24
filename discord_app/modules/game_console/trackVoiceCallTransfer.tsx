@@ -2,12 +2,12 @@
 
 // Module 9851 (trackVoiceCallTransfer)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import handleUpdate from "handleUpdate" /* 4541 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "createRTCConnection" /* 4539 */;
+import closure_4 from "handleUpdate" /* 4541 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
+const result = require("set").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 
 export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
   let obj = expandEventPropertiesDefault;

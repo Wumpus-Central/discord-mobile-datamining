@@ -1,12 +1,12 @@
 // === Module 7229: useGuildShopPreviewVisible ===
 
 // Module 7229 (useGuildShopPreviewVisible)
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ Permissions: c3, GuildFeatures: c4 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
+let result = require("set").fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
 
 export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(features) {
   const _require = features;

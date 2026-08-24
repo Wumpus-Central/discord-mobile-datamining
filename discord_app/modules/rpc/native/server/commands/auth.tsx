@@ -1,13 +1,11 @@
 // === Module 13881: ? ===
 
 // Module 13881
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import getApplicationFlags from "getApplicationFlags" /* 7873 */;
 import authorizeWithPromptDefault from "authorizeWithPrompt" /* 13882 */;
-import addApplication from "addApplication" /* 4478 */;
+import closure_3 from "addApplication" /* 4478 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+const require = arg1;
 ({ ComponentActions: c4, ApplicationFlags: c5, RPCErrors: closure_6 } = ME);
 const tmp3 = authorizeWithPromptDefault((arg0) => {
   ({ clientId: require, authorizations: importDefault, scopes: dependencyMap, parsedPermissions: closure_3, responseType: closure_4, redirectUri: closure_5, codeChallenge: closure_6, codeChallengeMethod: closure_7, state: closure_8, guildId: closure_9, channelId: closure_10, prompt: closure_11, disableGuildSelect: closure_12, disclosures: closure_13, integrationType: closure_14 } = arg0);
@@ -19,7 +17,7 @@ const tmp3 = authorizeWithPromptDefault((arg0) => {
       let obj = closure_1;
       let value;
       if (closure_1 != null) {
-        value = obj.get(closure_14);
+        value = obj.get(tmp);
       }
       tmp2 = value;
     }
@@ -60,15 +58,15 @@ const tmp3 = authorizeWithPromptDefault((arg0) => {
         callback2(tmp8);
       }
     };
-    obj[14] = getApplicationFlags.hasApplicationFlag(application, closure_1_5.EMBEDDED);
+    obj[14] = closure_1_0(closure_1_2[3]).hasApplicationFlag(application, closure_1_5.EMBEDDED);
     obj[15] = closure_13;
     obj[16] = closure_14;
-    const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+    const ComponentDispatch = closure_1_0(closure_1_2[4]).ComponentDispatch;
     ComponentDispatch.dispatch(closure_1_4.SHOW_OAUTH2_MODAL, obj);
   });
 }, function onAuthorizeValidationPassed() {
 
 });
-const result = require("obj132").fileFinishedImporting("modules/rpc/native/server/commands/auth.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/native/server/commands/auth.tsx");
 
 export default tmp3;

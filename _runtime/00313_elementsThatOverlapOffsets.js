@@ -2,17 +2,18 @@
 
 // Module 313 (elementsThatOverlapOffsets)
 import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, zoomScale) {
-  let num = zoomScale;
-  if (zoomScale === undefined) {
+function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, arg3) {
+  let num = arg3;
+  if (arg3 === undefined) {
     num = 1;
   }
   items = [];
   for (let num2 = 0; num2 < items.length; num2 = num2 + 1) {
     let tmp2 = items[num2];
     let diff = tmp - 1;
+    let tmp4 = num2;
     let num3 = 0;
     if (0 <= diff) {
       while (true) {
@@ -21,6 +22,7 @@ function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, z
         let cellMetricsApprox = getCellMetricsApprox.getCellMetricsApprox(sum, getItemCount);
         let result = cellMetricsApprox.offset * num;
         let diff1 = diff;
+        let tmp8 = num3;
         if (0 !== sum) {
           if (0 === sum) {
             if (tmp2 <= (cellMetricsApprox.offset + cellMetricsApprox.length) * num) {
@@ -42,12 +44,12 @@ function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, z
 }
 
 export { elementsThatOverlapOffsets };
-export const newRangeCount = function newRangeCount(arg0, arg1) {
-  const sum = arg1.last - arg1.first + 1;
-  const sum1 = 1 + Math.min(arg1.last, arg0.last);
-  return sum - Math.max(0, sum1 - Math.max(arg1.first, arg0.first));
+export const newRangeCount = function newRangeCount(last, last2) {
+  const sum = last2.last - last2.first + 1;
+  const sum1 = 1 + Math.min(last2.last, last.last);
+  return sum - Math.max(0, sum1 - Math.max(last2.first, last.first));
 };
-export const computeWindowedRenderLimits = function computeWindowedRenderLimits(getItemCount, result2, tmpResult2, cellsAroundViewport, _listMetrics, _scrollMetrics) {
+export const computeWindowedRenderLimits = function computeWindowedRenderLimits(getItemCount, result2, tmpResult2, last, _listMetrics, _scrollMetrics) {
   const itemCount = getItemCount.getItemCount(getItemCount.data);
   if (0 === itemCount) {
     return { first: 0, last: -1 };
@@ -60,8 +62,14 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
     const _Math = Math;
     const bound = Math.max(0, _scrollMetrics.offset);
     const sum = bound + visibleLength;
+    let str2 = "after";
     const result = (tmpResult2 - 1) * visibleLength;
     if (velocity <= 1) {
+      let str3 = "none";
+      if (velocity < -1) {
+        str3 = "before";
+      }
+      str2 = str3;
     }
     const _Math2 = Math;
     const result1 = 0.5 * result;
@@ -99,25 +107,30 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
       const _Math7 = Math;
       const sum1 = obj.last - obj.first + 1;
       const _Math8 = Math;
-      const sum2 = 1 + Math.min(obj.last, cellsAroundViewport.last);
-      const diff1 = sum1 - Math.max(0, sum2 - Math.max(obj.first, cellsAroundViewport.first));
+      const sum2 = 1 + Math.min(obj.last, last.last);
+      const diff1 = sum1 - Math.max(0, sum2 - Math.max(obj.first, last.first));
       let tmp21 = diff1;
       let tmp22 = bound4;
       let tmp23 = bound3;
       if (bound3 > num4) {
         while (true) {
           let tmp26 = tmp21 >= result2;
+          let tmp27 = importAll;
+          let tmp28 = dependencyMap;
           obj1 = javaScriptFlagGetterAll;
-          let tmp29 = tmp23 <= cellsAroundViewport.first;
+          let tmp29 = tmp23 <= last.first;
+          let tmp30 = tmp21;
+          let tmp31 = tmp22;
+          let tmp32 = tmp23;
           if (obj1.fixVirtualizeListCollapseWindowSize()) {
-            let tmp34 = tmp22 >= cellsAroundViewport.last;
+            let tmp34 = tmp22 >= last.last;
             let tmp33 = tmp29;
           } else {
             tmp33 = tmp29;
             if (!tmp29) {
-              tmp33 = tmp23 > cellsAroundViewport.last;
+              tmp33 = tmp23 > last.last;
             }
-            tmp34 = tmp22 >= cellsAroundViewport.last || tmp22 < cellsAroundViewport.first;
+            tmp34 = tmp22 >= last.last || tmp22 < last.first;
           }
           let tmp35 = tmp23 > num4;
           if (tmp35) {
@@ -243,24 +256,24 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
     }
   }
 };
-export const keyExtractor = function keyExtractor(key) {
-  if (typeof key === "object") {
-    key = undefined;
-    if (key != null) {
-      key = key.key;
+export const keyExtractor = function keyExtractor(obj) {
+  if (typeof obj === "object") {
+    let key;
+    if (obj != null) {
+      key = obj.key;
     }
     if (null != key) {
-      let id = key.key;
+      let id = obj.key;
     }
     return id;
   }
-  if (typeof key === "object") {
+  if (typeof obj === "object") {
     id = undefined;
-    if (key != null) {
-      id = key.id;
+    if (obj != null) {
+      id = obj.id;
     }
     if (null != id) {
-      id = key.id;
+      id = obj.id;
     }
   }
   id = String(arg1);

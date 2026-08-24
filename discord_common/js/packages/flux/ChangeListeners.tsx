@@ -1,9 +1,9 @@
 // === Module 592: has ===
 
 // Module 592 (has)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/flux/ChangeListeners.tsx");
+const result = set2.fileFinishedImporting("../discord_common/js/packages/flux/ChangeListeners.tsx");
 class ChangeListeners {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -22,7 +22,7 @@ class ChangeListeners {
       const conditionalListeners = obj.conditionalListeners;
       conditionalListeners.delete(arg0);
     };
-    obj.addConditional = function addConditional(fn) {
+    obj.addConditional = function addConditional(arg0) {
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
@@ -41,9 +41,9 @@ class ChangeListeners {
     };
     obj.removeAllConditional = function removeAllConditional() {
       let conditionalListeners = obj.conditionalListeners;
-      const item = conditionalListeners.forEach((item, index) => {
+      const item = conditionalListeners.forEach((arg0) => {
         listeners = listeners.listeners;
-        return listeners.delete(item);
+        return listeners.delete(arg0);
       });
       conditionalListeners = obj.conditionalListeners;
       conditionalListeners.clear();
@@ -61,7 +61,7 @@ prototype["hasAny"] = function hasAny() {
 };
 prototype["invokeAll"] = function invokeAll() {
   const listeners = this.listeners;
-  const item = listeners.forEach((item, index) => item());
+  const item = listeners.forEach((arg0) => arg0());
 };
 
 export { ChangeListeners };

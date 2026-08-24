@@ -1,7 +1,7 @@
 // === Module 4078: isFeatureTeenByDefault ===
 
 // Module 4078 (isFeatureTeenByDefault)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 class SettingsConfig {
   constructor(arg0) {
@@ -101,7 +101,7 @@ RegionalFeatureConfig["fromConnectionOpen"] = function fromConnectionOpen(region
   obj2.appStore = obj1;
   return obj2;
 };
-const result = obj132.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigModels.tsx");
+const result = set.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigModels.tsx");
 
 export { SettingsConfig };
 export { AgeVerificationConfig };

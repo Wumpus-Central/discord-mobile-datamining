@@ -1,9 +1,9 @@
 // === Module 14412: _isNativeReflectConstruct ===
 
 // Module 14412 (_isNativeReflectConstruct)
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -11,7 +11,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult2 from "noop" /* 19 */;
 import importDefaultResult3 from "emptyFunction" /* 12384 */;
 
-const CircularProgress = fn;
+const CircularProgress = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -57,8 +57,8 @@ class CircularProgress {
 importDefaultResult1(CircularProgress, importDefaultResult2.PureComponent);
 let obj = {
   key: "polarToCartesian",
-  value: function polarToCartesian(sum, sum2, diff, result5) {
-    const result = (result5 - 90) * Math.PI / 180;
+  value: function polarToCartesian(sum, sum2, diff, arg3) {
+    const result = (arg3 - 90) * Math.PI / 180;
     return { x: sum + diff * Math.cos(result), y: sum2 + diff * Math.sin(result) };
   }
 };
@@ -66,10 +66,10 @@ let items = [
   obj,
   {
     key: "circlePath",
-    value: function circlePath(sum, sum2, diff, result5, arcSweepAngle) {
+    value: function circlePath(sum, sum2, diff, arg3, arcSweepAngle) {
       const polarToCartesianResult = this.polarToCartesian(sum, sum2, diff, 0.9999999 * arcSweepAngle);
       let str = "1";
-      if (arcSweepAngle - result5 <= 180) {
+      if (arcSweepAngle - arg3 <= 180) {
         str = "0";
       }
       const items = ["M"];
@@ -80,7 +80,7 @@ let items = [
       items[6] = 0;
       items[7] = str;
       items[8] = 0;
-      ({ x: arr[9], y: arr[10] } = this.polarToCartesian(sum, sum2, diff, result5));
+      ({ x: arr[9], y: arr[10] } = this.polarToCartesian(sum, sum2, diff, arg3));
       return items.join(" ");
     }
   },
@@ -127,13 +127,13 @@ let items = [
       if (dashedTint.gap > 0) {
         const _Object = Object;
         let values = Object.values(dashedTint);
-        mapped = values.map((item, index) => parseInt(item));
+        mapped = values.map((joined) => parseInt(joined));
       }
       let mapped1 = null;
       if (dashedBackground.gap > 0) {
         const _Object2 = Object;
         values = Object.values(dashedBackground);
-        mapped1 = values.map((item, index) => parseInt(item));
+        mapped1 = values.map((joined) => parseInt(joined));
       }
       obj = { style, children: null };
       obj1 = { width: size + padding, height: size + padding, children: null };
@@ -149,7 +149,7 @@ let items = [
         obj3[2] = backgroundWidth;
         obj3[3] = lineCap;
         obj3[4] = mapped1;
-        tmp23Result = callback2(CircularProgress(6571).Path, obj3);
+        tmp23Result = tmp23(tmp24(6571).Path, obj3);
       }
       const items = [tmp23Result, , ];
       tmp23Result = fill > 0;
@@ -160,23 +160,23 @@ let items = [
         obj4[2] = width;
         obj4[3] = fillLineCap;
         obj4[4] = mapped;
-        tmp23Result = callback2(CircularProgress(6571).Path, obj4);
+        tmp23Result = tmp23(tmp24(6571).Path, obj4);
       }
       items[1] = tmp23Result;
       items[2] = renderCapResult;
       obj2[3] = items;
-      obj1[2] = callback3(CircularProgress(6571).G, obj2);
-      const items1 = [callback2(CircularProgress(6571).Svg, obj1), ];
+      obj1[2] = closure_7(CircularProgress(6571).G, obj2);
+      const items1 = [closure_6(CircularProgress(6571).Svg, obj1), ];
       let tmp23Result1 = children;
       if (children) {
         const obj5 = { style: null, children: null };
         obj5[0] = obj;
         obj5[1] = children(fill);
-        tmp23Result1 = callback2(closure_5, obj5);
+        tmp23Result1 = tmp23(tmp22, obj5);
       }
       items1[1] = tmp23Result1;
       obj[1] = items1;
-      return callback3(closure_5, obj);
+      return closure_7(closure_5, obj);
     }
   }
 ];

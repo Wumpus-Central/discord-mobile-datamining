@@ -2,12 +2,12 @@
 
 // Module 13928 (ReanimatedNativeStackScreen)
 import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importDefaultResult from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["children"];
 let c5 = importDefaultResult;
 let closure_7 = cancelAnimationDefault.createAnimatedComponent(require("Animated").InnerScreen);
@@ -64,7 +64,7 @@ const forwardRefResult = importDefaultResult.forwardRef((children, ref) => {
   const merged = Object.assign(tmp);
   obj = { value: sharedValue, children: jsx(sharedValue(tmp3[8]).Provider, { value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 }, children: children.children }) };
   obj.children = jsx(sharedValue(sharedValue1[7]).Provider, { value: sharedValue, children: jsx(sharedValue(tmp3[8]).Provider, { value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 }, children: children.children }) });
-  return <closure_7 value={sharedValue}>{jsx(sharedValue(tmp3[8]).Provider, { value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 }, children: children.children })}</closure_7>;
+  return <closure_7 value={sharedValue}>{jsx(sharedValue(tmp3[8]).Provider, { value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 }, children: arg0.children })}</closure_7>;
 });
 forwardRefResult.displayName = "ReanimatedNativeStackScreen";
 

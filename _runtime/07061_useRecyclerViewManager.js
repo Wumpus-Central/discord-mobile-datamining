@@ -1,10 +1,10 @@
 // === Module 7061: useRecyclerViewManager ===
 
 // Module 7061 (useRecyclerViewManager)
-import _slicedToArray from "_slicedToArray" /* 7041 */;
+import closure_2 from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ useEffect: c3, useMemo: c4, useState: c5 } = noop);
 
 export const useRecyclerViewManager = (data) => {

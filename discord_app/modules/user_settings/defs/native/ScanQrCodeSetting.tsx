@@ -7,7 +7,7 @@ import apply from "apply" /* 12 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
+require = arg1;
 apply = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -50,7 +50,7 @@ apply = {
             } else {
               CAMERA = requestPermission.CAMERA;
             }
-            obj3 = require(paths[3]);
+            obj3 = closure_1_0(paths[3]);
             requestPermission = v0(paths[4]).requestPermission;
             const permission = requestPermission(CAMERA);
             v0 = 2;
@@ -125,7 +125,7 @@ const debounceResult = apply.debounce(importDefaultResult(function*() {
           } else {
             CAMERA = requestPermission.CAMERA;
           }
-          obj3 = require(paths[3]);
+          obj3 = closure_1_0(paths[3]);
           requestPermission = v0(paths[4]).requestPermission;
           const permission = requestPermission(CAMERA);
           v0 = 2;
@@ -162,6 +162,6 @@ const debounceResult = apply.debounce(importDefaultResult(function*() {
     }
   }
 }), 1000, { leading: true, trailing: false });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ScanQrCodeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ScanQrCodeSetting.tsx");
 
 export default apply;

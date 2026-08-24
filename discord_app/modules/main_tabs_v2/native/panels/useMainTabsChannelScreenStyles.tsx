@@ -2,17 +2,18 @@
 
 // Module 15787 (useMainTabsChannelScreenStyles)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
-import "createCacheKey";
+import closure_2 from "noop" /* 19 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-const createCacheKey = {};
+const require = arg1;
+createCacheKey = { elevation: null };
+createCacheKey = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
 let closure_4 = { code: "function useMainTabsChannelScreenStylesTsx1(){const{freezeValue,isDragging,translateX,maxWidth,elevationStyle,isCompletelyCovered}=this.__closure;var _freezeValue,_isCompletelyCovered;(_freezeValue=freezeValue)===null||_freezeValue===void 0||_freezeValue.get();const showBorder=isDragging.get()||translateX.get()!==0&&translateX.get()!==maxWidth;return{transform:[{translateX:translateX.get()}],shadowOpacity:showBorder?elevationStyle.shadowOpacity:0,elevation:showBorder?elevationStyle.elevation:0,opacity:(_isCompletelyCovered=isCompletelyCovered)!==null&&_isCompletelyCovered!==void 0&&_isCompletelyCovered.get()?0:1};}" };
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx");
 
 export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, derivedValue, parentFreezeValue) {
   const _require = isDragging;
@@ -32,10 +33,12 @@ export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenS
     if (!value) {
       let tmp3 = 0 !== translateX.get();
       if (tmp3) {
-        tmp3 = translateX.get() !== closure_2;
+        tmp3 = obj2.get() !== closure_2;
       }
       value = tmp3;
+      obj2 = translateX;
     }
+    obj = { transform: null, shadowOpacity: null, elevation: null, opacity: null };
     obj = { translateX: translateX.get() };
     const items = [obj];
     obj[0] = items;
@@ -50,8 +53,8 @@ export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenS
     }
     obj[2] = num3;
     let value1;
-    if (derivedValue != null) {
-      value1 = derivedValue.get();
+    if (closure_3 != null) {
+      value1 = closure_3.get();
     }
     let num4 = 1;
     if (value1) {

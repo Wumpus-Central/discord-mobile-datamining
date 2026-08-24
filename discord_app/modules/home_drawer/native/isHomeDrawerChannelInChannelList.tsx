@@ -2,10 +2,10 @@
 
 // Module 15582 (useIsHomeDrawerChannelInChannelList)
 import initialize from "initialize" /* 589 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");
 
 export const useIsHomeDrawerChannelInChannelList = function useIsHomeDrawerChannelInChannelList() {
   const items = [closure_2];

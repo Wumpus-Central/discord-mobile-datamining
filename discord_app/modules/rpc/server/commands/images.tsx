@@ -4,16 +4,16 @@
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import prototypeDefault from "prototype" /* 8752 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 const RPCErrors = ME.RPCErrors;
 let obj = {
   scope: require("RPC_SCOPE_CONFIG").RPC_LOCAL_SCOPE,
   validation(string) {
-    createRpcJoiSchemaObjectDefault(string);
-    const obj = { type: null, id: null, format: null, size: null };
+    let obj = createRpcJoiSchemaObjectDefault(string);
+    obj = { type: null, id: null, format: null, size: null };
     const requiredResult = obj.required();
     const stringResult = string.string();
     obj[0] = string.string().required().valid(["user"]);
@@ -69,11 +69,11 @@ let obj = {
     } else {
       const _fetch = fetch;
       const response = fetch(text);
-      const nextPromise = response.then((result) => result.blob());
-      return response.then((result) => result.blob()).then((result) => callback(table[6]).readFileAsBase64(result)).then((result) => ({ data_url: result }));
+      const nextPromise = response.then((blob) => blob.blob());
+      return response.then((blob) => blob.blob()).then((arg0) => callback(table[6]).readFileAsBase64(arg0)).then((data_url) => ({ data_url }));
     }
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/rpc/server/commands/images.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/server/commands/images.tsx");
 
 export default { [ME.RPCCommands.GET_IMAGE]: obj };

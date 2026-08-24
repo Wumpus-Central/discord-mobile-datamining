@@ -1,11 +1,11 @@
 // === Module 8161: processColorOrThrow ===
 
 // Module 8161 (processColorOrThrow)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const processColor = get_ActivityIndicator.processColor;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorStyleSheet.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorStyleSheet.tsx");
 
 export const processColorOrThrow = function processColorOrThrow(arg0) {
   const tmp = processColor(arg0);

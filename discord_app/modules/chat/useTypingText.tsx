@@ -1,11 +1,11 @@
 // === Module 11196: useTypingText ===
 
 // Module 11196 (useTypingText)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/chat/useTypingText.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/chat/useTypingText.tsx");
 
 export default function useTypingText(channelId) {
   channelId = channelId.channelId;
@@ -19,9 +19,15 @@ export default function useTypingText(channelId) {
   [tmp2, tmp3, tmp4] = callback(channelId(typingUserIds[2]).useStateFromStoresArray(items, () => {
     const items = [];
     while (tmp2 !== undefined) {
+      let tmp4 = closure_1_4;
       let user = closure_1_4.getUser(tmp3);
       if (null != user) {
+        let tmp7 = guildId;
+        let tmp8 = typingUserIds;
         let obj = guildId(typingUserIds[3]);
+        let tmp9 = guildId;
+        let tmp10 = channelId;
+        let tmp11 = user;
         let arr = items.push(obj.getName(guildId, channelId, tmp6));
       }
       continue;

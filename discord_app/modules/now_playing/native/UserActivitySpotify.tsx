@@ -11,7 +11,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 ({ Linking: c4, View: c5 } = get_ActivityIndicator);
 ({ SPOTIFY_APP_PROTOCOL: closure_6, SpotifyEndpoints: error, SpotifyResourceTypes: closure_8 } = SPOTIFY_APP_PROTOCOL);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -23,19 +23,19 @@ class SpotifyTrack extends PureComponent {
     applyArgumentsResult.handleOpenSpotifyTrack = function handleOpenSpotifyTrack() {
       sync_id = sync_id.props.activity.sync_id;
       const canOpenURLResult = closure_1_4.canOpenURL("" + closure_1_6 + ":");
-      closure_1_4.canOpenURL("" + closure_1_6 + ":").then((result) => {
+      closure_1_4.canOpenURL("" + closure_1_6 + ":").then((arg0) => {
         const TRACK = closure_1_8.TRACK;
-        if (result) {
-          let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(TRACK, sync_id, true, "mobile")).catch((error) => {
+        if (arg0) {
+          let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(TRACK, tmp, true, "mobile")).catch(() => {
 
           });
-          const openURLResult = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(TRACK, sync_id, true, "mobile"));
+          const openURLResult = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(TRACK, tmp, true, "mobile"));
         } else {
-          catchPromise = closure_1_1(closure_1_3[6]).openURL(closure_1_7.WEB_OPEN(TRACK, sync_id, "mobile"));
+          catchPromise = closure_1_1(closure_1_3[6]).openURL(closure_1_7.WEB_OPEN(TRACK, tmp, "mobile"));
           const obj = closure_1_1(closure_1_3[6]);
         }
         return catchPromise;
-      }).catch((error) => {
+      }).catch(() => {
 
       });
     };
@@ -66,13 +66,12 @@ class SpotifyArtists extends PureComponent2 {
       ({ activity: closure_0, userId: closure_1 } = applyArgumentsResult.props);
       closure_2 = closure_1;
       const canOpenURLResult = closure_1_4.canOpenURL("" + closure_1_6 + ":");
-      closure_1_4.canOpenURL("" + closure_1_6 + ":").then((result) => {
-        closure_0 = result;
+      closure_1_4.canOpenURL("" + closure_1_6 + ":").then((closure_0) => {
         const spotifyMetadataFromActivity = closure_1_0(closure_1_3[7]).getSpotifyMetadataFromActivity(closure_0, closure_1);
-        return spotifyMetadataFromActivity.then((result) => {
+        return spotifyMetadataFromActivity.then((arg0) => {
           const ARTIST = closure_2_8.ARTIST;
           if (closure_0) {
-            let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(ARTIST, tmp, true, "mobile")).catch((error) => {
+            let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(ARTIST, tmp, true, "mobile")).catch(() => {
 
             });
             const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(ARTIST, tmp, true, "mobile"));
@@ -82,7 +81,7 @@ class SpotifyArtists extends PureComponent2 {
           }
           return catchPromise;
         });
-      }).catch((error) => {
+      }).catch(() => {
 
       });
     };
@@ -90,33 +89,35 @@ class SpotifyArtists extends PureComponent2 {
   }
 }
 const prototype = SpotifyArtists.prototype;
-prototype["renderLink"] = function renderLink(children, index, arg2) {
+prototype["renderLink"] = function renderLink(children, arg1, arg2) {
   const self = this;
-  closure_1 = index;
+  closure_1 = arg1;
   const onPress = this.props.onPress;
-  children = [, ];
-  children[0] = callback(onPress(1297).LegacyText, {
-    onPress() {
-      if (onPress != null) {
-        tmp();
-      }
-      const result = self.handleOpenSpotifyArtist(closure_1);
-    },
-    suppressHighlighting: true,
-    children
-  });
+  children = [
+    callback(onPress(1297).LegacyText, {
+      onPress() {
+        if (onPress != null) {
+          tmp();
+        }
+        const result = self.handleOpenSpotifyArtist(closure_1);
+      },
+      suppressHighlighting: true,
+      children
+    }),
+
+  ];
   let str = ", ";
   if (arg2) {
     str = "";
   }
   children[1] = str;
-  return callback(onPress(1297).LegacyText, { children }, index);
+  return closure_10(onPress(1297).LegacyText, { children }, arg1);
 };
 prototype["render"] = function render() {
   const self = this;
   const parts = this.props.artists.split("; ");
   const _require = parts.length - 1;
-  return callback(_require(1297).LegacyText, { children: parts.map((item, index) => self.renderLink(item, index, index === closure_0)) });
+  return callback(_require(1297).LegacyText, { children: parts.map((children) => self.renderLink(children, arg1, arg1 === closure_0)) });
 };
 const PureComponent3 = importAllResult.PureComponent;
 class SpotifyAlbum extends PureComponent3 {
@@ -126,14 +127,13 @@ class SpotifyAlbum extends PureComponent3 {
     applyArgumentsResult.handleOpenSpotifyAlbum = function handleOpenSpotifyAlbum() {
       ({ activity: closure_0, userId: closure_1 } = applyArgumentsResult.props);
       const canOpenURLResult = closure_1_4.canOpenURL("" + closure_1_6 + ":");
-      closure_1_4.canOpenURL("" + closure_1_6 + ":").then((result) => {
-        closure_0 = result;
+      closure_1_4.canOpenURL("" + closure_1_6 + ":").then((closure_0) => {
         const spotifyMetadataFromActivity = closure_1_0(closure_1_3[7]).getSpotifyMetadataFromActivity(closure_0, closure_1);
-        return spotifyMetadataFromActivity.then((result) => {
-          const album_id = result.album_id;
+        return spotifyMetadataFromActivity.then((album_id) => {
+          album_id = album_id.album_id;
           const ALBUM = closure_1_8.ALBUM;
           if (closure_0) {
-            let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch((error) => {
+            let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch(() => {
 
             });
             const openURLResult = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
@@ -143,7 +143,7 @@ class SpotifyAlbum extends PureComponent3 {
           }
           return catchPromise;
         });
-      }).catch((error) => {
+      }).catch(() => {
 
       });
     };
@@ -153,7 +153,7 @@ class SpotifyAlbum extends PureComponent3 {
 SpotifyAlbum.prototype["render"] = function render() {
   return callback(Button.LegacyText, { onPress: this.handleOpenSpotifyAlbum, suppressHighlighting: true, children: this.props.text });
 };
-let result = require("obj132").fileFinishedImporting("modules/now_playing/native/UserActivitySpotify.tsx");
+let result = require("set").fileFinishedImporting("modules/now_playing/native/UserActivitySpotify.tsx");
 
 export const canOpenSpotifyUrl = function canOpenSpotifyUrl() {
   return closure_4.canOpenURL("" + closure_6 + ":");
@@ -166,31 +166,32 @@ export const attributeInstall = function attributeInstall() {
 };
 export const openUrl = function openUrl(arg0, ALBUM, album_id) {
   if (arg0) {
-    let catchPromise = closure_4.openURL(closure_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch((error) => {
+    let catchPromise = closure_4.openURL(closure_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch(() => {
 
     });
     const openURLResult = closure_4.openURL(closure_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
   } else {
     catchPromise = _modDef4090.openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
+    const obj = _modDef4090;
   }
   return catchPromise;
 };
 export const openTrack = function openTrack(findActivityResult) {
   const sync_id = findActivityResult.sync_id;
   const canOpenURLResult = closure_4.canOpenURL("" + closure_6 + ":");
-  closure_4.canOpenURL("" + closure_6 + ":").then((result) => {
+  closure_4.canOpenURL("" + closure_6 + ":").then((arg0) => {
     const TRACK = closure_1_8.TRACK;
-    if (result) {
-      let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(TRACK, sync_id, true, "mobile")).catch((error) => {
+    if (arg0) {
+      let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(TRACK, tmp, true, "mobile")).catch(() => {
 
       });
-      const openURLResult = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(TRACK, sync_id, true, "mobile"));
+      const openURLResult = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(TRACK, tmp, true, "mobile"));
     } else {
-      catchPromise = closure_1_1(closure_1_3[6]).openURL(closure_1_7.WEB_OPEN(TRACK, sync_id, "mobile"));
+      catchPromise = closure_1_1(closure_1_3[6]).openURL(closure_1_7.WEB_OPEN(TRACK, tmp, "mobile"));
       const obj = closure_1_1(closure_1_3[6]);
     }
     return catchPromise;
-  }).catch((error) => {
+  }).catch(() => {
 
   });
 };
@@ -199,13 +200,12 @@ export const openArtist = function openArtist(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   const canOpenURLResult = closure_4.canOpenURL("" + closure_6 + ":");
-  closure_4.canOpenURL("" + closure_6 + ":").then((result) => {
-    closure_0 = result;
+  closure_4.canOpenURL("" + closure_6 + ":").then((closure_0) => {
     const spotifyMetadataFromActivity = closure_1_0(closure_1_3[7]).getSpotifyMetadataFromActivity(closure_0, closure_1);
-    return spotifyMetadataFromActivity.then((result) => {
+    return spotifyMetadataFromActivity.then((arg0) => {
       const ARTIST = closure_2_8.ARTIST;
       if (closure_0) {
-        let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(ARTIST, tmp, true, "mobile")).catch((error) => {
+        let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(ARTIST, tmp, true, "mobile")).catch(() => {
 
         });
         const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(ARTIST, tmp, true, "mobile"));
@@ -215,7 +215,7 @@ export const openArtist = function openArtist(arg0, arg1, arg2) {
       }
       return catchPromise;
     });
-  }).catch((error) => {
+  }).catch(() => {
 
   });
 };
@@ -223,14 +223,13 @@ export const openAlbum = function openAlbum(activity, id) {
   closure_0 = activity;
   closure_1 = id;
   const canOpenURLResult = closure_4.canOpenURL("" + closure_6 + ":");
-  closure_4.canOpenURL("" + closure_6 + ":").then((result) => {
-    closure_0 = result;
+  closure_4.canOpenURL("" + closure_6 + ":").then((closure_0) => {
     const spotifyMetadataFromActivity = closure_1_0(closure_1_3[7]).getSpotifyMetadataFromActivity(closure_0, closure_1);
-    return spotifyMetadataFromActivity.then((result) => {
-      const album_id = result.album_id;
+    return spotifyMetadataFromActivity.then((album_id) => {
+      album_id = album_id.album_id;
       const ALBUM = closure_1_8.ALBUM;
       if (closure_0) {
-        let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch((error) => {
+        let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch(() => {
 
         });
         const openURLResult = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
@@ -240,36 +239,38 @@ export const openAlbum = function openAlbum(activity, id) {
       }
       return catchPromise;
     });
-  }).catch((error) => {
+  }).catch(() => {
 
   });
 };
 export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   activity = activity.activity;
-  let obj = { source: registerAssetDefault };
+  let obj = { style: activity.style, children: null };
+  obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
+  obj = { source: registerAssetDefault };
   obj[0] = callback(activity(4745).Button.Icon, obj);
   const intl = activity(1236).intl;
   obj[1] = intl.formatToPlainString(activity(1236).t.LEgD7t, { platform: activity.name });
   obj[3] = function onPress() {
     sync_id = sync_id.sync_id;
     const canOpenURLResult = closure_1_4.canOpenURL("" + closure_1_6 + ":");
-    closure_1_4.canOpenURL("" + closure_1_6 + ":").then((result) => {
-      if (result) {
-        let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(closure_1_8.TRACK, sync_id)).catch((error) => {
+    closure_1_4.canOpenURL("" + closure_1_6 + ":").then((arg0) => {
+      if (arg0) {
+        let catchPromise = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(closure_1_8.TRACK, sync_id)).catch(() => {
 
         });
         const openURLResult = closure_1_4.openURL(closure_1_7.PLAYER_OPEN(closure_1_8.TRACK, sync_id));
       } else {
-        closure_1_2(closure_1_3[4]);
+        let obj = closure_1_2(closure_1_3[4]);
         const HTTP = sync_id(closure_1_3[5]).HTTP;
-        const obj = { url: null, rejectWithError: true };
+        obj = { url: null, rejectWithError: true };
         obj[0] = closure_1_7.INSTALL_ATTRIBUTION(obj.getConstants().Identifier);
         const value = HTTP.get(obj);
         catchPromise = closure_1_1(closure_1_3[6]).openURL(closure_1_7.APP_STORE);
         const obj3 = closure_1_1(closure_1_3[6]);
       }
       return catchPromise;
-    }).catch((error) => {
+    }).catch(() => {
 
     });
   };

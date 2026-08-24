@@ -1,7 +1,7 @@
 // === Module 7946: items ===
 
 // Module 7946 (items)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import FreemiumAppIconIds from "FreemiumAppIconIds" /* 7947 */;
 import registerAssetDefault from "registerAsset" /* 7948 */;
@@ -127,7 +127,7 @@ const intl24 = getSystemLocale.intl;
 obj21[3] = intl24.string(getSystemLocale.t.gnLLSK);
 items[23] = obj21;
 let closure_4 = [];
-const result = obj132.fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
+const result = set.fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
 
 export const getDefaultIcon = function getDefaultIcon() {
   const obj = { id: FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT, iconSource: registerAssetDefault, name: null, isPremium: false };
@@ -144,21 +144,21 @@ export const isIconExpired = function isIconExpired(expiresAt) {
   return tmp;
 };
 export const getOfficialAlternateIcons = function getOfficialAlternateIcons() {
-  return items.filter((item, index) => {
-    let tmp = null != item.expiresAt;
+  return items.filter((expiresAt) => {
+    let tmp = null != expiresAt.expiresAt;
     if (tmp) {
       const _Date = Date;
-      tmp = Date.now() > item.expiresAt;
+      tmp = Date.now() > expiresAt.expiresAt;
     }
     return !tmp;
   });
 };
 export const getLimitedAlternateIcons = function getLimitedAlternateIcons() {
-  return closure_4.filter((item, index) => {
-    let tmp = null != item.expiresAt;
+  return closure_4.filter((expiresAt) => {
+    let tmp = null != expiresAt.expiresAt;
     if (tmp) {
       const _Date = Date;
-      tmp = Date.now() > item.expiresAt;
+      tmp = Date.now() > expiresAt.expiresAt;
     }
     return !tmp;
   });
@@ -169,19 +169,19 @@ export const getIcons = function getIcons() {
   obj[2] = intl.string(getSystemLocale.t.ANxkLy);
   items = [
     obj,
-    ...items.filter((item, index) => {
-      let tmp = null != item.expiresAt;
+    ...items.filter((expiresAt) => {
+      let tmp = null != expiresAt.expiresAt;
       if (tmp) {
         const _Date = Date;
-        tmp = Date.now() > item.expiresAt;
+        tmp = Date.now() > expiresAt.expiresAt;
       }
       return !tmp;
     }),
-    ...closure_4.filter((item, index) => {
-      let tmp = null != item.expiresAt;
+    ...closure_4.filter((expiresAt) => {
+      let tmp = null != expiresAt.expiresAt;
       if (tmp) {
         const _Date = Date;
-        tmp = Date.now() > item.expiresAt;
+        tmp = Date.now() > expiresAt.expiresAt;
       }
       return !tmp;
     })
@@ -195,24 +195,24 @@ export const getIconById = function getIconById(currentAppIcon) {
   obj[2] = intl.string(_require(1236).t.ANxkLy);
   items = [
     obj,
-    ...items.filter((item, index) => {
-      let tmp = null != item.expiresAt;
+    ...items.filter((expiresAt) => {
+      let tmp = null != expiresAt.expiresAt;
       if (tmp) {
         const _Date = Date;
-        tmp = Date.now() > item.expiresAt;
+        tmp = Date.now() > expiresAt.expiresAt;
       }
       return !tmp;
     }),
-    ...closure_4.filter((item, index) => {
-      let tmp = null != item.expiresAt;
+    ...closure_4.filter((expiresAt) => {
+      let tmp = null != expiresAt.expiresAt;
       if (tmp) {
         const _Date = Date;
-        tmp = Date.now() > item.expiresAt;
+        tmp = Date.now() > expiresAt.expiresAt;
       }
       return !tmp;
     })
   ];
-  let found = items.find((item, index) => item.id === closure_0);
+  let found = items.find((id) => id.id === closure_0);
   if (null == found) {
     obj = { id: null, iconSource: null, name: null, isPremium: false };
     obj[0] = tmp(7947).FreemiumAppIconIds.DEFAULT;

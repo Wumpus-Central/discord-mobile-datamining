@@ -5,14 +5,14 @@ import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
 import showUserProfileAll from "showUserProfile" /* 11124 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import handleConnectionOpen2 from "handleConnectionOpen" /* 4197 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import updateImpressionCaches from "updateImpressionCaches" /* 11123 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "handleConnectionOpen" /* 4197 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "updateImpressionCaches" /* 11123 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
 export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
   let obj = dispatcherDefault;
@@ -47,6 +47,7 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
       }
       showUserProfileResult[3] = items1;
       showUserProfileResult = showUserProfileAll.showUserProfile(showUserProfileResult);
+      const obj2 = showUserProfileAll;
     }
   }
 };

@@ -1,11 +1,11 @@
 // === Module 8746: _handleUsePrimaryEntryPointAppCommand ===
 
 // Module 8746 (_handleUsePrimaryEntryPointAppCommand)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
-const require = fn;
+const require = arg1;
 function _handleUsePrimaryEntryPointAppCommand() {
   let self = this;
   const tmp = callback((arg0) => {
@@ -53,7 +53,7 @@ function _handleUsePrimaryEntryPointAppCommand() {
                 c4 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(8735)(lib.targetApplicationId, lib.channelId);
+                obj1[0] = closure_1_1(8735)(tmp27.targetApplicationId, tmp27.channelId);
                 return obj1;
               }
             }
@@ -258,7 +258,7 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
 
 export default function handleUsePrimaryEntryPointAppCommand() {
   const self = this;

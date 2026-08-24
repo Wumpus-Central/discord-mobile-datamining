@@ -15,9 +15,9 @@ function createErrorCapturingHandler(apply) {
       if (typeof promise === "object") {
         if (typeof promise.then === "function") {
           const resolved = Promise.resolve(applyResult);
-          let catchPromise = resolved.catch((error) => {
-            captureHandlerError(error, closure_0, closure_1);
-            throw error;
+          let catchPromise = resolved.catch((arg0) => {
+            closure_1_3(arg0, closure_0, closure_1);
+            throw arg0;
           });
         }
         return catchPromise;
@@ -29,10 +29,10 @@ function createErrorCapturingHandler(apply) {
     throw tmp10;
   }
 }
-function captureHandlerError(name, closure_0, tool_name) {
+function captureHandlerError(name, arg1, tool_name) {
   try {
     const obj = {};
-    if ("tool" === closure_0) {
+    if ("tool" === arg1) {
       obj.tool_name = tool_name;
       if ("ProtocolValidationError" !== name.name) {
         const message4 = name.message;
@@ -45,20 +45,25 @@ function captureHandlerError(name, closure_0, tool_name) {
                 const message3 = name.message;
                 if (!message3.includes("timeout")) {
                   captureError.captureError(name, "tool_execution", obj);
+                  const obj3 = captureError;
                 }
               }
             }
             captureError.captureError(name, "timeout", obj);
+            const obj4 = captureError;
           }
         }
       }
       captureError.captureError(name, "validation", obj);
-    } else if ("resource" === closure_0) {
+      const obj5 = captureError;
+    } else if ("resource" === arg1) {
       obj.resource_uri = tool_name;
       captureError.captureError(name, "resource_execution", obj);
-    } else if ("prompt" === closure_0) {
+      const obj2 = captureError;
+    } else if ("prompt" === arg1) {
       obj.prompt_name = tool_name;
       captureError.captureError(name, "prompt_execution", obj);
+      const obj6 = captureError;
     }
   } catch (err) {
   }
@@ -86,11 +91,11 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
           const self = this;
           const items = [...arguments];
           try {
-            const call = callback.call;
+            const call = closure_2.call;
             if (typeof call === "unknown") {
-              let callResult = callback(callback, table, callback, items);
+              let callResult = tmp3(tmp4, tmp5, tmp6, items);
             } else {
-              callResult = call(self, callback, table, callback, items);
+              callResult = call(self, tmp4, tmp5, tmp6, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -127,11 +132,11 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
           const self = this;
           const items = [...arguments];
           try {
-            const call = callback.call;
+            const call = closure_2.call;
             if (typeof call === "unknown") {
-              let callResult = callback(callback, table, callback, items);
+              let callResult = tmp3(tmp4, tmp5, tmp6, items);
             } else {
-              callResult = call(self, callback, table, callback, items);
+              callResult = call(self, tmp4, tmp5, tmp6, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -168,11 +173,11 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
           const self = this;
           const items = [...arguments];
           try {
-            const call = callback.call;
+            const call = closure_2.call;
             if (typeof call === "unknown") {
-              let callResult = callback(callback, table, callback, items);
+              let callResult = tmp3(tmp4, tmp5, tmp6, items);
             } else {
-              callResult = call(self, callback, table, callback, items);
+              callResult = call(self, tmp4, tmp5, tmp6, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -210,11 +215,11 @@ arg5.wrapPromptHandlers = function wrapPromptHandlers(arg0) {
           const self = this;
           const items = [...arguments];
           try {
-            const call = callback.call;
+            const call = closure_2.call;
             if (typeof call === "unknown") {
-              let callResult = callback(callback, table, callback, items);
+              let callResult = tmp3(tmp4, tmp5, tmp6, items);
             } else {
-              callResult = call(self, callback, table, callback, items);
+              callResult = call(self, tmp4, tmp5, tmp6, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -252,11 +257,11 @@ arg5.wrapResourceHandlers = function wrapResourceHandlers(arg0) {
           const self = this;
           const items = [...arguments];
           try {
-            const call = callback.call;
+            const call = closure_2.call;
             if (typeof call === "unknown") {
-              let callResult = callback(callback, table, callback, items);
+              let callResult = tmp3(tmp4, tmp5, tmp6, items);
             } else {
-              callResult = call(self, callback, table, callback, items);
+              callResult = call(self, tmp4, tmp5, tmp6, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -294,11 +299,11 @@ arg5.wrapToolHandlers = function wrapToolHandlers(arg0) {
           const self = this;
           const items = [...arguments];
           try {
-            const call = callback.call;
+            const call = closure_2.call;
             if (typeof call === "unknown") {
-              let callResult = callback(callback, table, callback, items);
+              let callResult = tmp3(tmp4, tmp5, tmp6, items);
             } else {
-              callResult = call(self, callback, table, callback, items);
+              callResult = call(self, tmp4, tmp5, tmp6, items);
             }
             return callResult;
           } catch (tmp13) {

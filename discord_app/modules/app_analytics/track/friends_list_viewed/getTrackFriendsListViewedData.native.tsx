@@ -1,21 +1,21 @@
 // === Module 15969: getTrackFriendsListViewedData ===
 
 // Module 15969 (getTrackFriendsListViewedData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import setStoredContacts from "setStoredContacts" /* 11852 */;
 import _uploadContacts from "_uploadContacts" /* 11853 */;
 import getFriendStatusCountsDefault from "getFriendStatusCounts" /* 15970 */;
-import initialize from "initialize" /* 5410 */;
-import recountRelationshipTypes from "recountRelationshipTypes" /* 5406 */;
-import set from "set" /* 5221 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_4 from "initialize" /* 5410 */;
+import closure_5 from "recountRelationshipTypes" /* 5406 */;
+import closure_6 from "set" /* 5221 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
 import ME from "ME" /* 676 */;
 
 const useContactSyncStore = setStoredContacts.useContactSyncStore;
 ({ PlatformTypes: closure_8, FriendDiscoveryFlags: c9 } = ME);
-const result = obj132.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx");
+const result = set.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx");
 
 export default function getTrackFriendsListViewedData() {
   localAccount = localAccount.getLocalAccount(constants.CONTACTS);
@@ -23,6 +23,7 @@ export default function getTrackFriendsListViewedData() {
   const setting = FriendDiscoverySettings.getSetting();
   let obj = hasFlag;
   const hasFlagResult = obj.hasFlag(setting, constants2.FIND_BY_PHONE);
+  const obj2 = hasFlag;
   suggestionCount = suggestionCount.getSuggestionCount();
   obj = { num_friends: store2.getFriendCount() };
   const merged = Object.assign(getFriendStatusCountsDefault());

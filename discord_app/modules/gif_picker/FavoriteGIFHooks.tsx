@@ -2,11 +2,11 @@
 
 // Module 10199 (useFavoriteGIFs)
 import useFrecencySettings from "useFrecencySettings" /* 10200 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 let closure_4 = {};
-const result = require("obj132").fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
 
 export const useFavoriteGIFs = function useFavoriteGIFs() {
   const favoriteGifs = useFrecencySettings.useFrecencySettings().favoriteGifs;
@@ -31,21 +31,21 @@ export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFav
   }
   const items = [gifs, transformFavoriteGifUrl];
   return React.useMemo(() => {
-    const mapped = gifs(dependencyMap[2])(gifs).map((item, index) => {
+    const mapped = gifs(closure_1_2[2])(gifs).map((src, url) => {
       const obj = {};
-      const merged = Object.assign(item);
-      obj.url = index;
-      let src;
+      const merged = Object.assign(src);
+      obj.url = url;
+      src = undefined;
       if (closure_0 != null) {
-        src = tmp2(item.src, index);
+        src = tmp2(src.src, url);
       }
       if (src == null) {
-        src = item.src;
+        src = src.src;
       }
       obj.src = src;
       return obj;
     });
-    const arr = gifs(dependencyMap[2])(gifs);
+    const arr = gifs(closure_1_2[2])(gifs);
     const sortByResult = mapped.sortBy("order");
     return mapped.sortBy("order").reverse().value();
   }, items);

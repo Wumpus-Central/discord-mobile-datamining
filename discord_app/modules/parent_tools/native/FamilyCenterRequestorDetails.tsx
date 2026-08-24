@@ -9,21 +9,24 @@ import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
 import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14249 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: null, detailsContainer: null };
+createCacheKey = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterRequestorDetails.tsx");
+let obj1 = { paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterRequestorDetails.tsx");
 
 export default function FamilyCenterRequestorDetails(otherUser) {
   otherUser = otherUser.otherUser;
   const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
+  let obj = useUserIdsForLinkStatus;
+  obj = { style: tmp.container, children: null };
   const linkTimestampText = obj.useLinkTimestampText(otherUser.id, otherUser.status);
   obj = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
   obj[4] = otherUser.avatarDecoration;

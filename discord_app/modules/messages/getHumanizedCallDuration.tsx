@@ -1,9 +1,9 @@
 // === Module 8203: getHumanizedCallDuration ===
 
 // Module 8203 (getHumanizedCallDuration)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/messages/getHumanizedCallDuration.tsx");
+const result = set.fileFinishedImporting("modules/messages/getHumanizedCallDuration.tsx");
 
 export default function getHumanizedCallDuration(call) {
   let duration = null;

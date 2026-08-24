@@ -4,16 +4,16 @@
 import contextDefault from "context" /* 7139 */;
 import _modDef9498 from "module_9498" /* 9498 */;
 import BackwardsCompatibleAppIconRowsDefault from "BackwardsCompatibleAppIconRows" /* 14835 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { getIconById } from "items" /* 7946 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ UpsellTypes: closure_6, AnalyticsPages: error } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ upsellButtonContainer: { padding: 0, position: "absolute", bottom: 56, width: 350, alignSelf: "center" } });
@@ -54,7 +54,7 @@ const memoResult = importAllResult.memo(() => {
                 const tmp25 = closure_1_8(lib);
                 if (null != tmp25) {
                   const id = tmp25.id;
-                  if (id === lib) {
+                  if (id === tmp23) {
                     if (v0 !== id) {
                       if (tmp27) {
                         if (!dependencyMap) {
@@ -88,6 +88,7 @@ const memoResult = importAllResult.memo(() => {
                     return obj3;
                   }
                 }
+                tmp23 = lib;
               }
             } else if (1 === tmp4) {
               if (arg0 === 1) {
@@ -135,6 +136,7 @@ const memoResult = importAllResult.memo(() => {
   const isPremiumResult = obj2.isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = contextDefault().analyticsLocations;
+  obj = { page: constants.APP_ICONS };
   obj = { children: null };
   obj1 = { accessibilityRole: "radiogroup", children: callback(BackwardsCompatibleAppIconRowsDefault, obj2) };
   obj2 = {
@@ -162,13 +164,13 @@ const memoResult = importAllResult.memo(() => {
     };
     const intl = tmp2(1236).intl;
     obj4[1] = intl.string(tmp2(1236).t.M0rDSO);
-    obj3[1] = callback(_modDef9498, obj4);
-    tmp9Result = callback(obj, obj3);
+    obj3[1] = tmp9(_modDef9498, obj4);
+    tmp9Result = tmp9(obj, obj3);
     const tmp6Result = _modDef9498;
   }
   children[1] = tmp9Result;
-  return callback(closure_10, { children });
+  return closure_11(closure_10, { children });
 });
-let result = require("obj132").fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
 
 export default memoResult;

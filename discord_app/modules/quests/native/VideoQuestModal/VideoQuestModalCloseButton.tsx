@@ -1,7 +1,7 @@
 // === Module 14501: VideoQuestModalCloseButton ===
 
 // Module 14501 (VideoQuestModalCloseButton)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
@@ -9,7 +9,7 @@ import PressableBase from "PressableBase" /* 5433 */;
 import XSmallIcon from "XSmallIcon" /* 6368 */;
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");
 
 export default function VideoQuestModalCloseButton(iconColor) {
   let MOBILE_TEXT_HEADING_PRIMARY = iconColor.iconColor;

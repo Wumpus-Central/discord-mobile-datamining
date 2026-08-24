@@ -1,31 +1,30 @@
 // === Module 13833: loadServer ===
 
 // Module 13833 (loadServer)
-import obj132 from "obj132" /* 500 */;
+import set2 from "set" /* 500 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import transformUserDefault from "transformUser" /* 8758 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import map from "map" /* 8708 */;
-import initializeState from "initializeState" /* 7453 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import sortActivity from "sortActivity" /* 4559 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "map" /* 8708 */;
+import closure_5 from "initializeState" /* 7453 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_10 from "sortActivity" /* 4559 */;
+import closure_11 from "createRTCConnection" /* 4539 */;
+import closure_12 from "markAllUserIdListsStale" /* 4030 */;
+import closure_13 from "handleConnectionOpen" /* 1979 */;
+import closure_14 from "mergeGuildAvatar" /* 1922 */;
+import closure_15 from "updateVoiceState" /* 4542 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
 import ME from "ME" /* 676 */;
 import { ActivityLayoutMode } from "items3" /* 4481 */;
 import { FrameLayoutModes } from "FrameLayoutModes" /* 8709 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 
-require = fn;
+require = arg1;
 ({ ActivityActionTypes: closure_17, RelationshipTypes: closure_18, AnalyticEvents: closure_19, RPCEvents: closure_20, RPCCloseCodes: closure_21 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -58,7 +57,7 @@ class RPCServerManager {
           combined = "" + MESSAGE_DELETE + type.id;
           MESSAGE_UPDATE = MESSAGE_DELETE;
         } else {
-          return obj(dependencyMap[22]).assertNever(type);
+          return obj(closure_1_2[22]).assertNever(type);
         }
         if (null != channelId) {
           const rpcServer = obj.rpcServer;
@@ -66,9 +65,9 @@ class RPCServerManager {
           obj[0] = channelId;
           obj = { channel_id: null, message: null };
           obj[0] = channelId;
-          obj[1] = obj(dependencyMap[23]).transformInternalTextMessage(message);
+          obj[1] = obj(closure_1_2[23]).transformInternalTextMessage(message);
           const result1 = rpcServer.dispatchToSubscriptions(MESSAGE_UPDATE, obj, obj, combined);
-          const obj5 = obj(dependencyMap[23]);
+          const obj5 = obj(closure_1_2[23]);
         }
       }
     };
@@ -79,7 +78,7 @@ class RPCServerManager {
         } else {
           SPEAKING_STOP = closure_1_20.SPEAKING_STOP;
         }
-        if (speakingFlags.context === MediaEngineContextTypes.DEFAULT) {
+        if (speakingFlags.context === closure_1_24.DEFAULT) {
           const voiceChannelId = closure_1_13.getVoiceChannelId();
           if (null != voiceChannelId) {
             const channel = closure_1_6.getChannel(voiceChannelId);
@@ -114,18 +113,19 @@ class RPCServerManager {
         const rpcServer = obj.rpcServer;
         obj = { channel_id: null, message: null, icon_url: null, title: null, body: null };
         obj[0] = tmp;
-        obj[1] = obj(dependencyMap[23]).transformInternalTextMessage(tmp2);
+        obj[1] = obj(closure_1_2[23]).transformInternalTextMessage(tmp2);
         let remoteIconURL = null;
         if (null != icon) {
-          remoteIconURL = tmp8(dependencyMap[23]).getRemoteIconURL(icon);
-          const tmp8Result = tmp8(dependencyMap[23]);
+          remoteIconURL = tmp8(tmp9[23]).getRemoteIconURL(icon);
+          const tmp8Result = tmp8(tmp9[23]);
         }
         obj[2] = remoteIconURL;
         obj[3] = tmp3;
         obj[4] = tmp4;
         const result = rpcServer.dispatchToSubscriptions(closure_1_20.NOTIFICATION_CREATE, {}, obj);
-        const obj3 = obj(dependencyMap[23]);
+        const obj3 = obj(closure_1_2[23]);
         tmp8 = obj;
+        tmp9 = closure_1_2;
       }
     };
     obj.handleActivityJoin = function handleActivityJoin(applicationId) {
@@ -143,6 +143,7 @@ class RPCServerManager {
           let tmp = socket.socket.application.id === applicationId;
           if (!tmp) {
             tmp = null != parentApplicationId && socket.socket.application.parentId === tmp2;
+            const tmp4 = null != parentApplicationId && socket.socket.application.parentId === tmp2;
           }
           return tmp;
         }, obj);
@@ -155,7 +156,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = tmp.rpcServer;
         obj = { is_pip_mode: null };
-        obj[0] = layoutMode !== ActivityLayoutMode.FOCUSED;
+        obj[0] = layoutMode !== closure_1_22.FOCUSED;
         const result = rpcServer.dispatchToSubscriptions(closure_1_20.ACTIVITY_PIP_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
         obj = { layout_mode: null };
         obj[0] = layoutMode;
@@ -169,12 +170,12 @@ class RPCServerManager {
       frameId = frameId.frameId;
       let dispatchToSubscriptions = frameId;
       if (0 !== frameId.rpcServer.subscriptions.length) {
-        if (tmp === FrameLayoutModes.PIP) {
-          let FOCUSED = ActivityLayoutMode.PIP;
-          let tmp2 = ActivityLayoutMode;
+        if (tmp === closure_1_23.PIP) {
+          let FOCUSED = closure_1_22.PIP;
+          let tmp2 = closure_1_22;
         } else {
-          tmp2 = ActivityLayoutMode;
-          FOCUSED = ActivityLayoutMode.FOCUSED;
+          tmp2 = closure_1_22;
+          FOCUSED = closure_1_22.FOCUSED;
         }
         function targetsFrame(socket) {
           let tmp = socket.socket.source.type === closure_1_16.POST_MESSAGE;
@@ -206,10 +207,10 @@ class RPCServerManager {
       if (0 !== applicationId.rpcServer.subscriptions.length) {
         if (null != applicationId) {
           obj = { thermal_state: null };
-          obj[0] = obj(dependencyMap[24]).getThermalState();
+          obj[0] = obj(closure_1_2[24]).getThermalState();
           const rpcServer = tmp.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(closure_1_20.THERMAL_STATE_UPDATE, (socket) => socket.socket.application.id === applicationId, obj);
-          const obj2 = obj(dependencyMap[24]);
+          const obj2 = obj(closure_1_2[24]);
         }
       }
     };
@@ -223,7 +224,7 @@ class RPCServerManager {
     };
     obj.handleEmbeddedActivityUpdate = function handleEmbeddedActivityUpdate() {
       if (0 !== obj.rpcServer.subscriptions.length) {
-        obj = obj(dependencyMap[25]);
+        obj = obj(closure_1_2[25]);
         const rpcServer = tmp.rpcServer;
         const result = rpcServer.dispatchToSubscriptions(closure_1_20.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, obj.activityInstanceConnectedParticipants());
       }
@@ -243,7 +244,7 @@ class RPCServerManager {
               }
               const user = closure_1_14.getUser(id);
               if (null != user) {
-                const currentUser = closure_1_14.getCurrentUser();
+                const currentUser = obj2.getCurrentUser();
                 if (null != currentUser) {
                   if (user.id !== currentUser.id) {
                     if (activity.type === closure_1_17.JOIN_REQUEST) {
@@ -256,19 +257,19 @@ class RPCServerManager {
                         if (applicationActivity.party.id === activity.party_id) {
                           application_id = applicationActivity.application_id;
                           type = activity.type;
-                          if (closure_1_17.JOIN === type) {
+                          if (tmp13.JOIN === type) {
                             const rpcServer = tmp.rpcServer;
                             obj = { user: null, activity: null, type: null, channel_id: null, message_id: null };
-                            obj[0] = transformUserDefault(user);
+                            obj[0] = closure_1_1(closure_1_2[26])(user);
                             obj[1] = applicationActivity;
                             obj[2] = activity.type;
                             obj[3] = channelId;
                             obj[4] = message.id;
                             const result = rpcServer.dispatchToSubscriptions(closure_1_20.ACTIVITY_INVITE, (socket) => socket.socket.application.id === application_id, obj);
-                          } else if (closure_1_17.JOIN_REQUEST === type) {
+                          } else if (tmp13.JOIN_REQUEST === type) {
                             const rpcServer2 = tmp.rpcServer;
                             obj = { user: null, activity: null, type: null, channel_id: null, message_id: null };
-                            obj[0] = transformUserDefault(user);
+                            obj[0] = closure_1_1(closure_1_2[26])(user);
                             obj[1] = applicationActivity;
                             obj[2] = activity.type;
                             obj[3] = channelId;
@@ -281,6 +282,7 @@ class RPCServerManager {
                   }
                 }
               }
+              obj2 = closure_1_14;
             }
           }
         }
@@ -289,9 +291,9 @@ class RPCServerManager {
     obj.handleOAuth2TokenRevoke = function handleOAuth2TokenRevoke(accessToken) {
       accessToken = accessToken.accessToken;
       const sockets = accessToken.rpcServer.sockets;
-      const item = sockets.forEach((item, index) => {
-        if (item.authorization.accessToken === accessToken) {
-          item.close(closure_1_21.TOKEN_REVOKED, "Token revoked");
+      const item = sockets.forEach((authorization) => {
+        if (authorization.authorization.accessToken === accessToken) {
+          authorization.close(closure_1_21.TOKEN_REVOKED, "Token revoked");
         }
       });
     };
@@ -303,13 +305,12 @@ class RPCServerManager {
         tmp3 = null != guild;
       }
       if (tmp3) {
-        const rpcServer = tmp2.rpcServer;
+        const rpcServer = obj.rpcServer;
         obj = { id: null, name: null };
         obj[0] = id;
         obj[1] = guild.name;
         const result = rpcServer.dispatchToSubscriptions(closure_1_20.GUILD_CREATE, {}, obj);
       }
-      tmp2 = obj;
     };
     obj.handleChannelCreate = function handleChannelCreate(arg0) {
       if (0 !== obj.rpcServer.subscriptions.length) {
@@ -323,14 +324,14 @@ class RPCServerManager {
     };
     obj.handleLogout = function handleLogout() {
       const sockets = obj.rpcServer.sockets;
-      const item = sockets.forEach((item, index) => item.close(constants.CLOSE_NORMAL, "User logout"));
+      const item = sockets.forEach((close) => close.close(constants.CLOSE_NORMAL, "User logout"));
     };
     obj.handleRelationshipAdd = function handleRelationshipAdd(arg0) {
       obj = undefined;
       if (0 !== obj.rpcServer.subscriptions.length) {
         const user = closure_1_14.getUser(tmp);
         if (null != user) {
-          obj = obj(dependencyMap[23]);
+          obj = obj(closure_1_2[23]);
           obj = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
@@ -342,7 +343,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const user = closure_1_14.getUser(tmp);
         if (null != user) {
-          obj = obj(dependencyMap[23]);
+          obj = obj(closure_1_2[23]);
           obj = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
@@ -354,7 +355,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const user = closure_1_14.getUser(tmp);
         if (null != user) {
-          obj = obj(dependencyMap[23]);
+          obj = obj(closure_1_2[23]);
           obj = obj.transformBaseRelationship(closure_1_18.NONE, user);
           const rpcServer = tmp2.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
@@ -366,22 +367,22 @@ class RPCServerManager {
       let item10023;
       if (0 !== obj.rpcServer.subscriptions.length) {
         const _Set = Set;
-        const set = new Set(updates.map((item, index) => item.user.id));
+        const set = new Set(updates.map((user) => user.user.id));
         function _loop() {
           const relationshipType = closure_1_12.getRelationshipType(item10023);
           if (relationshipType === closure_1_18.NONE) {
             return 0;
           } else {
-            const user = closure_1_14.getUser(item10023);
+            const user = closure_1_14.getUser(tmp);
             if (null == user) {
               return 0;
             } else {
               lib = lib(closure_1_2[23]).transformBaseRelationship(relationshipType, user);
               const rpcServer = lib.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
-              obj = lib(closure_1_2[23]);
             }
           }
+          tmp = item10023;
         }
         const values = set.values();
         for (const item10023 of values) {
@@ -403,7 +404,6 @@ class RPCServerManager {
               lib = lib(closure_1_2[23]).transformBaseRelationship(tmp, user);
               const rpcServer = lib.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
-              obj = lib(closure_1_2[23]);
             }
           }
         }
@@ -411,6 +411,7 @@ class RPCServerManager {
         const entries = mutableRelationships.entries();
         const tmp4 = entries[Symbol.iterator]();
         while (tmp4 !== undefined) {
+          let tmp8 = closure_1_3;
           let tmp9 = closure_1_3(tmp6, 2);
           [closure_1, closure_2] = tmp9;
           let _loop2Result = _loop2();
@@ -426,7 +427,7 @@ class RPCServerManager {
         if (relationshipType !== closure_1_18.NONE) {
           user = closure_1_14.getUser(id);
           if (null != user) {
-            obj = obj(dependencyMap[23]);
+            obj = obj(closure_1_2[23]);
             obj = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
             const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
@@ -460,7 +461,7 @@ class RPCServerManager {
         questId = enrolledQuestUserStatus.questId;
         const quest = closure_1_5.getQuest(questId);
         if (null != quest) {
-          obj = obj(dependencyMap[27]);
+          obj = obj(closure_1_2[27]);
           activityApplicationId = obj.getActivityApplicationId(quest);
           if (null != activityApplicationId) {
             const rpcServer = tmp.rpcServer;
@@ -491,7 +492,7 @@ class RPCServerManager {
 const prototype = RPCServerManager.prototype;
 prototype["loadServer"] = function loadServer() {
   const self = this;
-  if (obj132.isPlatformEmbedded) {
+  if (set2.isPlatformEmbedded) {
     const result = self.registerTransportsForEmbeddedPlatform();
   }
   for (const item10013 of tmp2) {
@@ -501,6 +502,7 @@ prototype["loadServer"] = function loadServer() {
   }
   const entries = Object.entries(self.rpcCommandHandlers);
   while (tmp5 !== undefined) {
+    let tmp7 = callback;
     let tmp8 = callback(tmp6, 2);
     let rpcServer2 = self.rpcServer;
     let setCommandHandlerResult = rpcServer2.setCommandHandler(tmp8[0], tmp8[1]);
@@ -508,26 +510,26 @@ prototype["loadServer"] = function loadServer() {
   }
   const entries1 = Object.entries(self.rpcEventHandlers);
   for (const item10045 of entries1) {
+    let tmp11 = callback;
     let tmp12 = callback(item10045, 2);
     let rpcServer3 = self.rpcServer;
     let setEventHandlerResult = rpcServer3.setEventHandler(tmp12[0], tmp12[1]);
     continue;
   }
-  tmp5 = entries[Symbol.iterator]();
 };
 prototype["init"] = function init() {
   const self = this;
   this.rpcServer.getCurrentUser = () => currentUser.getCurrentUser();
   this.rpcServer.onConnect = (app_id) => {
-    callback(709);
-    let obj = { type: "RPC_APP_CONNECTED", socketId: app_id.id, application: app_id.application, source: app_id.source };
+    let obj = callback(709);
+    obj = { type: "RPC_APP_CONNECTED", socketId: app_id.id, application: app_id.application, source: app_id.source };
     obj.dispatch(obj);
     obj = { app_id: app_id.application.id, transport: app_id.transport };
     callback(698).track(constants.AUTHORIZED_APP_CONNECTED, obj);
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    callback(709);
-    const obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
+    let obj = callback(709);
+    obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
     obj.dispatch(obj);
   };
   const items = [closure_6, closure_7, closure_10, closure_15, closure_9, closure_11];
@@ -537,56 +539,104 @@ prototype["init"] = function init() {
   });
   batchedStoreListener.attach("RPCServerManager");
   const subscription = dispatcherDefault.subscribe("MESSAGE_CREATE", this.handleMessage);
+  const obj2 = dispatcherDefault;
   const subscription1 = dispatcherDefault.subscribe("MESSAGE_UPDATE", this.handleMessage);
+  const obj3 = dispatcherDefault;
   const subscription2 = dispatcherDefault.subscribe("MESSAGE_DELETE", this.handleMessage);
+  const obj4 = dispatcherDefault;
   const subscription3 = dispatcherDefault.subscribe("SPEAKING", this.handleSpeaking);
+  const obj5 = dispatcherDefault;
   const subscription4 = dispatcherDefault.subscribe("OAUTH2_TOKEN_REVOKE", this.handleOAuth2TokenRevoke);
+  const obj6 = dispatcherDefault;
   const subscription5 = dispatcherDefault.subscribe("GUILD_CREATE", this.handleGuildCreate);
+  const obj7 = dispatcherDefault;
   const subscription6 = dispatcherDefault.subscribe("CHANNEL_CREATE", this.handleChannelCreate);
+  const obj8 = dispatcherDefault;
   const subscription7 = dispatcherDefault.subscribe("LOGOUT", this.handleLogout);
+  const obj9 = dispatcherDefault;
   const subscription8 = dispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const obj10 = dispatcherDefault;
   const subscription9 = dispatcherDefault.subscribe("RPC_NOTIFICATION_CREATE", this.handleNotificationCreate);
+  const obj11 = dispatcherDefault;
   const subscription10 = dispatcherDefault.subscribe("ACTIVITY_JOIN", this.handleActivityJoin);
+  const obj12 = dispatcherDefault;
   const subscription11 = dispatcherDefault.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", this.handleActivityLayoutModeUpdate);
+  const obj13 = dispatcherDefault;
   const subscription12 = dispatcherDefault.subscribe("FRAME_UPDATE_LAYOUT_MODE", this.handleFrameUpdateLayoutMode);
+  const obj14 = dispatcherDefault;
   const subscription13 = dispatcherDefault.subscribe("THERMAL_STATE_CHANGE", this.handleThermalStateChange);
+  const obj15 = dispatcherDefault;
   const subscription14 = dispatcherDefault.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", this.handleScreenOrientationUpdate);
+  const obj16 = dispatcherDefault;
   const subscription15 = dispatcherDefault.subscribe("EMBEDDED_ACTIVITY_UPDATE", this.handleEmbeddedActivityUpdate);
+  const obj17 = dispatcherDefault;
   const subscription16 = dispatcherDefault.subscribe("RELATIONSHIP_ADD", this.handleRelationshipAdd);
+  const obj18 = dispatcherDefault;
   const subscription17 = dispatcherDefault.subscribe("RELATIONSHIP_UPDATE", this.handleRelationshipUpdate);
+  const obj19 = dispatcherDefault;
   const subscription18 = dispatcherDefault.subscribe("RELATIONSHIP_REMOVE", this.handleRelationshipRemove);
+  const obj20 = dispatcherDefault;
   const subscription19 = dispatcherDefault.subscribe("PRESENCE_UPDATES", this.handlePresenceUpdates);
+  const obj21 = dispatcherDefault;
   const subscription20 = dispatcherDefault.subscribe("PRESENCES_REPLACE", this.handlePresencesReplace);
+  const obj22 = dispatcherDefault;
   const subscription21 = dispatcherDefault.subscribe("USER_UPDATE", this.handleUserUpdate);
+  const obj23 = dispatcherDefault;
   const subscription22 = dispatcherDefault.subscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate);
+  const obj24 = dispatcherDefault;
   const subscription23 = dispatcherDefault.subscribe("ENTITLEMENT_DELETE", this.handleEntitlementDelete);
+  const obj25 = dispatcherDefault;
   const subscription24 = dispatcherDefault.subscribe("QUESTS_ENROLL_SUCCESS", this.handleQuestEnrollSuccess);
 };
 prototype["terminate"] = function terminate() {
   dispatcherDefault.unsubscribe("MESSAGE_CREATE", this.handleMessage);
+  const obj = dispatcherDefault;
   dispatcherDefault.unsubscribe("MESSAGE_UPDATE", this.handleMessage);
+  const obj2 = dispatcherDefault;
   dispatcherDefault.unsubscribe("MESSAGE_DELETE", this.handleMessage);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.unsubscribe("SPEAKING", this.handleSpeaking);
+  const obj4 = dispatcherDefault;
   dispatcherDefault.unsubscribe("OAUTH2_TOKEN_REVOKE", this.handleOAuth2TokenRevoke);
+  const obj5 = dispatcherDefault;
   dispatcherDefault.unsubscribe("GUILD_CREATE", this.handleGuildCreate);
+  const obj6 = dispatcherDefault;
   dispatcherDefault.unsubscribe("CHANNEL_CREATE", this.handleChannelCreate);
+  const obj7 = dispatcherDefault;
   dispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
+  const obj8 = dispatcherDefault;
   dispatcherDefault.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const obj9 = dispatcherDefault;
   dispatcherDefault.unsubscribe("RPC_NOTIFICATION_CREATE", this.handleNotificationCreate);
+  const obj10 = dispatcherDefault;
   dispatcherDefault.unsubscribe("ACTIVITY_JOIN", this.handleActivityJoin);
+  const obj11 = dispatcherDefault;
   dispatcherDefault.unsubscribe("ACTIVITY_LAYOUT_MODE_UPDATE", this.handleActivityLayoutModeUpdate);
+  const obj12 = dispatcherDefault;
   dispatcherDefault.unsubscribe("FRAME_UPDATE_LAYOUT_MODE", this.handleFrameUpdateLayoutMode);
+  const obj13 = dispatcherDefault;
   dispatcherDefault.unsubscribe("THERMAL_STATE_CHANGE", this.handleThermalStateChange);
+  const obj14 = dispatcherDefault;
   dispatcherDefault.unsubscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", this.handleScreenOrientationUpdate);
+  const obj15 = dispatcherDefault;
   dispatcherDefault.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", this.handleEmbeddedActivityUpdate);
+  const obj16 = dispatcherDefault;
   dispatcherDefault.unsubscribe("RELATIONSHIP_ADD", this.handleRelationshipAdd);
+  const obj17 = dispatcherDefault;
   dispatcherDefault.unsubscribe("RELATIONSHIP_UPDATE", this.handleRelationshipUpdate);
+  const obj18 = dispatcherDefault;
   dispatcherDefault.unsubscribe("RELATIONSHIP_REMOVE", this.handleRelationshipRemove);
+  const obj19 = dispatcherDefault;
   dispatcherDefault.unsubscribe("PRESENCE_UPDATES", this.handlePresenceUpdates);
+  const obj20 = dispatcherDefault;
   dispatcherDefault.unsubscribe("PRESENCES_REPLACE", this.handlePresencesReplace);
+  const obj21 = dispatcherDefault;
   dispatcherDefault.unsubscribe("USER_UPDATE", this.handleUserUpdate);
+  const obj22 = dispatcherDefault;
   dispatcherDefault.unsubscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate);
+  const obj23 = dispatcherDefault;
   dispatcherDefault.unsubscribe("ENTITLEMENT_DELETE", this.handleEntitlementDelete);
+  const obj24 = dispatcherDefault;
   dispatcherDefault.unsubscribe("QUESTS_ENROLL_SUCCESS", this.handleQuestEnrollSuccess);
 };
 

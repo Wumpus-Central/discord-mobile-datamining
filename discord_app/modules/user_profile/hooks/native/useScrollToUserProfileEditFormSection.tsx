@@ -1,13 +1,13 @@
 // === Module 14025: useScrollToUserProfileEditFormSection ===
 
 // Module 14025 (useScrollToUserProfileEditFormSection)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import zustandStore from "zustandStore" /* 9537 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "zustandStore" /* 9537 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");
 
 export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
   const _require = arg0;

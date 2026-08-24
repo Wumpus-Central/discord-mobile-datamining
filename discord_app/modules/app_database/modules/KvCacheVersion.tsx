@@ -2,11 +2,11 @@
 
 // Module 5402 (okAsync)
 import timestampDefault from "timestamp" /* 3 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import HELLO_KEY from "HELLO_KEY" /* 499 */;
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-let obj132 = importDefault;
+let set = importDefault;
 ({ HELLO_KEY: c3, VERSION_TO_FORCE_RESYNCING_ALL_DATA: c4, VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: c5, VERSION_TO_SKIP_READING_THE_DATABASE: closure_6, VERSION_TO_SKIP_READING_THE_DATABASE_KEY: error } = HELLO_KEY);
 let closure_8 = new timestampDefault("KvCacheVersion");
 class KvCacheVersion {
@@ -32,6 +32,7 @@ const prototype = KvCacheVersion.prototype;
 prototype["okAsync"] = function okAsync(closure_0) {
   return callback(function*() {
     closure_1 = tmp2;
+    closure_0 = tmp5;
     const obj2 = closure_1_0(closure_1_1[3]);
     closure_0 = yield obj2.cache(closure_1_0).get(closure_1_7);
     let tmp8 = null;
@@ -52,7 +53,8 @@ prototype["canUseGuildVersions"] = function canUseGuildVersions() {
 };
 prototype["doesDatabaseVersionMatchJsConstants"] = function doesDatabaseVersionMatchJsConstants() {
   return callback(function*() {
-    let version = tmp2;
+    let version = tmp5;
+    version = tmp2;
     const obj2 = closure_1_0(closure_1_1[3]);
     const forceResyncVersionResult = obj2.forceResyncVersion();
     if (null == forceResyncVersionResult) {
@@ -79,22 +81,22 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
 };
 prototype["handleWrite"] = function handleWrite(database) {
   this.hasSuccessfullyConnected = true;
-  let obj = obj132(1955);
+  let obj = set(1955);
   obj.cacheTransaction(database).put(closure_3, "\u{1F44B}");
   const cacheTransactionResult = obj.cacheTransaction(database);
-  const obj3 = obj132(1955);
-  obj132(1955).cacheTransaction(database).put(closure_7, closure_6);
-  const cacheTransactionResult1 = obj132(1955).cacheTransaction(database);
-  const result = obj132(1955).forceResyncVersionTransaction(database);
+  const obj3 = set(1955);
+  set(1955).cacheTransaction(database).put(closure_7, closure_6);
+  const cacheTransactionResult1 = set(1955).cacheTransaction(database);
+  const result = set(1955).forceResyncVersionTransaction(database);
   obj = { version: closure_4 };
   result.put(closure_5, obj);
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {
   this.hasSuccessfullyConnected = false;
 };
-obj132 = Object.create(KvCacheVersion.prototype);
-obj132.hasSuccessfullyConnected = false;
-obj132.actions = {
+set = Object.create(KvCacheVersion.prototype);
+set.hasSuccessfullyConnected = false;
+set.actions = {
   BACKGROUND_SYNC(arg0, database) {
     return obj.handleWrite(database);
   },
@@ -105,6 +107,6 @@ obj132.actions = {
     return obj.handleWrite(database);
   }
 };
-let result = obj132.fileFinishedImporting("modules/app_database/modules/KvCacheVersion.tsx");
+let result = set.fileFinishedImporting("modules/app_database/modules/KvCacheVersion.tsx");
 
-export default obj132;
+export default set;

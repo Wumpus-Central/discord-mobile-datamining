@@ -1,14 +1,14 @@
 // === Module 8849: ? ===
 
 // Module 8849
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import _modDef5260 from "module_5260" /* 5260 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 
 let closure_3 = createChannelRecord.CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES;
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const result = obj132.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
 
 export default {
   CREATE_CHANNEL_MODAL_KEY: "CREATE_CHANNEL_MODAL_KEY",
@@ -30,11 +30,13 @@ export default {
           hasItem = closure_1_3.has(channel.type);
         }
         if (hasItem) {
-          self(dependencyMap[2]).transitionToChannel(id);
-          const obj = self(dependencyMap[2]);
+          self(closure_1_2[2]).transitionToChannel(id);
+          const obj = self(closure_1_2[2]);
         }
       };
       obj2.pushLazy(self(2007)(8845, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      const tmp2 = arg2;
+      const tmp3 = arg3;
       const tmp9 = self(2007)(8845, dependencyMap.paths);
     }
   },

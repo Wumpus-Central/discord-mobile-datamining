@@ -5,10 +5,10 @@ import contextDefault from "context" /* 7139 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 let context = importAllResult.createContext(null);
-let result = require("obj132").fileFinishedImporting("modules/user_profile/UserProfileAnalyticsContext.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/UserProfileAnalyticsContext.tsx");
 
 export const UserProfileAnalyticsProvider = (children) => {
   ({ value, openedAt } = children);
@@ -16,9 +16,11 @@ export const UserProfileAnalyticsProvider = (children) => {
   if (isLoaded === undefined) {
     isLoaded = false;
   }
+  let ref;
+  let obj;
   closure_6 = undefined;
-  let obj = isLoaded;
-  const ref = isLoaded.useRef(undefined);
+  obj = isLoaded;
+  ref = isLoaded.useRef(undefined);
   const ref1 = isLoaded.useRef(openedAt);
   if (ref1.current !== openedAt) {
     ref1.current = openedAt;
@@ -37,26 +39,26 @@ export const UserProfileAnalyticsProvider = (children) => {
       tmp3 = null != openedAt;
     }
     if (tmp3) {
-      ref.current = timestamp - openedAt;
+      tmp2.current = timestamp - openedAt;
     }
     if (isLoaded) {
       ({ analyticsLocations, value } = ref.current);
-      openedAt(dependencyMap[3]);
+      obj = openedAt(closure_1_2[3]);
       obj = { action: "VIEW", analyticsLocations: null };
       obj[1] = analyticsLocations;
       const merged = Object.assign(value);
       const result = obj.trackUserProfileAction(obj);
       obj = { profileUi: "USER_PROFILE", timeToInteractiveMs: null, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
-      obj[1] = ref.current;
+      obj[1] = tmp2.current;
       let diff;
       if (null != openedAt) {
-        diff = timestamp - openedAt;
+        diff = timestamp - tmp13;
       }
       obj[2] = diff;
       let diff1;
       if (null != closure_1) {
         if (null != closure_2) {
-          diff1 = closure_2 - closure_1;
+          diff1 = closure_2 - tmp15;
         }
       }
       obj[3] = diff1;
@@ -64,8 +66,8 @@ export const UserProfileAnalyticsProvider = (children) => {
       obj[5] = closure_1;
       obj[6] = analyticsLocations;
       const merged1 = Object.assign(value);
-      const result1 = openedAt(dependencyMap[3]).maybeTrackUserProfileUiViewed(obj);
-      const obj3 = openedAt(dependencyMap[3]);
+      const result1 = openedAt(closure_1_2[3]).maybeTrackUserProfileUiViewed(obj);
+      const obj3 = openedAt(closure_1_2[3]);
     }
   }, items);
   return ref(obj.Provider, { value, children: children.children });
@@ -82,8 +84,9 @@ export const useCreateUserProfileAnalyticsContext = function useCreateUserProfil
   if (flag === undefined) {
     flag = true;
   }
-  const context = channelId.useContext(roleId);
   let sessionId;
+  const context = channelId.useContext(roleId);
+  sessionId = undefined;
   if (context != null) {
     sessionId = context.sessionId;
   }
@@ -116,40 +119,40 @@ export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsCo
     context,
     trackUserProfileAction: importAllResult.useCallback((arg0) => {
       if (null != context) {
-        context(dependencyMap[3]);
-        const obj = { analyticsLocations: null };
+        let obj = context(closure_1_2[3]);
+        obj = { analyticsLocations: null };
         obj[0] = analyticsLocations;
-        const merged = Object.assign(context);
+        const merged = Object.assign(tmp);
         const merged1 = Object.assign(arg0);
         const result = obj.trackUserProfileAction(obj);
       }
     }, items),
     trackUserProfileEditAction: importAllResult.useCallback((arg0) => {
       if (null != context) {
-        context(dependencyMap[3]);
-        const obj = { analyticsLocations: null };
+        let obj = context(closure_1_2[3]);
+        obj = { analyticsLocations: null };
         obj[0] = analyticsLocations;
-        const merged = Object.assign(context);
+        const merged = Object.assign(tmp);
         const merged1 = Object.assign(arg0);
         const result = obj.trackUserProfileEditAction(obj);
       }
     }, items1),
     trackUserProfileEditSaved: importAllResult.useCallback((arg0) => {
       if (null != context) {
-        context(dependencyMap[3]);
-        const obj = { analyticsLocations: null };
+        let obj = context(closure_1_2[3]);
+        obj = { analyticsLocations: null };
         obj[0] = analyticsLocations;
-        const merged = Object.assign(context);
+        const merged = Object.assign(tmp);
         const merged1 = Object.assign(arg0);
         const result = obj.trackUserProfileEditSaved(obj);
       }
     }, items2),
     trackUserProfileWishlistAction: importAllResult.useCallback((arg0) => {
       if (null != context) {
-        context(dependencyMap[3]);
-        const obj = { analyticsLocations: null };
+        let obj = context(closure_1_2[3]);
+        obj = { analyticsLocations: null };
         obj[0] = analyticsLocations;
-        const merged = Object.assign(context);
+        const merged = Object.assign(tmp);
         const merged1 = Object.assign(arg0);
         const result = obj.trackUserProfileWishlistAction(obj);
       }

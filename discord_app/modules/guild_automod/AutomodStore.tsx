@@ -1,14 +1,14 @@
 // === Module 16762: withEqualityFn ===
 
 // Module 16762 (withEqualityFn)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 import { AutomodTriggerType } from "AutomodEventType" /* 11042 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 import identity from "identity" /* 700 */;
 
-const require = fn;
+const require = arg1;
 let closure_7 = {};
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
@@ -30,18 +30,18 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (items == null) {
         items = [];
       }
-      const found = items.filter((item, index) => {
-        const isDefaultRuleIdResult = guildId(guildId2[6]).isDefaultRuleId(item.id);
+      const found = items.filter((id) => {
+        const isDefaultRuleIdResult = guildId(guildId2[6]).isDefaultRuleId(id.id);
         let tmp2 = !isDefaultRuleIdResult;
         if (isDefaultRuleIdResult) {
-          tmp2 = item.triggerType !== triggerType;
+          tmp2 = id.triggerType !== triggerType;
         }
         return tmp2;
       });
       if (someResult) {
-        let mapped = found.map((item, index) => {
-          let tmp = item;
-          if (item.id === closure_2) {
+        let mapped = found.map((id) => {
+          let tmp = id;
+          if (id.id === closure_2) {
             tmp = closure_0;
           }
           return tmp;
@@ -50,8 +50,10 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped = [];
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
-      someResult = items.some((item, index) => item.id === closure_2);
+      someResult = items.some((id) => id.id === closure_2);
       callback(705).batchUpdates(() => {
+        obj = { rules: null, error: null };
+        obj = {};
         const merged = Object.assign(rules);
         obj = {};
         const merged1 = Object.assign(obj);
@@ -67,17 +69,18 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const rules = dependencyMap().rules;
       closure_3 = tmp;
       const keys = Object.keys(tmp);
-      closure_4 = keys.reduce((acc, item, index) => {
-        const NumberResult = Number(item);
+      closure_4 = keys.reduce((arg0, arg1) => {
+        const NumberResult = Number(arg1);
         let items = table[NumberResult];
         if (items == null) {
           items = [];
         }
-        acc[NumberResult] = items.filter((item, index) => item.id !== closure_0);
-        return acc;
+        arg0[NumberResult] = items.filter((id) => id.id !== closure_0);
+        return arg0;
       }, {});
       callback(705).batchUpdates(() => {
-        const obj = {};
+        let obj = { rules: null, error: null };
+        obj = {};
         const merged = Object.assign(rules);
         obj[closure_1] = closure_4;
         obj[0] = obj;
@@ -132,14 +135,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
                 return timestamp - num > 20000;
               })(callback)) {
                 const _Date = Date;
-                c7[callback] = Date.now();
+                c7[tmp41] = Date.now();
                 c4 = 1;
                 callback2 = function convertToRulesByTriggerType(arr) {
                   const obj = { [closure_5.KEYWORD]: [], [closure_5.ML_SPAM]: [], [closure_5.DEFAULT_KEYWORD_LIST]: [], [closure_5.MENTION_SPAM]: [], [closure_5.USER_PROFILE]: [], [closure_5.SERVER_POLICY]: [] };
-                  const item = arr.forEach((item, index) => {
-                    let arr = obj[item.triggerType];
+                  const item = arr.forEach((arg0) => {
+                    let arr = obj[arg0.triggerType];
                     if (arr != null) {
-                      arr = arr.push(item);
+                      arr = arr.push(arg0);
                     }
                   });
                   return obj;
@@ -147,7 +150,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
                 c6 = 2;
                 c7 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = callback(closure_1_1[8]).fetchAutomodRules(callback);
+                obj1[0] = callback(closure_1_1[8]).fetchAutomodRules(tmp41);
                 return obj1;
               }
             }
@@ -168,7 +171,8 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
               rules = callback2().rules;
               obj = callback(closure_1_1[7]);
               obj.batchUpdates(() => {
-                const obj = {};
+                let obj = { rules: null, error: null };
+                obj = {};
                 const merged = Object.assign(rules);
                 obj[callback] = closure_1;
                 obj[0] = obj;
@@ -207,7 +211,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
 
 export const useAutomodStore = withEqualityFn;
 export const getRuleCountByTriggerType = function getRuleCountByTriggerType(arg0, arg1) {
@@ -269,7 +273,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
                 v0 = 2;
                 c4 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = first(tmp20);
+                obj1[0] = closure_1_2(tmp20);
                 return obj1;
               }
             }
@@ -353,7 +357,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
                 v0 = 2;
                 c4 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = first(tmp20);
+                obj1[0] = closure_1_2(tmp20);
                 return obj1;
               }
             }
@@ -451,7 +455,7 @@ export const useAutomodRulesList = function useAutomodRulesList(arg0) {
   return withEqualityFn((updateRule) => {
     let tmp = closure_0;
     if (closure_0 == null) {
-      tmp = EMPTY_STRING_SNOWFLAKE_ID;
+      tmp = closure_1_6;
     }
     let obj = updateRule.rules[tmp];
     if (obj == null) {

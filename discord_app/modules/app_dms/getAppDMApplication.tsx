@@ -1,11 +1,11 @@
 // === Module 11371: getAppDMApplication ===
 
 // Module 11371 (getAppDMApplication)
-import addApplication from "addApplication" /* 4478 */;
-import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_0 from "addApplication" /* 4478 */;
+import closure_1 from "createUserWidgetFromServer" /* 5365 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
-const result = require("obj132").fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
+const result = require("set").fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 
 export const getAppDMApplication = function getAppDMApplication(channel) {
   let recipientId;

@@ -2,12 +2,12 @@
 
 // Module 12899 (useEligibleActiveOutboundPromotions)
 import initialize from "initialize" /* 589 */;
-import noop from "noop" /* 19 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createEmptyPromotionsByType" /* 7628 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
-require = fn;
+require = arg1;
 function useEligibleActiveOutboundPromotions(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -17,48 +17,52 @@ function useEligibleActiveOutboundPromotions(arg0) {
   if (flag === undefined) {
     flag = false;
   }
+  let stateFromStoresArray;
   let stateFromStores;
+  let stateFromStores1;
   const items = [closure_5];
-  const stateFromStoresArray = flag(stateFromStores[4]).useStateFromStoresArray(items, () => closure_5.outboundPromotions);
+  stateFromStoresArray = flag(stateFromStores[4]).useStateFromStoresArray(items, () => closure_5.outboundPromotions);
   const obj2 = flag(stateFromStores[4]);
   const items1 = [closure_5];
   stateFromStores = flag(stateFromStores[4]).useStateFromStores(items1, () => closure_5.consumedInboundPromotionId);
-  const obj3 = flag(stateFromStores[4]);
+  let obj3 = flag(stateFromStores[4]);
   const items2 = [closure_5];
-  const stateFromStores1 = flag(stateFromStores[4]).useStateFromStores(items2, () => closure_5.claimedOutboundPromotionCodes);
+  stateFromStores1 = flag(stateFromStores[4]).useStateFromStores(items2, () => closure_5.claimedOutboundPromotionCodes);
   const items3 = [stateFromStoresArray, stateFromStores, stateFromStores1, flag];
   return stateFromStores1.useMemo(() => {
     let set = null;
     if (set) {
       const _Set = Set;
-      set = new Set(stateFromStores1.map((item, index) => item.promotion.id));
+      set = new Set(stateFromStores1.map((promotion) => promotion.promotion.id));
     }
-    return stateFromStoresArray.filter((item, index) => {
-      let tmp = item.id !== closure_1_2;
+    return stateFromStoresArray.filter((id) => {
+      let tmp = id.id !== closure_1_2;
       if (tmp) {
-        let result = flag(stateFromStores[5]).shouldShowOutboundPromotionOnPlatform(item);
+        let result = flag(stateFromStores[5]).shouldShowOutboundPromotionOnPlatform(id);
         if (result) {
-          result = tmp2(stateFromStores[5]).isDedicatedSurfacePromotion(item);
+          result = tmp2(tmp3[5]).isDedicatedSurfacePromotion(id);
           flag = !result;
           if (!result) {
             flag = true;
             if (set != null) {
-              const hasItem = set.has(item.id);
+              const hasItem = obj3.has(id.id);
               flag = true;
             }
+            obj3 = set;
           }
           result = flag;
-          const tmp2Result = tmp2(stateFromStores[5]);
+          const tmp2Result = tmp2(tmp3[5]);
         }
         tmp = result;
         const obj = flag(stateFromStores[5]);
         tmp2 = flag;
+        tmp3 = stateFromStores;
       }
       return tmp;
     });
   }, items3);
 }
-let result = require("obj132").fileFinishedImporting("modules/premium/promotions/PromotionsHooks.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionsHooks.tsx");
 
 export { useEligibleActiveOutboundPromotions };
 export const useOutboundPromotions = function useOutboundPromotions() {
@@ -97,8 +101,8 @@ export const useOutboundPromotions = function useOutboundPromotions() {
         tmp = null == closure_0;
       }
       if (tmp) {
-        const activePromotions = closure_1_1(stateFromStores2[8]).fetchActivePromotions();
-        const obj = closure_1_1(stateFromStores2[8]);
+        const activePromotions = closure_1_1(closure_1_2[8]).fetchActivePromotions();
+        const obj = closure_1_1(closure_1_2[8]);
       }
     });
   }, items5);
@@ -112,24 +116,24 @@ export const useOutboundPromotions = function useOutboundPromotions() {
   activeOutboundPromotions = useEligibleActiveOutboundPromotions({ includeClaimedPromotions: true });
   const items7 = [activeOutboundPromotions, stateFromStores2];
   const claimedEndedOutboundPromotions = activeOutboundPromotions.useMemo(() => {
-    const set = new Set(activeOutboundPromotions.map((item, index) => item.id));
-    return stateFromStores2.filter((item, index) => {
-      const promotion = item.promotion;
+    const set = new Set(activeOutboundPromotions.map((id) => id.id));
+    return stateFromStores2.filter((promotion) => {
+      promotion = promotion.promotion;
       const hasItem = set.has(promotion.id);
       let result = !hasItem;
       if (!hasItem) {
-        set(stateFromStores2[5]);
-        const obj = { promotionType: null };
+        let obj = set(closure_1_2[5]);
+        obj = { promotionType: null };
         obj[0] = promotion.promotionType;
         result = false === obj.isRecurringPromotion(obj);
       }
       if (result) {
-        result = !set(stateFromStores2[5]).isDedicatedSurfacePromotion(promotion);
-        const obj3 = set(stateFromStores2[5]);
+        result = !set(closure_1_2[5]).isDedicatedSurfacePromotion(promotion);
+        const obj3 = set(closure_1_2[5]);
       }
       if (result) {
-        result = set(stateFromStores2[5]).shouldShowOutboundPromotionOnPlatform(promotion);
-        const obj4 = set(stateFromStores2[5]);
+        result = set(closure_1_2[5]).shouldShowOutboundPromotionOnPlatform(promotion);
+        const obj4 = set(closure_1_2[5]);
       }
       return result;
     });
@@ -153,14 +157,14 @@ export const useUnseenOutboundPromotions = function useUnseenOutboundPromotions(
     if (null == stateFromStores) {
       let found = closure_1;
     } else {
-      found = closure_1.filter((item, index) => {
-        const date = new Date(item.startDate);
+      found = closure_1.filter((startDate) => {
+        const date = new Date(startDate.startDate);
         return date > new Date(closure_0);
       });
     }
     return found;
   }, items1);
-  return memo.filter((item, index) => stateFromStores(table[5]).shouldShowOutboundPromotionOnPlatform(item));
+  return memo.filter((promotion) => stateFromStores(table[5]).shouldShowOutboundPromotionOnPlatform(promotion));
 };
 export const useBogoPromotion = function useBogoPromotion() {
   const obj = { promotion: initialize.useStateFromStores(items, () => bogoPromotion.bogoPromotion) };

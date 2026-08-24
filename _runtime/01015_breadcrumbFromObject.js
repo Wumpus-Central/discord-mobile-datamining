@@ -13,6 +13,7 @@ arg5.breadcrumbFromObject = function breadcrumbFromObject(type) {
   }
   if (typeof type.level === "string") {
     obj.level = registerSpanErrorInstrumentation.severityLevelFromString(type.level);
+    const obj2 = registerSpanErrorInstrumentation;
   }
   if (typeof type.event_id === "string") {
     obj.event_id = type.event_id;

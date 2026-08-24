@@ -2,8 +2,8 @@
 
 // Module 16690 (prototype)
 import initializeDefault from "initialize" /* 5038 */;
-import initialize from "initialize" /* 11585 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "initialize" /* 11585 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 initializeDefault;
 let prototype = function PushNotificationCacheManager() {
@@ -34,7 +34,7 @@ let prototype = function PushNotificationCacheManager() {
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj(11579);
+    obj = obj(11579);
     obj = undefined;
     if (obj.canUseMultiAccountNotifications) {
       const validUsers = obj.getValidUsers();
@@ -42,9 +42,9 @@ let prototype = function PushNotificationCacheManager() {
         obj = {};
       } else {
         obj = {};
-        const item = validUsers.forEach((item, index) => {
+        const item = validUsers.forEach((id) => {
           obj = obj(closure_1_1[2]);
-          obj[item.id] = obj.getUserTag(item, { identifiable: "always" });
+          obj[id.id] = obj.getUserTag(id, { identifiable: "always" });
         });
       }
     } else {
@@ -53,7 +53,7 @@ let prototype = function PushNotificationCacheManager() {
     obj.setMultiAccountUsers(obj);
   };
   applyArgumentsResult.handleLogout = function handleLogout() {
-    const result = applyArgumentsResult(dependencyMap[4]).clearPushNotificationLogs();
+    const result = applyArgumentsResult(closure_1_1[4]).clearPushNotificationLogs();
     applyArgumentsResult.handleUserUpdate();
   };
   return applyArgumentsResult;
@@ -61,6 +61,6 @@ let prototype = function PushNotificationCacheManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/push_notifications/native/PushNotificationCacheManager.tsx");
+let result = require("set").fileFinishedImporting("modules/push_notifications/native/PushNotificationCacheManager.tsx");
 
 export default prototype;

@@ -4,6 +4,7 @@
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import { KeyboardEvents, KeyboardEvents as KeyboardEvents2 } from "nativeEventEmitter" /* 1644 */;
 
+let closure_0 = arg1;
 let c2 = true;
 let obj = { height: 0, duration: 0, timestamp: null, target: -1, type: "default", appearance: "light" };
 obj[2] = new Date().getTime();
@@ -15,7 +16,7 @@ KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
   c2 = false;
   closure_3 = arg0;
 });
-let closure_0 = importDefaultResult((arg0) => {
+closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   return (function*(arg0) {
@@ -62,10 +63,10 @@ let closure_0 = importDefaultResult((arg0) => {
             c2 = true;
           }
           closure_1 = c2;
-          const promise = new Promise((fn) => {
-            const callback = fn;
+          const promise = new Promise((arg0) => {
+            const callback = arg0;
             if (c2) {
-              fn();
+              arg0();
             } else {
               const KeyboardEvents = callback(1644).KeyboardEvents;
               dependencyMap = KeyboardEvents.addListener("keyboardDidHide", () => {

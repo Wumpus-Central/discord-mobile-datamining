@@ -6,32 +6,35 @@ import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { EXPLICIT_END_EVENT_SHEET_KEY as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { fontSize: 24, fontFamily: require("ME").Fonts.PRIMARY_BOLD, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: null, subtitle: null, cancelButtonContainer: null, confirmButtonContainer: null };
+createCacheKey = { fontSize: 24, fontFamily: require("ME").Fonts.PRIMARY_BOLD, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginTop: 8, textAlign: "center" };
 createCacheKey[3] = { marginTop: 24, alignSelf: "stretch" };
 createCacheKey[4] = { marginTop: 8, alignSelf: "stretch" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/EndEventActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EndEventActionSheet.tsx");
 
 export default function EndEventActionSheet(channel) {
   channel = channel.channel;
+  let activeEvent;
   const tmp = callback3();
   let obj = channel(8891);
-  const activeEvent = obj.useActiveEvent(channel.id);
+  activeEvent = obj.useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
     function handleClose() {
-      activeEvent(dependencyMap[8]).hideActionSheet(closure_1_4);
-      const obj = activeEvent(dependencyMap[8]);
-      channel(dependencyMap[9]).handleDisconnect(channel);
+      activeEvent(closure_1_2[8]).hideActionSheet(closure_1_4);
+      const obj = activeEvent(closure_1_2[8]);
+      channel(closure_1_2[9]).handleDisconnect(channel);
     }
+    obj = { children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj1 = { style: null, accessibilityRole: "header", children: null };
@@ -59,12 +62,12 @@ export default function EndEventActionSheet(channel) {
     obj6[0] = intl4.string(tmp2(1236).t.mjB9pd);
     obj6[3] = function onPress() {
       if (null != activeEvent) {
-        activeEvent(dependencyMap[15]).endEvent(activeEvent.id, activeEvent.guild_id);
-        const obj = activeEvent(dependencyMap[15]);
-        activeEvent(dependencyMap[8]).hideActionSheet(closure_1_4);
-        const obj2 = activeEvent(dependencyMap[8]);
-        channel(dependencyMap[9]).handleDisconnect(channel);
-        const obj3 = channel(dependencyMap[9]);
+        activeEvent(closure_1_2[15]).endEvent(tmp.id, tmp.guild_id);
+        const obj = activeEvent(closure_1_2[15]);
+        activeEvent(closure_1_2[8]).hideActionSheet(closure_1_4);
+        const obj2 = activeEvent(closure_1_2[8]);
+        channel(closure_1_2[9]).handleDisconnect(channel);
+        const obj3 = channel(closure_1_2[9]);
       }
     };
     obj5[1] = callback(tmp2(4745).Button, obj6);

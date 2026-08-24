@@ -1,12 +1,12 @@
 // === Module 12097: useEntryActivityAndApplication ===
 
 // Module 12097 (useEntryActivityAndApplication)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import entryToKey from "entryToKey" /* 12098 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "participantFromServer" /* 1390 */;
+import closure_5 from "entryToKey" /* 12098 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
 
 export default function useEntryActivityAndApplication(extra) {
   const _require = extra;
@@ -26,6 +26,7 @@ export default function useEntryActivityAndApplication(extra) {
   const tmp7 = callback(first(7145)(items1), 2);
   first = tmp7[0];
   obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
+  const tmp = _require;
   const tmp4 = first(7145);
   const items2 = [closure_4];
   obj[1] = _require(589).useStateFromStores(items2, () => {

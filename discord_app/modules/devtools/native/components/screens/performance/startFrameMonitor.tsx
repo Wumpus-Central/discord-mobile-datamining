@@ -1,13 +1,14 @@
 // === Module 15183: FRAME_BUDGET_MS ===
 
 // Module 15183 (FRAME_BUDGET_MS)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 let c0 = 16.666666666666668;
-const result = obj132.fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");
+const result = set.fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");
 
 export const FRAME_BUDGET_MS = 16.666666666666668;
 export const startFrameMonitor = function startFrameMonitor() {
+  closure_0 = 0;
   closure_1 = performance.now();
   c2 = false;
   c3 = 0;

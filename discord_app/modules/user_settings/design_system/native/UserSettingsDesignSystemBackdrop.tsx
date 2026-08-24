@@ -5,18 +5,20 @@ import Stack from "Stack" /* 4733 */;
 import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
 import PressableCard from "PressableCard" /* 6292 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function BackdropCard(arg0) {
   ({ blur: require, setShowBackdrop: dependencyMap, setBlurAmount: closure_2 } = arg0);
   ({ buttonLabel, title, description } = arg0);
+  let obj = { children: null };
+  obj = { spacing: 12, children: null };
   const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: title }), callback2(Text.Text, { variant: "text-md/normal", color: "text-subtle", children: description }), ];
-  const obj = {
+  obj = {
     text: buttonLabel,
     onPress() {
       callback2(closure_0);
@@ -30,7 +32,8 @@ function BackdropCard(arg0) {
 }
 ({ ScrollView: c4, View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { container: { padding: 16 }, backdropContent: null };
+createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.alignItems = "stretch";
 createCacheKey.justifyContent = "center";
@@ -38,7 +41,7 @@ createCacheKey.padding = 16;
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function UserSettingsDesignSystemBackdropTsx1(){const{withSpring,showBackdrop,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(showBackdrop?1:0,SUBTLE_SPRING,'animate-always')};}" };
-const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx");
 
 export default function UserSettingsDesignSystemBackdrop() {
   const tmp = callback4();
@@ -46,7 +49,7 @@ export default function UserSettingsDesignSystemBackdrop() {
   let first = tmp2[0];
   dependencyMap = tmp4;
   [tmp6, tmp7] = callback(React.useState("none"), 2);
-  first(4115);
+  let obj = first(4115);
   const fn = function n() {
     let obj = first(4744);
     let num = 0;
@@ -56,7 +59,7 @@ export default function UserSettingsDesignSystemBackdrop() {
     obj = { opacity: obj.withSpring(num, first(4748).SUBTLE_SPRING, "animate-always") };
     return obj;
   };
-  let obj = { withSpring: first(4744).withSpring, showBackdrop: first, SUBTLE_SPRING: first(4748).SUBTLE_SPRING };
+  obj = { withSpring: first(4744).withSpring, showBackdrop: first, SUBTLE_SPRING: first(4748).SUBTLE_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 1929832617927;
   fn.__initData = closure_10;
@@ -76,18 +79,18 @@ export default function UserSettingsDesignSystemBackdrop() {
     obj3[0] = animatedStyle;
     obj3[1] = tmp6;
     obj3[2] = handleClose;
-    const items2 = [callback2(tmp8(4723).Backdrop, obj3), ];
+    const items2 = [tmp13(tmp8(4723).Backdrop, obj3), ];
     const obj4 = { style: null, pointerEvents: "box-none", children: null };
     obj4[0] = tmp.backdropContent;
     const obj5 = { children: null };
     const obj6 = { variant: "text-md/normal", children: null };
     const items3 = ["blur style: ", tmp6];
     obj6[1] = items3;
-    obj5[0] = callback3(tmp8(4734).Text, obj6);
-    obj4[2] = callback2(tmp8(6292).Card, obj5);
-    items2[1] = callback2(closure_5, obj4);
+    obj5[0] = tmp11(tmp8(4734).Text, obj6);
+    obj4[2] = tmp13(tmp8(6292).Card, obj5);
+    items2[1] = tmp13(closure_5, obj4);
     obj2[1] = items2;
-    first = callback3(tmp8(4716).Dialog, obj2);
+    first = tmp11(tmp8(4716).Dialog, obj2);
   }
   items1[1] = first;
   obj[1] = items1;

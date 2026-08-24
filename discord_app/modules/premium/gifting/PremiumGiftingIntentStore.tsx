@@ -7,15 +7,16 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS" /* 8291 */;
 import getFriendAnniversaryGateConfig from "getFriendAnniversaryGateConfig" /* 8292 */;
-import getHash from "getHash" /* 4288 */;
-import initialize from "initialize" /* 1212 */;
-import recomputeAffinities from "recomputeAffinities" /* 5407 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
-import hasConsented from "hasConsented" /* 5258 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_3 from "getHash" /* 4288 */;
+import closure_4 from "initialize" /* 1212 */;
+import closure_5 from "recomputeAffinities" /* 5407 */;
+import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_7 from "hasConsented" /* 5258 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
 import { Consents } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function getCurrentTime() {
   let timestamp = c17;
   if (c17 == null) {
@@ -25,7 +26,8 @@ function getCurrentTime() {
   return timestamp;
 }
 function categorizeTopAffinityFriendAnniversaries() {
-  const flag = false;
+  let flag;
+  flag = false;
   const result = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS.categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
     const userAffinity = closure_5.getUserAffinity(userId);
     let dmProbability;
@@ -48,19 +50,35 @@ function updateFriendAnniversaries() {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp17 = nextResult;
+          let tmp18 = store;
           let since = store.getSince(nextResult);
+          let tmp20 = userAffinity;
           userAffinity = userAffinity.getUserAffinity(nextResult);
           if (store.isFriend(nextResult)) {
+            let tmp22 = userAffinity;
             if (null != userAffinity) {
+              let tmp47 = userAffinity;
               if (userAffinity.dmProbability > 0) {
+                let tmp23 = since;
                 if (null != since) {
                   let _Date = Date;
+                  let tmp24 = since;
+                  let tmp25 = new.target;
+                  let tmp26 = new.target;
                   let date = new Date(since);
+                  let tmp30 = require;
+                  let tmp31 = dependencyMap;
+                  let tmp28 = date;
                   let tmp29 = date;
                   let obj = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS;
                   if (obj.isFriendAnniversary(date)) {
+                    let tmp32 = arr;
+                    let tmp33 = arr;
+                    let tmp34 = nextResult;
                     arr = arr.push(tmp17);
+                    let tmp36 = closure_14;
                     obj = { friendsSince: null };
+                    let tmp37 = tmp28;
                     obj[0] = tmp29;
                     closure_14[tmp17] = obj;
                   }
@@ -94,9 +112,9 @@ function resetFriendAnniversaries() {
 }
 function generateFriendAnniversaries(c15) {
   closure_11.length = 0;
-  new Set();
+  highestAffinity = new Set();
   set = new Set();
-  new Set();
+  highAffinity = new Set();
   closure_14 = {};
   highestAffinity = set2;
   highAffinity = dependencyMap;
@@ -106,25 +124,25 @@ function generateFriendAnniversaries(c15) {
     if (EnableFriendAnniversaryNotifications.getSetting()) {
       closure_15 = c15;
       const friendIDs = store.getFriendIDs();
-      const found = friendIDs.filter((item, index) => !closure_8.isIgnored(item));
+      const found = friendIDs.filter((arg0) => !closure_8.isIgnored(arg0));
       const _Set = Set;
       set2 = new Set(found);
       if (null != _null) {
         if (_null.length === c15) {
           _null = sampleSizeResult;
-          const item = sampleSizeResult.forEach((item, index) => {
-            const since = closure_8.getSince(item);
+          const item = sampleSizeResult.forEach((userId) => {
+            const since = closure_8.getSince(userId);
             if (null != since) {
               const _Date = Date;
               const date = new Date(since);
-              arr = arr.push(item);
+              arr = arr.push(userId);
               const obj = { friendsSince: null };
               obj[0] = date;
-              closure_14[item] = obj;
+              closure_14[userId] = obj;
             }
           });
-          const sorted = closure_11.sort((arg0, arg1) => closure_5.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8291).categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
+          const sorted = obj.sort((arg0, arg1) => closure_5.compareByDmProbability(arg0, arg1));
+          const result = highestAffinity(8291).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
             const userAffinity = closure_5.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -138,9 +156,9 @@ function generateFriendAnniversaries(c15) {
         sampleSizeResult = _null;
       }
       sampleSizeResult = applyDefault.sampleSize(found, c15);
+      const obj3 = applyDefault;
     }
   }
-  obj2 = set2(8292);
 }
 let closure_10 = { messageGiftIntentLastShownMap: {}, lastShownFriendsListGiftIntents: [], friendsTabBadgeLastDismissedTime: null, lastKnownGiftIntentDismissedAtMs: 0 };
 let closure_11 = [];
@@ -168,6 +186,7 @@ prototype["initialize"] = function initialize(friendsTabBadgeLastDismissedTime) 
       num = 0;
     }
     closure_10.lastKnownGiftIntentDismissedAtMs = num;
+    const tmp7 = closure_10;
   }
   const items = [closure_8, closure_5, closure_7, closure_3, closure_4, closure_6];
   this.syncWith(items, updateFriendAnniversaries);
@@ -185,15 +204,16 @@ prototype["getFriendAnniversaries"] = function getFriendAnniversaries() {
   return closure_11;
 };
 prototype["canShowFriendsTabBadge"] = function canShowFriendsTabBadge() {
-  return Array.from(set1).some((item, index) => {
+  return Array.from(set1).some((arg0) => {
     const lastShownFriendsListGiftIntents = obj.lastShownFriendsListGiftIntents;
-    return !lastShownFriendsListGiftIntents.includes(item);
+    return !lastShownFriendsListGiftIntents.includes(arg0);
   });
 };
 prototype["getFriendAnniversaryYears"] = function getFriendAnniversaryYears(arg0) {
   let num = 0;
   if (null != table[arg0]) {
     num = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS.yearsSince(tmp.friendsSince);
+    const obj = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS;
   }
   return num;
 };
@@ -365,6 +385,8 @@ const premiumGiftingIntentStore = new PremiumGiftingIntentStore(dispatcherDefaul
         let bound = dismissedAtMs;
       } else {
         let _Math = Math;
+        let tmp5 = tmp3;
+        let tmp6 = dismissedAtMs;
         bound = Math.max(tmp4, dismissedAtMs);
       }
       obj[targetId] = bound;
@@ -406,7 +428,7 @@ const premiumGiftingIntentStore = new PremiumGiftingIntentStore(dispatcherDefaul
     c17 = null;
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentStore.tsx");
+let result = set.fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentStore.tsx");
 
 export default premiumGiftingIntentStore;
 export const FRIENDS_LIST_ANNIVERSARY_DISPLAY_LIMIT = 5;

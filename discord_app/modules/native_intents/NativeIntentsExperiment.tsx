@@ -1,11 +1,11 @@
 // === Module 17080: experiment ===
 
 // Module 17080 (experiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import createExperiment from "createExperiment" /* 4286 */;
 
 const items = [{ id: 1, label: "All enabled", config: { searchEnabled: true, clearEnabled: true, activityEnabled: true } }, { id: 2, label: "Clear Only", config: { searchEnabled: false, clearEnabled: true, activityEnabled: false } }, { id: 3, label: "Activities Only", config: { searchEnabled: false, clearEnabled: false, activityEnabled: true } }, { id: 4, label: "Activities and Clear", config: { searchEnabled: false, clearEnabled: true, activityEnabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "user", id: "2025-06_native_intents", label: "Native Intents", defaultConfig: { searchEnabled: false, clearEnabled: false, activityEnabled: false }, treatments: items });
-const result = obj132.fileFinishedImporting("modules/native_intents/NativeIntentsExperiment.tsx");
+const result = set.fileFinishedImporting("modules/native_intents/NativeIntentsExperiment.tsx");
 
 export default experiment;

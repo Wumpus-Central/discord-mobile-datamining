@@ -1,10 +1,10 @@
 // === Module 1851: getLatestState ===
 
 // Module 1851 (getLatestState)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);
 let closure_5 = ["keyboardWillShow", "keyboardDidHide"];
 function getLatestState() {
@@ -20,8 +20,9 @@ export const useKeyboardState = function useKeyboardState(arg0) {
     tmp = defaultSelector;
   }
   closure_0 = tmp;
+  closure_1 = undefined;
   const tmp2 = callback(callback3(() => {
-    if (typeof getLatestState !== "function") {
+    if (typeof closure_1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = {};
@@ -33,9 +34,9 @@ export const useKeyboardState = function useKeyboardState(arg0) {
   }), 2);
   closure_1 = tmp2[1];
   callback2(() => {
-    const callback = closure_1_5.map((item, index) => {
+    const callback = closure_1_5.map((arg0) => {
       const KeyboardEvents = lib(closure_1_1[3]).KeyboardEvents;
-      return KeyboardEvents.addListener(item, () => {
+      return KeyboardEvents.addListener(arg0, () => {
         if (typeof closure_1_6 !== "function") {
           HermesBuiltin.throwTypeError();
         }
@@ -44,10 +45,10 @@ export const useKeyboardState = function useKeyboardState(arg0) {
         const merged = Object.assign(KeyboardController.state());
         const KeyboardController2 = closure_1_0(closure_1_1[2]).KeyboardController;
         obj.isVisible = KeyboardController2.isVisible();
-        return callback2(callback(obj));
+        return closure_1(closure_0(obj));
       });
     });
-    if (typeof getLatestState !== "function") {
+    if (typeof closure_1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = {};
@@ -57,7 +58,7 @@ export const useKeyboardState = function useKeyboardState(arg0) {
     obj.isVisible = KeyboardController2.isVisible();
     dependencyMap(callback(obj));
     return () => {
-      const item = lib.forEach((item, index) => item.remove());
+      const item = lib.forEach((remove) => remove.remove());
     };
   }, []);
   return tmp2[0];

@@ -4,7 +4,7 @@
 import noopAll from "noop" /* 19 */;
 import { useMemo } from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 
 export default function useAndroidRippleForView(arg0, arg1) {
@@ -45,7 +45,7 @@ export default function useAndroidRippleForView(arg0, arg1) {
       onPressIn(nativeEvent) {
         const current = ref.current;
         if (null != current) {
-          const Commands = closure_1_0(borderless[2]).Commands;
+          const Commands = closure_1_0(closure_1_2[2]).Commands;
           let num = nativeEvent.nativeEvent.locationX;
           if (num == null) {
             num = 0;
@@ -55,14 +55,16 @@ export default function useAndroidRippleForView(arg0, arg1) {
             num2 = 0;
           }
           Commands.hotspotUpdate(current, num, num2);
-          const Commands2 = closure_1_0(borderless[2]).Commands;
+          const Commands2 = closure_1_0(closure_1_2[2]).Commands;
           Commands2.setPressed(current, true);
+          const tmp2 = closure_1_0;
+          const tmp3 = closure_1_2;
         }
       },
       onPressMove(nativeEvent) {
         const current = ref.current;
         if (null != current) {
-          const Commands = closure_1_0(borderless[2]).Commands;
+          const Commands = closure_1_0(closure_1_2[2]).Commands;
           let num = nativeEvent.nativeEvent.locationX;
           if (num == null) {
             num = 0;
@@ -77,7 +79,7 @@ export default function useAndroidRippleForView(arg0, arg1) {
       onPressOut(arg0) {
         const current = ref.current;
         if (null != current) {
-          const Commands = closure_1_0(borderless[2]).Commands;
+          const Commands = closure_1_0(closure_1_2[2]).Commands;
           Commands.setPressed(current, false);
         }
       }

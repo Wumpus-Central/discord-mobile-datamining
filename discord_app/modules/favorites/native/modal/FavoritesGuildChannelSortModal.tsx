@@ -2,14 +2,14 @@
 
 // Module 15403 (FavoritesGuildChannelSortModal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import noop from "noop" /* 19 */;
-import sortCategoryList from "sortCategoryList" /* 15404 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "sortCategoryList" /* 15404 */;
 import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
 import { FAVORITES } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx");
 
 export default function FavoritesGuildChannelSortModal() {
   const effect = React.useEffect(() => {
@@ -25,12 +25,14 @@ export default function FavoritesGuildChannelSortModal() {
   const bottom = useSafeAreaInsetsDefault().bottom;
   let items = [bottom];
   const screens = React.useMemo(() => {
-    let obj = { title: null, render: null };
-    const intl = bottom(dependencyMap[7]).intl;
-    obj[0] = intl.string(bottom(dependencyMap[7]).t.OGiMXJ);
+    let obj = { FAVORITES_GUILD_CHANNEL_SORT: null };
+    obj = { title: null, render: null };
+    const intl = bottom(closure_1_2[7]).intl;
+    obj[0] = intl.string(bottom(closure_1_2[7]).t.OGiMXJ);
     obj[1] = function render() {
-      const obj = { paddingBottom: 16 + closure_0 };
-      obj[2] = bottom(closure_1_2[9]).closeFavoritesGuildChannelSortModal;
+      obj = { guildId: closure_1_6, contentContainerStyle: obj, onDone: null };
+      obj = { paddingBottom: 16 + closure_0 };
+      obj[2] = closure_1_0(closure_1_2[9]).closeFavoritesGuildChannelSortModal;
       return closure_1_7(closure_1_1(closure_1_2[8]), obj);
     };
     obj[0] = obj;

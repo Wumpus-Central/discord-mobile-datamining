@@ -24,9 +24,10 @@ arg5.debounce = function debounce(arg0, arg1, maxWait) {
   if (maxWait != null) {
     maxWait = maxWait.maxWait;
   }
+  let num = 0;
   if (maxWait) {
     const _Math = Math;
-    const num = Math.max(maxWait.maxWait, arg1);
+    num = Math.max(maxWait.maxWait, arg1);
   }
   let setTimeoutImpl;
   if (maxWait != null) {

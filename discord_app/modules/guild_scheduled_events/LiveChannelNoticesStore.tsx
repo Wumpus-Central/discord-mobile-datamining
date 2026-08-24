@@ -1,7 +1,7 @@
 // === Module 15446: initialize ===
 
 // Module 15446 (initialize)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
@@ -57,35 +57,39 @@ const liveChannelNoticesStore = new LiveChannelNoticesStore(dispatcherDefault, {
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function handleEventUpdate(guildScheduledEvent) {
     guildScheduledEvent = guildScheduledEvent.guildScheduledEvent;
-    const combined = "event-" + guildScheduledEvent.id;
+    let combined;
+    combined = "event-" + guildScheduledEvent.id;
     const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
     const hasItem = hiddenEventsAndStages.includes(combined);
     let tmp3 = !hasItem;
     if (hasItem) {
       tmp3 = guildScheduledEvent.status !== combined.CANCELED && guildScheduledEvent.status !== tmp4.COMPLETED;
+      const tmp5 = guildScheduledEvent.status !== combined.CANCELED && guildScheduledEvent.status !== tmp4.COMPLETED;
     }
     if (!tmp3) {
       const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((item, index) => item !== combined);
+      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
     }
   },
   GUILD_SCHEDULED_EVENT_DELETE: function handleEventDelete(guildScheduledEvent) {
-    const combined = "event-" + guildScheduledEvent.guildScheduledEvent.id;
+    let combined;
+    combined = "event-" + guildScheduledEvent.guildScheduledEvent.id;
     const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
     if (hiddenEventsAndStages.includes(combined)) {
       const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((item, index) => item !== combined);
+      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
     }
   },
   STAGE_INSTANCE_DELETE: function handleStageUpdate(instance) {
-    const combined = "stage-" + instance.instance.id;
+    let combined;
+    combined = "stage-" + instance.instance.id;
     const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
     if (hiddenEventsAndStages.includes(combined)) {
       const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((item, index) => item !== combined);
+      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
     }
   }
 });
-const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
 
 export default liveChannelNoticesStore;

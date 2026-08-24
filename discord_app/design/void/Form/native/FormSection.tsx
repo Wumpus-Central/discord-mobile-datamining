@@ -1,22 +1,21 @@
 // === Module 7692: FormSection ===
 
 // Module 7692 (FormSection)
-import obj132 from "obj132" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
 import context from "context" /* 6939 */;
 import DividerDefault from "Divider" /* 7693 */;
 import FormTitleDefault from "FormTitle" /* 7694 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { TitleStyleType } from "semanticColor" /* 1301 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ View: c4, StyleSheet, Platform } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 16 };
+createCacheKey = { titledSectionHeader: null, titledSectionNoBorder: null, titledSectionNoBorderOrMargin: null, emptySectionHeader: null, sectionBody: null, sectionBodyIOSBorder: null };
+createCacheKey = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 24 };
 createCacheKey[2] = {};
@@ -24,7 +23,7 @@ createCacheKey[3] = { marginTop: 24 };
 createCacheKey[4] = {};
 createCacheKey[5] = {};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormSection.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormSection.tsx");
 
 export default function FormSection(arg0) {
   ({ children, inset } = arg0);
@@ -43,10 +42,10 @@ export default function FormSection(arg0) {
   if (React.useContext(context.RedesignCompatContext)) {
     const Children = obj.Children;
     const toArrayResult = Children.toArray(children);
-    const found = toArrayResult.filter((item, index) => {
-      let isValidElementResult = closure_3.isValidElement(item);
+    const found = toArrayResult.filter((type) => {
+      let isValidElementResult = closure_3.isValidElement(type);
       if (isValidElementResult) {
-        isValidElementResult = item.type !== callback(7693);
+        isValidElementResult = type.type !== callback(7693);
       }
       return isValidElementResult;
     });
@@ -69,23 +68,24 @@ export default function FormSection(arg0) {
         if (null != element.props) {
           const props = element.props;
           flag = "error" in props && null != props.error;
+          const tmp22 = "error" in props && null != props.error;
         }
       }
     }
     obj1[2] = flag;
     obj1[3] = found;
-    obj[1] = callback(TableRowGroupTitle.TableRowGroup, obj1);
+    obj[1] = callback(tmp3(6286).TableRowGroup, obj1);
     const items = [callback(closure_4, obj), ];
     let tmp20Result = null;
     if (null != hint) {
       const obj2 = { style: null, children: null };
       obj2[0] = { marginTop: 8 };
       obj2[1] = hint;
-      tmp20Result = callback(closure_4, obj2);
+      tmp20Result = tmp20(tmp19, obj2);
     }
     items[1] = tmp20Result;
     obj[1] = items;
-    return callback(closure_4, obj);
+    return closure_7(closure_4, obj);
   } else {
     let tmp6;
     if (null != title) {
@@ -105,18 +105,19 @@ export default function FormSection(arg0) {
       obj3[6] = uppercaseTitle;
       obj3[7] = inset;
       tmp6 = callback(FormTitleDefault, obj3);
+      const tmp10 = FormTitleDefault;
     }
     const emptySectionHeader = tmp2.emptySectionHeader;
     let titledSectionNoBorderOrMargin = emptySectionHeader;
     if (null != tmp6) {
       if (TitleStyleType.DEFAULT === titleStyleType) {
         titledSectionNoBorderOrMargin = tmp2.titledSectionHeader;
-      } else if (TitleStyleType.ANDROID_NO_BORDER === titleStyleType) {
-        titledSectionNoBorderOrMargin = obj132.isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
-        const tmp3Result = obj132;
+      } else if (tmp12.ANDROID_NO_BORDER === titleStyleType) {
+        titledSectionNoBorderOrMargin = tmp3(500).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
+        const tmp3Result = tmp3(500);
       } else {
         titledSectionNoBorderOrMargin = emptySectionHeader;
-        if (TitleStyleType.NO_BORDER_OR_MARGIN === titleStyleType) {
+        if (tmp12.NO_BORDER_OR_MARGIN === titleStyleType) {
           titledSectionNoBorderOrMargin = tmp2.titledSectionNoBorderOrMargin;
         }
       }
@@ -146,6 +147,6 @@ export default function FormSection(arg0) {
     items2[2] = callback(closure_4, obj5);
     items2[3] = hint;
     obj4[3] = items2;
-    return callback(closure_4, obj4);
+    return closure_7(closure_4, obj4);
   }
 };

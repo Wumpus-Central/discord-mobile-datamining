@@ -2,10 +2,10 @@
 
 // Module 11055 (_fetchMediaPostEmbed)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _fetchMediaPostEmbed() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -146,10 +146,11 @@ function _unfurlEmbedUrl() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
 
 export const dismissMediaPostSharePrompt = function dismissMediaPostSharePrompt(threadId) {
-  const obj = { type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId };
+  let obj = dispatcherDefault;
+  obj = { type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId };
   obj.dispatch(obj);
 };
 export const fetchMediaPostEmbed = function fetchMediaPostEmbed(threadId) {

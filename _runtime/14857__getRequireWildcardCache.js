@@ -1,8 +1,6 @@
 // === Module 14857: _getRequireWildcardCache ===
 
 // Module 14857 (_getRequireWildcardCache)
-import _typeof from "_typeof" /* 45 */;
-
 function _getRequireWildcardCache(arg0) {
   if (typeof WeakMap !== "function") {
     return null;

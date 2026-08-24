@@ -5,13 +5,13 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import initializeDefault from "initialize" /* 5038 */;
 import frozen from "frozen" /* 14225 */;
-import setContent from "setContent" /* 4086 */;
-import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
-import initialize from "initialize" /* 14224 */;
+import closure_4 from "setContent" /* 4086 */;
+import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import closure_6 from "initialize" /* 14224 */;
 import items from "items" /* 5297 */;
 import { AppStates } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function maybePresentModal(daysRemaining) {
   daysRemaining = undefined;
   if (daysRemaining != null) {
@@ -34,10 +34,10 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const _Object = Object;
     const values = Object.values(linkedUsers.getLinkedUsers());
-    tmp5 = !values.some((item, index) => {
-      let tmp = item.link_status === constants.ACTIVE;
+    tmp5 = !values.some((link_status) => {
+      let tmp = link_status.link_status === constants.ACTIVE;
       if (tmp) {
-        tmp = item.link_type === constants2.PARENT;
+        tmp = link_status.link_type === constants2.PARENT;
       }
       return tmp;
     });
@@ -49,6 +49,7 @@ function maybePresentModal(daysRemaining) {
     const obj = { daysRemaining: null };
     obj[0] = daysRemaining;
     ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16680, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   }
 }
 ({ UserLinkStatus: error, UserLinkType: closure_8 } = items);
@@ -61,43 +62,43 @@ let prototype = function ParentalConsentWarningManager() {
     },
     POST_CONNECTION_OPEN() {
       const values = Object.values(linkedUsers.getLinkedUsers());
-      closure_3 = values.some((item, index) => {
-        let tmp = item.link_status === constants.ACTIVE;
+      closure_3 = values.some((link_status) => {
+        let tmp = link_status.link_status === constants.ACTIVE;
         if (tmp) {
-          tmp = item.link_type === constants2.PARENT;
+          tmp = link_status.link_type === constants2.PARENT;
         }
         return tmp;
       });
       callback(16682).maybeFetchWarning();
-      if (!store.shouldFetchToday()) {
-        callback2(store.getWarning());
+      if (!closure_6.shouldFetchToday()) {
+        callback2(closure_6.getWarning());
       }
-      const obj2 = callback(16682);
     },
     APP_STATE_UPDATE(state) {
       if (state.state === constants.ACTIVE) {
         callback(16682).maybeFetchWarning();
-        if (!store.shouldFetchToday()) {
-          callback2(store.getWarning());
+        if (!closure_6.shouldFetchToday()) {
+          callback2(obj2.getWarning());
         }
         const obj = callback(16682);
+        obj2 = closure_6;
       }
     },
     CURRENT_USER_UPDATE(user) {
       user = user.user;
       if (undefined !== user.linked_users) {
         const linked_users = user.linked_users;
-        const someResult = linked_users.some((item, index) => {
-          let tmp = item.link_status === constants.ACTIVE;
+        const someResult = linked_users.some((link_status) => {
+          let tmp = link_status.link_status === constants.ACTIVE;
           if (tmp) {
-            tmp = item.link_type === constants2.PARENT;
+            tmp = link_status.link_type === constants2.PARENT;
           }
           return tmp;
         });
         closure_3 = someResult;
         if (tmp) {
           if (someResult) {
-            const warning = store.getWarning();
+            const warning = closure_6.getWarning();
             let hasItem;
             if (warning != null) {
               const surfaces = warning.surfaces;
@@ -127,6 +128,6 @@ let prototype = function ParentalConsentWarningManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningManager.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningManager.tsx");
 
 export default prototype;

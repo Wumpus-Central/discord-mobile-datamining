@@ -6,27 +6,28 @@ import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAwar
 import ThreadListSectionDefault from "ThreadListSection" /* 15925 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import { SearchTypes } from "ME" /* 676 */;
 import { OpenThreadAnalyticsLocations as closure_7 } from "AbortCodes" /* 1235 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function ThreadsScreen(channel) {
   channel = channel.channel;
   let obj = channel(7234);
   const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
   const callback = importAllResult.useCallback(() => {
-    const result = channel(dependencyMap[10]).navigateToThreadCreation(channel, "Thread Browser Empty State");
+    const result = channel(closure_1_2[10]).navigateToThreadCreation(channel, "Thread Browser Empty State");
   }, items);
-  const items1 = [callback().container, channel.style];
+  obj = { style: items1, children: null };
+  items1 = [callback().container, channel.style];
   const callback1 = importAllResult.useCallback((arg0) => {
     channel = channel.getChannel(arg0);
     if (null != channel) {
-      channel(table[11]);
-      const obj = { source: null };
+      let obj = channel(table[11]);
+      obj = { source: null };
       obj[0] = constants.BROWSER;
       obj.transitionToThread(channel, obj);
     }
@@ -34,17 +35,21 @@ function ThreadsScreen(channel) {
   obj = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
   const tmp = callback();
+  const tmp4 = importDefault;
+  const tmp8 = View;
   if (canStartThread) {
     tmp10 = callback;
   }
   obj[1] = tmp10;
   obj[2] = callback1;
+  const tmp9 = ThreadListSectionDefault;
   obj[3] = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom + ThemesDefault.space.PX_16, paddingHorizontal: 16 };
   obj[1] = <tmp9 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
-  return <View channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
+  return <tmp8 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
 }
 let c3 = importAllResult;
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+let obj = { container: { flex: 1 }, screen: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[1] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((searchContext) => {
@@ -80,7 +85,7 @@ const memoResult1 = importAllResult.memo(() => {
   }
   return tmp3;
 });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
 
 export default memoResult1;
 export const SearchTabsThreadScreen = memoResult;

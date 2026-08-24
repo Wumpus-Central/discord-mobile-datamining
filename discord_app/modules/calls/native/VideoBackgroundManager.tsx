@@ -2,7 +2,7 @@
 
 // Module 8415 (prototype)
 import initializeDefault from "initialize" /* 5038 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import closure_0 from "handleConnectionOpen" /* 1979 */;
 
 initializeDefault;
 let prototype = function VideoBackgroundManager() {
@@ -13,7 +13,7 @@ let prototype = function VideoBackgroundManager() {
   applyArgumentsResult._handleSelectVoiceChannel = function _handleSelectVoiceChannel(channelId) {
     channelId = channelId.channelId;
     if (applyArgumentsResult.previousSelectedVoiceChannelId !== channelId) {
-      applyArgumentsResult.cachedDominantColors = {};
+      tmp.cachedDominantColors = {};
     }
     applyArgumentsResult.previousSelectedVoiceChannelId = channelId;
   };
@@ -23,6 +23,6 @@ let prototype = function VideoBackgroundManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/calls/native/VideoBackgroundManager.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/native/VideoBackgroundManager.tsx");
 
 export default prototype;

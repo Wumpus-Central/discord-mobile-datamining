@@ -1,7 +1,7 @@
 // === Module 4310: useTheme ===
 
 // Module 4310 (useTheme)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 
@@ -9,7 +9,7 @@ function useTheme() {
   return AccessibilityAnnouncer.useThemeContext().theme;
 }
 const ThemeTypes = ME.ThemeTypes;
-const result = obj132.fileFinishedImporting("hooks/useTheme.tsx");
+const result = set.fileFinishedImporting("hooks/useTheme.tsx");
 
 export default useTheme;
 export { useTheme };

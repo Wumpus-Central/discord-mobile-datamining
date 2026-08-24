@@ -1,14 +1,14 @@
 // === Module 9732: usePlayingGameActivities ===
 
 // Module 9732 (usePlayingGameActivities)
-import noop from "noop" /* 19 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import sortActivity from "sortActivity" /* 4559 */;
-import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "sortActivity" /* 4559 */;
+import closure_6 from "filterPlayingActivities" /* 7250 */;
 
-const require = fn;
+const require = arg1;
 let closure_7 = [];
-const result = require("obj132").fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
 
 export default function usePlayingGameActivities(arg0, arg1) {
   const _require = arg0;
@@ -17,8 +17,9 @@ export default function usePlayingGameActivities(arg0, arg1) {
   if (arg2 === undefined) {
     flag = true;
   }
+  let stateFromStores;
   const items = [closure_6, closure_5, closure_4];
-  const stateFromStores = _require(flag[4]).useStateFromStores(items, () => {
+  stateFromStores = _require(flag[4]).useStateFromStores(items, () => {
     if (flag) {
       if (closure_1_4.getId() === closure_0) {
         let activities = closure_1_6.getActivities();

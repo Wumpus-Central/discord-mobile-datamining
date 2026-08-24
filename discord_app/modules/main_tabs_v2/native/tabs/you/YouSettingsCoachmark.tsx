@@ -1,11 +1,11 @@
 // === Module 16005: YouSettingsCoachmark ===
 
 // Module 16005 (YouSettingsCoachmark)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import useCoachmark from "useCoachmark" /* 9314 */;
 import ReferralProgramCoachmarkImg from "ReferralProgramCoachmarkImg" /* 16006 */;
 
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx");
 
 export default function YouSettingsCoachmark(buttonRef) {
   const merged = Object.assign(buttonRef, Object.create(null));

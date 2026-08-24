@@ -7,16 +7,16 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 8682 */;
 import { SlowmodeType } from "setCooldown" /* 7440 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function TypingIndicatorInner(cleanUp) {
   ({ channel, transitionState } = cleanUp);
   cleanUp = cleanUp.cleanUp;
   let sharedValue;
   let sharedValue1;
-  transitionState(sharedValue[7]);
-  let obj = { channelId: channel.id, guildId: channel.getGuildId(), typingUserIds: cleanUp.typingUserIds };
+  let obj = transitionState(sharedValue[7]);
+  obj = { channelId: channel.id, guildId: channel.getGuildId(), typingUserIds: cleanUp.typingUserIds };
   const tmp4Result = cleanUp(sharedValue[8])(obj);
   let obj2 = transitionState(sharedValue[9]);
   sharedValue = obj2.useSharedValue(undefined);
@@ -57,6 +57,7 @@ function TypingIndicatorInner(cleanUp) {
     if (tmp) {
       const result = sharedValue1.set(transitionState(sharedValue[11]).withSpring(-arg0.height, transitionState(sharedValue[12]).springStandard, "respect-motion-settings"));
       const obj = transitionState(sharedValue[11]);
+      const tmp7 = -arg0.height;
     }
   };
   obj = { translateYValue: sharedValue1, withSpring: transitionState(sharedValue[11]).withSpring, springStandard: transitionState(sharedValue[12]).springStandard };
@@ -114,25 +115,25 @@ function TypingIndicatorInner(cleanUp) {
   const obj5 = { style: tmp8.horiz, children: null };
   let tmp14Result = null;
   if (null != tmp4Result) {
-    tmp14Result = callback(transitionState(tmp2[14]).Ellipsis, {});
+    tmp14Result = tmp14(tmp(tmp2[14]).Ellipsis, {});
   }
   const items4 = [tmp14Result, ];
   obj6 = { style: tmp8.text, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", ellipsizeMode: "tail", children: tmp4Result };
-  items4[1] = callback(transitionState(sharedValue[15]).Text, obj6);
+  items4[1] = closure_7(transitionState(sharedValue[15]).Text, obj6);
   obj5[1] = items4;
-  const items5 = [callback2(View, obj5), ];
+  const items5 = [closure_8(View, obj5), ];
   tmp14Result = null;
   if (channel.rateLimitPerUser > 0) {
     const obj7 = { channel: null, hasTypingText: null, slowmodeType: null };
     obj7[0] = channel;
     obj7[1] = null != tmp4Result;
     obj7[2] = SlowmodeType.SendMessage;
-    tmp14Result = callback(tmp3(tmp2[16]), obj7);
+    tmp14Result = tmp14(tmp3(tmp2[16]), obj7);
   }
   items5[1] = tmp14Result;
   obj4[1] = items5;
-  obj3[2] = callback2(View, obj4);
-  return callback(cleanUp(sharedValue[9]).View, obj3);
+  obj3[2] = closure_8(View, obj4);
+  return closure_7(cleanUp(sharedValue[9]).View, obj3);
 }
 function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   const obj = {};
@@ -143,9 +144,10 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
 }
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { paddingTop: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.MOBILE_TYPING_INDICATOR_BACKGROUND_DEFAULT };
+let obj = { typingWrapper: null, floatingWrapper: null, wrapperHoriz: null, horiz: null, text: null };
+obj = { paddingTop: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.MOBILE_TYPING_INDICATOR_BACKGROUND_DEFAULT };
 obj[0] = obj;
-const createCacheKey = { backgroundColor: "transparent", paddingRight: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING };
+createCacheKey = { backgroundColor: "transparent", paddingRight: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING };
 obj[1] = createCacheKey;
 obj[2] = { justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
 obj[3] = { marginRight: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
@@ -154,8 +156,10 @@ let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}" };
 let closure_11 = { code: "function TypingIndicatorTsx2(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}" };
 let closure_12 = { code: "function TypingIndicatorTsx3(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}" };
+let obj2 = { marginRight: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
+  closure_1 = undefined;
   let typingUserIds;
   const tmp = callback(channel.screenIndex);
   closure_1 = tmp;
@@ -176,6 +180,6 @@ const memoResult = importAllResult.memo((channel) => {
   obj = { item: memo, renderItem: renderTypingIndicator };
   return callback2(channel(typingUserIds[10]).TransitionItem, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/chat/native/TypingIndicator.tsx");
+let result = require("set").fileFinishedImporting("modules/chat/native/TypingIndicator.tsx");
 
 export default memoResult;

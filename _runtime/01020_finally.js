@@ -5,14 +5,14 @@ import noop from "noop" /* 1019 */;
 
 noop.prototype.finally = function(arg0) {
   closure_0 = arg0;
-  return this.then((result) => {
-    const callback = result;
-    const obj = callback(dependencyMap[0]);
-    return callback(dependencyMap[0]).resolve(callback()).then((result) => closure_0);
+  return this.then((arg0) => {
+    const callback = arg0;
+    const obj = callback(closure_1_1[0]);
+    return callback(closure_1_1[0]).resolve(callback()).then(() => closure_0);
   }, (arg0) => {
     const callback = arg0;
-    const obj = callback(dependencyMap[0]);
-    return callback(dependencyMap[0]).resolve(callback()).then((result) => {
+    const obj = callback(closure_1_1[0]);
+    return callback(closure_1_1[0]).resolve(callback()).then(() => {
       throw closure_0;
     });
   });

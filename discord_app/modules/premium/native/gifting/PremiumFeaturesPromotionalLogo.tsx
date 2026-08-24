@@ -1,25 +1,26 @@
 // === Module 10308: PremiumFeaturesPromotionalLogo ===
 
 // Module 10308 (PremiumFeaturesPromotionalLogo)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx");
 
 export default function PremiumFeaturesPromotionalLogo(arg0) {
   ({ rotatingAvatarImageUrl, promoRotatingStyle, shouldAnimate } = arg0);
   if (shouldAnimate === undefined) {
     shouldAnimate = true;
   }
+  let stateFromStores;
   let aPNGPlayerControls;
   let first;
   let React;
   let obj = shouldAnimate(aPNGPlayerControls[4]);
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let num = null;
   const ref = React.useRef(null);
   aPNGPlayerControls = shouldAnimate(aPNGPlayerControls[5]).useAPNGPlayerControls(ref);
@@ -41,7 +42,6 @@ export default function PremiumFeaturesPromotionalLogo(arg0) {
         aPNGPlayerControls.stop();
       }
     }
-    const obj = shouldAnimate(aPNGPlayerControls[6]);
   }, items1);
   const obj2 = shouldAnimate(aPNGPlayerControls[5]);
   const tmp9 = stateFromStores;
@@ -65,5 +65,4 @@ export default function PremiumFeaturesPromotionalLogo(arg0) {
     return tmp13;
   }
   tmp13 = jsx(tmp9(tmp2[8]), { style: promoRotatingStyle, resizeMode: "contain", source: { uri: rotatingAvatarImageUrl } });
-  tmpResult = shouldAnimate(aPNGPlayerControls[6]);
 };

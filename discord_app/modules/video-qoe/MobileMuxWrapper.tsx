@@ -1,12 +1,12 @@
 // === Module 14494: logger ===
 
 // Module 14494 (logger)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import log from "log" /* 4 */;
 import logger2 from "logger" /* 14495 */;
 
 const logger = new log.Logger("MobileMuxWrapper");
-let result = obj132.fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
+let result = set.fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
 class MobileMuxWrapper {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -58,7 +58,7 @@ prototype["updatePlayerState"] = function updatePlayerState(arg0, arg1) {
     muxIntegration.updatePlayerState(arg0, arg1);
   }
 };
-prototype["onLoadStart"] = function onLoadStart(onError, arg1) {
+prototype["onLoadStart"] = function onLoadStart(nativeEvent, arg1) {
   const muxIntegration = this.muxIntegration;
   if (muxIntegration != null) {
     muxIntegration.emitLoadStart();
@@ -95,7 +95,8 @@ prototype["onCanPlay"] = function onCanPlay() {
   }
 };
 prototype["onSeek"] = function onSeek(nativeEvent) {
-  const self = this;
+  let self = this;
+  self = this;
   if (null != this.muxIntegration) {
     if (!self.seekingEmitted) {
       let muxIntegration = self.muxIntegration;
@@ -140,8 +141,8 @@ prototype["onProgress"] = function onProgress(arg0) {
     muxIntegration.emitTimeUpdate();
   }
 };
-prototype["onBuffer"] = function onBuffer(flag2) {
-  if (!flag2) {
+prototype["onBuffer"] = function onBuffer(nativeEvent) {
+  if (!nativeEvent) {
     const self = this;
     const muxIntegration = this.muxIntegration;
     if (muxIntegration != null) {
@@ -180,7 +181,7 @@ prototype["onReadyForDisplay"] = function onReadyForDisplay(nativeEvent) {
 };
 prototype["onVideoTrackChange"] = function onVideoTrackChange(selectedVideoTrackId, videoTracks) {
   closure_0 = selectedVideoTrackId;
-  const size = videoTracks.find((item, index) => item.trackId === closure_0);
+  const size = videoTracks.find((trackId) => trackId.trackId === closure_0);
   if (null != size) {
     const self = this;
     const muxIntegration = this.muxIntegration;

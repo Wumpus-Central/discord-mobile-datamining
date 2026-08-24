@@ -1,9 +1,7 @@
 // === Module 137: createReactNativeDocumentInstanceHandle ===
 
 // Module 137 (createReactNativeDocumentInstanceHandle)
-import renderElementAll from "renderElement" /* 114 */;
-
-importAll = arg3;
+const exports = arg3;
 const dependencyMap = arg6;
 arg5.createReactNativeDocumentInstanceHandle = function createReactNativeDocumentInstanceHandle(arg0) {
   return arg0;
@@ -12,7 +10,7 @@ arg5.getNativeNodeReferenceFromReactNativeDocumentInstanceHandle = function getN
   return target;
 };
 arg5.getPublicInstanceFromReactNativeDocumentInstanceHandle = function getPublicInstanceFromReactNativeDocumentInstanceHandle(element) {
-  return renderElementAll.getPublicInstanceFromRootTag(Number(element));
+  return exports(114).getPublicInstanceFromRootTag(Number(element));
 };
 arg5.isReactNativeDocumentInstanceHandle = function isReactNativeDocumentInstanceHandle(target) {
   let tmp = typeof target === "number";

@@ -1,7 +1,7 @@
 // === Module 17045: fetchForwardReferencedGuilds ===
 
 // Module 17045 (fetchForwardReferencedGuilds)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import initializeDefault from "initialize" /* 5038 */;
 import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
@@ -17,6 +17,7 @@ function fetchForwardReferencedGuilds(message_reference) {
     const guild_id = message_reference.message_reference.guild_id;
     if (null != guild_id) {
       const basicGuild = _fetchBasicGuild.fetchBasicGuild(guild_id);
+      const obj = _fetchBasicGuild;
     }
   }
 }
@@ -33,6 +34,6 @@ class ForwardGuildBreadcrumbManager extends tmp6 {
 tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ForwardGuildBreadcrumbManager, importDefault);
 // ThrowIfThisInitialized (0x7c)
 setupLoadFromMessageManagerHandlersDefault(tmp, fetchForwardReferencedGuilds);
-const result = obj132.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
+const result = set.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
 
 export default tmp;

@@ -84,7 +84,7 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     D.__initData = closure_1_4;
     const onBeginResult = withTestIdResult.onBegin(C);
     const fn = function p(arg0) {
-      onGestureUpdate(arg0);
+      closure_1_2(arg0);
       if (obj.onUpdate) {
         obj.onUpdate(arg0);
       }
@@ -92,9 +92,10 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     fn.__closure = { onGestureUpdate, userDefinedConflictGestures: obj };
     fn.__workletHash = 14406733755860;
     fn.__initData = closure_1_5;
+    obj1 = { onGestureUpdate, userDefinedConflictGestures: obj };
     const onStartResult = withTestIdResult.onBegin(C).onStart(D);
     const fn2 = function c(arg0, arg1) {
-      onGestureEnd(arg0, arg1);
+      closure_1_3(arg0, arg1);
       if (obj.onEnd) {
         obj.onEnd(arg0, arg1);
       }
@@ -102,6 +103,7 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     fn2.__closure = { onGestureEnd, userDefinedConflictGestures: obj };
     fn2.__workletHash = 3800149117372;
     fn2.__initData = closure_1_6;
+    const obj2 = { onGestureEnd, userDefinedConflictGestures: obj };
     const onUpdateResult = withTestIdResult.onBegin(C).onStart(D).onUpdate(fn);
     const fn3 = function e(arg0, arg1) {
       if (obj.onFinalize) {

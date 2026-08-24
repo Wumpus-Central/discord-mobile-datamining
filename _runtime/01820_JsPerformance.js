@@ -53,7 +53,7 @@ function JsPerformance(smoothingFrames) {
     }
     return tmp;
   };
-  dependencyMap = callback(obj);
+  dependencyMap = closure_3(obj);
   const items = [sharedValue, sharedValue1];
   callback(() => {
     c0 = 0;
@@ -61,7 +61,7 @@ function JsPerformance(smoothingFrames) {
       let animationFrame = requestAnimationFrame((arg0) => {
         if (closure_0 > 0) {
           const _Math2 = Math;
-          const current = loop.current;
+          const current = closure_1_1.current;
           const rounded = Math.round(arg0);
           if (typeof closure_1_10 !== "function") {
             HermesBuiltin.throwTypeError();
@@ -86,7 +86,7 @@ function JsPerformance(smoothingFrames) {
     let animationFrame = requestAnimationFrame((arg0) => {
       if (closure_0 > 0) {
         const _Math2 = Math;
-        const current = loop.current;
+        const current = closure_1_1.current;
         const rounded = Math.round(arg0);
         if (typeof closure_1_10 !== "function") {
           HermesBuiltin.throwTypeError();
@@ -127,18 +127,19 @@ function JsPerformance(smoothingFrames) {
 function UiPerformance(smoothingFrames) {
   smoothingFrames = smoothingFrames.smoothingFrames;
   let sharedValue;
+  let sharedValue1;
   let obj = smoothingFrames(sharedValue[5]);
   sharedValue = obj.useSharedValue(null);
   obj1 = smoothingFrames(sharedValue[5]);
-  const sharedValue1 = obj1.useSharedValue(null);
+  sharedValue1 = obj1.useSharedValue(null);
   const fn = function n(timestamp) {
     if (null === sharedValue1.value) {
-      if (typeof createCircularDoublesBuffer !== "function") {
+      if (typeof closure_1_7 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const obj = { next: 0, buffer: null, size: null, count: 0, push: null, front: null, back: null };
       const _Float32Array = Float32Array;
-      const float32Array = new Float32Array(smoothingFrames);
+      const float32Array = new Float32Array(tmp2);
       obj[1] = float32Array;
       obj[2] = smoothingFrames;
       obj[4] = function push(arg0) {
@@ -171,11 +172,11 @@ function UiPerformance(smoothingFrames) {
         }
         return tmp;
       };
-      sharedValue1.value = obj;
+      iter.value = obj;
     }
-    const value = sharedValue1.value;
+    const value = iter.value;
     const rounded = Math.round(timestamp.timestamp);
-    if (typeof completeBufferRoutine !== "function") {
+    if (typeof closure_1_10 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const rounded1 = Math.round(rounded);
@@ -184,7 +185,7 @@ function UiPerformance(smoothingFrames) {
       arr = rounded1;
     }
     const result = (rounded1 - arr) / value.count;
-    if (typeof getFps !== "function") {
+    if (typeof closure_1_9 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const result1 = 1000 / result;
@@ -264,13 +265,13 @@ function getFps(arg0) {
 getFps.__closure = {};
 getFps.__workletHash = 14651351045012;
 getFps.__initData = { code: "function getFps_Pnpm_PerformanceMonitorTsx2(renderTimeInMs){return 1000/renderTimeInMs;}" };
-function completeBufferRoutine(count) {
+function completeBufferRoutine(arr) {
   const rounded = Math.round(arg1);
-  let arr = count.push(rounded);
+  arr = arr.push(rounded);
   if (arr == null) {
     arr = rounded;
   }
-  const result = (rounded - arr) / count.count;
+  const result = (rounded - arr) / arr.count;
   if (typeof getFps !== "function") {
     HermesBuiltin.throwTypeError();
   }

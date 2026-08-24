@@ -2,24 +2,27 @@
 
 // Module 11000 (StringSelectComponentActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-const createCacheKey = { flexShrink: 0, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+const require = arg1;
+createCacheKey = { selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 }, emojiWrapper: null, textEmoji: null, fastImageEmoji: null };
+createCacheKey = { flexShrink: 0, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { fontSize: 16, color: "#000000" };
 createCacheKey[4] = { width: 24, height: 24 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/components/StringSelectComponentActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/StringSelectComponentActionSheet.tsx");
 
 export default function StringSelectComponentActionSheet(selectionActionComponent) {
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   const onSubmit = selectionActionComponent.onSubmit;
+  dependencyMap = undefined;
   let first;
   let React;
+  let memo;
   let callback;
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
@@ -29,7 +32,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   first = tmp3[0];
   React = tmp3[1];
   let items = [selectionActionComponent];
-  const memo = React.useMemo(() => selectionActionComponent.maxValues > 1, items);
+  memo = React.useMemo(() => selectionActionComponent.maxValues > 1, items);
   const items1 = [onSubmit];
   callback = React.useCallback((values) => {
     obj = { type: selectionActionComponent(obj[6]).ComponentType.STRING_SELECT, values };
@@ -65,16 +68,17 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
         items = [value.value];
       }
       callback(items);
+      const tmp4 = callback;
     }
   }, items2);
   let selectionOptionItemWithDescription = React.useMemo(() => {
     const options = selectionActionComponent.options;
-    return options.some((item, index) => null != item.description);
+    return options.some((description) => null != description.description);
   }, items3);
   const items4 = [selectionActionComponent];
   const memo1 = React.useMemo(() => {
     const options = selectionActionComponent.options;
-    return options.some((item, index) => null != item.emoji);
+    return options.some((emoji) => null != emoji.emoji);
   }, items4);
   obj = {
     onPressOptionItem: callback1,

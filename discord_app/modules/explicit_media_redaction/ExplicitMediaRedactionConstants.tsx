@@ -1,12 +1,12 @@
 // === Module 5004: USER_SETTING_ACTION_SHEET_KEY ===
 
 // Module 5004 (USER_SETTING_ACTION_SHEET_KEY)
-import obj132 from "obj132" /* 2 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 693 */;
+import set from "set" /* 2 */;
 
 const items = [MessageEmbedTypes.MessageEmbedTypes.IMAGE, MessageEmbedTypes.MessageEmbedTypes.VIDEO, MessageEmbedTypes.MessageEmbedTypes.GIFV];
-const set = new Set(items);
-const result = obj132.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionConstants.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionConstants.tsx");
 
 export const USER_SETTING_ACTION_SHEET_KEY = "SensitiveMediaFilterSetting";
 export const EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY = "ExplicitMediaFalsePositiveActionSheet";

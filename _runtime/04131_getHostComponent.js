@@ -35,6 +35,7 @@ export const getHostComponent = function getHostComponent(RiveView, arg1) {
       return tmp;
     });
   }
+  let tmp = importAll;
 };
 export const callback = function callback(fn) {
   let tmp = fn;

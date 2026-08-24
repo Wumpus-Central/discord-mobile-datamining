@@ -5,19 +5,20 @@ import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ Image: c4, View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-let obj = {};
+let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
+obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[1] = obj;
 let items = [{ rotate: "30deg" }];
 obj[2] = { transform: items, width: 56, flex: 0, height: "300%", top: "-10%" };
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
 obj[3] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function ShineAnimationTsx1(){const{interpolate,progress}=this.__closure;const widthPercent=interpolate(progress.get(),[0,1],[20,160]);return{width:widthPercent+\"%\"};}" };
@@ -95,6 +96,6 @@ const memoResult = importAllResult.memo(function ShineAnimation(arg0) {
   obj1[1] = items3;
   return callback2(importDefault(hexResult1[5]).View, obj1);
 });
-let result = require("obj132").fileFinishedImporting("components_native/premium/ShineAnimation.tsx");
+let result = require("set").fileFinishedImporting("components_native/premium/ShineAnimation.tsx");
 
 export default memoResult;

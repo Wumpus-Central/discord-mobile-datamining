@@ -1,12 +1,12 @@
 // === Module 11681: useGuildPowerupRollbackModalConfig ===
 
 // Module 11681 (useGuildPowerupRollbackModalConfig)
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "calculateAppliedBoosts" /* 4261 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
 
 export default function useGuildPowerupRollbackModalConfig(guildId, location) {
   const _require = guildId;
@@ -53,12 +53,12 @@ export default function useGuildPowerupRollbackModalConfig(guildId, location) {
             obj = { dateString: null };
             obj[0] = tmp6;
             const _HermesInternal = HermesInternal;
-            obj[1] = "" + callback.title + " " + intl.formatToPlainString(callback(storeRemovalDate[10])["6e2ry1"], obj);
+            obj[1] = "" + tmp.title + " " + intl.formatToPlainString(callback(storeRemovalDate[10])["6e2ry1"], obj);
             const intl2 = guildId(storeRemovalDate[9]).intl;
             obj = { startDate: null, endDate: null, perkName: null, boostCount: null };
             obj[0] = tmp6;
             obj[1] = tmp6;
-            ({ title: obj3[2], cost: obj3[3] } = callback);
+            ({ title: obj3[2], cost: obj3[3] } = tmp);
             const items = [intl2.formatToPlainString(callback(storeRemovalDate[10]).jd8fki, obj)];
             obj[2] = items;
             return obj;

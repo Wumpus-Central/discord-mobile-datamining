@@ -1,7 +1,7 @@
 // === Module 1914: items ===
 
 // Module 1914 (items)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import ensureValidMode2 from "ensureValidMode" /* 1915 */;
@@ -37,13 +37,14 @@ prototype["getCachedConfig"] = function getCachedConfig() {
   const self = this;
   if (this.cachedConfig === closure_6) {
     if (obj.isLibdiscoreInitialized()) {
-      const experimentCacher = isBlockedDomain.getExperimentCacher();
+      const experimentCacher = tmp(1917).getExperimentCacher();
       self.cachedConfig = experimentCacher.getConfig(self.id);
-      const tmpResult = isBlockedDomain;
+      const tmpResult = tmp(1917);
     } else {
       self.cachedConfig = undefined;
     }
     obj = isBlockedDomain;
+    tmp = require;
   }
   return self.cachedConfig;
 };
@@ -238,7 +239,7 @@ tmp3.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of caus
 tmp3.defaultValue = false;
 let c7 = false;
 const tmp6 = new timestampDefault("libdiscoreExperiments");
-const result = obj132.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
+const result = set.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
 
 export const ALL_LIBDISCORE_EXPERIMENTS = items;
 export { LibdiscoreCachedExperiment };
@@ -263,5 +264,4 @@ export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperiment
     experimentCacher.clearCache();
     const tmpResult = isBlockedDomain;
   }
-  obj = isBlockedDomain;
 };

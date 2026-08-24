@@ -1,20 +1,20 @@
 // === Module 14067: useGuildProfileEditForm ===
 
 // Module 14067 (useGuildProfileEditForm)
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
-import handleFormOpen from "handleFormOpen" /* 8370 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import closure_6 from "noop" /* 19 */;
+import closure_7 from "handleFormOpen" /* 8370 */;
 import { IGNORE_GUILD_IDS } from "handleFormOpen" /* 8370 */;
-import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "createUserWidgetFromServer" /* 5365 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import closure_11 from "insertUnsortedGuilds" /* 5078 */;
+import closure_12 from "mergeGuildAvatar" /* 1922 */;
 import { FormStates } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["bannerOriginalMd5"];
-let result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
 
 export default function useGuildProfileEditForm() {
   let obj = stateFromStores(pendingNickname[9]);
@@ -71,7 +71,7 @@ export default function useGuildProfileEditForm() {
   const items3 = [memo];
   const effect = pendingThemeColors.useEffect(() => () => {
     closure_13.cancel();
-    pendingAvatar(pendingNickname[12]).wait(stateFromStores(pendingNickname[13]).resetAllPending);
+    closure_1_1(closure_1_2[12]).wait(closure_1_0(closure_1_2[13]).resetAllPending);
   }, items3);
   closure_14 = pendingAvatar(tmp2[14])();
   tmpResult = tmp(tmp2[9]);
@@ -109,52 +109,67 @@ export default function useGuildProfileEditForm() {
         c3 = tmp2;
         dependencyMap = tmp3;
         if (!closure_1_15) {
-          if (null != stateFromStores) {
+          if (null != closure_1_0) {
+            let guildMemberChangesForUpdateRequest = closure_1_0;
+            guildMemberChangesForUpdateRequest = dependencyMap;
             obj1 = { pendingAvatar: null, pendingNickname: null, pendingAvatarDecoration: null, pendingNameplate: null, pendingDisplayNameStyles: null };
-            obj1[0] = pendingAvatar;
+            guildMemberChangesForUpdateRequest = closure_1_1;
+            obj1[0] = closure_1_1;
+            guildMemberChangesForUpdateRequest = dependencyMap;
             obj1[1] = dependencyMap;
-            obj1[2] = pendingAvatarDecoration;
-            obj1[3] = pendingNameplate;
-            obj1[4] = pendingDisplayNameStyles;
-            const guildMemberChangesForUpdateRequest = stateFromStores(10397).getGuildMemberChangesForUpdateRequest(obj1);
+            guildMemberChangesForUpdateRequest = closure_1_8;
+            obj1[2] = closure_1_8;
+            guildMemberChangesForUpdateRequest = closure_1_11;
+            obj1[3] = closure_1_11;
+            guildMemberChangesForUpdateRequest = closure_1_12;
+            obj1[4] = closure_1_12;
+            guildMemberChangesForUpdateRequest = closure_1_0(10397).getGuildMemberChangesForUpdateRequest(obj1);
             let avatarId = guildMemberChangesForUpdateRequest;
-            const obj16 = stateFromStores(10397);
+            guildMemberChangesForUpdateRequest = closure_1_0;
+            guildMemberChangesForUpdateRequest = dependencyMap;
+            const obj16 = closure_1_0(10397);
             const obj2 = { pendingBanner: null, pendingBio: null, pendingPronouns: null, pendingThemeColors: null, pendingProfileEffect: null, pendingProfileFrame: null };
+            guildMemberChangesForUpdateRequest = c3;
             obj2[0] = c3;
+            guildMemberChangesForUpdateRequest = v0;
             obj2[1] = v0;
+            guildMemberChangesForUpdateRequest = body;
             obj2[2] = body;
-            obj2[3] = pendingThemeColors;
-            obj2[4] = pendingProfileEffect;
-            obj2[5] = pendingProfileFrame;
+            guildMemberChangesForUpdateRequest = closure_1_6;
+            obj2[3] = closure_1_6;
+            guildMemberChangesForUpdateRequest = closure_1_9;
+            obj2[4] = closure_1_9;
+            guildMemberChangesForUpdateRequest = closure_1_10;
+            obj2[5] = closure_1_10;
             let id;
-            if (selectedGuild != null) {
-              id = selectedGuild.id;
+            if (closure_1_7 != null) {
+              id = closure_1_7.id;
             }
-            let bannerOriginalMd5 = stateFromStores(10397).getProfileChangesForUpdateRequest(obj2, id);
+            let bannerOriginalMd5 = closure_1_0(10397).getProfileChangesForUpdateRequest(obj2, id);
             dependencyMap = true;
             c3 = false;
             const _Object = Object;
             if (Object.keys(guildMemberChangesForUpdateRequest).length > 0) {
               let id1;
-              if (selectedGuild != null) {
-                id1 = selectedGuild.id;
+              if (closure_1_7 != null) {
+                id1 = closure_1_7.id;
               }
               v0 = 1;
-              body = 1;
+              guildMemberChangesForUpdateRequest = 1;
               let obj3 = { value: null, done: false };
-              obj3[0] = stateFromStores(9539).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest);
+              obj3[0] = closure_1_0(9539).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest);
               return obj3;
             }
-            const obj18 = stateFromStores(10397);
+            const obj18 = closure_1_0(10397);
           }
         }
         yield "HermesInternal";
         if (1 === tmp6) {
           if (arg0 === 1) {
-            body = 3;
+            guildMemberChangesForUpdateRequest = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            body = 3;
+            guildMemberChangesForUpdateRequest = 3;
             const obj4 = { value: null, done: true };
             obj4[0] = arg1;
             return obj4;
@@ -162,14 +177,14 @@ export default function useGuildProfileEditForm() {
             v0 = arg1;
             if (v0.ok) {
               body = v0.body;
-              if (undefined !== pendingAvatar) {
-                obj3 = stateFromStores(8621);
+              if (undefined !== closure_1_1) {
+                obj3 = closure_1_0(8621);
                 const obj5 = { isGuildProfile: true, avatarHash: null, avatarId: null, avatarAssetOrigin: null };
-                obj5[1] = body.avatar;
+                obj5[1] = guildMemberChangesForUpdateRequest.avatar;
                 obj5[2] = avatarId.avatarId;
                 let assetOrigin;
-                if (pendingAvatar != null) {
-                  assetOrigin = pendingAvatar.assetOrigin;
+                if (closure_1_1 != null) {
+                  assetOrigin = closure_1_1.assetOrigin;
                 }
                 obj5[3] = assetOrigin;
                 const result = obj3.trackUserAvatarUpdated(obj5);
@@ -183,9 +198,10 @@ export default function useGuildProfileEditForm() {
                 }
               }
               if (null != avatar) {
-                const result1 = stateFromStores(14019).showGenericGuildProfileUpdateFailureToast(v0.body.avatar);
+                guildMemberChangesForUpdateRequest = v0;
+                guildMemberChangesForUpdateRequest = closure_1_0(14019).showGenericGuildProfileUpdateFailureToast(v0.body.avatar);
                 c3 = true;
-                const obj15 = stateFromStores(14019);
+                const obj15 = closure_1_0(14019);
               }
             }
             let tmp42 = dependencyMap;
@@ -203,10 +219,10 @@ export default function useGuildProfileEditForm() {
             dependencyMap = tmp42;
           }
         } else if (arg0 === 1) {
-          body = 3;
+          guildMemberChangesForUpdateRequest = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          body = 3;
+          guildMemberChangesForUpdateRequest = 3;
           let obj6 = { value: null, done: true };
           obj6[0] = arg1;
           return obj6;
@@ -217,19 +233,19 @@ export default function useGuildProfileEditForm() {
             ok1 = ok.ok;
           }
           if (!ok1) {
-            const aPIError = new stateFromStores(4273).APIError(ok);
+            const aPIError = new closure_1_0(4273).APIError(ok);
             const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
             if (null != firstFieldErrorMessage) {
-              obj1 = stateFromStores(14019);
-              const result2 = obj1.showGenericGuildProfileUpdateFailureToast(pendingProfileEffect);
+              obj1 = closure_1_0(14019);
+              const result1 = obj1.showGenericGuildProfileUpdateFailureToast(closure_1_9);
               c3 = true;
             }
           }
           let tmp24 = dependencyMap;
           if (dependencyMap) {
             let ok2;
-            if (pendingAvatarDecoration != null) {
-              ok2 = pendingAvatarDecoration.ok;
+            if (closure_1_8 != null) {
+              ok2 = closure_1_8.ok;
             }
             bannerOriginalMd5 = ok2;
             if (ok2 == null) {
@@ -244,12 +260,12 @@ export default function useGuildProfileEditForm() {
           tmp54 = c3;
         }
         if (!tmp54) {
-          obj6 = stateFromStores(14019);
-          const intl = stateFromStores(1236).intl;
-          const result3 = obj6.showGenericGuildProfileUpdateFailureToast(intl.string(stateFromStores(1236).t.s35OuK));
+          obj6 = closure_1_0(14019);
+          const intl = closure_1_0(1236).intl;
+          const result2 = obj6.showGenericGuildProfileUpdateFailureToast(intl.string(closure_1_0(1236).t.s35OuK));
         }
         if (dependencyMap) {
-          memo.delay();
+          closure_1_13.delay();
         }
         return dependencyMap;
       })();

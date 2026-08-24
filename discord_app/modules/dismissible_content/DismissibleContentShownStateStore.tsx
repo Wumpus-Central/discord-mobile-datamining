@@ -5,11 +5,11 @@ import initializeDefault from "initialize" /* 589 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isActionRequiredDefault from "isActionRequired" /* 1387 */;
-import handleUpdateUser from "handleUpdateUser" /* 1384 */;
-import handleRequiredAction from "handleRequiredAction" /* 1385 */;
+import closure_3 from "handleUpdateUser" /* 1384 */;
+import closure_4 from "handleRequiredAction" /* 1385 */;
 import identity from "identity" /* 700 */;
 
-require = fn;
+require = arg1;
 function withContent(currentlyShown, content) {
   const _require = content;
   if (null == content) {
@@ -18,7 +18,7 @@ function withContent(currentlyShown, content) {
     currentlyShown = currentlyShown.currentlyShown;
     currentlyShown.add(content.content);
     const recentlyShown = currentlyShown.recentlyShown;
-    const found = recentlyShown.filter((item, index) => item !== content.content);
+    const found = recentlyShown.filter((arg0) => arg0 !== content.content);
     found.unshift(content.content);
     found.splice(5);
     currentlyShown.recentlyShown = found;
@@ -91,6 +91,7 @@ function withUpdateWinner(candidates) {
           }
         }
         withContent(candidates, value);
+        const tmp6 = withContent;
       }
       return candidates;
     }
@@ -106,7 +107,7 @@ function withUpdateWinner(candidates) {
         const date1 = new Date();
       }
       if (!scheduledResult) {
-        taskRunner.schedule(() => {
+        obj.schedule(() => {
           callback(table[5]).batchUpdates(() => {
             state.setState((candidates) => {
               const obj = {};
@@ -128,13 +129,13 @@ function withUpdateWinner(candidates) {
               }
               let found = items;
               if (hasItem) {
-                found = items.filter((item, index) => {
+                found = items.filter((arg0) => {
                   const prevFatigableCandidate = obj.prevFatigableCandidate;
                   let content;
                   if (prevFatigableCandidate != null) {
                     content = prevFatigableCandidate.content;
                   }
-                  return item !== content;
+                  return arg0 !== content;
                 });
               }
               const candidates3 = obj.candidates;
@@ -158,14 +159,14 @@ function withUpdateWinner(candidates) {
                   obj.shownFatigableCandidate = null;
                 }
               }
-              callback(obj, value);
+              closure_8(obj, value);
               return obj;
             });
           });
         }, 250);
       }
+      obj = taskRunner;
     }
-    tmp2 = diff > 300000;
   }
 }
 const taskRunner = new require("schedule").TaskRunner();
@@ -223,7 +224,7 @@ identity = {
   }
 };
 const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(dispatcherDefault, identity);
-let result = require("obj132").fileFinishedImporting("modules/dismissible_content/DismissibleContentShownStateStore.tsx");
+let result = require("set").fileFinishedImporting("modules/dismissible_content/DismissibleContentShownStateStore.tsx");
 
 export default function useDismissibleContentShownStateStore(arg0, arg1) {
   return store(arg0, arg1);
@@ -287,42 +288,43 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
         const candidates2 = obj.candidates;
         candidates2.delete(closure_0.content);
         if (null != closure_0) {
-          if (null != closure_0.content) {
+          if (null != tmp12.content) {
             const currentlyShown2 = obj.currentlyShown;
-            currentlyShown2.delete(closure_0.content);
+            currentlyShown2.delete(tmp12.content);
           }
-          if (null != closure_0.groupName) {
+          if (null != tmp12.groupName) {
             const currentlyShownGroup2 = obj.currentlyShownGroup;
-            currentlyShownGroup2.delete(closure_0.groupName);
+            currentlyShownGroup2.delete(tmp12.groupName);
           }
           const shownFatigableCandidate2 = obj.shownFatigableCandidate;
           let content;
           if (shownFatigableCandidate2 != null) {
             content = shownFatigableCandidate2.content;
           }
-          if (content === closure_0.content) {
+          if (content === tmp12.content) {
             obj.shownFatigableCandidate = null;
           }
         }
         closure_1_9(obj);
+        const tmp11 = closure_1_9;
       } else {
         candidates = obj.candidates;
         candidates.delete(closure_0.content);
         if (null != closure_0) {
-          if (null != closure_0.content) {
+          if (null != tmp5.content) {
             const currentlyShown = obj.currentlyShown;
-            currentlyShown.delete(closure_0.content);
+            currentlyShown.delete(tmp5.content);
           }
-          if (null != closure_0.groupName) {
+          if (null != tmp5.groupName) {
             const currentlyShownGroup = obj.currentlyShownGroup;
-            currentlyShownGroup.delete(closure_0.groupName);
+            currentlyShownGroup.delete(tmp5.groupName);
           }
           const shownFatigableCandidate = obj.shownFatigableCandidate;
           let content1;
           if (shownFatigableCandidate != null) {
             content1 = shownFatigableCandidate.content;
           }
-          if (content1 === closure_0.content) {
+          if (content1 === tmp5.content) {
             obj.shownFatigableCandidate = null;
           }
         }
@@ -364,23 +366,23 @@ export const useIsAnyContentShown = function useIsAnyContentShown(arg0) {
   closure_0 = arg0;
   return store((arg0) => {
     closure_0 = arg0;
-    return closure_0.some((item, index) => {
+    return closure_0.some((arg0) => {
       currentlyShown = currentlyShown.currentlyShown;
-      return currentlyShown.has(item);
+      return currentlyShown.has(arg0);
     });
   });
 };
 export const isAnyContentShown = function isAnyContentShown(arr) {
   const currentlyShown = store.getState().currentlyShown;
-  return arr.find((item, index) => currentlyShown.has(item));
+  return arr.find((arg0) => currentlyShown.has(arg0));
 };
 export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
   const items = [...closure_6.getState().currentlyShown];
   const items1 = [
     store.getState().currentlyShown.size,
-    items.filter((item, index) => {
+    items.filter((arg0) => {
       const CONTENT_TYPES_WITH_BYPASS_FATIGUE = callback(table[4]).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
-      return !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(item);
+      return !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
     }).length
   ];
   return items1;

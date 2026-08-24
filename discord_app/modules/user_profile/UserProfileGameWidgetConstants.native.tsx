@@ -1,7 +1,7 @@
 // === Module 12175: widgetGameTagMetadata ===
 
 // Module 12175 (widgetGameTagMetadata)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import FriendsIcon from "FriendsIcon" /* 4095 */;
 import RibbonIcon from "RibbonIcon" /* 12177 */;
 import ThumbsUpIcon from "ThumbsUpIcon" /* 12179 */;
@@ -14,12 +14,12 @@ obj[WidgetGameTagIconRole.WidgetGameTagIconRole.THUMBS_UP] = ThumbsUpIcon.Thumbs
 obj[WidgetGameTagIconRole.WidgetGameTagIconRole.THUMBS_DOWN] = ThumbsDownIcon.ThumbsDownIcon;
 obj[WidgetGameTagIconRole.WidgetGameTagIconRole.FRIENDS] = FriendsIcon.FriendsIcon;
 const widgetGameTagMetadata = WidgetGameTagIconRole.buildWidgetGameTagMetadata(obj);
-const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetConstants.native.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetConstants.native.tsx");
 
 export const WIDGET_GAME_TAG_METADATA = widgetGameTagMetadata;
-export const getWidgetGameTagMetadata = function getWidgetGameTagMetadata(item) {
+export const getWidgetGameTagMetadata = function getWidgetGameTagMetadata(arg0) {
   let tmp2 = null;
-  if (null != widgetGameTagMetadata[item]) {
+  if (null != widgetGameTagMetadata[arg0]) {
     tmp2 = tmp;
   }
   return tmp2;

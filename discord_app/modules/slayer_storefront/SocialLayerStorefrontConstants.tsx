@@ -1,7 +1,7 @@
 // === Module 7203: STOREFRONT_MARKETING_GUILD_ID ===
 
 // Module 7203 (STOREFRONT_MARKETING_GUILD_ID)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import Environments2 from "Environments" /* 1929 */;
 
 const Environments = Environments2.Environments;
@@ -14,7 +14,7 @@ if (window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING) {
   tmp2 = null;
 }
 const re0 = /^\/(?:channels\/\d+\/)?game-shop(?:\/|$)/;
-const result = obj132.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConstants.tsx");
+const result = set.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConstants.tsx");
 
 export const STOREFRONT_MARKETING_GUILD_ID = str;
 export const STOREFRONT_MARKETING_GUILD_ID_TEST = tmp2;

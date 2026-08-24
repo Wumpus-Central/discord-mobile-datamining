@@ -1,11 +1,11 @@
 // === Module 6803: SafeAreaPaddingView ===
 
 // Module 6803 (SafeAreaPaddingView)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("obj132").fileFinishedImporting("components_native/common/SafeAreaView.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/SafeAreaView.tsx");
 
 export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
   let flag = top.top;

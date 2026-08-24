@@ -8,14 +8,14 @@ import timingNone from "timingNone" /* 4667 */;
 import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9275 */;
 import apexExperiment from "apexExperiment" /* 14363 */;
 import useVisibilityTransition from "useVisibilityTransition" /* 14364 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   ({ bounty, isActive } = isScrollingInBoundsSharedValue);
   isScrollingInBoundsSharedValue = isScrollingInBoundsSharedValue.isScrollingInBoundsSharedValue;
@@ -41,7 +41,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
         num = 1;
       }
     }
-    obj = { opacity: isActive(dependencyMap[7]).withTiming(num, isActive(dependencyMap[8]).timingStandard) };
+    obj = { opacity: isActive(closure_1_2[7]).withTiming(num, isActive(closure_1_2[8]).timingStandard) };
     return obj;
   };
   obj = { isScrollingInBoundsSharedValue, withTiming: isActive(4664).withTiming, isActive, timingStandard: isActive(4667).timingStandard };
@@ -63,7 +63,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj4[0] = bounty;
     obj4[1] = sourceQuestContent;
     obj4[2] = !isActive;
-    const items3 = [callback(tmp9(14397), obj4), ];
+    const items3 = [tmp10(tmp9(14397), obj4), ];
     const obj5 = { style: null, pointerEvents: "box-none", children: null };
     obj5[0] = tmp.endedCtaButtonsContainer;
     const obj6 = { bounty: null, visible: null, sourceQuestContent: null, onClose: null, showCloseButton: false, disabled: null };
@@ -74,10 +74,10 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
 
     };
     obj6[5] = !isActive;
-    obj5[2] = callback(tmp9(14399), obj6);
-    items3[1] = callback(closure_6, obj5);
+    obj5[2] = tmp10(tmp9(14399), obj6);
+    items3[1] = tmp10(tmp11, obj5);
     obj3[2] = items3;
-    let tmp10Result = callback(tmp9(4115).View, obj3);
+    let tmp10Result = tmp8(tmp9(4115).View, obj3);
   } else {
     let tmp13;
     if (isActive) {
@@ -95,28 +95,30 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj9[0] = tmp.textBlock;
     const obj10 = { variant: "heading-md/semibold", color: "text-strong", children: null };
     obj10[2] = bountyCtaInfo.label;
-    const items5 = [callback(isActive(4734).Text, obj10), ];
+    const items5 = [tmp10(tmp2(4734).Text, obj10), ];
     const obj11 = { variant: "heading-sm/medium", color: "text-default", children: null };
     obj11[2] = stringResult;
-    items5[1] = callback(isActive(4734).Text, obj11);
+    items5[1] = tmp10(tmp2(4734).Text, obj11);
     obj9[1] = items5;
-    const items6 = [callback(closure_6, obj9), ];
+    const items6 = [tmp8(tmp11, obj9), ];
     const obj12 = { accessible: false, color: null, style: null };
     obj12[1] = tmp9(712).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
     obj12[2] = tmp.replayIcon;
-    items6[1] = callback(isActive(10123).RetryIcon, obj12);
+    items6[1] = tmp10(tmp2(10123).RetryIcon, obj12);
     obj8[1] = items6;
-    obj7[5] = callback(tmp9(4115).View, obj8);
-    tmp10Result = callback(closure_4, obj7);
+    obj7[5] = tmp8(tmp9(4115).View, obj8);
+    tmp10Result = tmp10(closure_4, obj7);
+    const tmp12 = closure_4;
   }
   items1[2] = tmp10Result;
   obj[2] = items1;
-  return callback(isScrollingInBoundsSharedValue(4115).View, obj);
+  return closure_10(isScrollingInBoundsSharedValue(4115).View, obj);
 }
 ({ Pressable: c4, StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles(() => {
-  let obj = {};
+  let obj = { container: null, backdropTint: null, backdropGradient: null, overlayContent: null, pressable: null, textBlock: null, replayIcon: null, endedCtaButtonsContainer: null };
+  obj = {};
   const merged = Object.assign(closure_5.absoluteFillObject);
   obj[0] = obj;
   obj = {};
@@ -136,11 +138,14 @@ let closure_11 = createCacheKey.createStyles(() => {
   obj3.alignItems = "center";
   obj[4] = obj3;
   obj[5] = { alignItems: "center", gap: ThemesDefault.space.PX_4 };
+  obj1 = {};
+  const obj4 = { alignItems: "center", gap: ThemesDefault.space.PX_4 };
   obj[6] = { margin: ThemesDefault.space.PX_12 };
+  const obj5 = { margin: ThemesDefault.space.PX_12 };
   obj[7] = { position: "absolute", left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, bottom: ThemesDefault.space.PX_16 };
   return obj;
 });
-fn = function t(value) {
+let fn = function t(value) {
   const obj = { opacity: CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, timingNone.timingStandard, "respect-motion-settings") };
   return obj;
 };
@@ -157,7 +162,7 @@ fn2.__closure = createCacheKey;
 fn2.__workletHash = 7470211880124;
 fn2.__initData = { code: "function BountiesScrollEndCardTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}" };
 let closure_14 = { code: "function BountiesScrollEndCardTsx3(){const{isScrollingInBoundsSharedValue,withTiming,isActive,timingStandard}=this.__closure;var _isScrollingInBoundsS;const isScrollingInBounds=((_isScrollingInBoundsS=isScrollingInBoundsSharedValue)===null||_isScrollingInBoundsS===void 0?void 0:_isScrollingInBoundsS.get())===true;return{opacity:withTiming(isActive&&!isScrollingInBounds?1:0,timingStandard)};}" };
-const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollEndCard.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollEndCard.tsx");
 
 export default function BountiesScrollEndCard(visible) {
   visible = visible.visible;
@@ -187,6 +192,8 @@ export default function BountiesScrollEndCard(visible) {
     obj[3] = fn2;
     obj[4] = callback;
     shouldRender = callback(AnimatedRenderItemDefault, obj);
+    const tmp12 = callback;
+    const tmp14 = AnimatedRenderItemDefault;
   } else if (shouldRender) {
     obj1 = {};
     let merged = Object.assign(visible);

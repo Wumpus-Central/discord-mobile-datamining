@@ -1,10 +1,10 @@
 // === Module 8229: getApplicationCommand ===
 
 // Module 8229 (getApplicationCommand)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_0 from "_slicedToArray" /* 32 */;
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;
-const result = require("obj132").fileFinishedImporting("modules/messages/ApplicationCommands.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/ApplicationCommands.tsx");
 
 export const getApplicationCommand = function getApplicationCommand(content) {
   const match = regex.exec(content);

@@ -1,15 +1,15 @@
 // === Module 15284: NativeFreezeScreens ===
 
 // Module 15284 (NativeFreezeScreens)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let closure_7 = createCacheKey.createStyles({ screens: { flex: 1, overflow: "hidden" } });
-const result = require("obj132").fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");
+const result = require("set").fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");
 
 export const NativeFreezeScreens = function NativeFreezeScreens(detachInactiveScreens) {
   ({ children, activeIndex } = detachInactiveScreens);
@@ -60,32 +60,32 @@ export const NativeFreezeScreens = function NativeFreezeScreens(detachInactiveSc
     const items2 = [children];
     arr4 = items2;
   }
-  obj[4] = arr4.map((item, index) => {
+  obj[4] = arr4.map((children) => {
     if (flag3) {
       if (!tmp) {
         return null;
       }
     }
     if (flag2) {
-      if (!first.includes(index)) {
+      if (!first.includes(arg1)) {
         if (!tmp) {
-          if (!preloadIndices.includes(index)) {
+          if (!preloadIndices.includes(arg1)) {
             return null;
           }
         }
       }
     }
     let num = 0;
-    if (activeIndex === index) {
+    if (activeIndex === arg1) {
       num = 2;
     }
     const items = [preloadIndices.absoluteFill, ];
     let num2 = -1;
-    if (activeIndex === index) {
+    if (activeIndex === arg1) {
       num2 = 0;
     }
     items[1] = { zIndex: num2 };
-    return first(activeIndex(flag2[5]).Screen, { style: items, activityState: num, enabled: flag, freezeOnBlur: flag4, children: item }, index);
+    return first(activeIndex(flag2[5]).Screen, { style: items, activityState: num, enabled: flag, freezeOnBlur: flag4, children }, arg1);
   });
   return first(activeIndex(tmp2[5]).ScreenContainer, obj);
 };

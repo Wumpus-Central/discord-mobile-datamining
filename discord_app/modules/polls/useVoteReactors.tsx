@@ -1,11 +1,11 @@
 // === Module 10886: useVoteReactors ===
 
 // Module 10886 (useVoteReactors)
-import reactionKey from "reactionKey" /* 7509 */;
+import closure_3 from "reactionKey" /* 7509 */;
 import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
 
 export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;

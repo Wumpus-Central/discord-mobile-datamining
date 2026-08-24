@@ -2,8 +2,8 @@
 
 // Module 8705 (_launchFrameOnNative)
 import _launchFrameAll from "_launchFrame" /* 8707 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "updateVoiceState" /* 4542 */;
 
 function _launchFrameOnNative() {
   const self = this;
@@ -44,6 +44,6 @@ obj.launchFrame = function launchFrameOnNative() {
   }
   return applyArgumentsResult;
 };
-const result = require("obj132").fileFinishedImporting("modules/frames/FramesActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting("modules/frames/FramesActionCreators.native.tsx");
 
 export default obj;

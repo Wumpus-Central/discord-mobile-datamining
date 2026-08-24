@@ -13,23 +13,22 @@ import registerAssetDefault from "registerAsset" /* 9669 */;
 import registerAssetDefault2 from "registerAsset" /* 9670 */;
 import registerAssetDefault3 from "registerAsset" /* 9671 */;
 import useIsVideoModeDefault from "useIsVideoMode" /* 9886 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import closure_6 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import reset from "reset" /* 4652 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
-import handleAudioRouteChanged from "handleAudioRouteChanged" /* 9648 */;
-import nativeEventEmitter from "nativeEventEmitter" /* 9651 */;
+import closure_8 from "reset" /* 4652 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_11 from "handleConnectionOpen" /* 1979 */;
+import closure_12 from "updateVoiceState" /* 4542 */;
+import closure_13 from "handleAudioRouteChanged" /* 9648 */;
+import closure_14 from "nativeEventEmitter" /* 9651 */;
 import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
 import importDefaultResult from "apply" /* 12 */;
-import "obj132";
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 500 */;
 
-require = fn;
+require = arg1;
 function _handleToggleVideo() {
   const self = this;
   const tmp = callback2((arg0) => {
@@ -157,13 +156,13 @@ let closure_17 = importDefaultResult.debounce((arg0) => {
     AudioRoutePicker.handleAudioRoute(arg0);
   }
 }, 250);
-let closure_18 = importDefaultResult.debounce((fn) => {
-  fn();
+let closure_18 = importDefaultResult.debounce((arg0) => {
+  arg0();
 }, 1);
 let obj = { EARPIECE: registerAssetDefault, BLUETOOTH_HEADSET: registerAssetDefault2, WIRED_HEADSET: registerAssetDefault3, SPEAKERPHONE: registerAssetDefault3, INVALID: registerAssetDefault3 };
 let closure_20 = { TYPE_UNKNOWN: 0, [0]: "TYPE_UNKNOWN", TYPE_BUILTIN_EARPIECE: 1, [1]: "TYPE_BUILTIN_EARPIECE", TYPE_BUILTIN_SPEAKER: 2, [2]: "TYPE_BUILTIN_SPEAKER", TYPE_WIRED_HEADSET: 3, [3]: "TYPE_WIRED_HEADSET", TYPE_WIRED_HEADPHONES: 4, [4]: "TYPE_WIRED_HEADPHONES", TYPE_LINE_ANALOG: 5, [5]: "TYPE_LINE_ANALOG", TYPE_LINE_DIGITAL: 6, [6]: "TYPE_LINE_DIGITAL", TYPE_BLUETOOTH_SCO: 7, [7]: "TYPE_BLUETOOTH_SCO", TYPE_BLUETOOTH_A2DP: 8, [8]: "TYPE_BLUETOOTH_A2DP", TYPE_HDMI: 9, [9]: "TYPE_HDMI", TYPE_HDMI_ARC: 10, [10]: "TYPE_HDMI_ARC", TYPE_USB_DEVICE: 11, [11]: "TYPE_USB_DEVICE", TYPE_USB_ACCESSORY: 12, [12]: "TYPE_USB_ACCESSORY", TYPE_DOCK: 13, [13]: "TYPE_DOCK", TYPE_FM: 14, [14]: "TYPE_FM", TYPE_BUILTIN_MIC: 15, [15]: "TYPE_BUILTIN_MIC", TYPE_FM_TUNER: 16, [16]: "TYPE_FM_TUNER", TYPE_TV_TUNER: 17, [17]: "TYPE_TV_TUNER", TYPE_TELEPHONY: 18, [18]: "TYPE_TELEPHONY", TYPE_AUX_LINE: 19, [19]: "TYPE_AUX_LINE", TYPE_IP: 20, [20]: "TYPE_IP", TYPE_BUS: 21, [21]: "TYPE_BUS", TYPE_USB_HEADSET: 22, [22]: "TYPE_USB_HEADSET", TYPE_HEARING_AID: 23, [23]: "TYPE_HEARING_AID", TYPE_BUILTIN_SPEAKER_SAFE: 24, [24]: "TYPE_BUILTIN_SPEAKER_SAFE", TYPE_REMOTE_SUBMIX: 25, [25]: "TYPE_REMOTE_SUBMIX", TYPE_BLE_HEADSET: 26, [26]: "TYPE_BLE_HEADSET", TYPE_BLE_SPEAKER: 27, [27]: "TYPE_BLE_SPEAKER", TYPE_ECHO_REFERENCE: 28, [28]: "TYPE_ECHO_REFERENCE", TYPE_HDMI_EARC: 29, [29]: "TYPE_HDMI_EARC", TYPE_BLE_BROADCAST: 30, [30]: "TYPE_BLE_BROADCAST", TYPE_DOCK_ANALOG: 31, [31]: "TYPE_DOCK_ANALOG" };
 const importDefaultResult1 = importDefaultResult;
-let result = obj132.fileFinishedImporting("modules/voice_calls/native/CallsUtils.tsx");
+let result = set.fileFinishedImporting("modules/voice_calls/native/CallsUtils.tsx");
 
 export const handleToggleVideo = function handleToggleVideo(channel) {
   const self = this;
@@ -180,9 +179,11 @@ export const handleToggleSelfDeaf = function handleToggleSelfDeaf() {
 };
 export const handleToggleSelfMute = function handleToggleSelfMute() {
   const permission = NativePermissionsRequestOptionsDefault.requestPermission(NativePermissionTypes.AUDIO, { showAuthorizationError: true });
+  obj = NativePermissionsRequestOptionsDefault;
   trackDeviceChangedDefault.toggleSelfMute();
 };
 export const showSuppressedAlert = function showSuppressedAlert() {
+  obj = _modDef4656;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.FJSZVM);
@@ -191,6 +192,7 @@ export const showSuppressedAlert = function showSuppressedAlert() {
   obj.show(obj);
 };
 export const showServerMuteAlert = function showServerMuteAlert() {
+  obj = _modDef4656;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["+JQCa/"]);
@@ -199,6 +201,7 @@ export const showServerMuteAlert = function showServerMuteAlert() {
   obj.show(obj);
 };
 export const showServerDeafenAlert = function showServerDeafenAlert() {
+  obj = _modDef4656;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.QZ7WSS);
@@ -207,6 +210,7 @@ export const showServerDeafenAlert = function showServerDeafenAlert() {
   obj.show(obj);
 };
 export const showCameraDisabledAlert = function showCameraDisabledAlert() {
+  obj = _modDef4656;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.OYzPcW);
@@ -215,6 +219,7 @@ export const showCameraDisabledAlert = function showCameraDisabledAlert() {
   obj.show(obj);
 };
 export const showScreenshareDisabledAlert = function showScreenshareDisabledAlert() {
+  obj = _modDef4656;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["/x4knx"]);
@@ -232,13 +237,14 @@ export const showMinOSScreenshareRequirementAlert = function showMinOSScreenshar
   }
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.ejOT95, { errorCode });
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp(1236).intl;
   obj[0] = intl2.string(getSystemLocale.t.oblMYa);
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp(1236).intl;
   obj[1] = "" + intl3.string(getSystemLocale.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
   _modDef4656.show(obj);
 };
 export const showTabletRequirementAlert = function showTabletRequirementAlert() {
+  obj = _modDef4656;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["1N0dxa"]);
@@ -248,6 +254,7 @@ export const showTabletRequirementAlert = function showTabletRequirementAlert() 
 };
 export const handleDisconnect = function handleDisconnect(channel) {
   const result = dismissGlobalKeyboardAll.dismissGlobalKeyboard();
+  obj = dismissGlobalKeyboardAll;
   const result1 = openChannelCallModal.dismissVoiceChannelScreens(channel, () => {
     const voiceChannel = callback(table[20]).selectVoiceChannel(null);
   });
@@ -266,14 +273,14 @@ export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(
   const intl5 = getSystemLocale.intl;
   obj[4] = intl5.string(getSystemLocale.t.kCBL6t);
   if (deviceType.deviceType === constants.TYPE_BLE_HEADSET) {
-    const intl6 = getSystemLocale.intl;
-    let stringResult = intl6.string(getSystemLocale.t.BtXSp9);
+    const intl6 = tmp(1236).intl;
+    let stringResult = intl6.string(tmp(1236).t.BtXSp9);
   } else {
     stringResult = obj[deviceType.simpleDeviceType];
   }
   return stringResult;
 };
-export const useMaskedSpeakerStates = obj132.isAndroid() ? (() => {
+export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   const items = [closure_14];
   return initialize.useStateFromStoresObject(items, () => {
     activeAudioDevice = activeAudioDevice.getActiveAudioDevice();
@@ -285,7 +292,7 @@ export const useMaskedSpeakerStates = obj132.isAndroid() ? (() => {
     if (simpleDeviceType == null) {
       simpleDeviceType = callback(table[28]).AudioDeviceType.INVALID;
     }
-    obj[2] = table[simpleDeviceType];
+    obj[2] = closure_19[simpleDeviceType];
     return obj;
   }, []);
 }) : (() => {

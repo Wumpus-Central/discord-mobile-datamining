@@ -1,12 +1,12 @@
 // === Module 11298: useSortApplicationsViaFrecency ===
 
 // Module 11298 (useSortApplicationsViaFrecency)
-import noop from "noop" /* 19 */;
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8449 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 8449 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
 
 export const useSortApplicationsViaFrecency = function useSortApplicationsViaFrecency(found, stateFromStoresArray) {
   const _require = found;
@@ -21,13 +21,13 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   memo = memo.useMemo(() => {
     if (null != stateFromStoresArray) {
       if (0 !== stateFromStoresArray.length) {
-        let mapped = lib.map((item, index) => {
-          closure_0 = item;
+        let mapped = lib.map((arg0) => {
+          closure_0 = arg0;
           const obj = {};
-          const merged = Object.assign(item);
+          const merged = Object.assign(arg0);
           let flag;
           if (closure_1 != null) {
-            flag = closure_1.some((item, index) => item.application.id === item.id);
+            flag = closure_1.some((application) => application.application.id === id.id);
           }
           if (flag == null) {
             flag = false;
@@ -43,10 +43,10 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   const items2 = [found, stateFromStoresArray];
   memo1 = memo.useMemo(() => {
     found = undefined;
-    if (stateFromStoresArray != null) {
-      found = stateFromStoresArray.filter((item, index) => {
-        closure_0 = item;
-        return !closure_0.some((item, index) => item.id === item.application.id);
+    if (closure_1 != null) {
+      found = closure_1.filter((arg0) => {
+        closure_0 = arg0;
+        return !closure_0.some((id) => id.id === application.application.id);
       });
     }
     return found;
@@ -54,20 +54,19 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   const items3 = [memo, stateFromStores, memo1];
   const memo2 = memo.useMemo(() => {
     if (memo1 != null) {
-      const item = memo1.forEach((item, index) => {
-        let obj = stateFromStoresArray(stateFromStores[5]);
-        if (null == store.getEntry(item.application.id)) {
+      const item = arr.forEach((id) => {
+        let obj = closure_1_1(closure_1_2[5]);
+        if (null == store.getEntry(id.application.id)) {
           obj = { timestamp: null };
           obj[0] = extractTimestampResult;
-          store.track(item.application.id, obj);
+          store.track(id.application.id, obj);
         }
-        extractTimestampResult = obj.extractTimestamp(item.id);
       });
     }
     stateFromStores.compute();
     let mapped;
     if (memo1 != null) {
-      mapped = memo1.map((item, index) => callback(store[6]).getApplicationCommandSection(item.application, true));
+      mapped = arr.map((application) => callback(store[6]).getApplicationCommandSection(application.application, true));
     }
     if (mapped == null) {
       mapped = [];
@@ -95,21 +94,21 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   }, items3);
   const items4 = [memo2, memo, stateFromStores, stateFromStoresArray];
   return memo.useMemo(() => {
-    if (stateFromStoresArray != null) {
-      const item = stateFromStoresArray.forEach((item, index) => {
-        const extractTimestampResult = callback(stateFromStores[5]).extractTimestamp(item.id);
+    if (closure_1 != null) {
+      const item = closure_1.forEach((id) => {
+        const extractTimestampResult = callback(stateFromStores[5]).extractTimestamp(id.id);
         let tmp2 = null == callback;
         if (!tmp2) {
           tmp2 = extractTimestampResult > callback;
         }
         if (tmp2) {
-          closure_0 = item;
+          closure_0 = id;
           callback = extractTimestampResult;
         }
       });
     }
-    const item1 = memo.forEach((item, index) => {
-      const entry = str.getEntry(item.id);
+    const item1 = memo.forEach((id) => {
+      const entry = str.getEntry(id.id);
       let recentUses;
       if (entry != null) {
         recentUses = entry.recentUses;
@@ -124,7 +123,7 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
         tmp3 = applyResult > closure_1;
       }
       if (tmp3) {
-        closure_0 = item;
+        closure_0 = id;
         closure_1 = applyResult;
       }
     });
@@ -138,7 +137,7 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
     if (str == null) {
       str = "";
     }
-    let items = [...memo2.filter((item, index) => item.id === str), ...memo2.filter((item, index) => item.id !== str)];
+    let items = [...memo2.filter((id) => id.id === str), ...memo2.filter((id) => id.id !== str)];
     return items;
   }, items4);
 };

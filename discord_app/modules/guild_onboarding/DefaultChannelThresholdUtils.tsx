@@ -1,13 +1,13 @@
 // === Module 8852: _isDefaultChannelThresholdMetAfterDelete ===
 
 // Module 8852 (_isDefaultChannelThresholdMetAfterDelete)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handleUpdate from "handleUpdate" /* 6788 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "handleUpdate" /* 6788 */;
 import { NUM_DEFAULT_CHATTABLE_CHANNELS_MIN as closure_7 } from "serverPromptToClientPrompt" /* 5286 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _isDefaultChannelThresholdMetAfterDelete() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -145,11 +145,11 @@ function _isChattableChannelThresholdMetAfterChannelChange() {
                     hasItem = features.has(closure_1_8.GUILD_ONBOARDING);
                   }
                   if (hasItem) {
-                    if (store.shouldFetchPrompts(callback)) {
+                    if (store.shouldFetchPrompts(tmp46)) {
                       c5 = 1;
                       store = 1;
                       obj1 = { value: null, done: false };
-                      obj1[0] = callback(closure_1_3[5]).fetchOnboardingPrompts(callback);
+                      obj1[0] = callback(closure_1_3[5]).fetchOnboardingPrompts(tmp46);
                       return obj1;
                     }
                   }
@@ -168,20 +168,29 @@ function _isChattableChannelThresholdMetAfterChannelChange() {
             return obj;
           }
           closure_3 = (function getAllOnboardingChannelIds(closure_0) {
-            const defaultChannelIds = store.getDefaultChannelIds(closure_0);
-            if (store.isAdvancedMode(closure_0)) {
-              onboardingPromptsForOnboarding = store.getOnboardingPromptsForOnboarding(closure_0);
+            const defaultChannelIds = c6.getDefaultChannelIds(closure_0);
+            if (c6.isAdvancedMode(closure_0)) {
+              onboardingPromptsForOnboarding = obj.getOnboardingPromptsForOnboarding(closure_0);
               const items = [];
               const iter = onboardingPromptsForOnboarding[Symbol.iterator]();
               const nextResult = iter.next();
               while (iter !== undefined) {
                 if (nextResult.required) {
+                  let tmp9 = nextResult;
                   let options = tmp8.options;
+                  let tmp10 = options;
+                  let tmp11 = options;
                   for (const item10025 of options) {
                     if (null != item10025.channelIds) {
                       let push = items.push;
+                      let tmp13 = item10025;
                       let items1 = [];
+                      let tmp14 = items1;
+                      let num = 0;
                       let arraySpreadResult = HermesBuiltin.arraySpread(tmp12.channelIds, 0);
+                      let tmp16 = push;
+                      let tmp17 = items1;
+                      let tmp18 = items;
                       let applyResult = HermesBuiltin.apply(items1, items);
                     }
                     continue;
@@ -199,6 +208,7 @@ function _isChattableChannelThresholdMetAfterChannelChange() {
             } else {
               return defaultChannelIds;
             }
+            obj = c6;
           })(callback);
           if (closure_3.includes(closure_1)) {
             if (!closure_2.removingChat) {
@@ -286,44 +296,44 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
                 advancedMode = 3;
                 return { value: true, done: true };
               } else {
-                let found = callback;
-                if (null != callback2) {
+                let found = tmp55;
+                if (null != tmp56) {
                   let obj5 = callback2(closure_1_3[7]);
-                  found = callback2(closure_1_3[7]).filter(callback, obj5.invert(callback2));
+                  found = callback2(closure_1_3[7]).filter(tmp55, obj5.invert(tmp56));
                   const arr = callback2(closure_1_3[7]);
                 }
-                if (null != obj16.permissionOverwrites[guildId]) {
+                if (null != obj17.permissionOverwrites[guildId]) {
                   const arr2 = callback2(closure_1_3[7]);
                   let found1 = arr2.filter(tmp26.deny, callback2(closure_1_3[7]).invert(tmp26.allow));
                   let tmp27 = callback2;
-                  const obj7 = callback2(closure_1_3[7]);
+                  const obj8 = callback2(closure_1_3[7]);
                 } else {
                   tmp27 = callback2;
-                  const deserializer = callback2(closure_1_3[7]);
-                  found1 = deserializer.deserialize(0);
+                  found1 = callback2(closure_1_3[7]).deserialize(0);
+                  const obj7 = callback2(closure_1_3[7]);
                 }
                 let tmp27Result = tmp27(closure_1_3[7]);
                 const hasItem = tmp27Result.has(found, closure_1_9.VIEW_CHANNEL);
                 let tmp37 = hasItem;
                 if (hasItem) {
                   tmp27Result = tmp27(closure_1_3[7]);
-                  tmp37 = !tmp27Result.has(found1, closure_1_9.VIEW_CHANNEL);
+                  tmp37 = !tmp27Result.has(found1, tmp34.VIEW_CHANNEL);
                 }
                 obj1 = { removingView: null, removingChat: false };
                 obj1[0] = tmp37;
-                const isForumLikeChannelResult = obj16.isForumLikeChannel();
+                const isForumLikeChannelResult = obj17.isForumLikeChannel();
                 const has = tmp27(closure_1_3[7]).has;
                 if (isForumLikeChannelResult) {
-                  let hasItem1 = has(found, closure_1_9.SEND_MESSAGES_IN_THREADS);
+                  let hasItem1 = has(found, tmp34.SEND_MESSAGES_IN_THREADS);
                   if (hasItem1) {
-                    hasItem1 = !tmp27(closure_1_3[7]).has(found1, closure_1_9.SEND_MESSAGES_IN_THREADS);
+                    hasItem1 = !tmp27(closure_1_3[7]).has(found1, tmp34.SEND_MESSAGES_IN_THREADS);
                     const tmp27Result2 = tmp27(closure_1_3[7]);
                   }
                   obj1.removingChat = hasItem1;
                 } else {
-                  let hasItem2 = has(found, closure_1_9.SEND_MESSAGES);
+                  let hasItem2 = has(found, tmp34.SEND_MESSAGES);
                   if (hasItem2) {
-                    hasItem2 = !tmp27(closure_1_3[7]).has(found1, closure_1_9.SEND_MESSAGES);
+                    hasItem2 = !tmp27(closure_1_3[7]).has(found1, tmp34.SEND_MESSAGES);
                     const tmp27Result3 = tmp27(closure_1_3[7]);
                   }
                   obj1.removingChat = hasItem2;
@@ -338,7 +348,7 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
                 c5 = 1;
                 advancedMode = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_11(guildId, obj16.id, obj1);
+                obj2[0] = closure_1_11(guildId, obj17.id, obj1);
                 return obj2;
               }
             }
@@ -389,7 +399,7 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
   return applyArgumentsResult;
 }
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: c9 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/DefaultChannelThresholdUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/DefaultChannelThresholdUtils.tsx");
 
 export const isDefaultChannelThresholdMetAfterDelete = function isDefaultChannelThresholdMetAfterDelete(guildId, id) {
   const self = this;

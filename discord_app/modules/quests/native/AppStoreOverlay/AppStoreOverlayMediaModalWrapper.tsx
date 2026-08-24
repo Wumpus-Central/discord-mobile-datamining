@@ -2,11 +2,11 @@
 
 // Module 10703 (AppStoreOverlayMediaModalWrapper)
 import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 9008 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
 
 export default function AppStoreOverlayMediaModalWrapper(arg0) {
   const effect = React.useEffect(() => () => {

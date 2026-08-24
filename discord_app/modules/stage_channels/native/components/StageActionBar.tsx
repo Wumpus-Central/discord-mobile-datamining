@@ -6,15 +6,20 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
+  let canModerateRequestToSpeak;
   let actionBarPrimaryButton;
+  importAllResult = undefined;
+  closure_4 = undefined;
+  let callback;
+  callback = undefined;
   let obj = channel(actionBarPrimaryButton[4]);
-  const canModerateRequestToSpeak = obj.useCanModerateRequestToSpeak(channel.id);
+  canModerateRequestToSpeak = obj.useCanModerateRequestToSpeak(channel.id);
   let tmp = callback2();
   let tmp2 = channel;
   const tmp3 = actionBarPrimaryButton;
@@ -28,20 +33,21 @@ const memoResult = importAllResult.memo((channel) => {
   closure_4 = tmp8;
   let obj4 = channel(actionBarPrimaryButton[8]);
   const isStageVideoEnabledResult = tmp2(tmp3[9]).isStageVideoEnabled(channel.guild_id);
+  callback = isStageVideoEnabledResult;
   let items = [actionBarPrimaryButton, channel];
-  const callback = importAllResult.useCallback((arg0) => {
+  callback = importAllResult.useCallback((arg0) => {
     if (actionBarPrimaryButton === channel(actionBarPrimaryButton[5]).ActionBarPrimaryButton.END_STREAM) {
       let obj = { channel: null, isSmallSize: null };
       obj[0] = channel;
       obj[1] = arg0;
-      let tmp4 = _undefined(channel(actionBarPrimaryButton[5]).DisconnectStreamButton, obj);
+      let tmp4 = _undefined(tmp2(tmp3[5]).DisconnectStreamButton, obj);
     } else {
       tmp4 = null;
-      if (actionBarPrimaryButton === channel(actionBarPrimaryButton[5]).ActionBarPrimaryButton.END_CALL) {
+      if (actionBarPrimaryButton === tmp2(tmp3[5]).ActionBarPrimaryButton.END_CALL) {
         obj = { channel: null, isSmallSize: null };
         obj[0] = channel;
         obj[1] = arg0;
-        tmp4 = _undefined(channel(actionBarPrimaryButton[10]).DisconnectStageButton, obj);
+        tmp4 = _undefined(tmp2(tmp3[10]).DisconnectStageButton, obj);
       }
     }
     return tmp4;
@@ -56,7 +62,7 @@ const memoResult = importAllResult.memo((channel) => {
         if (_undefined) {
           let obj = { channel: null, isSmallSize: null };
           obj[0] = channel;
-          obj[1] = _undefined;
+          obj[1] = tmp21;
           tmp24 = _undefined(channel(actionBarPrimaryButton[5]).VideoButton, obj);
         }
         const items = [tmp24, , , , ];
@@ -64,7 +70,7 @@ const memoResult = importAllResult.memo((channel) => {
         obj[0] = channel;
         obj[1] = _undefined;
         items[1] = _undefined(channel(actionBarPrimaryButton[11]).ChannelCallMicButton, obj);
-        channel(actionBarPrimaryButton[10]);
+        obj1 = channel(actionBarPrimaryButton[10]);
         obj1 = { children: null };
         const obj2 = { channel: null, isSmallSize: null };
         obj2[0] = channel;
@@ -77,6 +83,10 @@ const memoResult = importAllResult.memo((channel) => {
         items[4] = callback(_undefined);
         obj1[0] = items;
         closure_1_7(callback, obj1);
+        const tmp22 = closure_1_7;
+        const tmp23 = callback;
+        const tmp33 = _undefined;
+        const tmp37 = canModerateRequestToSpeak ? obj1.RequestToSpeakListButton : obj1.MoveToAudienceButton;
       } else {
         let tmp = closure_4;
         let tmp2 = closure_4;
@@ -97,7 +107,7 @@ const memoResult = importAllResult.memo((channel) => {
         let tmp13 = canModerateRequestToSpeak;
         if (canModerateRequestToSpeak) {
           const obj5 = { channel: null, isSmallSize: null };
-          obj5[0] = channel;
+          obj5[0] = tmp12;
           obj5[1] = tmp2;
           tmp13 = _undefined(channel(actionBarPrimaryButton[10]).RequestToSpeakListButton, obj5);
         }
@@ -116,6 +126,6 @@ const memoResult = importAllResult.memo((channel) => {
   items2 = [tmp.container, { height: getActionBarHeight }];
   return callback(closure_4, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageActionBar.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageActionBar.tsx");
 
 export default memoResult;

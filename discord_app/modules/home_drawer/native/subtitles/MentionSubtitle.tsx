@@ -4,16 +4,14 @@
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import TextIcon from "TextIcon" /* 6876 */;
 import styles from "styles" /* 15589 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/subtitles/MentionSubtitle.tsx");
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/subtitles/MentionSubtitle.tsx");
 
 export default function MentionSubtitle(channel) {
   channel = channel.channel;
@@ -22,16 +20,17 @@ export default function MentionSubtitle(channel) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = getChannelIcon.getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = getChannelIcon;
+    channelIconComponentWithGuild = tmp(6832).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(6832);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = TextIcon.TextIcon;
+    channelIconComponentWithGuild = tmp(6876).TextIcon;
   }
+  obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
   const items = [callback(channelIconComponentWithGuild, obj), ];
   obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
-  const intl = getSystemLocale.intl;
+  const intl = tmp(1236).intl;
   obj1[4] = intl.format(getSystemLocale.t.L9YdGH, {
     channelName,
     count: count - 1,

@@ -1,11 +1,11 @@
 // === Module 6288: TABLE_ROW_HEIGHT ===
 
 // Module 6288 (TABLE_ROW_HEIGHT)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 ({ Platform, StyleSheet } = get_ActivityIndicator);
-const result = obj132.fileFinishedImporting("design/components/TableRow/native/TableRowConstants.tsx");
+const result = set.fileFinishedImporting("design/components/TableRow/native/TableRowConstants.tsx");
 
 export const TABLE_ROW_HEIGHT = 60;
 export const TABLE_ROW_CONTENT_HEIGHT = 36;

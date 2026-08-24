@@ -1,7 +1,7 @@
 // === Module 707: setSecondaryToken ===
 
 // Module 707 (setSecondaryToken)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import Storage6 from "Storage" /* 595 */;
 import sum from "sum" /* 505 */;
 
@@ -68,53 +68,55 @@ function removeToken(__analytics__) {
 function encryptAndStoreTokens() {
   let result;
   if (safeStorage != null) {
-    result = safeStorage.isEncryptionAvailable();
+    result = obj.isEncryptionAvailable();
   }
   if (result) {
-    if (null != closure_7) {
+    if (null != tmp2) {
       let result1;
-      if (safeStorage != null) {
-        result1 = safeStorage.isEncryptionAvailable();
+      if (obj != null) {
+        result1 = obj.isEncryptionAvailable();
       }
-      let combined = closure_7;
+      let combined = obj2;
       if (result1) {
-        combined = closure_7;
-        if (!closure_7.startsWith(c4)) {
+        combined = obj2;
+        if (!obj2.startsWith(c4)) {
           let _HermesInternal = HermesInternal;
-          combined = "" + c4 + safeStorage.encryptString(closure_7);
+          combined = "" + tmp6 + obj.encryptString(obj2);
         }
+        tmp6 = c4;
       }
       closure_8 = combined;
     }
     const _Object = Object;
     const entries = Object.entries(closure_10);
     let items = [];
-    HermesBuiltin.arraySpread(entries.map((item, index) => {
-      [tmp, obj] = item;
+    HermesBuiltin.arraySpread(entries.map((arg0) => {
+      [tmp, obj] = arg0;
       const items = [tmp, ];
       let result;
       if (closure_6 != null) {
-        result = closure_6.isEncryptionAvailable();
+        result = obj2.isEncryptionAvailable();
       }
       let combined = obj;
       if (result) {
         combined = obj;
         if (!obj.startsWith(closure_4)) {
           const _HermesInternal = HermesInternal;
-          combined = "" + closure_4 + closure_6.encryptString(obj);
+          combined = "" + tmp4 + obj2.encryptString(obj);
         }
+        tmp4 = closure_4;
       }
       items[1] = combined;
       return items;
     }), 0);
-    closure_11 = items.reduce((acc, item, index) => {
-      [tmp, tmp2] = item;
-      acc[tmp] = tmp2;
-      return acc;
+    closure_11 = items.reduce((arg0, arg1) => {
+      [tmp, tmp2] = arg1;
+      arg0[tmp] = tmp2;
+      return arg0;
     }, {});
     c9 = true;
   } else {
-    closure_8 = closure_7;
+    closure_8 = tmp2;
     closure_11 = closure_10;
   }
   if (c12) {
@@ -156,7 +158,7 @@ function getToken(arg0) {
   }
   return tmp;
 }
-let result = obj132.fileFinishedImporting("../discord_common/js/shared/lib/TokenManager.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/shared/lib/TokenManager.tsx");
 
 export const init = function init() {
   if (!c13) {
@@ -183,8 +185,8 @@ export const init = function init() {
       ({ wasEncrypted: c9, decryptedToken: closure_7 } = obj);
       const _Object = Object;
       const entries = Object.entries(closure_11);
-      const mapped = entries.map((item, index) => {
-        [tmp, arr] = item;
+      const mapped = entries.map((arg0) => {
+        [tmp, arr] = arg0;
         if (null != arr) {
           if (0 !== arr.length) {
             let obj = closure_6;
@@ -208,14 +210,14 @@ export const init = function init() {
         obj = { decryptedToken: null, wasEncrypted: false };
       });
       let items = [];
-      HermesBuiltin.arraySpread(mapped.filter((item, index) => {
-        [, tmp] = item;
+      HermesBuiltin.arraySpread(mapped.filter((arg0) => {
+        [, tmp] = arg0;
         return null != tmp;
       }), 0);
-      closure_10 = items.reduce((acc, item, index) => {
-        [tmp, tmp2] = item;
-        acc[tmp] = tmp2;
-        return acc;
+      closure_10 = items.reduce((arg0, arg1) => {
+        [tmp, tmp2] = arg1;
+        arg0[tmp] = tmp2;
+        return arg0;
       }, {});
       c13 = true;
     }

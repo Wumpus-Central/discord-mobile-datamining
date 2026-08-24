@@ -4,25 +4,26 @@
 import ThemesDefault from "Themes" /* 712 */;
 import useResourceChannelsDefault from "useResourceChannels" /* 15815 */;
 import registerAssetDefault from "registerAsset" /* 15823 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "comparator" /* 1980 */;
+import closure_8 from "reinjectEphemerals" /* 4994 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function ResourceChannelRow(channelId) {
   channelId = channelId.channelId;
   ({ icon, description } = channelId);
+  let stateFromStores;
   dependencyMap = undefined;
   const tmp = callback3();
   let obj = channelId(589);
   const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   obj1 = channelId(589);
   const items1 = [closure_9];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_9.can(closure_1_10.VIEW_CHANNEL, stateFromStores));
@@ -50,8 +51,8 @@ function ResourceChannelRow(channelId) {
   const items3 = [channelId, tmp12];
   const effect = React.useEffect(() => {
     if (dependencyMap) {
-      stateFromStores(7427);
-      const obj = { channelId: null, after: null, limit: 5 };
+      let obj = stateFromStores(7427);
+      obj = { channelId: null, after: null, limit: 5 };
       obj[0] = channelId;
       obj[1] = channelId;
       const messages = obj.fetchMessages(obj);
@@ -84,7 +85,7 @@ function ResourceChannelRow(channelId) {
         obj4 = { guildId: null, channelId: null };
         ({ guild_id: obj15[0], id: obj15[1] } = stateFromStores);
         obj3[5] = tmp10Result.parse(tmp11, true, obj4);
-        tmp19Result = callback(tmp2(4734).Text, obj3);
+        tmp19Result = tmp19(tmp2(4734).Text, obj3);
       }
       items4[1] = tmp19Result;
       tmp19Result = !tmp16;
@@ -93,12 +94,13 @@ function ResourceChannelRow(channelId) {
         obj5[2] = tmp.messageContent;
         ({ guild_id: obj18[0], id: obj18[1] } = stateFromStores);
         obj5[5] = tmp10(6807).parse(description, true, { guildId: null, channelId: null });
-        tmp19Result = callback(tmp2(4734).Text, obj5);
+        tmp19Result = tmp19(tmp2(4734).Text, obj5);
+        const obj6 = { guildId: null, channelId: null };
         const tmp10Result1 = tmp10(6807);
       }
       items4[2] = tmp19Result;
       obj1[1] = items4;
-      const items5 = [callback(closure_4, obj1), , ];
+      const items5 = [closure_13(closure_4, obj1), , ];
       let tmp19Result1 = null;
       if (null != icon) {
         tmp19Result1 = null;
@@ -108,7 +110,7 @@ function ResourceChannelRow(channelId) {
           obj8[0] = resourceChannelIconURL;
           obj7[0] = obj8;
           obj7[1] = tmp.icon;
-          tmp19Result1 = callback(closure_5, obj7);
+          tmp19Result1 = tmp19(closure_5, obj7);
         }
       }
       items5[1] = tmp19Result1;
@@ -139,14 +141,14 @@ function ResourceChannelRow(channelId) {
               }
               obj9[4] = id;
               obj9[5] = tmp.thumbnail;
-              tmp19Result2 = callback(tmp2(11185).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = tmp19(tmp2(11185).ForumPostMediaThumbnail, obj9);
             }
           }
         }
       }
       items5[2] = tmp19Result2;
       obj[2] = items5;
-      return callback(tmp2(5433).PressableOpacity, obj);
+      return closure_13(tmp2(5433).PressableOpacity, obj);
     }
   }
   return null;
@@ -154,7 +156,8 @@ function ResourceChannelRow(channelId) {
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ Permissions: c10, Routes: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "flex-start" };
+createCacheKey = { container: { paddingHorizontal: 12, display: "flex", flexDirection: "column", alignItems: "center" }, emptyStateContainer: { padding: 20, display: "flex", flexDirection: "column", alignItems: "center" }, channelContainer: null, messageContent: null, textContent: null, thumbnail: null, emptyStateImage: null, icon: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "flex-start" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: 8 };
 createCacheKey[4] = { flex: 1 };
@@ -162,7 +165,7 @@ createCacheKey[5] = { marginLeft: 8 };
 createCacheKey[6] = { marginTop: 12, marginBottom: 20 };
 createCacheKey[7] = { width: 72, height: 72 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/native/GuildHomeResources.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/GuildHomeResources.tsx");
 
 export default function GuildHomeResources(guildId) {
   guildId = guildId.guildId;
@@ -183,8 +186,8 @@ export default function GuildHomeResources(guildId) {
     obj2[0] = function onPress() {
       const defaultChannel = closure_1_7.getDefaultChannel(guildId);
       if (null != defaultChannel) {
-        guildId(dependencyMap[21]).transitionTo(closure_1_11.CHANNEL(guildId, defaultChannel.id));
-        const obj = guildId(dependencyMap[21]);
+        guildId(closure_1_2[21]).transitionTo(closure_1_11.CHANNEL(guildId, defaultChannel.id));
+        const obj = guildId(closure_1_2[21]);
       }
     };
     const intl2 = guildId(1236).intl;
@@ -195,7 +198,7 @@ export default function GuildHomeResources(guildId) {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj[1] = arr.map((item, index) => callback(closure_15, { channelId: item.channelId, title: item.title, icon: item.icon, description: item.description }, "resource-" + item.channelId));
+    obj[1] = arr.map((channelId) => callback(closure_15, { channelId: channelId.channelId, title: channelId.title, icon: channelId.icon, description: channelId.description }, "resource-" + channelId.channelId));
     tmp6 = callback(closure_4, obj);
   }
   return tmp6;

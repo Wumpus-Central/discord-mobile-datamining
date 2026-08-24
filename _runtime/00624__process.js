@@ -39,18 +39,18 @@ export default (() => {
   try {
     let types = module;
     if (module) {
-      types = module.require;
+      types = obj.require;
     }
     if (types) {
-      types = module.require("util").types;
+      types = obj.require("util").types;
     }
     if (!types) {
       let binding = _process;
       if (_process) {
-        binding = _process.binding;
+        binding = obj2.binding;
       }
       if (binding) {
-        binding = _process.binding("util");
+        binding = obj2.binding("util");
       }
       types = binding;
     }

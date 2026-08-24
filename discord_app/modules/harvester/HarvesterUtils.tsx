@@ -2,14 +2,14 @@
 
 // Module 14216 (harvestDisabled)
 import initialize from "initialize" /* 589 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import harvestType from "harvestType" /* 13257 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "harvestType" /* 13257 */;
 import { REQUEST_DATA_LIMIT_MS } from "REQUEST_DATA_LIMIT_DAYS" /* 14217 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
 export const harvestDisabled = function harvestDisabled(created_at, stateFromStores) {
   const verified = stateFromStores.verified;
@@ -37,6 +37,7 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [closure_5];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);
+  const obj3 = initialize;
   [tmp3, require] = callback(React.useState(() => Date.now()), 2);
   let sum = tmp3;
   if (null != stateFromStores1) {
@@ -45,9 +46,9 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
     sum = date.getTime() + REQUEST_DATA_LIMIT_MS;
   }
   dependencyMap = sum;
-  callback = React.useRef(null);
+  callback = obj4.useRef(null);
   const items2 = [sum];
-  const effect = React.useEffect(() => {
+  const effect = obj4.useEffect(() => {
     const diff = closure_1 - Date.now();
     if (diff > 0) {
       const _setTimeout = setTimeout;
@@ -78,5 +79,4 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   } else {
     return { allowed: false, reason: "not_verified" };
   }
-  const tmp2 = callback(React.useState(() => Date.now()), 2);
 };

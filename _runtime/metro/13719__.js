@@ -1,7 +1,9 @@
 // === Module 13719: ? ===
 
 // Module 13719
-let c0 = false;
+let c0 = require;
+c0 = true;
+c0 = false;
 
 export default {
   includes: (arg0, arg1, arg2) => {
@@ -34,6 +36,7 @@ export default {
       if (tmp4 > sum) {
         while (true) {
           let num = callback;
+          let tmp6 = sum1;
           if (callback) {
             if (tmp3[sum1] === arg1) {
               break;
@@ -81,6 +84,7 @@ export default {
       if (tmp4 > sum) {
         while (true) {
           let num = callback;
+          let tmp6 = sum1;
           if (callback) {
             if (tmp3[sum1] === arg1) {
               break;

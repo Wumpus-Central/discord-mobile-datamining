@@ -1,19 +1,19 @@
 // === Module 8687: usePipVideoOrStream ===
 
 // Module 8687 (usePipVideoOrStream)
-import participantFromServer from "participantFromServer" /* 1390 */;
-import getParticipants from "getParticipants" /* 4773 */;
-import updateSpeaker from "updateSpeaker" /* 8688 */;
-import reset from "reset" /* 4652 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "getParticipants" /* 4773 */;
+import closure_5 from "updateSpeaker" /* 8688 */;
+import closure_6 from "reset" /* 4652 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_10 from "createRTCConnection" /* 4539 */;
 import ParticipantTypes from "ParticipantTypes" /* 4544 */;
 
-const require = fn;
+const require = arg1;
 ({ isStreamParticipant: unpackModuleId, isUserParticipant: closure_12, ParticipantTypes: map1 } = ParticipantTypes);
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");
 
 export default function usePipVideoOrStream(arg0) {
   const _require = arg0;
@@ -29,27 +29,27 @@ export default function usePipVideoOrStream(arg0) {
     if (null != c0) {
       selectedParticipant = closure_1_4.getSelectedParticipant(tmp);
     }
-    const found = videoParticipants.find((item, index) => item.type === constants.USER && !item.localVideoDisabled);
+    const found = videoParticipants.find((type) => type.type === constants.USER && !type.localVideoDisabled);
     if (null != c0) {
-      let videoParticipants1 = closure_1_4.getVideoParticipants(tmp);
+      let videoParticipants1 = obj2.getVideoParticipants(tmp);
     } else {
       videoParticipants1 = [];
     }
     let participant = null;
-    const found1 = videoParticipants1.find((item, index) => {
-      let tmp = item.id !== id.getId();
+    const found1 = videoParticipants1.find((id) => {
+      let tmp = id.id !== id.getId();
       if (tmp) {
-        const tmp3 = callback(item);
+        const tmp3 = callback(id);
         let localVideoDisabled = !tmp3;
         if (tmp3) {
-          localVideoDisabled = item.localVideoDisabled;
+          localVideoDisabled = id.localVideoDisabled;
         }
         tmp = localVideoDisabled;
       }
       return tmp;
     });
     if (null != c0) {
-      participant = closure_1_4.getParticipant(tmp, closure_1_5.getSpeaker(tmp));
+      participant = obj2.getParticipant(tmp, closure_1_5.getSpeaker(tmp));
     }
     if (participant == null) {
       participant = found1;
@@ -70,9 +70,9 @@ export default function usePipVideoOrStream(arg0) {
     c0 = tmp8;
     let tmp11 = tmp8;
     if (closure_1_11(tmp8)) {
-      if (allActiveStreamsForChannel.filter((item, index) => {
-        _undefined(stateFromStores1[10]);
-        const obj = { streamType: item.streamType, guildId: item.guildId, channelId: item.channelId, ownerId: item.ownerId };
+      if (allActiveStreamsForChannel.filter((streamType) => {
+        let obj = _undefined(closure_1_2[10]);
+        obj = { streamType: streamType.streamType, guildId: streamType.guildId, channelId: streamType.channelId, ownerId: streamType.ownerId };
         let id;
         if (_undefined != null) {
           id = _undefined.id;
@@ -127,10 +127,11 @@ export default function usePipVideoOrStream(arg0) {
 };
 export const useHasPipParticipant = function useHasPipParticipant(isActivityViewFocused) {
   isActivityViewFocused = isActivityViewFocused.isActivityViewFocused;
-  let stateFromStores;
+  let stateFromStores = isActivityViewFocused;
+  stateFromStores = undefined;
   let stateFromStores1;
   const items = [closure_10];
-  stateFromStores(stateFromStores1[9]).useStateFromStores(items, () => channelId.getChannelId());
+  stateFromStores = stateFromStores(stateFromStores1[9]).useStateFromStores(items, () => channelId.getChannelId());
   stateFromStores = tmp4;
   let tmpResult = tmp(tmp2[9]);
   const items1 = [closure_4, closure_5, closure_6];
@@ -145,27 +146,27 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
     if (null != c0) {
       selectedParticipant = closure_1_4.getSelectedParticipant(tmp);
     }
-    const found = videoParticipants.find((item, index) => item.type === constants.USER && !item.localVideoDisabled);
+    const found = videoParticipants.find((type) => type.type === constants.USER && !type.localVideoDisabled);
     if (null != c0) {
-      let videoParticipants1 = closure_1_4.getVideoParticipants(tmp);
+      let videoParticipants1 = obj2.getVideoParticipants(tmp);
     } else {
       videoParticipants1 = [];
     }
     let participant = null;
-    const found1 = videoParticipants1.find((item, index) => {
-      let tmp = item.id !== id.getId();
+    const found1 = videoParticipants1.find((id) => {
+      let tmp = id.id !== id.getId();
       if (tmp) {
-        const tmp3 = callback(item);
+        const tmp3 = callback(id);
         let localVideoDisabled = !tmp3;
         if (tmp3) {
-          localVideoDisabled = item.localVideoDisabled;
+          localVideoDisabled = id.localVideoDisabled;
         }
         tmp = localVideoDisabled;
       }
       return tmp;
     });
     if (null != c0) {
-      participant = closure_1_4.getParticipant(tmp, closure_1_5.getSpeaker(tmp));
+      participant = obj2.getParticipant(tmp, closure_1_5.getSpeaker(tmp));
     }
     if (participant == null) {
       participant = found1;
@@ -186,9 +187,9 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
     c0 = tmp8;
     let tmp11 = tmp8;
     if (closure_1_11(tmp8)) {
-      if (allActiveStreamsForChannel.filter((item, index) => {
-        _undefined(stateFromStores1[10]);
-        const obj = { streamType: item.streamType, guildId: item.guildId, channelId: item.channelId, ownerId: item.ownerId };
+      if (allActiveStreamsForChannel.filter((streamType) => {
+        let obj = _undefined(closure_1_2[10]);
+        obj = { streamType: streamType.streamType, guildId: streamType.guildId, channelId: streamType.channelId, ownerId: streamType.ownerId };
         let id;
         if (_undefined != null) {
           id = _undefined.id;
@@ -250,14 +251,15 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
       let isLocalVideoDisabledResult = null != stateFromStores1;
       const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
       if (isLocalVideoDisabledResult) {
-        isLocalVideoDisabledResult = closure_1_9.isLocalVideoDisabled(stateFromStores1.id);
+        isLocalVideoDisabledResult = closure_1_9.isLocalVideoDisabled(tmp3.id);
       }
       let tmp6 = null != currentEmbeddedActivity;
       if (tmp6) {
         tmp6 = !stateFromStores;
       }
       if (!tmp6) {
-        tmp6 = null != stateFromStores1 && null != stateFromStores1.streamId && !isLocalVideoDisabledResult;
+        tmp6 = null != tmp3 && null != tmp3.streamId && !isLocalVideoDisabledResult;
+        const tmp8 = null != tmp3 && null != tmp3.streamId && !isLocalVideoDisabledResult;
       }
       return tmp6;
     }

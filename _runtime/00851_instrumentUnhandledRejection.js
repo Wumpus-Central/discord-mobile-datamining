@@ -20,8 +20,8 @@ function instrumentUnhandledRejection() {
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
+      const tmp2 = onunhandledrejection;
     }
-    const obj = callback(table[0]);
   };
   _mod821.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
 }
@@ -29,5 +29,6 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = null;
 arg5.addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(arg0) {
   addHandler.addHandler("unhandledrejection", arg0);
+  const obj = addHandler;
   addHandler.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 };

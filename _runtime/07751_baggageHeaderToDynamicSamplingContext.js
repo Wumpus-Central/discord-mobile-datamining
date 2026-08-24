@@ -20,46 +20,46 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
     }
     const _Array2 = Array;
     if (Array.isArray(arr)) {
-      let reduced = arr.reduce((acc, item, index) => {
-        closure_0 = acc;
-        let parts = item.split(",");
-        const mapped = parts.map((item, index) => {
-          const parts = item.split("=");
-          return parts.map((item, index) => decodeURIComponent(item.trim()));
+      let reduced = arr.reduce((arg0, str) => {
+        closure_0 = arg0;
+        let parts = str.split(",");
+        const mapped = parts.map((str) => {
+          const parts = str.split("=");
+          return parts.map((str) => decodeURIComponent(str.trim()));
         });
-        const entries = Object.entries(mapped.reduce((acc, item, index) => {
-          [tmp, tmp2] = item;
+        const entries = Object.entries(mapped.reduce((arg0, arg1) => {
+          [tmp, tmp2] = arg1;
           let tmp3 = tmp;
           if (tmp) {
             tmp3 = tmp2;
           }
           if (tmp3) {
-            acc[tmp] = tmp2;
+            arg0[tmp] = tmp2;
           }
-          return acc;
+          return arg0;
         }, {}));
-        item = entries.forEach((item, index) => {
-          [tmp, tmp2] = item;
+        const item = entries.forEach((arg0) => {
+          [tmp, tmp2] = arg0;
           closure_0[tmp] = tmp2;
         });
-        return acc;
+        return arg0;
       }, {});
     } else {
       let parts = arr.split(",");
-      let mapped = parts.map((item, index) => {
-        const parts = item.split("=");
-        return parts.map((item, index) => decodeURIComponent(item.trim()));
+      let mapped = parts.map((str) => {
+        const parts = str.split("=");
+        return parts.map((str) => decodeURIComponent(str.trim()));
       });
-      reduced = mapped.reduce((acc, item, index) => {
-        [tmp, tmp2] = item;
+      reduced = mapped.reduce((arg0, arg1) => {
+        [tmp, tmp2] = arg1;
         let tmp3 = tmp;
         if (tmp) {
           tmp3 = tmp2;
         }
         if (tmp3) {
-          acc[tmp] = tmp2;
+          arg0[tmp] = tmp2;
         }
-        return acc;
+        return arg0;
       }, {});
     }
     obj = isInstanceOf;
@@ -67,12 +67,12 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
   if (undefined) {
     const _Object = Object;
     let entries = Object.entries(tmp);
-    const reduced1 = entries.reduce((acc, item, index) => {
-      [str, tmp] = item;
+    const reduced1 = entries.reduce((arg0, arg1) => {
+      [str, tmp] = arg1;
       if (str.match(closure_3)) {
-        acc[str.slice(7)] = tmp;
+        arg0[str.slice(7)] = tmp;
       }
-      return acc;
+      return arg0;
     }, {});
     const _Object2 = Object;
     let tmp10;
@@ -86,35 +86,37 @@ arg5.dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingConte
   if (arg0) {
     const _Object = Object;
     const entries = Object.entries(arg0);
-    const reduced = entries.reduce((acc, item, index) => {
-      [tmp, tmp2] = item;
+    const reduced = entries.reduce((arg0, arg1) => {
+      [tmp, tmp2] = arg1;
       if (tmp2) {
         const _HermesInternal = HermesInternal;
-        acc["" + closure_2 + tmp] = tmp2;
+        arg0["" + closure_2 + tmp] = tmp2;
       }
-      return acc;
+      return arg0;
     }, {});
     const _Object2 = Object;
     let reduced1;
     if (0 !== Object.keys(reduced).length) {
       const _Object3 = Object;
       const entries1 = Object.entries(reduced);
-      reduced1 = entries1.reduce((acc, item, index) => {
-        [tmp, tmp2] = item;
+      reduced1 = entries1.reduce((arg0, arg1, arg2) => {
+        [tmp, tmp2] = arg1;
         const combined = "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
         let combined1 = combined;
-        if (0 !== index) {
+        if (0 !== arg2) {
           const _HermesInternal = HermesInternal;
-          combined1 = "" + acc + "," + combined;
+          combined1 = "" + arg0 + "," + combined;
         }
         if (combined1.length > closure_4) {
-          combined1 = acc;
+          combined1 = arg0;
           if (callback(table[1]).DEBUG_BUILD) {
-            const logger = callback(table[2]).logger;
+            const logger = tmp5(tmp6[2]).logger;
             const _HermesInternal2 = HermesInternal;
             logger.warn("Not adding key: " + tmp + " with val: " + tmp2 + " to baggage header due to exceeding baggage size limits.");
-            combined1 = acc;
+            combined1 = arg0;
           }
+          tmp5 = callback;
+          tmp6 = table;
         }
         return combined1;
       }, "");
@@ -129,46 +131,46 @@ arg5.parseBaggageHeader = function parseBaggageHeader(arr) {
     }
     const _Array2 = Array;
     if (Array.isArray(arr)) {
-      let reduced = arr.reduce((acc, item, index) => {
-        closure_0 = acc;
-        let parts = item.split(",");
-        const mapped = parts.map((item, index) => {
-          const parts = item.split("=");
-          return parts.map((item, index) => decodeURIComponent(item.trim()));
+      let reduced = arr.reduce((arg0, str) => {
+        closure_0 = arg0;
+        let parts = str.split(",");
+        const mapped = parts.map((str) => {
+          const parts = str.split("=");
+          return parts.map((str) => decodeURIComponent(str.trim()));
         });
-        const entries = Object.entries(mapped.reduce((acc, item, index) => {
-          [tmp, tmp2] = item;
+        const entries = Object.entries(mapped.reduce((arg0, arg1) => {
+          [tmp, tmp2] = arg1;
           let tmp3 = tmp;
           if (tmp) {
             tmp3 = tmp2;
           }
           if (tmp3) {
-            acc[tmp] = tmp2;
+            arg0[tmp] = tmp2;
           }
-          return acc;
+          return arg0;
         }, {}));
-        item = entries.forEach((item, index) => {
-          [tmp, tmp2] = item;
+        const item = entries.forEach((arg0) => {
+          [tmp, tmp2] = arg0;
           closure_0[tmp] = tmp2;
         });
-        return acc;
+        return arg0;
       }, {});
     } else {
       const parts = arr.split(",");
-      const mapped = parts.map((item, index) => {
-        const parts = item.split("=");
-        return parts.map((item, index) => decodeURIComponent(item.trim()));
+      const mapped = parts.map((str) => {
+        const parts = str.split("=");
+        return parts.map((str) => decodeURIComponent(str.trim()));
       });
-      reduced = mapped.reduce((acc, item, index) => {
-        [tmp, tmp2] = item;
+      reduced = mapped.reduce((arg0, arg1) => {
+        [tmp, tmp2] = arg1;
         let tmp3 = tmp;
         if (tmp) {
           tmp3 = tmp2;
         }
         if (tmp3) {
-          acc[tmp] = tmp2;
+          arg0[tmp] = tmp2;
         }
-        return acc;
+        return arg0;
       }, {});
     }
     return reduced;

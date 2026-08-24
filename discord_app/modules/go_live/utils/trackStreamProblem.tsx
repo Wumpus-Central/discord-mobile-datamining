@@ -1,12 +1,12 @@
 // === Module 16431: trackStreamProblem ===
 
 // Module 16431 (trackStreamProblem)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/go_live/utils/trackStreamProblem.tsx");
+const result = set.fileFinishedImporting("modules/go_live/utils/trackStreamProblem.tsx");
 
 export default function trackStreamProblem(arg0) {
   ({ stream, streamApplication, analyticsData, rating } = arg0);
@@ -15,7 +15,8 @@ export default function trackStreamProblem(arg0) {
     rating = null;
   }
   ({ category, variant } = arg0);
-  const obj = { reason: problem, category, reason_variant: variant, streamer_user_id: stream.ownerId, stream_channel_id: stream.channelId, guild_id: stream.guildId, application_id: null, application_name: null, location: null, rating: null, feedback: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { reason: problem, category, reason_variant: variant, streamer_user_id: stream.ownerId, stream_channel_id: stream.channelId, guild_id: stream.guildId, application_id: null, application_name: null, location: null, rating: null, feedback: null };
   let id = null;
   if (null != streamApplication) {
     id = streamApplication.id;

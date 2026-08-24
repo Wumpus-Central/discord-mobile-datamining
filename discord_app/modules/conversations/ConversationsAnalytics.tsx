@@ -2,16 +2,17 @@
 
 // Module 12686 (ConversationsAnalytics)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/conversations/ConversationsAnalytics.tsx");
+const result = require("set").fileFinishedImporting("modules/conversations/ConversationsAnalytics.tsx");
 
 export const ConversationsAnalytics = {
   trackEntrypointImpression(channelId) {
+    let obj = expandEventPropertiesDefault;
     channelId = channelId.channelId;
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: channelId, channel_type: null, guild_id: null };
+    obj = { channel_id: channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
       type = channel.type;
@@ -34,9 +35,10 @@ export const ConversationsAnalytics = {
     obj.track(AnalyticEvents.TOPICAL_NAV_ENTRYPOINT_IMPRESSION, obj);
   },
   trackTopicsUnitImpression(channelId) {
+    let obj = expandEventPropertiesDefault;
     channelId = channelId.channelId;
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: channelId, channel_type: null, guild_id: null };
+    obj = { channel_id: channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
       type = channel.type;
@@ -59,9 +61,10 @@ export const ConversationsAnalytics = {
     obj.track(AnalyticEvents.TOPICAL_NAV_TOPICS_UNIT_IMPRESSION, obj);
   },
   trackPreviewImpression(channelId) {
+    let obj = expandEventPropertiesDefault;
     channelId = channelId.channelId;
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: channelId, channel_type: null, guild_id: null };
+    obj = { channel_id: channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
       type = channel.type;
@@ -84,9 +87,10 @@ export const ConversationsAnalytics = {
     obj.track(AnalyticEvents.TOPICAL_NAV_PREVIEW_IMPRESSION, obj);
   },
   trackTopicsUnitClicked(channelId) {
+    let obj = expandEventPropertiesDefault;
     channelId = channelId.channelId;
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: channelId, channel_type: null, guild_id: null };
+    obj = { channel_id: channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
       type = channel.type;
@@ -109,9 +113,10 @@ export const ConversationsAnalytics = {
     obj.track(AnalyticEvents.TOPICAL_NAV_TOPICS_UNIT_CLICKED, obj);
   },
   trackFocusModeImpression(channelId) {
+    let obj = expandEventPropertiesDefault;
     channelId = channelId.channelId;
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: channelId, channel_type: null, guild_id: null };
+    obj = { channel_id: channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
       type = channel.type;
@@ -134,9 +139,10 @@ export const ConversationsAnalytics = {
     obj.track(AnalyticEvents.TOPICAL_NAV_FOCUS_MODE_IMPRESSION, obj);
   },
   trackFocusModeDismissed(channelId) {
+    let obj = expandEventPropertiesDefault;
     channelId = channelId.channelId;
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: channelId, channel_type: null, guild_id: null };
+    obj = { channel_id: channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
       type = channel.type;
@@ -159,9 +165,10 @@ export const ConversationsAnalytics = {
     obj.track(AnalyticEvents.TOPICAL_NAV_FOCUS_MODE_DISMISSED, obj);
   },
   trackThumbsClicked(channelId) {
+    let obj = expandEventPropertiesDefault;
     channelId = channelId.channelId;
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: channelId, channel_type: null, guild_id: null };
+    obj = { channel_id: channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
       type = channel.type;
@@ -184,9 +191,10 @@ export const ConversationsAnalytics = {
     obj.track(AnalyticEvents.TOPICAL_NAV_THUMBS_CLICKED, obj);
   },
   trackThumbsDownReasonSelected(channelId) {
+    let obj = expandEventPropertiesDefault;
     channelId = channelId.channelId;
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: channelId, channel_type: null, guild_id: null };
+    obj = { channel_id: channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
       type = channel.type;

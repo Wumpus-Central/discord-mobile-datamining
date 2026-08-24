@@ -1,27 +1,27 @@
 // === Module 13175: modKey ===
 
 // Module 13175 (modKey)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-if (obj132.isMac()) {
+if (set.isMac()) {
   let str = "cmd";
 } else {
-  const _module1 = obj132;
+  const _module1 = set;
   str = "ctrl";
 }
-if (obj132.isMac()) {
+if (set.isMac()) {
   let str2 = "opt";
 } else {
-  const _module3 = obj132;
+  const _module3 = set;
   str2 = "alt";
 }
-if (obj132.isMac()) {
+if (set.isMac()) {
   let str3 = "return";
 } else {
-  const _module5 = obj132;
+  const _module5 = set;
   str3 = "enter";
 }
-const result = obj132.fileFinishedImporting("lib/KeybindModKeys.tsx");
+const result = set.fileFinishedImporting("lib/KeybindModKeys.tsx");
 
 export const modKey = str;
 export const altKey = str2;

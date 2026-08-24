@@ -1,22 +1,22 @@
 // === Module 11655: productToGameServerGame ===
 
 // Module 11655 (productToGameServerGame)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
+const result = set.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
 
 export const productToGameServerGame = function productToGameServerGame(id) {
   const skus = id.skus;
-  const mapped = skus.map((item, index) => {
-    const plan_features = item.tenant_metadata.plan_features;
-    return { id: item.id, name: item.name, cost: item.tenant_metadata.boost_price, specifications: plan_features.map((item, index) => ({ title: item.title, description: item.description })) };
+  const mapped = skus.map((id) => {
+    const plan_features = id.tenant_metadata.plan_features;
+    return { id: id.id, name: id.name, cost: id.tenant_metadata.boost_price, specifications: plan_features.map((title) => ({ title: title.title, description: title.description })) };
   });
   const sorted = mapped.sort((cost, cost2) => cost2.cost - cost.cost);
   let num = 0;
   if (sorted.length > 0) {
     const _Math = Math;
     const items = [];
-    HermesBuiltin.arraySpread(sorted.map((item, index) => item.cost), 0);
+    HermesBuiltin.arraySpread(sorted.map((cost) => cost.cost), 0);
     const _Math2 = Math;
     num = HermesBuiltin.apply(items, Math);
   }

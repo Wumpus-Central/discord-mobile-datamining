@@ -1,10 +1,10 @@
 // === Module 4005: getLocalizedLink ===
 
 // Module 4005 (getLocalizedLink)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("modules/links/getLocalizedLink.tsx");
+const result = set.fileFinishedImporting("modules/links/getLocalizedLink.tsx");
 
 export default function getLocalizedLink(arg0) {
   const formatted = getSystemLocale.intl.currentLocale.toLowerCase();

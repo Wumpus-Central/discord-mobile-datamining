@@ -3,9 +3,9 @@
 // Module 7291 (getIdFromHistoryItem)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
-const require = fn;
+const require = arg1;
 function getIdFromHistoryItem(str) {
   return str.replace(regExp, "");
 }
@@ -13,7 +13,7 @@ function removeHistoryItem(arg0) {
   closure_0 = arg0;
   let flag = map.delete(arg0);
   if (flag) {
-    arr = arr.filter((item, index) => item !== combined);
+    arr = arr.filter((arg0) => arg0 !== combined);
     flag = true;
   }
   return flag;
@@ -22,7 +22,7 @@ function handleChannelDelete(channel) {
   const combined = "" + c3 + channel.channel.id;
   let flag = map.delete(combined);
   if (flag) {
-    arr = arr.filter((item, index) => item !== combined);
+    arr = arr.filter((arg0) => arg0 !== combined);
     flag = true;
   }
   return flag;
@@ -47,6 +47,7 @@ prototype["initialize"] = function initialize(history) {
     history = [];
   }
   for (const item10015 of history) {
+    let tmp3 = map;
     let result = map.set(item10015, undefined);
     continue;
   }
@@ -87,13 +88,20 @@ const navigationHistoryStore = new NavigationHistoryStore(dispatcherDefault, {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp3 = nextResult;
+        let tmp4 = c3;
         if (nextResult.startsWith(c3)) {
+          let tmp5 = getIdFromHistoryItem;
+          let tmp6 = nextResult;
+          let tmp7 = basicChannel;
           basicChannel = basicChannel.getBasicChannel(getIdFromHistoryItem(tmp3));
           let tmp10 = null != basicChannel;
           if (tmp10) {
+            let tmp11 = basicChannel;
             tmp10 = tmp9.guild_id !== guild.id;
           }
           if (!tmp10) {
+            let tmp12 = removeHistoryItem;
+            let tmp13 = nextResult;
             if (removeHistoryItem(tmp3)) {
               flag = true;
             }
@@ -105,7 +113,7 @@ const navigationHistoryStore = new NavigationHistoryStore(dispatcherDefault, {
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/NavigationHistoryStore.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/NavigationHistoryStore.tsx");
 
 export default navigationHistoryStore;
 export const CHANNEL_PREFIX = "channel-";
@@ -134,13 +142,13 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
                 const combined = "" + c3 + channelId;
                 combined2 = combined;
                 if (map.has(combined)) {
-                  arr = arr.filter((item, index) => item !== combined2);
+                  arr = arr.filter((arg0) => arg0 !== combined2);
                 }
                 if (null != arr[arr.length - 1]) {
                   const _Date3 = Date;
-                  const result = map.set(tmp30, Date.now());
+                  const result = obj4.set(tmp30, Date.now());
                 }
-                const result1 = map.set(combined, undefined);
+                const result1 = obj4.set(combined, undefined);
                 arr = arr.push(combined);
                 if (arr.length > 100) {
                   arr = arr.shift();
@@ -158,13 +166,13 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
               const combined1 = "" + c4 + guildId;
               combined2 = combined1;
               if (map.has(combined1)) {
-                arr = arr.filter((item, index) => item !== combined2);
+                arr = arr.filter((arg0) => arg0 !== combined2);
               }
               if (null != arr[arr.length - 1]) {
                 const _Date2 = Date;
-                const result2 = map.set(tmp52, Date.now());
+                const result2 = obj8.set(tmp52, Date.now());
               }
-              const result3 = map.set(combined1, undefined);
+              const result3 = obj8.set(combined1, undefined);
               arr.push(combined1);
               if (arr.length > 100) {
                 arr.shift();
@@ -177,13 +185,13 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
           const _HermesInternal2 = HermesInternal;
           combined2 = "" + c3 + coerceChannelRouteResult.params.channelId;
           if (map.has(combined2)) {
-            arr = arr.filter((item, index) => item !== combined2);
+            arr = arr.filter((arg0) => arg0 !== combined2);
           }
           if (null != arr[arr.length - 1]) {
             const _Date = Date;
-            const result4 = map.set(tmp47, Date.now());
+            const result4 = obj6.set(tmp47, Date.now());
           }
-          const result5 = map.set(combined2, undefined);
+          const result5 = obj6.set(combined2, undefined);
           arr.push(combined2);
           if (arr.length > 100) {
             arr.shift();
@@ -193,7 +201,6 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
       }
     }
   }
-  const obj = combined2(4230);
 };
 export function getNavigationHistory() {
   return closure_6;

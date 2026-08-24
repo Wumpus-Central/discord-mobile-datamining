@@ -1,12 +1,12 @@
 // === Module 10600: InappropriateConversationWarningBanner ===
 
 // Module 10600 (InappropriateConversationWarningBanner)
-import noop from "noop" /* 19 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
 import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 class InappropriateConversationWarningBanner {
   constructor(arg0) {
     channelId = global.channelId;
@@ -19,8 +19,8 @@ class InappropriateConversationWarningBanner {
     items[1] = warningId;
     items[2] = senderId;
     effect = closure_3.useEffect(() => {
-      channelId(senderId[4]);
-      const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2, viewName: channelId(senderId[4]).ViewNameTypes.SAFETY_WARNING_BANNER };
+      let obj = channelId(senderId[4]);
+      obj = { channelId, warningId, senderId, warningType: closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2, viewName: channelId(senderId[4]).ViewNameTypes.SAFETY_WARNING_BANNER };
       obj.trackNamedViewEvent(obj);
     }, items);
     items1 = [, , ];
@@ -28,8 +28,8 @@ class InappropriateConversationWarningBanner {
     items1[1] = warningId;
     items1[2] = senderId;
     callback = closure_3.useCallback((cta) => {
-      channelId(senderId[4]);
-      const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2, cta };
+      let obj = channelId(senderId[4]);
+      obj = { channelId, warningId, senderId, warningType: closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2, cta };
       obj.trackCtaEvent(obj);
     }, items1);
     closure_3 = callback;
@@ -60,11 +60,11 @@ class InappropriateConversationWarningBanner {
     items6[2] = senderId;
     items6[3] = callback;
     callback2 = closure_3.useCallback(() => {
-      warningId(senderId[7]);
-      let obj = {
+      let obj = warningId(senderId[7]);
+      obj = {
         importer() {
-          return channelId(senderId[9])(senderId[8], senderId.paths).then((result) => {
-            closure_0 = result.default;
+          return closure_1_0(closure_1_2[9])(closure_1_2[8], closure_1_2.paths).then((arg0) => {
+            closure_0 = arg0.default;
             return (arg0) => {
               const obj = {};
               const merged = Object.assign(arg0);
@@ -84,7 +84,7 @@ class InappropriateConversationWarningBanner {
       obj.openLazy(obj);
     }, items5);
     callback3 = closure_3.useCallback(() => {
-      const result = channelId(senderId[10]).openSafetyToolsActionSheet(channelId, senderId, warningId, SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
+      const result = channelId(senderId[10]).openSafetyToolsActionSheet(channelId, senderId, warningId, closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2);
       callback(channelId(senderId[4]).CtaEventTypes.USER_BANNER_OPEN_SAFETY_TOOLS);
     }, items6);
     tmp9 = jsx;
@@ -116,7 +116,7 @@ class InappropriateConversationWarningBanner {
     return tmp9(tmp10, obj);
   }
 }
-let result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx");
+let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx");
 
 export default InappropriateConversationWarningBanner;
 export { InappropriateConversationWarningBanner };

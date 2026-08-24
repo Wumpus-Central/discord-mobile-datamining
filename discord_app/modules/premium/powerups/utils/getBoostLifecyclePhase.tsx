@@ -1,11 +1,11 @@
 // === Module 11750: BOOST_EXPIRING_DISPLAY_WINDOW_DAYS ===
 
 // Module 11750 (BOOST_EXPIRING_DISPLAY_WINDOW_DAYS)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 
 let c2 = 259200000;
-const result = obj132.fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
 
 export const BOOST_EXPIRING_DISPLAY_WINDOW_DAYS = 3;
 export const BOOST_EXPIRING_DISPLAY_WINDOW_MS = 259200000;
@@ -40,6 +40,7 @@ export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id
     }
     if (time == null) {
       time = DISCORD_EPOCHDefault.extractTimestamp(id.id);
+      const obj = DISCORD_EPOCHDefault;
     }
     return time;
   }

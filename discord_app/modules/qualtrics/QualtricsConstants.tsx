@@ -1,9 +1,9 @@
 // === Module 9878: QuestionTypeEnum ===
 
 // Module 9878 (QuestionTypeEnum)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/qualtrics/QualtricsConstants.tsx");
+const result = set.fileFinishedImporting("modules/qualtrics/QualtricsConstants.tsx");
 
 export const QuestionTypeEnum = { MULTIPLE_CHOICE: "MC", TEXT_ENTRY: "TE", DESCRIPTIVE_BLOCK: "DB" };
 export const QuestionSelectorEnum = { SINGLE_ANSWER: "SAVR", MULTIPLE_ANSWER: "MAVR", DROPDOWN: "DL", SINGLE_LINE: "SL", MULTI_LINE: "ML", ESSAY: "ESTB", FORM: "FORM", PASSWORD: "PW", LIKERT: "Likert", BIPOLAR: "Bipolar", PROFILE: "Profile", MAXDIFF: "MaxDiff", DRAG_AND_DROP: "DND", RANK: "Rank", TEXT_BLOCK: "TB" };

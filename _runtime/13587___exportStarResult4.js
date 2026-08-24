@@ -3,7 +3,7 @@
 // Module 13587 (__exportStarResult4)
 const require = arg1;
 const dependencyMap = arg6;
-arg5.GetOption = function GetOption(obj, arg1, arg2, join) {
+arg5.GetOption = function GetOption(obj, arg1, arg2, arr) {
   if (typeof obj !== "object") {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("Options must be an object");
@@ -31,12 +31,12 @@ arg5.GetOption = function GetOption(obj, arg1, arg2, join) {
         str = str(13580).ToString(tmp3);
         tmp6 = str;
       }
-      if (undefined !== join) {
-        if (!join.filter((item, index) => item == str).length) {
+      if (undefined !== arr) {
+        if (!arr.filter((arg0) => arg0 == str).length) {
           const _RangeError = RangeError;
           const concat = "".concat;
           const combined = "".concat(tmp6, " is not within ");
-          const rangeError = new RangeError(combined.concat(join.join(", ")));
+          const rangeError = new RangeError(combined.concat(arr.join(", ")));
           throw rangeError;
         }
       }

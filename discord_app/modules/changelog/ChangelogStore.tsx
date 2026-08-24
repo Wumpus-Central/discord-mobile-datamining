@@ -5,11 +5,12 @@ import initializeDefault from "initialize" /* 589 */;
 import Storage3 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_2 from "_getSystemLocale" /* 1994 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY" /* 1978 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function handleUserSettingsProtoStoreChange() {
   const LastReceivedChangelogId = explicitContentFromProto.LastReceivedChangelogId;
   const setting = LastReceivedChangelogId.getSetting();
@@ -46,9 +47,9 @@ prototype["initialize"] = function initialize() {
     }
   }
 };
-prototype["getChangelog"] = function getChangelog(closure_0, closure_1) {
+prototype["getChangelog"] = function getChangelog(closure_1_0, closure_1) {
   let tmp2;
-  if (dependencyMap[closure_0] != null) {
+  if (dependencyMap[closure_1_0] != null) {
     tmp2 = tmp[closure_1];
   }
   if (tmp2 == null) {
@@ -59,9 +60,9 @@ prototype["getChangelog"] = function getChangelog(closure_0, closure_1) {
 prototype["latestChangelogId"] = function latestChangelogId() {
   return c8;
 };
-prototype["getChangelogLoadStatus"] = function getChangelogLoadStatus(closure_0, closure_1) {
+prototype["getChangelogLoadStatus"] = function getChangelogLoadStatus(arg0, closure_1) {
   let NOT_LOADED;
-  if (dependencyMap2[closure_0] != null) {
+  if (dependencyMap2[arg0] != null) {
     NOT_LOADED = tmp[closure_1];
   }
   if (NOT_LOADED == null) {
@@ -116,7 +117,7 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
   CHANGE_LOG_FETCH_SUCCESS: function handleChangelogFetch(arg0) {
     ({ id, changelog } = arg0);
     if (null == dependencyMap[id]) {
-      dependencyMap[id] = {};
+      tmp[id] = {};
     }
     const obj = { id, date: changelog.date, body: changelog.content, revision: 1, locale: changelog.locale };
     let str = "image";
@@ -126,7 +127,7 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
     obj[str] = changelog.asset;
     dependencyMap[id][changelog.locale] = obj;
     if (null == dependencyMap2[id]) {
-      dependencyMap2[id] = {};
+      tmp2[id] = {};
     }
     dependencyMap2[id][changelog.locale] = constants2.LOADED_SUCCESS;
   },
@@ -138,7 +139,7 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
       }
     }
     if (null == dependencyMap2[id]) {
-      dependencyMap2[id] = {};
+      tmp[id] = {};
     }
     dependencyMap2[id][locale] = constants2.LOADED_FAILURE;
   },
@@ -152,6 +153,6 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
     const result = Storage.set(lastChangeLogDate, changelogDate);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/changelog/ChangelogStore.tsx");
+let result = set.fileFinishedImporting("modules/changelog/ChangelogStore.tsx");
 
 export default changelogStore;

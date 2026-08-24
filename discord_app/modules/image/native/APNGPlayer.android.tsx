@@ -4,11 +4,12 @@
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((onLoad, ref) => {
   onLoad = onLoad.onLoad;
   const merged = Object.assign(onLoad, Object.create(null));
+  ref = undefined;
   ref = importAllResult.useRef(null);
   const items = [onLoad];
   const callback = importAllResult.useCallback((nativeEvent) => {
@@ -19,27 +20,27 @@ const forwardRefResult = importAllResult.forwardRef((onLoad, ref) => {
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
     play() {
       if (null != closure_1.current) {
-        const Commands = onLoad(closure_1_2[2]).Commands;
+        const Commands = closure_1_0(closure_1_2[2]).Commands;
         Commands.play(tmp.current);
       }
     },
     pause() {
       if (null != closure_1.current) {
-        const Commands = onLoad(closure_1_2[2]).Commands;
+        const Commands = closure_1_0(closure_1_2[2]).Commands;
         Commands.pause(tmp.current);
       }
     },
     stop() {
       if (null != closure_1.current) {
-        const Commands = onLoad(closure_1_2[2]).Commands;
-        Commands.seek(closure_1.current, 0);
-        const Commands2 = onLoad(closure_1_2[2]).Commands;
-        Commands2.pause(closure_1.current);
+        const Commands = closure_1_0(closure_1_2[2]).Commands;
+        Commands.seek(tmp.current, 0);
+        const Commands2 = closure_1_0(closure_1_2[2]).Commands;
+        Commands2.pause(tmp.current);
       }
     },
     seek(arg0) {
       if (null != closure_1.current) {
-        const Commands = onLoad(closure_1_2[2]).Commands;
+        const Commands = closure_1_0(closure_1_2[2]).Commands;
         Commands.seek(tmp.current, arg0);
       }
     }
@@ -47,7 +48,7 @@ const forwardRefResult = importAllResult.forwardRef((onLoad, ref) => {
   const merged1 = Object.assign(merged);
   return jsx(ref(8406), { ref, onLoad: callback });
 });
-const result = require("obj132").fileFinishedImporting("modules/image/native/APNGPlayer.android.tsx");
+const result = require("set").fileFinishedImporting("modules/image/native/APNGPlayer.android.tsx");
 
 export const useAPNGPlayerControls = function useAPNGPlayerControls(ref) {
   closure_0 = ref;

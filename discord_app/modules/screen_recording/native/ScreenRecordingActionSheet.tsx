@@ -7,17 +7,20 @@ import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { useScreenRecordingStore } from "useScreenRecordingStore" /* 15199 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xl };
+createCacheKey = { container: null, closeButton: null, buttonContainer: null };
+createCacheKey = { justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xl };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
+let obj1 = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingActionSheet.tsx");
+let obj2 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingActionSheet.tsx");
 
 export default function ScreenRecordingActionSheet() {
   const tmp = callback3();
@@ -64,6 +67,7 @@ export default function ScreenRecordingActionSheet() {
       return null;
     }
   }
+  obj = { style: tmp.container, children: null };
   const items = [callback(_require(4734).Text, { variant: "heading-xl/bold", children: str }), callback(_require(4734).Text, { variant: "text-md/normal", children: str2 }), ];
   obj = {
     disabled: tmp2,
@@ -71,13 +75,14 @@ export default function ScreenRecordingActionSheet() {
     loading: tmp2,
     onPress() {
       callback2();
-      callback2(dependencyMap[8]).hideActionSheet();
+      callback2(closure_1_2[8]).hideActionSheet();
     }
   };
   items[2] = callback(_require(4745).Button, obj);
   obj[1] = items;
   obj1 = { style: tmp.container, children: null };
   const tmp11 = callback2(View, obj);
+  const tmp6 = callback2;
   const tmp9 = _require;
   const items1 = [
     callback(_require(5433).PressableOpacity, {
@@ -101,6 +106,7 @@ export default function ScreenRecordingActionSheet() {
     accessibilityLabel: "close",
     children: callback(_require(6368).XSmallIcon, { size: "md", color: "text-default" })
   };
+  const obj3 = { variant: "heading-xl/bold", children: tmp5.title };
   obj4[1] = get_defaultRulesDefault.parse(tmp5.instructions);
   items1[2] = callback(_require(4734).Text, obj4);
   const obj5 = { style: tmp.buttonContainer, children: null };
@@ -118,7 +124,7 @@ export default function ScreenRecordingActionSheet() {
   });
   items1[3] = callback(View, obj5);
   obj1[1] = items1;
-  let children = callback2(View, obj1);
+  let children = tmp6(tmp7, obj1);
   if (tmp3) {
     children = tmp11;
   }

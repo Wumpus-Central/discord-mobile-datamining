@@ -1,9 +1,9 @@
 // === Module 14587: useEmojiByIdOrName ===
 
 // Module 14587 (useEmojiByIdOrName)
-import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
+import closure_2 from "getEmojiToGroupId" /* 6727 */;
 
-const require = fn;
+const require = arg1;
 function useEmojiByIdOrName(guildId, emojiId) {
   const _require = guildId;
   dependencyMap = emojiId;
@@ -14,15 +14,15 @@ function useEmojiByIdOrName(guildId, emojiId) {
       return null;
     } else {
       const disambiguatedEmojiContext = closure_1_2.getDisambiguatedEmojiContext(closure_0);
-      let byId = disambiguatedEmojiContext.getById(closure_1);
+      let byId = disambiguatedEmojiContext.getById(tmp);
       if (byId == null) {
-        byId = disambiguatedEmojiContext.getByName(closure_1);
+        byId = disambiguatedEmojiContext.getByName(tmp);
       }
       return byId;
     }
   }, items1);
 }
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
 
 export default useEmojiByIdOrName;
 export { useEmojiByIdOrName };

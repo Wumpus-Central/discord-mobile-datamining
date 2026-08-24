@@ -1,12 +1,12 @@
 // === Module 11275: useBottomSheetFlashListBottomViewabilityInset ===
 
 // Module 11275 (useBottomSheetFlashListBottomViewabilityInset)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 let closure_4 = { code: "function useBottomSheetFlashListBottomViewabilityInsetTsx1(){const{bottomSheetPosition}=this.__closure;var _bottomSheetPosition$,_bottomSheetPosition;return(_bottomSheetPosition$=(_bottomSheetPosition=bottomSheetPosition)===null||_bottomSheetPosition===void 0?void 0:_bottomSheetPosition.get())!==null&&_bottomSheetPosition$!==void 0?_bottomSheetPosition$:0;}" };
 let closure_5 = { code: "function useBottomSheetFlashListBottomViewabilityInsetTsx2(sheetPosition){const{distanceBetweenExpandedScreenTopAndSheetTop,runOnJS,handleBottomViewabilityInsetDebounced}=this.__closure;const bottomViewabilityInset=sheetPosition-distanceBetweenExpandedScreenTopAndSheetTop;runOnJS(handleBottomViewabilityInsetDebounced)(bottomViewabilityInset);}" };
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx");
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
   let obj = bottomVisibilityInsetRef;
@@ -26,6 +26,7 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
       current.updateViewableItems();
     }
   }, 200), []);
+  const tmp = flashListRef;
   const tmp3 = flashListRef(1494)();
   const fn = function u() {
     let num;

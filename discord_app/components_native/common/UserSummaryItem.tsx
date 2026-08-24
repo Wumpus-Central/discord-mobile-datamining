@@ -6,19 +6,21 @@ import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "trackCommunicationDisabled" /* 1990 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { marginStart: 4, paddingRight: 1, color: ThemesDefault.colors.TEXT_SUBTLE };
+createCacheKey = { container: { flexDirection: "row" }, names: { marginStart: 4, paddingRight: 1 }, namesLegacy: null, plusCountContainer: null, cutout: null };
+createCacheKey = { marginStart: 4, paddingRight: 1, color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };
 createCacheKey[4] = { marginRight: -4 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { direction: require("Button").CutoutDirection.RIGHT };
-const result = require("obj132").fileFinishedImporting("components_native/common/UserSummaryItem.tsx");
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };
+const result = require("set").fileFinishedImporting("components_native/common/UserSummaryItem.tsx");
 
 export default function UserSummaryItem(users) {
   ({ namesStyle, namesVariant, max } = users);
@@ -41,19 +43,20 @@ export default function UserSummaryItem(users) {
   if (cutout === undefined) {
     cutout = obj2;
   }
+  let obj;
   const tmp4 = callback();
   let tmp5 = renderedUsers.length > 0 ? renderedUsers.length : users.length;
   const bound = Math.min(tmp5, max);
-  let obj = {};
+  obj = {};
   obj1 = _require(avatarSize[7]);
   const items = [closure_4];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_0.forEach((item, index) => {
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_0.forEach((id) => {
     let tmp2 = null != closure_1;
     if (tmp2) {
-      tmp2 = null != item;
+      tmp2 = null != id;
     }
     if (tmp2) {
-      closure_3[item.id] = closure_1_4.getMember(closure_1, item.id);
+      closure_3[id.id] = closure_1_4.getMember(closure_1, id.id);
     }
   }));
   if (0 === bound) {
@@ -64,6 +67,8 @@ export default function UserSummaryItem(users) {
     let num2 = 0;
     if (0 < bound) {
       do {
+        let tmp9 = num;
+        let tmp10 = num2;
         if (0 === renderedUsers.length) {
           let tmp12 = users[num];
           _require = tmp12;
@@ -75,6 +80,7 @@ export default function UserSummaryItem(users) {
             let _HermesInternal = HermesInternal;
             id = "@" + num;
           }
+          let tmp14 = importDefault;
           let tmp15 = avatarSize;
           obj2 = importDefault(avatarSize[8]);
           let fn = obj2.makeSource(null);
@@ -84,23 +90,26 @@ export default function UserSummaryItem(users) {
               if (flag === undefined) {
                 flag = false;
               }
-              const avatarURL = closure_0.getAvatarURL(user, Button.AVATAR_SIZE_MAP[avatarSize], flag);
+              const avatarURL = closure_0.getAvatarURL(closure_1, Button.AVATAR_SIZE_MAP[avatarSize], flag);
               let avatar;
-              if (user != null) {
-                avatar = user.avatar;
+              if (closure_1 != null) {
+                avatar = tmp3.avatar;
               }
               let tmp5 = avatarURL;
               if (null != avatar) {
-                let guildMemberAvatarURL = getAvatarURLDefault.getGuildMemberAvatarURL(user, flag);
+                let guildMemberAvatarURL = getAvatarURLDefault.getGuildMemberAvatarURL(tmp3, flag);
                 if (guildMemberAvatarURL == null) {
                   guildMemberAvatarURL = avatarURL;
                 }
                 tmp5 = guildMemberAvatarURL;
+                obj = getAvatarURLDefault;
               }
               return getAvatarURLDefault.makeSource(tmp5);
             };
           }
           if (num < tmp8) {
+            let tmp19 = jsx;
+            let tmp20 = _require;
             obj = { size: null, source: null, style: null, cutout: null };
             obj[0] = avatarSize;
             obj[1] = fn;
@@ -109,6 +118,8 @@ export default function UserSummaryItem(users) {
             obj[3] = cutout;
             let arr = items1.push(jsx(_require(tmp15[6]).CutoutableAvatarImage, { size: null, source: null, style: null, cutout: null }, id));
           } else {
+            let tmp16 = jsx;
+            let tmp17 = _require;
             obj = { size: null, source: null };
             obj[0] = avatarSize;
             obj[1] = fn;

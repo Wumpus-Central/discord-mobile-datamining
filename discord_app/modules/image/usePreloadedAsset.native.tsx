@@ -1,12 +1,12 @@
 // === Module 16170: usePreloadedAsset ===
 
 // Module 16170 (usePreloadedAsset)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
 
 export default function usePreloadedAsset(arg0) {
   const _require = arg0;
@@ -22,6 +22,7 @@ export default function usePreloadedAsset(arg0) {
   if (num === undefined) {
     num = 2000;
   }
+  dependencyMap = undefined;
   let callback;
   let combined;
   c5 = undefined;
@@ -68,7 +69,7 @@ export default function usePreloadedAsset(arg0) {
           if (!c0) {
             c0 = true;
             const obj = { key: null, status: "timed-out" };
-            obj[0] = combined;
+            obj[0] = closure_1_4;
             closure_1_5(obj);
           }
         }, timeout);
@@ -77,18 +78,18 @@ export default function usePreloadedAsset(arg0) {
             let preloadResult = num(16171).preload(tmp);
             const obj2 = num(16171);
           }
-          preloadResult.then((result) => {
+          preloadResult.then(() => {
             if (!c0) {
               c0 = true;
               const obj = { key: null, status: "preloaded" };
-              obj[0] = combined;
+              obj[0] = closure_1_4;
               closure_1_5(obj);
             }
           }, () => {
             if (!c0) {
               c0 = true;
               const obj = { key: null, status: "skipped" };
-              obj[0] = combined;
+              obj[0] = closure_1_4;
               closure_1_5(obj);
             }
           });
@@ -99,6 +100,7 @@ export default function usePreloadedAsset(arg0) {
         }
         preloadResult = num(5449).preload(tmp, timeout + 1000);
         let obj = num(5449);
+        const tmp4 = timeout;
       }
     }
   }, items1);

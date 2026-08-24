@@ -1,7 +1,6 @@
 // === Module 13317: ? ===
 
 // Module 13317
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
 import registerAssetDefault from "registerAsset" /* 13318 */;
 import { dismissUpsellCTA } from "setStoredContacts" /* 11852 */;
@@ -10,16 +9,18 @@ import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: c4, AnalyticsSections: c5 } = ME);
-let obj = { padding: 12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj = { container: null };
+obj = { padding: 12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) {
   location = location.location;
   let obj = {
     onPress() {
-      const obj = { type: closure_1_5.CONTACT_SYNC_MODAL, location: null };
+      let obj = closure_1_1(closure_1_2[7]);
+      obj = { type: closure_1_5.CONTACT_SYNC_MODAL, location: null };
       let str = location;
       let str2 = location;
       if (location == null) {
@@ -30,12 +31,12 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
       if (str == null) {
         str = "Friends List Upsell";
       }
-      location(dependencyMap[8]).openContactSyncModal({}, { page: str });
-      const obj3 = location(dependencyMap[8]);
+      location(closure_1_2[8]).openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      location(7172);
-      const obj = { label: null, onPress: null };
+      let obj = location(7172);
+      obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+      obj = { label: null, onPress: null };
       const intl = location(1236).intl;
       obj[0] = intl.string(location(1236).t.WAI6xu);
       obj[1] = function onPress() {
@@ -57,7 +58,8 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
   obj[5] = intl2.string(location(1236).t.c6KIpg);
   return jsx(location(8083).FormCTA, {
     onPress() {
-      const obj = { type: closure_1_5.CONTACT_SYNC_MODAL, location: null };
+      let obj = closure_1_1(closure_1_2[7]);
+      obj = { type: closure_1_5.CONTACT_SYNC_MODAL, location: null };
       let str = location;
       let str2 = location;
       if (location == null) {
@@ -68,12 +70,12 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
       if (str == null) {
         str = "Friends List Upsell";
       }
-      location(dependencyMap[8]).openContactSyncModal({}, { page: str });
-      const obj3 = location(dependencyMap[8]);
+      location(closure_1_2[8]).openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      location(7172);
-      const obj = { label: null, onPress: null };
+      let obj = location(7172);
+      obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+      obj = { label: null, onPress: null };
       const intl = location(1236).intl;
       obj[0] = intl.string(location(1236).t.WAI6xu);
       obj[1] = function onPress() {
@@ -89,6 +91,6 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
     subtitle: null
   });
 });
-let result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");
+let result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");
 
 export default memoResult;

@@ -2,10 +2,10 @@
 
 // Module 8331 (_fetchMessageInteractionData)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _fetchMessageInteractionData() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -40,19 +40,22 @@ function _fetchMessageInteractionData() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/interactions/InteractionActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/interactions/InteractionActionCreators.tsx");
 
 export const queueInteractionComponentState = function queueInteractionComponentState(c1, closure_9, c8, c4) {
-  const obj = { type: "QUEUE_INTERACTION_COMPONENT_STATE", messageId: c1, nonce: closure_9, state: c8, componentId: c4 };
+  let obj = dispatcherDefault;
+  obj = { type: "QUEUE_INTERACTION_COMPONENT_STATE", messageId: c1, nonce: closure_9, state: c8, componentId: c4 };
   obj.dispatch(obj);
 };
 export const addQueued = function addQueued(closure_9, arg1) {
   ({ data, messageId, preflight, onCreate, onSuccess, onFailure } = arg1);
-  const obj = { type: "INTERACTION_QUEUE", data, nonce: closure_9, messageId, preflight, onCreate, onSuccess, onFailure };
+  let obj = dispatcherDefault;
+  obj = { type: "INTERACTION_QUEUE", data, nonce: closure_9, messageId, preflight, onCreate, onSuccess, onFailure };
   obj.dispatch(obj);
 };
 export const setFailed = function setFailed(closure_1, code, message, status) {
-  const obj = { type: "INTERACTION_FAILURE", nonce: closure_1, errorMessage: message, errorCode: code, status };
+  let obj = dispatcherDefault;
+  obj = { type: "INTERACTION_FAILURE", nonce: closure_1, errorMessage: message, errorCode: code, status };
   obj.dispatch(obj);
 };
 export const fetchMessageInteractionData = function fetchMessageInteractionData(channelId, messageId) {

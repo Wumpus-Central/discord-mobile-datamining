@@ -1,10 +1,10 @@
 // === Module 1141: _isNativeReflectConstruct ===
 
 // Module 1141 (_isNativeReflectConstruct)
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "noop" /* 19 */;
 
@@ -72,8 +72,8 @@ class ErrorBoundary {
           _lastEventId = type.event_id === closure_1._lastEventId;
         }
         if (_lastEventId) {
-          showDialog(closure_1[6]);
-          const obj = {};
+          let obj = showDialog(closure_1[6]);
+          obj = {};
           const merged = Object.assign(showDialog.dialogOptions);
           obj.eventId = closure_1._lastEventId;
           obj.showReportDialog(obj);
@@ -92,7 +92,7 @@ let items = [
       dependencyMap = arg0;
       closure_2 = componentStack;
       componentStack = componentStack.componentStack;
-      ({ beforeCapture: _getPrototypeOf, onError: _isNativeReflectConstruct, showDialog: noop, dialogOptions: ErrorBoundary } = this.props);
+      ({ beforeCapture: closure_4, onError: _isNativeReflectConstruct, showDialog: noop, dialogOptions: ErrorBoundary } = this.props);
       ErrorBoundary(1024).withScope((arg0) => {
         if (closure_4) {
           tmp(arg0, table, componentStack);
@@ -103,9 +103,9 @@ let items = [
         } else {
           handled = obj.props.fallback;
         }
-        const result = ErrorBoundary(table[7]).captureReactException(table, closure_2, { mechanism: { handled, type: "auto.function.react.error_boundary" } });
+        const result = closure_1_0(table[7]).captureReactException(table, closure_2, { mechanism: { handled, type: "auto.function.react.error_boundary" } });
         if (closure_5) {
-          tmp10(table, componentStack, result);
+          tmp10(tmp8, componentStack, result);
         }
         if (closure_6) {
           obj._lastEventId = result;
@@ -113,13 +113,12 @@ let items = [
             obj = {};
             const merged = Object.assign(closure_0);
             obj.eventId = result;
-            ErrorBoundary(table[6]).showReportDialog(obj);
-            const tmp6Result = ErrorBoundary(table[6]);
+            closure_1_0(table[6]).showReportDialog(obj);
+            const tmp6Result = closure_1_0(table[6]);
           }
         }
-        obj = { error: table, componentStack, eventId: result };
+        obj = { error: tmp8, componentStack, eventId: result };
         obj.setState(obj);
-        const obj2 = ErrorBoundary(table[7]);
       });
     }
   },
@@ -209,7 +208,9 @@ export const withErrorBoundary = function withErrorBoundary(displayName) {
   ErrorBoundary = displayName;
   dependencyMap = arg1;
   const memoResult = noop.memo((arg0) => {
+    let obj = {};
     const merged = Object.assign(closure_1);
+    obj = {};
     const merged1 = Object.assign(arg0);
     return <closure_1_9><closure_0 /></closure_1_9>;
   });

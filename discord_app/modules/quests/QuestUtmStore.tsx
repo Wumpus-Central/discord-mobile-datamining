@@ -1,7 +1,7 @@
 // === Module 7475: keys ===
 
 // Module 7475 (keys)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let obj = keys.create((arg0) => {
@@ -15,6 +15,6 @@ let obj = keys.create((arg0) => {
   };
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
+const result = set.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
 
 export default obj;

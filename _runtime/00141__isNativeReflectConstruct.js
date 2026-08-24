@@ -3,9 +3,9 @@
 // Module 141 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 124 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 const ReadOnlyElement = arg1;
@@ -255,8 +255,8 @@ const items = [
   },
   {
     key: "getBoundingClientRect",
-    value: function getBoundingClientRect() {
-      const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
+    value: function getBoundingClientRect(nativeElementReference, includeTransform) {
+      nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
         const boundingClientRect = importDefault(139).getBoundingClientRect(nativeElementReference, true);
         let tmp6 = new _isNativeReflectConstructDefault(boundingClientRect[0], boundingClientRect[1], boundingClientRect[2], boundingClientRect[3]);
@@ -287,7 +287,6 @@ const items = [
         importDefault(139).setPointerCapture(nativeElementReference, nativeElementReference);
         const obj2 = importDefault(139);
       }
-      const obj = ReadOnlyElement(136);
     }
   },
   {
@@ -298,14 +297,13 @@ const items = [
         const result = importDefault(139).releasePointerCapture(nativeElementReference, nativeElementReference);
         const obj2 = importDefault(139);
       }
-      const obj = ReadOnlyElement(136);
     }
   }
 ];
 
 export default importDefaultResult(ReadOnlyElement, items);
-export const getBoundingClientRect = function _getBoundingClientRect(c5, includeTransform) {
-  const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(c5);
+export const getBoundingClientRect = function _getBoundingClientRect(nativeElementReference3, includeTransform) {
+  const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(nativeElementReference3);
   if (null != nativeElementReference) {
     const boundingClientRect = importDefault(139).getBoundingClientRect(nativeElementReference, includeTransform.includeTransform);
     const tmp12 = new _isNativeReflectConstructDefault(boundingClientRect[0], boundingClientRect[1], boundingClientRect[2], boundingClientRect[3]);

@@ -3,11 +3,11 @@
 // Module 10577 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 589 */;
 import useUserIsTeen from "useUserIsTeen" /* 8152 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
 
 export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOrDefault() {
   currentUser = currentUser.getCurrentUser();
@@ -25,7 +25,9 @@ export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOr
     }
     return flag;
   });
+  const obj2 = initialize;
   let userIsTeen = useUserIsTeen.useUserIsTeen();
+  const obj3 = useUserIsTeen;
   let tmp3 = !userIsTeen;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });

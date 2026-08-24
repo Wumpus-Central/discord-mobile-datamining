@@ -1,11 +1,11 @@
 // === Module 16589: handleInviteData ===
 
 // Module 16589 (handleInviteData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import initializeDefault from "initialize" /* 5038 */;
-import set from "set" /* 8056 */;
+import set2 from "set" /* 8056 */;
 import _modDef12831 from "module_12831" /* 12831 */;
 import inviteGuildHasPendingMemberDisabledVerification from "inviteGuildHasPendingMemberDisabledVerification" /* 12832 */;
 
@@ -25,25 +25,29 @@ function handleInviteData(invite) {
     }
     if (hasItem) {
       _modDef12831.onOpenHubInvite(invite.invite);
+      const obj5 = _modDef12831;
     }
   }
   let new_member = invite.invite.new_member;
   if (new_member) {
-    let hasFlagResult = hasFlag.hasFlag(num, set.GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = hasFlag.hasFlag(num, set2.GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      hasFlagResult = hasFlag.hasFlag(num, set.GuildInviteFlags.IS_APPLICATION_BYPASS);
-      const tmp3Result = hasFlag;
+      hasFlagResult = tmp3(1403).hasFlag(num, tmp3(8056).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      const tmp3Result = tmp3(1403);
     }
     new_member = !hasFlagResult;
+    const obj = hasFlag;
   }
   if (new_member) {
     new_member = null != guild;
   }
   if (new_member) {
     new_member = inviteGuildHasPendingMemberDisabledVerification.inviteGuildHasPendingMemberDisabledVerification(guild);
+    const obj3 = inviteGuildHasPendingMemberDisabledVerification;
   }
   if (new_member) {
     const result = inviteGuildHasPendingMemberDisabledVerification.openVerificationModalOrTransitionToApplication(guild.id);
+    const obj4 = inviteGuildHasPendingMemberDisabledVerification;
   }
 }
 const GuildFeatures = ME.GuildFeatures;
@@ -56,6 +60,6 @@ let prototype = function GuildVerificationManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = obj132.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
+let result = set.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
 
 export default prototype;

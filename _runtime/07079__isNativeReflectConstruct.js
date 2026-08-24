@@ -3,9 +3,9 @@
 // Module 7079 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 7074 */;
 import RVGridLayoutManagerImpl from "_classCallCheck" /* 7050 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 7069 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 7071 */;
-import _get from "_get" /* 7072 */;
+import closure_1 from "_possibleConstructorReturn" /* 7069 */;
+import closure_2 from "_getPrototypeOf" /* 7071 */;
+import closure_3 from "_get" /* 7072 */;
 import importDefaultResult from "_createClass" /* 7051 */;
 
 function _isNativeReflectConstruct() {
@@ -33,7 +33,7 @@ class RVGridLayoutManagerImpl {
     tmp = RVGridLayoutManagerImpl(this, RVGridLayoutManagerImpl);
     items = [, ];
     items[0] = global;
-    items[1] = fn;
+    items[1] = arg1;
     tmp2 = closure_2;
     obj = closure_2(RVGridLayoutManagerImpl);
     tmp3 = closure_1;
@@ -55,7 +55,9 @@ let items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(windowSize) {
-      const self = this;
+      let self = this;
+      self = this;
+      closure_1 = undefined;
       const tmp = callback2(callback(self.prototype), "updateLayoutParams", this);
       closure_1 = tmp;
       let fn = tmp;
@@ -133,6 +135,7 @@ let items = [
       if (result <= arg1) {
         do {
           let layout1 = self.getLayout(result);
+          let tmp4 = result;
           let sum = y;
           let num = x;
           if (!self.checkBounds(x, layout1.width)) {
@@ -174,6 +177,8 @@ let items = [
         while (true) {
           let tmp5 = self.layouts[tmp2];
           let BooleanResult = flag;
+          let tmp7 = tmp2;
+          let tmp8 = num;
           let tmp9 = tmp3;
           if (!flag) {
             let _Boolean = Boolean;

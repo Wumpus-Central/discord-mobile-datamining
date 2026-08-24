@@ -6,19 +6,20 @@ import initializeDefault from "initialize" /* 5038 */;
 import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10029 */;
 import dispatcherDefault from "dispatcher" /* 10031 */;
 import NativeModulesDefault from "NativeModules" /* 11579 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import handleConnectionOpen2 from "handleConnectionOpen" /* 4197 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import getState from "getState" /* 7383 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "getState" /* 7383 */;
 import ME from "ME" /* 676 */;
 import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13263 */;
 
-require = fn;
+require = arg1;
 function handleMessageSendFailure(shouldNotify) {
   ({ channelId, messageId } = shouldNotify);
   if (shouldNotify.shouldNotify) {
     if ("active" !== state.getState()) {
-      let obj = { category: "local", alertTitle: null, alertBody: null, userInfo: null };
+      let obj = NativeModulesDefault;
+      obj = { category: "local", alertTitle: null, alertBody: null, userInfo: null };
       const intl = getSystemLocale.intl;
       obj[1] = intl.string(getSystemLocale.t.LdlH2M);
       const intl2 = getSystemLocale.intl;
@@ -32,6 +33,7 @@ function handleMessageSendFailure(shouldNotify) {
     } else if (channelId !== channelId.getChannelId(guildId.getGuildId())) {
       const MESSAGE_FAILED_TO_SEND = constants.MESSAGE_FAILED_TO_SEND;
       const notificationDuration = isReactionMilestoneNotification.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
+      const obj4 = isReactionMilestoneNotification;
       obj1 = { type: null, channelId: null, messageId: null, key: null, duration: null, onDismiss: null, inAppNotificationId: null };
       obj1[0] = MESSAGE_FAILED_TO_SEND;
       obj1[1] = channelId;
@@ -44,6 +46,7 @@ function handleMessageSendFailure(shouldNotify) {
       const obj5 = dispatcherDefault;
       obj1[6] = isReactionMilestoneNotification.generateInAppNotificationId();
       obj5.enqueueNotification(obj1);
+      const obj7 = isReactionMilestoneNotification;
     }
   }
 }
@@ -73,7 +76,7 @@ function handleMessageCreate(message) {
   if (prop) {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
-      handleMessageSendFailure({ channelId: message.channel_id, messageId: message.id, shouldNotify: true });
+      closure_1_10({ channelId: message.channel_id, messageId: message.id, shouldNotify: true });
     }, 3000);
   }
 }
@@ -87,6 +90,6 @@ let prototype = function MessageSendFailureNotificationManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/messages/native/MessageSendFailureNotificationManager.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/MessageSendFailureNotificationManager.tsx");
 
 export default prototype;

@@ -1,12 +1,12 @@
 // === Module 12296: useUserProfileWidgets ===
 
 // Module 12296 (useUserProfileWidgets)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
-import initialize from "initialize" /* 5370 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "createUserWidgetFromServer" /* 5365 */;
+import closure_4 from "initialize" /* 5370 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
 
 export default function useUserProfileWidgets(arg0) {
   const _require = arg0;

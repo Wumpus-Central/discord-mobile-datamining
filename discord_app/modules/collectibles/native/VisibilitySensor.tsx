@@ -1,34 +1,39 @@
 // === Module 12008: onChange ===
 
 // Module 12008 (onChange)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import noop from "noop" /* 19 */;
-import noop2 from "noop" /* 19 */;
+import closure_4 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 const View = get_ActivityIndicator.View;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = obj132.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
 
 export default function _default(onChange) {
   onChange = onChange.onChange;
+  dependencyMap = undefined;
+  let callback;
   let width;
+  let height;
+  closure_5 = undefined;
+  callback = undefined;
   function stopWatching(closure_5, arg1) {
     if (null !== ref.current) {
       const _clearInterval = clearInterval;
-      clearInterval(ref.current);
-      ref.current = null;
+      clearInterval(tmp.current);
+      tmp.current = null;
     }
   }
   ({ children, resetKey } = onChange);
   let tmp = width(null);
   dependencyMap = tmp;
-  let callback = width(false);
+  callback = width(false);
   const size = onChange(1494)();
   width = size.width;
-  const height = size.height;
+  height = size.height;
   closure_5 = width(null);
   const items = [resetKey];
   callback(() => {

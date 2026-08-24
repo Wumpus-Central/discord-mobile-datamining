@@ -11,12 +11,14 @@ import { HelpdeskArticles } from "ME" /* 676 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
 
 export default function FamilyCenterParentalControlsContentAndSocial() {
-  const obj = { settings: items, subLabel: null };
+  let obj = createToggle;
+  obj = { sections: null };
+  obj = { settings: items, subLabel: null };
   items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
   const intl = getSystemLocale.intl;
   obj1 = { learnMoreLink: null };

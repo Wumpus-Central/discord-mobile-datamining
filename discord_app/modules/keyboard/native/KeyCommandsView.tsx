@@ -1,7 +1,7 @@
 // === Module 13940: KeyCommandsView ===
 
 // Module 13940 (KeyCommandsView)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
@@ -17,14 +17,16 @@ let context = importAllResult.createContext({
 
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/keyboard/native/KeyCommandsView.tsx");
+const result = require("set").fileFinishedImporting("modules/keyboard/native/KeyCommandsView.tsx");
 
 export default function KeyCommandsView(style) {
   const merged = Object.assign(style, Object.create(null));
+  let first;
+  dependencyMap = undefined;
   let callback;
   let callback1;
   const tmp3 = callback(callback1.useState([]), 2);
-  const first = tmp3[0];
+  first = tmp3[0];
   dependencyMap = tmp3[1];
   callback = callback1.useCallback((arg0) => {
     closure_0 = arg0;
@@ -36,11 +38,11 @@ export default function KeyCommandsView(style) {
   }, []);
   callback1 = callback1.useCallback((arg0) => {
     closure_0 = arg0;
-    callback((arr) => arr.filter((item, index) => item.eventName !== closure_0));
+    callback((arr) => arr.filter((eventName) => eventName.eventName !== closure_0));
   }, []);
   let items = [first, callback, callback1];
-  { value: callback1.useMemo(() => ({ keyCommands: first, addKeyCommand: callback, removeKeyCommand: callback1 }), items), children: null };
-  const obj = {};
+  let obj = { value: callback1.useMemo(() => ({ keyCommands: first, addKeyCommand: callback, removeKeyCommand: callback1 }), items), children: null };
+  obj = {};
   const tmp2 = callback();
   const merged1 = Object.assign(merged);
   const items1 = [tmp2.viewDefaults, style.style];
@@ -48,7 +50,7 @@ export default function KeyCommandsView(style) {
   obj.keyCommands = first;
   obj.onKeyCommand = function onKeyCommand(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    const found = nativeEvent.find((item, index) => item.eventName === nativeEvent.eventName);
+    const found = nativeEvent.find((eventName) => eventName.eventName === nativeEvent.eventName);
     if (found != null) {
       found.onKeyCommand(nativeEvent);
     }
@@ -64,11 +66,13 @@ export const useKeyCommands = function useKeyCommands(memo) {
   const items = [addKeyCommand, removeKeyCommand, memo];
   const effect = importAllResult.useEffect(() => {
     for (const item10005 of closure_0) {
+      let tmp = addKeyCommand;
       let tmp2 = addKeyCommand(item10005);
       continue;
     }
     return () => {
       for (const item10005 of closure_0) {
+        let tmp = callback;
         let tmp2 = callback(item10005.eventName);
         continue;
       }

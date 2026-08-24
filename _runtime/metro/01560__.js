@@ -8,6 +8,7 @@ export default (arg0, arr) => {
   for (let num = 0; num < keys.length; num = num + 1) {
     let tmp2 = keys[num];
     let tmp3 = arg0[tmp2];
+    let tmp4 = num;
     if (tmp) {
       let tmp5 = -1 !== arr.indexOf(tmp2);
     } else {

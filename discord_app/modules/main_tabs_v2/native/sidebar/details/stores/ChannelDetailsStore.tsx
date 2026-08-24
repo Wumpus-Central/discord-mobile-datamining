@@ -1,7 +1,7 @@
 // === Module 8505: useChannelDetailsStore ===
 
 // Module 8505 (useChannelDetailsStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import keys from "keys" /* 644 */;
 
@@ -10,7 +10,7 @@ let obj = keys.create(() => {
   obj = { states: new Map() };
   return obj;
 });
-let result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
+let result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
 
 export const useChannelDetailsStore = obj;
 export const deleteChannelStates = function deleteChannelStates() {
@@ -62,7 +62,6 @@ export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearc
   const map = new Map(states);
   const result = map.set(arg0, obj);
   map(705).batchUpdates(() => closure_1_3.setState({ states: map }));
-  const obj5 = map(705);
 };
 export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;

@@ -2,12 +2,12 @@
 
 // Module 9662 (_fetchVideoFilterAssets)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _fetchVideoFilterAssets() {
   const self = this;
   const tmp = callback(function*() {
@@ -362,7 +362,7 @@ function _saveLastUsedBackgroundOption() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
 
 export const fetchVideoFilterAssets = function fetchVideoFilterAssets() {
   const self = this;
@@ -397,7 +397,8 @@ export const deleteVideoFilterAsset = function deleteVideoFilterAsset() {
 export { saveLastUsedBackgroundOption };
 export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) {
   if (closure_4.isSupported()) {
-    const obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: null };
+    let obj = dispatcherDefault;
+    obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: null };
     obj[1] = arg0;
     obj.dispatch(obj);
   }
@@ -405,6 +406,7 @@ export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) 
 export const startApplyMediaFilterSettings = function startApplyMediaFilterSettings() {
   if (closure_4.isSupported()) {
     dispatcherDefault.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
+    const obj = dispatcherDefault;
   }
 };
 export const errorApplyingMediaFilterSettings = function errorApplyingMediaFilterSettings() {

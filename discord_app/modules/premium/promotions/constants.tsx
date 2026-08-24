@@ -1,11 +1,11 @@
 // === Module 7656: CountryListMode ===
 
 // Module 7656 (CountryListMode)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const items = ["logitech", "call_of_duty"];
-const set = new Set(items);
-const result = obj132.fileFinishedImporting("modules/premium/promotions/constants.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/premium/promotions/constants.tsx");
 
 export const CountryListMode = { BLOCKLIST: "blocklist", ALLOWLIST: "allowlist" };
 export const PromotionTypes = { THIRD_PARTY: 0, [0]: "THIRD_PARTY", BOGO: 1, [1]: "BOGO", THIRD_PARTY_DIRECT_FULFILLMENT: 2, [2]: "THIRD_PARTY_DIRECT_FULFILLMENT", THIRD_PARTY_INBOUND: 3, [3]: "THIRD_PARTY_INBOUND", THIRD_PARTY_OUTBOUND: 4, [4]: "THIRD_PARTY_OUTBOUND", MARKETING_MOMENT: 5, [5]: "MARKETING_MOMENT", GIFT_PROMOTION: 6, [6]: "GIFT_PROMOTION", THIRD_PARTY_OUTBOUND_RECURRING: 7, [7]: "THIRD_PARTY_OUTBOUND_RECURRING" };

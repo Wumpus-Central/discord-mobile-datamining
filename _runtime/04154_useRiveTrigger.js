@@ -1,10 +1,10 @@
 // === Module 4154: useRiveTrigger ===
 
 // Module 4154 (useRiveTrigger)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c3, useEffect: c4, useRef: c5, useState: closure_6 } = noop);
 
 export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, arg2) {
@@ -24,9 +24,10 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
   tmp3.current = onTrigger;
   const items = [instance, startAnimation];
   disposableMemo = _require(4149).useDisposableMemo(() => {
-    if (instance) {
-      return instance.triggerProperty(closure_0);
+    if (closure_1) {
+      return obj.triggerProperty(closure_0);
     }
+    obj = closure_1;
   }, (dispose) => {
     let disposeResult;
     if (dispose != null) {
@@ -59,7 +60,7 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
   const items3 = [disposableMemo];
   callback3(() => {
     if (disposableMemo) {
-      closure_0 = disposableMemo.addListener(() => {
+      closure_0 = obj.addListener(() => {
         const current = ref.current;
         if (current != null) {
           current();
@@ -72,6 +73,7 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
         }
       };
     }
+    obj = disposableMemo;
   }, items3);
   obj = {
     trigger: callback2(() => {
@@ -82,9 +84,9 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
         const _console = console;
         const _HermesInternal = HermesInternal;
         if (ref2.current) {
-          warn(concat(closure_0, "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount."));
+          warn(concat(tmp3, "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount."));
         } else {
-          warn(concat(closure_0, "') called but the property is not available yet. The viewModelInstance may still be loading."));
+          warn(concat(tmp3, "') called but the property is not available yet. The viewModelInstance may still be loading."));
         }
       }
     }, items4),

@@ -1,9 +1,9 @@
 // === Module 9519: useOpenGameProfileModal ===
 
 // Module 9519 (useOpenGameProfileModal)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
+const result = set.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
 
 export default function useOpenGameProfileModal(arg0) {
   importDefault = arg0;
@@ -12,9 +12,11 @@ export default function useOpenGameProfileModal(arg0) {
     obj = {};
   }
   const onOpened = obj.onOpened;
+  closure_2 = undefined;
+  let gameId;
   const tmp = importDefault(onOpened[0])(arg0);
   closure_2 = tmp;
-  const gameId = tmp.gameId;
+  gameId = tmp.gameId;
   let fn;
   if (tmp.shouldOpenGameProfile) {
     if (null != gameId) {
@@ -25,8 +27,8 @@ export default function useOpenGameProfileModal(arg0) {
         if (stopPropagation != null) {
           stopPropagation.preventDefault();
         }
-        callback(onOpened[1]);
-        const obj = {};
+        let obj = callback(onOpened[1]);
+        obj = {};
         const merged = Object.assign(callback);
         obj.gameId = gameId;
         obj.gameProfileModalChecks = closure_2;

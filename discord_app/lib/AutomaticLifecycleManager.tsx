@@ -1,9 +1,9 @@
 // === Module 5038: initialize ===
 
 // Module 5038 (initialize)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("lib/AutomaticLifecycleManager.tsx");
+const result = set.fileFinishedImporting("lib/AutomaticLifecycleManager.tsx");
 class AutomaticLifecycleManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -21,8 +21,8 @@ prototype["initialize"] = function initialize() {
     self._initialize();
     const _Object = Object;
     const entries = Object.entries(self.actions);
-    const item = entries.forEach((item, index) => {
-      [tmp, tmp2] = item;
+    const item = entries.forEach((arg0) => {
+      [tmp, tmp2] = arg0;
       let callback = tmp2;
       if (typeof tmp2 !== "function") {
         callback = tmp2.callback;
@@ -30,9 +30,9 @@ prototype["initialize"] = function initialize() {
       const subscription = callback(table[0]).subscribe(tmp, callback);
     });
     const stores = self.stores;
-    const item1 = stores.forEach((item, index) => {
-      index.addChangeListener(item);
-      item();
+    const item1 = stores.forEach((onChange, addChangeListener) => {
+      addChangeListener.addChangeListener(onChange);
+      onChange();
     });
   }
 };
@@ -48,8 +48,8 @@ prototype["terminate"] = function terminate(arg0) {
       self._terminate();
       const _Object = Object;
       const entries = Object.entries(self.actions);
-      const item = entries.forEach((item, index) => {
-        [tmp, tmp2] = item;
+      const item = entries.forEach((arg0) => {
+        [tmp, tmp2] = arg0;
         let callback = tmp2;
         if (typeof tmp2 !== "function") {
           callback = tmp2.callback;
@@ -57,8 +57,8 @@ prototype["terminate"] = function terminate(arg0) {
         callback(table[0]).unsubscribe(tmp, callback);
       });
       const stores = self.stores;
-      const item1 = stores.forEach((item, index) => {
-        index.removeChangeListener(item);
+      const item1 = stores.forEach((arg0, removeChangeListener) => {
+        removeChangeListener.removeChangeListener(arg0);
       });
     }
   }

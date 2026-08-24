@@ -10,28 +10,27 @@ import nameFromUserDefault from "nameFromUser" /* 4219 */;
 import Text from "Text" /* 4734 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
 import preloadDefault from "preload" /* 5449 */;
-import getRoleIconData from "getRoleIconData" /* 7164 */;
 import RoleIconDefault from "RoleIcon" /* 7165 */;
 import registerAssetDefault from "registerAsset" /* 8338 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = fn;
+require = arg1;
 function HorizontalAutocompleteOption(arg0) {
   let sharedValue;
   ({ children, onPress } = arg0);
   let obj = sharedValue(4115);
   sharedValue = obj.useSharedValue(0);
   useMountLayoutEffectDefault(() => {
-    const result = sharedValue.set(sharedValue(dependencyMap[14]).withTiming(1));
+    const result = sharedValue.set(sharedValue(closure_1_2[14]).withTiming(1));
   });
   const tmp = callback3();
   const fn = function c() {
@@ -50,22 +49,26 @@ noopAll;
 ({ TouchableOpacity: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ ChannelTypes: c10, Fonts } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { emoji: { width: 32, height: 32 }, emojiImage: { resizeMode: "contain" }, emojiText: { lineHeight: 32, fontSize: 27, textAlign: "center" }, emojiName: { marginLeft: 8 }, nickname: null, status: null, horizontalAutocompleteOption: null, roleIcon: null, channelName: null };
+createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.TEXT_DEFAULT, 14));
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[6] = { paddingHorizontal: 8, flex: 1, flexDirection: "row", height: 56, alignItems: "center", borderRightWidth: StyleSheet.hairlineWidth, borderRightColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[7] = { marginRight: 4 };
 createCacheKey[8] = { marginLeft: 8 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let closure_14 = { code: "function HorizontalAutocompleteTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+let obj2 = { paddingHorizontal: 8, flex: 1, flexDirection: "row", height: 56, alignItems: "center", borderRightWidth: StyleSheet.hairlineWidth, borderRightColor: ThemesDefault.colors.BORDER_SUBTLE };
 let obj3 = {
   User(arg0) {
     ({ user, nick } = arg0);
     ({ status, guildId, onPress } = arg0);
     const tmp = callback3();
+    let obj = initialize;
     const items = [closure_5];
-    let obj = { onPress, children: null };
+    obj = { onPress, children: null };
     const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     obj = { status, statusStyle: tmp.status, user, size: Button.AvatarSizes.SMALL, guildId, animate: !stateFromStores };
     const items1 = [callback(Button.Avatar, obj), ];
@@ -74,17 +77,18 @@ let obj3 = {
     items2 = [tmp.nickname];
     if (nick == null) {
       nick = nameFromUserDefault.getName(user);
+      const obj6 = nameFromUserDefault;
     }
     obj2[2] = nick;
     const items3 = [callback(Text.Text, obj2), ];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const items4 = ["@", nameFromUserDefault.getUserTag(user, { decoration: "never" })];
     obj3[2] = items4;
-    items3[1] = callback2(Text.Text, obj3);
+    items3[1] = closure_12(Text.Text, obj3);
     obj1[1] = items3;
-    items1[1] = callback2(closure_4, obj1);
+    items1[1] = closure_12(closure_4, obj1);
     obj[1] = items1;
-    return callback2(HorizontalAutocompleteOption, obj);
+    return closure_12(HorizontalAutocompleteOption, obj);
   },
   Role(onPress) {
     ({ guildId: require, name, id: importDefault, colorString } = onPress);
@@ -94,8 +98,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = getRoleIconData.getRoleIconData(stateFromStores, 30);
-      const tmp2Result = getRoleIconData;
+      roleIconData = tmp2(7164).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(7164);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -112,8 +116,10 @@ let obj3 = {
       }
       obj1[1] = tmp13;
       obj1[2] = roleIconData.unicodeEmoji;
-      obj[1] = callback(RoleIconDefault, obj1);
-      tmp9Result = callback(closure_4, obj);
+      obj[1] = closure_11(RoleIconDefault, obj1);
+      tmp9Result = tmp9(closure_4, obj);
+      const tmp10 = closure_4;
+      const tmp12 = RoleIconDefault;
     }
     const items1 = [tmp9Result, ];
     const items2 = [tmp.nickname, ];
@@ -124,9 +130,9 @@ let obj3 = {
       tmp15 = obj3;
     }
     items2[1] = tmp15;
-    items1[1] = callback(Button.LegacyText, { style: items2, children: "@" + name });
+    items1[1] = closure_11(Button.LegacyText, { style: items2, children: "@" + name });
     obj[1] = items1;
-    return callback2(HorizontalAutocompleteOption, obj);
+    return closure_12(HorizontalAutocompleteOption, obj);
   },
   Channel(channel) {
     channel = channel.channel;
@@ -140,9 +146,10 @@ let obj3 = {
     }
     const tmp = callback3();
     tmp2Result = tmp2(4984);
+    let obj = { onPress: channel.onPress, children: null };
     const items = [callback(channel(1297).Icon, { source: channelIconWithGuild }), ];
     const channelName = tmp2Result.computeChannelName(channel, closure_9, closure_8);
-    const obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
+    obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
     items[1] = callback(channel(4734).Text, obj);
     obj[1] = items;
     return callback2(HorizontalAutocompleteOption, obj);
@@ -176,6 +183,6 @@ let obj3 = {
     return callback2(HorizontalAutocompleteOption, obj1);
   }
 };
-let result = require("obj132").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocomplete.tsx");
+let result = require("set").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocomplete.tsx");
 
 export default obj3;

@@ -11,20 +11,22 @@ import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import IMAGE_SIZE from "IMAGE_SIZE" /* 9301 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = IMAGE_SIZE);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING };
+let obj = { section: null, nsfwContainer: null, nsfwText: null };
+obj = { justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING };
 obj[0] = obj;
-const createCacheKey = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+createCacheKey = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 obj[1] = createCacheKey;
 obj[2] = { marginLeft: 4, textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
   const tmp = callback3();
-  let obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL };
+  let obj = { style: tmp.nsfwContainer, children: null };
+  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL };
   const items = [callback(Button.Icon, obj), ];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = getSystemLocale.intl;
@@ -50,9 +52,9 @@ const memoResult1 = importAllResult.memo((useTier0UpsellContent) => {
   }
   items[1] = tmp6;
   obj[1] = items;
-  return callback(View, obj);
+  return closure_5(View, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponents.tsx");
+const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponents.tsx");
 
 export const NSFWRow = memoResult;
 export const Section = memoResult1;

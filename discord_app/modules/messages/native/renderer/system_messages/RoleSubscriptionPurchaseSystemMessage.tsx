@@ -1,22 +1,17 @@
 // === Module 8241: createRoleSubscriptionPurchaseSystemMessage ===
 
 // Module 8241 (createRoleSubscriptionPurchaseSystemMessage)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
 import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
 import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
 import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
 import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import identityHook from "identityHook" /* 8211 */;
-import computeIsStickerReplyEnabled from "computeIsStickerReplyEnabled" /* 8216 */;
-import transform from "transform" /* 8217 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import { SystemChannelFlags } from "ME" /* 676 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx");
 
 export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSubscriptionPurchaseSystemMessage(message) {
   message = message.message;
@@ -41,11 +36,11 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
         if (tmp9) {
           tmp9 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
         }
-        let tmp5Result = computeIsStickerReplyEnabled;
+        let tmp5Result = tmp5(8216);
         if (tmp5Result.computeIsStickerReplyEnabled(guildId, channel, message, tmp9)) {
-          tmp5Result = transform;
-          const tmp5Result1 = identityHook;
-          const transformStickerResult = tmp5Result.transformSticker(identityHook.pickRoleSubscriptionPurchaseSticker(message.id));
+          tmp5Result = tmp5(8217);
+          const tmp5Result1 = tmp5(8211);
+          const transformStickerResult = tmp5Result.transformSticker(tmp5(8211).pickRoleSubscriptionPurchaseSticker(message.id));
         }
       }
     }
@@ -56,8 +51,8 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
         obj[0] = author.id;
         obj[1] = guildMemberAvatar;
         obj[2] = guildId;
-        let guildMemberAvatarSource = getAvatarURL.getGuildMemberAvatarSource(obj, author);
-        const tmp5Result3 = getAvatarURL;
+        let guildMemberAvatarSource = tmp5(1435).getGuildMemberAvatarSource(obj, author);
+        const tmp5Result3 = tmp5(1435);
       }
       obj = { action: "bindOpenRoleSubscriptionOverview", guildId: null, messageId: null, channelId: null, roleSubscriptionListingId: null };
       obj[1] = guildId;
@@ -85,15 +80,16 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
       obj1[2] = formatUsernameOnClickDefault(obj3);
       obj1[3] = obj;
       obj1[4] = roleSubscriptionData;
-      obj2[0] = identityHook.getRoleSubscriptionPurchaseSystemMessageContentMobile(obj1);
+      obj2[0] = tmp5(8211).getRoleSubscriptionPurchaseSystemMessageContentMobile(obj1);
       obj2[1] = roleSubscriptionData.total_months_subscribed;
       obj2[2] = messageAuthorWithProcessedColor.nick;
       obj2[3] = tmp17Result.uri;
       obj2[4] = transformStickerResult;
-      const tmp5Result4 = identityHook;
-      obj2[5] = identityHook.getRoleSubscriptionPurchaseStickerCTA(message.id, false);
-      const intl = getSystemLocale.intl;
-      obj2[6] = intl.string(getSystemLocale.t.piPHvY);
+      const tmp22 = guildId;
+      const tmp5Result4 = tmp5(8211);
+      obj2[5] = tmp5(8211).getRoleSubscriptionPurchaseStickerCTA(message.id, false);
+      const intl = tmp5(1236).intl;
+      obj2[6] = intl.string(tmp5(1236).t.piPHvY);
       const merged = Object.assign(createCommonMessageDefault(message));
       return obj2;
     }

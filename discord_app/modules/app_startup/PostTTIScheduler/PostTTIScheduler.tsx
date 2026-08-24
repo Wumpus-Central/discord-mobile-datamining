@@ -1,16 +1,21 @@
 // === Module 5415: promise ===
 
 // Module 5415 (promise)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
+const obj = {
+  resolve() {
+
+  }
+};
 const promise = new Promise((resolve) => {
   obj.resolve = resolve;
 });
-const result = obj132.fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
+const result = set.fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
 
 export const schedulePostTTIEvent = function schedulePostTTIEvent(arg0) {
   closure_0 = arg0;
-  promise.then((result) => {
+  promise.then(() => {
     callback();
   });
 };

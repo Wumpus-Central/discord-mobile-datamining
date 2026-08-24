@@ -5,22 +5,19 @@ import initializeDefault from "initialize" /* 589 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import useStageHasMedia from "useStageHasMedia" /* 4988 */;
-import sortKey from "sortKey" /* 6703 */;
 import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import getActiveStageChannelIds from "getActiveStageChannelIds" /* 4989 */;
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "handleConnectionOpen" /* 1979 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "getActiveStageChannelIds" /* 4989 */;
+import closure_11 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function handleUpdateActivity() {
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   let tmp2 = null;
@@ -53,8 +50,8 @@ function handleUpdateActivity() {
               if (id === result) {
                 tmp15 = obj;
               }
-              const mutableParticipants = store.getMutableParticipants(channel.id, sortKey.StageChannelParticipantNamedIndex.SPEAKER);
-              const length = mutableParticipants.filter((item, index) => item.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
+              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(6703).StageChannelParticipantNamedIndex.SPEAKER);
+              const length = mutableParticipants.filter((type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
               const diff = mutableParticipants.length - length;
               let size;
               const diff1 = store.getParticipantCount(voiceChannelId) - length;
@@ -75,12 +72,12 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = computeChannelName;
+                let tmp12Result = tmp12(4984);
                 topic = tmp12Result.computeChannelName(channel, closure_9, closure_7);
               }
               obj[1] = topic;
-              tmp12Result = useStageHasMedia;
-              obj[2] = tmp12Result.getStageHasMedia(channel.id) ? constants.WATCHING : constants.LISTENING;
+              tmp12Result = tmp12(4988);
+              obj[2] = tmp12Result.getStageHasMedia(channel.id) ? closure_13.WATCHING : closure_13.LISTENING;
               let start;
               if (tmp15 != null) {
                 const timestamps = tmp15.timestamps;
@@ -176,10 +173,10 @@ const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(
       if (tmp5) {
         handleUpdateActivity();
       }
-      tmp5 = null != result && null != voiceStates.find((item, index) => item.channelId === _undefined.channelId);
+      tmp5 = null != result && null != voiceStates.find((channelId) => channelId.channelId === _undefined.channelId);
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelSelfRichPresenceStore.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelSelfRichPresenceStore.tsx");
 
 export default stageChannelSelfRichPresenceStore;

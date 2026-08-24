@@ -1,21 +1,21 @@
 // === Module 10065: items ===
 
 // Module 10065 (items)
-import obj132Default from "obj132" /* 687 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import setDefault from "set" /* 687 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
-const require = fn;
-let items = [2 * obj132Default.Seconds.MINUTE, obj132Default.Seconds.SECOND];
+const require = arg1;
+let items = [2 * setDefault.Seconds.MINUTE, setDefault.Seconds.SECOND];
 const items1 = [items, , , ];
-const items2 = [5 * obj132Default.Seconds.MINUTE, obj132Default.Seconds.MINUTE];
+const items2 = [5 * setDefault.Seconds.MINUTE, setDefault.Seconds.MINUTE];
 items1[1] = items2;
-const items3 = [45 * obj132Default.Seconds.MINUTE, 2 * obj132Default.Seconds.MINUTE];
+const items3 = [45 * setDefault.Seconds.MINUTE, 2 * setDefault.Seconds.MINUTE];
 items1[2] = items3;
-const items4 = [21 * obj132Default.Seconds.HOUR, 5 * obj132Default.Seconds.MINUTE];
+const items4 = [21 * setDefault.Seconds.HOUR, 5 * setDefault.Seconds.MINUTE];
 items1[3] = items4;
-let closure_6 = 2 * obj132Default.Seconds.HOUR;
-let result = require("obj132").fileFinishedImporting("modules/markup/useFormattedTimestamp.tsx");
+let closure_6 = 2 * setDefault.Seconds.HOUR;
+let result = require("set").fileFinishedImporting("modules/markup/useFormattedTimestamp.tsx");
 
 export default function useFormattedTimestamp(format) {
   const _require = format;
@@ -27,12 +27,14 @@ export default function useFormattedTimestamp(format) {
       let result = 1000 * closure_1_6;
       const _Math = Math;
       const parsed = tmp.parsed;
-      const absolute = Math.abs(parsed.diff(forceUpdate(dependencyMap[4])()));
-      const obj = items1[Symbol.iterator]();
+      const absolute = Math.abs(parsed.diff(forceUpdate(closure_1_2[4])()));
+      const obj = closure_1_5[Symbol.iterator]();
       while (obj !== undefined) {
+        let tmp13 = closure_1_3;
         let tmp14 = closure_1_3(tmp11, 2);
         if (absolute < 1000 * tmp14[0]) {
           result = 1000 * tmp14[1];
+          let tmp15 = obj;
           obj.return();
           break;
         }
@@ -42,6 +44,7 @@ export default function useFormattedTimestamp(format) {
         }, result);
         return () => clearInterval(closure_0);
       }
+      const tmp8 = closure_1_5;
     }
   }, items);
   if ("R" === format.format) {

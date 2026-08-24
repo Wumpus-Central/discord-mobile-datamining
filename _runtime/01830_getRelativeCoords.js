@@ -3,7 +3,7 @@
 // Module 1830 (getRelativeCoords)
 import measureFabric from "measureFabric" /* 1831 */;
 
-require = fn;
+require = arg1;
 const dependencyMap = arg6;
 function getRelativeCoords(arg0, arg1, arg2) {
   let obj = measureFabric;

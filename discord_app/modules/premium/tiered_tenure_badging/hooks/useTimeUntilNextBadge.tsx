@@ -1,12 +1,12 @@
 // === Module 12876: computeDaysUntilNextBadgeDate ===
 
 // Module 12876 (computeDaysUntilNextBadgeDate)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import tDefault from "t" /* 3975 */;
 
 const useMemo = noop.useMemo;
-const result = obj132.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");
+const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");
 
 export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeDate(arg0, arg1) {
   const obj = tDefault(arg0);
@@ -22,17 +22,17 @@ export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
     if (null != nextTenureBadge) {
       if (null != premiumSince) {
         const tenureReqNumMonths = tmp.tenureReqNumMonths;
-        let obj = premiumSince(dependencyMap[1])(premiumSince);
+        let obj = premiumSince(closure_1_2[1])(tmp2);
         const addResult = obj.add(tenureReqNumMonths, "months");
         obj = { days: null, months: null };
         const _Math = Math;
         const addResult1 = obj.add(tenureReqNumMonths, "months").add(1, "day");
-        const obj5 = premiumSince(dependencyMap[1])(premiumSince);
-        const addResult2 = premiumSince(dependencyMap[1])(premiumSince).add(tenureReqNumMonths, "months");
-        obj[0] = Math.max(0, premiumSince(dependencyMap[1])(premiumSince).add(tenureReqNumMonths, "months").add(1, "day").diff(premiumSince(dependencyMap[1])(), "days"));
+        const obj5 = premiumSince(closure_1_2[1])(tmp2);
+        const addResult2 = premiumSince(closure_1_2[1])(tmp2).add(tenureReqNumMonths, "months");
+        obj[0] = Math.max(0, premiumSince(closure_1_2[1])(tmp2).add(tenureReqNumMonths, "months").add(1, "day").diff(premiumSince(closure_1_2[1])(), "days"));
         const _Math2 = Math;
         const _Math3 = Math;
-        obj[1] = Math.max(0, Math.round(addResult1.diff(premiumSince(dependencyMap[1])(), "months", true)));
+        obj[1] = Math.max(0, Math.round(addResult1.diff(premiumSince(closure_1_2[1])(), "months", true)));
         return obj;
       }
     }

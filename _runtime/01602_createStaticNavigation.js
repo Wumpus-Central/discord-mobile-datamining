@@ -1,10 +1,10 @@
 // === Module 1602: createStaticNavigation ===
 
 // Module 1602 (createStaticNavigation)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 
 export const createStaticNavigation = function createStaticNavigation(getComponent) {
   closure_0 = getComponent;
@@ -39,20 +39,20 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       let obj = linking(memo[2]);
       let initialRouteName;
       if (linking != null) {
-        const config = linking.config;
+        const config = tmp2.config;
         if (config != null) {
           initialRouteName = config.initialRouteName;
         }
       }
       let enabled;
       if (linking != null) {
-        enabled = linking.enabled;
+        enabled = tmp2.enabled;
       }
       const pathConfigForStaticNavigation = obj.createPathConfigForStaticNavigation(linking, { initialRouteName }, "auto" === enabled);
       if (pathConfigForStaticNavigation) {
         let path;
-        if (linking != null) {
-          const config2 = linking.config;
+        if (tmp2 != null) {
+          const config2 = tmp2.config;
           if (config2 != null) {
             path = config2.path;
           }
@@ -60,8 +60,8 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
         obj = { path: null, initialRouteName: null, screens: null };
         obj[0] = path;
         let initialRouteName1;
-        if (linking != null) {
-          const config3 = linking.config;
+        if (tmp2 != null) {
+          const config3 = tmp2.config;
           if (config3 != null) {
             initialRouteName1 = config3.initialRouteName;
           }
@@ -70,13 +70,14 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
         obj[2] = pathConfigForStaticNavigation;
         return obj;
       }
+      const tmp = linking;
     }, items);
     const items1 = [linking, memo];
     let enabled1;
     const memo1 = obj.useMemo(() => {
       if (linking) {
-        if (typeof linking.enabled === "boolean") {
-          let enabled = linking.enabled;
+        if (typeof tmp.enabled === "boolean") {
+          let enabled = tmp.enabled;
         } else {
           let screens;
           if (memo != null) {
@@ -85,7 +86,7 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
           enabled = null != screens;
         }
         const obj = {};
-        const merged = Object.assign(linking);
+        const merged = Object.assign(tmp);
         obj.enabled = enabled;
         obj.config = memo;
         return obj;
@@ -109,7 +110,7 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
     const merged1 = Object.assign(merged);
     obj.ref = ref;
     obj.linking = memo1;
-    obj.children = <memo />;
-    return jsx(getComponent(table[3]).NavigationContainer, {});
+    obj.children = closure_1_3(memo, {});
+    return closure_1_3(getComponent(table[3]).NavigationContainer, obj);
   });
 };

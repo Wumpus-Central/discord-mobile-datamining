@@ -1,9 +1,10 @@
 // === Module 7476: getApplicationIdsByTaskTypes ===
 
 // Module 7476 (getApplicationIdsByTaskTypes)
-import obj132Default from "obj132" /* 687 */;
-import initializeState from "initializeState" /* 7453 */;
+import setDefault from "set" /* 687 */;
+import closure_3 from "initializeState" /* 7453 */;
 
+let items5 = arg1;
 function getApplicationIdsByTaskTypes(nextResult, items) {
   if (null != nextResult) {
     const _Set = Set;
@@ -13,10 +14,15 @@ function getApplicationIdsByTaskTypes(nextResult, items) {
       let tmp11 = nextResult.config.taskConfigV2.tasks[tmp9];
       let tmp12 = tmp11;
       if (null != tmp11) {
+        let tmp13 = tmp11;
         if ("applications" in tmp12) {
           let _Array = Array;
+          let tmp14 = tmp11;
           if (Array.isArray(tmp12.applications)) {
+            let tmp15 = tmp11;
             let applications = tmp12.applications;
+            let tmp16 = applications;
+            let tmp17 = applications;
             for (const item10034 of applications) {
               let addResult = set.add(item10034.id);
               continue;
@@ -35,9 +41,9 @@ function getApplicationIdsByTaskTypes(nextResult, items) {
   }
 }
 function isQuestProgressingOnConsole(closure_0) {
-  let tmp = null != items5.userStatus;
+  let tmp = null != closure_0.userStatus;
   if (tmp) {
-    const userStatus = items5.userStatus;
+    const userStatus = closure_0.userStatus;
     let expiresAt;
     if (userStatus != null) {
       if (userStatus.progress[tmp4] != null) {
@@ -62,7 +68,7 @@ function isQuestProgressingOnConsole(closure_0) {
       flag = tmp14;
     }
     if (!flag) {
-      const userStatus2 = items5.userStatus;
+      const userStatus2 = closure_0.userStatus;
       let expiresAt1;
       if (userStatus2 != null) {
         if (userStatus2.progress[tmp15] != null) {
@@ -110,7 +116,7 @@ function _getTaskDetailsForType(arg0) {
   if (taskType == null) {
     const _Object = Object;
     let values = Object.values(taskConfigV2.tasks);
-    const first = values.filter((item, index) => quest.has(item.type))[0];
+    const first = values.filter((type) => quest.has(type.type))[0];
     let type;
     if (first != null) {
       type = first.type;
@@ -152,14 +158,14 @@ function _getTaskDetailsForType(arg0) {
       if (found != null) {
         const applications = found.applications;
         if (applications != null) {
-          mapped = applications.map((item, index) => item.id);
+          mapped = applications.map((id) => id.id);
         }
       }
       obj1 = { progressSeconds: null, targetSeconds: null, targetMinutes: null, percentComplete: null, taskType: null, applications: null };
       obj1[0] = target;
       obj1[1] = target2;
       const _Math3 = Math;
-      obj1[2] = Math.ceil(target2 / obj132Default.Seconds.MINUTE);
+      obj1[2] = Math.ceil(target2 / setDefault.Seconds.MINUTE);
       let num7 = 0;
       if (target2 > 0) {
         const _Math4 = Math;
@@ -197,7 +203,7 @@ function _getTaskDetailsForType(arg0) {
       if (typeof fn4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (quest.some((item, index) => null != config.config.taskConfigV2.tasks[item])) {
+      if (quest.some((arg0) => null != config.config.taskConfigV2.tasks[arg0])) {
         let optimisticProgress = closure_3.getOptimisticProgress(quest.id, floorResult.type);
         if (null == optimisticProgress) {
           optimisticProgress = num;
@@ -231,7 +237,7 @@ function _getTaskDetailsForType(arg0) {
             const date = new Date(lastBeatAt);
             const diff = timestamp - date.valueOf();
             obj1 = quest(12);
-            num2 = obj1.floor(diff / obj132Default.Millis.SECOND, 2);
+            num2 = obj1.floor(diff / setDefault.Millis.SECOND, 2);
           }
         }
         sum = num + num2;
@@ -284,28 +290,33 @@ function formatWatchTaskTimeFromSeconds(arg0) {
   return "" + padStartResult1 + ":" + String(bound3).padStart(2, "0");
 }
 let items = [require("set").FirstPartyQuestTaskTypes.PLAY_ON_XBOX, require("set").FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION];
-fn = (arg0) => {
+items5 = items;
+const fn = (arg0) => {
   closure_0 = arg0;
-  return closure_0.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  return closure_0.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 const items1 = [require("set").FirstPartyQuestTaskTypes.WATCH_VIDEO];
+items5 = items1;
 const fn2 = (arg0) => {
   closure_0 = arg0;
-  return closure_0.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  return closure_0.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 const items2 = [require("set").FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+items5 = items2;
 const fn3 = (arg0) => {
   closure_0 = arg0;
-  return closure_0.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  return closure_0.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 const items3 = [require("set").FirstPartyQuestTaskTypes.WATCH_VIDEO, require("set").FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+items5 = items3;
 const fn4 = (arg0) => {
   closure_0 = arg0;
-  return closure_0.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  return closure_0.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 const items4 = [require("set").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, require("set").FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, require("set").FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, require("set").FirstPartyQuestTaskTypes.PLAY_ON_XBOX, require("set").FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME];
-let items5 = [require("set").FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, require("set").FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-let result = require("obj132").fileFinishedImporting("modules/quests/utils/QuestTaskUtils.tsx");
+items5 = items4;
+items5 = [require("set").FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, require("set").FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+let result = require("set").fileFinishedImporting("modules/quests/utils/QuestTaskUtils.tsx");
 
 export const getAllApplicationIds = function getAllApplicationIds(quest) {
   if (null != quest) {
@@ -388,12 +399,12 @@ export function hasSomeFirstPartyTasks(arg0) {
   closure_0 = arg0;
   return (arg0) => {
     closure_0 = arg0;
-    return closure_0.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+    return closure_0.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
   };
 }
 export const isInGameQuest = function isInGameQuest(quest) {
   items5 = quest;
-  return Array.from(items5(6723).FirstPartyQuestTaskTypesSets.IN_GAME).some((item, index) => null != lib.config.taskConfigV2.tasks[item]);
+  return Array.from(items5(6723).FirstPartyQuestTaskTypesSets.IN_GAME).some((arg0) => null != lib.config.taskConfigV2.tasks[arg0]);
 };
 export const hasSomeConsoleTasks = fn;
 export const hasWatchVideoOnDesktopTasks = fn2;
@@ -401,24 +412,24 @@ export const hasWatchVideoOnMobileTasks = fn3;
 export const hasWatchVideoTasks = fn4;
 export const hasStandaloneGameplayTasks = (arg0) => {
   closure_0 = arg0;
-  return closure_0.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  return closure_0.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 export const hasActivityTasks = (arg0) => {
   closure_0 = arg0;
-  return closure_0.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  return closure_0.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 export const isVideoQuestForMobilePlatformOnly = function isVideoQuestForMobilePlatformOnly(arg0) {
   if (typeof fn3 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   items5 = arg0;
-  let someResult = items5.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  let someResult = items5.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
   if (someResult) {
     if (typeof fn2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     items5 = arg0;
-    someResult = !items5.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+    someResult = !items5.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
   }
   return someResult;
 };
@@ -427,14 +438,14 @@ export const isConsoleQuest = function isConsoleQuest(quest) {
     HermesBuiltin.throwTypeError();
   }
   items5 = quest;
-  return items5.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  return items5.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 export const isDesktopOnlyPlayQuest = function isDesktopOnlyPlayQuest(arg0) {
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
   items5 = arg0;
-  const someResult = items5.some((item, index) => null != config.config.taskConfigV2.tasks[item]);
+  const someResult = items5.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
   let tmp2 = !someResult;
   if (!someResult) {
     tmp2 = null != arg0.config.taskConfigV2.tasks[items5(undefined, 6723).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
@@ -463,7 +474,8 @@ export const getDefaultWatchVideoTask = function getDefaultWatchVideoTask(config
   return tmp3;
 };
 export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKTOP) {
-  if (arr.some((item, index) => null != lib.config.taskConfigV2.tasks[item])) {
+  items5 = closure_0;
+  if (arr.some((arg0) => null != lib.config.taskConfigV2.tasks[arg0])) {
     let obj = { progressSeconds: 0, targetSeconds: 1, targetMinutes: 1, percentComplete: 0, taskType: null };
     obj[4] = tmp(6723).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
     let tmp13Result = obj;
@@ -471,9 +483,10 @@ export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKT
     if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    if (items5.some((item, index) => null != config.config.taskConfigV2.tasks[item])) {
+    items5 = closure_0;
+    if (items5.some((arg0) => null != config.config.taskConfigV2.tasks[arg0])) {
       obj = { quest: null, includeTaskTypes: null };
-      obj[0] = items5;
+      obj[0] = closure_0;
       if (DESKTOP != null) {
         obj[1] = DESKTOP;
         tmp13Result = (function _getLatestTaskDetails(arg0) {
@@ -556,20 +569,26 @@ export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKT
           const found = sorted.filter(lib(1370).isNotNullish);
           const obj3 = found[Symbol.iterator]();
           while (obj3 !== undefined) {
+            let tmp5 = callback2;
             let tmp6 = callback2(tmp4.eventName);
             let tmp7 = tmp6;
             if (null != tmp6) {
               let hasItem;
               if (includeTaskTypes != null) {
+                let tmp9 = tmp6;
                 hasItem = includeTaskTypes.has(tmp7);
               }
               if (hasItem) {
+                let tmp10 = callback;
                 let obj = { quest: null, taskType: null, includeTaskTypes: null };
                 obj[0] = quest;
+                let tmp11 = tmp6;
                 obj[1] = tmp7;
                 obj[2] = includeTaskTypes;
                 let tmp12 = callback(obj);
+                let tmp13 = tmp12;
                 if (null != tmp12) {
+                  let tmp14 = obj3;
                   obj3.return();
                   return tmp12;
                 }
@@ -581,16 +600,17 @@ export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKT
         })(obj);
       } else {
         const FirstPartyQuestTaskTypesSets = tmp(6723).FirstPartyQuestTaskTypesSets;
-        const tmp23 = isQuestProgressingOnConsole(items5);
+        const tmp23 = isQuestProgressingOnConsole(closure_0);
       }
     } else {
       if (typeof fn4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (items5.some((item, index) => null != config.config.taskConfigV2.tasks[item])) {
+      items5 = closure_0;
+      if (items5.some((arg0) => null != config.config.taskConfigV2.tasks[arg0])) {
         obj1 = { quest: null, taskType: null };
-        obj1[0] = items5;
-        const config = items5.config;
+        obj1[0] = closure_0;
+        const config = closure_0.config;
         let tmp14 = config.taskConfigV2.tasks[tmp(undefined, 6723).FirstPartyQuestTaskTypes.WATCH_VIDEO];
         const tmp15 = config.taskConfigV2.tasks[tmp(undefined, 6723).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
         if (null == tmp14) {
@@ -611,24 +631,25 @@ export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKT
         }
         obj1[1] = type;
         tmp13Result = _getTaskDetailsForType(obj1);
+        let tmp13 = _getTaskDetailsForType;
       } else {
-        let tmp8 = null != items5;
+        let tmp8 = null != closure_0;
         if (tmp8) {
-          tmp8 = null != items5.config.taskConfigV2.tasks[tmp(undefined, 6723).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          tmp8 = null != closure_0.config.taskConfigV2.tasks[tmp(undefined, 6723).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         }
         if (tmp8) {
           const obj2 = { quest: null, taskType: null };
-          obj2[0] = items5;
+          obj2[0] = closure_0;
           obj2[1] = tmp(6723).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP;
           tmp13Result = _getTaskDetailsForType(obj2);
-        } else if (null != items5.config.taskConfigV2.tasks[tmp(undefined, 6723).FirstPartyQuestTaskTypes.PLAY_ACTIVITY]) {
+        } else if (null != closure_0.config.taskConfigV2.tasks[tmp(undefined, 6723).FirstPartyQuestTaskTypes.PLAY_ACTIVITY]) {
           let obj3 = { quest: null, taskType: null };
-          obj3[0] = items5;
+          obj3[0] = closure_0;
           obj3[1] = tmp(6723).FirstPartyQuestTaskTypes.PLAY_ACTIVITY;
           tmp13Result = _getTaskDetailsForType(obj3);
         } else {
           const obj4 = { quest: null, taskType: null };
-          obj4[0] = items5;
+          obj4[0] = closure_0;
           obj4[1] = tmp(6723).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
           tmp13Result = _getTaskDetailsForType(obj4);
         }
@@ -639,7 +660,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKT
     return tmp13Result;
   } else {
     const obj5 = { quest: null };
-    obj5[0] = items5;
+    obj5[0] = closure_0;
     let tmp26 = _getTaskDetailsForType(obj5);
     if (null == tmp26) {
       const obj6 = { progressSeconds: 0, targetSeconds: 1, targetMinutes: 1, percentComplete: 0, taskType: null };
@@ -662,7 +683,7 @@ export const getDefaultInGameTask = function getDefaultInGameTask(config) {
   return tmp;
 };
 export const getThirdPartyTaskDetails = function getThirdPartyTaskDetails(closure_0) {
-  const tasks = items5.config.taskConfigV2.tasks;
+  const tasks = closure_0.config.taskConfigV2.tasks;
   let tmp3 = tasks[items5(undefined, 6723).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY];
   if (tmp3 == null) {
     tmp3 = tasks[items5(undefined, 6723).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME];
@@ -673,7 +694,7 @@ export const getThirdPartyTaskDetails = function getThirdPartyTaskDetails(closur
   if (null == tmp3) {
     return null;
   } else {
-    const userStatus = items5.userStatus;
+    const userStatus = closure_0.userStatus;
     let num;
     if (userStatus != null) {
       const progress = userStatus.progress;
@@ -690,8 +711,8 @@ export const getThirdPartyTaskDetails = function getThirdPartyTaskDetails(closur
     let num2 = 0;
     if (target > 0) {
       const _Math = Math;
-      num2 = items5(12).floor(Math.min(num / target, 1), 4);
-      const tmpResult = items5(12);
+      num2 = tmp(12).floor(Math.min(num / target, 1), 4);
+      const tmpResult = tmp(12);
     }
     const obj = { title: null, description: null, target: null, progress: null, percentComplete: null };
     obj[0] = tmp3.messages.taskTitle;
@@ -701,6 +722,7 @@ export const getThirdPartyTaskDetails = function getThirdPartyTaskDetails(closur
     obj[4] = num2;
     return obj;
   }
+  tmp = items5;
 };
 export const getRemainingTaskTime = function getRemainingTaskTime(targetSeconds) {
   const diff = targetSeconds.targetSeconds - targetSeconds.progressSeconds;

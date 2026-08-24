@@ -10,42 +10,45 @@ import jsxProd from "jsxProd" /* 21 */;
 import { Easing } from "module_4115" /* 4115 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function EllipsisCircle(offset) {
   offset = offset.offset;
+  let sharedValue;
   let sharedValue1;
   ({ variant, size } = offset);
   obj = offset(sharedValue1[6]);
   const tmp = callback3(size, offset, offset(sharedValue1[6]).useForegroundColor(variant));
-  const sharedValue = offset(sharedValue1[2]).useSharedValue(0.4);
+  sharedValue = offset(sharedValue1[2]).useSharedValue(0.4);
   let obj2 = offset(sharedValue1[2]);
   sharedValue1 = offset(sharedValue1[2]).useSharedValue(0.75);
   let obj3 = offset(sharedValue1[2]);
   const mountLayoutEffect = offset(sharedValue1[7]).useMountLayoutEffect(() => {
-    if (typeof withEllipsisAnimation !== "function") {
+    if (typeof closure_1_7 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const result = 166.66666666666666 * offset;
+    const result = 166.66666666666666 * tmp3;
     obj = offset(sharedValue1[2]);
+    const tmp2 = closure_1_7;
     const obj2 = offset(sharedValue1[2]);
     const result1 = sharedValue.set(obj.withDelay(result, obj2.withRepeat(offset(sharedValue1[5]).withTiming(1, closure_1_5, "animate-always"), -1, true)));
-    if (typeof withEllipsisAnimation !== "function") {
+    if (typeof tmp2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    offset(sharedValue1[2]);
-    const result2 = 166.66666666666666 * offset;
-    const tmp4Result = offset(sharedValue1[2]);
+    let tmp4Result = tmp4(tmp5[2]);
+    const result2 = 166.66666666666666 * tmp3;
+    tmp4Result = tmp4(tmp5[2]);
     const obj3 = offset(sharedValue1[5]);
-    const result3 = sharedValue1.set(tmp4Result.withDelay(result2, tmp4Result.withRepeat(offset(sharedValue1[5]).withTiming(1, closure_1_5, "animate-always"), -1, true)));
+    const tmp7 = closure_1_5;
+    const result3 = sharedValue1.set(tmp4Result.withDelay(result2, tmp4Result.withRepeat(offset(sharedValue1[5]).withTiming(1, tmp7, "animate-always"), -1, true)));
     return () => {
-      offset(sharedValue1[2]).cancelAnimation(closure_1);
-      obj = offset(sharedValue1[2]);
-      offset(sharedValue1[2]).cancelAnimation(closure_2);
+      closure_1_0(closure_1_2[2]).cancelAnimation(closure_1);
+      obj = closure_1_0(closure_1_2[2]);
+      closure_1_0(closure_1_2[2]).cancelAnimation(closure_2);
     };
   });
   const obj4 = offset(sharedValue1[7]);
   const fn = function w() {
-    { opacity: sharedValue.get(), transform: null };
+    obj = { opacity: sharedValue.get(), transform: null };
     obj = { scale: sharedValue1.get() };
     const items = [obj];
     obj[1] = items;
@@ -99,9 +102,10 @@ withEllipsisAnimation.__closure = obj;
 withEllipsisAnimation.__workletHash = 2181731162311;
 withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };
 let closure_8 = { code: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
-let result = require("obj132").fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
 
 export const Ellipsis = function Ellipsis(arg0) {
+  obj = { style: { flexDirection: "row" }, children: null };
   obj = { offset: 0 };
   const merged = Object.assign(arg0);
   const items = [callback(EllipsisCircle, obj), , ];

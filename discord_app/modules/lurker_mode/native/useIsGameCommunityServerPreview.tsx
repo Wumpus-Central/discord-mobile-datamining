@@ -1,11 +1,11 @@
 // === Module 15367: useIsGameCommunityServerPreview ===
 
 // Module 15367 (useIsGameCommunityServerPreview)
-import initialize from "initialize" /* 4022 */;
+import closure_2 from "initialize" /* 4022 */;
 import { JoinGuildSources } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/lurker_mode/native/useIsGameCommunityServerPreview.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/lurker_mode/native/useIsGameCommunityServerPreview.tsx");
 
 export default function useIsGameCommunityServerPreview(arg0) {
   const _require = arg0;
@@ -17,7 +17,7 @@ export default function useIsGameCommunityServerPreview(arg0) {
     if (lurkingSourceForGuild != null) {
       type = lurkingSourceForGuild.type;
     }
-    return type === JoinGuildSources.GAME_COMMUNITY_UPSELL;
+    return type === closure_1_3.GAME_COMMUNITY_UPSELL;
   }, items1);
 };
 export const isGameCommunityServerPreview = function isGameCommunityServerPreview(id) {

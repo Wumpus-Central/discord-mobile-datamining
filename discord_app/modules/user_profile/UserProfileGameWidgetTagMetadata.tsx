@@ -1,7 +1,7 @@
 // === Module 12176: WidgetGameTagIconRole ===
 
 // Module 12176 (WidgetGameTagIconRole)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import WidgetGameTag from "WidgetGameTag" /* 5377 */;
 
@@ -108,7 +108,7 @@ let closure_2 = {
     iconRole: obj.FRIENDS
   }
 };
-const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTagMetadata.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTagMetadata.tsx");
 
 export const WidgetGameTagIconRole = obj;
 export const buildWidgetGameTagMetadata = function buildWidgetGameTagMetadata(arg0) {
@@ -117,10 +117,13 @@ export const buildWidgetGameTagMetadata = function buildWidgetGameTagMetadata(ar
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp4 = table;
     let tmp5 = table[nextResult];
     let tmp6 = tmp5;
     if (null != tmp5) {
+      let tmp7 = nextResult;
       obj = { getText: null, icon: null };
+      let tmp8 = tmp5;
       obj[0] = tmp6.getText;
       obj[1] = arg0[tmp6.iconRole];
       obj[tmp3] = obj;

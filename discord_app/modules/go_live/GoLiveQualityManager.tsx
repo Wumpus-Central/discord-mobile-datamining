@@ -4,7 +4,7 @@
 import timestampDefault from "timestamp" /* 3 */;
 import onDefault from "on" /* 4572 */;
 
-const require = fn;
+const require = arg1;
 let obj = { RequestedSSRCsUpdate: "requested-ssrcs-update", RequestedStreamsUpdate: "requested-streams-update" };
 onDefault;
 class GoLiveQualityManager extends tmp2 {
@@ -43,7 +43,7 @@ prototype["getUserID"] = function getUserID() {
 };
 prototype["updateAudioAndVideoStreamInfo"] = function updateAudioAndVideoStreamInfo(audioSSRC, items) {
   this.audioSSRC = audioSSRC;
-  this.videoStream = items.find((item, index) => item.active);
+  this.videoStream = items.find((active) => active.active);
   this.update();
 };
 prototype["onIncomingVideoEnabled"] = function onIncomingVideoEnabled(incomingVideoEnabled) {
@@ -83,16 +83,17 @@ prototype["stopStream"] = function stopStream() {
   }
 };
 prototype["request"] = function request(arg0, arr) {
-  const self = this;
+  let self = this;
+  self = this;
   if (undefined !== this.userId) {
     closure_0 = arg0;
-    const item = arr.forEach((item, index) => {
+    const item = arr.forEach((arg0) => {
       if (null == pixelCounts.pixelCounts) {
-        pixelCounts.pixelCounts = {};
+        tmp.pixelCounts = {};
       }
-      if (pixelCounts[item] > 0) {
+      if (pixelCounts[arg0] > 0) {
         const _Math = Math;
-        pixelCounts.pixelCounts[item] = Math.floor(self.resolutionWidth * self.resolutionHeight * self.zoom * self.zoom);
+        tmp.pixelCounts[arg0] = Math.floor(self.resolutionWidth * self.resolutionHeight * self.zoom * self.zoom);
       }
     });
     self.emit(obj.RequestedSSRCsUpdate, self.userId, self.audioSSRC, arr);
@@ -121,7 +122,7 @@ prototype["setStreamId"] = function setStreamId(streamId) {
     self.delayedUpdate();
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/go_live/GoLiveQualityManager.tsx");
+const result = require("set").fileFinishedImporting("modules/go_live/GoLiveQualityManager.tsx");
 
 export default GoLiveQualityManager;
 export const GoLiveQualityManagerEvent = obj;

@@ -1,10 +1,10 @@
 // === Module 8758: transformUser ===
 
 // Module 8758 (transformUser)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
 
-const result = obj132.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
+const result = set.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
 
 export default function transformUser(id) {
   let num = id.premiumType;

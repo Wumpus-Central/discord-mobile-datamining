@@ -1,21 +1,21 @@
 // === Module 1279: hydrateSingle ===
 
 // Module 1279 (hydrateSingle)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-function hydrateSingle(arr) {
+function hydrateSingle(str) {
   let length;
   let length2;
-  if (typeof arr === "string") {
+  if (typeof str === "string") {
     obj = { type: 0, value: null };
-    obj[1] = arr;
+    obj[1] = str;
     return obj;
   } else {
-    const first = _slicedToArray(arr, 1)[0];
+    const first = callback(str, 1)[0];
     if (obj.Argument === first) {
       obj = { type: null, value: null };
       obj[0] = first;
-      obj[1] = arr[1];
+      obj[1] = str[1];
       return obj;
     } else {
       if (tmp23.Number !== first) {
@@ -26,11 +26,12 @@ function hydrateSingle(arr) {
                 if (tmp23.Pound === first) {
                   return exports.FORMAT_JS_POUND;
                 } else if (tmp23.Tag === first) {
-                  let tmp21Result = _slicedToArray(arr, 4);
+                  let tmp21Result = tmp21(str, 4);
                   let num3 = 0;
                   [tmp7, tmp8] = tmp21Result;
                   if (0 < tmp21Result[2].length) {
                     do {
+                      let tmp9 = hydrateSingle;
                       arr[num3] = hydrateSingle(arr[num3]);
                       num3 = num3 + 1;
                       length = arr.length;
@@ -40,6 +41,7 @@ function hydrateSingle(arr) {
                     let num4 = 0;
                     if (0 < arr2.length) {
                       do {
+                        let tmp11 = hydrateSingle;
                         arr2[num4] = hydrateSingle(arr2[num4]);
                         num4 = num4 + 1;
                         length2 = arr2.length;
@@ -60,13 +62,15 @@ function hydrateSingle(arr) {
                 }
               }
             }
-            tmp21Result = _slicedToArray(arr, 5);
+            tmp21Result = tmp21(str, 5);
             [tmp14, tmp15, tmp16, tmp17] = tmp21Result;
             for (const key10046 in tmp16) {
+              let tmp24 = key10046;
               let arr3 = tmp16[key10046];
               let num7 = 0;
               if (0 < arr3.length) {
                 do {
+                  let tmp19 = hydrateSingle;
                   arr3[num7] = hydrateSingle(arr3[num7]);
                   num7 = num7 + 1;
                   let length3 = arr3.length;
@@ -98,15 +102,15 @@ function hydrateSingle(arr) {
       }
       const obj4 = { type: null, value: null, style: null };
       obj4[0] = first;
-      obj4[1] = arr[1];
-      obj4[2] = arr[2];
+      obj4[1] = str[1];
+      obj4[2] = str[2];
       return obj4;
     }
   }
 }
 function compressFormatJsToAst(value) {
   if (Array.isArray(value)) {
-    return value.map((item, index) => callback(item));
+    return value.map((arg0) => callback(arg0));
   } else {
     const type = value.type;
     if (obj.Literal === type) {
@@ -125,7 +129,9 @@ function compressFormatJsToAst(value) {
               const entries = Object.entries(value.options);
               const tmp14 = entries[Symbol.iterator]();
               while (tmp14 !== undefined) {
-                let tmp19 = _slicedToArray(tmp16, 2);
+                let tmp18 = callback;
+                let tmp19 = callback(tmp16, 2);
+                let tmp20 = compressFormatJsToAst;
                 obj[tmp19[0]] = compressFormatJsToAst(tmp19[1].value);
                 continue;
               }
@@ -139,7 +145,9 @@ function compressFormatJsToAst(value) {
               const entries1 = Object.entries(value.options);
               const tmp5 = entries1[Symbol.iterator]();
               while (tmp5 !== undefined) {
-                let tmp10 = _slicedToArray(tmp7, 2);
+                let tmp9 = callback;
+                let tmp10 = callback(tmp7, 2);
+                let tmp11 = compressFormatJsToAst;
                 obj[tmp10[0]] = compressFormatJsToAst(tmp10[1].value);
                 continue;
               }
@@ -187,50 +195,52 @@ obj[7] = "Pound";
 obj.Tag = 8;
 obj[8] = "Tag";
 
-export const hydrateFormatJsAst = function hydrateFormatJsAst(arr) {
+export const hydrateFormatJsAst = function hydrateFormatJsAst(str) {
   let length;
   let length2;
-  if (typeof arr === "string") {
-    return hydrateSingle(arr);
-  } else if (typeof arr[0] === "string") {
+  if (typeof str === "string") {
+    return hydrateSingle(str);
+  } else if (typeof str[0] === "string") {
     let num5 = 0;
-    if (0 < arr.length) {
+    if (0 < str.length) {
       do {
-        arr[num5] = hydrateSingle(arr[num5]);
+        let tmp4 = hydrateSingle;
+        str[num5] = hydrateSingle(str[num5]);
         num5 = num5 + 1;
-        length2 = arr.length;
+        length2 = str.length;
       } while (num5 < length2);
     }
-    return arr;
-  } else if (0 === arr.length) {
-    return arr;
+    return str;
+  } else if (0 === str.length) {
+    return str;
   } else {
     const _Array = Array;
-    if (Array.isArray(arr[0])) {
+    if (Array.isArray(str[0])) {
       let num2 = 0;
-      if (0 < arr.length) {
+      if (0 < str.length) {
         do {
-          arr[num2] = hydrateSingle(arr[num2]);
+          let tmp3 = hydrateSingle;
+          str[num2] = hydrateSingle(str[num2]);
           num2 = num2 + 1;
-          length = arr.length;
+          length = str.length;
         } while (num2 < length);
       }
-      return arr;
+      return str;
     } else {
-      return hydrateSingle(arr);
+      return hydrateSingle(str);
     }
   }
 };
 export { compressFormatJsToAst };
-export const isCompressedAst = function isCompressedAst(dependencyMap) {
-  let tmp = typeof dependencyMap === "string";
-  if (typeof dependencyMap !== "string") {
+export const isCompressedAst = function isCompressedAst(value) {
+  let tmp = typeof value === "string";
+  if (typeof value !== "string") {
     const _Array2 = Array;
-    let isArray = Array.isArray(dependencyMap);
+    let isArray = Array.isArray(value);
     if (isArray) {
       const _Array = Array;
-      isArray = Array.isArray(dependencyMap[0]) || typeof dependencyMap[0] === "string";
-      const tmp2 = Array.isArray(dependencyMap[0]) || typeof dependencyMap[0] === "string";
+      isArray = Array.isArray(value[0]) || typeof value[0] === "string";
+      const tmp2 = Array.isArray(value[0]) || typeof value[0] === "string";
     }
     tmp = isArray;
   }

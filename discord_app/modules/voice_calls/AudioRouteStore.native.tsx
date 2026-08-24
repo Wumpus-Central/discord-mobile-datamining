@@ -1,14 +1,14 @@
 // === Module 9648: handleAudioRouteChanged ===
 
 // Module 9648 (handleAudioRouteChanged)
-import obj132 from "obj132" /* 2 */;
-import obj1322 from "obj132" /* 500 */;
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import RouteTypes2 from "RouteTypes" /* 9649 */;
 import enforcingDefault from "enforcing" /* 9650 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
 
 function handleAudioRouteChanged(arr) {
   let tmp = arg1;
@@ -62,7 +62,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(dispatcherDefault, {
         UNKNOWN = RouteTypes2.RouteTypes.UNKNOWN;
         let addListenerResult;
         if (nativeEventEmitter != tmp3) {
-          addListenerResult = nativeEventEmitter.addListener("audio-route-changed", (routeType) => {
+          addListenerResult = obj.addListener("audio-route-changed", (routeType) => {
             callback(routeType.routeType, routeType.multipleRoutesAvailable);
             closure_10.emitChange();
           });
@@ -80,13 +80,15 @@ const audioRouteStoreClass = new AudioRouteStoreClass(dispatcherDefault, {
           const AudioRouteEmitter = NativeModules.AudioRouteEmitter;
           currentRoute1 = AudioRouteEmitter.getCurrentRoute();
         }
-        tmp11Result = obj1322;
-        const nextPromise = currentRoute1.then((result) => {
-          callback(result.routeType, result.multipleRoutesAvailable);
+        obj = nativeEventEmitter;
+        const tmp11 = require;
+        tmp11Result = set2;
+        const nextPromise = currentRoute1.then((routeType) => {
+          callback(routeType.routeType, routeType.multipleRoutesAvailable);
         });
-        _catch = currentRoute1.then((result) => {
-          callback(result.routeType, result.multipleRoutesAvailable);
-        }).then((result) => {
+        _catch = currentRoute1.then((routeType) => {
+          callback(routeType.routeType, routeType.multipleRoutesAvailable);
+        }).then(() => {
           let emitChangeResult;
           if (closure_10 != null) {
             emitChangeResult = closure_10.emitChange();
@@ -96,9 +98,9 @@ const audioRouteStoreClass = new AudioRouteStoreClass(dispatcherDefault, {
         _catch(() => {
 
         });
-        const nextPromise1 = currentRoute1.then((result) => {
-          callback(result.routeType, result.multipleRoutesAvailable);
-        }).then((result) => {
+        const nextPromise1 = currentRoute1.then((routeType) => {
+          callback(routeType.routeType, routeType.multipleRoutesAvailable);
+        }).then(() => {
           let emitChangeResult;
           if (closure_10 != null) {
             emitChangeResult = closure_10.emitChange();
@@ -119,6 +121,6 @@ const audioRouteStoreClass = new AudioRouteStoreClass(dispatcherDefault, {
     return false;
   }
 });
-const result = obj132.fileFinishedImporting("modules/voice_calls/AudioRouteStore.native.tsx");
+const result = set.fileFinishedImporting("modules/voice_calls/AudioRouteStore.native.tsx");
 
 export default audioRouteStoreClass;

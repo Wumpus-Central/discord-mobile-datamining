@@ -6,17 +6,18 @@ import Button from "Button" /* 1297 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import Text from "Text" /* 4734 */;
 import IconUploaderDefault from "IconUploader" /* 9944 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 let closure_3 = ["error"];
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: ThemesDefault.unsafe_rawColors.RED_400 };
+createCacheKey = { wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 }, error: null, label: null, iconUploaderWrapper: null, text: null };
+createCacheKey = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { fontSize: 12, marginTop: 20, color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[3] = { alignSelf: "stretch", alignItems: "center" };
@@ -60,6 +61,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj[0] = tmp.iconUploaderWrapper;
     obj = {};
     const tmp11 = callback(iconProps, closure_3);
+    const tmp12 = closure_8;
+    const tmp13 = closure_5;
+    const tmp14 = callback2;
     const merged = Object.assign(tmp11);
     const items = [callback2(IconUploaderDefault, obj), ];
     let tmp14Result = null;
@@ -69,11 +73,11 @@ prototype["renderIcon"] = function renderIcon() {
       obj1[0] = items1;
       const merged1 = Object.assign(errorProps);
       obj1.children = error;
-      tmp14Result = callback2(Button.LegacyText, obj1);
+      tmp14Result = tmp14(Button.LegacyText, obj1);
     }
     items[1] = tmp14Result;
     obj[1] = items;
-    return callback(closure_5, obj);
+    return tmp12(tmp13, obj);
   } else {
     if (null == source) {
       obj = AccessibilityAnnouncer;
@@ -97,6 +101,7 @@ prototype["render"] = function render() {
   return callback3(closure_5, obj);
 };
 IconLabelBlock.contextType = require("ManaContext").ThemeContext;
-const result = require("obj132").fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
+let obj1 = { fontSize: 12, marginTop: 20, color: ThemesDefault.colors.TEXT_SUBTLE };
+const result = require("set").fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 
 export default IconLabelBlock;

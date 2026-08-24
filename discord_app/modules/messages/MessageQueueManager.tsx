@@ -16,6 +16,6 @@ MessageQueueManager.prototype["handleLogout"] = function handleLogout() {
   itemsDefault.clear();
 };
 const messageQueueManager = new MessageQueueManager();
-const result = require("obj132").fileFinishedImporting("modules/messages/MessageQueueManager.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/MessageQueueManager.tsx");
 
 export default messageQueueManager;

@@ -1,16 +1,16 @@
 // === Module 5297: items ===
 
 // Module 5297 (items)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import "getAuthenticationPath";
+import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 
-require = fn;
-const result = 30 * obj132Default.Millis.SECOND;
-const result1 = 5 * obj132Default.Millis.MINUTE;
-const result2 = 5 * obj132Default.Millis.MINUTE;
-let getAuthenticationPath = { USER_ADD: 1, [1]: "USER_ADD", GUILD_ADD: 2, [2]: "GUILD_ADD", USER_INTERACTION: 3, [3]: "USER_INTERACTION", GUILD_INTERACTION: 4, [4]: "GUILD_INTERACTION", USER_CALLED: 5, [5]: "USER_CALLED", TOTAL_VOICE_MINUTES: 6, [6]: "TOTAL_VOICE_MINUTES", PURCHASES: 7, [7]: "PURCHASES", GIFTS: 8, [8]: "GIFTS" };
+require = arg1;
+const result = 30 * setDefault.Millis.SECOND;
+const result1 = 5 * setDefault.Millis.MINUTE;
+const result2 = 5 * setDefault.Millis.MINUTE;
+getAuthenticationPath = { USER_ADD: 1, [1]: "USER_ADD", GUILD_ADD: 2, [2]: "GUILD_ADD", USER_INTERACTION: 3, [3]: "USER_INTERACTION", GUILD_INTERACTION: 4, [4]: "GUILD_INTERACTION", USER_CALLED: 5, [5]: "USER_CALLED", TOTAL_VOICE_MINUTES: 6, [6]: "TOTAL_VOICE_MINUTES", PURCHASES: 7, [7]: "PURCHASES", GIFTS: 8, [8]: "GIFTS" };
 const items = [
   getAuthenticationPath.USER_INTERACTION,
   {
@@ -379,7 +379,7 @@ const obj6 = {
   },
   icon: getAuthenticationPath.X
 };
-const result3 = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
+const result3 = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
 
 export const RESTRICTED_HOURS_LAYER_KEY = "RESTRICTED_HOURS_LAYER";
 export const FAMILY_CENTER_REFETCH_COOLDOWN = result;

@@ -2,11 +2,11 @@
 
 // Module 14986 (CollectiblesShopViewAllCategoryItemsScreen)
 import _modDef14987 from "module_14987" /* 14987 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx");
 
 export default function CollectiblesShopViewAllCategoryItemsScreen() {
   let obj = stackNavigation(7385);

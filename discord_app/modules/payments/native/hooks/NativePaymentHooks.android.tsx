@@ -2,12 +2,12 @@
 
 // Module 7935 (notSupported)
 import timestampDefault from "timestamp" /* 3 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import updateProduct from "updateProduct" /* 5319 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "updateProduct" /* 5319 */;
 
-const require = fn;
+const require = arg1;
 function notSupported() {
   error = new Error("Native hook not supported for android");
   throw error;
@@ -68,7 +68,7 @@ function useGoogleSkuIds(arg0, arg1) {
                 c0 = differenceResult;
                 if (!closure_1_2) {
                   if (!tmp47) {
-                    if (0 !== closure_1_0.length) {
+                    if (0 !== arr.length) {
                       if (0 !== differenceResult.length) {
                         ref = 1;
                         v0 = 2;
@@ -80,6 +80,7 @@ function useGoogleSkuIds(arg0, arg1) {
                     }
                   }
                 }
+                arr = closure_1_0;
                 const obj4 = closure_2_1(closure_2_2[6]);
                 tmp47 = closure_1;
               }
@@ -159,7 +160,7 @@ function useCreateSubscription(arg0) {
 let closure_7 = new timestampDefault("NativePaymentHooks.android.tsx");
 let closure_8 = { nativePaymentsConnected: true, storeFront: null };
 const tmp2 = new timestampDefault("NativePaymentHooks.android.tsx");
-let result = require("obj132").fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.android.tsx");
+let result = require("set").fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.android.tsx");
 
 export default { useNativeIAPPayments, useGoogleSkuIds, useCreateSubscription, useCancelSubscription, useResubscribeSubscription };
 export { useNativeIAPPayments };

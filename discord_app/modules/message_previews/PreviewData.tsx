@@ -3,11 +3,11 @@
 // Module 13266 (isLatest)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import hasFlag from "hasFlag" /* 4031 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import closure_3 from "hasFlag" /* 4031 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/message_previews/PreviewData.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/message_previews/PreviewData.tsx");
 class PreviewData {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -37,9 +37,9 @@ prototype["messageGeneration"] = function messageGeneration(arg0, generation) {
     generation = merged.generation;
   }
 };
-prototype["messageId"] = function messageId(dependencyMap, arg1) {
+prototype["messageId"] = function messageId(channelType, arg1) {
   const messages = this.messages;
-  const value = messages.get(dependencyMap);
+  const value = messages.get(channelType);
   let id;
   if (value != null) {
     const message = value.message;
@@ -61,6 +61,7 @@ prototype["messageRecord"] = function messageRecord(arg0) {
   }
   if (!tmp2) {
     value.message = createMinimalMessageRecord.createMessageRecord(value.message);
+    const obj = createMinimalMessageRecord;
   }
   let message;
   if (value != null) {
@@ -79,11 +80,11 @@ prototype["put"] = function put(arg0, message, generation) {
   const messages = this.messages;
   const result = messages.set(arg0, { message, generation });
 };
-prototype["putNew"] = function putNew(channelId, first1, c6) {
+prototype["putNew"] = function putNew(channelId, first, c6) {
   const self = this;
   const messages = this.messages;
   const value = messages.get(channelId);
-  let tmp2 = null != first1;
+  let tmp2 = null != first;
   if (tmp2) {
     let id;
     if (value != null) {
@@ -94,12 +95,13 @@ prototype["putNew"] = function putNew(channelId, first1, c6) {
     }
     let tmp4 = null == id;
     if (!tmp4) {
-      tmp4 = DISCORD_EPOCHDefault.compare(first1.id, id) > 0;
+      tmp4 = DISCORD_EPOCHDefault.compare(first.id, id) > 0;
+      const obj = DISCORD_EPOCHDefault;
     }
     tmp2 = tmp4;
   }
   if (tmp2) {
-    self.put(channelId, first1, c6);
+    self.put(channelId, first, c6);
   }
 };
 prototype["putMany"] = function putMany(arg0, arg1) {

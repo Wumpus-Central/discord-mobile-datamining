@@ -1,20 +1,20 @@
 // === Module 7178: TableSwitchRow ===
 
 // Module 7178 (TableSwitchRow)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import getNodeText from "getNodeText" /* 4099 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import FormSwitch from "FormSwitch" /* 7179 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
-const result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
 
 export const TableSwitchRow = function TableSwitchRow(value) {
   value = value.value;
@@ -26,7 +26,7 @@ export const TableSwitchRow = function TableSwitchRow(value) {
   const variant = value.variant;
   const merged = Object.assign(value, Object.create(null));
   let callback;
-  let obj = obj132;
+  let obj = set;
   const tmp2 = callback2();
   obj1 = getNodeText;
   const nodeText = obj1.getNodeText(label);
@@ -55,11 +55,13 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       obj1 = { variant: "text-md/semibold", color: null, includeFontPadding: true, children: null };
       obj1[1] = str;
       obj1[3] = label;
-      tmp10Result = callback(tmp3(4734).Text, obj1);
+      tmp10Result = tmp10(tmp3(4734).Text, obj1);
     }
     const items1 = [tmp10Result, trailing];
     obj[1] = items1;
-    tmp15Result = callback2(View, obj);
+    tmp15Result = closure_6(View, obj);
+    const tmp15 = closure_6;
+    const tmp16 = View;
   }
   obj.label = tmp15Result;
   obj.subLabel = subLabel;
@@ -93,6 +95,6 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       }
     });
   };
-  obj.trailing = callback(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
-  return callback(TableRowInner.TableRow, obj);
+  obj.trailing = closure_5(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
+  return closure_5(TableRowInner.TableRow, obj);
 };

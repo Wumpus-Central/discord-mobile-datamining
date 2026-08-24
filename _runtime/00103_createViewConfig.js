@@ -1,13 +1,12 @@
 // === Module 103: createViewConfig ===
 
 // Module 103 (createViewConfig)
-import _modDef104 from "module_104" /* 104 */;
-
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.createViewConfig = function createViewConfig(closure_2) {
   let obj = { uiViewClassName: closure_2.uiViewClassName, Commands: {}, bubblingEventTypes: null, directEventTypes: null, validAttributes: null };
-  let bubblingEventTypes = closure_2.bubblingEventTypes;
+  let bubblingEventTypes = module(104).bubblingEventTypes;
+  bubblingEventTypes = closure_2.bubblingEventTypes;
   if (null != bubblingEventTypes) {
     if (null != bubblingEventTypes) {
       obj = {};
@@ -15,7 +14,8 @@ arg5.createViewConfig = function createViewConfig(closure_2) {
       const merged1 = Object.assign(bubblingEventTypes);
     }
     obj[2] = obj;
-    let directEventTypes = closure_2.directEventTypes;
+    let directEventTypes = tmp(104).directEventTypes;
+    directEventTypes = closure_2.directEventTypes;
     if (null != directEventTypes) {
       if (null != directEventTypes) {
         obj = {};
@@ -23,7 +23,8 @@ arg5.createViewConfig = function createViewConfig(closure_2) {
         const merged3 = Object.assign(directEventTypes);
       }
       obj[3] = obj;
-      let obj2 = closure_2.validAttributes;
+      let obj2 = tmp(104).validAttributes;
+      obj2 = closure_2.validAttributes;
       if (null != obj2) {
         if (null != obj2) {
           obj1 = {};

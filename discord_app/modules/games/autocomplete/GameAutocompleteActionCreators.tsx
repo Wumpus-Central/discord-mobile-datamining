@@ -1,11 +1,11 @@
 // === Module 7601: _fetchGameAutocomplete ===
 
 // Module 7601 (_fetchGameAutocomplete)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 6899 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "set" /* 6899 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _fetchGameAutocomplete() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -59,7 +59,7 @@ function _fetchGameAutocomplete() {
                   obj2[1] = result;
                   dispatch(obj2);
                   let constants = 1;
-                  const HTTP = callback(closure_1_2[5]).HTTP;
+                  const HTTP = tmp39(closure_1_2[5]).HTTP;
                   let obj3 = { url: null, query: null, rejectWithError: false };
                   obj3[0] = constants.GAMES_AUTOCOMPLETE;
                   const obj4 = { q: null };
@@ -75,6 +75,7 @@ function _fetchGameAutocomplete() {
               }
               c7 = 3;
               const obj13 = callback(closure_1_2[3]);
+              tmp39 = callback;
             }
           } else if (1 === tmp7) {
             constants = 0;
@@ -93,7 +94,7 @@ function _fetchGameAutocomplete() {
             if (body == null) {
               lib = [];
             }
-            lib = lib.map((item, index) => ({ id: String(item.id), name: item.name, icon: item.icon }));
+            lib = lib.map((id) => ({ id: String(id.id), name: id.name, icon: id.icon }));
             obj = lib(709);
             const obj7 = { type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: null, results: null };
             obj7[1] = c0;
@@ -127,7 +128,7 @@ function _fetchGameAutocomplete() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/games/autocomplete/GameAutocompleteActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/games/autocomplete/GameAutocompleteActionCreators.tsx");
 
 export const fetchGameAutocomplete = function fetchGameAutocomplete(arg0) {
   const self = this;

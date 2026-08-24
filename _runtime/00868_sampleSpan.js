@@ -13,12 +13,12 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
       const merged = Object.assign(parentSampled);
       obj.inheritOrSampleWith = function inheritOrSampleWith(arg0) {
         if (typeof parentSampled.parentSampleRate === "number") {
-          let parentSampleRate = parentSampled.parentSampleRate;
+          let parentSampleRate = tmp.parentSampleRate;
         } else {
           parentSampleRate = arg0;
-          if (typeof parentSampled.parentSampled === "boolean") {
+          if (typeof tmp.parentSampled === "boolean") {
             const _Number = Number;
-            parentSampleRate = Number(parentSampled.parentSampled);
+            parentSampleRate = Number(tmp.parentSampled);
           }
         }
         return parentSampleRate;

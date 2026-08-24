@@ -2,17 +2,17 @@
 
 // Module 11134 (PrimaryActionButton)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop2 from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import reset from "reset" /* 4045 */;
+import closure_9 from "reset" /* 4045 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function PrimaryActionButton(onPressApply) {
   const tmp = callback6();
   const _require = tmp;
@@ -32,7 +32,7 @@ function PrimaryActionButton(onPressApply) {
     };
     obj[2] = function renderIcon() {
       const style = [lib.nitroWheelButton];
-      return closure_1_12(lib(dependencyMap[23]).NitroWheel, { style });
+      return closure_1_12(lib(closure_1_2[23]).NitroWheel, { style });
     };
     obj[3] = tmp.getNitroButton;
     let tmp6 = callback4(tmp2(1297).ShinyButton, obj);
@@ -47,10 +47,11 @@ function PrimaryActionButton(onPressApply) {
 }
 ({ useEffect: c5, useLayoutEffect: closure_6, useRef: error } = noop);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createCacheKey = { borderRadius: ThemesDefault.radii.round };
+createCacheKey = { contentWrapper: { paddingHorizontal: 43.5, paddingVertical: 12 }, centeredText: { textAlign: "center" }, ctaContainer: { paddingHorizontal: 15, flexDirection: "column", display: "flex", gap: 6 }, nitroWheelButton: { marginStart: -2, width: 20, height: 20 }, getNitroButton: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.round };
 createCacheKey[4] = createCacheKey;
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx");
 
 export default function _default(message) {
   const sharedClientTheme = message.message.sharedClientTheme;
@@ -62,7 +63,7 @@ export default function _default(message) {
   if (undefined !== sharedClientTheme) {
     obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
     let colors = sharedClientTheme.colors;
-    obj[0] = colors.map((item, index) => "#" + item);
+    obj[0] = colors.map((arg0) => "#" + arg0);
     obj[1] = [];
     ({ gradient_angle: obj2[2], base_mix: obj2[3] } = sharedClientTheme);
     tmp4 = obj;
@@ -87,21 +88,20 @@ export default function _default(message) {
     let tmp4;
     if (undefined !== sharedClientTheme) {
       const obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-      const colors = sharedClientTheme.colors;
-      obj[0] = colors.map((item, index) => "#" + item);
+      const colors = tmp2.colors;
+      obj[0] = colors.map((arg0) => "#" + arg0);
       obj[1] = [];
-      ({ gradient_angle: obj[2], base_mix: obj[3] } = sharedClientTheme);
+      ({ gradient_angle: obj[2], base_mix: obj[3] } = tmp2);
       tmp4 = obj;
     }
-    callback(tmp4);
+    closure_3(tmp4);
     let baseTheme;
     if (undefined !== sharedClientTheme) {
-      baseTheme = sharedClientTheme(first[24]).getBaseTheme(sharedClientTheme.base_theme);
+      baseTheme = sharedClientTheme(first[24]).getBaseTheme(tmp2.base_theme);
       const obj2 = sharedClientTheme(first[24]);
     }
-    callback2(baseTheme);
-    ref(first[9]).track(AnalyticEvents.CUSTOM_THEME_SHARE_PREVIEWED, {});
-    const obj3 = ref(first[9]);
+    closure_5(baseTheme);
+    ref(first[9]).track(closure_1_10.CUSTOM_THEME_SHARE_PREVIEWED, {});
   }, items);
   const items1 = [first, first1];
   callback2(() => {
@@ -110,8 +110,8 @@ export default function _default(message) {
       tmp2 = undefined !== first1;
     }
     if (tmp2) {
-      sharedClientTheme(first[10]);
-      const obj = { baseTheme: null, customTheme: null };
+      let obj = sharedClientTheme(first[10]);
+      obj = { baseTheme: null, customTheme: null };
       obj[0] = first1;
       obj[1] = first;
       obj.previewCustomTheme(obj);
@@ -126,10 +126,10 @@ export default function _default(message) {
   const items3 = [ref];
   callback2(() => () => {
     if (ref.current) {
-      sharedClientTheme(first[10]).clearPreviewTheme();
-      const obj = sharedClientTheme(first[10]);
-      sharedClientTheme(first[11]).refreshTheme();
-      const obj2 = sharedClientTheme(first[11]);
+      closure_1_0(closure_1_2[10]).clearPreviewTheme();
+      const obj = closure_1_0(closure_1_2[10]);
+      closure_1_0(closure_1_2[11]).refreshTheme();
+      const obj2 = closure_1_0(closure_1_2[11]);
     }
   }, items3);
   obj = { ref: tmp2, backdropOpacity: 0, children: null };
@@ -157,15 +157,15 @@ export default function _default(message) {
         if (tmp2) {
           callback(true);
           let obj = sharedClientTheme(first[10]);
-          obj.updateCustomTheme(first, first1);
+          obj.updateCustomTheme(tmp, first1);
           obj = { customUserThemeSettings: null, theme: null };
-          obj[0] = first;
+          obj[0] = tmp;
           obj[1] = first1;
           sharedClientTheme(first[17]).saveClientTheme(obj);
           const obj2 = sharedClientTheme(first[17]);
           sharedClientTheme(first[10]).clearPreviewTheme();
           const obj4 = sharedClientTheme(first[10]);
-          ref(first[9]).track(AnalyticEvents.CUSTOM_THEME_SHARE_APPLIED, {});
+          ref(first[9]).track(closure_1_10.CUSTOM_THEME_SHARE_APPLIED, {});
           const current = ref.current;
           current.closeActionSheet();
           const obj5 = ref(first[9]);

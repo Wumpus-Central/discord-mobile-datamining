@@ -1,11 +1,11 @@
 // === Module 12758: createActivityMessageEmbed ===
 
 // Module 12758 (createActivityMessageEmbed)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import createAppMessageEmbed from "createAppMessageEmbed" /* 11126 */;
 import fetchCustomActivityLink from "fetchCustomActivityLink" /* 12411 */;
 
-const result = obj132.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
+const result = set.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
   app = app.app;
@@ -38,4 +38,5 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       return tmp8;
     }
   }
+  const tmp = require;
 };

@@ -12,8 +12,8 @@ class CreatorMonetizationStore extends Store {
 }
 const prototype = CreatorMonetizationStore.prototype;
 prototype["getPriceTiersFetchStateForGuildAndType"] = function getPriceTiersFetchStateForGuildAndType(arg0, arg1) {
-  map1.get(arg0);
-  let value;
+  let value = map1.get(arg0);
+  value = undefined;
   if (value != null) {
     value = value.get(arg1);
   }
@@ -23,8 +23,8 @@ prototype["getPriceTiersFetchStateForGuildAndType"] = function getPriceTiersFetc
   return value;
 };
 prototype["getPriceTiersForGuildAndType"] = function getPriceTiersForGuildAndType(arg0, arg1) {
-  map.get(arg0);
-  let value;
+  let value = map.get(arg0);
+  value = undefined;
   if (value != null) {
     value = value.get(arg1);
   }
@@ -41,10 +41,10 @@ obj = {
     if (!map1.has(guildId)) {
       const _Map = Map;
       map = new Map();
-      const result = map1.set(guildId, map);
+      const result = obj.set(guildId, map);
     }
-    const value = map1.get(guildId);
-    const result1 = value.set(guildId.priceTierType, map1.FETCHING);
+    const value = obj.get(guildId);
+    const result1 = value.set(guildId.priceTierType, obj.FETCHING);
   },
   CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function handleFetchPriceTiersSuccess(priceTiers) {
     ({ guildId, priceTierType } = priceTiers);
@@ -68,14 +68,14 @@ obj = {
     if (!map1.has(guildId)) {
       const _Map = Map;
       map = new Map();
-      const result = map1.set(guildId, map);
+      const result = obj.set(guildId, map);
     }
-    const value = map1.get(guildId);
-    const result1 = value.set(guildId.priceTierType, map1.FETCHED);
+    const value = obj.get(guildId);
+    const result1 = value.set(guildId.priceTierType, obj.FETCHED);
   }
 };
 const creatorMonetizationStore = new CreatorMonetizationStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationStore.tsx");
+let result = require("set").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationStore.tsx");
 
 export default creatorMonetizationStore;
 export const FetchState = obj;

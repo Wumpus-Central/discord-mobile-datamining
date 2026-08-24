@@ -50,6 +50,7 @@ let closure_3 = { code: "function pnpm_eventUtilsTs7(current,previous){const{dif
 function getChangeEventCalculator(diffCalculator) {
   closure_0 = diffCalculator;
   const fn = function t(handlerData, handlerData2) {
+    handlerData = handlerData.handlerData;
     handlerData = null;
     if (handlerData2) {
       handlerData = handlerData2.handlerData;
@@ -93,16 +94,30 @@ arg5.checkMappingForChangeProperties = function checkMappingForChangeProperties(
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (nextResult) {
+      let tmp3 = nextResult;
       if ("nativeEvent" in tmp2) {
+        let tmp4 = nextResult;
         if ("handlerData" in tmp2.nativeEvent) {
+          let tmp5 = nextResult;
           for (const key10023 in tmp2.nativeEvent.handlerData) {
+            let tmp14 = key10023;
+            let tmp15 = key10023;
             if (!key10023.startsWith("change")) {
               continue;
             } else {
+              let tmp6 = globalThis;
               let _Error = Error;
+              let tmp7 = require;
+              let tmp8 = dependencyMap;
               let obj = tagMessage;
+              let tmp9 = tmp14;
               let _HermesInternal = HermesInternal;
-              error = new Error(obj.tagMessage("" + key10023 + " is not available when using Animated.Event."));
+              let str = " is not available when using Animated.Event.";
+              let str2 = "";
+              let tmp10 = new.target;
+              let tmp11 = new.target;
+              error = new Error(obj.tagMessage("" + tmp15 + " is not available when using Animated.Event."));
+              let tmp13 = error;
               throw error;
             }
           }

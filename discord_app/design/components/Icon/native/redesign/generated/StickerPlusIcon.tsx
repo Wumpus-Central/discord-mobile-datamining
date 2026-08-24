@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 16803 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/StickerPlusIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/StickerPlusIcon.tsx");
 
 export const StickerPlusIcon = function StickerPlusIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

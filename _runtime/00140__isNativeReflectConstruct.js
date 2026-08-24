@@ -5,9 +5,9 @@ import _inheritsDefault from "_inherits" /* 98 */;
 import NativeDOMCxxDefault from "NativeDOMCxx" /* 139 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 141 */;
 import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 143 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 const ReactNativeDocument = arg1;
@@ -133,6 +133,8 @@ let items = [
         }
         return tmp6;
       }
+      const obj = NativeDOMCxxDefault;
+      const tmp = importDefault;
     }
   }
 ];

@@ -1,13 +1,13 @@
 // === Module 16097: useSortedMessageRequests ===
 
 // Module 16097 (useSortedMessageRequests)
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import processChannel from "processChannel" /* 4799 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "processChannel" /* 4799 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/message_request/hooks/useSortedMessageRequests.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useSortedMessageRequests.tsx");
 
 export default function useSortedMessageRequests() {
   const items = [closure_3];
@@ -17,8 +17,8 @@ export default function useSortedMessageRequests() {
   const items2 = [stateFromStores];
   stateFromStoresArray = stateFromStoresArray(stateFromStoresObject[4]).useStateFromStoresArray(items1, () => {
     stateFromStoresArray = store.getMutablePrivateChannels();
-    const mapped = Array.from(messageRequestChannelIds.getMessageRequestChannelIds()).map((item, index) => table[item]);
-    const found = mapped.filter((item, index) => null != item);
+    const mapped = Array.from(messageRequestChannelIds.getMessageRequestChannelIds()).map((arg0) => table[arg0]);
+    const found = mapped.filter((arg0) => null != arg0);
     const arr = Array.from(messageRequestChannelIds.getMessageRequestChannelIds());
     return stateFromStoresArray(stateFromStoresObject[5]).sortChannelIds(found);
   }, items2);
@@ -27,14 +27,14 @@ export default function useSortedMessageRequests() {
   const items4 = [stateFromStoresArray];
   stateFromStoresObject = stateFromStoresArray(stateFromStoresObject[4]).useStateFromStoresObject(items3, () => {
     const obj = {};
-    const item = obj.forEach((item, index) => {
-      const user = closure_1_4.getUser(item.recipients[0]);
+    const item = obj.forEach((id) => {
+      const user = closure_1_4.getUser(id.recipients[0]);
       if (null != user) {
-        obj[item.id] = user;
+        obj[id.id] = user;
       }
     });
     return obj;
   }, items4);
   const items5 = [stateFromStoresArray, stateFromStoresObject];
-  return React.useMemo(() => stateFromStoresArray.map((item, index) => ({ channel: item, user: table[item.id] })), items5);
+  return React.useMemo(() => stateFromStoresArray.map((channel) => ({ channel, user: table[channel.id] })), items5);
 };

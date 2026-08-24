@@ -1,10 +1,10 @@
 // === Module 7932: useIsBuyNitroPurchaseBlocked ===
 
 // Module 7932 (useIsBuyNitroPurchaseBlocked)
-import updateProduct from "updateProduct" /* 5319 */;
+import closure_2 from "updateProduct" /* 5319 */;
 import keys from "keys" /* 644 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = keys.create(() => ({ isLocked: false, hasCompletedInitialLoad: false }));
 keys = {
   begin(TableRowGroup, arg1) {
@@ -31,7 +31,7 @@ keys = {
     store.setState({ hasCompletedInitialLoad: promotionMarketingComponent });
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
 
 export const useIsBuyNitroPurchaseBlocked = function useIsBuyNitroPurchaseBlocked() {
   let stateFromStores = store((hasCompletedInitialLoad) => {

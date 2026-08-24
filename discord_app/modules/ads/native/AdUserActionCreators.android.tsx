@@ -1,8 +1,8 @@
 // === Module 7484: _fetchAdUser ===
 
 // Module 7484 (_fetchAdUser)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import adUser from "adUser" /* 7482 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "adUser" /* 7482 */;
 import ME from "ME" /* 676 */;
 
 function _fetchAdUser() {
@@ -46,12 +46,12 @@ function _fetchAdUser() {
               closure_3 = undefined;
               let constants;
               if (null != closure_1_3.adUser) {
-                if (null != closure_1_3.adUser.advertisingId) {
+                if (null != tmp82.adUser.advertisingId) {
                   let obj8 = callback(closure_1_1[3]);
                   obj1 = { has_advertising_id: true, android_advertising_id: null, location: null, success: true, last_fetched_timestamp: null };
-                  obj1[1] = closure_1_3.adUser.advertisingId;
+                  obj1[1] = tmp82.adUser.advertisingId;
                   obj1[2] = tmp81;
-                  obj1[4] = closure_1_3.lastFetchedAt;
+                  obj1[4] = tmp82.lastFetchedAt;
                   obj8.track(constants.AD_IDENTIFIER_FETCHED, obj1);
                   c6 = 3;
                 }
@@ -149,7 +149,7 @@ function _fetchAdUser() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: c4, Platforms: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/ads/native/AdUserActionCreators.android.tsx");
+const result = require("set").fileFinishedImporting("modules/ads/native/AdUserActionCreators.android.tsx");
 
 export const fetchAdUser = function fetchAdUser(handleStoreChange) {
   const self = this;

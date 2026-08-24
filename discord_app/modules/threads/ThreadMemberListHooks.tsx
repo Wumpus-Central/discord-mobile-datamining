@@ -1,25 +1,25 @@
 // === Module 15911: useThreadMemberListSections ===
 
 // Module 15911 (useThreadMemberListSections)
-import noop from "noop" /* 19 */;
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
-import handleUserUpdate from "handleUserUpdate" /* 7595 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_5 from "handleUserUpdate" /* 7595 */;
 import { StatusTypes } from "sum" /* 505 */;
 
-const require = fn;
+const require = arg1;
 let closure_7 = [];
-const result = require("obj132").fileFinishedImporting("modules/threads/ThreadMemberListHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/threads/ThreadMemberListHooks.tsx");
 
 export const useThreadMemberListSections = function useThreadMemberListSections(channelId, stateFromStores) {
   const _require = channelId;
   importDefault = stateFromStores;
   importDefault(stateFromStores[4])(() => {
     let id;
-    if (stateFromStores != null) {
-      id = stateFromStores.id;
+    if (closure_1 != null) {
+      id = tmp.id;
     }
     if (null != id) {
-      channelId(stateFromStores[5]).subscribeChannel(stateFromStores.id, channelId, channelId(stateFromStores[6]).DEFAULT_RANGES);
+      channelId(stateFromStores[5]).subscribeChannel(tmp.id, channelId, channelId(stateFromStores[6]).DEFAULT_RANGES);
       const obj = channelId(stateFromStores[5]);
     }
   });
@@ -42,20 +42,20 @@ export const useThreadMemberListSections = function useThreadMemberListSections(
     if (closure_4) {
       return closure_1_7;
     } else {
-      const found = stateFromStores.filter((item, index) => item.hoist);
-      const mapped = found.map((item, index) => ({ id: item.id, label: item.name }));
+      const found = stateFromStores.filter((hoist) => hoist.hoist);
+      const mapped = found.map((id) => ({ id: id.id, label: id.name }));
       let obj = { id: null, label: null };
-      obj[0] = StatusTypes.ONLINE;
+      obj[0] = closure_1_6.ONLINE;
       const intl = channelId(stateFromStores[8]).intl;
       obj[1] = intl.string(channelId(stateFromStores[8]).t.WbGtnH);
       obj = { id: null, label: null };
-      obj[0] = StatusTypes.OFFLINE;
+      obj[0] = closure_1_6.OFFLINE;
       const intl2 = channelId(stateFromStores[8]).intl;
       obj[1] = intl2.string(channelId(stateFromStores[8]).t.Vv0abJ);
       mapped.push(obj, obj);
-      return mapped.map((item, index) => {
-        const id = item.id;
-        const obj = { label: item.label, userIds: null, id: null, roleId: null };
+      return mapped.map((id) => {
+        id = id.id;
+        const obj = { label: id.label, userIds: null, id: null, roleId: null };
         let userIds;
         if (table != null) {
           if (table[id] != null) {

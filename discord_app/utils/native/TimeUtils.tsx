@@ -1,9 +1,9 @@
 // === Module 4869: getTimeFormat ===
 
 // Module 4869 (getTimeFormat)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-let result = obj132.fileFinishedImporting("utils/native/TimeUtils.tsx");
+let result = set.fileFinishedImporting("utils/native/TimeUtils.tsx");
 
 export const getTimeFormat = function getTimeFormat(playableDuration, padMinutes) {
   padMinutes = undefined;

@@ -4,7 +4,8 @@
 import toJSDefault from "toJS" /* 1931 */;
 
 toJSDefault;
-const prototype = function SubscriptionFacetRecord(subscriptionId) {
+let prototype;
+prototype = function SubscriptionFacetRecord(subscriptionId) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   subscriptionId = subscriptionId.subscriptionId;
@@ -55,7 +56,7 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
         if (renewal_line_items == null) {
           renewal_line_items = [];
         }
-        renewal_info = renewal_line_items.map((item, index) => ({ refOrderLineItemId: item.ref_order_line_item_id, price: item.price }));
+        renewal_info = renewal_line_items.map((refOrderLineItemId) => ({ refOrderLineItemId: refOrderLineItemId.ref_order_line_item_id, price: refOrderLineItemId.price }));
         obj[2] = renewal_info;
         tmp5 = obj;
       }
@@ -100,6 +101,6 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
   }
   return tmp;
 };
-const result = require("obj132").fileFinishedImporting("modules/payments/records/SubscriptionFacetRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/payments/records/SubscriptionFacetRecord.tsx");
 
 export default prototype;

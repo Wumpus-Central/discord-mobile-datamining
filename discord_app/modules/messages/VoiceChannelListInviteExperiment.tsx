@@ -1,12 +1,12 @@
 // === Module 10507: getVoiceChannelListInviteExperiment ===
 
 // Module 10507 (getVoiceChannelListInviteExperiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import createExperiment from "createExperiment" /* 4286 */;
 
 const items = [{ id: 1, label: "Enable channel-list-style voice invite embed", config: { enabled: true } }];
 let closure_0 = createExperiment.createExperiment({ kind: "guild", id: "2026-05_voice_channel_list_invite_embed", label: "Voice Channel List Invite Embed", defaultConfig: { enabled: false }, treatments: items });
-const result = obj132.fileFinishedImporting("modules/messages/VoiceChannelListInviteExperiment.tsx");
+const result = set.fileFinishedImporting("modules/messages/VoiceChannelListInviteExperiment.tsx");
 
 export const getVoiceChannelListInviteExperiment = function getVoiceChannelListInviteExperiment(guildId) {
   return closure_0.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location });

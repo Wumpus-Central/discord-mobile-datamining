@@ -6,6 +6,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_1 = { mediaType: "photo", videoQuality: "high", quality: 1, maxWidth: 0, maxHeight: 0, includeBase64: false, cameraType: "back", selectionLimit: 1, saveToPhotos: false, durationLimit: 0, includeExtra: false };
 for (const key10017 in require("module_4854")) {
+  let tmp2 = key10017;
   arg5[key10017] = require("module_4854")[key10017];
   continue;
 }

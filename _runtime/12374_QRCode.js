@@ -12,7 +12,10 @@ if (!fn) {
   fn = (arg0) => {
     for (let num = 1; num < arguments.length; num = num + 1) {
       let tmp = arguments[num];
+      let tmp2 = tmp;
+      let tmp3 = num;
       for (const key10012 in tmp) {
+        let tmp5 = key10012;
         let _Object = Object;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
@@ -78,6 +81,7 @@ const forwardRefResult = noop.forwardRef((obj) => {
   obj = {};
   ({ bgColor, fgColor, level, size, value } = obj);
   for (const key10012 in arg0) {
+    let tmp4 = key10012;
     if (items.indexOf(key10012) >= 0) {
       continue;
     } else {
@@ -104,12 +108,12 @@ const forwardRefResult = noop.forwardRef((obj) => {
   const modules = _default.modules;
   _default = noop.default;
   obj = { bgColor, bgD: null, fgColor: null, fgD: null, ref: null, size: null, viewBoxSize: null };
-  let mapped = modules.map((item, index) => {
-    closure_0 = index;
-    const mapped = item.map((item, index) => {
+  let mapped = modules.map((arr) => {
+    closure_0 = arg1;
+    const mapped = arr.map((arg0, arg1) => {
       let str = "";
-      if (!item) {
-        str = `${"M " + index + " " + closure_0} l 1 0 0 1 -1 0 Z`;
+      if (!arg0) {
+        str = `${"M " + arg1 + " " + closure_0} l 1 0 0 1 -1 0 Z`;
       }
       return str;
     });
@@ -117,12 +121,12 @@ const forwardRefResult = noop.forwardRef((obj) => {
   });
   obj[1] = mapped.join(" ");
   obj[2] = fgColor;
-  const mapped1 = modules.map((item, index) => {
-    closure_0 = index;
-    const mapped = item.map((item, index) => {
+  const mapped1 = modules.map((arr) => {
+    closure_0 = arg1;
+    const mapped = arr.map((arg0, arg1) => {
       let str = "";
-      if (item) {
-        str = `${"M " + index + " " + closure_0} l 1 0 0 1 -1 0 Z`;
+      if (arg0) {
+        str = `${"M " + arg1 + " " + closure_0} l 1 0 0 1 -1 0 Z`;
       }
       return str;
     });

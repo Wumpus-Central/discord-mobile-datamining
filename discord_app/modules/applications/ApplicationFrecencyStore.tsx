@@ -5,8 +5,8 @@ import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_2 from "participantFromServer" /* 1390 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
 function handleUserSettingsProtoStoreChange() {
@@ -23,7 +23,7 @@ function handleUserSettingsProtoStoreChange() {
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
     const mapped = recentUses.map(Number);
-    obj.recentUses = mapped.filter((item, index) => item > 0);
+    obj.recentUses = mapped.filter((arg0) => arg0 > 0);
     return obj;
   }), closure_6.pendingUsages);
 }
@@ -97,6 +97,7 @@ obj = {
         closure_7.compute();
       }
       hasItem = !isLaunching;
+      const tmp6 = !isLaunching;
     }
     return hasItem;
   },
@@ -118,6 +119,6 @@ obj = {
 };
 const applicationFrecencyStore = new ApplicationFrecencyStore(dispatcherDefault, obj);
 const tmp2 = new DEFAULT_FRECENCYDefault(obj);
-const result = require("obj132").fileFinishedImporting("modules/applications/ApplicationFrecencyStore.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyStore.tsx");
 
 export default applicationFrecencyStore;

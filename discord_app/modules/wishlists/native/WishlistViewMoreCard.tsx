@@ -10,12 +10,13 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ Pressable: c3, StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {
-  const obj = {};
+  let obj = { moreOverlay: null };
+  obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj.borderRadius = ThemesDefault.radii.lg;
   obj.backgroundColor = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
@@ -24,7 +25,7 @@ let closure_8 = createCacheKey.createStyles(() => {
   obj[0] = obj;
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/wishlists/native/WishlistViewMoreCard.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/native/WishlistViewMoreCard.tsx");
 
 export default function WishlistViewMoreCard(recipientName) {
   recipientName = recipientName.recipientName;
@@ -33,7 +34,7 @@ export default function WishlistViewMoreCard(recipientName) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.formatToPlainString(getSystemLocale.t["8uYD+I"], { username: recipientName });
   const items = [callback(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName }), ];
-  { style: callback3().moreOverlay, children: null };
+  obj = { style: callback3().moreOverlay, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.format(getSystemLocale.t.F6iMs4, { count: overflowCount });

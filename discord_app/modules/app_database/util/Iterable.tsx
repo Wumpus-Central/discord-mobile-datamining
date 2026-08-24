@@ -1,7 +1,7 @@
 // === Module 5073: next ===
 
 // Module 5073 (next)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 class Chained {
   constructor(arg0) {
@@ -27,7 +27,7 @@ prototype["next"] = function next() {
   }
   return { done: true, value: "a" };
 };
-const result = obj132.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
+const result = set.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
 
 export const chain = function chain() {
   const items = [...arguments];

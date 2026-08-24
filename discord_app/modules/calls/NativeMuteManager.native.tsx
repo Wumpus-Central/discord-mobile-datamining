@@ -4,10 +4,10 @@
 import timestampDefault from "timestamp" /* 3 */;
 import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
 import importDefaultResult from "handleAudioRouteChanged" /* 9648 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
 import importDefaultResult1 from "dispatcher" /* 709 */;
 
-let obj = fn;
+let obj = arg1;
 let c3 = importDefaultResult;
 const obj2 = new timestampDefault("NativeMuteManager");
 obj2.enableNativeLogger(true);
@@ -24,11 +24,11 @@ class NativeMuteManager {
     obj.handleAudioRouteChange = function handleAudioRouteChange() {
       const audioRouteChangeIgnoreTimer = obj.audioRouteChangeIgnoreTimer;
       if (audioRouteChangeIgnoreTimer.isStarted()) {
-        const audioRouteChangeIgnoreTimer2 = obj.audioRouteChangeIgnoreTimer;
+        const audioRouteChangeIgnoreTimer2 = tmp.audioRouteChangeIgnoreTimer;
         audioRouteChangeIgnoreTimer2.stop();
       }
       obj.ignoreForAudioRouteChange = true;
-      const audioRouteChangeIgnoreTimer3 = obj.audioRouteChangeIgnoreTimer;
+      const audioRouteChangeIgnoreTimer3 = tmp.audioRouteChangeIgnoreTimer;
       audioRouteChangeIgnoreTimer3.start(obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS, () => {
         closure_0.ignoreForAudioRouteChange = false;
       });
@@ -49,6 +49,7 @@ prototype["nativeMuteChanged"] = function nativeMuteChanged() {
       self.needToUnmuteNative = true;
       obj2.log("Native mute changed > toggling mute");
       trackDeviceChangedDefault.toggleSelfMute({ playSoundEffect: false });
+      obj = trackDeviceChangedDefault;
     }
   }
 };
@@ -89,11 +90,11 @@ obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
 obj.handleAudioRouteChange = function handleAudioRouteChange() {
   const audioRouteChangeIgnoreTimer = obj.audioRouteChangeIgnoreTimer;
   if (audioRouteChangeIgnoreTimer.isStarted()) {
-    const audioRouteChangeIgnoreTimer2 = obj.audioRouteChangeIgnoreTimer;
+    const audioRouteChangeIgnoreTimer2 = tmp.audioRouteChangeIgnoreTimer;
     audioRouteChangeIgnoreTimer2.stop();
   }
   obj.ignoreForAudioRouteChange = true;
-  const audioRouteChangeIgnoreTimer3 = obj.audioRouteChangeIgnoreTimer;
+  const audioRouteChangeIgnoreTimer3 = tmp.audioRouteChangeIgnoreTimer;
   audioRouteChangeIgnoreTimer3.start(obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS, () => {
     closure_0.ignoreForAudioRouteChange = false;
   });
@@ -109,6 +110,6 @@ prototype2["nativeMuteChanged"] = function nativeMuteChanged(arg0) {
 prototype2["updateNativeMute"] = function updateNativeMute() {
   obj.updateNativeMute();
 };
-const result = require("obj132").fileFinishedImporting("modules/calls/NativeMuteManager.native.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/NativeMuteManager.native.tsx");
 
 export default Object.create(NativeMuteManagerWrapper.prototype);

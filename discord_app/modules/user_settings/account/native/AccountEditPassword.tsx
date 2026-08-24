@@ -9,11 +9,12 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
 ({ View: obj1, StyleSheet } = get_ActivityIndicator);
-const obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { container: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => <closure_2 style={callback().container}>{jsx(componentWillUnmountDefault, {})}</closure_2>);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
 
 export default memoResult;

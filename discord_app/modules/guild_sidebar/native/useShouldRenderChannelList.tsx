@@ -1,15 +1,15 @@
 // === Module 15526: useShouldRenderChannelList ===
 
 // Module 15526 (useShouldRenderChannelList)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import handleClearCaches from "handleClearCaches" /* 5067 */;
-import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleClearCaches" /* 5067 */;
+import closure_5 from "_handleConnectionOpen" /* 4495 */;
 import { ComponentActions } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 let c7 = false;
-let result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/useShouldRenderChannelList.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_sidebar/native/useShouldRenderChannelList.tsx");
 
 export const useShouldRenderChannelList = function useShouldRenderChannelList() {
   const tmp = callback(React.useState(c7), 2);
@@ -17,7 +17,7 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
   closure_1 = tmp[1];
   const items = [first];
   const effect = React.useEffect(() => {
-    function allowRender(handleGatewayChange) {
+    function allowRender(arg0) {
       c7 = true;
       handleGatewayChange(true);
     }
@@ -44,13 +44,12 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
         c7 = true;
         handleGatewayChange(true);
       }
-      const obj2 = allowRender(handleGatewayChange[6]);
     }
     if (!allowRender) {
       let result = closure_1_5.addReactChangeListener(handleGatewayChange);
       let result1 = closure_1_4.addReactChangeListener(handleCacheChange);
       let ComponentDispatch = first(1231).ComponentDispatch;
-      const subscription = ComponentDispatch.subscribe(ComponentActions.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
+      const subscription = ComponentDispatch.subscribe(closure_1_6.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
       let rootNavigationRef = first(4230).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
@@ -59,12 +58,11 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
         const result = closure_2_5.removeReactChangeListener(handleGatewayChange);
         const result1 = closure_2_4.addReactChangeListener(handleCacheChange);
         const ComponentDispatch = first(handleGatewayChange[7]).ComponentDispatch;
-        ComponentDispatch.unsubscribe(ComponentActions.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
+        ComponentDispatch.unsubscribe(closure_2_6.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
         const rootNavigationRef = first(handleGatewayChange[6]).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.removeListener("state", handleNavigationChange);
         }
-        const obj = first(handleGatewayChange[6]);
       };
     }
   }, items);

@@ -1,9 +1,9 @@
 // === Module 8137: ReportNames ===
 
 // Module 8137 (ReportNames)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");
 
 export const ReportNames = { GUILD: "guild", GUILD_DISCOVERY: "guild_discovery", GUILD_DIRECTORY_ENTRY: "guild_directory_entry", MESSAGE: "message", STAGE_CHANNEL: "stage_channel", GUILD_SCHEDULED_EVENT: "guild_scheduled_event", FIRST_DM: "first_dm", USER: "user", APPLICATION: "application", WIDGET: "widget" };
 export const ModeratorReportNames = { MESSAGE: "report_to_mod_message" };

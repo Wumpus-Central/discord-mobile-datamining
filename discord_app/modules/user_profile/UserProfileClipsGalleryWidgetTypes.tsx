@@ -1,7 +1,7 @@
 // === Module 5374: convertClip ===
 
 // Module 5374 (convertClip)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import WidgetType from "WidgetType" /* 5366 */;
 
@@ -31,7 +31,8 @@ class ClipsGalleryWidget {
 }
 const prototype = ClipsGalleryWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
-  const obj = { type: this.type, clips: clips.map(convertClip) };
+  let obj = { id: this.id, data: null };
+  obj = { type: this.type, clips: clips.map(convertClip) };
   clips = this.clips;
   obj[1] = obj;
   return obj;
@@ -62,7 +63,7 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type };
 };
-const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx");
 
 export { ClipsGalleryWidget };
 export const WIDGET_CLIP_CONTENT_TYPE = "video/mp4";

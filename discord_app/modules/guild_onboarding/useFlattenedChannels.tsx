@@ -1,35 +1,38 @@
 // === Module 6793: getFlattenedChannels ===
 
 // Module 6793 (getFlattenedChannels)
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
-const require = fn;
-function getFlattenedChannels(guildId, set, found, flag) {
+const require = arg1;
+function getFlattenedChannels(guildId, set, found, arg3) {
   const _require = set;
   importDefault = found;
-  if (flag === undefined) {
+  let flag = arg3;
+  if (arg3 === undefined) {
     flag = false;
   }
   let mutableGuildChannelsForGuild;
+  set = undefined;
+  let found2;
   const tmp = importDefault(flag[1]);
   const values = importDefault(flag[1])(mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(guildId)).values();
   const tmpResult = importDefault(flag[1])(mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(guildId));
   mutableGuildChannelsForGuild = values.groupBy("parent_id").value();
   const iter = values.groupBy("parent_id");
-  const mapped = importDefault(flag[1])(found).map((item, index) => item.isCategory() ? item.id : item.parent_id);
+  const mapped = importDefault(flag[1])(found).map((isCategory) => isCategory.isCategory() ? isCategory.id : isCategory.parent_id);
   found = mapped.filter(_require(flag[2]).isNotNullish);
   const arr = importDefault(flag[1])(found);
-  const mapped1 = found.uniq().map((item, index) => channel.getChannel(item));
+  const mapped1 = found.uniq().map((arg0) => channel.getChannel(arg0));
   const found1 = mapped1.filter(_require(flag[2]).isNotNullish);
   const uniqResult = found.uniq();
   const valueResult = found1.sortBy("position").value();
-  set = new Set(valueResult.map((item, index) => item.id));
-  let found2 = found.filter((item, index) => {
-    let isCategoryResult = item.isCategory();
+  set = new Set(valueResult.map((id) => id.id));
+  found2 = found.filter((isCategory) => {
+    let isCategoryResult = isCategory.isCategory();
     if (!isCategoryResult) {
-      let hasItem = null != item.parent_id;
+      let hasItem = null != isCategory.parent_id;
       if (hasItem) {
-        hasItem = set.has(item.parent_id);
+        hasItem = set.has(isCategory.parent_id);
       }
       isCategoryResult = hasItem;
     }
@@ -50,10 +53,10 @@ function getFlattenedChannels(guildId, set, found, flag) {
     if (!flag) {
       found2.push(iter3);
     }
-    if (set.has(iter3.id)) {
+    if (iter3.has(iter3.id)) {
       found = channel[iter3.id];
     } else {
-      found = lib.filter((item, index) => item.parent_id === iter3.id);
+      found = lib.filter((parent_id) => parent_id.parent_id === iter3.id);
     }
     if (found == null) {
       found = [];
@@ -70,8 +73,6 @@ function getFlattenedChannels(guildId, set, found, flag) {
       })
     ];
     found2.push.apply(items);
-    const obj = lib(flag[1]);
-    set = iter3;
   }
   const iter3 = valueResult[Symbol.iterator]();
   while (iter3 !== undefined) {
@@ -80,7 +81,7 @@ function getFlattenedChannels(guildId, set, found, flag) {
   }
   return sortByResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/useFlattenedChannels.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/useFlattenedChannels.tsx");
 
 export { getFlattenedChannels };
 export const useFlattenedChannels = function useFlattenedChannels(arg0, arg1) {
@@ -92,7 +93,7 @@ export const useFlattenedChannels = function useFlattenedChannels(arg0, arg1) {
   }
   const items = [closure_3];
   return _require(flag[3]).useStateFromStoresArray(items, () => {
-    const mapped = Array.from(closure_1).map((item, index) => channel.getChannel(item));
-    return getFlattenedChannels(callback, closure_1, mapped.filter(callback(flag[2]).isNotNullish), flag);
+    const mapped = Array.from(closure_1).map((arg0) => channel.getChannel(arg0));
+    return closure_1_4(callback, closure_1, mapped.filter(callback(flag[2]).isNotNullish), flag);
   });
 };

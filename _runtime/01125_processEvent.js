@@ -55,9 +55,9 @@ function processEvent(arg0, arg1, arg2) {
                     if (undefined !== beforeScreenshot) {
                       const call = beforeScreenshot.call;
                       if (typeof call === "unknown") {
-                        let beforeScreenshotResult = beforeScreenshot(closure_1_0, closure_1_1);
+                        let beforeScreenshotResult = beforeScreenshot(tmp25, tmp26);
                       } else {
-                        beforeScreenshotResult = call(tmp24, closure_1_0, closure_1_1);
+                        beforeScreenshotResult = call(tmp24, tmp25, tmp26);
                       }
                       tmp24 = options;
                     }
@@ -104,6 +104,7 @@ function processEvent(arg0, arg1, arg2) {
               }
               length = HermesBuiltin.arraySpread(attachments, length);
               attachments.attachments = items;
+              const tmp10 = attachments;
             }
             c4 = 3;
             obj = { value: null, done: true };
@@ -131,12 +132,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn) => {
-      closure_0 = fn;
+    _Promise = new _Promise((arg0, arg1) => {
+      closure_0 = arg0;
       closure_1 = arg1;
-      function fulfilled(result) {
+      function fulfilled(arg0) {
         try {
-          step(iter.next(result));
+          step(iter.next(arg0));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -156,8 +157,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((fn) => {
-              fn(closure_0);
+            tmp = new tmp((arg0) => {
+              arg0(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -171,13 +172,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        fn(value);
+        arg0(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
-            fn(closure_0);
+          tmp3 = new tmp3((arg0) => {
+            arg0(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);

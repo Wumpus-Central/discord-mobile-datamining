@@ -3,20 +3,20 @@
 // Module 13359 (onClose)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef5260 from "module_5260" /* 5260 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13311 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-let require = fn;
+let require = arg1;
 function onClose() {
   _modDef5260.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
 let closure_9 = new timestampDefault("ShareScreenModal");
 const tmp2 = new timestampDefault("ShareScreenModal");
-const result = require("obj132").fileFinishedImporting("modules/share/native/ShareScreenModal.tsx");
+const result = require("set").fileFinishedImporting("modules/share/native/ShareScreenModal.tsx");
 
 export default function ShareScreenModal(text) {
   text = text.text;
@@ -27,6 +27,8 @@ export default function ShareScreenModal(text) {
   let first;
   let React;
   let stateFromStores;
+  closure_7 = undefined;
+  let first1;
   let obj = React;
   let tmp = first(React.useState(null), 2);
   first = tmp[0];
@@ -229,7 +231,7 @@ export default function ShareScreenModal(text) {
       return applyArgumentsResult;
     })();
   }, items2);
-  let first1 = stateFromStores;
+  first1 = stateFromStores;
   if (stateFromStores == null) {
     first1 = tmp6[0];
   }
@@ -242,29 +244,29 @@ export default function ShareScreenModal(text) {
     }
     obj[1] = items;
     if (null != first1) {
-      if (first1.type !== text(shareId[11]).ChannelTypes.DM) {
+      if (tmp.type !== text(shareId[11]).ChannelTypes.DM) {
         obj.targetChannelId = channelId;
       } else {
-        let isArray = first1;
-        if (first1) {
-          isArray = "recipients" in first1;
+        let isArray = tmp;
+        if (tmp) {
+          isArray = "recipients" in tmp;
         }
         if (isArray) {
           const _Array = Array;
-          isArray = Array.isArray(first1.recipients);
+          isArray = Array.isArray(tmp.recipients);
         }
         if (isArray) {
-          obj.targetUserId = first1.recipients[0];
+          obj.targetUserId = tmp.recipients[0];
         } else {
-          let tmp4 = first1;
-          if (first1) {
-            tmp4 = "recipient" in first1;
+          let tmp4 = tmp;
+          if (tmp) {
+            tmp4 = "recipient" in tmp;
           }
           if (tmp4) {
-            tmp4 = "id" in first1.recipient;
+            tmp4 = "id" in tmp.recipient;
           }
           if (tmp4) {
-            const recipient = first1.recipient;
+            const recipient = tmp.recipient;
             let id;
             if (recipient != null) {
               id = recipient.id;

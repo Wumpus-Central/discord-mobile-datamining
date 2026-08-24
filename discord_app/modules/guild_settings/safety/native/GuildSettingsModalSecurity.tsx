@@ -2,35 +2,38 @@
 
 // Module 16823 (GuildSettingsModalSecurity)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { isGuildOwnerWithRequiredMfaLevel as closure_6 } from "GuildNSFWContentLevel" /* 1434 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import handleFormInit from "handleFormInit" /* 8875 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "handleFormInit" /* 8875 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ GuildFeatures: c10, MFALevels: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createCacheKey = { alignItems: "center", flexDirection: "column", paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+createCacheKey = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: null, label: null, image: null, infoWrapper: null, button: null };
+createCacheKey = { alignItems: "center", flexDirection: "column", paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[3] = { width: 295, height: 142, marginHorizontal: 35 };
 createCacheKey[4] = { marginBottom: 40 };
 createCacheKey[5] = { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
 
 export default function GuildSettingsModalSecurity(guildId) {
   guildId = guildId.guildId;
+  let stateFromStores;
+  dependencyMap = undefined;
   const tmp = callback3();
   let obj = guildId(589);
   const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(guildId));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(guildId));
   obj1 = guildId(589);
   const items1 = [closure_9];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => props.getProps().mfaLevel);
@@ -53,12 +56,13 @@ export default function GuildSettingsModalSecurity(guildId) {
     tmp9 = tmp11;
   }
   const items2 = [stateFromStores, stateFromStores1 === constants2.ELEVATED];
-  const items3 = [tmp.wrapper, guildId.contentContainerStyle];
+  obj = { style: items3, children: null };
+  items3 = [tmp.wrapper, guildId.contentContainerStyle];
   obj = { style: tmp.center, children: null };
   callback = React.useCallback(() => {
     if (null != stateFromStores) {
-      stateFromStores(table[11]);
-      let updateMFALevelResult = { guildId: null, level: null };
+      let updateMFALevelResult = stateFromStores(table[11]);
+      updateMFALevelResult = { guildId: null, level: null };
       updateMFALevelResult[0] = tmp.id;
       updateMFALevelResult[1] = table ? closure_1_11.NONE : closure_1_11.ELEVATED;
       updateMFALevelResult = updateMFALevelResult.updateMFALevel(updateMFALevelResult);
@@ -96,12 +100,12 @@ export default function GuildSettingsModalSecurity(guildId) {
     const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1236).intl;
     obj4[2] = intl3.string(tmp2(1236).t["KG1V/E"]);
-    tmp17Result = callback2(tmp2(4734).Text, obj4);
+    tmp17Result = tmp17(tmp2(4734).Text, obj4);
   }
   const obj5 = { children: null };
   items4[2] = tmp17Result;
   obj[1] = items4;
-  const items5 = [callback(closure_4, obj), ];
+  const items5 = [closure_13(closure_4, obj), ];
   const obj6 = { style: tmp.center, children: null };
   const items6 = [callback2(closure_5, { source: stateFromStores(14149), style: tmp.image, resizeMode: "contain" }), ];
   const obj8 = { style: tmp.infoWrapper, children: null };
@@ -111,9 +115,9 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj8[1] = callback2(guildId(4734).Text, obj9);
   items6[1] = callback2(closure_4, obj8);
   obj6[1] = items6;
-  items5[1] = callback(closure_4, obj6);
+  items5[1] = closure_13(closure_4, obj6);
   obj[1] = items5;
-  const items7 = [callback(closure_4, obj), callback2(guildId(6550).NavScrim, {})];
+  const items7 = [closure_13(closure_4, obj), callback2(guildId(6550).NavScrim, {})];
   obj5[0] = items7;
-  return callback(closure_14, obj5);
+  return closure_13(closure_14, obj5);
 };

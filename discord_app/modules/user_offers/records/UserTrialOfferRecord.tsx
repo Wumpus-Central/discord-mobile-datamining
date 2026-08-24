@@ -2,7 +2,7 @@
 
 // Module 7425 (createFromServer)
 import toJSDefault from "toJS" /* 1931 */;
-import createFromServer from "createFromServer" /* 7426 */;
+import closure_0 from "createFromServer" /* 7426 */;
 
 toJSDefault;
 let UserTrialOfferRecord;
@@ -108,6 +108,6 @@ prototype["hasExpired"] = function hasExpired() {
 prototype["isRedeemed"] = function isRedeemed() {
   return null != this.redeemedAt;
 };
-const result = require("obj132").fileFinishedImporting("modules/user_offers/records/UserTrialOfferRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/user_offers/records/UserTrialOfferRecord.tsx");
 
 export default UserTrialOfferRecord;

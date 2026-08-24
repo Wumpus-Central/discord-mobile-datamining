@@ -6,27 +6,29 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import Text from "Text" /* 4734 */;
-import obj132Default from "obj132" /* 4827 */;
+import setDefault from "set" /* 4827 */;
 import SvgComponentDefault from "SvgComponent" /* 8741 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function ConfirmActivityGateContent(children) {
   const tmp = callback3();
+  let obj = { style: tmp.alertContainer, children: null };
   const items = [callback(SvgComponentDefault, {}), ];
-  const obj = { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description };
+  obj = { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { fontSize: 16, lineHeight: 24, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" };
+createCacheKey = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: null };
+createCacheKey = { fontSize: 16, lineHeight: 24, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/activities/confirmActivityAgeGateAlert.native.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/confirmActivityAgeGateAlert.native.tsx");
 
 export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(arg0) {
   ({ application, onAgree, onDisagree } = arg0);
@@ -44,5 +46,5 @@ export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(
   obj[4] = onAgree;
   obj[5] = onDisagree;
   obj[6] = Button.ButtonColors.RED;
-  return Promise.resolve(obj132Default.show(obj));
+  return Promise.resolve(setDefault.show(obj));
 };

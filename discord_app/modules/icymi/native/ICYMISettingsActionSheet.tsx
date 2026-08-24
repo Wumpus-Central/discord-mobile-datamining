@@ -3,24 +3,24 @@
 // Module 15710 (ICYMISettingsActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef9057 from "module_9057" /* 9057 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
-import initialize from "initialize" /* 9054 */;
-import filterStaffGuild from "filterStaffGuild" /* 9044 */;
+import closure_5 from "generateOldThreadCutoff" /* 4772 */;
+import closure_6 from "initialize" /* 9054 */;
+import closure_7 from "filterStaffGuild" /* 9044 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: c9 } = ME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { bottomPadding: ThemesDefault.space.PX_16, width: "100%" };
+createCacheKey = { padding: null };
+createCacheKey = { bottomPadding: ThemesDefault.space.PX_16, width: "100%" };
 createCacheKey[0] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMISettingsActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMISettingsActionSheet.tsx");
 
 export default function ICYMISettingsActionSheet() {
   let obj = stateFromStoresObject(589);
@@ -42,33 +42,34 @@ export default function ICYMISettingsActionSheet() {
     obj1 = { children: null };
     obj[1] = flag;
     obj[2] = function onValueChange() {
-      const obj = {};
+      let obj = closure_1_1(closure_1_2[16]);
+      obj = {};
       const merged = Object.assign(stateFromStoresObject);
       obj.filterStaffContent = !stateFromStoresObject.filterStaffContent;
       obj.setFilters(obj);
-      const dehydrated = _modDef9057.fetchDehydrated();
+      const dehydrated = closure_1_1(closure_1_2[16]).fetchDehydrated();
     };
     const items1 = [callback2(tmp(7178).TableSwitchRow, obj), , ];
     let obj2 = { label: "Clear read states", onPress: null };
     obj2[1] = function onPress() {
       dehydratedItems = dehydratedItems.getDehydratedItems();
-      const item = dehydratedItems.forEach((item, index) => {
-        let tmp3 = item.type === callback(table[18]).ICYMIItemTypes.MESSAGE;
+      const item = dehydratedItems.forEach((type) => {
+        let tmp3 = type.type === callback(table[18]).ICYMIItemTypes.MESSAGE;
         if (tmp3) {
-          tmp3 = item.data.channel_type === callback(table[19]).ChannelTypes.GUILD_ANNOUNCEMENT;
+          tmp3 = type.data.channel_type === tmp(tmp2[19]).ChannelTypes.GUILD_ANNOUNCEMENT;
         }
         if (tmp3) {
-          let obj = callback2(table[20]);
-          tmp3 = obj.compare(closure_5.ackMessageId(item.data.channel_id), item.data.message_id) >= 0;
+          let obj = callback2(tmp2[20]);
+          tmp3 = obj.compare(closure_5.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
         }
         if (tmp3) {
-          const tmpResult = callback(table[21]);
-          const channel_id = item.data.channel_id;
+          const tmpResult = tmp(tmp2[21]);
+          const channel_id = type.data.channel_id;
           obj = { object: null, objectType: null };
           obj[0] = constants2.ACK_GRAVITY_CLEAR_READ_STATES_BUTTON;
           obj[1] = constants.ACK_SEMI_AUTOMATIC;
-          tmpResult.ack(channel_id, obj, true, true, callback2(table[20]).atPreviousMillisecond(item.data.message_id));
-          const obj4 = callback2(table[20]);
+          tmpResult.ack(channel_id, obj, true, true, callback2(tmp2[20]).atPreviousMillisecond(type.data.message_id));
+          const obj4 = callback2(tmp2[20]);
         }
       });
       callback(paths[16]).clearReadStates();
@@ -105,7 +106,7 @@ export default function ICYMISettingsActionSheet() {
               return obj;
             } else {
               closure_0 = tmp4;
-              let obj2 = stateFromStoresObject(9056);
+              let obj2 = closure_1_0(9056);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -134,7 +135,8 @@ export default function ICYMISettingsActionSheet() {
     });
     items1[2] = callback2(tmp(6291).TableRow, obj3);
     obj1[0] = items1;
-    tmp5Result = callback(closure_11, obj1);
+    tmp5Result = tmp5(closure_11, obj1);
+    const tmp7 = closure_11;
   }
   let obj4 = { showGradient: true, startExpanded: true, children: null };
   const items2 = [tmp5Result, ];
@@ -153,9 +155,9 @@ export default function ICYMISettingsActionSheet() {
   };
   items2[1] = callback2(stateFromStoresObject(6291).TableRow, obj5);
   obj[2] = items2;
-  const items3 = [callback(stateFromStoresObject(6286).TableRowGroup, obj), ];
+  const items3 = [closure_12(stateFromStoresObject(6286).TableRowGroup, obj), ];
   const tmp4 = callback3();
   items3[1] = callback2(View, { style: callback3().padding });
   obj4[2] = items3;
-  return callback(stateFromStoresObject(7175).ActionSheet, obj4);
+  return closure_12(stateFromStoresObject(7175).ActionSheet, obj4);
 };

@@ -1,9 +1,9 @@
 // === Module 4819: isMentioned ===
 
 // Module 4819 (isMentioned)
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import closure_1 from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 
 function isMentioned(suppressRoles) {
   ({ userId, mentionUsers, mentionRoles, suppressEveryone } = suppressRoles);
@@ -38,9 +38,9 @@ function isMentioned(suppressRoles) {
               return false;
             } else {
               member = member.getMember(guildId, userId);
-              return null != member && mentionRoles.some((item, index) => {
+              return null != member && mentionRoles.some((arg0) => {
                 const roles = member.roles;
-                return roles.includes(item);
+                return roles.includes(arg0);
               });
             }
           }
@@ -50,7 +50,7 @@ function isMentioned(suppressRoles) {
     return false;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/messages/isMessageMentioned.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/isMessageMentioned.tsx");
 
 export default function isMessageMentioned(suppressRoles) {
   ({ message, suppressEveryone } = suppressRoles);
@@ -81,7 +81,7 @@ export const isRawMessageMentioned = function isRawMessageMentioned(suppressRole
   const mentions = rawMessage.mentions;
   let mapped;
   if (mentions != null) {
-    mapped = mentions.map((item, index) => item.id);
+    mapped = mentions.map((id) => id.id);
   }
   if (mapped == null) {
     mapped = [];

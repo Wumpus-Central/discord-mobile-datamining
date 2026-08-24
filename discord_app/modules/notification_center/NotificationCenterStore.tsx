@@ -3,19 +3,19 @@
 // Module 15668 (handleLoadFinished)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import NotificationCenterScenes from "NotificationCenterScenes" /* 4802 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import findOrCreateMessageRecord from "findOrCreateMessageRecord" /* 5384 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "findOrCreateMessageRecord" /* 5384 */;
 
-require = fn;
+require = arg1;
 function handleLoadFinished() {
   closure_6.hasNewMentions = false;
   closure_6.isDataStale = false;
   closure_6.isRefreshing = false;
 }
-let closure_5 = 90 * obj132Default.Millis.DAY;
+let closure_5 = 90 * setDefault.Millis.DAY;
 let closure_6 = { tab: null, localItemAcks: {}, hasNewMentions: false, isDataStale: false, isRefreshing: false };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterStore extends PersistedStore {
@@ -33,11 +33,16 @@ prototype["initialize"] = function initialize(localItemAcks) {
       const obj = {};
       const entries = Object.entries(localItemAcks);
       while (tmp2 !== undefined) {
+        let tmp4 = callback;
         let tmp5 = callback(tmp3, 2);
         [tmp6, tmp7] = tmp5;
         let _Date = Date;
+        let tmp8 = tmp7;
+        let tmp9 = closure_5;
         if (Date.now() - tmp7 < closure_5) {
-          obj[tmp6] = tmp7;
+          let tmp10 = tmp6;
+          let tmp11 = tmp7;
+          obj[tmp6] = tmp8;
         }
         continue;
       }
@@ -62,6 +67,7 @@ prototype["isLocalItemAcked"] = function isLocalItemAcked(addResult) {
     let tmp3 = null != closure_6.localItemAcks[addResult.local_id];
     if (!tmp3) {
       tmp3 = DISCORD_EPOCHDefault.age(addResult.id) > closure_5;
+      const obj = DISCORD_EPOCHDefault;
     }
     tmp = tmp3;
   }
@@ -101,12 +107,12 @@ const notificationCenterStore = new NotificationCenterStore(dispatcherDefault, {
   },
   NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: function handleAck(localIds) {
     localIds = localIds.localIds;
-    const item = localIds.forEach((item, index) => {
+    const item = localIds.forEach((arg0) => {
       let obj = {};
       const merged = Object.assign(obj);
       obj = {};
       const merged1 = Object.assign(obj.localItemAcks);
-      obj[item] = Date.now();
+      obj[arg0] = Date.now();
       obj.localItemAcks = obj;
     });
   },
@@ -116,6 +122,6 @@ const notificationCenterStore = new NotificationCenterStore(dispatcherDefault, {
   LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: handleLoadFinished,
   LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: handleLoadFinished
 });
-const result = require("obj132").fileFinishedImporting("modules/notification_center/NotificationCenterStore.tsx");
+const result = require("set").fileFinishedImporting("modules/notification_center/NotificationCenterStore.tsx");
 
 export default notificationCenterStore;

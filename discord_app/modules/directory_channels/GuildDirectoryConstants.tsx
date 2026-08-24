@@ -1,16 +1,17 @@
 // === Module 11472: DirectoryEntryTypes ===
 
 // Module 11472 (DirectoryEntryTypes)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
 import ME from "ME" /* 676 */;
 
 ({ ChannelTypes: c3, Permissions: c4 } = ME);
-let obj = { ALL: -1, [-1]: "ALL", UNCATEGORIZED: 0, [0]: "UNCATEGORIZED", SCHOOL_CLUB: 1, [1]: "SCHOOL_CLUB", CLASS: 2, [2]: "CLASS", STUDY_SOCIAL: 3, [3]: "STUDY_SOCIAL", MISC: 5, [5]: "MISC" };
+let obj = { CREATE: "CREATE", HUB_SCHOOL_CLUB: "HUB_SCHOOL_CLUB", HUB_STUDY: "HUB_STUDY", HUB_CLASS: "HUB_CLASS", HUB_SOCIAL: "HUB_SOCIAL", HUB_MAJOR: "HUB_MAJOR", HUB_DORM: "HUB_DORM" };
+obj = { ALL: -1, [-1]: "ALL", UNCATEGORIZED: 0, [0]: "UNCATEGORIZED", SCHOOL_CLUB: 1, [1]: "SCHOOL_CLUB", CLASS: 2, [2]: "CLASS", STUDY_SOCIAL: 3, [3]: "STUDY_SOCIAL", MISC: 5, [5]: "MISC" };
 let c7 = "883060064561299456";
-const result = obj132.fileFinishedImporting("modules/directory_channels/GuildDirectoryConstants.tsx");
+const result = set.fileFinishedImporting("modules/directory_channels/GuildDirectoryConstants.tsx");
 
 export const DirectoryEntryTypes = { GUILD: 0, [0]: "GUILD", GUILD_SCHEDULED_EVENT: 1, [1]: "GUILD_SCHEDULED_EVENT" };
 export const CreateOrAddGuildSlideTypes = { GUILD_TEMPLATES: "guild-templates", CUSTOMIZE_NEW_GUILD: "customize-new-guild", CHOOSE_GUILD: "choose-guild", CUSTOMIZE_EXISTING_GUILD: "customize-existing-guild", CONFIRMATION: "confirmation" };

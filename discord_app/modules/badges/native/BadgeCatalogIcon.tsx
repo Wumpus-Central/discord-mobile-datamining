@@ -1,21 +1,22 @@
 // === Module 14041: BadgeCatalogIcon ===
 
 // Module 14041 (BadgeCatalogIcon)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 const re7 = /\.svg(?:[?#]|$)/i;
-const result = require("obj132").fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
 
 export default function BadgeCatalogIcon(style) {
   ({ badge, size } = style);
+  let complex_icon_animated_url;
   let isMatch;
   dependencyMap = undefined;
   let callback;
-  let complex_icon_animated_url = badge.simple_icon_url;
+  complex_icon_animated_url = badge.simple_icon_url;
   if (complex_icon_animated_url == null) {
     complex_icon_animated_url = badge.complex_icon_static_url;
   }
@@ -36,21 +37,23 @@ export default function BadgeCatalogIcon(style) {
         if (null == obj.getCachedSvgXml(tmp)) {
           const _AbortController = AbortController;
           abortController = new AbortController();
-          const svgXml = complex_icon_animated_url(_undefined[4]).loadSvgXml(tmp, abortController.signal);
-          const tmp3Result = complex_icon_animated_url(_undefined[4]);
-          svgXml.then((result) => {
+          const svgXml = tmp3(tmp4[4]).loadSvgXml(tmp, abortController.signal);
+          const tmp3Result = tmp3(tmp4[4]);
+          svgXml.then((arg0) => {
             if (!abortController.signal.aborted) {
               const obj = { url: null, xml: null };
               obj[0] = abortController;
-              obj[1] = result;
+              obj[1] = arg0;
               closure_1_2(obj);
             }
-          }).catch((error) => {
+          }).catch(() => {
 
           });
           return () => abortController.abort();
         }
         obj = complex_icon_animated_url(_undefined[4]);
+        tmp3 = complex_icon_animated_url;
+        tmp4 = _undefined;
       }
     }
   }, items);
@@ -79,7 +82,7 @@ export default function BadgeCatalogIcon(style) {
       obj1[0] = xml;
       obj1[1] = size;
       obj1[2] = size;
-      tmp15Result = jsx(complex_icon_animated_url(6571).SvgXml, { xml: null, width: null, height: null });
+      tmp15Result = tmp15(complex_icon_animated_url(6571).SvgXml, obj1);
     }
     obj[2] = tmp15Result;
     return <View style={null} aria-hidden>{null}</View>;
@@ -100,9 +103,9 @@ export default function BadgeCatalogIcon(style) {
       obj5[1] = size;
       obj3[1] = obj5;
       obj3[2] = tmp7;
-      obj[2] = jsx(isMatch(5449), { source: null, style: null, onError: null });
+      obj[2] = tmp8(isMatch(5449), obj3);
     }
     return <View {...obj} />;
   }
-  const tmp3 = callback(React.useState(null), 2);
+  let tmp3 = callback(React.useState(null), 2);
 };

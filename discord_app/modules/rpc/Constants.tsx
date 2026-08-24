@@ -1,10 +1,11 @@
 // === Module 4277: RPC_SCOPE_CONFIG ===
 
 // Module 4277 (RPC_SCOPE_CONFIG)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const obj = { SETTINGS: "settings", CHANGELOG: "changelog", LIBRARY: "library", STORE: "store", INVITE: "invite", CHANNEL: "channel", GUILD_SETTINGS: "guild_settings", QUEST_HOME: "quest_home", DISCOVERY_GAME: "discovery_game", SHOP: "shop", ACTIVITIES: "activities", QUEST_PREVIEW_TOOL: "quest_preview_tool", PLAYGROUND: "playground" };
-const result = obj132.fileFinishedImporting("modules/rpc/Constants.tsx");
+let obj = { USER_SETTINGS: "USER_SETTINGS", CHANGELOG: "CHANGELOG", LIBRARY: "LIBRARY", STORE_HOME: "STORE_HOME", STORE_LISTING: "STORE_LISTING", CHANNEL: "CHANNEL", GAME_SHOP: "GAME_SHOP", PICK_GUILD_SETTINGS: "PICK_GUILD_SETTINGS", QUEST_HOME: "QUEST_HOME", DISCOVERY_GAME_RESULTS: "DISCOVERY_GAME_RESULTS", OAUTH2: "OAUTH2", FEATURES: "FEATURES", SHOP: "SHOP", ACTIVITIES: "ACTIVITIES", QUEST_PREVIEW_TOOL: "QUEST_PREVIEW_TOOL", ONE_TIME_LOGIN: "ONE_TIME_LOGIN", PLAYGROUND: "PLAYGROUND" };
+obj = { SETTINGS: "settings", CHANGELOG: "changelog", LIBRARY: "library", STORE: "store", INVITE: "invite", CHANNEL: "channel", GUILD_SETTINGS: "guild_settings", QUEST_HOME: "quest_home", DISCOVERY_GAME: "discovery_game", SHOP: "shop", ACTIVITIES: "activities", QUEST_PREVIEW_TOOL: "quest_preview_tool", PLAYGROUND: "playground" };
+const result = set.fileFinishedImporting("modules/rpc/Constants.tsx");
 
 export const RPC_SCOPE_CONFIG = { ANY: "$any", ALL: "$all" };
 export const RPC_PRIVATE_SCOPE = "RPC_PRIVATE_SCOPE";
@@ -17,28 +18,28 @@ export const DynamicLinkType = obj;
 export const getDynamicLinkType = function getDynamicLinkType(arg0) {
   if (obj.USER_SETTINGS === arg0) {
     return obj.SETTINGS;
-  } else if (obj.CHANGELOG === arg0) {
+  } else if (tmp.CHANGELOG === arg0) {
     return obj.CHANGELOG;
-  } else if (obj.LIBRARY === arg0) {
+  } else if (tmp.LIBRARY === arg0) {
     return obj.LIBRARY;
   } else {
-    if (obj.STORE_HOME !== arg0) {
-      if (obj.STORE_LISTING !== arg0) {
-        if (obj.CHANNEL === arg0) {
+    if (tmp.STORE_HOME !== arg0) {
+      if (tmp.STORE_LISTING !== arg0) {
+        if (tmp.CHANNEL === arg0) {
           return obj.CHANNEL;
-        } else if (obj.PICK_GUILD_SETTINGS === arg0) {
+        } else if (tmp.PICK_GUILD_SETTINGS === arg0) {
           return obj.GUILD_SETTINGS;
-        } else if (obj.QUEST_HOME === arg0) {
+        } else if (tmp.QUEST_HOME === arg0) {
           return obj.QUEST_HOME;
-        } else if (obj.QUEST_PREVIEW_TOOL === arg0) {
+        } else if (tmp.QUEST_PREVIEW_TOOL === arg0) {
           return obj.QUEST_PREVIEW_TOOL;
-        } else if (obj.DISCOVERY_GAME_RESULTS === arg0) {
+        } else if (tmp.DISCOVERY_GAME_RESULTS === arg0) {
           return obj.DISCOVERY_GAME;
-        } else if (obj.SHOP === arg0) {
+        } else if (tmp.SHOP === arg0) {
           return obj.SHOP;
-        } else if (obj.ACTIVITIES === arg0) {
+        } else if (tmp.ACTIVITIES === arg0) {
           return obj.ACTIVITIES;
-        } else if (obj.PLAYGROUND === arg0) {
+        } else if (tmp.PLAYGROUND === arg0) {
           return obj.PLAYGROUND;
         } else {
           return arg0;

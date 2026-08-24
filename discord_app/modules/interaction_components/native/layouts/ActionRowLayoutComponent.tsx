@@ -6,7 +6,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
 
 export default function ActionRowLayoutComponent(components) {
   components = components.components;

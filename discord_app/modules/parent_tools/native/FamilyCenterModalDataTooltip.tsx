@@ -8,18 +8,17 @@ import Text from "Text" /* 4734 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
 import Modal from "Modal" /* 11115 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function Row(arg0) {
   ({ header, description, IconComponent } = arg0);
   const tmp = callback3();
   obj = { style: tmp.row, children: null };
-  { style: tmp.iconContainer, children: callback(IconComponent, obj) };
+  obj = { style: tmp.iconContainer, children: callback(IconComponent, obj) };
   obj = { style: tmp.icon };
   const items = [callback(View, obj), ];
   obj1 = { style: tmp.content, children: null };
@@ -39,13 +38,14 @@ function FamilyCenterModalDataTooltipScreen() {
   obj1 = _require(5363);
   const sortedActivityTypeConfigs = obj1.getSortedActivityTypeConfigs();
   obj = { children: null };
+  obj = { children: null };
   obj1 = { style: tmp.container, children: null };
   const items = [
     callback(_require(4734).Text, { style: tmp.groupHeader, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: ageSpecificText }),
-    sortedActivityTypeConfigs.map((item, index) => {
-      [tmp, obj] = item;
+    sortedActivityTypeConfigs.map((arg0) => {
+      [tmp, obj] = arg0;
       obj = { IconComponent: closure_1_7[tmp], header: obj.tooltipHeader(), description: obj.tooltipDescription(closure_0) };
-      return closure_1_5(Row, obj, tmp);
+      return closure_1_5(closure_1_9, obj, tmp);
     })
   ];
   obj1[1] = items;
@@ -62,24 +62,30 @@ function FamilyCenterModalDataTooltipScreen() {
   return callback2(_require(5440).ModalScreen, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-{ [USER_INTERACTION]: require("ChatIcon").ChatIcon, [USER_CALLED]: require("PhoneIcon").PhoneIcon, [USER_ADD]: require("FriendsIcon").FriendsIcon, [GUILD_ADD]: require("ServerGridIcon").ServerGridIcon, [GUILD_INTERACTION]: require("ThreadIcon").ThreadIcon, [PURCHASES]: require("CreditCardIcon").CreditCardIcon, [TOTAL_VOICE_MINUTES]: require("ClockIcon").ClockIcon, [GIFTS]: require("GiftIcon").GiftIcon };
+let obj = { [USER_INTERACTION]: require("ChatIcon").ChatIcon, [USER_CALLED]: require("PhoneIcon").PhoneIcon, [USER_ADD]: require("FriendsIcon").FriendsIcon, [GUILD_ADD]: require("ServerGridIcon").ServerGridIcon, [GUILD_INTERACTION]: require("ThreadIcon").ThreadIcon, [PURCHASES]: require("CreditCardIcon").CreditCardIcon, [TOTAL_VOICE_MINUTES]: require("ClockIcon").ClockIcon, [GIFTS]: require("GiftIcon").GiftIcon };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = require("items").TeenActionDisplayType);
-let obj = { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+obj = { row: null, content: null, iconContainer: null, header: null, icon: null };
+obj = { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
 obj[0] = obj;
 obj[1] = { flexShrink: 1 };
-let createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round, flexShrink: 0, marginRight: ThemesDefault.space.PX_12 };
+createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round, flexShrink: 0, marginRight: ThemesDefault.space.PX_12 };
 obj[2] = createCacheKey;
 obj[3] = { marginBottom: ThemesDefault.space.PX_4 };
+const obj2 = { marginBottom: ThemesDefault.space.PX_4 };
 obj[4] = { tintColor: ThemesDefault.colors.TEXT_BRAND };
 let closure_8 = createCacheKey.createStyles(obj);
 let obj4 = { container: null, groupHeader: null };
+let obj3 = { tintColor: ThemesDefault.colors.TEXT_BRAND };
 obj4[0] = { display: "flex", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, width: "100%" };
+const obj5 = { display: "flex", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, width: "100%" };
 obj4[1] = { marginBottom: ThemesDefault.space.PX_24 };
 let closure_10 = createCacheKey.createStyles(obj4);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDataTooltip.tsx");
+const obj6 = { marginBottom: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDataTooltip.tsx");
 
 export default function FamilyCenterModalDataTooltip() {
   const memo = React.useMemo(() => {
+    obj = { DATA_TOOLTIP: null };
     obj = {
       headerShown: true,
       headerLeft: callback(6314).getHeaderCloseButton(callback2(5260).pop),

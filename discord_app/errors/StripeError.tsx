@@ -7,7 +7,8 @@ setDefault;
 const prototype = function StripeError(error) {
   error = error.error;
   if (null != error.param) {
-    const obj = {};
+    let obj = { body: null };
+    obj = {};
     ({ param, message } = error);
     const items = [message];
     obj[param] = items;
@@ -22,6 +23,6 @@ const prototype = function StripeError(error) {
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("obj132").fileFinishedImporting("errors/StripeError.tsx");
+const result = require("set").fileFinishedImporting("errors/StripeError.tsx");
 
 export default prototype;

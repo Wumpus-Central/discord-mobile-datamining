@@ -3,7 +3,7 @@
 // Module 4267 (handleGuildBoostsUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import reset from "reset" /* 4045 */;
+import closure_0 from "reset" /* 4045 */;
 
 function handleGuildBoostsUpdate(guildBoostSlot) {
   guildBoostSlot = guildBoostSlot.guildBoostSlot;
@@ -16,6 +16,7 @@ function handleSubscriptionStoreUpdate() {
   const values = Object.values(obj);
   for (const item10010 of values) {
     obj[item10010.id] = item10010;
+    let tmp2 = subscriptionById;
     item10010.subscription = subscriptionById.getSubscriptionById(item10010.subscriptionId);
     continue;
   }
@@ -60,8 +61,8 @@ const guildBoostSlotStore = new GuildBoostSlotStore(dispatcherDefault, {
   GUILD_BOOST_SLOTS_FETCH_SUCCESS: function handleGuildBoostsFetchSuccess(guildBoostSlots) {
     guildBoostSlots = guildBoostSlots.guildBoostSlots;
     closure_3 = {};
-    const item = guildBoostSlots.forEach((item, index) => {
-      closure_3[item.id] = item;
+    const item = guildBoostSlots.forEach((id) => {
+      closure_3[id.id] = id;
     });
     c2 = false;
     c1 = true;
@@ -75,6 +76,6 @@ const guildBoostSlotStore = new GuildBoostSlotStore(dispatcherDefault, {
     c2 = false;
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/billing/GuildBoostSlotStore.tsx");
+const result = require("set").fileFinishedImporting("stores/billing/GuildBoostSlotStore.tsx");
 
 export default guildBoostSlotStore;

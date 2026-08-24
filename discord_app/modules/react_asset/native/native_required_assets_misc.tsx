@@ -1,7 +1,7 @@
 // === Module 17131: NATIVE_REQUIRED_ASSETS_MISC ===
 
 // Module 17131 (NATIVE_REQUIRED_ASSETS_MISC)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import registerAssetDefault from "registerAsset" /* 1439 */;
 import registerAssetDefault2 from "registerAsset" /* 1440 */;
 import registerAssetDefault3 from "registerAsset" /* 1441 */;
@@ -24,6 +24,6 @@ import registerAssetDefault19 from "registerAsset" /* 17137 */;
 import registerAssetDefault20 from "registerAsset" /* 17138 */;
 
 const obj = { DefaultAvatar0: registerAssetDefault, DefaultAvatar1: registerAssetDefault2, DefaultAvatar2: registerAssetDefault3, DefaultAvatar3: registerAssetDefault4, DefaultAvatar4: registerAssetDefault5, DefaultGroup0: registerAssetDefault6, DefaultGroup1: registerAssetDefault7, DefaultGroup2: registerAssetDefault8, DefaultGroup3: registerAssetDefault9, DefaultGroup4: registerAssetDefault10, DefaultGroup5: registerAssetDefault11, DefaultGroup6: registerAssetDefault12, DefaultGroup7: registerAssetDefault13, PoopDark: registerAssetDefault14, PoopLight: registerAssetDefault15, RoleSubscriptionBadge: registerAssetDefault16, RoleSubscriptionLanyard: registerAssetDefault17, RoleSubscriptionPurchaseCard: registerAssetDefault18, SummaryIndicatorEnd: registerAssetDefault19, SummaryIndicatorStart: registerAssetDefault20 };
-const result = obj132.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");
+const result = set.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");
 
 export const NATIVE_REQUIRED_ASSETS_MISC = obj;

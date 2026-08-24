@@ -1,31 +1,41 @@
 // === Module 10252: useHorizontalAutocompleteResults ===
 
 // Module 10252 (useHorizontalAutocompleteResults)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ AutoCompleteResultTypes: c4, ChannelTypes: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");
 
 export const useHorizontalAutocompleteResults = function useHorizontalAutocompleteResults(channel) {
   channel = channel.channel;
   const selection = channel.selection;
   const text = channel.text;
+  let callback = text;
   let first;
-  let callback;
+  closure_4 = undefined;
+  let memo;
+  let text2;
+  let selectionStart;
+  let selectionEnd;
+  closure_9 = undefined;
+  let autocompleteType;
+  let query;
+  let queryOptions;
+  callback = undefined;
   let tmp = callback(first.useState([]), 2);
   first = tmp[0];
   closure_4 = tmp[1];
   let items = [channel];
-  const memo = first.useMemo(() => channel(selection[3]).getAutocompleteOptions(channel, false, false), items);
+  memo = first.useMemo(() => channel(selection[3]).getAutocompleteOptions(channel, false, false), items);
   let obj = { text, selectionStart: selection.start, selectionEnd: selection.end };
   const tmp4 = callback(first.useState(obj), 2);
   const first1 = tmp4[0];
-  const text2 = first1.text;
-  const selectionStart = first1.selectionStart;
-  const selectionEnd = first1.selectionEnd;
+  text2 = first1.text;
+  selectionStart = first1.selectionStart;
+  selectionEnd = first1.selectionEnd;
   closure_9 = tmp4[1];
   const items1 = [text, selection];
   const effect = first.useEffect(() => {
@@ -46,7 +56,11 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
     if (null != text2) {
       if (0 !== text2.trim().length) {
         while (true) {
+          let tmp2 = channel;
+          let tmp3 = selection;
           let WHITESPACE_RE = channel(selection[4]).WHITESPACE_RE;
+          let arr = text2;
+          let tmp5 = tmp;
           let tmp6 = tmp15;
           let found = tmp16;
           if (0 === tmp) {
@@ -54,13 +68,14 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
             if (selectionEnd == null) {
               tmp8 = tmp;
             }
-            let substr = text2.slice(tmp, tmp8);
+            let substr = arr.slice(tmp, tmp8);
             closure_0 = substr[0];
             let str2 = substr.slice(1);
             let formatted = str2.toLowerCase();
             let _Object = Object;
+            let tmp10 = memo;
             let keys = Object.keys(memo);
-            found = keys.find((item, index) => {
+            found = keys.find((arg0) => {
               let matchesResult = undefined !== closure_0;
               if (matchesResult) {
                 matchesResult = undefined !== formatted;
@@ -104,14 +119,15 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
     }
     return { query: null, autocompleteType: null, autocompleteSelectionStart: null };
   }, items2);
-  const autocompleteType = memo1.autocompleteType;
-  const query = memo1.query;
-  const queryOptions = memo1.queryOptions;
+  autocompleteType = memo1.autocompleteType;
+  query = memo1.query;
+  queryOptions = memo1.queryOptions;
   const items3 = [autocompleteType, query, queryOptions, memo];
   callback = first.useCallback((arg0) => {
     if (null != autocompleteType) {
       if (null != query) {
         callback(memo[tmp].queryResults(tmp2, queryOptions, arg0));
+        const obj = memo[tmp];
       }
     }
     callback([]);
@@ -137,8 +153,8 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
     callback(true);
   }, items5);
   obj = {
-    results: first.useMemo(() => first.filter((item, index) => {
-      const type = item.type;
+    results: first.useMemo(() => first.filter((type) => {
+      type = type.type;
       return type === constants.USER || type === constants.ROLE || type === constants.CHANNEL || type === constants.EMOJI;
     }), items6),
     autocompleteSelectionStart: memo1.autocompleteSelectionStart,

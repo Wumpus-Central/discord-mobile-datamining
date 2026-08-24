@@ -4,17 +4,17 @@
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import usePlaceholderWidth from "usePlaceholderWidth" /* 11227 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import initialize from "initialize" /* 11226 */;
+import closure_7 from "participantFromServer" /* 1390 */;
+import closure_8 from "initialize" /* 11226 */;
 import { FrecencySectionSelection } from "initialize" /* 11226 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function Placeholder() {
   const tmp = useIsMobileVisualRefreshExperimentEnabledDefault("AppLauncherRecents-native");
   const tmp2 = callback3();
@@ -27,6 +27,7 @@ function Placeholder() {
   if (!tmp) {
     rowShadow = tmp2.rowShadow;
   }
+  obj = { style: items, children: null };
   items[1] = rowShadow;
   obj = { style: tmp2.loadingCommandIcon };
   const items1 = [callback2(closure_5, obj), ];
@@ -36,9 +37,9 @@ function Placeholder() {
   const items4 = [tmp2.loadingTextPlaceholderSmall, { width: placeholderWidth1 }];
   items3[1] = callback2(closure_5, { style: items4 });
   obj1[0] = items3;
-  items1[1] = callback2(closure_5, obj1);
+  items1[1] = closure_12(closure_5, obj1);
   obj[1] = items1;
-  return callback2(closure_5, obj);
+  return closure_12(closure_5, obj);
 }
 function FrecentActivityOneClickCTA(context) {
   context = context.context;
@@ -92,7 +93,7 @@ function FrecentActivityOneClickCTA(context) {
   obj1[1] = tmp6;
   obj1[2] = isLaunching;
   obj1[3] = callback;
-  return callback(FrecentApp, obj1);
+  return closure_11(FrecentApp, obj1);
 }
 function FrecentApp(app) {
   app = app.app;
@@ -123,7 +124,7 @@ function FrecentApp(app) {
       if (tmp2) {
         const obj = { application: null, sectionName: null };
         obj[0] = app.section.application;
-        obj[1] = app(dependencyMap[16]).AppLauncherSectionName.RECENT_APPS;
+        obj[1] = app(closure_1_2[16]).AppLauncherSectionName.RECENT_APPS;
         onAppSelected(obj);
       }
     };
@@ -140,40 +141,56 @@ function FrecentApp(app) {
     obj[1] = tmp.submittingOverlay;
     items[1] = callback2(app(11236).SubmittingOverlay, obj);
     obj[6] = items;
-    return callback2(app(5433).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(5433).PressableOpacity, obj, app.applicationId);
   }
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, headerContainer: null, header: null, scrollView: null, scrollViewContentContainer: null, contextMenuIcon: null, appContainer: null, appContainerDisabled: null, commandContainer: null, rowShadow: null, appIcon: null, loadingCommandIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, submittingOverlay: null };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[3] = { marginTop: 8, overflow: "visible" };
+let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { height: 16, width: 16 };
+let obj2 = { gap: ThemesDefault.space.PX_8 };
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg };
 const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg, opacity: 0.4 };
+let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg, opacity: 0.4 };
 createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.md, paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, flexDirection: "row", justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 const merged2 = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[9] = {};
+let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.md, paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, flexDirection: "row", justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let obj6 = {};
 createCacheKey[10] = { width: 60, height: 60, borderRadius: ThemesDefault.radii.lg };
+const obj7 = { width: 60, height: 60, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[11] = { width: 36, height: 36, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+const obj8 = { width: 36, height: 36, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[12] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start", marginBottom: ThemesDefault.space.PX_4 };
+const obj9 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start", marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[13] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+const obj10 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 createCacheKey[14] = { position: "absolute", top: 0, left: 0, width: 60, height: 60, borderRadius: ThemesDefault.radii.lg };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj12 = { APPS: 0, [0]: "APPS", COMMANDS: 1, [1]: "COMMANDS" };
 let closure_16 = { code: "function FrecencySectionTsx1(){const{withTiming,isRecentsMenuOpen}=this.__closure;return{transform:[{rotate:withTiming(isRecentsMenuOpen?'-180deg':'0deg')}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySection.tsx");
+const obj11 = { position: "absolute", top: 0, left: 0, width: 60, height: 60, borderRadius: ThemesDefault.radii.lg };
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySection.tsx");
 
 export default function FrecencySection(loading) {
   ({ context: memo, sectionDescriptors: closure_1, commands } = loading);
   loading = loading.loading;
   const apps = loading.apps;
   ({ onAppSelected: closure_5, onCommandSelected: closure_6, onViewAllSelected: closure_7 } = loading);
+  closure_8 = undefined;
+  FrecencySectionSelection = undefined;
+  let first;
+  closure_11 = undefined;
   let first1;
   let callback3;
   closure_14 = undefined;
@@ -185,7 +202,7 @@ export default function FrecencySection(loading) {
   let obj = memo(commands[14]);
   obj1 = apps;
   const tmp6 = loading(apps.useState(false), 2);
-  const first = tmp6[0];
+  first = tmp6[0];
   closure_11 = tmp6[1];
   let obj2 = memo(commands[15]);
   let items = [closure_8];
@@ -197,10 +214,10 @@ export default function FrecencySection(loading) {
       let APPS = obj12.COMMANDS;
       let tmp13 = obj12;
     }
-    let tmp5Result = tmp5(tmp11(APPS), 2);
+    let tmp5Result = loading(tmp11(APPS), 2);
     first1 = tmp5Result[0];
     callback3 = tmp5Result[1];
-    const tmp17 = obj.useAppLauncherContext().entrypoint === tmp4(commands[16]).AppLauncherEntrypoint.VOICE;
+    const tmp17 = obj.useAppLauncherContext().entrypoint === tmp4(tmp2[16]).AppLauncherEntrypoint.VOICE;
     closure_14 = tmp17;
     let items1 = [commands.length, apps.length, loading, first1];
     const effect = obj1.useEffect(() => {
@@ -222,15 +239,17 @@ export default function FrecencySection(loading) {
         }
         trackWithMetadataResult = { num: null, section_name: null, location: null };
         trackWithMetadataResult[0] = length;
-        if (first1 === constants.APPS) {
-          let RECENT_COMMANDS = memo(HOME[16]).AppLauncherSectionName.RECENT_APPS;
+        if (tmp7 === tmp8.APPS) {
+          let RECENT_COMMANDS = tmp5(HOME[16]).AppLauncherSectionName.RECENT_APPS;
         } else {
-          RECENT_COMMANDS = memo(HOME[16]).AppLauncherSectionName.RECENT_COMMANDS;
+          RECENT_COMMANDS = tmp5(HOME[16]).AppLauncherSectionName.RECENT_COMMANDS;
         }
         trackWithMetadataResult[1] = RECENT_COMMANDS;
-        HOME = memo(HOME[16]).AppLauncherLocations.HOME;
+        HOME = tmp5(HOME[16]).AppLauncherLocations.HOME;
         trackWithMetadataResult[2] = HOME;
         trackWithMetadataResult = trackWithMetadataResult.trackWithMetadata(first.APP_LAUNCHER_FRECENTS_SEEN, trackWithMetadataResult);
+        tmp7 = first1;
+        tmp8 = constants;
       }
     }, items1);
     let items2 = [apps];
@@ -238,19 +257,19 @@ export default function FrecencySection(loading) {
     importDefault = tmp17;
     const items3 = [memo, tmp17];
     const memo1 = obj1.useMemo(() => {
-      const mapped = memo.map((item, index) => {
+      const mapped = memo.map((section) => {
         let tmp = null;
-        if (null != item.section) {
+        if (null != section.section) {
           let id = null;
-          if (null != item.section.application) {
+          if (null != section.section.application) {
             id = null;
-            if (obj.isEmbeddedApp(item.section.application)) {
+            if (obj.isEmbeddedApp(section.section.application)) {
               id = null;
               if (closure_1) {
-                id = item.section.application.id;
+                id = section.section.application.id;
               }
             }
-            obj = memo(commands[9]);
+            obj = closure_1_0(closure_1_2[9]);
           }
           tmp = id;
         }
@@ -258,7 +277,7 @@ export default function FrecencySection(loading) {
       });
       return mapped.filter(memo(commands[10]).isNotNullish);
     }, items3);
-    tmp(commands[11])(memo1);
+    importDefault(tmp2[11])(memo1);
     class V {
       constructor() {
         obj = closure_0(commands[19]);
@@ -275,23 +294,23 @@ export default function FrecencySection(loading) {
       }
     }
     obj = { withTiming: null, isRecentsMenuOpen: null };
-    obj[0] = tmp4(commands[19]).withTiming;
+    obj[0] = tmp4(tmp2[19]).withTiming;
     obj[1] = first;
     V.__closure = obj;
     V.__workletHash = 4528534448308;
     V.__initData = COMMANDS;
-    obj12 = tmp4(commands[18]).useAnimatedStyle(V);
+    obj12 = tmp4(tmp2[18]).useAnimatedStyle(V);
     if (0 === commands.length) {
       if (0 === apps.length) {
         return null;
       }
     }
     obj = { label: null, IconComponent: null, action: null };
-    let intl = tmp4(commands[20]).intl;
-    obj[0] = intl.string(tmp4(commands[20]).t.XRBNsN);
+    let intl = tmp4(tmp2[20]).intl;
+    obj[0] = intl.string(tmp4(tmp2[20]).t.XRBNsN);
     let prop;
     if (first1 === tmp13.COMMANDS) {
-      prop = tmp4(commands[21]).CheckmarkSmallBoldIcon;
+      prop = tmp4(tmp2[21]).CheckmarkSmallBoldIcon;
     }
     obj[1] = prop;
     obj[2] = function action() {
@@ -303,11 +322,11 @@ export default function FrecencySection(loading) {
     };
     const items4 = [obj, ];
     obj1 = { label: null, IconComponent: null, action: null };
-    const intl2 = tmp4(commands[20]).intl;
-    obj1[0] = intl2.string(tmp4(commands[20]).t.TCAk0p);
+    const intl2 = tmp4(tmp2[20]).intl;
+    obj1[0] = intl2.string(tmp4(tmp2[20]).t.TCAk0p);
     let prop1;
     if (first1 === tmp13.APPS) {
-      prop1 = tmp4(commands[21]).CheckmarkSmallBoldIcon;
+      prop1 = tmp4(tmp2[21]).CheckmarkSmallBoldIcon;
     }
     obj1[1] = prop1;
     obj1[2] = function action() {
@@ -319,9 +338,9 @@ export default function FrecencySection(loading) {
     };
     items4[1] = obj1;
     const substr = commands.slice(0, 8);
-    let mapped = substr.map((item, index) => {
-      closure_0 = item;
-      found = found.find((item, index) => item.id === item.applicationId);
+    let mapped = substr.map((type) => {
+      closure_0 = type;
+      found = found.find((id) => id.id === type.applicationId);
       let obj = memo(commands[23]);
       let application;
       if (found != null) {
@@ -331,17 +350,17 @@ export default function FrecencySection(loading) {
       if (null == found) {
         return null;
       } else {
-        let tmp2Result = memo(commands[9]);
+        let tmp2Result = tmp2(tmp3[9]);
         let FAKE_BUILT_IN_APP = found.application;
         if (FAKE_BUILT_IN_APP == null) {
-          FAKE_BUILT_IN_APP = memo(commands[9]).FAKE_BUILT_IN_APP;
+          FAKE_BUILT_IN_APP = tmp2(tmp3[9]).FAKE_BUILT_IN_APP;
         }
         const sectionName = tmp2Result.getSectionName(FAKE_BUILT_IN_APP);
-        if (item.type === memo(commands[24]).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
-          tmp2Result = memo(commands[9]);
-          let displayName = tmp2Result.formatPrimaryEntryPointCommandName(item.displayName);
+        if (type.type === tmp2(tmp3[24]).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
+          tmp2Result = tmp2(tmp3[9]);
+          let displayName = tmp2Result.formatPrimaryEntryPointCommandName(type.displayName);
         } else {
-          displayName = item.displayName;
+          displayName = type.displayName;
         }
         const items = [closure_9.commandContainer, ];
         let rowShadow = !closure_8;
@@ -360,42 +379,42 @@ export default function FrecencySection(loading) {
         if (tmp10) {
           obj = { iconSize: 36, iconSource: null };
           obj[1] = appLauncherIconSource;
-          tmp10 = callback2(callback(commands[26]), obj);
+          tmp10 = callback2(callback(tmp3[26]), obj);
         }
         const items1 = [tmp10, ];
         obj1 = { children: null };
         const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
         obj2[2] = displayName;
-        const items2 = [callback2(memo(commands[27]).Text, obj2), ];
+        const items2 = [callback2(tmp2(tmp3[27]).Text, obj2), ];
         const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: null };
         obj3[2] = sectionName;
-        items2[1] = callback2(memo(commands[27]).Text, obj3);
+        items2[1] = callback2(tmp2(tmp3[27]).Text, obj3);
         obj1[0] = items2;
         items1[1] = first1(closure_1_5, obj1);
         obj[5] = items1;
-        return first1(memo(commands[25]).PressableScale, obj, item.id);
+        return first1(tmp2(tmp3[25]).PressableScale, obj, type.id);
       }
     });
-    let found = mapped.filter(tmp4(commands[10]).isNotNullish);
-    const mapped1 = memo.map((item, index) => {
-      let applicationId = item;
+    let found = mapped.filter(tmp4(tmp2[10]).isNotNullish);
+    const mapped1 = memo.map((section) => {
+      let applicationId = section;
       let tmp = null;
-      if (null == item.section) {
+      if (null == section.section) {
         return null;
       } else {
         if (tmp != applicationId.section.application) {
           tmp = undefined;
-          memo(commands[9]);
-          let obj = { context: null, app: null };
+          let obj = memo(commands[9]);
+          obj = { context: null, app: null };
           obj[0] = memo;
           obj[1] = applicationId;
           applicationId = applicationId.applicationId;
-          let tmp8 = callback2(FrecentActivityOneClickCTA, obj, applicationId);
+          let tmp8 = callback2(closure_1_17, obj, applicationId);
         }
         obj = { app: null, onAppSelected: null };
         obj[0] = applicationId;
         obj[1] = closure_5;
-        tmp8 = callback2(FrecentApp, obj, applicationId.applicationId);
+        tmp8 = callback2(closure_1_18, obj, applicationId.applicationId);
       }
     });
     const filter = mapped1.filter;
@@ -440,15 +459,15 @@ export default function FrecencySection(loading) {
             obj[0] = closure_15;
             obj1 = { color: "interactive-text-default", style: null };
             obj1[1] = closure_9.contextMenuIcon;
-            obj[1] = callback2(memo(commands[29]).ChevronSmallDownIcon, obj1);
-            tmp5Result = callback2(callback(commands[18]).View, obj);
+            obj[1] = tmp5(memo(tmp7[29]).ChevronSmallDownIcon, obj1);
+            tmp5Result = tmp5(callback(tmp7[18]).View, obj);
           }
         }
         items[1] = tmp5Result;
         obj.children = items;
         return first1(closure_1_5, obj);
       };
-      const items5 = [closure_11(tmp4(commands[28]).ContextMenu, obj4), ];
+      const items5 = [closure_11(tmp4(tmp2[28]).ContextMenu, obj4), ];
       let tmp31 = COMMANDS === tmp13.APPS;
       if (tmp31) {
         tmp31 = tmp10;
@@ -473,17 +492,17 @@ export default function FrecencySection(loading) {
         return launchingActivity(COMMANDS);
       };
       const obj5 = { variant: "text-sm/medium", color: "text-brand", children: null };
-      const intl3 = tmp4(commands[20]).intl;
-      obj5[2] = intl3.string(tmp4(commands[20]).t["/qG8v7"]);
-      tmp32[3] = closure_11(tmp4(commands[27]).Text, obj5);
-      items5[1] = closure_11(tmp4(commands[30]).PressableOpacity, tmp32);
+      const intl3 = tmp4(tmp2[20]).intl;
+      obj5[2] = intl3.string(tmp4(tmp2[20]).t["/qG8v7"]);
+      tmp32[3] = closure_11(tmp4(tmp2[27]).Text, obj5);
+      items5[1] = closure_11(tmp4(tmp2[30]).PressableOpacity, tmp32);
       obj3[1] = items5;
       const items6 = [first1(closure_5, obj3), ];
       const obj6 = { style: null, contentContainerStyle: null, horizontal: true, showsHorizontalScrollIndicator: false, children: null };
       ({ scrollView: obj12[0], scrollViewContentContainer: obj12[1] } = tmp3);
       if (loading) {
         const items7 = [1, 2, 3, 4, 5];
-        mapped2 = items7.map((item, index) => callback2(closure_14, {}, index));
+        mapped2 = items7.map((arg0, arg1) => callback2(closure_14, {}, arg1));
       }
       obj6[4] = mapped2;
       items6[1] = closure_11(closure_6, obj6);
@@ -497,11 +516,9 @@ export default function FrecencySection(loading) {
         COMMANDS = tmp13.COMMANDS;
       }
     }
-    const tmp4Result = tmp4(commands[18]);
+    const tmp4Result = tmp4(tmp2[18]);
   }
   tmp13 = obj12;
   APPS = obj12.APPS;
-  tmp = importDefault;
-  tmp5 = loading;
 };
 export const SectionItemType = obj12;

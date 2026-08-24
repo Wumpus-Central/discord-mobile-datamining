@@ -7,41 +7,41 @@ arg5.flattenArray = function flattenArray(style) {
     function _flattenArray(arg0) {
 
     }
-    const item = style.forEach((item, index) => {
-      if (Array.isArray(item)) {
+    const item = style.forEach((arr) => {
+      if (Array.isArray(arr)) {
         if (typeof closure_1 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        item = item.forEach((item, index) => {
-          if (Array.isArray(item)) {
+        let item = arr.forEach((arr) => {
+          if (Array.isArray(arr)) {
             if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            item = item.forEach((item, index) => {
-              if (Array.isArray(item)) {
+            let item = arr.forEach((arr) => {
+              if (Array.isArray(arr)) {
                 if (typeof closure_1 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                item = item.forEach((item, index) => {
-                  if (Array.isArray(item)) {
+                let item = arr.forEach((arr) => {
+                  if (Array.isArray(arr)) {
                     if (typeof closure_1 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    item = item.forEach(() => { ... });
+                    let item = arr.forEach(() => { ... });
                   } else {
-                    arr = arr.push(item);
+                    arr = arr.push(arr);
                   }
                 });
               } else {
-                arr = arr.push(item);
+                arr = arr.push(arr);
               }
             });
           } else {
-            arr = arr.push(item);
+            arr = arr.push(arr);
           }
         });
       } else {
-        arr = arr.push(item);
+        arr = arr.push(arr);
       }
     });
     return items;

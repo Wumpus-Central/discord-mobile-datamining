@@ -2,28 +2,34 @@
 
 // Module 16015 (MobileShopButtonCoachmark)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-const createCacheKey = { height: 80, width: 80, marginTop: ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_16 };
+const require = arg1;
+createCacheKey = { image: null };
+createCacheKey = { height: 80, width: 80, marginTop: ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
 
 export default function MobileShopButtonCoachmark(marketing) {
   marketing = marketing.marketing;
   const navigateToShop = marketing.navigateToShop;
   const visible = marketing.visible;
   const onDismiss = marketing.onDismiss;
+  closure_4 = undefined;
+  let assetLight;
   let callback;
+  callback = undefined;
+  let callback1;
+  closure_9 = undefined;
   const tmp = callback();
   closure_4 = tmp;
-  const assetLight = marketing.assetLight;
-  visible.useRef(false);
+  assetLight = marketing.assetLight;
+  callback = visible.useRef(false);
   const items = [onDismiss, navigateToShop];
   callback = visible.useCallback(() => {
     closure_6.current = true;
@@ -31,7 +37,7 @@ export default function MobileShopButtonCoachmark(marketing) {
     navigateToShop();
   }, items);
   const items1 = [onDismiss];
-  const callback1 = visible.useCallback(() => {
+  callback1 = visible.useCallback(() => {
     closure_6.current = true;
     onDismiss(constants.USER_DISMISS);
   }, items1);
@@ -58,8 +64,9 @@ export default function MobileShopButtonCoachmark(marketing) {
       visible,
       position: "top",
       renderImgComponent() {
-        const obj = { uri: closure_5 };
-        return assetLight(onDismiss, obj);
+        obj = { style: image.image, source: obj };
+        obj = { uri: closure_5 };
+        return closure_1_5(closure_1_3, obj);
       },
       buttonLabel: null,
       buttonVariant: "secondary",

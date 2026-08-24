@@ -1,10 +1,10 @@
 // === Module 10435: _saveDocuments ===
 
 // Module 10435 (_saveDocuments)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 
-const require = fn;
+const require = arg1;
 function _saveDocuments() {
   const self = this;
   const tmp = callback((arg0) => {

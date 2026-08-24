@@ -1,7 +1,7 @@
 // === Module 1945: isPremiumAtLeast ===
 
 // Module 1945 (isPremiumAtLeast)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 function isPremiumAtLeast(premiumType, TIER_2) {
@@ -39,7 +39,7 @@ function isPremiumExactly(currentUser, TIER_2) {
   return tmp;
 }
 const PremiumTypeOrder = GuildFeatures.PremiumTypeOrder;
-const result = obj132.fileFinishedImporting("utils/PremiumTypeUtils.tsx");
+const result = set.fileFinishedImporting("utils/PremiumTypeUtils.tsx");
 
 export default { isPremiumAtLeast, isPremium, isPremiumExactly };
 export { isPremiumAtLeast };

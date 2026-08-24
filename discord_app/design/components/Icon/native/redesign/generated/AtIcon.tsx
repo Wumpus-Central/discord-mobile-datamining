@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 6838 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/AtIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/AtIcon.tsx");
 
 export const AtIcon = function AtIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

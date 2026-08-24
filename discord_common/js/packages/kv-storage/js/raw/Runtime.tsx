@@ -1,7 +1,7 @@
 // === Module 1965: logger ===
 
 // Module 1965 (logger)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import log from "log" /* 4 */;
 
 let c2 = 1000000;
@@ -37,11 +37,11 @@ prototype["addDatabaseStateCallback"] = function addDatabaseStateCallback(arg0) 
 };
 prototype["removeCompletionCallback"] = function removeCompletionCallback(databaseStateCallback) {
   closure_0 = databaseStateCallback;
-  this.completionCallbacks = this.completionCallbacks.filter((item, index) => item !== closure_0);
+  this.completionCallbacks = this.completionCallbacks.filter((arg0) => arg0 !== closure_0);
 };
 prototype["removeDatabaseStateCallback"] = function removeDatabaseStateCallback(arg0) {
   closure_0 = arg0;
-  this.dbStateCallbacks = this.dbStateCallbacks.filter((item, index) => item !== closure_0);
+  this.dbStateCallbacks = this.dbStateCallbacks.filter((arg0) => arg0 !== closure_0);
 };
 prototype["onResponse"] = function onResponse(id) {
   const self = this;
@@ -97,7 +97,8 @@ prototype["completeOperation"] = function completeOperation(value, timings, nowR
   }
 };
 prototype["initialize"] = function initialize() {
-  const self = this;
+  let self = this;
+  self = this;
   if (!this.initialized) {
     const KV_RAW = self(1957).KV_RAW;
     const obj = { status: null, response: null };
@@ -137,6 +138,6 @@ prototype.initialized = false;
 prototype.dbStateCallbacks = [];
 prototype.completionCallbacks = [];
 const map = new Map();
-let result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/raw/Runtime.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/raw/Runtime.tsx");
 
 export const Runtime = prototype;

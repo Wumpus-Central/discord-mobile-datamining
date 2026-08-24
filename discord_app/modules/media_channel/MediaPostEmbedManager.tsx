@@ -3,29 +3,30 @@
 // Module 17022 (resolveMediaPostEmbeds)
 import initializeDefault from "initialize" /* 5038 */;
 import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
-import isSubscriptionGated from "isSubscriptionGated" /* 1981 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import getMediaPostEmbed from "getMediaPostEmbed" /* 10639 */;
+import closure_3 from "isSubscriptionGated" /* 1981 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "getMediaPostEmbed" /* 10639 */;
 import { FetchState } from "getMediaPostEmbed" /* 10639 */;
 import { MessageFlags } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-const require = fn;
+const require = arg1;
 function resolveMediaPostEmbeds(embeds) {
   closure_0 = embeds;
   embeds = embeds.embeds;
   let found;
   if (embeds != null) {
-    found = embeds.filter((item, index) => item.type === first_message(table[5]).MessageEmbedTypes.POST_PREVIEW);
+    found = embeds.filter((type) => type.type === first_message(table[5]).MessageEmbedTypes.POST_PREVIEW);
   }
   let tmp2 = null != found;
   if (tmp2) {
     tmp2 = 0 !== found.length;
   }
   if (tmp2) {
-    const item = found.forEach((item, index) => {
-      if (null != item.url) {
-        const mediaPostEmbedChannelPath = first_message(closure_1_2[6]).getMediaPostEmbedChannelPath(item.url);
+    const item = found.forEach((url) => {
+      if (null != url.url) {
+        const mediaPostEmbedChannelPath = first_message(closure_1_2[6]).getMediaPostEmbedChannelPath(url.url);
         if (null != mediaPostEmbedChannelPath) {
           let threadId;
           if (mediaPostEmbedChannelPath != null) {
@@ -39,14 +40,14 @@ function resolveMediaPostEmbeds(embeds) {
             if (null != channelId) {
               if (closure_1_6.getEmbedFetchState(mediaPostEmbedChannelPath.threadId) === closure_1_7.NOT_FETCHED) {
                 if (!closure_1_9.has(mediaPostEmbedChannelPath.threadId)) {
-                  closure_1_9.add(mediaPostEmbedChannelPath.threadId);
+                  obj4.add(mediaPostEmbedChannelPath.threadId);
                   let guildId;
                   const id = closure_1_4.getId();
                   if (mediaPostEmbedChannelPath != null) {
                     guildId = mediaPostEmbedChannelPath.guildId;
                   }
                   const isMemberResult = closure_1_5.isMember(guildId, id);
-                  let tmp17Result = first_message(closure_1_2[7]);
+                  let tmp17Result = tmp17(tmp18[7]);
                   let num = first_message.flags;
                   if (num == null) {
                     num = 0;
@@ -64,11 +65,12 @@ function resolveMediaPostEmbeds(embeds) {
                     tmp14 = tmp15;
                   }
                   if (!tmp14) {
-                    tmp17Result = first_message(closure_1_2[8]);
+                    tmp17Result = tmp17(tmp18[8]);
                     const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
                   }
                   hasFlagResult = tmp17Result.hasFlag(num, closure_1_8.IS_CROSSPOST);
                 }
+                obj4 = closure_1_9;
               }
             }
           }
@@ -78,7 +80,7 @@ function resolveMediaPostEmbeds(embeds) {
     });
   }
 }
-const set = new Set();
+let set = new Set();
 initializeDefault;
 class MediaPostEmbedManager extends tmp7 {
   constructor() {
@@ -102,21 +104,21 @@ prototype["handleLoadThreadsSuccess"] = function handleLoadThreadsSuccess(firstM
   } else {
     set.clear();
     if (firstMessages != null) {
-      let item = firstMessages.forEach((item, index) => {
-        closure_0 = item;
-        const embeds = item.embeds;
+      let item = firstMessages.forEach((embeds) => {
+        closure_0 = embeds;
+        embeds = embeds.embeds;
         let found;
         if (embeds != null) {
-          found = embeds.filter((item, index) => item.type === first_message(table[5]).MessageEmbedTypes.POST_PREVIEW);
+          found = embeds.filter((type) => type.type === first_message(table[5]).MessageEmbedTypes.POST_PREVIEW);
         }
         let tmp2 = null != found;
         if (tmp2) {
           tmp2 = 0 !== found.length;
         }
         if (tmp2) {
-          item = found.forEach((item, index) => {
-            if (null != item.url) {
-              const mediaPostEmbedChannelPath = first_message(closure_1_2[6]).getMediaPostEmbedChannelPath(item.url);
+          const item = found.forEach((url) => {
+            if (null != url.url) {
+              const mediaPostEmbedChannelPath = first_message(closure_1_2[6]).getMediaPostEmbedChannelPath(url.url);
               if (null != mediaPostEmbedChannelPath) {
                 let threadId;
                 if (mediaPostEmbedChannelPath != null) {
@@ -130,14 +132,14 @@ prototype["handleLoadThreadsSuccess"] = function handleLoadThreadsSuccess(firstM
                   if (null != channelId) {
                     if (closure_1_6.getEmbedFetchState(mediaPostEmbedChannelPath.threadId) === closure_1_7.NOT_FETCHED) {
                       if (!closure_1_9.has(mediaPostEmbedChannelPath.threadId)) {
-                        closure_1_9.add(mediaPostEmbedChannelPath.threadId);
+                        obj4.add(mediaPostEmbedChannelPath.threadId);
                         let guildId;
                         const id = closure_1_4.getId();
                         if (mediaPostEmbedChannelPath != null) {
                           guildId = mediaPostEmbedChannelPath.guildId;
                         }
                         const isMemberResult = closure_1_5.isMember(guildId, id);
-                        let tmp17Result = first_message(closure_1_2[7]);
+                        let tmp17Result = tmp17(tmp18[7]);
                         let num = first_message.flags;
                         if (num == null) {
                           num = 0;
@@ -155,11 +157,12 @@ prototype["handleLoadThreadsSuccess"] = function handleLoadThreadsSuccess(firstM
                           tmp14 = tmp15;
                         }
                         if (!tmp14) {
-                          tmp17Result = first_message(closure_1_2[8]);
+                          tmp17Result = tmp17(tmp18[8]);
                           const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
                         }
                         hasFlagResult = tmp17Result.hasFlag(num, closure_1_8.IS_CROSSPOST);
                       }
+                      obj4 = closure_1_9;
                     }
                   }
                 }
@@ -175,22 +178,22 @@ prototype["handleLoadThreadsSuccess"] = function handleLoadThreadsSuccess(firstM
 function handleLoadForumPosts(threads, arg1, arg2, Object, prototype, MediaPostEmbedManager, arg6, resolveMediaPostEmbeds) {
   set.clear();
   const values = Object.values(threads.threads);
-  const mapped = values.map((item, index) => {
-    const first_message = item.first_message;
+  const mapped = values.map((first_message) => {
+    first_message = first_message.first_message;
     if (null != first_message) {
       const embeds = first_message.embeds;
       let found;
       if (embeds != null) {
-        found = embeds.filter((item, index) => item.type === first_message(table[5]).MessageEmbedTypes.POST_PREVIEW);
+        found = embeds.filter((type) => type.type === first_message(table[5]).MessageEmbedTypes.POST_PREVIEW);
       }
       let tmp3 = null != found;
       if (tmp3) {
         tmp3 = 0 !== found.length;
       }
       if (tmp3) {
-        item = found.forEach((item, index) => {
-          if (null != item.url) {
-            const mediaPostEmbedChannelPath = first_message(closure_1_2[6]).getMediaPostEmbedChannelPath(item.url);
+        const item = found.forEach((url) => {
+          if (null != url.url) {
+            const mediaPostEmbedChannelPath = first_message(closure_1_2[6]).getMediaPostEmbedChannelPath(url.url);
             if (null != mediaPostEmbedChannelPath) {
               let threadId;
               if (mediaPostEmbedChannelPath != null) {
@@ -204,14 +207,14 @@ function handleLoadForumPosts(threads, arg1, arg2, Object, prototype, MediaPostE
                 if (null != channelId) {
                   if (closure_1_6.getEmbedFetchState(mediaPostEmbedChannelPath.threadId) === closure_1_7.NOT_FETCHED) {
                     if (!closure_1_9.has(mediaPostEmbedChannelPath.threadId)) {
-                      closure_1_9.add(mediaPostEmbedChannelPath.threadId);
+                      obj4.add(mediaPostEmbedChannelPath.threadId);
                       let guildId;
                       const id = closure_1_4.getId();
                       if (mediaPostEmbedChannelPath != null) {
                         guildId = mediaPostEmbedChannelPath.guildId;
                       }
                       const isMemberResult = closure_1_5.isMember(guildId, id);
-                      let tmp17Result = first_message(closure_1_2[7]);
+                      let tmp17Result = tmp17(tmp18[7]);
                       let num = first_message.flags;
                       if (num == null) {
                         num = 0;
@@ -229,11 +232,12 @@ function handleLoadForumPosts(threads, arg1, arg2, Object, prototype, MediaPostE
                         tmp14 = tmp15;
                       }
                       if (!tmp14) {
-                        tmp17Result = first_message(closure_1_2[8]);
+                        tmp17Result = tmp17(tmp18[8]);
                         const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
                       }
                       hasFlagResult = tmp17Result.hasFlag(num, closure_1_8.IS_CROSSPOST);
                     }
+                    obj4 = closure_1_9;
                   }
                 }
               }
@@ -255,6 +259,6 @@ setupLoadFromMessageManagerHandlersDefault(handleLoadForumPosts, resolveMediaPos
     return closure_9.clear();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/media_channel/MediaPostEmbedManager.tsx");
+const result = set.fileFinishedImporting("modules/media_channel/MediaPostEmbedManager.tsx");
 
 export default handleLoadForumPosts;

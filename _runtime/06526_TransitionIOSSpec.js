@@ -4,7 +4,8 @@
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const Easing = get_ActivityIndicator.Easing;
-let obj = { duration: 350, easing: Easing.out(require("module_5")) };
+let obj = { animation: "timing", config: null };
+obj = { duration: 350, easing: Easing.out(require("module_5")) };
 obj[1] = obj;
 obj = { animation: "timing", config: { duration: 150, easing: Easing.in(Easing.linear) } };
 const obj2 = { animation: "timing", config: null };

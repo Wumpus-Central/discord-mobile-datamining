@@ -1,22 +1,22 @@
 // === Module 11641: usePermissions ===
 
 // Module 11641 (usePermissions)
-import noop from "noop" /* 19 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import comparator from "comparator" /* 1980 */;
-import comparator2 from "comparator" /* 1980 */;
-import handleInviteData from "handleInviteData" /* 4295 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handlePopAllLayers from "handlePopAllLayers" /* 11642 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "comparator" /* 1980 */;
+import closure_9 from "handleInviteData" /* 4295 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import closure_11 from "handlePopAllLayers" /* 11642 */;
+import closure_12 from "reinjectEphemerals" /* 4994 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_6, GUILD_VOCAL_CHANNELS_KEY: error } = comparator);
 ({ Permissions: closure_14, MessageTypes: closure_15 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_progress/GuildProgressHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_progress/GuildProgressHooks.tsx");
 
 export const usePermissions = function usePermissions(channel, guild) {
   const _require = channel;
@@ -24,20 +24,20 @@ export const usePermissions = function usePermissions(channel, guild) {
   const items = [closure_13];
   const items1 = [guild, channel];
   return _require(589).useStateFromStoresObject(items, () => {
-    const obj = { canInvite: channel(dependencyMap[11]).canViewInviteModal(closure_1_13, closure_1, channel), canManageGuild: null, canMessage: null, canCreateChannel: null };
+    const obj = { canInvite: channel(closure_1_2[11]).canViewInviteModal(closure_1_13, closure_1, channel), canManageGuild: null, canMessage: null, canCreateChannel: null };
     let canResult = null != closure_1;
     if (canResult) {
-      canResult = closure_1_13.can(closure_1_14.MANAGE_GUILD, closure_1);
+      canResult = obj3.can(closure_1_14.MANAGE_GUILD, tmp);
     }
     obj[1] = canResult;
-    let canResult1 = null != channel;
+    let canResult1 = null != tmp2;
     if (canResult1) {
-      canResult1 = closure_1_13.can(closure_1_14.SEND_MESSAGES, channel);
+      canResult1 = obj3.can(closure_1_14.SEND_MESSAGES, tmp2);
     }
     obj[2] = canResult1;
-    let canResult2 = null != closure_1;
+    let canResult2 = null != tmp;
     if (canResult2) {
-      canResult2 = closure_1_13.can(closure_1_14.MANAGE_CHANNELS, closure_1);
+      canResult2 = obj3.can(closure_1_14.MANAGE_CHANNELS, tmp);
     }
     obj[3] = canResult2;
     return obj;
@@ -52,13 +52,13 @@ export const useGuildChannelCreated = function useGuildChannelCreated(arg0) {
     if (guild != null) {
       id = guild.id;
     }
-    function hasNewChannel(item, index) {
+    function hasNewChannel(channel) {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        const obj = closure_1_1(stateFromStoresArray[12]);
-        const extractTimestampResult = closure_1_1(stateFromStoresArray[12]).extractTimestamp(item.channel.id);
-        tmp2 = extractTimestampResult - closure_1_1(stateFromStoresArray[12]).extractTimestamp(tmp.id) > 500;
-        const obj2 = closure_1_1(stateFromStoresArray[12]);
+        const obj = closure_1_1(closure_1_2[12]);
+        const extractTimestampResult = closure_1_1(closure_1_2[12]).extractTimestamp(channel.channel.id);
+        tmp2 = extractTimestampResult - closure_1_1(closure_1_2[12]).extractTimestamp(tmp.id) > 500;
+        const obj2 = closure_1_1(closure_1_2[12]);
       }
       return tmp2;
     }
@@ -99,7 +99,7 @@ export const useGuildPopulated = function useGuildPopulated(guild) {
     if (num == null) {
       num = 0;
     }
-    return num > 1 || stateFromStoresArray.some((item, index) => item.type === constants.USER_JOIN);
+    return num > 1 || stateFromStoresArray.some((type) => type.type === constants.USER_JOIN);
   }, items3);
 };
 export const useGuildPersonalized = function useGuildPersonalized(guild) {
@@ -130,7 +130,7 @@ export const useChannelsMessaged = function useChannelsMessaged(items3) {
   return _require(589).useStateFromStores(items1, () => callback(stateFromStoresArray[13]).some(closure_0, (id) => {
     const messages = closure_1_12.getMessages(id.id);
     const toArrayResult = messages.toArray();
-    return closure_1_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {
+    return closure_1_1(closure_1_2[13]).some(toArrayResult, (author) => {
       let tmp = author.author.id === closure_1;
       if (tmp) {
         tmp = !closure_1_1(closure_1_2[14])(author);
@@ -149,6 +149,7 @@ export const useGuildMessaged = function useGuildMessaged(arg0) {
     }
     return mutableBasicGuildChannelsForGuild;
   });
+  closure_1 = stateFromStores;
   const items1 = [stateFromStores];
   _require = React.useMemo(() => {
     if (null == callback) {
@@ -159,6 +160,7 @@ export const useGuildMessaged = function useGuildMessaged(arg0) {
     }
     return items;
   }, items1);
+  closure_1 = undefined;
   const obj = _require(589);
   const items2 = [closure_4];
   closure_1 = _require(589).useStateFromStores(items2, () => id.getId());
@@ -167,7 +169,7 @@ export const useGuildMessaged = function useGuildMessaged(arg0) {
   return _require(589).useStateFromStores(items3, () => callback(stateFromStoresArray[13]).some(closure_0, (id) => {
     const messages = closure_1_12.getMessages(id.id);
     const toArrayResult = messages.toArray();
-    return closure_1_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {
+    return closure_1_1(closure_1_2[13]).some(toArrayResult, (author) => {
       let tmp = author.author.id === closure_1;
       if (tmp) {
         tmp = !closure_1_1(closure_1_2[14])(author);
@@ -180,7 +182,7 @@ export const useCompletedStates = function useCompletedStates(guild) {
   let obj = { guildPopulated: null, guildMessaged: null, guildPersonalized: null, guildChannelCreated: null };
   let _require = guild;
   let items = [closure_5];
-  _require(stateFromStoresArray[10]).useStateFromStores(items, () => {
+  closure_1 = _require(stateFromStoresArray[10]).useStateFromStores(items, () => {
     let systemChannelId;
     if (guild != null) {
       systemChannelId = guild.systemChannelId;
@@ -212,9 +214,10 @@ export const useCompletedStates = function useCompletedStates(guild) {
     if (num == null) {
       num = 0;
     }
-    return num > 1 || stateFromStoresArray.some((item, index) => item.type === constants.USER_JOIN);
+    return num > 1 || stateFromStoresArray.some((type) => type.type === constants.USER_JOIN);
   }, items3);
   _require = guild;
+  closure_1 = undefined;
   const obj4 = _require(stateFromStoresArray[10]);
   const items4 = [closure_5];
   const stateFromStores = _require(stateFromStoresArray[10]).useStateFromStores(items4, () => {
@@ -224,6 +227,7 @@ export const useCompletedStates = function useCompletedStates(guild) {
     }
     return mutableBasicGuildChannelsForGuild;
   });
+  closure_1 = stateFromStores;
   const items5 = [stateFromStores];
   _require = React.useMemo(() => {
     if (null == callback) {
@@ -234,6 +238,7 @@ export const useCompletedStates = function useCompletedStates(guild) {
     }
     return items;
   }, items5);
+  closure_1 = undefined;
   const obj5 = _require(stateFromStoresArray[10]);
   const items6 = [closure_4];
   closure_1 = _require(stateFromStoresArray[10]).useStateFromStores(items6, () => id.getId());
@@ -242,7 +247,7 @@ export const useCompletedStates = function useCompletedStates(guild) {
   obj[1] = _require(stateFromStoresArray[10]).useStateFromStores(items7, () => callback(stateFromStoresArray[13]).some(closure_0, (id) => {
     const messages = closure_1_12.getMessages(id.id);
     const toArrayResult = messages.toArray();
-    return closure_1_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {
+    return closure_1_1(closure_1_2[13]).some(toArrayResult, (author) => {
       let tmp = author.author.id === closure_1;
       if (tmp) {
         tmp = !closure_1_1(closure_1_2[14])(author);
@@ -277,13 +282,13 @@ export const useCompletedStates = function useCompletedStates(guild) {
     if (guild != null) {
       id = guild.id;
     }
-    function hasNewChannel(item, index) {
+    function hasNewChannel(channel) {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        const obj = closure_1_1(stateFromStoresArray[12]);
-        const extractTimestampResult = closure_1_1(stateFromStoresArray[12]).extractTimestamp(item.channel.id);
-        tmp2 = extractTimestampResult - closure_1_1(stateFromStoresArray[12]).extractTimestamp(tmp.id) > 500;
-        const obj2 = closure_1_1(stateFromStoresArray[12]);
+        const obj = closure_1_1(closure_1_2[12]);
+        const extractTimestampResult = closure_1_1(closure_1_2[12]).extractTimestamp(channel.channel.id);
+        tmp2 = extractTimestampResult - closure_1_1(closure_1_2[12]).extractTimestamp(tmp.id) > 500;
+        const obj2 = closure_1_1(closure_1_2[12]);
       }
       return tmp2;
     }

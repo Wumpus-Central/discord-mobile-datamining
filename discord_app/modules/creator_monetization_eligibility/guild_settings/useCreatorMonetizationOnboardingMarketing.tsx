@@ -1,20 +1,21 @@
 // === Module 16937: useCreatorMonetizationOnboardingMarketing ===
 
 // Module 16937 (useCreatorMonetizationOnboardingMarketing)
-import _createCreatorMonetizationEnableRequestAll from "_createCreatorMonetizationEnableRequest" /* 16906 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationOnboardingMarketing.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationOnboardingMarketing.tsx");
 
 export default function useCreatorMonetizationOnboardingMarketing(arg0) {
+  closure_0 = arg0;
   [tmp2, importAll] = callback(React.useState(true), 2);
   const tmp = callback(React.useState(true), 2);
   [tmp4, dependencyMap] = callback(React.useState(), 2);
   const creatorMonetizationOnboardingMarketing = callback(React.useState(), 2);
   callback = creatorMonetizationOnboardingMarketing[1];
+  closure_0 = undefined;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -53,7 +54,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
               callback2(true);
               closure_1_2(undefined);
               c4 = 2;
-              obj1 = _createCreatorMonetizationEnableRequestAll;
+              obj1 = closure_2_1(closure_2_2[3]);
               c5 = 3;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -68,7 +69,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
             if (2 === tmp8) {
               c4 = 1;
               callback2 = closure_3;
-              const aPIError = new callback(dependencyMap[4]).APIError(callback2);
+              const aPIError = new callback(closure_2_2[4]).APIError(callback2);
               closure_1_2(aPIError);
               c4 = 0;
               callback2(false);

@@ -4,10 +4,10 @@
 import toJSDefault from "toJS" /* 1931 */;
 import create from "create" /* 1940 */;
 
-require = fn;
+require = arg1;
 toJSDefault;
 const frozen = Object.freeze({ 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY });
-let closure_3 = Object.freeze({ [fn(1940).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [fn(1940).DayOfWeek.MONDAY]: 1, [fn(1940).DayOfWeek.TUESDAY]: 2, [fn(1940).DayOfWeek.WEDNESDAY]: 3, [fn(1940).DayOfWeek.THURSDAY]: 4, [fn(1940).DayOfWeek.FRIDAY]: 5, [fn(1940).DayOfWeek.SATURDAY]: 6, [fn(1940).DayOfWeek.SUNDAY]: 0 });
+let closure_3 = Object.freeze({ [arg1(1940).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1940).DayOfWeek.MONDAY]: 1, [arg1(1940).DayOfWeek.TUESDAY]: 2, [arg1(1940).DayOfWeek.WEDNESDAY]: 3, [arg1(1940).DayOfWeek.THURSDAY]: 4, [arg1(1940).DayOfWeek.FRIDAY]: 5, [arg1(1940).DayOfWeek.SATURDAY]: 6, [arg1(1940).DayOfWeek.SUNDAY]: 0 });
 let ScheduleRuleRecord;
 class ScheduleRuleRecord extends tmp2 {
   constructor(arg0) {
@@ -68,7 +68,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
           }
           if (sum > sum1) {
             if (closure_0 === create.DayOfWeek.MONDAY) {
-              let SUNDAY = create.DayOfWeek.SUNDAY;
+              let SUNDAY = tmp6(1940).DayOfWeek.SUNDAY;
             } else {
               SUNDAY = closure_0 - 1;
             }
@@ -78,6 +78,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
                 return true;
               }
             }
+            tmp6 = require;
           }
           return false;
         }
@@ -124,6 +125,7 @@ RestrictedScheduleRecord["fromServer"] = function fromServer(rules) {
     // ThrowIfThisInitialized (0x7c)
     tmp9.rules = mapped;
     tmp = tmp9;
+    const tmp2 = RestrictedScheduleRecord;
   }
   return tmp;
 };
@@ -139,6 +141,7 @@ RestrictedScheduleRecord["fromCache"] = function fromCache(rules) {
     // ThrowIfThisInitialized (0x7c)
     tmp9.rules = mapped;
     tmp = tmp9;
+    const tmp2 = RestrictedScheduleRecord;
   }
   return tmp;
 };
@@ -156,7 +159,7 @@ prototype2["isInRestrictedHours"] = function isInRestrictedHours(date) {
     const result = 60 * date.getHours();
     closure_1 = result + date.getMinutes();
     const rules = tmp4.rules;
-    return rules.some((item, index) => item.isActiveAt(closure_0, closure_1));
+    return rules.some((isActiveAt) => isActiveAt.isActiveAt(closure_0, closure_1));
   }
 };
 prototype2["getNextStartInfo"] = function getNextStartInfo(date) {
@@ -172,7 +175,7 @@ prototype2["getNextStartInfo"] = function getNextStartInfo(date) {
       const sum = result + date.getMinutes();
       let tmp8 = null;
       const rules = self.rules;
-      const found = rules.filter((item, index) => item.enabled);
+      const found = rules.filter((enabled) => enabled.enabled);
       const iter = found[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -180,26 +183,39 @@ prototype2["getNextStartInfo"] = function getNextStartInfo(date) {
         let startMinutes = nextResult.getStartMinutes();
         let tmp15 = startMinutes;
         if (null != startMinutes) {
+          let tmp30 = nextResult;
           if (0 !== tmp13.days.length) {
+            let tmp31 = nextResult;
             let days = tmp13.days;
+            let tmp32 = days;
+            let tmp16 = days;
             for (const item10043 of days) {
+              let tmp17 = table;
               let result1 = (table[item10043] - day + 7) % 7;
               let num4 = result1;
               let tmp19 = 0 === result1;
               if (0 === result1) {
+                let tmp20 = startMinutes;
                 tmp19 = tmp15 <= sum;
               }
               if (tmp19) {
                 num4 = 7;
               }
+              let tmp21 = num4;
+              let tmp22 = startMinutes;
               let sum1 = 24 * num4 * 60 - sum + tmp15;
+              let tmp24 = tmp8;
               let tmp25 = null == tmp8;
               if (!tmp25) {
+                let tmp26 = sum1;
+                let tmp27 = tmp8;
                 tmp25 = sum1 < tmp8.minutesUntil;
               }
               if (tmp25) {
                 let obj = { minutesUntil: null, rule: null };
+                let tmp28 = sum1;
                 obj[0] = sum1;
+                let tmp29 = nextResult;
                 obj[1] = tmp13;
                 tmp8 = obj;
               }
@@ -230,16 +246,23 @@ prototype2["getNextEndTime"] = function getNextEndTime() {
     const sum = result + date.getMinutes();
     c1 = sum;
     const rules = tmp4.rules;
-    const found = rules.filter((item, index) => item.isActiveAt(closure_0, c1));
+    const found = rules.filter((isActiveAt) => isActiveAt.isActiveAt(closure_0, c1));
     const iter = found[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let endMinutes = nextResult.getEndMinutes();
+      let tmp8 = endMinutes;
       let startMinutes = nextResult.getStartMinutes();
       if (null != endMinutes) {
+        let tmp10 = startMinutes;
         if (null != startMinutes) {
+          let tmp11 = startMinutes;
           let tmp12 = startMinutes > endMinutes;
+          let tmp13 = globalThis;
           let _Date2 = Date;
+          let tmp14 = new.target;
+          let tmp15 = new.target;
+          let tmp16 = date;
           let date1 = new Date(date);
           let obj4 = date1;
           let _Math = Math;
@@ -249,9 +272,17 @@ prototype2["getNextEndTime"] = function getNextEndTime() {
             tmp12 = sum >= startMinutes;
           }
           if (tmp12) {
+            let tmp19 = date1;
+            let num = 1;
             let setDateResult = obj4.setDate(obj4.getDate() + 1);
           }
+          let tmp21 = rounded;
+          let tmp22 = result1;
+          let tmp23 = date1;
+          let num2 = 0;
+          let num3 = 0;
           let setHoursResult = date1.setHours(rounded, result1, 0, 0);
+          let tmp25 = iter;
           iter.return();
           return date1;
         }
@@ -262,7 +293,7 @@ prototype2["getNextEndTime"] = function getNextEndTime() {
   }
 };
 let obj = { 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY };
-let result = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterModels.tsx");
+let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterModels.tsx");
 
 export const JS_DAY_TO_DAY_OF_WEEK = frozen;
 export { ScheduleRuleRecord };
@@ -276,18 +307,18 @@ export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleR
     } else {
       let length = restrictedSchedule.rules.length;
       if (0 === length) {
-        if (typeof RestrictedScheduleRecord !== "function") {
+        if (typeof obj !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const items = [];
-        const tmp7 = new RestrictedScheduleRecord("Trying to call a non-function", RestrictedScheduleRecord, new.target, items, RestrictedScheduleRecord, length, tmp2);
+        const tmp7 = new RestrictedScheduleRecord("Trying to call a non-function", obj, new.target, items, RestrictedScheduleRecord, length, tmp2);
         // ThrowIfThisInitialized (0x7c)
         tmp7.rules = items;
         length = tmp7;
       } else if ("ruleId" in restrictedSchedule.rules[0]) {
-        length = RestrictedScheduleRecord.fromCache(restrictedSchedule);
+        length = obj.fromCache(restrictedSchedule);
       } else {
-        length = RestrictedScheduleRecord.fromServer(restrictedSchedule);
+        length = obj.fromServer(restrictedSchedule);
       }
       tmp2 = length;
     }

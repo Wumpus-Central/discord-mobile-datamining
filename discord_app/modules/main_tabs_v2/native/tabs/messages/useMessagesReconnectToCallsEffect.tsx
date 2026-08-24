@@ -1,13 +1,13 @@
 // === Module 15314: useMessagesReconnectToCallsEffect ===
 
 // Module 15314 (useMessagesReconnectToCallsEffect)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import makeSortedChannel from "makeSortedChannel" /* 5388 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "_handleConnectionOpen" /* 4495 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "makeSortedChannel" /* 5388 */;
 
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
 
 export default function useMessagesReconnectToCallsEffect() {
   const effect = React.useEffect(() => {
@@ -22,8 +22,10 @@ export default function useMessagesReconnectToCallsEffect() {
           let num3 = 0;
           if (0 < Math.min(20, arr.length)) {
             do {
+              let tmp7 = closure_1_5;
               let channel = closure_1_5.getChannel(arr[num3].channelId);
               let isGroupDMResult = null != channel;
+              let tmp9 = num3;
               if (isGroupDMResult) {
                 isGroupDMResult = channel.isGroupDM();
               }

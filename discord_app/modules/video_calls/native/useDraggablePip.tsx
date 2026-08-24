@@ -1,11 +1,11 @@
 // === Module 8691: clamp ===
 
 // Module 8691 (clamp)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { useChannelCallStore } from "VoiceChatDrawerState" /* 8669 */;
 import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8677 */;
 
-const require = fn;
+const require = arg1;
 ({ PIP_FOCUS_SCALE: c4, PIP_GESTURE_ACTIVE_OFFSET: c5 } = PIP_GESTURE_ACTIVE_OFFSET);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001, damping: 20 };
 let closure_7 = { code: "function useDraggablePipTsx1(){const{withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING}=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});}" };
@@ -29,7 +29,7 @@ function clamp(arg0, arg1, arg2) {
 clamp.__closure = {};
 clamp.__workletHash = 1988116204206;
 clamp.__initData = { code: "function clamp_useDraggablePipTsx16(value,min,max){return Math.min(Math.max(value,min),max);}" };
-let result = require("obj132").fileFinishedImporting("modules/video_calls/native/useDraggablePip.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/useDraggablePip.tsx");
 
 export const useDraggablePip = function useDraggablePip(width) {
   width = width.width;
@@ -39,6 +39,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   const onPress = width.onPress;
   const onMoved = width.onMoved;
   const snapToCorners = width.snapToCorners;
+  closure_7 = undefined;
   let derivedValue;
   let derivedValue1;
   let derivedValue2;
@@ -51,7 +52,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   let sharedValue2;
   let sharedValue3;
   let sharedValue4;
-  let tmp = containerHeight((pipFocus) => pipFocus.pipFocus);
+  const tmp = containerHeight((pipFocus) => pipFocus.pipFocus);
   closure_7 = tmp;
   let obj = width(height[3]);
   class X {
@@ -133,7 +134,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   derivedValue6 = width(height[3]).useDerivedValue(I);
   const obj8 = width(height[3]);
   sharedValue = width(height[3]).useSharedValue(0);
-  let obj9 = width(height[3]);
+  const obj9 = width(height[3]);
   sharedValue1 = width(height[3]).useSharedValue(sharedValue.get());
   const obj11 = width(height[3]);
   sharedValue2 = width(height[3]).useSharedValue(0);
@@ -153,9 +154,9 @@ export const useDraggablePip = function useDraggablePip(width) {
   J.__closure = { containerWidth, scaledWidthDv: derivedValue3, xPosition: sharedValue1 };
   J.__workletHash = 2741340788440;
   J.__initData = derivedValue6;
-  const fn = function q(closure_3) {
-    if (!obj.cheapWorkletArrayShallowEqual(closure_3, tmp)) {
-      const tmp3 = containerWidth(closure_3, 2);
+  const fn = function q(activeIndex) {
+    if (!obj.cheapWorkletArrayShallowEqual(activeIndex, arg1)) {
+      const tmp3 = containerWidth(activeIndex, 2);
       const first = tmp3[0];
       let items = arg1;
       if (arg1 == null) {
@@ -165,7 +166,7 @@ export const useDraggablePip = function useDraggablePip(width) {
       if (null != arg1) {
         if (first !== first1) {
           const result = tmp3[1] * (first / first1);
-          if (typeof clamp !== "function") {
+          if (typeof closure_1_22 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const _Math = Math;
@@ -175,9 +176,8 @@ export const useDraggablePip = function useDraggablePip(width) {
           const result2 = sharedValue.set(bound);
         }
       }
+      const tmp2 = containerWidth;
     }
-    obj = width(height[6]);
-    tmp = arg1;
   };
   obj = { cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual, clamp, xPosition: sharedValue1, xDestination: sharedValue };
   fn.__closure = obj;
@@ -266,14 +266,14 @@ export const useDraggablePip = function useDraggablePip(width) {
     const sum = sharedValue1.get() + 0.0875 * velocityX.velocityX;
     let value = derivedValue5.get();
     const diff = value - derivedValue3.get();
-    if (typeof clamp !== "function") {
+    if (typeof closure_1_22 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const bound = Math.min(Math.max(sum, 0), diff);
     const sum1 = sharedValue3.get() + 0.0875 * velocityX.velocityY;
     value = derivedValue6.get();
     const diff1 = value - derivedValue4.get();
-    if (typeof clamp !== "function") {
+    if (typeof tmp4 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const bound1 = Math.min(Math.max(sum1, 0), diff1);
@@ -336,13 +336,18 @@ export const useDraggablePip = function useDraggablePip(width) {
     obj.velocity = velocityX.velocityX;
     const result = obj.set(width(height[8]).withSpring(num2, obj));
     const result1 = sharedValue.set(num2);
+    const obj2 = derivedValue5;
+    const obj3 = derivedValue3;
+    const obj4 = sharedValue3;
+    const obj5 = derivedValue6;
+    const obj6 = derivedValue4;
     const obj7 = width(height[8]);
+    tmp4 = closure_1_22;
     obj = {};
     const merged1 = Object.assign(snapToCorners);
     obj.velocity = velocityX.velocityY;
-    const result2 = sharedValue3.set(width(height[8]).withSpring(num, obj));
+    const result2 = obj4.set(width(height[8]).withSpring(num, obj));
     const result3 = sharedValue2.set(num);
-    const obj9 = width(height[8]);
   }
   obj3 = { xPosition: sharedValue1, containerWidthDv: derivedValue5, scaledWidthDv: derivedValue3, clamp, yPosition: sharedValue3, containerHeightDv: derivedValue6, scaledHeightDv: derivedValue4, snapToCorners, withSpring: width(height[8]).withSpring, spring: snapToCorners, xDestination: sharedValue, yDestination: sharedValue2 };
   se.__closure = obj3;
@@ -367,9 +372,10 @@ export const useDraggablePip = function useDraggablePip(width) {
   obj5[0] = Gesture3.Race(onEndResult, Gesture2.Tap().onStart(re));
   const onStartResult = Gesture2.Tap().onStart(re);
   function ce() {
-    let obj = { translateX: null };
-    sharedValue1.get();
-    const value = derivedValue3.get();
+    let obj = { transform: null };
+    obj = { translateX: null };
+    let value = sharedValue1.get();
+    value = derivedValue3.get();
     obj[0] = value + (value - derivedValue1.get()) / 2;
     const items = [obj, , ];
     obj = { translateY: null };

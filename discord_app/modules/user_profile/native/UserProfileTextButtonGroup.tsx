@@ -11,7 +11,7 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "row", flexWrap: "wrap", gap: 12 }, buttonArea: { flexGrow: 1 } });
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
 
 export default function UserProfileTextButtonGroup(arg0) {
   ({ primaryButton, secondaryButton, maxWidth, style } = arg0);

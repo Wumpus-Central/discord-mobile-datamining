@@ -56,9 +56,9 @@ arg5.safeMathRandom = function safeMathRandom() {
     random1 = Math.random();
   }
 };
-arg5.withRandomSafeContext = function withRandomSafeContext(fn) {
+arg5.withRandomSafeContext = function withRandomSafeContext(arg0) {
   if (undefined !== c2) {
-    return tmp ? tmp(fn) : fn();
+    return tmp ? tmp(arg0) : arg0();
   } else {
     const _Symbol = Symbol;
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
@@ -66,11 +66,11 @@ arg5.withRandomSafeContext = function withRandomSafeContext(fn) {
     if (forResult in GLOBAL_OBJ) {
       if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
-        let tmp8Result = tmp8(fn);
+        let tmp8Result = tmp8(arg0);
       }
       return tmp8Result;
     }
     c2 = null;
-    tmp8Result = fn();
+    tmp8Result = arg0();
   }
 };

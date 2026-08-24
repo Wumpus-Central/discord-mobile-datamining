@@ -5,27 +5,30 @@ import importAllResult from "noop" /* 19 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ SearchListItemTypes: c4, CARD_ESTIMATED_ITEM_SIZE: c5, FILES_OR_LINKS_NUM_COLUMNS: closure_6, FILES_OR_LINKS_GAP_WIDTH: error } = MessageEmbedTypes);
 const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const tab = searchContext.tab;
+  let searchMessages;
   let fileOrLinkImageDimensions;
+  let onPressMessageItem;
+  let callback;
   let placeholderCount;
   ({ isFocused, width } = searchContext);
   let obj = searchContext(fileOrLinkImageDimensions[3]);
   const contentContainerStyles = obj.useContentContainerStyles();
-  const searchMessages = searchContext(fileOrLinkImageDimensions[4]).useSearchMessages(searchContext, tab);
+  searchMessages = searchContext(fileOrLinkImageDimensions[4]).useSearchMessages(searchContext, tab);
   const obj2 = searchContext(fileOrLinkImageDimensions[4]);
   fileOrLinkImageDimensions = searchContext(fileOrLinkImageDimensions[5]).useFileOrLinkImageDimensions(width);
   let obj3 = searchContext(fileOrLinkImageDimensions[5]);
-  const onPressMessageItem = searchContext(fileOrLinkImageDimensions[6]).useOnPressMessageItem({ searchContext });
+  onPressMessageItem = searchContext(fileOrLinkImageDimensions[6]).useOnPressMessageItem({ searchContext });
   let items = [onPressMessageItem, searchContext];
-  const callback = onPressMessageItem.useCallback((arg0, index) => {
+  callback = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId } = arg0);
-    searchContext(fileOrLinkImageDimensions[7]);
-    const obj = { searchContext, channelId, messageId, index };
+    let obj = searchContext(fileOrLinkImageDimensions[7]);
+    obj = { searchContext, channelId, messageId, index };
     const result = obj.trackMessageItemPress(obj);
     onPressMessageItem(channelId, messageId);
   }, items);
@@ -39,13 +42,22 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
     const items = [];
     c1 = 0;
     if (c1 != null) {
-      let item = c1.forEach((item, index) => {
-        const files = searchContext(fileOrLinkImageDimensions[9]).getFiles(item);
-        item = files.forEach((item, index) => {
-          const sum = closure_1 + index;
+      let item = c1.forEach((arg0) => {
+        const files = searchContext(fileOrLinkImageDimensions[9]).getFiles(arg0);
+        const item = files.forEach((data) => {
+          const sum = closure_1 + arg1;
           let arr = sum;
-          const obj = { itemIndex: sum, spacing: closure_2_7, numColumns: closure_2_6 };
-          obj[3] = items(fileOrLinkImageDimensions[9]).getGridItemSpacingStyles(obj);
+          let obj = { type: closure_2_4.FILE, props: null };
+          obj = {
+            data,
+            onPress(arg0) {
+              return closure_1_4(arg0, closure_0);
+            },
+            imageStyle: closure_1_2,
+            containerStyle: null
+          };
+          obj = { itemIndex: sum, spacing: closure_2_7, numColumns: closure_2_6 };
+          obj[3] = items(closure_2_2[9]).getGridItemSpacingStyles(obj);
           obj[1] = obj;
           arr = arr.push(obj);
         });
@@ -60,15 +72,21 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
       const adjustedPlaceholderCount = searchContext(fileOrLinkImageDimensions[10]).getAdjustedPlaceholderCount(obj);
       for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
         obj = { type: null, key: null, props: null };
+        let tmp3 = callback;
         obj[0] = callback.FILE_OR_LINK_PLACEHOLDER;
         let _HermesInternal = HermesInternal;
         obj[1] = "file-or-link-placeholder-" + num;
         obj = { imageStyle: null, containerStyle: null };
+        let tmp4 = fileOrLinkImageDimensions;
         obj[0] = fileOrLinkImageDimensions;
+        let tmp5 = searchContext;
+        let tmp6 = fileOrLinkImageDimensions;
         let obj3 = searchContext(fileOrLinkImageDimensions[9]);
         obj1 = { itemIndex: null, spacing: null, numColumns: null };
         obj1[0] = length + num;
+        let tmp7 = closure_1_7;
         obj1[1] = closure_1_7;
+        let tmp8 = closure_1_6;
         obj1[2] = closure_1_6;
         obj[1] = obj3.getGridItemSpacingStyles(obj1);
         obj[2] = obj;
@@ -86,6 +104,6 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
   obj[8] = isNextPageLoading;
   return jsx(searchMessages(fileOrLinkImageDimensions[7]), { data: memo, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.filesOrLinksContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null });
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/FilesScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/FilesScreen.tsx");
 
 export default memoResult;

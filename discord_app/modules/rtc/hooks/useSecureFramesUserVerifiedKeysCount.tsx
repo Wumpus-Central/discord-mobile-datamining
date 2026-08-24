@@ -1,11 +1,11 @@
 // === Module 9720: useSecureFramesUserVerifiedKeysCount ===
 
 // Module 9720 (useSecureFramesUserVerifiedKeysCount)
-import noop from "noop" /* 19 */;
-import initialize from "initialize" /* 9692 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "initialize" /* 9692 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");
 
 export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUserVerifiedKeysCount(userId) {
   userId = userId.userId;
@@ -17,7 +17,7 @@ export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUser
       return null;
     } else {
       const _Uint8Array = Uint8Array;
-      const uint8Array = new Uint8Array(keyToOmit);
+      const uint8Array = new Uint8Array(tmp);
       return userId(keyToOmit[2]).serializeKey(uint8Array);
     }
   }, items);
@@ -29,7 +29,7 @@ export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUser
     if (null != userVerifiedKeys) {
       const _Object = Object;
       const keys = Object.keys(userVerifiedKeys);
-      num = keys.filter((item, index) => item !== closure_2).length;
+      num = keys.filter((arg0) => arg0 !== closure_2).length;
     }
     return num;
   }, items2);

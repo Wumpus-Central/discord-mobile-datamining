@@ -1,10 +1,10 @@
 // === Module 10927: _startAuthorizationNoHook ===
 
 // Module 10927 (_startAuthorizationNoHook)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _startAuthorizationNoHook() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -103,7 +103,7 @@ function _startAuthorizationNoHook() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
 
 export const startAuthorizationNoHook = function startAuthorizationNoHook(application, items) {
   const self = this;

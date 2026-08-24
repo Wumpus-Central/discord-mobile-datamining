@@ -1,10 +1,10 @@
 // === Module 15184: useMountTimer ===
 
 // Module 15184 (useMountTimer)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/performance/useMountTimer.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/useMountTimer.tsx");
 
 export default function useMountTimer() {
   const tmp = callback(React.useState(null), 2);

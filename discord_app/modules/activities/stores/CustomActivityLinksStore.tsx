@@ -3,7 +3,7 @@
 // Module 12412 (getOne)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getAssetURL from "getAssetURL" /* 12413 */;
+import closure_0 from "getAssetURL" /* 12413 */;
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
@@ -23,12 +23,11 @@ const customActivityLinksStore = new CustomActivityLinksStore(dispatcherDefault,
       dependencyMap[applicationId] = Object.create(null);
     }
     dependencyMap[applicationId][link.link_id] = new closure_0(link);
-    const tmp3 = new closure_0(link);
   },
   LOGOUT: function handleLogout() {
     closure_1 = {};
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
 
 export default customActivityLinksStore;

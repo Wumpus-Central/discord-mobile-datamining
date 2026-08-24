@@ -6,7 +6,7 @@ import createStandardNavigationFactories from "createStandardNavigationFactories
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ Animated: obj1, Platform, StyleSheet } = get_ActivityIndicator);
 const styles = StyleSheet.create({ container: { flex: 1, elevation: 4 } });

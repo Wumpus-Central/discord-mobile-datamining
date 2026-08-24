@@ -4,12 +4,12 @@
 import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 import sendRequest from "sendRequest" /* 530 */;
 import handleLogoutDefault from "handleLogout" /* 5256 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function getLocationContextServer() {
   basicChannel = basicChannel.getBasicChannel(channelId.getChannelId());
   let str;
@@ -490,12 +490,13 @@ function _finishUserCodeTwoWayLinkError() {
   return applyArgumentsResult;
 }
 ({ ChannelTypes: closure_6, Endpoints: error } = ME);
-const result = require("obj132").fileFinishedImporting("modules/oauth2/actions.tsx");
+const result = require("set").fileFinishedImporting("modules/oauth2/actions.tsx");
 
 export { getLocationContextServer };
 export const acceptWhitelist = function acceptWhitelist(token) {
   const HTTP = sendRequest.HTTP;
-  const obj = { token };
+  obj = { url: obj.OAUTH2_WHITELIST_ACCEPT, query: obj, oldFormErrors: true, rejectWithError: null };
+  obj = { token };
   obj[3] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);
 };
@@ -539,9 +540,9 @@ export const fetchChannels = function fetchChannels(closure_0) {
   }
   return applyArgumentsResult;
 };
-export const logoutWithRedirect = function logoutWithRedirect(pathname, TTI_test) {
+export const logoutWithRedirect = function logoutWithRedirect(pathname, login_required_account_manager) {
   const obj = handleLogoutDefault;
-  obj.logout(TTI_test, getAuthenticationPath.getLoginPath(pathname.pathname + pathname.search, false));
+  obj.logout(login_required_account_manager, getAuthenticationPath.getLoginPath(pathname.pathname + pathname.search, false));
 };
 export const verifyUserCode = function verifyUserCode(closure_1_0) {
   const self = this;

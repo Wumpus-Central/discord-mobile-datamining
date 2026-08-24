@@ -1,11 +1,11 @@
 // === Module 12300: useProfileTabIndices ===
 
 // Module 12300 (useProfileTabIndices)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
 
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
 export function useProfileTabIndices(arg0, arg1) {
   let num = -1;
@@ -28,13 +28,14 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
   ({ initialUserProfileSection: closure_0, wishlistTabIndex } = boardTabIndex);
   boardTabIndex = boardTabIndex.boardTabIndex;
   const onTabChange = boardTabIndex.onTabChange;
+  c4 = undefined;
   let num2;
   let obj = wishlistTabIndex;
   [tmp2, tmp3] = callback(wishlistTabIndex.useState(() => {
     if (boardTabIndex.WISHLIST === closure_0) {
-      return boardTabIndex.WISHLIST;
+      return tmp2.WISHLIST;
     } else {
-      return boardTabIndex.WIDGETS === tmp ? boardTabIndex.WIDGETS : boardTabIndex.MAIN;
+      return tmp2.WIDGETS === tmp ? tmp2.WIDGETS : tmp2.MAIN;
     }
   }), 2);
   c4 = tmp3;

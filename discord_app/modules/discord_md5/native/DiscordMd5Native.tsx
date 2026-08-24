@@ -1,9 +1,8 @@
 // === Module 4857: fromFileUri ===
 
 // Module 4857 (fromFileUri)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import obj1322 from "obj132" /* 500 */;
 import enforcingDefault from "enforcing" /* 1271 */;
 import fromBlobDefault from "fromBlob" /* 4858 */;
 
@@ -25,15 +24,15 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
       error = new Error("RTNFileManager doesn't exist?");
       let rejectResult = Promise.reject(error);
     } else {
-      rejectResult = enforcingDefault.getFileHash(uri, "md5", num);
-      const tmp3Result = enforcingDefault;
+      rejectResult = tmp3(1271).getFileHash(uri, "md5", num);
+      const tmp3Result = tmp3(1271);
     }
+    tmp3 = importDefault;
   } else {
     const DCDFileManager = NativeModules.DCDFileManager;
     return DCDFileManager.getFileHash(uri, "md5", num);
   }
-  obj = obj1322;
 };
-const result = obj132.fileFinishedImporting("modules/discord_md5/native/DiscordMd5Native.tsx");
+const result = set.fileFinishedImporting("modules/discord_md5/native/DiscordMd5Native.tsx");
 
 export default prototype;

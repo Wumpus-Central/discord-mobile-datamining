@@ -1,11 +1,11 @@
 // === Module 16695: fetchRTCLatencyTestRegions ===
 
 // Module 16695 (fetchRTCLatencyTestRegions)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = obj132.fileFinishedImporting("actions/RTCLatencyTestActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/RTCLatencyTestActionCreators.tsx");
 
 export const fetchRTCLatencyTestRegions = function fetchRTCLatencyTestRegions(arg0) {
   const HTTP = sendRequest.HTTP;
@@ -13,6 +13,7 @@ export const fetchRTCLatencyTestRegions = function fetchRTCLatencyTestRegions(ar
   return HTTP.get(obj);
 };
 export const completeRTCLatencyTest = function completeRTCLatencyTest(latencyRankedRegions, mapped) {
-  const obj = { type: "RTC_LATENCY_TEST_COMPLETE", latencyRankedRegions, geoRankedRegions: mapped };
+  let obj = dispatcherDefault;
+  obj = { type: "RTC_LATENCY_TEST_COMPLETE", latencyRankedRegions, geoRankedRegions: mapped };
   obj.dispatch(obj);
 };

@@ -3,15 +3,16 @@
 // Module 11583 (_requestPushNotificationPermission)
 import initialize from "initialize" /* 589 */;
 import set from "set" /* 11591 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "set" /* 11578 */;
 import { EventActionType } from "EventActionType" /* 11582 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { NotificationAuthorizationStatus as closure_10 } from "NativePermissionStatus" /* 4839 */;
 
-require = fn;
+require = arg1;
 function _requestPushNotificationPermission() {
   const self = this;
   const tmp = callback2((arg0, arg1, arg2) => {
@@ -79,8 +80,8 @@ function _requestPushNotificationPermission() {
             } else if (closure_3 !== constants3.AUTHORIZED) {
               obj = callback2(11590);
               const permission = obj.requestPermission((permission_granted) => {
-                callback(698);
-                const obj = { action_type: closure_0, action_location: callback, permission_granted };
+                let obj = callback(698);
+                obj = { action_type: closure_0, action_location: callback, permission_granted };
                 obj.track(closure_1_9.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
                 dependencyMap();
               });
@@ -163,9 +164,9 @@ function _enableProvisionalPushNotification() {
               obj.track(constants.PERMISSIONS_ACKED, { type: "provisional_notification", action: str });
               const NativePermissionManager = obj.NativePermissionManager;
               const notificationAuthorizationStatus = NativePermissionManager.getNotificationAuthorizationStatus();
-              notificationAuthorizationStatus.then((result) => {
-                if (null != result) {
-                  result = callback(table[10]).updateNotificationAuthorizationStatus(result);
+              notificationAuthorizationStatus.then((closure_0) => {
+                if (null != closure_0) {
+                  const result = callback(table[10]).updateNotificationAuthorizationStatus(closure_0);
                   const obj = callback(table[10]);
                 }
               });
@@ -189,7 +190,7 @@ function _enableProvisionalPushNotification() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 
 export const requestPushNotificationPermission = function requestPushNotificationPermission(ALLOW_TO_REQUEST, ALERT, callback) {
   const self = this;
@@ -296,15 +297,17 @@ export const enableProvisionalPushNotification = function enableProvisionalPushN
 };
 export const useCanSeePushNotificationNudge = function useCanSeePushNotificationNudge() {
   const isTeenInStrictCountry = set.useIsTeenInStrictCountry();
+  const obj = set;
   const items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => state.authorizationStatus);
+  const obj2 = initialize;
   [tmp4, require] = callback(React.useState(false), 2);
   const effect = React.useEffect(() => {
-    const NativePermissionManager = NativeModules.NativePermissionManager;
+    const NativePermissionManager = closure_1_6.NativePermissionManager;
     const notificationAuthorizationStatus = NativePermissionManager.getNotificationAuthorizationStatus();
-    notificationAuthorizationStatus.then((result) => {
-      if (null != result) {
-        result = closure_1_0(closure_1_2[10]).updateNotificationAuthorizationStatus(result);
+    notificationAuthorizationStatus.then((closure_0) => {
+      if (null != closure_0) {
+        const result = closure_1_0(closure_1_2[10]).updateNotificationAuthorizationStatus(closure_0);
         const obj = closure_1_0(closure_1_2[10]);
       }
       callback(true);
@@ -325,15 +328,19 @@ export const useCanSeePushNotificationNudge = function useCanSeePushNotification
 };
 export const useShouldShowPushNotificationNudgeByPromptType = function useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER) {
   const isTeenInStrictCountry = set.useIsTeenInStrictCountry();
+  let obj = set;
+  const tmp = require;
   const items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => state.authorizationStatus);
+  const obj2 = initialize;
+  const tmp4 = closure_7;
   [tmp7, require] = callback(React.useState(false), 2);
   const effect = React.useEffect(() => {
-    const NativePermissionManager = NativeModules.NativePermissionManager;
+    const NativePermissionManager = closure_1_6.NativePermissionManager;
     const notificationAuthorizationStatus = NativePermissionManager.getNotificationAuthorizationStatus();
-    notificationAuthorizationStatus.then((result) => {
-      if (null != result) {
-        result = closure_1_0(closure_1_2[10]).updateNotificationAuthorizationStatus(result);
+    notificationAuthorizationStatus.then((closure_0) => {
+      if (null != closure_0) {
+        const result = closure_1_0(closure_1_2[10]).updateNotificationAuthorizationStatus(closure_0);
         const obj = closure_1_0(closure_1_2[10]);
       }
       callback(true);
@@ -351,7 +358,7 @@ export const useShouldShowPushNotificationNudgeByPromptType = function useShould
     hasItem = items1.includes(stateFromStores);
   }
   const tmp6 = callback(React.useState(false), 2);
-  const items2 = [closure_7];
+  const items2 = [tmp4];
   const stateFromStores1 = initialize.useStateFromStores(items2, () => state.getState().eligiblePromptTypes);
   if (hasItem) {
     hasItem = stateFromStores1.has(CHANNEL_BANNER);

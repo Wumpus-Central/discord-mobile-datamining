@@ -50,12 +50,12 @@ function getCurrentHubShim() {
     endSession: _flush.endSession,
     captureSession(arg0) {
       if (arg0) {
-        let tmpResult = callback(dependencyMap[1]);
+        let tmpResult = tmp(tmp2[1]);
         return tmpResult.endSession();
       } else {
-        tmpResult = callback(dependencyMap[0]);
+        tmpResult = tmp(tmp2[0]);
         const currentScope = tmpResult.getCurrentScope();
-        const client = callback(dependencyMap[0]).getClient();
+        const client = tmp(tmp2[0]).getClient();
         const session = currentScope.getSession();
         let tmp4 = client;
         if (client) {
@@ -64,7 +64,6 @@ function getCurrentHubShim() {
         if (tmp4) {
           client.captureSession(session);
         }
-        const tmpResult1 = callback(dependencyMap[0]);
       }
     }
   };

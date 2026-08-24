@@ -1,11 +1,11 @@
 // === Module 11993: useHandleClaim ===
 
 // Module 11993 (useHandleClaim)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 
-let require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/useHandleClaim.tsx");
+let require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleClaim.tsx");
 
 export const useHandleClaim = function useHandleClaim(product) {
   product = product.product;

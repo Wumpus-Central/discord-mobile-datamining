@@ -1,12 +1,12 @@
 // === Module 16292: useSoundboardSoundPlayer ===
 
 // Module 16292 (useSoundboardSoundPlayer)
-import noop from "noop" /* 19 */;
-import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate" /* 4780 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleSoundCreateOrUpdate" /* 4780 */;
 import { SoundOutputChannel } from "SoundOutputChannel" /* 9655 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/soundboard/useSoundboardSoundPlayer.native.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/soundboard/useSoundboardSoundPlayer.native.tsx");
 
 export default function useSoundboardSoundPlayer(arg0, arg1) {
   const _require = arg0;
@@ -24,10 +24,10 @@ export default function useSoundboardSoundPlayer(arg0, arg1) {
   }
   audioRef = undefined;
   audioRef = React.useContext(importDefault(audioRef[4])).audioRef;
-  _require(audioRef[5]);
+  let obj = _require(audioRef[5]);
   const items = [closure_4];
   const items1 = [arg0];
-  let obj = { playSoundboardSound: null, isPlayingSound: null, previewSound: null, isPreviewingSound: false };
+  obj = { playSoundboardSound: null, isPlayingSound: null, previewSound: null, isPreviewingSound: false };
   const items2 = [arg0, audioRef, arg1];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isPlayingSound(lib.soundId), items1);
   obj[0] = React.useCallback((arg0) => {

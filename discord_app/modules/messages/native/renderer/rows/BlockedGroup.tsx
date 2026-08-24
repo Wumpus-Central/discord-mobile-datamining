@@ -1,11 +1,10 @@
 // === Module 8160: generateBlockedGroupRowData ===
 
 // Module 8160 (generateBlockedGroupRowData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import sum from "sum" /* 505 */;
 import ThemesDefault from "Themes" /* 712 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
 import Changeset from "Changeset" /* 8158 */;
 import processColorOrThrow from "processColorOrThrow" /* 8161 */;
 import apply from "apply" /* 12 */;
@@ -18,15 +17,15 @@ let closure_5 = apply.memoize((arg0) => {
   if (obj.isThemeDark(arg0)) {
     str = ThemesDefault.unsafe_rawColors.PRIMARY_700;
   }
-  let tmpResult = AccessibilityAnnouncer;
+  let tmpResult = tmp(1363);
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
     str2 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
   }
-  tmpResult = AccessibilityAnnouncer;
+  tmpResult = tmp(1363);
   if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
-    const tmpResult1 = hexToRgba;
+    let GREY1 = tmp(4223).hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
+    const tmpResult1 = tmp(4223);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }
@@ -37,7 +36,7 @@ let closure_5 = apply.memoize((arg0) => {
   obj[2] = processColorOrThrow.processColorOrThrow(GREY1);
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
 
 export const generateBlockedGroupRowData = function generateBlockedGroupRowData(canUncollapse, theme, self) {
   closure_0 = self;
@@ -50,7 +49,7 @@ export const generateBlockedGroupRowData = function generateBlockedGroupRowData(
   let obj = {};
   const merged = Object.assign(callback(theme));
   obj.type = rowType;
-  obj.content = content.map((item, index) => _self.generate(item));
+  obj.content = content.map((arg0) => _self.generate(arg0));
   obj = { type: SeparatorAction.TOGGLE_BLOCKED_MESSAGES, context: null };
   if (context == null) {
     context = message.id;

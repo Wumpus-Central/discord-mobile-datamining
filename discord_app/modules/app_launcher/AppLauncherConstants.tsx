@@ -1,9 +1,9 @@
 // === Module 11313: CommandListSortOrder ===
 
 // Module 11313 (CommandListSortOrder)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");
+const result = set.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");
 
 export const CommandListSortOrder = { POPULAR: 0, [0]: "POPULAR", ALPHABETICAL: 1, [1]: "ALPHABETICAL" };
 export const APP_LAUNCHER_ELEMENT_CLASSNAME = "app-launcher-element";

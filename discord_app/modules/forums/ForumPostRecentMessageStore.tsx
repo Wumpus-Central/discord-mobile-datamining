@@ -6,25 +6,25 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
+require = arg1;
 function handleLoadThreadsSuccess(arg0) {
   ({ threads, mostRecentMessages } = arg0);
-  const item = threads.forEach((item, index) => {
-    closure_5[item.id] = { loaded: true, message: null };
+  const item = threads.forEach((id) => {
+    closure_5[id.id] = { loaded: true, message: null };
     return true;
   });
   if (mostRecentMessages != null) {
     const found = mostRecentMessages.filter(isDiscordFrontendDevelopment.isNotNullish);
-    const item1 = found.forEach((item, index) => {
+    const item1 = found.forEach((channel_id) => {
       let messageRecord = null;
-      if (null != item) {
-        messageRecord = callback(table[3]).createMessageRecord(item);
+      if (null != channel_id) {
+        messageRecord = callback(table[3]).createMessageRecord(channel_id);
         const obj = callback(table[3]);
       }
-      closure_5[item.channel_id] = { loaded: true, message: messageRecord };
+      closure_5[channel_id.channel_id] = { loaded: true, message: messageRecord };
     });
   }
 }
@@ -75,6 +75,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(dispatcherDe
             }
           }
           flag = DISCORD_EPOCHDefault.compare(id, id1) > -1;
+          const obj2 = DISCORD_EPOCHDefault;
         }
       }
       if (flag) {
@@ -83,6 +84,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(dispatcherDe
           let messageRecord = null;
           if (null != message3) {
             messageRecord = createMinimalMessageRecord.createMessageRecord(message3);
+            const obj4 = createMinimalMessageRecord;
           }
           let obj = { loaded: true, message: null };
           obj[1] = messageRecord;
@@ -119,6 +121,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(dispatcherDe
           }
         }
         flag = DISCORD_EPOCHDefault.compare(id, id1) > -1;
+        const obj2 = DISCORD_EPOCHDefault;
       }
     }
     let tmp9 = flag;
@@ -134,6 +137,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(dispatcherDe
           const merged = Object.assign(tmp12);
           obj.message = createMinimalMessageRecord.updateMessageRecord(message, message.message);
           dependencyMap[channel_id] = obj;
+          const obj4 = createMinimalMessageRecord;
         }
         tmp16 = null != dependencyMap[channel_id] && null != message;
       }
@@ -160,12 +164,16 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(dispatcherDe
   LOAD_FORUM_POSTS: function handlePostChannelLoadData(threads) {
     threads = threads.threads;
     for (const key10006 in threads) {
+      let tmp5 = key10006;
       let most_recent_message = threads[key10006].most_recent_message;
       let messageRecord = null;
       if (null != most_recent_message) {
+        let tmp = require;
+        let tmp2 = dependencyMap;
         let obj = createMinimalMessageRecord;
         messageRecord = obj.createMessageRecord(most_recent_message);
       }
+      let tmp4 = closure_5;
       obj = { loaded: true, message: null };
       obj[1] = messageRecord;
       closure_5[key10006] = obj;
@@ -175,6 +183,6 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(dispatcherDe
   LOAD_ARCHIVED_THREADS_SUCCESS: handleLoadThreadsSuccess,
   LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess
 });
-const result = require("obj132").fileFinishedImporting("modules/forums/ForumPostRecentMessageStore.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/ForumPostRecentMessageStore.tsx");
 
 export default forumPostRecentMessageStore;

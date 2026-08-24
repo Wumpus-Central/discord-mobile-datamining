@@ -1,16 +1,16 @@
 // === Module 11822: useIsHubRealNamePromptShowing ===
 
 // Module 11822 (useIsHubRealNamePromptShowing)
-import noop from "noop" /* 19 */;
-import initialize from "initialize" /* 11823 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "initialize" /* 11823 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import { GuildPrompts } from "GuildPrompts" /* 11824 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 
 export default function useIsHubRealNamePromptShowing(arg0) {
   const _require = arg0;
@@ -20,11 +20,11 @@ export default function useIsHubRealNamePromptShowing(arg0) {
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(GuildFeatures.HUB);
+      hasItem = features.has(closure_1_8.HUB);
     }
     if (true !== hasItem) {
       return null;
-    } else if (true === closure_1_4.hasViewedPrompt(GuildPrompts.REAL_NAME_PROMPT, guild.id)) {
+    } else if (true === closure_1_4.hasViewedPrompt(closure_1_9.REAL_NAME_PROMPT, guild.id)) {
       return null;
     } else {
       const currentUser = closure_1_7.getCurrentUser();
@@ -52,8 +52,8 @@ export default function useIsHubRealNamePromptShowing(arg0) {
     }
     if (tmp2) {
       if (!stateFromStores) {
-        stateFromStores(dependencyMap[8]).viewPrompt(GuildPrompts.REAL_NAME_PROMPT, closure_0);
-        const obj = stateFromStores(dependencyMap[8]);
+        stateFromStores(closure_1_2[8]).viewPrompt(closure_1_9.REAL_NAME_PROMPT, closure_0);
+        const obj = stateFromStores(closure_1_2[8]);
       }
     }
   }, items1);

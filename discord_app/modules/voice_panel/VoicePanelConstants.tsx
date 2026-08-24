@@ -1,9 +1,11 @@
 // === Module 11440: VoicePanelModes ===
 
 // Module 11440 (VoicePanelModes)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-const obj = {};
+let obj = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };
+obj = { mass: 0.5, damping: 80, stiffness: 200 };
+obj = {};
 const merged = Object.assign(obj);
 obj.overshootClamping = true;
 const obj1 = {};
@@ -14,17 +16,18 @@ const merged2 = Object.assign(obj);
 obj2.mass = 0.3;
 const obj3 = { NO_VIDEO_PARTICIPANTS: "no_video_participants", CALLER_DISCONNECTED: "caller_disconnected" };
 const obj4 = { [obj3.NO_VIDEO_PARTICIPANTS]: { width: 2, height: 1 } };
-obj132.isAndroid();
-obj132.isIOS();
-const result = obj132.fileFinishedImporting("modules/voice_panel/VoicePanelConstants.tsx");
+let set = new Set(Object.keys(obj4));
+set = set.isAndroid();
+set = set.isIOS();
+const result = set.fileFinishedImporting("modules/voice_panel/VoicePanelConstants.tsx");
 
 export const VoicePanelModes = obj;
 export const getAnalyticsNameForVoicePanelMode = function getAnalyticsNameForVoicePanelMode(arg0) {
   if (obj.DISMISSED === arg0) {
     return "dismissed";
-  } else if (obj.PIP === arg0) {
+  } else if (tmp.PIP === arg0) {
     return "pip";
-  } else if (obj.PANEL === arg0) {
+  } else if (tmp.PANEL === arg0) {
     return "grid";
   }
 };
@@ -45,9 +48,9 @@ export const GridItemTypes = { USER: "USER", STREAM: "STREAM", ACTIVITY: "ACTIVI
 export const BASE_TARGET_CARD_SIZE = 165;
 export const VoicePanelCTACard = obj3;
 export const VoicePanelCTACardDimensions = obj4;
-export const VoicePanelCTACardDimensionKeys = new Set(Object.keys(obj4));
+export const VoicePanelCTACardDimensionKeys = set;
 export const VoicePanelCardItemType = { PARTICIPANT: "participant", CTA: "cta" };
-export const IS_ANDROID = obj132;
-export const IS_IOS = obj132;
+export const IS_ANDROID = set;
+export const IS_IOS = set;
 export const SECONDARY_PIP_TOP_MARGIN = 8;
 export const VOICE_PANEL_DRAWER_MAX_WIDTH = 540;

@@ -1,8 +1,8 @@
 // === Module 6363: Lazy ===
 
 // Module 6363 (Lazy)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 
 export const Lazy = function Lazy(arg0) {

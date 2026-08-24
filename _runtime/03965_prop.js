@@ -5,7 +5,9 @@ if (Intl.ListFormat) {
   const _Intl = Intl;
   if (typeof Intl.ListFormat.__addLocaleData === "function") {
     const _Intl2 = Intl;
-    const obj = { long: null, narrow: null, short: null };
+    let obj = { data: null, locale: "sv" };
+    obj = { conjunction: null, disjunction: null, unit: null };
+    obj = { long: null, narrow: null, short: null };
     obj[0] = { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" };
     obj[1] = { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" };
     obj[2] = { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" };

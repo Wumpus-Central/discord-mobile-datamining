@@ -3,9 +3,9 @@
 // Module 222 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import BlobDefault from "Blob" /* 203 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 const File = arg1;

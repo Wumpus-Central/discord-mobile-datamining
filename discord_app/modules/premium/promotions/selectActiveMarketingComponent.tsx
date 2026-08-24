@@ -1,7 +1,7 @@
 // === Module 7657: comparePriorityDescending ===
 
 // Module 7657 (comparePriorityDescending)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
   effectiveStartDate = effectiveStartDate.effectiveStartDate;
@@ -58,7 +58,7 @@ function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
     }
   }
 }
-const result = obj132.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
+const result = set.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
 
 export default function selectActiveMarketingComponent(arr) {
   closure_0 = arg1;
@@ -68,27 +68,27 @@ export default function selectActiveMarketingComponent(arr) {
       return true;
     };
   }
-  const found = arr.filter((item, index) => {
-    ({ effectiveStartDate, effectiveEndDate } = item);
+  const found = arr.filter((isTimed) => {
+    ({ effectiveStartDate, effectiveEndDate } = isTimed);
     let tmp = null != effectiveStartDate;
     if (tmp) {
-      const time = store.getTime();
+      const time = obj.getTime();
       tmp = time < effectiveStartDate.getTime();
     }
     if (!tmp) {
       let tmp3 = null != effectiveEndDate;
       if (tmp3) {
-        const time1 = store.getTime();
+        const time1 = obj.getTime();
         tmp3 = time1 > effectiveEndDate.getTime();
       }
       tmp = tmp3;
     }
     let tmp5 = !tmp;
     if (tmp5) {
-      const isTimed = item.isTimed;
+      isTimed = isTimed.isTimed;
       let tmp6 = !isTimed;
       if (isTimed) {
-        tmp6 = fn(item);
+        tmp6 = fn(isTimed);
       }
       tmp5 = tmp6;
     }

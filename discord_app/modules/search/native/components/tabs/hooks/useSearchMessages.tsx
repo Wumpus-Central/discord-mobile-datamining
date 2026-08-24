@@ -1,11 +1,11 @@
 // === Module 15914: useSearchMessages ===
 
 // Module 15914 (useSearchMessages)
-import handleReaction from "handleReaction" /* 4971 */;
-import prototype from "prototype" /* 11510 */;
+import closure_2 from "handleReaction" /* 4971 */;
+import closure_3 from "prototype" /* 11510 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
 
 export const useSearchMessages = function useSearchMessages(searchContext, tab) {
   const _require = searchContext;

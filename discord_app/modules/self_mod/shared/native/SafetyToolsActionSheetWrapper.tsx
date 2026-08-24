@@ -1,12 +1,12 @@
 // === Module 10612: SafetyToolsActionSheetWrapper ===
 
 // Module 10612 (SafetyToolsActionSheetWrapper)
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx");
 
 export default function SafetyToolsActionSheetWrapper(channelId) {
   channelId = channelId.channelId;
@@ -24,6 +24,7 @@ export default function SafetyToolsActionSheetWrapper(channelId) {
   }, items1);
   let tmp5 = null;
   if (null != stateFromStores) {
+    obj = { showGradient: true, startExpanded: true, header: null, children: null };
     obj = { recipientId: null, warningId: null, warningType: null, hasBackButton: null, title: null, channelId: null };
     obj[0] = recipientId;
     obj[1] = warningId;

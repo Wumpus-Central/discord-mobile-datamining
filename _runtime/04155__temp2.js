@@ -1,10 +1,10 @@
 // === Module 4155: _temp2 ===
 
 // Module 4155 (_temp2)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 function _temp2(arg0) {
   return arg0 + 1;
 }
@@ -55,7 +55,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
               let tmp15 = cResult[13];
               let tmp16 = cResult[14];
             }
-            callback2(tmp15, tmp16);
+            tmp9(tmp15, tmp16);
             if (cResult[15] !== disposableMemo) {
               class M {
                 constructor() {
@@ -67,7 +67,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                     return () => {
                       try {
                         callback();
-                        disposableMemo.removeListeners();
+                        closure_1_4.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -81,6 +81,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
               cResult[16] = M;
               cResult[17] = items;
               let tmp19 = items;
+              const tmp18 = M;
             } else {
               class M {
                 constructor() {
@@ -92,7 +93,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                     return () => {
                       try {
                         callback();
-                        disposableMemo.removeListeners();
+                        closure_1_4.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -103,7 +104,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
               }
               tmp19 = cResult[17];
             }
-            callback2(M, tmp19);
+            tmp9(tmp18, tmp19);
             if (disposableMemo != null) {
               class M {
                 constructor() {
@@ -115,7 +116,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                     return () => {
                       try {
                         callback();
-                        disposableMemo.removeListeners();
+                        closure_1_4.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -136,7 +137,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                     return () => {
                       try {
                         callback();
-                        disposableMemo.removeListeners();
+                        closure_1_4.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -310,7 +311,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                 }
               }
             }
-            if (cResult[30] === tmp24) {
+            if (cResult[30] === tmp23) {
               class O {
                 constructor(arg0) {
                   obj = closure_4;
@@ -324,21 +325,21 @@ export const useRiveList = function useRiveList(arg0, arg1) {
             }
             obj = { length: null, getInstanceAt: null, addInstance: null, addInstanceAt: null, removeInstance: null, removeInstanceAt: null, swap: null, error: null };
             obj[0] = undefined;
-            obj[1] = R;
-            obj[2] = tmp24;
-            obj[3] = C;
-            obj[4] = O;
-            obj[5] = tmp28;
-            obj[6] = tmp30;
+            obj[1] = tmp22;
+            obj[2] = tmp23;
+            obj[3] = tmp25;
+            obj[4] = tmp26;
+            obj[5] = tmp27;
+            obj[6] = tmp29;
             obj[7] = tmp5;
-            cResult[30] = tmp24;
-            cResult[31] = C;
+            cResult[30] = tmp23;
+            cResult[31] = tmp25;
             cResult[32] = tmp5;
-            cResult[33] = R;
+            cResult[33] = tmp22;
             cResult[34] = undefined;
-            cResult[35] = O;
-            cResult[36] = tmp28;
-            cResult[37] = tmp30;
+            cResult[35] = tmp26;
+            cResult[36] = tmp27;
+            cResult[37] = tmp29;
             cResult[38] = obj;
           }
         }
@@ -372,8 +373,9 @@ export const useRiveList = function useRiveList(arg0, arg1) {
     }
     const fn2 = function v() {
       if (closure_1) {
-        return closure_1.listProperty(closure_0);
+        return obj.listProperty(closure_0);
       }
+      obj = closure_1;
     };
     cResult[4] = arg0;
     cResult[5] = arg1;
@@ -385,5 +387,4 @@ export const useRiveList = function useRiveList(arg0, arg1) {
   cResult[2] = arg1;
   cResult[3] = items3;
   tmp8 = items3;
-  const tmp6 = callback(disposableMemo(0), 2);
 };

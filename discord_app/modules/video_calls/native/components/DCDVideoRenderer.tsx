@@ -6,6 +6,6 @@ import importDefaultResult from "map" /* 4728 */;
 
 const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: __INTERNAL_VIEW_CONFIGDefault };
 const importDefaultResultResult = importDefaultResult(obj);
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/DCDVideoRenderer.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/DCDVideoRenderer.tsx");
 
 export default importDefaultResultResult;

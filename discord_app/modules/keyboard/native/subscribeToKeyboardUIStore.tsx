@@ -1,9 +1,9 @@
 // === Module 1496: subscribeToKeyboardUIStore ===
 
 // Module 1496 (subscribeToKeyboardUIStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/keyboard/native/subscribeToKeyboardUIStore.tsx");
+const result = set.fileFinishedImporting("modules/keyboard/native/subscribeToKeyboardUIStore.tsx");
 
 export default function subscribeToKeyboardUIStore(arg0) {
   const _require = arg0;

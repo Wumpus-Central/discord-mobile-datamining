@@ -12,38 +12,40 @@ function getFilenameToDebugIdMap(arg0) {
     if (reduced) {
       return reduced;
     }
-    reduced = keys.reduce((acc, item, index) => {
+    reduced = keys.reduce((arg0, arg1) => {
       let filename;
       let tmp = obj;
       if (!obj) {
         obj = {};
         tmp = obj;
       }
-      if (tmp[item]) {
-        acc[tmp2[0]] = tmp2[1];
+      if (tmp[arg1]) {
+        arg0[tmp2[0]] = tmp2[1];
       } else {
-        const arr = callback(item);
+        const arr = callback(arg1);
         let diff = arr.length - 1;
         if (0 <= diff) {
           while (true) {
             let tmp5 = arr[diff];
+            let tmp6 = diff;
             filename = tmp5;
             if (tmp5) {
               filename = tmp5.filename;
             }
+            let tmp7 = _sentryDebugIds;
             if (filename) {
-              if (_sentryDebugIds[item]) {
+              if (_sentryDebugIds[arg1]) {
                 break;
               }
             }
             diff = diff - 1;
           }
-          acc[filename] = tmp8;
+          arg0[filename] = tmp8;
           const items = [filename, tmp8];
-          obj[item] = items;
+          obj[arg1] = items;
         }
       }
-      return acc;
+      return arg0;
     }, {});
   } else {
     return {};
@@ -58,7 +60,11 @@ arg5.getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1
     while (iter !== undefined) {
       let tmp7 = nextResult;
       if (nextResult) {
+        let tmp8 = tmp[tmp7];
+      }
+      if (nextResult) {
         let obj = { type: "sourcemap", code_file: null, debug_id: null };
+        let tmp9 = tmp7;
         obj[1] = tmp7;
         obj[2] = tmp[tmp7];
         let arr = items.push(obj);

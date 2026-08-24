@@ -5,22 +5,23 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import GroupIcon from "GroupIcon" /* 6884 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { useInstantInviteSendStates as closure_8 } from "setSendState" /* 11887 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import updateWithLatestInvite from "updateWithLatestInvite" /* 8919 */;
-import comparator from "comparator" /* 1980 */;
-import _computeRows from "_computeRows" /* 11502 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import closure_10 from "updateWithLatestInvite" /* 8919 */;
+import closure_11 from "comparator" /* 1980 */;
+import closure_12 from "_computeRows" /* 11502 */;
 import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics" /* 8617 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function SeeMoreFooter(openInviteSheet) {
-  const obj = { style: callback2().friendIcon, children: callback(GroupIcon.GroupIcon, { size: "sm" }) };
+  let obj = { icon: null, onPress: null, label: null, end: true };
+  obj = { style: callback2().friendIcon, children: callback(GroupIcon.GroupIcon, { size: "sm" }) };
   obj[0] = callback(closure_6, obj);
   obj[1] = openInviteSheet.openInviteSheet;
   const intl = getSystemLocale.intl;
@@ -29,6 +30,7 @@ function SeeMoreFooter(openInviteSheet) {
 }
 function GuildInviteSuggestionRows(openInviteSheet) {
   ({ invite: require, suggestions } = openInviteSheet);
+  closure_2 = undefined;
   const tmp = callback2();
   closure_2 = tmp;
   [][0] = suggestions;
@@ -47,7 +49,7 @@ function GuildInviteSuggestionRows(openInviteSheet) {
     if (suggestions.length > 6) {
       obj = { openInviteSheet: null };
       obj[0] = openInviteSheet.openInviteSheet;
-      tmp6Result = callback(SeeMoreFooter, obj);
+      tmp6Result = tmp6(SeeMoreFooter, obj);
     }
     obj[3] = tmp6Result;
     obj[4] = function ItemSeparatorComponent() {
@@ -56,30 +58,37 @@ function GuildInviteSuggestionRows(openInviteSheet) {
     obj[5] = function keyExtractor(item) {
       return item.item.id;
     };
-    obj[1] = callback(closure_7, obj);
-    tmp6Result = callback(closure_6, obj);
+    obj[1] = closure_19(closure_7, obj);
+    tmp6Result = tmp6(closure_6, obj);
+    const tmp7 = closure_6;
+    const tmp8 = closure_7;
   }
   return tmp6Result;
 }
 ({ Image: c5, View: closure_6, FlatList: error, StyleSheet } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_14, AnalyticsSections: closure_15, InstantInviteSources: closure_16, Permissions: closure_17, SearchTypes: closure_18 } = ME);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
+createCacheKey = { container: null, header: null, description: null, headerImage: null, linkContainer: null, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
+createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 8 };
 createCacheKey[2] = { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" };
 createCacheKey[3] = { marginVertical: 16 };
 createCacheKey[4] = { paddingHorizontal: 16, width: "100%" };
 createCacheKey[5] = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 12, justifyContent: "space-between" };
+let obj1 = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 createCacheKey[6] = { flexShrink: 0, marginLeft: 8, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[7] = { marginTop: 8 };
 createCacheKey[8] = { marginVertical: 16 };
 createCacheKey[9] = { width: "100%", flex: 1, alignContent: "flex-start" };
+let obj2 = { flexShrink: 0, marginLeft: 8, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, height: 32, width: 32, padding: 8, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xxl };
 createCacheKey[11] = { marginHorizontal: 12 };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, height: 32, width: 32, padding: 8, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xxl };
 createCacheKey[12] = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginStart: ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING };
 let closure_21 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/create_guild/native/components/GuildInvite.tsx");
+let obj4 = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginStart: ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING };
+let result = require("set").fileFinishedImporting("modules/create_guild/native/components/GuildInvite.tsx");
 
 export default function GuildInvite(closeOnEditInviteLink) {
   let flag = closeOnEditInviteLink.closeOnEditInviteLink;
@@ -88,25 +97,30 @@ export default function GuildInvite(closeOnEditInviteLink) {
   }
   const onClose = closeOnEditInviteLink.onClose;
   let navigation;
+  let isScreenReaderEnabled;
   let ref;
+  let first;
+  closure_6 = undefined;
+  let stateFromStores;
+  let stateFromStores1;
   closure_9 = undefined;
   closure_10 = undefined;
   let tmp = callback2();
   let obj = flag(navigation[19]);
   navigation = obj.useNavigation();
   obj1 = flag(navigation[20]);
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   let obj2 = ref;
   ref = ref.useRef(null);
   const tmp7 = isScreenReaderEnabled(ref.useState(false), 2);
-  const first = tmp7[0];
+  first = tmp7[0];
   closure_6 = tmp7[1];
   let obj3 = flag(navigation[21]);
   const items = [closure_10];
-  const stateFromStores = obj3.useStateFromStores(items, () => store.getInvite());
+  stateFromStores = obj3.useStateFromStores(items, () => store.getInvite());
   let obj4 = flag(navigation[21]);
   const items1 = [closure_10, closure_9, closure_11];
-  const stateFromStores1 = obj4.useStateFromStores(items1, () => {
+  stateFromStores1 = obj4.useStateFromStores(items1, () => {
     const inviteSettings = store.getInviteSettings();
     let channelId;
     if (inviteSettings != null) {
@@ -115,13 +129,14 @@ export default function GuildInvite(closeOnEditInviteLink) {
     if (null != channelId) {
       return channel.getChannel(channelId);
     } else {
-      const guildId = store.getGuildId();
+      const guildId = obj.getGuildId();
       let defaultChannel = null;
       if (null != guildId) {
         defaultChannel = defaultChannel.getDefaultChannel(guildId, true, constants.CREATE_INSTANT_INVITE);
       }
       return defaultChannel;
     }
+    obj = store;
   });
   const items2 = [isScreenReaderEnabled, stateFromStores];
   const effect = ref.useEffect(() => {
@@ -130,8 +145,8 @@ export default function GuildInvite(closeOnEditInviteLink) {
       tmp = null != ref.current;
     }
     if (tmp) {
-      flag(navigation[22]);
-      const obj = { ref: null, delay: 100 };
+      let obj = flag(navigation[22]);
+      obj = { ref: null, delay: 100 };
       obj[0] = ref;
       const result = obj.setAccessibilityFocus(obj);
     }
@@ -140,8 +155,8 @@ export default function GuildInvite(closeOnEditInviteLink) {
   const tmp12 = stateFromStores1();
   closure_9 = tmp12;
   onClose(navigation[23])(() => {
-    flag(navigation[24]);
-    const obj = { omitUserIds: new Set(), channel: stateFromStores1 };
+    let obj = flag(navigation[24]);
+    obj = { omitUserIds: new Set(), channel: stateFromStores1 };
     const inviteSuggestions = obj.loadInviteSuggestions(obj);
   });
   const items3 = [tmp12, stateFromStores];
@@ -165,12 +180,12 @@ export default function GuildInvite(closeOnEditInviteLink) {
     }
     obj = {
       headerRight: obj.getHeaderTextButton(stringResult, () => {
-        const AccessibilityAnnouncer = flag(navigation[26]).AccessibilityAnnouncer;
-        const intl = flag(navigation[17]).intl;
-        AccessibilityAnnouncer.announce(intl.string(flag(navigation[17]).t["FY/yLY"]));
+        const AccessibilityAnnouncer = closure_1_0(closure_1_2[26]).AccessibilityAnnouncer;
+        const intl = closure_1_0(closure_1_2[17]).intl;
+        AccessibilityAnnouncer.announce(intl.string(closure_1_0(closure_1_2[17]).t["FY/yLY"]));
         callback();
-        onClose(navigation[14]);
-        const obj = { flow_type: closure_1_15.GUILD_CREATE_MODAL, from_step: closure_1_13.GUILD_INVITE, to_step: "modal_closed", skip: !closure_5 };
+        let obj = closure_1_1(closure_1_2[14]);
+        obj = { flow_type: closure_1_15.GUILD_CREATE_MODAL, from_step: closure_1_13.GUILD_INVITE, to_step: "modal_closed", skip: !closure_5 };
         obj.track(closure_1_14.USER_FLOW_TRANSITION, obj);
       }),
       headerLeft() {
@@ -211,6 +226,8 @@ export default function GuildInvite(closeOnEditInviteLink) {
         code = stateFromStores.code;
       }
       const obj = flag(navigation[29]);
+      const tmp2 = flag;
+      const tmp3 = navigation;
       obj.handleOpenShareSheet(code, tmp, flag(navigation[29]).getShareMessage(closure_10));
       callback(true);
       const tmp2Result = flag(navigation[29]);
@@ -266,7 +283,7 @@ export default function GuildInvite(closeOnEditInviteLink) {
       obj7[1] = tmp.linkButtonIcon;
       items9[1] = callback(tmp2(tmp3[35]).Icon, obj7);
       obj5[4] = items9;
-      const items10 = [callback2(tmp2(tmp3[34]).PressableOpacity, obj5), , ];
+      const items10 = [closure_20(tmp2(tmp3[34]).PressableOpacity, obj5), , ];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.inviteDetail;
       const obj9 = { channel: null, canEditInvite: true, callbackActionSheet: null, onEdit: null, source: null };
@@ -289,10 +306,10 @@ export default function GuildInvite(closeOnEditInviteLink) {
       obj10[1] = callback(tmp2(tmp3[38]).Button, obj11);
       items10[2] = callback(closure_6, obj10);
       obj4[1] = items10;
-      items8[3] = callback2(closure_6, obj4);
+      items8[3] = closure_20(closure_6, obj4);
       items8[4] = tmp27;
       obj[4] = items8;
-      return callback2(tmp2(tmp3[31]).SafeAreaPaddingView, obj);
+      return closure_20(tmp2(tmp3[31]).SafeAreaPaddingView, obj);
     }
   }
   return null;

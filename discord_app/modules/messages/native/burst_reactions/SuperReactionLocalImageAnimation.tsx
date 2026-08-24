@@ -6,9 +6,9 @@ import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
 import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7574 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx");
 
 export default function SuperReactionLocalImageAnimation(arg0) {
   let tmp = null;
@@ -21,6 +21,7 @@ export default function SuperReactionLocalImageAnimation(arg0) {
     obj[1] = superReactionAnimationSourceFromLocalImage;
     const merged1 = Object.assign(merged);
     tmp = jsx(FadeOutLottieAnimationDefault, { loop: true, source: null });
+    const tmp7 = FadeOutLottieAnimationDefault;
   }
   return tmp;
 };

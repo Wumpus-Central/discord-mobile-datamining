@@ -1,9 +1,9 @@
 // === Module 1908: fromServerGuildIncidentsData ===
 
 // Module 1908 (fromServerGuildIncidentsData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/guild_antiraid/guildIncidentsSerialization.tsx");
+const result = set.fileFinishedImporting("modules/guild_antiraid/guildIncidentsSerialization.tsx");
 
 export const fromServerGuildIncidentsData = function fromServerGuildIncidentsData(incidents_data) {
   if (null != incidents_data) {

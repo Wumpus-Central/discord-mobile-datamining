@@ -1,8 +1,8 @@
 // === Module 8744: _selectAndWaitForVoiceChannelJoin ===
 
 // Module 8744 (_selectAndWaitForVoiceChannelJoin)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
 
 function _selectAndWaitForVoiceChannelJoin() {
   const self = this;
@@ -137,7 +137,7 @@ const prototype = function JoinTimeoutError() {
 }.prototype;
 class prototype extends Error {
 }
-let result = require("obj132").fileFinishedImporting("modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx");
 
 export default function selectAndWaitForVoiceChannelJoin() {
   const self = this;

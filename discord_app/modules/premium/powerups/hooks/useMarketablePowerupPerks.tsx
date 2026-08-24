@@ -1,15 +1,16 @@
 // === Module 13010: set ===
 
 // Module 13010 (set)
-import noop from "noop" /* 19 */;
-import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "calculateAppliedBoosts" /* 4261 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import set from "set" /* 2 */;
 
-const require = fn;
+const require = arg1;
 const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;
 let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), require("VANITY_URL_POWERUP_SKU_ID").VANITY_URL_POWERUP_SKU_ID];
-const set = new Set(items);
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
 
 export default function useMarketablePowerupPerks(arg0) {
   const _require = arg0;
@@ -20,7 +21,7 @@ export default function useMarketablePowerupPerks(arg0) {
     if (stateForGuild != null) {
       const powerupCatalog = stateForGuild.powerupCatalog;
       if (powerupCatalog != null) {
-        tmp2 = powerupCatalog[GuildPowerupType.PERK];
+        tmp2 = powerupCatalog[closure_1_5.PERK];
       }
     }
     return tmp2;
@@ -37,6 +38,6 @@ export default function useMarketablePowerupPerks(arg0) {
     if (null != closure_2) {
       items1.push(tmp);
     }
-    return items1.filter((item, index) => !set.has(item.skuId));
+    return items1.filter((skuId) => !set.has(skuId.skuId));
   }, items1);
 };

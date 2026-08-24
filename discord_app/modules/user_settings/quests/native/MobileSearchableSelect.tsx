@@ -2,13 +2,13 @@
 
 // Module 14531 (MobileSearchableSelect)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 class MobileSearchableSelect {
   constructor(arg0) {
     options = global.options;
@@ -64,13 +64,13 @@ class MobileSearchableSelect {
     effect = obj.useEffect(() => {
       let tmp2 = null == closure_1;
       if (!tmp2) {
-        tmp2 = closure_1 === first;
+        tmp2 = tmp === first;
       }
       if (!tmp2) {
         tmp2 = first1;
       }
       if (!tmp2) {
-        callback(closure_1);
+        callback(tmp);
       }
     }, items);
     items1 = [, , ];
@@ -80,13 +80,14 @@ class MobileSearchableSelect {
     memo = obj.useMemo(() => {
       let found = closure_0;
       if ("" !== first.trim()) {
-        closure_0 = first.toLowerCase();
-        found = closure_0.filter((item, index) => {
-          const formatted = item.label.toLowerCase();
+        closure_0 = str.toLowerCase();
+        found = closure_0.filter((label) => {
+          const formatted = label.label.toLowerCase();
           let hasItem = formatted.includes(closure_0);
           if (!hasItem) {
-            const formatted1 = item.value.toLowerCase();
+            const formatted1 = label.value.toLowerCase();
             hasItem = formatted1.includes(closure_0);
+            const str2 = label.value;
           }
           return hasItem;
         });
@@ -96,10 +97,10 @@ class MobileSearchableSelect {
         tmp = found;
         if (0 === found.length) {
           tmp = found;
-          if ("" !== first.trim()) {
+          if ("" !== str.trim()) {
             const obj = { label: null, value: null };
-            obj[0] = first.trim();
-            obj[1] = first.trim();
+            obj[0] = str.trim();
+            obj[1] = str.trim();
             const items = [obj];
             tmp = items;
           }
@@ -120,7 +121,7 @@ class MobileSearchableSelect {
       if (!tmp4) {
         tmp4 = options.length > 0;
       }
-      _undefined(tmp4);
+      c8(tmp4);
     }, items2);
     items4 = [];
     items4[0] = onChange;
@@ -145,7 +146,7 @@ class MobileSearchableSelect {
       if (!tmp2) {
         tmp2 = options.length > 0;
       }
-      _undefined(tmp2);
+      c8(tmp2);
     }, items5);
     tmp15 = c4;
     obj = { style: { position: "relative", zIndex: 100, overflow: "visible" }, children: null };
@@ -167,25 +168,25 @@ class MobileSearchableSelect {
       obj2[0] = tmp3.dropdownContainer;
       tmp17 = closure_5;
       obj3 = { nestedScrollEnabled: true, showsVerticalScrollIndicator: false, keyboardShouldPersistTaps: "handled", children: null };
-      obj3[3] = memo.map((item, index) => {
-        closure_0 = item;
+      obj3[3] = memo.map((children) => {
+        closure_0 = children;
         const items = [dropdownItem.dropdownItem, ];
-        let dropdownItemLast = index === memo.length - 1;
+        let dropdownItemLast = arg1 === memo.length - 1;
         if (dropdownItemLast) {
-          dropdownItemLast = dropdownItem.dropdownItemLast;
+          dropdownItemLast = tmp3.dropdownItemLast;
         }
-        {
+        obj = {
           style: items,
           activeOpacity: 0.7,
           onPress() {
-            closure_1_12(item.value);
+            closure_1_12(value.value);
           },
           disabled: flag2,
-          children: callback(options(value[9]).Text, obj)
+          children: tmp(options(value[9]).Text, obj)
         };
         items[1] = dropdownItemLast;
-        obj = { variant: "text-sm/medium", color: "text-default", style: dropdownItem.dropdownItemText, children: item.label };
-        return callback(first, obj, "option-" + item.value + "-" + index);
+        obj = { variant: "text-sm/medium", color: "text-default", style: tmp3.dropdownItemText, children: children.label };
+        return closure_7(first, obj, "option-" + children.value + "-" + arg1);
       });
       obj2[1] = tmp16(closure_5, obj3);
       tmp16Result = tmp16(tmp15, obj2);
@@ -197,13 +198,15 @@ class MobileSearchableSelect {
 }
 ({ View: c4, ScrollView: c5, TouchableOpacity: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.md, marginTop: ThemesDefault.space.PX_4, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, left: 0, right: 0, zIndex: 999999, elevation: 30, shadowColor: "#000", shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.4, shadowRadius: 8, maxHeight: 250 };
+createCacheKey = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.md, marginTop: ThemesDefault.space.PX_4, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, left: 0, right: 0, zIndex: 999999, elevation: 30, shadowColor: "#000", shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.4, shadowRadius: 8, maxHeight: 250 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_MUTED };
 createCacheKey[2] = { borderBottomWidth: 0 };
 createCacheKey[3] = { fontSize: 14 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");
+let obj1 = { padding: ThemesDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_MUTED };
+const result = require("set").fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");
 
 export default MobileSearchableSelect;
 export { MobileSearchableSelect };

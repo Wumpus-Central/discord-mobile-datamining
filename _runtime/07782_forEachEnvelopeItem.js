@@ -4,11 +4,12 @@
 import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
 import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
 import dsnFromString from "dsnFromString" /* 7785 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-function forEachEnvelopeItem(arg0, fn) {
+function forEachEnvelopeItem(arg0, arg1) {
   for (const item10007 of tmp) {
     if (arg1(item10007, item10007[0].type)) {
+      let tmp2 = obj;
       obj.return();
       let flag = true;
       return true;
@@ -19,7 +20,7 @@ function forEachEnvelopeItem(arg0, fn) {
 let closure_4 = { session: "session", sessions: "session", attachment: "attachment", transaction: "transaction", event: "error", client_report: "internal", user_report: "default", profile: "profile", profile_chunk: "profile", replay_event: "replay", replay_recording: "replay", check_in: "monitor", feedback: "feedback", span: "span", statsd: "metric_bucket", raw_security: "security" };
 
 export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
-  const tmp = _slicedToArray(arg0, 2);
+  const tmp = callback(arg0, 2);
   const items = [tmp[0], ];
   const items1 = [];
   items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
@@ -33,8 +34,8 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
     let encodePolyfill = dependencyMap;
     if (!getGlobalSingleton.GLOBAL_OBJ.__SENTRY__) {
       const _TextEncoder = TextEncoder;
-      const encoder = new TextEncoder();
-      let encodeResult = encoder.encode(data);
+      const textEncoder = new TextEncoder();
+      let encodeResult = textEncoder.encode(data);
     }
     __SENTRY__ = __SENTRY__(7739).GLOBAL_OBJ.__SENTRY__;
     encodePolyfill = __SENTRY__.encodePolyfill;
@@ -43,8 +44,8 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
     data = data.data;
     const obj = { type: "attachment", length: null, filename: null, content_type: null, attachment_type: null };
     obj[1] = data.length;
-    ({ filename: obj2[2], contentType: obj2[3], attachmentType: obj2[4] } = data);
-    const items = [obj.dropUndefinedKeys(obj), data];
+    ({ filename: obj3[2], contentType: obj3[3], attachmentType: obj3[4] } = data);
+    const items = [addNonEnumerableProperty.dropUndefinedKeys(obj), data];
     return items;
   }
 };
@@ -70,6 +71,7 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
     obj = { dsn: null };
     obj[0] = dsnFromString.dsnToString(arg3);
     tmp4 = obj;
+    const obj5 = dsnFromString;
   }
   const merged1 = Object.assign(tmp4);
   let tmp8 = tmp;
@@ -79,6 +81,7 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
     const merged2 = Object.assign(tmp);
     obj1[0] = addNonEnumerableProperty.dropUndefinedKeys(obj2);
     tmp8 = obj1;
+    const obj7 = addNonEnumerableProperty;
   }
   const merged3 = Object.assign(tmp8);
   return obj;
@@ -113,15 +116,15 @@ export const parseEnvelope = function parseEnvelope(arr) {
       }
       const subarrayResult = lib.subarray(0, length);
       lib = lib.subarray(length + 1);
-      if (lib(dependencyMap[1]).GLOBAL_OBJ.__SENTRY__) {
-        if (tmp3(dependencyMap[1]).GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
-          const __SENTRY__ = tmp3(dependencyMap[1]).GLOBAL_OBJ.__SENTRY__;
+      if (lib(closure_1_1[1]).GLOBAL_OBJ.__SENTRY__) {
+        if (tmp3(tmp4[1]).GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
+          const __SENTRY__ = tmp3(tmp4[1]).GLOBAL_OBJ.__SENTRY__;
           let decodePolyfillResult = __SENTRY__.decodePolyfill(subarrayResult);
         }
         return JSON.parse(decodePolyfillResult);
       }
-      const decoder = new TextDecoder();
-      decodePolyfillResult = decoder.decode(subarrayResult);
+      const textDecoder = new TextDecoder();
+      decodePolyfillResult = textDecoder.decode(subarrayResult);
     }
     let _require = arr;
     const items = [];
@@ -134,13 +137,16 @@ export const parseEnvelope = function parseEnvelope(arr) {
       }
       let items1 = [json1, ];
       if (length) {
+        let tmp11 = _require;
         let subarrayResult = _require.subarray(0, length);
+        let tmp12 = _require;
         _require = _require.subarray(length + 1);
       } else {
         subarrayResult = readJson();
       }
       items1[1] = subarrayResult;
       arr = items.push(items1);
+      let tmp14 = _require;
     }
     const items2 = [json, items];
     return items2;
@@ -149,8 +155,8 @@ export const parseEnvelope = function parseEnvelope(arr) {
     let encodePolyfill = dependencyMap;
     if (!_require(7739).GLOBAL_OBJ.__SENTRY__) {
       const _TextEncoder = TextEncoder;
-      const encoder = new TextEncoder();
-      let encodeResult = encoder.encode(arr);
+      const textEncoder = new TextEncoder();
+      let encodeResult = textEncoder.encode(arr);
     }
     __SENTRY__ = __SENTRY__(7739).GLOBAL_OBJ.__SENTRY__;
     encodePolyfill = __SENTRY__.encodePolyfill;
@@ -164,44 +170,45 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
       if (typeof json === "string") {
         let sum = arr + json;
       } else {
-        if (callback(dependencyMap[1]).GLOBAL_OBJ.__SENTRY__) {
-          if (tmp14(dependencyMap[1]).GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
-            const __SENTRY__2 = tmp14(dependencyMap[1]).GLOBAL_OBJ.__SENTRY__;
+        if (callback(closure_1_1[1]).GLOBAL_OBJ.__SENTRY__) {
+          if (tmp14(tmp15[1]).GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
+            const __SENTRY__2 = tmp14(tmp15[1]).GLOBAL_OBJ.__SENTRY__;
             let encodePolyfillResult = __SENTRY__2.encodePolyfill(arr);
           }
           sum = [encodePolyfillResult, json];
         }
         const _TextEncoder2 = TextEncoder;
-        const encoder2 = new TextEncoder();
-        encodePolyfillResult = encoder2.encode(arr);
+        const textEncoder = new TextEncoder();
+        encodePolyfillResult = textEncoder.encode(arr);
       }
       callback = sum;
     } else if (typeof json !== "string") {
       arr = arr.push(json);
     } else {
       let __SENTRY__ = callback;
-      let encodePolyfill = dependencyMap;
-      if (!callback(dependencyMap[1]).GLOBAL_OBJ.__SENTRY__) {
+      let encodePolyfill = closure_1_1;
+      if (!callback(closure_1_1[1]).GLOBAL_OBJ.__SENTRY__) {
         const _TextEncoder = TextEncoder;
-        const encoder = new TextEncoder();
-        let encodeResult = encoder.encode(json);
+        const textEncoder1 = new TextEncoder();
+        let encodeResult = textEncoder1.encode(json);
       }
       __SENTRY__ = __SENTRY__(encodePolyfill[1]).GLOBAL_OBJ.__SENTRY__;
       encodePolyfill = __SENTRY__.encodePolyfill;
       encodeResult = encodePolyfill(json);
     }
   }
-  const tmp4 = _slicedToArray(arg0, 2);
+  const tmp4 = callback(arg0, 2);
   const _require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = _require;
     if (typeof _require !== "string") {
       tmp22 = (function concatBuffers(arr) {
-        const uint8Array = new Uint8Array(arr.reduce((acc, item, index) => acc + item.length, 0));
+        const uint8Array = new Uint8Array(arr.reduce((arg0, arg1) => arg0 + arg1.length, 0));
         let num = 0;
         const iter = arr[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
+          let tmp = num;
           let result = uint8Array.set(nextResult, num);
           num = num + nextResult.length;
           continue;
@@ -211,7 +218,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     }
     return tmp22;
   } else {
-    const tmp8 = _slicedToArray(tmp6, 2);
+    const tmp8 = callback(tmp6, 2);
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
     append("\n" + JSON.stringify(tmp8[0]) + "\n");
@@ -224,12 +231,11 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
           append(json);
         } catch (err) {
           const _JSON3 = tmp2.JSON;
-          const normalizer = _require(7783);
-          json = _JSON3.stringify(normalizer.normalize(tmp3));
+          json = _JSON3.stringify(_require(7783).normalize(tmp3));
+          const obj = _require(7783);
         }
       }
     }
     append(tmp8[1]);
   }
-  tmp5 = tmp4[1][Symbol.iterator]();
 };

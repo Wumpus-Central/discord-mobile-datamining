@@ -7,25 +7,28 @@ import setLevels from "setLevels" /* 10725 */;
 import setLevelsDefault from "setLevels" /* 10725 */;
 import context from "context" /* 15288 */;
 import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 15624 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function LeftPanelContent(panelStyles) {
   panelStyles = panelStyles.panelStyles;
+  let first;
+  let isChatBesideChannelList;
   let top;
   const tmp = callback3();
-  let first;
+  first = undefined;
+  isChatBesideChannelList = undefined;
   let obj = first(top[5]);
   const tmp4 = callback(obj.useGuildsRouteGuildAndChannelId(), 2);
   first = tmp4[0];
   obj1 = importAllResult;
   const ref = importAllResult.useRef(first);
-  let isChatBesideChannelList = ref;
+  isChatBesideChannelList = ref;
   let items = [first];
   const effect = importAllResult.useEffect(() => {
     isChatBesideChannelList.current = first;
@@ -63,7 +66,7 @@ function LeftPanelContent(panelStyles) {
   obj = { activeIndex: num, children: null };
   const items3 = [callback2(isChatBesideChannelList(top[13]), { style: memo1 }), callback2(isChatBesideChannelList(top[14]), { style: memo1, selectedGuildId: tmp11, selectedChannelId: tmp4[1] })];
   obj[1] = items3;
-  const tmp15Result = callback2(first(top[12]).NativeFreezeScreens, obj);
+  const tmp15Result = closure_10(first(top[12]).NativeFreezeScreens, obj);
   const items4 = [absoluteFill.absoluteFill, ];
   let tmp19;
   if (isChatBesideChannelList) {
@@ -76,22 +79,23 @@ function LeftPanelContent(panelStyles) {
     obj1 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
     obj1[0] = memo;
     obj1[3] = tmp15Result;
-    let tmp16Result = callback2(closure_5, obj1);
+    let tmp16Result = tmp16(tmp18, obj1);
   } else {
     const obj2 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
     const items6 = [panelStyles, tmp.sideContainer];
     obj2[0] = items6;
     obj2[3] = tmp15Result;
-    tmp16Result = callback2(tmp10(tmp3[16]).View, obj2);
+    tmp16Result = tmp16(tmp10(tmp3[16]).View, obj2);
   }
   items5[1] = tmp16Result;
   obj[1] = items5;
-  return callback2(closure_5, obj);
+  return closure_10(closure_5, obj);
 }
 function LeftPanelHomeDrawerContainer() {
   let obj = context;
   const homeGesture = obj.useHomeGesture();
   ({ gesture, panelStyles, homeDrawerContext } = homeGesture);
+  obj = { value: homeDrawerContext, children: null };
   obj = { gesture, children: callback2(LeftPanelContent, { panelStyles }) };
   obj[1] = callback2(NonCollapsableGestureDetector.NonCollapsableGestureDetector, obj);
   return callback2(context.HomeDrawerStateContext.Provider, obj);
@@ -101,28 +105,30 @@ let c4 = importAllResult;
 const DM_WIDTH = ME.DM_WIDTH;
 ME = ME.ME;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: ThemesDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: ThemesDefault.radii.xl };
+let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
+obj = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: ThemesDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: ThemesDefault.radii.xl };
 obj[1] = obj;
-const createCacheKey = { borderTopLeftRadius: ThemesDefault.radii.xl - 1, borderTopRightRadius: ThemesDefault.radii.none };
+createCacheKey = { borderTopLeftRadius: ThemesDefault.radii.xl - 1, borderTopRightRadius: ThemesDefault.radii.none };
 obj[2] = createCacheKey;
 obj[3] = { borderTopRightRadius: ThemesDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_14 = importAllResult.memo(function LeftMenuTabsInner() {
   const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment2.MobileHomeDrawerExperiment;
   if (MobileHomeDrawerExperiment.useConfig({ location: "gesture" }).enableHome) {
-    let tmp2Result = callback(LeftPanelHomeDrawerContainer, {});
+    let tmp2Result = tmp2(LeftPanelHomeDrawerContainer, {});
   } else {
     const obj = { style: null, children: null };
     obj[0] = tmp.fill;
-    obj[1] = callback(LeftPanelContent, {});
-    tmp2Result = callback(closure_5, obj);
+    obj[1] = tmp2(LeftPanelContent, {});
+    tmp2Result = tmp2(closure_5, obj);
   }
   return tmp2Result;
 });
+let obj2 = { borderTopRightRadius: ThemesDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
 const memoResult = importAllResult.memo(function MainChannelsRedesignInner() {
   const obj = { profile: setLevels.Profiles.LeftPanel, children: callback2(closure_14, {}) };
   return callback2(setLevelsDefault, obj);
 });
-const result = require("obj132").fileFinishedImporting("components_native/MainChannels.tsx");
+const result = require("set").fileFinishedImporting("components_native/MainChannels.tsx");
 
 export default memoResult;

@@ -14,10 +14,10 @@ class EventEmitter {
     return;
   }
 }
-function _addListener(_events, type, listener, arg3) {
-  if (typeof listener !== "function") {
+function _addListener(_events, type, fn, arg3) {
+  if (typeof fn !== "function") {
     const _TypeError = TypeError;
-    const typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof listener);
+    const typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof fn);
     throw typeError;
   } else {
     _events = _events._events;
@@ -29,8 +29,9 @@ function _addListener(_events, type, listener, arg3) {
       _events = obj;
     } else {
       if (undefined !== _events.newListener) {
-        if (listener.listener) {
-          listener = listener.listener;
+        let listener = fn;
+        if (fn.listener) {
+          listener = fn.listener;
         }
         _events.emit("newListener", type, listener);
         _events = _events._events;
@@ -38,26 +39,26 @@ function _addListener(_events, type, listener, arg3) {
       let arr = _events[type];
     }
     if (undefined === arr) {
-      _events[type] = listener;
+      _events[type] = fn;
       _events._eventsCount = _events._eventsCount + 1;
     } else if (typeof arr === "function") {
       const items = [, ];
       if (arg3) {
-        items[0] = listener;
+        items[0] = fn;
         items[1] = arr;
         let tmp7 = items;
       } else {
         items[0] = arr;
-        items[1] = listener;
+        items[1] = fn;
         tmp7 = items;
       }
       _events[type] = tmp7;
     } else {
       if (arg3) {
-        arr = arr.unshift(listener);
+        arr = arr.unshift(fn);
         let arr2 = arr;
       } else {
-        arr = arr.push(listener);
+        arr = arr.push(fn);
         arr2 = arr;
       }
       if (undefined === _events._maxListeners) {
@@ -123,6 +124,7 @@ function _listeners(_events, arg1, arg2) {
         items1 = [];
         items1[0] = items1.listener || items1;
         let items2 = items1;
+        const tmp10 = items1.listener || items1;
       } else {
         items2 = [items1];
       }
@@ -134,6 +136,7 @@ function _listeners(_events, arg1, arg2) {
       if (0 < array.length) {
         do {
           let listener = items1[num3].listener;
+          let tmp9 = num3;
           if (!listener) {
             listener = items1[num3];
           }
@@ -612,7 +615,12 @@ if (null) {
       closure_0 = arg0;
       closure_1 = arg1;
       return new Promise((arg0, arg1) => {
+        let obj = arg0;
         error = arg1;
+        function errorListener(arg0) {
+          obj.removeListener(error, obj);
+          error(arg0);
+        }
         function resolver() {
           if (typeof obj.removeListener === "function") {
             obj.removeListener("error", errorListener);
@@ -626,8 +634,9 @@ if (null) {
           }
           obj(substr);
         }
-        let obj = { once: true };
-        const errorListener = resolver;
+        obj = resolver;
+        obj = { once: true };
+        errorListener = resolver;
         if (typeof obj.on === "function") {
           if (obj.once) {
             obj.once(tmp, resolver);
@@ -639,11 +648,11 @@ if (null) {
           const typeError = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
           throw typeError;
         } else {
-          function wrapListener(event) {
+          function wrapListener(arg0) {
             if (obj.once) {
               const removed = obj.removeEventListener(error, wrapListener2);
             }
-            errorListener(event);
+            errorListener(arg0);
           }
           let wrapListener2 = wrapListener;
           const listener = obj.addEventListener(tmp, wrapListener);
@@ -663,11 +672,11 @@ if (null) {
               const typeError1 = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
               throw typeError1;
             } else {
-              wrapListener2 = function wrapListener(event) {
+              wrapListener2 = function wrapListener(arg0) {
                 if (obj.once) {
                   const removed = obj.removeEventListener(error, wrapListener2);
                 }
-                errorListener(event);
+                errorListener(arg0);
               };
               const listener1 = obj.addEventListener("error", wrapListener2);
             }
@@ -694,7 +703,7 @@ if (null) {
     };
     obj[2] = function set(num) {
       if (typeof num === "number") {
-        if (0 >= 0) {
+        if (num >= 0) {
           if (!callback(num)) {
             closure_4 = num;
           }

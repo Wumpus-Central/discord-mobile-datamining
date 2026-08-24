@@ -1,7 +1,7 @@
 // === Module 12487: useModeratorOverlayChannelState ===
 
 // Module 12487 (useModeratorOverlayChannelState)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import identity from "identity" /* 700 */;
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
@@ -17,7 +17,7 @@ let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/stage_channels/native/components/ModeratorOverlayState.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/native/components/ModeratorOverlayState.tsx");
 
 export const useModeratorOverlayChannelState = function useModeratorOverlayChannelState(id) {
   const _require = id;

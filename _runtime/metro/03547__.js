@@ -20,8 +20,8 @@ if (!buildMatchFn) {
 obj2 = {
   matchPattern: /^第?\d+(年|四半期|月|週|日|時|分|秒)?/i,
   parsePattern: /\d+/i,
-  valueCallback(match) {
-    return parseInt(match, 10);
+  valueCallback(joined) {
+    return parseInt(joined, 10);
   }
 };
 const items = [/^B/i, /^A/i];

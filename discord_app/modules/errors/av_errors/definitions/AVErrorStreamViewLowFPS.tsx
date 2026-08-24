@@ -1,62 +1,62 @@
 // === Module 17057: AVErrorStreamViewLowFPSDefinition ===
 
 // Module 17057 (AVErrorStreamViewLowFPSDefinition)
-import getParticipants from "getParticipants" /* 4773 */;
-import reset from "reset" /* 4652 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import initialize from "initialize" /* 4558 */;
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "initialize" /* 4558 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
 
 export const AVErrorStreamViewLowFPSDefinition = {
   getActiveErrors() {
     let reduced = null;
     if (obj.getReportInboundErrors()) {
       allActiveStreams = allActiveStreams.getAllActiveStreams();
-      reduced = allActiveStreams.reduce((acc, item, index) => {
+      reduced = allActiveStreams.reduce((arr, ownerId) => {
         let obj = callback(table[6]);
-        rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(item));
+        rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
         let mediaEngineConnectionId;
         if (rTCConnection != null) {
           mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
         }
         if (null == mediaEngineConnectionId) {
-          return acc;
+          return arr;
         } else {
-          if (item.ownerId !== id.getId()) {
-            if (item.state !== constants.PAUSED) {
-              let tmpResult = callback(table[5]);
-              const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, item.ownerId);
+          if (ownerId.ownerId !== id.getId()) {
+            if (ownerId.state !== constants.PAUSED) {
+              let tmpResult = tmp(tmp2[5]);
+              const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
               if (null == accumulatedStatsWithMinDatapoints) {
-                return acc;
+                return arr;
               } else {
-                tmpResult = callback(table[6]);
-                participant = participant.getParticipant(item.channelId, tmpResult.encodeStreamKey(item));
+                tmpResult = tmp(tmp2[6]);
+                participant = participant.getParticipant(ownerId.channelId, tmpResult.encodeStreamKey(ownerId));
                 if (null == participant) {
-                  return acc;
+                  return arr;
                 } else {
-                  const maxQuality = callback(table[7]).getMaxQuality(participant);
+                  const maxQuality = tmp(tmp2[7]).getMaxQuality(participant);
                   if (null != maxQuality) {
                     if (accumulatedStatsWithMinDatapoints.short.frameRate < tmpResult2.getWarningFrameRate(maxQuality.maxFrameRate)) {
                       obj = { type: null };
-                      obj[0] = callback(table[8]).AVError.STREAM_VIEW_LOW_FPS;
-                      const tmpResult3 = callback(table[9]);
-                      const merged = Object.assign(tmpResult3.getStreamErrorContext(callback(table[6]).encodeStreamKey(item)));
-                      acc.push(obj);
-                      const tmpResult4 = callback(table[6]);
+                      obj[0] = tmp(tmp2[8]).AVError.STREAM_VIEW_LOW_FPS;
+                      const tmpResult3 = tmp(tmp2[9]);
+                      const merged = Object.assign(tmpResult3.getStreamErrorContext(tmp(tmp2[6]).encodeStreamKey(ownerId)));
+                      arr.push(obj);
+                      const tmpResult4 = tmp(tmp2[6]);
                     } else {
-                      callback(table[5]);
+                      const tmpResult5 = tmp(tmp2[5]);
                     }
-                    tmpResult2 = callback(table[5]);
+                    tmpResult2 = tmp(tmp2[5]);
                   }
-                  return acc;
+                  return arr;
                 }
               }
             }
           }
-          return acc;
+          return arr;
         }
       }, []);
     }

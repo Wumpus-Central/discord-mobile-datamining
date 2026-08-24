@@ -2,14 +2,14 @@
 
 // Module 6916 (_install)
 import timestampDefault from "timestamp" /* 3 */;
-import set2 from "set" /* 1906 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import importDefaultResult from "obj132" /* 4004 */;
+import set from "set" /* 1906 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import importDefaultResult from "set" /* 4004 */;
 import importDefaultResult1 from "apply" /* 12 */;
 
-require = fn;
+require = arg1;
 function _install() {
   const self = this;
   const tmp = callback(function*() {
@@ -25,7 +25,7 @@ function _install() {
         closure_0 = closure_1;
         if (null != document.body) {
           const _document = document;
-          const listener = body.addEventListener("beforeinput", (event) => closure_1_9(closure_0, event.target), true);
+          const listener = body.addEventListener("beforeinput", (target) => closure_1_9(closure_0, target.target), true);
         }
       })(usesMultilang);
     }
@@ -57,10 +57,10 @@ class Spellchecker {
     obj.corrections = [];
     items = [];
     closure_0 = items;
-    item = global.forEach((item, index) => {
+    item = global.forEach((arg0) => {
       let str = "nb";
-      if ("no" !== item) {
-        str = item;
+      if ("no" !== arg0) {
+        str = arg0;
       }
       let str2 = first(obj[5])[str];
       if (str2 == null) {
@@ -75,12 +75,14 @@ class Spellchecker {
             const formatted = langtag.language.language.toLowerCase();
             const _HermesInternal = HermesInternal;
             const combined = "" + formatted + "-" + langtag.region.toUpperCase();
+            const str3 = langtag.region;
+            const str4 = langtag.language.language;
           }
           if (null != combined) {
             items.push(combined);
             let tmp10 = obj.rawLocaleByNormalized[combined];
             if (tmp10 == null) {
-              tmp10 = item;
+              tmp10 = arg0;
             }
             obj.rawLocaleByNormalized[combined] = tmp10;
           }
@@ -203,14 +205,14 @@ prototype["getCachedMisspelling"] = function getCachedMisspelling() {
 prototype["replaceMisspelling"] = function replaceMisspelling(closure_0) {
   spellCheck.replaceMisspelling(closure_0);
 };
-prototype["applyLocale"] = function applyLocale(mapped1) {
-  closure_0 = mapped1;
-  const setLocaleResult = spellCheck.setLocale(mapped1);
+prototype["applyLocale"] = function applyLocale(combined) {
+  closure_0 = combined;
+  const setLocaleResult = spellCheck.setLocale(combined);
   if (setLocaleResult != null) {
-    setLocaleResult.then((result) => {
+    setLocaleResult.then((arg0) => {
       let str = "(unavailable)";
-      const combined = "Switching to " + closure_0;
-      if (result) {
+      combined = "Switching to " + closure_0;
+      if (arg0) {
         str = "(available)";
       }
       closure_1_6.info(combined, str);
@@ -218,18 +220,16 @@ prototype["applyLocale"] = function applyLocale(mapped1) {
   }
 };
 prototype["applyLanguages"] = function applyLanguages(locale) {
-  const self = this;
+  let self = this;
+  self = this;
   const items = [locale, ...navigator.languages];
-  const mapped = items.map((item, index) => {
-    let str = "nb";
-    if ("no" !== item) {
-      str = item;
-    }
-    let str2 = self(dependencyMap[5])[str];
+  const mapped = items.map((str) => {
+    str = "nb";
+    let str2 = self(closure_1_2[5])[str];
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = mapped1(dependencyMap[6]).parse(str2.replace(/[_-]/g, "-"));
+    const parsed = mapped1(closure_1_2[6]).parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {
@@ -237,6 +237,8 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
           const formatted = langtag.language.language.toLowerCase();
           const _HermesInternal = HermesInternal;
           const combined = "" + formatted + "-" + langtag.region.toUpperCase();
+          const str3 = langtag.region;
+          const str4 = langtag.language.language;
         }
         if (null != combined) {
           const availableLocales = self.availableLocales;
@@ -244,7 +246,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
             return combined;
           }
         }
-        const str7 = closure_1_4(item.replace(/_/g, "-").split("-"), 1)[0];
+        const str7 = closure_1_4(str.replace(/_/g, "-").split("-"), 1)[0];
         let tmp10 = self.availableLanguagesByLanguage[str7.toLowerCase(str7)];
         if (tmp10 == null) {
           tmp10 = null;
@@ -253,14 +255,13 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
       }
     }
     closure_1_6.error("" + str2 + " is not a valid locale.");
-    const obj = mapped1(dependencyMap[6]);
   });
   const arr = Array.from(new Set(mapped.filter(mapped1(1370).isNotNullish)));
   if (0 !== arr.length) {
-    mapped1 = arr.map((item, index) => {
-      let tmp = self.rawLocaleByNormalized[item];
+    mapped1 = arr.map((arg0) => {
+      let tmp = self.rawLocaleByNormalized[arg0];
       if (tmp == null) {
-        tmp = item;
+        tmp = arg0;
       }
       return tmp;
     });
@@ -269,34 +270,34 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
       logger.info("setSpellCheckerLanguages unavailable, falling back to single-locale: " + mapped1[0]);
       self.applyLocale(mapped1[0]);
     } else {
-      const result = spellCheck.setSpellCheckerLanguages(mapped1);
+      const result = obj.setSpellCheckerLanguages(mapped1);
       if (result != null) {
-        result.then((result) => {
+        result.then((arg0) => {
           const info = closure_1_6.info;
-          if (result) {
+          if (arg0) {
             const _HermesInternal2 = HermesInternal;
-            info("Spellcheck languages: " + mapped1.join(", "), "(applied)");
+            info("Spellcheck languages: " + obj.join(", "), "(applied)");
           } else {
             const _HermesInternal = HermesInternal;
-            info("Failed to set spellcheck languages, falling back to single-locale: " + mapped1[0]);
-            self.applyLocale(mapped1[0]);
+            info("Failed to set spellcheck languages, falling back to single-locale: " + obj[0]);
+            self.applyLocale(obj[0]);
           }
         });
       }
     }
+    obj = spellCheck;
   } else {
     let _HermesInternal = HermesInternal;
     logger.info("No spellcheck languages resolved from candidates: " + items.join(", "));
   }
-  const set = new Set(mapped.filter(mapped1(1370).isNotNullish));
 };
 prototype["buildLanguageIndex"] = function buildLanguageIndex(items) {
   const obj = {};
-  const item = items.forEach((item, index) => {
-    const first = closure_1_4(item.split("-"), 1)[0];
+  const item = items.forEach((arg0) => {
+    const first = closure_1_4(arg0.split("-"), 1)[0];
     let tmp3 = obj[first];
     if (tmp3 == null) {
-      tmp3 = item;
+      tmp3 = arg0;
     }
     obj[first] = tmp3;
   });
@@ -307,9 +308,9 @@ let closure_9 = importDefaultResult1.debounce((detectLanguage, hasAttribute) => 
   let textContent = null;
   if (null != hasAttribute) {
     if (!obj.isElement(hasAttribute, globalThis.HTMLInputElement)) {
-      let tmp2Result = set2;
+      let tmp2Result = tmp2(1906);
       if (!tmp2Result.isElement(hasAttribute, globalThis.HTMLTextAreaElement)) {
-        tmp2Result = set2;
+        tmp2Result = tmp2(1906);
         if (tmp2Result.isElement(hasAttribute)) {
           if (hasAttribute.hasAttribute("contenteditable")) {
             textContent = hasAttribute.textContent;
@@ -318,13 +319,13 @@ let closure_9 = importDefaultResult1.debounce((detectLanguage, hasAttribute) => 
       }
     }
     textContent = hasAttribute.value;
-    obj = set2;
+    obj = set;
   }
   if (null != textContent) {
     detectLanguage.detectLanguage(textContent);
   }
 }, 250);
-let result = require("obj132").fileFinishedImporting("lib/spellcheck/Spellchecker.tsx");
+let result = require("set").fileFinishedImporting("lib/spellcheck/Spellchecker.tsx");
 
 export { Spellchecker };
 export const install = function install() {

@@ -1,12 +1,12 @@
 // === Module 4157: useRiveFile ===
 
 // Module 4157 (useRiveFile)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 
-const require = fn;
+const require = arg1;
 ({ useState: c4, useEffect: c5, useMemo: closure_6, useRef: error } = noop);
 
 export const useRiveFile = function useRiveFile(src, arg1) {
@@ -15,6 +15,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
     obj = {};
   }
   c1 = undefined;
+  closure_2 = undefined;
   let callback;
   let str2;
   let uri;
@@ -28,8 +29,8 @@ export const useRiveFile = function useRiveFile(src, arg1) {
     if (undefined !== referencedAssets) {
       const _Object = Object;
       const entries = Object.entries(referencedAssets);
-      const item = entries.forEach((item, index) => {
-        [tmp, tmp2] = item;
+      const item = entries.forEach((arg0) => {
+        [tmp, tmp2] = arg0;
         let tmp4 = null !== tmp2;
         if (tmp4) {
           tmp4 = typeof tmp2 === "object";
@@ -110,6 +111,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   }
   const items1 = [str2, uri];
   uri(() => {
+    closure_0 = null;
     closure_0 = callback(function*() {
       if (c5 === 2) {
         c5 = 3;
@@ -145,6 +147,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
               obj[2] = error;
               tmp17Result = closure_2_1(obj);
               c5 = 3;
+              const tmp17 = closure_2_1;
             } else {
               if (2 === tmp17Result) {
                 if (arg0 === 1) {
@@ -213,12 +216,12 @@ export const useRiveFile = function useRiveFile(src, arg1) {
             closure_1 = tmp3;
             closure_0 = tmp17Result;
             c3 = 1;
-            if ("uri" === str2) {
+            if ("uri" === closure_2_4) {
               const obj6 = { uri: null };
-              obj6[0] = uri;
+              obj6[0] = closure_2_5;
               obj5 = obj6;
             } else {
-              obj5 = uri;
+              obj5 = closure_2_5;
             }
             if (null == obj5) {
               const obj7 = { riveFile: null, isLoading: false, error: null };
@@ -306,13 +309,13 @@ export const useRiveFile = function useRiveFile(src, arg1) {
       tmp3 = riveFile;
     }
     if (tmp3) {
-      tmp3 = closure_2;
+      tmp3 = tmp2;
     }
     if (tmp3) {
       obj = { data: null };
-      obj[0] = closure_2;
+      obj[0] = tmp2;
       const result = riveFile.updateReferencedAssets(obj);
-      ref.current = closure_2;
+      ref.current = tmp2;
     }
   }, items2);
   obj = { riveFile: tmp2.riveFile, isLoading: tmp2.isLoading, error: tmp2.error };

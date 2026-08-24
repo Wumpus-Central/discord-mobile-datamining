@@ -2,16 +2,16 @@
 
 // Module 14526 (MobileQuestPreviewControlBar)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import initializeState from "initializeState" /* 7453 */;
+import closure_7 from "initializeState" /* 7453 */;
 import { AppRoutes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 class MobileQuestPreviewControlBar {
   constructor(arg0) {
     questId = global.questId;
@@ -60,8 +60,8 @@ class MobileQuestPreviewControlBar {
     items5 = [];
     items5[0] = setQuestId;
     memo = closure_5.useMemo(() => {
-      const mapped = questsWithPreviewAccess.map((item, index) => {
-        const config = item.config;
+      const mapped = questsWithPreviewAccess.map((config) => {
+        config = config.config;
         let questName;
         if (config != null) {
           const messages = config.messages;
@@ -70,14 +70,14 @@ class MobileQuestPreviewControlBar {
           }
         }
         if (questName == null) {
-          questName = item.id;
+          questName = config.id;
         }
-        return { label: "" + questName + " (" + item.id + ")", value: item.id };
+        return { label: "" + questName + " (" + config.id + ")", value: config.id };
       });
       if (!tmp2) {
         const obj = { label: null, value: null };
-        obj[0] = questId;
-        obj[1] = questId;
+        obj[0] = tmp;
+        obj[1] = tmp;
         mapped.unshift(obj);
       }
       return mapped;
@@ -118,10 +118,10 @@ class MobileQuestPreviewControlBar {
               return obj;
             } else {
               closure_0 = tmp3;
-              if (null != questId) {
+              if (null != closure_1_0) {
                 v0(true);
                 v0 = 1;
-                obj1 = questId(refreshQuest[11]);
+                obj1 = closure_1_0(closure_1_2[11]);
                 c1 = 2;
                 c4 = 1;
                 obj1 = { value: null, done: false };
@@ -192,10 +192,10 @@ class MobileQuestPreviewControlBar {
               return obj;
             } else {
               closure_0 = tmp3;
-              if (null != questId) {
+              if (null != closure_1_0) {
                 v0(true);
                 v0 = 1;
-                obj1 = questId(refreshQuest[11]);
+                obj1 = closure_1_0(closure_1_2[11]);
                 c1 = 2;
                 c4 = 1;
                 obj1 = { value: null, done: false };
@@ -266,12 +266,12 @@ class MobileQuestPreviewControlBar {
               return obj;
             } else {
               closure_0 = tmp3;
-              if (null != questId) {
+              if (null != closure_1_0) {
                 v0(true);
                 v0 = 1;
                 const _Math = Math;
                 const random = Math.random();
-                obj1 = questId(refreshQuest[11]);
+                obj1 = closure_1_0(closure_1_2[11]);
                 c1 = 2;
                 c4 = 1;
                 obj1 = { value: null, done: false };
@@ -321,8 +321,9 @@ class MobileQuestPreviewControlBar {
     obj = { style: tmp.container, children: null };
     tmp17 = jsx;
     callback4 = closure_5.useCallback(() => {
-      questId(refreshQuest[12]);
-      let obj = { label: null, onPress: null };
+      let obj = questId(refreshQuest[12]);
+      obj = { key: "quest-preview-menu", options: null, hasIcons: false };
+      obj = { label: null, onPress: null };
       const intl = questId(refreshQuest[13]).intl;
       obj[0] = intl.string(questId(refreshQuest[13]).t.jQEfRT);
       obj[1] = callback1;
@@ -342,8 +343,8 @@ class MobileQuestPreviewControlBar {
       obj3[0] = intl4.string(questId(refreshQuest[13]).t.rNGQfD);
       obj3[1] = function onPress() {
         if (null != closure_0) {
-          questId(refreshQuest[14]).copy(closure_1_8.QUEST_PREVIEW_TOOL_2(tmp));
-          const obj = questId(refreshQuest[14]);
+          closure_1_0(closure_1_2[14]).copy(closure_1_8.QUEST_PREVIEW_TOOL_2(tmp));
+          const obj = closure_1_0(closure_1_2[14]);
         }
       };
       items[3] = obj3;
@@ -410,13 +411,16 @@ class MobileQuestPreviewControlBar {
   }
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start", gap: ThemesDefault.space.PX_8, zIndex: 2, overflow: "visible" };
+createCacheKey = { container: { overflow: "visible", zIndex: 1 }, questInputContainer: null, searchField: null, iconsColumn: null, errorText: null };
+createCacheKey = { flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start", gap: ThemesDefault.space.PX_8, zIndex: 2, overflow: "visible" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, zIndex: 3, overflow: "visible" };
 createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_4 };
+let obj1 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_4, zIndex: 1 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx");
+let obj2 = { marginTop: ThemesDefault.space.PX_4, zIndex: 1 };
+let result = require("set").fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx");
 
 export default MobileQuestPreviewControlBar;
 export { MobileQuestPreviewControlBar };

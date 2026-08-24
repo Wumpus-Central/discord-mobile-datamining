@@ -5,13 +5,13 @@ import sendRequest from "sendRequest" /* 530 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import snapVolumeToDefault from "snapVolumeToDefault" /* 9656 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import handleUpdate from "handleUpdate" /* 4541 */;
-import set from "set" /* 4540 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_5 from "handleUpdate" /* 4541 */;
+import closure_6 from "set" /* 4540 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function disconnectRemote() {
   const self = this;
   const apply = _disconnectRemote.apply;
@@ -111,10 +111,10 @@ function _getConnectNonce() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw body;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = body;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -125,11 +125,11 @@ function _getConnectNonce() {
         if (0 === rTCConnectionId) {
           if (arg0 === 1) {
             c5 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = body;
+            obj[0] = arg1;
             return obj;
           } else {
             let callback = tmp3;
@@ -164,15 +164,15 @@ function _getConnectNonce() {
             c5 = 3;
           } else if (arg0 === 1) {
             c5 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 !== 2) {
-            nonce = body.body.nonce;
+            nonce = arg1.body.nonce;
             c3 = 0;
           }
           c3 = 0;
           c5 = 3;
           obj = { value: null, done: true };
-          obj[0] = body;
+          obj[0] = arg1;
           return obj;
         }
       } catch (tmp27) {
@@ -664,20 +664,23 @@ function _transferToPlayStation() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: error, Endpoints: closure_8, PlatformTypes: c9 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");
 
 export const waitForSession = function waitForSession(XBOX, id, closure_1) {
-  const obj = { type: "WAIT_FOR_REMOTE_SESSION", sessionType: XBOX, nonce: closure_1, channelId: id };
+  let obj = dispatcherDefault;
+  obj = { type: "WAIT_FOR_REMOTE_SESSION", sessionType: XBOX, nonce: closure_1, channelId: id };
   obj.dispatch(obj);
 };
 export { disconnectRemote };
 export const connectToRemote = function connectToRemote(sessionId) {
-  const obj = { type: "REMOTE_SESSION_CONNECT", sessionId };
+  let obj = dispatcherDefault;
+  obj = { type: "REMOTE_SESSION_CONNECT", sessionId };
   obj.dispatch(obj);
 };
 export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSessionId, arg1) {
   ({ selfMute, selfDeaf } = arg1);
-  const obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "VOICE_STATE_UPDATE", self_mute: selfMute, self_deaf: selfDeaf } };
+  let obj = dispatcherDefault;
+  obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "VOICE_STATE_UPDATE", self_mute: selfMute, self_deaf: selfDeaf } };
   obj.dispatch(obj);
   const sessionById = store.getSessionById(remoteSessionId);
   let os;
@@ -690,7 +693,8 @@ export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSess
   expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, { command_type: "VOICE_STATE_UPDATE", remote_platform: os });
 };
 export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
-  const obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "DISCONNECT" } };
+  let obj = dispatcherDefault;
+  obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "DISCONNECT" } };
   obj.dispatch(obj);
   const sessionById = store.getSessionById(remoteSessionId);
   let os;
@@ -703,9 +707,9 @@ export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
   expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, { command_type: "DISCONNECT", remote_platform: os });
   disconnectRemote();
 };
-export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId) {
+export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId, arg1, first) {
   let obj = snapVolumeToDefault;
-  const result = obj.coerceAudioContextForProto(arg2);
+  const result = obj.coerceAudioContextForProto(first);
   if (null != result) {
     obj = { type: "REMOTE_COMMAND", sessionId: null, payload: null };
     obj[1] = sessionId;
@@ -715,6 +719,7 @@ export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sess
     const merged = Object.assign(arg3);
     obj[2] = obj;
     dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
     const sessionById = store.getSessionById(sessionId);
     let os;
     if (sessionById != null) {
@@ -726,6 +731,7 @@ export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sess
     obj1 = { command_type: "AUDIO_SETTINGS_UPDATE", remote_platform: null };
     obj1[1] = os;
     expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, obj1);
+    const obj6 = expandEventPropertiesDefault;
   }
 };
 export { getConnectNonce };
@@ -741,7 +747,8 @@ export const fetchDevices = function fetchDevices(closure_0) {
   return applyArgumentsResult;
 };
 export const persistSelectedDeviceId = function persistSelectedDeviceId(closure_0, value) {
-  const obj = { type: "GAME_CONSOLE_SELECT_DEVICE", platform: closure_0, deviceId: value };
+  let obj = dispatcherDefault;
+  obj = { type: "GAME_CONSOLE_SELECT_DEVICE", platform: closure_0, deviceId: value };
   obj.dispatch(obj);
 };
 export { cancelCommand };

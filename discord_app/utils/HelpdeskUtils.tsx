@@ -1,16 +1,16 @@
 // === Module 1993: combined ===
 
 // Module 1993 (combined)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import getLocalizedLinkDefault from "getLocalizedLink" /* 4005 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import closure_3 from "_getSystemLocale" /* 1994 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 const LocalizedLinks = ME.LocalizedLinks;
 let combined = "https://" + ME.SUPPORT_DOMAIN;
 let closure_6 = "https://" + ME.SUPPORT_DEV_DOMAIN;
-const result = require("obj132").fileFinishedImporting("utils/HelpdeskUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/HelpdeskUtils.tsx");
 
 export default {
   getArticleURL(REFERRAL_PROGRAM) {
@@ -35,7 +35,7 @@ export default {
   },
   getSubmitRequestURL(arg0) {
     const formatted = closure_3.locale.toLowerCase();
-    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(obj132.getPlatformName());
+    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(set.getPlatformName());
     let sum1 = sum;
     if (null != arg0) {
       const _encodeURIComponent = encodeURIComponent;

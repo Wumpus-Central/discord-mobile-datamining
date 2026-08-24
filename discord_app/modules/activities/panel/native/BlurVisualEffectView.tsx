@@ -9,7 +9,7 @@ import { jsx } from "jsxProd" /* 21 */;
 import hexToRgba from "hexToRgba" /* 4223 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 let closure_5 = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.24);
 const memoResult = importAllResult.memo(() => {
   let obj = map;
@@ -17,6 +17,6 @@ const memoResult = importAllResult.memo(() => {
   obj = { style: StyleSheet.absoluteFill, blurStyle: "default", tintColor: closure_5, android_fallbackColor: token, blurAmount: 0.24, blurTheme: "dark" };
   return jsx(isBlurDisabledDefault, { style: StyleSheet.absoluteFill, blurStyle: "default", tintColor: closure_5, android_fallbackColor: token, blurAmount: 0.24, blurTheme: "dark" });
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/BlurVisualEffectView.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/BlurVisualEffectView.tsx");
 
 export default memoResult;

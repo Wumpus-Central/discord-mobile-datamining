@@ -7,9 +7,9 @@ import sharedValueDefault from "sharedValue" /* 14434 */;
 import ShopCardGridItemDefault from "ShopCardGridItem" /* 14968 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
@@ -24,27 +24,31 @@ function SkeletonGrid(accessibilityLabel) {
     let _Math = Math;
     obj[0] = Math.min(columns, loadingCardsNum - num);
     let arr = Array.from(obj);
+    let tmp4 = jsx;
+    let tmp5 = View;
     obj = { style: null, children: null };
     let items1 = [tmp.skeletonRow, ];
     obj1 = { width: null };
     obj1[0] = tmp3;
     items1[1] = obj1;
     obj[0] = items1;
-    obj[1] = arr.map((item, index) => {
-      const obj = { marginBottom: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP };
+    obj[1] = arr.map((arg0, arg1) => {
+      let obj = { width: num, style: null };
+      obj = { marginBottom: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP };
       obj[1] = obj;
-      return jsx(sharedValueDefault, { marginBottom: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP }, "" + num + "-" + index);
+      return jsx(sharedValueDefault, { marginBottom: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP }, "" + num + "-" + arg1);
     });
     let _HermesInternal = HermesInternal;
     arr = items.push(<View key={"row-" + num} style={null}>{null}</View>);
   }
-  return <View style={tmp.skeletonGrid} accessibilityRole="list" accessibilityLabel={accessibilityLabel.accessibilityLabel} accessibilityState={{ busy: true }} accessible>{items}</View>;
+  return <View style={tmp.skeletonGrid} accessibilityRole="list" accessibilityLabel={arg0.accessibilityLabel} accessibilityState={{ busy: true }} accessible>{items}</View>;
 }
 noopAll;
-const createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingHorizontal: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
+createCacheKey = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: null };
+createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingHorizontal: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
 createCacheKey[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");
 
 export default function FeedProductList(arg0) {
   ({ products, accessibilityLabel } = arg0);

@@ -2,30 +2,27 @@
 
 // Module 10204 (FavoritesSearch)
 import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import SearchField from "SearchField" /* 7337 */;
 import GIF_PROVIDER from "GIF_PROVIDER" /* 10196 */;
-import ChevronLargeLeftIcon from "ChevronLargeLeftIcon" /* 10205 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function FavoritesSearch(columnWidth) {
   columnWidth = columnWidth.columnWidth;
   const onQueryChange = columnWidth.onQueryChange;
+  let ref;
   let first;
   importAllResult = undefined;
-  const ref = importAllResult.useRef(null);
+  let sharedValue;
+  ref = importAllResult.useRef(null);
   const tmp3 = first(importAllResult.useState(false), 2);
   first = tmp3[0];
   importAllResult = tmp3[1];
   let obj = columnWidth(ref[9]);
-  const sharedValue = obj.useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
   const items = [first, sharedValue];
   const effect = importAllResult.useEffect(() => {
     let num = 0;
@@ -39,7 +36,6 @@ function FavoritesSearch(columnWidth) {
         current.focus();
       }
     }
-    const obj = columnWidth(ref[10]);
   }, items);
   obj1 = columnWidth(ref[9]);
   class S {
@@ -87,8 +83,8 @@ function FavoritesSearch(columnWidth) {
   const intl = tmp5(tmp6[14]).intl;
   obj[3] = intl.string(columnWidth(ref[14]).t["+Kakw+"]);
   obj[4] = callback;
-  obj[4] = callback(columnWidth(ref[12]).IconButton, obj);
-  const items1 = [callback(onQueryChange(ref[9]).View, obj), ];
+  obj[4] = closure_7(columnWidth(ref[12]).IconButton, obj);
+  const items1 = [closure_7(onQueryChange(ref[9]).View, obj), ];
   obj1 = { style: items2, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
   items2 = [callback().favoritesSearch, animatedStyle1];
   let str3 = "none";
@@ -103,7 +99,7 @@ function FavoritesSearch(columnWidth) {
   }
   obj2 = { children: null };
   obj1[3] = str4;
-  obj1[4] = callback(columnWidth(ref[15]).SearchField, {
+  obj1[4] = closure_7(columnWidth(ref[15]).SearchField, {
     ref,
     size: "md",
     onChange: onQueryChange,
@@ -116,16 +112,17 @@ function FavoritesSearch(columnWidth) {
     },
     onBlur: callback1
   });
-  items1[1] = callback(onQueryChange(ref[9]).View, obj1);
+  items1[1] = closure_7(onQueryChange(ref[9]).View, obj1);
   obj2[0] = items1;
-  return callback2(closure_8, obj2);
+  return closure_9(closure_8, obj2);
 }
 let c4 = importAllResult;
 require("ME").GIFPickerResultTypes;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let obj = { paddingVertical: ThemesDefault.space.PX_8 };
+let obj = { container: null, headerContainer: null, header: null, favoritesSearch: null };
+obj = { paddingVertical: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-const createCacheKey = { flexDirection: "row", justifyContent: "space-between", gap: require("transformFavoriteGifUrl").GIF_PICKER_GUTTER_SPACING };
+createCacheKey = { flexDirection: "row", justifyContent: "space-between", gap: require("transformFavoriteGifUrl").GIF_PICKER_GUTTER_SPACING };
 obj[1] = createCacheKey;
 obj[2] = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: ThemesDefault.space.PX_8, height: require("InputHeights").InputHeights.MD, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 obj[3] = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
@@ -145,50 +142,50 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj[2] = tmp5;
     obj[3] = onQueryClear;
     obj[4] = searchInputRef;
-    let tmp13Result = callback(SearchField.SearchField, obj);
+    let tmp13Result = tmp6(tmp2(7337).SearchField, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
     obj1 = { style: null, accessibilityRole: "button", onPress: null, accessibilityLabel: null, children: null };
     obj1[0] = tmp.header;
     obj1[2] = onQueryClear;
-    const intl4 = getSystemLocale.intl;
+    const intl4 = tmp2(1236).intl;
     const obj2 = { destination: null };
-    const intl5 = getSystemLocale.intl;
-    obj2[0] = intl5.string(getSystemLocale.t.ffgJrs);
-    obj1[3] = intl4.formatToPlainString(getSystemLocale.t.UTypEu, obj2);
+    const intl5 = tmp2(1236).intl;
+    obj2[0] = intl5.string(tmp2(1236).t.ffgJrs);
+    obj1[3] = intl4.formatToPlainString(tmp2(1236).t.UTypEu, obj2);
     const obj3 = { color: null, size: "sm" };
     obj3[0] = ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE;
-    const items = [callback(ChevronLargeLeftIcon.ChevronLargeLeftIcon, obj3), ];
-    if (categoryType === GIFPickerResultTypes.TRENDING_GIFS) {
-      const intl3 = getSystemLocale.intl;
-      let stringResult = intl3.string(getSystemLocale.t.TsWCdW);
-    } else if (categoryType === GIFPickerResultTypes.FAVORITES) {
-      const intl2 = getSystemLocale.intl;
-      stringResult = intl2.string(getSystemLocale.t.k8fFjp);
+    const items = [tmp6(tmp2(10205).ChevronLargeLeftIcon, obj3), ];
+    if (categoryType === tmp8.TRENDING_GIFS) {
+      const intl3 = tmp2(1236).intl;
+      let stringResult = intl3.string(tmp2(1236).t.TsWCdW);
+    } else if (categoryType === tmp8.FAVORITES) {
+      const intl2 = tmp2(1236).intl;
+      stringResult = intl2.string(tmp2(1236).t.k8fFjp);
     } else {
-      const intl = getSystemLocale.intl;
-      stringResult = intl.string(getSystemLocale.t["5h0QOP"]);
+      const intl = tmp2(1236).intl;
+      stringResult = intl.string(tmp2(1236).t["5h0QOP"]);
     }
     const obj4 = { variant: "text-sm/semibold", color: "text-default", maxFontSizeMultiplier: 2, children: null };
     obj4[3] = stringResult;
-    items[1] = callback(Text.Text, obj4);
+    items[1] = tmp6(tmp2(4734).Text, obj4);
     obj1[4] = items;
-    const items1 = [callback2(PressableBase.PressableOpacity, obj1), ];
-    let tmp6Result = categoryType === GIFPickerResultTypes.FAVORITES;
+    const items1 = [closure_9(tmp2(5433).PressableOpacity, obj1), ];
+    let tmp6Result = categoryType === tmp8.FAVORITES;
     if (tmp6Result) {
       const obj5 = { columnWidth: null, onQueryChange: null };
       obj5[0] = columnWidth;
       obj5[1] = onFavoritesQueryChange;
-      tmp6Result = callback(FavoritesSearch, obj5);
+      tmp6Result = tmp6(FavoritesSearch, obj5);
     }
     items1[1] = tmp6Result;
     obj[1] = items1;
-    tmp13Result = callback2(View, obj);
+    tmp13Result = tmp13(tmp7, obj);
   }
   obj[1] = tmp13Result;
-  return callback(View, obj);
+  return closure_7(View, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/gif_picker/native/GIFPickerHeader.tsx");
+let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerHeader.tsx");
 
 export default memoResult;

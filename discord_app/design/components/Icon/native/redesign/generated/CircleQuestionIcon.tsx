@@ -9,10 +9,10 @@ import registerAsset2 from "registerAsset" /* 10417 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx");
 
 export const CircleQuestionIcon = function CircleQuestionIcon(color) {
   ({ style, secondaryColor } = color);
@@ -24,7 +24,8 @@ export const CircleQuestionIcon = function CircleQuestionIcon(color) {
     INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   const merged = Object.assign(color, Object.create(null));
-  let obj = { source: registerAsset, color: secondaryColor, style };
+  let obj = { children: null };
+  obj = { source: registerAsset, color: secondaryColor, style };
   const merged1 = Object.assign(merged);
   const items = [callback(BaseIconImage.BaseIconImage, obj), ];
   obj = { source: registerAsset2, color: INTERACTIVE_ICON_DEFAULT, style: items2 };

@@ -7,25 +7,25 @@ import getRelativeTimestamp from "getRelativeTimestamp" /* 4967 */;
 import computeChannelName from "computeChannelName" /* 4984 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8886 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
 import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
 import renderChannelWrapperDefault from "renderChannelWrapper" /* 16198 */;
 import ChannelContentDefault from "ChannelContent" /* 16201 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function LaunchpadChannelIcon(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  channel(589);
+  let obj = channel(589);
   const items = [closure_4];
-  const obj = { style: tmp.guildBadgeIcon, children: null };
+  obj = { children: null };
+  obj = { style: tmp.guildBadgeIcon, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   const tmp2 = getLayoutStyleDefault();
   obj[1] = callback(GuildIconSizesDefault, { guild: stateFromStores, size: getLayoutStyleDefault().icon.guildBadgeIconSize });
@@ -36,11 +36,12 @@ function LaunchpadChannelIcon(channel) {
 noopAll;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles(() => {
-  const obj = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: 6 };
+  let obj = { guildBadgeIcon: null };
+  obj = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: 6 };
   obj[0] = obj;
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/renderChannelItem.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/renderChannelItem.tsx");
 
 export default function renderChannelItem(unread) {
   ({ channel, locked } = unread);
@@ -82,6 +83,7 @@ export default function renderChannelItem(unread) {
   }
   const tmp7 = getLayoutStyleDefault();
   const children = [unreadBadge, , , ];
+  obj = { style: null, children: null };
   obj = { position: "relative", borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0, width: tmp7.icon.wrapper.size, height: tmp7.icon.wrapper.size };
   const merged = Object.assign(tmp7.icon.margin);
   obj[0] = obj;
@@ -89,17 +91,20 @@ export default function renderChannelItem(unread) {
     obj1 = { channel: null, size: null };
     obj1[0] = channel;
     obj1[1] = tmp7.icon.avatarSize;
-    let tmp11Result = callback(FacepileGroupDMAvatarDefault, obj1);
+    let tmp11Result = tmp11(tmp5(9916), obj1);
   } else {
     const obj2 = { channel: null };
     obj2[0] = channel;
-    tmp11Result = callback(LaunchpadChannelIcon, obj2);
+    tmp11Result = tmp11(LaunchpadChannelIcon, obj2);
   }
   obj[1] = tmp11Result;
-  children[1] = callback(View, obj);
+  children[1] = closure_8(View, obj);
+  const tmp10 = closure_9;
   const tmp8 = renderChannelWrapperDefault;
+  const tmp9 = closure_10;
   if (channelName == null) {
     channelName = computeChannelName.computeChannelName(channel, closure_6, closure_5);
+    const obj6 = computeChannelName;
   }
   children[2] = ChannelContentDefault({ name: channelName, subtitle, unread: flag, resolvedUnreadSetting: ONLY_MENTIONS, muted: flag3, lastMessageTimestampString: relativeTimestamp, channel, channelCategoryName, locked, connected, live: flag2, mentionCount, mentionBadge, isSubscriptionGated, needSubscriptionToAccess: flag4 });
   tmp11Result = null;
@@ -107,10 +112,10 @@ export default function renderChannelItem(unread) {
     const obj3 = { style: null, children: null };
     obj3[0] = { paddingLeft: 8 };
     obj3[1] = end;
-    tmp11Result = callback(View, obj3);
+    tmp11Result = tmp11(tmp12, obj3);
   }
   children[3] = tmp11Result;
-  return tmp8(callback2(closure_9, { children }), { fontScale });
+  return tmp8(tmp9(tmp10, { children }), { fontScale });
 };
 export const getChannelAccessibilityProps = function getChannelAccessibilityProps(arg0) {
   ({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount } = arg0);

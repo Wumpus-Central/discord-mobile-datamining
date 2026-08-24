@@ -2,18 +2,18 @@
 
 // Module 16537 (handleConnectionOpen)
 import timestampDefault from "timestamp" /* 3 */;
-import obj132 from "obj132" /* 500 */;
-import obj132Default from "obj132" /* 687 */;
+import set from "set" /* 500 */;
+import setDefault from "set" /* 687 */;
 import keys from "keys" /* 691 */;
 import initializeDefault from "initialize" /* 5038 */;
 import okAsyncDefault from "okAsync" /* 5402 */;
 import _writeCaches from "_writeCaches" /* 14878 */;
-import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
-import handleClearCaches from "handleClearCaches" /* 5067 */;
+import closure_3 from "_handleConnectionOpen" /* 4495 */;
+import closure_4 from "handleClearCaches" /* 5067 */;
 
-require = fn;
+require = arg1;
 let closure_5 = new timestampDefault("CacheStore");
-let closure_6 = 15 * obj132Default.Millis.MINUTE;
+let closure_6 = 15 * setDefault.Millis.MINUTE;
 initializeDefault;
 class CacheManager extends tmp3 {
   constructor() {
@@ -35,8 +35,8 @@ class CacheManager extends tmp3 {
 const prototype = CacheManager.prototype;
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const result = okAsyncDefault.doesDatabaseVersionMatchJsConstants();
-  result.then((result) => {
-    if (!result) {
+  result.then((arg0) => {
+    if (!arg0) {
       callback(table[6]).writeCaches();
       const obj = callback(table[6]);
     }
@@ -46,8 +46,10 @@ prototype["handleConnectionClose"] = function handleConnectionClose() {
   return false;
 };
 prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
+  const obj = set;
+  const tmp = require;
   const AppStates = keys.AppStates;
-  let isConnectedResult = (obj132.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
+  let isConnectedResult = (set.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
   if (isConnectedResult) {
     isConnectedResult = connected.isConnected();
   }
@@ -63,6 +65,7 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
     if (Date.now() - lastWriteTime.lastWriteTime > closure_6) {
       closure_5.verbose("Writing cache from window unfocus");
       _writeCaches.writeCaches();
+      const obj = _writeCaches;
     } else {
       closure_5.verbose("Not writing cache from window unfocus");
     }
@@ -71,6 +74,6 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
 };
 const cacheManager = new CacheManager();
 const tmp2 = new timestampDefault("CacheStore");
-let result = require("obj132").fileFinishedImporting("modules/cache/CacheManager.native.tsx");
+let result = require("set").fileFinishedImporting("modules/cache/CacheManager.native.tsx");
 
 export default cacheManager;

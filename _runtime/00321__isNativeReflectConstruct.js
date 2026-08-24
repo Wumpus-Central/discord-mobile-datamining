@@ -2,9 +2,9 @@
 
 // Module 321 (_isNativeReflectConstruct)
 import _modDef38 from "module_38" /* 38 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import { isValidElement } from "noop" /* 19 */;
@@ -12,7 +12,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-const CellRenderer = fn;
+const CellRenderer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -83,7 +83,7 @@ class CellRenderer {
       const props = closure_0.props;
       const onCellLayout = props.onCellLayout;
       if (onCellLayout != null) {
-        onCellLayout(arg0, closure_0.props.cellKey, closure_0.props.index);
+        onCellLayout(arg0, tmp.props.cellKey, tmp.props.index);
       }
     };
     tmp3Result._onCellFocusCapture = (arg0) => {
@@ -101,7 +101,8 @@ let obj = {
   key: "updateSeparatorProps",
   value: function updateSeparatorProps(closure_0) {
     this.setState((separatorProps) => {
-      const obj = {};
+      let obj = { separatorProps: null };
+      obj = {};
       const merged = Object.assign(separatorProps.separatorProps);
       const merged1 = Object.assign(closure_0);
       obj[0] = obj;
@@ -196,7 +197,7 @@ let items = [
           const merged1 = Object.assign(onCellLayout);
           const items3 = [_renderElementResult, tmp2];
           obj.children = items3;
-          let tmp10Result = callback2(CellRendererComponent, obj);
+          let tmp10Result = tmp10(CellRendererComponent, obj);
         } else {
           obj1 = { style: null, onFocusCapture: null };
           obj1[0] = tmp7;
@@ -210,7 +211,8 @@ let items = [
           const merged2 = Object.assign(tmp12);
           const items4 = [_renderElementResult, tmp2];
           obj1.children = items4;
-          tmp10Result = callback2(closure_7, obj1);
+          tmp10Result = tmp10(closure_7, obj1);
+          const tmp11 = closure_7;
         }
         const obj3 = { cellKey: null, children: null };
         obj3[0] = self.props.cellKey;
@@ -225,7 +227,8 @@ obj = {
   value: function getDerivedStateFromProps(item, separatorProps) {
     let tmp = null;
     if (item.item !== separatorProps.separatorProps.leadingItem) {
-      const obj = {};
+      let obj = { separatorProps: null };
+      obj = {};
       const merged = Object.assign(separatorProps.separatorProps);
       obj.leadingItem = item.item;
       obj[0] = obj;

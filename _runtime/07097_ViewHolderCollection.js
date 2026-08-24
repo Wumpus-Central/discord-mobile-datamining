@@ -1,12 +1,12 @@
 // === Module 7097: ViewHolderCollection ===
 
 // Module 7097 (ViewHolderCollection)
-import _slicedToArray from "_slicedToArray" /* 7041 */;
+import closure_2 from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
-import noop2 from "noop" /* 19 */;
+import closure_6 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ useEffect: c3, useImperativeHandle: c4, useLayoutEffect: c5 } = noop);
 
 export const ViewHolderCollection = (data) => {
@@ -33,8 +33,9 @@ export const ViewHolderCollection = (data) => {
   callback4(() => {
     if (first > 0) {
       if (closure_17 != null) {
-        closure_17.layout();
+        obj.layout();
       }
+      obj = closure_17;
     }
   }, items);
   const items1 = [first];
@@ -104,9 +105,14 @@ export const ViewHolderCollection = (data) => {
     const _Array = Array;
     size = Array.from(renderStack.entries(), (arg0) => {
       [tmp, ] = arg0;
+      let tmp5;
       if (closure_8) {
+        if (!callback2(tmp2)) {
+          tmp5 = tmp3[tmp2 + 1];
+        }
       }
-      const obj = {};
+      let obj = { index: tmp2, item: data[tmp2], trailingItem: tmp5, layout: null, refHolder: null, onSizeChanged: null, target: "Cell", renderItem: null, extraData: null, CellRendererComponent: null, ItemSeparatorComponent: null, horizontal: null, hidden: null, inverted: null };
+      obj = {};
       const merged = Object.assign(callback(tmp2));
       obj[3] = obj;
       obj[4] = closure_2;
@@ -122,7 +128,7 @@ export const ViewHolderCollection = (data) => {
       }
       obj[12] = tmp11;
       obj[13] = closure_14;
-      return jsx(data(dependencyMap[5]).ViewHolder, {}, tmp);
+      return closure_1_7(data(closure_1_1[5]).ViewHolder, obj, tmp);
     });
   }
   obj[1] = size;

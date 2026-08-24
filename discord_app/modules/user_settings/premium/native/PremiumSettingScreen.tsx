@@ -8,9 +8,9 @@ import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
 import dispatcherDefault from "dispatcher" /* 7877 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumSettingScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumSettingScreen.tsx");
 
 export default function PremiumScreen() {
   let obj = useSettingNavigationRoute;
@@ -21,6 +21,7 @@ export default function PremiumScreen() {
     close = dispatcherDefault.close;
   }
   obj = { onClose: close };
+  const obj2 = useNavigation;
   const merged = Object.assign(settingNavigationRoute.params);
   return jsx(UserSettingsPremiumDefault, { onClose: close });
 };

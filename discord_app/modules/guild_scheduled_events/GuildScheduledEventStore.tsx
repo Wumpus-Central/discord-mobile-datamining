@@ -4,8 +4,8 @@
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
 function scheduledEventSort(status) {
@@ -82,49 +82,49 @@ function addGuildEventUser(guild_scheduled_event_id) {
     closure_9 = closure_9 + 1;
   }
 }
-function removeGuildEventUser(closure_12, arg1) {
+function removeGuildEventUser(guild_scheduled_event_exception_id, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  let guild_scheduled_event_exception_id = closure_12.guild_scheduled_event_exception_id;
+  guild_scheduled_event_exception_id = guild_scheduled_event_exception_id.guild_scheduled_event_exception_id;
   if (guild_scheduled_event_exception_id == null) {
     guild_scheduled_event_exception_id = SERIES;
   }
   let tmp4;
-  if (dependencyMap[closure_12.guild_scheduled_event_id] != null) {
+  if (dependencyMap[guild_scheduled_event_exception_id.guild_scheduled_event_id] != null) {
     if (tmp3[guild_scheduled_event_exception_id] != null) {
-      tmp4 = tmp5[closure_12.user_id];
+      tmp4 = tmp5[guild_scheduled_event_exception_id.user_id];
     }
   }
   let tmp7 = !tmp6;
   if (null == tmp4) {
-    tmp7 = closure_12.user_id === store.getId();
+    tmp7 = guild_scheduled_event_exception_id.user_id === store.getId();
   }
   if (!tmp7) {
-    if (dependencyMap[closure_12.guild_scheduled_event_id] != null) {
+    if (dependencyMap[guild_scheduled_event_exception_id.guild_scheduled_event_id] != null) {
       if (tmp9[guild_scheduled_event_exception_id] != null) {
-        const user_id = closure_12.user_id;
+        const user_id = guild_scheduled_event_exception_id.user_id;
         delete tmp2[tmp];
       }
     }
-    let guild_scheduled_event_exception_id2 = closure_12.guild_scheduled_event_exception_id;
+    let guild_scheduled_event_exception_id2 = guild_scheduled_event_exception_id.guild_scheduled_event_exception_id;
     if (guild_scheduled_event_exception_id2 == null) {
       guild_scheduled_event_exception_id2 = SERIES;
     }
     let num;
-    if (dependencyMap2[closure_12.guild_scheduled_event_id] != null) {
+    if (dependencyMap2[guild_scheduled_event_exception_id.guild_scheduled_event_id] != null) {
       num = tmp11[guild_scheduled_event_exception_id2];
     }
     if (num == null) {
       num = 0;
     }
-    if (null == closure_12.guild_scheduled_event_exception_id) {
+    if (null == guild_scheduled_event_exception_id.guild_scheduled_event_exception_id) {
       let num3 = 1;
-      if (null == closure_12.guild_scheduled_event_exception_id) {
+      if (null == guild_scheduled_event_exception_id.guild_scheduled_event_exception_id) {
         num3 = 1;
       }
-      ({ guild_scheduled_event_id, guild_scheduled_event_exception_id: guild_scheduled_event_exception_id3 } = closure_12);
+      ({ guild_scheduled_event_id, guild_scheduled_event_exception_id: guild_scheduled_event_exception_id3 } = guild_scheduled_event_exception_id);
       const sum = num + num3;
       if (guild_scheduled_event_exception_id3 == null) {
         guild_scheduled_event_exception_id3 = SERIES;
@@ -154,7 +154,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return false;
   } else {
     const guild_scheduled_event_exceptions = value.guild_scheduled_event_exceptions;
-    const findIndexResult = guild_scheduled_event_exceptions.findIndex((item, index) => item.event_exception_id === eventException.event_exception_id);
+    const findIndexResult = guild_scheduled_event_exceptions.findIndex((event_exception_id) => event_exception_id.event_exception_id === eventException.event_exception_id);
     const items = [];
     HermesBuiltin.arraySpread(value.guild_scheduled_event_exceptions, 0);
     if (findIndexResult < 0) {
@@ -270,7 +270,7 @@ prototype["getRsvpVersion"] = function getRsvpVersion() {
   return c9;
 };
 prototype["getRsvp"] = function getRsvp(closure_1_0, closure_1_1, id) {
-  if (null == importDefault) {
+  if (null == closure_1_0) {
     return null;
   } else {
     let tmp = closure_1_1;
@@ -278,7 +278,7 @@ prototype["getRsvp"] = function getRsvp(closure_1_0, closure_1_1, id) {
       tmp = SERIES;
     }
     let tmp4;
-    if (dependencyMap[importDefault] != null) {
+    if (dependencyMap[closure_1_0] != null) {
       if (tmp3[tmp] != null) {
         tmp4 = tmp5[id];
       }
@@ -389,10 +389,10 @@ obj = {
     closure_12 = {};
     closure_13 = {};
     const item = closure_10.forEach(saveEvent);
-    const item1 = guilds.forEach((item, index) => {
-      const prop = item.guild_scheduled_events;
-      return prop.forEach((item, index) => {
-        const result = closure_8.set(item.id, item);
+    const item1 = guilds.forEach((guild_scheduled_events) => {
+      const prop = guild_scheduled_events.guild_scheduled_events;
+      return prop.forEach((id) => {
+        const result = closure_8.set(id.id, id);
         closure_9 = closure_9 + 1;
       });
     });
@@ -402,8 +402,8 @@ obj = {
     guild = guild.guild;
     c0 = false;
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guild.id));
-    const item = values.forEach((item, index) => {
-      secondaryIndexMap.delete(item.id);
+    const item = values.forEach((id) => {
+      closure_1_8.delete(id.id);
       delete tmp[tmp2];
       if (c0) {
         delete tmp[tmp2];
@@ -411,8 +411,8 @@ obj = {
       closure_9 = closure_9 + 1;
     });
     const prop = guild.guild_scheduled_events;
-    const item1 = prop.forEach((item, index) => {
-      const result = closure_8.set(item.id, item);
+    const item1 = prop.forEach((id) => {
+      const result = closure_8.set(id.id, id);
       closure_9 = closure_9 + 1;
     });
     return true;
@@ -420,8 +420,8 @@ obj = {
   GUILD_DELETE: function handleGuildDelete(guild) {
     c0 = true;
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guild.guild.id));
-    const item = values.forEach((item, index) => {
-      secondaryIndexMap.delete(item.id);
+    const item = values.forEach((id) => {
+      closure_1_8.delete(id.id);
       delete tmp[tmp2];
       if (c0) {
         delete tmp[tmp2];
@@ -438,16 +438,17 @@ obj = {
   FETCH_GUILD_EVENTS_FOR_GUILD: function handleFetchGuildEventsForGuild(guildScheduledEvents) {
     guildScheduledEvents = guildScheduledEvents.guildScheduledEvents;
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guildScheduledEvents.guildId), true);
-    const mapped = values.map((item, index) => item.id);
-    const mapped1 = guildScheduledEvents.map((item, index) => item.id);
+    const mapped = values.map((id) => id.id);
+    const mapped1 = guildScheduledEvents.map((id) => id.id);
     obj = applyDefault;
-    const item = obj.difference(mapped, mapped1).forEach((item, index) => {
-      set.delete(item);
+    const item = obj.difference(mapped, mapped1).forEach((arg0) => {
+      set.delete(arg0);
       delete tmp[tmp2];
       delete tmp[tmp2];
       closure_9 = closure_9 + 1;
     });
     for (const item10029 of guildScheduledEvents) {
+      let tmp4 = saveEvent;
       let tmp5 = saveEvent(item10029);
       continue;
     }
@@ -491,16 +492,16 @@ obj = {
   },
   GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS: function handleFetchGuildEventsForUser(guildScheduledEventUsers) {
     const prop = guildScheduledEventUsers.guildScheduledEventUsers;
-    const item = prop.forEach((item, index) => {
-      callback(item, false, false);
+    const item = prop.forEach((arg0) => {
+      callback(arg0, false, false);
     });
     closure_9 = closure_9 + 1;
     return true;
   },
   GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: function handleFetchUsersForGuildEventSuccess(guildScheduledEventUsers) {
     const prop = guildScheduledEventUsers.guildScheduledEventUsers;
-    const item = prop.forEach((item, index) => {
-      callback(item, false, false);
+    const item = prop.forEach((arg0) => {
+      callback(arg0, false, false);
     });
     closure_9 = closure_9 + 1;
     return true;
@@ -516,14 +517,13 @@ obj = {
       let tmp = arg0;
       const diff = counts.eventCount - counts.recurrenceCounts[arg0];
       if (arg0 == null) {
-        tmp = SERIES;
+        tmp = closure_1_11;
       }
       if (null == closure_1_13[eventId]) {
-        closure_1_13[eventId] = {};
+        closure_1_13[tmp2] = {};
       }
       closure_1_13[eventId][tmp] = diff;
     });
-    obj = eventId(counts[5]);
   },
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(invite) {
     const guild_scheduled_event = invite.invite.guild_scheduled_event;
@@ -546,7 +546,7 @@ obj = {
     } else {
       const prop = value.guild_scheduled_event_exceptions;
       obj = {};
-      const found = prop.filter((item, index) => item.event_exception_id !== eventException.event_exception_id);
+      const found = prop.filter((event_exception_id) => event_exception_id.event_exception_id !== eventException.event_exception_id);
       const merged = Object.assign(value);
       obj.guild_scheduled_event_exceptions = found;
       const result = obj.set(obj.id, obj);
@@ -574,7 +574,7 @@ obj = {
   }
 };
 const guildScheduledEventStore = new GuildScheduledEventStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventStore.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventStore.tsx");
 
 export default guildScheduledEventStore;
 export const StaticGuildEventIndexes = obj;

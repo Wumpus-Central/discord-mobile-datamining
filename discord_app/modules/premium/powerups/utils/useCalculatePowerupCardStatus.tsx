@@ -1,11 +1,11 @@
 // === Module 11688: useCalculatePowerupCardStatus ===
 
 // Module 11688 (useCalculatePowerupCardStatus)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 
 export const useCalculatePowerupCardStatus = function useCalculatePowerupCardStatus(powerup, arg1, arg2) {
   closure_0 = powerup;
@@ -20,7 +20,7 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
     }
     if (null != ends_at) {
       let obj = { type: "expiring", expiringAt: null };
-      obj[1] = lib.sourceEntitlement.ends_at;
+      obj[1] = tmp.sourceEntitlement.ends_at;
       let tmp5 = obj;
     } else {
       if (dependencyMap) {
@@ -30,23 +30,23 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
           tmp5 = obj;
         }
       }
-      if (lib.type === PowerupActiveStatusType.LEVEL_ACTIVATED) {
+      if (tmp.type === closure_1_4.LEVEL_ACTIVATED) {
         const intl2 = powerup(1236).intl;
-        const sourcePowerup = lib.sourcePowerup;
+        const sourcePowerup = tmp.sourcePowerup;
         let title;
         if (sourcePowerup != null) {
           title = sourcePowerup.title;
         }
         if (title == null) {
-          const intl3 = powerup(1236).intl;
-          title = intl3.string(powerup(1236).t.BfF6ED);
+          const intl3 = tmp9(1236).intl;
+          title = intl3.string(tmp9(1236).t.BfF6ED);
         }
         obj1 = { type: "active", statusText: null };
         const obj2 = { perkName: null };
         obj2[0] = title;
         obj1[1] = intl2.formatToPlainString(lib(2367).WRRYUT, obj2);
         tmp5 = obj1;
-      } else if (lib.type !== tmp4.INACTIVE) {
+      } else if (tmp.type !== tmp4.INACTIVE) {
         obj = { type: "active", statusText: null };
         const intl = powerup(1236).intl;
         obj[1] = intl.string(lib(2367).FFLkmx);

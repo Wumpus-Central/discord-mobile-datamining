@@ -1,23 +1,26 @@
 // === Module 14375: useBountyVideoProgressPersistence ===
 
 // Module 14375 (useBountyVideoProgressPersistence)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import set from "set" /* 7452 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "set" /* 7452 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
 
-const require = fn;
+const require = arg1;
 let closure_6 = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
 
 export const useBountyVideoProgressPersistence = function useBountyVideoProgressPersistence(bountyId) {
   bountyId = bountyId.bountyId;
   const endMode = bountyId.endMode;
+  let callback;
   let React;
+  closure_4 = undefined;
   QuestsExperimentLocations = undefined;
+  closure_6 = undefined;
   let obj = bountyId(endMode[4]);
   const bountiesExperience = obj.useBountiesExperience(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  const callback = tmp2;
+  callback = tmp2;
   const first = callback(React.useState(() => {
     if (closure_2) {
       let bountyVideoProgress = ref2.getBountyVideoProgress(bountyId);
@@ -51,8 +54,8 @@ export const useBountyVideoProgressPersistence = function useBountyVideoProgress
       }
       if (tmp) {
         ref.current = current3 + 1;
-        bountyId(endMode[6]);
-        const obj = { timestampSec: null, maxTimestampSec: null, duration: null };
+        let obj = bountyId(endMode[6]);
+        obj = { timestampSec: null, maxTimestampSec: null, duration: null };
         obj[0] = current3;
         obj[1] = current;
         obj[2] = current2;
@@ -61,8 +64,8 @@ export const useBountyVideoProgressPersistence = function useBountyVideoProgress
     }, items),
     flushProgress: React.useCallback(() => {
       if (closure_2) {
-        bountyId(endMode[6]);
-        const obj = { timestampSec: null, maxTimestampSec: null, duration: null };
+        let obj = bountyId(endMode[6]);
+        obj = { timestampSec: null, maxTimestampSec: null, duration: null };
         obj[0] = ref2.current;
         obj[1] = ref3.current;
         obj[2] = ref4.current;

@@ -1,20 +1,16 @@
 // === Module 17061: AVErrorStreamSendLowFPSDefinition ===
 
 // Module 17061 (AVErrorStreamSendLowFPSDefinition)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import isStreamKey from "isStreamKey" /* 4531 */;
-import isPremiumResolution from "isPremiumResolution" /* 9667 */;
-import mapped from "mapped" /* 9668 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17055 */;
-import getReportInboundErrors from "getReportInboundErrors" /* 17058 */;
-import getParticipants from "getParticipants" /* 4773 */;
-import reset from "reset" /* 4652 */;
-import initialize from "initialize" /* 4558 */;
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "initialize" /* 4558 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
 
-require = fn;
-let closure_6 = 20 * obj132Default.Millis.SECOND;
-const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");
+require = arg1;
+let closure_6 = 20 * setDefault.Millis.SECOND;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");
 
 export const AVErrorStreamSendLowFPSDefinition = {
   getActiveErrors() {
@@ -42,33 +38,33 @@ export const AVErrorStreamSendLowFPSDefinition = {
                 }
               }
               if (rTCConnection.hasActiveRemoteWants()) {
-                let tmp11Result = isStreamKey;
+                let tmp11Result = tmp11(4531);
                 participant = participant.getParticipant(currentUserActiveStream.channelId, tmp11Result.encodeStreamKey(currentUserActiveStream));
                 if (null == participant) {
                   return null;
                 } else {
-                  tmp11Result = getReportInboundErrors;
+                  tmp11Result = tmp11(17058);
                   const accumulatedStatsWithMinDatapoints = tmp11Result.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
                   if (null == accumulatedStatsWithMinDatapoints) {
                     return null;
                   } else {
-                    const maxQuality = isPremiumResolution.getMaxQuality(participant);
+                    const maxQuality = tmp11(9667).getMaxQuality(participant);
                     let tmp9 = null;
                     if (null != maxQuality) {
                       if (accumulatedStatsWithMinDatapoints.short.frameRate < tmp11Result2.getWarningFrameRate(maxQuality.maxFrameRate)) {
                         obj = { type: null };
-                        obj[0] = mapped.AVError.STREAM_SEND_LOW_FPS;
-                        const tmp11Result3 = getVoiceChannelErrorContext;
-                        const merged = Object.assign(tmp11Result3.getStreamErrorContext(isStreamKey.encodeStreamKey(currentUserActiveStream)));
+                        obj[0] = tmp11(9668).AVError.STREAM_SEND_LOW_FPS;
+                        const tmp11Result3 = tmp11(17055);
+                        const merged = Object.assign(tmp11Result3.getStreamErrorContext(tmp11(4531).encodeStreamKey(currentUserActiveStream)));
                         const items = [obj];
                         let tmp6 = items;
-                        const tmp11Result4 = isStreamKey;
+                        const tmp11Result4 = tmp11(4531);
                       } else {
-                        getReportInboundErrors;
                         tmp6 = null;
+                        const tmp11Result5 = tmp11(17058);
                       }
                       tmp9 = tmp6;
-                      tmp11Result2 = getReportInboundErrors;
+                      tmp11Result2 = tmp11(17058);
                     }
                     return tmp9;
                   }
@@ -78,6 +74,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
               }
             }
           }
+          const obj8 = isStreamKey;
           obj9 = rTCConnection;
         }
       }

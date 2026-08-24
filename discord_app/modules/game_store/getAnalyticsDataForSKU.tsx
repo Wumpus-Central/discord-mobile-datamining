@@ -1,10 +1,10 @@
 // === Module 4477: getAnalyticsDataForSKU ===
 
 // Module 4477 (getAnalyticsDataForSKU)
-import addApplication from "addApplication" /* 4478 */;
+import closure_0 from "addApplication" /* 4478 */;
 import { SKUFeatureTypes } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/game_store/getAnalyticsDataForSKU.tsx");
+const result = require("set").fileFinishedImporting("modules/game_store/getAnalyticsDataForSKU.tsx");
 
 export default function getAnalyticsDataForSKU(applicationId) {
   let flag = arg1;

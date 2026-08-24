@@ -1,7 +1,6 @@
 // === Module 7271: updateState ===
 
 // Module 7271 (updateState)
-import obj132 from "obj132" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
@@ -10,12 +9,13 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import AbortCodes from "AbortCodes" /* 1235 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import hasFlag from "hasFlag" /* 4031 */;
-import createdAt from "createdAt" /* 1930 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import closure_5 from "hasFlag" /* 4031 */;
+import closure_6 from "createdAt" /* 1930 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "reinjectEphemerals" /* 4994 */;
+import set from "set" /* 2 */;
 
-function updateState(type, fn) {
+function updateState(type) {
   if (set.has(type.type)) {
     if (!(type.id in dependencyMap)) {
       const obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
@@ -25,13 +25,14 @@ function updateState(type, fn) {
       }
       obj[2] = messageCount;
       dependencyMap[type.id] = obj;
+      const tmp2 = dependencyMap;
     }
     let num = dependencyMap2[tmp5.parentId];
     if (num == null) {
       num = 0;
     }
     dependencyMap2[dependencyMap[type.id].parentId] = num + 1;
-    fn(dependencyMap[type.id]);
+    arg1(dependencyMap[type.id]);
   }
 }
 function updateFromGuild(threads) {
@@ -58,15 +59,16 @@ function updateFromThreadMessages(type) {
           }
           obj[2] = messageCount;
           dependencyMap[channel.id] = obj;
+          const tmp2 = dependencyMap;
         }
         let num = dependencyMap2[tmp4.parentId];
         if (num == null) {
           num = 0;
         }
         dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
-        ((closure_12) => {
-          closure_12.mostRecentRawMessage = closure_0;
-          closure_12.mostRecentMessage = null;
+        ((arg0) => {
+          arg0.mostRecentRawMessage = closure_0;
+          arg0.mostRecentMessage = null;
         })(dependencyMap[channel.id]);
       }
     }
@@ -83,31 +85,32 @@ function updateFromThread(type) {
       }
       obj[2] = messageCount;
       dependencyMap[type.id] = obj;
+      const tmp2 = dependencyMap;
     }
     let num = dependencyMap2[tmp5.parentId];
     if (num == null) {
       num = 0;
     }
     dependencyMap2[dependencyMap[type.id].parentId] = num + 1;
-    ((closure_12) => {
+    ((mostRecentRawMessage) => {
       if (null != channel.messageCount) {
-        closure_12.count = channel.messageCount;
+        mostRecentRawMessage.count = tmp.messageCount;
       }
-      let mostRecentMessage = closure_12.mostRecentRawMessage;
+      let mostRecentMessage = mostRecentRawMessage.mostRecentRawMessage;
       if (mostRecentMessage == null) {
-        mostRecentMessage = closure_12.mostRecentMessage;
+        mostRecentMessage = mostRecentRawMessage.mostRecentMessage;
       }
-      let tmp2 = null != channel.lastMessageId;
+      let tmp2 = null != tmp.lastMessageId;
       if (tmp2) {
         let id;
         if (mostRecentMessage != null) {
           id = mostRecentMessage.id;
         }
-        tmp2 = id !== channel.lastMessageId;
+        tmp2 = id !== tmp.lastMessageId;
       }
       if (tmp2) {
-        closure_12.mostRecentRawMessage = null;
-        closure_12.mostRecentMessage = null;
+        mostRecentRawMessage.mostRecentRawMessage = null;
+        mostRecentRawMessage.mostRecentMessage = null;
       }
     })(dependencyMap[type.id]);
   }
@@ -126,31 +129,32 @@ function updateFromServerThread(id) {
             }
             obj[2] = messageCount;
             dependencyMap[channel.id] = obj;
+            const tmp4 = dependencyMap;
           }
           let num = dependencyMap2[tmp6.parentId];
           if (num == null) {
             num = 0;
           }
           dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
-          ((closure_12) => {
+          ((mostRecentRawMessage) => {
             if (null != channel.messageCount) {
-              closure_12.count = channel.messageCount;
+              mostRecentRawMessage.count = tmp.messageCount;
             }
-            let mostRecentMessage = closure_12.mostRecentRawMessage;
+            let mostRecentMessage = mostRecentRawMessage.mostRecentRawMessage;
             if (mostRecentMessage == null) {
-              mostRecentMessage = closure_12.mostRecentMessage;
+              mostRecentMessage = mostRecentRawMessage.mostRecentMessage;
             }
-            let tmp2 = null != channel.lastMessageId;
+            let tmp2 = null != tmp.lastMessageId;
             if (tmp2) {
               let id;
               if (mostRecentMessage != null) {
                 id = mostRecentMessage.id;
               }
-              tmp2 = id !== channel.lastMessageId;
+              tmp2 = id !== tmp.lastMessageId;
             }
             if (tmp2) {
-              closure_12.mostRecentRawMessage = null;
-              closure_12.mostRecentMessage = null;
+              mostRecentRawMessage.mostRecentRawMessage = null;
+              mostRecentRawMessage.mostRecentMessage = null;
             }
           })(dependencyMap[channel.id]);
         }
@@ -171,31 +175,32 @@ function handleThreadCreateOrUpdate(channel) {
       }
       obj[2] = messageCount;
       dependencyMap[channel.id] = obj;
+      const tmp2 = dependencyMap;
     }
     let num = dependencyMap2[tmp5.parentId];
     if (num == null) {
       num = 0;
     }
     dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
-    ((closure_12) => {
+    ((mostRecentRawMessage) => {
       if (null != channel.messageCount) {
-        closure_12.count = channel.messageCount;
+        mostRecentRawMessage.count = tmp.messageCount;
       }
-      let mostRecentMessage = closure_12.mostRecentRawMessage;
+      let mostRecentMessage = mostRecentRawMessage.mostRecentRawMessage;
       if (mostRecentMessage == null) {
-        mostRecentMessage = closure_12.mostRecentMessage;
+        mostRecentMessage = mostRecentRawMessage.mostRecentMessage;
       }
-      let tmp2 = null != channel.lastMessageId;
+      let tmp2 = null != tmp.lastMessageId;
       if (tmp2) {
         let id;
         if (mostRecentMessage != null) {
           id = mostRecentMessage.id;
         }
-        tmp2 = id !== channel.lastMessageId;
+        tmp2 = id !== tmp.lastMessageId;
       }
       if (tmp2) {
-        closure_12.mostRecentRawMessage = null;
-        closure_12.mostRecentMessage = null;
+        mostRecentRawMessage.mostRecentRawMessage = null;
+        mostRecentRawMessage.mostRecentMessage = null;
       }
     })(dependencyMap[channel.id]);
   }
@@ -206,11 +211,11 @@ function handleLoadArchivedThreadsSuccess(threads) {
 }
 function handleSearchMessagesSuccess(data) {
   data = data.data;
-  let item = data.forEach((item, index) => {
-    ({ messages, threads } = item);
-    item = messages.forEach((item, index) => {
-      item = item.forEach((item, index) => {
-        const thread = item.thread;
+  let item = data.forEach((arg0) => {
+    ({ messages, threads } = arg0);
+    let item = messages.forEach((arr) => {
+      const item = arr.forEach((thread) => {
+        thread = thread.thread;
         if (null != thread) {
           if (!(thread.id in table)) {
             channel = channel.getChannel(thread.id);
@@ -224,31 +229,32 @@ function handleSearchMessagesSuccess(data) {
                   }
                   obj[2] = messageCount;
                   table[channel.id] = obj;
+                  const tmp4 = table;
                 }
                 let num = table2[tmp6.parentId];
                 if (num == null) {
                   num = 0;
                 }
                 table2[table[channel.id].parentId] = num + 1;
-                ((closure_12) => {
+                ((mostRecentRawMessage) => {
                   if (null != channel.messageCount) {
-                    closure_12.count = channel.messageCount;
+                    mostRecentRawMessage.count = tmp.messageCount;
                   }
-                  let mostRecentMessage = closure_12.mostRecentRawMessage;
+                  let mostRecentMessage = mostRecentRawMessage.mostRecentRawMessage;
                   if (mostRecentMessage == null) {
-                    mostRecentMessage = closure_12.mostRecentMessage;
+                    mostRecentMessage = mostRecentRawMessage.mostRecentMessage;
                   }
-                  let tmp2 = null != channel.lastMessageId;
+                  let tmp2 = null != tmp.lastMessageId;
                   if (tmp2) {
                     let id;
                     if (mostRecentMessage != null) {
                       id = mostRecentMessage.id;
                     }
-                    tmp2 = id !== channel.lastMessageId;
+                    tmp2 = id !== tmp.lastMessageId;
                   }
                   if (tmp2) {
-                    closure_12.mostRecentRawMessage = null;
-                    closure_12.mostRecentMessage = null;
+                    mostRecentRawMessage.mostRecentRawMessage = null;
+                    mostRecentRawMessage.mostRecentMessage = null;
                   }
                 })(table[channel.id]);
               }
@@ -262,6 +268,8 @@ function handleSearchMessagesSuccess(data) {
 }
 function handleRelationshipUpdate() {
   for (const key10003 in closure_12) {
+    let tmp3 = key10003;
+    let tmp4 = dependencyMap;
     let tmp5 = dependencyMap[key10003];
     if (null == tmp5) {
       continue;
@@ -269,6 +277,7 @@ function handleRelationshipUpdate() {
       if (null == tmp5.mostRecentMessage) {
         continue;
       } else {
+        let tmp = store2;
         let message = store2.getMessage(key10003, tmp5.mostRecentMessage.id);
         if (null == message) {
           continue;
@@ -286,7 +295,7 @@ function handleRelationshipUpdate() {
 ({ ALL_CHANNEL_TYPES: c3, THREAD_CHANNEL_TYPES: c4 } = createChannelRecord);
 const MAX_THREAD_MESSAGE_COUNT = AbortCodes.MAX_THREAD_MESSAGE_COUNT;
 const MessageTypes = ME.MessageTypes;
-const set = new Set();
+let set = new Set();
 let closure_12 = {};
 let closure_13 = {};
 const Store = initializeDefault.Store;
@@ -313,6 +322,7 @@ prototype["getMostRecentMessage"] = function getMostRecentMessage(id) {
       let message = store2.getMessage(id, tmp.mostRecentRawMessage.id);
       if (message == null) {
         message = createMinimalMessageRecord.createMessageRecord(tmp.mostRecentRawMessage);
+        const obj = createMinimalMessageRecord;
       }
       tmp.mostRecentMessage = message;
       tmp.mostRecentRawMessage = null;
@@ -345,15 +355,27 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
     let obj = {};
     const merged = Object.assign(threadMessages);
     for (const key10009 in obj) {
+      let tmp16 = key10009;
       let mostRecentMessage = threadMessages[key10009].mostRecentMessage;
       if (null == mostRecentMessage) {
         continue;
       } else {
+        let tmp2 = closure_5;
         obj = {};
+        let tmp3 = obj;
+        let tmp4 = mostRecentMessage;
         let merged1 = Object.assign(mostRecentMessage);
+        let tmp6 = closure_6;
+        let tmp7 = new.target;
+        let tmp8 = new.target;
         let tmp9 = new closure_6(mostRecentMessage.author);
+        let tmp10 = tmp9;
         obj.author = tmp9;
+        let tmp11 = new.target;
+        let tmp12 = new.target;
+        let tmp13 = obj;
         let tmp14 = new closure_5(obj);
+        let tmp15 = tmp14;
         threadMessages[key10009].mostRecentMessage = tmp14;
         continue;
       }
@@ -387,12 +409,12 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
     ({ threads, mostRecentMessages } = arg0);
     const item = threads.forEach(updateFromThread);
     if (mostRecentMessages != null) {
-      const item1 = mostRecentMessages.forEach((item, index) => {
-        closure_0 = item;
-        channel = channel.getChannel(item.channel_id);
+      const item1 = mostRecentMessages.forEach((channel_id) => {
+        closure_0 = channel_id;
+        channel = channel.getChannel(channel_id.channel_id);
         let tmp2 = null != channel;
         if (tmp2) {
-          tmp2 = item.type !== constants.THREAD_STARTER_MESSAGE;
+          tmp2 = channel_id.type !== constants.THREAD_STARTER_MESSAGE;
         }
         if (tmp2) {
           if (set.has(channel.type)) {
@@ -404,15 +426,16 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
               }
               obj[2] = messageCount;
               table[channel.id] = obj;
+              const tmp6 = table;
             }
             let num = table2[tmp8.parentId];
             if (num == null) {
               num = 0;
             }
             table2[table[channel.id].parentId] = num + 1;
-            ((closure_12) => {
-              closure_12.mostRecentRawMessage = closure_0;
-              closure_12.mostRecentMessage = null;
+            ((arg0) => {
+              arg0.mostRecentRawMessage = closure_0;
+              arg0.mostRecentMessage = null;
             })(table[channel.id]);
           }
         }
@@ -466,14 +489,15 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
                   }
                   obj[2] = messageCount;
                   dependencyMap[channel.id] = obj;
+                  const tmp15 = dependencyMap;
                 }
                 let num = dependencyMap2[tmp17.parentId];
                 if (num == null) {
                   num = 0;
                 }
                 dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
-                ((closure_12) => {
-                  count.count = Math.min(count.count + 1, MAX_THREAD_MESSAGE_COUNT);
+                ((count) => {
+                  count.count = Math.min(count.count + 1, closure_1_9);
                   count.mostRecentRawMessage = message;
                   count.mostRecentMessage = null;
                 })(dependencyMap[channel.id]);
@@ -510,9 +534,11 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
           dependencyMap2[tmp.parentId] = num + 1;
           if (null != tmp.mostRecentMessage) {
             tmp.mostRecentMessage = createMinimalMessageRecord.updateMessageRecord(tmp.mostRecentMessage, message);
+            const obj = createMinimalMessageRecord;
           }
           if (null != tmp.mostRecentRawMessage) {
             tmp.mostRecentRawMessage = createMinimalMessageRecord.updateServerMessage(tmp.mostRecentRawMessage, message);
+            const obj2 = createMinimalMessageRecord;
           }
         }
       }
@@ -545,9 +571,11 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
           let count = Math.max(tmp.count - 1, 0);
         }
         tmp.count = count;
-        set.add(id);
+        obj2.add(id);
       }
       count = tmp.count;
+      const obj = DISCORD_EPOCHDefault;
+      obj2 = set;
       tmp3 = null != mostRecentMessage && mostRecentMessage.id === id;
     }
   },
@@ -556,10 +584,10 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
     if (null == dependencyMap[channelId]) {
       return false;
     } else {
-      const length = ids.filter((item, index) => {
-        let tmp = DISCORD_EPOCHDefault.castChannelIdAsMessageId(channelId) !== item;
+      const length = ids.filter((arg0) => {
+        let tmp = closure_1_1(closure_1_2[8]).castChannelIdAsMessageId(channelId) !== arg0;
         if (tmp) {
-          tmp = !set.has(item);
+          tmp = !closure_1_11.has(arg0);
         }
         return tmp;
       }).length;
@@ -578,7 +606,7 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
           tmp.mostRecentRawMessage = null;
         }
         tmp.count = tmp.count - length;
-        const item = ids.forEach((item, index) => set.add(item));
+        const item = ids.forEach((arg0) => set.add(arg0));
         tmp3 = null != mostRecentMessage && ids.includes(mostRecentMessage.id);
       }
     }
@@ -587,6 +615,7 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
     closure_0 = isAfter;
     let flag = false;
     for (const item10007 of tmp) {
+      let tmp2 = updateFromServerThread;
       let tmp3 = updateFromServerThread(item10007.thread);
       if (!tmp3) {
         tmp3 = flag;
@@ -606,16 +635,16 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
                   count.mostRecentMessage = null;
                   count.count = 0;
                 } else {
-                  let first = isAfter.messages[0];
+                  let first = tmp.messages[0];
                   if (first == null) {
                     first = null;
                   }
-                  count.count = isAfter.messages.length >= MAX_THREAD_MESSAGE_COUNT ? MAX_THREAD_MESSAGE_COUNT : count.count;
+                  count.count = tmp.messages.length >= closure_1_9 ? closure_1_9 : count.count;
                   let type;
                   if (first != null) {
                     type = first.type;
                   }
-                  if (type !== MessageTypes.THREAD_STARTER_MESSAGE) {
+                  if (type !== closure_1_10.THREAD_STARTER_MESSAGE) {
                     count.mostRecentRawMessage = first;
                     count.mostRecentMessage = null;
                   }
@@ -630,6 +659,6 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
     return flag;
   }
 });
-let result = obj132.fileFinishedImporting("modules/threads/ThreadMessageStore.tsx");
+let result = set.fileFinishedImporting("modules/threads/ThreadMessageStore.tsx");
 
 export default threadMessageStore;

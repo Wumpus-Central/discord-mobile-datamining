@@ -1,7 +1,7 @@
 // === Module 8484: ForLaterFreemiumConfig ===
 
 // Module 8484 (ForLaterFreemiumConfig)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
 import hasForLaterPremiumType2 from "hasForLaterPremiumType" /* 8485 */;
 import hasForLaterPremiumTypeDefault from "hasForLaterPremiumType" /* 8485 */;
@@ -59,7 +59,7 @@ obj2[2] = (arg0) => {
 };
 obj[3] = obj2;
 let closure_7 = ApexExperiment.createApexExperiment(obj);
-const result = obj132.fileFinishedImporting("modules/saved_messages/ForLaterExperiment.tsx");
+const result = set.fileFinishedImporting("modules/saved_messages/ForLaterExperiment.tsx");
 
 export const useIsForLaterExperimentOn = function useIsForLaterExperimentOn(LongPressMessageActionSheet) {
   let obj = { location: LongPressMessageActionSheet };
@@ -70,12 +70,12 @@ export const useIsForLaterExperimentOn = function useIsForLaterExperimentOn(Long
   }
   return enabled;
 };
-export const isForLaterExperimentOn = function isForLaterExperimentOn(callback) {
-  let obj = { location: callback };
+export const isForLaterExperimentOn = function isForLaterExperimentOn(MessageRemindersNotificationManager) {
+  let obj = { location: MessageRemindersNotificationManager };
   let enabled = store2.getConfig(obj).enabled;
   if (!enabled) {
     obj = { location: null };
-    obj[0] = callback;
+    obj[0] = MessageRemindersNotificationManager;
     enabled = store.getConfig(obj).enabled;
   }
   return enabled;
@@ -84,7 +84,8 @@ export const isForLaterFreemiumExperimentOn = function isForLaterFreemiumExperim
   return store2.getConfig({ location }).enabled;
 };
 export const useHasForLaterAccess = function useHasForLaterAccess(ForLaterOpenActionButton) {
-  const obj = { location: ForLaterOpenActionButton };
+  let obj = { location: ForLaterOpenActionButton };
+  obj = { location: ForLaterOpenActionButton };
   let enabled = store2.useConfig(obj).enabled;
   if (!enabled) {
     let enabled1 = store.useConfig(obj).enabled;
@@ -96,7 +97,8 @@ export const useHasForLaterAccess = function useHasForLaterAccess(ForLaterOpenAc
   return enabled;
 };
 export const hasForLaterAccess = function hasForLaterAccess(addOrUpdateSavedMessage) {
-  const obj = { location: addOrUpdateSavedMessage };
+  let obj = { location: addOrUpdateSavedMessage };
+  obj = { location: addOrUpdateSavedMessage };
   let enabled = store2.getConfig(obj).enabled;
   if (!enabled) {
     let enabled1 = store.getConfig(obj).enabled;

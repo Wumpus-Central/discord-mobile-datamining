@@ -2,8 +2,8 @@
 
 // Module 1146 (instrumentReactRouter)
 import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
 function instrumentReactRouter(f103592, arg1, arg2, location) {
   const _require = f103592;
@@ -16,11 +16,14 @@ function instrumentReactRouter(f103592, arg1, arg2, location) {
   function normalizeTransactionName(pathname) {
     if (0 !== items.length) {
       if (closure_3) {
-        const tmp3 = matchRoutes(tmp, pathname, tmp8);
+        const tmp3 = closure_1_5(tmp, pathname, tmp8);
         for (const item10011 of tmp3) {
+          let tmp6 = item10011;
           if (item10011.match.isExact) {
             items = [item10011.match.path, ];
+            let str = "route";
             items[1] = "route";
+            let tmp7 = obj;
             obj.return();
             return items;
           }
@@ -43,8 +46,8 @@ function instrumentReactRouter(f103592, arg1, arg2, location) {
     }
     if (pathname) {
       [tmp5, tmp6] = items(normalizeTransactionName(pathname), 2);
-      _require(1024);
-      let obj = { name: null, attributes: null };
+      let obj = _require(1024);
+      obj = { name: null, attributes: null };
       obj[0] = tmp5;
       obj = {};
       obj[_require(817).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
@@ -65,8 +68,8 @@ function instrumentReactRouter(f103592, arg1, arg2, location) {
       if (arg1) {
         if ("PUSH" === arg1) {
           [tmp5, tmp6] = items(normalizeTransactionName(pathname.pathname), 2);
-          callback(1024);
-          let obj = { name: null, attributes: null };
+          let obj = callback(1024);
+          obj = { name: null, attributes: null };
           obj[0] = tmp5;
           obj = {};
           obj[callback(817).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
@@ -88,9 +91,9 @@ function matchRoutes(pathname, search, arg2) {
   if (arg3 === undefined) {
     items = [];
   }
-  pathname.some((item, index) => {
-    if (item.path) {
-      let match = callback(closure_0, item);
+  pathname.some((path) => {
+    if (path.path) {
+      let match = callback(closure_0, path);
     } else {
       let arr = items;
       if (items.length) {
@@ -103,18 +106,18 @@ function matchRoutes(pathname, search, arg2) {
     }
     if (match) {
       let obj = { route: null, match: null };
-      obj[0] = item;
+      obj[0] = path;
       obj[1] = match;
       arr = items.push(obj);
-      if (item.routes) {
-        let routes = item.routes;
+      if (path.routes) {
+        let routes = path.routes;
         items = undefined;
         if (items === undefined) {
           items = [];
         }
-        routes.some((item, index) => {
-          if (item.path) {
-            let match = callback(closure_0, item);
+        routes.some((path) => {
+          if (path.path) {
+            let match = callback(closure_0, path);
           } else {
             let arr = items;
             if (items.length) {
@@ -127,18 +130,18 @@ function matchRoutes(pathname, search, arg2) {
           }
           if (match) {
             let obj = { route: null, match: null };
-            obj[0] = item;
+            obj[0] = path;
             obj[1] = match;
             arr = items.push(obj);
-            if (item.routes) {
-              let routes = item.routes;
+            if (path.routes) {
+              let routes = path.routes;
               items = undefined;
               if (items === undefined) {
                 items = [];
               }
-              routes.some((item, index) => {
-                if (item.path) {
-                  let match = callback(closure_0, item);
+              routes.some((path) => {
+                if (path.path) {
+                  let match = callback(closure_0, path);
                 } else {
                   let arr = items;
                   if (items.length) {
@@ -151,18 +154,18 @@ function matchRoutes(pathname, search, arg2) {
                 }
                 if (match) {
                   let obj = { route: null, match: null };
-                  obj[0] = item;
+                  obj[0] = path;
                   obj[1] = match;
                   arr = items.push(obj);
-                  if (item.routes) {
-                    let routes = item.routes;
+                  if (path.routes) {
+                    let routes = path.routes;
                     items = undefined;
                     if (items === undefined) {
                       items = [];
                     }
-                    routes.some((item, index) => {
-                      if (item.path) {
-                        let match = callback(closure_0, item);
+                    routes.some((path) => {
+                      if (path.path) {
+                        let match = callback(closure_0, path);
                       } else {
                         let arr = items;
                         if (items.length) {
@@ -175,11 +178,11 @@ function matchRoutes(pathname, search, arg2) {
                       }
                       if (match) {
                         let obj = { route: null, match: null };
-                        obj[0] = item;
+                        obj[0] = path;
                         obj[1] = match;
                         arr = items.push(obj);
-                        if (item.routes) {
-                          let routes = item.routes;
+                        if (path.routes) {
+                          let routes = path.routes;
                           items = undefined;
                           if (items === undefined) {
                             items = [];
@@ -206,13 +209,14 @@ function matchRoutes(pathname, search, arg2) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const reactRouterV4BrowserTracingIntegration = function reactRouterV4BrowserTracingIntegration(instrumentNavigation) {
-  let obj = {};
+  let obj = feedbackAsyncIntegration;
+  obj = {};
   const merged = Object.assign(instrumentNavigation);
   obj.instrumentPageLoad = false;
   obj.instrumentNavigation = false;
   const result = obj.browserTracingIntegration(obj);
   require = result;
-  ({ history: dependencyMap, routes: _slicedToArray, matchPath: noop, instrumentPageLoad } = instrumentNavigation);
+  ({ history: dependencyMap, routes: closure_2, matchPath: closure_3, instrumentPageLoad } = instrumentNavigation);
   closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
   instrumentNavigation = instrumentNavigation.instrumentNavigation;
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
@@ -225,13 +229,14 @@ export const reactRouterV4BrowserTracingIntegration = function reactRouterV4Brow
   return obj;
 };
 export const reactRouterV5BrowserTracingIntegration = function reactRouterV5BrowserTracingIntegration(instrumentNavigation) {
-  let obj = {};
+  let obj = feedbackAsyncIntegration;
+  obj = {};
   const merged = Object.assign(instrumentNavigation);
   obj.instrumentPageLoad = false;
   obj.instrumentNavigation = false;
   const result = obj.browserTracingIntegration(obj);
   require = result;
-  ({ history: dependencyMap, routes: _slicedToArray, matchPath: noop, instrumentPageLoad } = instrumentNavigation);
+  ({ history: dependencyMap, routes: closure_2, matchPath: closure_3, instrumentPageLoad } = instrumentNavigation);
   closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
   instrumentNavigation = instrumentNavigation.instrumentNavigation;
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;

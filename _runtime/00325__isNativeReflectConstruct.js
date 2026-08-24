@@ -3,10 +3,10 @@
 // Module 325 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 const StateSafePureComponent = importDefault;
@@ -56,8 +56,9 @@ let items = [
   {
     key: "setState",
     value: function setState(fn) {
+      let self = this;
       let fn2 = this;
-      const self = fn;
+      self = fn;
       if (typeof fn === "function") {
         fn = callback3(callback2(self.prototype), "setState", self);
         fn2 = fn;
@@ -95,7 +96,7 @@ let items = [
       ({ props: dependencyMap, state: closure_2 } = this);
       let obj = {
         get() {
-          self(dependencyMap[7])(!self._inAsyncStateUpdate, "\"this.props\" should not be accessed during state updates");
+          self(closure_1_1[7])(!self._inAsyncStateUpdate, "\"this.props\" should not be accessed during state updates");
           return closure_1;
         },
         set(arg0) {
@@ -105,7 +106,7 @@ let items = [
       Object.defineProperty(this, "props", obj);
       obj = {
         get() {
-          self(dependencyMap[7])(!self._inAsyncStateUpdate, "\"this.state\" should not be acceessed during state updates");
+          self(closure_1_1[7])(!self._inAsyncStateUpdate, "\"this.state\" should not be acceessed during state updates");
           return closure_2;
         },
         set(arg0) {

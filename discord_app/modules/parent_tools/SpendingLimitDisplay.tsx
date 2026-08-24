@@ -2,17 +2,15 @@
 
 // Module 14266 (getSpendingLimitDisplayState)
 import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2335 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import CurrencyCodes from "CurrencyCodes" /* 5317 */;
 import spendingLimitEqual from "spendingLimitEqual" /* 14184 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
-import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "freshTeenActivityWithMap" /* 5296 */;
 import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
 
-require = fn;
-function getSpendingLimitDisplayState(amount, arg1) {
+require = arg1;
+function getSpendingLimitDisplayState(amount) {
   if (null == amount) {
     return { kind: "off" };
   } else if (0 === amount.amount) {
@@ -26,7 +24,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
       obj[1] = formatRateResult;
       return obj;
     } else {
-      let num = CurrencyCodes.CurrencyExponents[amount.currency];
+      let num = tmp5(5317).CurrencyExponents[amount.currency];
       if (num == null) {
         num = 2;
       }
@@ -34,20 +32,21 @@ function getSpendingLimitDisplayState(amount, arg1) {
       if (diff <= 10 * 10 ** num) {
         obj = { kind: "close-to-limit", monthlyText: null, remainingText: null };
         obj[1] = formatRateResult;
-        const intl = getSystemLocale.intl;
+        const intl = tmp5(1236).intl;
         obj1 = { amount: null };
-        obj1[0] = formatSingleCurrencyPrice.formatPrice(diff, currency);
+        obj1[0] = tmp5(5316).formatPrice(diff, currency);
         obj[2] = intl.formatToPlainString(messagesProxyDefault["+Q+bU1"], obj1);
-        const tmp5Result = formatSingleCurrencyPrice;
+        const tmp5Result = tmp5(5316);
       } else {
         obj = { kind: "on", monthlyText: null };
         obj[1] = formatRateResult;
       }
       return obj;
     }
+    const obj7 = formatSingleCurrencyPrice;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/SpendingLimitDisplay.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/SpendingLimitDisplay.tsx");
 
 export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUserSettings() {
   const items = [closure_3];

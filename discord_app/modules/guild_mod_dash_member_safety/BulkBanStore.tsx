@@ -3,9 +3,10 @@
 // Module 6779 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_0 from "fetchFingerprint" /* 1218 */;
+import set from "set" /* 2 */;
 
-const set = new Set();
+let set = new Set();
 const set1 = new Set();
 const Store = initializeDefault.Store;
 class BulkBanStore extends Store {
@@ -27,25 +28,27 @@ const bulkBanStore = new BulkBanStore(dispatcherDefault, {
   },
   GUILD_BULK_BAN_FAILED: function handleBulkBanFailed(guildId) {
     if (set.has(guildId.guildId)) {
-      set.delete(guildId.guildId);
+      obj.delete(guildId.guildId);
     } else {
       return false;
     }
+    obj = set;
   },
   GUILD_BULK_BAN_UPDATE: function handleBulkBanUpdate(guildId) {
     if (set.has(guildId.guildId)) {
-      set.delete(guildId.guildId);
+      obj.delete(guildId.guildId);
     } else {
       const _HermesInternal = HermesInternal;
       set1.add("" + guildId.guildId + ":" + id.getId());
       return false;
     }
+    obj = set;
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();
     set1.clear();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/BulkBanStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/BulkBanStore.tsx");
 
 export default bulkBanStore;

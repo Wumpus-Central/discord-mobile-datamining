@@ -19,6 +19,7 @@ export default function iterateIterator(next) {
       if (iter) {
         if (!iter.done) {
           while (true) {
+            let tmp2 = iter;
             if (tmp) {
               let tmpResult = tmp(iter.value);
             } else {

@@ -1,11 +1,11 @@
 // === Module 10021: isChannelCurrentlyVisible ===
 
 // Module 10021 (isChannelCurrentlyVisible)
-import handlePermissionsChange from "handlePermissionsChange" /* 4970 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import handleConnectionOpen2 from "handleConnectionOpen" /* 4197 */;
+import closure_0 from "handlePermissionsChange" /* 4970 */;
+import closure_1 from "handleConnectionOpen" /* 1979 */;
+import closure_2 from "handleConnectionOpen" /* 4197 */;
 
-const result = require("obj132").fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");
 
 export const isChannelCurrentlyVisible = function isChannelCurrentlyVisible(id) {
   channelId = channelId.getChannelId(guildId.getGuildId());

@@ -1,11 +1,11 @@
 // === Module 1899: parseAvatarDecorationData ===
 
 // Module 1899 (parseAvatarDecorationData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1900 */;
 
-let result = obj132.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
+let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
 
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {
   if (typeof avatar_decoration_data === "object") {
@@ -45,14 +45,14 @@ export const isAvatarDecorationExpired = function isAvatarDecorationExpired(avat
   }
   return tmp2;
 };
-export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDecoration, asset2) {
+export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDecoration, skuId) {
   if (null != avatarDecoration) {
-    if (null != asset2) {
+    if (null != skuId) {
       let tmp2 = null;
       if (typeof avatarDecoration === "object") {
         tmp2 = null;
         if (null != avatarDecoration) {
-          let tmp12Result = parseSkuIdFromServerData;
+          let tmp12Result = tmp12(1900);
           const result = tmp12Result.parseSkuIdFromServerData(avatarDecoration);
           tmp2 = null;
           if (null != result) {
@@ -76,37 +76,38 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
         }
       }
       let tmp6 = null;
-      if (typeof asset2 === "object") {
+      if (typeof skuId === "object") {
         tmp6 = null;
-        if (null != asset2) {
-          tmp12Result = parseSkuIdFromServerData;
-          const result1 = tmp12Result.parseSkuIdFromServerData(asset2);
+        if (null != skuId) {
+          tmp12Result = tmp12(1900);
+          const result1 = tmp12Result.parseSkuIdFromServerData(skuId);
           tmp6 = null;
           if (null != result1) {
             obj = { skuId: null };
             obj[0] = result1;
             if (tmp8) {
-              obj.asset = asset2.asset;
+              obj.asset = skuId.asset;
             }
             if (tmp9) {
-              obj.expiresAt = asset2.expires_at;
+              obj.expiresAt = skuId.expires_at;
             }
             tmp6 = obj;
             if (tmp10) {
-              obj.expiresAt = asset2.expiresAt;
+              obj.expiresAt = skuId.expiresAt;
               tmp6 = obj;
             }
-            tmp10 = "expiresAt" in asset2 && typeof asset2.expiresAt === "number";
-            tmp8 = "asset" in asset2 && typeof asset2.asset === "string";
-            tmp9 = "expires_at" in asset2 && typeof asset2.expires_at === "number";
+            tmp10 = "expiresAt" in skuId && typeof skuId.expiresAt === "number";
+            tmp8 = "asset" in skuId && typeof skuId.asset === "string";
+            tmp9 = "expires_at" in skuId && typeof skuId.expires_at === "number";
           }
         }
       }
       let isEqualResult = apply.isEqual(tmp2, tmp6);
+      const obj5 = apply;
     }
     return isEqualResult;
   }
-  isEqualResult = avatarDecoration === asset2;
+  isEqualResult = avatarDecoration === skuId;
 };
 export const hasGlobalDefaultAvatarDecoration = function hasGlobalDefaultAvatarDecoration(avatarDecoration) {
   let tmp = null != arg1;

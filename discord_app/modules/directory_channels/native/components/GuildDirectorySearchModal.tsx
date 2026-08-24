@@ -5,10 +5,10 @@ import noopAll from "noop" /* 19 */;
 import useInitialValueDefault from "useInitialValue" /* 7127 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 const SEARCH_SCREEN_KEY = "SEARCH_SCREEN_KEY";
-const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModal.tsx");
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModal.tsx");
 
 export default function GuildDirectorySearchModal(arg0) {
   const _require = arg0;

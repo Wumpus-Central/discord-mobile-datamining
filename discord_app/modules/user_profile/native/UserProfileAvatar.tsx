@@ -9,7 +9,7 @@ import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
 import { AVATAR_SIZE_VARIANT } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
@@ -19,11 +19,12 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   }
   const merged = Object.assign(backgroundColor, Object.create(null));
   const tmp2 = useSharedStylesDefault();
+  let obj = { children: null };
   const items = [, , ];
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp2);
   items[2] = { backgroundColor: backgroundColor.backgroundColor };
   const items1 = [callback(View, { style: items }), ];
-  const obj = { ref, style: items2, size };
+  obj = { ref, style: items2, size };
   items2 = [, ];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   const merged1 = Object.assign(merged);
@@ -32,7 +33,7 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   return callback2(closure_8, obj);
 });
 let c10 = forwardRefResult;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileAvatar.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAvatar.tsx");
 
 export default forwardRefResult;
 export const OpenableUserProfileAvatar = function OpenableUserProfileAvatar(animate) {
@@ -44,13 +45,15 @@ export const OpenableUserProfileAvatar = function OpenableUserProfileAvatar(anim
   const guildId = animate.guildId;
   const merged = Object.assign(animate, Object.create(null));
   let ref;
+  let trackUserProfileAction;
+  let obj = ref;
   ref = ref.useRef(null);
-  const trackUserProfileAction = flag(guildId[7]).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = flag(guildId[7]).useUserProfileAnalyticsContext().trackUserProfileAction;
   const tmp5 = null != user.avatar || user.hasAvatarForGuild(guildId);
   const items = [flag, guildId, trackUserProfileAction, user];
-  let obj = { ref };
+  obj = { ref };
   const callback = obj.useCallback(() => {
-    let obj = { action: TrackUserProfileActions.VIEW_AVATAR };
+    let obj = { action: closure_1_5.VIEW_AVATAR };
     trackUserProfileAction(obj);
     obj = { user, guildId, animate: flag, originViewOrOriginLayout: ref.current };
     user(guildId[8])(obj);
@@ -71,5 +74,5 @@ export const OpenableUserProfileAvatar = function OpenableUserProfileAvatar(anim
     accessibilityLabel = merged.accessibilityLabel;
   }
   obj.accessibilityLabel = accessibilityLabel;
-  return callback(closure_10, obj);
+  return closure_7(closure_10, obj);
 };

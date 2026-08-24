@@ -3,26 +3,26 @@
 // Module 15758 (Screenshot)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
 import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 8803 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import { DraftType } from "handleChanged" /* 4825 */;
-import map from "map" /* 4824 */;
+import closure_9 from "map" /* 4824 */;
 import { AbortCodes } from "ME" /* 676 */;
 import { UserRowModes } from "UserRowModes" /* 9081 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function Screenshot(setUri) {
   setUri = setUri.setUri;
+  let ref;
   const tmp = callback5();
-  const ref = React.useRef(null);
+  ref = React.useRef(null);
   const items = [setUri];
   const effect = React.useEffect(() => {
     const timerId = setTimeout(() => {
@@ -31,8 +31,8 @@ function Screenshot(setUri) {
       if (current != null) {
         const capture = current.capture;
         if (capture != null) {
-          nextPromise = capture().then((result) => {
-            callback(result);
+          nextPromise = capture().then((arg0) => {
+            callback(arg0);
           });
           const captureResult = capture();
         }
@@ -40,8 +40,9 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  setUri(8501);
-  const obj = { style: items1, children: null };
+  let obj = setUri(8501);
+  obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
+  obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1494)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
   obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
@@ -67,11 +68,13 @@ function Screenshot(setUri) {
 }
 function GravityShareFooter(arg0) {
   ({ count, isSending, onSend } = arg0);
+  importDefault = undefined;
+  let first;
   let insets;
   const tmp = callback5();
   importDefault = tmp;
   const tmp2 = insets(React.useState(""), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   insets = importDefault(first[24])({ includeKeyboardHeight: true }).insets;
   let obj = onSend(first[25]);
   const shareChatInputActions = obj.useShareChatInputActions(tmp4);
@@ -81,13 +84,13 @@ function GravityShareFooter(arg0) {
     onSend(first);
   }, items);
   if (count <= 1) {
-    const intl2 = onSend(tmp6[14]).intl;
-    let stringResult = intl2.string(onSend(tmp6[14]).t.TXNS7S);
+    const intl2 = tmp7(tmp6[14]).intl;
+    let stringResult = intl2.string(tmp7(tmp6[14]).t.TXNS7S);
   } else {
-    const intl = onSend(tmp6[14]).intl;
+    const intl = tmp7(tmp6[14]).intl;
     obj = { count: null };
     obj[0] = count;
-    stringResult = intl.formatToPlainString(onSend(tmp6[14]).t.jWtYUm, obj);
+    stringResult = intl.formatToPlainString(tmp7(tmp6[14]).t.jWtYUm, obj);
   }
   const items1 = [tmp.footer, insets.bottom];
   let tmp14Result = null;
@@ -114,9 +117,12 @@ function GravityShareFooter(arg0) {
     }
     obj2[4] = tmp17;
     obj2[5] = isSending;
-    items2[1] = callback3(onSend(tmp6[27]).Button, obj2);
+    items2[1] = callback3(tmp7(tmp6[27]).Button, obj2);
     obj[1] = items2;
-    tmp14Result = callback2(View, obj);
+    tmp14Result = closure_14(View, obj);
+    const tmp14 = closure_14;
+    const tmp15 = View;
+    const tmp16 = callback3;
   }
   return tmp14Result;
 }
@@ -184,7 +190,7 @@ class ICYMIShareModal {
                 v0 = 3;
                 throw arr;
               } else if (arg0 !== 2) {
-                const mapped = arr.map((item, index) => channel.getChannel(item));
+                const mapped = arr.map((arg0) => channel.getChannel(arg0));
                 const found = mapped.filter(callback(closure_1_2[30]).isNotNullish);
                 const item = found.forEach((() => {
                   closure_0 = v3((arg0) => {
@@ -204,7 +210,7 @@ class ICYMIShareModal {
                     return applyArgumentsResult;
                   };
                 })());
-                arr = closure_1_1(closure_1_2[28]).pop();
+                closure_1_1(closure_1_2[28]).pop();
                 if (null != v0) {
                   v0();
                 }
@@ -275,7 +281,7 @@ class ICYMIShareModal {
       headerLeftContainerStyle: null,
       headerRightContainerStyle: null
     };
-    obj3 = require("obj132");
+    obj3 = require("set");
     num = 0;
     if (!obj3.isIOS()) {
       num = rect.top;
@@ -320,20 +326,27 @@ class ICYMIShareModal {
   }
 }
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
+createCacheKey = { headerLeftContainer: null, headerRightContainer: null, preview: null, base: null, contentContainer: null, footer: null };
+createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingRight: ThemesDefault.space.PX_16 };
+let obj1 = { paddingRight: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[3] = { position: "relative" };
+let obj2 = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[5] = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMIShareModal.tsx");
+let obj4 = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIShareModal.tsx");
 
 export default ICYMIShareModal;
 export const GuildEventShareModal = function GuildEventShareModal(event) {
   event = event.event;
-  const obj = { title: null, originDestinationId: null, linkText: null };
+  let obj = SHARE_EVENT_DETAILS_LINK;
+  obj = { guildId: event.guild_id, guildEventId: event.id };
+  obj = { title: null, originDestinationId: null, linkText: null };
   const result = obj.SHARE_EVENT_DETAILS_LINK(obj);
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["7TVSLK"]);
@@ -345,13 +358,14 @@ export const GuildEventShareModal = function GuildEventShareModal(event) {
   }
   obj[1] = tmp4;
   obj[2] = result;
-  return callback(ICYMIShareModal, obj);
+  return closure_13(ICYMIShareModal, obj);
 };
 export const GameShareModal = function GameShareModal(content) {
   let _require = content.content;
   let obj = { title: null, linkText: "", forwardToChannel: null };
   let intl = _require(1236).intl;
   obj[0] = intl.string(_require(1236).t["59CWHK"]);
+  _require = undefined;
   _require = callback2((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -388,11 +402,11 @@ export const GameShareModal = function GameShareModal(content) {
               closure_1 = tmp7;
               c0 = undefined;
               c4 = 1;
-              let obj3 = callback(dependencyMap[15]);
+              let obj3 = callback(closure_2_2[15]);
               obj1 = { channel: null, content: "", entry: null, whenReady: false, doNotNotifyOnError: true, location: null };
               obj1[0] = c0;
               obj1[2] = callback;
-              obj1[5] = MessageSendLocation.ICYMI;
+              obj1[5] = closure_2_12.ICYMI;
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
@@ -404,13 +418,13 @@ export const GameShareModal = function GameShareModal(content) {
             closure_1 = closure_3;
             let tmp12 = null != closure_1.body;
             if (tmp12) {
-              tmp12 = closure_1.body.code === AbortCodes.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
+              tmp12 = closure_1.body.code === closure_2_10.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
             }
             callback = tmp12;
-            obj1 = dispatcherDefault;
-            const intl = callback(dependencyMap[14]).intl;
+            obj1 = closure_2_1(closure_2_2[16]);
+            const intl = callback(closure_2_2[14]).intl;
             const string = intl.string;
-            let t = callback(dependencyMap[14]).t;
+            let t = callback(closure_2_2[14]).t;
             if (callback) {
               let stringResult = string(t.BC5vfD);
             } else {

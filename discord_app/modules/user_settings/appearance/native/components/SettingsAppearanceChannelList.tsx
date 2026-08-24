@@ -3,20 +3,17 @@
 // Module 14635 (ChannelListPreview)
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef4115 from "module_4115" /* 4115 */;
-import ChannelRowItemDefault from "ChannelRowItem" /* 14636 */;
-import MessagesHeaderItemDefault from "MessagesHeaderItem" /* 14637 */;
-import ActivityCardsItemDefault from "ActivityCardsItem" /* 14638 */;
-import _modDef14644 from "module_14644" /* 14644 */;
 import SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault from "SettingsAppearanceChannelListPreviewNitroUpsellComponent" /* 14647 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { channelPreviewGradient: null, channelPreviewCardContainer: null };
+createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.borderRadius = ThemesDefault.radii.xl;
 createCacheKey.overflow = "hidden";
@@ -26,7 +23,7 @@ let merged1 = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 obj1.shadowColor = "#000000";
 createCacheKey[1] = obj1;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx");
 
 export default function ChannelListPreview(useGradientBackground) {
   ({ themes, themeIndex, animatedStyles } = useGradientBackground);
@@ -41,17 +38,17 @@ export default function ChannelListPreview(useGradientBackground) {
       let obj = {};
       const merged = Object.assign(item);
       obj.animatedStyles = animatedStyles;
-      return closure_1_5(ChannelRowItemDefault, obj);
+      return closure_1_5(closure_1_1(closure_1_2[5]), obj);
     } else if ("messages-header" === kind) {
       obj = {};
       const merged1 = Object.assign(item);
       obj.animatedStyles = animatedStyles;
-      return closure_1_5(MessagesHeaderItemDefault, obj);
+      return closure_1_5(closure_1_1(closure_1_2[6]), obj);
     } else if ("activity-cards" === kind) {
       obj = {};
       const merged2 = Object.assign(item);
       obj.animatedStyles = animatedStyles;
-      return closure_1_5(ActivityCardsItemDefault, obj);
+      return closure_1_5(closure_1_1(closure_1_2[7]), obj);
     } else {
       return null;
     }
@@ -72,10 +69,10 @@ export default function ChannelListPreview(useGradientBackground) {
     obj = { themes: null, themeIndex: null, isDimmed: false, backgroundToken: null };
     obj[0] = themes;
     obj[1] = themeIndex;
-    obj[3] = ThemesDefault.colors.BACKGROUND_BASE_LOW;
-    obj[1] = callback(_modDef14644, obj);
+    obj[3] = tmp4(712).colors.BACKGROUND_BASE_LOW;
+    obj[1] = callback(tmp4(14644), obj);
     tmp7 = callback(closure_4, obj);
-    const tmp4Result = _modDef14644;
+    const tmp4Result = tmp4(14644);
   }
   const items2 = [tmp7, , ];
   obj1 = {
@@ -91,5 +88,5 @@ export default function ChannelListPreview(useGradientBackground) {
   items2[1] = callback(animatedStyles(8029).FlashList, obj1);
   items2[2] = callback(SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj[4] = items2;
-  return callback(_modDef4115.View, obj);
+  return closure_6(_modDef4115.View, obj);
 };

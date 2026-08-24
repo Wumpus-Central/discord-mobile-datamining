@@ -2,12 +2,10 @@
 
 // Module 11169 (_scheduleMessage)
 import tDefault from "t" /* 3975 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import dispatcherDefault from "dispatcher" /* 7524 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 11170 */;
 
-const require = fn;
+const require = arg1;
 function _scheduleMessage() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -89,9 +87,10 @@ function _scheduleMessage() {
           } else if (2 === tmp8) {
             c4 = 0;
             (function showScheduleMessageFailureToast(message) {
-              _undefined2(_undefined3[4]);
+              let obj = _undefined2(_undefined3[4]);
+              obj = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
               const intl = _undefined(_undefined3[5]).intl;
-              const obj = { error: message };
+              obj = { error: message };
               obj[1] = intl.formatToPlainString(_undefined(_undefined3[5]).t.PsJmUe, obj);
               obj[2] = _undefined(_undefined3[7]).CircleXIcon;
               obj.open(obj);
@@ -109,9 +108,10 @@ function _scheduleMessage() {
             return obj;
           } else {
             (function showScheduleMessageSuccessToast(c1) {
-              _undefined2(_undefined3[4]);
+              let obj = _undefined2(_undefined3[4]);
+              obj = { key: "SCHEDULED_MESSAGE_CREATE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
               const intl = _undefined(_undefined3[5]).intl;
-              const obj = { timestamp: new Date(c1).valueOf() };
+              obj = { timestamp: new Date(c1).valueOf() };
               obj[1] = intl.formatToPlainString(_undefined(_undefined3[5]).t["CvHu/j"], obj);
               obj[2] = _undefined(_undefined3[6]).ClockIcon;
               obj.open(obj);
@@ -144,7 +144,7 @@ function _scheduleMessage() {
   return applyArgumentsResult;
 }
 ({ MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c4, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c5 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
-let result = require("obj132").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx");
+let result = require("set").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx");
 
 export const scheduleMessage = function scheduleMessage(arg0) {
   const self = this;
@@ -191,12 +191,13 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   obj3[0] = intl4.string(_require(1236).t["3+ii4F"]);
   obj2[1] = obj3;
   const items1 = [
-    ...items.map((item, index) => {
-      const value = item.value;
+    ...items.map((label) => {
+      const value = label.value;
       return {
-        label: item.label,
+        label: label.label,
         onPress() {
-          const obj = { scheduledTimestamp: value.toISOString() };
+          let obj = closure_2_1(closure_2_2[14]);
+          obj = { scheduledTimestamp: value.toISOString() };
           const result = obj.changeScheduledMessage(value, obj);
         }
       };
@@ -206,21 +207,22 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   const intl5 = _require(1236).intl;
   obj4[0] = intl5.string(_require(1236).t.stHooC);
   obj4[1] = function onPress() {
-    let obj = { title: null, mode: "datetime", startDate: null, minimumDate: null, maximumDate: null, onSubmit: null };
-    const intl = id(dependencyMap[5]).intl;
-    obj[0] = intl.string(id(dependencyMap[5]).t["3+ii4F"]);
-    const tmp = id(dependencyMap[12])(dependencyMap[11], dependencyMap.paths);
-    const defaultScheduledTime = id(dependencyMap[13]).getDefaultScheduledTime();
+    let obj = closure_1_1(closure_1_2[10]);
+    obj = { title: null, mode: "datetime", startDate: null, minimumDate: null, maximumDate: null, onSubmit: null };
+    const intl = id(closure_1_2[5]).intl;
+    obj[0] = intl.string(id(closure_1_2[5]).t["3+ii4F"]);
+    const tmp = id(closure_1_2[12])(closure_1_2[11], closure_1_2.paths);
+    const defaultScheduledTime = id(closure_1_2[13]).getDefaultScheduledTime();
     obj[2] = defaultScheduledTime.toDate();
-    const obj3 = id(dependencyMap[13]);
-    const obj5 = tDefault();
-    obj[3] = tDefault().add(closure_1_5, "seconds").toDate();
-    const addResult = tDefault().add(closure_1_5, "seconds");
-    const obj7 = tDefault();
-    obj[4] = tDefault().add(closure_1_4, "seconds").toDate();
+    const obj3 = id(closure_1_2[13]);
+    const obj5 = closure_1_1(closure_1_2[8])();
+    obj[3] = closure_1_1(closure_1_2[8])().add(closure_1_5, "seconds").toDate();
+    const addResult = closure_1_1(closure_1_2[8])().add(closure_1_5, "seconds");
+    const obj7 = closure_1_1(closure_1_2[8])();
+    obj[4] = closure_1_1(closure_1_2[8])().add(closure_1_4, "seconds").toDate();
     obj[5] = function onSubmit(toISOString) {
-      closure_1_1(closure_1_2[14]);
-      const obj = { scheduledTimestamp: toISOString.toISOString() };
+      let obj = closure_1_1(closure_1_2[14]);
+      obj = { scheduledTimestamp: toISOString.toISOString() };
       const result = obj.changeScheduledMessage(closure_0, obj);
     };
     obj.openLazy(tmp, "DatePicker", obj);

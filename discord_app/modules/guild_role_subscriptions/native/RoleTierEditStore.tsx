@@ -2,11 +2,11 @@
 
 // Module 16950 (usePriceTiers)
 import isIterable from "isIterable" /* 4006 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
 import identity from "identity" /* 700 */;
 
-require = fn;
+require = arg1;
 function usePriceTiers(guildId) {
   const _require = guildId;
   let tmp = callback(withEqualityFn((arg0) => {
@@ -20,7 +20,7 @@ function usePriceTiers(guildId) {
   first(4761)(() => {
     let tmp2 = null == first;
     if (tmp2) {
-      tmp2 = closure_2 !== obj.LOADING;
+      tmp2 = closure_2 !== closure_1_6.LOADING;
     }
     if (tmp2) {
       callback(closure_0);
@@ -32,7 +32,7 @@ function usePriceTiers(guildId) {
     onRefresh(arg0) {
       let tmp = null == first;
       if (tmp) {
-        tmp = closure_2 !== obj.LOADING;
+        tmp = closure_2 !== closure_1_6.LOADING;
       }
       if (tmp) {
         callback(arg0);
@@ -44,25 +44,30 @@ function usePriceTiers(guildId) {
 let obj = { IDLE: 0, [0]: "IDLE", LOADING: 1, [1]: "LOADING", ERROR: 2, [2]: "ERROR" };
 let closure_7 = Object.freeze({ currentScene: null, groupCover: null, groupDescription: "", groupIsFullGate: false });
 const withEqualityFn = identity.createWithEqualityFn((arg0) => {
+  closure_0 = arg0;
   obj = {};
   const merged = Object.assign(closure_7);
   obj.setScene = function setScene(arg0) {
     const callback = arg0;
-    callback(dependencyMap[2]).batchUpdates(() => callback({ currentScene: callback }));
-  };
-  obj.setGroupCover = (arg0) => {
-    const callback = arg0;
-    callback(dependencyMap[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
-  };
-  obj.setGroupDescription = (arg0) => {
-    const callback = arg0;
-    callback(dependencyMap[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+    callback(closure_1_3[2]).batchUpdates(() => callback({ currentScene: callback }));
   };
   closure_0 = arg0;
-  const groupIsFullGate = "groupIsFullGate";
+  let groupIsFullGate = "groupCover";
+  obj.setGroupCover = (arg0) => {
+    const callback = arg0;
+    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+  };
+  closure_0 = arg0;
+  groupIsFullGate = "groupDescription";
+  obj.setGroupDescription = (arg0) => {
+    const callback = arg0;
+    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+  };
+  closure_0 = arg0;
+  groupIsFullGate = "groupIsFullGate";
   obj.setGroupIsFullGate = (arg0) => {
     const callback = arg0;
-    callback(dependencyMap[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
   };
   obj.priceTiers = null;
   obj.priceTierState = obj.IDLE;
@@ -93,11 +98,11 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     })();
   };
   obj.reset = function reset() {
-    callback(dependencyMap[2]).batchUpdates(() => callback(closure_1_7));
+    callback(closure_1_3[2]).batchUpdates(() => callback(closure_1_7));
   };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
 
 export const LoadingState = obj;
 export const useRoleTierEditStore = withEqualityFn;
@@ -125,7 +130,7 @@ export const usePriceTiersAvailableInGuild = function usePriceTiersAvailableInGu
   }
   tiers = undefined;
   if (tiers != null) {
-    tiers = tiers.filter((item, index) => !set.has(item));
+    tiers = tiers.filter((arg0) => !set.has(arg0));
   }
   return { tiers, state, onRefresh };
 };

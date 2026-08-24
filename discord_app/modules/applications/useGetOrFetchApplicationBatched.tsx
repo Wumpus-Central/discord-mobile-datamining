@@ -1,11 +1,11 @@
 // === Module 10755: request ===
 
 // Module 10755 (request)
-import noop from "noop" /* 19 */;
-import addApplication from "addApplication" /* 4478 */;
-import obj132 from "obj132" /* 2 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "addApplication" /* 4478 */;
+import set from "set" /* 2 */;
 
-let obj132 = fn;
+let set = arg1;
 class ApplicationFetchManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -43,44 +43,44 @@ prototype["_flush"] = function _flush() {
   const self = this;
   const items = [];
   let _pending = this._pending;
-  const item = _pending.forEach((item, index) => {
+  const item = _pending.forEach((arg0) => {
     const _lastFetchedAttempted = self._lastFetchedAttempted;
-    const result = _lastFetchedAttempted.set(item, Date.now());
-    items.push(item);
+    const result = _lastFetchedAttempted.set(arg0, Date.now());
+    items.push(arg0);
   });
   _pending = this._pending;
   _pending.clear();
   const items1 = [];
   const items2 = [];
-  const item1 = items.forEach((item, index) => {
-    if (closure_1_4.didFetchingApplicationFail(item)) {
-      items2.push(item);
+  const item1 = items.forEach((applicationId) => {
+    if (closure_1_4.didFetchingApplicationFail(applicationId)) {
+      items2.push(applicationId);
     } else {
-      items1.push(item);
+      items1.push(applicationId);
     }
   });
   if (items1.length > 0) {
     const obj = items(items1[3]);
-    const item2 = items(items1[3]).chunk(items1, 20).forEach((item, index) => {
-      const applications = items(items1[4]).fetchApplications(item, false);
+    const item2 = items(items1[3]).chunk(items1, 20).forEach((arg0) => {
+      const applications = items(items1[4]).fetchApplications(arg0, false);
     });
     const chunkResult = items(items1[3]).chunk(items1, 20);
   }
   if (items2.length > 0) {
     const obj2 = items(items1[3]);
-    const item3 = items(items1[3]).chunk(items2, 20).forEach((item, index) => {
-      const applications = items(items1[4]).fetchApplications(item, true);
+    const item3 = items(items1[3]).chunk(items2, 20).forEach((arg0) => {
+      const applications = items(items1[4]).fetchApplications(arg0, true);
     });
     const chunkResult1 = items(items1[3]).chunk(items2, 20);
   }
 };
-obj132 = Object.create(ApplicationFetchManager.prototype);
-obj132._lastFetchedAttempted = new Map();
-let map = new Map();
-obj132._pending = new Set();
+set = Object.create(ApplicationFetchManager.prototype);
+set._lastFetchedAttempted = new Map();
+set = new Set();
+set._pending = set;
 let delayedCall = new require("start").DelayedCall(32, () => obj._flush());
-obj132._flushHandler = delayedCall;
-let result = obj132.fileFinishedImporting("modules/applications/useGetOrFetchApplicationBatched.tsx");
+set._flushHandler = delayedCall;
+let result = set.fileFinishedImporting("modules/applications/useGetOrFetchApplicationBatched.tsx");
 
 export const useRequestApplication = function useRequestApplication(arg0) {
   closure_0 = arg0;
@@ -88,10 +88,10 @@ export const useRequestApplication = function useRequestApplication(arg0) {
   const effect = React.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = "" !== closure_0;
+      tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      obj132.request(closure_0);
+      closure_1_5.request(tmp);
     }
   }, items);
 };
@@ -100,10 +100,10 @@ export const useGetOrFetchApplicationBatched = function useGetOrFetchApplication
   const effect = React.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = "" !== closure_0;
+      tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      obj132.request(closure_0);
+      closure_1_5.request(tmp);
     }
   }, items);
   const items1 = [closure_4];
@@ -112,8 +112,8 @@ export const useGetOrFetchApplicationBatched = function useGetOrFetchApplication
     let application = null;
     if (null != closure_0) {
       application = null;
-      if ("" !== closure_0) {
-        application = closure_1_4.getApplication(closure_0);
+      if ("" !== tmp) {
+        application = closure_1_4.getApplication(tmp);
       }
     }
     return application;

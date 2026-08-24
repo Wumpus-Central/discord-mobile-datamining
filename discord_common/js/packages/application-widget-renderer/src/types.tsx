@@ -1,6 +1,6 @@
-// === Module 12274: obj132 ===
+// === Module 12274: set ===
 
-// Module 12274 (obj132)
-import obj132 from "obj132" /* 2 */;
+// Module 12274 (set)
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/types.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/types.tsx");

@@ -1,10 +1,10 @@
 // === Module 7444: extractActivityBookmarkParams ===
 
 // Module 7444 (extractActivityBookmarkParams)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 
-const result = obj132.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
+const result = set.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
 export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {
   let obj = isDiscordProxiedAssetUrlDefault;

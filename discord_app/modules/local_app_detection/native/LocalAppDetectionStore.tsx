@@ -3,11 +3,11 @@
 // Module 13258 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import hasConsented from "hasConsented" /* 5258 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "hasConsented" /* 5258 */;
 import { Consents } from "ME" /* 676 */;
 
-let object = fn;
+let object = arg1;
 let closure_6 = { detected: false, lastScannedAt: "Array" };
 let closure_7 = { apps: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -66,9 +66,11 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     let tmp5 = null == appState.lastScannedAt;
     if (!tmp5) {
       let _Date = Date;
+      let tmp6 = appState;
       tmp5 = Date.now() - tmp4.lastScannedAt > 86400000;
     }
     if (tmp5) {
+      let tmp7 = nextResult;
       let arr = items.push(tmp2);
     }
     continue;
@@ -89,6 +91,7 @@ prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionC
     const merged = Object.assign(obj);
     const tmp6 = entries[Symbol.iterator]();
     while (tmp6 !== undefined) {
+      let tmp10 = callback;
       let tmp11 = callback(tmp8, 2);
       obj = { detected: null, lastScannedAt: null };
       obj[0] = tmp11[1];
@@ -107,6 +110,7 @@ class DEV_resetState {
 prototype["DEV_resetState"] = DEV_resetState;
 LocalAppDetectionStore.displayName = "AppDetectionStore";
 LocalAppDetectionStore.persistKey = "AppDetectionStore";
+object = undefined;
 object = new Object(dispatcherDefault, {
   POST_CONNECTION_OPEN() {
     return obj.handlePostConnectionOpen();
@@ -116,6 +120,6 @@ object = new Object(dispatcherDefault, {
   }
 }, tmp, LocalAppDetectionStore, Object, prototype, new.target, undefined, DEV_resetState);
 // ThrowIfThisInitialized (0x7c)
-const result = require("obj132").fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionStore.tsx");
+const result = require("set").fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionStore.tsx");
 
 export default object;

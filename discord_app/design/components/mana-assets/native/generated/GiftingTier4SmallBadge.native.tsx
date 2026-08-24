@@ -1,13 +1,13 @@
 // === Module 5870: GiftingTier4SmallBadge ===
 
 // Module 5870 (GiftingTier4SmallBadge)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import vanityUrlDefault from "vanityUrl" /* 5871 */;
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier4SmallBadge.native.tsx");
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier4SmallBadge.native.tsx");
 
 export const GiftingTier4SmallBadge = function GiftingTier4SmallBadge(width) {
   let num = width.width;
@@ -23,7 +23,8 @@ export const GiftingTier4SmallBadge = function GiftingTier4SmallBadge(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { uri: vanityUrlDefault };
+  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  obj = { uri: vanityUrlDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];

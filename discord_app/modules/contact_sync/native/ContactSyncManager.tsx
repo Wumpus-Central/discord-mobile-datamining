@@ -3,14 +3,14 @@
 // Module 11854 (_requestAndSyncContacts)
 import Storage3 from "Storage" /* 595 */;
 import initializeDefault from "initialize" /* 5038 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 5221 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "set" /* 5221 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import setStoredContacts from "setStoredContacts" /* 11852 */;
 import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
 import { PlatformTypes } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _requestAndSyncContacts() {
   const self = this;
   const tmp = callback(function*() {
@@ -151,9 +151,9 @@ let prototype = function ContactSyncLifecycleManager() {
     if (null != currentUser.getCurrentUser()) {
       localAccount = localAccount.getLocalAccount(constants.CONTACTS);
       if (obj.isContactSyncEnabled(localAccount)) {
-        const result = applyArgumentsResult(table[7]).checkContactPermissions();
-        result.then((result) => {
-          if (result === constants.AUTHORIZED) {
+        const result = tmp4(tmp5[7]).checkContactPermissions();
+        result.then((arg0) => {
+          if (arg0 === constants.AUTHORIZED) {
             callback(table[9]).runAfterInteractions(() => (function requestAndSyncContacts() {
               const self = this;
               const apply = closure_11.apply;
@@ -167,9 +167,11 @@ let prototype = function ContactSyncLifecycleManager() {
             const obj = callback(table[9]);
           }
         });
-        const tmp4Result = applyArgumentsResult(table[7]);
+        const tmp4Result = tmp4(tmp5[7]);
       }
       obj = applyArgumentsResult(table[7]);
+      tmp4 = applyArgumentsResult;
+      tmp5 = table;
     }
   };
   return applyArgumentsResult;
@@ -177,7 +179,7 @@ let prototype = function ContactSyncLifecycleManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/contact_sync/native/ContactSyncManager.tsx");
+let result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncManager.tsx");
 
 export default prototype;
 export const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";

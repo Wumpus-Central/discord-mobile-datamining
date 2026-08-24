@@ -1,13 +1,13 @@
 // === Module 4978: MAX_STAGE_TOPIC_LENGTH ===
 
 // Module 4978 (MAX_STAGE_TOPIC_LENGTH)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1993 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;
-const result = obj132.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
 
 export const MAX_STAGE_TOPIC_LENGTH = 240;
 export const MAX_AUDIENCE_ROW_LIMIT = 4;

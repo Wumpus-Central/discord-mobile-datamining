@@ -27,10 +27,11 @@ function CanonicalizeLocaleList(str) {
       const _Object = Object;
       const ObjectResult = Object(tmp67);
       let num3 = 0;
-      if (0 < length3) {
+      if (0 < ObjectResult.length) {
         while (true) {
           let _String = String;
           let StringResult = String(num3);
+          let tmp3 = num3;
           if (StringResult in ObjectResult) {
             let tmp4 = ObjectResult[StringResult];
             if (null == tmp4) {
@@ -39,14 +40,16 @@ function CanonicalizeLocaleList(str) {
               if (typeof tmp4 === "string") {
                 let _String2 = String;
                 str = String(tmp4);
+                let tmp5 = require;
+                let tmp6 = dependencyMap;
                 let expBCP47Syntax = RegExpResult1.expBCP47Syntax;
                 let isMatch = expBCP47Syntax.test(str);
                 if (isMatch) {
-                  let expVariantDupes = RegExpResult1.expVariantDupes;
+                  let expVariantDupes = tmp5(16484).expVariantDupes;
                   isMatch = expVariantDupes.test(str);
                   let tmp9 = !isMatch;
                   if (!isMatch) {
-                    let expSingletonDupes = RegExpResult1.expSingletonDupes;
+                    let expSingletonDupes = tmp5(16484).expSingletonDupes;
                     tmp9 = !expSingletonDupes.test(str);
                   }
                   isMatch = tmp9;
@@ -58,6 +61,7 @@ function CanonicalizeLocaleList(str) {
                   let num = 1;
                   if (1 < length) {
                     while (true) {
+                      let tmp14 = num;
                       if (2 === parts[num].length) {
                         let str7 = parts[num];
                         parts[num] = str7.toUpperCase();
@@ -81,20 +85,26 @@ function CanonicalizeLocaleList(str) {
                       }
                     }
                   }
+                  let tmp16 = join;
                   let call = join.call;
-                  let str8 = typeof call === "unknown" ? join("-") : call(parts, "-");
+                  let str8 = typeof call === "unknown" ? tmp16("-") : call(parts, "-");
+                  let tmp17 = require;
+                  let tmp18 = dependencyMap;
                   let match = str8.match(RegExpResult1.expExtSequences);
                   let tmp19 = str8;
                   let tmp20 = match;
                   if (match) {
                     tmp20 = match.length > 1;
                   }
+                  let tmp21 = str8;
                   if (!tmp20) {
+                    let tmp25 = hasOwnProperty;
                     let call3 = hasOwnProperty.call;
                     let tags = closure_22.tags;
+                    let tmp26 = closure_22;
                     let str9 = tmp19;
-                    if (typeof call3 === "unknown" ? hasOwnProperty(tmp19) : call3(tags, tmp19)) {
-                      str9 = closure_22.tags[tmp19];
+                    if (typeof call3 === "unknown" ? tmp25(tmp19) : call3(tags, tmp19)) {
+                      str9 = tmp26.tags[tmp19];
                     }
                     let parts1 = str9.split("-");
                     let length2 = parts1.length;
@@ -103,30 +113,35 @@ function CanonicalizeLocaleList(str) {
                     let tmp28 = parts1;
                     if (1 < length2) {
                       while (true) {
+                        let tmp29 = hasOwnProperty;
                         let call4 = hasOwnProperty.call;
+                        let tmp30 = closure_22;
                         let subtags = closure_22.subtags;
                         let tmp31 = tmp27[num2];
                         let tmp32 = length2;
                         let tmp33 = num2;
                         let tmp34 = tmp27;
-                        if (typeof call4 === "unknown" ? hasOwnProperty(tmp31) : call4(subtags, tmp31)) {
-                          tmp27[num2] = closure_22.subtags[tmp27[num2]];
+                        if (typeof call4 === "unknown" ? tmp29(tmp31) : call4(subtags, tmp31)) {
+                          tmp27[num2] = tmp30.subtags[tmp27[num2]];
                           let tmp36 = length2;
                           let tmp37 = num2;
                           let tmp38 = tmp27;
                         } else {
-                          let call5 = hasOwnProperty.call;
-                          let extLang = closure_22.extLang;
+                          let call5 = tmp29.call;
+                          let extLang = tmp30.extLang;
                           let tmp35 = tmp27[num2];
                           tmp36 = length2;
                           tmp37 = num2;
                           tmp38 = tmp27;
-                          if (typeof call5 === "unknown" ? hasOwnProperty(tmp35) : call5(extLang, tmp35)) {
-                            tmp27[num2] = closure_22.extLang[tmp27[num2]][0];
+                          if (typeof call5 === "unknown" ? tmp29(tmp35) : call5(extLang, tmp35)) {
+                            tmp27[num2] = tmp30.extLang[tmp27[num2]][0];
                             let tmp39 = 1 === num2;
                             if (1 === num2) {
-                              tmp39 = closure_22.extLang[tmp27[1]][1] === tmp27[0];
+                              tmp39 = tmp30.extLang[tmp27[1]][1] === tmp27[0];
                             }
+                            let tmp40 = length2;
+                            let tmp41 = num2;
+                            let tmp42 = tmp27;
                             if (tmp39) {
                               break;
                             } else {
@@ -142,18 +157,22 @@ function CanonicalizeLocaleList(str) {
                         tmp28 = tmp38;
                         continue;
                       }
+                      let tmp43 = slice;
                       let call6 = slice.call;
                       let sum = num2 + 1;
                       let diff = length2 - 1;
-                      let tmp46 = typeof call6 === "unknown" ? slice(num2) : call6(tmp27, num2);
+                      let tmp46 = typeof call6 === "unknown" ? tmp43(num2) : call6(tmp27, num2);
                     }
+                    let tmp47 = join;
                     let call7 = join.call;
-                    let tmp48 = typeof call7 === "unknown" ? join("-") : call7(tmp28, "-");
-                    let call8 = callback.call;
-                    if (-1 === (typeof call8 === "unknown" ? callback(tmp48) : call8(obj, tmp48))) {
+                    let tmp48 = typeof call7 === "unknown" ? tmp47("-") : call7(tmp28, "-");
+                    let tmp49 = closure_7;
+                    let call8 = closure_7.call;
+                    if (-1 === (typeof call8 === "unknown" ? tmp49(tmp48) : call8(obj, tmp48))) {
+                      let tmp50 = push;
                       let call9 = push.call;
                       if (typeof call9 === "unknown") {
-                        let tmp50Result = push(tmp48);
+                        let tmp50Result = tmp50(tmp48);
                       } else {
                         let call9Result = call9(obj, tmp48);
                       }
@@ -161,20 +180,29 @@ function CanonicalizeLocaleList(str) {
                   } else {
                     let sorted = match.sort();
                     let _RegExp = RegExp;
-                    let call2 = join.call;
+                    let call2 = tmp16.call;
                     let RegExpResult = RegExp(`(?:${tmp17(16484).expExtSequences.source})+`, "i");
-                    let replaced = str8.replace(RegExpResult, typeof call2 === "unknown" ? join("") : call2(match, ""));
+                    let replaced = str8.replace(RegExpResult, typeof call2 === "unknown" ? tmp16("") : call2(match, ""));
                   }
                 } else {
                   let _RangeError = RangeError;
+                  let str2 = "'";
+                  let tmp10 = new.target;
+                  let str3 = "' is not a structurally valid language tag";
+                  let tmp11 = new.target;
                   let rangeError = new RangeError("'" + str + "' is not a structurally valid language tag");
+                  let tmp13 = rangeError;
                   throw rangeError;
                 }
               } else if (typeof tmp4 !== "object") {
                 break;
               }
               let _TypeError = TypeError;
+              let tmp52 = new.target;
+              let str10 = "String or Object type expected";
+              let tmp53 = new.target;
               let typeError1 = new TypeError("String or Object type expected");
+              let tmp55 = typeError1;
               throw typeError1;
             }
           }
@@ -196,9 +224,11 @@ function LookupMatcher(arg0, arg1) {
     let str3 = replaced;
     while (true) {
       while (true) {
-        let call = callback.call;
+        let tmp7 = closure_7;
+        let call = closure_7.call;
+        let tmp8 = str3;
         let tmp9 = str3;
-        if ((typeof call === "unknown" ? callback(str3) : call(arg0, str3)) > -1) {
+        if ((typeof call === "unknown" ? tmp7(str3) : call(arg0, str3)) > -1) {
           break;
         } else {
           let lastIndexOfResult = str3.lastIndexOf("-");
@@ -237,11 +267,14 @@ function LookupMatcher(arg0, arg1) {
   const keys = Object.keys();
   if (keys !== undefined) {
     while (keys[-1] !== undefined) {
+      let tmp24 = tmp16;
+      let tmp25 = Record;
       let tmp26 = undefined instanceof Record;
       if (tmp26) {
         if (!tmp26) {
           continue;
         } else {
+          let tmp19 = fn;
           obj = { value: null, enumerable: true, writable: true, configurable: true };
           obj[0] = undefined[tmp16];
           let tmp20 = fn(obj, tmp16, obj);
@@ -249,8 +282,9 @@ function LookupMatcher(arg0, arg1) {
         }
         continue;
       } else {
+        let tmp17 = hasOwnProperty;
         let call2 = hasOwnProperty.call;
-        let tmp18 = typeof call2 === "unknown" ? hasOwnProperty(tmp16) : call2(undefined, tmp16);
+        let tmp18 = typeof call2 === "unknown" ? tmp17(tmp16) : call2(undefined, tmp16);
       }
     }
   }
@@ -281,31 +315,36 @@ function ResolveLocale(arg0, arg1, __localeMatcher__) {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown") {
-      let callResult = hasOwnProperty("[[extension]]");
+      let callResult = tmp4("[[extension]]");
     } else {
       callResult = call(tmp2, "[[extension]]");
     }
     if (!callResult) {
       obj = Object.create(Record.prototype);
       for (const key10033 in undefined) {
-        let tmp41 = undefined instanceof Record;
-        if (tmp41) {
-          if (!tmp41) {
+        let tmp37 = key10033;
+        let tmp38 = Record;
+        let tmp39 = undefined instanceof Record;
+        if (tmp39) {
+          if (!tmp39) {
             continue;
           } else {
+            let tmp13 = fn;
             obj = { value: null, enumerable: true, writable: true, configurable: true };
             obj[0] = undefined[key10033];
-            let tmp16 = fn(obj, key10033, obj);
+            let tmp14 = fn(obj, key10033, obj);
             continue;
           }
           continue;
         } else {
+          let tmp10 = hasOwnProperty;
           let call3 = hasOwnProperty.call;
           if (typeof call3 === "unknown") {
-            let call3Result = hasOwnProperty(key10033);
+            let call3Result = tmp10(key10033);
           } else {
             call3Result = call3(undefined, key10033);
           }
+          let tmp12 = call3Result;
         }
       }
       obj["[[dataLocale]]"] = str;
@@ -314,28 +353,32 @@ function ResolveLocale(arg0, arg1, __localeMatcher__) {
       let str10 = "-u";
       if (0 < arg3.length) {
         do {
-          let tmp18 = arg3[num4];
-          let tmp19 = arg4[str][tmp18];
-          let first = tmp19[0];
+          let tmp16 = arg3[num4];
+          let tmp17 = arg4[str][tmp16];
+          let first = tmp17[0];
+          let tmp19 = closure_7;
+          let tmp20 = num4;
+          let tmp21 = str4;
           let str11 = "";
-          let tmp24 = first;
+          let tmp22 = first;
           // // eliminated: always false
+          let tmp23 = hasOwnProperty;
           let call4 = hasOwnProperty.call;
-          let text = `${"[[" + tmp18}]]`;
+          let text = `${"[[" + tmp16}]]`;
           let str12 = str11;
-          let tmp27 = tmp24;
-          if (typeof call4 === "unknown" ? hasOwnProperty(`${"[[" + tmp18}]]`) : call4(__localeMatcher__, `${"[[" + tmp18}]]`)) {
-            let tmp28 = __localeMatcher__["[[" + tmp18 + "]]"];
-            let call5 = callback.call;
-            let tmp29 = -1 !== (typeof call5 === "unknown" ? callback(tmp28) : call5(tmp19, tmp28)) && tmp28 !== tmp24;
+          let tmp25 = tmp22;
+          if (typeof call4 === "unknown" ? tmp23(`${"[[" + tmp16}]]`) : call4(__localeMatcher__, `${"[[" + tmp16}]]`)) {
+            let tmp26 = __localeMatcher__["[[" + tmp16 + "]]"];
+            let call5 = tmp19.call;
+            let tmp27 = -1 !== (typeof call5 === "unknown" ? tmp19(tmp26) : call5(tmp17, tmp26)) && tmp26 !== tmp22;
             str12 = str11;
-            tmp27 = tmp24;
-            if (tmp29) {
+            tmp25 = tmp22;
+            if (tmp27) {
               str12 = "";
-              tmp27 = tmp28;
+              tmp25 = tmp26;
             }
           }
-          obj["[[" + tmp18 + "]]"] = tmp27;
+          obj["[[" + tmp16 + "]]"] = tmp25;
           str4 = str4 + str12;
           num4 = num4 + 1;
           str10 = str4;
@@ -349,16 +392,17 @@ function ResolveLocale(arg0, arg1, __localeMatcher__) {
       obj["[[locale]]"] = sum1;
       return obj;
     } else {
-      const prop = tmp2["[[extension]]"];
+      __extension__ = tmp2["[[extension]]"];
       const _String = String;
       const call2 = split.call;
       if (typeof call2 === "unknown") {
         let parts = split("-");
       } else {
-        parts = call2(prop, "-");
+        parts = call2(__extension__, "-");
       }
-      const prop1 = tmp2["[[extensionIndex]]"];
+      __extensionIndex__ = tmp2["[[extensionIndex]]"];
     }
+    tmp4 = hasOwnProperty;
   }
 }
 function LookupSupportedLocales(arg0, arg1) {
@@ -370,9 +414,11 @@ function LookupSupportedLocales(arg0, arg1) {
     let str2 = String(arg1[num]).replace(closure_21, "");
     do {
       while (true) {
-        let call = callback.call;
+        let tmp6 = closure_7;
+        let call = closure_7.call;
+        let tmp7 = str2;
         let tmp8 = str2;
-        if ((typeof call === "unknown" ? callback(str2) : call(arg0, str2)) > -1) {
+        if ((typeof call === "unknown" ? tmp6(str2) : call(arg0, str2)) > -1) {
           break;
         } else {
           let lastIndexOfResult = str2.lastIndexOf("-");
@@ -390,9 +436,10 @@ function LookupSupportedLocales(arg0, arg1) {
         }
       }
       if (undefined !== tmp8) {
+        let tmp12 = push;
         let call2 = push.call;
         if (typeof call2 === "unknown") {
-          let tmp12Result = push(tmp3);
+          let tmp12Result = tmp12(tmp3);
         } else {
           let call2Result = call2(obj, tmp3);
         }
@@ -437,14 +484,15 @@ class NumberFormatConstructor {
   }
 }
 function InitializeNumberFormat(__getInternalProperties) {
-  let tmp49;
+  let tmp48;
+  let typeError = hasOwnProperty;
   const call = hasOwnProperty.call;
   if (typeof call === "unknown") {
-    let callResult = hasOwnProperty("__getInternalProperties");
+    let typeErrorResult = typeError("__getInternalProperties");
   } else {
-    callResult = call(__getInternalProperties, "__getInternalProperties");
+    typeErrorResult = call(__getInternalProperties, "__getInternalProperties");
   }
-  if (callResult) {
+  if (typeErrorResult) {
     let result = __getInternalProperties.__getInternalProperties(closure_16);
   } else {
     result = callback(null);
@@ -452,19 +500,26 @@ function InitializeNumberFormat(__getInternalProperties) {
   require = result;
   const tmp7 = createRegExpRestore();
   if (true === result["[[initializedIntlObject]]"]) {
+    typeError = globalThis;
     const _TypeError3 = TypeError;
-    const typeError = new TypeError("`this` object has already been initialized as an Intl object");
+    typeError = new.target;
+    typeError = new.target;
+    typeError = new TypeError("`this` object has already been initialized as an Intl object");
     throw typeError;
   } else {
+    typeError = arg1;
+    typeError = arg2;
+    typeError = fn;
     obj = { value: null };
     obj[0] = function value() {
       if (arguments[0] === closure_1_16) {
         return closure_0;
       }
     };
-    fn(__getInternalProperties, "__getInternalProperties", obj);
+    typeError = fn(__getInternalProperties, "__getInternalProperties", obj);
     result["[[initializedIntlObject]]"] = true;
-    const tmp131 = CanonicalizeLocaleList(arg1);
+    typeError = CanonicalizeLocaleList;
+    typeError = CanonicalizeLocaleList(arg1);
     if (undefined === arg2) {
       let ObjectResult = {};
     } else if (null == arg2) {
@@ -477,11 +532,14 @@ function InitializeNumberFormat(__getInternalProperties) {
     }
     obj = Object.create(Record.prototype);
     for (const key10032 in undefined) {
-      let tmp134 = undefined instanceof Record;
-      if (tmp134) {
-        if (!tmp134) {
+      typeError = key10032;
+      typeError = Record;
+      typeError = undefined instanceof Record;
+      if (typeError) {
+        if (!typeError) {
           continue;
         } else {
+          let tmp20 = fn;
           obj1 = { value: null, enumerable: true, writable: true, configurable: true };
           obj1[0] = undefined[key10032];
           let tmp21 = fn(obj, key10032, obj1);
@@ -489,12 +547,14 @@ function InitializeNumberFormat(__getInternalProperties) {
         }
         continue;
       } else {
+        let tmp17 = hasOwnProperty;
         let call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
-          let call2Result = hasOwnProperty(key10032);
+          let call2Result = tmp17(key10032);
         } else {
           call2Result = call2(undefined, key10032);
         }
+        let tmp19 = call2Result;
       }
     }
     List("lookup", "best fit");
@@ -503,32 +563,38 @@ function InitializeNumberFormat(__getInternalProperties) {
     if (undefined !== localeMatcher) {
       const _String = String;
       const StringResult = String(localeMatcher);
-      const call3 = callback.call;
+      const call3 = closure_7.call;
       str5 = StringResult;
-      if (-1 === (typeof call3 === "unknown" ? callback(StringResult) : call3(obj2, StringResult))) {
+      if (-1 === (typeof call3 === "unknown" ? tmp27(StringResult) : call3(obj2, StringResult))) {
         const _RangeError9 = RangeError;
-        const rangeError = new RangeError("'" + StringResult + "' is not an allowed value for `localeMatcher`");
-        throw rangeError;
+        typeError = new.target;
+        typeError = new.target;
+        typeError = new RangeError("'" + StringResult + "' is not an allowed value for `localeMatcher`");
+        throw typeError;
       }
+      tmp27 = closure_7;
     }
     obj["[[localeMatcher]]"] = str5;
-    const prop = closure_15.NumberFormat["[[localeData]]"];
+    __localeData__ = closure_15.NumberFormat["[[localeData]]"];
     obj2 = Object.create(List.prototype);
-    ({ [[locale]]: tmp5["[[locale]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"], [[dataLocale]]: tmp35 } = ResolveLocale(closure_15.NumberFormat["[[availableLocales]]"], tmp131, obj, closure_15.NumberFormat["[[relevantExtensionKeys]]"], prop));
-    const tmp34 = ResolveLocale(closure_15.NumberFormat["[[availableLocales]]"], tmp131, obj, closure_15.NumberFormat["[[relevantExtensionKeys]]"], prop);
+    ({ [[locale]]: tmp5["[[locale]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"], [[dataLocale]]: tmp34 } = ResolveLocale(closure_15.NumberFormat["[[availableLocales]]"], typeError, obj, closure_15.NumberFormat["[[relevantExtensionKeys]]"], __localeData__));
+    const tmp33 = ResolveLocale(closure_15.NumberFormat["[[availableLocales]]"], typeError, obj, closure_15.NumberFormat["[[relevantExtensionKeys]]"], __localeData__);
     List("decimal", "percent", "currency");
     const style = ObjectResult.style;
     let str9 = "decimal";
     if (undefined !== style) {
       const _String2 = String;
       const StringResult1 = String(style);
-      const call4 = callback.call;
+      const call4 = closure_7.call;
       str9 = StringResult1;
-      if (-1 === (typeof call4 === "unknown" ? callback(StringResult1) : call4(obj3, StringResult1))) {
+      if (-1 === (typeof call4 === "unknown" ? tmp39(StringResult1) : call4(obj3, StringResult1))) {
         const _RangeError8 = RangeError;
-        const rangeError1 = new RangeError("'" + StringResult1 + "' is not an allowed value for `style`");
-        throw rangeError1;
+        typeError = new.target;
+        typeError = new.target;
+        typeError = new RangeError("'" + StringResult1 + "' is not an allowed value for `style`");
+        throw typeError;
       }
+      tmp39 = closure_7;
     }
     result["[[style]]"] = str9;
     const currency = ObjectResult.currency;
@@ -538,46 +604,57 @@ function InitializeNumberFormat(__getInternalProperties) {
       StringResult2 = String(currency);
     }
     if (undefined !== StringResult2) {
+      typeError = globalThis;
       const _String5 = String;
       const StringResult3 = String(StringResult2);
-      let diff = tmp136 - 1;
+      typeError = +StringResult3.length;
+      let diff = typeError - 1;
       let str11 = StringResult3;
-      let tmp51 = StringResult3;
-      if (+StringResult3.length) {
+      let tmp50 = StringResult3;
+      if (typeError) {
         do {
           let str10 = str11.charAt(diff);
-          let tmp43 = str10 >= "a";
-          if (tmp43) {
-            tmp43 = str10 <= "z";
+          let tmp42 = str10 >= "a";
+          let tmp43 = diff;
+          let tmp44 = str11;
+          if (tmp42) {
+            tmp42 = str10 <= "z";
           }
           let sum1 = str11;
-          if (tmp43) {
+          if (tmp42) {
             let substr = str11.slice(0, diff);
             let sum = substr + str10.toUpperCase();
             sum1 = sum + str11.slice(diff + 1);
           }
-          tmp49 = +diff;
-          diff = tmp49 - 1;
+          tmp48 = +diff;
+          diff = tmp48 - 1;
           str11 = sum1;
-          tmp51 = sum1;
-        } while (tmp49);
+          tmp50 = sum1;
+        } while (tmp48);
       }
-      if (false === regex.test(tmp51)) {
+      if (false === regex.test(tmp50)) {
         const _RangeError = RangeError;
-        const rangeError2 = new RangeError("'" + StringResult2 + "' is not a valid currency code");
-        throw rangeError2;
+        const rangeError = new RangeError("'" + StringResult2 + "' is not a valid currency code");
+        throw rangeError;
       }
     }
     if ("currency" === str9) {
       if (undefined === StringResult2) {
+        typeError = globalThis;
         const _TypeError2 = TypeError;
-        const typeError2 = new TypeError("Currency code is required when style is currency");
-        throw typeError2;
+        typeError = new.target;
+        typeError = new.target;
+        typeError = new TypeError("Currency code is required when style is currency");
+        throw typeError;
       }
     }
     if ("currency" === str9) {
       const formatted = StringResult2.toUpperCase();
       result["[[currency]]"] = formatted;
+      let num4 = 2;
+      if (undefined !== dependencyMap[formatted]) {
+        num4 = dependencyMap[formatted];
+      }
     }
     obj3 = Object.create(List.prototype);
     List("code", "symbol", "name");
@@ -586,13 +663,16 @@ function InitializeNumberFormat(__getInternalProperties) {
     if (undefined !== currencyDisplay) {
       const _String4 = String;
       const StringResult4 = String(currencyDisplay);
-      const call5 = callback.call;
+      const call5 = closure_7.call;
       str17 = StringResult4;
-      if (-1 === (typeof call5 === "unknown" ? callback(StringResult4) : call5(obj4, StringResult4))) {
+      if (-1 === (typeof call5 === "unknown" ? tmp63(StringResult4) : call5(obj4, StringResult4))) {
         const _RangeError7 = RangeError;
-        const rangeError3 = new RangeError("'" + StringResult4 + "' is not an allowed value for `currencyDisplay`");
-        throw rangeError3;
+        typeError = new.target;
+        typeError = new.target;
+        typeError = new RangeError("'" + StringResult4 + "' is not an allowed value for `currencyDisplay`");
+        throw typeError;
       }
+      tmp63 = closure_7;
     }
     if ("currency" === str9) {
       result["[[currencyDisplay]]"] = str17;
@@ -612,13 +692,14 @@ function InitializeNumberFormat(__getInternalProperties) {
         }
       }
       const _RangeError6 = RangeError;
-      const rangeError4 = new RangeError("Value is not a number or outside accepted range");
-      throw rangeError4;
+      typeError = new.target;
+      typeError = new RangeError("Value is not a number or outside accepted range");
+      throw typeError;
     }
     result["[[minimumIntegerDigits]]"] = num7;
     let num8 = 0;
     if ("currency" === str9) {
-      num8 = tmp58;
+      num8 = tmp57;
     }
     const minimumFractionDigits = ObjectResult.minimumFractionDigits;
     if (undefined !== minimumFractionDigits) {
@@ -634,13 +715,13 @@ function InitializeNumberFormat(__getInternalProperties) {
         }
       }
       const _RangeError5 = RangeError;
-      const rangeError5 = new RangeError("Value is not a number or outside accepted range");
-      throw rangeError5;
+      const rangeError1 = new RangeError("Value is not a number or outside accepted range");
+      throw rangeError1;
     }
     result["[[minimumFractionDigits]]"] = num8;
     if ("currency" === str9) {
       const _Math3 = Math;
-      let bound = Math.max(num8, tmp58);
+      let bound = Math.max(num8, tmp57);
     } else if ("percent" === str9) {
       const _Math2 = Math;
       bound = Math.max(num8, 0);
@@ -662,11 +743,11 @@ function InitializeNumberFormat(__getInternalProperties) {
         }
       }
       const _RangeError4 = RangeError;
-      const rangeError6 = new RangeError("Value is not a number or outside accepted range");
-      throw rangeError6;
+      const rangeError2 = new RangeError("Value is not a number or outside accepted range");
+      throw rangeError2;
     }
     result["[[maximumFractionDigits]]"] = bound;
-    if (!tmp75) {
+    if (!tmp74) {
       const minimumSignificantDigits = ObjectResult.minimumSignificantDigits;
       let num10 = 1;
       if (undefined !== minimumSignificantDigits) {
@@ -682,8 +763,8 @@ function InitializeNumberFormat(__getInternalProperties) {
           }
         }
         const _RangeError3 = RangeError;
-        const rangeError7 = new RangeError("Value is not a number or outside accepted range");
-        throw rangeError7;
+        const rangeError3 = new RangeError("Value is not a number or outside accepted range");
+        throw rangeError3;
       }
       const maximumSignificantDigits = ObjectResult.maximumSignificantDigits;
       let num12 = 21;
@@ -700,8 +781,8 @@ function InitializeNumberFormat(__getInternalProperties) {
           }
         }
         const _RangeError2 = RangeError;
-        const rangeError8 = new RangeError("Value is not a number or outside accepted range");
-        throw rangeError8;
+        const rangeError4 = new RangeError("Value is not a number or outside accepted range");
+        throw rangeError4;
       }
       result["[[minimumSignificantDigits]]"] = num10;
       result["[[maximumSignificantDigits]]"] = num12;
@@ -713,7 +794,7 @@ function InitializeNumberFormat(__getInternalProperties) {
       flag2 = Boolean(useGrouping);
     }
     result["[[useGrouping]]"] = flag2;
-    ({ positivePattern: tmp5["[[positivePattern]]"], negativePattern: tmp5["[[negativePattern]]"] } = prop[tmp35].patterns[str9]);
+    ({ positivePattern: tmp5["[[positivePattern]]"], negativePattern: tmp5["[[negativePattern]]"] } = __localeData__[tmp34].patterns[str9]);
     result["[[boundFormat]]"] = undefined;
     result["[[initializedNumberFormat]]"] = true;
     if (!closure_4) {
@@ -723,9 +804,10 @@ function InitializeNumberFormat(__getInternalProperties) {
     } else {
       const call6 = GetFormatNumber.call;
       __getInternalProperties.format = typeof call6 === "unknown" ? GetFormatNumber() : call6(__getInternalProperties);
+      const tmp89 = GetFormatNumber;
     }
     obj4 = Object.create(List.prototype);
-    tmp75 = undefined === ObjectResult.minimumSignificantDigits && undefined === ObjectResult.maximumSignificantDigits;
+    tmp74 = undefined === ObjectResult.minimumSignificantDigits && undefined === ObjectResult.maximumSignificantDigits;
   }
 }
 class GetFormatNumber {
@@ -781,7 +863,7 @@ function FormatNumber(numberFormat, diff) {
   const tmp = createRegExpRestore();
   const call = hasOwnProperty.call;
   if (typeof call === "unknown") {
-    let callResult = hasOwnProperty("__getInternalProperties");
+    let callResult = tmp2("__getInternalProperties");
   } else {
     callResult = call(numberFormat, "__getInternalProperties");
   }
@@ -790,15 +872,15 @@ function FormatNumber(numberFormat, diff) {
   } else {
     result = callback(null);
   }
-  const prop = result["[[numberingSystem]]"];
-  const tmp10 = closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols[prop] || closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols.latn;
+  __numberingSystem__ = result["[[numberingSystem]]"];
+  const tmp9 = closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols[__numberingSystem__] || closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols.latn;
   if (false === isFinite(diff)) {
     const _isNaN = isNaN;
     if (isNaN(diff)) {
-      let nan = tmp10.nan;
+      let nan = tmp9.nan;
       let flag3 = false;
     } else {
-      const infinity = tmp10.infinity;
+      const infinity = tmp9.infinity;
       flag3 = false;
       nan = infinity;
       if (diff < 0) {
@@ -808,39 +890,40 @@ function FormatNumber(numberFormat, diff) {
     }
   } else {
     let flag = false;
-    let tmp11 = diff;
+    let tmp10 = diff;
     if (diff < 0) {
-      tmp11 = -diff;
+      tmp10 = -diff;
       flag = true;
     }
-    let result1 = tmp11;
+    let result1 = tmp10;
     if ("percent" === result["[[style]]"]) {
-      result1 = tmp11 * 100;
+      result1 = tmp10 * 100;
     }
-    const call2 = hasOwnProperty.call;
+    const call2 = tmp2.call;
     if (typeof call2 === "unknown") {
-      let tmp2Result = hasOwnProperty("[[minimumSignificantDigits]]");
+      let tmp2Result = tmp2("[[minimumSignificantDigits]]");
     } else {
       tmp2Result = call2(result, "[[minimumSignificantDigits]]");
     }
     if (tmp2Result) {
-      const call3 = hasOwnProperty.call;
+      const call3 = tmp2.call;
       if (typeof call3 === "unknown") {
-        let tmp2Result1 = hasOwnProperty("[[maximumSignificantDigits]]");
+        let tmp2Result1 = tmp2("[[maximumSignificantDigits]]");
       } else {
         tmp2Result1 = call3(result, "[[maximumSignificantDigits]]");
       }
       if (tmp2Result1) {
-        ({ [[minimumSignificantDigits]]: tmp35, [[maximumSignificantDigits]]: tmp36 } = result);
+        ({ [[minimumSignificantDigits]]: tmp34, [[maximumSignificantDigits]]: tmp35 } = result);
         if (0 === result1) {
           const call8 = join.call;
           const _Array4 = Array;
           if (typeof call8 === "unknown") {
-            let call8Result = join("0");
+            let call8Result = tmp38("0");
           } else {
             call8Result = call8(ArrayResult, "0");
           }
-          ArrayResult = Array(tmp36 + 1);
+          ArrayResult = Array(tmp35 + 1);
+          tmp38 = join;
         } else {
           const _Math7 = Math;
           const absolute = Math.abs(result1);
@@ -855,38 +938,40 @@ function FormatNumber(numberFormat, diff) {
             const _Math11 = Math;
             const rounded1 = Math.round(Math.log(absolute) * Math.LOG10E);
             const _Number2 = Number;
-            rounded = rounded1 - (Number(`1e${tmp78}`) > absolute);
+            rounded = rounded1 - (Number(`1e${tmp76}`) > absolute);
           }
           const _Math3 = Math;
           const _Math4 = Math;
           const _Math5 = Math;
           const _Math6 = Math;
-          const rounded2 = Math.round(Math.exp(Math.abs(rounded - tmp36 + 1) * Math.LN10));
-          const StringResult = String(Math.round(rounded - tmp36 + 1 < 0 ? result1 * rounded2 : result1 / rounded2));
-          if (rounded < tmp36) {
-            if (rounded !== tmp36 - 1) {
+          const rounded2 = Math.round(Math.exp(Math.abs(rounded - tmp35 + 1) * Math.LN10));
+          const StringResult = String(Math.round(rounded - tmp35 + 1 < 0 ? result1 * rounded2 : result1 / rounded2));
+          if (rounded < tmp35) {
+            let tmp50 = StringResult;
+            if (rounded !== tmp35 - 1) {
               if (rounded >= 0) {
-                const text = `${arr7.slice(0, tmp37 + 1)}.`;
-                let text1 = `${arr7.slice(0, tmp37 + 1)}.${arr7.slice(tmp37 + 1)}`;
+                const text = `${arr7.slice(0, tmp36 + 1)}.`;
+                let text1 = `${arr7.slice(0, tmp36 + 1)}.${arr7.slice(tmp36 + 1)}`;
               } else {
                 text1 = StringResult;
                 if (rounded < 0) {
                   const call9 = join.call;
                   const _Array5 = Array;
                   if (typeof call9 === "unknown") {
-                    join("0");
+                    tmp42("0");
                   } else {
                     call9(ArrayResult1, "0");
                   }
-                  text1 = `0.${tmp45}${arr7}`;
+                  text1 = `0.${tmp44}${arr7}`;
                   ArrayResult1 = Array(1 - (rounded + 1));
+                  tmp42 = join;
                 }
               }
               let substr = text1;
               if (text1.indexOf(".") >= 0) {
                 substr = text1;
-                if (tmp36 > tmp35) {
-                  diff = tmp36 - tmp35;
+                if (tmp35 > tmp34) {
+                  diff = tmp35 - tmp34;
                   let str21 = text1;
                   if (diff > 0) {
                     let arr9 = text1;
@@ -911,26 +996,28 @@ function FormatNumber(numberFormat, diff) {
                   }
                 }
               }
+              tmp50 = substr;
             }
           }
           const call10 = join.call;
           const _Array6 = Array;
           if (typeof call10 === "unknown") {
-            let call10Result = join("0");
+            let call10Result = tmp51("0");
           } else {
             call10Result = call10(ArrayResult2, "0");
           }
           const sum = StringResult + call10Result;
-          ArrayResult2 = Array(rounded - tmp36 + 1 + 1);
+          ArrayResult2 = Array(rounded - tmp35 + 1 + 1);
+          tmp51 = join;
         }
       }
     }
-    ({ [[minimumIntegerDigits]]: tmp15, [[maximumFractionDigits]]: tmp16 } = result);
+    ({ [[minimumIntegerDigits]]: tmp14, [[maximumFractionDigits]]: tmp15 } = result);
     const _Number = Number;
     const call4 = toFixed.call;
-    const str5 = typeof call4 === "unknown" ? toFixed(tmp16) : call4(result1, tmp16);
+    const str5 = typeof call4 === "unknown" ? toFixed(tmp15) : call4(result1, tmp15);
     const length = str5.split(".")[0].length;
-    let diff2 = tmp16 - result["[[minimumFractionDigits]]"];
+    let diff2 = tmp15 - result["[[minimumFractionDigits]]"];
     const index = str5.indexOf("e");
     let num3 = 0;
     if (index > -1) {
@@ -959,10 +1046,10 @@ function FormatNumber(numberFormat, diff) {
       if ("." === arr4.slice(-1)) {
         substr2 = arr4.slice(0, -1);
       }
-      if (length >= tmp15) {
+      if (length >= tmp14) {
         const sum1 = str13 + substr2;
-        if (table[prop]) {
-          closure_0 = tmp57[result["[[numberingSystem]]"]];
+        if (table[__numberingSystem__]) {
+          closure_0 = tmp56[result["[[numberingSystem]]"]];
           const _String2 = String;
           let str24 = String(sum1).replace(/\d/g, (arg0) => table[arg0]);
           const str25 = String(sum1);
@@ -970,64 +1057,71 @@ function FormatNumber(numberFormat, diff) {
           const _String = String;
           str24 = String(sum1);
         }
-        const str26 = str24.replace(/\./g, tmp10.decimal);
+        const str26 = str24.replace(/\./g, tmp9.decimal);
         flag3 = flag;
         nan = str26;
         if (true === result["[[useGrouping]]"]) {
-          const parts = str26.split(tmp10.decimal);
+          const parts = str26.split(tmp9.decimal);
           const first = parts[0];
-          if (first.length <= (tmp9.patterns.primaryGroupSize || 3)) {
+          if (first.length <= (tmp8.patterns.primaryGroupSize || 3)) {
             const call15 = join.call;
-            const decimal = tmp10.decimal;
+            const decimal = tmp9.decimal;
             nan = typeof call15 === "unknown" ? join(decimal) : call15(parts, decimal);
             flag3 = flag;
+            const tmp70 = join;
           } else {
             obj = Object.create(List.prototype);
             List();
-            const diff4 = first.length - tmp58;
-            let result2 = diff4 % tmp59;
+            const diff4 = first.length - tmp57;
+            let result2 = diff4 % tmp58;
             const substr3 = first.slice(0, result2);
             if (substr3.length) {
               const call11 = push.call;
               if (typeof call11 === "unknown") {
-                push(substr3);
+                tmp59(substr3);
               } else {
                 call11(obj, substr3);
               }
+              tmp59 = push;
             }
             if (result2 < diff4) {
               do {
+                let tmp61 = push;
                 let call12 = push.call;
-                let substr4 = first.slice(result2, result2 + tmp59);
+                let substr4 = first.slice(result2, result2 + tmp58);
+                let tmp63 = result2;
                 if (typeof call12 === "unknown") {
-                  let tmp62Result = push(substr4);
+                  let tmp61Result = tmp61(substr4);
                 } else {
                   let call12Result = call12(obj, substr4);
                 }
-                result2 = result2 + tmp59;
+                result2 = result2 + tmp58;
               } while (result2 < diff4);
             }
             const call13 = push.call;
             const substr5 = first.slice(diff4);
             if (typeof call13 === "unknown") {
-              push(substr5);
+              tmp66(substr5);
             } else {
               call13(obj, substr5);
             }
             const call14 = join.call;
-            const group = tmp10.group;
+            const group = tmp9.group;
             parts[0] = typeof call14 === "unknown" ? join(group) : call14(obj, group);
+            tmp66 = push;
+            const tmp69 = join;
           }
         }
       } else {
         const call7 = join.call;
         const _Array3 = Array;
         if (typeof call7 === "unknown") {
-          let call7Result = join("0");
+          let call7Result = tmp29("0");
         } else {
           call7Result = call7(ArrayResult3, "0");
         }
-        ArrayResult3 = Array(tmp15 - length + 1);
+        ArrayResult3 = Array(tmp14 - length + 1);
+        tmp29 = join;
       }
     } else {
       const replaced = str5.slice(0, index).replace(".", "");
@@ -1035,21 +1129,21 @@ function FormatNumber(numberFormat, diff) {
       const _Array = Array;
       const str8 = str5.slice(0, index);
       if (typeof call5 === "unknown") {
-        join("0");
+        tmp19("0");
       } else {
         call5(ArrayResult4, "0");
       }
-      const call6 = join.call;
+      const call6 = tmp19.call;
       const _Array2 = Array;
-      const text2 = `${tmp22}.`;
+      const text2 = `${tmp21}.`;
       ArrayResult4 = Array(num3 - (replaced.length - 1) + 1);
       if (typeof call6 === "unknown") {
-        let tmp20Result = join("0");
+        let tmp19Result = tmp19("0");
       } else {
-        tmp20Result = call6(ArrayResult5, "0");
+        tmp19Result = call6(ArrayResult5, "0");
       }
-      const sum2 = replaced + (text2 + tmp20Result);
-      ArrayResult5 = Array(tmp16 + 1);
+      const sum2 = replaced + (text2 + tmp19Result);
+      ArrayResult5 = Array(tmp15 + 1);
     }
   }
   let str27 = "[[positivePattern]]";
@@ -1059,16 +1153,16 @@ function FormatNumber(numberFormat, diff) {
   const str29 = result[str27].replace("{number}", nan);
   let replaced1 = str29;
   if ("currency" === result["[[style]]"]) {
-    const prop1 = result["[[currency]]"];
-    let tmp74 = tmp9.currencies[prop1];
-    let tmp75 = prop1;
+    __currency__ = result["[[currency]]"];
+    let tmp72 = tmp8.currencies[__currency__];
+    let tmp73 = __currency__;
     if ("symbol" === result["[[currencyDisplay]]"]) {
-      if (!tmp74) {
-        tmp74 = prop1;
+      if (!tmp72) {
+        tmp72 = __currency__;
       }
-      tmp75 = tmp74;
+      tmp73 = tmp72;
     }
-    replaced1 = str29.replace("{currency}", tmp75);
+    replaced1 = str29.replace("{currency}", tmp73);
   }
   const exp = tmp.exp;
   const isMatch = exp.test(tmp.input);
@@ -1107,10 +1201,11 @@ class DateTimeFormatConstructor {
   }
 }
 function InitializeDateTimeFormat(prototype) {
-  let tmp33;
+  let tmp32;
+  let tmp = hasOwnProperty;
   const call = hasOwnProperty.call;
   if (typeof call === "unknown") {
-    let callResult = hasOwnProperty("__getInternalProperties");
+    let callResult = tmp("__getInternalProperties");
   } else {
     callResult = call(prototype, "__getInternalProperties");
   }
@@ -1134,15 +1229,18 @@ function InitializeDateTimeFormat(prototype) {
     };
     fn(prototype, "__getInternalProperties", obj);
     result["[[initializedIntlObject]]"] = true;
-    const tmp96 = CanonicalizeLocaleList(arg1);
-    const tmp98 = ToDateTimeOptions(arg2, "any", "date");
+    const tmp95 = CanonicalizeLocaleList(arg1);
+    const tmp97 = ToDateTimeOptions(arg2, "any", "date");
     obj = Object.create(Record.prototype);
     for (const key10016 in undefined) {
-      let tmp103 = undefined instanceof Record;
-      if (tmp103) {
-        if (!tmp103) {
+      tmp = key10016;
+      tmp = Record;
+      tmp = undefined instanceof Record;
+      if (tmp) {
+        if (!tmp) {
           continue;
         } else {
+          let tmp11 = fn;
           obj = { value: null, enumerable: true, writable: true, configurable: true };
           obj[0] = undefined[key10016];
           let tmp12 = fn(obj, key10016, obj);
@@ -1150,126 +1248,147 @@ function InitializeDateTimeFormat(prototype) {
         }
         continue;
       } else {
+        let tmp8 = hasOwnProperty;
         let call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
-          let call2Result = hasOwnProperty(key10016);
+          let call2Result = tmp8(key10016);
         } else {
           call2Result = call2(undefined, key10016);
         }
+        let tmp10 = call2Result;
       }
     }
     List("lookup", "best fit");
-    const localeMatcher = tmp98.localeMatcher;
+    const localeMatcher = tmp97.localeMatcher;
     let str4 = "best fit";
     if (undefined !== localeMatcher) {
       const _String = String;
       const StringResult = String(localeMatcher);
-      const call3 = callback.call;
+      const call3 = closure_7.call;
       str4 = StringResult;
-      if (-1 === (typeof call3 === "unknown" ? callback(StringResult) : call3(obj1, StringResult))) {
+      if (-1 === (typeof call3 === "unknown" ? tmp18(StringResult) : call3(obj1, StringResult))) {
         const _RangeError4 = RangeError;
         const rangeError = new RangeError("'" + StringResult + "' is not an allowed value for `localeMatcher`");
         throw rangeError;
       }
+      tmp18 = closure_7;
     }
     obj["[[localeMatcher]]"] = str4;
     const DateTimeFormat = closure_15.DateTimeFormat;
-    const prop = DateTimeFormat["[[localeData]]"];
-    const tmp25 = ResolveLocale(DateTimeFormat["[[availableLocales]]"], tmp96, obj, DateTimeFormat["[[relevantExtensionKeys]]"], prop);
-    ({ [[locale]]: tmp5["[[locale]]"], [[ca]]: tmp5["[[calendar]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"] } = tmp25);
-    const timeZone = tmp98.timeZone;
-    let tmp26 = timeZone;
+    __localeData__ = DateTimeFormat["[[localeData]]"];
+    const tmp24 = ResolveLocale(DateTimeFormat["[[availableLocales]]"], tmp95, obj, DateTimeFormat["[[relevantExtensionKeys]]"], __localeData__);
+    ({ [[locale]]: tmp5["[[locale]]"], [[ca]]: tmp5["[[calendar]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"] } = tmp24);
+    const timeZone = tmp97.timeZone;
+    let tmp25 = timeZone;
     if (undefined !== timeZone) {
-      let diff = tmp104 - 1;
+      tmp = +timeZone.length;
+      let diff = tmp - 1;
       let str6 = timeZone;
-      let tmp35 = timeZone;
-      if (+timeZone.length) {
+      let tmp34 = timeZone;
+      if (tmp) {
         do {
           let str5 = str6.charAt(diff);
-          let tmp27 = str5 >= "a";
-          if (tmp27) {
-            tmp27 = str5 <= "z";
+          let tmp26 = str5 >= "a";
+          let tmp27 = diff;
+          let tmp28 = str6;
+          if (tmp26) {
+            tmp26 = str5 <= "z";
           }
           let sum1 = str6;
-          if (tmp27) {
+          if (tmp26) {
             let substr = str6.slice(0, diff);
             let sum = substr + str5.toUpperCase();
             sum1 = sum + str6.slice(diff + 1);
           }
-          tmp33 = +diff;
-          diff = tmp33 - 1;
+          tmp32 = +diff;
+          diff = tmp32 - 1;
           str6 = sum1;
-          tmp35 = sum1;
-        } while (tmp33);
+          tmp34 = sum1;
+        } while (tmp32);
       }
-      tmp26 = tmp35;
-      if ("UTC" !== tmp35) {
+      tmp25 = tmp34;
+      if ("UTC" !== tmp34) {
         const _RangeError3 = RangeError;
         const rangeError1 = new RangeError("timeZone is not supported.");
         throw rangeError1;
       }
     }
-    result["[[timeZone]]"] = tmp26;
+    result["[[timeZone]]"] = tmp25;
     let obj2 = Object.create(Record.prototype);
     for (const key10081 in undefined) {
-      let tmp107 = undefined instanceof Record;
-      if (tmp107) {
-        if (!tmp107) {
+      tmp = key10081;
+      tmp = Record;
+      tmp = undefined instanceof Record;
+      if (tmp) {
+        if (!tmp) {
           continue;
         } else {
+          let tmp39 = fn;
           let obj3 = { value: null, enumerable: true, writable: true, configurable: true };
           obj3[0] = undefined[key10081];
-          let tmp41 = fn(obj2, key10081, obj3);
+          let tmp40 = fn(obj2, key10081, obj3);
           continue;
         }
         continue;
       } else {
+        let tmp36 = hasOwnProperty;
         let call4 = hasOwnProperty.call;
         if (typeof call4 === "unknown") {
-          let call4Result = hasOwnProperty(key10081);
+          let call4Result = tmp36(key10081);
         } else {
           call4Result = call4(undefined, key10081);
         }
+        let tmp38 = call4Result;
       }
     }
     for (const key10096 in closure_35) {
+      tmp = key10096;
+      tmp = hasOwnProperty;
       let call10 = hasOwnProperty.call;
+      tmp = closure_35;
       if (typeof call10 === "unknown") {
-        let call10Result = hasOwnProperty(key10096);
+        let tmpResult = tmp(key10096);
       } else {
-        call10Result = call10(table, key10096);
+        tmpResult = call10(tmp, key10096);
       }
-      if (!call10Result) {
+      if (!tmpResult) {
         continue;
       } else {
-        let tmp45 = table[key10096];
-        let tmp46 = tmp98[key10096];
-        let tmp47;
-        if (undefined !== tmp46) {
+        let tmp44 = tmp[key10096];
+        let tmp45 = tmp97[key10096];
+        let tmp46;
+        if (undefined !== tmp45) {
           let _String2 = String;
-          let StringResult1 = String(tmp46);
-          tmp47 = StringResult1;
-          if (undefined !== tmp45) {
-            let call5 = callback.call;
+          let StringResult1 = String(tmp45);
+          tmp46 = StringResult1;
+          if (undefined !== tmp44) {
+            let tmp48 = closure_7;
+            let call5 = closure_7.call;
             if (typeof call5 === "unknown") {
-              let call5Result = callback(StringResult1);
+              let call5Result = tmp48(StringResult1);
             } else {
-              call5Result = call5(tmp45, StringResult1);
+              call5Result = call5(tmp44, StringResult1);
             }
-            tmp47 = StringResult1;
+            tmp46 = StringResult1;
             if (-1 === call5Result) {
               let _RangeError = RangeError;
+              let str10 = "'";
+              let str11 = "' is not an allowed value for `";
+              let tmp50 = new.target;
+              let str12 = "`";
+              let tmp51 = new.target;
               let rangeError2 = new RangeError("'" + StringResult1 + "' is not an allowed value for `" + key10096 + "`");
+              let tmp53 = rangeError2;
               throw rangeError2;
             }
           }
         }
-        obj2["[[" + key10096 + "]]"] = tmp47;
+        obj2["[[" + key10096 + "]]"] = tmp46;
         continue;
       }
       continue;
     }
-    const formats = tmp55.formats;
+    const formats = tmp54.formats;
     const _Object = Object;
     const call6 = toString.call;
     let dateTimeFormats = formats;
@@ -1278,38 +1397,43 @@ function InitializeDateTimeFormat(prototype) {
       dateTimeFormats = obj2.createDateTimeFormats(formats);
     }
     obj1 = Object.create(List.prototype);
+    const tmp98 = Record;
     List("basic", "best fit");
-    const formatMatcher = tmp98.formatMatcher;
+    const formatMatcher = tmp97.formatMatcher;
     let str15 = "best fit";
     if (undefined !== formatMatcher) {
       const _String3 = String;
       const StringResult2 = String(formatMatcher);
-      const call7 = callback.call;
+      const call7 = closure_7.call;
       str15 = StringResult2;
-      if (-1 === (typeof call7 === "unknown" ? callback(StringResult2) : call7(obj4, StringResult2))) {
+      if (-1 === (typeof call7 === "unknown" ? tmp62(StringResult2) : call7(obj4, StringResult2))) {
         const _RangeError2 = RangeError;
         const rangeError3 = new RangeError("'" + StringResult2 + "' is not an allowed value for `formatMatcher`");
         throw rangeError3;
       }
+      tmp62 = closure_7;
     }
-    prop[tmp25["[[dataLocale]]"]].formats = dateTimeFormats;
+    __localeData__[tmp24["[[dataLocale]]"]].formats = dateTimeFormats;
     if ("basic" === str15) {
-      let tmp65 = calculateScore(obj2, dateTimeFormats);
+      let tmp64 = calculateScore(obj2, dateTimeFormats);
     } else {
-      tmp65 = calculateScore(obj2, dateTimeFormats, true);
+      tmp64 = calculateScore(obj2, dateTimeFormats, true);
     }
     const keys = Object.keys();
     if (keys !== undefined) {
       while (keys[-1] !== undefined) {
+        tmp = tmp68;
+        tmp = hasOwnProperty;
         let call11 = hasOwnProperty.call;
-        if (!(typeof call11 === "unknown" ? hasOwnProperty(tmp69) : call11(table, tmp69))) {
+        tmp = closure_35;
+        if (!(typeof call11 === "unknown" ? tmp(tmp68) : call11(tmp, tmp68))) {
           continue;
         } else {
-          let call8 = hasOwnProperty.call;
-          if (!(typeof call8 === "unknown" ? hasOwnProperty(tmp69) : call8(tmp65, tmp69))) {
+          let call8 = tmp.call;
+          if (!(typeof call8 === "unknown" ? tmp(tmp68) : call8(tmp64, tmp68))) {
             continue;
           } else {
-            result["[[" + tmp69 + "]]"] = tmp65[tmp69];
+            result["[[" + tmp68 + "]]"] = tmp64[tmp68];
             continue;
           }
           continue;
@@ -1317,24 +1441,24 @@ function InitializeDateTimeFormat(prototype) {
         continue;
       }
     }
-    const hour12 = tmp98.hour12;
+    const hour12 = tmp97.hour12;
     if (undefined !== hour12) {
       const _Boolean = Boolean;
       let hour122 = Boolean(hour12);
     }
     if (result["[[hour]]"]) {
       if (undefined === hour122) {
-        hour122 = tmp55.hour12;
+        hour122 = tmp54.hour12;
       }
       result["[[hour12]]"] = hour122;
       if (true === hour122) {
-        result["[[hourNo0]]"] = tmp55.hourNo0;
-        let pattern = tmp65.pattern12;
+        result["[[hourNo0]]"] = tmp54.hourNo0;
+        let pattern = tmp64.pattern12;
       } else {
-        pattern = tmp65.pattern;
+        pattern = tmp64.pattern;
       }
     } else {
-      pattern = tmp65.pattern;
+      pattern = tmp64.pattern;
     }
     result["[[pattern]]"] = pattern;
     result["[[boundFormat]]"] = undefined;
@@ -1346,6 +1470,7 @@ function InitializeDateTimeFormat(prototype) {
     } else {
       const call9 = GetFormatDateTime.call;
       prototype.format = typeof call9 === "unknown" ? GetFormatDateTime() : call9(prototype);
+      const tmp70 = GetFormatDateTime;
     }
     obj4 = Object.create(List.prototype);
   }
@@ -1362,11 +1487,14 @@ function ToDateTimeOptions(arg0, any, date) {
       const ObjectResult = Object(arg0);
       obj = Object.create(Record.prototype);
       for (const key10004 in undefined) {
-        let tmp30 = undefined instanceof Record;
-        if (tmp30) {
-          if (!tmp30) {
+        let tmp29 = key10004;
+        let tmp30 = Record;
+        let tmp31 = undefined instanceof Record;
+        if (tmp31) {
+          if (!tmp31) {
             continue;
           } else {
+            let tmp6 = fn;
             obj = { value: null, enumerable: true, writable: true, configurable: true };
             obj[0] = undefined[key10004];
             let tmp7 = fn(obj, key10004, obj);
@@ -1374,12 +1502,14 @@ function ToDateTimeOptions(arg0, any, date) {
           }
           continue;
         } else {
+          let tmp3 = hasOwnProperty;
           let call = hasOwnProperty.call;
           if (typeof call === "unknown") {
-            let callResult = hasOwnProperty(key10004);
+            let callResult = tmp3(key10004);
           } else {
             callResult = call(undefined, key10004);
           }
+          let tmp5 = callResult;
         }
       }
       tmp2 = obj;
@@ -1387,61 +1517,64 @@ function ToDateTimeOptions(arg0, any, date) {
       if (keys !== undefined) {
         tmp2 = obj;
         while (keys[tmp] !== undefined) {
+          let tmp32 = tmp10;
           obj[tmp10] = ObjectResult[tmp10];
           continue;
         }
       }
     }
   }
-  date = callback(tmp2);
-  let tmp16 = "date" !== any;
-  if (tmp16) {
-    tmp16 = "any" !== any;
+  const tmp16 = callback(tmp2);
+  let tmp17 = "date" !== any;
+  if (tmp17) {
+    tmp17 = "any" !== any;
   }
-  if (!tmp16) {
-    tmp16 = undefined === date.weekday && undefined === date.year && undefined === date.month && undefined === date.day;
+  if (!tmp17) {
+    tmp17 = undefined === tmp16.weekday && undefined === tmp16.year && undefined === tmp16.month && undefined === tmp16.day;
+    const tmp18 = undefined === tmp16.weekday && undefined === tmp16.year && undefined === tmp16.month && undefined === tmp16.day;
   }
   let flag = true;
-  if (!tmp16) {
+  if (!tmp17) {
     flag = false;
   }
-  let tmp18 = "time" !== any;
-  if (tmp18) {
-    tmp18 = "any" !== any;
+  let tmp19 = "time" !== any;
+  if (tmp19) {
+    tmp19 = "any" !== any;
   }
-  if (!tmp18) {
-    tmp18 = undefined === date.hour && undefined === date.minute && undefined === date.second;
+  if (!tmp19) {
+    tmp19 = undefined === tmp16.hour && undefined === tmp16.minute && undefined === tmp16.second;
+    const tmp20 = undefined === tmp16.hour && undefined === tmp16.minute && undefined === tmp16.second;
   }
-  if (!tmp18) {
+  if (!tmp19) {
     flag = false;
   }
-  let tmp20 = !flag;
-  let tmp21 = tmp20;
+  let tmp21 = !flag;
+  let tmp22 = tmp21;
   if (flag) {
-    let tmp22 = "date" !== date;
-    if (tmp22) {
-      tmp22 = "all" !== date;
-    }
-    tmp21 = tmp22;
-  }
-  if (!tmp21) {
-    date.day = "numeric";
-    date.month = "numeric";
-    date.year = "numeric";
-  }
-  if (flag) {
-    let tmp23 = "time" !== date;
+    let tmp23 = "date" !== date;
     if (tmp23) {
       tmp23 = "all" !== date;
     }
-    tmp20 = tmp23;
+    tmp22 = tmp23;
   }
-  if (!tmp20) {
-    date.second = "numeric";
-    date.minute = "numeric";
-    date.hour = "numeric";
+  if (!tmp22) {
+    tmp16.day = "numeric";
+    tmp16.month = "numeric";
+    tmp16.year = "numeric";
   }
-  return date;
+  if (flag) {
+    let tmp24 = "time" !== date;
+    if (tmp24) {
+      tmp24 = "all" !== date;
+    }
+    tmp21 = tmp24;
+  }
+  if (!tmp21) {
+    tmp16.second = "numeric";
+    tmp16.minute = "numeric";
+    tmp16.hour = "numeric";
+  }
+  return tmp16;
 }
 function calculateScore(arg0, arg1, arg2) {
   let num = -Infinity;
@@ -1450,6 +1583,8 @@ function calculateScore(arg0, arg1, arg2) {
   if (0 < arg1.length) {
     do {
       let tmp5 = arg1[num2];
+      let tmp6 = closure_35;
+      let tmp7 = num2;
       let tmp8 = num;
       let tmp9 = tmp3;
       let num3 = 0;
@@ -1460,14 +1595,17 @@ function calculateScore(arg0, arg1, arg2) {
         num4 = num3;
         let tmp12 = keys[tmp];
         while (tmp12 !== undefined) {
+          let tmp23 = tmp12;
+          let tmp24 = hasOwnProperty;
           let call4 = hasOwnProperty.call;
-          if (!(typeof call4 === "unknown" ? hasOwnProperty(tmp12) : call4(closure_35, tmp12))) {
+          let tmp25 = closure_35;
+          if (!(typeof call4 === "unknown" ? tmp24(tmp12) : call4(tmp25, tmp12))) {
             continue;
           } else {
             let tmp13 = arg0["[[" + tmp12 + "]]"];
-            let call = hasOwnProperty.call;
+            let call = tmp24.call;
             let tmp14;
-            if (typeof call === "unknown" ? hasOwnProperty(tmp12) : call(tmp5, tmp12)) {
+            if (typeof call === "unknown" ? tmp24(tmp12) : call(tmp5, tmp12)) {
               tmp14 = tmp5[tmp12];
             }
             if (undefined === tmp13) {
@@ -1483,12 +1621,13 @@ function calculateScore(arg0, arg1, arg2) {
               }
             }
             let items = ["2-digit", "numeric", "narrow", "short", "long"];
-            let call2 = callback.call;
-            let call3 = callback.call;
-            let tmp16 = typeof call2 === "unknown" ? callback(tmp13) : call2(items, tmp13);
+            let tmp15 = closure_7;
+            let call2 = closure_7.call;
+            let call3 = tmp15.call;
+            let tmp16 = typeof call2 === "unknown" ? tmp15(tmp13) : call2(items, tmp13);
             let _Math = Math;
             let _Math2 = Math;
-            let bound = Math.max(Math.min((typeof call3 === "unknown" ? callback(tmp14) : call3(items, tmp14)) - tmp16, 2), -2);
+            let bound = Math.max(Math.min((typeof call3 === "unknown" ? tmp15(tmp14) : call3(items, tmp14)) - tmp16, 2), -2);
             let tmp18 = tmp2;
             if (arg2) {
               let tmp19 = "numeric" !== tmp13 && "2-digit" !== tmp13 || "numeric" === tmp14 || "2-digit" === tmp14;
@@ -1567,7 +1706,7 @@ class GetFormatDateTime {
               } else {
                 timestamp = arguments[0];
               }
-              return callback(this, Number(timestamp));
+              return closure_39(this, Number(timestamp));
             };
             tmp["[[boundFormat]]"] = typeof call2 === "unknown" ? tmp13(self) : call2(fn, self);
           }
@@ -1604,30 +1743,33 @@ class GetFormatDateTime {
   }
 }
 function FormatDateTime(__getInternalProperties, arg1) {
-  let tmp31;
+  let tmp27;
   if (isFinite(arg1)) {
     const result = __getInternalProperties.__getInternalProperties(closure_16);
     const tmp12 = createRegExpRestore();
-    const prop = result["[[locale]]"];
-    const items = [prop];
+    __locale__ = result["[[locale]]"];
+    const items = [__locale__];
     const numberFormat = new obj.NumberFormat(items, { useGrouping: false });
-    const items1 = [prop];
+    const items1 = [__locale__];
     const numberFormat1 = new obj.NumberFormat(items1, { minimumIntegerDigits: 2, useGrouping: false });
-    const prop1 = result["[[calendar]]"];
-    const tmp26 = (function ToLocalTime(arg0, arg1, __timeZone__) {
+    __calendar__ = result["[[calendar]]"];
+    const tmp24 = (function ToLocalTime(arg0, arg1, __timeZone__) {
       let str = __timeZone__;
       const date = new Date(arg0);
       if (!__timeZone__) {
         str = "";
       }
-      { "[[weekday]]": date[`get${str}` + "Day"](), "[[era]]": +date[`get${str}` + "FullYear"]() >= 0, "[[year]]": date[`get${str}` + "FullYear"](), "[[month]]": date[`get${str}` + "Month"](), "[[day]]": date[`get${str}` + "Date"](), "[[hour]]": date[`get${str}` + "Hours"](), "[[minute]]": date[`get${str}` + "Minutes"](), "[[second]]": date[`get${str}` + "Seconds"](), "[[inDST]]": false };
+      obj = { "[[weekday]]": date[`get${str}` + "Day"](), "[[era]]": +date[`get${str}` + "FullYear"]() >= 0, "[[year]]": date[`get${str}` + "FullYear"](), "[[month]]": date[`get${str}` + "Month"](), "[[day]]": date[`get${str}` + "Date"](), "[[hour]]": date[`get${str}` + "Hours"](), "[[minute]]": date[`get${str}` + "Minutes"](), "[[second]]": date[`get${str}` + "Seconds"](), "[[inDST]]": false };
       obj = Object.create(ctor.prototype);
       for (const key10051 in obj) {
+        let tmp8 = key10051;
+        let tmp9 = ctor;
         let tmp10 = obj instanceof ctor;
         if (tmp10) {
           if (!tmp10) {
             continue;
           } else {
+            let tmp6 = callback;
             obj = { value: null, enumerable: true, writable: true, configurable: true };
             obj[0] = obj[key10051];
             let tmp7 = callback(obj, key10051, obj);
@@ -1635,83 +1777,110 @@ function FormatDateTime(__getInternalProperties, arg1) {
           }
           continue;
         } else {
-          let call = callback.call;
+          let tmp3 = closure_5;
+          let call = closure_5.call;
           if (typeof call === "unknown") {
-            let callResult = callback(key10051);
+            let callResult = tmp3(key10051);
           } else {
             callResult = call(obj, key10051);
           }
+          let tmp5 = callResult;
         }
       }
       return obj;
     })(arg1, 0, result["[[timeZone]]"]);
-    const prop2 = result["[[pattern]]"];
+    __pattern__ = result["[[pattern]]"];
     const calendars = closure_15.DateTimeFormat["[[localeData]]"][result["[[dataLocale]]"]].calendars;
-    const prop3 = result["[[calendar]]"];
-    let replaced = prop2;
-    let str17 = prop2;
+    __calendar__2 = result["[[calendar]]"];
+    let replaced = __pattern__;
+    let str17 = __pattern__;
     const keys = Object.keys();
     if (keys !== undefined) {
       str17 = replaced;
       while (keys[tmp] !== undefined) {
+        let tmp64 = tmp32;
+        let tmp65 = hasOwnProperty;
         let call = hasOwnProperty.call;
-        let text = `${"[[" + tmp36}]]`;
-        if (!(typeof call === "unknown" ? hasOwnProperty(`${"[[" + tmp36}]]`) : call(result, `${"[[" + tmp36}]]`))) {
+        let text = `${"[[" + tmp32}]]`;
+        if (!(typeof call === "unknown" ? tmp65(`${"[[" + tmp32}]]`) : call(result, `${"[[" + tmp32}]]`))) {
           continue;
         } else {
-          let tmp37 = result["[[" + tmp36 + "]]"];
-          let tmp38 = tmp26["[[" + tmp36 + "]]"];
-          if ("year" === tmp36) {
-            if (tmp38 <= 0) {
-              let diff = 1 - tmp38;
-              let tmp41 = tmp35;
-              if ("numeric" === tmp37) {
+          let tmp33 = result["[[" + tmp32 + "]]"];
+          let tmp34 = tmp24["[[" + tmp32 + "]]"];
+          if ("year" === tmp32) {
+            if (tmp34 <= 0) {
+              let diff = 1 - tmp34;
+              let tmp37 = tmp31;
+              if ("numeric" === tmp33) {
+                let tmp54 = FormatNumber;
                 let str = FormatNumber(numberFormat, diff);
-              } else if ("2-digit" === tmp37) {
+              } else if ("2-digit" === tmp33) {
+                let tmp52 = FormatNumber;
                 let arr3 = FormatNumber(numberFormat1, diff);
                 str = arr3;
                 if (arr3.length > 2) {
+                  let tmp53 = str;
                   str = str.slice(-2);
                 }
-              } else if (tmp37 in closure_17) {
-                if ("month" === tmp36) {
-                  str = resolveDateString(calendars, prop3, "months", tmp37, tmp26["[[" + tmp36 + "]]"]);
-                } else if ("weekday" === tmp36) {
-                  try {
-                    str = resolveDateString(calendars, prop3, "days", tmp37, tmp26["[[" + tmp36 + "]]"]);
-                  } catch (err) {
-                    error = new tmp3.Error("Could not find weekday data for locale " + tmp2);
-                    throw error;
+              } else {
+                let tmp67 = closure_17;
+                if (tmp33 in closure_17) {
+                  if ("month" === tmp32) {
+                    let tmp48 = resolveDateString;
+                    let num8 = 0;
+                    let tmp49 = calendars;
+                    let tmp50 = __calendar__2;
+                    let str21 = "months";
+                    let tmp51 = tmp33;
+                    str = resolveDateString(calendars, __calendar__2, "months", tmp33, tmp24["[[" + tmp32 + "]]"]);
+                  } else if ("weekday" === tmp32) {
+                    try {
+                      let tmp40 = resolveDateString;
+                      let num7 = 0;
+                      let tmp41 = calendars;
+                      let tmp42 = __calendar__2;
+                      let str19 = "days";
+                      let tmp43 = tmp33;
+                      str = resolveDateString(calendars, __calendar__2, "days", tmp33, tmp24["[[" + tmp32 + "]]"]);
+                    } catch (err) {
+                      let str20 = "Could not find weekday data for locale ";
+                      let tmp44 = new.target;
+                      let tmp45 = new.target;
+                      error = new tmp3.Error("Could not find weekday data for locale " + tmp2);
+                      let tmp47 = error;
+                      throw error;
+                    }
+                  } else if ("timeZoneName" === tmp32) {
+                    str = "";
+                  } else {
+                    str = tmp24["[[" + tmp32 + "]]"];
                   }
-                } else if ("timeZoneName" === tmp36) {
-                  str = "";
-                } else {
-                  str = tmp26["[[" + tmp36 + "]]"];
                 }
               }
-              replaced = str18.replace(`{${tmp36}}`, str);
-              tmp31 = tmp41;
+              let tmp55 = str;
+              replaced = str18.replace(`{${tmp32}}`, str);
+              tmp27 = tmp37;
               continue;
             }
           }
-          if ("month" === tmp36) {
-            diff = tmp38 + 1;
-            tmp41 = tmp35;
+          if ("month" === tmp32) {
+            diff = tmp34 + 1;
+            tmp37 = tmp31;
           } else {
-            let tmp39 = "hour" === tmp36 && true === result["[[hour12]]"];
-            diff = tmp38;
-            tmp41 = tmp35;
-            if (tmp39) {
-              let result1 = tmp38 % 12;
-              let tmp43 = 0 === result1;
+            let tmp35 = "hour" === tmp32 && true === result["[[hour12]]"];
+            diff = tmp34;
+            tmp37 = tmp31;
+            if (tmp35) {
+              let result1 = tmp34 % 12;
+              let tmp39 = 0 === result1;
               if (0 === result1) {
-                tmp43 = true === result["[[hourNo0]]"];
+                tmp39 = true === result["[[hourNo0]]"];
               }
               let num6 = result1;
-              if (tmp43) {
+              if (tmp39) {
                 num6 = 12;
               }
-              tmp41 = result1 !== tmp26["[[" + tmp36 + "]]"];
+              tmp37 = result1 !== tmp24["[[" + tmp32 + "]]"];
               diff = num6;
             }
           }
@@ -1719,16 +1888,17 @@ function FormatDateTime(__getInternalProperties, arg1) {
         continue;
       }
       str18 = replaced;
-      const tmp33 = tmp31;
+      const tmp29 = tmp27;
     }
     let replaced1 = str17;
     if (true === result["[[hour12]]"]) {
       let str22 = "am";
-      if (tmp33) {
+      if (tmp29) {
         str22 = "pm";
       }
-      const tmp61Result = resolveDateString(calendars, prop3, "dayPeriods", str22);
-      replaced1 = str17.replace("{ampm}", tmp61Result);
+      const tmp57Result = resolveDateString(calendars, __calendar__2, "dayPeriods", str22);
+      replaced1 = str17.replace("{ampm}", tmp57Result);
+      const tmp57 = resolveDateString;
     }
     const exp = tmp12.exp;
     const isMatch = exp.test(tmp12.input);
@@ -1739,22 +1909,22 @@ function FormatDateTime(__getInternalProperties, arg1) {
     throw rangeError;
   }
 }
-function resolveDateString(calendars, prop3, days, pm, arg4) {
-  if (calendars[prop3]) {
-    if (calendars[prop3][days]) {
-      let tmp = calendars[prop3][days];
+function resolveDateString(calendars, __calendar__2, days, arg3, arg4) {
+  if (calendars[__calendar__2]) {
+    if (calendars[__calendar__2][days]) {
+      let tmp = calendars[__calendar__2][days];
     }
     obj = { narrow: null, short: null, long: null };
     obj[0] = ["short", "long"];
     obj[1] = ["long", "narrow"];
     obj[2] = ["short", "narrow"];
     const call = hasOwnProperty.call;
-    if (typeof call === "unknown" ? hasOwnProperty(pm) : call(tmp, pm)) {
-      let tmp6 = tmp[pm];
+    if (typeof call === "unknown" ? hasOwnProperty(arg3) : call(tmp, arg3)) {
+      let tmp6 = tmp[arg3];
     } else {
-      const call2 = hasOwnProperty.call;
-      const first = obj[pm][0];
-      if (typeof call2 === "unknown" ? hasOwnProperty(first) : call2(tmp, first)) {
+      const call2 = tmp3.call;
+      const first = obj[arg3][0];
+      if (typeof call2 === "unknown" ? tmp3(first) : call2(tmp, first)) {
         tmp6 = tmp[tmp5[0]];
       } else {
         tmp6 = tmp[tmp5[1]];
@@ -1827,7 +1997,8 @@ function createRegExpRestore() {
   if (RegExp.multiline) {
     str2 = "m";
   }
-  Object.create(List.prototype);
+  obj = { input: RegExp.input };
+  obj = Object.create(List.prototype);
   List();
   obj = {};
   let num = 1;
@@ -1837,6 +2008,8 @@ function createRegExpRestore() {
     let _RegExp = RegExp;
     tmp4 = RegExp[`$${num}`];
     obj[`$${num}`] = tmp4;
+    let tmp5 = num;
+    let tmp6 = flag;
     if (!tmp4) {
       tmp4 = flag;
     }
@@ -1850,16 +2023,19 @@ function createRegExpRestore() {
   if (tmp4) {
     do {
       let str4 = obj["$" + num2];
+      let tmp9 = num2;
+      let tmp10 = str3;
       if (str4) {
         let replaced = str4.replace(tmp7, "\\$&");
         let replaced1 = str3.replace(replaced, `(${tmp11})`);
       } else {
         replaced1 = `()${str3}`;
       }
+      let tmp12 = push;
       let call = push.call;
       let substr = replaced1.slice(0, replaced1.indexOf("(") + 1);
       if (typeof call === "unknown") {
-        let tmp12Result = push(substr);
+        let tmp12Result = tmp12(substr);
       } else {
         let callResult = call(obj, substr);
       }
@@ -1934,19 +2110,22 @@ let tmp4 = Object.create || ((arg0, obj) => {
   F.prototype = arg0;
   obj = Object.create(F.prototype);
   for (const key10008 in arg1) {
+    let tmp5 = key10008;
+    let tmp6 = hasOwnProperty;
     class F {
       constructor() {
         return;
       }
     }
     if (typeof tmp7 === "unknown") {
-      let tmp7Result = hasOwnProperty(key10008);
+      let tmp7Result = tmp6(key10008);
     } else {
       tmp7Result = tmp7(arg1, key10008);
     }
     if (!tmp7Result) {
       continue;
     } else {
+      let tmp3 = fn;
       let tmp4 = fn(obj, key10008, arg1[key10008]);
       class F {
         constructor() {
@@ -1970,23 +2149,23 @@ let tmp5 = Function.prototype.bind || (function(arg0) {
   }
   closure_2 = callResult;
   return 1 === this.length ? ((arg0) => {
-    const call = concat.call;
-    const call2 = slice.call;
+    const call = closure_1_10.call;
+    const call2 = closure_1_9.call;
     if (typeof call2 === "unknown") {
-      let call2Result = slice();
+      let call2Result = closure_1_9();
     } else {
       call2Result = call2(arguments);
     }
-    return self.apply(closure_0, typeof call === "unknown" ? concat(call2Result) : call(closure_2, call2Result));
+    return self.apply(closure_0, typeof call === "unknown" ? closure_1_10(call2Result) : call(closure_2, call2Result));
   }) : (() => {
-    const call = concat.call;
-    const call2 = slice.call;
+    const call = closure_1_10.call;
+    const call2 = closure_1_9.call;
     if (typeof call2 === "unknown") {
-      let call2Result = slice();
+      let call2Result = closure_1_9();
     } else {
       call2Result = call2(arguments);
     }
-    return self.apply(closure_0, typeof call === "unknown" ? concat(call2Result) : call(closure_2, call2Result));
+    return self.apply(closure_0, typeof call === "unknown" ? closure_1_10(call2Result) : call(closure_2, call2Result));
   });
 });
 function supportedLocalesOf(arg0) {
@@ -2000,11 +2179,11 @@ function supportedLocalesOf(arg0) {
   if (callResult) {
     const tmp10 = createRegExpRestore();
     const tmp11 = arguments[1];
-    const prop = self["[[availableLocales]]"];
-    const tmp14 = CanonicalizeLocaleList(arg0);
+    __availableLocales__ = self["[[availableLocales]]"];
+    const tmp13 = CanonicalizeLocaleList(arg0);
     const exp = tmp10.exp;
     const isMatch = exp.test(tmp10.input);
-    let tmp16;
+    let tmp15;
     if (undefined !== tmp11) {
       if (null == tmp11) {
         const _TypeError2 = TypeError;
@@ -2013,36 +2192,41 @@ function supportedLocalesOf(arg0) {
       } else {
         const _Object = Object;
         const ObjectResult = Object(tmp11);
-        obj = Object.create(tmp42.prototype);
+        obj = Object.create(tmp41.prototype);
         for (const key10028 in ObjectResult) {
-          let tmp50 = ObjectResult instanceof Record;
-          if (tmp50) {
-            if (!tmp50) {
+          let tmp47 = key10028;
+          let tmp48 = Record;
+          let tmp49 = ObjectResult instanceof Record;
+          if (tmp49) {
+            if (!tmp49) {
               continue;
             } else {
+              let tmp19 = fn;
               obj = { value: null, enumerable: true, writable: true, configurable: true };
               obj[0] = ObjectResult[key10028];
-              let tmp21 = fn(obj, key10028, obj);
+              let tmp20 = fn(obj, key10028, obj);
               continue;
             }
             continue;
           } else {
+            let tmp16 = hasOwnProperty;
             let call2 = hasOwnProperty.call;
             if (typeof call2 === "unknown") {
-              let call2Result = hasOwnProperty(key10028);
+              let call2Result = tmp16(key10028);
             } else {
               call2Result = call2(ObjectResult, key10028);
             }
+            let tmp18 = call2Result;
           }
         }
         const localeMatcher = obj.localeMatcher;
-        tmp16 = localeMatcher;
+        tmp15 = localeMatcher;
         if (undefined !== localeMatcher) {
           const _String = String;
           const StringResult = String(localeMatcher);
-          tmp16 = StringResult;
+          tmp15 = StringResult;
           if ("lookup" !== StringResult) {
-            tmp16 = StringResult;
+            tmp15 = StringResult;
             if ("best fit" !== StringResult) {
               const _RangeError = RangeError;
               const rangeError = new RangeError("matcher should be \"lookup\" or \"best fit\"");
@@ -2052,29 +2236,32 @@ function supportedLocalesOf(arg0) {
         }
       }
     }
-    if (undefined !== tmp16) {
-      if ("best fit" !== tmp16) {
-        let tmp24 = LookupSupportedLocales(prop, tmp14);
+    if (undefined !== tmp15) {
+      if ("best fit" !== tmp15) {
+        let tmp23 = LookupSupportedLocales(__availableLocales__, tmp13);
       }
       const keys = Object.keys();
       if (keys !== undefined) {
         while (keys[1] !== undefined) {
+          let tmp50 = tmp27;
+          let tmp51 = hasOwnProperty;
           let call3 = hasOwnProperty.call;
-          if (!(typeof call3 === "unknown" ? hasOwnProperty(tmp28) : call3(tmp24, tmp28))) {
+          if (!(typeof call3 === "unknown" ? tmp51(tmp27) : call3(tmp23, tmp27))) {
             continue;
           } else {
+            let tmp28 = fn;
             obj = { writable: false, configurable: false, value: null };
-            obj[2] = tmp24[tmp28];
-            let tmp30 = fn(tmp24, tmp28, obj);
+            obj[2] = tmp23[tmp27];
+            let tmp29 = fn(tmp23, tmp27, obj);
             continue;
           }
           continue;
         }
       }
-      fn(tmp24, "length", { writable: false });
-      return tmp24;
+      fn(tmp23, "length", { writable: false });
+      return tmp23;
     }
-    tmp24 = LookupSupportedLocales(prop, tmp14);
+    tmp23 = LookupSupportedLocales(__availableLocales__, tmp13);
   } else {
     const _TypeError = TypeError;
     const typeError1 = new TypeError("supportedLocalesOf() is not a constructor");
@@ -2108,11 +2295,14 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
   value() {
     obj = Object.create(Record.prototype);
     for (const key10006 in undefined) {
+      let tmp23 = key10006;
+      let tmp24 = Record;
       let tmp25 = undefined instanceof Record;
       if (tmp25) {
         if (!tmp25) {
           continue;
         } else {
+          let tmp5 = fn;
           obj = { value: null, enumerable: true, writable: true, configurable: true };
           obj[0] = undefined[key10006];
           let tmp6 = fn(obj, key10006, obj);
@@ -2120,12 +2310,14 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
         }
         continue;
       } else {
+        let tmp2 = hasOwnProperty;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
-          let callResult = hasOwnProperty(key10006);
+          let callResult = tmp2(key10006);
         } else {
           callResult = call(undefined, key10006);
         }
+        let tmp4 = callResult;
       }
     }
     const self = this;
@@ -2136,9 +2328,11 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
           let num = 0;
           if (0 < items.length) {
             do {
+              let tmp19 = hasOwnProperty;
               let call3 = hasOwnProperty.call;
               let text = `${"[[" + arr[num]}]]`;
-              if (typeof call3 === "unknown" ? hasOwnProperty(`${"[[" + arr[num]}]]`) : call3(tmp7, `${"[[" + arr[num]}]]`)) {
+              let tmp21 = num;
+              if (typeof call3 === "unknown" ? tmp19(`${"[[" + arr[num]}]]`) : call3(tmp7, `${"[[" + arr[num]}]]`)) {
                 obj = { value: null, writable: true, configurable: true, enumerable: true };
                 obj[0] = tmp7[`${"[[" + arr[num]}]]`];
                 obj[items[num]] = obj;
@@ -2155,7 +2349,7 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
     } else {
       const call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
-        let call2Result = hasOwnProperty("__getInternalProperties");
+        let call2Result = tmp8("__getInternalProperties");
       } else {
         call2Result = call2(self, "__getInternalProperties");
       }
@@ -2164,6 +2358,7 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
       } else {
         result = callback(null);
       }
+      tmp8 = hasOwnProperty;
     }
   }
 });
@@ -2181,11 +2376,14 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
   value() {
     obj = Object.create(Record.prototype);
     for (const key10006 in undefined) {
+      let tmp23 = key10006;
+      let tmp24 = Record;
       let tmp25 = undefined instanceof Record;
       if (tmp25) {
         if (!tmp25) {
           continue;
         } else {
+          let tmp5 = fn;
           obj = { value: null, enumerable: true, writable: true, configurable: true };
           obj[0] = undefined[key10006];
           let tmp6 = fn(obj, key10006, obj);
@@ -2193,12 +2391,14 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
         }
         continue;
       } else {
+        let tmp2 = hasOwnProperty;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
-          let callResult = hasOwnProperty(key10006);
+          let callResult = tmp2(key10006);
         } else {
           callResult = call(undefined, key10006);
         }
+        let tmp4 = callResult;
       }
     }
     const self = this;
@@ -2209,9 +2409,11 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
           let num = 0;
           if (0 < items.length) {
             do {
+              let tmp19 = hasOwnProperty;
               let call3 = hasOwnProperty.call;
               let text = `${"[[" + arr[num]}]]`;
-              if (typeof call3 === "unknown" ? hasOwnProperty(`${"[[" + arr[num]}]]`) : call3(tmp7, `${"[[" + arr[num]}]]`)) {
+              let tmp21 = num;
+              if (typeof call3 === "unknown" ? tmp19(`${"[[" + arr[num]}]]`) : call3(tmp7, `${"[[" + arr[num]}]]`)) {
                 obj = { value: null, writable: true, configurable: true, enumerable: true };
                 obj[0] = tmp7[`${"[[" + arr[num]}]]`];
                 obj[items[num]] = obj;
@@ -2228,7 +2430,7 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
     } else {
       const call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
-        let call2Result = hasOwnProperty("__getInternalProperties");
+        let call2Result = tmp8("__getInternalProperties");
       } else {
         call2Result = call2(self, "__getInternalProperties");
       }
@@ -2237,6 +2439,7 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
       } else {
         result = callback(null);
       }
+      tmp8 = hasOwnProperty;
     }
   }
 });
@@ -2318,19 +2521,23 @@ fn(obj, "__applyLocaleSensitivePrototypes", {
     obj = { writable: true, configurable: true, value: obj7.Date.toLocaleString };
     fn(Date.prototype, "toLocaleString", obj);
     for (const key10019 in obj7.Date) {
+      let tmp6 = key10019;
+      let tmp7 = hasOwnProperty;
       let call = hasOwnProperty.call;
       let _Date2 = obj7.Date;
+      let tmp8 = obj7;
       if (typeof call === "unknown") {
-        let callResult = hasOwnProperty(key10019);
+        let callResult = tmp7(key10019);
       } else {
         callResult = call(_Date2, key10019);
       }
       if (!callResult) {
         continue;
       } else {
+        let tmp4 = fn;
         let _Date = Date;
         obj = { writable: true, configurable: true, value: null };
-        obj[2] = obj7.Date[key10019];
+        obj[2] = tmp8.Date[key10019];
         let tmp5 = fn(Date.prototype, key10019, obj);
         continue;
       }
@@ -2340,20 +2547,22 @@ fn(obj, "__applyLocaleSensitivePrototypes", {
 });
 fn(obj, "__addLocaleData", {
   value(locale) {
+    let tmp22;
     locale = locale.locale;
     const expBCP47Syntax = RegExpResult1.expBCP47Syntax;
     let isMatch = expBCP47Syntax.test(locale);
     if (isMatch) {
-      const expVariantDupes = RegExpResult1.expVariantDupes;
+      const expVariantDupes = tmp(16484).expVariantDupes;
       isMatch = expVariantDupes.test(locale);
       let tmp5 = !isMatch;
       if (!isMatch) {
-        const expSingletonDupes = RegExpResult1.expSingletonDupes;
+        const expSingletonDupes = tmp(16484).expSingletonDupes;
         tmp5 = !expSingletonDupes.test(locale);
       }
       isMatch = tmp5;
     }
     if (isMatch) {
+      const str2 = locale.locale;
       if (locale.number) {
         const items = [str2];
         const parts = str2.split("-");
@@ -2365,43 +2574,47 @@ fn(obj, "__addLocaleData", {
           const call = push.call;
           const text = `${arr2[0]}-${arr2[2]}`;
           if (typeof call === "unknown") {
-            push(text);
+            tmp17(text);
           } else {
             call(items, text);
           }
+          tmp17 = push;
         }
         const call2 = shift.call;
         let tmp21 = typeof call2 === "unknown" ? shift() : call2(items);
         if (tmp21) {
           while (true) {
+            tmp22 = push;
             let call3 = push.call;
             let date = closure_15;
-            let prop = closure_15.NumberFormat["[[availableLocales]]"];
+            __availableLocales__ = closure_15.NumberFormat["[[availableLocales]]"];
+            let tmp23 = tmp21;
             if (typeof call3 === "unknown") {
-              let tmp22Result = push(tmp21);
+              let tmp22Result = tmp22(tmp21);
             } else {
-              let call3Result = call3(prop, tmp21);
+              let call3Result = call3(__availableLocales__, tmp21);
             }
             date.NumberFormat["[[localeData]]"][tmp21] = locale.number;
             if (locale.date) {
               break;
             } else {
+              let tmp26 = shift;
               let call5 = shift.call;
-              let tmp29 = typeof call5 === "unknown" ? shift() : call5(items);
-              tmp21 = tmp29;
+              let tmp27 = typeof call5 === "unknown" ? tmp26() : call5(items);
+              tmp21 = tmp27;
             }
           }
           locale.date.nu = locale.number.nu;
-          const call4 = push.call;
-          let prop1 = date.DateTimeFormat["[[availableLocales]]"];
+          const call4 = tmp22.call;
+          __localeData__ = date.DateTimeFormat["[[availableLocales]]"];
           if (typeof call4 === "unknown") {
-            push(tmp21);
+            tmp22(tmp21);
           } else {
-            call4(prop1, tmp21);
+            call4(__localeData__, tmp21);
           }
-          prop1 = date.DateTimeFormat["[[localeData]]"];
+          __localeData__ = date.DateTimeFormat["[[localeData]]"];
           date = locale.date;
-          prop1[tmp21] = date;
+          __localeData__[tmp21] = date;
         }
         if (!c18) {
           InitializeNumberFormat(obj.NumberFormat.prototype);

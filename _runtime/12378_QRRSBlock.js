@@ -25,7 +25,9 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
       do {
         let result1 = 3 * num2;
         let tmp2 = rsBlockTable[result1];
+        let tmp5 = num2;
         for (let num = 0; num < tmp2; num = num + 1) {
+          let tmp6 = QRRSBlock;
           let obj = Object.create(QRRSBlock.prototype);
           obj = { totalCount: tmp3, dataCount: tmp4 };
           let arr = array.push(obj);
@@ -39,11 +41,11 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
 QRRSBlock.getRsBlockTable = (arg0, arg1) => {
   if (_mod12379.L === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1)];
-  } else if (_mod12379.M === arg1) {
+  } else if (tmp(12379).M === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1) + 1];
-  } else if (_mod12379.Q === arg1) {
+  } else if (tmp(12379).Q === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1) + 2];
-  } else if (_mod12379.H === arg1) {
+  } else if (tmp(12379).H === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1) + 3];
   }
 };

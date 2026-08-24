@@ -9,11 +9,11 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ hsvColorPicker: { alignItems: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
 
 export default function HSVColorPicker(arg0) {
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
@@ -22,9 +22,14 @@ export default function HSVColorPicker(arg0) {
   const sharedValue = obj.useSharedValue(0);
   const tmp = callback();
   const sharedValue1 = _mod4115.useSharedValue(1);
+  const obj2 = _mod4115;
   obj = { style: tmp.hsvColorPicker, children: null };
   const sharedValue2 = _mod4115.useSharedValue(1);
   let tmp11 = hue;
+  const obj3 = _mod4115;
+  const tmp6 = closure_5;
+  const tmp7 = View;
+  const tmp9 = importDefault;
   if (hue == null) {
     tmp11 = sharedValue;
   }
@@ -43,11 +48,12 @@ export default function HSVColorPicker(arg0) {
   obj[6] = saturationValueSelectorStyle;
   obj[7] = onPanUpdate;
   obj[8] = onPanFinalize;
-  const items = [callback(ColorBoxDefault, obj), ];
+  const items = [closure_4(ColorBoxDefault, obj), ];
+  const tmp10 = ColorBoxDefault;
   if (hue == null) {
     hue = sharedValue;
   }
-  items[1] = callback(HuePickerDefault, { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
+  items[1] = closure_4(HuePickerDefault, { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
   obj[1] = items;
-  return callback2(View, obj);
+  return tmp6(tmp7, obj);
 };

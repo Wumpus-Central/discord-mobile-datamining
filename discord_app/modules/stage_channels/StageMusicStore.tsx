@@ -38,6 +38,6 @@ const stageMusicStore = new StageMusicStore(dispatcherDefault, {
     c1 = false;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageMusicStore.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/StageMusicStore.tsx");
 
 export default stageMusicStore;

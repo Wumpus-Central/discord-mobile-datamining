@@ -1,12 +1,12 @@
 // === Module 10306: useShouldShowGiftingPromotionDeco ===
 
 // Module 10306 (useShouldShowGiftingPromotionDeco)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import NativeGiftContextProvider from "NativeGiftContextProvider" /* 9625 */;
 
 const PremiumTypes = GuildFeatures.PremiumTypes;
-const result = obj132.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
+const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
 
 export default function useShouldShowGiftingPromotionDeco(arg0) {
   const nativeGiftContext = NativeGiftContextProvider.useNativeGiftContext();

@@ -1,9 +1,9 @@
 // === Module 15847: inBoundingBox ===
 
 // Module 15847 (inBoundingBox)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 function inBoundingBox(arg0, left) {
   const first = arg0.allTouches[0];
   let tmp2 = null != first;
@@ -23,7 +23,7 @@ inBoundingBox.__closure = {};
 inBoundingBox.__workletHash = 14606221606756;
 inBoundingBox.__initData = { code: "function inBoundingBox_useSearchSuggestionsGestureTsx1(e,coordinates,safeAreaTop){const touch=e.allTouches[0];if(touch==null)return false;return coordinates.left<touch.absoluteX&&touch.absoluteX<coordinates.right&&coordinates.top<touch.absoluteY+safeAreaTop&&touch.absoluteY+safeAreaTop<coordinates.bottom;}" };
 let closure_5 = { code: "function useSearchSuggestionsGestureTsx2(e,manager){const{coordinates,inBoundingBox,safeAreaTop,dismissed}=this.__closure;manager.fail();const _coordinates=coordinates.get();if(_coordinates==null||inBoundingBox(e,_coordinates,safeAreaTop))return;dismissed.set(true);}" };
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx");
 
 export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(channelDetailsSearchContext) {
   const _require = channelDetailsSearchContext;
@@ -52,13 +52,14 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
       const rect = closure_2.get();
       let tmp2 = null == rect;
       if (!tmp2) {
-        if (typeof num !== "function") {
+        if (typeof closure_1_4 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const first = arg0.allTouches[0];
         let tmp7 = null != first;
         if (tmp7) {
-          tmp7 = rect.left < first.absoluteX && first.absoluteX < rect.right && rect.top < first.absoluteY + closure_4 && first.absoluteY + closure_4 < rect.bottom;
+          tmp7 = rect.left < first.absoluteX && first.absoluteX < rect.right && rect.top < first.absoluteY + tmp4 && first.absoluteY + tmp4 < rect.bottom;
+          const tmp8 = rect.left < first.absoluteX && first.absoluteX < rect.right && rect.top < first.absoluteY + tmp4 && first.absoluteY + tmp4 < rect.bottom;
         }
         tmp2 = tmp7;
       }

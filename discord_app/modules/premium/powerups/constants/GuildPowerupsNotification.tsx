@@ -1,9 +1,9 @@
 // === Module 11664: GUILD_POWERUP_NOTIFICATION_COOLDOWN ===
 
 // Module 11664 (GUILD_POWERUP_NOTIFICATION_COOLDOWN)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
 
 export const GUILD_POWERUP_NOTIFICATION_COOLDOWN = 21600000;
 export const BOOST_TO_UNLOCK_COACHMARK_COOLDOWN = 2592000000;

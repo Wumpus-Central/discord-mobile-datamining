@@ -24,15 +24,15 @@ const memoResult = importAllResult.memo(function FavoritesGuildSuggestionsLoader
   const items = [isEligible, isSelected];
   const layoutEffect = importAllResult.useLayoutEffect(() => {
     if (isSelected) {
-      ref.current = true;
+      tmp.current = true;
     } else {
-      const current = ref.current;
+      const current = tmp.current;
       let tmp2 = !current;
       if (!current) {
         tmp2 = isEligible;
       }
       if (!tmp2) {
-        ref.current = false;
+        tmp.current = false;
         closure_1_4(closure_1_3);
       }
     }
@@ -43,6 +43,6 @@ const memoResult = importAllResult.memo(function FavoritesGuildSuggestionsLoader
   }
   return tmp3;
 });
-const result = require("obj132").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsLoader.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsLoader.tsx");
 
 export default memoResult;

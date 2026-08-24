@@ -3,21 +3,22 @@
 // Module 1711 (FadeInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 
-let obj = { 0: { opacity: 0 }, 100: null };
+obj = { FadeIn: { name: "FadeIn", style: obj, duration: 0.3 }, FadeInRight: { name: "FadeInRight", style: obj, duration: 0.3 }, FadeInLeft: { name: "FadeInLeft", style: obj1, duration: 0.3 }, FadeInUp: { name: "FadeInUp", style: obj2, duration: 0.3 }, FadeInDown: { name: "FadeInDown", style: obj3, duration: 0.3 } };
+obj = { 0: { opacity: 0 }, 100: null };
 obj[100] = { opacity: 1 };
 obj = { 0: { opacity: 0, transform: items }, 100: null };
 items = [{ translateX: "25px" }];
 const items1 = [{ translateX: "0px" }];
 obj[100] = { opacity: 1, transform: items1 };
-const obj1 = { 0: { opacity: 0, transform: items2 }, 100: null };
+obj1 = { 0: { opacity: 0, transform: items2 }, 100: null };
 items2 = [{ translateX: "-25px" }];
 const items3 = [{ translateX: "0px" }];
 obj1[100] = { opacity: 1, transform: items3 };
-const obj2 = { 0: { opacity: 0, transform: items4 }, 100: null };
+obj2 = { 0: { opacity: 0, transform: items4 }, 100: null };
 items4 = [{ translateY: "-25px" }];
 const items5 = [{ translateY: "0px" }];
 obj2[100] = { opacity: 1, transform: items5 };
-const obj3 = { 0: { opacity: 0, transform: items6 }, 100: null };
+obj3 = { 0: { opacity: 0, transform: items6 }, 100: null };
 items6 = [{ translateY: "25px" }];
 const items7 = [{ translateY: "0px" }];
 obj3[100] = { opacity: 1, transform: items7 };

@@ -2,17 +2,18 @@
 
 // Module 15033 (UserSettingsSensitiveContentFilters)
 import _modDef13991 from "module_13991" /* 13991 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
 
 export default function UserSettingsSensitiveContentFilters() {
   const node = React.useMemo(() => {
-    callback(10669);
-    const obj = { label: null, settings: null, subLabel: null };
+    let obj = callback(10669);
+    obj = { sections: null };
+    obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.GYpoAq);
     const items = [, ];

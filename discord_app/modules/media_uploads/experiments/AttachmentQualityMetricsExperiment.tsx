@@ -1,10 +1,10 @@
 // === Module 4866: apexExperiment ===
 
 // Module 4866 (apexExperiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-attachment-quality-metrics", kind: "user", defaultConfig: { enableQualityMetrics: false, enableOriginDetection: false }, variations: { 0: { enableQualityMetrics: false, enableOriginDetection: false }, 1: { enableQualityMetrics: true, enableOriginDetection: true } } });
-const result = obj132.fileFinishedImporting("modules/media_uploads/experiments/AttachmentQualityMetricsExperiment.tsx");
+const result = set.fileFinishedImporting("modules/media_uploads/experiments/AttachmentQualityMetricsExperiment.tsx");
 
 export const AttachmentQualityMetricsExperiment = apexExperiment;

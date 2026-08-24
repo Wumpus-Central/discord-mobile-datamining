@@ -14,8 +14,8 @@ if (prototype) {
 
 export default function cloneSymbol(arg0) {
   if (valueOf) {
-    const call = valueOf.call;
-    Object(typeof call === "unknown" ? valueOf() : call(arg0));
+    const call = tmp.call;
+    Object(typeof call === "unknown" ? tmp() : call(arg0));
   } else {
     return {};
   }

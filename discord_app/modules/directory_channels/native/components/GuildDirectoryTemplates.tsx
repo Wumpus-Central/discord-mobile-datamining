@@ -1,21 +1,21 @@
 // === Module 11490: GuildTemplatesItem ===
 
 // Module 11490 (GuildTemplatesItem)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11472 */;
 import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 11477 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 class GuildTemplatesItem {
   constructor(arg0) {
     guildTemplate = global.guildTemplate;
     onGuildTemplatePress = global.onGuildTemplatePress;
     obj = {
       Icon(qXtNtS) {
-            return closure_1_9(guildTemplate(dependencyMap[7]).Icon, { source: guildTemplate(dependencyMap[8]).GUILD_TEMPLATE_ICONS[guildTemplate.id], disableColor: true, style: { width: 48, height: 48 } });
+            return closure_1_9(guildTemplate(closure_1_2[7]).Icon, { source: guildTemplate(closure_1_2[8]).GUILD_TEMPLATE_ICONS[guildTemplate.id], disableColor: true, style: { width: 48, height: 48 } });
           },
       message: guildTemplate.label,
       onPress() {
@@ -29,7 +29,7 @@ class GuildTemplatesItem {
 ({ getHubGuildTemplatesMap: closure_6, HubGuildTemplateId: error } = DirectoryEntryTypes);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ label: { marginTop: 16, marginLeft: 16, marginBottom: 8 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, templateGroup: { marginHorizontal: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryTemplates.tsx");
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryTemplates.tsx");
 
 export default function GuildDirectoryTemplates(directoryGuildName) {
   const _require = directoryGuildName;
@@ -43,8 +43,9 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   });
   const items = [navigation];
   callback = React.useCallback((guildTemplate) => {
-    navigation.push(GuildDirectoryCreate.CREATE, { onHubGuildInfoSet: ref.current.onHubGuildInfoSet, guildTemplate });
+    navigation.push(closure_1_8.CREATE, { onHubGuildInfoSet: ref.current.onHubGuildInfoSet, guildTemplate });
   }, items);
+  obj = { children: null };
   obj = { contentContainerStyle: obj1, children: null };
   const obj2 = { style: tmp.header, children: null };
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -71,6 +72,7 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   items2[1] = callback2(closure_4, obj6);
   const obj10 = { style: tmp.label, children: null };
   obj1 = { paddingBottom: importDefault(navigation[10])().bottom + 16 };
+  const obj4 = { guildName: directoryGuildName.directoryGuildName };
   const intl4 = _require(navigation[13]).intl;
   obj10[1] = intl4.string(_require(navigation[13]).t.JGDkfg);
   items2[2] = callback2(importDefault(navigation[15]), obj10);

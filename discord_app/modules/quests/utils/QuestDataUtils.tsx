@@ -2,15 +2,13 @@
 
 // Module 7451 (getQuestDeliveryDataForPlacement)
 import _modDef1208 from "module_1208" /* 1208 */;
-import hasFlag from "hasFlag" /* 1403 */;
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import result2 from "result" /* 7468 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import set from "set" /* 7452 */;
-import initializeState from "initializeState" /* 7453 */;
+import closure_3 from "_getSystemLocale" /* 1994 */;
+import closure_4 from "set" /* 7452 */;
+import closure_5 from "initializeState" /* 7453 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 
-require = fn;
+require = arg1;
 function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   if (arg0 === QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL) {
     let tmp3 = null;
@@ -19,9 +17,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
       let tmp8 = null;
       if (null != adDecisionByPlacementAndAdCreativeId) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-        let tmpResult = result2;
+        let tmpResult = tmp(7468);
         obj[0] = tmpResult.getDeliveredQuestId(adDecisionByPlacementAndAdCreativeId.creative);
-        tmpResult = result2;
+        tmpResult = tmp(7468);
         obj[1] = tmpResult.getDeliveredAdCreativeId(adDecisionByPlacementAndAdCreativeId.creative);
         ({ adDecisionData: obj[2], adContext: obj[3], metadataSealed: obj[4], trafficMetadataSealed: obj[5] } = adDecisionByPlacementAndAdCreativeId);
         tmp8 = obj;
@@ -36,27 +34,27 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   } else {
     const questAdDecisionByPlacement = quest.questAdDecisionByPlacement;
     const value = questAdDecisionByPlacement.get(arg0);
-    if (arg0 === QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
+    if (arg0 === tmp(6719).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
       if (null != value) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-        obj[0] = result2.getDeliveredQuestId(value.creative);
-        const tmpResult1 = result2;
-        obj[1] = result2.getDeliveredAdCreativeId(value.creative);
+        obj[0] = tmp(7468).getDeliveredQuestId(value.creative);
+        const tmpResult1 = tmp(7468);
+        obj[1] = tmp(7468).getDeliveredAdCreativeId(value.creative);
         ({ adDecisionData: obj7[2], adContext: obj7[3], metadataSealed: obj7[4], trafficMetadataSealed: obj7[5] } = value);
         let tmp9 = obj;
-        const tmpResult2 = result2;
+        const tmpResult2 = tmp(7468);
       }
       return tmp9;
     }
     tmp9 = null;
     if (null != value) {
       obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-      obj[0] = result2.getDeliveredQuestId(value.creative);
-      const tmpResult3 = result2;
-      obj[1] = result2.getDeliveredAdCreativeId(value.creative);
+      obj[0] = tmp(7468).getDeliveredQuestId(value.creative);
+      const tmpResult3 = tmp(7468);
+      obj[1] = tmp(7468).getDeliveredAdCreativeId(value.creative);
       ({ adDecisionData: obj4[2], adContext: obj4[3], metadataSealed: obj4[4], trafficMetadataSealed: obj4[5] } = value);
       tmp9 = obj;
-      const tmpResult4 = result2;
+      const tmpResult4 = tmp(7468);
     }
   }
 }
@@ -70,7 +68,7 @@ obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_HOME_HERO] 
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_HOME_HERO_SHELF] = require("QuestsVisibleMessagesChangedSource").AdPlacement.QUEST_HOME_BANNER_DESKTOP;
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_HOME_MOBILE_CAROUSEL] = require("QuestsVisibleMessagesChangedSource").AdPlacement.QUEST_HOME_MOBILE_CAROUSEL;
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.VIDEO_MODAL_MOBILE] = require("QuestsVisibleMessagesChangedSource").AdPlacement.VIDEO_MODAL_MOBILE;
-const result = require("obj132").fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
 
 export const THIRTY_DAYS_MS = 2592000000;
 export const earnedDecisionIsValid = function earnedDecisionIsValid(value) {
@@ -82,28 +80,28 @@ export const earnedDecisionIsValid = function earnedDecisionIsValid(value) {
   }
   return tmp;
 };
-export const findQuestOrReplacement = function findQuestOrReplacement(closure_0, quests, excludedQuests) {
+export const findQuestOrReplacement = function findQuestOrReplacement(questId, quests, excludedQuests) {
   let map = quests;
   if (Array.isArray(quests)) {
     const _Map = Map;
-    map = new Map(quests.map((item, index) => {
-      const items = [item.id, item];
+    map = new Map(quests.map((id) => {
+      const items = [id.id, id];
       return items;
     }));
   }
   map1 = excludedQuests;
   if (Array.isArray(excludedQuests)) {
     const _Map2 = Map;
-    map1 = new Map(excludedQuests.map((item, index) => {
-      const items = [item.id, item];
+    map1 = new Map(excludedQuests.map((id) => {
+      const items = [id.id, id];
       return items;
     }));
   }
-  let value = map.get(closure_0);
+  let value = map.get(questId);
   if (null != value) {
     return value;
   } else {
-    value = map1.get(closure_0);
+    value = map1.get(questId);
     let replacementId;
     if (value != null) {
       replacementId = value.replacementId;
@@ -120,12 +118,13 @@ export const isDismissible = function isDismissible(closure_1) {
   return keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[closure_1]);
 };
 export const isDismissed = function isDismissed(dismissedQuestContent) {
-  const keys = Object.keys(table);
+  const keys = Object.keys(closure_6);
   if (keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[arg1])) {
-    return hasFlag.hasFlag(dismissedQuestContent.dismissedQuestContent, table[QuestsVisibleMessagesChangedSource.QuestContent[arg1]]);
+    return tmp2(1403).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 6719).QuestContent[arg1]]);
   } else {
     return false;
   }
+  tmp = closure_6;
 };
 export const isQuestConfigExpired = function isQuestConfigExpired(expiresAt) {
   const date = new Date(expiresAt.expiresAt);
@@ -153,11 +152,17 @@ export const findNextUpcomingExpirationEpochMs = function findNextUpcomingExpira
   const timestamp = Date.now();
   while (tmp3 !== undefined) {
     let _Date = Date;
+    let tmp5 = new.target;
+    let tmp6 = new.target;
     let date = new Date(tmp4.config.expiresAt);
+    let tmp7 = date;
     let valueOfResult = date.valueOf();
     if (valueOfResult > timestamp) {
+      let tmp10 = tmp;
       let tmp11 = null == tmp;
       if (!tmp11) {
+        let tmp12 = valueOfResult;
+        let tmp13 = tmp;
         tmp11 = tmp9 < tmp;
       }
       if (tmp11) {
@@ -261,6 +266,7 @@ export const getAdContext = function getAdContext(questContent, adContentId) {
   }
 };
 export const captureQuestsException = function captureQuestsException(error, tags) {
+  obj = _modDef1208;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

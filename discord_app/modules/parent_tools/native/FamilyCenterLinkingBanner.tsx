@@ -12,13 +12,12 @@ import FamilyCenterTeenQRCodeButtonInner from "FamilyCenterTeenQRCodeButtonInner
 import registerAssetDefault from "registerAsset" /* 14271 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function FamilyCenterLinkingBannerParentContent() {
-  { style: callback4().container, children: null };
-  let obj = { index: 1, header: null, description: null };
+  let obj = { style: callback4().container, children: null };
+  obj = { index: 1, header: null, description: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(messagesProxyDefault["7xxAni"]);
   const intl2 = getSystemLocale.intl;
@@ -46,7 +45,8 @@ function FamilyCenterLinkingBannerTeenContent() {
 function FamilyCenterLinkingInstructionsRow(arg0) {
   ({ header, description, index, isLast } = arg0);
   const tmp = callback6();
-  let obj = { style: tmp.circle, children: callback(Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }) };
+  let obj = { style: tmp.row, children: null };
+  obj = { style: tmp.circle, children: callback(Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }) };
   const items = [callback(closure_3, obj), ];
   const items1 = [tmp.rowContent, ];
   let gap = null;
@@ -57,23 +57,28 @@ function FamilyCenterLinkingInstructionsRow(arg0) {
   items1[1] = gap;
   const items2 = [callback(Text.Text, { variant: "heading-sm/bold", children: header }), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: description })];
   obj[1] = items2;
-  items[1] = callback(closure_3, obj);
+  items[1] = closure_6(closure_3, obj);
   obj[1] = items;
-  return callback(closure_3, obj);
+  return closure_6(closure_3, obj);
 }
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: ThemesDefault.space.PX_16, paddingTop: 0, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center", borderRadius: ThemesDefault.radii.md, elevation: 2, overflow: "hidden" };
+createCacheKey = { container: null, content: null, art: null, header: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: ThemesDefault.space.PX_16, paddingTop: 0, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center", borderRadius: ThemesDefault.radii.md, elevation: 2, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
+let obj1 = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { width: "100%", height: 175, marginBottom: ThemesDefault.space.PX_12 };
+const obj2 = { width: "100%", height: 175, marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const obj4 = { container: null };
+const obj3 = { marginBottom: ThemesDefault.space.PX_8 };
 obj4[0] = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, width: "100%" };
 let closure_8 = createCacheKey.createStyles(obj4);
 createCacheKey = { container: null };
+const obj5 = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, width: "100%" };
 createCacheKey[0] = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 const obj8 = { row: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, gap: { marginBottom: 12 }, circle: null, rowContent: null };
@@ -81,7 +86,8 @@ createCacheKey = { display: "flex", flexDirection: "column", justifyContent: "ce
 obj8[2] = createCacheKey;
 obj8[3] = { marginLeft: 12, flex: 1 };
 let closure_12 = createCacheKey.createStyles(obj8);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkingBanner.tsx");
+const obj7 = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkingBanner.tsx");
 
 export default function FamilyCenterLinkingBanner() {
   const tmp = callback3();
@@ -94,6 +100,7 @@ export default function FamilyCenterLinkingBanner() {
   const intl3 = getSystemLocale.intl;
   const stringResult = intl.string(messagesProxyDefault.zUCWEL);
   const intl4 = getSystemLocale.intl;
+  obj = { style: tmp.container, children: null };
   obj = { source: null, style: null, resizeMethod: "resize" };
   const ageSpecificText1 = obj1.useAgeSpecificText(intl3.format(messagesProxyDefault.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }), intl4.string(messagesProxyDefault.JsAEDi));
   obj[0] = registerAssetDefault;

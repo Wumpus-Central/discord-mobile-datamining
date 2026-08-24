@@ -121,12 +121,14 @@ function _createForOfIteratorHelper(str) {
                   arr = array;
                 } while (num3 < length);
               }
+            } else {
+              const obj2 = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
             }
           }
         }
         const _Array2 = Array;
         arr = Array.from(str);
-        tmp3 = "Object" === substr && "Object".constructor;
+        tmp3 = "Object" === substr && str.constructor;
       }
     }
     if (!arr) {
@@ -366,11 +368,11 @@ export default function parse(arg0, arg1, arg2, locale) {
               const dateToSystemTimezoneSetter = new tmp2(3775).DateToSystemTimezoneSetter();
               const items = [dateToSystemTimezoneSetter];
               const match = str.match(closure_13);
-              const mapped = match.map((item, index) => {
-                const first = item[0];
-                let tmp2 = item;
+              const mapped = match.map((arg0) => {
+                const first = arg0[0];
+                let tmp2 = arg0;
                 if (first in obj.default) {
-                  tmp2 = obj.default[first](item, locale.formatLong);
+                  tmp2 = obj.default[first](arg0, locale.formatLong);
                 }
                 return tmp2;
               });
@@ -392,15 +394,16 @@ export default function parse(arg0, arg1, arg2, locale) {
                   if (!tmp10) {
                     callback(locale[10]).throwProtectedError(str, str, str2);
                   }
+                  str2 = str[0];
                   obj = callback(locale[11]).parsers[str2];
                   if (obj) {
                     incompatibleTokens = obj.incompatibleTokens;
                     const _Array = Array;
                     if (Array.isArray(incompatibleTokens)) {
-                      const found = arr2.find((item, index) => {
-                        let hasItem = incompatibleTokens.includes(item.token);
+                      const found = arr2.find((token) => {
+                        let hasItem = incompatibleTokens.includes(token.token);
                         if (!hasItem) {
-                          hasItem = item.token === str2;
+                          hasItem = token.token === str2;
                         }
                         return hasItem;
                       });
@@ -425,7 +428,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                     let arr = arr2.push(obj);
                     const runResult = obj.run(arr, str, locale.match, obj);
                     if (runResult) {
-                      items.push(runResult.setter);
+                      arr = items.push(runResult.setter);
                       arr = runResult.rest;
                     } else {
                       obj = { v: null };
@@ -477,15 +480,15 @@ export default function parse(arg0, arg1, arg2, locale) {
                     return date;
                   }
                 }
-                const mapped1 = items.map((item, index) => item.priority);
+                const mapped1 = items.map((priority) => priority.priority);
                 const sorted = mapped1.sort((arg0, arg1) => arg1 - arg0);
-                let found = sorted.filter((item, index, arr) => arr.indexOf(item) === index);
-                const mapped2 = found.map((item, index) => {
-                  closure_0 = item;
-                  const found = items.filter((item, index) => item.priority === closure_0);
+                let found = sorted.filter((arg0, arg1, arr) => arr.indexOf(arg0) === arg1);
+                const mapped2 = found.map((arg0) => {
+                  closure_0 = arg0;
+                  const found = items.filter((priority) => priority.priority === closure_0);
                   return found.sort((subPriority, subPriority2) => subPriority2.subPriority - subPriority.subPriority);
                 });
-                const mapped3 = mapped2.map((item, index) => item[0]);
+                const mapped3 = mapped2.map((arg0) => arg0[0]);
                 const defaultResult4 = locale.default(arg2);
                 const _isNaN = isNaN;
                 if (isNaN(defaultResult4.getTime())) {
@@ -503,11 +506,15 @@ export default function parse(arg0, arg1, arg2, locale) {
                     if (!iter3.done) {
                       const value = iter4.value;
                       while (value.validate(defaultResult5, obj)) {
+                        let tmp52 = value;
+                        let tmp53 = defaultResult5;
                         let result = value.set(defaultResult5, obj, obj);
                         let tmp55 = result;
                         let _Array = Array;
+                        let tmp56 = result;
                         if (Array.isArray(result)) {
                           defaultResult5 = tmp55[0];
+                          let tmp57 = iter2;
                           let defaultResult6 = iter2.default(obj, tmp55[1]);
                         } else {
                           defaultResult5 = tmp55;

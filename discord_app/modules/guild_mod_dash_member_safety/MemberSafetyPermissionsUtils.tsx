@@ -2,28 +2,27 @@
 
 // Module 7231 (getContextForPermission)
 import fromStringAll from "fromString" /* 506 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions" /* 4025 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ GuildFeatures: c9, Permissions: c10 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx");
 
-export const getContextForPermission = function getContextForPermission(arg0, items) {
-  let tmp = items;
-  if (items === undefined) {
-    items = [closure_7, closure_8];
+export const getContextForPermission = function getContextForPermission(arg0, arg1) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    const items = [closure_7, closure_8];
     tmp = items;
   }
   [obj, obj2] = callback(tmp, 2);
   const guild = obj.getGuild(arg0);
   const currentUser = obj2.getCurrentUser();
-  const tmp4 = callback(tmp, 2);
 };
 export const canAccessMemberSafetyPage = function canAccessMemberSafetyPage(arg0) {
   let tmp = arg1;
@@ -69,6 +68,7 @@ export const canPruneGuildMembers = function canPruneGuildMembers(guild, current
     let canResult1 = canResult;
   } else {
     canResult1 = obj.can(fromStringAll.combine(constants2.MANAGE_GUILD, constants2.KICK_MEMBERS), guild);
+    const obj2 = fromStringAll;
   }
   return canResult1;
 };

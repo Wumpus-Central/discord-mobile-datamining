@@ -3,13 +3,13 @@
 // Module 9598 (GiftBackgroundSelect)
 import ThemesDefault from "Themes" /* 712 */;
 import NativeGiftContextProvider from "NativeGiftContextProvider" /* 9625 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = fn;
+require = arg1;
 class GiftBackgroundSelect {
   constructor(arg0) {
     flag = global.withConsistentHeight;
@@ -94,12 +94,13 @@ class GiftBackgroundSelect {
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
-let obj = { flex: 1, marginTop: ThemesDefault.space.PX_24 };
+let obj = { scrollView: null, contentContainer: null };
+obj = { flex: 1, marginTop: ThemesDefault.space.PX_24 };
 obj[0] = obj;
 obj[1] = { justifyContent: "center" };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function PremiumGiftBackgroundSelectTsx1(){const{STANDARD_EASING,withTiming,visibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};}" };
-let result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
 
 export default function PremiumGiftBackgroundSelect() {
   let obj = NativeGiftContextProvider;

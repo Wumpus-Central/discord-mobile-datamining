@@ -4,13 +4,13 @@
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
 
 function handleUpdate(sessions) {
   closure_4 = {};
   sessions = sessions.sessions;
-  const item = sessions.forEach((item, index) => {
-    closure_4[item.sessionId] = item;
+  const item = sessions.forEach((sessionId) => {
+    closure_4[sessionId.sessionId] = sessionId;
   });
 }
 let closure_3 = Object.freeze([]);
@@ -85,21 +85,22 @@ prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivit
       return null;
     } else {
       const activities = found.activities;
-      let found1 = activities.find((item, index) => item.application_id === closure_0);
+      let found1 = activities.find((application_id) => application_id.application_id === closure_0);
       if (null == found1) {
         const hiddenActivities = found.hiddenActivities;
         let found2;
         if (hiddenActivities != null) {
-          found2 = hiddenActivities.find((item, index) => item.application_id === closure_0);
+          found2 = hiddenActivities.find((application_id) => application_id.application_id === closure_0);
         }
         found1 = found2;
       }
       return found1;
     }
+    const arr3 = applyDefault;
   }
 };
 SessionsStore.displayName = "SessionsStore";
 const sessionsStore = new SessionsStore(dispatcherDefault, { CONNECTION_OPEN: handleUpdate, SESSIONS_REPLACE: handleUpdate });
-const result = require("obj132").fileFinishedImporting("stores/SessionsStore.tsx");
+const result = require("set").fileFinishedImporting("stores/SessionsStore.tsx");
 
 export default sessionsStore;

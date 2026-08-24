@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 9562 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/SlashBoxIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/SlashBoxIcon.tsx");
 
 export const SlashBoxIcon = function SlashBoxIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

@@ -1,13 +1,13 @@
 // === Module 12643: useModalPanGesture ===
 
 // Module 12643 (useModalPanGesture)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 let closure_3 = { code: "function useModalPanGestureTsx1({velocityY:velocityY}){const{translateY,thresholdTranslate,thresholdVelocity,withSpring,height,runOnJS,ModalActionCreators,onClose,onEnd}=this.__closure;const config={damping:15,mass:1,stiffness:250,overshootClamping:true,restSpeedThreshold:0.001,restDisplacementThreshold:0.001,velocity:velocityY};if(translateY.get()>=thresholdTranslate||velocityY>=thresholdVelocity){translateY.set(withSpring(height,config,'respect-motion-settings',function(){runOnJS(ModalActionCreators.pop)();}));if(onClose!=null){runOnJS(onClose)();}}else{translateY.set(withSpring(0,config));}if(onEnd!=null){runOnJS(onEnd)();}}" };
 let closure_4 = { code: "function useModalPanGestureTsx2({translationY:translationY}){const{translateY,interpolate,start,maxTranslate,Extrapolate}=this.__closure;translateY.set(interpolate(start.get().y+translationY,[0,maxTranslate],[0,maxTranslate],Extrapolate.CLAMP));}" };
 let closure_5 = { code: "function useModalPanGestureTsx3(){const{onStart,runOnJS,start,translateY}=this.__closure;if(onStart!=null){runOnJS(onStart)();}start.set({y:translateY.get()});}" };
 let closure_6 = { code: "function useModalPanGestureTsx4(){const{runOnJS,ModalActionCreators}=this.__closure;runOnJS(ModalActionCreators.pop)();}" };
-let result = obj132.fileFinishedImporting("modules/video_calls/native/components/useModalPanGesture.tsx");
+let result = set.fileFinishedImporting("modules/video_calls/native/components/useModalPanGesture.tsx");
 
 export default function useModalPanGesture(thresholdVelocity) {
   let num = thresholdVelocity.thresholdVelocity;
@@ -21,8 +21,9 @@ export default function useModalPanGesture(thresholdVelocity) {
   const onStart = thresholdVelocity.onStart;
   const onEnd = thresholdVelocity.onEnd;
   const onClose = thresholdVelocity.onClose;
+  let sharedValue;
   let obj = num(thresholdTranslate[0]);
-  const sharedValue = obj.useSharedValue({ y: 0 });
+  sharedValue = obj.useSharedValue({ y: 0 });
   const Gesture = num(thresholdTranslate[1]).Gesture;
   const PanResult = Gesture.Pan();
   class J {

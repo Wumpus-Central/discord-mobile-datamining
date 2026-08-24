@@ -12,9 +12,9 @@ if (getOwnPropertySymbols) {
       const _Object = Object;
       const ObjectResult = Object(arg0);
       _require = ObjectResult;
-      items = _require(797)(getOwnPropertySymbols(ObjectResult), (ownPropertySymbols) => {
-        const call = propertyIsEnumerable.call;
-        return typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols) : call(closure_0, ownPropertySymbols);
+      items = _require(797)(getOwnPropertySymbols(ObjectResult), (arg0) => {
+        const call = closure_1_2.call;
+        return typeof call === "unknown" ? closure_1_2(arg0) : call(closure_0, arg0);
       });
       const tmp5 = _require(797);
     }

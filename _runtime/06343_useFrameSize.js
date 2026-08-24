@@ -3,12 +3,12 @@
 // Module 6343 (useFrameSize)
 import useEffectDefault from "useEffect" /* 1522 */;
 import is from "is" /* 6345 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import __react_navigation__elements_contexts from "__react_navigation__elements_contexts" /* 6344 */;
 
-require = fn;
+require = arg1;
 ({ jsx, jsxs: c4 } = jsxProd);
 const namedContext = __react_navigation__elements_contexts.getNamedContext("FrameContext", undefined);
 
@@ -26,11 +26,17 @@ export const useFrameSize = function useFrameSize(arg0, arg1) {
 };
 export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
   initialFrame = initialFrame.initialFrame;
+  closure_0 = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let React;
+  let callback;
+  let redux;
+  let ref;
   let obj = { width: initialFrame.width, height: initialFrame.height };
   closure_0 = React.useRef(obj);
   importDefault = React.useRef(new Set());
-  let tmp2 = useEffectDefault(() => ref.current);
+  const tmp2 = useEffectDefault(() => ref.current);
   dependencyMap = tmp2;
   const tmp3 = useEffectDefault((arg0) => {
     closure_0 = arg0;
@@ -72,21 +78,20 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
       clearTimeout(closure_1);
     };
   });
-  let callback = tmp4;
+  callback = tmp4;
   const items = [tmp3, tmp4, tmp2];
   const memo = React.useMemo(() => ({ getCurrent: closure_2, subscribe: closure_3, subscribeThrottled: closure_4 }), items);
   const tmp6 = useEffectDefault((height) => {
     if (!tmp2) {
       const obj = { width: null, height: null };
       ({ width: obj[0], height: obj[1] } = height);
-      ref.current = obj;
+      tmp.current = obj;
       const current = ref2.current;
-      const item = current.forEach((item, index) => item());
+      const item = current.forEach((arg0) => arg0());
     }
-    tmp2 = ref.current.height === height.height && ref.current.width === height.width;
   });
-  const redux = tmp6;
-  const ref = React.useRef(null);
+  redux = tmp6;
+  ref = React.useRef(null);
   const items1 = [tmp6];
   const effect = React.useEffect(() => {
     const current = ref.current;
@@ -98,10 +103,10 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
           obj[1] = arg3;
           callback(obj);
         }
-        tmp = ref.current.width > 0 && ref.current.height > 0;
       });
     }
   }, items1);
+  obj = { value: memo, children: null };
   obj = {
     ref,
     onLayout(nativeEvent) {

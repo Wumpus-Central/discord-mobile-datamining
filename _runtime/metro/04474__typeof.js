@@ -84,7 +84,7 @@ function loadStripe(KEY) {
   closure_0 = closure_1;
   let catchPromise = promise;
   if (null === promise) {
-    promise = new Promise((fn) => {
+    promise = new Promise((arg0, arg1) => {
       if (typeof window !== "undefined") {
         const _document = document;
         if (typeof document !== "undefined") {
@@ -96,7 +96,7 @@ function loadStripe(KEY) {
           const _window2 = window;
           if (window.Stripe) {
             const _window3 = window;
-            fn(window.Stripe);
+            arg0(window.Stripe);
           } else {
             try {
               const tmp8 = (function findScript() {
@@ -104,12 +104,17 @@ function loadStripe(KEY) {
                 let num = 0;
                 if (0 < elements.length) {
                   while (true) {
+                    let tmp2 = closure_8;
                     let src = elements[num].src;
+                    let tmp3 = num;
                     if (typeof closure_8 !== "function") {
+                      let str = "Trying to call a non-function";
                       let throwTypeErrorResult = HermesBuiltin.throwTypeError();
                     }
+                    let tmp4 = regex;
                     let isMatch = regex.test(src);
                     if (!isMatch) {
+                      let tmp6 = regex2;
                       isMatch = regex2.test(src);
                     }
                     if (isMatch) {
@@ -128,8 +133,8 @@ function loadStripe(KEY) {
                   const _console2 = console;
                   console.warn(closure_1_7);
                 }
-                closure_12 = (function onLoad(fn, arg1) {
-                  closure_0 = fn;
+                closure_12 = (function onLoad(arg0, arg1) {
+                  closure_0 = arg0;
                   closure_1 = arg1;
                   return () => {
                     if (window.Stripe) {
@@ -141,7 +146,7 @@ function loadStripe(KEY) {
                       callback2(error);
                     }
                   };
-                })(fn, arg1);
+                })(arg0, arg1);
                 closure_11 = (function onError(arg0) {
                   closure_0 = arg0;
                   return (cause) => {
@@ -166,12 +171,12 @@ function loadStripe(KEY) {
                       if (!tmp17) {
                         obj2.removeChild(obj);
                       }
-                      obj = injectScript(closure_0);
+                      obj = closure_1_9(closure_0);
                     }
                   }
                 }
               } else {
-                obj = injectScript(closure_0);
+                obj = closure_1_9(closure_0);
               }
             } catch (tmp30) {
               tmp2(tmp30);
@@ -180,33 +185,33 @@ function loadStripe(KEY) {
           tmp4 = window.Stripe && closure_0;
         }
       }
-      fn(null);
+      arg0(null);
     });
-    catchPromise = promise.catch((error) => {
+    catchPromise = promise.catch((arg0) => {
       c10 = null;
-      return Promise.reject(error);
+      return Promise.reject(arg0);
     });
   }
-  return catchPromise.then((result) => {
+  return catchPromise.then((version) => {
     let tmp3 = null;
-    if (null !== result) {
-      let match = table[0].match(/^pk_test/);
-      const version = result.version;
+    if (null !== version) {
+      let match = tmp[0].match(/^pk_test/);
+      version = version.version;
       let str = "v3";
       if (3 !== version) {
         str = version;
       }
       if (match) {
-        match = str !== basil;
+        match = str !== tmp4;
       }
       if (match) {
         const _console = console;
         const concat = "Stripe.js@".concat;
         const combined = "Stripe.js@".concat(str, " was loaded on the page, but @stripe/stripe-js@");
         const combined1 = combined.concat("7.3.1", " expected Stripe.js@");
-        console.warn(combined1.concat(basil, ". This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning"));
+        console.warn(combined1.concat(tmp4, ". This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning"));
       }
-      const applyResult = result.apply(undefined, table);
+      const applyResult = version.apply(undefined, tmp);
       let _registerWrapper = applyResult;
       if (applyResult) {
         _registerWrapper = applyResult._registerWrapper;
@@ -218,6 +223,7 @@ function loadStripe(KEY) {
         applyResult._registerWrapper(obj);
         tmp3 = applyResult;
       }
+      const str7 = tmp[0];
     }
     return tmp3;
   });

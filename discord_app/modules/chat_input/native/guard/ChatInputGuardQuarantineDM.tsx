@@ -8,7 +8,7 @@ import { QUARANTINE_APPEAL_LINK } from "QUARANTINE_APPEAL_LINK" /* 11620 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 const memoResult = importAllResult.memo(function ChatInputGuardQuarantineDM() {
   let obj = { type: "simple-action", icon: jsx(ChatWarningIcon.ChatWarningIcon, {}), message: null, subtext: null };
   const intl = getSystemLocale.intl;
@@ -18,6 +18,6 @@ const memoResult = importAllResult.memo(function ChatInputGuardQuarantineDM() {
   obj[3] = intl2.format(getSystemLocale.t.PThBel, obj);
   return jsx(ChatInputGuardDefault, { appealLink: QUARANTINE_APPEAL_LINK });
 });
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx");
 
 export default memoResult;

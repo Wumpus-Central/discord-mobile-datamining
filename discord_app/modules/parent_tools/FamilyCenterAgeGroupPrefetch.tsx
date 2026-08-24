@@ -2,9 +2,9 @@
 
 // Module 14792 (prefetchFamilyCenterAgeGroupWhen)
 import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
-import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
+import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
 
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx");
 
 export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled) {
   let tmp = isFamilyCenterV3Enabled;
@@ -13,9 +13,11 @@ export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAge
   }
   if (tmp) {
     if (!closure_2.isLoading()) {
-      if (closure_2.canRefetch()) {
+      if (obj.canRefetch()) {
         maybeFetchCollectiblesForInvoicesDefault.initialPageLoad();
+        const obj2 = maybeFetchCollectiblesForInvoicesDefault;
       }
     }
+    obj = closure_2;
   }
 };

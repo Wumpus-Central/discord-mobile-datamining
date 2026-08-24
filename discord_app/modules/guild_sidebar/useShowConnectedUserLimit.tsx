@@ -1,12 +1,12 @@
 // === Module 11461: useShowConnectedUserLimit ===
 
 // Module 11461 (useShowConnectedUserLimit)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9653 */;
 
 let closure_2 = ME.MAX_STAGE_VOICE_USER_LIMIT;
-const result = obj132.fileFinishedImporting("modules/guild_sidebar/useShowConnectedUserLimit.tsx");
+const result = set.fileFinishedImporting("modules/guild_sidebar/useShowConnectedUserLimit.tsx");
 
 export default function useShowConnectedUserLimit(channel) {
   ({ channel, video, considerMaxStageVoiceUserLimit } = { channel: channel.channel, video: channel.video });

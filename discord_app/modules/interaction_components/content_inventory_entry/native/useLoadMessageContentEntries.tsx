@@ -2,17 +2,16 @@
 
 // Module 10721 (fetchColors)
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import items3 from "items" /* 8343 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
-import addApplication from "addApplication" /* 4478 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "addApplication" /* 4478 */;
 import { ImageSizes } from "items3" /* 4481 */;
 
-require = fn;
+require = arg1;
 function fetchColors(play) {
   closure_0 = play;
-  return promiseDeduper1.one(play, () => play(dependencyMap[8]).maybeFetchColors(play));
+  return promiseDeduper1.one(play, () => play(closure_1_2[8]).maybeFetchColors(play));
 }
 function _fetchApplicationParts() {
   const self = this;
@@ -269,11 +268,11 @@ function _fetchWatchedContentParts() {
               obj[0] = arg1;
               return obj;
             } else if ("application_id" in lib.extra) {
-              if ("media_assets_large_image" in lib.extra) {
+              if ("media_assets_large_image" in tmp17.extra) {
                 obj1 = lib(table[10]);
                 const items = [, ];
                 ({ LARGE: arr[0], LARGE: arr[1] } = closure_1_7);
-                const assetImage = obj1.getAssetImage(lib.extra.application_id, lib.extra.media_assets_large_image, items);
+                const assetImage = obj1.getAssetImage(tmp17.extra.application_id, tmp17.extra.media_assets_large_image, items);
                 if (null != assetImage) {
                   table = 1;
                   c1 = 1;
@@ -511,7 +510,7 @@ function _loadContentEntryParts() {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      if (components.type === arr(components[11]).ComponentType.CONTENT_INVENTORY_ENTRY) {
+                      if (closure_1_2.type === arr(closure_1_2[11]).ComponentType.CONTENT_INVENTORY_ENTRY) {
                         function _fetchEntryParts() {
                           const self = this;
                           const tmp = closure_1_4(/* F120921 */ function() { ... });
@@ -524,7 +523,7 @@ function _loadContentEntryParts() {
                           }
                           return applyArgumentsResult;
                         }
-                        const contentInventoryEntry = components.contentInventoryEntry;
+                        const contentInventoryEntry = closure_1_2.contentInventoryEntry;
                         const items = [];
                         arr = items;
                         arr = items.push((function fetchApplicationParts(contentInventoryEntry) {
@@ -726,18 +725,23 @@ function _loadContentEntryParts() {
   }
   return applyArgumentsResult;
 }
-function isMessageRenderable(closure_1) {
-  const iter = importDefault.components[Symbol.iterator]();
+function isMessageRenderable(arg0) {
+  const iter = arg0.components[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     if (nextResult.type === PermissionOverwriteType.ComponentType.CONTENT_INVENTORY_ENTRY) {
-      let tmp3Result = items3;
-      let obj = { contentInventoryEntry: null };
+      let tmp3Result = tmp3(8343);
+      let obj = { component: null, message: null };
+      obj = { contentInventoryEntry: null };
+      let tmp5 = nextResult;
       obj[0] = tmp2.contentInventoryEntry;
       obj[0] = obj;
-      obj[1] = importDefault;
+      obj[1] = arg0;
       if (null == tmp3Result.transformToRowGeneratedContentInventoryEntryComponent(obj)) {
+        let tmp6 = iter;
         iter.return();
         let flag = false;
         return false;
@@ -747,10 +751,10 @@ function isMessageRenderable(closure_1) {
   }
   return true;
 }
-new require("areArraysShallowlyEqual").PromiseDeduper();
-const promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
+let promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
+promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
 const promiseDeduper1 = new require("areArraysShallowlyEqual").PromiseDeduper();
-let result = require("obj132").fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");
+let result = require("set").fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");
 
 export default function useLoadMessageContentEntries(arg0) {
   let _require = arg0;
@@ -766,6 +770,7 @@ export default function useLoadMessageContentEntries(arg0) {
   first1 = tmp7[0];
   closure_6 = tmp7[1];
   let obj = _require(8345);
+  _require = undefined;
   const colorStore = obj.useColorStore((palette) => palette.palette);
   _require = callback((arg0, arg1) => {
     closure_0 = arg0;
@@ -804,21 +809,21 @@ export default function useLoadMessageContentEntries(arg0) {
               closure_2 = tmp5;
               if (0 !== closure_1.components.length) {
                 const current7 = closure_1.current;
-                if (!current7.has(closure_0)) {
+                if (!current7.has(tmp50)) {
                   const current5 = closure_1.current;
-                  const result = current5.set(closure_0, "loading");
+                  const result = current5.set(tmp50, "loading");
                   closure_1_4((arg0) => {
                     const items = [];
                     items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
                     return new Set(items);
                   });
                   const current6 = closure_1_2.current;
-                  const result1 = current6.set(closure_0, closure_1);
+                  const result1 = current6.set(tmp50, tmp51);
                   c5 = 1;
                   v0 = 2;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = (function loadContentEntryParts(closure_1) {
+                  obj1[0] = (function loadContentEntryParts(arg0) {
                     const self = this;
                     const apply = closure_17.apply;
                     if (typeof apply === "unknown") {
@@ -827,7 +832,7 @@ export default function useLoadMessageContentEntries(arg0) {
                       applyArgumentsResult = apply(self, arguments);
                     }
                     return applyArgumentsResult;
-                  })(closure_1);
+                  })(tmp51);
                   return obj1;
                 }
               }
@@ -841,7 +846,7 @@ export default function useLoadMessageContentEntries(arg0) {
               current4.delete(closure_0);
               closure_1_4((arg0) => {
                 const items = [...arg0];
-                return new Set(items.filter((item, index) => item !== closure_0));
+                return new Set(items.filter((arg0) => arg0 !== closure_0));
               });
               v0((arg0) => {
                 const items = [];
@@ -852,14 +857,14 @@ export default function useLoadMessageContentEntries(arg0) {
               c7 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              if (isMessageRenderable(closure_1)) {
+              if (closure_2_18(closure_1)) {
                 const current = closure_1.current;
                 const result3 = current.set(closure_0, "loaded");
                 const current2 = closure_1_2.current;
                 current2.delete(closure_0);
                 closure_1_4((arg0) => {
                   const items = [...arg0];
-                  return new Set(items.filter((item, index) => item !== closure_0));
+                  return new Set(items.filter((arg0) => arg0 !== closure_0));
                 });
               }
               c5 = 0;
@@ -898,21 +903,21 @@ export default function useLoadMessageContentEntries(arg0) {
     if (0 !== ref.current.size) {
       const items = [];
       let current = tmp.current;
-      let item = current.forEach((item, index) => {
-        if (isMessageRenderable(item)) {
-          items.push(index);
+      let item = current.forEach((arg0, arg1) => {
+        if (closure_2_18(arg0)) {
+          items.push(arg1);
         }
       });
       if (items.length > 0) {
-        const item1 = items.forEach((item, index) => {
+        const item1 = items.forEach((arg0) => {
           const current = ref.current;
-          const result = current.set(item, "loaded");
+          const result = current.set(arg0, "loaded");
           const current2 = ref2.current;
-          current2.delete(item);
+          current2.delete(arg0);
         });
         callback((items) => {
           const set = new Set(items);
-          const item = set.forEach((item, index) => set.delete(item));
+          const item = set.forEach((arg0) => set.delete(arg0));
           return set;
         });
       }
@@ -920,13 +925,13 @@ export default function useLoadMessageContentEntries(arg0) {
   }, items);
   const items1 = [callback, arg0];
   const effect1 = first1.useEffect(() => {
-    const item = closure_0.forEach((item, index) => {
-      if (closure_1_1(closure_1_2[13])(item)) {
-        if (null != item.messageSnapshots[0]) {
-          callback(item.id, item.messageSnapshots[0].message);
+    const item = closure_0.forEach((id) => {
+      if (closure_1_1(closure_1_2[13])(id)) {
+        if (null != id.messageSnapshots[0]) {
+          callback(id.id, id.messageSnapshots[0].message);
         }
       }
-      callback(item.id, item);
+      callback(id.id, id);
     });
   }, items1);
   const items2 = [first, first1];
@@ -934,8 +939,8 @@ export default function useLoadMessageContentEntries(arg0) {
     unloadedContentEntryMessageIds: first,
     unloadableContentEntryMessageIds: first1.useMemo(() => {
       const set = new Set();
-      const item = first.forEach((item, index) => set.add(item));
-      const item1 = first1.forEach((item, index) => set.add(item));
+      const item = first.forEach((arg0) => set.add(arg0));
+      const item1 = first1.forEach((arg0) => set.add(arg0));
       return set;
     }, items2)
   };

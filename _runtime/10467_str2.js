@@ -2,12 +2,12 @@
 
 // Module 10467 (str2)
 import noopDefault from "noop" /* 19 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
 import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["ref", "leftThreshold", "rightThreshold", "enabled", "containerStyle", "childrenContainerStyle", "animationOptions", "overshootLeft", "overshootRight", "testID", "children", "enableTrackpadTwoFingerGesture", "dragOffsetFromLeft", "dragOffsetFromRight", "friction", "overshootFriction", "onSwipeableOpenStartDrag", "onSwipeableCloseStartDrag", "onSwipeableWillOpen", "onSwipeableWillClose", "onSwipeableOpen", "onSwipeableClose", "renderLeftActions", "renderRightActions", "simultaneousWith", "requireToFail", "block", "hitSlop"];
 ({ useCallback: c5, useEffect, useImperativeHandle: closure_6, useMemo: error } = noop);
 noopDefault;
@@ -35,7 +35,8 @@ let closure_29 = { code: "function pnpm_ReanimatedSwipeableTsx22(event){const{us
 let closure_30 = { code: "function pnpm_ReanimatedSwipeableTsx23(event){const{handleRelease}=this.__closure;handleRelease(event);}" };
 let closure_31 = { code: "function pnpm_ReanimatedSwipeableTsx24(){const{dragStarted}=this.__closure;dragStarted.value=false;}" };
 let closure_32 = { code: "function pnpm_ReanimatedSwipeableTsx25(){const{appliedTranslation,rowState}=this.__closure;return{transform:[{translateX:appliedTranslation.value}],pointerEvents:rowState.value===0?'auto':'box-only'};}" };
-let obj = {};
+let obj = { container: { overflow: "hidden" }, leftActions: null, rightActions: null };
+obj = {};
 let merged = Object.assign(StyleSheet.absoluteFill);
 let str = "row";
 if (I18nManager.isRTL) {
@@ -144,19 +145,18 @@ function _default(hitSlop) {
     sharedValue3.value = leftThreshold(animationOptions[4]).interpolate(sum, items, items1);
     let num7 = 0;
     if (sharedValue5.value > 0) {
-      let tmp8Result = leftThreshold(animationOptions[4]);
-      const items2 = [-1, 0, sharedValue5.value];
-      num7 = tmp8Result.interpolate(sharedValue3.value, items2, [0, 0, 1]);
+      let tmp8Result = tmp8(tmp9[4]);
+      const items2 = [-1, 0, iter4.value];
+      num7 = tmp8Result.interpolate(iter2.value, items2, [0, 0, 1]);
     }
     sharedValue7.value = num7;
     let num8 = 0;
     if (sharedValue6.value > 0) {
-      tmp8Result = leftThreshold(animationOptions[4]);
-      const items3 = [-sharedValue6.value, 0, 1];
-      num8 = tmp8Result.interpolate(sharedValue3.value, items3, [1, 0, 0]);
+      tmp8Result = tmp8(tmp9[4]);
+      const items3 = [-iter3.value, 0, 1];
+      num8 = tmp8Result.interpolate(iter2.value, items3, [1, 0, 0]);
     }
     sharedValue8.value = num8;
-    const obj = leftThreshold(animationOptions[4]);
   };
   obj = { overshootLeft, leftWidth: sharedValue5, overshootRight, rightWidth: sharedValue6, rowState: sharedValue1, userDrag: sharedValue2, friction: num4, appliedTranslation: sharedValue3, interpolate: leftThreshold(animationOptions[4]).interpolate, overshootFriction: num3, showLeftProgress: sharedValue7, showRightProgress: sharedValue8 };
   fn.__closure = obj;
@@ -182,9 +182,10 @@ function _default(hitSlop) {
         } else {
           RIGHT = leftThreshold(animationOptions[5]).SwipeDirection.RIGHT;
         }
-        leftThreshold(animationOptions[4]).runOnJS(onSwipeableWillClose)(RIGHT);
-        const runOnJSResult = leftThreshold(animationOptions[4]).runOnJS(onSwipeableWillClose);
+        leftThreshold(animationOptions[4]).runOnJS(tmp11)(RIGHT);
+        const runOnJSResult = leftThreshold(animationOptions[4]).runOnJS(tmp11);
       }
+      tmp11 = onSwipeableWillClose;
     } else {
       const obj = leftThreshold(animationOptions[4]);
       if (arg1 > 0) {
@@ -220,9 +221,10 @@ function _default(hitSlop) {
         } else {
           RIGHT = leftThreshold(animationOptions[5]).SwipeDirection.RIGHT;
         }
-        leftThreshold(animationOptions[4]).runOnJS(onSwipeableClose)(RIGHT);
-        const runOnJSResult = leftThreshold(animationOptions[4]).runOnJS(onSwipeableClose);
+        leftThreshold(animationOptions[4]).runOnJS(tmp11)(RIGHT);
+        const runOnJSResult = leftThreshold(animationOptions[4]).runOnJS(tmp11);
       }
+      tmp11 = onSwipeableClose;
     } else {
       const obj = leftThreshold(animationOptions[4]);
       if (arg1 > 0) {
@@ -273,14 +275,14 @@ function _default(hitSlop) {
       obj.restSpeedThreshold = 0.01;
       let interpolateResult = num;
       if (num) {
-        let tmpResult = leftThreshold(animationOptions[4]);
+        let tmpResult = tmp(tmp2[4]);
         const items = [-value, value];
         interpolateResult = tmpResult.interpolate(num, items, [-1, 1]);
       }
       obj.velocity = interpolateResult;
       value = sharedValue1.value;
       c1 = value;
-      tmpResult = leftThreshold(animationOptions[4]);
+      tmpResult = tmp(tmp2[4]);
       const fn = function n(arg0) {
         if (arg0) {
           closure_1_26(c1, closure_0);
@@ -300,15 +302,14 @@ function _default(hitSlop) {
         num4 = Math.sign(value);
       }
       const _Math2 = Math;
-      sharedValue7.value = leftThreshold(animationOptions[4]).withSpring(Math.max(num4, 0), obj);
-      const tmpResult1 = leftThreshold(animationOptions[4]);
+      sharedValue7.value = tmp(tmp2[4]).withSpring(Math.max(num4, 0), obj);
+      const tmpResult1 = tmp(tmp2[4]);
       const _Math3 = Math;
-      sharedValue8.value = leftThreshold(animationOptions[4]).withSpring(Math.max(-num4, 0), obj);
+      sharedValue8.value = tmp(tmp2[4]).withSpring(Math.max(-num4, 0), obj);
       callback2(value, value);
       const _Math4 = Math;
       sharedValue1.value = Math.sign(value);
       sharedValue.value = 0 !== sharedValue1.value;
-      const tmpResult2 = leftThreshold(animationOptions[4]);
     }
   };
   obj2 = { ReduceMotion: leftThreshold(animationOptions[4]).ReduceMotion, animationOptions, rowState: sharedValue1, rightWidth: sharedValue6, leftWidth: sharedValue5, interpolate: leftThreshold(animationOptions[4]).interpolate, appliedTranslation: sharedValue3, withSpring: leftThreshold(animationOptions[4]).withSpring, dispatchEndEvents: tmp16, showLeftProgress: sharedValue7, showRightProgress: sharedValue8, dispatchImmediateEvents: tmp15, shouldEnableTap: sharedValue };
@@ -378,23 +379,24 @@ function _default(hitSlop) {
   closure_31 = tmp21;
   const items5 = [tmp17, tmp21, sharedValue5, sharedValue6, sharedValue2, sharedValue7, sharedValue3, sharedValue1];
   const tmp22 = onSwipeableOpenStartDrag(() => {
+    let obj = { close: null, openLeft: null, openRight: null, reset: null };
     function close() {
       if (globalThis._WORKLET) {
         callback(0);
       } else {
-        leftThreshold(animationOptions[4]);
+        let obj = closure_1_0(closure_1_2[4]);
         const fn = function t() {
           callback(0);
         };
-        const obj = { animateRow: null };
+        obj = { animateRow: null };
         obj[0] = callback;
         fn.__closure = obj;
         fn.__workletHash = 7817847521965;
-        fn.__initData = sharedValue3;
+        fn.__initData = closure_1_18;
         obj.runOnUI(fn)();
       }
     }
-    let obj = { animateRow: closure_27, runOnUI: leftThreshold(animationOptions[4]).runOnUI };
+    obj = { animateRow: closure_27, runOnUI: leftThreshold(animationOptions[4]).runOnUI };
     close.__closure = obj;
     close.__workletHash = 13750166537974;
     close.__initData = sharedValue2;
@@ -404,18 +406,18 @@ function _default(hitSlop) {
         callback2();
         callback(value.value);
       } else {
-        leftThreshold(animationOptions[4]);
+        let obj = closure_1_0(closure_1_2[4]);
         const fn = function t() {
           callback2();
           callback(value.value);
         };
-        const obj = { updateElementWidths: null, animateRow: null, leftWidth: null };
+        obj = { updateElementWidths: null, animateRow: null, leftWidth: null };
         obj[0] = callback2;
         obj[1] = callback;
         obj[2] = value;
         fn.__closure = obj;
         fn.__workletHash = 13169175708736;
-        fn.__initData = sharedValue5;
+        fn.__initData = closure_1_20;
         obj.runOnUI(fn)();
       }
     };
@@ -429,18 +431,18 @@ function _default(hitSlop) {
         callback2();
         callback(-value2.value);
       } else {
-        leftThreshold(animationOptions[4]);
+        let obj = closure_1_0(closure_1_2[4]);
         const fn = function t() {
           callback2();
           callback(-value.value);
         };
-        const obj = { updateElementWidths: null, animateRow: null, rightWidth: null };
+        obj = { updateElementWidths: null, animateRow: null, rightWidth: null };
         obj[0] = callback2;
         obj[1] = callback;
         obj[2] = value2;
         fn.__closure = obj;
         fn.__workletHash = 3813246920715;
-        fn.__initData = sharedValue7;
+        fn.__initData = closure_1_22;
         obj.runOnUI(fn)();
       }
     };
@@ -679,8 +681,9 @@ function _default(hitSlop) {
   num3(ref, () => closure_32, items12);
   const obj22 = leftThreshold(animationOptions[6]);
   function rt() {
-    const obj = { translateX: sharedValue3.value };
-    const items = [obj];
+    let obj = { transform: items, pointerEvents: null };
+    obj = { translateX: sharedValue3.value };
+    items = [obj];
     let str = "box-only";
     if (0 === sharedValue1.value) {
       str = "auto";

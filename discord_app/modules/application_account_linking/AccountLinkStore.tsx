@@ -3,7 +3,8 @@
 // Module 16159 (map)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import recomputeFromAppTokens from "recomputeFromAppTokens" /* 5289 */;
+import closure_0 from "recomputeFromAppTokens" /* 5289 */;
+import set from "set" /* 2 */;
 
 const map = new Map();
 let set = new Set();
@@ -34,12 +35,11 @@ const accountLinkStore = new AccountLinkStore(dispatcherDefault, {
       obj[2] = applicationId.accountLinkCallbacks;
       const result = map.set(applicationId.applicationId, obj);
     }
-    tmp = null == newestTokenForApplication.getNewestTokenForApplication(applicationId.applicationId) && null != applicationId.accountLinkCallbacks;
   },
   ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS: function handleSetGloballyDisabledFlows(flows) {
     set = new Set(flows.flows);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
+let result = set.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
 
 export default accountLinkStore;

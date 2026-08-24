@@ -7,8 +7,8 @@ import textRegexpDefault from "textRegexp" /* 6815 */;
 import regExpDefault from "regExp" /* 6829 */;
 import _modDef6830 from "module_6830" /* 6830 */;
 
-const require = fn;
-function defaultRules(upload) {
+const require = arg1;
+function defaultRules(uri) {
   let obj = {};
   const merged = Object.assign(_require(8306).baseRules);
   if (null != _require(8306).customRules.strong) {
@@ -16,7 +16,7 @@ function defaultRules(upload) {
     const merged1 = Object.assign(tmp(8306).baseRules.strong);
     if (typeof tmp(8306).customRules.strong === "function") {
       const customRules = tmp(8306).customRules;
-      let strong = customRules.strong(upload);
+      let strong = customRules.strong(uri);
     } else {
       strong = tmp(8306).customRules.strong;
     }
@@ -30,7 +30,7 @@ function defaultRules(upload) {
     const merged4 = Object.assign(image);
     if (typeof tmp(8306).customRules.image === "function") {
       const customRules2 = tmp(8306).customRules;
-      image = customRules2.image(upload);
+      image = customRules2.image(uri);
     } else {
       image = tmp(8306).customRules.image;
     }
@@ -40,7 +40,7 @@ function defaultRules(upload) {
     const merged6 = Object.assign(link);
     if (typeof tmp(8306).customRules.link === "function") {
       const customRules3 = tmp(8306).customRules;
-      link = customRules3.link(upload);
+      link = customRules3.link(uri);
     } else {
       link = tmp(8306).customRules.link;
     }
@@ -50,7 +50,7 @@ function defaultRules(upload) {
     const merged8 = Object.assign(list);
     if (typeof tmp(8306).customRules.list === "function") {
       const customRules4 = tmp(8306).customRules;
-      list = customRules4.list(upload);
+      list = customRules4.list(uri);
     } else {
       list = tmp(8306).customRules.list;
     }
@@ -78,7 +78,7 @@ function defaultRules(upload) {
     const obj6 = {};
     const merged10 = Object.assign(lheading);
     _require = true;
-    obj6.parse = (arg0, fn, inline) => {
+    obj6.parse = (arg0, arg1, inline) => {
       const match = closure_1_10.exec(arg0[1]);
       const str2 = arg0[1].replace(closure_1_10, "");
       let formatted = str2;
@@ -95,12 +95,12 @@ function defaultRules(upload) {
         num = 1;
       }
       obj[1] = num;
-      obj[2] = tDefault.parseInline(fn, formatted, inline);
+      obj[2] = closure_1_1(closure_1_2[0]).parseInline(arg1, formatted, inline);
       return obj;
     };
     if (typeof tmp(8306).customRules.lheading === "function") {
       const customRules5 = tmp(8306).customRules;
-      lheading = customRules5.lheading(upload);
+      lheading = customRules5.lheading(uri);
     } else {
       lheading = tmp(8306).customRules.lheading;
     }
@@ -110,7 +110,7 @@ function defaultRules(upload) {
     const merged12 = Object.assign(heading);
     if (typeof tmp(8306).customRules.heading === "function") {
       const customRules6 = tmp(8306).customRules;
-      heading = customRules6.heading(upload);
+      heading = customRules6.heading(uri);
     } else {
       heading = tmp(8306).customRules.heading;
     }
@@ -120,7 +120,7 @@ function defaultRules(upload) {
     const merged14 = Object.assign(blockQuote);
     if (typeof tmp(8306).customRules.blockQuote === "function") {
       const customRules7 = tmp(8306).customRules;
-      blockQuote = customRules7.blockQuote(upload);
+      blockQuote = customRules7.blockQuote(uri);
     } else {
       blockQuote = tmp(8306).customRules.blockQuote;
     }
@@ -130,7 +130,7 @@ function defaultRules(upload) {
     const merged16 = Object.assign(paragraph);
     if (typeof tmp(8306).customRules.paragraph === "function") {
       const customRules8 = tmp(8306).customRules;
-      paragraph = customRules8.paragraph(upload);
+      paragraph = customRules8.paragraph(uri);
     } else {
       paragraph = tmp(8306).customRules.paragraph;
     }
@@ -148,19 +148,20 @@ let blockQuote = tDefault.defaultRules.blockQuote;
 let paragraph = tDefault.defaultRules.paragraph;
 const re10 = /\{(.+?)}/;
 const re11 = /^\$(\w+?)\$/;
-const result = require("obj132").fileFinishedImporting("utils/ChangeLogUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/ChangeLogUtils.tsx");
 
 export default {
-  getDefaultRules(upload) {
-    const merged = Object.assign(defaultRules(upload));
+  getDefaultRules(uri) {
+    const merged = Object.assign(defaultRules(uri));
     return {};
   },
-  getSpecialRules(upload) {
-    const merged = Object.assign(defaultRules(upload));
+  getSpecialRules(uri) {
     let obj = {};
+    const merged = Object.assign(defaultRules(uri));
+    obj = {};
     const merged1 = Object.assign(lheading);
     const _require = false;
-    obj.parse = (arg0, fn, inline) => {
+    obj.parse = (arg0, arg1, inline) => {
       const match = closure_1_10.exec(arg0[1]);
       const str2 = arg0[1].replace(closure_1_10, "");
       let formatted = str2;
@@ -177,12 +178,12 @@ export default {
         num = 1;
       }
       obj[1] = num;
-      obj[2] = tDefault.parseInline(fn, formatted, inline);
+      obj[2] = closure_1_1(closure_1_2[0]).parseInline(arg1, formatted, inline);
       return obj;
     };
     if (typeof _require(8306).customRules.lheading === "function") {
       const customRules = tmp3(8306).customRules;
-      lheading = customRules.lheading(upload);
+      lheading = customRules.lheading(uri);
     } else {
       lheading = tmp3(8306).customRules.lheading;
     }
@@ -192,9 +193,11 @@ export default {
     const merged3 = Object.assign(obj);
     return obj;
   },
-  getMessageRules(upload) {
-    const merged = Object.assign(defaultRules(upload));
-    const obj = {};
+  getMessageRules(uri) {
+    let obj = {};
+    obj = {};
+    const merged = Object.assign(defaultRules(uri));
+    obj = {};
     const merged1 = Object.assign(tDefault.defaultRules.newline);
     obj.newline = obj;
     obj.text = textRegexpDefault;
@@ -204,9 +207,10 @@ export default {
     return obj;
   }
 };
-export const renderChangelogMessageMarkup = function renderChangelogMessageMarkup(content, upload) {
-  let obj = {};
-  const merged = Object.assign(defaultRules(upload));
+export const renderChangelogMessageMarkup = function renderChangelogMessageMarkup(content, uri) {
+  let obj = get_defaultRulesDefault;
+  obj = {};
+  const merged = Object.assign(defaultRules(uri));
   if (null != arg2) {
     obj = { changeLog: null };
     obj[0] = arg2;

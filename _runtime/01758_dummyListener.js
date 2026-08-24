@@ -2,7 +2,7 @@
 
 // Module 1758 (dummyListener)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const PropsFilter = arg1;
 function dummyListener() {
@@ -25,27 +25,30 @@ const items = [
       props = props.props;
       let obj = {};
       for (const key10014 in props) {
+        let tmp6 = key10014;
         iter = props[key10014];
         if ("style" === key10014) {
           let style = props.style;
+          let tmp4 = iter;
+          let tmp5 = animatedProps;
           let obj4 = iter(animatedProps[2]);
           if (style == null) {
             style = [];
           }
           let flattenArrayResult = obj4.flattenArray(style);
-          obj[key10014] = flattenArrayResult.map((item, index) => {
-            if (item) {
-              if (item.viewDescriptors) {
+          obj[key10014] = flattenArrayResult.map((viewDescriptors) => {
+            if (viewDescriptors) {
+              if (viewDescriptors.viewDescriptors) {
                 if (iter._isFirstRender) {
                   const _initialPropsMap = animatedProps._initialPropsMap;
                   obj = {};
-                  const merged = Object.assign(item.initial.value);
-                  const merged1 = Object.assign(iter(animatedProps[3]).initialUpdaterRun(item.initial.updater));
-                  const result = _initialPropsMap.set(item, obj);
+                  const merged = Object.assign(viewDescriptors.initial.value);
+                  const merged1 = Object.assign(iter(animatedProps[3]).initialUpdaterRun(viewDescriptors.initial.updater));
+                  const result = _initialPropsMap.set(viewDescriptors, obj);
                   const obj4 = iter(animatedProps[3]);
                 }
                 const _initialPropsMap2 = animatedProps._initialPropsMap;
-                obj = _initialPropsMap2.get(item);
+                obj = _initialPropsMap2.get(viewDescriptors);
                 if (obj == null) {
                   obj = {};
                 }
@@ -53,9 +56,9 @@ const items = [
               }
             }
             obj = iter(animatedProps[4]);
-            let inlineStyle = item;
-            if (obj.hasInlineStyles(item)) {
-              inlineStyle = iter(animatedProps[4]).getInlineStyle(item, iter._isFirstRender);
+            let inlineStyle = viewDescriptors;
+            if (obj.hasInlineStyles(viewDescriptors)) {
+              inlineStyle = iter(animatedProps[4]).getInlineStyle(viewDescriptors, iter._isFirstRender);
               const obj2 = iter(animatedProps[4]);
             }
             return inlineStyle;
@@ -69,12 +72,12 @@ const items = [
             } else {
               let _Object = Object;
               let keys = Object.keys(animatedProps.initial.value);
-              let item = keys.forEach((item, index) => {
+              let item = keys.forEach((arg0) => {
                 let tmp2;
                 if (animatedProps.initial != null) {
-                  tmp2 = iter.value[item];
+                  tmp2 = iter.value[arg0];
                 }
-                obj[item] = tmp2;
+                obj[arg0] = tmp2;
               });
               continue;
             }
@@ -87,17 +90,18 @@ const items = [
               if (iter.workletEventHandler instanceof tmp7(tmp8[5]).WorkletEventHandler) {
                 if (iter.workletEventHandler.eventNames.length > 0) {
                   let eventNames = iter.workletEventHandler.eventNames;
-                  let item1 = eventNames.forEach((item, index) => {
+                  let item1 = eventNames.forEach((arg0) => {
                     obj = PropsFilter(1751);
                     if (obj.has("listeners", iter.workletEventHandler)) {
-                      let tmp3 = iter.workletEventHandler.listeners[item];
+                      let tmp3 = iter.workletEventHandler.listeners[arg0];
                     } else {
                       tmp3 = dummyListener;
                     }
-                    obj[item] = tmp3;
+                    obj[arg0] = tmp3;
                   });
                   continue;
                 } else {
+                  let tmp2 = dummyListener;
                   obj[key10014] = dummyListener;
                   continue;
                 }

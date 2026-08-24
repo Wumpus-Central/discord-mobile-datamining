@@ -2,12 +2,12 @@
 
 // Module 7722 (useIAPContext)
 import noopDefault from "noop" /* 19 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ useContext: c4, useEffect: c5, useMemo: closure_6, useState: error } = noop);
 const context = noopDefault.createContext(null);
 
@@ -58,15 +58,16 @@ export function withIAPContext(arg0) {
     closure_1_5(() => {
       const connection = first(7707).initConnection();
       const obj = first(7707);
-      connection.then((result) => {
+      connection.then((arg0) => {
         callback2(undefined);
-        callback(result);
+        callback(arg0);
       }).catch(closure_19);
     }, []);
     let items1 = [first];
     closure_1_5(() => {
       if (closure_0) {
-        first1((arg0) => {
+        closure_0 = undefined;
+        closure_0 = first1((arg0) => {
           closure_0 = arg0;
           c1 = 0;
           return (function*(arg0) {
@@ -107,7 +108,7 @@ export function withIAPContext(arg0) {
             }
           })();
         });
-        first(7719).purchaseUpdatedListener(function(arg0) {
+        closure_0 = first(7719).purchaseUpdatedListener(function(arg0) {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -118,6 +119,7 @@ export function withIAPContext(arg0) {
           return applyArgumentsResult;
         });
         let obj = first(7719);
+        closure_0 = undefined;
         closure_0 = first1((arg0) => {
           closure_0 = arg0;
           c1 = 0;
@@ -149,12 +151,12 @@ export function withIAPContext(arg0) {
                 } else {
                   error = undefined;
                   if (closure_0 != null) {
-                    error = closure_0.error;
+                    error = tmp4.error;
                   }
                   closure_1_17(error);
                   let transaction;
                   if (closure_0 != null) {
-                    transaction = closure_0.transaction;
+                    transaction = tmp4.transaction;
                   }
                   closure_1_15(transaction);
                   c1 = 3;
@@ -262,10 +264,10 @@ export function withIAPContext(arg0) {
         };
       }
     }, items1);
-    { value: closure_1_6(() => ({ connected: first, products: first1, subscriptions: first3, promotedProductsIOS: first2, purchaseHistory: first4, availablePurchases: first5, currentPurchase: first6, currentTransaction: first7, currentPurchaseError: first8, initConnectionError: first9, setConnected: closure_1, setProducts: closure_3, setSubscriptions: closure_7, setPurchaseHistory: closure_9, setAvailablePurchases: closure_11, setCurrentPurchase: closure_13, setCurrentPurchaseError: closure_17 }), items), children: null };
-    let obj = {};
+    let obj = { value: closure_1_6(() => ({ connected: first, products: first1, subscriptions: first3, promotedProductsIOS: first2, purchaseHistory: first4, availablePurchases: first5, currentPurchase: first6, currentTransaction: first7, currentPurchaseError: first8, initConnectionError: first9, setConnected: closure_1, setProducts: closure_3, setSubscriptions: closure_7, setPurchaseHistory: closure_9, setAvailablePurchases: closure_11, setCurrentPurchase: closure_13, setCurrentPurchaseError: closure_17 }), items), children: null };
+    obj = {};
     const merged = Object.assign(arg0);
-    obj[1] = <first />;
-    return <closure_1_9.Provider />;
+    obj[1] = closure_1_8(first, obj);
+    return closure_1_8(closure_1_9.Provider, obj);
   };
 }

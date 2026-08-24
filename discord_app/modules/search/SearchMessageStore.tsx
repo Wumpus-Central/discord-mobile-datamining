@@ -6,12 +6,12 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4032 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function handleReaction(optimistic) {
   let colors = optimistic;
   ({ messageId, emoji } = optimistic);
@@ -37,6 +37,7 @@ function handleReaction(optimistic) {
         obj[1] = reactionType;
         obj[2] = addReaction === DM;
         let addReactionResult = addReaction(emoji, tmp8, obj);
+        const tmp10 = addReaction === DM;
       } else {
         addReactionResult = value.removeReaction(emoji, tmp8, reactionType);
       }
@@ -80,7 +81,8 @@ prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
   this.documentsIndexed = 0;
 };
 prototype["handleSearchSuccess"] = function handleSearchSuccess(analyticsId, arr) {
-  const self = this;
+  let self = this;
+  self = this;
   let items;
   let items1;
   this.analyticsId = analyticsId.analyticsId;
@@ -96,17 +98,17 @@ prototype["handleSearchSuccess"] = function handleSearchSuccess(analyticsId, arr
   }
   items = [...messages];
   items1 = [];
-  const item = arr.forEach((item, index) => {
+  const item = arr.forEach((id) => {
     const messageIds = self.messageIds;
-    let hasItem = messageIds.has(item.id);
+    let hasItem = messageIds.has(id.id);
     if (!hasItem) {
-      hasItem = closure_1_4.isBlockedOrIgnoredForMessage(item);
+      hasItem = closure_1_4.isBlockedOrIgnoredForMessage(id);
     }
     if (!hasItem) {
       const messageIds2 = self.messageIds;
-      messageIds2.add(item.id);
-      items.push(item);
-      items1.push(item);
+      messageIds2.add(id.id);
+      items.push(id);
+      items1.push(id);
     }
   });
   self.messages = items;
@@ -137,6 +139,7 @@ prototype2["getTotalCount"] = function getTotalCount(searchTabFetchId) {
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.totalResults;
 };
@@ -151,6 +154,7 @@ prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.isInitialFetchComplete;
 };
@@ -165,6 +169,7 @@ prototype2["getIsIndexing"] = function getIsIndexing(searchTabFetchId) {
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.isIndexing;
 };
@@ -179,6 +184,7 @@ prototype2["getIsHistoricalIndexing"] = function getIsHistoricalIndexing(searchT
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.isHistoricalIndexing;
 };
@@ -193,6 +199,7 @@ prototype2["getDocumentsIndexed"] = function getDocumentsIndexed(searchTabFetchI
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.documentsIndexed;
 };
@@ -207,6 +214,7 @@ prototype2["getIsFetching"] = function getIsFetching(arg0) {
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.isFetching;
 };
@@ -221,6 +229,7 @@ prototype2["getError"] = function getError(arg0) {
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.error;
 };
@@ -235,6 +244,7 @@ prototype2["getMessages"] = function getMessages(arg0) {
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.messages;
 };
@@ -249,6 +259,7 @@ prototype2["getCursor"] = function getCursor(searchTabFetchId) {
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.cursor;
 };
@@ -263,6 +274,7 @@ prototype2["getAnalyticsId"] = function getAnalyticsId(arg0) {
     const set = new Set();
     obj[8] = set;
     value = obj;
+    const tmp2 = SearchState;
   }
   return value.analyticsId;
 };
@@ -273,90 +285,90 @@ SearchMessageStore.displayName = "SearchMessageStore";
 const searchMessageStore = new SearchMessageStore(dispatcherDefault, {
   SEARCH_MESSAGES_START: function handleSearchMessagesStart(ids) {
     ids = ids.ids;
-    const item = ids.forEach((item, index) => {
-      let value = store.get(item);
+    const item = ids.forEach((arg0) => {
+      let value = store.get(arg0);
       if (value == null) {
-        if (typeof ctor !== "function") {
+        if (typeof closure_6 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const obj = Object.create(ctor.prototype);
+        const obj = Object.create(closure_6.prototype);
         const _Set = Set;
         const set = new Set();
         obj[8] = set;
         value = obj;
+        const tmp = closure_6;
       }
-      const result = store.set(item, value);
+      const result = store.set(arg0, value);
       value.handleSearchStart();
     });
   },
   SEARCH_MESSAGES_SUCCESS: function handleSearchMessagesSuccess(data) {
     data = data.data;
-    let item = data.forEach((item, index) => {
-      const id = item.id;
+    let item = data.forEach((id) => {
+      id = id.id;
       let value = store.get(id);
       if (value == null) {
-        if (typeof ctor !== "function") {
+        if (typeof closure_6 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const obj = Object.create(ctor.prototype);
+        const obj = Object.create(closure_6.prototype);
         const _Set = Set;
         const set = new Set();
         obj[8] = set;
         value = obj;
+        const tmp = closure_6;
       }
       let result = store.set(id, value);
-      const messages = item.messages;
-      item = value.handleSearchSuccess(item, messages.map((item, index) => {
-        [tmp] = item;
+      const messages = id.messages;
+      const item = value.handleSearchSuccess(id, messages.map((arg0) => {
+        [tmp] = arg0;
         return callback(table[5]).createMessageRecord(tmp);
-      })).forEach((item, index) => {
-        const result = closure_8.set(item.id, item);
-        let num = store.get(item.id);
+      })).forEach((id) => {
+        const result = closure_8.set(id.id, id);
+        let num = store.get(id.id);
         if (num == null) {
           num = 0;
         }
-        const result1 = store.set(item.id, num + 1);
+        const result1 = store.set(id.id, num + 1);
       });
-      const handleSearchSuccessResult = value.handleSearchSuccess(item, messages.map((item, index) => {
-        [tmp] = item;
-        return callback(table[5]).createMessageRecord(tmp);
-      }));
     });
   },
   SEARCH_MESSAGES_INDEXING: function handleSearchMessagesIndexing(ids) {
     ids = ids.ids;
-    const item = ids.forEach((item, index) => {
-      let value = store.get(item);
+    const item = ids.forEach((arg0) => {
+      let value = store.get(arg0);
       if (value == null) {
-        if (typeof ctor !== "function") {
+        if (typeof closure_6 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const obj = Object.create(ctor.prototype);
+        const obj = Object.create(closure_6.prototype);
         const _Set = Set;
         const set = new Set();
         obj[8] = set;
         value = obj;
+        const tmp = closure_6;
       }
-      const result = store.set(item, value);
+      const result = store.set(arg0, value);
       value.handleSearchIndexing();
     });
   },
   SEARCH_MESSAGES_FAILURE: function handleSearchMessagesFailure(ids) {
     closure_0 = ids;
     ids = ids.ids;
-    const item = ids.forEach((item, index) => {
-      let value = map.get(item);
+    const item = ids.forEach((arg0) => {
+      let value = closure_1_7.get(arg0);
       if (value == null) {
-        if (typeof SearchState !== "function") {
+        if (typeof closure_1_6 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const obj = Object.create(SearchState.prototype);
+        const obj = Object.create(closure_1_6.prototype);
         const _Set = Set;
         const set = new Set();
         obj[8] = set;
         value = obj;
+        const tmp = closure_1_6;
       }
-      const result = map.set(item, value);
+      const result = closure_1_7.set(arg0, value);
       value.handleSearchFailure(ids.error);
     });
   },
@@ -366,16 +378,16 @@ const searchMessageStore = new SearchMessageStore(dispatcherDefault, {
       return false;
     } else {
       const messageIds = value.messageIds;
-      const item = messageIds.forEach((item, index) => {
-        let num = store.get(item);
+      const item = messageIds.forEach((arg0) => {
+        let num = store.get(arg0);
         if (num == null) {
           num = 0;
         }
         if (num <= 1) {
-          set.delete(item);
-          store.delete(item);
+          set.delete(arg0);
+          store.delete(arg0);
         } else {
-          const result = store.set(item, num - 1);
+          const result = store.set(arg0, num - 1);
         }
       });
       map.delete(id.id);
@@ -438,6 +450,6 @@ const searchMessageStore = new SearchMessageStore(dispatcherDefault, {
     map2 = new Map();
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/search/SearchMessageStore.tsx");
+let result = require("set").fileFinishedImporting("modules/search/SearchMessageStore.tsx");
 
 export default searchMessageStore;

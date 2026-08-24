@@ -3,24 +3,21 @@
 // Module 4558 (initialize)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import obj132 from "obj132" /* 500 */;
 import initializeDefault from "initialize" /* 589 */;
 import isStreamKey from "isStreamKey" /* 4531 */;
-import isOwner2 from "isOwner" /* 4561 */;
 import isOwnerDefault from "isOwner" /* 4561 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import _findPlayingActivity from "_findPlayingActivity" /* 7487 */;
 import canSpectateDefault from "canSpectate" /* 13074 */;
-import initialize from "initialize" /* 4504 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_4 from "initialize" /* 4504 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
 import importDefaultResult from "_detectH265HardwareDecode" /* 4497 */;
-import sortActivity from "sortActivity" /* 4559 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
+import closure_7 from "sortActivity" /* 4559 */;
+import closure_8 from "createRTCConnection" /* 4539 */;
 import ME from "ME" /* 676 */;
 import { StreamTypes } from "StreamIssueReportReasons" /* 4532 */;
 import importDefaultResult1 from "dispatcher" /* 709 */;
 
-require = fn;
+require = arg1;
 ({ RTCConnectionQuality: c9, StreamLayouts } = ME);
 let closure_11 = {};
 let closure_12 = {};
@@ -231,8 +228,8 @@ if (importDefaultResult.isSupported()) {
     if (tmp6) {
       const _Object = Object;
       const entries = Object.entries(wants);
-      const someResult = entries.some((item, index) => {
-        [tmp, tmp2] = item;
+      const someResult = entries.some((arg0) => {
+        [tmp, tmp2] = arg0;
         let tmp3 = "any" !== tmp;
         if (tmp3) {
           tmp3 = 0 !== tmp2;
@@ -251,11 +248,11 @@ if (importDefaultResult.isSupported()) {
     appContext = appContext.appContext;
     ({ pid, nativePickerStyleUsed: importDefault, goLiveModalDurationMs } = appContext);
     ({ streamType, guildId, channelId, sourceId, sourcePid, analyticsLocations } = appContext);
-    appContext(4531);
-    let obj = { streamType, guildId, channelId, ownerId: id.getId() };
+    let obj = appContext(4531);
+    obj = { streamType, guildId, channelId, ownerId: id.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
-    const item = applyDefault.forEach(dependencyMap, (analyticsContext) => {
+    const item = applyDefault.forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);
       const result = analyticsContext.setNativePickerStyleUsed(closure_1);
@@ -275,11 +272,11 @@ if (importDefaultResult.isSupported()) {
         ({ name: obj3[0], id: obj3[1], exeName: obj3[2], distributor: obj3[3], sku: obj3[4], gameMetadata: obj3[5] } = gameForPID);
         dependencyMap[encodeStreamKeyResult] = obj;
       }
-      if (dependencyMap[encodeStreamKeyResult] != null) {
+      if (tmp4[encodeStreamKeyResult] != null) {
         let analyticsContext = tmp10.analyticsContext;
         let result = analyticsContext.updateStreamApplication(dependencyMap[encodeStreamKeyResult]);
       }
-    } else if (dependencyMap[encodeStreamKeyResult] != null) {
+    } else if (tmp4[encodeStreamKeyResult] != null) {
       const analyticsContext2 = tmp6.analyticsContext;
       const result1 = analyticsContext2.updateStreamApplication(null);
     }
@@ -322,15 +319,15 @@ if (importDefaultResult.isSupported()) {
         tmp11 = null == dependencyMap2[streamKey];
       }
       if (tmp11) {
-        dependencyMap[streamKey] = _findPlayingActivity.getStreamerApplication(decodeStreamKeyResult, closure_7);
-        const tmp4Result = _findPlayingActivity;
+        tmp10[streamKey] = tmp4(7487).getStreamerApplication(decodeStreamKeyResult, closure_7);
+        const tmp4Result = tmp4(7487);
       }
       obj = { streamRegion: null, streamApplication: null, streamSourceType: null, actionContext: null, numViewers: null, goLiveModalDurationMs: null, analyticsLocations: null };
       obj[0] = region;
       obj[1] = dependencyMap[streamKey];
       let str2 = "unknown";
       if (null != dependencyMap2[streamKey]) {
-        if (!obj132.isPlatformEmbedded) {
+        if (!tmp4(500).isPlatformEmbedded) {
           let name;
           if (globalThis.platform != null) {
             name = globalThis.platform.name;
@@ -386,7 +383,7 @@ if (importDefaultResult.isSupported()) {
         analyticsLocations = tmp23.analyticsLocations;
       }
       obj[6] = analyticsLocations;
-      const streamRTCAnalyticsContext = new isOwner2.StreamRTCAnalyticsContext(obj);
+      const streamRTCAnalyticsContext = new tmp4(4561).StreamRTCAnalyticsContext(obj);
       _modDef38(null != closure_3, "Creating RTCConnection without session.");
       obj = { sessionId: null, streamKey: null, serverId: null, channelId: null, initialLayout: null, analyticsContext: null, parentMediaSessionId: null };
       obj[0] = closure_3;
@@ -398,11 +395,13 @@ if (importDefaultResult.isSupported()) {
       let tmp32 = isOwnerDefault;
       obj[6] = mediaSessionId.getMediaSessionId();
       tmp32 = new tmp32(obj);
-      dependencyMap3[streamKey] = tmp32;
+      tmp3[streamKey] = tmp32;
       obj = tmp32;
+      const tmp19 = table;
     }
     delete tmp[tmp2];
     decodeStreamKeyResult = obj1.decodeStreamKey(streamKey);
+    tmp3 = dependencyMap3;
     obj1 = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: obj.getMediaEngineConnectionId() };
     importDefaultResult1.dispatch(obj1);
   };
@@ -440,7 +439,7 @@ if (importDefaultResult.isSupported()) {
   obj[14] = function handleLayoutUpdate(layout) {
     layout = layout.layout;
     const values = Object.values(closure_18);
-    const item = values.forEach((item, index) => item.layoutChange(layout));
+    const item = values.forEach((layoutChange) => layoutChange.layoutChange(layout));
   };
   obj[15] = function handleVideoSizeUpdate(arg0) {
     ({ streamId: require, dimensions: importDefault, zoom: dependencyMap } = arg0);
@@ -454,6 +453,6 @@ if (importDefaultResult.isSupported()) {
   obj = {};
 }
 const streamRTCConnectionStore = new StreamRTCConnectionStore(importDefaultResult1, obj);
-let result = require("obj132").fileFinishedImporting("stores/StreamRTCConnectionStore.tsx");
+let result = require("set").fileFinishedImporting("stores/StreamRTCConnectionStore.tsx");
 
 export default streamRTCConnectionStore;

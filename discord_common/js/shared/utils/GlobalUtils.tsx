@@ -1,9 +1,9 @@
 // === Module 697: getGlobalObject ===
 
 // Module 697 (getGlobalObject)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
 
 export const getGlobalObject = function getGlobalObject() {
   if (typeof globalThis !== "undefined") {

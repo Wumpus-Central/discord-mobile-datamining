@@ -22,11 +22,13 @@ if (self2) {
   if (!fn) {
     fn = (obj, exports) => {
       for (const key10007 in arg0) {
+        let tmp5 = key10007;
         let tmp6 = "default" === key10007;
         if (tmp6) {
           if (tmp6) {
             continue;
           } else {
+            let tmp3 = self2;
             let tmp4 = self2(arg1, arg0, key10007);
             continue;
           }
@@ -39,6 +41,7 @@ if (self2) {
           } else {
             hasOwnPropertyResult = call(arg1, key10007);
           }
+          let tmp2 = hasOwnPropertyResult;
         }
       }
     };
@@ -53,8 +56,8 @@ if (self2) {
   exports.validateFileType = function validateFileType(fileChunk, arr, chunkSize) {
     let items = [];
     const items1 = [
-      ...new Set(arr.map((item, index) => {
-        const parts = item.split(".");
+      ...new Set(arr.map((str) => {
+        const parts = str.split(".");
         const formatted = parts.join("").toUpperCase();
         let combined = formatted;
         if ("7Z" === formatted) {
@@ -65,8 +68,13 @@ if (self2) {
       }))
     ];
     for (const item10023 of items1) {
+      let str = item10023;
       let _Object = Object;
       let call = hasOwnProperty.call;
+      let tmp2 = require;
+      let tmp3 = require;
+      let tmp4 = dependencyMap;
+      let tmp5 = dependencyMap;
       let FileTypes = _mod4883.FileTypes;
       if (typeof call === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(item10023);
@@ -74,12 +82,19 @@ if (self2) {
         hasOwnPropertyResult = call(FileTypes, item10023);
       }
       if (hasOwnPropertyResult) {
-        arr = items.push(item10023);
+        let tmp12 = item10023;
+        arr = items.push(str);
         continue;
       } else {
         let _TypeError = TypeError;
+        let tmp7 = item10023;
         let _HermesInternal = HermesInternal;
-        let typeError = new TypeError("Type `" + item10023.toLowerCase() + "` is not supported. Please make sure that `types` list conatins only supported files");
+        let str2 = "` is not supported. Please make sure that `types` list conatins only supported files";
+        let str3 = "Type `";
+        let tmp8 = new.target;
+        let tmp9 = new.target;
+        let typeError = new TypeError("Type `" + str.toLowerCase() + "` is not supported. Please make sure that `types` list conatins only supported files");
+        let tmp11 = typeError;
         throw typeError;
       }
     }
@@ -112,10 +127,10 @@ if (self2) {
     }
     if (!chunkSize) {
       const arr3 = (function addSimilarTypes(items) {
-        if (items.some((item, index) => "MP4" === item)) {
+        if (items.some((arg0) => "MP4" === arg0)) {
           items = ["M4V"];
         } else {
-          items = items.some((item, index) => "AAC" === item) ? ["M4A"] : [];
+          items = items.some((arg0) => "AAC" === arg0) ? ["M4A"] : [];
         }
         return items;
       })(items);
@@ -133,13 +148,21 @@ if (self2) {
     let items2 = [];
     const items3 = [];
     for (const item10079 of combined) {
+      let tmp19 = item10079;
+      let tmp20 = require;
       let tmp21 = require;
+      let tmp22 = dependencyMap;
+      let tmp23 = dependencyMap;
       let FileTypes2 = _mod4883.FileTypes;
+      let tmp24 = items2;
       items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
       let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod4883.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
       if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
+        let tmp25 = tmp20;
+        let tmp26 = tmp22;
         let FileTypes3 = tmp21(4883).FileTypes;
-        arr = items3.push(FileTypes3.getInfoByName(item10079));
+        let tmp27 = item10079;
+        arr = items3.push(FileTypes3.getInfoByName(tmp19));
       }
       continue;
     }
@@ -156,23 +179,23 @@ if (self2) {
     require = detectSignatureResult;
     if (detectSignatureResult) {
       if (items3.length > 0) {
-        const found = items3.filter((item, index) => {
-          const signatures = item.signatures;
+        const found = items3.filter((signatures) => {
+          signatures = signatures.signatures;
           return signatures.includes(closure_0);
         });
         if (found.length > 0) {
           const FileTypes5 = _mod4883.FileTypes;
           const result = FileTypes5.detectTypeByAdditionalCheck(fileChunk, found);
           dependencyMap = result;
-          return result && combined.some((item, index) => item.toLowerCase() === closure_1);
+          return result && combined.some((str) => str.toLowerCase() === closure_1);
         }
       }
       return true;
     } else {
       return false;
     }
-    const set = new Set(arr.map((item, index) => {
-      const parts = item.split(".");
+    const set = new Set(arr.map((str) => {
+      const parts = str.split(".");
       const formatted = parts.join("").toUpperCase();
       let combined = formatted;
       if ("7Z" === formatted) {
@@ -181,6 +204,8 @@ if (self2) {
       }
       return combined;
     }));
+    const tmp29 = require;
+    const tmp30 = require;
   };
 } else {
   let _Object = Object;

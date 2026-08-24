@@ -1,7 +1,7 @@
 // === Module 4279: prototype ===
 
 // Module 4279 (prototype)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const AbortCodes = ME.AbortCodes;
@@ -12,6 +12,6 @@ const prototype = function ClientOutdatedAcceptGiftError(arg0) {
 }.prototype;
 class prototype extends Error {
 }
-const result = obj132.fileFinishedImporting("errors/ClientOutdatedAcceptGiftError.tsx");
+const result = set.fileFinishedImporting("errors/ClientOutdatedAcceptGiftError.tsx");
 
 export default prototype;

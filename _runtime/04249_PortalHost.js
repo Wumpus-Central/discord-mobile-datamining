@@ -22,7 +22,7 @@ const memoResult = noop.memo((name) => {
       callback();
     };
   }, []);
-  obj = { children: portalState.map((item, index) => item.node) };
+  obj = { children: portalState.map((node) => node.node) };
   return callback(closure_3, obj);
 });
 memoResult.displayName = "PortalHost";

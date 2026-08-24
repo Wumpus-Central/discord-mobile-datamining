@@ -3,7 +3,7 @@
 // Module 315 (ListMetricsAggregator)
 import _modDef38 from "module_38" /* 38 */;
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 
 const ListMetricsAggregator = arg1;
 class ListMetricsAggregator {
@@ -81,64 +81,65 @@ const items = [
   },
   {
     key: "getCellMetricsApprox",
-    value: function getCellMetricsApprox(diff, props) {
+    value: function getCellMetricsApprox(first, props) {
       const self = this;
-      const cellMetrics = this.getCellMetrics(diff, props);
+      const cellMetrics = this.getCellMetrics(first, props);
       if (cellMetrics) {
-        if (cellMetrics.index === diff) {
+        if (cellMetrics.index === first) {
           return cellMetrics;
         }
       }
       const highestMeasuredCellIndex = self.getHighestMeasuredCellIndex();
       let sum;
-      if (highestMeasuredCellIndex < diff) {
+      if (highestMeasuredCellIndex < first) {
         const cellMetrics1 = self.getCellMetrics(highestMeasuredCellIndex, props);
         if (cellMetrics1) {
-          sum = cellMetrics1.offset + cellMetrics1.length + self._averageCellLength * (diff - highestMeasuredCellIndex - 1);
+          sum = cellMetrics1.offset + cellMetrics1.length + self._averageCellLength * (first - highestMeasuredCellIndex - 1);
         }
       }
       if (null == sum) {
-        sum = self._averageCellLength * diff;
+        sum = self._averageCellLength * first;
       }
       ({ data, getItemCount } = props);
-      let tmp5 = diff >= 0;
+      let tmp5 = first >= 0;
       if (tmp5) {
-        tmp5 = diff < getItemCount(data);
+        tmp5 = first < getItemCount(data);
       }
-      _modDef38(tmp5, `Tried to get frame for out of range index ${diff}`);
-      return { length: self._averageCellLength, offset: sum, index: diff, isMounted: false };
+      _modDef38(tmp5, `Tried to get frame for out of range index ${first}`);
+      return { length: self._averageCellLength, offset: sum, index: first, isMounted: false };
     }
   },
   {
     key: "getCellMetrics",
-    value: function getCellMetrics(highestMeasuredCellIndex, keyExtractor) {
+    value: function getCellMetrics(first, keyExtractor) {
       ({ data, getItemLayout } = keyExtractor);
       ({ getItem, getItemCount } = keyExtractor);
-      let tmp3 = highestMeasuredCellIndex >= 0;
+      let tmp3 = first >= 0;
       if (tmp3) {
-        tmp3 = highestMeasuredCellIndex < getItemCount(data);
+        tmp3 = first < getItemCount(data);
       }
-      _modDef38(tmp3, `Tried to get metrics for out of range cell index ${highestMeasuredCellIndex}`);
+      _modDef38(tmp3, `Tried to get metrics for out of range cell index ${first}`);
       keyExtractor = keyExtractor.keyExtractor;
       if (keyExtractor == null) {
         keyExtractor = ListMetricsAggregator(313).keyExtractor;
       }
       const _cellMetrics = this._cellMetrics;
-      const value = _cellMetrics.get(keyExtractor(getItem(data, highestMeasuredCellIndex), highestMeasuredCellIndex));
+      const value = _cellMetrics.get(keyExtractor(getItem(data, first), first));
       if (value) {
-        if (value.index === highestMeasuredCellIndex) {
+        if (value.index === first) {
           return value;
         }
       }
       if (getItemLayout) {
-        const itemLayout = getItemLayout(data, highestMeasuredCellIndex);
+        const itemLayout = getItemLayout(data, first);
         const obj = { index: null, length: null, offset: null, isMounted: true };
-        obj[0] = highestMeasuredCellIndex;
+        obj[0] = first;
         ({ length: obj[1], offset: obj[2] } = itemLayout);
         return obj;
       } else {
         return null;
       }
+      const tmp2 = _modDef38;
     }
   },
   {

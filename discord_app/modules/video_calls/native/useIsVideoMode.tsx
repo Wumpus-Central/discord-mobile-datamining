@@ -2,14 +2,14 @@
 
 // Module 9886 (useIsVideoMode)
 import initialize from "initialize" /* 589 */;
-import reset from "reset" /* 4652 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_2 from "reset" /* 4652 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "updateVoiceState" /* 4542 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
 
 export default function useIsVideoMode() {
   const items = [closure_3, closure_5, closure_4, closure_6, closure_2];
@@ -17,8 +17,8 @@ export default function useIsVideoMode() {
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
     let tmp2 = null != channel;
     if (tmp2) {
-      tmp2 = allActiveStreams.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || videoEnabled.isVideoEnabled();
-      const tmp3 = allActiveStreams.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || videoEnabled.isVideoEnabled();
+      tmp2 = closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
+      const tmp3 = closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
     }
     return tmp2;
   });

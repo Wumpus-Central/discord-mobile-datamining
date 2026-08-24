@@ -1,7 +1,7 @@
 // === Module 1538: createNavigatorFactory ===
 
 // Module 1538 (createNavigatorFactory)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 

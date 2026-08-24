@@ -1,11 +1,11 @@
 // === Module 7217: useIsCreatorMonetizationEnabledGuild ===
 
 // Module 7217 (useIsCreatorMonetizationEnabledGuild)
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx");
 
 export default function useIsCreatorMonetizationEnabledGuild(arg0) {
   const _require = arg0;
@@ -15,14 +15,14 @@ export default function useIsCreatorMonetizationEnabledGuild(arg0) {
     let tmp2 = null != guild;
     if (tmp2) {
       const features = guild.features;
-      const hasItem = features.has(GuildFeatures.CREATOR_MONETIZABLE_DISABLED);
+      const hasItem = features.has(closure_1_3.CREATOR_MONETIZABLE_DISABLED);
       let tmp5 = !hasItem;
       if (!hasItem) {
         const features2 = guild.features;
-        let hasItem1 = features2.has(GuildFeatures.CREATOR_MONETIZABLE);
+        let hasItem1 = features2.has(tmp3.CREATOR_MONETIZABLE);
         if (!hasItem1) {
           const features3 = guild.features;
-          hasItem1 = features3.has(GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
+          hasItem1 = features3.has(tmp3.CREATOR_MONETIZABLE_PROVISIONAL);
         }
         tmp5 = hasItem1;
       }
@@ -37,10 +37,10 @@ export const isCreatorMonetizationEnabledGuild = function isCreatorMonetizationE
   let tmp3 = !hasItem;
   if (!hasItem) {
     const features2 = guild.features;
-    let hasItem1 = features2.has(GuildFeatures.CREATOR_MONETIZABLE);
+    let hasItem1 = features2.has(tmp.CREATOR_MONETIZABLE);
     if (!hasItem1) {
       const features3 = guild.features;
-      hasItem1 = features3.has(GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
+      hasItem1 = features3.has(tmp.CREATOR_MONETIZABLE_PROVISIONAL);
     }
     tmp3 = hasItem1;
   }

@@ -1,17 +1,17 @@
 // === Module 7616: useCheckoutPlanPriceString ===
 
 // Module 7616 (useCheckoutPlanPriceString)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { useNativeCheckoutStore } from "context" /* 7395 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
 
-export const useCheckoutPlanPriceString = function useCheckoutPlanPriceString(productId, stateFromStores) {
+export const useCheckoutPlanPriceString = function useCheckoutPlanPriceString(productId, first) {
   const _require = productId;
   let priceString;
-  if (stateFromStores != null) {
-    priceString = stateFromStores.priceString;
+  if (first != null) {
+    priceString = first.priceString;
   }
   if (priceString == null) {
     priceString = null;
@@ -23,13 +23,14 @@ export const useCheckoutPlanPriceString = function useCheckoutPlanPriceString(pr
     if (null == table) {
       return null;
     } else {
-      const availablePlanForItems = table.getAvailablePlanForItems(productId(table[2]).getSubscriptionItemsForProduct(productId));
+      const availablePlanForItems = obj.getAvailablePlanForItems(productId(table[2]).getSubscriptionItemsForProduct(productId));
       let priceString = null;
       if (null != availablePlanForItems) {
         priceString = availablePlanForItems.getPriceString();
       }
       return priceString;
     }
+    obj = table;
   }, items);
   const tmp2 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
   let tmp5 = priceString;

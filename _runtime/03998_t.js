@@ -33,14 +33,14 @@ if (typeof exports === "object") {
                   const result = arg0 % 10;
                   let tmp3 = table[result];
                   if (!tmp3) {
-                    tmp3 = table[arg0 % 100 - result];
+                    tmp3 = tmp2[arg0 % 100 - result];
                   }
                   if (!tmp3) {
                     let num5 = null;
                     if (arg0 >= 100) {
                       num5 = 100;
                     }
-                    tmp3 = table[num5];
+                    tmp3 = tmp2[num5];
                   }
                   return arg0 + tmp3;
                 }
@@ -79,14 +79,14 @@ if (typeof globalThis.define === "function") {
                     const result = arg0 % 10;
                     let tmp3 = table[result];
                     if (!tmp3) {
-                      tmp3 = table[arg0 % 100 - result];
+                      tmp3 = tmp2[arg0 % 100 - result];
                     }
                     if (!tmp3) {
                       let num5 = null;
                       if (arg0 >= 100) {
                         num5 = 100;
                       }
-                      tmp3 = table[num5];
+                      tmp3 = tmp2[num5];
                     }
                     return arg0 + tmp3;
                   }
@@ -123,14 +123,14 @@ obj = {
               const result = arg0 % 10;
               let tmp3 = table[result];
               if (!tmp3) {
-                tmp3 = table[arg0 % 100 - result];
+                tmp3 = tmp2[arg0 % 100 - result];
               }
               if (!tmp3) {
                 let num5 = null;
                 if (arg0 >= 100) {
                   num5 = 100;
                 }
-                tmp3 = table[num5];
+                tmp3 = tmp2[num5];
               }
               return arg0 + tmp3;
             }

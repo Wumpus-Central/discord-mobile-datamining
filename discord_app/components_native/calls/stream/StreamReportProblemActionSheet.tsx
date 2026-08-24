@@ -2,35 +2,31 @@
 
 // Module 16430 (ReportProblem)
 import noopAll from "noop" /* 19 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
 import BottomSheetModal from "BottomSheetModal" /* 6952 */;
 import ActionSheet from "ActionSheet" /* 7175 */;
 import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
-import _findPlayingActivity from "_findPlayingActivity" /* 7487 */;
-import trackStreamProblemDefault from "trackStreamProblem" /* 16431 */;
 import getStreamIssueReportOptionsDefault from "getStreamIssueReportOptions" /* 16432 */;
-import sortActivity from "sortActivity" /* 4559 */;
+import closure_3 from "sortActivity" /* 4559 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { container: null };
+createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("components_native/calls/stream/StreamReportProblemActionSheet.tsx");
+const result = require("set").fileFinishedImporting("components_native/calls/stream/StreamReportProblemActionSheet.tsx");
 
 export default function ReportProblem(arg0) {
   ({ stream: require, analyticsData: importDefault } = arg0);
   useMountLayoutEffectDefault(() => {
-    let obj = _findPlayingActivity;
+    let obj = closure_1_0(closure_1_2[7]);
     const streamerApplication = obj.getStreamerApplication(ownerId, closure_1_3);
     obj = { type: "Stream Issue Sheet", other_user_id: ownerId.ownerId, application_id: null, application_name: null, game_id: null };
     let id = null;
@@ -48,26 +44,29 @@ export default function ReportProblem(arg0) {
       id1 = streamerApplication.id;
     }
     obj[4] = id1;
-    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_POPOUT, obj);
+    closure_1_1(closure_1_2[8]).track(closure_1_4.OPEN_POPOUT, obj);
   });
   let tmp = callback();
-  const mapped = getStreamIssueReportOptionsDefault({ isStreamer: false, isEndStream: false }).map((item, index) => {
-    const value = item.value;
-    return jsx(ActionSheetRowIcon.ActionSheetRow, {
-      label: item.label,
+  const mapped = getStreamIssueReportOptionsDefault({ isStreamer: false, isEndStream: false }).map((label) => {
+    const value = label.value;
+    return closure_1_5(closure_1_0(closure_1_2[13]).ActionSheetRow, {
+      label: label.label,
       arrow: true,
       onPress() {
         const obj = { problem: closure_0, stream: value, feedback: "", streamApplication: null, analyticsData: null, location: "Stream" };
-        const tmp = trackStreamProblemDefault;
-        obj[3] = _findPlayingActivity.getStreamerApplication(value, closure_2_3);
+        const tmp = closure_2_1(closure_2_2[9]);
+        obj[3] = closure_2_0(closure_2_2[7]).getStreamerApplication(value, closure_2_3);
         obj[4] = closure_1_1;
         tmp(obj);
-        ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
-        presentAddedFriendToast.presentFeedbackSent();
+        const obj2 = closure_2_0(closure_2_2[7]);
+        closure_2_1(closure_2_2[10]).hideActionSheet();
+        const obj3 = closure_2_1(closure_2_2[10]);
+        closure_2_0(closure_2_2[11]).presentFeedbackSent();
       }
-    }, index);
+    }, arg1);
   });
-  let obj = { title: null };
+  let obj = { scrollable: true, header: null, children: null };
+  obj = { title: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.XuqqwI);
   obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null });

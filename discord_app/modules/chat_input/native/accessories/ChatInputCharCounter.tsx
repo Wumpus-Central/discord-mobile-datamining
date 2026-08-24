@@ -1,25 +1,26 @@
 // === Module 11599: ChatInputCharCounter ===
 
 // Module 11599 (ChatInputCharCounter)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { UpsellTypes } from "ME" /* 676 */;
 import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
 const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
+  let stateFromStores;
   dependencyMap = undefined;
   let callback;
   let obj = analyticsLocations(589);
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
+  stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   const tmp = callback4();
   [tmp6, c2] = callback(importAllResult.useState(0), 2);
   const tmp7 = stateFromStores(8462)();
@@ -46,6 +47,6 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
 });
 forwardRefResult.displayName = "ChatInputCharCounter";
 const memoResult = importAllResult.memo(forwardRefResult);
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCharCounter.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCharCounter.tsx");
 
 export default memoResult;

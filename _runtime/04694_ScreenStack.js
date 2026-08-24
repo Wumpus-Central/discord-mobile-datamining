@@ -1,11 +1,11 @@
 // === Module 4694: ScreenStack ===
 
 // Module 4694 (ScreenStack)
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let closure_4 = ["goBackGesture", "screensRefs", "currentScreenId", "transitionAnimation", "screenEdgeGesture", "onFinishTransitioning", "children"];
 
 export default function ScreenStack(arg0) {
@@ -20,7 +20,7 @@ export default function ScreenStack(arg0) {
     current = {};
   }
   const ref = React.useRef(current);
-  const tmp = callback(arg0, closure_4);
+  const ref1 = obj.useRef(null);
   let Children = obj.Children;
   const _require = Children.count(children);
   const context = obj.useContext(_require(4695).GHContext);
@@ -55,7 +55,7 @@ export default function ScreenStack(arg0) {
       }
     }
     if (freezeOnBlur == null) {
-      let obj = callback(dependencyMap[5]);
+      let obj = callback(closure_1_3[5]);
       freezeOnBlur = obj.freezeEnabled();
     }
     const diff = callback - arg1;
@@ -68,7 +68,7 @@ export default function ScreenStack(arg0) {
       freezeOnBlur = tmp7;
     }
     obj = { freeze: freezeOnBlur, children };
-    return jsx(ref2(dependencyMap[6]), { freeze: freezeOnBlur, children });
+    return closure_1_7(ref2(closure_1_3[6]), obj);
   });
   const effect = obj.useEffect(() => {
     const current = ref2.current;
@@ -85,7 +85,9 @@ export default function ScreenStack(arg0) {
   obj1[4] = ref;
   obj1[5] = currentScreenId;
   const obj2 = {};
-  const ref1 = obj.useRef(null);
+  const tmp = callback(arg0, closure_4);
+  const tmp10 = "GHWrapper" !== context.name && undefined !== goBackGesture;
+  const tmp13 = undefined !== goBackGesture && null === ref && undefined === currentScreenId;
   const tmp4 = _require;
   const merged = Object.assign(tmp);
   obj2.iosPreventReattachmentOfDismissedScreens = ref2(4683).experiment.iosPreventReattachmentOfDismissedScreens;

@@ -1,20 +1,21 @@
 // === Module 10420: getTierForProgress ===
 
 // Module 10420 (getTierForProgress)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initialize from "initialize" /* 8936 */;
 
 let closure_0 = initialize.getSingleRequirementThreshold;
-const result = obj132.fileFinishedImporting("modules/premium/gifting/GiftingBadgeConstants.tsx");
+const result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgeConstants.tsx");
 
 export const getTierForProgress = function getTierForProgress(arr) {
   closure_0 = arg1;
-  return arr.reduce((acc, item, index) => {
-    let tmp = acc;
-    let tmp4 = acc;
+  return arr.reduce((arg0, arg1) => {
+    let tmp = arg0;
+    const tmp3 = callback(arg1);
+    let tmp4 = arg0;
     if (callback >= tmp3) {
       if (null == tmp) {
-        tmp = item;
+        tmp = arg1;
       }
       tmp4 = tmp;
     }
@@ -23,12 +24,13 @@ export const getTierForProgress = function getTierForProgress(arr) {
 };
 export const getNextTierForProgress = function getNextTierForProgress(arr) {
   closure_0 = arg1;
-  return arr.reduce((acc, item, index) => {
-    let tmp = acc;
-    let tmp4 = acc;
+  return arr.reduce((arg0, arg1) => {
+    let tmp = arg0;
+    const tmp3 = callback(arg1);
+    let tmp4 = arg0;
     if (callback < tmp3) {
       if (null == tmp) {
-        tmp = item;
+        tmp = arg1;
       }
       tmp4 = tmp;
     }
@@ -37,12 +39,13 @@ export const getNextTierForProgress = function getNextTierForProgress(arr) {
 };
 export const getRemainingGiftsToNextTier = function getRemainingGiftsToNextTier(arr) {
   const callback = arg1;
-  const reduced = arr.reduce((acc, item, index) => {
-    let tmp = acc;
-    let tmp4 = acc;
+  const reduced = arr.reduce((arg0, arg1) => {
+    let tmp = arg0;
+    const tmp3 = callback(arg1);
+    let tmp4 = arg0;
     if (callback < tmp3) {
       if (null == tmp) {
-        tmp = item;
+        tmp = arg1;
       }
       tmp4 = tmp;
     }

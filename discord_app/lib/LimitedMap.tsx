@@ -1,7 +1,7 @@
 // === Module 8328: LimitedMap ===
 
 // Module 8328 (LimitedMap)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 class LimitedMap extends Map {
   constructor(arg0) {
@@ -20,6 +20,6 @@ class LimitedMap extends Map {
   }
 }
 let closure_0 = LimitedMap.prototype;
-const result = obj132.fileFinishedImporting("lib/LimitedMap.tsx");
+const result = set.fileFinishedImporting("lib/LimitedMap.tsx");
 
 export default LimitedMap;

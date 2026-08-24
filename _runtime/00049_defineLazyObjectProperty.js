@@ -11,6 +11,7 @@ arg5.default = function defineLazyObjectProperty(arg0, arg1, get) {
   Object.defineProperty(arg0, arg1, {
     get: function getValue() {
       if (!c6) {
+        c6 = true;
         const tmp2 = get();
         closure_2 = tmp2;
         c6 = true;

@@ -8,29 +8,28 @@ import Text from "Text" /* 4734 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import TableRowIcon from "TableRowIcon" /* 6296 */;
 import TableRowArrow from "TableRowArrow" /* 6297 */;
-import LockIcon from "LockIcon" /* 6890 */;
 import TableSwitchRow from "TableSwitchRow" /* 7178 */;
 import registerAssetDefault from "registerAsset" /* 8134 */;
 import useIsUserSecureFramesVerified from "useIsUserSecureFramesVerified" /* 9689 */;
 import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9726 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 9745 */;
 import WrenchIcon from "WrenchIcon" /* 14870 */;
 import importAllResult from "noop" /* 19 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import getParticipants from "getParticipants" /* 4773 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import getVoiceStatesForGuild from "getVoiceStatesForGuild" /* 4545 */;
+import closure_4 from "participantFromServer" /* 1390 */;
+import closure_5 from "getParticipants" /* 4773 */;
+import closure_6 from "initialize" /* 8683 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import closure_12 from "getVoiceStatesForGuild" /* 4545 */;
 import ME from "ME" /* 676 */;
 import { isStreamParticipant } from "ParticipantTypes" /* 4544 */;
 import { SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY as closure_17 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 class VoicePanelSettingsOverviewHeader {
   constructor(arg0) {
     ({ guildId, channelId } = global);
@@ -43,8 +42,8 @@ class VoicePanelSettingsOverviewHeader {
     stateFromStores = obj.useStateFromStores(items, () => {
       const voiceStatesForChannelAlt = closure_1_12.getVoiceStatesForChannelAlt(channelId, closure_0);
       const substr = voiceStatesForChannelAlt.slice(0, 2);
-      const mapped = substr.map((item, index) => item.user);
-      return channelId(dependencyMap[17])(closure_0, channelId, mapped, voiceStatesForChannelAlt.length - mapped.length);
+      const mapped = substr.map((user) => user.user);
+      return channelId(closure_1_2[17])(closure_0, channelId, mapped, voiceStatesForChannelAlt.length - mapped.length);
     });
     obj2 = require("initialize");
     items1 = [];
@@ -60,10 +59,10 @@ class VoicePanelSettingsOverviewHeader {
     isCallSecureFramesVerified = obj4.useIsCallSecureFramesVerified({ channelId });
     tmp10 = jsxs;
     obj = { style: tmp.headerContainer, children: null };
-    tmp11 = require("obj132");
+    tmp11 = require("set");
     obj1 = { style: tmp.channelTitleWrapper, children: null };
     tmp13 = jsx;
-    tmp12 = require("obj132");
+    tmp12 = require("set");
     obj2 = { style: tmp.channelTitle, variant: "heading-lg/bold", lineClamp: 1, accessibilityRole: "header", children: tmp7 };
     items3 = [, ];
     items3[0] = jsx(require("Text").Text, obj2);
@@ -83,7 +82,7 @@ class VoicePanelSettingsOverviewHeader {
     if (isSecureFramesUIEnabled) {
       obj5 = { style: null, children: null };
       obj5[0] = tmp.secureFrames;
-      tmp6Result = require("obj132");
+      tmp6Result = require("set");
       items5 = [, ];
       items5[0] = tmp13(require("LockIcon").LockIcon, { size: "xxs", color: "status-positive" });
       obj6 = { variant: "text-xs/medium", color: "status-positive", children: null };
@@ -105,20 +104,21 @@ function ShareActivityLogsButton() {
     const json = obj.stringify(items);
     if ("" === json) {
       obj = { key: "EMBEDDED_ACTIVITIES_SHARE_EMPTY_LOGS_ERROR_MESSAGE", content: null };
-      const intl = callback(table[24]).intl;
-      obj[1] = intl.string(callback(table[24]).t["i+9VWy"]);
-      callback2(table[27]).open(obj);
-      const obj5 = callback2(table[27]);
+      const intl = tmp(tmp2[24]).intl;
+      obj[1] = intl.string(tmp(tmp2[24]).t["i+9VWy"]);
+      callback2(tmp2[27]).open(obj);
+      const obj5 = callback2(tmp2[27]);
     } else {
-      let tmpResult = callback(table[28]);
+      let tmpResult = tmp(tmp2[28]);
       const result = tmpResult.closeVoicePanelSettingsActionSheet();
-      tmpResult = callback(table[29]);
+      tmpResult = tmp(tmp2[29]);
       obj = { message: null };
       obj[0] = json;
       tmpResult.showShareActionSheet(obj, "Activity Logs");
     }
   }, []);
-  let obj = { IconComponent: WrenchIcon.WrenchIcon, source: registerAssetDefault };
+  let obj = { onPress: callback, icon: null, label: null, trailing: null };
+  obj = { IconComponent: WrenchIcon.WrenchIcon, source: registerAssetDefault };
   obj[1] = callback(TableRowIcon.TableRowIcon, obj);
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.iQzQs3);
@@ -130,10 +130,11 @@ function ActivityDebugToggle() {
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const callback = importAllResult.useCallback((visible) => {
-    callback(table[35]);
-    const obj = { type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible };
+    let obj = callback(table[35]);
+    obj = { type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible };
     obj.dispatch(obj);
   }, []);
+  obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj = { IconComponent: WrenchIcon.WrenchIcon, source: registerAssetDefault };
   obj[0] = callback(TableRowIcon.TableRowIcon, obj);
   const intl = getSystemLocale.intl;
@@ -147,7 +148,8 @@ function ActivityDebugToggle() {
 let c3 = importAllResult;
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = ME);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-let obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, marginTop: 8, padding: 4, gap: 4 };
+let obj = { headerContainer: { alignItems: "center" }, channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 }, channelTitle: { textAlign: "center" }, channelSubtitle: { marginTop: 4, marginHorizontal: 16, textAlign: "center" }, secureFrames: null, secureFramesIcon: null };
+obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, marginTop: 8, padding: 4, gap: 4 };
 obj[4] = obj;
 obj[5] = { marginStart: 4 };
 let closure_21 = createCacheKey.createStyles(obj);
@@ -155,7 +157,10 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
   let stateFromStores;
+  let stateFromStores1;
+  let stateFromStores3;
   let stateFromStores4;
+  let isSecureFramesUIEnabled;
   const tmp = guildId;
   const tmp2 = stateFromStores;
   let obj = guildId(stateFromStores[16]);
@@ -165,25 +170,29 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const setting = DeveloperMode.useSetting();
   obj1 = guildId(stateFromStores[16]);
   const items1 = [closure_12];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_12.getVoiceStatesForChannelAlt(channelId, guildId));
+  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_12.getVoiceStatesForChannelAlt(channelId, guildId));
   let obj2 = guildId(stateFromStores[16]);
   const items2 = [closure_11];
   const items3 = [stateFromStores, stateFromStores1];
   const stateFromStoresArray = obj2.useStateFromStoresArray(items2, () => {
     if (null != stateFromStores) {
-      if (stateFromStores.isPrivate()) {
+      if (obj.isPrivate()) {
         const _Set = Set;
-        const set = new Set(stateFromStores1.map((item, index) => item.user.id));
+        const set = new Set(stateFromStores1.map((user) => user.user.id));
         const items = [];
-        const recipients = stateFromStores.recipients;
+        const recipients = obj.recipients;
         for (const item10020 of recipients) {
+          let tmp9 = closure_1_11;
+          let tmp8 = item10020;
           let user = closure_1_11.getUser(item10020);
           let hasItem = null == user;
           let tmp11 = user;
           if (!hasItem) {
-            hasItem = set.has(item10020);
+            let tmp13 = item10020;
+            hasItem = set.has(tmp8);
           }
           if (!hasItem) {
+            let tmp14 = user;
             let arr = items.push(tmp11);
           }
           continue;
@@ -201,13 +210,13 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   }, []);
   let obj4 = guildId(stateFromStores[16]);
   const items5 = [stateFromStores4];
-  const stateFromStores3 = obj4.useStateFromStores(items5, () => stateFromStores4.getVoiceParticipantsHidden(channelId));
+  stateFromStores3 = obj4.useStateFromStores(items5, () => stateFromStores4.getVoiceParticipantsHidden(channelId));
   let obj5 = guildId(stateFromStores[16]);
   const items6 = [stateFromStores4, closure_7];
   stateFromStores4 = obj5.useStateFromStores(items6, () => {
     const selectedParticipant = stateFromStores4.getSelectedParticipant(channelId);
     let id = null;
-    if (isStreamParticipant(selectedParticipant)) {
+    if (closure_1_16(selectedParticipant)) {
       id = null;
       if (selectedParticipant.stream.ownerId !== closure_1_7.getId()) {
         id = selectedParticipant.id;
@@ -234,8 +243,8 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    channelId(stateFromStores[42]);
-    const obj = { channelId };
+    let obj = channelId(stateFromStores[42]);
+    obj = { channelId };
     obj.openLazy(guildId(stateFromStores[44])(stateFromStores[43], stateFromStores.paths), closure_1_17, obj);
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
@@ -261,10 +270,11 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const tmp18 = channelId(stateFromStores[47])(stateFromStores);
   const inviteMembersCallback = obj11.useInviteMembersCallback(channelId);
   let obj12 = guildId(stateFromStores[19]);
-  let isSecureFramesUIEnabled = obj12.useIsSecureFramesUIEnabled({ channelId });
+  isSecureFramesUIEnabled = obj12.useIsSecureFramesUIEnabled({ channelId });
   const children = [callback(VoicePanelSettingsOverviewHeader, { guildId, channelId }), , , , , ];
   let tmp26Result = null;
   if (tmp22) {
+    obj = { hasIcons: false, children: null };
     obj = { channel: null, analyticsSection: null };
     obj[0] = stateFromStores;
     obj[1] = constants.CHANNEL_ACTION_SHEET;
@@ -369,7 +379,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
     isSecureFramesUIEnabled = tmp26(tmp(tmp2[30]).TableRow, obj11);
   }
   items16[4] = isSecureFramesUIEnabled;
-  children[3] = callback(tmp(tmp2[51]).VoicePanelFormSection, { hasIcons: true, children: items16 });
+  children[3] = closure_19(tmp(tmp2[51]).VoicePanelFormSection, { hasIcons: true, children: items16 });
   let tmp24Result = stateFromStores1.length > 0 || canInviteMembers;
   if (tmp24Result) {
     const obj13 = { title: null, hasIcons: true, children: null };
@@ -394,15 +404,15 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
     }
     const items17 = [
       tmp26Result3,
-      stateFromStores1.map((item, index) => {
-          const obj = { user: item.user, selfStream: item.voiceState.selfStream, nick, channelId, guildId, showSecureFramesUI: isSecureFramesUIEnabled, showGameActivity: true };
-          nick = item.nick;
-          return closure_1_18(guildId(stateFromStores[51]).MemberRowItem, obj, item.user.id);
+      stateFromStores1.map((user) => {
+          const obj = { user: user.user, selfStream: user.voiceState.selfStream, nick, channelId, guildId, showSecureFramesUI: isSecureFramesUIEnabled, showGameActivity: true };
+          nick = user.nick;
+          return closure_1_18(guildId(stateFromStores[51]).MemberRowItem, obj, user.user.id);
         }),
-      stateFromStoresArray.map((item, index) => closure_1_18(guildId(stateFromStores[51]).MemberRowItem, { user: item, channelId, guildId, notConnected: true, showRing: true }, item.id))
+      stateFromStoresArray.map((id) => closure_1_18(guildId(stateFromStores[51]).MemberRowItem, { user: id, channelId, guildId, notConnected: true, showRing: true }, id.id))
     ];
     obj13[2] = items17;
-    tmp24Result = callback(tmp(tmp2[51]).VoicePanelFormSection, obj13);
+    tmp24Result = tmp24(tmp(tmp2[51]).VoicePanelFormSection, obj13);
   }
   children[4] = tmp24Result;
   tmp24Result = null;
@@ -416,12 +426,12 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
     }
     const items18 = [tmp26Result4, tmp26(ActivityDebugToggle, {})];
     obj17[2] = items18;
-    tmp24Result = callback(tmp(tmp2[51]).VoicePanelFormSection, obj17);
+    tmp24Result = tmp24(tmp(tmp2[51]).VoicePanelFormSection, obj17);
   }
   children[5] = tmp24Result;
-  return callback(closure_20, { children });
+  return closure_19(closure_20, { children });
 });
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsOverview.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsOverview.tsx");
 
 export default memoResult;
 export { VoicePanelSettingsOverviewHeader };

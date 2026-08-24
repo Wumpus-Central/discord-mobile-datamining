@@ -10,7 +10,8 @@ function validatePathConfig(config) {
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = null;
+  let obj;
+  obj = null;
   if (!flag) {
     obj = { alias: "array", exact: "boolean", stringify: "object", parse: "object" };
   }
@@ -21,19 +22,19 @@ function validatePathConfig(config) {
       const _Object4 = Object;
       const _Object5 = Object;
       const keys = Object.keys(config);
-      const mapped = keys.map((item, index) => {
-        if (item in obj) {
-          if (undefined !== table[item]) {
+      const mapped = keys.map((arg0) => {
+        if (arg0 in obj) {
+          if (undefined !== table[arg0]) {
             if ("array" === tmp) {
               const _Array = Array;
               if (!Array.isArray(tmp3)) {
-                const items = [item, ];
+                const items = [arg0, ];
                 const _HermesInternal2 = HermesInternal;
                 items[1] = "expected 'Array', got '" + typeof tmp3 + "'";
                 return items;
               }
             } else if (typeof tmp3 !== tmp) {
-              const items1 = [item, ];
+              const items1 = [arg0, ];
               const _HermesInternal = HermesInternal;
               items1[1] = "expected '" + tmp + "', got '" + tmp4 + "'";
               return items1;
@@ -41,7 +42,7 @@ function validatePathConfig(config) {
           }
           return null;
         } else {
-          const items2 = [item, "extraneous"];
+          const items2 = [arg0, "extraneous"];
           return items2;
         }
       });
@@ -54,8 +55,8 @@ function validatePathConfig(config) {
         }
         const _Object2 = Object;
         const entries = Object.entries(fromEntriesResult);
-        const mapped1 = entries.map((item, index) => {
-          [tmp, tmp2] = item;
+        const mapped1 = entries.map((arg0) => {
+          [tmp, tmp2] = arg0;
           return "- " + tmp + " (" + tmp2 + ")";
         });
         const joined = mapped1.join("\n");
@@ -64,8 +65,8 @@ function validatePathConfig(config) {
         }
         const _Object3 = Object;
         const entries1 = Object.entries(obj);
-        const mapped2 = entries1.map((item, index) => {
-          [tmp, tmp2] = item;
+        const mapped2 = entries1.map((arg0) => {
+          [tmp, tmp2] = arg0;
           return "- " + tmp + " (" + tmp2 + ")";
         });
         let _HermesInternal2 = HermesInternal;
@@ -88,8 +89,8 @@ function validatePathConfig(config) {
         if (tmp2) {
           const _Object = Object;
           const entries2 = Object.entries(config.screens);
-          const item = entries2.forEach((item, index) => {
-            [, tmp] = item;
+          const item = entries2.forEach((arg0) => {
+            [, tmp] = arg0;
             if (typeof tmp !== "string") {
               obj(tmp, false);
             }

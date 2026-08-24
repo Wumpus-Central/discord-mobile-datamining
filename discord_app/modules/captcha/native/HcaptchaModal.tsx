@@ -1,15 +1,15 @@
 // === Module 16504: HcaptchaModal ===
 
 // Module 16504 (HcaptchaModal)
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "_getSystemLocale" /* 1994 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 class HcaptchaModal {
   constructor(arg0) {
     onMessage = global.onMessage;
@@ -45,8 +45,9 @@ class HcaptchaModal {
     stringResult = intl.string(require("getSystemLocale").t.wsoPhr);
     callback = closure_5.useCallback(() => {
       if (onMessage != null) {
-        const obj = { data: null };
-        obj[0] = onMessage(dependencyMap[13]).CaptchaError.CANCEL;
+        let obj = { nativeEvent: null };
+        obj = { data: null };
+        obj[0] = onMessage(closure_1_2[13]).CaptchaError.CANCEL;
         obj[0] = obj;
         tmp(obj);
       }
@@ -70,7 +71,7 @@ class HcaptchaModal {
       items2 = [, ];
       items2[0] = jsx(require("Text").Text, obj2);
       tmp18 = ActivityIndicator;
-      tmp3Result = require("obj132");
+      tmp3Result = require("set");
       WHITE = undefined;
       if (tmp3Result.isAndroid()) {
         WHITE = require("Themes").unsafe_rawColors.WHITE;
@@ -116,6 +117,6 @@ let closure_3 = ["onMessage", "onClose"];
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
 HcaptchaModal.modalConfig = { animation: require("ME").ModalAnimation.FADE };
-const result = require("obj132").fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
+const result = require("set").fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
 
 export default HcaptchaModal;

@@ -3,13 +3,13 @@
 // Module 6492 (LegacyScrollView)
 import tagMessage from "tagMessage" /* 6382 */;
 import itemsDefault from "items" /* 6491 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 let closure_2 = ["refreshControl", "waitFor"];
 let closure_3 = ["waitFor", "refreshControl"];
 ({ FlatList: error, DrawerLayoutAndroid, RefreshControl, ScrollView, Switch, TextInput } = get_ActivityIndicator);
@@ -52,13 +52,19 @@ export const LegacyFlatList = (arg0) => {
   const ref = React.useRef(null);
   ({ waitFor: dependencyMap, refreshControl } = arg0);
   let obj = {};
+  obj = {};
   const entries = Object.entries(callback2(arg0, closure_3));
   while (tmp3 !== undefined) {
+    let tmp5 = callback;
     let tmp6 = callback(tmp4, 2);
     let first = tmp6[0];
     let tmp8 = first;
     let tmp9 = tmp6[1];
+    let tmp10 = ref;
+    let tmp11 = dependencyMap;
     let nativeViewProps = ref(6419).nativeViewProps;
+    let tmp12 = first;
+    let tmp13 = tmp9;
     if (nativeViewProps.includes(first)) {
       obj[tmp8] = tmp9;
     } else {
@@ -77,9 +83,9 @@ export const LegacyFlatList = (arg0) => {
       items = [];
     }
     const items1 = [];
-    items1[HermesBuiltin.arraySpread(ref(dependencyMap[6]).toArray(items), 0)] = ref;
+    items1[HermesBuiltin.arraySpread(ref(closure_1_1[6]).toArray(items), 0)] = ref;
     obj.waitFor = items1;
-    return <LegacyScrollView />;
+    return closure_1_8(closure_1_10, obj);
   };
   let cloneElementResult;
   if (refreshControl) {

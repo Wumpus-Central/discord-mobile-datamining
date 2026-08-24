@@ -1,7 +1,7 @@
 // === Module 1621: useRoutePath ===
 
 // Module 1621 (useRoutePath)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -35,12 +35,12 @@ export const useRoutePath = function useRoutePath() {
     return obj.useMemo(() => {
       let enabled;
       if (options != null) {
-        enabled = options.enabled;
+        enabled = tmp.enabled;
       }
       if (false !== enabled) {
         let config;
-        if (options != null) {
-          config = options.config;
+        if (tmp != null) {
+          config = tmp.config;
         }
         return getPathFromState(stateForPath, config);
       }

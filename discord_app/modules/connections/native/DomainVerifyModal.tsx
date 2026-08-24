@@ -8,16 +8,17 @@ import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
 import EXAMPLE_DOMAIN from "EXAMPLE_DOMAIN" /* 9809 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function DomainScreen(onClose) {
   onClose = onClose.onClose;
+  importDefault = undefined;
   let first;
   let callback;
   let React;
@@ -27,24 +28,24 @@ function DomainScreen(onClose) {
     const HTTP = onClose(first[8]).HTTP;
     let obj = { url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false };
     const postResult = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false });
-    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false }).then((result) => {
+    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false }).then(() => {
       callback();
     });
-    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false }).then((result) => {
+    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false }).then(() => {
       callback();
-    }).catch((error) => {
-      const body = error.body;
+    }).catch((body) => {
+      body = body.body;
       let proof;
       if (body != null) {
         proof = body.proof;
       }
       if (proof) {
         const obj = { proof: null, domain: null };
-        obj[0] = error.body.proof;
+        obj[0] = body.body.proof;
         obj[1] = closure_2;
         arr = arr.push(closure_1_11.PROOF_DNS, obj);
       } else {
-        const body2 = error.body;
+        const body2 = body.body;
         let message;
         if (body2 != null) {
           const errors = body2.errors;
@@ -62,7 +63,7 @@ function DomainScreen(onClose) {
           }
         }
         if (!message) {
-          const body3 = error.body;
+          const body3 = body.body;
           let message1;
           if (body3 != null) {
             message1 = body3.message;
@@ -70,9 +71,10 @@ function DomainScreen(onClose) {
           message = message1;
         }
         if (!message) {
-          message = error.message;
+          message = body.message;
         }
-        callback(message);
+        closure_3(message);
+        const tmp2 = closure_3;
       }
     }).finally(() => {
       callback2(false);
@@ -81,12 +83,13 @@ function DomainScreen(onClose) {
   const tmp = callback4();
   let obj = onClose(first[7]);
   importDefault = obj.useNavigation();
-  const tmp2 = callback(React.useState(""), 2);
+  let tmp2 = callback(React.useState(""), 2);
   first = tmp2[0];
   const tmp4 = callback(React.useState(null), 2);
   callback = tmp4[1];
   const tmp5 = callback(React.useState(false), 2);
   React = tmp5[1];
+  obj = { bottom: true, style: tmp.container, children: null };
   obj = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl = onClose(first[11]).intl;
   obj[3] = intl.string(onClose(first[11]).t.NxPUqY);
@@ -110,14 +113,16 @@ function DomainScreen(onClose) {
 function DNSProofScreen(proof) {
   ({ onClose: require, domain } = proof);
   proof = proof.proof;
+  let callback;
   let React;
   c5 = undefined;
   const tmp = callback4();
   let obj = require(proof[7]);
-  const callback = obj.useNavigation();
+  callback = obj.useNavigation();
   [tmp5, c4] = callback(React.useState(null), 2);
   const tmp4 = callback(React.useState(null), 2);
   [tmp7, c5] = callback(React.useState(false), 2);
+  obj = { bottom: true, style: tmp.container, children: null };
   obj = { variant: "text-md/normal", children: null };
   const intl = require(proof[11]).intl;
   obj[1] = intl.string(require(proof[11]).t.cSURbq);
@@ -148,26 +153,26 @@ function DNSProofScreen(proof) {
     const obj8 = { variant: "text-md/normal", color: "text-feedback-critical", style: null, children: null };
     obj8[2] = tmp.error;
     obj8[3] = tmp5;
-    tmp9Result = callback2(require(tmp3[10]).Text, obj8);
+    tmp9Result = tmp9(tmp2(tmp3[10]).Text, obj8);
   }
   items[2] = tmp9Result;
   const obj9 = { style: tmp.button, children: null };
   const obj10 = { loading: tmp7, text: null, onPress: null };
-  const intl5 = require(tmp3[11]).intl;
+  const intl5 = tmp2(tmp3[11]).intl;
   obj10[1] = intl5.string(require(proof[11]).t["13ofGu"]);
   obj10[2] = function onPress() {
     _undefined2(true);
     _undefined(null);
-    const HTTP = require(proof[8]).HTTP;
+    const HTTP = closure_1_0(proof[8]).HTTP;
     const obj = { url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false };
     const postResult = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false });
-    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then((result) => {
+    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
       callback();
     });
-    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then((result) => {
+    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
       callback();
-    }).catch((error) => {
-      const body = error.body;
+    }).catch((body) => {
+      body = body.body;
       let message;
       if (body != null) {
         const errors = body.errors;
@@ -185,7 +190,7 @@ function DNSProofScreen(proof) {
         }
       }
       if (!message) {
-        const body2 = error.body;
+        const body2 = body.body;
         let message1;
         if (body2 != null) {
           message1 = body2.message;
@@ -193,9 +198,9 @@ function DNSProofScreen(proof) {
         message = message1;
       }
       if (!message) {
-        message = error.message;
+        message = body.message;
       }
-      callback(message);
+      closure_4(message);
     }).finally(() => {
       callback2(false);
     });
@@ -204,7 +209,7 @@ function DNSProofScreen(proof) {
   items[3] = callback2(c5, obj9);
   const obj11 = { style: tmp.button, children: null };
   const obj12 = { variant: "secondary", text: null, onPress: null };
-  const intl6 = require(tmp3[11]).intl;
+  const intl6 = tmp2(tmp3[11]).intl;
   obj12[1] = intl6.string(require(proof[11]).t.CkfdNx);
   obj12[2] = function onPress() {
 
@@ -216,6 +221,7 @@ function DNSProofScreen(proof) {
 }
 function HTTPProofScreen(children) {
   ({ onClose: require, domain } = children);
+  dependencyMap = undefined;
   let callback;
   let React;
   const tmp = callback4();
@@ -224,6 +230,7 @@ function HTTPProofScreen(children) {
   [tmp5, c3] = callback(React.useState(null), 2);
   const tmp4 = callback(React.useState(null), 2);
   [tmp7, c4] = callback(React.useState(false), 2);
+  obj = { bottom: true, style: tmp.container, children: null };
   obj = { variant: "text-md/normal", children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.p4ql7y);
@@ -249,26 +256,26 @@ function HTTPProofScreen(children) {
     obj6 = { variant: "text-md/normal", color: "text-feedback-critical", style: null, children: null };
     obj6[2] = tmp.error;
     obj6[3] = tmp5;
-    tmp9Result = callback2(Text.Text, obj6);
+    tmp9Result = tmp9(tmp2(4734).Text, obj6);
   }
   items[2] = tmp9Result;
   const obj7 = { style: tmp.button, children: null };
   const obj8 = { loading: tmp7, text: null, onPress: null };
-  const intl4 = getSystemLocale.intl;
+  const intl4 = tmp2(1236).intl;
   obj8[1] = intl4.string(getSystemLocale.t["13ofGu"]);
   obj8[2] = function onPress() {
     _undefined2(true);
     _undefined(null);
-    const HTTP = require(arr[8]).HTTP;
+    const HTTP = closure_1_0(arr[8]).HTTP;
     const obj = { url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false };
     const postResult = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false });
-    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then((result) => {
+    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
       callback();
     });
-    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then((result) => {
+    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
       callback();
-    }).catch((error) => {
-      const body = error.body;
+    }).catch((body) => {
+      body = body.body;
       let message;
       if (body != null) {
         const errors = body.errors;
@@ -286,7 +293,7 @@ function HTTPProofScreen(children) {
         }
       }
       if (!message) {
-        const body2 = error.body;
+        const body2 = body.body;
         let message1;
         if (body2 != null) {
           message1 = body2.message;
@@ -294,9 +301,9 @@ function HTTPProofScreen(children) {
         message = message1;
       }
       if (!message) {
-        message = error.message;
+        message = body.message;
       }
-      callback(message);
+      closure_3(message);
     }).finally(() => {
       callback2(false);
     });
@@ -305,7 +312,7 @@ function HTTPProofScreen(children) {
   items[3] = callback2(View, obj7);
   const obj9 = { style: tmp.button, children: null };
   const obj10 = { variant: "secondary", text: null, onPress: null };
-  const intl5 = getSystemLocale.intl;
+  const intl5 = tmp2(1236).intl;
   obj10[1] = intl5.string(getSystemLocale.t.RhJMVQ);
   obj10[2] = function onPress() {
 
@@ -317,29 +324,31 @@ function HTTPProofScreen(children) {
 }
 ({ Endpoints: closure_6, PlatformTypes: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginTop: 16 };
+createCacheKey = { container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 }, dns: null, error: null, code: null, button: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginTop: 16 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { marginTop: 16 };
 createCacheKey[5] = { fontFamily: "monospace", marginBottom: 4 };
 createCacheKey[6] = { marginTop: 16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { DOMAIN: "DOMAIN", PROOF_DNS: "PROOF_DNS", PROOF_HTTP: "PROOF_HTTP" };
-const result = require("obj132").fileFinishedImporting("modules/connections/native/DomainVerifyModal.tsx");
+const result = require("set").fileFinishedImporting("modules/connections/native/DomainVerifyModal.tsx");
 
 export default function DomainVerifyModal(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
-    function onClose(dependencyMap) {
+    function onClose(arg0) {
       return callback(table[15]).pop();
     }
-    let obj = { headerTitle: null, headerLeft: null, render: null };
+    let obj = {};
+    obj = { headerTitle: null, headerLeft: null, render: null };
     const intl = onClose(1236).intl;
     obj[0] = intl.string(onClose(1236).t["7lo8+e"]);
     let obj2 = onClose(6314);
     obj[1] = obj2.getHeaderBackButton(onClose);
     obj[2] = function render() {
-      return closure_1_8(DomainScreen, { onClose });
+      return closure_1_8(closure_1_12, { onClose });
     };
     obj[constants.DOMAIN] = obj;
     obj = { headerTitle: null, headerLeft: null, render: null };
@@ -347,7 +356,7 @@ export default function DomainVerifyModal(arg0) {
     obj[0] = intl2.string(onClose(1236).t["7lo8+e"]);
     obj[1] = onClose(6314).getHeaderBackButton(onClose);
     obj[2] = function render(domain) {
-      return closure_1_8(DNSProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
+      return closure_1_8(closure_1_13, { domain: domain.domain, proof: domain.proof, onClose });
     };
     obj[constants.PROOF_DNS] = obj;
     obj1 = { headerTitle: null, headerLeft: null, render: null };
@@ -356,7 +365,7 @@ export default function DomainVerifyModal(arg0) {
     const obj5 = onClose(6314);
     obj1[1] = onClose(6314).getHeaderBackButton(onClose);
     obj1[2] = function render(domain) {
-      return closure_1_8(HTTPProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
+      return closure_1_8(closure_1_14, { domain: domain.domain, proof: domain.proof, onClose });
     };
     obj[constants.PROOF_HTTP] = obj1;
     obj2 = { screens: null, initialRouteName: null, headerBackTitle: null };

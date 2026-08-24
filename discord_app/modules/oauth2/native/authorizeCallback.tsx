@@ -1,7 +1,7 @@
 // === Module 12426: authorizeCallback ===
 
 // Module 12426 (authorizeCallback)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 691 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
@@ -13,7 +13,7 @@ import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
 ({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: c4 } = OAUTH2_AUTHORIZE_MODAL_KEY);
 const re5 = /oauth2\/authorized/;
 const re6 = /oauth2\/error/;
-const result = obj132.fileFinishedImporting("modules/oauth2/native/authorizeCallback.tsx");
+const result = set.fileFinishedImporting("modules/oauth2/native/authorizeCallback.tsx");
 
 export default function authorizeCallback(arg0) {
   ({ location: _location, canceled, wasDeepLink } = arg0);
@@ -24,19 +24,19 @@ export default function authorizeCallback(arg0) {
     }
     ({ host, pathname, searchParams } = toURLSafeResult);
     if (null != host) {
-      let tmp8Result = isDiscordProxiedAssetUrlDefault;
+      let tmp8Result = tmp8(1487);
       if (tmp8Result.isDiscordHostname(host)) {
         if (null != pathname) {
           if (null != pathname.match(closure_5)) {
-            tmp8Result = _modDef5260;
+            tmp8Result = tmp8(5260);
             let obj = { application: null, guild: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            tmp8Result.pushLazy(asyncRequireImpl(12427, dependencyMap.paths), obj, closure_3);
+            tmp8Result.pushLazy(asyncRequireImpl(12427, tmp9.paths), obj, closure_3);
           } else if (null != pathname.match(closure_6)) {
             if (!canceled) {
               let str;
-              const tmp8Result1 = _modDef5260;
+              const tmp8Result1 = tmp8(5260);
               if (searchParams != null) {
                 str = "error_description";
                 const str2 = searchParams.get("error_description");
@@ -56,8 +56,8 @@ export default function authorizeCallback(arg0) {
               }
               obj = { error: null };
               obj[0] = str;
-              tmp8Result1.pushLazy(asyncRequireImpl(9776, dependencyMap.paths), obj, closure_4);
-              const tmp17 = asyncRequireImpl(9776, dependencyMap.paths);
+              tmp8Result1.pushLazy(asyncRequireImpl(9776, tmp9.paths), obj, closure_4);
+              const tmp17 = asyncRequireImpl(9776, tmp9.paths);
             }
           }
         }
@@ -66,7 +66,9 @@ export default function authorizeCallback(arg0) {
     if (wasDeepLink) {
       const browserManagerSelectedBrowser = NativeModules.getBrowserManagerSelectedBrowser();
       wasDeepLink = browserManagerSelectedBrowser === keys.WebBrowserType.IN_APP;
+      const obj5 = NativeModules;
     }
+    const obj2 = isDiscordProxiedAssetUrlDefault;
     let SAFARI;
     if (wasDeepLink) {
       SAFARI = keys.WebBrowserType.SAFARI;

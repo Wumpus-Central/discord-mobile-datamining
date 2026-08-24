@@ -7,14 +7,15 @@ import Text from "Text" /* 4734 */;
 import getNicknameDefault from "getNickname" /* 4796 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/subtitles/StreamingSubtitle.tsx");
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/subtitles/StreamingSubtitle.tsx");
 
 export default function StreamingSubtitle(arg0) {
   ({ guildId, streamingUser } = arg0);
+  let obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
   const intl = getSystemLocale.intl;
-  const obj = { username: getNicknameDefault.getName(guildId, null, streamingUser) };
+  obj = { username: getNicknameDefault.getName(guildId, null, streamingUser) };
   obj[3] = intl.format(getSystemLocale.t.k5IKep, obj);
   return jsx(Text.Text, { username: getNicknameDefault.getName(guildId, null, streamingUser) });
 };

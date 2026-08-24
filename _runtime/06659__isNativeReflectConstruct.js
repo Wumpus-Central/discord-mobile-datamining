@@ -4,9 +4,9 @@
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -54,7 +54,7 @@ class Polygon {
       points = points.points;
       if (points) {
         const _HermesInternal = HermesInternal;
-        points.d = "M" + lib(dependencyMap[7])(points) + "z";
+        points.d = "M" + lib(closure_1_1[7])(points) + "z";
       }
       if (lib.root) {
         const root = lib.root;

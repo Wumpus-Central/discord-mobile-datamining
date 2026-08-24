@@ -1,9 +1,9 @@
 // === Module 4808: prototype ===
 
 // Module 4808 (prototype)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
+const result = set.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
 const prototype = function InteractionCallbackError(reason) {
   const obj = Object.create(new.target.prototype);
   obj.reason = reason;

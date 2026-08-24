@@ -1,7 +1,7 @@
 // === Module 4963: getStickerPreview ===
 
 // Module 4963 (getStickerPreview)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import handleChanged from "handleChanged" /* 4825 */;
@@ -31,6 +31,6 @@ const stickerMessagePreviewStore = new StickerMessagePreviewStore(dispatcherDefa
     closure_2 = {};
   }
 });
-const result = obj132.fileFinishedImporting("modules/stickers/StickerMessagePreviewStore.tsx");
+const result = set.fileFinishedImporting("modules/stickers/StickerMessagePreviewStore.tsx");
 
 export default stickerMessagePreviewStore;

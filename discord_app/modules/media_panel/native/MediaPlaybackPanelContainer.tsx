@@ -7,7 +7,7 @@ import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 16437 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 const memoResult = importAllResult.memo(function MediaPlaybackPanelContainer() {
   let obj = _initialize;
   let tmp2 = null;
@@ -57,9 +57,10 @@ const memoResult = importAllResult.memo(function MediaPlaybackPanelContainer() {
     obj = { children: null };
     obj[0] = jsx(MediaPlaybackPanelUIDefault, {});
     tmp2 = jsx(MediaPlaybackPanelControllerDefault, { children: null });
+    let tmp5 = MediaPlaybackPanelControllerDefault;
   }
   return tmp2;
 });
-const result = require("obj132").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
 
 export default memoResult;

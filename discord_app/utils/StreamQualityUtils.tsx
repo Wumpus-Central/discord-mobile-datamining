@@ -3,20 +3,20 @@
 // Module 9667 (isPremiumResolution)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import noop from "noop" /* 19 */;
-import ApplicationStreamPresets from "ApplicationStreamPresets" /* 4562 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ApplicationStreamPresets" /* 4562 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "createRTCConnection" /* 4539 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
 import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures" /* 1924 */;
 import { ResolutionTypes } from "DesktopSources" /* 4529 */;
 
-require = fn;
+require = arg1;
 ({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: unpackModuleId, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = RESOLUTION_720);
-const result = require("obj132").fileFinishedImporting("utils/StreamQualityUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/StreamQualityUtils.tsx");
 
 export const isPremiumResolution = function isPremiumResolution(maxQuality) {
   if (null != maxQuality) {
@@ -28,13 +28,14 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
     closure_0 = callback2(height);
     let tmp6 = callback(maxQuality.maxFrameRate) !== FPS_5.FPS_5;
     if (tmp6) {
-      tmp6 = null == closure_12.find((item, index) => {
-        let tmp = item.resolution === closure_0;
+      tmp6 = null == closure_12.find((resolution) => {
+        let tmp = resolution.resolution === closure_0;
         if (tmp) {
-          tmp = item.fps !== closure_1_10.FPS_5;
+          tmp = resolution.fps !== closure_1_10.FPS_5;
         }
         if (tmp) {
-          tmp = !(null != item.quality || null != item.guildPremiumTier);
+          tmp = !(null != resolution.quality || null != resolution.guildPremiumTier);
+          const tmp4 = null != resolution.quality || null != resolution.guildPremiumTier;
         }
         return tmp;
       });
@@ -45,10 +46,11 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
 export const isPremiumFPS = function isPremiumFPS(maxQuality) {
   if (null != maxQuality) {
     closure_0 = callback(maxQuality.maxFrameRate);
-    return null == closure_12.find((item, index) => {
-      let tmp = item.fps === closure_0;
+    return null == closure_12.find((fps) => {
+      let tmp = fps.fps === closure_0;
       if (tmp) {
-        tmp = !(null != item.quality || null != item.guildPremiumTier);
+        tmp = !(null != fps.quality || null != fps.guildPremiumTier);
+        const tmp3 = null != fps.quality || null != fps.guildPremiumTier;
       }
       return tmp;
     });
@@ -61,16 +63,16 @@ export const getPremiumRequirement = function getPremiumRequirement(arg0, arg1, 
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return closure_12.find((item, index) => {
-    let tmp = null == item.preset;
+  return closure_12.find((preset) => {
+    let tmp = null == preset.preset;
     if (!tmp) {
-      tmp = item.preset === closure_0;
+      tmp = preset.preset === closure_0;
     }
     if (tmp) {
-      tmp = item.resolution === closure_1;
+      tmp = preset.resolution === closure_1;
     }
     if (tmp) {
-      tmp = item.fps === closure_2;
+      tmp = preset.fps === closure_2;
     }
     return tmp;
   });
@@ -118,19 +120,19 @@ export const useMaxQuality = function useMaxQuality(participant) {
       obj = { height: null, width: 0, type: null };
       obj[0] = stateFromStoresObject.resolution;
       if (0 === stateFromStoresObject.resolution) {
-        let FIXED = ResolutionTypes.SOURCE;
+        let FIXED = closure_1_16.SOURCE;
       } else {
-        FIXED = ResolutionTypes.FIXED;
+        FIXED = closure_1_16.FIXED;
       }
       obj[2] = FIXED;
       obj[1] = obj;
     } else {
       let tmp3 = null;
-      if (null != participant.maxResolution) {
+      if (null != tmp.maxResolution) {
         tmp3 = null;
-        if (null != participant.maxFrameRate) {
+        if (null != tmp.maxFrameRate) {
           obj = { maxFrameRate: null, maxResolution: null };
-          ({ maxFrameRate: obj[0], maxResolution: obj[1] } = participant);
+          ({ maxFrameRate: obj[0], maxResolution: obj[1] } = tmp);
           tmp3 = obj;
         }
       }
@@ -142,16 +144,16 @@ export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(pres
   closure_0 = preset;
   importDefault = resolution;
   dependencyMap = frameRate;
-  const found = closure_12.find((item, index) => {
-    let tmp = null == item.preset;
+  const found = closure_12.find((preset) => {
+    let tmp = null == preset.preset;
     if (!tmp) {
-      tmp = item.preset === closure_0;
+      tmp = preset.preset === closure_0;
     }
     if (tmp) {
-      tmp = item.resolution === closure_1;
+      tmp = preset.resolution === closure_1;
     }
     if (tmp) {
-      tmp = item.fps === closure_2;
+      tmp = preset.fps === closure_2;
     }
     return tmp;
   });

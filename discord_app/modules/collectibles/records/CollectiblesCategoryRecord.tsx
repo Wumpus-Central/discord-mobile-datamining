@@ -3,11 +3,12 @@
 // Module 5302 (fromServer)
 import fromServerDefault from "fromServer" /* 5310 */;
 import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import fromServer from "fromServer" /* 5303 */;
+import closure_2 from "fromServer" /* 5303 */;
 
-require = fn;
+require = arg1;
 fromServerDefault;
-const prototype = function CollectiblesCategoryRecord(products) {
+let prototype;
+prototype = function CollectiblesCategoryRecord(products) {
   const tmp3 = new prototype(products, tmp2, new.target, tmp, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ products: tmp3.products, heroRanking: tmp3.heroRanking, unpublishedAt: tmp3.unpublishedAt } = products);
@@ -17,7 +18,7 @@ const prototype = function CollectiblesCategoryRecord(products) {
   }
   if (isArray) {
     products = products.products;
-    isArray = undefined === products.find((item, index) => !callback(table[3]).isOrbsExclusiveProduct(item));
+    isArray = undefined === products.find((product) => !callback(table[3]).isOrbsExclusiveProduct(product));
   }
   tmp3.isOrbsExclusive = isArray;
   ({ heroBannerUrl: tmp3.heroBannerUrl, heroBannerAnimatedUrl: tmp3.heroBannerAnimatedUrl, heroRiveUrl: tmp3.heroRiveUrl, heroLogoUrl: tmp3.heroLogoUrl, catalogBannerUrl: tmp3.catalogBannerUrl, catalogBannerAnimatedUrl: tmp3.catalogBannerAnimatedUrl, catalogBannerRiveUrl: tmp3.catalogBannerRiveUrl, featuredBlockUrl: tmp3.featuredBlockUrl, logoUrl: tmp3.logoUrl, pdpBgUrl: tmp3.pdpBgUrl, mobileBannerUrl: tmp3.mobileBannerUrl, mobileBgUrl: tmp3.mobileBgUrl, heroLogoDisplayConfig: tmp3.heroLogoDisplayConfig, heroBannerDisplayConfig: tmp3.heroBannerDisplayConfig } = products);
@@ -31,13 +32,13 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ hero_ranking, hero_logo_display_config, hero_banner_display_config, hero_banner_url, hero_banner_animated_url, hero_rive_url, hero_logo_url, catalog_banner_url, catalog_banner_animated_url, catalog_banner_rive_url, featured_block_url, logo_url, pdp_bg_url, mobile_banner_url, mobile_bg_url } = arg0);
   const obj = {};
   const merged = Object.assign(super.fromServer(Object.assign(arg0, Object.create(null))));
-  obj.products = products.reduce((acc, item, index) => {
-    const fromServerResult = closure_2.fromServer(item);
+  obj.products = products.reduce((arr) => {
+    const fromServerResult = closure_2.fromServer(arg1);
     const type = fromServerResult.type;
     if (tmp4) {
-      acc.push(fromServerResult);
+      arr.push(fromServerResult);
     }
-    return acc;
+    return arr;
   }, []);
   if (null != unpublished_at) {
     const _Date = Date;
@@ -58,8 +59,10 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.mobileBannerUrl = mobile_banner_url;
   obj.mobileBgUrl = mobile_bg_url;
   obj.heroLogoDisplayConfig = getItemRecordsFromPurchases.getAssetDisplayConfig(hero_logo_display_config);
+  const obj2 = getItemRecordsFromPurchases;
+  const tmp2 = prototype;
   obj.heroBannerDisplayConfig = getItemRecordsFromPurchases.getAssetDisplayConfig(hero_banner_display_config);
-  return new prototype(obj);
+  return new tmp2(obj);
 };
 prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionRecord(id) {
   const products = id.products;
@@ -70,16 +73,18 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     summary: id.description,
     unpublishedAt: id.unpublishedAt,
     styles: id.styles,
-    products: products.reduce((acc, item, index) => {
-      const result = closure_2.fromStorefrontProductRecord(item);
+    products: products.reduce((arr, skus) => {
+      const result = closure_2.fromStorefrontProductRecord(skus);
       if (null != result) {
         const type = result.type;
         if (tmp4) {
-          acc.push(result);
+          arr.push(result);
         }
+        const tmp2 = callback;
+        const tmp3 = table;
         tmp4 = type === callback(table[2]).CollectiblesItemType.VARIANTS_GROUP || type === callback(table[2]).CollectiblesItemType.EXTERNAL_SKU;
       }
-      return acc;
+      return arr;
     }, []),
     heroRanking: id.heroRanking,
     heroBannerUrl: id.heroBannerUrl,
@@ -98,6 +103,6 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     heroBannerDisplayConfig: id.heroDisplayConfig
   });
 };
-let result = require("obj132").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoryRecord.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoryRecord.tsx");
 
 export default prototype;

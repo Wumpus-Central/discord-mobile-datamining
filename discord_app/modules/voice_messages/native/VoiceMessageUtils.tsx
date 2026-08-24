@@ -3,19 +3,19 @@
 // Module 11419 (_startAudioRecording)
 import timestampDefault from "timestamp" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4343 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
 import downsampleWaveformDefault from "downsampleWaveform" /* 11420 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
 import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11147 */;
 import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11148 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import importDefaultResult from "apply" /* 12 */;
 
-require = fn;
+require = arg1;
 function _startAudioRecording() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -136,17 +136,18 @@ function stopAndGetAudioRecording() {
   callback4(null);
   callback5(null);
   const waveform = store.getState().waveform;
-  const mapped = waveform.map((item, index) => {
-    [tmp] = item;
+  const mapped = waveform.map((arg0) => {
+    [tmp] = arg0;
     return tmp;
   });
   let arr3 = mapped;
   if (mapped.length > closure_16) {
     arr3 = downsampleWaveformDefault(mapped, tmp3);
   }
-  const mapped1 = arr3.map((item, index) => Math.min(item, closure_13));
+  const mapped1 = arr3.map((arg0) => Math.min(arg0, closure_13));
   const uint8Array = new Uint8Array(mapped1);
   closure_0 = byteLengthDefault.fromByteArray(uint8Array);
+  const obj = byteLengthDefault;
   return new Promise((arg0) => {
     closure_0 = arg0;
     const mediaEngine = closure_1_4.getMediaEngine();
@@ -336,14 +337,14 @@ let closure_21 = importDefaultResult.throttle((arg0) => {
     }
   }
 }, 100);
-let result = require("obj132").fileFinishedImporting("modules/voice_messages/native/VoiceMessageUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_messages/native/VoiceMessageUtils.tsx");
 
 export const generateBase64EncodedWaveform = function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
   if (arg0.length > closure_16) {
     arr = downsampleWaveformDefault(arg0, tmp);
   }
-  const mapped = arr.map((item, index) => Math.min(item, closure_13));
+  const mapped = arr.map((arg0) => Math.min(arg0, closure_13));
   const uint8Array = new Uint8Array(mapped);
   return byteLengthDefault.fromByteArray(uint8Array);
 };
@@ -368,10 +369,11 @@ export const endAudioRecording = function endAudioRecording() {
   return applyArgumentsResult;
 };
 export { stopAndCacheAudioRecording };
-export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, c4) {
-  if (null != c4) {
-    const obj = { recording_start_timestamp: null, recording_stop_timestamp: null, duration_secs: null, result: null, initialize_secs: null };
-    obj[0] = c4;
+export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, first) {
+  if (null != first) {
+    let obj = expandEventPropertiesDefault;
+    obj = { recording_start_timestamp: null, recording_stop_timestamp: null, duration_secs: null, result: null, initialize_secs: null };
+    obj[0] = first;
     const _Date = Date;
     obj[1] = Date.now();
     obj[2] = durationSecs;
@@ -383,6 +385,7 @@ export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCEL
 };
 export const triggerHaptic = function triggerHaptic() {
   const obj = HapticFeedbackTypes2;
+  const obj2 = set;
   const HapticFeedbackTypes = HapticFeedbackTypes2.HapticFeedbackTypes;
-  const result = obj.triggerHapticFeedback(obj132.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
+  const result = obj.triggerHapticFeedback(set.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
 };

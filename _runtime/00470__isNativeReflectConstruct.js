@@ -2,9 +2,9 @@
 
 // Module 470 (_isNativeReflectConstruct)
 import NativeEventEmitterDefault from "NativeEventEmitter" /* 209 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
@@ -100,5 +100,11 @@ let items = [
     }
   }
 ];
+let obj = {
+  key: "addEventListener",
+  value: function addEventListener(arg0, arg1) {
+    return this.addListener(arg0, arg1);
+  }
+};
 
 export default new importDefaultResult(LinkingImpl, items)();

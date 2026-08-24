@@ -2,22 +2,18 @@
 
 // Module 885 (_INTERNAL_captureSerializedMetric)
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import consoleSandbox from "consoleSandbox" /* 824 */;
 import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
-import dateTimestampInSeconds from "dateTimestampInSeconds" /* 838 */;
-import _getSpanForScope from "_getSpanForScope" /* 844 */;
 import getClient from "getClient" /* 848 */;
 import mergeScopeData from "mergeScopeData" /* 871 */;
-import _getTraceInfoFromScope from "_getTraceInfoFromScope" /* 881 */;
-import isAttributeObject from "isAttributeObject" /* 883 */;
 import createMetricContainerEnvelopeItem from "createMetricContainerEnvelopeItem" /* 886 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function _INTERNAL_captureSerializedMetric(closure_0) {
   const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
+  const obj = getGlobalSingleton;
   const globalSingleton1 = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
@@ -43,23 +39,25 @@ function _INTERNAL_flushMetricsBuffer(closure_0, value) {
       const weakMap = new WeakMap();
       return weakMap;
     });
-    items = globalSingleton.get(_require);
+    items = globalSingleton.get(closure_0);
+    const obj = getGlobalSingleton;
   }
   if (items == null) {
     items = [];
   }
   if (0 !== items.length) {
-    const options = _require.getOptions();
+    const options = closure_0.getOptions();
     const obj3 = createMetricContainerEnvelopeItem;
     ({ _metadata, tunnel } = options);
-    const metricEnvelope = obj3.createMetricEnvelope(items, _metadata, tunnel, _require.getDsn());
+    const metricEnvelope = obj3.createMetricEnvelope(items, _metadata, tunnel, closure_0.getDsn());
     const globalSingleton1 = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
-    const result = globalSingleton1.set(_require, []);
-    _require.emit("flushMetrics");
-    _require.sendEnvelope(metricEnvelope);
+    const result = globalSingleton1.set(closure_0, []);
+    closure_0.emit("flushMetrics");
+    closure_0.sendEnvelope(metricEnvelope);
+    const obj4 = getGlobalSingleton;
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -99,9 +97,10 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       if (enableMetrics != null) {
         if (!enableMetrics) {
           if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-            const debug2 = consoleSandbox.debug;
+            const debug2 = tmp13(824).debug;
             debug2.warn("metrics option not enabled, metric will not be captured.");
           }
+          tmp13 = require;
         }
       }
     }
@@ -212,9 +211,9 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       beforeSendMetricResult = beforeSendMetric(obj);
     }
     if (beforeSendMetricResult) {
-      let tmp17Result = _getTraceInfoFromScope;
-      const tmp37 = _slicedToArray(tmp17Result._getTraceInfoFromScope(client, scope), 2)[1];
-      tmp17Result = _getSpanForScope;
+      let tmp17Result = tmp17(881);
+      const tmp37 = callback(tmp17Result._getTraceInfoFromScope(client, scope), 2)[1];
+      tmp17Result = tmp17(844);
       const _getSpanForScopeResult = tmp17Result._getSpanForScope(scope);
       if (_getSpanForScopeResult) {
         let str10 = _getSpanForScopeResult.spanContext().traceId;
@@ -226,7 +225,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
         spanId = _getSpanForScopeResult.spanContext().spanId;
       }
       obj1 = { timestamp: null, trace_id: null, span_id: null, name: null, type: null, unit: null, value: null, attributes: null };
-      obj1[0] = dateTimestampInSeconds.timestampInSeconds();
+      obj1[0] = tmp17(838).timestampInSeconds();
       if (str10 == null) {
         str10 = "";
       }
@@ -234,25 +233,29 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       obj1[2] = spanId;
       ({ name: obj12[3], type: obj12[4], unit: obj12[5], value: obj12[6] } = beforeSendMetricResult);
       obj2 = {};
-      const tmp17Result1 = dateTimestampInSeconds;
-      const merged2 = Object.assign(isAttributeObject.serializeAttributes(attributes));
-      const tmp17Result2 = isAttributeObject;
-      const merged3 = Object.assign(isAttributeObject.serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"));
+      const tmp17Result1 = tmp17(838);
+      const merged2 = Object.assign(tmp17(883).serializeAttributes(attributes));
+      const tmp17Result2 = tmp17(883);
+      const merged3 = Object.assign(tmp17(883).serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"));
       obj1[7] = obj2;
-      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-        const debug4 = consoleSandbox.debug;
+      if (tmp17(823).DEBUG_BUILD) {
+        const debug4 = tmp17(824).debug;
         debug4.log("[Metric]", obj1);
       }
       prop(client, obj1);
       client.emit("afterCaptureMetric", beforeSendMetricResult);
-      const tmp17Result3 = isAttributeObject;
-    } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      const debug3 = consoleSandbox.debug;
+      const tmp17Result3 = tmp17(883);
+    } else if (tmp17(823).DEBUG_BUILD) {
+      const debug3 = tmp17(824).debug;
       debug3.log("`beforeSendMetric` returned `null`, will not send metric.");
     }
-  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-    const debug = consoleSandbox.debug;
-    debug.warn("No client available to capture metric.");
+    const obj4 = getClient;
+  } else {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      const debug = tmp8(824).debug;
+      debug.warn("No client available to capture metric.");
+    }
+    tmp8 = require;
   }
 };
 export { _INTERNAL_captureSerializedMetric };

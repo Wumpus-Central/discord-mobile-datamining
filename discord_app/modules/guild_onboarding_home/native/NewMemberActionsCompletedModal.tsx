@@ -3,19 +3,21 @@
 // Module 16583 (NewMemberActionsCompleted)
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef4115 from "module_4115" /* 4115 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { borderRadius: ThemesDefault.radii.round, height: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, width: "60%" };
+createCacheKey = { screen: { flex: 1, position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0, 0, 0, 0.8)", display: "flex", alignItems: "center", justifyContent: "center" }, text: { marginBottom: 16 }, progressBackground: null, progressForeground: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.round, height: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, width: "60%" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_330, borderRadius: ThemesDefault.radii.round, height: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function NewMemberActionsCompletedModalTsx1(){const{withDelay,withTiming,barWidth}=this.__closure;return{width:withDelay(500,withTiming(barWidth.get()*100+\"%\",{duration:700}))};}" };
-let result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsCompletedModal.tsx");
+let obj1 = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_330, borderRadius: ThemesDefault.radii.round, height: 8 };
+let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsCompletedModal.tsx");
 
 export default function NewMemberActionsCompleted(arg0) {
   let sharedValue;
@@ -30,8 +32,8 @@ export default function NewMemberActionsCompleted(arg0) {
   obj1 = sharedValue(4115);
   const fn = function b() {
     const obj = { width: null };
-    const obj2 = sharedValue(dependencyMap[5]);
-    obj[0] = obj2.withDelay(500, sharedValue(dependencyMap[6]).withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
+    const obj2 = sharedValue(closure_1_2[5]);
+    obj[0] = obj2.withDelay(500, sharedValue(closure_1_2[6]).withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
     return obj;
   };
   obj = { withDelay: sharedValue(4115).withDelay, withTiming: sharedValue(4664).withTiming, barWidth: sharedValue };

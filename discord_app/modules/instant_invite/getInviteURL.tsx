@@ -1,9 +1,9 @@
 // === Module 7506: getInviteURL ===
 
 // Module 7506 (getInviteURL)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");
+const result = set.fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");
 
 export default function getInviteURL() {
   let str = arg0;

@@ -3,19 +3,19 @@
 // Module 10106 (NotificationSettingsMessageUnread)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10107 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function NotificationSettingsMessageUnread(onPress) {
   const _require = onPress;
   const tmp = callback3();
   let obj = _require(10100);
   const unreadSelectOptions = obj.getUnreadSelectOptions();
-  const found = unreadSelectOptions.find((item, index) => item.value === onPress.setting);
+  const found = unreadSelectOptions.find((value) => value.value === onPress.setting);
+  obj = { style: onPress.style, children: null };
   obj = { style: tmp.header, children: null };
   obj1 = { variant: "text-sm/semibold", color: "text-default", style: tmp.headerTitle, children: null };
   const intl = _require(1236).intl;
@@ -55,14 +55,15 @@ function NotificationSettingsMessageUnread(onPress) {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
+createCacheKey = { card: null, cta: null, label: null, header: null, headerTitle: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 4, textAlign: "center" };
 createCacheKey[2] = { marginTop: 8, textAlign: "center" };
 createCacheKey[3] = { marginBottom: 8 };
 createCacheKey[4] = { marginBottom: 4 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnread.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnread.tsx");
 
 export const NotificationSettingsGuildMessageUnread = function NotificationSettingsGuildMessageUnread(style) {
   const _require = style;
@@ -70,8 +71,9 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
     style: style.style,
     setting: _require(10098).useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
-      const obj = { guildId: style.guildId };
-      obj.openLazy(style(dependencyMap[13])(dependencyMap[12], dependencyMap.paths), "MessageUnreadActionSheet", obj);
+      let obj = closure_1_1(closure_1_2[11]);
+      obj = { guildId: style.guildId };
+      obj.openLazy(style(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "MessageUnreadActionSheet", obj);
     }
   };
   return callback(NotificationSettingsMessageUnread, obj);
@@ -82,8 +84,9 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
     style: style.style,
     setting: _require(10090).useChannelPresetSettings(style.channel).unread,
     onCustomize() {
-      const obj = { channel: style.channel };
-      obj.openLazy(style(dependencyMap[13])(dependencyMap[15], dependencyMap.paths), "MessageUnreadActionSheet", obj);
+      let obj = closure_1_1(closure_1_2[11]);
+      obj = { channel: style.channel };
+      obj.openLazy(style(closure_1_2[13])(closure_1_2[15], closure_1_2.paths), "MessageUnreadActionSheet", obj);
     }
   };
   return callback(NotificationSettingsMessageUnread, obj);

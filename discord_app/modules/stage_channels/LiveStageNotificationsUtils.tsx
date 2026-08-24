@@ -1,34 +1,34 @@
 // === Module 8911: useCanSendStageStartNotification ===
 
 // Module 8911 (useCanSendStageStartNotification)
-import handleInviteData from "handleInviteData" /* 4295 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "handleInviteData" /* 4295 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "sum" /* 505 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
 
-export const useCanSendStageStartNotification = function useCanSendStageStartNotification(arg0) {
-  const _require = arg0;
+export const useCanSendStageStartNotification = function useCanSendStageStartNotification(first) {
+  const _require = first;
   const items = [closure_3];
-  const items1 = [arg0];
+  const items1 = [first];
   return _require(589).useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_3.can(Permissions.MENTION_EVERYONE, tmp);
+      canResult = closure_1_3.can(closure_1_4.MENTION_EVERYONE, tmp);
     }
     return canResult;
   }, items1);
 };
-export const useDefaultSendStartStageNotificationToggle = function useDefaultSendStartStageNotificationToggle(guild_id) {
-  guild_id = undefined;
-  if (guild_id != null) {
-    guild_id = guild_id.guild_id;
+export const useDefaultSendStartStageNotificationToggle = function useDefaultSendStartStageNotificationToggle(first) {
+  let guild_id;
+  if (first != null) {
+    guild_id = first.guild_id;
   }
   const items = [closure_2];
   const items1 = [guild_id];
   const stateFromStores = guild_id(589).useStateFromStores(items, () => closure_1_2.getMemberCount(guild_id), items1);
-  let tmp3 = null == guild_id;
+  let tmp3 = null == first;
   if (!tmp3) {
     let tmp4 = null == stateFromStores;
     if (!tmp4) {

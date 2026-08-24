@@ -3,7 +3,7 @@
 // Module 1543 (useNavigation)
 import NavigationContainerRefContext from "NavigationContainerRefContext" /* 1531 */;
 import NavigationContext from "NavigationContext" /* 1544 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 require = arg1;
 

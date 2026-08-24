@@ -1,9 +1,9 @@
 // === Module 9506: MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN ===
 
 // Module 9506 (MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerConstants.tsx");
+const result = set.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerConstants.tsx");
 
 export const MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN = 100;
 export const HEARTBEAT_SECONDS = 60;

@@ -3,18 +3,18 @@
 // Module 13911 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
-import getUserAgnosticState from "getUserAgnosticState" /* 4737 */;
+import closure_3 from "getUserAgnosticState" /* 4737 */;
 
-const require = fn;
+const require = arg1;
 initializeDefault;
 class CollectiblesMarketingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       const value = closure_3.get("shop_include_unpublished");
-      callback(5300);
+      let obj = callback(5300);
       const CollectiblesMarketingReleaseType = callback(5361).CollectiblesMarketingReleaseType;
-      const obj = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
+      obj = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
       const collectiblesMarketings = obj.fetchCollectiblesMarketings(obj);
     };
     return applyArgumentsResult;
@@ -28,6 +28,6 @@ prototype["_terminate"] = function _terminate() {
   dispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 const collectiblesMarketingManager = new CollectiblesMarketingManager();
-const result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesMarketingManager.native.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesMarketingManager.native.tsx");
 
 export default collectiblesMarketingManager;

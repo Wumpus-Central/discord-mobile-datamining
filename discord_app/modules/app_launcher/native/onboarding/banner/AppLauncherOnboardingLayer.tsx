@@ -9,7 +9,8 @@ import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-let obj = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
+let obj = { container: null };
+obj = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((visibleContent) => {
@@ -17,8 +18,9 @@ const memoResult = importAllResult.memo((visibleContent) => {
   ({ context, bottomOffset } = visibleContent);
   let tmp3 = null;
   if (null != visibleContent) {
+    let obj = { style: null, children: null };
     const items = [tmp.container, ];
-    let obj = { bottom: null };
+    obj = { bottom: null };
     obj[0] = tmp2 + bottomOffset;
     items[1] = obj;
     obj[0] = items;
@@ -30,6 +32,6 @@ const memoResult = importAllResult.memo((visibleContent) => {
   }
   return tmp3;
 });
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingLayer.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingLayer.tsx");
 
 export default memoResult;

@@ -1,16 +1,16 @@
 // === Module 7360: openUserSettings ===
 
 // Module 7360 (openUserSettings)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
 import handleFormClose from "handleFormClose" /* 7361 */;
 
 const UserSettingsSections = ME.UserSettingsSections;
-const result = obj132.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
-export const openUserSettings = (screen, fn) => {
+export const openUserSettings = (screen) => {
   let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp2) {
@@ -25,9 +25,9 @@ export const openUserSettings = (screen, fn) => {
     obj[1] = screen;
     dispatcherDefault.dispatch(obj);
     rootNavigationRef.navigate("settings", screen);
-    if (fn != null) {
-      fn();
+    if (arg1 != null) {
+      arg1();
     }
+    const obj3 = dispatcherDefault;
   }
-  tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
 };

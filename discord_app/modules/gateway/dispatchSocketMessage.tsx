@@ -12,25 +12,25 @@ import convertServerThreadMemberDefault from "convertServerThreadMember" /* 7529
 import _fetchProfileAll from "_fetchProfile" /* 8418 */;
 import urlUserId from "urlUserId" /* 8939 */;
 import hydrateGuildAll from "hydrateGuild" /* 13232 */;
-import isUserSettingsOpen from "isUserSettingsOpen" /* 13308 */;
 import splitAgeRestrictedActivitiesDefault from "splitAgeRestrictedActivities" /* 13309 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
 import { createChannelRecordFromServer as closure_6 } from "createChannelRecord" /* 1395 */;
-import createFromServer from "createFromServer" /* 4272 */;
-import createdAt from "createdAt" /* 1930 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "createFromServer" /* 4272 */;
+import closure_8 from "createdAt" /* 1930 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
 import { ChannelLoader } from "ensureGuildLoaded" /* 1391 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
-import addSubscriptionPlan from "addSubscriptionPlan" /* 4044 */;
-import reset from "reset" /* 4045 */;
+import closure_11 from "trackCommunicationDisabled" /* 1990 */;
+import closure_12 from "mergeGuildAvatar" /* 1922 */;
+import closure_13 from "updateVoiceState" /* 4542 */;
+import closure_14 from "addSubscriptionPlan" /* 4044 */;
+import closure_15 from "reset" /* 4045 */;
 import { ActivityTypes } from "ME" /* 676 */;
 import importDefaultResult from "flush" /* 13203 */;
 
-require = fn;
+require = arg1;
 function defineSimpleDispatch(arg0, arg1) {
   while (tmp !== undefined) {
+    let tmp3 = closure_22;
     let obj = { preload: null, dispatch: null };
     obj[0] = function preload() {
       return null;
@@ -39,17 +39,16 @@ function defineSimpleDispatch(arg0, arg1) {
     closure_22[tmp2] = obj;
     continue;
   }
-  tmp = arg0[Symbol.iterator]();
 }
 function definePreloadableDispatch(arg0, arg1, arg2) {
   while (tmp !== undefined) {
+    let tmp3 = closure_22;
     let obj = { preload: null, dispatch: null };
     obj[0] = arg1;
     obj[1] = arg2;
     closure_22[tmp2] = obj;
     continue;
   }
-  tmp = arg0[Symbol.iterator]();
 }
 function dispatchVoiceStateUpdates(items) {
   items = [];
@@ -58,26 +57,34 @@ function dispatchVoiceStateUpdates(items) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (null != nextResult.member) {
+      let tmp3 = dispatchGuildMemberAdd;
+      let tmp4 = nextResult;
       let tmp5 = dispatchGuildMemberAdd(tmp2.guild_id, tmp2.member.user, tmp2.member);
     }
     let obj = { userId: null, guildId: null, sessionId: null, channelId: null, mute: null, deaf: null, selfMute: null, selfDeaf: null, selfVideo: null, suppress: null, selfStream: null, requestToSpeakTimestamp: null, discoverable: null, oldChannelId: null, connectedAt: null };
+    let tmp6 = nextResult;
     ({ user_id: obj[0], guild_id: obj[1], session_id: obj[2], channel_id: obj[3], mute: obj[4], deaf: obj[5], self_mute: obj[6], self_deaf: obj[7], self_video } = tmp2);
     if (!self_video) {
       self_video = false;
     }
     obj[8] = self_video;
+    let tmp7 = nextResult;
     obj[9] = tmp2.suppress;
     obj[10] = tmp2.self_stream || false;
+    let tmp8 = nextResult;
     let prop = tmp2.request_to_speak_timestamp;
     if (prop == null) {
       prop = null;
     }
     obj[11] = prop;
+    let tmp10 = nextResult;
     let flag = tmp2.discoverable;
     if (flag == null) {
       flag = true;
     }
     obj[12] = flag;
+    let tmp11 = userVoiceChannelId;
+    let tmp12 = nextResult;
     obj[13] = userVoiceChannelId.getUserVoiceChannelId(tmp2.guild_id, tmp2.user_id);
     obj[14] = tmp2.connected_at;
     let arr = items.push(obj);
@@ -87,6 +94,7 @@ function dispatchVoiceStateUpdates(items) {
 }
 function dispatchOrResetSocket(arg0) {
   closure_0 = arg0;
+  const obj = dispatcherDefault;
   dispatcherDefault.dispatch(arg0).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -104,6 +112,7 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
   let isEqualResult = null != member && member.nick === nick && member.avatar === avatar;
   if (isEqualResult) {
     isEqualResult = applyDefault.isEqual(member.roles, roles);
+    const obj3 = applyDefault;
   }
   if (isEqualResult) {
     let avatarDecoration = member.avatarDecoration;
@@ -114,8 +123,8 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
     if (avatar_decoration_data == null) {
       tmp9 = null;
     }
-    isEqualResult = tmp2(1899).isEqualAvatarDecoration(avatarDecoration, tmp9);
-    const tmp2Result = tmp2(1899);
+    isEqualResult = obj(1899).isEqualAvatarDecoration(avatarDecoration, tmp9);
+    const tmp2Result = obj(1899);
   }
   if (isEqualResult) {
     isEqualResult = member.premiumSince === premium_since;
@@ -153,6 +162,7 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
       tmp14 = null;
     }
     isEqualResult = applyDefault.isEqual(collectibles, tmp14);
+    const obj5 = applyDefault;
   }
   if (isEqualResult) {
     let displayNameStyles = member.displayNameStyles;
@@ -164,6 +174,7 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
       tmp17 = null;
     }
     isEqualResult = applyDefault.isEqual(displayNameStyles, tmp17);
+    const obj6 = applyDefault;
   }
   if (!isEqualResult) {
     obj = { type: "GUILD_MEMBER_ADD", guildId: null, user: null, roles: null, nick: null, avatar: null, avatarDecoration: null, premiumSince: null, isPending: null, joinedAt: null, communicationDisabledUntil: null, unusualDMActivityUntil: null, flags: null, collectibles: null, displayNameStyles: null };
@@ -181,6 +192,7 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
     obj[12] = flags;
     obj[13] = result;
     obj[14] = result1;
+    const obj8 = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -189,8 +201,6 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
     });
     const dispatchResult = dispatcherDefault.dispatch(obj);
   }
-  const obj2 = obj(1933);
-  tmp2 = obj;
 }
 function dispatchPresence(arg0) {
   importDefaultResult3.add(arg0);
@@ -235,7 +245,7 @@ importDefaultResult1 = new importDefaultResult1(require("handleIdentify").socket
     tmp = obj;
   }
   const updates = tmp.updates;
-  obj = { guildId: guildId.guild_id, sounds: soundboard_sounds.map((item, index) => ({ name: item.name, soundId: item.sound_id, emojiName: item.emoji_name, emojiId: item.emoji_id, userId: item.user_id, volume: item.volume, available: item.available, guildId: guildId.guild_id })) };
+  obj = { guildId: guildId.guild_id, sounds: soundboard_sounds.map((name) => ({ name: name.name, soundId: name.sound_id, emojiName: name.emoji_name, emojiId: name.emoji_id, userId: name.user_id, volume: name.volume, available: name.available, guildId: guildId.guild_id })) };
   soundboard_sounds = guildId.soundboard_sounds;
   updates.push(obj);
   return tmp;
@@ -282,7 +292,7 @@ let result = definePreloadableDispatch(["INITIAL_GUILD"], (data_mode) => {
   closure_0 = arg0;
   const initialGuild = serializeDefault.initialGuild;
   initialGuild.measure(() => {
-    const Emitter = initializeDefault.Emitter;
+    const Emitter = closure_1_1(closure_1_3[15]).Emitter;
     Emitter.batched(() => {
       let obj = closure_1_2(closure_1_3[16]);
       const hydrateInitialGuildResult = obj.hydrateInitialGuild(obj, closure_1_0(closure_1_3[13]).socket.identifyStartTime);
@@ -290,8 +300,8 @@ let result = definePreloadableDispatch(["INITIAL_GUILD"], (data_mode) => {
       if (null != closure_1_12.getCurrentUser()) {
         obj = { type: "GUILD_CREATE", guild: null };
         obj[1] = hydrateInitialGuildResult;
-        const obj3 = closure_1_1(closure_1_3[20]);
-        closure_1_1(closure_1_3[20]).dispatch(obj).catch((error) => {
+        const obj3 = closure_1_1(tmp[20]);
+        closure_1_1(tmp[20]).dispatch(obj).catch((error) => {
           closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
           const socket = obj(closure_1_3[13]).socket;
           obj = { error, action: obj.type };
@@ -299,34 +309,33 @@ let result = definePreloadableDispatch(["INITIAL_GUILD"], (data_mode) => {
         });
         obj = { type: "VOICE_STATE_UPDATES", voiceStates: null };
         const voice_states = hydrateInitialGuildResult.voice_states;
-        obj[1] = voice_states.map((item, index) => {
-          obj = { userId: item.user_id, guildId: obj.id, sessionId: item.session_id, channelId: item.channel_id, mute: item.mute, deaf: item.deaf, selfMute: item.self_mute, selfDeaf: item.self_deaf, selfVideo: tmp, suppress: item.suppress, selfStream: tmp2, requestToSpeakTimestamp: null, discoverable: null, connectedAt: null };
-          let prop = item.request_to_speak_timestamp;
+        obj[1] = voice_states.map((userId) => {
+          obj = { userId: userId.user_id, guildId: obj.id, sessionId: userId.session_id, channelId: userId.channel_id, mute: userId.mute, deaf: userId.deaf, selfMute: userId.self_mute, selfDeaf: userId.self_deaf, selfVideo: tmp, suppress: userId.suppress, selfStream: tmp2, requestToSpeakTimestamp: null, discoverable: null, connectedAt: null };
+          let prop = userId.request_to_speak_timestamp;
           if (prop == null) {
             prop = null;
           }
           obj[11] = prop;
-          let flag = item.discoverable;
+          let flag = userId.discoverable;
           if (flag == null) {
             flag = true;
           }
           obj[12] = flag;
-          obj[13] = item.connected_at;
+          obj[13] = userId.connected_at;
           return obj;
         });
-        const dispatchResult = closure_1_1(closure_1_3[20]).dispatch(obj);
-        const obj5 = closure_1_1(closure_1_3[20]);
-        closure_1_1(closure_1_3[20]).dispatch(obj).catch((error) => {
+        const dispatchResult = closure_1_1(tmp[20]).dispatch(obj);
+        const obj5 = closure_1_1(tmp[20]);
+        closure_1_1(tmp[20]).dispatch(obj).catch((error) => {
           closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
           const socket = obj(closure_1_3[13]).socket;
           obj = { error, action: obj.type };
           result = socket.resetSocketOnDispatchError(obj);
         });
         const _HermesInternal = HermesInternal;
-        closure_1_17.log("Dispatched INITIAL_GUILD " + tmp2.id);
-        const dispatchResult1 = closure_1_1(closure_1_3[20]).dispatch(obj);
+        closure_1_17.log("Dispatched INITIAL_GUILD " + obj.id);
+        const dispatchResult1 = closure_1_1(tmp[20]).dispatch(obj);
       }
-      tmp2 = obj;
     });
   });
 });
@@ -334,70 +343,74 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
   closure_0 = arg0;
   const readySupplemental = serializeDefault.readySupplemental;
   readySupplemental.measure(() => {
-    const Emitter = initializeDefault.Emitter;
+    const Emitter = closure_1_1(closure_1_3[15]).Emitter;
     Emitter.batched(() => {
       const hydrateReadySupplemental = closure_1_1(closure_1_3[14]).hydrateReadySupplemental;
       const measureResult = hydrateReadySupplemental.measure(() => {
         obj = callback(items[16]);
         return obj.hydrateReadySupplementalPayload(obj, obj(items[13]).socket.identifyStartTime);
       });
+      let obj = measureResult;
       const guilds = measureResult.guilds;
-      const found = guilds.filter((item, index) => true !== item.unavailable);
-      let obj = found;
-      let item = found.forEach((item, index) => {
-        const id = item.id;
-        item.presences = item.presences || [].map((item, index) => {
-          let activities = item.activities;
+      const found = guilds.filter((unavailable) => true !== unavailable.unavailable);
+      obj = found;
+      let item = found.forEach((presences) => {
+        const id = presences.id;
+        presences.presences = presences.presences || [].map((activities) => {
+          activities = activities.activities;
           if (activities == null) {
             activities = [];
           }
-          let hidden_activities = item.hidden_activities;
+          let hidden_activities = activities.hidden_activities;
           if (hidden_activities == null) {
             hidden_activities = [];
           }
-          const tmp2Result = closure_1_1(items[36])(activities, hidden_activities);
-          const tmp2 = closure_1_1(items[36]);
+          const tmp2Result = closure_1_1(closure_1_3[36])(activities, hidden_activities);
+          const tmp = id;
+          const tmp2 = closure_1_1(closure_1_3[36]);
           const activities1 = tmp2Result.activities;
-          return { user: item.user, status: item.status, clientStatus: item.client_status, activities: activities1.map(() => { ... }), hiddenActivities: tmp2Result.hiddenActivities, guildId: id, processedAtTimestamp: item.processed_at_timestamp };
+          return { user: activities.user, status: activities.status, clientStatus: activities.client_status, activities: activities1.map(() => { ... }), hiddenActivities: tmp2Result.hiddenActivities, guildId: id, processedAtTimestamp: activities.processed_at_timestamp };
         });
       });
       let presences = obj.presences;
       if (presences == null) {
         presences = [];
       }
-      closure_1 = presences.map((item, index) => {
-        let activities = item.activities;
+      closure_1 = presences.map((activities) => {
+        activities = activities.activities;
         if (activities == null) {
           activities = [];
         }
-        let hidden_activities = item.hidden_activities;
+        let hidden_activities = activities.hidden_activities;
         if (hidden_activities == null) {
           hidden_activities = [];
         }
-        const tmp2Result = closure_1_1(items[36])(activities, hidden_activities);
-        const tmp2 = closure_1_1(items[36]);
+        const tmp2Result = closure_1_1(closure_1_3[36])(activities, hidden_activities);
+        const tmp = id;
+        const tmp2 = closure_1_1(closure_1_3[36]);
         const activities1 = tmp2Result.activities;
         return {
-          user: item.user,
-          status: item.status,
-          clientStatus: item.client_status,
-          activities: activities1.map((item, index) => {
-            const timestamps = item.timestamps;
+          user: activities.user,
+          status: activities.status,
+          clientStatus: activities.client_status,
+          activities: activities1.map((timestamps) => {
+            timestamps = timestamps.timestamps;
             let end;
             if (timestamps != null) {
               end = timestamps.end;
             }
-            const created_at = item.created_at;
-            let tmp2 = item;
+            const created_at = timestamps.created_at;
+            let tmp2 = timestamps;
             if (null != end) {
-              tmp2 = item;
+              tmp2 = timestamps;
               if (null != created_at) {
-                const merged = Object.assign(item);
                 obj = {};
-                const merged1 = Object.assign(item.timestamps);
+                const merged = Object.assign(timestamps);
+                obj = {};
+                const merged1 = Object.assign(timestamps.timestamps);
                 let tmp8 = end > created_at;
                 if (tmp8) {
-                  tmp8 = item.type !== constants.LISTENING;
+                  tmp8 = timestamps.type !== constants.LISTENING;
                 }
                 obj.isCountDown = tmp8;
                 obj.timestamps = obj;
@@ -408,15 +421,15 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
           }),
           hiddenActivities: tmp2Result.hiddenActivities,
           guildId: id,
-          processedAtTimestamp: item.processed_at_timestamp
+          processedAtTimestamp: activities.processed_at_timestamp
         };
       });
       let prop = obj.lazy_private_channels;
       if (prop == null) {
         prop = [];
       }
-      closure_2 = prop.map((item, index) => callback2(item));
-      const dispatchReadySupplemental = closure_1_1(closure_1_3[14]).dispatchReadySupplemental;
+      closure_2 = prop.map((arg0) => callback2(arg0));
+      const dispatchReadySupplemental = tmp(tmp2[14]).dispatchReadySupplemental;
       dispatchReadySupplemental.measure(() => {
         obj = { type: "CONNECTION_OPEN_SUPPLEMENTAL", guilds: obj, presences: closure_1, lazyPrivateChannels: closure_2 };
         const obj2 = closure_2_1(closure_2_3[20]);
@@ -428,30 +441,30 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
         });
       });
       const items = [];
-      const item1 = found.forEach((item, index) => {
-        closure_0 = item;
-        const voice_states = item.voice_states;
-        item = voice_states.forEach((item, index) => {
-          obj = { userId: item.user_id, guildId: item.id, sessionId: item.session_id, channelId: item.channel_id, mute: item.mute, deaf: item.deaf, selfMute: item.self_mute, selfDeaf: item.self_deaf, selfVideo: null, suppress: null, selfStream: null, requestToSpeakTimestamp: null, discoverable: null, connectedAt: null };
-          let flag = item.self_video;
+      const item1 = found.forEach((voice_states) => {
+        closure_0 = voice_states;
+        voice_states = voice_states.voice_states;
+        const item = voice_states.forEach((userId) => {
+          obj = { userId: userId.user_id, guildId: voice_states.id, sessionId: userId.session_id, channelId: userId.channel_id, mute: userId.mute, deaf: userId.deaf, selfMute: userId.self_mute, selfDeaf: userId.self_deaf, selfVideo: null, suppress: null, selfStream: null, requestToSpeakTimestamp: null, discoverable: null, connectedAt: null };
+          let flag = userId.self_video;
           if (!flag) {
             flag = false;
           }
           obj[8] = flag;
-          obj[9] = item.suppress;
-          obj[10] = item.self_stream || false;
-          let prop = item.request_to_speak_timestamp;
+          obj[9] = userId.suppress;
+          obj[10] = userId.self_stream || false;
+          let prop = userId.request_to_speak_timestamp;
           if (prop == null) {
             prop = null;
           }
           obj[11] = prop;
-          let flag2 = item.discoverable;
+          let flag2 = userId.discoverable;
           if (flag2 == null) {
             flag2 = true;
           }
           obj[12] = flag2;
-          obj[13] = item.connected_at;
-          items.push(obj);
+          obj[13] = userId.connected_at;
+          closure_1_3.push(obj);
         });
       });
       obj = { type: "VOICE_STATE_UPDATES", voiceStates: items, initial: true };
@@ -462,9 +475,8 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
         obj = { error, action: obj.type };
         result = socket.resetSocketOnDispatchError(obj);
       });
-      const localVoiceState = closure_1_0(closure_1_3[13]).localVoiceState;
+      const localVoiceState = closure_1_0(tmp2[13]).localVoiceState;
       localVoiceState.update();
-      const dispatchResult = closure_1_1(closure_1_3[20]).dispatch(obj);
     });
   });
   const timerId = setTimeout(() => {
@@ -481,19 +493,19 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
 let result1 = definePreloadableDispatch(["READY"], (guilds) => {
   guilds = guilds.guilds;
   const result = hydrateGuildAll.preloadReadyPayloadData();
-  const found = guilds.filter((item, index) => {
-    const unavailable = item.unavailable;
+  const found = guilds.filter((unavailable) => {
+    unavailable = unavailable.unavailable;
     let tmp = !unavailable;
     if (!unavailable) {
-      let tmp2 = "partial" === item.data_mode;
+      let tmp2 = "partial" === unavailable.data_mode;
       if (tmp2) {
-        let channels = item.partial_updates.channels;
+        let channels = unavailable.partial_updates.channels;
         if (channels == null) {
           channels = [];
         }
         let tmp4 = channels.length > 0;
         if (!tmp4) {
-          let deleted_channel_ids = item.partial_updates.deleted_channel_ids;
+          let deleted_channel_ids = unavailable.partial_updates.deleted_channel_ids;
           if (deleted_channel_ids == null) {
             deleted_channel_ids = [];
           }
@@ -505,13 +517,14 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
     }
     return tmp;
   });
-  let guildIds = ChannelLoader.loadGuildIds(found.map((item, index) => item.id));
+  let guildIds = ChannelLoader.loadGuildIds(found.map((id) => id.id));
   if (guildIds == null) {
     guildIds = Promise.resolve();
   }
   const items = [result, guildIds];
-  return Promise.all(items).then((result) => {
-    [tmp] = result;
+  const obj = hydrateGuildAll;
+  return Promise.all(items).then((arg0) => {
+    [tmp] = arg0;
     return tmp;
   });
 }, (user) => {
@@ -519,6 +532,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
   importDefault = arg2;
   if (user.user.bot) {
     obj = { type: "LOGOUT" };
+    const obj2 = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -529,30 +543,31 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
   } else {
     const ready = serializeDefault.ready;
     ready.measure(() => {
-      const Emitter = callback(dependencyMap[15]).Emitter;
+      const Emitter = callback(closure_1_3[15]).Emitter;
       Emitter.batched(() => {
         const hydrateReady = closure_1_1(closure_1_3[14]).hydrateReady;
         const measureResult = hydrateReady.measure(() => {
           obj = callback(13232);
           return obj.hydrateReadyPayloadPrioritized(obj, obj(13187).socket.identifyStartTime, closure_1);
         });
+        obj = measureResult;
         const private_channels = measureResult.private_channels;
-        obj = private_channels.map((item, index) => callback2(item));
+        obj = private_channels.map((arg0) => callback2(arg0));
         const guilds = obj.guilds;
-        const found = guilds.filter((item, index) => true === item.unavailable && true !== item.geo_restricted);
-        closure_1 = found.map((item, index) => item.id);
+        const found = guilds.filter((unavailable) => true === unavailable.unavailable && true !== unavailable.geo_restricted);
+        closure_1 = found.map((id) => id.id);
         const guilds1 = obj.guilds;
-        closure_2 = guilds1.filter((item, index) => true !== item.unavailable);
+        closure_2 = guilds1.filter((unavailable) => true !== unavailable.unavailable);
         const guilds2 = obj.guilds;
-        closure_3 = guilds2.filter((item, index) => true === item.geo_restricted);
+        closure_3 = guilds2.filter((geo_restricted) => true === geo_restricted.geo_restricted);
         let result;
         if (null != obj.user_settings_proto) {
-          obj = closure_1_0(closure_1_3[17]);
+          obj = closure_1_0(tmp2[17]);
           result = obj.b64ToPreloadedUserSettingsProto(obj.user_settings_proto);
         }
         closure_4 = result;
         closure_1_1(closure_1_3[18])("AllGatewayConnectionStores", () => obj(13233));
-        const dispatchReady = closure_1_1(closure_1_3[14]).dispatchReady;
+        const dispatchReady = tmp(tmp2[14]).dispatchReady;
         dispatchReady.measure(() => {
           obj = { type: "CONNECTION_OPEN", sessionId: obj.session_id, authSessionIdHash: obj.auth_session_id_hash, staticAuthSessionId: obj.static_client_session_id, user: obj.user, users: obj.users, guilds: closure_2, initialPrivateChannels: obj, unavailableGuilds: closure_1, readState: obj.read_state, userGuildSettings: obj.user_guild_settings, tutorial: obj.tutorial, relationships: null, gameRelationships: null, friendSuggestionCount: null, analyticsToken: null, experiments: null, connectedAccounts: null, guildExperiments: null, apexExperiments: null, requiredAction: null, consents: null, sessions: null, pendingPayments: null, countryCode: null, guildJoinRequests: null, userSettingsProto: null, apiCodeVersion: null, auth: null, notificationSettings: null, geoRestrictedGuilds: null, explicitContentScanVersion: null, failedStates: null, linkedUsers: null, regionalFeatureConfig: null };
           let relationships = obj.relationships;
@@ -574,20 +589,20 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           if (sessions == null) {
             sessions = [];
           }
-          obj[22] = sessions.map((item, index) => {
-            obj = { sessionId: item.session_id, lastModified: item.last_modified, status: item.status, activities: null, hiddenActivities: null, active: null, clientInfo: null };
-            let activities = item.activities;
+          obj[22] = sessions.map((sessionId) => {
+            obj = { sessionId: sessionId.session_id, lastModified: sessionId.last_modified, status: sessionId.status, activities: null, hiddenActivities: null, active: null, clientInfo: null };
+            let activities = sessionId.activities;
             if (activities == null) {
               activities = [];
             }
             obj[3] = activities.map(() => { ... });
-            let hidden_activities = item.hidden_activities;
+            let hidden_activities = sessionId.hidden_activities;
             if (hidden_activities == null) {
               hidden_activities = [];
             }
             obj[4] = hidden_activities;
-            obj[5] = item.active;
-            obj[6] = item.client_info;
+            obj[5] = sessionId.active;
+            obj[6] = sessionId.client_info;
             return obj;
           });
           obj[23] = obj.pending_payments;
@@ -622,7 +637,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           obj = { type: "UPDATE_TOKEN", token: null, userId: null };
           obj[1] = obj.auth_token;
           obj[2] = obj.user.id;
-          let tmpResult = closure_1_1(closure_1_3[20]);
+          let tmpResult = tmp(tmp2[20]);
           tmpResult.dispatch(obj).catch((error) => {
             closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
             const socket = obj(closure_1_3[13]).socket;
@@ -634,7 +649,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
         if (null != obj.ad_personalization_toggles_disabled) {
           obj = { type: "AD_PERSONALIZATION_TOGGLES_RESTRICTED", disabled: null };
           obj[1] = obj.ad_personalization_toggles_disabled;
-          tmpResult = closure_1_1(closure_1_3[20]);
+          tmpResult = tmp(tmp2[20]);
           tmpResult.dispatch(obj).catch((error) => {
             closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
             const socket = obj(closure_1_3[13]).socket;
@@ -643,9 +658,9 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           });
           const dispatchResult1 = tmpResult.dispatch(obj);
         }
-        const localPresenceState = closure_1_0(closure_1_3[13]).localPresenceState;
+        const localPresenceState = closure_1_0(tmp2[13]).localPresenceState;
         localPresenceState.update();
-        const localVoiceState = closure_1_0(closure_1_3[13]).localVoiceState;
+        const localVoiceState = closure_1_0(tmp2[13]).localVoiceState;
         localVoiceState.update();
       });
     });
@@ -654,6 +669,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
 defineSimpleDispatch(["STATE_UPDATE"], (apex_experiments) => {
   apex_experiments = apex_experiments.apex_experiments;
   const obj = { type: "CONNECTION_OPEN_STATE_UPDATE", apexExperiments: apex_experiments };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -662,11 +678,13 @@ defineSimpleDispatch(["STATE_UPDATE"], (apex_experiments) => {
   });
 });
 defineSimpleDispatch(["EXPERIMENT_SESSION_OVERRIDE_CREATE"], (experimentName) => {
-  const obj = { type: "APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE", experimentName: experimentName.experiment_name, variantId: experimentName.variant_id };
+  let obj = dispatcherDefault;
+  obj = { type: "APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE", experimentName: experimentName.experiment_name, variantId: experimentName.variant_id };
   obj.dispatch(obj);
 });
 defineSimpleDispatch(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (experimentName) => {
-  const obj = { type: "APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE", experimentName: experimentName.experiment_name };
+  let obj = dispatcherDefault;
+  obj = { type: "APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE", experimentName: experimentName.experiment_name };
   obj.dispatch(obj);
 });
 defineSimpleDispatch(["RESUMED"], () => {
@@ -675,6 +693,7 @@ defineSimpleDispatch(["RESUMED"], () => {
   const localVoiceState = obj(13187).localVoiceState;
   localVoiceState.forceUpdate();
   obj = { type: "CONNECTION_RESUMED" };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -686,16 +705,18 @@ defineSimpleDispatch(["TYPING_START"], (guildId) => {
   if (null != guildId.member) {
     dispatchGuildMemberAdd(guildId.guild_id, guildId.member.user, guildId.member);
   }
-  dispatcherDefault.dispatch({ type: "TYPING_START", guildId: guildId.guild_id, channelId: guildId.channel_id, userId: guildId.user_id }).catch((error) => {
+  const obj = { type: "TYPING_START", guildId: guildId.guild_id, channelId: guildId.channel_id, userId: guildId.user_id };
+  const obj2 = dispatcherDefault;
+  dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
     obj = { error, action: obj.type };
     result = socket.resetSocketOnDispatchError(obj);
   });
-  const dispatchResult = dispatcherDefault.dispatch({ type: "TYPING_START", guildId: guildId.guild_id, channelId: guildId.channel_id, userId: guildId.user_id });
 });
 defineSimpleDispatch(["GUILD_RING_START"], (ongoingRings) => {
   const obj = { type: "GUILD_RING_START", ongoingRings: ongoingRings.ongoing_rings, channelId: ongoingRings.channel_id, guildId: ongoingRings.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -705,6 +726,7 @@ defineSimpleDispatch(["GUILD_RING_START"], (ongoingRings) => {
 });
 defineSimpleDispatch(["GUILD_RING_STOP"], (ringing) => {
   const obj = { type: "GUILD_RING_STOP", ringing: ringing.ringing, channelId: ringing.channel_id, guildId: ringing.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -714,6 +736,7 @@ defineSimpleDispatch(["GUILD_RING_STOP"], (ringing) => {
 });
 defineSimpleDispatch(["ACTIVITY_START"], (userId) => {
   const obj = { type: "ACTIVITY_START", userId: userId.user_id, activity: userId.activity };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -723,6 +746,7 @@ defineSimpleDispatch(["ACTIVITY_START"], (userId) => {
 });
 defineSimpleDispatch(["ACTIVITY_USER_ACTION"], (actionType) => {
   const obj = { type: "ACTIVITY_USER_ACTION", actionType: actionType.action_type, user: actionType.user, applicationId: actionType.application_id, channelId: actionType.channel_id, messageId: actionType.message_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -744,11 +768,11 @@ const result2 = definePreloadableDispatch(["MESSAGE_CREATE"], (guild_id) => {
     dispatchGuildMemberAdd(guild_id, author.author, member);
   }
   if (null != mentions) {
-    const item = mentions.forEach((item, index) => {
-      if (null != item.member) {
+    const item = mentions.forEach((member) => {
+      if (null != member.member) {
         if (null != obj) {
           delete tmp2[tmp];
-          dispatchGuildMemberAdd(tmp3, item, item.member);
+          closure_1_25(tmp3, member, member.member);
         }
       }
     });
@@ -757,6 +781,7 @@ const result2 = definePreloadableDispatch(["MESSAGE_CREATE"], (guild_id) => {
     obj = { type: "MESSAGE_CREATE", guildId: null, channelId: null, message: null, optimistic: false, isPushNotification: false };
     ({ guild_id: obj[1], channel_id: obj[2] } = author);
     obj[3] = author;
+    const obj2 = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -780,29 +805,30 @@ const result3 = definePreloadableDispatch(["MESSAGE_UPDATE"], (guild_id) => {
     dispatchGuildMemberAdd(guild_id, author.author, member);
   }
   if (null != mentions) {
-    const item = mentions.forEach((item, index) => {
-      if (null != item.member) {
+    const item = mentions.forEach((member) => {
+      if (null != member.member) {
         if (null != obj) {
           delete tmp2[tmp];
-          dispatchGuildMemberAdd(tmp3, item, item.member);
+          closure_1_25(tmp3, member, member.member);
         }
       }
     });
   }
   obj = { type: "MESSAGE_UPDATE", guildId: author.guild_id, message: author };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
     obj = { error, action: obj.type };
     result = socket.resetSocketOnDispatchError(obj);
   });
-  const dispatchResult = dispatcherDefault.dispatch(obj);
 });
 const result4 = definePreloadableDispatch(["MESSAGE_DELETE"], (guild_id) => {
   const items = [guild_id.guild_id];
   return ChannelLoader.loadGuildIds(items);
 }, (guildId) => {
   const obj = { type: "MESSAGE_DELETE", guildId: guildId.guild_id, id: guildId.id, channelId: guildId.channel_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -815,6 +841,7 @@ const result5 = definePreloadableDispatch(["MESSAGE_DELETE_BULK"], (guild_id) =>
   return ChannelLoader.loadGuildIds(items);
 }, (guildId) => {
   const obj = { type: "MESSAGE_DELETE_BULK", guildId: guildId.guild_id, ids: guildId.ids, channelId: guildId.channel_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -824,6 +851,7 @@ const result5 = definePreloadableDispatch(["MESSAGE_DELETE_BULK"], (guild_id) =>
 });
 const result6 = definePreloadableDispatch(["MESSAGE_ACK"], (channel_id) => ChannelLoader.loadGuildFromChannelId(channel_id.channel_id), (channelId) => {
   const obj = { type: "MESSAGE_ACK", channelId: channelId.channel_id, messageId: channelId.message_id, manual: channelId.manual, newMentionCount: channelId.mention_count, version: channelId.version };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -833,6 +861,7 @@ const result6 = definePreloadableDispatch(["MESSAGE_ACK"], (channel_id) => Chann
 });
 defineSimpleDispatch(["GUILD_FEATURE_ACK"], (id) => {
   const obj = { type: "GUILD_FEATURE_ACK", id: id.resource_id, ackType: id.ack_type, ackedId: id.entity_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -842,6 +871,7 @@ defineSimpleDispatch(["GUILD_FEATURE_ACK"], (id) => {
 });
 defineSimpleDispatch(["USER_NON_CHANNEL_ACK"], (ackType) => {
   const obj = { type: "USER_NON_CHANNEL_ACK", ackType: ackType.ack_type, ackedId: ackType.entity_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -854,6 +884,7 @@ const result7 = definePreloadableDispatch(["CHANNEL_PINS_ACK"], (guild_id) => {
   return ChannelLoader.loadGuildIds(items);
 }, (channelId) => {
   const obj = { type: "CHANNEL_PINS_ACK", channelId: channelId.channel_id, timestamp: channelId.timestamp, version: channelId.version };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -866,6 +897,7 @@ const result8 = definePreloadableDispatch(["CHANNEL_PINS_UPDATE"], (guild_id) =>
   return ChannelLoader.loadGuildIds(items);
 }, (channelId) => {
   const obj = { type: "CHANNEL_PINS_UPDATE", channelId: channelId.channel_id, lastPinTimestamp: channelId.last_pin_timestamp };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -878,6 +910,7 @@ const result9 = definePreloadableDispatch(["CHANNEL_CREATE", "CHANNEL_DELETE"], 
   return ChannelLoader.loadGuildIds(items);
 }, (arg0, type) => {
   const obj = { type, channel: callback2(arg0) };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -887,6 +920,7 @@ const result9 = definePreloadableDispatch(["CHANNEL_CREATE", "CHANNEL_DELETE"], 
 });
 defineSimpleDispatch(["VOICE_CHANNEL_STATUS_UPDATE"], (id, type) => {
   const obj = { type, id: id.id, guildId: id.guild_id, status: id.status };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -897,6 +931,7 @@ defineSimpleDispatch(["VOICE_CHANNEL_STATUS_UPDATE"], (id, type) => {
 defineSimpleDispatch(["VOICE_CHANNEL_START_TIME_UPDATE"], (id, type) => {
   const obj = { type, id: id.id, guildId: id.guild_id, voiceStartTime: voice_start_time };
   voice_start_time = id.voice_start_time;
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -905,8 +940,9 @@ defineSimpleDispatch(["VOICE_CHANNEL_START_TIME_UPDATE"], (id, type) => {
   });
 });
 defineSimpleDispatch(["CHANNEL_INFO"], (guildId, type) => {
-  const obj = { type, guildId: guildId.guild_id, channels: channels.map((item, index) => ({ id: item.id, status: item.status, voiceStartTime: item.voice_start_time })) };
+  const obj = { type, guildId: guildId.guild_id, channels: channels.map((id) => ({ id: id.id, status: id.status, voiceStartTime: id.voice_start_time })) };
   channels = guildId.channels;
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -916,6 +952,7 @@ defineSimpleDispatch(["CHANNEL_INFO"], (guildId, type) => {
 });
 defineSimpleDispatch(["CHANNEL_MEMBER_COUNT_UPDATE"], (guildId, type) => {
   const obj = { type, guildId: guildId.guild_id, channelId: guildId.channel_id, online: guildId.presence_count, total: guildId.member_count };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -934,6 +971,7 @@ const result11 = definePreloadableDispatch(["THREAD_CREATE", "THREAD_UPDATE", "T
   return ChannelLoader.loadGuildIds(items);
 }, (isNewlyCreated, type) => {
   const obj = { type, isNewlyCreated: isNewlyCreated.newly_created, channel: callback2(callback(isNewlyCreated, closure_4)) };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -948,12 +986,12 @@ const result12 = definePreloadableDispatch(["THREAD_LIST_SYNC"], (guild_id) => {
   const obj = {
     type: "THREAD_LIST_SYNC",
     guildId: guildId.guild_id,
-    threads: threads.map((item, index) => {
-      channel = channel.getChannel(item.parent_id);
+    threads: threads.map((parent_id) => {
+      channel = channel.getChannel(parent_id.parent_id);
       if (null != channel) {
-        ({ nsfw: item.nsfw, type: item.parentChannelThreadType } = channel);
+        ({ nsfw: parent_id.nsfw, type: parent_id.parentChannelThreadType } = channel);
       }
-      return callback(item);
+      return callback(parent_id);
     }),
     mostRecentMessages: guildId.most_recent_messages,
     members: null,
@@ -963,19 +1001,21 @@ const result12 = definePreloadableDispatch(["THREAD_LIST_SYNC"], (guild_id) => {
   let mapped;
   if (guildId.members) {
     mapped = applyDefault.map(guildId.members, convertServerThreadMemberDefault);
+    const arr2 = applyDefault;
   }
   obj[4] = mapped;
   obj[5] = guildId.channel_ids;
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
     obj = { error, action: obj.type };
     result = socket.resetSocketOnDispatchError(obj);
   });
-  const dispatchResult = dispatcherDefault.dispatch(obj);
 });
 defineSimpleDispatch(["THREAD_MEMBER_UPDATE"], (id) => {
   const obj = { type: "THREAD_MEMBER_UPDATE", id: id.id, guildId: id.guild_id, userId: id.user_id, flags: id.flags, muted: id.muted, muteConfig: id.mute_config, joinTimestamp: id.join_timestamp };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -984,17 +1024,19 @@ defineSimpleDispatch(["THREAD_MEMBER_UPDATE"], (id) => {
   });
 });
 defineSimpleDispatch(["THREAD_MEMBERS_UPDATE"], (id) => {
-  let obj = { type: "THREAD_MEMBERS_UPDATE", id: id.id, guildId: id.guild_id, memberCount: id.member_count, addedMembers: null, removedMemberIds: null, memberIdsPreview: null };
+  let obj = id;
+  obj = { type: "THREAD_MEMBERS_UPDATE", id: id.id, guildId: id.guild_id, memberCount: id.member_count, addedMembers: null, removedMemberIds: null, memberIdsPreview: null };
   const added_members = id.added_members;
   let mapped;
   if (added_members != null) {
-    mapped = added_members.map((item, index) => {
-      obj = { id: item.id, guildId: obj.guild_id, userId: item.user_id, flags: item.flags, joinTimestamp: item.join_timestamp };
+    mapped = added_members.map((id) => {
+      obj = { id: id.id, guildId: obj.guild_id, userId: id.user_id, flags: id.flags, joinTimestamp: id.join_timestamp };
       return obj;
     });
   }
   obj[4] = mapped;
   ({ removed_member_ids: obj[5], member_ids_preview: obj[6] } = id);
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1006,7 +1048,8 @@ defineSimpleDispatch(["FORUM_UNREADS"], (permission_denied) => {
   if (!permission_denied.permission_denied) {
     const obj = { type: "FORUM_UNREADS", channelId: null, threads: null };
     ({ channel_id: obj[1], threads } = permission_denied);
-    obj[2] = threads.map((item, index) => ({ threadId: item.thread_id, missing: item.missing, count: item.count }));
+    obj[2] = threads.map((threadId) => ({ threadId: threadId.thread_id, missing: threadId.missing, count: threadId.count }));
+    const obj2 = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -1021,6 +1064,7 @@ defineSimpleDispatch(["SOUNDBOARD_SOUNDS"], (arg0) => {
 });
 defineSimpleDispatch(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (channelId, type) => {
   const obj = { type, channelId: channelId.channel_id, user: channelId.user, nick: channelId.nick, isMember: null != store.getBasicChannel(channelId.channel_id) };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1040,6 +1084,7 @@ const result13 = definePreloadableDispatch(["GUILD_CREATE"], (data_mode) => {
     let obj = { type: "GUILD_UNAVAILABLE", guildId: null };
     obj[1] = unavailable.id;
     obj1 = obj;
+    const obj7 = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -1050,8 +1095,11 @@ const result13 = definePreloadableDispatch(["GUILD_CREATE"], (data_mode) => {
   } else {
     obj = hydrateGuildAll;
     const result = obj.hydratePreviouslyUnavailableGuild(unavailable);
+    obj1 = result;
     obj = { type: "GUILD_CREATE", guild: null };
     obj[1] = result;
+    obj1 = obj;
+    const obj3 = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -1060,22 +1108,23 @@ const result13 = definePreloadableDispatch(["GUILD_CREATE"], (data_mode) => {
     });
     obj1 = { type: "VOICE_STATE_UPDATES", voiceStates: null };
     const voice_states = result.voice_states;
-    obj1[1] = voice_states.map((item, index) => {
-      const obj = { userId: item.user_id, guildId: obj1.id, sessionId: item.session_id, channelId: item.channel_id, mute: item.mute, deaf: item.deaf, selfMute: item.self_mute, selfDeaf: item.self_deaf, selfVideo: tmp, suppress: item.suppress, selfStream: tmp2, requestToSpeakTimestamp: null, discoverable: null, connectedAt: null };
-      let prop = item.request_to_speak_timestamp;
+    obj1[1] = voice_states.map((userId) => {
+      const obj = { userId: userId.user_id, guildId: obj1.id, sessionId: userId.session_id, channelId: userId.channel_id, mute: userId.mute, deaf: userId.deaf, selfMute: userId.self_mute, selfDeaf: userId.self_deaf, selfVideo: tmp, suppress: userId.suppress, selfStream: tmp2, requestToSpeakTimestamp: null, discoverable: null, connectedAt: null };
+      let prop = userId.request_to_speak_timestamp;
       if (prop == null) {
         prop = null;
       }
       obj[11] = prop;
-      let flag = item.discoverable;
+      let flag = userId.discoverable;
       if (flag == null) {
         flag = true;
       }
       obj[12] = flag;
-      obj[13] = item.connected_at;
+      obj[13] = userId.connected_at;
       return obj;
     });
     const dispatchResult1 = dispatcherDefault.dispatch(obj);
+    const obj5 = dispatcherDefault;
     dispatcherDefault.dispatch(obj1).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -1087,6 +1136,8 @@ const result13 = definePreloadableDispatch(["GUILD_CREATE"], (data_mode) => {
 });
 defineSimpleDispatch(["GUILD_UPDATE"], (guild) => {
   let obj = { type: "GUILD_UPDATE", guild };
+  const obj2 = dispatcherDefault;
+  const tmp = importDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1105,10 +1156,11 @@ defineSimpleDispatch(["GUILD_UPDATE"], (guild) => {
     });
     const dispatchResult1 = dispatcherDefault.dispatch(obj);
   }
-  const dispatchResult = dispatcherDefault.dispatch(obj);
 });
 defineSimpleDispatch(["GUILD_PRUNE_UPDATE"], (guildId) => {
-  const obj = { isPreview: guildId.prune.is_preview, isFinished: guildId.prune.is_finished, days: guildId.prune.days, pruneCount: guildId.prune.prune_count, includeRoles: guildId.prune.include_roles };
+  obj = { type: "GUILD_PRUNE_UPDATE", guildId: guildId.guild_id, prune: obj };
+  obj = { isPreview: guildId.prune.is_preview, isFinished: guildId.prune.is_finished, days: guildId.prune.days, pruneCount: guildId.prune.prune_count, includeRoles: guildId.prune.include_roles };
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1137,6 +1189,7 @@ defineSimpleDispatch(["GUILD_BULK_BAN_UPDATE"], (guildId) => {
   }
   obj[1] = failed_users;
   obj[2] = obj;
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1146,6 +1199,7 @@ defineSimpleDispatch(["GUILD_BULK_BAN_UPDATE"], (guildId) => {
 });
 defineSimpleDispatch(["GUILD_DELETE"], (geo_restricted) => {
   let obj = { type: "GUILD_DELETE", guild: geo_restricted };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1155,7 +1209,7 @@ defineSimpleDispatch(["GUILD_DELETE"], (geo_restricted) => {
   if (geo_restricted.geo_restricted) {
     obj = { type: "GUILD_GEO_RESTRICTED", guildId: null, icon: null, name: null };
     ({ id: obj5[1], icon: obj5[2], name: obj5[3] } = geo_restricted);
-    let tmpResult = dispatcherDefault;
+    let tmpResult = tmp(709);
     tmpResult.dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -1166,7 +1220,7 @@ defineSimpleDispatch(["GUILD_DELETE"], (geo_restricted) => {
   } else if (geo_restricted.unavailable) {
     obj = { type: "GUILD_UNAVAILABLE", guildId: null };
     obj[1] = geo_restricted.id;
-    tmpResult = dispatcherDefault;
+    tmpResult = tmp(709);
     tmpResult.dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
@@ -1175,48 +1229,49 @@ defineSimpleDispatch(["GUILD_DELETE"], (geo_restricted) => {
     });
     const dispatchResult2 = tmpResult.dispatch(obj);
   }
-  const dispatchResult = dispatcherDefault.dispatch(obj);
 });
 defineSimpleDispatch(["GUILD_MEMBERS_CHUNK"], (arg0) => {
   closure_0 = arg0;
   const Emitter = initializeDefault.Emitter;
   Emitter.batched(() => {
-    importDefaultResult2.add({ guildId: closure_0.guild_id, members: closure_0.members, notFound: closure_0.not_found });
+    closure_1_20.add({ guildId: closure_0.guild_id, members: closure_0.members, notFound: closure_0.not_found });
     if (null != closure_0.presences) {
       ({ presences, guild_id: closure_0 } = closure_0);
-      const mapped = presences.map((item, index) => {
-        let activities = item.activities;
+      const mapped = presences.map((activities) => {
+        activities = activities.activities;
         if (activities == null) {
           activities = [];
         }
-        let hidden_activities = item.hidden_activities;
+        let hidden_activities = activities.hidden_activities;
         if (hidden_activities == null) {
           hidden_activities = [];
         }
-        const tmp2Result = closure_1_1(items[36])(activities, hidden_activities);
-        const tmp2 = closure_1_1(items[36]);
+        const tmp2Result = closure_1_1(closure_1_3[36])(activities, hidden_activities);
+        const tmp = id;
+        const tmp2 = closure_1_1(closure_1_3[36]);
         const activities1 = tmp2Result.activities;
         return {
-          user: item.user,
-          status: item.status,
-          clientStatus: item.client_status,
-          activities: activities1.map((item, index) => {
-            const timestamps = item.timestamps;
+          user: activities.user,
+          status: activities.status,
+          clientStatus: activities.client_status,
+          activities: activities1.map((timestamps) => {
+            timestamps = timestamps.timestamps;
             let end;
             if (timestamps != null) {
               end = timestamps.end;
             }
-            const created_at = item.created_at;
-            let tmp2 = item;
+            const created_at = timestamps.created_at;
+            let tmp2 = timestamps;
             if (null != end) {
-              tmp2 = item;
+              tmp2 = timestamps;
               if (null != created_at) {
-                const merged = Object.assign(item);
                 obj = {};
-                const merged1 = Object.assign(item.timestamps);
+                const merged = Object.assign(timestamps);
+                obj = {};
+                const merged1 = Object.assign(timestamps.timestamps);
                 let tmp8 = end > created_at;
                 if (tmp8) {
-                  tmp8 = item.type !== constants.LISTENING;
+                  tmp8 = timestamps.type !== constants.LISTENING;
                 }
                 obj.isCountDown = tmp8;
                 obj.timestamps = obj;
@@ -1227,12 +1282,12 @@ defineSimpleDispatch(["GUILD_MEMBERS_CHUNK"], (arg0) => {
           }),
           hiddenActivities: tmp2Result.hiddenActivities,
           guildId: id,
-          processedAtTimestamp: item.processed_at_timestamp
+          processedAtTimestamp: activities.processed_at_timestamp
         };
       });
-      const item = mapped.forEach(dispatchPresence);
+      const item = mapped.forEach(closure_1_26);
     }
-    importDefaultResult.flush("GUILD_MEMBERS_CHUNK");
+    closure_1_1(closure_1_3[12]).flush("GUILD_MEMBERS_CHUNK");
   });
 });
 defineSimpleDispatch(["THREAD_MEMBER_LIST_UPDATE"], (arg0) => {
@@ -1240,8 +1295,11 @@ defineSimpleDispatch(["THREAD_MEMBER_LIST_UPDATE"], (arg0) => {
   const Emitter = initializeDefault.Emitter;
   Emitter.batched(() => {
     obj = { type: "THREAD_MEMBER_LIST_UPDATE", guildId: obj.guild_id, threadId: obj.thread_id, members: obj.members };
+    const obj2 = closure_1_1(closure_1_3[20]);
     const tmp = obj;
-    dispatcherDefault.dispatch(obj).catch((error) => {
+    const tmp2 = closure_1_1;
+    const tmp3 = closure_1_3;
+    closure_1_1(closure_1_3[20]).dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
       obj = { error, action: obj.type };
@@ -1249,39 +1307,41 @@ defineSimpleDispatch(["THREAD_MEMBER_LIST_UPDATE"], (arg0) => {
     });
     if (null != obj.presences) {
       ({ presences, guild_id: obj } = tmp);
-      const mapped = presences.map((item, index) => {
-        let activities = item.activities;
+      const mapped = presences.map((activities) => {
+        activities = activities.activities;
         if (activities == null) {
           activities = [];
         }
-        let hidden_activities = item.hidden_activities;
+        let hidden_activities = activities.hidden_activities;
         if (hidden_activities == null) {
           hidden_activities = [];
         }
-        const tmp2Result = closure_1_1(items[36])(activities, hidden_activities);
-        const tmp2 = closure_1_1(items[36]);
+        const tmp2Result = closure_1_1(closure_1_3[36])(activities, hidden_activities);
+        const tmp = id;
+        const tmp2 = closure_1_1(closure_1_3[36]);
         const activities1 = tmp2Result.activities;
         return {
-          user: item.user,
-          status: item.status,
-          clientStatus: item.client_status,
-          activities: activities1.map((item, index) => {
-            const timestamps = item.timestamps;
+          user: activities.user,
+          status: activities.status,
+          clientStatus: activities.client_status,
+          activities: activities1.map((timestamps) => {
+            timestamps = timestamps.timestamps;
             let end;
             if (timestamps != null) {
               end = timestamps.end;
             }
-            const created_at = item.created_at;
-            let tmp2 = item;
+            const created_at = timestamps.created_at;
+            let tmp2 = timestamps;
             if (null != end) {
-              tmp2 = item;
+              tmp2 = timestamps;
               if (null != created_at) {
-                const merged = Object.assign(item);
                 obj = {};
-                const merged1 = Object.assign(item.timestamps);
+                const merged = Object.assign(timestamps);
+                obj = {};
+                const merged1 = Object.assign(timestamps.timestamps);
                 let tmp8 = end > created_at;
                 if (tmp8) {
-                  tmp8 = item.type !== constants.LISTENING;
+                  tmp8 = timestamps.type !== constants.LISTENING;
                 }
                 obj.isCountDown = tmp8;
                 obj.timestamps = obj;
@@ -1292,14 +1352,13 @@ defineSimpleDispatch(["THREAD_MEMBER_LIST_UPDATE"], (arg0) => {
           }),
           hiddenActivities: tmp2Result.hiddenActivities,
           guildId: id,
-          processedAtTimestamp: item.processed_at_timestamp
+          processedAtTimestamp: activities.processed_at_timestamp
         };
       });
-      const item = mapped.forEach(dispatchPresence);
+      const item = mapped.forEach(closure_1_26);
     }
-    const dispatchResult = dispatcherDefault.dispatch(obj);
-    importDefaultResult.flush();
-    const tmp2Result = importDefaultResult;
+    const dispatchResult = closure_1_1(closure_1_3[20]).dispatch(obj);
+    tmp2(tmp3[12]).flush();
   });
 });
 defineSimpleDispatch(["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "GUILD_MEMBER_UPDATE", "GUILD_MEMBER_REMOVE"], (guildId, type) => {
@@ -1307,6 +1366,7 @@ defineSimpleDispatch(["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "
   const obj2 = obj(1900);
   obj[14] = obj(1933).parseServerDisplayNameStyles(guildId.display_name_styles);
   const obj3 = obj(1933);
+  const obj4 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1319,6 +1379,7 @@ const result14 = definePreloadableDispatch(["GUILD_ROLE_CREATE", "GUILD_ROLE_UPD
   return ChannelLoader.loadGuildIds(items);
 }, (guildId, type) => {
   const obj = { type, guildId: guildId.guild_id, role: guildId.role };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1331,6 +1392,7 @@ const result15 = definePreloadableDispatch(["GUILD_ROLE_DELETE"], (guild_id) => 
   return ChannelLoader.loadGuildIds(items);
 }, (guildId) => {
   const obj = { type: "GUILD_ROLE_DELETE", guildId: guildId.guild_id, roleId: guildId.role_id, version: guildId.version };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1340,6 +1402,7 @@ const result15 = definePreloadableDispatch(["GUILD_ROLE_DELETE"], (guild_id) => 
 });
 defineSimpleDispatch(["GUILD_EMOJIS_UPDATE"], (guildId) => {
   const obj = { type: "GUILD_EMOJIS_UPDATE", guildId: guildId.guild_id, emojis: guildId.emojis };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1349,6 +1412,7 @@ defineSimpleDispatch(["GUILD_EMOJIS_UPDATE"], (guildId) => {
 });
 defineSimpleDispatch(["GUILD_STICKERS_UPDATE"], (guildId) => {
   const obj = { type: "GUILD_STICKERS_UPDATE", guildId: guildId.guild_id, stickers: guildId.stickers };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1358,6 +1422,7 @@ defineSimpleDispatch(["GUILD_STICKERS_UPDATE"], (guildId) => {
 });
 defineSimpleDispatch(["GUILD_INTEGRATIONS_UPDATE"], (guildId) => {
   const obj = { type: "GUILD_INTEGRATIONS_UPDATE", guildId: guildId.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1367,6 +1432,7 @@ defineSimpleDispatch(["GUILD_INTEGRATIONS_UPDATE"], (guildId) => {
 });
 defineSimpleDispatch(["INTEGRATION_CREATE"], (application) => {
   const obj = { type: "INTEGRATION_CREATE", application: application.application, guildId: application.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1376,6 +1442,7 @@ defineSimpleDispatch(["INTEGRATION_CREATE"], (application) => {
 });
 defineSimpleDispatch(["INTEGRATION_DELETE"], (applicationId) => {
   const obj = { type: "INTEGRATION_DELETE", applicationId: applicationId.application_id, guildId: applicationId.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1385,6 +1452,7 @@ defineSimpleDispatch(["INTEGRATION_DELETE"], (applicationId) => {
 });
 defineSimpleDispatch(["USER_UPDATE"], (user) => {
   const obj = { type: "CURRENT_USER_UPDATE", user };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1400,11 +1468,13 @@ defineSimpleDispatch(["USER_SETTINGS_PROTO_UPDATE"], (settings) => {
       const _Error = Error;
       throw Error("UserSettingsProto must not be a string");
     } else {
+      obj = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, partial: null };
       obj = { proto: null, type: null };
       obj[0] = b64ToProtoWithTypeResult;
       obj[1] = settings.settings.type;
       obj[1] = obj;
       obj[2] = settings.partial;
+      const obj4 = dispatcherDefault;
       dispatcherDefault.dispatch(obj).catch((error) => {
         closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
         const socket = obj(closure_1_3[13]).socket;
@@ -1418,6 +1488,7 @@ defineSimpleDispatch(["USER_SETTINGS_PROTO_UPDATE"], (settings) => {
 defineSimpleDispatch(["USER_GUILD_SETTINGS_UPDATE"], (arg0) => {
   const obj = { type: "USER_GUILD_SETTINGS_FULL_UPDATE", userGuildSettings: items };
   items = [arg0];
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1427,6 +1498,7 @@ defineSimpleDispatch(["USER_GUILD_SETTINGS_UPDATE"], (arg0) => {
 });
 defineSimpleDispatch(["USER_CONNECTIONS_UPDATE"], () => {
   const obj = { type: "USER_CONNECTIONS_UPDATE" };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1436,6 +1508,7 @@ defineSimpleDispatch(["USER_CONNECTIONS_UPDATE"], () => {
 });
 defineSimpleDispatch(["USER_REQUIRED_ACTION_UPDATE"], (requiredAction) => {
   const obj = { type: "USER_REQUIRED_ACTION_UPDATE", requiredAction: requiredAction.required_action };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1446,6 +1519,7 @@ defineSimpleDispatch(["USER_REQUIRED_ACTION_UPDATE"], (requiredAction) => {
 defineSimpleDispatch(["USER_NOTE_UPDATE"], (arg0) => {
   const obj = { type: "USER_NOTE_UPDATE" };
   const merged = Object.assign(arg0);
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1456,6 +1530,7 @@ defineSimpleDispatch(["USER_NOTE_UPDATE"], (arg0) => {
 defineSimpleDispatch(["RELATIONSHIP_ADD"], (id) => {
   let obj = { id: id.id, type: id.type, user: id.user, since: id.since, nickname: id.nickname, isSpamRequest: tmp, isStrangerRequest: tmp2, userIgnored: tmp3, originApplicationId: id.origin_application_id, note: id.note };
   obj = { type: "RELATIONSHIP_ADD", relationship: obj, shouldNotify: true === id.should_notify };
+  const obj3 = dispatcherDefault;
   tmp = id.is_spam_request || false;
   tmp2 = id.is_stranger_request || false;
   tmp3 = id.user_ignored || false;
@@ -1468,6 +1543,7 @@ defineSimpleDispatch(["RELATIONSHIP_ADD"], (id) => {
 });
 defineSimpleDispatch(["RELATIONSHIP_REMOVE"], (relationship) => {
   const obj = { type: "RELATIONSHIP_REMOVE", relationship };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1478,6 +1554,7 @@ defineSimpleDispatch(["RELATIONSHIP_REMOVE"], (relationship) => {
 defineSimpleDispatch(["RELATIONSHIP_UPDATE"], (id) => {
   let obj = { id: id.id, type: id.type, user: id.user, nickname: id.nickname, since: id.since, isSpamRequest: tmp, isStrangerRequest: tmp2, userIgnored: tmp3, originApplicationId: id.origin_application_id, note: id.note };
   obj = { type: "RELATIONSHIP_UPDATE", relationship: obj };
+  const obj3 = dispatcherDefault;
   tmp = id.is_spam_request || false;
   tmp2 = id.is_stranger_request || false;
   tmp3 = id.user_ignored || false;
@@ -1489,7 +1566,9 @@ defineSimpleDispatch(["RELATIONSHIP_UPDATE"], (id) => {
   });
 });
 defineSimpleDispatch(["GAME_RELATIONSHIP_ADD"], (id) => {
-  const obj = { id: id.id, applicationId: id.application_id, type: id.type, since: id.since, dmAccessType: id.dm_access_type, user: id.user };
+  obj = { type: "GAME_RELATIONSHIP_ADD", gameRelationship: obj };
+  obj = { id: id.id, applicationId: id.application_id, type: id.type, since: id.since, dmAccessType: id.dm_access_type, user: id.user };
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1499,6 +1578,7 @@ defineSimpleDispatch(["GAME_RELATIONSHIP_ADD"], (id) => {
 });
 defineSimpleDispatch(["GAME_RELATIONSHIP_REMOVE"], (id) => {
   const obj = { type: "GAME_RELATIONSHIP_REMOVE", userId: id.id, applicationId: id.application_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1516,28 +1596,30 @@ defineSimpleDispatch(["PRESENCE_UPDATE"], (hidden_activities) => {
     hidden_activities = [];
   }
   const tmpResult = splitAgeRestrictedActivitiesDefault(activities, hidden_activities);
+  const tmp = splitAgeRestrictedActivitiesDefault;
   activities = tmpResult.activities;
   importDefaultResult3.add({
     user: hidden_activities.user,
     status: hidden_activities.status,
     clientStatus: hidden_activities.client_status,
-    activities: activities.map((item, index) => {
-      const timestamps = item.timestamps;
+    activities: activities.map((timestamps) => {
+      timestamps = timestamps.timestamps;
       let end;
       if (timestamps != null) {
         end = timestamps.end;
       }
-      const created_at = item.created_at;
-      let tmp2 = item;
+      const created_at = timestamps.created_at;
+      let tmp2 = timestamps;
       if (null != end) {
-        tmp2 = item;
+        tmp2 = timestamps;
         if (null != created_at) {
-          const merged = Object.assign(item);
           obj = {};
-          const merged1 = Object.assign(item.timestamps);
+          const merged = Object.assign(timestamps);
+          obj = {};
+          const merged1 = Object.assign(timestamps.timestamps);
           let tmp8 = end > created_at;
           if (tmp8) {
-            tmp8 = item.type !== constants.LISTENING;
+            tmp8 = timestamps.type !== constants.LISTENING;
           }
           obj.isCountDown = tmp8;
           obj.timestamps = obj;
@@ -1554,39 +1636,41 @@ defineSimpleDispatch(["PRESENCE_UPDATE"], (hidden_activities) => {
 defineSimpleDispatch(["PRESENCES_REPLACE"], (arr) => {
   const obj = {
     type: "PRESENCES_REPLACE",
-    presences: arr.map((item, index) => {
-      let activities = item.activities;
+    presences: arr.map((activities) => {
+      activities = activities.activities;
       if (activities == null) {
         activities = [];
       }
-      let hidden_activities = item.hidden_activities;
+      let hidden_activities = activities.hidden_activities;
       if (hidden_activities == null) {
         hidden_activities = [];
       }
-      const tmp2Result = closure_1_1(items[36])(activities, hidden_activities);
-      const tmp2 = closure_1_1(items[36]);
+      const tmp2Result = closure_1_1(closure_1_3[36])(activities, hidden_activities);
+      const tmp = id;
+      const tmp2 = closure_1_1(closure_1_3[36]);
       const activities1 = tmp2Result.activities;
       return {
-        user: item.user,
-        status: item.status,
-        clientStatus: item.client_status,
-        activities: activities1.map((item, index) => {
-          const timestamps = item.timestamps;
+        user: activities.user,
+        status: activities.status,
+        clientStatus: activities.client_status,
+        activities: activities1.map((timestamps) => {
+          timestamps = timestamps.timestamps;
           let end;
           if (timestamps != null) {
             end = timestamps.end;
           }
-          const created_at = item.created_at;
-          let tmp2 = item;
+          const created_at = timestamps.created_at;
+          let tmp2 = timestamps;
           if (null != end) {
-            tmp2 = item;
+            tmp2 = timestamps;
             if (null != created_at) {
-              const merged = Object.assign(item);
               obj = {};
-              const merged1 = Object.assign(item.timestamps);
+              const merged = Object.assign(timestamps);
+              obj = {};
+              const merged1 = Object.assign(timestamps.timestamps);
               let tmp8 = end > created_at;
               if (tmp8) {
-                tmp8 = item.type !== constants.LISTENING;
+                tmp8 = timestamps.type !== constants.LISTENING;
               }
               obj.isCountDown = tmp8;
               obj.timestamps = obj;
@@ -1597,10 +1681,11 @@ defineSimpleDispatch(["PRESENCES_REPLACE"], (arr) => {
         }),
         hiddenActivities: tmp2Result.hiddenActivities,
         guildId: id,
-        processedAtTimestamp: item.processed_at_timestamp
+        processedAtTimestamp: activities.processed_at_timestamp
       };
     })
   };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1611,29 +1696,30 @@ defineSimpleDispatch(["PRESENCES_REPLACE"], (arr) => {
 defineSimpleDispatch(["SESSIONS_REPLACE"], (arr) => {
   const obj = {
     type: "SESSIONS_REPLACE",
-    sessions: arr.map((item, index) => {
-      obj = { sessionId: item.session_id, lastModified: item.last_modified, status: item.status, activities: null, hiddenActivities: null, active: null, clientInfo: null };
-      let activities = item.activities;
+    sessions: arr.map((sessionId) => {
+      obj = { sessionId: sessionId.session_id, lastModified: sessionId.last_modified, status: sessionId.status, activities: null, hiddenActivities: null, active: null, clientInfo: null };
+      let activities = sessionId.activities;
       if (activities == null) {
         activities = [];
       }
-      obj[3] = activities.map((item, index) => {
-        const timestamps = item.timestamps;
+      obj[3] = activities.map((timestamps) => {
+        timestamps = timestamps.timestamps;
         let end;
         if (timestamps != null) {
           end = timestamps.end;
         }
-        const created_at = item.created_at;
-        let tmp2 = item;
+        const created_at = timestamps.created_at;
+        let tmp2 = timestamps;
         if (null != end) {
-          tmp2 = item;
+          tmp2 = timestamps;
           if (null != created_at) {
-            const merged = Object.assign(item);
             obj = {};
-            const merged1 = Object.assign(item.timestamps);
+            const merged = Object.assign(timestamps);
+            obj = {};
+            const merged1 = Object.assign(timestamps.timestamps);
             let tmp8 = end > created_at;
             if (tmp8) {
-              tmp8 = item.type !== constants.LISTENING;
+              tmp8 = timestamps.type !== constants.LISTENING;
             }
             obj.isCountDown = tmp8;
             obj.timestamps = obj;
@@ -1642,16 +1728,17 @@ defineSimpleDispatch(["SESSIONS_REPLACE"], (arr) => {
         }
         return tmp2;
       });
-      let hidden_activities = item.hidden_activities;
+      let hidden_activities = sessionId.hidden_activities;
       if (hidden_activities == null) {
         hidden_activities = [];
       }
       obj[4] = hidden_activities;
-      obj[5] = item.active;
-      obj[6] = item.client_info;
+      obj[5] = sessionId.active;
+      obj[6] = sessionId.client_info;
       return obj;
     })
   };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1668,6 +1755,7 @@ defineSimpleDispatch(["VOICE_STATE_UPDATE_BATCH"], (voice_states) => {
 });
 defineSimpleDispatch(["VOICE_SERVER_UPDATE"], (guildId) => {
   const obj = { type: "VOICE_SERVER_UPDATE", guildId: guildId.guild_id, channelId: guildId.channel_id, endpoint: guildId.endpoint, token: guildId.token };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1677,6 +1765,8 @@ defineSimpleDispatch(["VOICE_SERVER_UPDATE"], (guildId) => {
 });
 defineSimpleDispatch(["CALL_CREATE"], (channelId) => {
   let obj = { type: "CALL_CREATE", channelId: channelId.channel_id, messageId: channelId.message_id, region: channelId.region, ongoingRings: channelId.ongoing_rings };
+  const obj2 = dispatcherDefault;
+  const tmp = importDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1686,19 +1776,19 @@ defineSimpleDispatch(["CALL_CREATE"], (channelId) => {
   const voice_states = channelId.voice_states;
   if (null != voice_states) {
     obj = { type: "VOICE_STATE_UPDATES", voiceStates: null };
-    obj[1] = voice_states.map((item, index) => {
-      obj = { userId: item.user_id, guildId: null, sessionId: item.session_id, channelId: item.channel_id, mute: item.mute, deaf: item.deaf, selfMute: item.self_mute, selfDeaf: item.self_deaf, selfVideo: tmp, suppress: item.suppress, selfStream: tmp2, requestToSpeakTimestamp: null, discoverable: null, connectedAt: null };
-      let prop = item.request_to_speak_timestamp;
+    obj[1] = voice_states.map((userId) => {
+      obj = { userId: userId.user_id, guildId: null, sessionId: userId.session_id, channelId: userId.channel_id, mute: userId.mute, deaf: userId.deaf, selfMute: userId.self_mute, selfDeaf: userId.self_deaf, selfVideo: tmp, suppress: userId.suppress, selfStream: tmp2, requestToSpeakTimestamp: null, discoverable: null, connectedAt: null };
+      let prop = userId.request_to_speak_timestamp;
       if (prop == null) {
         prop = null;
       }
       obj[11] = prop;
-      let flag = item.discoverable;
+      let flag = userId.discoverable;
       if (flag == null) {
         flag = true;
       }
       obj[12] = flag;
-      obj[13] = item.connected_at;
+      obj[13] = userId.connected_at;
       return obj;
     });
     const tmpResult = dispatcherDefault;
@@ -1710,10 +1800,10 @@ defineSimpleDispatch(["CALL_CREATE"], (channelId) => {
     });
     const dispatchResult1 = dispatcherDefault.dispatch(obj);
   }
-  const dispatchResult = dispatcherDefault.dispatch(obj);
 });
 defineSimpleDispatch(["CALL_UPDATE"], (channelId) => {
   const obj = { type: "CALL_UPDATE", channelId: channelId.channel_id, messageId: channelId.message_id, region: channelId.region, ongoingRings: channelId.ongoing_rings };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1723,6 +1813,7 @@ defineSimpleDispatch(["CALL_UPDATE"], (channelId) => {
 });
 defineSimpleDispatch(["CALL_DELETE"], (channelId) => {
   const obj = { type: "CALL_DELETE", channelId: channelId.channel_id, unavailable: channelId.unavailable };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1732,6 +1823,7 @@ defineSimpleDispatch(["CALL_DELETE"], (channelId) => {
 });
 defineSimpleDispatch(["OAUTH2_TOKEN_CREATE"], (id) => {
   const obj = { type: "OAUTH2_TOKEN_CREATE", id: id.id, scopes: id.scopes, application: id.application };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1741,6 +1833,7 @@ defineSimpleDispatch(["OAUTH2_TOKEN_CREATE"], (id) => {
 });
 defineSimpleDispatch(["OAUTH2_TOKEN_DELETE"], (id) => {
   const obj = { type: "OAUTH2_TOKEN_DELETE", id: id.id, applicationId: id.application_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1750,6 +1843,7 @@ defineSimpleDispatch(["OAUTH2_TOKEN_DELETE"], (id) => {
 });
 defineSimpleDispatch(["OAUTH2_TOKEN_REVOKE"], (accessToken) => {
   const obj = { type: "OAUTH2_TOKEN_REVOKE", accessToken: accessToken.access_token };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1759,6 +1853,7 @@ defineSimpleDispatch(["OAUTH2_TOKEN_REVOKE"], (accessToken) => {
 });
 defineSimpleDispatch(["RECENT_MENTION_DELETE"], (id) => {
   const obj = { type: "RECENT_MENTION_DELETE", id: id.message_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1769,6 +1864,7 @@ defineSimpleDispatch(["RECENT_MENTION_DELETE"], (id) => {
 defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
   obj = { type: "SAVED_MESSAGE_CREATE", savedMessage: obj(8489).savedMessageCreateObjectToClient(body) };
   const obj2 = obj(8489);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1779,6 +1875,7 @@ defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
 defineSimpleDispatch(["SAVED_MESSAGE_DELETE"], (channelId) => {
   obj = { type: "SAVED_MESSAGE_DELETE", savedMessageData: obj(8489).savedMessageDeleteObjectToClient(channelId) };
   const obj2 = obj(8489);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1788,6 +1885,7 @@ defineSimpleDispatch(["SAVED_MESSAGE_DELETE"], (channelId) => {
 });
 defineSimpleDispatch(["FRIEND_SUGGESTION_CREATE"], (suggestion) => {
   const obj = { type: "FRIEND_SUGGESTION_CREATE", suggestion };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1797,6 +1895,7 @@ defineSimpleDispatch(["FRIEND_SUGGESTION_CREATE"], (suggestion) => {
 });
 defineSimpleDispatch(["FRIEND_SUGGESTION_DELETE"], (suggestedUserId) => {
   const obj = { type: "FRIEND_SUGGESTION_DELETE", suggestedUserId: suggestedUserId.suggested_user_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1806,6 +1905,7 @@ defineSimpleDispatch(["FRIEND_SUGGESTION_DELETE"], (suggestedUserId) => {
 });
 defineSimpleDispatch(["WEBHOOKS_UPDATE"], (guildId) => {
   const obj = { type: "WEBHOOKS_UPDATE", guildId: guildId.guild_id, channelId: guildId.channel_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1815,6 +1915,7 @@ defineSimpleDispatch(["WEBHOOKS_UPDATE"], (guildId) => {
 });
 defineSimpleDispatch(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (channelId, type) => {
   const obj = { type, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: channelId.emoji, colors: channelId.burst_colors, reactionType: channelId.type, messageAuthorId: channelId.message_author_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1827,8 +1928,9 @@ defineSimpleDispatch(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (cha
   if ("MESSAGE_POLL_VOTE_ADD" === arg1) {
     str = "MESSAGE_REACTION_ADD";
   }
-  { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: obj, reactionType: obj(7510).ReactionTypes.VOTE };
+  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: obj, reactionType: obj(7510).ReactionTypes.VOTE };
   obj = { id: channelId.answer_id, name: "" };
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1841,15 +1943,16 @@ defineSimpleDispatch(["MESSAGE_POLL_VOTE_ADD_MANY"], (channelId) => {
     type: "MESSAGE_REACTION_ADD_MANY",
     channelId: channelId.channel_id,
     messageId: channelId.message_id,
-    reactions: votes.map((item, index) => {
+    reactions: votes.map((answer_id) => {
       obj = {};
-      const merged = Object.assign(item);
-      obj.emoji = { id: item.answer_id, name: "" };
+      const merged = Object.assign(answer_id);
+      obj.emoji = { id: answer_id.answer_id, name: "" };
       obj.reactionType = obj(table[26]).ReactionTypes.VOTE;
       return obj;
     })
   };
   votes = channelId.votes;
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1859,6 +1962,7 @@ defineSimpleDispatch(["MESSAGE_POLL_VOTE_ADD_MANY"], (channelId) => {
 });
 defineSimpleDispatch(["MESSAGE_REACTION_REMOVE_ALL"], (channelId) => {
   const obj = { type: "MESSAGE_REACTION_REMOVE_ALL", channelId: channelId.channel_id, messageId: channelId.message_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1868,6 +1972,7 @@ defineSimpleDispatch(["MESSAGE_REACTION_REMOVE_ALL"], (channelId) => {
 });
 defineSimpleDispatch(["MESSAGE_REACTION_REMOVE_EMOJI"], (channelId) => {
   const obj = { type: "MESSAGE_REACTION_REMOVE_EMOJI", channelId: channelId.channel_id, messageId: channelId.message_id, emoji: channelId.emoji };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1877,6 +1982,7 @@ defineSimpleDispatch(["MESSAGE_REACTION_REMOVE_EMOJI"], (channelId) => {
 });
 defineSimpleDispatch(["MESSAGE_REACTION_ADD_MANY"], (channelId) => {
   const obj = { type: "MESSAGE_REACTION_ADD_MANY", channelId: channelId.channel_id, messageId: channelId.message_id, reactions: channelId.reactions };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1886,6 +1992,7 @@ defineSimpleDispatch(["MESSAGE_REACTION_ADD_MANY"], (channelId) => {
 });
 defineSimpleDispatch(["PAYMENT_UPDATE"], (payment) => {
   const obj = { type: "PAYMENT_UPDATE", payment };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1895,6 +2002,7 @@ defineSimpleDispatch(["PAYMENT_UPDATE"], (payment) => {
 });
 defineSimpleDispatch(["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE"], (entitlement, type) => {
   const obj = { type, entitlement };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1907,19 +2015,21 @@ defineSimpleDispatch(["USER_PAYMENT_SOURCES_UPDATE"], () => {
     const paymentSources = _deletePaymentSource.fetchPaymentSources();
     const tmpResult = _deletePaymentSource;
     const subscriptionPlansBySKUs = fetchSubscriptionPlansForSKUAll.fetchSubscriptionPlansBySKUs(fetchedSKUIDs.getFetchedSKUIDs());
+    const obj3 = fetchSubscriptionPlansForSKUAll;
   }
-  obj = isUserSettingsOpen;
 });
 defineSimpleDispatch(["USER_SUBSCRIPTIONS_UPDATE"], () => {
   const currentUser = _fetchProfileAll.fetchCurrentUser();
+  const obj = _fetchProfileAll;
+  const tmp3 = require;
   if (obj2.isUserSettingsOpen()) {
     const subscriptions = _deletePaymentSource.fetchSubscriptions();
     const tmp3Result = _deletePaymentSource;
   }
-  obj2 = isUserSettingsOpen;
 });
 defineSimpleDispatch(["WISHLIST_ITEM_PURCHASED"], (recipientId) => {
   const obj = { type: "WISHLIST_ITEM_PURCHASED", recipientId: recipientId.recipient_id, skuId: recipientId.sku_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1932,6 +2042,7 @@ defineSimpleDispatch(["USER_BADGE_STATE_UPDATE"], (badge_id) => {
 });
 defineSimpleDispatch(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (subscription_id) => {
   const obj = { type: "GUILD_BOOST_SLOT_CREATE", guildBoostSlot: closure_7.createFromServer(subscription_id, store2.getSubscriptionById(subscription_id.subscription_id)) };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1941,6 +2052,7 @@ defineSimpleDispatch(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (subscript
 });
 defineSimpleDispatch(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (subscription_id) => {
   const obj = { type: "GUILD_BOOST_SLOT_UPDATE", guildBoostSlot: closure_7.createFromServer(subscription_id, store2.getSubscriptionById(subscription_id.subscription_id)) };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1950,6 +2062,7 @@ defineSimpleDispatch(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (subscript
 });
 defineSimpleDispatch(["BILLING_POPUP_BRIDGE_CALLBACK"], (paymentSourceType) => {
   const obj = { type: "BILLING_POPUP_BRIDGE_CALLBACK", paymentSourceType: paymentSourceType.payment_source_type, state: paymentSourceType.state, path: paymentSourceType.path, query: paymentSourceType.query };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1959,6 +2072,7 @@ defineSimpleDispatch(["BILLING_POPUP_BRIDGE_CALLBACK"], (paymentSourceType) => {
 });
 defineSimpleDispatch(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], (loadId) => {
   const obj = { type: "USER_PAYMENT_BROWSER_CHECKOUT_DONE", loadId: loadId.load_id, skuId: loadId.sku_id, skuSubscriptionPlanId: loadId.sku_subscription_plan_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -1969,19 +2083,20 @@ defineSimpleDispatch(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], (loadId) => {
 defineSimpleDispatch(["USER_PAYMENT_CLIENT_ADD"], (arg0) => {
   const _require = arg0;
   const purchaseTokenHash = _require(4475).getPurchaseTokenHash();
-  purchaseTokenHash.then((result) => {
+  purchaseTokenHash.then((arg0) => {
     const purchase_token_hash = obj.purchase_token_hash;
-    if (purchase_token_hash === result) {
+    if (purchase_token_hash === arg0) {
       obj = { type: "USER_PAYMENT_CLIENT_ADD", purchaseTokenHash: null, expiresAt: null };
       obj[1] = purchase_token_hash;
       obj[2] = tmp.expires_at;
-      dispatcherDefault.dispatch(obj).catch((error) => {
+      const obj2 = closure_1_1(closure_1_3[20]);
+      closure_1_1(closure_1_3[20]).dispatch(obj).catch((error) => {
         closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
         const socket = obj(closure_1_3[13]).socket;
         obj = { error, action: obj.type };
         result = socket.resetSocketOnDispatchError(obj);
       });
-      const dispatchResult = dispatcherDefault.dispatch(obj);
+      const dispatchResult = closure_1_1(closure_1_3[20]).dispatch(obj);
     }
   });
 });
@@ -2007,23 +2122,24 @@ defineSimpleDispatch(["GUILD_MEMBER_LIST_UPDATE"], (arg0) => {
           obj = { user: null, status: null, clientStatus: null, activities: null, hiddenActivities: null, guildId: null, processedAtTimestamp: null };
           ({ user: obj[0], status: obj[1], client_status: obj[2] } = presence);
           const activities1 = tmp.activities;
-          obj[3] = activities1.map((item, index) => {
-            const timestamps = item.timestamps;
+          obj[3] = activities1.map((timestamps) => {
+            timestamps = timestamps.timestamps;
             let end;
             if (timestamps != null) {
               end = timestamps.end;
             }
-            const created_at = item.created_at;
-            let tmp2 = item;
+            const created_at = timestamps.created_at;
+            let tmp2 = timestamps;
             if (null != end) {
-              tmp2 = item;
+              tmp2 = timestamps;
               if (null != created_at) {
-                const merged = Object.assign(item);
                 obj = {};
-                const merged1 = Object.assign(item.timestamps);
+                const merged = Object.assign(timestamps);
+                obj = {};
+                const merged1 = Object.assign(timestamps.timestamps);
                 let tmp8 = end > created_at;
                 if (tmp8) {
-                  tmp8 = item.type !== constants.LISTENING;
+                  tmp8 = timestamps.type !== constants.LISTENING;
                 }
                 obj.isCountDown = tmp8;
                 obj.timestamps = obj;
@@ -2042,18 +2158,19 @@ defineSimpleDispatch(["GUILD_MEMBER_LIST_UPDATE"], (arg0) => {
       }
     };
     const ops = obj.ops;
-    let item = ops.forEach((item, index) => {
-      ({ op, items } = item);
+    let item = ops.forEach((arg0) => {
+      ({ op, items } = arg0);
       if ("SYNC" === op) {
-        item = items.forEach(obj);
+        const item = items.forEach(obj);
       } else if ("UPDATE" === op) {
         obj(tmp);
       }
     });
-    obj = importDefaultResult;
+    obj = closure_1_1(closure_1_3[12]);
     obj.flush();
     obj = { type: "GUILD_MEMBER_LIST_UPDATE", guildId: obj.guild_id, id: obj.id, ops: obj.ops, groups: obj.groups, memberCount: obj.member_count, onlineCount: obj.online_count };
-    dispatcherDefault.dispatch(obj).catch((error) => {
+    const obj3 = closure_1_1(closure_1_3[20]);
+    closure_1_1(closure_1_3[20]).dispatch(obj).catch((error) => {
       closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
       const socket = obj(closure_1_3[13]).socket;
       obj = { error, action: obj.type };
@@ -2063,6 +2180,7 @@ defineSimpleDispatch(["GUILD_MEMBER_LIST_UPDATE"], (arg0) => {
 });
 defineSimpleDispatch(["GIFT_CODE_UPDATE"], (uses) => {
   const obj = { type: "GIFT_CODE_UPDATE", uses: uses.uses, code: uses.code };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2072,6 +2190,7 @@ defineSimpleDispatch(["GIFT_CODE_UPDATE"], (uses) => {
 });
 defineSimpleDispatch(["GIFT_CODE_CREATE"], (giftCode) => {
   const obj = { type: "GIFT_CODE_CREATE", giftCode };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2081,6 +2200,7 @@ defineSimpleDispatch(["GIFT_CODE_CREATE"], (giftCode) => {
 });
 defineSimpleDispatch(["LIBRARY_APPLICATION_UPDATE"], (libraryApplication) => {
   const obj = { type: "LIBRARY_APPLICATION_UPDATE", libraryApplication };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2090,6 +2210,7 @@ defineSimpleDispatch(["LIBRARY_APPLICATION_UPDATE"], (libraryApplication) => {
 });
 defineSimpleDispatch(["STREAM_CREATE"], (streamKey) => {
   const obj = { type: "STREAM_CREATE", streamKey: streamKey.stream_key, region: streamKey.region, viewerIds: streamKey.viewer_ids, rtcServerId: streamKey.rtc_server_id, rtcChannelId: streamKey.rtc_channel_id, paused: streamKey.paused };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2099,6 +2220,7 @@ defineSimpleDispatch(["STREAM_CREATE"], (streamKey) => {
 });
 defineSimpleDispatch(["STREAM_SERVER_UPDATE"], (streamKey) => {
   const obj = { type: "STREAM_SERVER_UPDATE", streamKey: streamKey.stream_key, endpoint: streamKey.endpoint, token: streamKey.token };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2108,6 +2230,7 @@ defineSimpleDispatch(["STREAM_SERVER_UPDATE"], (streamKey) => {
 });
 defineSimpleDispatch(["STREAM_UPDATE"], (streamKey) => {
   const obj = { type: "STREAM_UPDATE", streamKey: streamKey.stream_key, region: streamKey.region, viewerIds: streamKey.viewer_ids, paused: streamKey.paused };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2117,6 +2240,7 @@ defineSimpleDispatch(["STREAM_UPDATE"], (streamKey) => {
 });
 defineSimpleDispatch(["STREAM_DELETE"], (streamKey) => {
   const obj = { type: "STREAM_DELETE", streamKey: streamKey.stream_key, unavailable: streamKey.unavailable, reason: streamKey.reason };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2126,6 +2250,7 @@ defineSimpleDispatch(["STREAM_DELETE"], (streamKey) => {
 });
 defineSimpleDispatch(["GENERIC_PUSH_NOTIFICATION_SENT"], (title) => {
   const obj = { type: "GENERIC_PUSH_NOTIFICATION_SENT", title: title.title, body: title.body, trackingType: title.tracking_type, icon: title.icon, route: title.route, tag: title.tag };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2135,6 +2260,7 @@ defineSimpleDispatch(["GENERIC_PUSH_NOTIFICATION_SENT"], (title) => {
 });
 defineSimpleDispatch(["REACTION_NOTIFICATION_SENT"], (route) => {
   const obj = { type: "REACTION_NOTIFICATION_SENT", route: route.route, message: route.message, emoji: route.emoji, reactorUserId: route.reactor_user_id, title: route.title, body: route.body, trackingType: route.tracking_type, icon: route.icon };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2144,6 +2270,7 @@ defineSimpleDispatch(["REACTION_NOTIFICATION_SENT"], (route) => {
 });
 defineSimpleDispatch(["NOTIFICATION_CENTER_ITEM_CREATE"], (item) => {
   const obj = { type: "NOTIFICATION_CENTER_ITEM_CREATE", item };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2153,6 +2280,7 @@ defineSimpleDispatch(["NOTIFICATION_CENTER_ITEM_CREATE"], (item) => {
 });
 defineSimpleDispatch(["NOTIFICATION_CENTER_ITEM_DELETE"], (id) => {
   const obj = { type: "NOTIFICATION_CENTER_ITEM_DELETE", id: id.id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2163,6 +2291,7 @@ defineSimpleDispatch(["NOTIFICATION_CENTER_ITEM_DELETE"], (id) => {
 defineSimpleDispatch(["NOTIFICATION_CENTER_ITEMS_ACK"], (id) => {
   const obj = { type: "NOTIFICATION_CENTER_ITEMS_ACK", ids: items, optimistic: false };
   items = [id.id];
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2172,6 +2301,7 @@ defineSimpleDispatch(["NOTIFICATION_CENTER_ITEMS_ACK"], (id) => {
 });
 defineSimpleDispatch(["NOTIFICATION_CENTER_ITEM_COMPLETED"], (item_enum) => {
   const obj = { type: "NOTIFICATION_CENTER_ITEM_COMPLETED", item_enum: item_enum.item_enum };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2181,6 +2311,7 @@ defineSimpleDispatch(["NOTIFICATION_CENTER_ITEM_COMPLETED"], (item_enum) => {
 });
 defineSimpleDispatch(["QUESTS_USER_STATUS_UPDATE"], (user_status) => {
   const obj = { type: "QUESTS_USER_STATUS_UPDATE", user_status: user_status.user_status };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2190,6 +2321,7 @@ defineSimpleDispatch(["QUESTS_USER_STATUS_UPDATE"], (user_status) => {
 });
 defineSimpleDispatch(["QUESTS_USER_COMPLETION_UPDATE"], (quest_enrollment_blocked_until) => {
   const obj = { type: "QUESTS_USER_COMPLETION_UPDATE", quest_enrollment_blocked_until: quest_enrollment_blocked_until.quest_enrollment_blocked_until };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2199,6 +2331,7 @@ defineSimpleDispatch(["QUESTS_USER_COMPLETION_UPDATE"], (quest_enrollment_blocke
 });
 defineSimpleDispatch(["QUEST_PREVIEW_UPDATE"], (quest_id) => {
   const obj = { type: "QUEST_PREVIEW_UPDATE", quest_id: quest_id.quest_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2208,6 +2341,7 @@ defineSimpleDispatch(["QUEST_PREVIEW_UPDATE"], (quest_id) => {
 });
 defineSimpleDispatch(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (guildId, type) => {
   const obj = { type, guildId: guildId.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2217,6 +2351,7 @@ defineSimpleDispatch(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (guildId, type)
 });
 defineSimpleDispatch(["GUILD_APPLICATION_COMMAND_INDEX_UPDATE"], (guildId) => {
   const obj = { type: "GUILD_APPLICATION_COMMAND_INDEX_UPDATE", guildId: guildId.guild_id, version: guildId.version };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2226,6 +2361,7 @@ defineSimpleDispatch(["GUILD_APPLICATION_COMMAND_INDEX_UPDATE"], (guildId) => {
 });
 defineSimpleDispatch(["GUILD_JOIN_REQUEST_CREATE"], (request) => {
   const obj = { type: "GUILD_JOIN_REQUEST_CREATE", request: request.request, status: request.status, guildId: request.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2235,6 +2371,7 @@ defineSimpleDispatch(["GUILD_JOIN_REQUEST_CREATE"], (request) => {
 });
 defineSimpleDispatch(["GUILD_JOIN_REQUEST_UPDATE"], (request) => {
   const obj = { type: "GUILD_JOIN_REQUEST_UPDATE", request: request.request, status: request.status, guildId: request.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2244,6 +2381,7 @@ defineSimpleDispatch(["GUILD_JOIN_REQUEST_UPDATE"], (request) => {
 });
 defineSimpleDispatch(["GUILD_JOIN_REQUEST_DELETE"], (id) => {
   const obj = { type: "GUILD_JOIN_REQUEST_DELETE", id: id.id, userId: id.user_id, guildId: id.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2253,6 +2391,7 @@ defineSimpleDispatch(["GUILD_JOIN_REQUEST_DELETE"], (id) => {
 });
 defineSimpleDispatch(["INTERACTION_CREATE"], (id) => {
   const obj = { type: "INTERACTION_CREATE", interactionId: id.id, nonce: id.nonce };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2262,6 +2401,7 @@ defineSimpleDispatch(["INTERACTION_CREATE"], (id) => {
 });
 defineSimpleDispatch(["INTERACTION_SUCCESS"], (id) => {
   const obj = { type: "INTERACTION_SUCCESS", interactionId: id.id, nonce: id.nonce };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2271,6 +2411,7 @@ defineSimpleDispatch(["INTERACTION_SUCCESS"], (id) => {
 });
 defineSimpleDispatch(["INTERACTION_FAILURE"], (id) => {
   const obj = { type: "INTERACTION_FAILURE", interactionId: id.id, nonce: id.nonce, reasonCode: id.reason_code };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2280,6 +2421,7 @@ defineSimpleDispatch(["INTERACTION_FAILURE"], (id) => {
 });
 defineSimpleDispatch(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], (choices) => {
   const obj = { type: "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE", choices: choices.choices, nonce: choices.nonce };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2291,6 +2433,7 @@ defineSimpleDispatch(["INTERACTION_MODAL_CREATE"], (id) => {
   obj = { type: "INTERACTION_MODAL_CREATE", id: id.id, channelId: id.channel_id, customId: id.custom_id, application: id.application, title: id.title, components: obj(4805).transformComponents(id.components), nonce: null, resolved: null };
   ({ nonce: obj[7], resolved: obj[8] } = id);
   const obj2 = obj(4805);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2300,6 +2443,7 @@ defineSimpleDispatch(["INTERACTION_MODAL_CREATE"], (id) => {
 });
 defineSimpleDispatch(["INTERACTION_IFRAME_MODAL_CREATE"], (id) => {
   const obj = { type: "INTERACTION_IFRAME_MODAL_CREATE", id: id.id, channelId: id.channel_id, customId: id.custom_id, application: id.application, title: id.title, iframePath: id.iframe_path, modalSize: id.modal_size, nonce: id.nonce };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2309,6 +2453,7 @@ defineSimpleDispatch(["INTERACTION_IFRAME_MODAL_CREATE"], (id) => {
 });
 defineSimpleDispatch(["STAGE_INSTANCE_CREATE"], (instance) => {
   const obj = { type: "STAGE_INSTANCE_CREATE", instance };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2318,6 +2463,7 @@ defineSimpleDispatch(["STAGE_INSTANCE_CREATE"], (instance) => {
 });
 defineSimpleDispatch(["STAGE_INSTANCE_UPDATE"], (instance) => {
   const obj = { type: "STAGE_INSTANCE_UPDATE", instance };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2327,6 +2473,7 @@ defineSimpleDispatch(["STAGE_INSTANCE_UPDATE"], (instance) => {
 });
 defineSimpleDispatch(["STAGE_INSTANCE_DELETE"], (instance) => {
   const obj = { type: "STAGE_INSTANCE_DELETE", instance };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2336,6 +2483,7 @@ defineSimpleDispatch(["STAGE_INSTANCE_DELETE"], (instance) => {
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_CREATE"], (guildScheduledEvent) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_CREATE", guildScheduledEvent };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2345,6 +2493,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_CREATE"], (guildScheduledEvent) => 
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_UPDATE"], (guildScheduledEvent) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_UPDATE", guildScheduledEvent };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2354,6 +2503,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_UPDATE"], (guildScheduledEvent) => 
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_DELETE"], (guildScheduledEvent) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_DELETE", guildScheduledEvent };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2363,6 +2513,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_DELETE"], (guildScheduledEvent) => 
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE"], (eventException) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE", eventException };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2372,6 +2523,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE"], (eventException
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE"], (eventException) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE", eventException };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2381,6 +2533,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE"], (eventException
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], (eventException) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE", eventException };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2390,6 +2543,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], (eventException
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], (eventId) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE", eventId: eventId.event_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2399,6 +2553,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], (eventId) => {
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_USER_ADD"], (userId) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_USER_ADD", userId: userId.user_id, guildId: userId.guild_id, guildEventId: userId.guild_scheduled_event_id, guildEventExceptionId: userId.guild_scheduled_event_exception_id, response: userId.response };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2408,6 +2563,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_USER_ADD"], (userId) => {
 });
 defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_USER_REMOVE"], (userId) => {
   const obj = { type: "GUILD_SCHEDULED_EVENT_USER_REMOVE", userId: userId.user_id, guildId: userId.guild_id, guildEventId: userId.guild_scheduled_event_id, guildEventExceptionId: userId.guild_scheduled_event_exception_id, response: userId.response };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2417,6 +2573,7 @@ defineSimpleDispatch(["GUILD_SCHEDULED_EVENT_USER_REMOVE"], (userId) => {
 });
 defineSimpleDispatch(["GUILD_DIRECTORY_ENTRY_CREATE"], (channelId) => {
   const obj = { type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: channelId.directory_channel_id, entry: channelId };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2426,6 +2583,7 @@ defineSimpleDispatch(["GUILD_DIRECTORY_ENTRY_CREATE"], (channelId) => {
 });
 defineSimpleDispatch(["GUILD_DIRECTORY_ENTRY_UPDATE"], (channelId) => {
   const obj = { type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: channelId.directory_channel_id, entry: channelId };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2435,6 +2593,7 @@ defineSimpleDispatch(["GUILD_DIRECTORY_ENTRY_UPDATE"], (channelId) => {
 });
 defineSimpleDispatch(["GUILD_DIRECTORY_ENTRY_DELETE"], (channelId) => {
   const obj = { type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId: channelId.directory_channel_id, guildId: channelId.entity_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2444,6 +2603,7 @@ defineSimpleDispatch(["GUILD_DIRECTORY_ENTRY_DELETE"], (channelId) => {
 });
 defineSimpleDispatch(["AUTO_MODERATION_MENTION_RAID_DETECTION"], (guildId) => {
   const obj = { type: "AUTO_MODERATION_MENTION_RAID_DETECTION", guildId: guildId.guild_id, decisionId: guildId.decision_id, suspiciousMentionActivityUntil: guildId.suspicious_mention_activity_until };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2453,6 +2613,7 @@ defineSimpleDispatch(["AUTO_MODERATION_MENTION_RAID_DETECTION"], (guildId) => {
 });
 defineSimpleDispatch(["VOICE_CHANNEL_EFFECT_SEND"], (emoji) => {
   const obj = { type: "VOICE_CHANNEL_EFFECT_SEND", emoji: emoji.emoji, channelId: emoji.channel_id, userId: emoji.user_id, animationType: emoji.animation_type, animationId: emoji.animation_id, soundId: emoji.sound_id, soundVolume: emoji.sound_volume };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2468,6 +2629,7 @@ defineSimpleDispatch(["CLIPS_REMOTE_TRIGGER"], (userId) => {
   }
   obj[3] = party_id;
   obj[4] = userId.remote_clip_id;
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2476,10 +2638,12 @@ defineSimpleDispatch(["CLIPS_REMOTE_TRIGGER"], (userId) => {
   });
 });
 defineSimpleDispatch(["GUILD_SOUNDBOARD_SOUND_CREATE"], (guildId) => {
-  const obj = { guildId: guildId.guild_id, name: guildId.name, soundId: guildId.sound_id, user: new closure_8(guildId.user), userId: null, volume: null, emojiId: null, emojiName: null, available: null };
+  let obj = { type: "GUILD_SOUNDBOARD_SOUND_CREATE", sound: null };
+  obj = { guildId: guildId.guild_id, name: guildId.name, soundId: guildId.sound_id, user: new closure_8(guildId.user), userId: null, volume: null, emojiId: null, emojiName: null, available: null };
   ({ user_id: obj2[4], volume: obj2[5], emoji_id: obj2[6], emoji_name: obj2[7], available: obj2[8] } = guildId);
   obj[1] = obj;
   const tmp = new closure_8(guildId.user);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2488,10 +2652,12 @@ defineSimpleDispatch(["GUILD_SOUNDBOARD_SOUND_CREATE"], (guildId) => {
   });
 });
 defineSimpleDispatch(["GUILD_SOUNDBOARD_SOUND_UPDATE"], (guildId) => {
-  const obj = { guildId: guildId.guild_id, name: guildId.name, soundId: guildId.sound_id, user: new closure_8(guildId.user), userId: null, volume: null, emojiId: null, emojiName: null, available: null };
+  let obj = { type: "GUILD_SOUNDBOARD_SOUND_UPDATE", sound: null };
+  obj = { guildId: guildId.guild_id, name: guildId.name, soundId: guildId.sound_id, user: new closure_8(guildId.user), userId: null, volume: null, emojiId: null, emojiName: null, available: null };
   ({ user_id: obj2[4], volume: obj2[5], emoji_id: obj2[6], emoji_name: obj2[7], available: obj2[8] } = guildId);
   obj[1] = obj;
   const tmp = new closure_8(guildId.user);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2501,6 +2667,7 @@ defineSimpleDispatch(["GUILD_SOUNDBOARD_SOUND_UPDATE"], (guildId) => {
 });
 defineSimpleDispatch(["GUILD_SOUNDBOARD_SOUND_DELETE"], (guildId) => {
   const obj = { type: "GUILD_SOUNDBOARD_SOUND_DELETE", guildId: guildId.guild_id, soundId: guildId.sound_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2509,15 +2676,17 @@ defineSimpleDispatch(["GUILD_SOUNDBOARD_SOUND_DELETE"], (guildId) => {
   });
 });
 defineSimpleDispatch(["GUILD_SOUNDBOARD_SOUNDS_UPDATE"], (guildId) => {
-  let obj = {
+  let obj = guildId;
+  obj = {
     type: "GUILD_SOUNDBOARD_SOUNDS_UPDATE",
     guildId: guildId.guild_id,
-    soundboardSounds: soundboard_sounds.map((item, index) => {
-      obj = { name: item.name, soundId: item.sound_id, emojiName: item.emoji_name, emojiId: item.emoji_id, userId: item.user_id, volume: item.volume, available: item.available, guildId: obj.guild_id };
+    soundboardSounds: soundboard_sounds.map((name) => {
+      obj = { name: name.name, soundId: name.sound_id, emojiName: name.emoji_name, emojiId: name.emoji_id, userId: name.user_id, volume: name.volume, available: name.available, guildId: obj.guild_id };
       return obj;
     })
   };
   soundboard_sounds = guildId.soundboard_sounds;
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2525,7 +2694,7 @@ defineSimpleDispatch(["GUILD_SOUNDBOARD_SOUNDS_UPDATE"], (guildId) => {
     result = socket.resetSocketOnDispatchError(obj);
   });
 });
-const result16 = definePreloadableDispatch(["EMBEDDED_ACTIVITY_UPDATE_V2"], (guild_id) => {
+definePreloadableDispatch(["EMBEDDED_ACTIVITY_UPDATE_V2"], (guild_id) => {
   const items = [guild_id.guild_id];
   return ChannelLoader.loadGuildIds(items);
 }, (application_id) => {
@@ -2537,6 +2706,7 @@ const result16 = definePreloadableDispatch(["EMBEDDED_ACTIVITY_UPDATE_V2"], (gui
   obj = { type: "EMBEDDED_ACTIVITY_UPDATE_V2", instance: obj };
   obj[4] = participants;
   obj[5] = application_id.content_classification;
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2546,6 +2716,7 @@ const result16 = definePreloadableDispatch(["EMBEDDED_ACTIVITY_UPDATE_V2"], (gui
 });
 defineSimpleDispatch(["AUTH_SESSION_CHANGE"], (authSessionIdHash) => {
   const obj = { type: "AUTH_SESSION_CHANGE", authSessionIdHash: authSessionIdHash.auth_session_id_hash };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2555,6 +2726,7 @@ defineSimpleDispatch(["AUTH_SESSION_CHANGE"], (authSessionIdHash) => {
 });
 defineSimpleDispatch(["USER_CONNECTIONS_LINK_CALLBACK"], (provider) => {
   const obj = { type: "USER_CONNECTIONS_LINK_CALLBACK", provider: provider.provider, callbackCode: provider.callback_code, callbackState: provider.callback_state };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2564,6 +2736,7 @@ defineSimpleDispatch(["USER_CONNECTIONS_LINK_CALLBACK"], (provider) => {
 });
 defineSimpleDispatch(["USER_CONNECTIONS_CALLBACK"], (provider) => {
   const obj = { type: "USER_CONNECTIONS_CALLBACK", provider: provider.provider, code: provider.code, state: provider.state, openid_params: provider.openid_params };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2574,6 +2747,7 @@ defineSimpleDispatch(["USER_CONNECTIONS_CALLBACK"], (provider) => {
 defineSimpleDispatch(["DELETED_ENTITY_IDS"], (arg0) => {
   const obj = { type: "DELETED_ENTITY_IDS" };
   const merged = Object.assign(arg0);
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2581,17 +2755,18 @@ defineSimpleDispatch(["DELETED_ENTITY_IDS"], (arg0) => {
     result = socket.resetSocketOnDispatchError(obj);
   });
 });
-const result17 = definePreloadableDispatch(["CHANNEL_SYNC"], (guild_id) => {
+definePreloadableDispatch(["CHANNEL_SYNC"], (guild_id) => {
   const items = [guild_id.guild_id];
   return ChannelLoader.loadGuildIds(items);
 }, (guild_id) => {
   if (!guild_id.integrity_check) {
     const channels = guild_id.channels;
-    const item = channels.forEach((item, index) => {
-      set.add(item);
+    const item = channels.forEach((arg0) => {
+      set.add(arg0);
     });
   }
   const obj = { type: "CHANNEL_SYNC", guild_id: guild_id.guild_id, channels: guild_id.channels, integrity_check: guild_id.integrity_check };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2601,6 +2776,7 @@ const result17 = definePreloadableDispatch(["CHANNEL_SYNC"], (guild_id) => {
 });
 defineSimpleDispatch(["CONSOLE_COMMAND_UPDATE"], (id) => {
   const obj = { type: "CONSOLE_COMMAND_UPDATE", id: id.id, result: id.result, error: id.error };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2608,7 +2784,7 @@ defineSimpleDispatch(["CONSOLE_COMMAND_UPDATE"], (id) => {
     result = socket.resetSocketOnDispatchError(obj);
   });
 });
-const result18 = definePreloadableDispatch(["PASSIVE_UPDATE_V2"], (guild_id) => {
+definePreloadableDispatch(["PASSIVE_UPDATE_V2"], (guild_id) => {
   const items = [guild_id.guild_id];
   return ChannelLoader.loadGuildIds(items);
 }, (guildId) => {
@@ -2616,30 +2792,31 @@ const result18 = definePreloadableDispatch(["PASSIVE_UPDATE_V2"], (guild_id) => 
     type: "PASSIVE_UPDATE_V2",
     guildId: guildId.guild_id,
     members: guildId.updated_members,
-    channels: updated_channels.map((item, index) => ({ id: item.id, lastMessageId: item.last_message_id, lastPinTimestamp: item.last_pin_timestamp })),
-    voiceStates: updated_voice_states.map((item, index) => {
-      obj = { channelId: item.channel_id, deaf: tmp, mute: tmp2, requestToSpeakTimestamp: null, selfDeaf: null, selfMute: null, selfStream: null, selfVideo: null, sessionId: null, suppress: null, userId: null, discoverable: null, connectedAt: null };
-      let prop = item.request_to_speak_timestamp;
+    channels: updated_channels.map((id) => ({ id: id.id, lastMessageId: id.last_message_id, lastPinTimestamp: id.last_pin_timestamp })),
+    voiceStates: updated_voice_states.map((channelId) => {
+      obj = { channelId: channelId.channel_id, deaf: tmp, mute: tmp2, requestToSpeakTimestamp: null, selfDeaf: null, selfMute: null, selfStream: null, selfVideo: null, sessionId: null, suppress: null, userId: null, discoverable: null, connectedAt: null };
+      let prop = channelId.request_to_speak_timestamp;
       if (prop == null) {
         prop = null;
       }
       obj[3] = prop;
-      obj[4] = item.self_deaf || false;
-      obj[5] = item.self_mute || false;
-      obj[6] = item.self_stream || false;
-      obj[7] = item.self_video || false;
-      ({ session_id: obj[8], suppress: obj[9], user_id: obj[10], discoverable } = item);
+      obj[4] = channelId.self_deaf || false;
+      obj[5] = channelId.self_mute || false;
+      obj[6] = channelId.self_stream || false;
+      obj[7] = channelId.self_video || false;
+      ({ session_id: obj[8], suppress: obj[9], user_id: obj[10], discoverable } = channelId);
       if (discoverable == null) {
         discoverable = true;
       }
       obj[11] = discoverable;
-      obj[12] = item.connected_at;
+      obj[12] = channelId.connected_at;
       return obj;
     }),
     removedVoiceStateUsers: guildId.removed_voice_states
   };
   updated_channels = guildId.updated_channels;
   updated_voice_states = guildId.updated_voice_states;
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2649,6 +2826,7 @@ const result18 = definePreloadableDispatch(["PASSIVE_UPDATE_V2"], (guild_id) => 
 });
 defineSimpleDispatch(["CREATOR_MONETIZATION_RESTRICTIONS_UPDATE"], (guildId) => {
   const obj = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS", guildId: guildId.guild_id, restrictions: guildId.restrictions };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2658,6 +2836,7 @@ defineSimpleDispatch(["CREATOR_MONETIZATION_RESTRICTIONS_UPDATE"], (guildId) => 
 });
 defineSimpleDispatch(["BILLING_REFERRAL_TRIAL_OFFER_UPDATE"], (userTrialOfferId) => {
   const obj = { type: "BILLING_REFERRAL_TRIAL_OFFER_UPDATE", userTrialOfferId: userTrialOfferId.user_trial_offer_id, recipientId: userTrialOfferId.recipient_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2667,6 +2846,7 @@ defineSimpleDispatch(["BILLING_REFERRAL_TRIAL_OFFER_UPDATE"], (userTrialOfferId)
 });
 defineSimpleDispatch(["LAST_MESSAGES"], (guildId) => {
   const obj = { type: "MESSAGE_PREVIEWS_LOADED", guildId: guildId.guild_id, messages: guildId.messages };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2676,6 +2856,7 @@ defineSimpleDispatch(["LAST_MESSAGES"], (guildId) => {
 });
 defineSimpleDispatch(["AUTHENTICATOR_UPDATE"], (credential) => {
   const obj = { type: "AUTHENTICATOR_UPDATE", credential };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2685,6 +2866,7 @@ defineSimpleDispatch(["AUTHENTICATOR_UPDATE"], (credential) => {
 });
 defineSimpleDispatch(["AUTHENTICATOR_CREATE"], (credential) => {
   const obj = { type: "AUTHENTICATOR_CREATE", credential };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2694,6 +2876,7 @@ defineSimpleDispatch(["AUTHENTICATOR_CREATE"], (credential) => {
 });
 defineSimpleDispatch(["AUTHENTICATOR_DELETE"], (credential) => {
   const obj = { type: "AUTHENTICATOR_DELETE", credential };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2702,7 +2885,9 @@ defineSimpleDispatch(["AUTHENTICATOR_DELETE"], (credential) => {
   });
 });
 defineSimpleDispatch(["NOTIFICATION_SETTINGS_UPDATE"], (flags) => {
-  const obj = { flags: flags.flags };
+  obj = { type: "NOTIFICATION_SETTINGS_UPDATE", settings: obj };
+  obj = { flags: flags.flags };
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2713,6 +2898,7 @@ defineSimpleDispatch(["NOTIFICATION_SETTINGS_UPDATE"], (flags) => {
 defineSimpleDispatch(["CONVERSATION_SUMMARY_UPDATE"], (arg0) => {
   const obj = { type: "CONVERSATION_SUMMARY_UPDATE" };
   const merged = Object.assign(arg0);
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2722,6 +2908,7 @@ defineSimpleDispatch(["CONVERSATION_SUMMARY_UPDATE"], (arg0) => {
 });
 defineSimpleDispatch(["PREMIUM_MARKETING_PREVIEW"], (data) => {
   const obj = { type: "PREMIUM_MARKETING_PREVIEW", data };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2731,6 +2918,7 @@ defineSimpleDispatch(["PREMIUM_MARKETING_PREVIEW"], (data) => {
 });
 defineSimpleDispatch(["USER_APPLICATION_UPDATE"], (applicationId) => {
   const obj = { type: "USER_APPLICATION_UPDATE", applicationId: applicationId.application_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2740,6 +2928,7 @@ defineSimpleDispatch(["USER_APPLICATION_UPDATE"], (applicationId) => {
 });
 defineSimpleDispatch(["USER_APPLICATION_REMOVE"], (applicationId) => {
   const obj = { type: "USER_APPLICATION_REMOVE", applicationId: applicationId.application_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2749,6 +2938,7 @@ defineSimpleDispatch(["USER_APPLICATION_REMOVE"], (applicationId) => {
 });
 defineSimpleDispatch(["DM_SETTINGS_UPSELL_SHOW"], (guildId) => {
   const obj = { type: "DM_SETTINGS_UPSELL_SHOW", guildId: guildId.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2758,6 +2948,7 @@ defineSimpleDispatch(["DM_SETTINGS_UPSELL_SHOW"], (guildId) => {
 });
 defineSimpleDispatch(["CONTENT_INVENTORY_INBOX_STALE"], (refreshAfterMs) => {
   const obj = { type: "CONTENT_INVENTORY_INBOX_STALE", refreshAfterMs: refreshAfterMs.refresh_after_ms };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2767,6 +2958,7 @@ defineSimpleDispatch(["CONTENT_INVENTORY_INBOX_STALE"], (refreshAfterMs) => {
 });
 defineSimpleDispatch(["VIRTUAL_CURRENCY_BALANCE_UPDATE"], (balance) => {
   const obj = { type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: balance.balance };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2776,6 +2968,7 @@ defineSimpleDispatch(["VIRTUAL_CURRENCY_BALANCE_UPDATE"], (balance) => {
 });
 defineSimpleDispatch(["WALLET_BALANCE_UPDATE"], (paymentSourceId) => {
   const obj = { type: "WALLET_BALANCE_UPDATE", paymentSourceId: paymentSourceId.payment_source_id, balance: paymentSourceId.balance, currency: paymentSourceId.currency };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2785,6 +2978,7 @@ defineSimpleDispatch(["WALLET_BALANCE_UPDATE"], (paymentSourceId) => {
 });
 defineSimpleDispatch(["GUILD_POWERUP_ENTITLEMENTS_CREATE", "GUILD_POWERUP_ENTITLEMENTS_DELETE"], (guildId, type) => {
   const obj = { type, guildId: guildId.guild_id, entitlements: guildId.entitlements };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2794,6 +2988,7 @@ defineSimpleDispatch(["GUILD_POWERUP_ENTITLEMENTS_CREATE", "GUILD_POWERUP_ENTITL
 });
 defineSimpleDispatch(["GAME_SERVER_CREATE", "GAME_SERVER_UPDATE"], (guildId, type) => {
   const obj = { type, guildId: guildId.guild_id, gameServer: guildId.game_server };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2803,6 +2998,7 @@ defineSimpleDispatch(["GAME_SERVER_CREATE", "GAME_SERVER_UPDATE"], (guildId, typ
 });
 defineSimpleDispatch(["GAME_SERVER_DELETE"], (guildId, type) => {
   const obj = { type, guildId: guildId.guild_id, gameServerId: guildId.game_server_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2812,6 +3008,7 @@ defineSimpleDispatch(["GAME_SERVER_DELETE"], (guildId, type) => {
 });
 defineSimpleDispatch(["GUILD_APPLIED_BOOSTS_UPDATE"], (guildId, type) => {
   const obj = { type, guildId: guildId.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2821,6 +3018,7 @@ defineSimpleDispatch(["GUILD_APPLIED_BOOSTS_UPDATE"], (guildId, type) => {
 });
 defineSimpleDispatch(["USER_APPLICATION_IDENTITY_UPDATE"], (user_id, type) => {
   const obj = { type, user_id: user_id.user_id, application_id: user_id.application_id, username: user_id.username, avatar_hash: user_id.avatar_hash, metadata: user_id.metadata };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2830,6 +3028,7 @@ defineSimpleDispatch(["USER_APPLICATION_IDENTITY_UPDATE"], (user_id, type) => {
 });
 defineSimpleDispatch(["USER_APPLICATION_IDENTITY_REMOVE"], (user_id, type) => {
   const obj = { type, user_id: user_id.user_id, application_id: user_id.application_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2839,6 +3038,7 @@ defineSimpleDispatch(["USER_APPLICATION_IDENTITY_REMOVE"], (user_id, type) => {
 });
 defineSimpleDispatch(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (interactionId) => {
   const obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE", interactionId: interactionId.interaction_id, applicationId: interactionId.application_id, skuId: interactionId.sku_id, recipientId: interactionId.recipient_id, eligible: interactionId.eligible, ineligibleReason: interactionId.ineligible_reason };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2849,6 +3049,7 @@ defineSimpleDispatch(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (intera
 defineSimpleDispatch(["GUILD_ROOM_CONNECT"], (body, type) => {
   obj = { type, room: obj(9866).serverGuildRoomToClient(body) };
   const obj2 = obj(9866);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2858,6 +3059,7 @@ defineSimpleDispatch(["GUILD_ROOM_CONNECT"], (body, type) => {
 });
 defineSimpleDispatch(["GUILD_ROOM_DISCONNECT"], (userId, type) => {
   const obj = { type, userId: userId.user_id, roomId: userId.room_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2868,6 +3070,7 @@ defineSimpleDispatch(["GUILD_ROOM_DISCONNECT"], (userId, type) => {
 defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
   obj = { type, room: obj(9866).serverGuildRoomToClient(body) };
   const obj2 = obj(9866);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2877,6 +3080,7 @@ defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
 });
 defineSimpleDispatch(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (gameApplicationIds, type) => {
   const obj = { type, gameApplicationIds: gameApplicationIds.game_application_ids, guildId: gameApplicationIds.guild_id };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2886,6 +3090,7 @@ defineSimpleDispatch(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (gameApplicati
 });
 defineSimpleDispatch(["MESSAGE_REQUEST_NOTIFICATION_SENT"], (triggeringUserId) => {
   const obj = { type: "MESSAGE_REQUEST_NOTIFICATION_SENT", triggeringUserId: triggeringUserId.triggering_user_id, numMutualGuilds: triggeringUserId.num_mutual_guilds };
+  const obj2 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
     const socket = obj(closure_1_3[13]).socket;
@@ -2894,7 +3099,7 @@ defineSimpleDispatch(["MESSAGE_REQUEST_NOTIFICATION_SENT"], (triggeringUserId) =
   });
 });
 let tmp2 = new timestampDefault("ConnectionStore");
-const result19 = require("obj132").fileFinishedImporting("modules/gateway/dispatchSocketMessage.tsx");
+require("set").fileFinishedImporting("modules/gateway/dispatchSocketMessage.tsx");
 
 export default function getDispatchHandler(type) {
   return table[type];

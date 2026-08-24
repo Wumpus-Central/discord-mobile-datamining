@@ -7,37 +7,36 @@ import Text from "Text" /* 4734 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
 import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 12558 */;
 import handleKrispLinkPressed from "handleKrispLinkPressed" /* 12561 */;
-import registerAssetDefault from "registerAsset" /* 12562 */;
-import registerAssetDefault2 from "registerAsset" /* 12563 */;
 import _modDef13991 from "module_13991" /* 13991 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "combined" /* 1993 */;
 
-require = fn;
+require = arg1;
 function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = registerAssetDefault;
+    let tmp2Result = tmp2(12562);
   } else {
-    tmp2Result = registerAssetDefault2;
+    tmp2Result = tmp2(12563);
   }
+  obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
-  const intl = getSystemLocale.intl;
+  const intl = tmp5(1236).intl;
   obj[2] = intl.string(getSystemLocale.t.vFiCSx);
   const items = [callback(closure_5, obj), ];
   obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp5(1236).intl;
   obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
   obj1[2] = handleKrispLinkPressed.handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp5(1236).intl;
   obj2[2] = intl3.string(getSystemLocale.t.hvVgAZ);
   obj1[3] = callback(Text.Text, obj2);
   items[1] = callback(LegacyBaseButton.LegacyPressable, obj1);
@@ -48,14 +47,15 @@ function SystemProcessingSubLabel() {
   let obj = getNoiseCancellationDeferredToSystem;
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
-    const intl = getSystemLocale.intl;
+    obj = { variant: "text-sm/medium", children: null };
+    const intl = tmp(1236).intl;
     obj = { onSettingsClick: null };
     obj[0] = function onSettingsClick() {
       mediaEngine = mediaEngine.getMediaEngine();
       const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
     };
-    obj[1] = intl.format(getSystemLocale.t.EUNgko, obj);
-    tmp3 = callback(Text.Text, obj);
+    obj[1] = intl.format(tmp(1236).t.EUNgko, obj);
+    tmp3 = callback(tmp(4734).Text, obj);
   }
   return tmp3;
 }
@@ -63,12 +63,13 @@ function SystemProcessingSubLabel() {
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = "" + importDefaultResult.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
 let closure_13 = createCacheKey.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
-let result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    callback(10669);
-    const obj = { label: null, settings: null };
+    let obj = callback(10669);
+    obj = { sections: null };
+    obj = { label: null, settings: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.LKCupB);
     const items = [, , ];

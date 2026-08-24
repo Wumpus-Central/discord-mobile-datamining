@@ -3,25 +3,26 @@
 // Module 12772 (validateBuildOverride)
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
 import { BUILD_OVERRIDE_TARGET_NAMES as closure_5 } from "BUILD_OVERRIDE_TARGET_NAMES" /* 4291 */;
 import { PublicReleaseChannels } from "ME" /* 676 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
 
-export default function validateBuildOverride(targetBuildOverride, items2) {
+export default function validateBuildOverride(targetBuildOverride, items1) {
   if (null != targetBuildOverride) {
-    if (null != items2) {
+    if (null != items1) {
       ({ releaseChannel, expiresAt, validForUserIds, allowedVersions } = targetBuildOverride);
       const _Object = Object;
       const keys = Object.keys(targetBuildOverride.targetBuildOverride);
-      if (0 === obj12.intersection(keys, items2).length) {
+      if (0 === obj12.intersection(keys, items1).length) {
+        let obj = { valid: false, reason: null };
         const intl5 = getSystemLocale.intl;
-        let obj = { requestedTargets: null };
-        const mapped = keys.map((item, index) => {
-          let str = table[item];
+        obj = { requestedTargets: null };
+        const mapped = keys.map((arg0) => {
+          let str = table[arg0];
           if (str == null) {
             str = "unknown";
           }
@@ -59,11 +60,14 @@ export default function validateBuildOverride(targetBuildOverride, items2) {
           } else {
             const iter = allowedVersions[Symbol.iterator]();
             while (iter !== undefined) {
+              let tmp6 = callback;
               let tmp7 = callback(str3.split("."), 2);
               let first = tmp7[0];
               if ("*" === tmp7[1]) {
+                let tmp9 = first;
                 if (tmp2 === first) {
                   flag = true;
+                  let tmp10 = iter;
                   iter.return();
                   break;
                 }

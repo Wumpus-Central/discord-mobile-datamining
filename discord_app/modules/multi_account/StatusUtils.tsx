@@ -1,10 +1,10 @@
 // === Module 10026: getStatusExpiryParts ===
 
 // Module 10026 (getStatusExpiryParts)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
+const result = set.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
 
 export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
   const date = new Date(Number(arg0));
@@ -35,19 +35,19 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
   const formatTimeResult = data.formatTime(date, { format: "short" });
   if (tmp2) {
     let obj = { kind: "today", dateString: null, timeString: null };
-    const data4 = getSystemLocale.intl.data;
+    const data4 = tmp10(1236).intl.data;
     obj[1] = data4.formatRelativeTime(0, "day", { numeric: "auto" });
     obj[2] = formatTimeResult;
     obj1 = obj;
   } else if (tmp7) {
     obj = { kind: "tomorrow", dateString: null, timeString: null };
-    const data3 = getSystemLocale.intl.data;
+    const data3 = tmp10(1236).intl.data;
     obj[1] = data3.formatRelativeTime(1, "day", { numeric: "auto" });
     obj[2] = formatTimeResult;
     obj1 = obj;
   } else {
     obj1 = { kind: "date", dateString: null, timeString: null };
-    const data2 = getSystemLocale.intl.data;
+    const data2 = tmp10(1236).intl.data;
     obj1[1] = data2.formatDate(date, { dateStyle: "short" });
     obj1[2] = formatTimeResult;
   }

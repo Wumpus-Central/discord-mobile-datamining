@@ -2,19 +2,17 @@
 
 // Module 10645 (GiftCodeRedeemModal)
 import noopAll from "noop" /* 19 */;
-import GiftCodeRedeemStartDefault from "GiftCodeRedeemStart" /* 10646 */;
 import useGiftCodeErrorMessageDefault from "useGiftCodeErrorMessage" /* 10647 */;
-import GiftCodeRedeemSuccessDefault from "GiftCodeRedeemSuccess" /* 10659 */;
-import updateGiftCode from "updateGiftCode" /* 10641 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "updateGiftCode" /* 10641 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
 import HeaderBackImage from "HeaderBackImage" /* 6314 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 let obj = { START: "giftcode-start", SUCCESS: "giftcode-success", ERROR: "giftcode-error" };
 const headerNoTitle = HeaderBackImage.getHeaderNoTitle();
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx");
 
 export default function GiftCodeRedeemModal(code) {
   code = code.code;
@@ -40,7 +38,7 @@ export default function GiftCodeRedeemModal(code) {
       obj = {};
       const merged = Object.assign(arg0);
       obj.user = stateFromStores1;
-      return jsx(GiftCodeRedeemStartDefault, {});
+      return closure_1_5(closure_1_1(closure_1_2[6]), obj);
     };
     obj[obj.START] = obj;
     obj1 = { headerTitle: null, headerLeft: null, render: null };
@@ -51,7 +49,7 @@ export default function GiftCodeRedeemModal(code) {
       obj = {};
       const merged = Object.assign(arg0);
       obj.user = stateFromStores1;
-      return jsx(GiftCodeRedeemSuccessDefault, {});
+      return closure_1_5(closure_1_1(closure_1_2[7]), obj);
     };
     obj[obj.SUCCESS] = obj1;
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
@@ -87,6 +85,7 @@ export default function GiftCodeRedeemModal(code) {
       }
       obj3[1] = items3;
       jsx(tmp2(6312).Navigator, { screens: null, initialRouteStack: null });
+      const tmp7 = jsx;
     }
     const tmp2Result1 = tmp2(6314);
   }

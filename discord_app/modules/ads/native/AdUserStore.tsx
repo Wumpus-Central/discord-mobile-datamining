@@ -77,6 +77,6 @@ const adUserStore = new AdUserStore(dispatcherDefault, {
     c3 = null;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/ads/native/AdUserStore.tsx");
+const result = require("set").fileFinishedImporting("modules/ads/native/AdUserStore.tsx");
 
 export default adUserStore;

@@ -5,6 +5,6 @@ import importAllResult from "noop" /* 19 */;
 
 const context = importAllResult.createContext({ audioRef: importAllResult.createRef() });
 const obj = { audioRef: importAllResult.createRef() };
-const result = require("obj132").fileFinishedImporting("modules/soundplayer/SoundPlayerContext.tsx");
+const result = require("set").fileFinishedImporting("modules/soundplayer/SoundPlayerContext.tsx");
 
 export default context;

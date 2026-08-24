@@ -3,7 +3,7 @@
 // Module 10347 (handleUserSettingsStoreUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import closure_0 from "_getSystemLocale" /* 1994 */;
 
 function handleUserSettingsStoreUpdate() {
   if (locale === closure_0.locale) {
@@ -119,6 +119,6 @@ const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcher
     return false;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/wishlists/WishlistRecommendationsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/WishlistRecommendationsStore.tsx");
 
 export default wishlistRecommendationsStore;

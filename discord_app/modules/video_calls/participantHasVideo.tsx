@@ -1,12 +1,12 @@
 // === Module 11444: canRenderParticipantVideo ===
 
 // Module 11444 (canRenderParticipantVideo)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
 import ParticipantTypes from "ParticipantTypes" /* 4544 */;
 import { Features } from "DesktopSources" /* 4529 */;
 
-const require = fn;
+const require = arg1;
 function canRenderParticipantVideo(participant, closure_1_4) {
   let obj = closure_1_4;
   if (closure_1_4 === undefined) {
@@ -54,7 +54,7 @@ function canRenderParticipantVideo(participant, closure_1_4) {
   return tmp;
 }
 ({ ParticipantTypes: c4, isStreamParticipant: c5, isUserParticipant: closure_6 } = ParticipantTypes);
-const result = require("obj132").fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
 
 export default function participantHasVideo(type) {
   let streamId = type;
@@ -83,5 +83,5 @@ export { canRenderParticipantVideo };
 export const useCanRenderParticipantVideo = function useCanRenderParticipantVideo(stateFromStores) {
   const _require = stateFromStores;
   const items = [closure_3];
-  return _require(589).useStateFromStores(items, () => canRenderParticipantVideo(closure_0, closure_1_3));
+  return _require(589).useStateFromStores(items, () => closure_1_8(closure_0, closure_1_3));
 };

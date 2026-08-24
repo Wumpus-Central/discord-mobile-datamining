@@ -2,9 +2,10 @@
 
 // Module 14991 (useSecureFramesVerifiedUserIds)
 import initialize from "initialize" /* 589 */;
+import closure_2 from "initialize" /* 9692 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
 
 export const useSecureFramesVerifiedUserIds = function useSecureFramesVerifiedUserIds() {
   const items = [closure_2];

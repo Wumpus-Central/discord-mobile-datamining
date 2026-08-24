@@ -4,12 +4,12 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import openAll from "open" /* 12597 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
 
-const require = fn;
+const require = arg1;
 function updateStats(arr, arg1, timestamp) {
   obj = arg1;
   if (arg1 === undefined) {
@@ -22,6 +22,7 @@ function updateStats(arr, arg1, timestamp) {
   obj = {};
   const entries = Object.entries(arr);
   while (tmp4 !== undefined) {
+    let tmp6 = callback;
     let tmp7 = callback(tmp5, 2);
     let first = tmp7[0];
     let tmp9 = first;
@@ -29,52 +30,80 @@ function updateStats(arr, arg1, timestamp) {
     arr = tmp10;
     let tmp11 = obj[first];
     let _Array = Array;
+    let tmp12 = tmp10;
     if (Array.isArray(tmp10)) {
       if (typeof arr[0] === "object") {
         let _Array3 = Array;
+        let tmp26 = tmp11;
         let tmp27 = Array.isArray(tmp11) ? tmp11 : [];
+        let tmp29 = first;
         let items = [];
         obj[tmp9] = items;
         let arr5 = items;
         let num = 0;
+        let tmp30 = tmp10;
         if (0 < arr.length) {
           do {
+            let tmp31 = tmp27;
+            let tmp32 = num;
             let tmp33 = tmp28[num];
+            let tmp34 = tmp33;
+            let tmp35 = items;
+            let tmp36 = updateStats;
+            let tmp37 = tmp10;
+            let tmp38 = num;
             arr = arr5.push(updateStats(arr[num], typeof tmp33 === "object" ? tmp33 : {}, timestamp));
             sum = num + 1;
             num = sum;
           } while (sum < arr.length);
         }
       } else {
+        let tmp45 = first;
+        let tmp46 = tmp10;
         obj[tmp9] = arr;
       }
     } else {
       if (typeof arr === "object") {
+        let tmp41 = tmp10;
         if (null !== arr) {
+          let tmp22 = tmp11;
           if (typeof tmp11 === "object") {
+            let tmp44 = tmp11;
             if (null !== tmp11) {
               obj = tmp11;
+              let tmp23 = first;
+              let tmp24 = updateStats;
+              let tmp25 = tmp10;
               obj[tmp9] = updateStats(arr, obj, timestamp);
             }
           }
           obj = {};
         }
       }
+      let tmp13 = first;
+      let tmp14 = obj;
       if (tmp9 in obj) {
+        let tmp15 = tmp10;
         if (typeof arr === "number") {
+          let tmp18 = first;
           let _Array2 = Array;
+          let tmp19 = tmp11;
           let arr1 = Array.isArray(tmp11) ? tmp11 : [];
           obj[tmp9] = arr1;
           let arr3 = arr1;
           obj1 = { value: null, time: null };
+          let tmp20 = tmp10;
           obj1[0] = arr;
           obj1[1] = timestamp;
           arr = arr1.push(obj1);
           if (arr1.length > 600) {
+            let tmp42 = arr1;
             arr1 = arr3.shift();
           }
         }
       }
+      let tmp16 = first;
+      let tmp17 = tmp10;
       obj[tmp9] = arr;
     }
     continue;
@@ -144,8 +173,8 @@ let c16 = false;
 let c17 = null;
 const map1 = new Map();
 let values = Object.values(MediaEngineContextTypes);
-let item = values.forEach((item, index) => {
-  closure_12[item] = {};
+let item = values.forEach((arg0) => {
+  closure_12[arg0] = {};
 });
 const Store = initializeDefault.Store;
 class RTCDebugStore extends Store {
@@ -168,7 +197,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   }
   let found;
   if (tmp2 != null) {
-    found = tmp2.find((item, index) => "video" === item.type);
+    found = tmp2.find((type) => "video" === type.type);
   }
   let name;
   if (found != null) {
@@ -213,7 +242,7 @@ prototype2["getOutboundStats"] = function getOutboundStats(context) {
   }
   let found;
   if (outbound != null) {
-    found = outbound.find((item, index) => "video" === item.type);
+    found = outbound.find((type) => "video" === type.type);
   }
   let name;
   if (found != null) {
@@ -311,6 +340,7 @@ obj = {
         if (null != replayConnection) {
           replayConnection.on(replayConnection(4569).BaseConnectionEvent.Video, (userId) => {
             let num = arg3;
+            obj = closure_1_1(closure_1_3[7]);
             obj = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };
             if (arg3 == null) {
               num = 0;
@@ -324,6 +354,7 @@ obj = {
             obj.dispatch(obj);
           });
           dispatcherDefault.wait(() => callback(table[5]).open());
+          const obj3 = dispatcherDefault;
         }
       }
     }
@@ -341,8 +372,8 @@ obj = {
     if (null != channelId.channelId) {
       const _Object = Object;
       const values = Object.values(MediaEngineContextTypes);
-      const item = values.forEach((item, index) => {
-        closure_12[item] = {};
+      const item = values.forEach((arg0) => {
+        closure_12[arg0] = {};
       });
       map.clear();
       map1.clear();
@@ -357,16 +388,16 @@ obj = {
   MEDIA_ENGINE_CONNECTION_STATS: function handleMediaEngineConnectionStats(connectionStats) {
     connectionStats = connectionStats.connectionStats;
     const values = Object.values(MediaEngineContextTypes);
-    let item = values.forEach((item, index) => {
-      connectionStats = item;
-      const found = connectionStats.filter((item, index) => item.context === closure_0);
-      item = found.forEach((item, index) => {
-        const stats = item.stats;
+    let item = values.forEach((arg0) => {
+      connectionStats = arg0;
+      const found = connectionStats.filter((context) => context.context === closure_0);
+      const item = found.forEach((stats) => {
+        stats = stats.stats;
         if (null != stats) {
           const tmp7 = closure_1_4(closure_11.split(":"), 3);
-          if (tmp7[0] === closure_0) {
+          if (tmp7[0] === tmp3) {
             const _parseInt = parseInt;
-            if (parseInt(tmp9) === index) {
+            if (parseInt(tmp9) === arg1) {
               if (null != closure_1_6.getUser(tmp8)) {
                 const _Object = Object;
                 const keys = Object.keys(stats.rtp.inbound);
@@ -381,9 +412,9 @@ obj = {
           let tmp15 = stats;
           if (null != stats.screenshare) {
             const _HermesInternal = HermesInternal;
-            combined = "" + closure_0 + ":" + index;
+            combined = "" + tmp3 + ":" + arg1;
             const value = closure_1_18.get(combined);
-            if (tmp4[index] != null) {
+            if (tmp4[arg1] != null) {
               const screenshare = tmp43.screenshare;
             }
             const result = closure_1_18.set(combined, timestamp);
@@ -394,6 +425,7 @@ obj = {
                 const result1 = (timestamp - value) / 1000;
                 tmp15 = stats;
                 if (0 < result1) {
+                  obj = {};
                   const merged = Object.assign(stats);
                   obj = {};
                   const merged1 = Object.assign(stats.screenshare);
@@ -525,8 +557,9 @@ obj = {
                 }
               }
             }
+            const obj3 = closure_1_18;
           }
-          tmp4[index] = closure_1_19(tmp15, tmp4[index], timestamp);
+          tmp4[arg1] = closure_1_19(tmp15, tmp4[arg1], timestamp);
         } else {
           delete tmp[tmp2];
         }
@@ -535,7 +568,7 @@ obj = {
   }
 };
 const rTCDebugStore = new RTCDebugStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("stores/RTCDebugStore.tsx");
+let result = require("set").fileFinishedImporting("stores/RTCDebugStore.tsx");
 
 export default rTCDebugStore;
 export const DEFAULT_SECTION = combined;

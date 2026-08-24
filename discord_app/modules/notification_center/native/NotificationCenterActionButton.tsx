@@ -7,9 +7,9 @@ import IconButton from "IconButton" /* 8035 */;
 import registerAssetDefault from "registerAsset" /* 9416 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/notification_center/native/NotificationCenterActionButton.tsx");
+const result = require("set").fileFinishedImporting("modules/notification_center/native/NotificationCenterActionButton.tsx");
 
 export default function NotificationCenterActionButton() {
   const obj = {

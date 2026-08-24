@@ -1,7 +1,7 @@
 // === Module 4829: cancel ===
 
 // Module 4829 (cancel)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import v1 from "v1" /* 514 */;
 import EventEmitter2 from "EventEmitter" /* 652 */;
@@ -70,7 +70,7 @@ prototype["cancel"] = function cancel() {
 prototype["resetState"] = function resetState() {
   return this;
 };
-const result = obj132.fileFinishedImporting("lib/uploader/Upload.tsx");
+const result = set.fileFinishedImporting("lib/uploader/Upload.tsx");
 
 export default Upload;
 export const UploadPlatform = obj;

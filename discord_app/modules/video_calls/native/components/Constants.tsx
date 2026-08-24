@@ -1,9 +1,9 @@
 // === Module 8677: PIP_GESTURE_ACTIVE_OFFSET ===
 
 // Module 8677 (PIP_GESTURE_ACTIVE_OFFSET)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
+const result = set.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
 
 export const PIP_GESTURE_ACTIVE_OFFSET = 2;
 export const SWIPE_TO_CHAT_ACTIVE_OFFSET = 16;

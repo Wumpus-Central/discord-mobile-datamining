@@ -5,16 +5,18 @@ import importAllResult from "noop" /* 19 */;
 import { CHANNEL_LIST_SEARCH_LAYOUT as closure_4 } from "MessageEmbedTypes" /* 8507 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
   channel = channel.channel;
   ({ lastMessageId, onPress } = channel);
   let extractTimestampResult = null;
   const merged = Object.assign(channel, Object.create(null));
+  let id;
+  let guild_id;
   c4 = undefined;
-  const id = channel.id;
-  const guild_id = channel.guild_id;
+  id = channel.id;
+  guild_id = channel.guild_id;
   if (null != lastMessageId) {
     let obj = onPress(id[3]);
     extractTimestampResult = obj.extractTimestamp(lastMessageId);
@@ -43,6 +45,6 @@ const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
   obj.onPress = callback;
   return jsx(onPress(id[6]), {});
 });
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
 
 export default memoResult;

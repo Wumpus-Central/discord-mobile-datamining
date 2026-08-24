@@ -1,10 +1,10 @@
-// === Module 13736: prop ===
+// === Module 13736: __core-js_shared__ ===
 
-// Module 13736 (prop)
-import prop from "prop" /* 13688 */;
+// Module 13736 (__core-js_shared__)
+import __core_js_shared__ from "__core-js_shared__" /* 13688 */;
 import sum from "sum" /* 13695 */;
 
-let closure_2 = prop("keys");
+let closure_2 = __core_js_shared__("keys");
 
 export default (arg0) => {
   let tmp2 = table[arg0];

@@ -11,6 +11,7 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   if (arg0 === undefined) {
     obj = {};
   }
+  obj = undefined;
   obj = {};
   let merged = Object.assign(closure_2);
   let merged1 = Object.assign(obj.include);
@@ -32,6 +33,7 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
       if (normalizedRequest) {
         obj = {};
         const merged1 = Object.assign(sdkProcessingMetadata.request);
+        obj2 = undefined;
         obj1 = {};
         obj2 = {};
         const merged2 = Object.assign(normalizedRequest.headers);
@@ -41,8 +43,8 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
             delete tmp2[tmp];
           }
           if (!obj.ip) {
-            const ipHeaderNames = obj(dependencyMap[1]).ipHeaderNames;
-            const item = ipHeaderNames.forEach((item, index) => {
+            const ipHeaderNames = obj(closure_1_1[1]).ipHeaderNames;
+            const item = ipHeaderNames.forEach((arg0) => {
               delete tmp2[tmp];
             });
           }
@@ -56,8 +58,8 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
           if (!cookies) {
             let parseCookieResult;
             if (obj2.cookie) {
-              parseCookieResult = obj(dependencyMap[2]).parseCookie(obj2.cookie);
-              const obj7 = obj(dependencyMap[2]);
+              parseCookieResult = obj(closure_1_1[2]).parseCookie(obj2.cookie);
+              const obj7 = obj(closure_1_1[2]);
             }
             cookies = parseCookieResult;
           }
@@ -77,8 +79,8 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
         if (obj.ip) {
           let ipAddress = normalizedRequest.headers;
           if (ipAddress) {
-            ipAddress = obj(dependencyMap[1]).getClientIPAddress(normalizedRequest.headers);
-            const obj8 = obj(dependencyMap[1]);
+            ipAddress = obj(closure_1_1[1]).getClientIPAddress(normalizedRequest.headers);
+            const obj8 = obj(closure_1_1[1]);
           }
           if (!ipAddress) {
             ipAddress = prop.ipAddress;

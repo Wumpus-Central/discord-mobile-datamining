@@ -3,23 +3,24 @@
 // Module 16006 (ReferralProgramCoachmarkImg)
 import preloadDefault from "preload" /* 5449 */;
 import registerAssetDefault from "registerAsset" /* 16007 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function ReferralProgramCoachmarkImg() {
   const tmp = callback2();
-  const obj = { source: registerAssetDefault, style: tmp.coachmarkImage };
+  let obj = { style: tmp.coachmarkImageContainer, children: null };
+  obj = { source: registerAssetDefault, style: tmp.coachmarkImage };
   obj[1] = jsx(preloadDefault, { source: registerAssetDefault, style: tmp.coachmarkImage });
   return <View source={registerAssetDefault} style={tmp.coachmarkImage} />;
 }
 let closure_9 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
-let result = require("obj132").fileFinishedImporting("modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx");
 
 export const useReferralProgramCoachmark = function useReferralProgramCoachmark(disabled) {
   disabled = disabled.disabled;
@@ -50,5 +51,4 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
     return tmp13;
   }
   items = [];
-  const obj2 = _require(8274);
 };

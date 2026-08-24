@@ -2,12 +2,12 @@
 
 // Module 6488 (Touchable)
 import noopDefault from "noop" /* 19 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
 import noop from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["underlayColor", "defaultUnderlayOpacity", "activeUnderlayOpacity", "defaultOpacity", "animationDuration", "androidRipple", "delayLongPress", "onLongPress", "onPress", "onPressIn", "onPressOut", "children", "disabled", "cancelOnLeave", "ref"];
 ({ use: c5, useCallback: closure_6, useRef: error } = noop);
 noopDefault;
@@ -264,8 +264,8 @@ export const Touchable = (hitSlop) => {
     ref.current = lib.UNKNOWN;
     if (undefined !== closure_7.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(closure_7.current);
-      closure_7.current = undefined;
+      clearTimeout(tmp11.current);
+      tmp11.current = undefined;
     }
     callback();
   }, items4);
@@ -277,26 +277,26 @@ export const Touchable = (hitSlop) => {
     onUpdate: callback2((pointerInside) => {
       if (!closure_9.current) {
         if (ref.current !== lib.UNKNOWN) {
-          const current = ref.current;
+          const current = tmp.current;
           if (pointerInside.pointerInside) {
-            if (current === lib.OUTSIDE) {
+            if (current === tmp2.OUTSIDE) {
               if (onPressIn != null) {
                 tmp9(pointerInside);
               }
             }
-            ref.current = lib.INSIDE;
+            tmp.current = tmp2.INSIDE;
           } else {
-            if (current === lib.INSIDE) {
+            if (current === tmp2.INSIDE) {
               if (onPressOut != null) {
                 tmp3(pointerInside);
               }
               if (undefined !== closure_7.current) {
                 const _clearTimeout = clearTimeout;
-                clearTimeout(closure_7.current);
-                closure_7.current = undefined;
+                clearTimeout(tmp6.current);
+                tmp6.current = undefined;
               }
             }
-            ref.current = lib.OUTSIDE;
+            tmp.current = tmp2.OUTSIDE;
           }
         }
       }
@@ -340,26 +340,26 @@ export const Touchable = (hitSlop) => {
   const tmp27 = callback2((pointerInside) => {
     if (!closure_9.current) {
       if (ref.current !== lib.UNKNOWN) {
-        const current = ref.current;
+        const current = tmp.current;
         if (pointerInside.pointerInside) {
-          if (current === lib.OUTSIDE) {
+          if (current === tmp2.OUTSIDE) {
             if (onPressIn != null) {
               tmp9(pointerInside);
             }
           }
-          ref.current = lib.INSIDE;
+          tmp.current = tmp2.INSIDE;
         } else {
-          if (current === lib.INSIDE) {
+          if (current === tmp2.INSIDE) {
             if (onPressOut != null) {
               tmp3(pointerInside);
             }
             if (undefined !== closure_7.current) {
               const _clearTimeout = clearTimeout;
-              clearTimeout(closure_7.current);
-              closure_7.current = undefined;
+              clearTimeout(tmp6.current);
+              tmp6.current = undefined;
             }
           }
-          ref.current = lib.OUTSIDE;
+          tmp.current = tmp2.OUTSIDE;
         }
       }
     }

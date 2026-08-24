@@ -2,15 +2,15 @@
 
 // Module 16993 (_createGroupFromStore)
 import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import closure_6 from "noop" /* 19 */;
 import { useRoleTierEditStore } from "usePriceTiers" /* 16950 */;
 import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function _createGroupFromStore() {
   const self = this;
   const tmp = callback2((arg0, arg1, arg2, arg3) => {
@@ -62,9 +62,10 @@ function _createGroupFromStore() {
                 id = 1;
                 c6 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = tmp25(closure_0, obj1);
+                obj2[0] = tmp25(tmp24, obj1);
                 return obj2;
               }
+              tmp24 = closure_0;
               tmp25 = callback;
             }
           } else if (1 === tmp4) {
@@ -282,8 +283,8 @@ class GuildRoleSubscriptionGroupSetupModal {
       if (null != error) {
         let anyErrorMessage = error.getAnyErrorMessage();
         if (anyErrorMessage == null) {
-          const intl = merged(_undefined[10]).intl;
-          anyErrorMessage = intl.string(merged(_undefined[10]).t.R0RpRX);
+          const intl = tmp(tmp2[10]).intl;
+          anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
         }
         merged(_undefined[9]).presentError(anyErrorMessage);
         const obj2 = merged(_undefined[9]);
@@ -299,7 +300,8 @@ class GuildRoleSubscriptionGroupSetupModal {
     items1 = [];
     items1[0] = memo;
     memo1 = obj.useMemo(() => {
-      let obj = { impressionName: merged(_undefined[11]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING };
+      let obj = {};
+      obj = { impressionName: merged(_undefined[11]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING };
       obj[constants.GATING] = obj;
       obj = { impressionName: merged(_undefined[11]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_TIER_STEP };
       obj[constants.DETAILS] = obj;
@@ -307,8 +309,8 @@ class GuildRoleSubscriptionGroupSetupModal {
     }, []);
     callback = obj.useCallback((arg0) => {
       closure_0 = arg0;
-      guildId(_undefined[12]);
-      const obj = { setup_modal_step: memo.findIndex((item, index) => item === closure_0) + 1 };
+      let obj = guildId(_undefined[12]);
+      obj = { setup_modal_step: memo.findIndex((arg0) => arg0 === closure_0) + 1 };
       obj.trackWithMetadata(_handleCreateGroupAndTier.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj);
     }, items1);
     obj = { guildId, editStateId: first, groupListingId: null, children: null };
@@ -337,6 +339,6 @@ class GuildRoleSubscriptionGroupSetupModal {
 }
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: c9 } = MAX_SUBSCRIPTION_TIERS);
 GuildRoleSubscriptionGroupSetupModal.modalConfig = { closable: false };
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupSetupModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupSetupModal.tsx");
 
 export default GuildRoleSubscriptionGroupSetupModal;

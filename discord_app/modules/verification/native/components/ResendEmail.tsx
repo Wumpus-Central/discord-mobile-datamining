@@ -1,19 +1,19 @@
 // === Module 8568: ResendEmail ===
 
 // Module 8568 (ResendEmail)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import handleRequiredAction from "handleRequiredAction" /* 1385 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "handleRequiredAction" /* 1385 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { VerificationModalScenes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, resend: { marginTop: 16, width: "100%" }, change: { marginTop: 8, width: "100%" } });
-let result = require("obj132").fileFinishedImporting("modules/verification/native/components/ResendEmail.tsx");
+let result = require("set").fileFinishedImporting("modules/verification/native/components/ResendEmail.tsx");
 
 export default function ResendEmail() {
   let tmp = callback3();
@@ -34,7 +34,7 @@ export default function ResendEmail() {
   const result = obj3.isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
   [tmp10, dependencyMap] = callback(React.useState(false), 2);
-  React.useRef(verified);
+  callback = React.useRef(verified);
   const items2 = [verified];
   const effect = React.useEffect(() => {
     let tmp = verified;
@@ -42,16 +42,17 @@ export default function ResendEmail() {
       tmp = false === ref.current;
     }
     if (tmp) {
-      verified(dependencyMap[12]).close();
-      const obj = verified(dependencyMap[12]);
+      verified(closure_1_2[12]).close();
+      const obj = verified(closure_1_2[12]);
     }
   }, items2);
   const effect1 = React.useEffect(() => {
     closure_3.current = verified;
   });
   const items3 = [navigation];
+  obj = { style: tmp.container, children: null };
   callback = React.useCallback(() => {
-    navigation.push(VerificationModalScenes.ENTER_EMAIL);
+    navigation.push(closure_1_8.ENTER_EMAIL);
   }, items3);
   const items4 = [callback2(navigation(5447).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -91,10 +92,10 @@ export default function ResendEmail() {
     const intl4 = tmp2(1236).intl;
     obj6[0] = intl4.string(tmp2(1236).t.Vm8akB);
     obj6[2] = callback;
-    obj5[1] = callback2(tmp2(4745).Button, obj6);
-    tmp16Result = callback2(View, obj5);
+    obj5[1] = tmp16(tmp2(4745).Button, obj6);
+    tmp16Result = tmp16(tmp15, obj5);
   }
   items4[4] = tmp16Result;
   obj[1] = items4;
-  return callback(View, obj);
+  return closure_10(View, obj);
 };

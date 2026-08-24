@@ -1,15 +1,15 @@
 // === Module 9804: CrunchyrollLinkDiscordConsent ===
 
 // Module 9804 (CrunchyrollLinkDiscordConsent)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { CrunchyrollLinkModalScenes as closure_3 } from "CrunchyrollLinkModalScenes" /* 9799 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import CRUNCHYROLL_LINK_DEST_ORIGIN from "CRUNCHYROLL_LINK_DEST_ORIGIN" /* 9047 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ CRUNCHYROLL_CLIENT_ID: c5, CRUNCHYROLL_CLIENT_SCOPES: closure_6 } = CRUNCHYROLL_LINK_DEST_ORIGIN);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx");
 
 export default function CrunchyrollLinkDiscordConsent(arg0) {
   let navigation;

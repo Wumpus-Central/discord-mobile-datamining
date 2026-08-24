@@ -1,7 +1,7 @@
 // === Module 1920: _initLibdiscore ===
 
 // Module 1920 (_initLibdiscore)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import importAllResult from "setTimeout" /* 1921 */;
 
@@ -52,7 +52,7 @@ function _initLibdiscore() {
   return applyArgumentsResult;
 }
 const result = importAllResult.registerTimerPolyfills();
-const result1 = require("obj132").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx");
+const result1 = require("set").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx");
 
 export const isLibdiscoreInitialized = function isLibdiscoreInitialized() {
   return undefined !== NativeModules.LibDiscoreModule;

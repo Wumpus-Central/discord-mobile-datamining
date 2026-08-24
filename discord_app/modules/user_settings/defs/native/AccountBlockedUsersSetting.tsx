@@ -3,11 +3,11 @@
 // Module 14157 (route)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_2 from "markAllUserIdListsStale" /* 4030 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-{
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.PFOUKW);
@@ -29,7 +29,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx");
 
 export default createToggle;
 export const AccountBlockedUsersSettingV2 = createToggle;

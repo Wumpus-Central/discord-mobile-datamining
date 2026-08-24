@@ -8,11 +8,20 @@ if (typeof globalThis !== "undefined") {
 }
 
 export default function availableTypedArrays() {
+  let tmp2;
   const items = [];
-  for (let num = 0; num < _mod1419.length; num = num + 1) {
-    if (typeof global[_mod1419[num]] === "function") {
-      items[items.length] = _mod1419[num];
-    }
+  let num = 0;
+  if (0 < _mod1419.length) {
+    do {
+      let tmp = global;
+      tmp2 = require;
+      let tmp3 = dependencyMap;
+      let tmp4 = num;
+      if (typeof global[_mod1419[num]] === "function") {
+        items[items.length] = tmp2(1419)[num];
+      }
+      num = num + 1;
+    } while (num < tmp2(1419).length);
   }
   return items;
 };

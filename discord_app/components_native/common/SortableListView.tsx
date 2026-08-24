@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c3, Animated: c4, Dimensions, PanResponder: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let height = Dimensions.get("window").height;
@@ -25,7 +25,8 @@ let closure_12 = importAllResult.memo((stateFromStores) => {
     if (current != null) {
       current.measure((frameX, frameY, frameWidth, frameHeight, pageX, pageY) => {
         const current = ref.current;
-        const obj = { frameX, frameY, frameWidth, frameHeight, pageX, pageY };
+        obj = { layout: obj, rowData: ref.current.rowData };
+        obj = { frameX, frameY, frameWidth, frameHeight, pageX, pageY };
         current.onRowActive(obj);
       });
     }
@@ -68,9 +69,9 @@ let closure_12 = importAllResult.memo((stateFromStores) => {
   if (hideContent) {
     obj = { height: 0.01, opacity: 0 };
   }
-  items[1] = callback(closure_3, { style: obj, children: ref.cloneElement(renderRow(item, index, active), { sortHandlers: { onLongPress: callback, onPressOut } }) });
+  items[1] = closure_7(closure_3, { style: obj, children: ref.cloneElement(renderRow(item, index, active), { sortHandlers: { onLongPress: callback, onPressOut } }) });
   obj[2] = items;
-  return callback2(closure_3, obj);
+  return closure_8(closure_3, obj);
 });
 let closure_13 = importAllResult.memo((listPageY) => {
   ({ rowData, pan, frameHeight } = listPageY);
@@ -157,7 +158,8 @@ class SortableListView extends Component {
       if (null != renderActiveDivider) {
         let renderActiveDividerResult = renderActiveDivider(frameHeight);
       } else {
-        const obj = { height: null };
+        let obj = { style: null };
+        obj = { height: null };
         obj[0] = frameHeight;
         obj[0] = obj;
         renderActiveDividerResult = closure_1_7(closure_1_3, obj);
@@ -334,13 +336,13 @@ class SortableListView extends Component {
     tmp2._updateLayoutMap = function _updateLayoutMap(arg0, arg1) {
       let tmp2 = null == lib.firstRowY;
       if (!tmp2) {
-        tmp2 = 0 === lib.firstRowY;
+        tmp2 = 0 === tmp.firstRowY;
       }
       if (!tmp2) {
-        tmp2 = arg1.y < lib.firstRowY;
+        tmp2 = arg1.y < tmp.firstRowY;
       }
       if (tmp2) {
-        lib.firstRowY = arg1.y;
+        tmp.firstRowY = arg1.y;
       }
       lib.layoutMap[arg0] = arg1;
     };
@@ -470,7 +472,7 @@ prototype["componentDidMount"] = function componentDidMount() {
       scrollResponder = current.getScrollResponder();
     }
     self.scrollResponder = scrollResponder;
-    const current2 = self._wrapperRef.current;
+    const current2 = tmp._wrapperRef.current;
     if (current2 != null) {
       current2.measure((frameX, frameY, frameWidth, frameHeight, pageX, pageY) => {
         closure_0.wrapperLayout = { frameX, frameY, frameWidth, frameHeight, pageX, pageY };
@@ -502,8 +504,9 @@ prototype["getMemoedRowData"] = function getMemoedRowData(index, item) {
 prototype["render"] = function render() {
   const self = this;
   const props = this.props;
-  const items = [props.wrapperStyles, { flex: 1 }];
-  const obj = {};
+  let obj = { ref: this._wrapperRef, style: items, children: null };
+  items = [props.wrapperStyles, { flex: 1 }];
+  obj = {};
   ({ contentContainerStyle, header, footer, data, scrollEnabled, keyboardShouldPersistTaps, scrollEventThrottle } = props);
   const merged = Object.assign(this._panResponder.panHandlers);
   obj.ref = this._listRef;
@@ -526,11 +529,11 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [callback(closure_6, obj), self.renderActive()];
+  const items1 = [closure_7(closure_6, obj), self.renderActive()];
   obj[2] = items1;
-  return callback2(closure_3, obj);
+  return closure_8(closure_3, obj);
 };
 SortableListView.defaultProps = { disableSorting: false };
-let result = require("obj132").fileFinishedImporting("components_native/common/SortableListView.tsx");
+let result = require("set").fileFinishedImporting("components_native/common/SortableListView.tsx");
 
 export default SortableListView;

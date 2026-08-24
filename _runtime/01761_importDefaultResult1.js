@@ -2,8 +2,8 @@
 
 // Module 1761 (importDefaultResult1)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_classPrivateFieldBase" /* 90 */;
 import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 
 const NativeEventsManager = arg1;
@@ -29,16 +29,21 @@ const items = [
     value: function attachEvents() {
       const props = callback2(this, closure_4)[closure_4].props;
       for (const key10010 in props) {
+        let tmp5 = key10010;
         let tmp6 = props[key10010];
+        let tmp7 = NativeEventsManager;
+        let tmp8 = dependencyMap;
         let obj = NativeEventsManager(1751);
         let hasItem = obj.has("workletEventHandler", tmp6);
         if (hasItem) {
-          hasItem = tmp6.workletEventHandler instanceof NativeEventsManager(1759).WorkletEventHandler;
+          hasItem = tmp6.workletEventHandler instanceof tmp7(1759).WorkletEventHandler;
         }
         if (!hasItem) {
           continue;
         } else {
           let workletEventHandler = tmp6.workletEventHandler;
+          let tmp2 = callback2;
+          let tmp3 = closure_6;
           let registerForEventsResult = workletEventHandler.registerForEvents(callback2(this, closure_6)[closure_6], key10010);
           continue;
         }
@@ -51,16 +56,21 @@ const items = [
     value: function detachEvents() {
       const props = callback2(this, closure_4)[closure_4].props;
       for (const key10010 in props) {
+        let tmp5 = key10010;
         let tmp6 = props[key10010];
+        let tmp7 = NativeEventsManager;
+        let tmp8 = dependencyMap;
         let obj = NativeEventsManager(1751);
         let hasItem = obj.has("workletEventHandler", tmp6);
         if (hasItem) {
-          hasItem = tmp6.workletEventHandler instanceof NativeEventsManager(1759).WorkletEventHandler;
+          hasItem = tmp6.workletEventHandler instanceof tmp7(1759).WorkletEventHandler;
         }
         if (!hasItem) {
           continue;
         } else {
           let workletEventHandler = tmp6.workletEventHandler;
+          let tmp2 = callback2;
+          let tmp3 = closure_6;
           let unregisterFromEventsResult = workletEventHandler.unregisterFromEvents(callback2(this, closure_6)[closure_6]);
           continue;
         }
@@ -75,16 +85,21 @@ const items = [
       const eventViewTag = this.getEventViewTag(true);
       if (callback2(this, closure_6)[closure_6] !== eventViewTag) {
         for (const key10071 in arg0) {
+          let tmp36 = key10071;
           let tmp37 = arg0[key10071];
+          let tmp38 = NativeEventsManager;
+          let tmp39 = dependencyMap;
           let obj4 = NativeEventsManager(1751);
           let hasItem = obj4.has("workletEventHandler", tmp37);
           if (hasItem) {
-            hasItem = tmp37.workletEventHandler instanceof NativeEventsManager(1759).WorkletEventHandler;
+            hasItem = tmp37.workletEventHandler instanceof tmp38(1759).WorkletEventHandler;
           }
           if (!hasItem) {
             continue;
           } else {
             let workletEventHandler4 = tmp37.workletEventHandler;
+            let tmp21 = callback2;
+            let tmp22 = closure_6;
             let unregisterFromEventsResult = workletEventHandler4.unregisterFromEvents(callback2(self, closure_6)[closure_6]);
             continue;
           }
@@ -94,22 +109,27 @@ const items = [
         self.attachEvents();
       } else {
         for (const key10010 in arg0) {
+          let tmp28 = key10010;
           let tmp29 = arg0[key10010];
+          let tmp30 = NativeEventsManager;
+          let tmp31 = dependencyMap;
           let obj2 = NativeEventsManager(1751);
           let hasItem1 = obj2.has("workletEventHandler", tmp29);
           if (hasItem1) {
-            hasItem1 = tmp29.workletEventHandler instanceof NativeEventsManager(1759).WorkletEventHandler;
+            hasItem1 = tmp29.workletEventHandler instanceof tmp30(1759).WorkletEventHandler;
           }
           if (!hasItem1) {
             continue;
           } else {
             let workletEventHandler = tmp29.workletEventHandler;
+            let tmp3 = callback2;
+            let tmp4 = closure_4;
             let tmp5 = callback2(self, closure_4)[closure_4].props[key10010];
             if (tmp5) {
-              let tmp30Result = NativeEventsManager(1751);
+              let tmp30Result = tmp30(1751);
               let hasItem2 = tmp30Result.has("workletEventHandler", tmp5);
               if (hasItem2) {
-                hasItem2 = tmp5.workletEventHandler instanceof NativeEventsManager(1759).WorkletEventHandler;
+                hasItem2 = tmp5.workletEventHandler instanceof tmp30(1759).WorkletEventHandler;
               }
               if (hasItem2) {
                 hasItem2 = tmp5.workletEventHandler !== workletEventHandler;
@@ -117,14 +137,16 @@ const items = [
               if (!hasItem2) {
                 continue;
               } else {
-                let unregisterFromEventsResult1 = workletEventHandler.unregisterFromEvents(callback2(self, closure_6)[closure_6]);
+                let tmp9 = closure_6;
+                let unregisterFromEventsResult1 = workletEventHandler.unregisterFromEvents(tmp3(self, closure_6)[closure_6]);
                 let workletEventHandler2 = tmp5.workletEventHandler;
-                let registerForEventsResult = workletEventHandler2.registerForEvents(callback2(self, closure_6)[closure_6]);
+                let registerForEventsResult = workletEventHandler2.registerForEvents(tmp3(self, closure_6)[closure_6]);
                 continue;
               }
               continue;
             } else {
-              let unregisterFromEventsResult2 = workletEventHandler.unregisterFromEvents(callback2(self, closure_6)[closure_6]);
+              let tmp6 = closure_6;
+              let unregisterFromEventsResult2 = workletEventHandler.unregisterFromEvents(tmp3(self, closure_6)[closure_6]);
               continue;
             }
             continue;
@@ -133,11 +155,14 @@ const items = [
         }
         const props = callback2(self, closure_4)[closure_4].props;
         for (const key10054 in props) {
+          let tmp32 = key10054;
           let tmp33 = props[key10054];
+          let tmp34 = NativeEventsManager;
+          let tmp35 = dependencyMap;
           let obj3 = NativeEventsManager(1751);
           let hasItem3 = obj3.has("workletEventHandler", tmp33);
           if (hasItem3) {
-            hasItem3 = tmp33.workletEventHandler instanceof NativeEventsManager(1759).WorkletEventHandler;
+            hasItem3 = tmp33.workletEventHandler instanceof tmp34(1759).WorkletEventHandler;
           }
           if (!hasItem3) {
             continue;
@@ -146,6 +171,8 @@ const items = [
             if (arg0[key10054]) {
               continue;
             } else {
+              let tmp16 = callback2;
+              let tmp17 = closure_6;
               let registerForEventsResult1 = workletEventHandler3.registerForEvents(callback2(self, closure_6)[closure_6]);
               continue;
             }
@@ -182,13 +209,13 @@ const items = [
         }
         return tmp16;
       } else {
-        const tmp5 = callback2(self, closure_5)[closure_5];
+        const tmp5 = tmp(self, closure_5)[closure_5];
         let setNativeProps;
         if (tmp5 != null) {
           setNativeProps = tmp5.setNativeProps;
         }
         if (setNativeProps) {
-          let num3 = NativeEventsManager(1762).findNodeHandle(callback2(self, closure_4)[closure_4]);
+          let num3 = NativeEventsManager(1762).findNodeHandle(tmp(self, tmp2)[tmp2]);
           if (num3 == null) {
             num3 = -1;
           }
@@ -221,8 +248,8 @@ const items = [
           }
           num = num2;
         } else {
-          componentViewTag = callback2(self, closure_4)[closure_4].getComponentViewTag();
-          const obj = callback2(self, closure_4)[closure_4];
+          componentViewTag = tmp(self, tmp2)[tmp2].getComponentViewTag();
+          const obj = tmp(self, tmp2)[tmp2];
         }
         return componentViewTag;
       }

@@ -2,11 +2,11 @@
 
 // Module 10915 (_getMetadata)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import sortActivity from "sortActivity" /* 4559 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "sortActivity" /* 4559 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _getMetadata() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -59,23 +59,24 @@ function _getMetadata() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("actions/UserActivityActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
 export const sync = function sync(activity, userId) {
-  const obj = { type: "ACTIVITY_SYNC", activity, userId };
+  let obj = dispatcherDefault;
+  obj = { type: "ACTIVITY_SYNC", activity, userId };
   obj.dispatch(obj);
 };
 export const play = function play(closure_0, closure_1) {
   const _require = closure_0;
   const spotifyMetadataFromActivity = _require(10914).getSpotifyMetadataFromActivity(closure_0, closure_1);
   let obj = _require(10914);
-  spotifyMetadataFromActivity.then((result) => {
-    callback(dependencyMap[3]);
-    const obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata: result };
+  spotifyMetadataFromActivity.then((metadata) => {
+    let obj = callback(closure_1_2[3]);
+    obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };
     return obj.dispatch(obj);
-  }).catch((error) => {
-    callback(dependencyMap[3]);
-    const obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback };
+  }).catch(() => {
+    let obj = callback(closure_1_2[3]);
+    obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback };
     return obj.dispatch(obj);
   });
 };

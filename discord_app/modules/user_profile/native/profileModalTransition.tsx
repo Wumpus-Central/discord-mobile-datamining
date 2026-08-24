@@ -1,12 +1,13 @@
 // === Module 16004: set ===
 
 // Module 16004 (set)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
+import set from "set" /* 2 */;
 
-const require = fn;
+const require = arg1;
 let c3 = 0;
-const set = new Set();
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/profileModalTransition.tsx");
+let set = new Set();
+const result = set.fileFinishedImporting("modules/user_profile/native/profileModalTransition.tsx");
 
 export const useReportProfileModalTransition = function useReportProfileModalTransition() {
   navigation = navigation(1500).useNavigation();
@@ -18,7 +19,7 @@ export const useReportProfileModalTransition = function useReportProfileModalTra
         const _Math = Math;
         bound = Math.max(0, bound - 1);
         if (bound !== bound) {
-          const item = closure_1_4.forEach((item, index) => item());
+          const item = closure_1_4.forEach((arg0) => arg0());
         }
       }
     }
@@ -30,7 +31,7 @@ export const useReportProfileModalTransition = function useReportProfileModalTra
           const _Math = Math;
           bound = Math.max(0, bound + 1);
           if (bound !== bound) {
-            const item = closure_1_4.forEach((item, index) => item());
+            const item = closure_1_4.forEach((arg0) => arg0());
           }
         }
       }),
@@ -38,13 +39,13 @@ export const useReportProfileModalTransition = function useReportProfileModalTra
       navigation.addListener("gestureCancel", leave)
     ];
     return () => {
-      const item = items.forEach((item, index) => item());
+      const item = items.forEach((arg0) => arg0());
       if (c0) {
         c0 = false;
         const _Math = Math;
         bound = Math.max(0, bound - 1);
         if (bound !== bound) {
-          const item1 = closure_1_4.forEach((item, index) => item());
+          const item1 = closure_1_4.forEach((arg0) => arg0());
         }
       }
     };

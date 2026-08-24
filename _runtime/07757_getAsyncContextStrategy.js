@@ -18,5 +18,6 @@ arg5.getAsyncContextStrategy = function getAsyncContextStrategy(arg0) {
 };
 arg5.setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
   const mainCarrier = getMainCarrier.getMainCarrier();
+  const obj = getMainCarrier;
   getMainCarrier.getSentryCarrier(mainCarrier).acs = acs;
 };

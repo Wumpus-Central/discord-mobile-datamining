@@ -7,21 +7,27 @@ import Text from "Text" /* 4734 */;
 import useDesignToggleDefault from "useDesignToggle" /* 5295 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { "os-drawn": "OS-Drawn", "custom-drawn": "Custom-Drawn", "js-stack": "JS Stack", sheet: "Sheet", bespoke: "Bespoke" };
-const createCacheKey = { paddingHorizontal: 4, paddingVertical: 1, borderRadius: ThemesDefault.radii.xs };
+createCacheKey = { tintWash: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", opacity: 0.15 }, badgeContainer: { position: "absolute", bottom: 2, right: 4, pointerEvents: "none" }, badge: null, "color-os-drawn": null, "color-custom-drawn": null, "color-js-stack": null, "color-sheet": null, "color-bespoke": null };
+createCacheKey = { paddingHorizontal: 4, paddingVertical: 1, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.TEXT_LINK };
+let obj1 = { backgroundColor: ThemesDefault.colors.TEXT_LINK };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.STATUS_DANGER };
+let obj2 = { backgroundColor: ThemesDefault.colors.STATUS_DANGER };
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[6] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
+const obj4 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
 createCacheKey[7] = { backgroundColor: ThemesDefault.colors.STATUS_WARNING };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx");
+const obj5 = { backgroundColor: ThemesDefault.colors.STATUS_WARNING };
+const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx");
 
 export default function useHeaderDebugOverlay(arg0, arg1) {
   const tmp3 = callback3();
@@ -32,7 +38,8 @@ export default function useHeaderDebugOverlay(arg0, arg1) {
     if (arg1 == null) {
       tmp6 = table[arg0];
     }
-    let obj = { style: null };
+    let obj = { children: null };
+    obj = { style: null };
     const items = [tmp3.tintWash, tmp8];
     obj[0] = items;
     const items1 = [callback(View, obj), ];

@@ -1,9 +1,9 @@
 // === Module 8158: Changeset ===
 
 // Module 8158 (Changeset)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorConstants.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorConstants.tsx");
 
 export const Changeset = { NOOP: 0, [0]: "NOOP", INSERT: 1, [1]: "INSERT", UPDATE: 2, [2]: "UPDATE", REMOVE: 3, [3]: "REMOVE" };
 export const RowType = { SEPARATOR: 0, [0]: "SEPARATOR", MESSAGE: 1, [1]: "MESSAGE", BLOCKED_GROUP: 2, [2]: "BLOCKED_GROUP", LOADING: 4, [4]: "LOADING", EMBEDDED_ACTIVITY: 5, [5]: "EMBEDDED_ACTIVITY", IGNORED_GROUP: 6, [6]: "IGNORED_GROUP", SUSPENDED_USER_GROUP: 7, [7]: "SUSPENDED_USER_GROUP" };

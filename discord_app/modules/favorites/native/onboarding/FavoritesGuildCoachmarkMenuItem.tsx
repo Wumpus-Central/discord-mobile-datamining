@@ -3,14 +3,16 @@
 // Module 15494 (FavoritesGuildCoachmarkMenuItemContent)
 import Layer from "Layer" /* 7126 */;
 import items12 from "items1" /* 9990 */;
-import noop from "noop" /* 19 */;
-import initializeFromUserSettings from "initializeFromUserSettings" /* 1394 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "initializeFromUserSettings" /* 1394 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   let stateFromStores;
+  let shouldShowPopover;
   let markPopoverAsDismissed;
   let callback;
   let callback1;
@@ -19,15 +21,15 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   stateFromStores = stateFromStores(markPopoverAsDismissed[7]).useStateFromStores(items, () => callback1.hasStoredFavorites());
   let obj = stateFromStores(markPopoverAsDismissed[7]);
   const favoritesMenuItemPopoverDismissibleContent = stateFromStores(markPopoverAsDismissed[5]).useFavoritesMenuItemPopoverDismissibleContent(set.has(channelType));
-  const shouldShowPopover = favoritesMenuItemPopoverDismissibleContent.shouldShowPopover;
+  shouldShowPopover = favoritesMenuItemPopoverDismissibleContent.shouldShowPopover;
   markPopoverAsDismissed = favoritesMenuItemPopoverDismissibleContent.markPopoverAsDismissed;
   const items1 = [markPopoverAsDismissed];
   callback = callback.useCallback(() => {
-    markPopoverAsDismissed(ContentDismissActionType.USER_DISMISS);
+    markPopoverAsDismissed(closure_1_5.USER_DISMISS);
   }, items1);
   const items2 = [markPopoverAsDismissed];
   callback1 = callback.useCallback(() => {
-    markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+    markPopoverAsDismissed(closure_1_5.TAKE_ACTION);
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, callback, callback1];
   const memo = callback.useMemo(() => {
@@ -35,18 +37,16 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
     const intl = stateFromStores(markPopoverAsDismissed[8]).intl;
     const tmp4 = shouldShowPopover(markPopoverAsDismissed[9]);
     if (stateFromStores) {
-      let TWuDTt = tmp4.TWuDTt;
-      let tmp6 = shouldShowPopover;
+      let tmp5 = tmp3;
     } else {
-      TWuDTt = tmp4["25YCHl"];
-      tmp6 = shouldShowPopover;
+      tmp5 = tmp3;
     }
-    obj[2] = intl.string(TWuDTt);
-    const intl2 = stateFromStores(markPopoverAsDismissed[8]).intl;
-    obj[3] = intl2.string(tmp6(markPopoverAsDismissed[9]).Ztl9ht);
+    obj[2] = intl.string(_25YCHl);
+    const intl2 = tmp(tmp2[8]).intl;
+    obj[3] = intl2.string(tmp5(markPopoverAsDismissed[9]).Ztl9ht);
     obj[4] = callback;
-    const intl3 = stateFromStores(markPopoverAsDismissed[8]).intl;
-    obj[6] = intl3.string(tmp6(markPopoverAsDismissed[9])["+h9aza"]);
+    const intl3 = tmp(tmp2[8]).intl;
+    obj[6] = intl3.string(tmp5(markPopoverAsDismissed[9])["+h9aza"]);
     obj[7] = callback1;
     return obj;
   }, items3);
@@ -56,13 +56,14 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
 }
 let items = [, , ];
 ({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = require("ME").ChannelTypes);
-const set = new Set(items);
-const result = require("obj132").fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx");
 
 export default function FavoritesGuildCoachmarkMenuItem(arg0) {
   let obj = items12;
   let tmp3 = null;
   if (obj.useShouldRenderFavoritesMenuItemPopover()) {
+    obj = { zIndex: 1, children: null };
     obj = {};
     const merged = Object.assign(arg0);
     obj[1] = <FavoritesGuildCoachmarkMenuItemContent />;

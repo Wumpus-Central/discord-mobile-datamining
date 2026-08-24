@@ -1,7 +1,7 @@
 // === Module 13096: calculateFps ===
 
 // Module 13096 (calculateFps)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import ME from "ME" /* 676 */;
 import isTablet from "isTablet" /* 4383 */;
@@ -58,7 +58,8 @@ prototype["calculateFps"] = function calculateFps(arg0, arg1, arg2) {
   return NaN;
 };
 prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
-  const self = this;
+  let self = this;
+  self = this;
   if (!this.disabled) {
     const streamDisabledUsers = self.streamDisabledUsers;
     if (!streamDisabledUsers.has(arg0)) {
@@ -71,8 +72,9 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
           if (self.perUserFpsWindow[arg0].length >= self.windowLength) {
             if (self.perUserFpsWindow[arg0].length > self.windowLength) {
               arr = self.perUserFpsWindow[arg0].shift();
+              const arr2 = self.perUserFpsWindow[arg0];
             }
-            if (arr3.filter((item, index) => item < self.fpsThreshold).length >= self.fpsWindowBorderlineCount) {
+            if (arr3.filter((arg0) => arg0 < self.fpsThreshold).length >= self.fpsWindowBorderlineCount) {
               const logger = self.logger;
               const _HermesInternal = HermesInternal;
               logger.info("" + arg0 + ": detected poor network quality, turning off video");
@@ -82,11 +84,11 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
               dispatchAutoDisableVideoDefault(arg0, VideoToggleState.DISABLED);
               const result = self.startReenableBackoffTimer(arg0);
             } else if (self.currentVideoAutoToggleState[arg0] === VideoToggleState.AUTO_PROBING) {
-              self.currentVideoAutoToggleState[arg0] = VideoToggleState.AUTO_ENABLED;
+              self.currentVideoAutoToggleState[arg0] = tmp7.AUTO_ENABLED;
               const logger2 = self.logger;
               const _HermesInternal2 = HermesInternal;
               logger2.info("acceptable conditions reached, will reset and send a AUTO_ENABLED for user " + arg0);
-              dispatchAutoDisableVideoDefault(arg0, VideoToggleState.AUTO_ENABLED);
+              dispatchAutoDisableVideoDefault(arg0, tmp7.AUTO_ENABLED);
             }
             if (self.probingUserId === arg0) {
               self.probingUserId = undefined;
@@ -100,7 +102,8 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
   }
 };
 prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0) {
-  const self = this;
+  let self = this;
+  self = this;
   const _require = arg0;
   if (!this.disabled) {
     const logger = self.logger;
@@ -171,6 +174,7 @@ prototype["reenableVideo"] = function reenableVideo(arr) {
     self.probingUserId = arr;
     dispatchAutoDisableVideoDefault(arr, VideoToggleState.AUTO_PROBING);
     flag = true;
+    const obj = sleep;
   }
   return flag;
 };
@@ -220,11 +224,13 @@ prototype["disable"] = function disable() {
   const self = this;
   this.disabled = true;
   for (const key10004 in this.perUserFpsWindow) {
+    let tmp = key10004;
     let deleteUserResult = self.deleteUser(key10004);
     continue;
   }
 };
 VideoHealthManager.defaultConfig = { featureEnabled: isTablet.isMobile, windowLength: 5, allowedPoorFpsRatio: 1, fpsThreshold: 5, backoffTimeSec: 15 };
-let result = obj132.fileFinishedImporting("lib/VideoHealthManager.tsx");
+let obj = { featureEnabled: isTablet.isMobile, windowLength: 5, allowedPoorFpsRatio: 1, fpsThreshold: 5, backoffTimeSec: 15 };
+let result = set2.fileFinishedImporting("lib/VideoHealthManager.tsx");
 
 export { VideoHealthManager };

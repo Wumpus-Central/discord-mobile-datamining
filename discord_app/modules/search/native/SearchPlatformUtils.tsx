@@ -9,16 +9,16 @@ import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
 import _modDef11518 from "module_11518" /* 11518 */;
 import _modDef11531 from "module_11531" /* 11531 */;
 import _modDef11534 from "module_11534" /* 11534 */;
-import handleReaction from "handleReaction" /* 4971 */;
-import prototype from "prototype" /* 11510 */;
+import closure_3 from "handleReaction" /* 4971 */;
+import closure_4 from "prototype" /* 11510 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 import SEARCH_TEXT_INPUT_DEBOUNCE_TIME from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11524 */;
 import ME from "ME" /* 676 */;
 import importDefaultResult from "apply" /* 12 */;
 
-require = fn;
-function performKeyboardAwareNavigation(fn) {
-  const _require = fn;
+require = arg1;
+function performKeyboardAwareNavigation(arg0) {
+  const _require = arg0;
   if (obj.getKeyboardIsOpen()) {
     let tmpResult = tmp(500);
     if (tmpResult.isIOS()) {
@@ -28,8 +28,7 @@ function performKeyboardAwareNavigation(fn) {
       const timerId = setTimeout(() => callback(), 100);
     }
   }
-  fn();
-  obj = _require(7349);
+  arg0();
 }
 function delayUntilNavigationComplete(arg0) {
   closure_0 = arg0;
@@ -55,9 +54,10 @@ function getUrlIcon(target) {
         }
         return LinkIcon.LinkIcon;
       }
-      tmp10Result = isDiscordProxiedAssetUrlDefault;
+      tmp10Result = tmp10(1487);
     }
     obj = isDiscordProxiedAssetUrlDefault;
+    tmp10 = importDefault;
   }
 }
 function getGridItemBorderStyles(numItems) {
@@ -89,7 +89,8 @@ function getGridItemBorderStyles(numItems) {
 }
 function getMediaGridItemStyles(numItems) {
   ({ itemIndex, numColumns } = numItems);
-  let obj = { itemIndex, numItems: numItems.numItems, numColumns };
+  let obj = {};
+  obj = { itemIndex, numItems: numItems.numItems, numColumns };
   const merged = Object.assign(getGridItemBorderStyles(obj));
   const result = numItems.spacing * (numColumns - 1) / numColumns;
   const result1 = itemIndex % numColumns;
@@ -137,15 +138,16 @@ function getNextFetchLimit(arg0) {
 }
 function onInitialFetchMessagesSuccess(tabEntries) {
   tabEntries = tabEntries.tabEntries;
-  if (tabEntries.every((item, index) => {
-    [, tmp] = item;
+  if (tabEntries.every((arg0) => {
+    [, tmp] = arg0;
     let tmp2 = 0 === tmp.total_results;
     if (!tmp2) {
       tmp2 = null == tmp.total_results;
     }
     return tmp2;
   })) {
-    const obj = { searchContext: null };
+    let obj = _modDef11531;
+    obj = { searchContext: null };
     obj[0] = tabEntries.searchContext;
     const result = obj.trackSearchEmptyMessageResult(obj);
   }
@@ -155,28 +157,33 @@ function onFetchMessagesStart(searchQueryString) {
   _modDef11534.updateSearchQuery(searchQueryString.searchContext, (setSearchResultsQuery) => setSearchResultsQuery.setSearchResultsQuery(searchQueryString));
 }
 function fetchInitialMessages(closure_0) {
-  const queryString = store2.getQueryString(_require);
+  const _require = closure_0;
+  const queryString = store2.getQueryString(closure_0);
   if (isInitialSearchQueryResult) {
-    const type = _require.type;
+    const type = closure_0.type;
     if (constants3.GUILD_CHANNEL !== type) {
+      if (constants3.CHANNEL !== type) {
+        let tmp4 = closure_8;
+      }
     }
+    tmp4 = closure_5;
   } else {
     let obj = _require(11511);
-    const searchTabFetchId = obj.getSearchTabFetchId(_require, table[0], queryString);
+    const searchTabFetchId = obj.getSearchTabFetchId(closure_0, tmp3[0], queryString);
     obj1 = store;
     if (!store.getIsFetching(searchTabFetchId)) {
       const result = queryString(11518).clearAllSearchMesssages();
       const obj3 = queryString(11518);
       obj = { searchContext: null };
-      obj[0] = _require;
+      obj[0] = closure_0;
       queryString(11531).trackSearchStarted(obj);
       const obj4 = queryString(11531);
       obj = { searchContext: null, searchTabs: null, searchQueryString: null, getId: null, getLimit: null, onFetchStart: null, onFetchSuccess: null, pagination: null, trackExactTotalHits: null, searchMode: null };
-      obj[0] = _require;
-      obj[1] = table;
+      obj[0] = closure_0;
+      obj[1] = tmp3;
       obj[2] = queryString;
       obj[3] = function getId(closure_1) {
-        return callback(dependencyMap[5]).getSearchTabFetchId(callback, closure_1, queryString);
+        return callback(closure_1_2[5]).getSearchTabFetchId(callback, closure_1, queryString);
       };
       obj[4] = getInitialFetchLimit;
       obj[5] = onFetchMessagesStart;
@@ -189,20 +196,19 @@ function fetchInitialMessages(closure_0) {
       obj1[0] = cursor;
       obj[7] = obj1;
       const obj6 = queryString(11518);
-      obj[8] = tmp6(4066).SearchResultExactCountEnabled.getSetting();
+      obj[8] = _require(4066).SearchResultExactCountEnabled.getSetting();
       obj[9] = constants2.NEWEST;
       const tabMessages = obj6.fetchTabMessages(obj);
-      const SearchResultExactCountEnabled = tmp6(4066).SearchResultExactCountEnabled;
+      const SearchResultExactCountEnabled = _require(4066).SearchResultExactCountEnabled;
     }
-    tmp6 = _require;
   }
-  isInitialSearchQueryResult = store2.isInitialSearchQuery(_require);
 }
 function syncAutocomplete(closure_0) {
   const queryString = store2.getQueryString(closure_0, true);
   let obj = SearchTokenTypes;
   const tokenizeQueryResult = obj.tokenizeQuery(queryString);
   const selectionScope = SearchTokenTypes.getSelectionScope(tokenizeQueryResult, queryString.length - 1, queryString.length - 1);
+  const obj2 = SearchTokenTypes;
   obj = { searchContext: closure_0, tokens: tokenizeQueryResult, cursorScope: selectionScope, queryString };
   const result = _modDef11518.updateAutocompleteQuery(obj);
 }
@@ -227,8 +233,9 @@ let obj = {
     const bound = Math.min(dependencyMap[tab], closure_6);
     const searchTabFetchId1 = _require(11511).getSearchTabFetchId(searchContext, tab, queryString);
     if (!store.getIsInitialFetchComplete(searchTabFetchId1)) {
-      const isFetching = store.getIsFetching(searchTabFetchId);
-      let flag = !store.getIsInitialFetchComplete(searchTabFetchId);
+      const isFetching = obj3.getIsFetching(searchTabFetchId);
+      let flag = false;
+      flag = !obj3.getIsInitialFetchComplete(searchTabFetchId);
       if (!flag) {
         flag = isFetching;
       }
@@ -241,11 +248,11 @@ let obj = {
         obj[2] = queryString;
         obj[3] = getNextFetchLimit;
         obj[4] = function getId(closure_1) {
-          return searchContext(dependencyMap[5]).getSearchTabFetchId(searchContext, closure_1, queryString);
+          return searchContext(closure_1_2[5]).getSearchTabFetchId(searchContext, closure_1, queryString);
         };
         obj[5] = onFetchMessagesStart;
         obj[6] = arg2;
-        let cursor = store.getCursor(searchTabFetchId);
+        let cursor = obj3.getCursor(searchTabFetchId);
         if (cursor == null) {
           cursor = null;
         }
@@ -260,19 +267,21 @@ let obj = {
       }
       return tabMessages;
     } else {
-      const cursor1 = store.getCursor(searchTabFetchId1);
-      const totalCount = store.getTotalCount(searchTabFetchId1);
-      let messages = store.getMessages(searchTabFetchId1);
+      const cursor1 = obj3.getCursor(searchTabFetchId1);
+      const totalCount = obj3.getTotalCount(searchTabFetchId1);
+      let messages = obj3.getMessages(searchTabFetchId1);
       if (SearchResultExactCountEnabled.getSetting()) {
         let tmp12 = null != cursor1 && null != totalCount && null != messages;
         if (tmp12) {
           messages = messages.length;
           tmp12 = messages < totalCount;
         }
+        let tmp10 = tmp12;
+      } else if (null == totalCount) {
+        tmp10 = null != cursor1;
       }
       SearchResultExactCountEnabled = tmp2(4066).SearchResultExactCountEnabled;
     }
-    const obj2 = _require(11511);
   },
   syncAutocomplete,
   syncAutocompleteDebounced: null,
@@ -287,12 +296,12 @@ obj[12] = function navigateToSearchWithPrefetch(closure_8, closure_9) {
   const result1 = _modDef11534.initializeSearchQuery(closure_9);
   fetchInitialMessages(closure_9);
   obj = { searchContext: closure_9 };
-  navigation.navigate("search", obj);
+  closure_8.navigate("search", obj);
 };
-obj[13] = function subscribeSearchQueryState(searchContext, fn, fn2, arg3) {
+obj[13] = function subscribeSearchQueryState(searchContext, arg1, arg2, arg3) {
   closure_0 = searchContext;
-  closure_1 = fn;
-  closure_2 = fn2;
+  closure_1 = arg1;
+  closure_2 = arg2;
   let tmp = arg3;
   function callback() {
     const tmp = f88186(callback.getManager(closure_0));
@@ -301,13 +310,13 @@ obj[13] = function subscribeSearchQueryState(searchContext, fn, fn2, arg3) {
       f88187(tmp, closure_3);
     }
   }
-  const tmp2 = fn(callback.getManager(searchContext));
+  const tmp2 = arg1(callback.getManager(searchContext));
   closure_3 = tmp2;
   if (arg3) {
     tmp = null != tmp2;
   }
   if (tmp) {
-    fn2(closure_3, undefined);
+    arg2(closure_3, undefined);
   }
   callback.addChangeListener(callback);
   return () => callback.removeChangeListener(callback);
@@ -321,7 +330,7 @@ obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
     if (textInputValue2 != null) {
       textInputValue = textInputValue2.textInputValue;
     }
-    callback(textInputValue.textInputValue, textInputValue, textInputValue.textInputChangedFromInput);
+    closure_0(textInputValue.textInputValue, textInputValue, textInputValue.textInputChangedFromInput);
   };
   function callback() {
     const tmp = f88186(callback.getManager(closure_0));
@@ -330,8 +339,9 @@ obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
       f88187(tmp, closure_3);
     }
   }
+  let obj = callback;
   const manager = callback.getManager(closure_0);
-  const obj = { textInputValue: manager.getTextInputValue(), textInputChangedFromInput: manager.getTextValueChangedFromInput() };
+  obj = { textInputValue: manager.getTextInputValue(), textInputChangedFromInput: manager.getTextValueChangedFromInput() };
   if (arg2) {
     flag = true;
   }
@@ -342,73 +352,79 @@ obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
   return () => callback.removeChangeListener(callback);
 };
 const importDefaultResult1 = importDefaultResult;
-let result = require("obj132").fileFinishedImporting("modules/search/native/SearchPlatformUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/SearchPlatformUtils.tsx");
 
 export default obj;
 export const getMedia = function getMedia(items, items1) {
   guildIdFromSearchContext = guildIdFromSearchContext(11511).getGuildIdFromSearchContext(items);
   items = [];
-  let item = items1.forEach((item, index) => {
-    closure_0 = item;
+  let item = items1.forEach((getContentMessage) => {
+    closure_0 = getContentMessage;
     items = 0;
-    const contentMessage = item.getContentMessage();
+    const contentMessage = getContentMessage.getContentMessage();
     const attachments = contentMessage.attachments;
     if (attachments != null) {
-      item = attachments.forEach((item, index) => {
-        let obj = guildIdFromSearchContext(dependencyMap[6]);
-        if (!obj.isThumbnailAttachment(item)) {
-          let tmpResult = guildIdFromSearchContext(dependencyMap[6]);
-          if (tmpResult.isValidImageAttachment(item)) {
-            tmpResult = guildIdFromSearchContext(dependencyMap[6]);
-            const result = tmpResult.extractMediaFromAttachment(item, closure_0, index, closure_0);
+      const item = attachments.forEach((flags, index) => {
+        let obj = guildIdFromSearchContext(closure_2_2[6]);
+        if (!obj.isThumbnailAttachment(flags)) {
+          let tmpResult = tmp(tmp2[6]);
+          if (tmpResult.isValidImageAttachment(flags)) {
+            tmpResult = tmp(tmp2[6]);
+            const result = tmpResult.extractMediaFromAttachment(flags, closure_0, index, closure_0);
             if (null != result) {
               obj = { type: null, attachment: null, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null };
               obj[0] = closure_2_12.ATTACHMENT;
-              obj[1] = item;
-              ({ id: obj5[2], channel_id: obj5[3], author: obj5[4] } = closure_0);
+              obj[1] = flags;
+              ({ id: obj5[2], channel_id: obj5[3], author: obj5[4] } = tmp4);
               obj[5] = arr;
               obj[6] = result;
               arr = arr.push(obj);
               arr = arr + 1;
             }
+            tmp4 = closure_0;
           } else {
-            guildIdFromSearchContext(dependencyMap[6]);
+            const tmpResult1 = tmp(tmp2[6]);
           }
         }
       });
     }
     const embeds = contentMessage.embeds;
     if (embeds != null) {
-      const item1 = embeds.forEach((item, index) => {
-        let obj = guildIdFromSearchContext(dependencyMap[6]);
-        if (obj.isValidImageEmbed(item)) {
-          let tmpResult = guildIdFromSearchContext(dependencyMap[6]);
-          const result = tmpResult.extractMediaFromEmbed(item, closure_0, contentMessage, index, closure_0);
+      const item1 = embeds.forEach((image) => {
+        let obj = guildIdFromSearchContext(closure_2_2[6]);
+        if (obj.isValidImageEmbed(image)) {
+          let tmpResult = tmp(tmp2[6]);
+          const result = tmpResult.extractMediaFromEmbed(image, closure_0, contentMessage, arg1, closure_0);
           if (null != result) {
             obj = { type: null, embed: null, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null };
             obj[0] = closure_2_12.EMBED;
-            obj[1] = item;
-            ({ id: obj4[2], channel_id: obj4[3], author: obj4[4] } = closure_0);
+            obj[1] = image;
+            ({ id: obj4[2], channel_id: obj4[3], author: obj4[4] } = tmp4);
             obj[5] = arr;
             obj[6] = result;
             arr = arr.push(obj);
             arr = arr + 1;
           }
+          tmp4 = closure_0;
         } else {
-          tmpResult = guildIdFromSearchContext(dependencyMap[6]);
+          tmpResult = tmp(tmp2[6]);
         }
       });
     }
-    let obj = guildIdFromSearchContext(dependencyMap[6]);
-    let result = obj.extractMediaFromMessageComponents(item, contentMessage, closure_0);
+    let obj = guildIdFromSearchContext(closure_1_2[6]);
+    let result = obj.extractMediaFromMessageComponents(getContentMessage, contentMessage, closure_0);
     const iter = result[Symbol.iterator]();
     while (iter !== undefined) {
+      let tmp6 = items;
       obj = { type: null, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null, unfurledMediaItem: null };
+      let tmp7 = closure_1_12;
       obj[0] = closure_1_12.COMPONENT;
-      ({ id: obj2[1], channel_id: obj2[2], author: obj2[3] } = item);
+      ({ id: obj2[1], channel_id: obj2[2], author: obj2[3] } = getContentMessage);
+      let tmp8 = items;
       obj[4] = items;
       ({ sources: obj2[5], unfurledMediaItem: obj2[6] } = nextResult);
       let arr = items.push(obj);
+      let tmp10 = items;
       items = items + 1;
       continue;
     }
@@ -416,12 +432,11 @@ export const getMedia = function getMedia(items, items1) {
     if (obj3.hasFlag(contentMessage.flags, closure_1_14.IS_VOICE_MESSAGE)) {
       obj = { type: null, messageId: null, channelId: null, author: null, mediaIndex: null };
       obj[0] = closure_1_12.AUDIO;
-      ({ id: obj4[1], channel_id: obj4[2], author: obj4[3] } = item);
+      ({ id: obj4[1], channel_id: obj4[2], author: obj4[3] } = getContentMessage);
       obj[4] = items;
       items.push(obj);
       items = items + 1;
     }
-    obj3 = guildIdFromSearchContext(dependencyMap[7]);
   });
   return items;
 };
@@ -431,30 +446,30 @@ export const getFiles = function getFiles(getContentMessage) {
   const contentMessage = getContentMessage.getContentMessage();
   const attachments = contentMessage.attachments;
   if (attachments != null) {
-    const item = attachments.forEach((item, index) => {
+    const item = attachments.forEach((attachment, fileIndex) => {
       let obj = getContentMessage(contentMessage[6]);
-      if (!obj.isValidImageAttachment(item)) {
-        let tmpResult = getContentMessage(contentMessage[6]);
-        if (!tmpResult.isValidVideoAttachment(item)) {
-          tmpResult = getContentMessage(contentMessage[7]);
+      if (!obj.isValidImageAttachment(attachment)) {
+        let tmpResult = tmp(tmp2[6]);
+        if (!tmpResult.isValidVideoAttachment(attachment)) {
+          tmpResult = tmp(tmp2[7]);
           const push = items.push;
           obj = { type: null, messageId: null, channelId: null, author: null, fileIndex: null, attachment: null };
           if (tmpResult.hasFlag(contentMessage.flags, closure_1_14.IS_VOICE_MESSAGE)) {
-            obj[0] = closure_1_10.AUDIO;
+            obj[0] = tmp6.AUDIO;
             ({ id: obj4[1], channel_id: obj4[2], author: obj4[3] } = getContentMessage);
-            obj[4] = index;
-            obj[5] = item;
+            obj[4] = fileIndex;
+            obj[5] = attachment;
             push(obj);
           } else {
-            obj[0] = closure_1_10.ATTACHMENT;
+            obj[0] = tmp6.ATTACHMENT;
             ({ id: obj4[1], channel_id: obj4[2], author: obj4[3] } = getContentMessage);
-            obj[4] = index;
-            obj[5] = item;
+            obj[4] = fileIndex;
+            obj[5] = attachment;
             push(obj);
           }
         }
       }
-      obj = { type: closure_1_10.MEDIA_ATTACHMENT, messageId: getContentMessage.id, channelId: getContentMessage.channel_id, author: getContentMessage.author, fileIndex: index, attachment: item };
+      obj = { type: closure_1_10.MEDIA_ATTACHMENT, messageId: getContentMessage.id, channelId: getContentMessage.channel_id, author: getContentMessage.author, fileIndex, attachment };
       items.push(obj);
     });
   }
@@ -469,23 +484,24 @@ export const getLinks = function getLinks(items, getContentMessage) {
   c4 = 0;
   const embeds = contentMessage.embeds;
   if (embeds != null) {
-    const item = embeds.forEach((item, index) => {
+    const item = embeds.forEach((image) => {
       let obj = getContentMessage(items[6]);
-      if (obj.isValidImageEmbed(item)) {
-        let tmpResult = getContentMessage(items[6]);
-        const result = tmpResult.extractMediaFromEmbed(item, getContentMessage, contentMessage, index, guildIdFromSearchContext);
+      if (obj.isValidImageEmbed(image)) {
+        let tmpResult = tmp(tmp2[6]);
+        const result = tmpResult.extractMediaFromEmbed(image, getContentMessage, contentMessage, arg1, guildIdFromSearchContext);
         if (null != result) {
           obj = { type: null, messageId: null, channelId: null, author: null, linkIndex: null, sources: null, embed: null };
           obj[0] = closure_1_11.EMBED;
-          ({ id: obj4[1], channel_id: obj4[2], author: obj4[3] } = getContentMessage);
+          ({ id: obj4[1], channel_id: obj4[2], author: obj4[3] } = tmp4);
           obj[4] = closure_4;
           obj[5] = result;
-          obj[6] = item;
+          obj[6] = image;
           items.push(obj);
           closure_4 = closure_4 + 1;
         }
+        tmp4 = getContentMessage;
       } else {
-        tmpResult = getContentMessage(items[6]);
+        tmpResult = tmp(tmp2[6]);
       }
     });
   }

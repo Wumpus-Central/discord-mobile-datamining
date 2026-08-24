@@ -5,18 +5,16 @@ import noopAll from "noop" /* 19 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
 import AppsIcon2 from "AppsIcon" /* 7974 */;
 import GameControllerIcon from "GameControllerIcon" /* 9430 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 9898 */;
 import TvIcon from "TvIcon" /* 9899 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 9901 */;
 import MusicIcon from "MusicIcon" /* 9904 */;
 import getActivityStatusTextDefault from "getActivityStatusText" /* 9906 */;
 import { ActivityTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
 
 export default function PresenceActivityStatus(hideText) {
   ({ activity, hideIcon } = hideText);
@@ -37,13 +35,13 @@ export default function PresenceActivityStatus(hideText) {
     let AppsIcon = AppsIcon2.AppsIcon;
   } else if (activity.type === ActivityTypes.PLAYING) {
     AppsIcon = GameControllerIcon.GameControllerIcon;
-  } else if (activity.type === ActivityTypes.LISTENING) {
+  } else if (activity.type === tmp3.LISTENING) {
     AppsIcon = MusicIcon.MusicIcon;
   } else {
-    if (activity.type !== ActivityTypes.WATCHING) {
-      if (activity.type !== ActivityTypes.STREAMING) {
+    if (activity.type !== tmp3.WATCHING) {
+      if (activity.type !== tmp3.STREAMING) {
         AppsIcon = null;
-        if (activity.type === ActivityTypes.COMPETING) {
+        if (activity.type === tmp3.COMPETING) {
           AppsIcon = GameControllerIcon.GameControllerIcon;
         }
       }
@@ -58,7 +56,7 @@ export default function PresenceActivityStatus(hideText) {
     let obj = { icon: null, style: null };
     obj[0] = AppsIcon;
     obj[1] = iconStyle;
-    tmp12 = callback(ActivityStatusIconDefault, obj);
+    tmp12 = callback(tmp(9898), obj);
   }
   const children = [tmp12, ];
   let tmp15 = !flag;
@@ -67,8 +65,8 @@ export default function PresenceActivityStatus(hideText) {
     obj[0] = textStyle;
     obj[1] = maxFontSizeMultiplier;
     obj[2] = getActivityStatusTextDefault(activity, true).text;
-    tmp15 = callback(ActivityStatusTextDefault, obj);
+    tmp15 = callback(tmp(9901), obj);
   }
   children[1] = tmp15;
-  return callback(closure_5, { children });
+  return closure_6(closure_5, { children });
 };

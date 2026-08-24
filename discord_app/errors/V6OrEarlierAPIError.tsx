@@ -1,7 +1,7 @@
 // === Module 4062: prototype ===
 
 // Module 4062 (prototype)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
@@ -28,6 +28,6 @@ const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
 }.prototype;
 class prototype extends V6OrEarlierAPIError {
 }
-const result = obj132.fileFinishedImporting("errors/V6OrEarlierAPIError.tsx");
+const result = set.fileFinishedImporting("errors/V6OrEarlierAPIError.tsx");
 
 export default prototype;

@@ -1,11 +1,11 @@
 // === Module 11718: usePowerupGroupConfig ===
 
 // Module 11718 (usePowerupGroupConfig)
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
 
 export default function usePowerupGroupConfig(arg0, arg1) {
   const _require = arg0;

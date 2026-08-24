@@ -1,10 +1,10 @@
 // === Module 11214: useActivityShelfItemsSorting ===
 
 // Module 11214 (useActivityShelfItemsSorting)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
 
 export default function useActivityShelfItemsSorting(arg0) {
   const _require = arg0;
@@ -14,23 +14,24 @@ export default function useActivityShelfItemsSorting(arg0) {
   return React.useMemo(() => {
     let items = [];
     let items2 = items;
-    const item = items2.forEach((item, index) => items2.push(item.application.id));
+    const item = items2.forEach((application) => items2.push(application.application.id));
     const items1 = [...items];
     const sorted = items1.sort((arg0, arg1) => {
       items2 = arg0;
       closure_1 = arg1;
       let num = 1;
-      if (findIndexResult < items2.findIndex((item, index) => item === closure_1)) {
+      if (findIndexResult < items2.findIndex((arg0) => arg0 === closure_1)) {
         num = -1;
       }
       return num;
     });
     items2 = undefined;
+    c1 = undefined;
     items2 = [...items2];
     c1 = 0;
-    const item1 = items1.forEach((item, index) => {
-      let items = item;
-      const findIndexResult = items.findIndex((item, index) => item.application.id === items);
+    const item1 = items1.forEach((arg0) => {
+      let items = arg0;
+      const findIndexResult = items.findIndex((application) => application.application.id === items);
       if (-1 !== findIndexResult) {
         items.splice(findIndexResult, 1);
         items = [];
@@ -40,12 +41,12 @@ export default function useActivityShelfItemsSorting(arg0) {
         closure_1 = closure_1 + 1;
       }
     });
-    const mapped = items2.map((item, index) => {
-      const items = [item, index];
+    const mapped = items2.map((arg0, arg1) => {
+      const items = [arg0, arg1];
       return items;
     });
-    const found = mapped.filter((item, index) => {
-      [tmp] = item;
+    const found = mapped.filter((arg0) => {
+      [tmp] = arg0;
       const embeddedActivityConfig = tmp.application.embeddedActivityConfig;
       let label_type;
       if (embeddedActivityConfig != null) {
@@ -60,11 +61,12 @@ export default function useActivityShelfItemsSorting(arg0) {
       if (tmp8) {
         tmp8 = label_type === items2(1954).EmbeddedActivityLabelTypes.NEW || label_type === items2(1954).EmbeddedActivityLabelTypes.UPDATED;
         const tmp11 = label_type === items2(1954).EmbeddedActivityLabelTypes.NEW || label_type === items2(1954).EmbeddedActivityLabelTypes.UPDATED;
+        const tmp9 = items2;
       }
       return tmp8;
     });
-    const item2 = found.forEach((item, index) => {
-      [tmp, tmp2] = item;
+    const item2 = found.forEach((arg0) => {
+      [tmp, tmp2] = arg0;
       let diff = tmp2;
       if (null != tmp.application.embeddedActivityConfig) {
         diff = tmp2;

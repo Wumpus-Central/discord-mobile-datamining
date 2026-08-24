@@ -1,10 +1,10 @@
 // === Module 4146: useRive ===
 
 // Module 4146 (useRive)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ useRef: c3, useCallback, useState: c4 } = noop);
 
 export const useRive = function useRive() {
@@ -35,8 +35,8 @@ export const useRive = function useRive() {
         }
         const items = [awaitViewReadyResult, promise];
         const racePromise = Promise.race(items);
-        const nextPromise = Promise.race(items).then((result) => {
-          if (true === result) {
+        const nextPromise = Promise.race(items).then((arg0) => {
+          if (true === arg0) {
             closure_1_1(closure_0);
           } else {
             const _console = console;
@@ -44,34 +44,34 @@ export const useRive = function useRive() {
             closure_1_1(null);
           }
         });
-        Promise.race(items).then((result) => {
-          if (true === result) {
+        Promise.race(items).then((arg0) => {
+          if (true === arg0) {
             closure_1_1(closure_0);
           } else {
             const _console = console;
             console.warn("Rive view ready check returned false");
             closure_1_1(null);
           }
-        }).catch((error) => {
-          console.warn("Failed to initialize Rive view:", error);
+        }).catch((arg0) => {
+          console.warn("Failed to initialize Rive view:", arg0);
           callback(null);
         }).finally(() => {
           if (ref.current) {
             const _clearTimeout = clearTimeout;
-            clearTimeout(ref.current);
-            ref.current = null;
+            clearTimeout(tmp.current);
+            tmp.current = null;
           }
         });
-        const catchPromise = Promise.race(items).then((result) => {
-          if (true === result) {
+        const catchPromise = Promise.race(items).then((arg0) => {
+          if (true === arg0) {
             closure_1_1(closure_0);
           } else {
             const _console = console;
             console.warn("Rive view ready check returned false");
             closure_1_1(null);
           }
-        }).catch((error) => {
-          console.warn("Failed to initialize Rive view:", error);
+        }).catch((arg0) => {
+          console.warn("Failed to initialize Rive view:", arg0);
           callback(null);
         });
       }

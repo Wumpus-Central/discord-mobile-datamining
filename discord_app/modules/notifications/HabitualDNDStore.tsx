@@ -2,13 +2,13 @@
 
 // Module 13269 (initialize)
 import initializeDefault from "initialize" /* 589 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
+import closure_3 from "filterPlayingActivities" /* 7250 */;
 import { StatusTypes } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 let closure_5 = [];
 let c6 = false;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -47,23 +47,23 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
       if ("0" === StatusExpiresAtSetting.getSetting()) {
         const _Date = Date;
         arr = arr.push(Date.now());
-        const found = arr.filter((item, index) => {
+        const found = arr.filter((arg0) => {
           const timestamp = Date.now();
-          return item > timestamp - 5 * callback(687).Millis.DAY;
+          return arg0 > timestamp - 5 * callback(687).Millis.DAY;
         });
         arr = found;
         let someResult = found.length >= 4;
         if (someResult) {
-          someResult = arr.some((item, index) => {
+          someResult = arr.some((arg0) => {
             const timestamp = Date.now();
-            return item < timestamp - 3 * callback(table[2]).Millis.DAY;
+            return arg0 < timestamp - 3 * callback(table[2]).Millis.DAY;
           });
         }
         if (someResult) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
             callback(709).dispatch({ type: "HABITUAL_DND_CLEAR" });
-          }, 15 * obj132Default.Millis.SECOND);
+          }, 15 * setDefault.Millis.SECOND);
         }
       }
     }
@@ -72,15 +72,15 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
   HABITUAL_DND_CLEAR: function handleDNDClear() {
     let someResult = arr.length >= 4;
     if (someResult) {
-      someResult = arr.some((item, index) => {
+      someResult = arr.some((arg0) => {
         const timestamp = Date.now();
-        return item < timestamp - 3 * callback(table[2]).Millis.DAY;
+        return arg0 < timestamp - 3 * callback(table[2]).Millis.DAY;
       });
     }
     c6 = someResult;
     arr = [];
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/notifications/HabitualDNDStore.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/HabitualDNDStore.tsx");
 
 export default habitualDNDStore;

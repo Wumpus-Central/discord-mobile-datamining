@@ -1,9 +1,9 @@
 // === Module 14957: INITIAL_SCROLL_DELAY_MS ===
 
 // Module 14957 (INITIAL_SCROLL_DELAY_MS)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");
 
 export const INITIAL_SCROLL_DELAY_MS = 100;
 export const useScrollToInitialIndexOnce = function useScrollToInitialIndexOnce(initialScrollIndex) {
@@ -15,6 +15,8 @@ export const useScrollToInitialIndexOnce = function useScrollToInitialIndexOnce(
     num = 100;
   }
   const resetKey = initialScrollIndex.resetKey;
+  closure_5 = undefined;
+  closure_6 = undefined;
   closure_5 = initialScrollIndex.useRef(false);
   closure_6 = initialScrollIndex.useRef(resetKey);
   const items = [shouldScroll, initialScrollIndex, num, flashListRef, resetKey];

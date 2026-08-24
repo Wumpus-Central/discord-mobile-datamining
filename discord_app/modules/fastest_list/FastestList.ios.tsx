@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import { RefreshControl } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function noop() {
 
 }
@@ -52,19 +52,19 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
         if (arg2 == null) {
           num3 = -1;
         }
-        tmp11Result = tmp11(inActionSheet(keyExtractor[6]).ITEM, arg1, num3);
+        tmp11Result = tmp11(inActionSheet(tmp2[6]).ITEM, arg1, num3);
       }
       return tmp11Result;
-    } else if (horizontal(keyExtractor[5]).FastListItemTypes.SECTION === arg0) {
+    } else if (tmp(tmp2[5]).FastListItemTypes.SECTION === arg0) {
       let tmp7Result;
       if (keyExtractor != null) {
-        tmp7Result = tmp7(inActionSheet(keyExtractor[6]).SECTION_HEADER, arg1, -1);
+        tmp7Result = tmp7(inActionSheet(tmp2[6]).SECTION_HEADER, arg1, -1);
       }
       return tmp7Result;
-    } else if (horizontal(keyExtractor[5]).FastListItemTypes.SECTION_FOOTER === arg0) {
+    } else if (tmp(tmp2[5]).FastListItemTypes.SECTION_FOOTER === arg0) {
       let tmp3Result;
       if (keyExtractor != null) {
-        tmp3Result = tmp3(inActionSheet(keyExtractor[6]).SECTION_FOOTER, arg1, -1);
+        tmp3Result = tmp3(inActionSheet(tmp2[6]).SECTION_FOOTER, arg1, -1);
       }
       return tmp3Result;
     }
@@ -72,11 +72,11 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   const memo = preventNativeModalDismiss.useMemo(() => {
     if (horizontal) {
       let obj = { left: null, right: null };
-      obj[0] = scrollIndicatorInsetStart;
+      obj[0] = tmp;
       obj[1] = scrollIndicatorInsetEnd;
     } else {
       obj = { top: null, bottom: null };
-      obj[0] = scrollIndicatorInsetStart;
+      obj[0] = tmp;
       obj[1] = scrollIndicatorInsetEnd;
     }
   }, items1);
@@ -86,7 +86,7 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
     if (true === preventNativeModalDismiss) {
       if (true === inActionSheet) {
         const obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-        obj[1] = noop;
+        obj[1] = closure_1_6;
         tmp = scrollIndicatorInsetStart(scrollIndicatorInsetEnd, obj);
       }
     }
@@ -156,6 +156,6 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   obj[36] = style;
   return scrollIndicatorInsetStart(AnimatedFastList, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/fastest_list/FastestList.ios.tsx");
+const result = require("set").fileFinishedImporting("modules/fastest_list/FastestList.ios.tsx");
 
 export default forwardRefResult;

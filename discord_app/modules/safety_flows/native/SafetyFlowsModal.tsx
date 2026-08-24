@@ -1,21 +1,32 @@
 // === Module 17087: SafetyFlowsModal ===
 
 // Module 17087 (SafetyFlowsModal)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/safety_flows/native/SafetyFlowsModal.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/SafetyFlowsModal.tsx");
 
 export default function SafetyFlowsModal(initialRouteName) {
+  let first;
+  closure_1 = undefined;
   const tmp = callback(React.useState(initialRouteName.task), 2);
-  const first = tmp[0];
+  first = tmp[0];
   closure_1 = tmp[1];
   let obj = first(6312);
   let items = [first];
   const navigatorScreens = obj.useNavigatorScreens(() => {
-    { [closure_0(closure_2[4]).SafetyFlowScreens.OVERVIEW]: obj, [closure_0(closure_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj };
+    obj = { [closure_0(closure_2[4]).SafetyFlowScreens.OVERVIEW]: obj, [closure_0(closure_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj };
+    obj = {
+      headerLeft() {
+        return null;
+      },
+      headerShown: false,
+      render() {
+        return callback3(callback2(17088), {});
+      }
+    };
     obj = {
       headerLeft() {
         return null;
@@ -85,21 +96,21 @@ export default function SafetyFlowsModal(initialRouteName) {
   const memo = React.useMemo(() => {
     let flow_context;
     if (first != null) {
-      flow_context = first.flow_context;
+      flow_context = tmp.flow_context;
     }
     if (null == flow_context) {
       return [];
     } else {
-      const tasks = first.flow_context.tasks;
+      const tasks = tmp.flow_context.tasks;
       if (1 === tasks.length) {
-        if (tasks[0].task_type === first(dependencyMap[4]).TaskType.PARENTAL_CONSENT_CONNECTION) {
+        if (tasks[0].task_type === first(closure_1_2[4]).TaskType.PARENTAL_CONSENT_CONNECTION) {
           let items = [];
         }
         return items;
       }
-      const tasks1 = first.flow_context.tasks;
-      const mapped = tasks1.map((item, index) => callback(table[14]).getScreensForTaskType(item.task_type));
-      const found = mapped.filter((item, index) => null != item);
+      const tasks1 = tmp.flow_context.tasks;
+      const mapped = tasks1.map((task_type) => callback(table[14]).getScreensForTaskType(task_type.task_type));
+      const found = mapped.filter((arg0) => null != arg0);
       items = found.flat();
     }
   }, items);

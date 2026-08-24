@@ -6,12 +6,12 @@ arg5.IsValidTimeZoneName = function IsValidTimeZoneName(str) {
   const formatted = str.toUpperCase();
   const set = new Set();
   const set1 = new Set();
-  const mapped = zoneNamesFromData.map((item, index) => item.toUpperCase());
-  const item = mapped.forEach((item, index) => set.add(item));
+  const mapped = zoneNamesFromData.map((str) => str.toUpperCase());
+  const item = mapped.forEach((arg0) => set.add(arg0));
   const keys = Object.keys(uppercaseLinks);
-  const item1 = keys.forEach((item, index) => {
-    set1.add(item.toUpperCase());
-    set.add(uppercaseLinks[item].toUpperCase());
+  const item1 = keys.forEach((str) => {
+    set1.add(str.toUpperCase());
+    set.add(uppercaseLinks[str].toUpperCase());
   });
   return set.has(formatted) || set1.has(formatted);
 };

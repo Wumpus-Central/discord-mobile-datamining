@@ -8,16 +8,17 @@ import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
 import useActionsForDisplayType from "useActionsForDisplayType" /* 14251 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const createCacheKey = { display: "flex", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, padding: 12, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
+createCacheKey = { container: null };
+createCacheKey = { display: "flex", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, padding: 12, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LEDGE);
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityTotal.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityTotal.tsx");
 
 export default function FamilyCenterActivityTotal(displayType) {
   displayType = displayType.displayType;
@@ -29,18 +30,20 @@ export default function FamilyCenterActivityTotal(displayType) {
   if (actionTotalsForDisplayType > 0) {
     str = "text-brand";
   }
+  const obj2 = useActionsForDisplayType;
   const activityTypeTextConfigs = getEmptyActivityFormatter.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
   let tooltipHeaderResult;
   if (value != null) {
     tooltipHeaderResult = value.tooltipHeader();
   }
+  obj = { style: tmp.container, children: null };
   obj = { variant: "heading-xxl/medium", color: str, children: null };
   if (num == null) {
     num = 0;
   }
   obj[2] = num;
-  const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
+  const items = [closure_3(Text.Text, obj), closure_3(Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
   obj[1] = items;
-  return callback2(View, obj);
+  return closure_4(View, obj);
 };

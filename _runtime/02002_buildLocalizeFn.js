@@ -23,8 +23,9 @@ export default function buildLocalizeFn(arg0) {
             StringResult = String(context.width);
           }
         }
-        let tmp5 = formattingValues.formattingValues[StringResult] || formattingValues.formattingValues[formattingValues.defaultFormattingWidth || formattingValues.defaultWidth];
-        let obj = formattingValues;
+        let tmp5 = tmp2.formattingValues[StringResult] || tmp2.formattingValues[tmp2.defaultFormattingWidth || tmp2.defaultWidth];
+        let obj = tmp2;
+        const tmp9 = tmp2.formattingValues[StringResult] || tmp2.formattingValues[tmp2.defaultFormattingWidth || tmp2.defaultWidth];
       }
       let argumentCallbackResult = arg0;
       if (obj.argumentCallback) {

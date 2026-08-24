@@ -2,19 +2,19 @@
 
 // Module 8562 (closeModal)
 import _modDef8561 from "module_8561" /* 8561 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { resetChangeEmailStore } from "ChangeEmailFields" /* 8563 */;
 import { VerificationModalScenes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function closeModal() {
   resetChangeEmailStore();
   _modDef8561.close();
 }
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 
 export default function EmailVerificationModal(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
@@ -54,5 +54,4 @@ export default function EmailVerificationModal(isChangeEmail) {
   if (stateFromStores != null) {
     const verified = stateFromStores.verified;
   }
-  const tmp4 = importDefault(first[18]);
 };

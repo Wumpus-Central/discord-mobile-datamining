@@ -2,11 +2,12 @@
 
 // Module 9729 (useIsStreamRTCConnectionEmpty)
 import initialize from "initialize" /* 589 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "createRTCConnection" /* 4539 */;
+import closure_4 from "initialize" /* 4558 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
 
 export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   const _require = stateFromStores4;

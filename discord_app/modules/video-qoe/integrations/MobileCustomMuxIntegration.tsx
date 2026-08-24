@@ -1,7 +1,7 @@
 // === Module 14495: logger ===
 
 // Module 14495 (logger)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import log from "log" /* 4 */;
 import UDefault from "U" /* 14493 */;
 
@@ -9,7 +9,7 @@ const logger = new log.Logger("MobileCustomMuxIntegration");
 let c4 = "1.0.0";
 const Cloudflare = "Cloudflare";
 let c6 = 1000;
-let result = obj132.fileFinishedImporting("modules/video-qoe/integrations/MobileCustomMuxIntegration.tsx");
+let result = set.fileFinishedImporting("modules/video-qoe/integrations/MobileCustomMuxIntegration.tsx");
 class MobileCustomMuxIntegration {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -104,6 +104,7 @@ prototype["emitPlayerReady"] = function emitPlayerReady() {
       try {
         UDefault.emit(self.playerId, "playerready");
         self.playerReadyEmitted = true;
+        const obj = UDefault;
       } catch (tmp4) {
         logger.error("Error emitting playerready event", tmp4);
       }
@@ -117,6 +118,7 @@ prototype["emitViewInit"] = function emitViewInit() {
       try {
         UDefault.emit(self.playerId, "viewinit");
         self.viewInitEmitted = true;
+        const obj = UDefault;
       } catch (tmp4) {
         logger.error("Error emitting viewinit event", tmp4);
       }
@@ -154,6 +156,7 @@ prototype["emitPlay"] = function emitPlay() {
       UDefault.emit(self.playerId, "play");
       self.playStarted = true;
       self.playingEmitted = false;
+      const obj = UDefault;
     } catch (tmp6) {
       logger.error("Error emitting play event", tmp6);
     }
@@ -165,6 +168,7 @@ prototype["emitPause"] = function emitPause() {
     try {
       self.updatePlayerState(true);
       UDefault.emit(self.playerId, "pause");
+      const obj = UDefault;
     } catch (tmp5) {
       logger.error("Error emitting pause event", tmp5);
     }
@@ -181,9 +185,11 @@ prototype["emitPlaying"] = function emitPlaying() {
         if (!self.playStarted) {
           UDefault.emit(self.playerId, "play");
           self.playStarted = true;
+          const obj = UDefault;
         }
         UDefault.emit(self.playerId, "playing");
         self.playingEmitted = true;
+        const obj2 = UDefault;
       } catch (tmp8) {
         logger.error("Error emitting playing event", tmp8);
       }
@@ -194,6 +200,7 @@ prototype["emitWaiting"] = function emitWaiting() {
   if (this.isInitialized) {
     try {
       UDefault.emit(tmp.playerId, "waiting");
+      const obj = UDefault;
     } catch (tmp5) {
       logger.error("Error emitting waiting event", tmp5);
     }
@@ -206,6 +213,7 @@ prototype["emitSeeking"] = function emitSeeking() {
   if (this.isInitialized) {
     try {
       UDefault.emit(tmp.playerId, "seeking");
+      const obj = UDefault;
     } catch (tmp5) {
       logger.error("Error emitting seeking event", tmp5);
     }
@@ -215,6 +223,7 @@ prototype["emitSeeked"] = function emitSeeked() {
   if (this.isInitialized) {
     try {
       UDefault.emit(tmp.playerId, "seeked");
+      const obj = UDefault;
     } catch (tmp5) {
       logger.error("Error emitting seeked event", tmp5);
     }
@@ -226,6 +235,7 @@ prototype["emitEnded"] = function emitEnded() {
     try {
       UDefault.emit(self.playerId, "ended");
       self.emitViewEnd();
+      const obj = UDefault;
     } catch (tmp5) {
       logger.error("Error emitting ended event", tmp5);
     }
@@ -235,6 +245,7 @@ prototype["emitError"] = function emitError(arg0) {
   if (this.isInitialized) {
     try {
       UDefault.emit(tmp.playerId, "error", arg0);
+      const obj = UDefault;
     } catch (tmp6) {
       logger.error("Error emitting error event", tmp6);
     }
@@ -275,6 +286,7 @@ prototype["emitRenditionChange"] = function emitRenditionChange(width, height, b
       obj[1] = height;
       obj[2] = bitrate;
       UDefault.emit(self.playerId, "renditionchange", obj);
+      const obj2 = UDefault;
     } catch (tmp9) {
       logger.error("Error emitting renditionchange event", tmp9);
     }
@@ -300,6 +312,7 @@ prototype["emitViewEnd"] = function emitViewEnd() {
   if (this.isInitialized) {
     try {
       UDefault.emit(tmp.playerId, "viewend");
+      const obj = UDefault;
     } catch (tmp5) {
       logger.error("Error emitting viewend event", tmp5);
     }

@@ -1,9 +1,9 @@
 // === Module 15258: _decodeEncodedUserRecord ===
 
 // Module 15258 (_decodeEncodedUserRecord)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import createdAt from "createdAt" /* 1930 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createdAt" /* 1930 */;
 
 function _decodeEncodedUserRecord() {
   const self = this;
@@ -17,8 +17,7 @@ function _decodeEncodedUserRecord() {
       dependencyMap = tmp5;
       let callback = table;
       const obj2 = callback(table[3]);
-      yield obj2.decryptEncodedCiphertext(callback, callback);
-      callback = str;
+      callback = yield obj2.decryptEncodedCiphertext(callback, callback);
       table = str.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
       if (null == table) {
         const _Error = Error;
@@ -50,7 +49,7 @@ function _decodeEncodedUserRecord() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");
 
 export const decodeEncodedUserRecord = function decodeEncodedUserRecord(arg0, closure_6) {
   const self = this;

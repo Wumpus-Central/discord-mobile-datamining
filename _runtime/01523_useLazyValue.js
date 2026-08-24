@@ -1,13 +1,13 @@
 // === Module 1523: useLazyValue ===
 
 // Module 1523 (useLazyValue)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
 
-export const useLazyValue = function useLazyValue(fn) {
+export const useLazyValue = function useLazyValue(arg0) {
   const ref = React.useRef(undefined);
   if (undefined === ref.current) {
-    ref.current = fn();
+    ref.current = arg0();
   }
   return ref.current;
 };

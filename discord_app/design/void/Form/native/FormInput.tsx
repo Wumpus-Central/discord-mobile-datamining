@@ -5,12 +5,13 @@ import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { KeyboardThemes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-let obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+const require = arg1;
+let obj = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: null, inputText: null };
+obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj[1] = obj;
-const createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
+createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
 obj[2] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
@@ -87,8 +88,8 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
     if (!flag6) {
       let str2 = keyboardType;
     } else {
-      TextArea(obj[5]);
       str2 = "visible-password";
+      const TextAreaResult1 = TextArea(obj[5]);
     }
     ref = obj4.useRef(null);
     ref1 = obj4.useRef(null);
@@ -171,7 +172,7 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
         obj[13] = onEndEditing;
         obj[14] = value;
         obj[15] = error;
-        let tmp14Result = <TextArea ref={null} returnKeyType="default" onChange={null} keyboardAppearance={null} keyboardType={null} placeholderTextColor={null} placeholder={null} secureTextEntry={null} isDisabled={null} autoFocus={null} autoCapitalize={null} autoCorrect={null} maxLength={null} onEndEditing={null} value={null} errorMessage={null} />;
+        let tmp14Result = tmp14(TextArea, obj);
       } else {
         obj = { ref: null, returnKeyType: "done", onChange: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, placeholder: null, secureTextEntry: null, isDisabled: null, autoFocus: null, autoCapitalize: null, autoCorrect: null, onEndEditing: null, value: null, errorMessage: null };
         obj[0] = ref;
@@ -188,7 +189,8 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
         obj[12] = onEndEditing.onEndEditing;
         obj[13] = value;
         obj[14] = error;
-        tmp14Result = jsx(TextArea(obj[10]).TextInput, { ref: null, returnKeyType: "done", onChange: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, placeholder: null, secureTextEntry: null, isDisabled: null, autoFocus: null, autoCapitalize: null, autoCorrect: null, onEndEditing: null, value: null, errorMessage: null });
+        tmp14Result = tmp14(TextArea(obj[10]).TextInput, obj);
+        const tmp18 = value;
       }
     } else {
       obj1 = { ref: null, inputTextColor: null, multiline: null, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null };
@@ -237,13 +239,13 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
       }
       obj1[23] = clearButtonVisibility;
       const merged = Object.assign(onEndEditing);
-      return jsx(TextArea(obj[11]).InputView, { ref: null, inputTextColor: null, multiline: null, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null });
+      return tmp14(TextArea(obj[11]).InputView, obj1);
     }
   } else {
     TextArea(obj[7]).isThemeDark(tmp4) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
     const TextAreaResult2 = TextArea(obj[7]);
   }
 });
-const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormInput.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormInput.tsx");
 
 export default forwardRefResult;

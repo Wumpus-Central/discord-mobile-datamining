@@ -1,12 +1,12 @@
 // === Module 11215: useDeveloperActivityShelfItems ===
 
 // Module 11215 (useDeveloperActivityShelfItems)
-import noop from "noop" /* 19 */;
-import initialize from "initialize" /* 7872 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "initialize" /* 7872 */;
 import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3" /* 4481 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 
 export const useDeveloperActivityShelfItems = function useDeveloperActivityShelfItems() {
   const items = [closure_3];
@@ -19,11 +19,12 @@ export const useDeveloperActivityShelfItems = function useDeveloperActivityShelf
   const items2 = [stateFromStoresArray, isEnabled, lastUsedObject];
   return stateFromStoresArray.useMemo(() => {
     if (isEnabled) {
-      const mapped = stateFromStoresArray.map((item, index) => {
-        const obj = {};
+      const mapped = stateFromStoresArray.map((application) => {
+        let obj = { application, activity: null };
+        obj = {};
         const merged = Object.assign(closure_4);
-        const merged1 = Object.assign(item.embeddedActivityConfig);
-        obj.application_id = item.id;
+        const merged1 = Object.assign(application.embeddedActivityConfig);
+        obj.application_id = application.id;
         obj[1] = obj;
         return obj;
       });

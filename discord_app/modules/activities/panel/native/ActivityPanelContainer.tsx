@@ -4,13 +4,13 @@
 import initialize from "initialize" /* 589 */;
 import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 16226 */;
 import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 16235 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "participantFromServer" /* 1390 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 const memoResult = importAllResult.memo(function ActivityPanelContainer() {
   let obj = initialize;
   const items = [closure_5, closure_3, closure_4];
@@ -29,7 +29,7 @@ const memoResult = importAllResult.memo(function ActivityPanelContainer() {
         if (channel != null) {
           type = channel.type;
         }
-        let tmp4 = type === callback(table[7]).ChannelTypes.GUILD_TEXT;
+        let tmp4 = type === tmp8(tmp9[7]).ChannelTypes.GUILD_TEXT;
         if (!tmp4) {
           let isPrivateResult;
           if (channel != null) {
@@ -44,14 +44,17 @@ const memoResult = importAllResult.memo(function ActivityPanelContainer() {
         return tmp4;
       }
       const obj2 = callback(table[6]);
+      tmp8 = callback;
+      tmp9 = table;
     }
   }, [])) {
     obj = { children: null };
     obj[0] = jsx(renderActivityOrPIPDefault, {});
     tmp2 = jsx(BaseActivityPanelControllerDefault, { children: null });
+    const tmp5 = BaseActivityPanelControllerDefault;
   }
   return tmp2;
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
 
 export default memoResult;

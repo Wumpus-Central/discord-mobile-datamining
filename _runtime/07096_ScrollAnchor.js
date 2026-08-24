@@ -2,19 +2,20 @@
 
 // Module 7096 (ScrollAnchor)
 import noopDefault from "noop" /* 19 */;
-import _slicedToArray from "_slicedToArray" /* 7041 */;
+import closure_2 from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ useImperativeHandle: c3, useMemo: c4, useState: c5 } = noop);
 noopDefault;
 
 export const ScrollAnchor = function ScrollAnchor(horizontal) {
   horizontal = horizontal.horizontal;
+  let first;
   let callback;
   const tmp = callback(callback4(1000000), 2);
-  const first = tmp[0];
+  first = tmp[0];
   callback = tmp[1];
   callback2(horizontal.scrollAnchorRef, () => ({
     scrollBy(diff) {
@@ -34,6 +35,6 @@ export const ScrollAnchor = function ScrollAnchor(horizontal) {
       num2 = first;
     }
     style[3] = num2;
-    return jsx(horizontal(first[3]).CompatView, { style });
+    return closure_1_6(horizontal(first[3]).CompatView, { style });
   }, items);
 };

@@ -27,7 +27,7 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
   if (arg1 == null) {
     sharedValue = obj.useSharedValue(0);
   }
-  current = callback(sharedValue).current;
+  current = closure_4(sharedValue).current;
   const fn = function _() {
     if (closure_0) {
       current = tmp.current;
@@ -50,8 +50,8 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
   callback = tmp3;
   const items1 = [animatedRef, tmp3];
   callback2(() => {
-    if (animatedRef) {
-      return animatedRef.observe((arg0) => {
+    if (closure_0) {
+      return obj.observe((arg0) => {
         if (arg0) {
           current = scrollableNode.current;
           scrollableNode = undefined;
@@ -66,11 +66,12 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
             const removed = scrollableNode.removeEventListener("scroll", closure_1_2);
           };
         } else {
-          const logger = animatedRef(closure_1_1[3]).logger;
+          const logger = closure_1_0(closure_1_1[3]).logger;
           logger.warn(closure_1_5);
         }
       });
     }
+    obj = closure_0;
   }, items1);
   return current;
 }) : (function useScrollViewOffsetNative(arg0, arg1) {
@@ -79,8 +80,11 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
   if (arg1 == null) {
     sharedValue = obj.useSharedValue(0);
   }
-  const current = callback(sharedValue).current;
+  const current = closure_4(sharedValue).current;
   obj = _require(current[2]);
+  const tmp2 = _require;
+  const tmp3 = current;
+  const tmp4 = closure_4;
   const fn = function _(contentOffset) {
     if (0 === contentOffset.contentOffset.x) {
       let x = contentOffset.contentOffset.y;
@@ -96,7 +100,7 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
   const items = [arg0, event];
   callback2(() => {
     if (closure_0) {
-      return closure_0.observe((arg0) => {
+      return obj.observe((arg0) => {
         closure_0 = arg0;
         if (arg0) {
           workletEventHandler.workletEventHandler.registerForEvents(arg0);
@@ -104,11 +108,12 @@ export const useScrollViewOffset = isJest.isWeb() ? (function useScrollViewOffse
             closure_1_2.workletEventHandler.unregisterFromEvents(closure_0);
           };
         } else {
-          const logger = closure_1_0(current[3]).logger;
+          const logger = closure_1_0(closure_1_1[3]).logger;
           logger.warn(closure_1_5);
         }
       });
     }
+    obj = closure_0;
   }, items);
   return current;
 });

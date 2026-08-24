@@ -1,10 +1,10 @@
 // === Module 15018: useDefaultGuildsRestricted ===
 
 // Module 15018 (useDefaultGuildsRestricted)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 
-const result = obj132.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
 
 export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() {
   const DefaultGuildsRestricted = explicitContentFromProto.DefaultGuildsRestricted;
@@ -13,6 +13,7 @@ export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() 
   let setting1 = DefaultGuildsRestrictedV2.useSetting();
   if (null == setting1) {
     setting1 = setting || setting;
+    const tmp3 = setting || setting;
   }
   return setting1;
 };

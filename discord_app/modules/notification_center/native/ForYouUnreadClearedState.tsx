@@ -9,21 +9,24 @@ import Text from "Text" /* 4734 */;
 import registerAssetDefault from "registerAsset" /* 10286 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { width: 48, height: 48, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_400, opacity: 0.16, borderRadius: ThemesDefault.radii.xl, marginRight: 16, justifyContent: "center", alignItems: "center" };
+createCacheKey = { container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" }, imageContainer: null, icon: null, headerText: null };
+createCacheKey = { width: 48, height: 48, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_400, opacity: 0.16, borderRadius: ThemesDefault.radii.xl, marginRight: 16, justifyContent: "center", alignItems: "center" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { margin: 12, position: "absolute", color: ThemesDefault.unsafe_rawColors.GREEN_400 };
 createCacheKey[3] = { marginBottom: 2 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/notification_center/native/ForYouUnreadClearedState.tsx");
+let obj1 = { margin: 12, position: "absolute", color: ThemesDefault.unsafe_rawColors.GREEN_400 };
+const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouUnreadClearedState.tsx");
 
 export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
   const tmp = callback3();
-  let obj = { style: tmp.imageContainer };
+  let obj = { style: tmp.container, children: null };
+  obj = { style: tmp.imageContainer };
   const items = [callback(View, obj), , ];
   obj = { source: registerAssetDefault, style: tmp.icon, color: tmp.icon.color };
   items[1] = callback(Button.Icon, obj);

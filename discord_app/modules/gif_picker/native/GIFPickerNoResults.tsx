@@ -6,20 +6,22 @@ import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 1019
 import importAllResult from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 require("ME").GIFPickerResultTypes;
-let obj = { color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: null, emptyStateImage: null };
+obj = { color: ThemesDefault.colors.TEXT_SUBTLE };
 obj[1] = obj;
-const createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: 0 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: 0 };
 obj[2] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionSheet) {
   inActionSheet = inActionSheet.inActionSheet;
+  let safeAreaBottomKeyboardAware;
   const tmp = callback();
-  const safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({ hasCategories: false }).safeAreaBottomKeyboardAware;
+  safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({ hasCategories: false }).safeAreaBottomKeyboardAware;
   const items = [safeAreaBottomKeyboardAware];
   const memo = importAllResult.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
   let obj = safeAreaBottomKeyboardAware(9383);
@@ -47,6 +49,6 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
   obj[3] = jsx(safeAreaBottomKeyboardAware(1297).RefreshEmptyState, { source: searchEmptySource, body: stringResult, bodyStyle: tmp.emptyStateBody, containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateImage });
   return <BottomSheetScrollView source={searchEmptySource} body={stringResult} bodyStyle={tmp.emptyStateBody} containerStyle={tmp.emptyStateContainer} imageStyle={tmp.emptyStateImage} />;
 });
-const result = require("obj132").fileFinishedImporting("modules/gif_picker/native/GIFPickerNoResults.tsx");
+const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerNoResults.tsx");
 
 export default memoResult;

@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 const memoResult = importAllResult.memo((paused) => {
   ({ layerConfig, animate } = paused);
   paused = paused.paused;
@@ -24,6 +24,7 @@ const memoResult = importAllResult.memo((paused) => {
     }
     aPNGPlayerControls.pause();
   }, items);
+  obj = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
   const items1 = [StyleSheet.absoluteFill, ];
   obj = { position: "absolute", width, height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width), opacity: null };
   let num = 0;
@@ -37,6 +38,6 @@ const memoResult = importAllResult.memo((paused) => {
   obj[5] = onLoad;
   return jsx(animate(paused[3]).APNGPlayer, { position: "absolute", width, height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width), opacity: null });
 });
-const result = require("obj132").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
 
 export default memoResult;

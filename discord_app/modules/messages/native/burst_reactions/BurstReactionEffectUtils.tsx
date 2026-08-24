@@ -1,12 +1,12 @@
 // === Module 7531: _generateAnimationSource ===
 
 // Module 7531 (_generateAnimationSource)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const require = fn;
+const require = arg1;
 function _generateAnimationSource() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
@@ -356,7 +356,7 @@ function _generateAnimationSourceFromLocalImage() {
   return applyArgumentsResult;
 }
 ({ NativeModules: c5, Image: closure_6 } = get_ActivityIndicator);
-const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx");
 
 export const useBurstReactionAnimationSource = function useBurstReactionAnimationSource(channelId) {
   channelId = channelId.channelId;
@@ -461,6 +461,7 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
 export const useSuperReactionAnimationSourceFromLocalImage = function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
   animationSource = animationSource.animationSource;
   const localImageSource = animationSource.localImageSource;
+  closure_2 = undefined;
   let tmp = callback2(React.useState(null), 2);
   closure_2 = tmp[1];
   const items = [animationSource, localImageSource];

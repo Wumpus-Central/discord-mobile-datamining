@@ -3,6 +3,8 @@
 // Module 69 (RN$LegacyInterop_UIManager_getConstants)
 import nullthrowsDefault from "nullthrows" /* 70 */;
 
+let c0 = arg1;
+let c1 = importDefault;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let closure_4 = {};
@@ -10,12 +12,13 @@ const f17568 = () => {
 
 };
 ({ RN$LegacyInterop_UIManager_getConstantsForViewManager: error, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8 } = global);
-let c0 = false;
-let c1 = null;
+c0 = false;
+c1 = null;
 const f66262 = () => {
 
 };
-let obj = {
+let obj = {};
+obj = {
   measure(arg0, arg1) {
     console.error("" + "[ReactNative Architecture][JS] '" + "measure" + "' is not available in the new React Native architecture.");
   },
@@ -199,7 +202,7 @@ obj.findSubviewIn = function findSubviewIn(arg0, arg1, arg2) {
     console.error("findSubviewIn() noop: Cannot find view with reactTag " + arg0);
   }
 };
-obj.viewIsDescendantOf = function viewIsDescendantOf(arg0, arg1, fn) {
+obj.viewIsDescendantOf = function viewIsDescendantOf(arg0, arg1, arg2) {
   const tmp = _null(70);
   const tmpResult = tmp(callback(71).getFabricUIManager());
   const result = tmpResult.findShadowNodeByTag_DEPRECATED(arg0);
@@ -207,7 +210,7 @@ obj.viewIsDescendantOf = function viewIsDescendantOf(arg0, arg1, fn) {
     const result1 = tmpResult.findShadowNodeByTag_DEPRECATED(arg1);
     if (result1) {
       const items = [16 & tmpResult.compareDocumentPosition(result1, result)];
-      fn(items);
+      arg2(items);
     } else {
       const _console2 = console;
       const _HermesInternal2 = HermesInternal;
@@ -230,7 +233,7 @@ if (RN$LegacyInterop_UIManager_getConstants) {
     c3 = true;
   }
   const keys = Object.keys(closure_4);
-  const item = keys.forEach((item, index) => {
+  const item = keys.forEach((arg0) => {
     if (typeof f17568 !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -238,18 +241,18 @@ if (RN$LegacyInterop_UIManager_getConstants) {
       dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
       c3 = true;
     }
-    obj[item] = dependencyMap[item];
+    obj[arg0] = dependencyMap[arg0];
   });
   if (obj.getConstants().ViewManagerNames) {
     const ViewManagerNames = obj.getConstants().ViewManagerNames;
-    const item1 = ViewManagerNames.forEach((item, index) => {
-      closure_0 = item;
+    const item1 = ViewManagerNames.forEach((arg0) => {
+      closure_0 = arg0;
       obj = {
         get() {
-          return closure_1_1(dependencyMap[0])(obj.getConstantsForViewManager)(closure_0);
+          return closure_1_1(closure_1_2[0])(closure_1_10.getConstantsForViewManager)(closure_0);
         }
       };
-      _null(49)(obj, item, obj);
+      _null(49)(obj, arg0, obj);
     });
   }
 }

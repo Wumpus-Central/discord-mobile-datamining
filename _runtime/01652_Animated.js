@@ -3,14 +3,14 @@
 // Module 1652 (Animated)
 import noopDefault from "noop" /* 19 */;
 import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import controlEdgeToEdgeValues from "controlEdgeToEdgeValues" /* 1653 */;
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c4, useEffect: c5, useMemo: closure_6, useRef: error, useState: closure_8 } = noop);
 noopDefault;
 let Animated = get_ActivityIndicator.Animated;
@@ -117,7 +117,8 @@ export const KeyboardProvider = (enabled) => {
   let items = [first];
   const obj7 = _require(1843);
   const tmp9 = sharedValue(() => {
-    let obj = { progress: closure_4, height: closure_9.multiply(closure_5, -1) };
+    let obj = { enabled: first, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
+    obj = { progress: closure_4, height: closure_9.multiply(closure_5, -1) };
     obj[1] = obj;
     obj = { progress: sharedValue, height: sharedValue1 };
     obj[2] = obj;
@@ -133,7 +134,7 @@ export const KeyboardProvider = (enabled) => {
     return closure_9.event(items, { useNativeDriver: true });
   }, []);
   const fn = function _(progress, arr) {
-    if (arr.includes(android)) {
+    if (arr.includes(closure_1_15)) {
       sharedValue.value = progress.progress;
       sharedValue1.value = -progress.height;
     }
@@ -199,7 +200,7 @@ export const KeyboardProvider = (enabled) => {
       HermesBuiltin.throwTypeError();
     }
     const items = ["android", "ios"];
-    if (items.includes(android)) {
+    if (items.includes(closure_1_15)) {
       sharedValue.value = progress.progress;
       sharedValue1.value = -progress.height;
     }
@@ -213,7 +214,7 @@ export const KeyboardProvider = (enabled) => {
       HermesBuiltin.throwTypeError();
     }
     const items = ["android"];
-    if (items.includes(android)) {
+    if (items.includes(closure_1_15)) {
       sharedValue.value = progress.progress;
       sharedValue1.value = -progress.height;
     }

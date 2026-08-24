@@ -3,10 +3,10 @@
 // Module 12824 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
 
-let require = fn;
+let require = arg1;
 initializeDefault;
 class StageLurkingManager extends tmp2 {
   constructor() {
@@ -27,9 +27,9 @@ class StageLurkingManager extends tmp2 {
       }
       const result = applyArgumentsResult.handleDisconnectFromStageChannel(tmp3);
     };
-    applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(guildId) {
+    applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(arg0) {
       guildId = guildId.getGuildId();
-      const items = [guildId, guildId];
+      const items = [guildId, arg0];
       applyArgumentsResult(7284).stopLurkingAll(items.filter(applyArgumentsResult(1370).isNotNullish));
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
@@ -42,13 +42,15 @@ class StageLurkingManager extends tmp2 {
 const prototype = StageLurkingManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const subscription = dispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const obj = dispatcherDefault;
   const subscription1 = dispatcherDefault.subscribe("LOGOUT", this.handleLogout);
 };
 prototype["_terminate"] = function _terminate() {
   dispatcherDefault.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const obj = dispatcherDefault;
   dispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
 };
 const stageLurkingManager = new StageLurkingManager();
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageLurkingManager.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/StageLurkingManager.tsx");
 
 export default stageLurkingManager;

@@ -3,17 +3,16 @@
 // Module 16425 (HideSelfStreamAndVideoConfirmDialog)
 import noopAll from "noop" /* 19 */;
 import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9365 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { SelfStreamAndVideoAlertType as closure_4 } from "SelfStreamAndVideoAlertType" /* 16424 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, ctaLink: { paddingTop: 8, textAlign: "center", textDecorationLine: "underline" } });
-let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx");
 
 export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   ({ type, onConfirm } = arg0);
@@ -49,13 +48,14 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   const intl6 = tmp6(1236).intl;
   obj.confirmText = intl6.string(tmp6(1236).t["cY+Oob"]);
   obj.onConfirm = onConfirm;
+  obj = { style: tmp2.body, children: null };
   obj = { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 };
-  const items = [callback(tmp6(4734).Text, obj), ];
+  const items = [closure_5(tmp6(4734).Text, obj), ];
   obj1 = {
     accessibilityRole: "link",
     style: items1,
     onPress() {
-      const result = saveGuildFoldersDefault.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: true });
+      const result = closure_1_1(closure_1_2[8]).updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: true });
       onConfirm();
     },
     variant: "text-sm/medium",
@@ -65,8 +65,8 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   ({ ctaLink: arr2[0], description: arr2[1] } = tmp2);
   const intl7 = tmp6(1236).intl;
   obj1[4] = intl7.string(tmp6(1236).t["JdIQ/Y"]);
-  items[1] = callback(tmp6(4734).Text, obj1);
+  items[1] = closure_5(tmp6(4734).Text, obj1);
   obj[1] = items;
   obj.children = callback(View, obj);
-  return callback(componentDidMountDefault, obj);
+  return closure_5(componentDidMountDefault, obj);
 };

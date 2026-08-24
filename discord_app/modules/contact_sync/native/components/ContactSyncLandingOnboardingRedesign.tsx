@@ -5,32 +5,41 @@ import ThemesDefault from "Themes" /* 712 */;
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 11859 */;
 import registerAssetDefault from "registerAsset" /* 11866 */;
 import ContactSyncErrorDefault from "ContactSyncError" /* 11867 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-const createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -ThemesDefault.space.PX_32 - require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+createCacheKey = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
+createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -ThemesDefault.space.PX_32 - require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[0] = createCacheKey;
+const tmp4 = -ThemesDefault.space.PX_32;
 createCacheKey[1] = { height: 135, width: 216, marginBottom: ThemesDefault.space.PX_24 };
+let obj1 = { height: 135, width: 216, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8 };
+let obj2 = { marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { height: 48, width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj4 = { height: 48, width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { paddingBottom: ThemesDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx");
+const obj5 = { paddingBottom: ThemesDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx");
 
 export default function ContactSyncLandingOnboardingRedesign(onNext) {
   onNext = onNext.onNext;
   ({ loading, error, discoverabilityEnabled, setDiscoverabilityEnabled } = onNext);
   const tmp = callback4();
   const items = [onNext];
-  let obj = { resizeMode: "contain", style: tmp.headerImage, source: null };
+  let obj = { children: null };
+  obj = { style: tmp.content, children: null };
+  obj = { resizeMode: "contain", style: tmp.headerImage, source: null };
   callback = React.useCallback(callback(function*() {
     if (table === 2) {
       table = 3;

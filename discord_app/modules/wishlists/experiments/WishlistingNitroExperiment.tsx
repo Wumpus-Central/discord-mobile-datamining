@@ -1,11 +1,11 @@
 // === Module 12325: useIsNitroWishlistingEnabled ===
 
 // Module 12325 (useIsNitroWishlistingEnabled)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-03-wishlisting-nitro", kind: "user", defaultConfig: { isEnabled: false, isRoadblocksEnabled: false }, variations: { 0: { isEnabled: false, isRoadblocksEnabled: false }, 1: { isEnabled: true, isRoadblocksEnabled: false }, 2: { isEnabled: true, isRoadblocksEnabled: true } } });
-const result = obj132.fileFinishedImporting("modules/wishlists/experiments/WishlistingNitroExperiment.tsx");
+const result = set.fileFinishedImporting("modules/wishlists/experiments/WishlistingNitroExperiment.tsx");
 
 export const useIsNitroWishlistingEnabled = function useIsNitroWishlistingEnabled(add_to_wishlist_grid_suggested_nitro) {
   return store.useConfig({ location: add_to_wishlist_grid_suggested_nitro }).isEnabled;

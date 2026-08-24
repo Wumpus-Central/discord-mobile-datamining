@@ -3,7 +3,7 @@
 // Module 6400 (GestureDetector)
 import jsxProd from "jsxProd" /* 21 */;
 import noop from "noop" /* 19 */;
-import noop2 from "noop" /* 19 */;
+import closure_6 from "noop" /* 19 */;
 
 ({ useEffect: c3, useMemo: c4, useRef: c5 } = noop);
 const jsx = jsxProd.jsx;
@@ -17,7 +17,11 @@ export const GestureDetector = (gesture) => {
         let tmp2 = arg0[item10008];
         if (undefined !== tmp2) {
           let toGestureArrayResult = arg1.toGestureArray();
+          let tmp5 = toGestureArrayResult;
+          let tmp6 = toGestureArrayResult;
           for (const item10018 of toGestureArrayResult) {
+            let tmp7 = item10008;
+            let tmp8 = tmp2;
             item10018.config[tmp] = tmp3;
             continue;
           }
@@ -27,7 +31,7 @@ export const GestureDetector = (gesture) => {
     })(gesture, gesture);
     let items = [gesture];
     let obj = current2(() => gesture.toGestureArray(), items);
-    const someResult = obj.some((item, index) => item.shouldUseReanimated);
+    const someResult = obj.some((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
     obj1 = gesture(webEventHandlers[2]);
     webEventHandlers = obj1.useWebEventHandlers();
     const current = detectorUpdater({ firstRender: true, viewRef: null, previousViewTag: -1, forceRebuildReanimatedEvent: false }).current;
@@ -54,7 +58,7 @@ export const GestureDetector = (gesture) => {
       obj.attachHandlers(obj);
       return () => {
         closure_4.isMounted = false;
-        gesture(webEventHandlers[10]).dropHandlers(closure_4);
+        closure_1_0(closure_1_2[10]).dropHandlers(closure_4);
       };
     }, []);
     const items1 = [gesture];
@@ -73,12 +77,12 @@ export const GestureDetector = (gesture) => {
       obj[0] = viewRefHandler;
       obj[1] = current2.animatedEventHandler;
       obj[2] = gesture.children;
-      let tmp28Result = <tmp9Result3.AnimatedWrap ref={null} onGestureHandlerEvent={null}>{null}</tmp9Result3.AnimatedWrap>;
+      let tmp28Result = tmp28(tmp9Result3.AnimatedWrap, obj);
     } else {
       obj1 = { ref: null, children: null };
       obj1[0] = viewRefHandler;
       obj1[1] = gesture.children;
-      tmp28Result = <tmp9Result3.Wrap ref={null}>{null}</tmp9Result3.Wrap>;
+      tmp28Result = tmp28(tmp9Result3.Wrap, obj1);
     }
     return tmp28Result;
   } else {

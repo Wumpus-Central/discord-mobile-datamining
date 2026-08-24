@@ -1,17 +1,17 @@
 // === Module 16729: PhoneThenEmailInterstitial ===
 
 // Module 16729 (PhoneThenEmailInterstitial)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getCountrySelectorOpened from "getCountrySelectorOpened" /* 16730 */;
-import handleRequiredAction from "handleRequiredAction" /* 1385 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "getCountrySelectorOpened" /* 16730 */;
+import closure_7 from "handleRequiredAction" /* 1385 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function PhoneThenEmailInterstitial(navigation) {
   navigation = navigation.navigation;
   let obj = { Illustration: navigation(16731).VerifyPhone, title: null, body: null, children: null };
@@ -19,7 +19,7 @@ function PhoneThenEmailInterstitial(navigation) {
   obj[1] = intl.string(navigation(1236).t.KLnLIP);
   const intl2 = navigation(1236).intl;
   obj[2] = intl2.string(navigation(1236).t.XGbCq3);
-  { style: callback().button, children: null };
+  obj = { style: callback().button, children: null };
   obj = { text: null, onPress: null };
   const intl3 = navigation(1236).intl;
   obj[0] = intl3.string(navigation(1236).t["3oK4qw"]);
@@ -34,7 +34,7 @@ function PhoneThenEmailInterstitial(navigation) {
     } else {
       ENTER_EMAIL = closure_1_10.ENTER_EMAIL;
     }
-    const StackActions = navigation(dependencyMap[13]).StackActions;
+    const StackActions = navigation(closure_1_2[13]).StackActions;
     navigation.dispatch(StackActions.push(ENTER_EMAIL));
   };
   obj[1] = jsx(navigation(4745).Button, { text: null, onPress: null });
@@ -43,7 +43,7 @@ function PhoneThenEmailInterstitial(navigation) {
 }
 ({ UserRequiredActions: c9, VerificationModalScenes: c10 } = ME);
 let closure_12 = createCacheKey.createStyles({ button: { position: "absolute", right: 32, bottom: 32, left: 32 } });
-let result = require("obj132").fileFinishedImporting("modules/verification/native/components/VerificationModal.tsx");
+let result = require("set").fileFinishedImporting("modules/verification/native/components/VerificationModal.tsx");
 
 export default function VerificationModal() {
   let obj = stateFromStores(589);
@@ -67,8 +67,9 @@ export default function VerificationModal() {
   }, []);
   obj = {
     screens: React.useMemo(() => {
-      { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
-      let obj = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CHANGE_EMAIL_COLLECT_REASONS };
+      let obj = {};
+      obj = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
+      obj = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CHANGE_EMAIL_COLLECT_REASONS };
       obj[1] = obj;
       let obj3 = stateFromStores(6314);
       obj[2] = obj3.getHeaderNoTitle();
@@ -96,8 +97,9 @@ export default function VerificationModal() {
         let intl = callback(1236).intl;
         obj[1] = intl.string(callback(1236).t.PdRCRg);
         obj[2] = function onPress() {
-          callback(7172);
-          const obj = { label: null, isDestructive: true, onPress: null };
+          let obj = callback(7172);
+          obj = { key: "VerificationOverviewMore", options: null, hasIcons: false };
+          obj = { label: null, isDestructive: true, onPress: null };
           const intl = callback(1236).intl;
           obj[0] = intl.string(callback(1236).t["2jxGer"]);
           obj[2] = function onPress() {
@@ -223,8 +225,9 @@ export default function VerificationModal() {
   obj[2] = intl.string(stateFromStores(1236).t["13/7kX"]);
   return jsx(stateFromStores(6312).Navigator, {
     screens: React.useMemo(() => {
-      { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
-      let obj = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CHANGE_EMAIL_COLLECT_REASONS };
+      let obj = {};
+      obj = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
+      obj = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CHANGE_EMAIL_COLLECT_REASONS };
       obj[1] = obj;
       let obj3 = stateFromStores(6314);
       obj[2] = obj3.getHeaderNoTitle();
@@ -252,8 +255,9 @@ export default function VerificationModal() {
         let intl = callback(1236).intl;
         obj[1] = intl.string(callback(1236).t.PdRCRg);
         obj[2] = function onPress() {
-          callback(7172);
-          const obj = { label: null, isDestructive: true, onPress: null };
+          let obj = callback(7172);
+          obj = { key: "VerificationOverviewMore", options: null, hasIcons: false };
+          obj = { label: null, isDestructive: true, onPress: null };
           const intl = callback(1236).intl;
           obj[0] = intl.string(callback(1236).t["2jxGer"]);
           obj[2] = function onPress() {

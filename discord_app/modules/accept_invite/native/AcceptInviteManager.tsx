@@ -1,20 +1,17 @@
 // === Module 16514: prototype ===
 
 // Module 16514 (prototype)
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import initializeDefault from "initialize" /* 5038 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import updateInvite from "updateInvite" /* 4359 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "updateInvite" /* 4359 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
 import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 5417 */;
 import ME from "ME" /* 676 */;
 
-let require = fn;
+let require = arg1;
 ({ InviteStates: c10, Permissions: unpackModuleId, Routes: closure_12 } = ME);
 initializeDefault;
 let prototype = function AcceptInviteManager() {
@@ -39,20 +36,20 @@ let prototype = function AcceptInviteManager() {
     code = code.code;
     ({ deeplinkAttemptId, invite_instance_id } = code);
     if (closure_1_3.isAuthenticated()) {
-      applyArgumentsResult._handleInvite(code, deeplinkAttemptId, invite_instance_id);
+      obj._handleInvite(code, deeplinkAttemptId, invite_instance_id);
     } else {
-      applyArgumentsResult._deferredCode = code;
+      obj._deferredCode = code;
     }
   };
   applyArgumentsResult._handleClearInvite = function _handleClearInvite() {
     closure_0._deferredCode = null;
     closure_0._isRegistration = false;
-    _modDef5260.popWithKey(ACCEPT_INVITE_MODAL_KEY);
+    closure_1_1(closure_1_2[11]).popWithKey(closure_1_9);
   };
   applyArgumentsResult._handleShowDeferredInvite = function _handleShowDeferredInvite() {
     if (null != applyArgumentsResult._deferredCode) {
-      applyArgumentsResult._handleInvite(applyArgumentsResult._deferredCode);
-      applyArgumentsResult._deferredCode = null;
+      obj._handleInvite(obj._deferredCode);
+      obj._deferredCode = null;
     }
   };
   applyArgumentsResult._handleInvite = function _handleInvite(_deferredCode, deeplinkAttemptId, invite_instance_id) {
@@ -64,6 +61,7 @@ let prototype = function AcceptInviteManager() {
       let flag = null == invite;
       if (!flag) {
         flag = invite.state !== closure_2_10.RESOLVED && invite.state !== closure_2_10.EXPIRED && invite.state !== closure_2_10.BANNED && invite.state !== closure_2_10.ERROR;
+        const tmp4 = invite.state !== closure_2_10.RESOLVED && invite.state !== closure_2_10.EXPIRED && invite.state !== closure_2_10.BANNED && invite.state !== closure_2_10.ERROR;
       }
       if (!flag) {
         if (null == invite.channel) {
@@ -75,10 +73,12 @@ let prototype = function AcceptInviteManager() {
               }
               let obj = { location: null };
               obj[0] = str;
-              applyArgumentsResult(dependencyMap[15]).acceptFriendInvite(invite, obj);
-              const obj6 = applyArgumentsResult(dependencyMap[15]);
-              dispatcherDefault.wait(() => set(9151).clearDisplayedInvite());
+              applyArgumentsResult(closure_2_2[15]).acceptFriendInvite(invite, obj);
+              const obj6 = applyArgumentsResult(closure_2_2[15]);
+              const tmp34 = closure_2_2;
+              closure_2_1(closure_2_2[16]).wait(() => set(9151).clearDisplayedInvite());
               flag = false;
+              const obj8 = closure_2_1(closure_2_2[16]);
             }
           }
         }
@@ -116,29 +116,34 @@ let prototype = function AcceptInviteManager() {
                   let flag3 = closure_2_8.can(closure_2_11.VIEW_CHANNEL, closure_2_4.getChannel(target_channel_id));
                   if (flag3) {
                     const target_message_id = invite.target_message_id;
-                    applyArgumentsResult(dependencyMap[9]).transitionTo(closure_2_12.CHANNEL(id, target_channel_id, target_message_id), { navigationReplace: true, openChannel: true });
+                    tmp39(tmp40[9]).transitionTo(closure_2_12.CHANNEL(id, target_channel_id, target_message_id), { navigationReplace: true, openChannel: true });
                     flag3 = true;
-                    const tmp39Result = applyArgumentsResult(dependencyMap[9]);
+                    const tmp39Result = tmp39(tmp40[9]);
                   }
                   flag2 = flag3;
                 }
               }
             }
           }
-          obj9 = applyArgumentsResult(dependencyMap[8]);
+          obj9 = applyArgumentsResult(closure_2_2[8]);
+          tmp39 = applyArgumentsResult;
+          tmp40 = closure_2_2;
         }
         if (flag2) {
-          dispatcherDefault.wait(() => set(9151).clearDisplayedInvite());
+          closure_2_1(closure_2_2[16]).wait(() => set(9151).clearDisplayedInvite());
           flag = false;
+          const obj5 = closure_2_1(closure_2_2[16]);
         } else {
-          ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+          closure_2_1(closure_2_2[10]).hideActionSheet();
+          const obj2 = closure_2_1(closure_2_2[10]);
           obj = { code: null, isRegistration: null, deeplinkAttemptId: null, inviteInstanceId: null };
           obj[0] = set;
           obj[1] = _isRegistration._isRegistration;
           obj[2] = closure_1;
           obj[3] = closure_2;
-          _modDef5260.pushLazy(applyArgumentsResult(dependencyMap[13])(dependencyMap[12], dependencyMap.paths), obj, ACCEPT_INVITE_MODAL_KEY);
+          closure_2_1(closure_2_2[11]).pushLazy(applyArgumentsResult(closure_2_2[13])(closure_2_2[12], closure_2_2.paths), obj, closure_2_9);
           flag = false;
+          const obj3 = closure_2_1(closure_2_2[11]);
         }
       }
       return flag;
@@ -152,6 +157,6 @@ let prototype = function AcceptInviteManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/accept_invite/native/AcceptInviteManager.tsx");
+let result = require("set").fileFinishedImporting("modules/accept_invite/native/AcceptInviteManager.tsx");
 
 export default prototype;

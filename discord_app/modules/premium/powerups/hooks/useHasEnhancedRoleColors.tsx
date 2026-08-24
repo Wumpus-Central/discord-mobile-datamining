@@ -1,11 +1,11 @@
 // === Module 6814: useHasEnhancedRoleColors ===
 
 // Module 6814 (useHasEnhancedRoleColors)
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx");
 
 export default function useHasEnhancedRoleColors(arg0) {
   const _require = arg0;
@@ -15,7 +15,7 @@ export default function useHasEnhancedRoleColors(arg0) {
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
-      hasItem = features.has(GuildFeatures.ENHANCED_ROLE_COLORS);
+      hasItem = features.has(closure_1_3.ENHANCED_ROLE_COLORS);
     }
     return hasItem;
   });
@@ -41,7 +41,7 @@ export const useHasEnhancedRoleColorsForRole = function useHasEnhancedRoleColors
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
-      hasItem = features.has(GuildFeatures.ENHANCED_ROLE_COLORS);
+      hasItem = features.has(closure_1_3.ENHANCED_ROLE_COLORS);
     }
     return hasItem;
   });

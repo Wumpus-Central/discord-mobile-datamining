@@ -3,18 +3,19 @@
 // Module 9279 (ProductDetailsActionSheetPreview)
 import ThemesDefault from "Themes" /* 712 */;
 import memoDefault from "memo" /* 9280 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c4, useState: c5 } = noop);
-const createCacheKey = { borderBottomColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: ThemesDefault.space.PX_16, flex: 1 };
+createCacheKey = { previewContainer: { flex: 1 }, previewDivider: null };
+createCacheKey = { borderBottomColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: ThemesDefault.space.PX_16, flex: 1 };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
 
 export default function ProductDetailsActionSheetPreview(onBundleActiveItemChange) {
   ({ product, handlePreviewPress, onTrackPress } = onBundleActiveItemChange);
@@ -36,7 +37,7 @@ export default function ProductDetailsActionSheetPreview(onBundleActiveItemChang
     obj[2] = handlePreviewPress;
     obj[3] = onTrackPress;
     obj[4] = onBundleActiveItemChange.onBundleActiveItemChange;
-    let tmp7Result = jsx(memoDefault, { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null });
+    let tmp7Result = tmp7(memoDefault, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.previewDivider;
@@ -45,8 +46,8 @@ export default function ProductDetailsActionSheetPreview(onBundleActiveItemChang
     obj1[1] = tmp3;
     obj1[2] = handlePreviewPress;
     obj1[3] = onTrackPress;
-    obj[1] = jsx(_require(9282).IndividualProductPreview, { product: null, width: null, handlePreviewPress: null, onTrackPress: null });
-    tmp7Result = <View style={null}>{null}</View>;
+    obj[1] = tmp7(_require(9282).IndividualProductPreview, obj1);
+    tmp7Result = tmp7(tmp8, obj);
   }
   obj[2] = tmp7Result;
   return <View style={tmp.previewContainer} onLayout={callback2((nativeEvent) => {

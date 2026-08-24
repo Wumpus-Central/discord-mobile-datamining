@@ -9,11 +9,11 @@ export const browserSessionIntegration = registerSpanErrorInstrumentation.define
   name: "BrowserSession",
   setupOnce() {
     if (undefined !== callback(table[1]).WINDOW.document) {
-      let tmpResult = callback(table[0]);
+      let tmpResult = tmp(tmp2[0]);
       tmpResult.startSession({ ignoreDuration: true });
-      tmpResult = callback(table[0]);
+      tmpResult = tmp(tmp2[0]);
       tmpResult.captureSession();
-      const result = callback(table[3]).addHistoryInstrumentationHandler((arg0) => {
+      const result = tmp(tmp2[3]).addHistoryInstrumentationHandler((arg0) => {
         const from = arg0.from;
         if (tmp) {
           callback(817).startSession({ ignoreDuration: true });
@@ -21,11 +21,10 @@ export const browserSessionIntegration = registerSpanErrorInstrumentation.define
           callback(817).captureSession();
           const obj2 = callback(817);
         }
-        tmp = undefined !== from && from !== arg0.to;
       });
-      const tmpResult1 = callback(table[3]);
-    } else if (callback(table[2]).DEBUG_BUILD) {
-      const debug = callback(table[0]).debug;
+      const tmpResult1 = tmp(tmp2[3]);
+    } else if (tmp(tmp2[2]).DEBUG_BUILD) {
+      const debug = tmp(tmp2[0]).debug;
       debug.warn("Using the `browserSessionIntegration` in non-browser environments is not supported.");
     }
   }

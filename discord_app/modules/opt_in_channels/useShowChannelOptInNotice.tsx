@@ -1,12 +1,12 @@
 // === Module 10635: useShowChannelOptInNotice ===
 
 // Module 10635 (useShowChannelOptInNotice)
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
 import { NULL_STRING_GUILD_ID } from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
 
 export default function useShowChannelOptInNotice(getGuildId) {
   const _require = getGuildId;

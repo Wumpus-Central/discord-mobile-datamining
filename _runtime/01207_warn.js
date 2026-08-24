@@ -1,7 +1,7 @@
 // === Module 1207: warn ===
 
 // Module 1207 (warn)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import isHermesEnabled from "isHermesEnabled" /* 1002 */;
 import { debug } from "registerSpanErrorInstrumentation" /* 817 */;

@@ -1,16 +1,17 @@
 // === Module 4736: useManaTextMigrationHighlight ===
 
 // Module 4736 (useManaTextMigrationHighlight)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
 import importDefaultResult from "getUserAgnosticState" /* 4737 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 let c3 = importDefaultResult;
-let obj = { borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_POSITIVE };
+let obj = { highlight: null, overridden: null };
+obj = { borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_POSITIVE };
 obj[0] = obj;
 obj[1] = { borderWidth: 1, borderStyle: "dashed", borderColor: ThemesDefault.colors.STATUS_DANGER };
 let closure_5 = createCacheKey.createStyles(obj);
@@ -21,27 +22,28 @@ obj2[1] = internal.resolveSemanticColor(ThemesDefault.themes.DARK, ThemesDefault
 const obj3 = { borderWidth: 1, borderColor: null };
 const internal2 = ThemesDefault.internal;
 obj3[1] = internal2.resolveSemanticColor(ThemesDefault.themes.LIGHT, ThemesDefault.colors.STATUS_WARNING);
-const result = obj132.fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlight.tsx");
+const obj1 = { borderWidth: 1, borderStyle: "dashed", borderColor: ThemesDefault.colors.STATUS_DANGER };
+const result = set.fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlight.tsx");
 
-export const useManaTextMigrationHighlight = function useManaTextMigrationHighlight(closure_17, style) {
+export const useManaTextMigrationHighlight = function useManaTextMigrationHighlight(arg0, style) {
   const tmp = callback();
   const items = [closure_3];
   if (!obj.useStateFromStores(items, () => closure_3.get("highlight_mana_text"))) {
     return null;
   } else {
-    const _require = closure_17;
+    const _require = arg0;
     dependencyMap = StyleSheet.flatten(style);
     const _Object = Object;
-    const keys = Object.keys(closure_17);
-    keys.some((item, index) => {
-      if ("includeFontPadding" === item) {
+    const keys = Object.keys(arg0);
+    keys.some((arg0) => {
+      if ("includeFontPadding" === arg0) {
         return false;
       } else {
-        let tmp2 = undefined !== table[item];
+        let tmp2 = undefined !== table[arg0];
         if (tmp2) {
           let tmp4;
           if (table2 != null) {
-            tmp4 = table2[item];
+            tmp4 = table2[arg0];
           }
           tmp2 = undefined !== tmp4;
         }
@@ -49,7 +51,6 @@ export const useManaTextMigrationHighlight = function useManaTextMigrationHighli
       }
     }) ? tmp.overridden : tmp.highlight;
   }
-  obj = _require(589);
 };
 export const withManaTextMigrationHighlight = function withManaTextMigrationHighlight(fromEntriesResult) {
   let proxy = fromEntriesResult;

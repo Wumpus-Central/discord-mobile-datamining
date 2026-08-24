@@ -3,10 +3,10 @@
 // Module 16533 (handleMessageCreate)
 import initializeDefault from "initialize" /* 5038 */;
 import _backgroundSync from "_backgroundSync" /* 16534 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
+require = arg1;
 initializeDefault;
 class BackgroundSyncManager extends tmp2 {
   constructor() {
@@ -36,6 +36,7 @@ prototype["handleMessageCreate"] = function handleMessageCreate(message) {
     }
     if (tmp2) {
       _backgroundSync.backgroundSync({ force: true });
+      const obj2 = _backgroundSync;
     }
   }
 };
@@ -43,6 +44,6 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   _backgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
 };
 const backgroundSyncManager = new BackgroundSyncManager();
-const result = require("obj132").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
+const result = require("set").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
 
 export default backgroundSyncManager;

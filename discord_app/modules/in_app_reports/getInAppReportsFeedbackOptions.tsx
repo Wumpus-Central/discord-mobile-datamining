@@ -1,11 +1,11 @@
 // === Module 16575: getInAppReportsFeedbackOptions ===
 
 // Module 16575 (getInAppReportsFeedbackOptions)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
 let obj = { COULD_NOT_FIND: "I couldn't find what I was looking for", CONFUSING_LANGUAGE: "I found the language confusing", OTHER: "Other" };
-const result = obj132.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
 
 export default function getInAppReportsFeedbackOptions() {
   obj = { label: null, code: 2, value: null };

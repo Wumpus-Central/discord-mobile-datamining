@@ -2,17 +2,17 @@
 
 // Module 5089 (getSearchIndex)
 import apply from "apply" /* 12 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import getGuildMemberSecondaryIndexes from "getGuildMemberSecondaryIndexes" /* 5090 */;
 import getJoinedAtDateFormatter from "getJoinedAtDateFormatter" /* 5092 */;
 import hasStringMatch from "hasStringMatch" /* 5243 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
-let closure_5 = 3 * obj132Default.Millis.SECOND;
-let result = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyPageStore.tsx");
+require = arg1;
+let closure_5 = 3 * setDefault.Millis.SECOND;
+let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyPageStore.tsx");
 class GuildMemberSafetyPageStore {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -141,6 +141,7 @@ prototype["_checkUpdatesForPaginationUpdate"] = function _checkUpdatesForPaginat
   let tmp = null != isIncludedInSearchResults2.isIncludedInSearchResults && isIncludedInSearchResults2.isIncludedInSearchResults !== enhanceNewMemberResult.isIncludedInSearchResults;
   if (!tmp) {
     tmp = null != isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp && isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp !== enhanceNewMemberResult.isCurrentGuildMemberByTimestamp;
+    const tmp2 = null != isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp && isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp !== enhanceNewMemberResult.isCurrentGuildMemberByTimestamp;
   }
   return tmp;
 };
@@ -312,19 +313,29 @@ prototype["updateClientMembers"] = function updateClientMembers(items, requiresU
           let tmp10 = nextResult;
           if (flag) {
             let obj = {};
+            let tmp7 = tmp10;
+            let tmp8 = obj;
             let merged = Object.assign(tmp10);
             obj.isIncludedInSearchResults = true;
             tmp10 = obj;
           }
           if (flag2) {
+            let tmp11 = require;
+            let tmp12 = dependencyMap;
             let obj2 = getJoinedAtDateFormatter;
+            let tmp13 = nextResult;
             obj = {};
+            let tmp15 = tmp10;
+            let tmp16 = obj;
             let joinedAtTimestamp = obj2.getJoinedAtTimestamp(tmp6.joinedAt);
             let merged1 = Object.assign(tmp10);
             obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= self._members.newMemberTimestamp;
             obj.refreshTimestamp = self.lastRefreshTimestamp;
             tmp10 = obj;
           }
+          let tmp18 = nextResult;
+          let tmp19 = tmp10;
+          let tmp20 = callback;
           let tmp21 = callback(self._rawUpdateMember(tmp6.userId, tmp10), 2);
           let first = tmp21[0];
           let tmp22 = tmp21;
@@ -332,6 +343,7 @@ prototype["updateClientMembers"] = function updateClientMembers(items, requiresU
             first = flag3;
           }
           flag3 = first;
+          let tmp24 = tmp21;
           let tmp25 = tmp22[1] || flag4;
           flag4 = tmp25;
         }
@@ -354,9 +366,13 @@ prototype["updateServerMembers"] = function updateServerMembers(members) {
       const iter = members[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
+        let tmp7 = store;
         let tmp6 = nextResult;
         let trueMember = store.getTrueMember(self.guildId, nextResult.user.id);
         if (null != trueMember) {
+          let tmp10 = nextResult;
+          let tmp11 = trueMember;
+          let tmp12 = callback;
           let tmp13 = callback(self._rawUpdateMember(tmp6.user.id, tmp9), 2);
           let first = tmp13[0];
           let tmp14 = tmp13;
@@ -364,6 +380,7 @@ prototype["updateServerMembers"] = function updateServerMembers(members) {
             first = flag;
           }
           flag = first;
+          let tmp16 = tmp13;
           let tmp17 = tmp14[1] || flag2;
           flag2 = tmp17;
         }
@@ -378,15 +395,16 @@ prototype["updateServerMembers"] = function updateServerMembers(members) {
   return false;
 };
 prototype["updateMembersByMemberIds"] = function updateMembersByMemberIds(items) {
-  const self = this;
+  let self = this;
+  self = this;
   if (null != this._members) {
     if (self._initialized) {
-      return self.updateClientMembers(items.reduce((acc, item, index) => {
-        const trueMember = closure_1_3.getTrueMember(self.guildId, item);
+      return self.updateClientMembers(items.reduce((arr, id) => {
+        const trueMember = closure_1_3.getTrueMember(self.guildId, id);
         if (null != trueMember) {
-          acc.push(trueMember);
+          arr.push(trueMember);
         }
-        return acc;
+        return arr;
       }, []));
     }
   }
@@ -395,17 +413,17 @@ prototype["updateMembersByMemberIds"] = function updateMembersByMemberIds(items)
 prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
   const self = this;
   closure_0 = selectedSort;
-  return new Promise((fn) => {
+  return new Promise((arg0) => {
     const items = [...selectedSort(self[8]).cloneDeep(self.getMembersByIndex(closure_0(self[4]).MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0])];
     let obj = selectedSort(self[8]);
     HermesBuiltin.arraySpread(selectedSort(self[8]).cloneDeep(self.getMembersByIndex(selectedSort(self[4]).MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0]), tmp);
-    const item = items.forEach((item, index) => {
-      let obj = selectedSort(self[9]);
+    const item = items.forEach((joinedAt) => {
+      let obj = closure_1_0(closure_1_1[9]);
       _search = _search._search;
       let flag;
-      const sortValueForMember = obj.getSortValueForMember(item, closure_0);
+      const sortValueForMember = obj.getSortValueForMember(joinedAt, closure_0);
       if (_search != null) {
-        flag = _search.isMemberIncludedInSearchResults(item);
+        flag = _search.isMemberIncludedInSearchResults(joinedAt);
       }
       if (flag == null) {
         flag = false;
@@ -415,14 +433,15 @@ prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
         obj = { sort: null, isIncludedInSearchResults: null };
         obj[0] = sortValueForMember;
         obj[1] = flag;
-        _members.updateMember(item, obj);
+        _members.updateMember(joinedAt, obj);
       }
     });
-    fn();
+    arg0();
   });
 };
 prototype["sortMembersBySelectedSort"] = function sortMembersBySelectedSort(selectedSort) {
-  const self = this;
+  let self = this;
+  self = this;
   let tmp = null != this._search && null != self._members && self._initialized;
   if (tmp) {
     tmp = null != selectedSort;
@@ -431,23 +450,24 @@ prototype["sortMembersBySelectedSort"] = function sortMembersBySelectedSort(sele
     const obj = { sort: null };
     obj[0] = selectedSort;
     let result = self.updatePaginationState(obj, true);
-    self.updateMembersSort(selectedSort).then((result) => {
-      result = self.updatePaginationChunks();
+    self.updateMembersSort(selectedSort).then(() => {
+      const result = self.updatePaginationChunks();
     });
     const updateMembersSortResult = self.updateMembersSort(selectedSort);
   }
 };
 prototype["updateSearchedMembersByMemberIds"] = function updateSearchedMembersByMemberIds(memberIds) {
-  const self = this;
+  let self = this;
+  self = this;
   if (null != this._search) {
     if (null != self._members) {
       if (self._initialized) {
-        return self.updateClientMembers(memberIds.reduce((acc, item, index) => {
-          const trueMember = closure_1_3.getTrueMember(self.guildId, item);
+        return self.updateClientMembers(memberIds.reduce((arr, id) => {
+          const trueMember = closure_1_3.getTrueMember(self.guildId, id);
           if (null != trueMember) {
-            acc.push(trueMember);
+            arr.push(trueMember);
           }
-          return acc;
+          return arr;
         }, []), self._search.requiresUsernameMatch, 0 !== self.lastRefreshTimestamp);
       }
     }
@@ -464,7 +484,8 @@ prototype["rebuildAllMembers"] = function rebuildAllMembers() {
   return false;
 };
 prototype["_scheduleRefresh"] = function _scheduleRefresh(NumberResult) {
-  const self = this;
+  let self = this;
+  self = this;
   this.lastRefreshTimestamp = NumberResult;
   this.lastCursorTimestamp = Date.now();
   if (null != this._lastRefreshTimer) {
@@ -493,6 +514,7 @@ prototype["refreshNewMembersAndSearchResults"] = function refreshNewMembersAndSe
           let _members2 = self._members;
           obj = { isCurrentGuildMemberByTimestamp: true, refreshTimestamp: null, user: null };
           obj[1] = NumberResult;
+          let tmp9 = user;
           obj[2] = user.getUser(item10031.userId);
           let updateMemberResult = _members2.updateMember(item10031, obj);
           if (!updateMemberResult) {
@@ -558,16 +580,20 @@ prototype["updateSearchState"] = function updateSearchState(selectedSort) {
         const cloneDeepResult = obj.cloneDeep(_members.values(getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER));
         let flag2 = BooleanResult !== self._search.hasDefaultQuery;
         for (const item10048 of cloneDeepResult) {
+          let tmp11 = item10048;
           if (item10048.isCurrentGuildMemberByTimestamp) {
             let _search3 = self._search;
-            let result1 = _search3.isMemberIncludedInSearchResults(item10048);
-            if (result1 !== item10048.isIncludedInSearchResults) {
+            let tmp12 = item10048;
+            let result1 = _search3.isMemberIncludedInSearchResults(tmp11);
+            if (result1 !== tmp11.isIncludedInSearchResults) {
               flag2 = true;
               flag = true;
               let _members2 = self._members;
+              let tmp15 = item10048;
               obj = { isIncludedInSearchResults: null };
+              let tmp16 = result1;
               obj[0] = tmp14;
-              let updateMemberResult = _members2.updateMember(item10048, obj);
+              let updateMemberResult = _members2.updateMember(tmp11, obj);
             }
           }
           continue;

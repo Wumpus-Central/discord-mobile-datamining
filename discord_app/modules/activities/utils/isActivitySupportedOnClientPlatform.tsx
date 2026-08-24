@@ -1,20 +1,18 @@
 // === Module 8727: isActivitySupportedOnClientPlatform ===
 
 // Module 8727 (isActivitySupportedOnClientPlatform)
-import obj132 from "obj132" /* 2 */;
-import obj1322 from "obj132" /* 500 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {
   if (obj.isIOS()) {
-    let IOS = PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.IOS;
+    let IOS = tmp(1954).EmbeddedActivitySupportedPlatforms.IOS;
   } else {
-    const tmpResult = obj1322;
-    const EmbeddedActivitySupportedPlatforms = PermissionOverwriteType.EmbeddedActivitySupportedPlatforms;
-    IOS = obj1322.isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
-    const isAndroidResult = obj1322.isAndroid();
+    const tmpResult = tmp(500);
+    const EmbeddedActivitySupportedPlatforms = tmp(1954).EmbeddedActivitySupportedPlatforms;
+    IOS = tmp(500).isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
+    const isAndroidResult = tmp(500).isAndroid();
   }
   let flag;
   if (arr != null) {

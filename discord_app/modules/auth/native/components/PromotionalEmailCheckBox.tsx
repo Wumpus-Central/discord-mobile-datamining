@@ -7,18 +7,19 @@ import setPromoEmailConsentState from "setPromoEmailConsentState" /* 5257 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ View: obj1, Pressable: c3 } = get_ActivityIndicator);
 ({ usePromoEmailConsentStore: c4, setPromoEmailConsentChecked: c5 } = setPromoEmailConsentState);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, checkboxLabel: { flex: 1 } });
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
 
 export default function PromotionalEmailCheckBox(style) {
+  let _require;
   const tmp = callback4();
   const tmp3 = callback((checked) => checked.checked);
-  const _require = tmp3;
+  _require = tmp3;
   let obj = _require(4105);
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: tmp3 });
   let tmp9 = null;

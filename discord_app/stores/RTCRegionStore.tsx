@@ -3,11 +3,11 @@
 // Module 4565 (initialize)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
-const HOUR = obj132Default.Millis.HOUR;
+const HOUR = setDefault.Millis.HOUR;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class RTCRegionStore extends DeviceSettingsStore {
 }
@@ -90,6 +90,6 @@ obj = {
   }
 };
 const rTCRegionStore = new RTCRegionStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("stores/RTCRegionStore.tsx");
+const result = require("set").fileFinishedImporting("stores/RTCRegionStore.tsx");
 
 export default rTCRegionStore;

@@ -29,6 +29,6 @@ const displayedInviteStore = new DisplayedInviteStore(dispatcherDefault, {
     c2 = null;
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/native/DisplayedInviteStore.tsx");
+const result = require("set").fileFinishedImporting("stores/native/DisplayedInviteStore.tsx");
 
 export default displayedInviteStore;

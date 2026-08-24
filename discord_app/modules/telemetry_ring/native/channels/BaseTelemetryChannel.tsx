@@ -1,9 +1,9 @@
 // === Module 13561: append ===
 
 // Module 13561 (append)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");
+const result = set.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");
 class BaseTelemetryChannel {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);

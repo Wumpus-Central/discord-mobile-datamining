@@ -1,7 +1,7 @@
 // === Module 15483: useTotalPossibleBoostCount ===
 
 // Module 15483 (useTotalPossibleBoostCount)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
 import ME from "ME" /* 676 */;
@@ -9,7 +9,7 @@ import ME from "ME" /* 676 */;
 let useMemo = noop.useMemo;
 ({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: closure_1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: obj1 } = BoostedGuildTiers);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c3, BoostedGuildTiers: c4, GuildFeatures: c5 } = ME);
-const result = obj132.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
 
 export default function useTotalPossibleBoostCount(arg0) {
   useMemo = arg0;
@@ -31,10 +31,10 @@ export default function useTotalPossibleBoostCount(arg0) {
       const values = Object.values(closure_1_2);
       const _Object2 = Object;
       const combined = values.concat(Object.values(closure_1_1));
-      const item = combined.forEach((item, index) => {
-        let tmp = null == item.includedInLevel;
+      const item = combined.forEach((includedInLevel) => {
+        let tmp = null == includedInLevel.includedInLevel;
         if (tmp) {
-          const isEnabled = item.isEnabled;
+          const isEnabled = includedInLevel.isEnabled;
           num = undefined;
           if (isEnabled != null) {
             num = isEnabled(num.id);
@@ -45,7 +45,7 @@ export default function useTotalPossibleBoostCount(arg0) {
           tmp = num;
         }
         if (tmp) {
-          closure_0 = closure_0 + item.boostPrice;
+          closure_0 = closure_0 + includedInLevel.boostPrice;
         }
       });
       return num;

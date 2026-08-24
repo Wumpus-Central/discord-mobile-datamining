@@ -10,7 +10,8 @@ class ActivityShelfStore extends PersistedStore {
 }
 const prototype = ActivityShelfStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = { usageByApplicationId: {}, shelfOrder: [] };
+  let obj = arg0;
+  obj = { usageByApplicationId: {}, shelfOrder: [] };
   if (arg0 == null) {
     obj = {};
   }
@@ -26,6 +27,6 @@ const activityShelfStore = new ActivityShelfStore(dispatcherDefault, {
     closure_0 = { usageByApplicationId: {}, shelfOrder: [] };
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/ActivityShelfStore.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/ActivityShelfStore.tsx");
 
 export default activityShelfStore;

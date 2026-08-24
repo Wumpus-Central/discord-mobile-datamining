@@ -4,9 +4,9 @@
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/guild_moderation/native/KickConfirmModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_moderation/native/KickConfirmModal.tsx");
 
 export default function KickConfirmModal(onBeforeGoBack) {
   ({ guildId: require, userId: importDefault } = onBeforeGoBack);
@@ -16,7 +16,7 @@ export default function KickConfirmModal(onBeforeGoBack) {
   const intl = require(onGoBack[4]).intl;
   obj[1] = intl.string(require(onGoBack[4]).t.R3QeLQ);
   obj[2] = function render() {
-    return jsx(importDefault(onGoBack[5]), { onKick: onGoBack, guildId: closure_0, userId: closure_1 });
+    return closure_1_3(closure_1_1(onGoBack[5]), { onKick: onGoBack, guildId: closure_0, userId: closure_1 });
   };
   return jsx(importDefault(onGoBack[3]), { screenKey: "kick", title: null, render: null });
 };

@@ -18,6 +18,9 @@ const fn = function q(arg0) {
   let num2 = 0;
   while (true) {
     let tmp2 = num2 < arr.length;
+    let tmp3 = num;
+    let tmp4 = num2;
+    let tmp5 = arr;
     if (!tmp2) {
       let _String = String;
       arr = items.push(fromCharCode.apply(null, uint16Array.subarray(0, num)));

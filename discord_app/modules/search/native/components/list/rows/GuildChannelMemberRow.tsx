@@ -6,7 +6,7 @@ import UserRowSubLabelDefault from "UserRowSubLabel" /* 9645 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelMemberRow.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelMemberRow.tsx");
 
 export default function GuildChannelMemberRow(arg0) {
   const merged = Object.assign(arg0);

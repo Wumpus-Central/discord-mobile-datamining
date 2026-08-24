@@ -1,14 +1,14 @@
 // === Module 1733: n ===
 
 // Module 1733 (n)
-const require = fn;
+const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_delayTs2(){const{_nextAnimation,delayMs,getReduceMotionForAnimation,reduceMotion}=this.__closure;const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function delay(animation,now){const{startTime:startTime,started:started,previousAnimation:previousAnimation}=animation;const current=animation.current;if(now-startTime>=delayMs||animation.reduceMotion){if(!started){nextAnimation.onStart(nextAnimation,current,now,previousAnimation);animation.previousAnimation=null;animation.started=true;}const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;return finished;}else if(previousAnimation){const finished=previousAnimation.finished||previousAnimation.onFrame(previousAnimation,now);animation.current=previousAnimation.current;if(finished){animation.previousAnimation=null;}}return false;}function onStart(animation,value,now,previousAnimation){animation.startTime=now;animation.started=false;animation.current=value;if(previousAnimation===animation){animation.previousAnimation=previousAnimation.previousAnimation;}else{animation.previousAnimation=previousAnimation;}if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}}const callback=function(finished){if(nextAnimation.callback){nextAnimation.callback(finished);}};return{isHigherOrder:true,onFrame:delay,onStart:onStart,current:nextAnimation.current,callback:callback,previousAnimation:null,startTime:0,started:false,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };
-fn = function n(delayMs, _nextAnimation, reduceMotion) {
+let fn = function n(delayMs, _nextAnimation, reduceMotion) {
   const _require = delayMs;
   dependencyMap = _nextAnimation;
   closure_2 = reduceMotion;
-  _require(1694);
+  let obj = _require(1694);
   const fn = function s() {
     let tmpResult = table;
     if (typeof table === "function") {
@@ -64,7 +64,7 @@ fn = function n(delayMs, _nextAnimation, reduceMotion) {
     };
     return obj;
   };
-  let obj = { _nextAnimation, delayMs, getReduceMotionForAnimation: _require(1694).getReduceMotionForAnimation, reduceMotion };
+  obj = { _nextAnimation, delayMs, getReduceMotionForAnimation: _require(1694).getReduceMotionForAnimation, reduceMotion };
   fn.__closure = obj;
   fn.__workletHash = 7904568249320;
   fn.__initData = closure_2;

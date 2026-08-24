@@ -3,13 +3,13 @@
 // Module 10519 (AnimatedCount)
 import Text from "Text" /* 4734 */;
 import defaultFormatter2 from "defaultFormatter" /* 10520 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function AnimatedCount(state) {
   state = state.state;
   const cleanUp = state.cleanUp;
@@ -37,24 +37,33 @@ function AnimatedCount(state) {
   }
   sharedValue = obj1.useSharedValue(NEUTRAL);
   items = [height];
-  memo = obj.useMemo(() => items.map((item, index) => {
+  memo = obj.useMemo(() => closure_1_11.map((arg0) => {
     if (null == closure_2) {
       return 0;
-    } else if (closure_1_10.ABOVE === item) {
-    } else if (closure_1_10.BELOW !== item) {
+    } else if (closure_1_10.ABOVE === arg0) {
+      let num = -1 * tmp;
+    } else {
+      num = tmp;
+      if (tmp3.BELOW !== arg0) {
+        if (tmp3.NEUTRAL === arg0) {
+          num = 0;
+        }
+      }
     }
   }), items);
   let fn = function y() {
+    obj = { transform: null };
+    obj = { translateY: null };
     const obj3 = state(height[8]);
     const obj4 = state(height[6]);
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = closure_0 === state(height[7]).TransitionStates.YEETED;
+        tmp = closure_0 === closure_1_0(closure_1_2[7]).TransitionStates.YEETED;
       }
       if (tmp) {
-        state(height[6]).runOnJS(closure_1)();
-        obj = state(height[6]);
+        closure_1_0(closure_1_2[6]).runOnJS(closure_1)();
+        obj = closure_1_0(closure_1_2[6]);
       }
     };
     obj = { state, TransitionStates: state(height[7]).TransitionStates, runOnJS: state(height[6]).runOnJS, cleanUp };
@@ -76,15 +85,15 @@ function AnimatedCount(state) {
     if (state === state(height[7]).TransitionStates.YEETED) {
       ({ current, previous } = context);
       if (current > previous) {
-        let NEUTRAL = obj.BELOW;
+        let NEUTRAL = closure_1_10.BELOW;
       } else if (current < previous) {
-        NEUTRAL = obj.ABOVE;
+        NEUTRAL = closure_1_10.ABOVE;
       } else {
-        NEUTRAL = obj.NEUTRAL;
+        NEUTRAL = closure_1_10.NEUTRAL;
       }
       const result = -1 * NEUTRAL;
     } else {
-      const result1 = sharedValue.set(obj.NEUTRAL);
+      const result1 = sharedValue.set(closure_1_10.NEUTRAL);
     }
   }, items1);
   obj = { style: items2, children: null };
@@ -99,19 +108,24 @@ function getItemKey(arg0) {
 function AnimatedCounterTransitionGroup(count) {
   count = count.count;
   const formatter = count.formatter;
+  let ref = formatter;
   const textColor = count.textColor;
   const textVariant = count.textVariant;
   const textStyle = count.textStyle;
   const springConfig = count.springConfig;
+  let first;
+  let callback;
   let callback2;
   let callback3;
+  ref = undefined;
   const tmp = callback3();
   const tmp2 = textVariant(textStyle.useState(), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
+  callback = tmp2[1];
   items = [count];
   [tmp5, c8] = textVariant(textStyle.useState(items), 2);
   callback3 = textStyle.useRef(tmp5);
-  const ref = textStyle.useRef(count);
+  ref = textStyle.useRef(count);
   let items1 = [count];
   const effect = textStyle.useEffect(() => {
     ref.current = ref.current[0];
@@ -124,9 +138,11 @@ function AnimatedCounterTransitionGroup(count) {
   const items2 = [tmp5, ref];
   const memo = textStyle.useMemo(() => ({ current: count[0], previous: ref.current }), items2);
   const items3 = [formatter, first, springConfig, textColor, textStyle, textVariant];
-  const callback = textStyle.useCallback((nativeEvent) => {
+  callback = textStyle.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.height);
   }, []);
+  obj = { style: tmp.container, children: null };
+  obj = { value: memo, children: null };
   const callback1 = textStyle.useCallback((arg0, arg1, arg2, arg3) => {
     obj = { formatter: ref, springConfig: null, count: null, state: null, cleanUp: null, height: null, textColor: null, textVariant: null, textStyle: null };
     let springStandard = springConfig;
@@ -141,7 +157,7 @@ function AnimatedCounterTransitionGroup(count) {
     obj[6] = textColor;
     obj[7] = textVariant;
     obj[8] = textStyle;
-    return callback(AnimatedCount, obj, arg0);
+    return closure_7(closure_1_15, obj, arg0);
   }, items3);
   obj = { items: tmp5, renderItem: callback1, getItemKey };
   obj[1] = callback(count(textColor[7]).TransitionGroup, obj);
@@ -192,7 +208,7 @@ const memoResult = importAllResult.memo((textColor) => {
     obj[3] = str;
     obj[4] = str2;
     obj[5] = textStyle;
-    let tmp3Result = callback(AnimatedCounterTransitionGroup, obj);
+    let tmp3Result = tmp3(AnimatedCounterTransitionGroup, obj);
   } else {
     obj = { count: null, formatter: null, textColor: null, textVariant: null, textStyle: null };
     obj[0] = count;
@@ -200,10 +216,10 @@ const memoResult = importAllResult.memo((textColor) => {
     obj[2] = str;
     obj[3] = str2;
     obj[4] = textStyle;
-    tmp3Result = callback(BasicCounter, obj);
+    tmp3Result = tmp3(BasicCounter, obj);
   }
   return tmp3Result;
 });
-let result = require("obj132").fileFinishedImporting("modules/forums/native/posts/AnimatedCounter.tsx");
+let result = require("set").fileFinishedImporting("modules/forums/native/posts/AnimatedCounter.tsx");
 
 export default memoResult;

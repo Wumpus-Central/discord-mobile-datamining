@@ -1,7 +1,7 @@
 // === Module 10332: useAutoPlay ===
 
 // Module 10332 (useAutoPlay)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
 
 export const useAutoPlay = function useAutoPlay(autoPlay) {
@@ -19,7 +19,7 @@ export const useAutoPlay = function useAutoPlay(autoPlay) {
     if (!ref2.current) {
       if (ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(ref.current);
+        clearTimeout(tmp.current);
       }
       const _setTimeout = setTimeout;
       ref.current = setTimeout(() => {

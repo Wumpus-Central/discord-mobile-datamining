@@ -1,7 +1,6 @@
 // === Module 638: isSymbol ===
 
 // Module 638 (isSymbol)
-import toStringTag from "toStringTag" /* 607 */;
 import isObjectLike from "isObjectLike" /* 620 */;
 
 
@@ -10,9 +9,10 @@ export default function isSymbol(arg0) {
   if (typeof arg0 !== "symbol") {
     let tmp2 = isObjectLike(arg0);
     if (tmp2) {
-      tmp2 = "[object Symbol]" == toStringTag(arg0);
+      tmp2 = "[object Symbol]" == tmp3(607)(arg0);
     }
     tmp = tmp2;
+    tmp3 = require;
   }
   return tmp;
 };

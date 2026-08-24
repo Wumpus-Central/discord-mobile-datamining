@@ -1,11 +1,11 @@
 // === Module 11730: useGuildPowerupsWarningConfig ===
 
 // Module 11730 (useGuildPowerupsWarningConfig)
-import noop from "noop" /* 19 */;
-import handleModifyingAppliedBoostStart from "handleModifyingAppliedBoostStart" /* 11731 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleModifyingAppliedBoostStart" /* 11731 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
 
 export default function useGuildPowerupsWarningConfig(arg0, arg1) {
   const _require = arg0;
@@ -48,10 +48,10 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
       obj[1] = intl.string(lib(stateFromStores[5]).n5hQhc);
       const intl2 = callback(stateFromStores[4]).intl;
       obj = { boostCount: null, perksString: null };
-      obj[0] = closure_3;
+      obj[0] = tmp;
       obj[1] = lib.join(", ");
       obj[2] = intl2.formatToPlainString(lib(stateFromStores[5]).iAaAiG, obj);
-      obj[3] = closure_3;
+      obj[3] = tmp;
     }
     return obj;
   }, items3);

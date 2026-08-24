@@ -16,7 +16,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { CHANNEL_SPRING_CONFIG } from "n" /* 12126 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
   let items = [cutout];
@@ -34,31 +34,31 @@ function StaticNativeCutoutAvatarImage(cutout) {
 function AnimatedNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
   ({ source, style, imageStyle } = cutout);
-  cutout(4115);
+  obj = cutout(4115);
   const fn = function h() {
     const size = cutout;
-    if (cutout.shape === cutout(dependencyMap[8]).CutoutShape.RoundedRect) {
+    if (cutout.shape === cutout(closure_1_2[8]).CutoutShape.RoundedRect) {
       obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
-      obj[0] = cutout(dependencyMap[8]).CutoutShape.RoundedRect;
-      let tmpResult = cutout(dependencyMap[11]);
-      obj[1] = tmpResult.withSpring(size.x, CHANNEL_SPRING_CONFIG);
-      tmpResult = cutout(dependencyMap[11]);
-      obj[2] = tmpResult.withSpring(size.y, CHANNEL_SPRING_CONFIG);
-      obj[3] = cutout(dependencyMap[11]).withSpring(size.width, CHANNEL_SPRING_CONFIG);
-      const tmpResult1 = cutout(dependencyMap[11]);
-      obj[4] = cutout(dependencyMap[11]).withSpring(size.height, CHANNEL_SPRING_CONFIG);
-      const tmpResult2 = cutout(dependencyMap[11]);
-      obj[5] = cutout(dependencyMap[11]).withSpring(size.cornerRadius, CHANNEL_SPRING_CONFIG);
-      const tmpResult3 = cutout(dependencyMap[11]);
+      obj[0] = tmp(tmp2[8]).CutoutShape.RoundedRect;
+      let tmpResult = tmp(tmp2[11]);
+      obj[1] = tmpResult.withSpring(size.x, closure_1_6);
+      tmpResult = tmp(tmp2[11]);
+      obj[2] = tmpResult.withSpring(size.y, closure_1_6);
+      obj[3] = tmp(tmp2[11]).withSpring(size.width, closure_1_6);
+      const tmpResult1 = tmp(tmp2[11]);
+      obj[4] = tmp(tmp2[11]).withSpring(size.height, closure_1_6);
+      const tmpResult2 = tmp(tmp2[11]);
+      obj[5] = tmp(tmp2[11]).withSpring(size.cornerRadius, closure_1_6);
+      const tmpResult3 = tmp(tmp2[11]);
     } else {
       obj = { shape: null, x: null, y: null, size: null };
-      obj[0] = cutout(dependencyMap[8]).CutoutShape.Circle;
-      obj[1] = cutout(dependencyMap[11]).withSpring(size.x, CHANNEL_SPRING_CONFIG);
-      const tmpResult4 = cutout(dependencyMap[11]);
-      obj[2] = cutout(dependencyMap[11]).withSpring(size.y, CHANNEL_SPRING_CONFIG);
-      const tmpResult5 = cutout(dependencyMap[11]);
-      obj[3] = cutout(dependencyMap[11]).withSpring(size.size, CHANNEL_SPRING_CONFIG);
-      const tmpResult6 = cutout(dependencyMap[11]);
+      obj[0] = tmp(tmp2[8]).CutoutShape.Circle;
+      obj[1] = tmp(tmp2[11]).withSpring(size.x, closure_1_6);
+      const tmpResult4 = tmp(tmp2[11]);
+      obj[2] = tmp(tmp2[11]).withSpring(size.y, closure_1_6);
+      const tmpResult5 = tmp(tmp2[11]);
+      obj[3] = tmp(tmp2[11]).withSpring(size.size, closure_1_6);
+      const tmpResult6 = tmp(tmp2[11]);
     }
     const cutouts = [obj];
     return { cutouts };
@@ -129,7 +129,9 @@ function CutoutAvatarImage(arg0) {
       obj[1] = getReactNativeSVGImageSourceDefault(source);
       obj[5] = callback(preloadDefault, obj);
       let tmp8 = callback(inlineStyles.ForeignObject, obj);
+      let tmp9 = importDefault;
       let tmp10 = callback;
+      const tmp14 = preloadDefault;
     }
     const obj2 = { style: null, children: null };
     obj2[0] = style;
@@ -137,7 +139,7 @@ function CutoutAvatarImage(arg0) {
     obj3[0] = size;
     obj3[1] = size;
     obj3[2] = v4Result;
-    if (CIRCULAR === obj40.CIRCULAR) {
+    if (CIRCULAR === tmp4.CIRCULAR) {
       const obj4 = { cx: null, cy: null, r: null, fill: "white" };
       obj4[0] = result;
       obj4[1] = result;
@@ -157,15 +159,15 @@ function CutoutAvatarImage(arg0) {
     obj7[2] = radius;
     items[1] = tmp10(inlineStyles.Circle, obj7);
     obj3[3] = items;
-    obj6[0] = callback(inlineStyles.Mask, obj3);
+    obj6[0] = closure_8(inlineStyles.Mask, obj3);
     const items1 = [tmp10(inlineStyles.Defs, obj6), tmp8, ];
     if (null == cutout.border) {
       const obj8 = { height: "100%", width: "100%", children: null };
       items1[2] = null;
       obj8[2] = items1;
-      obj2[1] = callback(tmp9Result, obj8);
-      return tmp10(closure_5, obj2);
-    } else if (CIRCULAR === obj40.CIRCULAR) {
+      obj2[1] = tmp16(tmp9Result, obj8);
+      return tmp10(tmp15, obj2);
+    } else if (CIRCULAR === tmp4.CIRCULAR) {
       Circle = inlineStyles.Circle;
       obj = { cx: null, cy: null, r: null, fill: "none", mask: null, stroke: null, strokeWidth: null };
       obj[0] = result;
@@ -187,11 +189,12 @@ function CutoutAvatarImage(arg0) {
       obj9[7] = cutout.border.width;
       tmp10Result = tmp10(inlineStyles.Rect, obj9);
     }
+    tmp15 = closure_5;
     tmp9Result = inlineStylesDefault;
   }
   tmp8 = callback(inlineStyles.Image, { x: "0", y: "0", height: "100%", width: "100%", href: getReactNativeSVGImageSourceDefault(source), mask: "url(#" + v4Result + ")" });
+  tmp9 = importDefault;
   tmp10 = callback;
-  const obj10 = { x: "0", y: "0", height: "100%", width: "100%", href: getReactNativeSVGImageSourceDefault(source), mask: "url(#" + v4Result + ")" };
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
@@ -286,6 +289,7 @@ const memoResult = importAllResult.memo((style) => {
       if (!tmp30) {
         const obj4 = getAvatarURLDefault;
         source = obj4.makeSource(getAvatarURLDefault.getDefaultAvatarURL(user2.id, user2.discriminator));
+        const obj5 = getAvatarURLDefault;
       }
     }
     if (null != cutout) {
@@ -367,8 +371,9 @@ const memoResult = importAllResult.memo((style) => {
   } else {
     return false;
   }
+  const tmp = importDefault;
 });
-let result = require("obj132").fileFinishedImporting("design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx");
+let result = require("set").fileFinishedImporting("design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx");
 
 export default memoResult;
 export const AvatarSizes = obj;

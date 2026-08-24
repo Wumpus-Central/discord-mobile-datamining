@@ -2,14 +2,14 @@
 
 // Module 85 (AssetSourceResolver)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
-const AssetSourceResolver = fn;
+const AssetSourceResolver = arg1;
 class AssetSourceResolver {
   constructor(arg0, arg1, arg2) {
     tmp = closure_2(this, AssetSourceResolver);
     this.serverUrl = global;
-    this.jsbundleUrl = fn;
+    this.jsbundleUrl = arg1;
     this.asset = importDefault;
     return;
   }
@@ -92,13 +92,14 @@ const items = [
       AssetSourceResolver(38)(null != this.serverUrl, "need server to load from");
       ({ asset, fromSource, serverUrl } = this);
       const obj = AssetSourceResolver(86);
+      const tmp = AssetSourceResolver;
       const _default = AssetSourceResolver(87).default;
       let str = "";
       if (1 !== pickScaleResult) {
         str = `${"@" + tmp4}x`;
       }
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
-      return fromSource(serverUrl + (AssetSourceResolver(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type) + "?platform=android&hash=" + self.asset.hash);
+      return fromSource(serverUrl + (tmp(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type) + "?platform=android&hash=" + self.asset.hash);
     }
   },
   {
@@ -106,13 +107,14 @@ const items = [
     value: function scaledAssetPath() {
       const asset = this.asset;
       const obj = AssetSourceResolver(86);
+      const tmp = AssetSourceResolver;
       const _default = AssetSourceResolver(87).default;
       let str = "";
       if (1 !== pickScaleResult) {
         str = `${"@" + tmp3}x`;
       }
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
-      return this.fromSource(AssetSourceResolver(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type);
+      return this.fromSource(tmp(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type);
     }
   },
   {
@@ -125,12 +127,13 @@ const items = [
       }
       const asset = self.asset;
       const obj = AssetSourceResolver(86);
+      const tmp = AssetSourceResolver;
       const _default = AssetSourceResolver(87).default;
       let str2 = "";
       if (1 !== pickScaleResult) {
         str2 = `${"@" + tmp3}x`;
       }
-      AssetSourceResolver(102);
+      tmp(102);
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
       return self.fromSource(str + `${obj2.getBasePath(asset)}/${asset.name}` + str2 + "." + asset.type.replace(/\.\.\//g, "_"));
     }

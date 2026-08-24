@@ -8,16 +8,17 @@ import useThemeDefault from "useTheme" /* 4310 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { getIconById } from "items" /* 7946 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
-const createCacheKey = { overflow: "hidden", borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { container: null, image: null };
+createCacheKey = { overflow: "hidden", borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { resizeMode: "contain", height: "100%", width: "100%" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
 
 export default function AppIcon(size) {
   let num = size.size;
@@ -31,7 +32,8 @@ export default function AppIcon(size) {
   if (obj.isThemeDark(tmp2)) {
     num2 = 0;
   }
-  const items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
+  obj = { style: items, children: <closure_3 {...obj} /> };
+  items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
   obj = { style: tmp.image, source: getIconById(size.id).iconSource };
-  return <closure_4 style={tmp.image} source={getIconById(size.id).iconSource} />;
+  return <closure_4 style={tmp.image} source={getIconById(arg0.id).iconSource} />;
 };

@@ -1,11 +1,11 @@
 // === Module 14683: useDisplayNameStylesHandleApply ===
 
 // Module 14683 (useDisplayNameStylesHandleApply)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
 
 export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHandleApply(hasChanges) {
   hasChanges = hasChanges.hasChanges;
@@ -21,12 +21,12 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
     if (hasChanges) {
       let tmp4 = selectedEffectId === hasChanges(selectedEffectId[2]).DisplayNameEffect.SOLID;
       if (tmp4) {
-        tmp4 = selectedColors.length > 0;
+        tmp4 = arr.length > 0;
       }
       if (tmp4) {
-        tmp4 = selectedColors[0] === defaultColor;
+        tmp4 = arr[0] === defaultColor;
       }
-      let items = selectedColors;
+      let items = arr;
       if (tmp4) {
         items = [];
       }
@@ -35,10 +35,10 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
       obj[1] = selectedEffectId;
       obj[2] = items;
       if (isTryItOut) {
-        let tmp2Result = hasChanges(selectedEffectId[3]);
+        let tmp2Result = tmp2(tmp3[3]);
         const result = tmp2Result.setTryItOutDisplayNameStyles(obj);
       } else {
-        tmp2Result = hasChanges(selectedEffectId[4]);
+        tmp2Result = tmp2(tmp3[4]);
         obj = { guildId: null, displayNameStyles: null };
         obj[0] = guildId;
         obj[1] = obj;
@@ -53,6 +53,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
         onClose();
       }
       const obj5 = selectedFontId(selectedEffectId[5]);
+      const tmp6 = selectedFontId;
     }
   }, items);
 };

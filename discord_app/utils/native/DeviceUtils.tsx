@@ -2,11 +2,10 @@
 
 // Module 4354 (DCDDeviceManager)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import Storage3 from "Storage" /* 595 */;
 import enforcingDefault from "enforcing" /* 671 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   const importDefaultResult = enforcingDefault;
   let constants;
   if (importDefaultResult != null) {
@@ -24,7 +23,7 @@ function getSystemVersion() {
 function getDevice() {
   return DCDDeviceManager.device;
 }
-let result = obj132.fileFinishedImporting("utils/native/DeviceUtils.tsx");
+let result = set.fileFinishedImporting("utils/native/DeviceUtils.tsx");
 
 export const isIpadOS = function isIpadOS() {
   return "iPad" === DCDDeviceManager.deviceModel;
@@ -47,6 +46,7 @@ export const getSystemVersionMajor = function getSystemVersionMajor() {
     }
     return num2;
   }
+  const str = DCDDeviceManager.systemVersion;
 };
 export const getSystemVersionMinor = function getSystemVersionMinor() {
   const match = DCDDeviceManager.systemVersion.match(/\d+/g);
@@ -79,15 +79,16 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
   if (obj.isAndroid()) {
     let tmp5 = null == mediaPerformanceClass2;
     if (tmp5) {
-      const Storage = Storage3.Storage;
+      const Storage = tmp(595).Storage;
       const value = Storage.get(mediaPerformanceClass);
       mediaPerformanceClass2 = value;
       tmp5 = null == value;
     }
     if (tmp5) {
       mediaPerformanceClass2 = enforcingDefault.getMediaPerformanceClass();
-      const Storage2 = Storage3.Storage;
+      const Storage2 = tmp(595).Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
+      const obj2 = enforcingDefault;
     }
     tmp3 = mediaPerformanceClass2;
   }

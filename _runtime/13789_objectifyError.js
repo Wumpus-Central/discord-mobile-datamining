@@ -16,8 +16,8 @@ function objectifyError(headers) {
   closure_0 = headers;
   const obj = {};
   const ownPropertyNames = Object.getOwnPropertyNames(headers);
-  const item = ownPropertyNames.forEach((item, index) => {
-    obj[item] = error[item];
+  const item = ownPropertyNames.forEach((arg0) => {
+    obj[arg0] = headers[arg0];
   });
   return obj;
 }
@@ -47,47 +47,32 @@ export default (arg0) => {
                 } else {
                   try {
                     const promise = _default2(_default(stack.stack));
-                    _default2(_default(stack.stack)).then((result) => {
-                      stack = result.stack;
-                      const mapped = stack.map((item, index) => ({ fileName: item.file, functionName: item.methodName, lineNumber: item.lineNumber }));
+                    _default2(_default(stack.stack)).then((stack) => {
+                      stack = stack.stack;
+                      const mapped = stack.map((file) => ({ fileName: file.file, functionName: file.methodName, lineNumber: file.lineNumber }));
                       let found = mapped;
                       if (closure_1_1.veto) {
-                        found = mapped.filter((item, index) => {
+                        found = mapped.filter((arg0) => {
                           let vetoResult;
                           if (closure_1 != null) {
-                            vetoResult = closure_1.veto(item);
+                            vetoResult = closure_1.veto(arg0);
                           }
                           return vetoResult;
                         });
                       }
                       stack.error(stack.message, found);
-                    }).catch((error) => {
+                    }).catch((headers) => {
                       stack.error("Unable to symbolicate stack trace from error object", []);
                       if (typeof closure_1_6 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
-                      stack = error;
+                      stack = headers;
                       const obj = {};
-                      const ownPropertyNames = Object.getOwnPropertyNames(error);
-                      const item = ownPropertyNames.forEach((item, index) => {
-                        obj[item] = error[item];
+                      const ownPropertyNames = Object.getOwnPropertyNames(headers);
+                      const item = ownPropertyNames.forEach((arg0) => {
+                        obj[arg0] = headers[arg0];
                       });
                       stack.debug(obj);
-                    });
-                    const nextPromise = _default2(_default(stack.stack)).then((result) => {
-                      stack = result.stack;
-                      const mapped = stack.map((item, index) => ({ fileName: item.file, functionName: item.methodName, lineNumber: item.lineNumber }));
-                      let found = mapped;
-                      if (closure_1_1.veto) {
-                        found = mapped.filter((item, index) => {
-                          let vetoResult;
-                          if (closure_1 != null) {
-                            vetoResult = closure_1.veto(item);
-                          }
-                          return vetoResult;
-                        });
-                      }
-                      stack.error(stack.message, found);
                     });
                   } catch (tmp32) {
                     logger.error("Unable to parse stack trace from error object", []);
@@ -122,7 +107,7 @@ export default (arg0) => {
         logger.debug(closure_1_6(tmp47));
       }
     }
-    const result = callback(dependencyMap[1]).assertHasLoggerPlugin(arg0);
+    const result = callback(closure_1_1[1]).assertHasLoggerPlugin(arg0);
     callback = arg0;
     let obj = callback;
     if (!callback) {

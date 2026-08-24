@@ -1,24 +1,24 @@
 // === Module 16338: handleAudioRouteChanged ===
 
 // Module 16338 (handleAudioRouteChanged)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import RouteTypes from "RouteTypes" /* 9649 */;
 import apexExperimentDefault from "apexExperiment" /* 16339 */;
-import handleAudioRouteChanged from "handleAudioRouteChanged" /* 9648 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
+import closure_4 from "handleAudioRouteChanged" /* 9648 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
 
 function handleAudioRouteChanged() {
   if (c8) {
     currentRouteType = currentRouteType.getCurrentRouteType();
     let flag2 = currentRouteType !== RouteTypes.RouteTypes.UNKNOWN;
     if (flag2) {
-      if (currentRouteType !== RouteTypes.RouteTypes.SPEAKER) {
-        if (currentRouteType !== RouteTypes.RouteTypes.BLUETOOTH) {
-          if (currentRouteType !== RouteTypes.RouteTypes.WIRED) {
+      if (currentRouteType !== tmp3(9649).RouteTypes.SPEAKER) {
+        if (currentRouteType !== tmp3(9649).RouteTypes.BLUETOOTH) {
+          if (currentRouteType !== tmp3(9649).RouteTypes.WIRED) {
             const AudioRoutePicker = NativeModules.AudioRoutePicker;
             if (AudioRoutePicker != null) {
               AudioRoutePicker.toggleSpeaker(true);
@@ -70,6 +70,7 @@ const stageChannelAudioStore = new StageChannelAudioStore(dispatcherDefault, {
               let defaultSpeakerForGuildCall = channel.isGuildVoice();
               if (defaultSpeakerForGuildCall) {
                 defaultSpeakerForGuildCall = apexExperimentDefault.getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForGuildCall;
+                const obj2 = apexExperimentDefault;
               }
               isGuildStageVoiceResult = defaultSpeakerForGuildCall;
             }
@@ -77,6 +78,7 @@ const stageChannelAudioStore = new StageChannelAudioStore(dispatcherDefault, {
               let defaultSpeakerForDMCall = channel.isDM();
               if (defaultSpeakerForDMCall) {
                 defaultSpeakerForDMCall = apexExperimentDefault.getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForDMCall;
+                const obj3 = apexExperimentDefault;
               }
               isGuildStageVoiceResult = defaultSpeakerForDMCall;
             }
@@ -110,6 +112,6 @@ const stageChannelAudioStore = new StageChannelAudioStore(dispatcherDefault, {
     return flag;
   }
 });
-const result = obj132.fileFinishedImporting("modules/stage_channels/native/StageChannelAudioStore.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/native/StageChannelAudioStore.tsx");
 
 export default stageChannelAudioStore;

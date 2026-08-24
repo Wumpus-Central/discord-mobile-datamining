@@ -18,7 +18,7 @@ const prototype = LayerContextManager.prototype;
 prototype["add"] = function add(key, component) {
   closure_0 = key;
   const items = this.items;
-  this.items = items.filter((item, index) => item.key !== closure_0);
+  this.items = items.filter((key) => key.key !== closure_0);
   const items1 = this.items;
   items1.push({ key, component });
   this.invalidate();
@@ -26,7 +26,7 @@ prototype["add"] = function add(key, component) {
 prototype["remove"] = function remove(arg0) {
   closure_0 = arg0;
   const items = this.items;
-  this.items = items.filter((item, index) => item.key !== closure_0);
+  this.items = items.filter((key) => key.key !== closure_0);
   this.invalidate();
 };
 prototype["setSurfaceRef"] = function setSurfaceRef(current) {
@@ -39,7 +39,7 @@ obj[2] = function invalidate() {
   return null;
 };
 const context = importAllResult.createContext(obj);
-const result = require("obj132").fileFinishedImporting("design/components/Layers/native/LayerContext.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Layers/native/LayerContext.native.tsx");
 
 export { LayerContextManager };
 export const LayerContext = context;

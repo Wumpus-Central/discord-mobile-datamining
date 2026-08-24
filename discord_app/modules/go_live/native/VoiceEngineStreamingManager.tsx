@@ -5,15 +5,15 @@ import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import inject from "inject" /* 4499 */;
 import initializeDefault from "initialize" /* 4720 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
-import reset from "reset" /* 4652 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "reset" /* 4652 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import importDefaultResult from "handleConnectionOpen" /* 1979 */;
 import ME from "ME" /* 676 */;
 import { getAppIntentScheme } from "items3" /* 4481 */;
 
-require = fn;
+require = arg1;
 function handleThumbnailUpload() {
   const self = this;
   const apply = _handleThumbnailUpload.apply;
@@ -65,16 +65,16 @@ function _handleThumbnailUpload() {
               if (!DisableStreamPreviews.getSetting()) {
                 closure_1_14.stop();
                 const _HermesInternal = HermesInternal;
-                const combined = "" + closure_1_8 + callback2;
-                obj1 = callback2(closure_1_2[10]);
+                const combined = "" + closure_1_8 + tmp34;
+                obj1 = callback2(tmp36[10]);
                 obj1 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: null, previewURL: null };
-                obj1[1] = callback;
+                obj1[1] = tmp33;
                 obj1[2] = combined;
                 obj1.dispatch(obj1);
                 c5 = 1;
-                const HTTP = callback(closure_1_2[11]).HTTP;
+                const HTTP = tmp35(tmp36[11]).HTTP;
                 obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
-                obj2[0] = closure_1_9.STREAM_PREVIEW(callback);
+                obj2[0] = closure_1_9.STREAM_PREVIEW(tmp33);
                 const obj3 = { thumbnail: null };
                 obj3[0] = combined;
                 obj2[1] = obj3;
@@ -84,6 +84,8 @@ function _handleThumbnailUpload() {
                 obj4[0] = HTTP.post(obj2);
                 return obj4;
               }
+              tmp34 = callback2;
+              tmp35 = callback;
             }
           } else {
             if (1 === tmp7) {
@@ -147,17 +149,18 @@ class VoiceEngineStreamingManager extends tmp6 {
         channelId = channelId.channelId;
         if (channelId !== channelId) {
           if (closure_19 != null) {
-            closure_19.stopBroadcast();
+            obj.stopBroadcast();
           }
           allActiveStreams = allActiveStreams.getAllActiveStreams();
-          const item = allActiveStreams.forEach((item, index) => {
-            if (item.channelId !== channelId) {
+          const item = allActiveStreams.forEach((channelId) => {
+            if (channelId.channelId !== channelId) {
               const obj = channelId(closure_1_2[17]);
-              const encodeStreamKeyResult = channelId(closure_1_2[17]).encodeStreamKey(item);
+              const encodeStreamKeyResult = channelId(closure_1_2[17]).encodeStreamKey(channelId);
               channelId(closure_1_2[15]).stopStream(encodeStreamKeyResult, false);
               obj2 = channelId(closure_1_2[15]);
             }
           });
+          obj = closure_19;
         }
       };
       // AddOwnPrivateBySym (0x64)
@@ -177,18 +180,18 @@ prototype["_initialize"] = function _initialize() {
     if (null != channel) {
       const guildId = channel.getGuildId();
       currentUserActiveStream(9860).startStream(guildId, channel.id, { sourceId: "screen:0" });
-      currentUserActiveStream = obj2.getCurrentUserActiveStream();
+      currentUserActiveStream = currentAppIntent.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
         const tmp2Result = callback2(8666);
         const participant = tmp2Result.selectParticipant(channel.id, tmp9(4531).encodeStreamKey(currentUserActiveStream));
         if ("android" === voiceEngine.platform) {
           closure_15.start(15000, () => {
-            closure_1_1(closure_1_2[14])(null != voiceEngine, "Voice Engine should be initialized in callback");
+            closure_1_1(closure_1_2[14])(null != closure_1_19, "Voice Engine should be initialized in callback");
             const size = currentUserActiveStream(closure_1_2[18]).getWindowDimensions();
             const bound = Math.min(512 / size.width, 288 / size.height);
-            const result = voiceEngine.setBroadcastThumbnailCallback(size.width * bound, size.height * bound, 300, (arg0) => {
+            const result = closure_1_19.setBroadcastThumbnailCallback(size.width * bound, size.height * bound, 300, (arg0) => {
               closure_1_13.log("Broadcast thumbnail of size:", arg0.length);
-              closure_1_17(currentUserActiveStream(closure_1_2[17]).encodeStreamKey(closure_0), arg0);
+              closure_1_17(closure_1_0(closure_1_2[17]).encodeStreamKey(closure_0), arg0);
             });
           });
         }
@@ -202,7 +205,6 @@ prototype["_initialize"] = function _initialize() {
     } else {
       let result = voiceEngine.stopBroadcastWithError(-1, "Not currently in a voice channel");
     }
-    obj2 = currentAppIntent;
   });
   const result1 = voiceEngine.setBroadcastFinishedCallback(() => {
     logger.log("Broadcast Finished");
@@ -222,12 +224,13 @@ prototype["_initialize"] = function _initialize() {
   });
   const result3 = voiceEngine.setBroadcastBlockedCallback(() => {
     logger.log("Broadcast Blocked");
-    callback2(11579);
-    const obj = { alertBody: null };
+    let obj = callback2(11579);
+    obj = { alertBody: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.iYQlwv);
     const result = obj.presentLocalNotification(obj);
   });
+  let obj = inject;
   // GetOwnPrivateBySym (0x65)
   const subscription = dispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", importDefault);
 };
@@ -241,6 +244,7 @@ prototype["_terminate"] = function _terminate() {
   }
   timeout.stop();
   timeout1.stop();
+  const obj = inject;
   // GetOwnPrivateBySym (0x65)
   dispatcherDefault.unsubscribe("VOICE_CHANNEL_SELECT", this);
 };
@@ -248,6 +252,6 @@ prototype["getApplicationNames"] = function getApplicationNames() {
   return closure_16;
 };
 const voiceEngineStreamingManager = new VoiceEngineStreamingManager();
-let result = require("obj132").fileFinishedImporting("modules/go_live/native/VoiceEngineStreamingManager.tsx");
+let result = require("set").fileFinishedImporting("modules/go_live/native/VoiceEngineStreamingManager.tsx");
 
 export default voiceEngineStreamingManager;

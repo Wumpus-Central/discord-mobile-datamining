@@ -19,11 +19,23 @@ const messageActivityInviteCoverImageStore = new MessageActivityInviteCoverImage
     if (store.get(messageId) === coverImageURL) {
       return false;
     } else {
-      const result = store.set(messageId, coverImageURL);
+      const result = obj.set(messageId, coverImageURL);
     }
+    obj = store;
   }
 });
+let obj = {
+  SET_MESSAGE_ACTIVITY_INVITE_COVER_IMAGE_URL: function handleSetMessageActivityInviteCoverImageURL(arg0) {
+    ({ messageId, coverImageURL } = arg0);
+    if (store.get(messageId) === coverImageURL) {
+      return false;
+    } else {
+      const result = obj.set(messageId, coverImageURL);
+    }
+    obj = store;
+  }
+};
 const tmp2 = new privDefault({ max: 500 });
-let result = require("obj132").fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageStore.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageStore.tsx");
 
 export default messageActivityInviteCoverImageStore;

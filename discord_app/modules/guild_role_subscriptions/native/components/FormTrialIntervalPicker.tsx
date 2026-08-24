@@ -2,14 +2,13 @@
 
 // Module 16968 (FormTrialIntervalPicker)
 import noopAll from "noop" /* 19 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import LockedIconDefault from "LockedIcon" /* 13356 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 const GuildRoleSubscriptionTrialIntervalSelect = "GuildRoleSubscriptionTrialIntervalSelect";
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx");
 
 export default function FormTrialIntervalPicker(disabled) {
   const interval = disabled.interval;
@@ -24,9 +23,10 @@ export default function FormTrialIntervalPicker(disabled) {
   obj = {
     label: stringResult,
     onPress() {
-      const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const intl = interval(dependencyMap[3]).intl;
-      obj[0] = intl.string(interval(dependencyMap[3]).t.m1KuWd);
+      let obj = closure_1_1(closure_1_2[5]);
+      obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const intl = interval(closure_1_2[3]).intl;
+      obj[0] = intl.string(interval(closure_1_2[3]).t.m1KuWd);
       obj[1] = closure_2;
       obj[2] = function onItemSelect(arg0) {
         if (closure_1 != null) {
@@ -39,17 +39,17 @@ export default function FormTrialIntervalPicker(disabled) {
         tmp3 = null;
       }
       obj[3] = tmp3;
-      obj.openLazy(interval(dependencyMap[7])(dependencyMap[6], dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj);
-      const tmp = interval(dependencyMap[7])(dependencyMap[6], dependencyMap.paths);
+      obj.openLazy(interval(closure_1_2[7])(closure_1_2[6], closure_1_2.paths), closure_1_4, obj);
     },
     disabled: disabled.disabled
   };
   return jsx(LockedIconDefault, {
     label: stringResult,
     onPress() {
-      const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const intl = interval(dependencyMap[3]).intl;
-      obj[0] = intl.string(interval(dependencyMap[3]).t.m1KuWd);
+      let obj = closure_1_1(closure_1_2[5]);
+      obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const intl = interval(closure_1_2[3]).intl;
+      obj[0] = intl.string(interval(closure_1_2[3]).t.m1KuWd);
       obj[1] = closure_2;
       obj[2] = function onItemSelect(arg0) {
         if (closure_1 != null) {
@@ -62,8 +62,7 @@ export default function FormTrialIntervalPicker(disabled) {
         tmp3 = null;
       }
       obj[3] = tmp3;
-      obj.openLazy(interval(dependencyMap[7])(dependencyMap[6], dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj);
-      const tmp = interval(dependencyMap[7])(dependencyMap[6], dependencyMap.paths);
+      obj.openLazy(interval(closure_1_2[7])(closure_1_2[6], closure_1_2.paths), closure_1_4, obj);
     },
     disabled: disabled.disabled
   });

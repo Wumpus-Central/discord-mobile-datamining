@@ -4,7 +4,6 @@
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import mapAll from "map" /* 66 */;
-import mergeDefault from "merge" /* 67 */;
 
 const require = arg1;
 noopAll;
@@ -29,26 +28,26 @@ export const get = function get(arg0, arg1) {
     }
     ({ native, verify } = tmpResult);
     if (native) {
-      let viewConfig = mergeDefault(RNBridgeless);
+      let viewConfig = closure_1_2(closure_1_4[2])(RNBridgeless);
       if (viewConfig == null) {
-        viewConfig = callback(dependencyMap[3]).createViewConfig(callback());
-        const obj3 = callback(dependencyMap[3]);
+        viewConfig = callback(tmp12[3]).createViewConfig(callback());
+        const obj3 = callback(tmp12[3]);
       }
       let viewConfig1 = viewConfig;
-      let tmp6 = dependencyMap;
+      let tmp6 = tmp12;
     } else {
-      tmp6 = dependencyMap;
-      viewConfig1 = callback(dependencyMap[3]).createViewConfig(callback());
+      tmp6 = closure_1_4;
+      viewConfig1 = callback(closure_1_4[3]).createViewConfig(callback());
       if (viewConfig1 == null) {
-        viewConfig1 = importDefault(tmp6[2])(RNBridgeless);
+        viewConfig1 = closure_1_2(tmp6[2])(RNBridgeless);
       }
-      const obj2 = callback(dependencyMap[3]);
+      const obj2 = callback(closure_1_4[3]);
     }
-    importDefault(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
+    closure_1_2(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
     if (verify) {
       let tmp20 = viewConfig1;
       if (!native) {
-        tmp20 = importDefault(tmp6[2])(RNBridgeless);
+        tmp20 = closure_1_2(tmp6[2])(tmp18);
       }
       if (null == tmp20) {
         return viewConfig1;
@@ -58,13 +57,14 @@ export const get = function get(arg0, arg1) {
           viewConfig2 = callback(tmp6[3]).createViewConfig(callback());
           const obj4 = callback(tmp6[3]);
         }
-        const validateResult = importAll(tmp6[5]).validate(RNBridgeless, tmp20, viewConfig2);
+        const validateResult = closure_1_3(tmp6[5]).validate(tmp18, tmp20, viewConfig2);
         if ("invalid" === validateResult.type) {
           const _console = console;
-          console.error(importAll(tmp6[5]).stringifyValidationResult(RNBridgeless, validateResult));
-          const tmp24Result = importAll(tmp6[5]);
+          console.error(tmp24(tmp6[5]).stringifyValidationResult(tmp18, validateResult));
+          const tmp24Result = tmp24(tmp6[5]);
         }
-        const obj5 = importAll(tmp6[5]);
+        const obj5 = closure_1_3(tmp6[5]);
+        tmp24 = closure_1_3;
       }
     }
     return viewConfig1;
@@ -94,26 +94,26 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(ar
         }
         ({ native, verify } = tmpResult);
         if (native) {
-          let viewConfig = mergeDefault(RNBridgeless);
+          let viewConfig = closure_1_2(closure_1_4[2])(RNBridgeless);
           if (viewConfig == null) {
-            viewConfig = callback(dependencyMap[3]).createViewConfig(callback());
-            const obj3 = callback(dependencyMap[3]);
+            viewConfig = callback(tmp12[3]).createViewConfig(callback());
+            const obj3 = callback(tmp12[3]);
           }
           let viewConfig1 = viewConfig;
-          let tmp6 = dependencyMap;
+          let tmp6 = tmp12;
         } else {
-          tmp6 = dependencyMap;
-          viewConfig1 = callback(dependencyMap[3]).createViewConfig(callback());
+          tmp6 = closure_1_4;
+          viewConfig1 = callback(closure_1_4[3]).createViewConfig(callback());
           if (viewConfig1 == null) {
-            viewConfig1 = importDefault(tmp6[2])(RNBridgeless);
+            viewConfig1 = closure_1_2(tmp6[2])(RNBridgeless);
           }
-          const obj2 = callback(dependencyMap[3]);
+          const obj2 = callback(closure_1_4[3]);
         }
-        importDefault(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
+        closure_1_2(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
         if (verify) {
           let tmp20 = viewConfig1;
           if (!native) {
-            tmp20 = importDefault(tmp6[2])(RNBridgeless);
+            tmp20 = closure_1_2(tmp6[2])(tmp18);
           }
           if (null == tmp20) {
             return viewConfig1;
@@ -123,13 +123,14 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(ar
               viewConfig2 = callback(tmp6[3]).createViewConfig(callback());
               const obj4 = callback(tmp6[3]);
             }
-            const validateResult = importAll(tmp6[5]).validate(RNBridgeless, tmp20, viewConfig2);
+            const validateResult = closure_1_3(tmp6[5]).validate(tmp18, tmp20, viewConfig2);
             if ("invalid" === validateResult.type) {
               const _console = console;
-              console.error(importAll(tmp6[5]).stringifyValidationResult(RNBridgeless, validateResult));
-              const tmp24Result = importAll(tmp6[5]);
+              console.error(tmp24(tmp6[5]).stringifyValidationResult(tmp18, validateResult));
+              const tmp24Result = tmp24(tmp6[5]);
             }
-            const obj5 = importAll(tmp6[5]);
+            const obj5 = closure_1_3(tmp6[5]);
+            tmp24 = closure_1_3;
           }
         }
         return viewConfig1;
@@ -151,26 +152,26 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(ar
       }
       ({ native, verify } = tmpResult);
       if (native) {
-        let viewConfig = mergeDefault(RNBridgeless);
+        let viewConfig = closure_1_2(closure_1_4[2])(RNBridgeless);
         if (viewConfig == null) {
-          viewConfig = callback(dependencyMap[3]).createViewConfig(callback());
-          const obj3 = callback(dependencyMap[3]);
+          viewConfig = callback(tmp12[3]).createViewConfig(callback());
+          const obj3 = callback(tmp12[3]);
         }
         let viewConfig1 = viewConfig;
-        let tmp6 = dependencyMap;
+        let tmp6 = tmp12;
       } else {
-        tmp6 = dependencyMap;
-        viewConfig1 = callback(dependencyMap[3]).createViewConfig(callback());
+        tmp6 = closure_1_4;
+        viewConfig1 = callback(closure_1_4[3]).createViewConfig(callback());
         if (viewConfig1 == null) {
-          viewConfig1 = importDefault(tmp6[2])(RNBridgeless);
+          viewConfig1 = closure_1_2(tmp6[2])(RNBridgeless);
         }
-        const obj2 = callback(dependencyMap[3]);
+        const obj2 = callback(closure_1_4[3]);
       }
-      importDefault(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
+      closure_1_2(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
       if (verify) {
         let tmp20 = viewConfig1;
         if (!native) {
-          tmp20 = importDefault(tmp6[2])(RNBridgeless);
+          tmp20 = closure_1_2(tmp6[2])(tmp18);
         }
         if (null == tmp20) {
           return viewConfig1;
@@ -180,13 +181,14 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(ar
             viewConfig2 = callback(tmp6[3]).createViewConfig(callback());
             const obj4 = callback(tmp6[3]);
           }
-          const validateResult = importAll(tmp6[5]).validate(RNBridgeless, tmp20, viewConfig2);
+          const validateResult = closure_1_3(tmp6[5]).validate(tmp18, tmp20, viewConfig2);
           if ("invalid" === validateResult.type) {
             const _console = console;
-            console.error(importAll(tmp6[5]).stringifyValidationResult(RNBridgeless, validateResult));
-            const tmp24Result = importAll(tmp6[5]);
+            console.error(tmp24(tmp6[5]).stringifyValidationResult(tmp18, validateResult));
+            const tmp24Result = tmp24(tmp6[5]);
           }
-          const obj5 = importAll(tmp6[5]);
+          const obj5 = closure_1_3(tmp6[5]);
+          tmp24 = closure_1_3;
         }
       }
       return viewConfig1;
@@ -196,6 +198,7 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(ar
         return null;
       }
     }
+    let obj = mapAll;
   }
   class FallbackNativeComponent {
     constructor(arg0) {

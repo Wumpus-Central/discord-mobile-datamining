@@ -3,11 +3,11 @@
 // Module 14663 (useMessagePreview)
 import useIsNsfwGatedDefault from "useIsNsfwGated" /* 8512 */;
 import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 14664 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
 
 export default function useMessagePreview(guild_id) {
   ({ unread, disabled } = arg1);
@@ -29,13 +29,13 @@ export default function useMessagePreview(guild_id) {
       tmp2 = messagePreviews;
     }
     if (null != tmp2) {
-      const ValidMessagePreviewTypes = guild_id(dependencyMap[2]).ValidMessagePreviewTypes;
+      const ValidMessagePreviewTypes = guild_id(closure_1_2[2]).ValidMessagePreviewTypes;
       if (ValidMessagePreviewTypes.has(tmp2.value)) {
         let setting = tmp2.value;
       }
       return setting;
     }
-    const MessagePreviewSetting = guild_id(dependencyMap[2]).MessagePreviewSetting;
+    const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
   const obj = guild_id(589);
@@ -84,13 +84,13 @@ export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) 
       tmp2 = messagePreviews;
     }
     if (null != tmp2) {
-      const ValidMessagePreviewTypes = guild_id(dependencyMap[2]).ValidMessagePreviewTypes;
+      const ValidMessagePreviewTypes = guild_id(closure_1_2[2]).ValidMessagePreviewTypes;
       if (ValidMessagePreviewTypes.has(tmp2.value)) {
         let setting = tmp2.value;
       }
       return setting;
     }
-    const MessagePreviewSetting = guild_id(dependencyMap[2]).MessagePreviewSetting;
+    const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
 };

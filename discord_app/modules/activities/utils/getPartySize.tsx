@@ -1,9 +1,9 @@
 // === Module 10918: getPartySize ===
 
 // Module 10918 (getPartySize)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_0 from "_slicedToArray" /* 32 */;
 
-const result = require("obj132").fileFinishedImporting("modules/activities/utils/getPartySize.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/getPartySize.tsx");
 
 export const getPartySize = function getPartySize(activity) {
   if (null != activity) {

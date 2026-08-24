@@ -1,9 +1,9 @@
 // === Module 12873: useScrollToSection ===
 
 // Module 12873 (useScrollToSection)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/useScrollToSection.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/useScrollToSection.tsx");
 
 export default function useScrollToSection(arg0, arg1) {
   const React = arg0;

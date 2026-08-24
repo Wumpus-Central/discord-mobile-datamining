@@ -1,12 +1,12 @@
 // === Module 13467: getAnimatedTypingTranslateX ===
 
 // Module 13467 (getAnimatedTypingTranslateX)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13468 */;
 import STATUS_PADDING from "STATUS_PADDING" /* 1298 */;
 
 ({ STATUS_PADDING: obj1, StatusSizes: c3 } = STATUS_PADDING);
-const result = obj132.fileFinishedImporting("design/void/Status/native/StatusUtils.tsx");
+const result = set.fileFinishedImporting("design/void/Status/native/StatusUtils.tsx");
 
 export const getAnimatedTypingTranslateX = function getAnimatedTypingTranslateX(width) {
   return width / 2 - 6;
@@ -21,7 +21,7 @@ export const getVRStatusContainerRect = function getVRStatusContainerRect(items)
 };
 export const getStatusTypingDimensions = function getStatusTypingDimensions(items) {
   if (constants.SMALL !== items) {
-    if (constants.XSMALL !== items) {
+    if (tmp.XSMALL !== items) {
       let num = 6;
       let num2 = 28;
     }

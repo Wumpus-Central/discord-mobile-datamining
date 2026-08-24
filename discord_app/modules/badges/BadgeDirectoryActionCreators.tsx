@@ -2,11 +2,11 @@
 
 // Module 8939 (urlUserId)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function urlUserId(arg0) {
   currentUser = currentUser.getCurrentUser();
   let id;
@@ -310,7 +310,7 @@ function _fetchBadge() {
   return applyArgumentsResult;
 }
 ({ Endpoints: c5, ME: closure_6 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/badges/BadgeDirectoryActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/badges/BadgeDirectoryActionCreators.tsx");
 
 export const fetchBadgeDirectory = function fetchBadgeDirectory(id) {
   const self = this;
@@ -333,6 +333,7 @@ export const fetchBadge = function fetchBadge(GIFTING) {
   return applyArgumentsResult;
 };
 export const markBadgeDirectoryBadgeIndicatorSeen = function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
-  const obj = { type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId };
+  let obj = dispatcherDefault;
+  obj = { type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId };
   obj.dispatch(obj);
 };

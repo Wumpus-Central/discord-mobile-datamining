@@ -1,10 +1,11 @@
-// === Module 500: obj132 ===
+// === Module 500: set ===
 
-// Module 500 (obj132)
-import obj132 from "obj132" /* 2 */;
+// Module 500 (set)
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("utils/PlatformUtils.tsx");
+const result = set.fileFinishedImporting("utils/PlatformUtils.tsx");
 for (const key10018 in require("PlatformTypes")) {
+  let tmp3 = key10018;
   arg5[key10018] = require("PlatformTypes")[key10018];
   continue;
 }

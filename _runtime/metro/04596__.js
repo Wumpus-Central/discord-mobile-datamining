@@ -12,6 +12,8 @@ if (Object.getOwnPropertySymbols) {
     const items = [];
     if (arg0) {
       do {
+        let tmp2 = require;
+        let tmp3 = dependencyMap;
         let tmp4 = arrayPush;
         let tmp4Result = tmp4(items, getOwnPropertySymbols(tmp));
         tmp = overArg(tmp);

@@ -3,11 +3,11 @@
 // Module 6366 (initialWindowMetrics)
 import _mod1632 from "module_1632" /* 1632 */;
 import useFrameSize from "useFrameSize" /* 6343 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 ({ Dimensions, Platform, StyleSheet, View: c3 } = get_ActivityIndicator);
 const size = Dimensions.get("window");
 const width = size.width;
@@ -21,7 +21,8 @@ if (undefined !== height) {
   num2 = height;
 }
 if (null == require("module_1632").initialWindowMetrics) {
-  let obj = { x: 0, y: 0, width: null, height: null };
+  let obj = { frame: null, insets: null };
+  obj = { x: 0, y: 0, width: null, height: null };
   obj[2] = num;
   obj[3] = num2;
   obj[0] = obj;
@@ -46,14 +47,14 @@ class SafeAreaProviderCompat {
               const items = [closure_1_6.container, closure_1];
               obj[2] = items;
               obj[3] = closure_0;
-              let tmp2Result = <closure_1_3 ref={null} onLayout={null} style={null}>{null}</closure_1_3>;
+              let tmp2Result = tmp2(closure_1_3, obj);
             } else {
               obj = { initialMetrics: null, style: null, onLayout: null, children: null };
-              obj[0] = initialWindowMetrics;
+              obj[0] = closure_1_5;
               obj[1] = closure_1;
               obj[2] = onLayout;
               obj[3] = closure_0;
-              tmp2Result = jsx(_mod1632.SafeAreaProvider, { initialMetrics: null, style: null, onLayout: null, children: null });
+              tmp2Result = tmp2(closure_1_0(closure_1_1[3]).SafeAreaProvider, obj);
             }
             return tmp2Result;
           }

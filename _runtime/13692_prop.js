@@ -3,7 +3,6 @@
 // Module 13692 (prop)
 import _mod13673 from "module_13673" /* 13673 */;
 import _mod13677 from "module_13677" /* 13677 */;
-import _mod13693 from "module_13693" /* 13693 */;
 
 let prop = Object.getOwnPropertySymbols;
 if (prop) {
@@ -20,10 +19,10 @@ if (prop) {
       const _Symbol2 = Symbol;
       let tmp2Result = !sham;
       if (!sham) {
-        tmp2Result = _mod13693;
+        tmp2Result = tmp2(13693);
       }
       if (tmp2Result) {
-        tmp2Result = _mod13693 < 41;
+        tmp2Result = tmp2(13693) < 41;
       }
       tmp5 = tmp2Result;
     }

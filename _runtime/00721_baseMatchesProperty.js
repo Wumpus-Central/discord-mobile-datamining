@@ -16,10 +16,10 @@ export default function baseMatchesProperty(arg0, arg1) {
     const tmp4 = callback(table[4])(arg0, callback);
     if (undefined === tmp4) {
       if (tmp4 === table) {
-        let tmp6 = callback(table[5])(arg0, callback);
+        let tmp6 = tmp(tmp2[5])(arg0, callback);
       }
       return tmp6;
     }
-    tmp6 = callback(table[6])(table, tmp4, 3);
+    tmp6 = tmp(tmp2[6])(table, tmp4, 3);
   };
 };

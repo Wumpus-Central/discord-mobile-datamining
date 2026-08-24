@@ -1,7 +1,7 @@
 // === Module 13669: ? ===
 
 // Module 13669
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import Buffer from "Buffer" /* 511 */;
 import q from "q" /* 1214 */;
 import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 13764 */;
@@ -48,4 +48,4 @@ if (tmp7) {
 if (!tmp7) {
   const _module6 = q;
 }
-const result = obj132.fileFinishedImporting("polyfillsNative.tsx");
+const result = set.fileFinishedImporting("polyfillsNative.tsx");

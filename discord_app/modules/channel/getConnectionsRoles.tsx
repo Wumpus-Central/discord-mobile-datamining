@@ -1,8 +1,8 @@
 // === Module 5226: ChannelTypes ===
 
 // Module 5226 (ChannelTypes)
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 import importAllResult from "fromString" /* 506 */;
 
@@ -10,7 +10,7 @@ import importAllResult from "fromString" /* 506 */;
 let items = [, , , , , ];
 ({ GUILD_TEXT: arr[0], GUILD_VOICE: arr[1], GUILD_ANNOUNCEMENT: arr[2], GUILD_FORUM: arr[3], PUBLIC_THREAD: arr[4], PRIVATE_THREAD: arr[5] } = ChannelTypes);
 let closure_5 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES);
-const result = require("obj132").fileFinishedImporting("modules/channel/getConnectionsRoles.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/getConnectionsRoles.tsx");
 
 export default function getConnectionsRoles(type) {
   if (null != type) {
@@ -21,10 +21,10 @@ export default function getConnectionsRoles(type) {
       } else {
         const _Object = Object;
         const values = Object.values(type.permissionOverwrites);
-        const found = values.filter((item, index) => {
-          let tmp = 0 === item.type;
+        const found = values.filter((type) => {
+          let tmp = 0 === type.type;
           if (tmp) {
-            const role = closure_1_2.getRole(guild.id, item.id);
+            const role = closure_1_2.getRole(guild.id, type.id);
             let guild_connections;
             if (role != null) {
               const tags = role.tags;
@@ -35,13 +35,13 @@ export default function getConnectionsRoles(type) {
             tmp = null === guild_connections;
           }
           if (tmp) {
-            tmp = !guild(dependencyMap[3]).hasAny(item.deny, closure_1_5);
-            const obj = guild(dependencyMap[3]);
+            tmp = !guild(closure_1_1[3]).hasAny(type.deny, closure_1_5);
+            const obj = guild(closure_1_1[3]);
           }
           return tmp;
         });
-        const mapped = found.map((item, index) => closure_1_2.getRole(guild.id, item.id));
-        items = mapped.filter((item, index) => null != item);
+        const mapped = found.map((id) => closure_1_2.getRole(guild.id, id.id));
+        items = mapped.filter((arg0) => null != arg0);
       }
       return items;
     }

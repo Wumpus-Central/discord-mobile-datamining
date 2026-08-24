@@ -1,7 +1,7 @@
 // === Module 4563: getHookError ===
 
 // Module 4563 (getHookError)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -26,6 +26,6 @@ const hookErrorStore = new HookErrorStore(dispatcherDefault, {
     closure_1[MediaEngineHookTypes.SOUND] = { errorMessage: errorMessage.errorMessage, errorCode: errorMessage.errorCode };
   }
 });
-const result = obj132.fileFinishedImporting("stores/HookErrorStore.tsx");
+const result = set.fileFinishedImporting("stores/HookErrorStore.tsx");
 
 export default hookErrorStore;

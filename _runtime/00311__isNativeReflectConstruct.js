@@ -4,16 +4,16 @@
 import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
 import get_VirtualizedListDefault from "get VirtualizedList" /* 312 */;
 import areInputsEqualDefault from "areInputsEqual" /* 327 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "_classCallCheck" /* 41 */;
+import closure_7 from "_possibleConstructorReturn" /* 93 */;
+import closure_8 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
-const FlatList = fn;
+const FlatList = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -66,6 +66,7 @@ class FlatList {
         const items = [];
         for (let num2 = 0; num2 < num; num2 = num2 + 1) {
           let sum = arg1 * num + num2;
+          let tmp2 = num2;
           if (sum < arg0.length) {
             let arr = items.push(arg0[sum]);
           }
@@ -102,14 +103,14 @@ class FlatList {
       }
       let keyExtractor = lib.props.keyExtractor;
       if (keyExtractor == null) {
-        keyExtractor = get_VirtualizedListDefault.keyExtractor;
+        keyExtractor = closure_1_1(closure_1_3[9]).keyExtractor;
       }
       if (num > 1) {
         const _Array = Array;
-        lib(dependencyMap[10])(Array.isArray(arr), "FlatList: Encountered internal consistency error, expected each item to consist of an array with 1-%s columns; instead, received a single item.", num);
-        const mapped = arr.map((item, index) => keyExtractor(item, closure_0 * num + index));
+        lib(closure_1_3[10])(Array.isArray(arr), "FlatList: Encountered internal consistency error, expected each item to consist of an array with 1-%s columns; instead, received a single item.", num);
+        const mapped = arr.map((arg0, arg1) => keyExtractor(arg0, closure_0 * num + arg1));
         let joined = mapped.join(":");
-        const tmp7 = lib(dependencyMap[10]);
+        const tmp7 = lib(closure_1_3[10]);
       } else {
         joined = keyExtractor(arr, arg1);
       }
@@ -119,6 +120,10 @@ class FlatList {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
+      let num = arg3;
+      if (arg3 == null) {
+        num = 1;
+      }
       function render(arg0) {
 
       }
@@ -132,9 +137,9 @@ class FlatList {
           const tmp11 = callback(num[10]);
           const tmp16 = callback2(num[11]);
           obj[0] = callback(num[12]).default.compose(closure_1_12.row, closure_2);
-          obj[1] = item.map((item, index) => {
-            let obj = { item, index: closure_1 * num + index, separators: separators.separators };
-            if (typeof render !== "function") {
+          obj[1] = item.map((item) => {
+            let obj = { item, index: closure_1 * closure_1_3 + arg1, separators: separators.separators };
+            if (typeof closure_1_4 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (separators) {
@@ -151,7 +156,7 @@ class FlatList {
             if (null != tmp2Result) {
               obj = { children: null };
               obj[0] = tmp2Result;
-              tmp8 = closure_2_10(closure_2_9.Fragment, obj, index);
+              tmp8 = closure_2_10(closure_2_9.Fragment, obj, arg1);
             }
             return tmp8;
           });
@@ -187,14 +192,14 @@ class FlatList {
     props = tmp3Result.props;
     if (tmp3Result.props.viewabilityConfigCallbackPairs) {
       prop = props.viewabilityConfigCallbackPairs;
-      tmp3Result._virtualizedListPairs = prop.map((item, index) => ({ viewabilityConfig: item.viewabilityConfig, onViewableItemsChanged: lib._createOnViewableItemsChanged(item.onViewableItemsChanged) }));
+      tmp3Result._virtualizedListPairs = prop.map((viewabilityConfig) => ({ viewabilityConfig: viewabilityConfig.viewabilityConfig, onViewableItemsChanged: lib._createOnViewableItemsChanged(viewabilityConfig.onViewableItemsChanged) }));
     } else if (props.onViewableItemsChanged) {
       prop1 = tmp3Result._virtualizedListPairs;
       obj = { viewabilityConfig: null, onViewableItemsChanged: null };
       obj[0] = tmp3Result.props.viewabilityConfig;
       obj[1] = tmp3Result._createOnViewableItemsChanged(() => {
         const items = [...arguments];
-        lib(dependencyMap[10])(lib.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
+        lib(closure_1_3[10])(lib.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
         const props = lib.props;
         const items1 = [...items];
         return props.onViewableItemsChanged.apply(items1);
@@ -322,16 +327,15 @@ let items = [
       }
       FlatList(38)(tmp4, "FlatList does not support custom data formats.");
       if (num > 1) {
-        FlatList(38)(!horizontal, "numColumns does not support horizontal.");
+        tmp(38)(!horizontal, "numColumns does not support horizontal.");
       } else {
-        FlatList(38)(!columnWrapperStyle, "columnWrapperStyle not supported for single column lists");
+        tmp(38)(!columnWrapperStyle, "columnWrapperStyle not supported for single column lists");
       }
       const tmp3 = FlatList(38);
       if (onViewableItemsChanged) {
         onViewableItemsChanged = viewabilityConfigCallbackPairs;
       }
       FlatList(38)(!onViewableItemsChanged, "FlatList does not support setting both onViewableItemsChanged and viewabilityConfigCallbackPairs.");
-      const tmpResult = FlatList(38);
     }
   },
   {
@@ -348,9 +352,9 @@ let items = [
         keyExtractor = importDefault(keyExtractor[9]).keyExtractor;
       }
       item = item.item;
-      const item1 = item.forEach((item, index) => {
+      const item1 = item.forEach((item) => {
         items(keyExtractor[10])(null != item.index, "Missing index!");
-        const sum = item.index * num + index;
+        const sum = item.index * num + arg1;
         const obj = {};
         const merged = Object.assign(item);
         obj.item = item;
@@ -375,9 +379,9 @@ let items = [
             items = [];
             items1 = [];
             viewableItems = viewableItems.viewableItems;
-            const item = viewableItems.forEach((item, index) => items1._pushMultiColumnViewable(items1, item));
+            const item = viewableItems.forEach((item) => items1._pushMultiColumnViewable(items1, item));
             const changed = viewableItems.changed;
-            const item1 = changed.forEach((item, index) => items1._pushMultiColumnViewable(items, item));
+            const item1 = changed.forEach((item) => items1._pushMultiColumnViewable(items, item));
             const obj = { viewableItems: null, changed: null };
             obj[0] = items1;
             obj[1] = items;
@@ -398,18 +402,29 @@ let items = [
       const obj = {};
       const merged = Object.assign(callback(props, closure_4));
       ({ _getItem: obj.getItem, _getItemCount: obj.getItemCount, _keyExtractor: obj.keyExtractor, _captureRef: obj.ref, _virtualizedListPairs: obj.viewabilityConfigCallbackPairs } = self);
+      const tmp = undefined !== strictMode && strictMode;
       const tmp2 = callback(props, closure_4);
       const tmp3 = undefined !== strictMode && strictMode ? self._memoizedRenderer : self._renderer;
+      const tmp4 = jsx;
       const result = javaScriptFlagGetterAll.shouldUseRemoveClippedSubviewsAsDefaultOnIOS();
       if (removeClippedSubviews == null) {
         removeClippedSubviews = true;
       }
       obj.removeClippedSubviews = removeClippedSubviews;
       const merged1 = Object.assign(tmp3(self.props.ListItemComponent, self.props.renderItem, columnWrapperStyle, numColumns, self.props.extraData));
-      return jsx(get_VirtualizedListDefault.VirtualizedList, {});
+      return tmp4(get_VirtualizedListDefault.VirtualizedList, obj);
     }
   }
 ];
+let obj = {
+  key: "scrollToEnd",
+  value: function scrollToEnd(arg0) {
+    if (this._listRef) {
+      const _listRef = tmp._listRef;
+      _listRef.scrollToEnd(arg0);
+    }
+  }
+};
 const importDefaultResultResult = importDefaultResult(FlatList, items);
 let closure_12 = require("get hairlineWidth").default.create({ row: { flexDirection: "row" } });
 

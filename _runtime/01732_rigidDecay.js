@@ -3,7 +3,7 @@
 // Module 1732 (rigidDecay)
 import isValidRubberBandConfig from "isValidRubberBandConfig" /* 1730 */;
 
-require = fn;
+require = arg1;
 const dependencyMap = arg6;
 function rigidDecay(initialVelocity, lastTimestamp, deceleration) {
   initialVelocity = initialVelocity.initialVelocity;

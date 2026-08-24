@@ -2,10 +2,9 @@
 
 // Module 264 (getTargetFromInstanceHandle)
 import isEnabledAll from "isEnabled" /* 46 */;
-import nullthrowsDefault from "nullthrows" /* 70 */;
 import getInstanceHandle from "getInstanceHandle" /* 136 */;
 import NativeIntersectionObserverCxxDefault from "NativeIntersectionObserverCxx" /* 265 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_4 from "_slicedToArray" /* 32 */;
 
 require = arg1;
 function getTargetFromInstanceHandle(arg0) {
@@ -18,7 +17,7 @@ function notifyIntersectionObservers() {
       if (null == callback2(265)) {
         callback5();
       } else {
-        const takeRecordsResult = callback2(265).takeRecords();
+        const takeRecordsResult = tmp(265).takeRecords();
         const _Map = Map;
         map = new Map();
         const iter = takeRecordsResult[Symbol.iterator]();
@@ -30,11 +29,20 @@ function notifyIntersectionObservers() {
           if (null == value) {
             let items = [];
             arr = items;
+            let tmp9 = nextResult;
             let result = map.set(tmp7.intersectionObserverId, items);
           }
+          let tmp11 = callback4;
+          let tmp12 = nextResult;
           let tmp13 = callback4(tmp7.targetInstanceHandle);
           if (null != tmp13) {
+            let tmp16 = arr;
+            let tmp17 = callback;
+            let tmp18 = dependencyMap;
+            let tmp19 = dependencyMap;
             let obj = callback(266);
+            let tmp20 = nextResult;
+            let tmp21 = tmp13;
             arr = arr.push(obj.createIntersectionObserverEntry(tmp7, tmp14));
           } else {
             let _console = console;
@@ -44,13 +52,19 @@ function notifyIntersectionObservers() {
         }
         const obj2 = map[Symbol.iterator]();
         while (obj2 !== undefined) {
+          let tmp27 = callback3;
           let tmp28 = callback3(tmp25, 2);
           let tmp29 = tmp28[1];
+          let tmp30 = closure_7;
           value = closure_7.get(tmp28[0]);
           let tmp32 = value;
           if (value) {
+            let tmp34 = value;
             ({ observer, callback } = tmp32);
+            let tmp35 = callback;
             let call = callback.call;
+            let tmp36 = observer;
+            let tmp37 = tmp29;
             if (typeof call === "unknown") {
               let callbackResult = callback(tmp29, observer);
             } else {
@@ -58,14 +72,15 @@ function notifyIntersectionObservers() {
             }
             continue;
           } else {
+            let tmp33 = obj2;
             obj2.return();
           }
         }
-        const tmpResult = callback2(265);
       }
+      tmp = callback2;
+      const tmp2 = dependencyMap;
     })();
     isEnabledAll.endEvent();
-    const tmp4Result = isEnabledAll;
   } catch (tmp9) {
     tmp3(tmp[4]).endEvent();
     throw tmp9;
@@ -117,7 +132,7 @@ export const observe = function observe(arg0) {
       if (null == nativeNodeReference) {
         return false;
       } else {
-        let tmp25Result = getInstanceHandle;
+        let tmp25Result = tmp25(136);
         const instanceHandle = tmp25Result.getInstanceHandle(target);
         if (null == instanceHandle) {
           const _console2 = console;
@@ -126,7 +141,7 @@ export const observe = function observe(arg0) {
         } else {
           let nativeNodeReference1 = null;
           if (null != root) {
-            tmp25Result = getInstanceHandle;
+            tmp25Result = tmp25(136);
             nativeNodeReference1 = tmp25Result.getNativeNodeReference(root);
           }
           if (null != root) {
@@ -138,11 +153,11 @@ export const observe = function observe(arg0) {
           }
           const result = weakMap.set(instanceHandle, target);
           if (!c6) {
-            let tmpResult = NativeIntersectionObserverCxxDefault;
+            let tmpResult = tmp(265);
             tmpResult.connect(notifyIntersectionObservers);
             c6 = true;
           }
-          tmpResult = nullthrowsDefault;
+          tmpResult = tmp(70);
           const obj = { intersectionObserverId: null, rootShadowNode: null, targetShadowNode: null, thresholds: null, rootThresholds: null, rootMargin: null };
           obj[0] = intersectionObserverId;
           obj[1] = nativeNodeReference1;
@@ -150,10 +165,11 @@ export const observe = function observe(arg0) {
           obj[3] = value.observer.thresholds;
           obj[4] = value.observer.rnRootThresholds;
           obj[5] = value.observer.rootMargin;
-          const result1 = weakMap1.set(target, tmpResult(NativeIntersectionObserverCxxDefault.observeV2)(obj));
+          const result1 = weakMap1.set(target, tmpResult(tmp(265).observeV2)(obj));
           return true;
         }
       }
+      const obj4 = getInstanceHandle;
     }
   }
 };
@@ -162,8 +178,8 @@ export const unobserve = function unobserve(arg0, arg1) {
     if (null != map.get(arg0)) {
       const value = weakMap1.get(arg1);
       if (null != value) {
-        nullthrowsDefault(NativeIntersectionObserverCxxDefault.unobserveV2)(arg0, value);
-        const tmpResult = nullthrowsDefault;
+        tmp(70)(tmp(265).unobserveV2)(arg0, value);
+        const tmpResult = tmp(70);
       } else {
         const _console2 = console;
         console.error("IntersectionObserverManager: could not find registration data for target");

@@ -7,15 +7,16 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 let closure_5 = createCacheKey.createStyles((arg0) => {
-  const obj = { position: "absolute", bottom: arg0 + ThemesDefault.space.PX_12, left: 0, right: 0 };
+  let obj = { container: null };
+  obj = { position: "absolute", bottom: arg0 + ThemesDefault.space.PX_12, left: 0, right: 0 };
   obj[0] = obj;
   return obj;
 });
 let closure_6 = { code: "function PremiumEmojiFeatureUpsellTsx1(){const{shouldShow,inPortalKeyboard,bottomSheetIndex}=this.__closure;if(!shouldShow.get()){return false;}return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}" };
-const result = require("obj132").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumEmojiFeatureUpsell.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumEmojiFeatureUpsell.tsx");
 
 export default function PremiumEmojiFeatureUpsell(bottomSheetIndex) {
   bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
@@ -31,6 +32,11 @@ export default function PremiumEmojiFeatureUpsell(bottomSheetIndex) {
       return value;
     } else {
       value = bottomSheetIndex.get();
+      if (inPortalKeyboard) {
+        let tmp5 = 1 === value;
+      } else {
+        tmp5 = 0 === value;
+      }
     }
   };
   fn.__closure = { shouldShow, inPortalKeyboard, bottomSheetIndex };

@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 5038 */;
 import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 16120 */;
 import commonTriggerPointConfiguration2 from "commonTriggerPointConfiguration" /* 16547 */;
 
-require = fn;
+require = arg1;
 initializeDefault;
 class CommonTriggerPointManager extends tmp2 {
   constructor() {
@@ -33,6 +33,6 @@ prototype["handleUserSettingsModalOpen"] = function handleUserSettingsModalOpen(
   OpenUserSettingsTriggerPoint.trigger();
 };
 const commonTriggerPointManager = new CommonTriggerPointManager();
-const result = require("obj132").fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
 
 export default commonTriggerPointManager;

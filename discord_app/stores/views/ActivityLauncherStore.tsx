@@ -3,11 +3,11 @@
 // Module 10663 (handleActivityStateChanged)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import updateActivities from "updateActivities" /* 7251 */;
-import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
+import closure_3 from "updateActivities" /* 7251 */;
+import closure_4 from "filterPlayingActivities" /* 7250 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {
   ({ applicationId, remotePartyId } = type);
   if (COMPLETE === constants.COMPLETE) {
@@ -17,6 +17,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
     if (null != dependencyMap2[applicationId]) {
       dependencyMap2[applicationId].stop();
       delete tmp[tmp2];
+      const obj7 = dependencyMap2[applicationId];
     }
   } else {
     let obj = dependencyMap[applicationId];
@@ -28,31 +29,34 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
     obj[1] = remotePartyId;
     obj[JOIN] = obj;
     dependencyMap[applicationId] = obj;
-    if (COMPLETE === constants.FAILED) {
+    if (COMPLETE === tmp5.FAILED) {
       closure_1 = JOIN;
       if (null != dependencyMap2[applicationId]) {
-        dependencyMap2[applicationId].stop();
+        tmp16[applicationId].stop();
+        const obj5 = tmp16[applicationId];
       }
       const timeout = new applicationId(4259).Timeout();
       timeout.start(c9, () => {
-        JOIN(dependencyMap[4]);
-        const obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType: JOIN };
+        let obj = JOIN(closure_1_2[4]);
+        obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType: JOIN };
         return obj.dispatch(obj);
       });
       dependencyMap2[applicationId] = timeout;
-    } else if (COMPLETE === constants.LOADING) {
+      const tmp15 = c9;
+    } else if (COMPLETE === tmp5.LOADING) {
       let num = 15000;
       if (null == remotePartyId) {
         num = c9;
       }
       closure_1 = JOIN;
       if (null != dependencyMap2[applicationId]) {
-        dependencyMap2[applicationId].stop();
+        tmp7[applicationId].stop();
+        const obj3 = tmp7[applicationId];
       }
       const timeout1 = new applicationId(4259).Timeout();
       timeout1.start(num, () => {
-        JOIN(dependencyMap[4]);
-        const obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType: JOIN };
+        let obj = JOIN(closure_1_2[4]);
+        obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType: JOIN };
         return obj.dispatch(obj);
       });
       dependencyMap2[applicationId] = timeout1;
@@ -71,8 +75,8 @@ function handleActivityComplete(type) {
 }
 function handleActivityUpdate() {
   const entries = Object.entries(closure_7);
-  const mapped = entries.map((item, index) => {
-    [tmp, tmp2] = item;
+  const mapped = entries.map((arg0) => {
+    [tmp, tmp2] = arg0;
     const obj = { applicationId: tmp, remotePartyId: null };
     let remotePartyId;
     if (tmp2[constants.JOIN] != null) {
@@ -81,10 +85,10 @@ function handleActivityUpdate() {
     obj[1] = remotePartyId;
     return obj;
   });
-  const found = mapped.filter((item, index) => null != item.remotePartyId);
+  const found = mapped.filter((remotePartyId) => null != remotePartyId.remotePartyId);
   c0 = false;
-  const item = found.forEach((item, index) => {
-    ({ applicationId, remotePartyId } = item);
+  const item = found.forEach((arg0) => {
+    ({ applicationId, remotePartyId } = arg0);
     const applicationActivity = closure_1_3.getApplicationActivity(applicationId);
     const applicationActivity1 = closure_1_4.getApplicationActivity(applicationId);
     let id;
@@ -109,7 +113,7 @@ function handleActivityUpdate() {
       const obj = { applicationId: null, remotePartyId: null };
       obj[0] = applicationId;
       obj[1] = remotePartyId;
-      handleActivityStateChanged(closure_1_5.COMPLETE, closure_1_6.JOIN, obj);
+      closure_1_10(closure_1_5.COMPLETE, closure_1_6.JOIN, obj);
       c0 = true;
     }
   });
@@ -142,6 +146,7 @@ prototype["getStates"] = function getStates() {
 ActivityLauncherStore.displayName = "ActivityLauncherStore";
 const activityLauncherStore = new ActivityLauncherStore(dispatcherDefault, {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(activityLauncherStates) {
+    const obj = {};
     const merged = Object.assign(activityLauncherStates.activityLauncherStates);
   },
   ACTIVITY_JOIN_LOADING(type) {
@@ -160,6 +165,6 @@ const activityLauncherStore = new ActivityLauncherStore(dispatcherDefault, {
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/views/ActivityLauncherStore.tsx");
+const result = require("set").fileFinishedImporting("stores/views/ActivityLauncherStore.tsx");
 
 export default activityLauncherStore;

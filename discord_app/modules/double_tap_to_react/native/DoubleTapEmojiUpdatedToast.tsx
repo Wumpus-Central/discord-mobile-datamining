@@ -5,14 +5,14 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import dispatcherDefault from "dispatcher" /* 4094 */;
 import Text from "Text" /* 4734 */;
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
-import obj132 from "obj132" /* 500 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-require = fn;
+require = arg1;
 class ToastEmoji {
   constructor(arg0) {
     emoji = global.emoji;
@@ -28,18 +28,18 @@ class ToastEmoji {
     items1[1] = stateFromStores;
     memo = closure_3.useMemo(() => {
       if (null != emoji.id) {
-        stateFromStores(dependencyMap[8]);
-        const obj = { id: null, animated: null, size: null };
-        obj[0] = emoji.id;
+        let obj = stateFromStores(closure_1_2[8]);
+        obj = { id: null, animated: null, size: null };
+        obj[0] = tmp.id;
         let animated = !stateFromStores;
         if (!stateFromStores) {
-          animated = emoji.animated;
+          animated = tmp.animated;
         }
         obj[1] = animated;
-        obj[2] = EMOJI_URL_BASE_SIZE;
+        obj[2] = closure_1_5;
         let url = obj.getEmojiURL(obj);
       } else {
-        url = emoji.url;
+        url = tmp.url;
       }
       return url;
     }, items1);
@@ -56,22 +56,23 @@ class ToastEmoji {
   }
 }
 function ToastText(emoji) {
-  { variant: "text-sm/normal", style: callback().toastText, children: null };
+  let obj = { variant: "text-sm/normal", style: callback().toastText, children: null };
   const intl = getSystemLocale.intl;
-  const obj = { emojiName: emoji.emoji.name };
+  obj = { emojiName: emoji.emoji.name };
   obj[2] = intl.format(getSystemLocale.t.nKY0Fl, obj);
   return jsx(Text.Text, { emojiName: emoji.emoji.name });
 }
-const createCacheKey = { marginLeft: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
+createCacheKey = { toastEmoji: null, toastEmojiCustom: null, toastEmojiText: null, toastText: null };
+createCacheKey = { marginLeft: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 24, height: 24 };
 let num = 16;
-if (obj132.isIOS()) {
+if (set.isIOS()) {
   num = 24;
 }
 const obj1 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
 let num2;
-if (obj132.isIOS()) {
+if (set.isIOS()) {
   num2 = 32;
 }
 obj1[1] = num2;
@@ -79,7 +80,7 @@ obj1[3] = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 createCacheKey[2] = obj1;
 createCacheKey[3] = { marginRight: ThemesDefault.space.PX_12, marginVertical: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = obj132.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
+const result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 
 export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
@@ -94,11 +95,12 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
   } else {
     obj = { key: "DEFAULT_REACTION_EMOJI_UPDATED", icon: null, content: null, toastDurationMs: 3000 };
     obj[1] = function icon() {
-      return <ToastEmoji emoji={emoji} />;
+      return closure_1_6(closure_1_8, { emoji });
     };
     obj[2] = function content() {
-      return <ToastText emoji={emoji} />;
+      return closure_1_6(closure_1_9, { emoji });
     };
     dispatcherDefault.open(obj);
+    const obj2 = dispatcherDefault;
   }
 };

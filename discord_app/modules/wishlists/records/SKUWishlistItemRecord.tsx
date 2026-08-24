@@ -2,10 +2,11 @@
 
 // Module 9191 (fromServer)
 import fromServerDefault from "fromServer" /* 9188 */;
-import createFromServer from "createFromServer" /* 4515 */;
+import closure_0 from "createFromServer" /* 4515 */;
 
 fromServerDefault;
-const prototype = function SKUWishlistItemRecord(sku) {
+let prototype;
+prototype = function SKUWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target);
   // ThrowIfThisInitialized (0x7c)
   tmp.skuProductLine = sku.sku.productLine;
@@ -48,10 +49,11 @@ prototype["fromSKU"] = function fromSKU(arg0) {
     tmp8.skuProductLine = obj.sku.productLine;
     tmp8.sku = obj.sku;
     tmp = tmp8;
+    const tmp2 = prototype;
   }
   return tmp;
 };
-const result = require("obj132").fileFinishedImporting("modules/wishlists/records/SKUWishlistItemRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/records/SKUWishlistItemRecord.tsx");
 
 export default prototype;
 export const isSKUWishlistItemRecord = function isSKUWishlistItemRecord(sku) {

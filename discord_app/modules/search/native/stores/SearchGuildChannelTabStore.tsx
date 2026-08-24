@@ -1,7 +1,7 @@
 // === Module 11536: search ===
 
 // Module 11536 (search)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -9,7 +9,7 @@ import NOOP from "NOOP" /* 6714 */;
 import NOOPDefault from "NOOP" /* 6714 */;
 import HeaderRecord from "HeaderRecord" /* 6773 */;
 import comparator from "comparator" /* 1980 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import closure_5 from "generateOldThreadCutoff" /* 4772 */;
 
 ({ GUILD_VOCAL_CHANNELS_KEY: c3, GUILD_SELECTABLE_CHANNELS_KEY: c4 } = comparator);
 HeaderRecord.AutocompleterResultTypes;
@@ -29,23 +29,37 @@ prototype["search"] = function search(query, guildId) {
   let obj = NOOP;
   const boosterMap = obj.getBoosterMap(AutocompleterResultTypes.TEXT_CHANNEL);
   obj1 = NOOP;
+  obj = {
+    query,
+    guildId,
+    limit: 1000,
+    allowEmptyQueries: true,
+    allowSnowflake: true,
+    fuzzy: false,
+    filter() {
+      return true;
+    }
+  };
   const boosterMap1 = obj1.getBoosterMap(AutocompleterResultTypes.VOICE_CHANNEL);
   obj = {};
   const merged = Object.assign(obj);
   obj.type = closure_4;
   obj.boosters = boosterMap;
+  const obj4 = NOOPDefault;
   const queryChannelsResult = NOOPDefault.queryChannels(obj);
   obj1 = {};
   const merged1 = Object.assign(obj);
   obj1.type = closure_3;
   obj1.boosters = boosterMap1;
-  this.voiceChannels = NOOPDefault.queryChannels(obj1).map((item, index) => ({ channel: item.record }));
+  const obj6 = NOOPDefault;
+  this.voiceChannels = NOOPDefault.queryChannels(obj1).map((channel) => ({ channel: channel.record }));
   const queryChannelsResult1 = NOOPDefault.queryChannels(obj1);
-  const mapped = apply.chain(queryChannelsResult).map((item, index) => {
-    const obj = { channel: item.record, lastMessageId: null };
-    let lastMessageId = closure_5.lastMessageId(item.record.id);
+  const obj8 = apply;
+  const mapped = apply.chain(queryChannelsResult).map((channel) => {
+    const obj = { channel: channel.record, lastMessageId: null };
+    let lastMessageId = closure_5.lastMessageId(channel.record.id);
     if (lastMessageId == null) {
-      lastMessageId = item.record.lastMessageId;
+      lastMessageId = channel.record.lastMessageId;
     }
     obj[1] = lastMessageId;
     return obj;
@@ -123,6 +137,7 @@ const searchGuildChannelTabStore = new SearchGuildChannelTabStore(dispatcherDefa
       obj[1] = [];
       obj[2] = [];
       value = obj;
+      const tmp = GuildChannelSearchManager;
     }
     const result = obj.set(id, value);
     value.search(searchQueryString, guildId);
@@ -131,6 +146,6 @@ const searchGuildChannelTabStore = new SearchGuildChannelTabStore(dispatcherDefa
     return map.delete(id.id);
   }
 });
-let result = obj132.fileFinishedImporting("modules/search/native/stores/SearchGuildChannelTabStore.tsx");
+let result = set.fileFinishedImporting("modules/search/native/stores/SearchGuildChannelTabStore.tsx");
 
 export default searchGuildChannelTabStore;

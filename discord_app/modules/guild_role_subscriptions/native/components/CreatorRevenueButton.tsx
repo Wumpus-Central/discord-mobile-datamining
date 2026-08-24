@@ -8,7 +8,7 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 noopAll;
 let closure_3 = createCacheKey.createStyles({ container: { borderRadius: 3 } });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/CreatorRevenueButton.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/CreatorRevenueButton.tsx");
 
 export const CreatorRevenueButton = function CreatorRevenueButton(arg0) {
   ({ disabled, text, onPress, style, loading } = arg0);

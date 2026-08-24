@@ -1,13 +1,13 @@
 // === Module 14376: useBountiesModalVideoAnalytics ===
 
 // Module 14376 (useBountiesModalVideoAnalytics)
-import noop from "noop" /* 19 */;
-import handleConnectionInfoChange from "handleConnectionInfoChange" /* 4564 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleConnectionInfoChange" /* 4564 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 let closure_6 = [25, 50, 75];
-let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx");
 
 export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnalytics(bountyId) {
   bountyId = bountyId.bountyId;
@@ -41,6 +41,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   if (flag2 === undefined) {
     flag2 = true;
   }
+  let questImpressionId;
+  let memo;
   closure_11 = undefined;
   closure_12 = undefined;
   closure_13 = undefined;
@@ -66,8 +68,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   let callback15;
   let callback16;
   let obj = bountyId(rewardDurationMs[3]);
-  const questImpressionId = obj.useQuestImpressionId();
-  const memo = num2.useMemo(() => bountyId(rewardDurationMs[4]).v4(), []);
+  questImpressionId = obj.useQuestImpressionId();
+  memo = num2.useMemo(() => bountyId(rewardDurationMs[4]).v4(), []);
   const set = new Set();
   if (tmp4) {
     set.add("start");
@@ -90,8 +92,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   callback = obj2.useCallback(() => {
     if (null != ref7.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(ref7.current);
-      ref7.current = null;
+      clearTimeout(tmp.current);
+      tmp.current = null;
     }
   }, []);
   const items = [flag, str, prop, rewardDurationMs];
@@ -114,13 +116,16 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
         const nextResult = iter.next();
         while (iter !== undefined) {
           if (result >= nextResult / 100) {
+            let tmp7 = closure_11;
             current = closure_11.current;
+            let tmp8 = nextResult;
             let _HermesInternal = HermesInternal;
             let addResult = current.add("p" + tmp6);
           }
           continue;
         }
         const obj = bountyId(rewardDurationMs[5]);
+        const tmp14 = str;
       }
     }
   }, items1);
@@ -128,7 +133,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   callback3 = obj2.useCallback((arg0) => {
     ({ videoTimestampSeconds, progress, thresholdMet } = arg0);
     let obj = bountyId(rewardDurationMs[6]);
-    { adContentId: bountyId, adCreativeType: bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY, event: flag.AD_VIDEO_PROGRESSED, properties: obj, sourceQuestContent };
+    obj = { adContentId: bountyId, adCreativeType: bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY, event: flag.AD_VIDEO_PROGRESSED, properties: obj, sourceQuestContent };
     obj = { progress, video_timestamp_seconds: videoTimestampSeconds, video_session_id: memo, impression_id: questImpressionId, threshold_met: thresholdMet, reward_timer_seconds: rewardDurationMs / 1000 };
     obj.trackAdContentEvent(obj);
   }, items2);
@@ -149,8 +154,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       current2.add("threshold");
       const _Math = Math;
       const bound = Math.max(rewardDurationMs / 1000, arg0);
-      bountyId(rewardDurationMs[5]);
-      const obj = { videoTimestampSeconds: null, progress: null, thresholdMet: true };
+      let obj = bountyId(rewardDurationMs[5]);
+      obj = { videoTimestampSeconds: null, progress: null, thresholdMet: true };
       obj[0] = bound;
       obj[1] = obj.formatVideoProgressRatio(bound, current);
       callback3(obj);
@@ -169,9 +174,9 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
     }
   }, items5);
   const items6 = [callback3, rewardDurationMs];
-  callback7 = obj2.useCallback((maxVideoProgressSeconds, current) => {
+  callback7 = obj2.useCallback((bound, current) => {
     if (current > 0) {
-      const result = bountyId(rewardDurationMs[5]).formatVideoProgressRatio(maxVideoProgressSeconds, current);
+      const result = bountyId(rewardDurationMs[5]).formatVideoProgressRatio(bound, current);
       const iter = str[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -180,20 +185,26 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
         let combined = "p" + nextResult;
         current = closure_11.current;
         let tmp6 = combined;
+        let tmp7 = closure_11;
         if (!current.has(combined)) {
+          let tmp8 = nextResult;
           if (result >= tmp4 / 100) {
-            let current2 = closure_11.current;
+            let current2 = tmp7.current;
+            let tmp9 = combined;
             let addResult = current2.add(tmp6);
+            let tmp11 = callback3;
             let obj = { videoTimestampSeconds: null, progress: null, thresholdMet: null };
-            obj[0] = maxVideoProgressSeconds;
+            obj[0] = bound;
             obj[1] = result;
-            obj[2] = 1000 * maxVideoProgressSeconds >= rewardDurationMs;
+            let tmp12 = rewardDurationMs;
+            obj[2] = 1000 * bound >= rewardDurationMs;
             let tmp13 = callback3(obj);
           }
         }
         continue;
       }
       const obj2 = bountyId(rewardDurationMs[5]);
+      const tmp18 = str;
     }
   }, items6);
   const items7 = [callback2, callback4, callback5, callback7, rewardDurationMs];
@@ -226,7 +237,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   const callback10 = obj2.useCallback((loop_count) => {
     closure_13.current = 0;
     let obj = bountyId(rewardDurationMs[6]);
-    { adContentId: bountyId, adCreativeType: bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY, event: flag.AD_VIDEO_LOOPED, properties: obj, sourceQuestContent };
+    obj = { adContentId: bountyId, adCreativeType: bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY, event: flag.AD_VIDEO_LOOPED, properties: obj, sourceQuestContent };
     obj = { video_session_id: memo, impression_id: questImpressionId, loop_count, reward_timer_seconds: rewardDurationMs / 1000 };
     obj.trackAdContentEvent(obj);
   }, items9);
@@ -235,7 +246,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
     if (arg1 === bountyId(rewardDurationMs[8]).PlaybackTriggerSource.USER_INTERACTION) {
       let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
       obj[0] = bountyId;
-      obj[1] = bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY;
+      obj[1] = tmp(tmp2[7]).AdCreativeType.BOUNTY;
       obj[2] = flag.AD_VIDEO_PAUSED;
       obj = { video_timestamp_seconds: null, video_session_id: null, impression_id: null, reward_timer_seconds: null };
       obj[0] = arg0;
@@ -244,8 +255,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       obj[3] = rewardDurationMs / 1000;
       obj[3] = obj;
       obj[4] = sourceQuestContent;
-      bountyId(rewardDurationMs[6]).trackAdContentEvent(obj);
-      const tmpResult = bountyId(rewardDurationMs[6]);
+      tmp(tmp2[6]).trackAdContentEvent(obj);
+      const tmpResult = tmp(tmp2[6]);
     }
   }, items10);
   const items12 = [bountyId, memo, questImpressionId, sourceQuestContent, rewardDurationMs];
@@ -253,7 +264,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
     if (arg1 === bountyId(rewardDurationMs[8]).PlaybackTriggerSource.USER_INTERACTION) {
       let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
       obj[0] = bountyId;
-      obj[1] = bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY;
+      obj[1] = tmp(tmp2[7]).AdCreativeType.BOUNTY;
       obj[2] = flag.AD_VIDEO_RESUMED;
       obj = { video_timestamp_seconds: null, video_session_id: null, impression_id: null, reward_timer_seconds: null };
       obj[0] = arg0;
@@ -262,15 +273,15 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       obj[3] = rewardDurationMs / 1000;
       obj[3] = obj;
       obj[4] = sourceQuestContent;
-      bountyId(rewardDurationMs[6]).trackAdContentEvent(obj);
-      const tmpResult = bountyId(rewardDurationMs[6]);
+      tmp(tmp2[6]).trackAdContentEvent(obj);
+      const tmpResult = tmp(tmp2[6]);
     }
   }, items11);
   const items13 = [bountyId, memo, questImpressionId, callback1, memo1, sourceQuestContent];
   const callback13 = obj2.useCallback((error) => {
-    bountyId(rewardDurationMs[6]);
-    { adContentId: bountyId, adCreativeType: bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY, event: flag.AD_VIDEO_ERROR, properties: null, sourceQuestContent: null };
-    const obj = { video_progress: bountyId(rewardDurationMs[5]).formatVideoProgressRatio(ref2.current, ref3.current), video_error_type: null, network_connection_speed: null, video_session_id: memo, video_error_code: null, video_error_message: null, video_network_state: null, impression_id: null, reward_timer_seconds: null };
+    let obj = bountyId(rewardDurationMs[6]);
+    obj = { adContentId: bountyId, adCreativeType: bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY, event: flag.AD_VIDEO_ERROR, properties: null, sourceQuestContent: null };
+    obj = { video_progress: bountyId(rewardDurationMs[5]).formatVideoProgressRatio(ref2.current, ref3.current), video_error_type: null, network_connection_speed: null, video_session_id: memo, video_error_code: null, video_error_message: null, video_network_state: null, impression_id: null, reward_timer_seconds: null };
     let code;
     if (error != null) {
       code = error.error.code;
@@ -296,20 +307,19 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
     const obj4 = bountyId(rewardDurationMs[5]);
     if (tmpResult.isSourceError(error)) {
       obj1 = { name: null, tags: null };
-      obj1[0] = bountyId(rewardDurationMs[11]).MetricEvents.QUEST_VIDEO_ERROR;
+      obj1[0] = tmp(tmp2[11]).MetricEvents.QUEST_VIDEO_ERROR;
       obj1[1] = ["error_type:SOURCE_ERROR"];
-      sourceQuestContent(rewardDurationMs[10]).increment(obj1);
-      const obj6 = sourceQuestContent(rewardDurationMs[10]);
+      sourceQuestContent(tmp2[10]).increment(obj1);
+      const obj6 = sourceQuestContent(tmp2[10]);
     }
-    tmpResult = bountyId(rewardDurationMs[9]);
   }, items12);
   callback14 = obj2.useCallback(() => {
     if (null != ref8.current) {
       const _Date = Date;
-      ref8.current = null;
-      const diff = Date.now() - ref8.current;
-      bountyId(rewardDurationMs[6]);
-      let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
+      tmp.current = null;
+      const diff = Date.now() - tmp.current;
+      let obj = bountyId(rewardDurationMs[6]);
+      obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
       obj[0] = bountyId;
       obj[1] = bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY;
       obj[2] = flag.AD_VIDEO_BUFFERING_ENDED;
@@ -339,8 +349,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
     if (!current) {
       ref5.current = true;
       callback();
-      bountyId(rewardDurationMs[6]);
-      let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
+      let obj = bountyId(rewardDurationMs[6]);
+      obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
       obj[0] = bountyId;
       obj[1] = bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY;
       obj[2] = true.AD_VIDEO_TIME_TO_FIRST_FRAME;
@@ -425,7 +435,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
         if (null != selectedVideoTrackId) {
           num = -1;
           if (selectedVideoTrackId.length > 0) {
-            num = videoTracks.findIndex((item, index) => item.trackId === selectedVideoTrackId);
+            num = videoTracks.findIndex((trackId) => trackId.trackId === selectedVideoTrackId);
           }
         }
         const size = num >= 0 ? videoTracks[num] : videoTracks[0];
@@ -457,7 +467,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
         tmp6 = null != closure_16.current;
       }
       if (tmp6) {
-        tmp6 = null != closure_22.current.bitrateBps;
+        tmp6 = null != tmp.current.bitrateBps;
       }
       if (tmp6) {
         callback15();
@@ -480,8 +490,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
             const _Date = Date;
             closure_20.current = Date.now();
             ref9.current = ref9.current + 1;
-            bountyId(rewardDurationMs[6]);
-            let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
+            let obj = bountyId(rewardDurationMs[6]);
+            obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
             obj[0] = bountyId;
             obj[1] = bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY;
             obj[2] = flag.AD_VIDEO_BUFFERING_STARTED;

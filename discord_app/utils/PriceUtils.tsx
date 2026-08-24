@@ -1,18 +1,16 @@
 // === Module 5316: formatSingleCurrencyPrice ===
 
 // Module 5316 (formatSingleCurrencyPrice)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
 import CurrencyCodes2 from "CurrencyCodes" /* 5317 */;
-import updateProduct from "updateProduct" /* 5319 */;
-import isGenericIapConnected from "isGenericIapConnected" /* 5321 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd" /* 4041 */;
+import closure_2 from "_getSystemLocale" /* 1994 */;
+import closure_3 from "handlePaymentSourceCreateEnd" /* 4041 */;
 import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
 import { CurrencyCodes } from "sum" /* 505 */;
 
-require = fn;
+require = arg1;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   let obj = localeOverride;
   if (localeOverride == null) {
@@ -36,7 +34,8 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
     obj.currencyDisplay = "code";
   }
   if (isWindowsResult) {
-    isWindowsResult = obj132.isWindows();
+    isWindowsResult = set.isWindows();
+    const obj3 = set;
   }
   if (isWindowsResult) {
     isWindowsResult = "en-GB" === closure_2.systemLocale;
@@ -49,41 +48,42 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   }
   return CurrencyCodes2.formatPrice(result, BGN, localeOverride, obj);
 }
-function formatPrice(result, str, localeOverride) {
+function formatPrice(amount, currency, localeOverride, localeOverride) {
   const timestamp = Date.now();
   let flag = false;
   if (timestamp < date.getTime()) {
-    const platformName = obj132.getPlatformName();
+    const platformName = set.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = updateProduct.default.getUserCountry();
-      const _default2 = updateProduct.default;
+      let ipCountryCode = tmp2(5319).default.getUserCountry();
+      const _default2 = tmp2(5319).default;
     } else if ("ios" === platformName) {
-      const storeFront = isGenericIapConnected.default.getStoreFront();
+      const storeFront = tmp2(5321).default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = isGenericIapConnected.default;
+      const _default = tmp2(5321).default;
     } else {
       ipCountryCode = ipCountryCode.ipCountryCode;
     }
     let tmp9 = "BG" === ipCountryCode;
     if (tmp9) {
       let formatted;
-      if (str != null) {
-        formatted = str.toLowerCase();
+      if (currency != null) {
+        formatted = currency.toLowerCase();
       }
       tmp9 = formatted === CurrencyCodes.EUR;
     }
     flag = tmp9;
+    const obj2 = set;
   }
   if (flag) {
-    const tmp13Result = formatSingleCurrencyPrice(result, CurrencyCodes.EUR, localeOverride);
+    const tmp13Result = tmp13(amount, CurrencyCodes.EUR, localeOverride);
     const _HermesInternal = HermesInternal;
-    let combined = "" + tmp13Result + " (" + formatSingleCurrencyPrice(1.95583 * result, CurrencyCodes.BGN, localeOverride) + ")";
+    let combined = "" + tmp13Result + " (" + tmp13(1.95583 * amount, CurrencyCodes.BGN, localeOverride) + ")";
   } else {
-    combined = formatSingleCurrencyPrice(result, str, localeOverride);
+    combined = tmp13(amount, currency, localeOverride);
   }
   return combined;
 }
@@ -94,7 +94,7 @@ function formatRate(priceString, interval, intervalCount) {
     obj[0] = priceString;
     return intl3.formatToPlainString(getSystemLocale.t["rS8FA+"], obj);
   } else {
-    if (interval === SubscriptionIntervalTypes.MONTH) {
+    if (interval === tmp.MONTH) {
       if (1 === intervalCount) {
         const intl2 = getSystemLocale.intl;
         obj = { price: null };
@@ -102,7 +102,7 @@ function formatRate(priceString, interval, intervalCount) {
         return intl2.formatToPlainString(getSystemLocale.t.AbOLNu, obj);
       }
     }
-    if (interval === SubscriptionIntervalTypes.MONTH) {
+    if (interval === tmp.MONTH) {
       if (intervalCount > 1) {
         const intl = getSystemLocale.intl;
         obj = { price: null, intervalCount: null };
@@ -118,7 +118,7 @@ function formatRate(priceString, interval, intervalCount) {
   }
 }
 let closure_6 = Object.freeze(["en-CA", "en-AU", "en-NZ"]);
-const result = require("obj132").fileFinishedImporting("utils/PriceUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/PriceUtils.tsx");
 
 export { formatSingleCurrencyPrice };
 export const formatDualPriceForBG = function formatDualPriceForBG(result, localeOverride) {
@@ -140,8 +140,8 @@ export const maybeShortenPrice = function maybeShortenPrice(str) {
   }
   return replaced;
 };
-export const shortenAndFormatPrice = function shortenAndFormatPrice(amount, currency) {
-  const arr = formatPrice(amount, currency, arg2);
+export const shortenAndFormatPrice = function shortenAndFormatPrice(amount, currency, localeOverride) {
+  const arr = formatPrice(amount, currency, localeOverride);
   let replaced = arr;
   if (arr.length > 5) {
     replaced = arr.replace(/\.00(?=[\s)]|$)/g, "");

@@ -8,16 +8,16 @@ import ErrorBlockDefault from "ErrorBlock" /* 11384 */;
 import WarningNoticeDefault from "WarningNotice" /* 16904 */;
 import HowItWorksCardDefault from "HowItWorksCard" /* 16915 */;
 import EarningPreviewDefault from "EarningPreview" /* 16919 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { CREATOR_REVENUE_PORTAL_URL as closure_8 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 import { GuildSettingsSections } from "ME" /* 676 */;
 import { CreatorMonetizationOnboardingMarketingSection as closure_10 } from "CreatorMonetizationApplicationState" /* 16903 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function ApplicationStatusNotice(arg0) {
   ({ style, resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = arg0);
   ({ resubmittingEnableRequest, createEnableRequest, isApplicationPending } = arg0);
@@ -96,17 +96,18 @@ function StartEarningButton(isTermsAccepted) {
     flag = false;
   }
   submitAcceptTermsRequest = undefined;
+  let navigation;
   const tmp = callback3();
   const tmp4 = importDefault(submitAcceptTermsRequest[13])(guildId);
   ({ error, loading, submitAcceptTermsRequest } = tmp4);
   let obj = isTermsAccepted(submitAcceptTermsRequest[14]);
-  const navigation = obj.useNavigation();
+  navigation = obj.useNavigation();
   const items = [submitAcceptTermsRequest];
   const items1 = [eligibility, navigation];
   const callback = React.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = React.useCallback(() => {
-    importDefault(submitAcceptTermsRequest[15]);
-    const obj = {
+    let obj = closure_1_1(submitAcceptTermsRequest[15]);
+    obj = {
       eligibility,
       onRequireModeratorMFAClick() {
 
@@ -114,7 +115,7 @@ function StartEarningButton(isTermsAccepted) {
     };
     return obj.openLazy(isTermsAccepted(submitAcceptTermsRequest[17])(submitAcceptTermsRequest[16], submitAcceptTermsRequest.paths), isTermsAccepted(submitAcceptTermsRequest[18]).ELIGIBILITY_ACTION_SHEET_KEY, obj);
   }, items1);
-  {
+  obj = {
     style: tmp.tos,
     leading: callback(isTermsAccepted(submitAcceptTermsRequest[19]).FormRow.Checkbox, { selected: isTermsAccepted }),
     label: callback(isTermsAccepted(submitAcceptTermsRequest[12]).Text, { variant: "text-xs/normal", color: "text-default", children: acceptTermsCheckboxText }),
@@ -126,6 +127,7 @@ function StartEarningButton(isTermsAccepted) {
   let tmp13 = eligibleForMonetization;
   if (eligibleForMonetization) {
     tmp13 = true === flag && !isTermsAccepted || true !== flag;
+    const tmp14 = true === flag && !isTermsAccepted || true !== flag;
   }
   if (tmp13) {
     tmp13 = tmp10;
@@ -148,22 +150,22 @@ function StartEarningButton(isTermsAccepted) {
     obj2[2] = intl2.string(tmp5(tmp3[10]).t.NL5ZNS);
     obj2[3] = callback;
     obj1[1] = tmp9(tmp5(tmp3[20]).Button, obj2);
-    const items3 = [tmp9(closure_6, obj1), ];
+    const items3 = [tmp9(tmp12, obj1), ];
     let tmp11Result = null != error;
     if (tmp11Result) {
       const obj3 = { children: null };
       const items4 = [tmp9(tmp5(tmp3[21]).Spacer, { size: 12 }), ];
       const obj4 = { children: null };
       obj4[0] = error.getAnyErrorMessage();
-      items4[1] = tmp9(importDefault(tmp3[9]), obj4);
+      items4[1] = tmp9(tmp2(tmp3[9]), obj4);
       obj3[0] = items4;
-      tmp11Result = callback(closure_13, obj3);
-      const tmp2Result = importDefault(tmp3[9]);
+      tmp11Result = tmp11(tmp16, obj3);
+      const tmp2Result = tmp2(tmp3[9]);
     }
     const obj5 = { children: null };
     items3[1] = tmp11Result;
     obj5[0] = items3;
-    tmp11Result = callback(closure_13, obj5);
+    tmp11Result = tmp11(tmp16, obj5);
   } else {
     obj1[0] = tmp.startEarningButton;
     const obj6 = { loading: null, text: null, icon: null, pillStyle: null, onPress: null };
@@ -171,18 +173,18 @@ function StartEarningButton(isTermsAccepted) {
     const intl = tmp5(tmp3[10]).intl;
     obj6[1] = intl.string(tmp5(tmp3[10]).t.NL5ZNS);
     const obj7 = { source: null, color: null, size: null };
-    obj7[0] = importDefault(tmp3[23]);
-    obj7[1] = importDefault(tmp3[8]).unsafe_rawColors.WHITE;
+    obj7[0] = tmp2(tmp3[23]);
+    obj7[1] = tmp2(tmp3[8]).unsafe_rawColors.WHITE;
     obj7[2] = tmp5(tmp3[21]).Icon.Sizes.SMALL_20;
     obj6[2] = tmp9(tmp5(tmp3[21]).Icon, obj7);
     obj6[3] = { backgroundColor: "#EB5D30" };
     obj6[4] = callback1;
     obj1[1] = tmp9(tmp5(tmp3[22]).BaseTextButton, obj6);
-    tmp11Result = tmp9(closure_6, obj1);
+    tmp11Result = tmp9(tmp12, obj1);
   }
   items2[1] = tmp11Result;
   obj[1] = items2;
-  return callback(closure_6, obj);
+  return closure_12(closure_6, obj);
 }
 class MarketingSections {
   constructor(arg0) {
@@ -223,20 +225,20 @@ class MarketingSections {
       tmp5 = Fragment;
       obj3 = { children: null };
       sections1 = onboardingMarketing.sections;
-      obj3[0] = sections1.map((item, index) => {
-        const type = item.type;
+      obj3[0] = sections1.map((type) => {
+        type = type.type;
         if (closure_1_10.HOW_IT_WORKS === type) {
           return callback;
-        } else if (closure_1_10.BENEFITS === type) {
+        } else if (tmp.BENEFITS === type) {
           return callback2;
-        } else if (closure_1_10.OTHER_CREATORS === type) {
+        } else if (tmp.OTHER_CREATORS === type) {
           let obj = { title: null, children: null };
-          const intl = callback(dependencyMap[10]).intl;
-          obj[0] = intl.string(callback(dependencyMap[10]).t["tJp+QV"]);
+          const intl = callback(closure_1_3[10]).intl;
+          obj[0] = intl.string(callback(closure_1_3[10]).t["tJp+QV"]);
           obj = { highlightedCreators: null };
-          obj[0] = item.creators;
-          obj[1] = closure_1_11(callback2(dependencyMap[26]), obj);
-          return closure_1_11(SectionContainer, obj, closure_1_10.OTHER_CREATORS);
+          obj[0] = type.creators;
+          obj[1] = closure_1_11(callback2(closure_1_3[26]), obj);
+          return closure_1_11(closure_1_16, obj, tmp.OTHER_CREATORS);
         }
       });
       tmpResult = tmp(Fragment, obj3);
@@ -246,7 +248,8 @@ class MarketingSections {
 }
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.sm, marginTop: 10 };
+createCacheKey = { container: { flex: 1 }, contentContainer: { flex: 1, padding: 24 }, heroImage: { resizeMode: "cover", width: "100%" }, subtitle: { marginTop: 8 }, tos: null, startEarningButton: null, startEarningButtonContainer: null, startEarningFabContainer: null, divider: null, sectionTitle: null, sectionFooter: null, statusNoticeContainer: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.sm, marginTop: 10 };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { marginTop: 12 };
 createCacheKey[6] = { marginTop: 14 };
@@ -256,12 +259,14 @@ createCacheKey[9] = { marginTop: 36, marginBottom: 10 };
 createCacheKey[10] = { marginTop: 36 };
 createCacheKey[11] = { marginHorizontal: 0, marginTop: 14 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx");
+let obj1 = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx");
 
 export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
   guild = guild.guild;
   refreshEligibility = undefined;
   let ref;
+  importAll = undefined;
   let ref1;
   let first;
   let React;
@@ -370,9 +375,9 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
         obj9[1] = callback;
         items4[3] = callback(MarketingSections, obj9);
         obj4[3] = items4;
-        items3[1] = callback(closure_6, obj4);
+        items3[1] = closure_12(closure_6, obj4);
         obj2[1] = items3;
-        obj1[2] = callback(closure_6, obj2);
+        obj1[2] = closure_12(closure_6, obj2);
         const items5 = [callback(closure_7, obj1), ];
         if (tmp31Result) {
           tmp31Result = eligibleForMonetization;
@@ -393,14 +398,14 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
         }
         items5[1] = tmp31Result;
         obj[2] = items5;
-        let tmp30Result = callback(tmp2(tmp3[36]).SafeAreaPaddingView, obj);
+        let tmp30Result = tmp30(tmp2(tmp3[36]).SafeAreaPaddingView, obj);
+        const tmp32 = closure_7;
         const tmp4Result = tmp4(tmp3[37]);
       }
       return tmp30Result;
     }
   }
   tmp30Result = callback(tmp4(tmp3[34]), {});
-  const tmp15 = ref(ref1[31]);
 };
 export { SectionContainer };
 export { MarketingSections };

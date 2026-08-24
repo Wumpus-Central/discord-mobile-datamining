@@ -1,9 +1,9 @@
 // === Module 9710: SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY ===
 
 // Module 9710 (SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/rtc/SecureFramesConstants.tsx");
+const result = set.fileFinishedImporting("modules/rtc/SecureFramesConstants.tsx");
 
 export const SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY = "secure_frames_linking_bottom_sheet_key";
 export const SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY = "secure_frames_call_verification_bottom_sheet_key";

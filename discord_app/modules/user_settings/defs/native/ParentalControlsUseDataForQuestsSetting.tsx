@@ -4,11 +4,11 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2335 */;
 import result2 from "result" /* 14182 */;
-import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
-import "createToggle";
+import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxyDefault.ZhaNu8);
@@ -27,6 +27,6 @@ let createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx");
 
 export default createToggle;

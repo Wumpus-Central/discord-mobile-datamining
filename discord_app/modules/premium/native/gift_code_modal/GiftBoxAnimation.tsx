@@ -5,13 +5,13 @@ import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import t from "t" /* 4486 */;
 import playDefault from "play" /* 7130 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { PremiumGiftStyles } from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx");
 
 export default function GiftBoxAnimation(giftStyle) {
   giftStyle = giftStyle.giftStyle;
@@ -21,6 +21,7 @@ export default function GiftBoxAnimation(giftStyle) {
     return null;
   } else {
     const match = t.match(giftStyle);
+    const str = t;
     const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, () => callback(10656));
     const withResult1 = match.with(PremiumGiftStyles.SNOWGLOBE, () => callback(10656)).with(PremiumGiftStyles.BOX, () => callback(10657));
     const withResult2 = match.with(PremiumGiftStyles.SNOWGLOBE, () => callback(10656)).with(PremiumGiftStyles.BOX, () => callback(10657)).with(PremiumGiftStyles.CUP, () => callback(10658));
@@ -38,4 +39,5 @@ export default function GiftBoxAnimation(giftStyle) {
     obj[2] = { width: 320, height: 212 };
     return jsx(playDefault, { source: null, autoPlay: null, style: null });
   }
+  const tmp = require;
 };

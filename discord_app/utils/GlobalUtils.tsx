@@ -1,10 +1,10 @@
 // === Module 1370: isDiscordFrontendDevelopment ===
 
 // Module 1370 (isDiscordFrontendDevelopment)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 
 let closure_0 = "development" === window.GLOBAL_ENV.PROJECT_ENV;
-const result = obj132.fileFinishedImporting("utils/GlobalUtils.tsx");
+const result = set2.fileFinishedImporting("utils/GlobalUtils.tsx");
 
 export function isDiscordFrontendDevelopment() {
   return false;

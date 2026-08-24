@@ -1,13 +1,13 @@
 // === Module 1089: distanceToMatch ===
 
 // Module 1089 (distanceToMatch)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_1 from "_slicedToArray" /* 32 */;
+import closure_2 from "_objectWithoutProperties" /* 109 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_createClass" /* 42 */;
 
-function distanceToMatch(nodeType, fn) {
+function distanceToMatch(nodeType) {
   let num = arg2;
   if (arg2 === undefined) {
     num = Infinity;
@@ -23,8 +23,8 @@ function distanceToMatch(nodeType, fn) {
       num4 = -1;
       if (num2 <= num) {
         let tmp2 = num2;
-        if (!fn(nodeType)) {
-          tmp2 = distanceToMatch(nodeType.parentNode, fn, num, num2 + 1);
+        if (!arg1(nodeType)) {
+          tmp2 = distanceToMatch(nodeType.parentNode, arg1, num, num2 + 1);
         }
         num4 = tmp2;
       }
@@ -33,8 +33,8 @@ function distanceToMatch(nodeType, fn) {
   }
   return num3;
 }
-function hookSetter(headers, arg1, arg2) {
-  closure_0 = headers;
+function hookSetter(arg0, arg1, arg2, arg3) {
+  closure_0 = arg0;
   closure_1 = arg1;
   let tmp = arg2;
   closure_2 = arg2;
@@ -42,25 +42,27 @@ function hookSetter(headers, arg1, arg2) {
   if (arg4 === undefined) {
     _window = window;
   }
+  let ownPropertyDescriptor;
   const _Object = _window.Object;
-  const ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(headers, arg1);
+  ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(arg0, arg1);
   const _Object2 = _window.Object;
   if (!arg3) {
     obj = { set: null };
     obj[0] = function set(arg0) {
-      const self = this;
+      let self = this;
+      self = this;
       closure_0 = arg0;
-      setTimeout$1(() => {
+      closure_1_17(() => {
         const call = set.call;
         if (typeof call === "unknown") {
-          const result = set(closure_0);
+          const result = set(tmp2);
         } else {
-          call(self, closure_0);
+          call(self, tmp2);
         }
       }, 0);
       let set = closure_3;
       if (closure_3) {
-        set = closure_3.set;
+        set = tmp2.set;
       }
       if (set) {
         let call = set2.call;
@@ -73,7 +75,7 @@ function hookSetter(headers, arg1, arg2) {
     };
     tmp = obj;
   }
-  _Object2.defineProperty(headers, arg1, tmp);
+  _Object2.defineProperty(arg0, arg1, tmp);
   return () => {
     obj = ownPropertyDescriptor;
     if (!ownPropertyDescriptor) {
@@ -81,6 +83,7 @@ function hookSetter(headers, arg1, arg2) {
     }
     closure_0 = tmp;
     closure_1 = tmp2;
+    ownPropertyDescriptor = undefined;
     let _Object = window.Object;
     ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
     let _Object2 = window.Object;
@@ -92,6 +95,7 @@ function hookSetter(headers, arg1, arg2) {
       }
       closure_0 = tmp;
       closure_1 = tmp2;
+      ownPropertyDescriptor = undefined;
       let _Object = window.Object;
       ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
       let _Object2 = window.Object;
@@ -103,6 +107,7 @@ function hookSetter(headers, arg1, arg2) {
         }
         closure_0 = tmp;
         closure_1 = tmp2;
+        ownPropertyDescriptor = undefined;
         let _Object = window.Object;
         ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
         let _Object2 = window.Object;
@@ -114,6 +119,7 @@ function hookSetter(headers, arg1, arg2) {
           }
           closure_0 = tmp;
           closure_1 = tmp2;
+          ownPropertyDescriptor = undefined;
           let _Object = window.Object;
           ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
           let _Object2 = window.Object;
@@ -124,13 +130,13 @@ function hookSetter(headers, arg1, arg2) {
     };
   };
 }
-function patch(arg0, arg1, fn) {
+function patch(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   try {
     if (arg1 in arg0) {
       closure_2 = tmp2;
-      const tmp4 = fn(arg0[arg1]);
+      const tmp4 = arg2(arg0[arg1]);
       if (typeof tmp4 === "function") {
         let prototype = tmp5.prototype;
         if (!prototype) {
@@ -185,9 +191,9 @@ function isBlocked(nodeType) {
         } else {
           try {
             if (c0) {
-              if (typeof c0 === "string") {
+              if (typeof tmp === "string") {
                 const _HermesInternal = HermesInternal;
-                if (parentNode.matches("." + c0)) {
+                if (parentNode.matches("." + tmp)) {
                   return true;
                 }
               } else if ((function elementClassMatchesRegex(classList, test) {
@@ -200,7 +206,7 @@ function isBlocked(nodeType) {
                   return true;
                 }
                 return false;
-              })(parentNode, c0)) {
+              })(parentNode, tmp)) {
                 return true;
               }
             }
@@ -259,9 +265,9 @@ function isBlocked(nodeType) {
                   } else {
                     try {
                       if (c0) {
-                        if (typeof c0 === "string") {
+                        if (typeof tmp === "string") {
                           const _HermesInternal = HermesInternal;
-                          if (parentNode.matches("." + c0)) {
+                          if (parentNode.matches("." + tmp)) {
                             return true;
                           }
                         } else if ((function elementClassMatchesRegex(classList, test) {
@@ -274,7 +280,7 @@ function isBlocked(nodeType) {
                             return true;
                           }
                           return false;
-                        })(parentNode, c0)) {
+                        })(parentNode, tmp)) {
                           return true;
                         }
                       }
@@ -315,6 +321,7 @@ function isBlocked(nodeType) {
             num12 = num13;
           }
           tmp9 = num2 > -1 && num12 < 0 || num2 < num12;
+          const tmp13 = num2 > -1 && num12 < 0 || num2 < num12;
         }
         return tmp9;
       } else {
@@ -370,9 +377,11 @@ function setTimeout$1() {
   const items = [...arguments];
   return getImplementation("setTimeout")(...items);
 }
-function serializeArg(buffer, closure_0, closure_1) {
+function serializeArg(buffer, arg1, arg2) {
+  closure_0 = arg1;
+  closure_1 = arg2;
   if (buffer instanceof Array) {
-    return buffer.map((item, index) => serializeArg(item, closure_0, closure_1));
+    return buffer.map((arg0) => closure_1_24(arg0, closure_0, closure_1));
   } else if (null === buffer) {
     return buffer;
   } else {
@@ -405,6 +414,7 @@ function serializeArg(buffer, closure_0, closure_1) {
                         let str2 = "";
                         if (0 < uint8Array.length) {
                           do {
+                            let tmp11 = dependencyMap;
                             let sum = num9 + 1;
                             let sum1 = num9 + 2;
                             str = `` + dependencyMap[uint8Array[num9] >> 2] + dependencyMap[(3 & uint8Array[num9]) << 4 | uint8Array[sum] >> 4] + dependencyMap[(15 & uint8Array[sum]) << 2 | uint8Array[sum1] >> 6] + dependencyMap[63 & uint8Array[sum1]];
@@ -427,7 +437,7 @@ function serializeArg(buffer, closure_0, closure_1) {
                         if (buffer instanceof DataView) {
                           obj = { rr_type: null, args: null };
                           obj[0] = buffer.constructor.name;
-                          const items = [serializeArg(buffer.buffer, closure_0, closure_1), , ];
+                          const items = [serializeArg(buffer.buffer, arg1, arg2), , ];
                           ({ byteOffset: arr4[1], byteLength: arr4[2] } = buffer);
                           obj[1] = items;
                           return obj;
@@ -446,7 +456,7 @@ function serializeArg(buffer, closure_0, closure_1) {
                               if (buffer instanceof globalThis.ImageData) {
                                 const obj3 = { rr_type: null, args: null };
                                 obj3[0] = buffer.constructor.name;
-                                const items1 = [serializeArg(buffer.data, closure_0, closure_1), , ];
+                                const items1 = [serializeArg(buffer.data, arg1, arg2), , ];
                                 ({ width: arr3[1], height: arr3[2] } = buffer);
                                 obj3[1] = items1;
                                 let tmp3 = obj3;
@@ -455,14 +465,14 @@ function serializeArg(buffer, closure_0, closure_1) {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 closure_0 = buffer;
-                                closure_1 = closure_0;
+                                closure_1 = arg1;
                                 const items2 = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"];
-                                const found = items2.filter((item, index) => typeof dependencyMap[item] === "function");
+                                const found = items2.filter((arg0) => typeof dependencyMap[arg0] === "function");
                                 const _Boolean = Boolean;
-                                if (Boolean(found.find((item, index) => closure_0 instanceof dependencyMap[item]))) {
+                                if (Boolean(found.find((arg0) => closure_0 instanceof dependencyMap[arg0]))) {
                                   obj = { rr_type: null, index: null };
                                   obj[0] = buffer.constructor.name;
-                                  obj[1] = callback(buffer, closure_0, closure_1);
+                                  obj[1] = callback2(buffer, arg1, arg2);
                                   tmp3 = obj;
                                 } else {
                                   tmp3 = buffer;
@@ -502,7 +512,7 @@ function initCanvasContextObserver(HTMLCanvasElement) {
       return function(arg0) {
         const self = this;
         const substr = [...arguments].slice();
-        if (!isBlocked(this, callback, closure_1_1, closure_1_2, true)) {
+        if (!closure_2_13(this, callback, closure_1_1, closure_1_2, true)) {
           let str = "webgl";
           if ("experimental-webgl" !== arg0) {
             str = arg0;
@@ -530,7 +540,7 @@ function initCanvasContextObserver(HTMLCanvasElement) {
       };
     }));
     return () => {
-      const item = items.forEach((item, index) => item());
+      const item = items.forEach((arg0) => arg0());
     };
   } catch (err) {
     const _console = console;
@@ -558,7 +568,7 @@ function patchGLPrototype(headers) {
           if (typeof headers[item10017] !== "function") {
             return 0;
           } else {
-            items.push(patch(tmp3, item10017, (arg0) => {
+            items.push(closure_1_12(tmp3, item10017, (arg0) => {
               closure_0 = arg0;
               return function() {
                 const self = this;
@@ -566,7 +576,7 @@ function patchGLPrototype(headers) {
                 const applyResult = callback.apply(this, items);
                 closure_3_23(applyResult, closure_2_6, this);
                 if ("tagName" in this.canvas) {
-                  if (!isBlocked(self.canvas, closure_2_3, closure_2_4, closure_2_5, true)) {
+                  if (!closure_3_13(self.canvas, closure_2_3, closure_2_4, closure_2_5, true)) {
                     if (typeof closure_3_25 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
@@ -574,7 +584,7 @@ function patchGLPrototype(headers) {
                     obj = { type: null, property: null, args: null };
                     obj[0] = closure_2_1;
                     obj[1] = callback;
-                    obj[2] = items.map((item, index) => closure_1_24(item, closure_0, closure_1));
+                    obj[2] = items.map((arg0) => closure_1_24(arg0, closure_0, closure_1));
                     closure_2_2(self.canvas, obj);
                   }
                 }
@@ -588,7 +598,7 @@ function patchGLPrototype(headers) {
             items = [arg0];
             closure_1_2(this.canvas, { type: closure_1_1, property: closure_0, args: items, setter: true });
           };
-          items.push(hookSetter(headers, tmp, obj));
+          items.push(closure_1_11(headers, tmp, obj));
         }
       }
     })(item10017);
@@ -685,7 +695,7 @@ let closure_8 = (() => {
         idNodeMap.delete(this.getId(childNodes));
         if (childNodes.childNodes) {
           childNodes = childNodes.childNodes;
-          const item = childNodes.forEach((item, index) => self.removeNodeFromMap(item));
+          const item = childNodes.forEach((arg0) => self.removeNodeFromMap(arg0));
         }
       }
     },
@@ -738,7 +748,7 @@ let closure_8 = (() => {
       }
     }
   ];
-  return _createClass(Mirror, items);
+  return callback(Mirror, items);
 })();
 let c10 = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.";
 let obj = {

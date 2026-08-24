@@ -1,14 +1,14 @@
 // === Module 16301: cleanUp ===
 
 // Module 16301 (cleanUp)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx");
 class VoicePanelStreamOutputSinkStack {
   constructor(arg0) {
-    flag = fn;
-    if (fn === undefined) {
+    flag = arg1;
+    if (arg1 === undefined) {
       flag = false;
     }
     obj = Object.create(new.target.prototype);
@@ -32,17 +32,21 @@ prototype["cleanUp"] = function cleanUp() {
 prototype["logSinks"] = function logSinks() {
   const items = [];
   while (tmp !== undefined) {
+    let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     let first = tmp4[0];
     let _Array = Array;
     let arr = Array.from(tmp4[1]);
     let _HermesInternal = HermesInternal;
+    let str = "[Stream:";
+    let tmp6 = first;
+    let str2 = ", Locks:[";
+    let str3 = "]]";
     arr = items.push("[Stream:" + first + ", Locks:[" + arr.join(",") + "]]");
     continue;
   }
-  tmp = this.activeSinks[Symbol.iterator]();
 };
-prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(dependencyMap) {
+prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(closure_1) {
   const self = this;
   const activeSinks = this.activeSinks;
   let set = activeSinks.get(arg1);
@@ -50,20 +54,20 @@ prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(
     const _Set = Set;
     set = new Set();
   }
-  const hasItem = set.has(dependencyMap);
+  const hasItem = set.has(closure_1);
   if (arg2) {
     if (!hasItem) {
-      set.add(dependencyMap);
+      set.add(closure_1);
       if (1 === set.size) {
-        self.setActive(arg1, true, self.sourceId(dependencyMap));
+        self.setActive(arg1, true, self.sourceId(closure_1));
         const activeSinks3 = self.activeSinks;
         const result = activeSinks3.set(arg1, set);
       }
     }
   } else if (hasItem) {
-    set.delete(dependencyMap);
+    set.delete(closure_1);
     if (0 === set.size) {
-      self.setActive(arg1, false, self.sourceId(dependencyMap));
+      self.setActive(arg1, false, self.sourceId(closure_1));
       const activeSinks2 = self.activeSinks;
       activeSinks2.delete(arg1);
     }
@@ -72,11 +76,15 @@ prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(
 prototype["clearLock"] = function clearLock(closure_1) {
   const self = this;
   while (tmp !== undefined) {
+    let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     [tmp5, obj] = tmp4;
+    let obj2 = obj;
     if (obj.has(closure_1)) {
-      let deleteResult = obj.delete(closure_1);
-      if (0 === obj.size) {
+      let tmp6 = obj;
+      let deleteResult = obj2.delete(closure_1);
+      if (0 === obj2.size) {
+        let tmp8 = tmp5;
         let setActiveResult = self.setActive(tmp5, false, self.sourceId(closure_1));
         let activeSinks = self.activeSinks;
         let deleteResult1 = activeSinks.delete(tmp5);
@@ -84,7 +92,6 @@ prototype["clearLock"] = function clearLock(closure_1) {
     }
     continue;
   }
-  tmp = this.activeSinks[Symbol.iterator]();
 };
 prototype["setActive"] = function setActive(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -93,8 +100,8 @@ prototype["setActive"] = function setActive(arg0, arg1, arg2) {
   const mediaEngine = this.mediaEngine;
   mediaEngine.eachConnection((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, closure_1, closure_2));
 };
-prototype["sourceId"] = function sourceId(dependencyMap) {
-  return "VoicePanelStreamOutputSinkStack-" + dependencyMap;
+prototype["sourceId"] = function sourceId(closure_1) {
+  return "VoicePanelStreamOutputSinkStack-" + closure_1;
 };
 
 export default VoicePanelStreamOutputSinkStack;

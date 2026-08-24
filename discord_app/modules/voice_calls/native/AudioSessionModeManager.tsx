@@ -3,19 +3,19 @@
 // Module 16529 (handleAVAudioSessionMode)
 import initializeDefault from "initialize" /* 5038 */;
 import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 16530 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import buildStageChannelUserRoles from "buildStageChannelUserRoles" /* 4990 */;
-import reset from "reset" /* 4652 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
-import getState from "getState" /* 7383 */;
+import closure_2 from "participantFromServer" /* 1390 */;
+import closure_3 from "buildStageChannelUserRoles" /* 4990 */;
+import closure_4 from "reset" /* 4652 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_8 from "handleConnectionOpen" /* 1979 */;
+import closure_9 from "updateVoiceState" /* 4542 */;
+import closure_10 from "getState" /* 7383 */;
 import { AppStates } from "ME" /* 676 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-require = fn;
+require = arg1;
 function handleAVAudioSessionMode() {
   channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
   if (null == channel) {
@@ -34,10 +34,10 @@ function handleAVAudioSessionMode() {
         const AVAudioSessionMode = VoiceEngine.AVAudioSessionMode;
         if (obj.shouldImmediatelyRequestVoicePermissions(id.getId(), channel.id)) {
           VIDEO = AVAudioSessionMode.VOICE;
-          obj2 = VoiceEngine;
+          obj2 = tmp9;
         } else {
           VIDEO = AVAudioSessionMode.LISTEN;
-          obj2 = VoiceEngine;
+          obj2 = tmp9;
         }
         obj = handleVoiceChannelSelect;
       }
@@ -53,13 +53,13 @@ function handleAVAudioSessionMode() {
     const result = obj2.setAVAudioSessionMode(VIDEO);
   }
 }
-if (obj132.isAndroid()) {
-  obj132 = { setAVAudioSessionMode: null, AVAudioSessionMode: null };
-  obj132[0] = function setAVAudioSessionMode(VIDEO) {
+if (set.isAndroid()) {
+  set = { setAVAudioSessionMode: null, AVAudioSessionMode: null };
+  set[0] = function setAVAudioSessionMode(VIDEO) {
 
   };
-  obj132[1] = { VOICE: "AVAudioSessionModeVoiceChat", VIDEO: "AVAudioSessionModeVideoChat", LISTEN: "AVAudioSessionModeSpokenAudio", DEFAULT: "AVAudioSessionModeDefault" };
-  let VoiceEngine = obj132;
+  set[1] = { VOICE: "AVAudioSessionModeVoiceChat", VIDEO: "AVAudioSessionModeVideoChat", LISTEN: "AVAudioSessionModeSpokenAudio", DEFAULT: "AVAudioSessionModeDefault" };
+  let VoiceEngine = set;
 } else {
   VoiceEngine = require("get ActivityIndicator").NativeModules.VoiceEngine;
 }
@@ -77,6 +77,6 @@ let prototype = function AudioSessionModeManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = obj132.fileFinishedImporting("modules/voice_calls/native/AudioSessionModeManager.tsx");
+let result = set.fileFinishedImporting("modules/voice_calls/native/AudioSessionModeManager.tsx");
 
 export default prototype;

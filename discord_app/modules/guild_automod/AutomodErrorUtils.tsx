@@ -2,10 +2,11 @@
 
 // Module 7608 (getAutomodErrorMessageFromErrorResponse)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import { AbortCodes } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
   if (null == errorResponseBody) {
     return null;
@@ -38,8 +39,11 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
               const intl = getSystemLocale.intl;
               return intl.string(getSystemLocale.t.ipgKDg);
             }
-          } else if (channel != null) {
-            channel.isForumLikeChannel();
+          } else {
+            let isForumLikeChannelResult;
+            if (channel != null) {
+              isForumLikeChannelResult = channel.isForumLikeChannel();
+            }
           }
           return null;
         }
@@ -52,16 +56,16 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
 function getAutomodErrorMessageFromMessageData(message) {
   const channel = store.getChannel(message.message.channelId);
   if (obj2.isMessageDataEdit(message)) {
-    const intl4 = getSystemLocale.intl;
-    let stringResult = intl4.string(getSystemLocale.t.bU6o0z);
+    const intl4 = tmp(1236).intl;
+    let stringResult = intl4.string(tmp(1236).t.bU6o0z);
   } else {
     let isThreadResult;
     if (channel != null) {
       isThreadResult = channel.isThread();
     }
     if (isThreadResult) {
-      const intl3 = getSystemLocale.intl;
-      stringResult = intl3.string(getSystemLocale.t.DVdG9E);
+      const intl3 = tmp(1236).intl;
+      stringResult = intl3.string(tmp(1236).t.DVdG9E);
     } else {
       let isForumPostResult;
       if (channel != null) {
@@ -73,12 +77,12 @@ function getAutomodErrorMessageFromMessageData(message) {
           isForumLikeChannelResult = channel.isForumLikeChannel();
         }
         if (!isForumLikeChannelResult) {
-          const intl = getSystemLocale.intl;
-          stringResult = intl.string(getSystemLocale.t.zQ69pv);
+          const intl = tmp(1236).intl;
+          stringResult = intl.string(tmp(1236).t.zQ69pv);
         }
       }
-      const intl2 = getSystemLocale.intl;
-      stringResult = intl2.string(getSystemLocale.t.ipgKDg);
+      const intl2 = tmp(1236).intl;
+      stringResult = intl2.string(tmp(1236).t.ipgKDg);
     }
   }
   return stringResult;
@@ -92,8 +96,8 @@ class prototype extends Error {
 }
 const items = [, , ];
 ({ AUTOMOD_MESSAGE_BLOCKED: arr[0], AUTOMOD_TITLE_BLOCKED: arr[1], AUTOMOD_INVALID_RUST_SERVICE_RESPONSE: arr[2] } = AbortCodes);
-const set = new Set(items);
-const result = require("obj132").fileFinishedImporting("modules/guild_automod/AutomodErrorUtils.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/guild_automod/AutomodErrorUtils.tsx");
 
 export { InvalidKeywordError };
 export const InvalidRegexPatternError = prototype;

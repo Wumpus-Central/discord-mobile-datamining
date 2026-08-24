@@ -1,14 +1,14 @@
 // === Module 12293: getWidgetAssetURL ===
 
 // Module 12293 (getWidgetAssetURL)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
 
 const DEFAULT_CDN_HOST = ME.DEFAULT_CDN_HOST;
-const result = obj132.fileFinishedImporting("modules/user_profile/WidgetAssetUtils.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/WidgetAssetUtils.tsx");
 
-export const getWidgetAssetURL = function getWidgetAssetURL(closure_0, fileId, arg2) {
+export const getWidgetAssetURL = function getWidgetAssetURL(arg0, fileId, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -28,5 +28,5 @@ export const getWidgetAssetURL = function getWidgetAssetURL(closure_0, fileId, a
     }
     str = str2;
   }
-  return "https://" + CDN_HOST + "/widget-assets/" + closure_0 + "/" + fileId + "?format=" + str + "&animated=" + flag;
+  return "https://" + CDN_HOST + "/widget-assets/" + arg0 + "/" + fileId + "?format=" + str + "&animated=" + flag;
 };

@@ -6,14 +6,15 @@ import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import registerAssetDefault from "registerAsset" /* 8147 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey = { tintColor: null };
+createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/Arrow.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/Arrow.tsx");
 
 export default function Arrow() {
   const tmp = callback();

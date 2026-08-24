@@ -5,13 +5,13 @@ import useIsNewMemberDefault from "useIsNewMember" /* 5284 */;
 import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 11546 */;
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 11682 */;
 import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 15483 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "handleSettingsLoadSuccess" /* 5048 */;
 import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 5281 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
 
 export default function useGuildActionRows(id) {
   const _require = id;
@@ -45,6 +45,7 @@ export default function useGuildActionRows(id) {
   const hasItem1 = features2.has(GuildFeatures.COMMUNITY);
   const hasItem2 = features3.has(GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
   const obj10 = _require(7198);
+  const tmp14 = GuildFeatures;
   const tmp18 = useHasAllocateBoostPermissionDefault(id.id);
   const mobileBoostProgressBarEnabled = _require(15418).useMobileBoostProgressBarEnabled("useGuildActionRows");
   const obj11 = _require(15418);
@@ -104,7 +105,7 @@ export default function useGuildActionRows(id) {
               }
               if (canReviewGuildMemberApplications) {
                 const features5 = id.features;
-                canReviewGuildMemberApplications = features5.has(GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+                canReviewGuildMemberApplications = features5.has(tmp14.MEMBER_VERIFICATION_MANUAL_APPROVAL);
               }
               if (canReviewGuildMemberApplications) {
                 items3.push(ChannelListGuildActionRow.GUILD_MOD_DASH_MEMBER_SAFETY);
@@ -140,5 +141,4 @@ export default function useGuildActionRows(id) {
     }
   }
   items2 = [];
-  const obj14 = _require(15521);
 };

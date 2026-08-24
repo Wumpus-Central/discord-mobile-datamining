@@ -2,10 +2,11 @@
 
 // Module 16217 (getIsOnMainSurface)
 import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function getIsOnMainSurface() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
@@ -49,8 +50,8 @@ function getIsOnMainSurface() {
   }
   return false;
 }
-const set = new Set(["tabs", "channel"]);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
+let set = new Set(["tabs", "channel"]);
+const result = set.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
 
 export const useIsOnMainSurface = function useIsOnMainSurface() {
   [tmp2, require] = callback(React.useState(getIsOnMainSurface), 2);
@@ -58,14 +59,15 @@ export const useIsOnMainSurface = function useIsOnMainSurface() {
     function handleNavigationChange() {
       return rootNavigationRef(closure_1_5());
     }
-    const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+    const rootNavigationRef = closure_1_0(closure_1_1[2]).getRootNavigationRef();
     if (null != rootNavigationRef) {
-      rootNavigationRef(getIsOnMainSurface());
+      rootNavigationRef(closure_1_5());
       rootNavigationRef.addListener("state", handleNavigationChange);
       return () => {
         rootNavigationRef.removeListener("state", handleNavigationChange);
       };
     }
+    const obj = closure_1_0(closure_1_1[2]);
   }, []);
   return tmp2;
 };

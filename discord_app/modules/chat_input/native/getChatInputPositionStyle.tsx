@@ -1,14 +1,14 @@
 // === Module 11425: getChatInputPositionStyle ===
 
 // Module 11425 (getChatInputPositionStyle)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import obj1322 from "obj132" /* 500 */;
+import set2 from "set" /* 500 */;
 
 let obj = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj.top = undefined;
-const result = obj132.fileFinishedImporting("modules/chat_input/native/getChatInputPositionStyle.tsx");
+const result = set.fileFinishedImporting("modules/chat_input/native/getChatInputPositionStyle.tsx");
 
 export default function getChatInputPositionStyle() {
   obj = arg0;
@@ -20,7 +20,7 @@ export default function getChatInputPositionStyle() {
     if (obj2.isIOS()) {
       tmp = obj;
     }
-    obj2 = obj1322;
+    obj2 = set2;
   }
   return tmp;
 };

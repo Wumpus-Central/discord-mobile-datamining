@@ -1,32 +1,33 @@
 // === Module 11008: DurationSelectionActionSheet ===
 
 // Module 11008 (DurationSelectionActionSheet)
-import noop from "noop" /* 19 */;
-import computeAlertSettings from "computeAlertSettings" /* 10014 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "computeAlertSettings" /* 10014 */;
 import useGuildIncidentsActionSheetStore from "useGuildIncidentsActionSheetStore" /* 11009 */;
 import { getTimeframes } from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8235 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function DurationSelectionActionSheet(onClose) {
   onClose = onClose.onClose;
-  let obj = { title: null };
+  let obj = { children: null };
+  obj = { title: null };
   const intl = onClose(1236).intl;
   obj[0] = intl.string(onClose(1236).t.vKYZzc);
   const items = [callback2(onClose(6949).BottomSheetTitleHeader, obj), ];
   obj = {
     hasIcons: false,
-    children: getTimeframes().map((item, index) => {
-      closure_0 = item;
-      return closure_1_14(onClose(dependencyMap[10]).ActionSheetRow, {
-        label: item.label,
+    children: getTimeframes().map((label) => {
+      closure_0 = label;
+      return closure_1_14(onClose(closure_1_2[10]).ActionSheetRow, {
+        label: label.label,
         onPress() {
-          closure_2_9(item.value);
-          item();
+          closure_2_9(label.value);
+          label();
         }
-      }, item.value);
+      }, label.value);
     })
   };
   items[1] = callback2(onClose(7177).ActionSheetRow.Group, obj);
@@ -49,7 +50,7 @@ class GuildIncidentActionsActionSheet {
     closure_7 = undefined;
     onDurationSelectorClose = function onDurationSelectorClose(c5) {
       let obj = guild(time[13]);
-      { content: closure_1_14(GuildIncidentActionsActionSheet, obj), key: "GuildIncidentActionsActionSheet" };
+      obj = { content: closure_1_14(closure_1_18, obj), key: "GuildIncidentActionsActionSheet" };
       obj = { guild, analyticsData };
       obj.showActionSheet(obj);
     };
@@ -96,7 +97,7 @@ class GuildIncidentActionsActionSheet {
     items3 = [];
     items3[0] = time;
     memo = pauseInvites.useMemo(() => {
-      const found = getTimeframes().find((item, index) => item.value === closure_2);
+      const found = closure_1_11().find((value) => value.value === closure_2);
       let label;
       if (found != null) {
         label = found.label;
@@ -121,7 +122,7 @@ class GuildIncidentActionsActionSheet {
     obj3[1] = intl2.string(require("getSystemLocale").t.vKYZzc);
     obj3[3] = function onPress() {
       let obj = guild(time[13]);
-      { content: closure_1_14(DurationSelectionActionSheet, obj), key: "DurationSelectionActionSheet" };
+      obj = { content: closure_1_14(closure_1_17, obj), key: "DurationSelectionActionSheet" };
       obj = { onClose: onDurationSelectorClose };
       obj.showActionSheet(obj);
     };
@@ -179,6 +180,11 @@ class GuildIncidentActionsActionSheet {
             ({ source, alertType, messageId } = analyticsData);
             obj = { guild_id: guild.id, source, raid_alert_id: messageId, raid_alert_type: alertType, intervention_type_enabled: null, intervention_type_disabled: null, duration: null };
             const obj3 = analyticsData(time[23]);
+            const tmp = guild;
+            const tmp3 = guild;
+            const tmp4 = pauseInvites;
+            const tmp5 = pauseDms;
+            const tmp7 = analyticsData;
             obj[4] = guild(time[12]).getEnabledInterventions(pauseInvites, pauseDms);
             const obj5 = guild(time[12]);
             obj[5] = guild(time[12]).getDisabledInterventions(pauseInvites, pauseDms);
@@ -189,20 +195,19 @@ class GuildIncidentActionsActionSheet {
               tmp11 = !c6;
             }
             if (!tmp11) {
-              tmp11 = pauseInvites;
+              tmp11 = tmp4;
             }
             if (!tmp11) {
-              tmp11 = pauseDms;
+              tmp11 = tmp5;
             }
             if (!tmp11) {
               obj = { content: null, key: "GuildRaidLockdownFeedbackActionSheet" };
               obj1 = { guildId: null };
-              obj1[0] = guild.id;
-              obj[0] = closure_1_14(analyticsData(time[24]), obj1);
-              guild(time[13]).showActionSheet(obj);
-              const tmpResult = guild(time[13]);
+              obj1[0] = tmp3.id;
+              obj[0] = closure_1_14(tmp7(tmp2[24]), obj1);
+              tmp(tmp2[13]).showActionSheet(obj);
+              const tmpResult = tmp(tmp2[13]);
             }
-            const obj6 = guild(time[12]);
           },
       text: null,
       variant: "primary",
@@ -230,6 +235,6 @@ class GuildIncidentActionsActionSheet {
     return tmp14(require("ActionSheet").ActionSheet, obj);
   }
 }
-let result = require("obj132").fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentActionsActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentActionsActionSheet.tsx");
 
 export default GuildIncidentActionsActionSheet;

@@ -1,9 +1,9 @@
 // === Module 4265: VANITY_URL_POWERUP_SKU_ID ===
 
 // Module 4265 (VANITY_URL_POWERUP_SKU_ID)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/Powerups.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/Powerups.tsx");
 
 export const VANITY_URL_POWERUP_SKU_ID = "1387197800336330924";
 export const GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID = "1395150519886024775";

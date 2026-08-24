@@ -3,32 +3,39 @@
 // Module 16172 (AnimatedToast)
 import Button from "Button" /* 1297 */;
 import importAllResult from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import ToastStore from "ToastStore" /* 16173 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "ToastStore" /* 16173 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function AnimatedToast(toast) {
   toast = toast.toast;
   const merged = Object.assign(toast, Object.create(null));
   const state = toast.state;
   const cleanUp = toast.cleanUp;
+  let sharedValue;
+  let width;
+  let height;
+  let mobileQuestDockHeight;
+  let top;
+  let stateFromStores;
+  let content;
   closure_10 = undefined;
   let str;
   let sharedValue1;
   let youBarTotalHeight;
   let obj = merged(cleanUp[6]);
-  const sharedValue = obj.useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
   const size = state(cleanUp[7])();
-  const width = size.width;
-  const height = size.height;
+  width = size.width;
+  height = size.height;
   obj1 = merged(cleanUp[8]);
-  const mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
-  const top = state(cleanUp[9])().top;
+  mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
+  top = state(cleanUp[9])().top;
   const tmp2 = top();
   items = [width];
-  const stateFromStores = merged(cleanUp[10]).useStateFromStores(items, () => {
+  stateFromStores = merged(cleanUp[10]).useStateFromStores(items, () => {
     let flag = width.useReducedMotion;
     if (!flag) {
       flag = merged.disableAnimations;
@@ -38,7 +45,7 @@ function AnimatedToast(toast) {
     }
     return flag;
   });
-  const content = merged.content;
+  content = merged.content;
   const obj3 = merged(cleanUp[10]);
   let tmp10 = null != content;
   const isScreenReaderEnabled = merged(cleanUp[11]).useIsScreenReaderEnabled();
@@ -72,29 +79,29 @@ function AnimatedToast(toast) {
     items = [num3, sum];
     const interpolateResult = obj.interpolate(value, content, items);
     if (stateFromStores) {
-      value = sharedValue1.get();
+      value = obj2.get();
     } else {
-      let tmp8Result = merged(cleanUp[13]);
-      value = tmp8Result.withSpring(sharedValue1.get(), closure_10);
+      let tmp8Result = tmp8(tmp9[13]);
+      value = tmp8Result.withSpring(obj2.get(), closure_10);
     }
     obj = { opacity: value, transform: null, maxWidth: null };
     let withSpringResult = interpolateResult;
     if (!stateFromStores) {
-      tmp8Result = merged(cleanUp[13]);
+      tmp8Result = tmp8(tmp9[13]);
       const fn = function t(arg0) {
         let tmp = arg0;
         if (arg0) {
-          tmp = closure_1 === merged(cleanUp[14]).TransitionStates.YEETED;
+          tmp = closure_1 === closure_1_0(closure_1_2[14]).TransitionStates.YEETED;
         }
         if (tmp) {
-          merged(cleanUp[6]).runOnJS(closure_2)();
-          const obj = merged(cleanUp[6]);
+          closure_1_0(closure_1_2[6]).runOnJS(closure_2)();
+          const obj = closure_1_0(closure_1_2[6]);
         }
       };
       obj = { state: null, TransitionStates: null, runOnJS: null, cleanUp: null };
       obj[0] = state;
-      obj[1] = merged(cleanUp[14]).TransitionStates;
-      obj[2] = merged(cleanUp[6]).runOnJS;
+      obj[1] = tmp8(tmp9[14]).TransitionStates;
+      obj[2] = tmp8(tmp9[6]).runOnJS;
       obj[3] = cleanUp;
       fn.__closure = obj;
       fn.__workletHash = 633151838569;
@@ -147,7 +154,7 @@ function AnimatedToast(toast) {
   return tmp17;
 }
 function renderItem(arg0, toast, state, cleanUp) {
-  return <AnimatedToast key={arg0} toast={toast} state={state} cleanUp={cleanUp} />;
+  return <AnimatedToast key={arg0} toast={arg1} state={arg2} cleanUp={arg3} />;
 }
 function getItemKey(key) {
   return key.key;
@@ -156,7 +163,8 @@ function wrapChildren(children) {
   return jsx(Button.NonExpandingOverlayView, { children });
 }
 let c3 = importAllResult;
-let obj = { position: "absolute", alignSelf: "center", flexDirection: "row", justifyContent: "center", shadowColor: require("result").TOAST_CONTAINER_SHADOW_COLOR };
+let obj = { container: null };
+obj = { position: "absolute", alignSelf: "center", flexDirection: "row", justifyContent: "center", shadowColor: require("result").TOAST_CONTAINER_SHADOW_COLOR };
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 createCacheKey = { START: 0, [0]: "START", END: 1, [1]: "END" };
@@ -192,6 +200,6 @@ const memoResult = importAllResult.memo(() => {
   obj = { items: stateFromStoresArray, renderItem, getItemKey, wrapChildren };
   return jsx(stateFromStoresArray(4668).TransitionGroup, { items: stateFromStoresArray, renderItem, getItemKey, wrapChildren });
 });
-let result = require("obj132").fileFinishedImporting("modules/toast/native/ToastContainer.tsx");
+let result = require("set").fileFinishedImporting("modules/toast/native/ToastContainer.tsx");
 
 export default memoResult;

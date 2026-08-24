@@ -3,10 +3,10 @@
 // Module 9704 (_isNativeReflectConstruct)
 import _asyncLoop from "_asyncLoop" /* 9699 */;
 import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 9705 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 let SHA224 = require;
@@ -91,14 +91,18 @@ let items = [
       let tmp29;
       let num = 0;
       do {
+        let tmp2 = uint32Array2;
         uint32Array2[num] = getUint32.getUint32(sum, false);
         num = num + 1;
         sum = sum + 4;
         num2 = 16;
       } while (num < 16);
       do {
+        let tmp3 = uint32Array2;
         let tmp4 = uint32Array2[num2 - 15];
         let tmp5 = uint32Array2[num2 - 2];
+        let tmp6 = SHA224;
+        let tmp7 = dependencyMap;
         let rotrResult = SHA224(9699).rotr(tmp4, 7);
         let tmp9 = rotrResult ^ SHA224(9699).rotr(tmp4, 18) ^ tmp4 >>> 3;
         let rotrResult1 = SHA224(9699).rotr(tmp5, 17);
@@ -109,9 +113,13 @@ let items = [
       ({ A, B, C, D, E, F, G, H } = this);
       let num3 = 0;
       do {
+        let tmp11 = SHA224;
+        let tmp12 = dependencyMap;
         let rotrResult2 = SHA224(9699).rotr(E, 6);
         let tmp14 = rotrResult2 ^ SHA224(9699).rotr(E, 11);
         let sum1 = H + (tmp14 ^ SHA224(9699).rotr(E, 25));
+        let tmp16 = uint32Array;
+        let tmp17 = uint32Array2;
         let tmp18 = sum1 + SHA224(9705).Chi(E, F, G) + uint32Array[num3] + uint32Array2[num3] | 0;
         let rotrResult3 = SHA224(9699).rotr(A, 2);
         let tmp20 = rotrResult3 ^ SHA224(9699).rotr(A, 13);

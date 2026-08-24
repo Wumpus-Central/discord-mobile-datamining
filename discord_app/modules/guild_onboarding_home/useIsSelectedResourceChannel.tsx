@@ -1,15 +1,14 @@
 // === Module 10548: useIsSelectedResourceChannel ===
 
 // Module 10548 (useIsSelectedResourceChannel)
-import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 10549 */;
-import handlePermissionsChange from "handlePermissionsChange" /* 4970 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import closure_3 from "handlePermissionsChange" /* 4970 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
 
 export default function useIsSelectedResourceChannel(arg0) {
   const _require = arg0;
@@ -17,12 +16,13 @@ export default function useIsSelectedResourceChannel(arg0) {
   const stateFromStores = _require(647).useStateFromStores(items, () => {
     const channel = closure_1_4.getChannel(callback);
     if (null != channel) {
-      if (obj.hasFlag(channel.flags, ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) {
-        if (isSelectedFromHomeChannelDefault(channel, closure_1_5, closure_1_3)) {
+      if (obj.hasFlag(channel.flags, closure_1_7.IS_GUILD_RESOURCE_CHANNEL)) {
+        if (closure_1_1(tmp3[7])(channel, closure_1_5, closure_1_3)) {
           return channel.guild_id;
         }
       }
-      obj = callback(dependencyMap[6]);
+      obj = callback(closure_1_2[6]);
+      tmp3 = closure_1_2;
     }
   });
   let obj = _require(647);

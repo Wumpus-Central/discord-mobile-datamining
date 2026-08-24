@@ -1,10 +1,10 @@
 // === Module 6914: INTERACTION_EVENTS ===
 
 // Module 6914 (INTERACTION_EVENTS)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 let c0 = null;
-const result = obj132.fileFinishedImporting("utils/web/WindowInteractingUtils.tsx");
+const result = set.fileFinishedImporting("utils/web/WindowInteractingUtils.tsx");
 
 export const INTERACTION_EVENTS = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"];
 export function getCurrentlyInteractingWindowId() {

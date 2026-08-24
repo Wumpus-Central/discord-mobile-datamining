@@ -4,12 +4,12 @@
 import transitionTo from "transitionTo" /* 1222 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
 import openMemberVerificationModal from "openMemberVerificationModal" /* 8522 */;
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4198 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 ({ GuildFeatures: c3, Routes: c4 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 
 export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(guild) {
   const features = guild.features;

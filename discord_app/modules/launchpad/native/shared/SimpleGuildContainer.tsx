@@ -9,7 +9,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
@@ -39,7 +39,8 @@ let closure_13 = importAllResult.memo((arg0) => {
     source = activityIndicatorState.source;
   }
   if (null != source) {
-    let obj = { backgroundColor: null };
+    let obj = { style: null, source: null, IconComponent: null, isCurrentUserConnected: null };
+    obj = { backgroundColor: null };
     obj[0] = backgroundColor;
     obj[0] = obj;
     ({ source: obj3[1], IconComponent: obj3[2], isCurrentUserConnected: obj3[3] } = activityIndicatorState);
@@ -62,7 +63,7 @@ let closure_15 = { code: "function SimpleGuildContainerTsx2(){const{selected}=th
 let closure_16 = { code: "function SimpleGuildContainerTsx3(){const{withSpring,toRadius,springConfig,GUILD_SIZE,iconBackground}=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),width:GUILD_SIZE,height:GUILD_SIZE,overflow:'hidden',backgroundColor:iconBackground.color};}" };
 let closure_17 = { code: "function SimpleGuildContainerTsx4(){const{withSpring,toRadius,springConfig,interpolate,toStrokeWidth,borderColor,GUILD_SIZE}=this.__closure;return{borderRadius:withSpring(toRadius.get()+2,springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,2]),springConfig),borderColor:borderColor,position:'absolute',top:-2,left:-2,width:GUILD_SIZE+4,height:GUILD_SIZE+4};}" };
 let closure_18 = { code: "function SimpleGuildContainerTsx5(){const{withSpring,toRadius,springConfig,interpolate,toStrokeWidth,backgroundColor,GUILD_SIZE}=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,3]),springConfig),borderColor:backgroundColor,position:'absolute',top:0,left:0,width:GUILD_SIZE,height:GUILD_SIZE};}" };
-const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/SimpleGuildContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/SimpleGuildContainer.tsx");
 
 export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
   selected = selected.selected;
@@ -91,11 +92,13 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
     flag2 = false;
   }
   const activityIndicatorState = selected.activityIndicatorState;
+  let iconStroke;
+  let token;
   ({ accessibilityLabel, onAccessibilityAction, onLayout } = selected);
   const tmp3 = num(borderRadius[7])();
-  const iconStroke = tmp3.iconStroke;
+  iconStroke = tmp3.iconStroke;
   let obj = selected(borderRadius[8]);
-  const token = obj.useToken(num(borderRadius[6]).colors.BACKGROUND_BRAND);
+  token = obj.useToken(num(borderRadius[6]).colors.BACKGROUND_BRAND);
   obj1 = badge;
   let items = [selected, flag2, , , , , , , ];
   let source;
@@ -141,8 +144,10 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
       obj[9] = borderRadius + 2;
       obj[10] = num;
       let tmp13Result = flag2(num(borderRadius[9]), obj);
+      const tmp13 = flag2;
       const tmp16 = num(borderRadius[9]);
     } else {
+      obj = { children: null };
       obj = { style: null };
       obj1 = { borderRadius: null, borderWidth: 2, borderColor: null, position: "absolute", top: -2, left: -2, width: null, height: null };
       obj1[0] = borderRadius + 2;
@@ -163,14 +168,16 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
       tmp13Result = iconStroke(activityIndicatorState, obj);
     }
   }, items);
-  const items2 = [{ name: "activate" }];
+  obj = { style, accessible: true, accessibilityState: { selected }, accessibilityRole: "button", accessibilityLabel, accessibilityActions: items2, onAccessibilityAction, children: null };
+  items2 = [{ name: "activate" }];
   obj = { ref: guildIconRef, onLayout, style: null, children: null };
   obj1 = { borderRadius, overflow: "hidden", backgroundColor: null };
   let str = "transparent";
   const memo1 = obj1.useMemo(() => {
     let tmp = null;
     if (!flag2) {
-      const obj = { position: "absolute", borderWidth: 1, borderColor: null, borderRadius: null, width: null, height: null };
+      let obj = { style: null };
+      obj = { position: "absolute", borderWidth: 1, borderColor: null, borderRadius: null, width: null, height: null };
       obj[2] = iconStroke.color;
       obj[3] = borderRadius;
       obj[4] = num;

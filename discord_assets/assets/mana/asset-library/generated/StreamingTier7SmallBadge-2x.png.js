@@ -1,9 +1,9 @@
 // === Module 6217: vanityUrl ===
 
 // Module 6217 (vanityUrl)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StreamingTier7SmallBadge-2x.png.js");
+const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StreamingTier7SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/1bcbde9f58b9970ddcd8d85e5b895218da42f942693c98bb47c5a11414de6362.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/StreamingTier7SmallBadge-2x.png";

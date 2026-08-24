@@ -2,7 +2,7 @@
 
 // Module 1620 (useLocale)
 import context2 from "context" /* 1611 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 require = arg1;
 

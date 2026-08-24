@@ -100,6 +100,7 @@ const fn13 = function h(arg0, arg1) {
 fn13.__closure = {};
 fn13.__workletHash = 16649253670356;
 fn13.__initData = { code: "function pnpm_presetsTs14(_event,_screenSize){return{};}" };
+obj = { SwipeRight: { topScreenStyle: fn, belowTopScreenStyle: fn2 }, SwipeLeft: { topScreenStyle: fn3, belowTopScreenStyle: fn4 }, SwipeDown: { topScreenStyle: fn5, belowTopScreenStyle: fn6 }, SwipeUp: { topScreenStyle: fn7, belowTopScreenStyle: fn8 }, Horizontal: obj, Vertical: { topScreenStyle: fn12, belowTopScreenStyle: fn13 }, TwoDimensional: { topScreenStyle: fn9, belowTopScreenStyle: fn10 }, SwipeRightFade: null };
 obj = { topScreenStyle: null, belowTopScreenStyle: null };
 class X {
   constructor(arg0, arg1) {

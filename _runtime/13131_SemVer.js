@@ -4,11 +4,11 @@
 import SemVer from "SemVer" /* 13123 */;
 
 
-export default (version, pre, major2, major2, major22) => {
-  let tmp = major22;
-  let tmp2 = major2;
+export default (version, pre, major2) => {
+  let tmp = arg4;
+  let tmp2 = arg3;
   if (typeof major2 === "string") {
-    tmp = major2;
+    tmp = arg3;
     tmp2 = major2;
   }
   try {

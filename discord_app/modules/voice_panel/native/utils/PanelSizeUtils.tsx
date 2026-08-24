@@ -1,7 +1,7 @@
 // === Module 16299: VOICE_PANEL_DRAWER_MAX_WIDTH ===
 
 // Module 16299 (VOICE_PANEL_DRAWER_MAX_WIDTH)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import VoicePanelModes from "VoicePanelModes" /* 11440 */;
 
 const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
@@ -23,7 +23,7 @@ function getPanelX(width, maxPanelWidth) {
 getPanelX.__closure = {};
 getPanelX.__workletHash = 6050807520832;
 getPanelX.__initData = { code: "function getPanelX_PanelSizeUtilsTsx2(windowWidth,width){return(windowWidth-width)/2;}" };
-const result = obj132.fileFinishedImporting("modules/voice_panel/native/utils/PanelSizeUtils.tsx");
+const result = set.fileFinishedImporting("modules/voice_panel/native/utils/PanelSizeUtils.tsx");
 
 export { getMaxPanelWidth };
 export { getPanelX };

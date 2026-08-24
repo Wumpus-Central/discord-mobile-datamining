@@ -5,7 +5,6 @@ import extend2 from "extend" /* 16449 */;
 import SyntaxError from "SyntaxError" /* 16450 */;
 import StringFormat from "StringFormat" /* 16452 */;
 import extend from "extend" /* 16448 */;
-import "extend";
 
 class MessageFormat {
   constructor(arg0, arg1, arg2) {

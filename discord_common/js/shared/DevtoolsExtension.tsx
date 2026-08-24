@@ -1,9 +1,9 @@
 // === Module 1232: logFluxAction ===
 
 // Module 1232 (logFluxAction)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/DevtoolsExtension.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/DevtoolsExtension.tsx");
 
 export const logFluxAction = function logFluxAction(description, durationMs) {
   let __DISCORD_DEVTOOLS = null;

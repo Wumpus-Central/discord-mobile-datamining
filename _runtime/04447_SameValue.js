@@ -13,6 +13,7 @@ export default function SameValue(arg0, arg1) {
     let tmp3 = tmp4;
   } else {
     tmp3 = isNaN(arg0) && isNaN(arg1);
+    const tmp = require;
   }
   return tmp3;
 };

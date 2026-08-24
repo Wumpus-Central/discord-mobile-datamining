@@ -16,7 +16,9 @@ export const StaticContainer = noopAll.memo(function StaticContainer(children) {
     while (iter !== undefined) {
       let tmp5 = nextResult;
       if ("children" !== nextResult) {
+        let tmp6 = nextResult;
         if (arg0[tmp5] !== arg1[tmp5]) {
+          let tmp7 = iter;
           iter.return();
           let flag = false;
           return false;

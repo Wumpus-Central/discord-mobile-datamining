@@ -4,20 +4,21 @@
 import ThemesDefault from "Themes" /* 712 */;
 import stylesDefault from "styles" /* 13358 */;
 import HeaderDefault from "Header" /* 16954 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import usePriceTiers from "usePriceTiers" /* 16950 */;
+import closure_7 from "usePriceTiers" /* 16950 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { height: 114, width: "100%", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
+createCacheKey = { height: 114, width: "100%", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx");
 
 export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
   onDone = onDone.onDone;
@@ -26,6 +27,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     flag = false;
   }
   const merged = Object.assign(onDone, Object.create(null));
+  importDefault = undefined;
   const tmp2 = callback4();
   const tmp5 = stylesDefault();
   let obj = onDone(16962);
@@ -68,7 +70,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
             v0 = 2;
             c4 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = onDone();
+            obj1[0] = closure_1_0();
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -130,7 +132,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       obj2[1] = callback3(tmp3(5449), obj3);
       items1[1] = callback3(View, obj2);
       obj[0] = items1;
-      tmp13Result = callback(closure_9, obj);
+      tmp13Result = tmp13(tmp16, obj);
     }
     const obj4 = { children: null };
     const items2 = [tmp13Result, , ];
@@ -145,9 +147,9 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     obj6[3] = callback2(closure_7.useGroupDescriptionState(), 1)[0];
     items2[2] = callback3(tmp6(4734).Text, obj6);
     obj4[0] = items2;
-    flag = callback(closure_9, obj4);
+    flag = tmp13(tmp16, obj4);
   }
   const items3 = [flag, callback3(onDone(16986).GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
   obj.children = items3;
-  return callback(HeaderDefault, obj);
+  return closure_10(HeaderDefault, obj);
 };

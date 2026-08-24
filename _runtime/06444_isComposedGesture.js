@@ -10,11 +10,11 @@ arg5.prepareRelations = function prepareRelations(config, closure_2) {
   if (simultaneousWith) {
     const _Array = Array;
     if (Array.isArray(simultaneousWith)) {
-      const item = simultaneousWith.forEach(function processSingleGesture(item, index) {
-        if ("handlerTags" in item) {
-          let prop = item.externalSimultaneousHandlers;
+      const item = simultaneousWith.forEach(function processSingleGesture(externalSimultaneousHandlers) {
+        if ("handlerTags" in externalSimultaneousHandlers) {
+          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
         } else {
-          prop = item.gestureRelations.simultaneousHandlers;
+          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
         }
         if (!prop.includes(closure_0)) {
           prop.push(closure_0);
@@ -35,11 +35,11 @@ arg5.prepareRelations = function prepareRelations(config, closure_2) {
   if (simultaneousWith) {
     const _Array2 = Array;
     if (Array.isArray(simultaneousWith)) {
-      let flatMapResult = simultaneousWith.flatMap((item, index) => {
-        if ("handlerTags" in item) {
-          let handlerTags = item.handlerTags;
+      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
+        if ("handlerTags" in handlerTags) {
+          handlerTags = handlerTags.handlerTags;
         } else {
-          handlerTags = [item.handlerTag];
+          handlerTags = [handlerTags.handlerTag];
         }
         return handlerTags;
       });
@@ -55,11 +55,11 @@ arg5.prepareRelations = function prepareRelations(config, closure_2) {
     if (requireToFail) {
       const _Array3 = Array;
       if (Array.isArray(requireToFail)) {
-        let flatMapResult1 = requireToFail.flatMap((item, index) => {
-          if ("handlerTags" in item) {
-            let handlerTags = item.handlerTags;
+        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
+          if ("handlerTags" in handlerTags) {
+            handlerTags = handlerTags.handlerTags;
           } else {
-            handlerTags = [item.handlerTag];
+            handlerTags = [handlerTags.handlerTag];
           }
           return handlerTags;
         });
@@ -74,11 +74,11 @@ arg5.prepareRelations = function prepareRelations(config, closure_2) {
       if (block) {
         const _Array4 = Array;
         if (Array.isArray(block)) {
-          let flatMapResult2 = block.flatMap((item, index) => {
-            if ("handlerTags" in item) {
-              let handlerTags = item.handlerTags;
+          let flatMapResult2 = block.flatMap((handlerTags) => {
+            if ("handlerTags" in handlerTags) {
+              handlerTags = handlerTags.handlerTags;
             } else {
-              handlerTags = [item.handlerTag];
+              handlerTags = [handlerTags.handlerTag];
             }
             return handlerTags;
           });

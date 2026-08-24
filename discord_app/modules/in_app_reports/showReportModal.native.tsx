@@ -2,9 +2,9 @@
 
 // Module 8138 (_showReportModal)
 import _modDef5260 from "module_5260" /* 5260 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = fn;
+const require = arg1;
 function _showReportModal() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -141,7 +141,7 @@ function _showReportModal() {
   return applyArgumentsResult;
 }
 const IN_APP_REPORT_MODAL_KEY = "IN_APP_REPORT_MODAL_KEY";
-const result = require("obj132").fileFinishedImporting("modules/in_app_reports/showReportModal.native.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_reports/showReportModal.native.tsx");
 
 export const showReportModal = function showReportModal(arg0, arg1, arg2) {
   const self = this;

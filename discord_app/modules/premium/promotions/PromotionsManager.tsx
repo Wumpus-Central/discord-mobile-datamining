@@ -3,16 +3,16 @@
 // Module 16687 (_terminate)
 import initializeDefault from "initialize" /* 5038 */;
 import fetchActivePromotions from "fetchActivePromotions" /* 7928 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import reset from "reset" /* 4045 */;
-import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "reset" /* 4045 */;
+import closure_7 from "createEmptyPromotionsByType" /* 7628 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import { EntitlementTypes } from "ME" /* 676 */;
 import { SubscriptionTypes } from "sum" /* 505 */;
 
-require = fn;
+require = arg1;
 initializeDefault;
 class PromotionsManager extends tmp2 {
   constructor() {
@@ -58,7 +58,7 @@ class PromotionsManager extends tmp2 {
             } else {
               const currentUser = closure_1_5.getCurrentUser();
               if (!obj6.isPremiumExactly(currentUser, closure_1_8.TIER_2)) {
-                obj1 = v0(closure_1_2[11]);
+                obj1 = v0(tmp15[11]);
                 v02 = 1;
                 v0 = 1;
                 obj1 = { value: null, done: false };
@@ -66,6 +66,7 @@ class PromotionsManager extends tmp2 {
                 return obj1;
               }
               obj6 = v02(closure_1_2[10]);
+              tmp15 = closure_1_2;
             }
           } else if (arg0 === 1) {
             v0 = 3;
@@ -99,6 +100,7 @@ prototype["onLocaleChanged"] = function onLocaleChanged() {
   }
   if (tmp) {
     const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+    const obj = fetchActivePromotions;
   }
 };
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
@@ -163,12 +165,12 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
   if (null != subscriptions) {
     const _Object = Object;
     const values = Object.values(subscriptions);
-    const found = values.filter((item, index) => item.type === constants.PREMIUM);
-    let mapped = found.map((item, index) => {
-      const items = item.items;
-      const mapped = items.map((item, index) => item.planId);
+    const found = values.filter((type) => type.type === constants.PREMIUM);
+    let mapped = found.map((items) => {
+      items = items.items;
+      const mapped = items.map((planId) => planId.planId);
       const sorted = mapped.sort();
-      return "" + item.id + ":" + item.type + ":" + item.status + ":" + sorted.join("|");
+      return "" + items.id + ":" + items.type + ":" + items.status + ":" + sorted.join("|");
     });
     let sorted = mapped.sort();
     str = sorted.join(",");
@@ -181,6 +183,7 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
         self.hasPendingSubscriptionRefetch = true;
       } else {
         const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+        const obj3 = fetchActivePromotions;
       }
     }
   }
@@ -190,6 +193,7 @@ prototype["onPromotionsFetchSettled"] = function onPromotionsFetchSettled() {
     if (!closure_7.isFetchingActivePromotions) {
       tmp.hasPendingSubscriptionRefetch = false;
       const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+      const obj = fetchActivePromotions;
     }
   }
 };
@@ -201,11 +205,12 @@ prototype["onOfferUpdated"] = function onOfferUpdated() {
 };
 prototype["onVCRedeemed"] = function onVCRedeemed(entitlements) {
   entitlements = entitlements.entitlements;
-  if (entitlements.some((item, index) => item.type === constants.FRACTIONAL_REDEMPTION)) {
+  if (entitlements.some((type) => type.type === constants.FRACTIONAL_REDEMPTION)) {
     const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+    const obj = fetchActivePromotions;
   }
 };
 const promotionsManager = new PromotionsManager();
-let result = require("obj132").fileFinishedImporting("modules/premium/promotions/PromotionsManager.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionsManager.tsx");
 
 export default promotionsManager;

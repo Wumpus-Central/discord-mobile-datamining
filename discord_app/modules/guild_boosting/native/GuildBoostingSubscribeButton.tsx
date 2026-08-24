@@ -1,16 +1,16 @@
 // === Module 7372: _handleBoostPress ===
 
 // Module 7372 (_handleBoostPress)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate" /* 4267 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
 import ME from "ME" /* 676 */;
 import { PremiumGuildSubscribeModalScenes as closure_11 } from "PremiumGuildSubscribeModalScenes" /* 6712 */;
 import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function _handleBoostPress() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -96,7 +96,7 @@ function _handleBoostPress() {
   return applyArgumentsResult;
 }
 ({ AnalyticsObjects: error, AnalyticsObjectTypes: closure_8, AnalyticsPages: c9, NOOP: c10 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
 
 export default function GuildBoostingSubscribeButton(guild) {
   guild = guild.guild;
@@ -114,7 +114,7 @@ export default function GuildBoostingSubscribeButton(guild) {
   let items = [closure_6];
   const stateFromStores = guild(analyticsSection[14]).useStateFromStores(items, () => {
     const keys = Object.keys(boostSlots.boostSlots);
-    return keys.some((item, index) => null == boostSlots.boostSlots[item].premiumGuildSubscription && !boostSlots.boostSlots[item].isOnCooldown());
+    return keys.some((arg0) => null == boostSlots.boostSlots[arg0].premiumGuildSubscription && !boostSlots.boostSlots[arg0].isOnCooldown());
   });
   const items1 = [navigation, analyticsSection, onAvailableSlotPress, intent, guild.onResult];
   const callback = intent.useCallback((arg0, arg1) => {
@@ -173,6 +173,7 @@ export default function GuildBoostingSubscribeButton(guild) {
     }
     return tmp8;
   }, items2);
+  obj = { style: styles, children: null };
   obj = {
     loading: tmp3,
     variant: "primary",

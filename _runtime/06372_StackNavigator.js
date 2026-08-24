@@ -2,17 +2,17 @@
 
 // Module 6372 (StackNavigator)
 import createStandardNavigationFactories2 from "createStandardNavigationFactories" /* 1501 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 
-require = fn;
+require = arg1;
 function StackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let state;
   let navigation;
-  state(navigation[2]);
+  let obj = state(navigation[2]);
   const navigationBuilder = state(navigation[2]).useNavigationBuilder(state(navigation[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   state = navigationBuilder.state;
   navigation = navigationBuilder.navigation;
@@ -36,7 +36,7 @@ function StackNavigator(arg0) {
           }
           if (tmp2) {
             const obj = {};
-            const StackActions = state(navigation[2]).StackActions;
+            const StackActions = closure_2_0(closure_2_1[2]).StackActions;
             const merged = Object.assign(StackActions.popToTop());
             obj.target = closure_0.key;
             closure_1.dispatch(obj);
@@ -46,7 +46,8 @@ function StackNavigator(arg0) {
     }
     return addListenerResult;
   }, items);
-  let obj = {};
+  obj = { children: null };
+  obj = {};
   const merged1 = Object.assign(merged);
   obj.direction = obj.useLocale().direction;
   obj.state = state;

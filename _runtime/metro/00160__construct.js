@@ -26,4 +26,5 @@ export default function _construct(bind) {
     }
     return tmp9;
   }
+  const tmp = require;
 };

@@ -1,10 +1,10 @@
 // === Module 1387: isActionRequired ===
 
 // Module 1387 (isActionRequired)
-import handleUpdateUser from "handleUpdateUser" /* 1384 */;
-import handleRequiredAction from "handleRequiredAction" /* 1385 */;
+import closure_0 from "handleUpdateUser" /* 1384 */;
+import closure_1 from "handleRequiredAction" /* 1385 */;
 
-const result = require("obj132").fileFinishedImporting("modules/core/isActionRequired.tsx");
+const result = require("set").fileFinishedImporting("modules/core/isActionRequired.tsx");
 
 export default function isActionRequired() {
   let obj = arg0;

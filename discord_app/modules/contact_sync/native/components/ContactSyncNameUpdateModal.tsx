@@ -4,22 +4,22 @@
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 import NavigationStack from "NavigationStack" /* 6312 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ContactSyncScenes } from "ContactSyncLandingPage" /* 11851 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import HeaderBackImage from "HeaderBackImage" /* 6314 */;
 
-require = fn;
+require = arg1;
 function onClose() {
   let arr = _modDef5260;
   arr = arr.pop();
 }
 function ContactSyncNameInputScreen() {
-  function onNext(allowPhone) {
+  function onNext(arg0) {
     const self = this;
     const apply = _onNext.apply;
     if (typeof apply === "unknown") {
@@ -76,7 +76,7 @@ function ContactSyncNameInputScreen() {
   const contactSyncAccount = obj.useContactSyncAccount();
   const tmp3 = callback(React.useState(false), 2);
   _require = tmp3[1];
-  { style: callback2().container, children: null };
+  obj = { style: callback2().container, children: null };
   obj = {
     onNext,
     onRemoveName(arg0) {
@@ -87,6 +87,7 @@ function ContactSyncNameInputScreen() {
   };
   let str;
   let tmp = callback2();
+  const tmp5 = View;
   if (contactSyncAccount != null) {
     str = contactSyncAccount.name;
   }
@@ -102,11 +103,12 @@ function ContactSyncNameInputScreen() {
     loading: tmp3[0],
     initialName: null
   });
-  return <View onNext={onNext} onRemoveName={function onRemoveName(arg0) {
+  return <tmp5 onNext={onNext} onRemoveName={function onRemoveName(arg0) {
     return onNext(null);
   }} loading={tmp3[0]} initialName={null} />;
 }
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+createCacheKey = { container: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
 createCacheKey[0] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj1 = {};
@@ -121,7 +123,7 @@ let obj2 = {
 };
 obj2[3] = HeaderBackImage.getHeaderCloseButton(onClose);
 obj1[ContactSyncScenes.NAME_INPUT] = obj2;
-const result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
+const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
 
 export default function ContactSyncNameUpdateModal() {
   return jsx(NavigationStack.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });

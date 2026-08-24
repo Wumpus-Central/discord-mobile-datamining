@@ -17,12 +17,12 @@ arg5.getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForR
   if (!str) {
     str = "";
   }
-  return _mod13648.calendars[str] || _mod13648.calendars["001"].map((item, index) => {
+  return _mod13648.calendars[str] || _mod13648.calendars["001"].map((arg0) => {
     let str = "gregory";
-    if ("gregorian" !== item) {
+    if ("gregorian" !== arg0) {
       let str2 = "islamicc";
-      if ("islamic-civil" !== item) {
-        str2 = item;
+      if ("islamic-civil" !== arg0) {
+        str2 = arg0;
       }
       str = str2;
     }
@@ -35,13 +35,13 @@ arg5.getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPrefer
   if (region) {
     str = region.toUpperCase();
   }
-  let v001 = _mod13649.hourCycles[formatted] || _mod13649.hourCycles[str];
+  let v001 = _mod13649.hourCycles[formatted] || tmp2(13649).hourCycles[str];
   if (!v001) {
     const concat = "".concat;
-    v001 = _mod13649.hourCycles["".concat("", formatted, "-001")];
+    v001 = tmp2(13649).hourCycles["".concat("", formatted, "-001")];
   }
   if (!v001) {
-    v001 = _mod13649.hourCycles["001"];
+    v001 = tmp2(13649).hourCycles["001"];
   }
   return e.__spreadArray([], v001, true);
 };
@@ -49,7 +49,7 @@ arg5.getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(re
   const formatted = region.toLowerCase();
   const items = [];
   if (_mod13650.timezones[formatted]) {
-    return e.__spreadArray(items, _mod13650.timezones[formatted], true);
+    return tmp2(1281).__spreadArray(items, tmp2(13650).timezones[formatted], true);
   } else {
     return items;
   }

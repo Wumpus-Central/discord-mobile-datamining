@@ -2,31 +2,37 @@
 
 // Module 11966 (GuildIconWithChannelTypeSizes)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { pileSize: 32, guildIconSize: require("GuildIconSizes").GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
+let obj = { SMALL_32: "SMALL_32" };
+obj = {};
+obj = { pileSize: 32, guildIconSize: require("GuildIconSizes").GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
 obj[obj.SMALL_32] = obj;
 const obj1 = { typeIconWrapper: { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, width: 20 } };
 let closure_8 = createCacheKey.createStyles(obj1);
-const result = require("obj132").fileFinishedImporting("modules/guild/native/GuildIconWithChannelType.tsx");
+const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, width: 20 };
+const result = require("set").fileFinishedImporting("modules/guild/native/GuildIconWithChannelType.tsx");
 
 export const GuildIconWithChannelTypeSizes = obj;
 export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) {
   ({ aria-label: tmp, size, channel } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   typeIconSize = undefined;
+  let typeIconPadding;
+  dependencyMap = undefined;
+  let React;
   ({ guildIconSize, typeIconSize } = obj[size]);
-  const typeIconPadding = tmp4.typeIconPadding;
+  typeIconPadding = tmp4.typeIconPadding;
   const gap = tmp4.gap;
   const tmp5 = typeIconSize(7188).ImageSizes[guildIconSize];
   dependencyMap = tmp5;
   const sum = typeIconSize + 2 * typeIconPadding;
-  const React = sum;
+  React = sum;
   const sum1 = 0.5 + gap / tmp5;
   let items = [tmp5, sum];
   const items1 = [typeIconPadding, sum];
@@ -39,7 +45,7 @@ export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) 
   const memo2 = React.useMemo(() => ({ width: typeIconSize, height: typeIconSize }), items2);
   obj = typeIconSize(6832);
   const channelIcon = obj.getChannelIcon(channel);
-  { "aria-label": tmp, shape: typeIconSize(8402).CutoutShape.Circle, size: memo, gap, depthX: sum1, depthY: sum1, children: null };
+  obj = { "aria-label": tmp, shape: typeIconSize(8402).CutoutShape.Circle, size: memo, gap, depthX: sum1, depthY: sum1, children: null };
   obj = {};
   const tmp3 = callback3();
   const merged1 = Object.assign(merged);

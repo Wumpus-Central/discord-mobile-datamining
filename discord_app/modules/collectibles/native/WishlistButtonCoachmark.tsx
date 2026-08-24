@@ -1,15 +1,16 @@
 // === Module 14963: WishlistButtonCoachmark ===
 
 // Module 14963 (WishlistButtonCoachmark)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/WishlistButtonCoachmark.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/native/WishlistButtonCoachmark.tsx");
 
 export default function WishlistButtonCoachmark(anchorRef) {
   let hasNeverWishlisted;
+  dependencyMap = undefined;
   let callback;
   let registerDismiss;
   hasNeverWishlisted = hasNeverWishlisted(9179).useHasNeverWishlisted();

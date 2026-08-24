@@ -10,12 +10,14 @@ require = arg1;
 const dependencyMap = arg6;
 arg5.getClient = function getClient() {
   const mainCarrier = getMainCarrier.getMainCarrier();
+  const obj = getMainCarrier;
   const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   const currentScope = asyncContextStrategy.getCurrentScope();
   return currentScope.getClient();
 };
 arg5.getCurrentScope = function getCurrentScope() {
   const mainCarrier = getMainCarrier.getMainCarrier();
+  const obj = getMainCarrier;
   const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   return asyncContextStrategy.getCurrentScope();
 };
@@ -27,6 +29,7 @@ arg5.getGlobalScope = function getGlobalScope() {
 };
 arg5.getIsolationScope = function getIsolationScope() {
   const mainCarrier = getMainCarrier.getMainCarrier();
+  const obj = getMainCarrier;
   const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   return asyncContextStrategy.getIsolationScope();
 };
@@ -38,6 +41,7 @@ arg5.getTraceContextFromScope = function getTraceContextFromScope(getPropagation
 arg5.withIsolationScope = function withIsolationScope() {
   const items = [...arguments];
   const mainCarrier = getMainCarrier.getMainCarrier();
+  const obj = getMainCarrier;
   const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
     [tmp2, tmp3] = items;
@@ -50,10 +54,12 @@ arg5.withIsolationScope = function withIsolationScope() {
   } else {
     return asyncContextStrategy.withIsolationScope(items[0]);
   }
+  const obj2 = getAsyncContextStrategy;
 };
 arg5.withScope = function withScope() {
   const items = [...arguments];
   const mainCarrier = getMainCarrier.getMainCarrier();
+  const obj = getMainCarrier;
   const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
     [tmp2, tmp3] = items;
@@ -66,4 +72,5 @@ arg5.withScope = function withScope() {
   } else {
     return asyncContextStrategy.withScope(items[0]);
   }
+  const obj2 = getAsyncContextStrategy;
 };

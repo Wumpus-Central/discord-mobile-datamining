@@ -8,24 +8,26 @@ import Button from "Button" /* 1297 */;
 import Text from "Text" /* 4734 */;
 import componentDidMountDefault from "componentDidMount" /* 4763 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { header: null, text: null };
+createCacheKey = {};
 const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 createCacheKey.textAlign = "center";
 createCacheKey.marginVertical = 12;
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginVertical: 8 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/quarantine/native/QuarantineModeInfoAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/quarantine/native/QuarantineModeInfoAlert.tsx");
 
 export default function QuarantineModeInfoAlert(onClose) {
   const tmp = callback3();
-  let obj = { style: tmp.header, children: null };
+  let obj = { onClose: onClose.onClose, children: null };
+  obj = { style: tmp.header, children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.EouHwv);
   const items = [callback(Button.LegacyText, obj), ];

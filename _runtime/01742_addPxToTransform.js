@@ -4,32 +4,34 @@
 import TransitionType from "TransitionType" /* 1710 */;
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 import findDescendantWithExitingAnimation from "findDescendantWithExitingAnimation" /* 1741 */;
-import LinearTransition from "LinearTransition" /* 1743 */;
-import SequencedTransition from "SequencedTransition" /* 1744 */;
-import FadingTransition from "FadingTransition" /* 1745 */;
-import JumpingTransition from "JumpingTransition" /* 1746 */;
-import prepareCurvedTransition from "prepareCurvedTransition" /* 1747 */;
-import addTransformToKeepPosition from "addTransformToKeepPosition" /* 1748 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "_slicedToArray" /* 32 */;
 
 require = arg1;
 function addPxToTransform(transform) {
-  return transform.map((item, index) => {
+  return transform.map((arg0) => {
     const obj = {};
-    const entries = Object.entries(item);
+    const entries = Object.entries(arg0);
     while (tmp2 !== undefined) {
+      let tmp4 = callback;
       let tmp5 = callback(tmp3, 2);
       let first = tmp5[0];
       let obj3 = first;
       let tmp6 = tmp5[1];
       if (first.includes("translate")) {
+        let tmp8 = tmp6;
         if (typeof tmp6 === "number") {
+          let tmp11 = first;
+          let tmp12 = tmp6;
           let _HermesInternal = HermesInternal;
           obj[obj3] = "" + tmp6 + "px";
           continue;
         }
+      } else {
+        let tmp7 = first;
       }
+      let tmp9 = first;
+      let tmp10 = tmp6;
       obj[obj3] = tmp6;
     }
     return obj;
@@ -49,6 +51,8 @@ export const createCustomKeyFrameAnimation = function createCustomKeyFrameAnimat
   while (iter !== undefined) {
     let tmp5 = nextResult;
     if (nextResult.transform) {
+      let tmp6 = nextResult;
+      let tmp7 = addPxToTransform;
       tmp5.transform = addPxToTransform(tmp5.transform);
     }
     continue;
@@ -57,12 +61,14 @@ export const createCustomKeyFrameAnimation = function createCustomKeyFrameAnimat
   const keys = Object.keys(definitions);
   for (let num = 1; num < keys.length; num = num + 1) {
     let tmp8 = definitions[keys[num]];
+    let tmp9 = num;
     if (tmp8.easing) {
       definitions[keys[num - 1]].easing = tmp8.easing;
       delete tmp2[tmp];
     }
   }
   const result = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj);
+  const obj2 = convertAnimationObjectToKeyframes;
   findDescendantWithExitingAnimation.insertWebAnimation(obj.name, result);
   return obj.name;
 };
@@ -80,7 +86,10 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
       while (tmp10 !== undefined) {
         let _Object = Object;
         let entries = Object.entries(tmp12);
+        let tmp15 = entries;
+        let tmp16 = entries;
         for (const item10040 of entries) {
+          let tmp17 = callback2;
           let tmp18 = callback2(item10040, 2);
           let result = map.set(tmp18[0], tmp18[1]);
           continue;
@@ -90,7 +99,10 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
       for (const item10053 of tmp5) {
         let _Object2 = Object;
         let entries1 = Object.entries(item10053);
+        let tmp23 = entries1;
+        let tmp24 = entries1;
         for (const item10061 of entries1) {
+          let tmp25 = callback2;
           let tmp26 = callback2(item10061, 2);
           let result1 = map.set(tmp26[0], tmp26[1]);
           continue;
@@ -114,6 +126,7 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
   obj = { name: tmp30, style: structuredCloneResult, duration: TransitionType.AnimationsData[presetName].duration };
   const tmp3 = callback(initialValues, closure_2);
   const result2 = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj);
+  const obj4 = convertAnimationObjectToKeyframes;
   findDescendantWithExitingAnimation.insertWebAnimation(tmp30, result2);
   return tmp30;
 };
@@ -121,31 +134,31 @@ export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easi
   closure_6 = tmp + 1;
   const transitionKeyframeName = `REA${tmp}`;
   if (TransitionType.TransitionType.LINEAR === ENTRY_EXIT) {
-    let tmp3Result = LinearTransition;
+    let tmp3Result = tmp3(1743);
     firstKeyframeObj = tmp3Result.LinearTransition(`REA${tmp}`, easingY);
-  } else if (TransitionType.TransitionType.SEQUENCED === ENTRY_EXIT) {
-    tmp3Result = SequencedTransition;
+  } else if (tmp3(1710).TransitionType.SEQUENCED === ENTRY_EXIT) {
+    tmp3Result = tmp3(1744);
     firstKeyframeObj = tmp3Result.SequencedTransition(`REA${tmp}`, easingY);
-  } else if (TransitionType.TransitionType.FADING === ENTRY_EXIT) {
-    firstKeyframeObj = FadingTransition.FadingTransition(`REA${tmp}`, easingY);
-    const tmp3Result1 = FadingTransition;
-  } else if (TransitionType.TransitionType.JUMPING === ENTRY_EXIT) {
-    firstKeyframeObj = JumpingTransition.JumpingTransition(`REA${tmp}`, easingY);
-    const tmp3Result2 = JumpingTransition;
-  } else if (TransitionType.TransitionType.CURVED === ENTRY_EXIT) {
+  } else if (tmp3(1710).TransitionType.FADING === ENTRY_EXIT) {
+    firstKeyframeObj = tmp3(1745).FadingTransition(`REA${tmp}`, easingY);
+    const tmp3Result1 = tmp3(1745);
+  } else if (tmp3(1710).TransitionType.JUMPING === ENTRY_EXIT) {
+    firstKeyframeObj = tmp3(1746).JumpingTransition(`REA${tmp}`, easingY);
+    const tmp3Result2 = tmp3(1746);
+  } else if (tmp3(1710).TransitionType.CURVED === ENTRY_EXIT) {
     closure_6 = tmp7 + 1;
     const text1 = `REA${tmp7}`;
-    const tmp3Result3 = prepareCurvedTransition;
-    ({ firstKeyframeObj, secondKeyframeObj } = prepareCurvedTransition.CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY));
-    const CurvedTransitionResult = prepareCurvedTransition.CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY);
-    const result = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(secondKeyframeObj);
-    const tmp3Result4 = convertAnimationObjectToKeyframes;
-    findDescendantWithExitingAnimation.insertWebAnimation(`REA${+closure_6}`, result);
+    const tmp3Result3 = tmp3(1747);
+    ({ firstKeyframeObj, secondKeyframeObj } = tmp3(1747).CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY));
+    const CurvedTransitionResult = tmp3(1747).CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY);
+    const result = tmp3(1712).convertAnimationObjectToKeyframes(secondKeyframeObj);
+    const tmp3Result4 = tmp3(1712);
+    tmp3(1741).insertWebAnimation(`REA${+closure_6}`, result);
     const dummyTransitionKeyframeName = text1;
-    const tmp3Result5 = findDescendantWithExitingAnimation;
-  } else if (TransitionType.TransitionType.ENTRY_EXIT === ENTRY_EXIT) {
-    firstKeyframeObj = addTransformToKeepPosition.EntryExitTransition(`REA${tmp}`, easingY);
-    const tmp3Result6 = addTransformToKeepPosition;
+    const tmp3Result5 = tmp3(1741);
+  } else if (tmp3(1710).TransitionType.ENTRY_EXIT === ENTRY_EXIT) {
+    firstKeyframeObj = tmp3(1748).EntryExitTransition(`REA${tmp}`, easingY);
+    const tmp3Result6 = tmp3(1748);
   }
   const result1 = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(firstKeyframeObj);
   const tmp3Result7 = convertAnimationObjectToKeyframes;

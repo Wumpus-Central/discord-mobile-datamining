@@ -5,17 +5,18 @@ import ThemesDefault from "Themes" /* 712 */;
 import CollapsingText from "CollapsingText" /* 4746 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
 import useInputStyles from "useInputStyles" /* 7345 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
 import { Text } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 let closure_2 = ["size", "isRound", "text", "value", "icon", "iconPosition", "accessibilityLabel", "accessibilityValue", "maxFontSizeMultiplier"];
-let obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+let obj = { buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" }, buttonTextPlaceholder: null, buttonTextValue: null };
+obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj[1] = obj;
-const createCacheKey = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+createCacheKey = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 obj[2] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((size, ref) => {
@@ -85,6 +86,6 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
     return jsx(CollapsingText.BaseTextButton, {});
   }
 });
-const result = require("obj132").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
 
 export const InputButton = forwardRefResult;

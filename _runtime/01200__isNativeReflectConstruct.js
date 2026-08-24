@@ -2,14 +2,14 @@
 
 // Module 1200 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const FeedbackButton = fn;
+const FeedbackButton = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -90,7 +90,7 @@ let items = [
         }
       }
       const merged2 = Object.assign(merged1, triggerButton);
-      let tmpResult = FeedbackButton(1202);
+      let tmpResult = tmp(1202);
       const styles2 = self.props.styles;
       let triggerText;
       const merged3 = Object.assign({}, tmpResult.defaultButtonStyles(theme).triggerText);
@@ -100,7 +100,7 @@ let items = [
         }
       }
       const style = Object.assign(merged3, triggerText);
-      tmpResult = FeedbackButton(1202);
+      tmpResult = tmp(1202);
       const styles3 = self.props.styles;
       let triggerIcon;
       const merged5 = Object.assign({}, tmpResult.defaultButtonStyles(theme).triggerIcon);
@@ -114,7 +114,7 @@ let items = [
       obj[1] = FeedbackButton(1197).showFeedbackWidget;
       obj[2] = merged.triggerAriaLabel;
       obj = { source: null, style: null };
-      obj1 = { uri: FeedbackButton(1203).feedbackIcon };
+      obj1 = { uri: tmp(1203).feedbackIcon };
       obj[0] = obj1;
       obj[1] = merged6;
       const element = <closure_7 source={null} style={null} />;

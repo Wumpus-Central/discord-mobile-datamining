@@ -60,7 +60,9 @@ export default function eachHourOfInterval(arg0, step) {
         const items = [];
         if (defaultResult1.getTime() <= time1) {
           do {
+            let tmp15 = _typeof;
             let arr = items.push(_typeof.default(defaultResult1));
+            let tmp17 = addHours;
             let defaultResult3 = addHours.default(defaultResult1, NumberResult);
             defaultResult1 = defaultResult3;
             time2 = defaultResult3.getTime();

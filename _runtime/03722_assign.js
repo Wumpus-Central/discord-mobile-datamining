@@ -9,6 +9,7 @@ export default function assign(arg0, obj) {
     throw typeError;
   } else {
     for (const key10006 in arg1) {
+      let tmp10 = key10006;
       let _Object = Object;
       let call = hasOwnProperty.call;
       if (typeof call === "unknown") {

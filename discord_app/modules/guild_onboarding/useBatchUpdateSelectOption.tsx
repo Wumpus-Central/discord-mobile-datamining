@@ -1,14 +1,14 @@
 // === Module 10746: useBatchUpdateSelectOption ===
 
 // Module 10746 (useBatchUpdateSelectOption)
-import noop from "noop" /* 19 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
-import handleUpdate from "handleUpdate" /* 6788 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_5 from "handleUpdate" /* 6788 */;
 import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 685 */;
 
-const require = fn;
+const require = arg1;
 let closure_7 = {};
-let result = require("obj132").fileFinishedImporting("modules/guild_onboarding/useBatchUpdateSelectOption.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_onboarding/useBatchUpdateSelectOption.tsx");
 
 export default function useBatchUpdateSelectOption(arg0) {
   const _require = arg0;
@@ -24,12 +24,12 @@ export default function useBatchUpdateSelectOption(arg0) {
   }, items1);
   let items2 = [arg0];
   const effect = React.useEffect(() => {
-    stateFromStores(dependencyMap[4]);
-    let obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: closure_0 };
+    let obj = stateFromStores(closure_1_2[4]);
+    obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: closure_0 };
     obj.dispatch(obj);
     return () => {
-      stateFromStores(closure_1_2[4]);
-      const obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: closure_0 };
+      let obj = closure_1_1(closure_1_2[4]);
+      obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: closure_0 };
       obj.dispatch(obj);
     };
   }, items2);
@@ -41,8 +41,8 @@ export default function useBatchUpdateSelectOption(arg0) {
       tmp2 = 0 !== Object.keys(tmp).length;
     }
     if (tmp2) {
-      const result = stateFromStores(dependencyMap[9]).updateOnboardingResponses(closure_0);
-      const obj = stateFromStores(dependencyMap[9]);
+      const result = stateFromStores(closure_1_2[9]).updateOnboardingResponses(closure_0);
+      const obj = stateFromStores(closure_1_2[9]);
     }
   }, items3);
   obj = {
@@ -53,7 +53,7 @@ export default function useBatchUpdateSelectOption(arg0) {
       if (singleSelect.singleSelect) {
         if (arg2) {
           const options = singleSelect.options;
-          const found = options.find((item, index) => onboardingResponses.includes(item.id));
+          const found = options.find((id) => onboardingResponses.includes(id.id));
           roleIds = roleIds.roleIds;
           if (roleIds == null) {
             roleIds = [];
@@ -65,8 +65,10 @@ export default function useBatchUpdateSelectOption(arg0) {
           if (roleIds1 == null) {
             roleIds1 = [];
           }
-          const obj5 = stateFromStores(dependencyMap[5]);
-          const differenceResult = stateFromStores(dependencyMap[5]).difference(roleIds, roleIds1);
+          const obj5 = stateFromStores(closure_1_2[5]);
+          const tmp10 = stateFromStores;
+          const tmp11 = closure_1_2;
+          const differenceResult = stateFromStores(closure_1_2[5]).difference(roleIds, roleIds1);
           let roleIds2;
           if (found != null) {
             roleIds2 = found.roleIds;
@@ -78,15 +80,15 @@ export default function useBatchUpdateSelectOption(arg0) {
           if (roleIds3 == null) {
             roleIds3 = [];
           }
-          let differenceResult1 = stateFromStores(dependencyMap[5]).difference(roleIds2, roleIds3);
+          let differenceResult1 = tmp10(tmp11[5]).difference(roleIds2, roleIds3);
           let items2 = differenceResult;
-          const tmp10Result = stateFromStores(dependencyMap[5]);
+          const tmp10Result = tmp10(tmp11[5]);
         }
         callback = roleIds;
         if (singleSelect.singleSelect) {
           if (arg2) {
             const options1 = singleSelect.options;
-            const found1 = options1.find((item, index) => onboardingResponses.includes(item.id));
+            const found1 = options1.find((id) => onboardingResponses.includes(id.id));
             let channelIds = roleIds.channelIds;
             if (channelIds == null) {
               channelIds = [];
@@ -98,8 +100,10 @@ export default function useBatchUpdateSelectOption(arg0) {
             if (channelIds1 == null) {
               channelIds1 = [];
             }
-            const obj10 = stateFromStores(dependencyMap[5]);
-            const differenceResult2 = stateFromStores(dependencyMap[5]).difference(channelIds, channelIds1);
+            const obj10 = stateFromStores(closure_1_2[5]);
+            const tmp21 = stateFromStores;
+            const tmp22 = closure_1_2;
+            const differenceResult2 = stateFromStores(closure_1_2[5]).difference(channelIds, channelIds1);
             let channelIds2;
             if (found1 != null) {
               channelIds2 = found1.channelIds;
@@ -111,9 +115,9 @@ export default function useBatchUpdateSelectOption(arg0) {
             if (channelIds3 == null) {
               channelIds3 = [];
             }
-            let differenceResult3 = stateFromStores(dependencyMap[5]).difference(channelIds2, channelIds3);
+            let differenceResult3 = tmp21(tmp22[5]).difference(channelIds2, channelIds3);
             let items1 = differenceResult2;
-            const tmp21Result = stateFromStores(dependencyMap[5]);
+            const tmp21Result = tmp21(tmp22[5]);
           }
           if (obj12.hasNotSetUpChannelOptIn(tmp)) {
             const push = items1.push;
@@ -121,30 +125,30 @@ export default function useBatchUpdateSelectOption(arg0) {
             HermesBuiltin.arraySpread(obj.getDefaultChannelIds(tmp), 0);
             HermesBuiltin.apply(items, items1);
           }
-          const merged = Object.assign(items1.reduce((acc, item, index) => {
+          obj = {};
+          const merged = Object.assign(items1.reduce((arg0, id) => {
             const obj = { flags: null };
-            const channelIdFlags = closure_1_4.getChannelIdFlags(lib, item);
+            const channelIdFlags = closure_1_4.getChannelIdFlags(lib, id);
             obj[0] = lib(closure_1_2[10]).setFlag(channelIdFlags, closure_1_6.OPT_IN_ENABLED, true);
-            acc[item] = obj;
-            return acc;
+            arg0[id] = obj;
+            return arg0;
           }, {}));
-          const merged1 = Object.assign(differenceResult3.reduce((acc, item, index) => {
+          const merged1 = Object.assign(differenceResult3.reduce((arg0, id) => {
             const obj = { flags: null };
-            const channelIdFlags = closure_1_4.getChannelIdFlags(lib, item);
+            const channelIdFlags = closure_1_4.getChannelIdFlags(lib, id);
             obj[0] = lib(closure_1_2[10]).setFlag(channelIdFlags, closure_1_6.OPT_IN_ENABLED, false);
-            acc[item] = obj;
-            return acc;
+            arg0[id] = obj;
+            return arg0;
           }, {}));
-          const obj14 = stateFromStores(dependencyMap[9]);
+          const obj14 = stateFromStores(closure_1_2[9]);
           const option = obj14.selectOption(tmp, singleSelect.id, roleIds.id, arg2);
-          obj12 = callback(dependencyMap[7]);
+          obj12 = callback(closure_1_2[7]);
           obj = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId: null, overrides: null };
           obj[1] = tmp;
           obj[2] = obj;
-          stateFromStores(dependencyMap[4]).dispatch(obj);
-          const obj15 = stateFromStores(dependencyMap[4]);
-          stateFromStores(dependencyMap[9]).updateRolesLocal(tmp, items2, differenceResult1);
-          const obj17 = stateFromStores(dependencyMap[9]);
+          stateFromStores(closure_1_2[4]).dispatch(obj);
+          const obj15 = stateFromStores(closure_1_2[4]);
+          stateFromStores(closure_1_2[9]).updateRolesLocal(tmp, items2, differenceResult1);
         }
         if (arg2) {
           let channelIds4 = roleIds.channelIds;
@@ -155,17 +159,17 @@ export default function useBatchUpdateSelectOption(arg0) {
           items1 = channelIds4;
         } else {
           const options2 = singleSelect.options;
-          const found2 = options2.filter((item, index) => onboardingResponses.includes(item.id));
-          const found3 = found2.filter((item, index) => lib.id !== item.id);
-          const mapped = found2.map((item, index) => item.channelIds);
-          const found4 = mapped.flat().filter(callback(dependencyMap[6]).isNotNullish);
-          const mapped1 = found3.map((item, index) => item.channelIds);
+          const found2 = options2.filter((id) => onboardingResponses.includes(id.id));
+          const found3 = found2.filter((id) => lib.id !== id.id);
+          const mapped = found2.map((channelIds) => channelIds.channelIds);
+          const found4 = mapped.flat().filter(callback(closure_1_2[6]).isNotNullish);
+          const mapped1 = found3.map((channelIds) => channelIds.channelIds);
           const flatResult = mapped.flat();
           items1 = [];
-          const found5 = mapped1.flat().filter(callback(dependencyMap[6]).isNotNullish);
+          const found5 = mapped1.flat().filter(callback(closure_1_2[6]).isNotNullish);
           const flatResult1 = mapped1.flat();
-          differenceResult3 = stateFromStores(dependencyMap[5]).difference(found4, found5);
-          const obj9 = stateFromStores(dependencyMap[5]);
+          differenceResult3 = stateFromStores(closure_1_2[5]).difference(found4, found5);
+          const obj9 = stateFromStores(closure_1_2[5]);
         }
       }
       if (arg2) {
@@ -177,17 +181,17 @@ export default function useBatchUpdateSelectOption(arg0) {
         items2 = roleIds4;
       } else {
         const options3 = singleSelect.options;
-        const found6 = options3.filter((item, index) => onboardingResponses.includes(item.id));
-        const found7 = found6.filter((item, index) => lib.id !== item.id);
-        const mapped2 = found6.map((item, index) => item.roleIds);
-        const found8 = mapped2.flat().filter(callback(dependencyMap[6]).isNotNullish);
-        const mapped3 = found7.map((item, index) => item.roleIds);
+        const found6 = options3.filter((id) => onboardingResponses.includes(id.id));
+        const found7 = found6.filter((id) => lib.id !== id.id);
+        const mapped2 = found6.map((roleIds) => roleIds.roleIds);
+        const found8 = mapped2.flat().filter(callback(closure_1_2[6]).isNotNullish);
+        const mapped3 = found7.map((roleIds) => roleIds.roleIds);
         const flatResult2 = mapped2.flat();
         items2 = [];
-        const found9 = mapped3.flat().filter(callback(dependencyMap[6]).isNotNullish);
+        const found9 = mapped3.flat().filter(callback(closure_1_2[6]).isNotNullish);
         const flatResult3 = mapped3.flat();
-        differenceResult1 = stateFromStores(dependencyMap[5]).difference(found8, found9);
-        const obj4 = stateFromStores(dependencyMap[5]);
+        differenceResult1 = stateFromStores(closure_1_2[5]).difference(found8, found9);
+        const obj4 = stateFromStores(closure_1_2[5]);
       }
     }, items4)
   };

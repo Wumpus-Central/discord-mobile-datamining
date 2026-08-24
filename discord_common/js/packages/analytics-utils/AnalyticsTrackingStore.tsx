@@ -1,12 +1,9 @@
 // === Module 504: logger ===
 
 // Module 504 (logger)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import log from "log" /* 4 */;
 import generate from "generate" /* 510 */;
-import extractId from "extractId" /* 513 */;
-import v1 from "v1" /* 514 */;
-import sendRequest from "sendRequest" /* 530 */;
 import sum from "sum" /* 505 */;
 
 ({ TelemetryEndpoints: c3, TelemetryEvents: c4 } = sum);
@@ -61,25 +58,25 @@ let c33 = false;
 function defaultGetSessionId() {
   return Promise.resolve({ sessionId: "r" });
 }
-let result = obj132.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 
 export const AnalyticsActionHandlers = obj;
-export const analyticsTrackingStoreMaker = (encodeProperties) => {
-  ({ dispatcher, actionHandler, getFingerprint: require, getSessionId } = encodeProperties);
+export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
+  ({ dispatcher, actionHandler, getFingerprint: require, getSessionId } = getLaunchSignature);
   if (getSessionId === undefined) {
     getSessionId = defaultGetSessionId;
   }
-  ({ TRACKING_URL: dependencyMap, drainTimeoutOverride, waitFor: closure_3, scheduleWhenIdle } = encodeProperties);
+  ({ TRACKING_URL: dependencyMap, drainTimeoutOverride, waitFor: closure_3, scheduleWhenIdle } = getLaunchSignature);
   if (scheduleWhenIdle === undefined) {
     scheduleWhenIdle = fn;
   }
-  fn = encodeProperties.getLaunchSignature;
+  fn = getLaunchSignature.getLaunchSignature;
   if (fn === undefined) {
     fn = function z() {
       return null;
     };
   }
-  ({ submitEvents: logger, sendUnloadRequest: closure_7 } = encodeProperties);
+  ({ submitEvents: logger, sendUnloadRequest: closure_7 } = getLaunchSignature);
   function scheduleDrain(shouldFlushOnNextTick) {
     let flag = shouldFlushOnNextTick.shouldFlushOnNextTick;
     if (flag === undefined) {
@@ -90,8 +87,9 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
       if (0 === arr.length) {
         tmp = tmp3;
       } else if (null != userId) {
+        let tmp6 = null != analyticsToken;
       } else {
-        const tmp6 = null != callback();
+        tmp6 = null != callback();
       }
     }
     if (tmp) {
@@ -123,9 +121,9 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
         }
         c21 = c21 + num2;
         const promise = submitEventsImmediately(substr);
-        promise.then((result) => {
-          const item = substr.forEach((item, index) => {
-            const resolve = item.resolve;
+        promise.then(() => {
+          const item = substr.forEach((resolve) => {
+            resolve = resolve.resolve;
             if (resolve != null) {
               resolve();
             }
@@ -141,16 +139,18 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
         return Promise.resolve();
       }
     } else if (null != userId) {
+      let tmp4 = null != analyticsToken;
     } else {
-      const tmp4 = null != substr();
+      tmp4 = null != substr();
     }
   }
   function submitEventsImmediately(items, CLIENT_TELEMETRY) {
     closure_0 = Date.now();
-    const mapped = items.map((item, index) => {
-      const merged = Object.assign(item);
+    const mapped = items.map((properties) => {
       obj = {};
-      const merged1 = Object.assign(item.properties);
+      const merged = Object.assign(properties);
+      obj = {};
+      const merged1 = Object.assign(properties.properties);
       obj.client_send_timestamp = closure_0;
       obj.properties = obj;
       return obj;
@@ -164,11 +164,12 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
       }
       obj = {};
       if (!c23) {
-        obj[fn] = v1.v4();
+        v4Result = closure_1_0(closure_1_2[4]).v4();
+        obj[fn] = v4Result;
         c23 = true;
-        v4Result = v1.v4();
+        const obj2 = closure_1_0(closure_1_2[4]);
       }
-      const HTTP = sendRequest.HTTP;
+      const HTTP = closure_1_0(closure_1_2[5]).HTTP;
       obj = { url: null, headers: null, body: null, retries: 3, rejectWithError: false };
       obj[0] = tmp3;
       obj[1] = obj;
@@ -176,11 +177,11 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
       obj[0] = analyticsToken;
       obj[1] = mapped;
       obj[2] = obj;
-      return HTTP.post(obj).then((result) => {
-        if (obj[fn]) {
+      return HTTP.post(obj).then((headers) => {
+        if (obj[closure_1_5]) {
           let tmp3;
-          if (result != null) {
-            const headers = result.headers;
+          if (headers != null) {
+            headers = headers.headers;
             if (headers != null) {
               tmp3 = headers[tmp];
             }
@@ -190,11 +191,11 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
           }
           c24 = tmp3;
         }
-        return result;
+        return headers;
       });
     }
   }
-  function flushQueuedEvents(event) {
+  function flushQueuedEvents() {
     if (null != closure_6) {
       return false;
     } else if (null == closure_7) {
@@ -209,10 +210,11 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
             const _JSON = JSON;
             obj = { token: null, events: null };
             obj[0] = analyticsToken;
-            obj[1] = substr.map((item, index) => {
-              const merged = Object.assign(item);
+            obj[1] = substr.map((properties) => {
               obj = {};
-              const merged1 = Object.assign(item.properties);
+              const merged = Object.assign(properties);
+              obj = {};
+              const merged1 = Object.assign(properties.properties);
               obj.client_send_timestamp = closure_0;
               obj.properties = obj;
               return obj;
@@ -221,8 +223,8 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
             if (flag) {
               arr = [];
               c32 = null;
-              const item = substr.forEach((item, index) => {
-                const resolve = item.resolve;
+              const item = substr.forEach((resolve) => {
+                resolve = resolve.resolve;
                 let resolveResult;
                 if (resolve != null) {
                   resolveResult = resolve();
@@ -234,8 +236,9 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
             return flag;
           }
         } else if (null != userId) {
+          let tmp3 = null != analyticsToken;
         } else {
-          const tmp3 = null != callback();
+          tmp3 = null != callback();
         }
       }
       return false;
@@ -243,6 +246,7 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
   }
   drainTimeoutOverride = flushQueuedEvents;
   function sendTelemetryEvent() {
+    obj = { type: scheduleWhenIdle.CLIENT_TELEMETRY, properties: null };
     obj = { client_track_timestamp: Date.now(), rpc_success_count: c14, rpc_failure_count: c15, first_seen_event_sequence_number: closure_16, last_seen_event_sequence_number: sendTelemetryEvent, telemetry_period_start_timestamp: closure_17, telemetry_period_end_timestamp: Date.now(), event_queue_rejection_count: closure_13, event_queue_batch_count: c18, event_queue_batch_min_size: null, event_queue_batch_max_size: null, event_queue_batch_avg_size: null, science_request_id: null, science_response: null, launch_signature: null };
     let num = 0;
     if (MAX_SAFE_INTEGER !== Number.MAX_SAFE_INTEGER) {
@@ -269,10 +273,10 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
     closure_17 = Date.now();
     closure_16 = sendTelemetryEvent;
     const items = [obj];
-    return submitEventsImmediately(items, closure_1_3.CLIENT_TELEMETRY).catch((error) => {
+    return submitEventsImmediately(items, closure_1_3.CLIENT_TELEMETRY).catch((status) => {
       let str;
-      if (error != null) {
-        str = error.status;
+      if (status != null) {
+        str = status.status;
       }
       if (str == null) {
         str = "unknown";
@@ -291,7 +295,7 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
   if (!tmp) {
     c33 = true;
     const _document2 = document;
-    const listener = document.addEventListener("visibilitychange", (event) => {
+    const listener = document.addEventListener("visibilitychange", () => {
       if ("hidden" === document.visibilityState) {
         drainTimeoutOverride();
       }
@@ -313,7 +317,7 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
       obj = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
       obj[1] = setTimeout(() => {
-        sendTelemetryEvent();
+        closure_1_12();
         if (typeof scheduleNextHeartbeat !== "function") {
           HermesBuiltin.throwTypeError();
         }
@@ -368,8 +372,9 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
   };
   obj.handleTrack = (arg0) => {
     ({ event: closure_0, properties: getSessionId, flush: closure_2, fingerprint: closure_3, resolve: scheduleWhenIdle } = arg0);
-    getSessionId().then((result) => {
-      obj = { client_track_timestamp: Date.now(), client_heartbeat_session_id: result.sessionId, event_sequence_number: sum };
+    getSessionId().then((client_heartbeat_session_id) => {
+      obj = { type: closure_0, fingerprint: closure_3, properties: null, resolve: null };
+      obj = { client_track_timestamp: Date.now(), client_heartbeat_session_id: client_heartbeat_session_id.sessionId, event_sequence_number: sum };
       sum = sendTelemetryEvent + 1;
       sendTelemetryEvent = sum;
       const merged = Object.assign(closure_1);
@@ -384,18 +389,19 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
         }
         extractIdResult = null;
         if (null != fingerprint) {
-          extractIdResult = extractId.extractId(fingerprint);
+          extractIdResult = closure_2_0(closure_2_2[3]).extractId(fingerprint);
+          const obj3 = closure_2_0(closure_2_2[3]);
         }
       }
       if (null != extractIdResult) {
-        obj.properties.client_uuid = idGenerator.generate(extractIdResult);
+        obj.properties.client_uuid = closure_2_29.generate(extractIdResult);
       }
       arr = arr.push(obj);
       if (arr.length > 10000) {
         closure_13 = closure_13 + (arr.length - 10000);
         arr = arr.slice(-10000);
       }
-      scheduleDrain(closure_2 ? { shouldFlushOnNextTick: true } : { shouldFlushOnNextTick: false });
+      closure_1_8(closure_2 ? { shouldFlushOnNextTick: true } : { shouldFlushOnNextTick: false });
     });
     return false;
   };
@@ -425,7 +431,6 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
           }, tmp4);
           continue;
         }
-        tmp3 = closure_1_7[Symbol.iterator]();
       };
       return applyArgumentsResult;
     }
@@ -435,7 +440,7 @@ export const analyticsTrackingStoreMaker = (encodeProperties) => {
       const self = this;
       const waitFor = this.waitFor;
       const items = [];
-      HermesBuiltin.arraySpread(closure_3, 0);
+      HermesBuiltin.arraySpread(tmp, 0);
       const self2 = this;
       HermesBuiltin.apply(items, this);
     }

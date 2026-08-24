@@ -16,12 +16,14 @@ _isNativeReflectConstructDefault.addListener("hardwareBackPress", (timeStamp) =>
   obj = {};
   if (null != timeStamp) {
     const result = SymbolResult1.setEventInitTimeStamp(obj, timeStamp);
+    const obj2 = SymbolResult1;
   }
   const hardwareBackPressEvent = new _isNativeReflectConstruct.HardwareBackPressEvent(obj);
   let diff = closure_3.length - 1;
   if (0 <= diff) {
     while (true) {
       let tmp7 = closure_3[diff];
+      let tmp8 = diff;
       let tmp7Result;
       if (tmp7 != null) {
         tmp7Result = tmp7(hardwareBackPressEvent);

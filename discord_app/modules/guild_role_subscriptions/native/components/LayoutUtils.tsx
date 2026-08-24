@@ -1,12 +1,12 @@
 // === Module 9422: GappedList ===
 
 // Module 9422 (GappedList)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/LayoutUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/LayoutUtils.tsx");
 
 export const GappedList = function GappedList(gap) {
   let num = gap.gap;
@@ -16,7 +16,7 @@ export const GappedList = function GappedList(gap) {
   const renderGap = gap.renderGap;
   let found;
   let Children = found.Children;
-  found = Children.toArray(gap.children).filter((item, index) => null != item);
+  found = Children.toArray(gap.children).filter((arg0) => null != arg0);
   const toArrayResult = Children.toArray(gap.children);
   Children = found.Children;
   return callback(closure_4, {

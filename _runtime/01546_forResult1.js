@@ -28,13 +28,13 @@ arg5.Profiler = forResult4;
 arg5.StrictMode = forResult3;
 arg5.Suspense = forResult8;
 arg5.SuspenseList = forResult9;
-arg5.isContextConsumer = ($$typeof) => {
+arg5.isContextConsumer = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -47,7 +47,7 @@ arg5.isContextConsumer = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -74,13 +74,13 @@ arg5.isContextConsumer = ($$typeof) => {
   }
   return tmp === forResult5;
 };
-arg5.isContextProvider = ($$typeof) => {
+arg5.isContextProvider = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -93,7 +93,7 @@ arg5.isContextProvider = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -120,23 +120,23 @@ arg5.isContextProvider = ($$typeof) => {
   }
   return tmp === forResult6;
 };
-arg5.isElement = ($$typeof) => {
-  let tmp = typeof $$typeof === "object";
-  if (typeof $$typeof === "object") {
-    tmp = null !== $$typeof;
+arg5.isElement = (obj) => {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
   if (tmp) {
-    tmp = $$typeof.$$typeof === closure_0;
+    tmp = obj.$$typeof === closure_0;
   }
   return tmp;
 };
-arg5.isForwardRef = ($$typeof) => {
+arg5.isForwardRef = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -149,7 +149,7 @@ arg5.isForwardRef = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -176,13 +176,13 @@ arg5.isForwardRef = ($$typeof) => {
   }
   return tmp === forResult7;
 };
-arg5.isFragment = ($$typeof) => {
+arg5.isFragment = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -195,7 +195,7 @@ arg5.isFragment = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -222,13 +222,13 @@ arg5.isFragment = ($$typeof) => {
   }
   return tmp === forResult2;
 };
-arg5.isLazy = ($$typeof) => {
+arg5.isLazy = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -241,7 +241,7 @@ arg5.isLazy = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -268,13 +268,13 @@ arg5.isLazy = ($$typeof) => {
   }
   return tmp === forResult11;
 };
-arg5.isMemo = ($$typeof) => {
+arg5.isMemo = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -287,7 +287,7 @@ arg5.isMemo = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -314,13 +314,13 @@ arg5.isMemo = ($$typeof) => {
   }
   return tmp === forResult10;
 };
-arg5.isPortal = ($$typeof) => {
+arg5.isPortal = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -333,7 +333,7 @@ arg5.isPortal = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -360,13 +360,13 @@ arg5.isPortal = ($$typeof) => {
   }
   return tmp === forResult1;
 };
-arg5.isProfiler = ($$typeof) => {
+arg5.isProfiler = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -379,7 +379,7 @@ arg5.isProfiler = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -406,13 +406,13 @@ arg5.isProfiler = ($$typeof) => {
   }
   return tmp === forResult4;
 };
-arg5.isStrictMode = ($$typeof) => {
+arg5.isStrictMode = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -425,7 +425,7 @@ arg5.isStrictMode = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -452,13 +452,13 @@ arg5.isStrictMode = ($$typeof) => {
   }
   return tmp === forResult3;
 };
-arg5.isSuspense = ($$typeof) => {
+arg5.isSuspense = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -471,7 +471,7 @@ arg5.isSuspense = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -498,13 +498,13 @@ arg5.isSuspense = ($$typeof) => {
   }
   return tmp === forResult8;
 };
-arg5.isSuspenseList = ($$typeof) => {
+arg5.isSuspenseList = (obj) => {
   let tmp;
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof2 = obj.$$typeof;
       if (closure_0 === $$typeof2) {
-        const type = $$typeof.type;
+        const type = obj.type;
         tmp = type;
         if (forResult2 !== type) {
           tmp = type;
@@ -517,7 +517,7 @@ arg5.isSuspenseList = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
+                    let $$typeof = type;
                     if (type) {
                       $$typeof = type.$$typeof;
                     }
@@ -544,50 +544,50 @@ arg5.isSuspenseList = ($$typeof) => {
   }
   return tmp === forResult9;
 };
-arg5.isValidElementType = ($$typeof) => {
-  let tmp = typeof $$typeof === "string";
-  if (typeof $$typeof !== "string") {
-    tmp = typeof $$typeof === "function";
+arg5.isValidElementType = (str) => {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    tmp = typeof str === "function";
   }
   if (!tmp) {
-    tmp = $$typeof === forResult2;
+    tmp = str === forResult2;
   }
   if (!tmp) {
-    tmp = $$typeof === forResult4;
+    tmp = str === forResult4;
   }
   if (!tmp) {
-    tmp = $$typeof === forResult3;
+    tmp = str === forResult3;
   }
   if (!tmp) {
-    tmp = $$typeof === forResult8;
+    tmp = str === forResult8;
   }
   if (!tmp) {
-    tmp = $$typeof === forResult9;
+    tmp = str === forResult9;
   }
   if (!tmp) {
-    let tmp7 = typeof $$typeof === "object";
-    if (typeof $$typeof === "object") {
-      tmp7 = null !== $$typeof;
+    let tmp7 = typeof str === "object";
+    if (typeof str === "object") {
+      tmp7 = null !== str;
     }
     if (tmp7) {
-      let tmp9 = $$typeof.$$typeof === forResult11;
+      let tmp9 = str.$$typeof === forResult11;
       if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === forResult10;
+        tmp9 = str.$$typeof === forResult10;
       }
       if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === forResult6;
+        tmp9 = str.$$typeof === forResult6;
       }
       if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === forResult5;
+        tmp9 = str.$$typeof === forResult5;
       }
       if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === forResult7;
+        tmp9 = str.$$typeof === forResult7;
       }
       if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === closure_13;
+        tmp9 = str.$$typeof === closure_13;
       }
       if (!tmp9) {
-        tmp9 = undefined !== $$typeof.getModuleId;
+        tmp9 = undefined !== str.getModuleId;
       }
       tmp7 = tmp9;
     }
@@ -595,12 +595,12 @@ arg5.isValidElementType = ($$typeof) => {
   }
   return tmp;
 };
-arg5.typeOf = function typeOf($$typeof) {
-  if (typeof $$typeof === "object") {
-    if (null !== $$typeof) {
-      $$typeof = $$typeof.$$typeof;
+arg5.typeOf = function typeOf(obj) {
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      const $$typeof = obj.$$typeof;
       if (closure_0 === $$typeof) {
-        const type = $$typeof.type;
+        const type = obj.type;
         if (forResult2 !== type) {
           if (forResult4 !== type) {
             if (forResult3 !== type) {

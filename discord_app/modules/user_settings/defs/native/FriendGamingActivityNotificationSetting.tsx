@@ -1,7 +1,7 @@
 // === Module 14812: toggle ===
 
 // Module 14812 (toggle)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import MobileUserSettings from "MobileUserSettings" /* 8198 */;
@@ -21,6 +21,19 @@ const toggle = createToggle.createToggle({
   useValue: explicitContentFromProto.EnableFriendGamingActivityNotifications.useSetting,
   onValueChange: onFriendGamingActivityNotificationSettingsChanged.onFriendGamingActivityNotificationSettingsChanged
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/FriendGamingActivityNotificationSetting.tsx");
+const obj = {
+  useTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["yq/aPt"]);
+  },
+  useDescription() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Amy1fz);
+  },
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableFriendGamingActivityNotifications.useSetting,
+  onValueChange: onFriendGamingActivityNotificationSettingsChanged.onFriendGamingActivityNotificationSettingsChanged
+};
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendGamingActivityNotificationSetting.tsx");
 
 export default toggle;

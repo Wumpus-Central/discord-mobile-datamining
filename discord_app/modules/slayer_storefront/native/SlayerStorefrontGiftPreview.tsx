@@ -11,7 +11,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function WarningBox(application) {
   application = application.application;
   ({ canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku } = application);
@@ -45,19 +45,21 @@ function WarningBox(application) {
         name1 = application.name;
       }
       obj[1] = name1;
-      obj[2] = intl.formatToPlainString(getSystemLocale.t["EgCl+Q"], obj);
+      obj[2] = intl.formatToPlainString(tmp6(1236).t["EgCl+Q"], obj);
       tmp7 = obj;
     } else {
-      obj[2] = intl.format(getSystemLocale.t["3T0cpx"], {});
+      obj[2] = intl.format(tmp6(1236).t["3T0cpx"], {});
       tmp7 = obj;
     }
-    callback(InfoBoxDefault, tmp7);
+    closure_4(InfoBoxDefault, tmp7);
+    const tmp3 = closure_4;
+    const tmp5 = InfoBoxDefault;
   }
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
 
 export default function SlayerStorefrontGiftPreview(arg0) {
   ({ sku, application, mobileAccountLinkingDisabled } = arg0);
@@ -94,7 +96,9 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     obj2[4] = application;
     items[2] = callback(WarningBox, obj2);
     obj[1] = items;
-    tmp3Result = callback2(View, obj);
+    tmp3Result = closure_5(View, obj);
+    const tmp3 = closure_5;
+    const tmp4 = View;
   }
   return tmp3Result;
 };

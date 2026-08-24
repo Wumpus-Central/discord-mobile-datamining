@@ -2,8 +2,8 @@
 
 // Module 16219 (FreezeAfterLayoutPipView)
 import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideoUnavailable" /* 16222 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import closure_4 from "module_9010" /* 9010 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -24,7 +24,7 @@ function FreezeAfterLayoutPipView() {
   }, []);
   return jsx(ExternalPipViewVideoUnavailableDefault, { onLayout });
 }
-const result = require("obj132").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
+const result = require("set").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
 
 export default function ExternalPipView() {
   const obj = { disabled: null };

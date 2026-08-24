@@ -4,7 +4,8 @@
 import toJSDefault from "toJS" /* 1931 */;
 
 toJSDefault;
-const prototype = function AppliedGuildBoostRecord(endsAt) {
+let prototype;
+prototype = function AppliedGuildBoostRecord(endsAt) {
   const tmp = new prototype(new.target, endsAt, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, guildId: tmp.guildId, userId: tmp.userId, user: tmp.user, ended: tmp.ended } = endsAt);
@@ -53,6 +54,6 @@ prototype["createFromServer"] = function createFromServer(user) {
   tmp5.endsAt = tmp6;
   return tmp5;
 };
-const result = require("obj132").fileFinishedImporting("records/AppliedGuildBoostRecord.tsx");
+const result = require("set").fileFinishedImporting("records/AppliedGuildBoostRecord.tsx");
 
 export default prototype;

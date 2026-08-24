@@ -3,10 +3,10 @@
 // Module 9557 (isApplicationAgeRestricted)
 import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
 import getUnitIdDefault from "getUnitId" /* 9558 */;
-import addApplication from "addApplication" /* 4478 */;
+import closure_3 from "addApplication" /* 4478 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");
 
 export default function isApplicationAgeRestricted(arg0) {
   if (obj.getConfig({ location: "isApplicationAgeRestricted" }).enabled) {

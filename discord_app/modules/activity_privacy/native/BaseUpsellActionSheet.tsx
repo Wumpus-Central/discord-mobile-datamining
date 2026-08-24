@@ -4,13 +4,13 @@
 import ThemesDefault from "Themes" /* 712 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4335 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function renderSuccessIcon() {
   return callback(CircleCheckIcon.CircleCheckIcon, { size: "sm", color: ThemesDefault.colors.STATUS_POSITIVE, secondaryColor: ThemesDefault.colors.WHITE });
 }
@@ -25,10 +25,11 @@ function StoreGuildIcon(guildId) {
 function GuildCard(guildIds) {
   guildIds = guildIds.guildIds;
   ({ direction, onPress } = guildIds);
+  let memo;
   let substr;
   const tmp = callback3();
   const items = [guildIds];
-  const memo = React.useMemo(() => guildIds(substr[9]).sortGuildIdsByFrecency(guildIds), items);
+  memo = React.useMemo(() => guildIds(substr[9]).sortGuildIdsByFrecency(guildIds), items);
   let obj = guildIds(substr[7]);
   const items1 = [closure_6];
   const stateFromStores = obj.useStateFromStores(items1, () => closure_1_6.getGuild(memo[0]));
@@ -56,9 +57,10 @@ function GuildCard(guildIds) {
   }
   const items2 = [closure_6];
   const items3 = [substr];
+  obj = { style: tmp.card, onPress, children: null };
   obj = { style: tmp.cardInfo, children: null };
-  const stateFromStoresArray = guildIds(substr[7]).useStateFromStoresArray(items2, () => substr.map((item, index) => {
-    guild = guild.getGuild(item);
+  const stateFromStoresArray = guildIds(substr[7]).useStateFromStoresArray(items2, () => substr.map((arg0) => {
+    guild = guild.getGuild(arg0);
     let str;
     if (guild != null) {
       str = guild.name;
@@ -84,39 +86,49 @@ function GuildCard(guildIds) {
   obj4[4] = intl4.format(tmp7 ? t["8ZLbvR"] : t["+NoTYm"], { guildName: str });
   items5[1] = callback(guildIds(substr[11]).Text, obj4);
   obj3[1] = items5;
-  items4[1] = callback(closure_5, obj3);
+  items4[1] = closure_8(closure_5, obj3);
   obj[1] = items4;
-  const items6 = [callback(closure_5, obj), , ];
+  const items6 = [closure_8(closure_5, obj), , ];
+  const obj2 = { count: guildIds.length };
   const tmp10 = null != onPress ? closure_4 : closure_5;
   const tmp2Result = guildIds(substr[7]);
-  items6[1] = callback(guildIds(substr[12]).GuildIconPile, { size: guildIds(substr[8]).GuildIconSizes.XSMALL, names: stateFromStoresArray, totalCount: memo.length, children: substr.map((item, index) => callback(closure_11, { guildId: item }, item)) });
+  const tmp4 = closure_6;
+  items6[1] = callback(guildIds(substr[12]).GuildIconPile, { size: guildIds(substr[8]).GuildIconSizes.XSMALL, names: stateFromStoresArray, totalCount: memo.length, children: substr.map((guildId) => callback(closure_11, { guildId }, guildId)) });
   let tmp12Result = null != onPress;
   if (tmp12Result) {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.chevron;
     const obj7 = { color: null, size: "xs" };
     obj7[0] = memo(tmp3[5]).colors.TEXT_SUBTLE;
-    obj6[1] = callback(tmp2(tmp3[13]).ChevronLargeRightIcon, obj7);
-    tmp12Result = callback(closure_5, obj6);
+    obj6[1] = tmp12(tmp2(tmp3[13]).ChevronLargeRightIcon, obj7);
+    tmp12Result = tmp12(tmp11, obj6);
   }
   items6[2] = tmp12Result;
   obj[2] = items6;
-  return callback(tmp10, obj);
+  return closure_8(tmp10, obj);
 }
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_24 };
+createCacheKey = { container: null, title: null, description: null, card: null, cardInfo: null, statusRow: null, guildSummary: null, chevron: null, buttonsContainer: null };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_24 };
+let obj2 = { marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[4] = { flex: 1, marginRight: ThemesDefault.space.PX_12 };
+let obj4 = { flex: 1, marginRight: ThemesDefault.space.PX_12 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center", marginTop: ThemesDefault.space.PX_4, paddingBottom: 2 };
 createCacheKey[6] = { flexShrink: 1 };
+const obj5 = { flexDirection: "row", alignItems: "center", marginTop: ThemesDefault.space.PX_4, paddingBottom: 2 };
 createCacheKey[7] = { marginLeft: ThemesDefault.space.PX_8 };
+let obj6 = { marginLeft: ThemesDefault.space.PX_8 };
 createCacheKey[8] = { gap: ThemesDefault.space.PX_8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/activity_privacy/native/BaseUpsellActionSheet.tsx");
+let obj7 = { gap: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/activity_privacy/native/BaseUpsellActionSheet.tsx");
 
 export default function BaseUpsellActionSheet(toastContent) {
   toastContent = toastContent.toastContent;
@@ -126,15 +138,17 @@ export default function BaseUpsellActionSheet(toastContent) {
   const items = [onConfirm, toastContent];
   const callback = React.useCallback(() => {
     onConfirm();
-    let obj = onConfirm(dependencyMap[14]);
+    let obj = onConfirm(closure_1_2[14]);
     obj.hideActionSheet();
-    obj = { key: "ACTIVITY_PRIVACY_UPSELL_TOAST", content: toastContent, icon: renderSuccessIcon };
-    onConfirm(dependencyMap[15]).open(obj);
+    obj = { key: "ACTIVITY_PRIVACY_UPSELL_TOAST", content: toastContent, icon: closure_1_9 };
+    onConfirm(closure_1_2[15]).open(obj);
   }, items);
   const callback1 = React.useCallback(() => {
     onConfirm(table[14]).hideActionSheet();
   }, []);
-  let obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title };
+  let obj = { startExpanded: true, children: null };
+  obj = { style: tmp.container, children: null };
+  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title };
   const items1 = [callback(toastContent(4734).Text, obj), callback(toastContent(4734).Text, { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle }), callback(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
   const obj2 = { style: tmp.buttonsContainer, children: null };
   const items2 = [callback(toastContent(4745).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];

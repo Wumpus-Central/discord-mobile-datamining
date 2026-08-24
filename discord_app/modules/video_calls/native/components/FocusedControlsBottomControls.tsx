@@ -6,17 +6,17 @@ import _mod4115 from "module_4115" /* 4115 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
 import CallPTTButtonLooksDefault from "CallPTTButtonLooks" /* 10544 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = fn;
+require = arg1;
 function FocusedControlsExpanded(children) {
   const availableHeight = children.availableHeight;
   const positionY = children.positionY;
@@ -33,7 +33,7 @@ function FocusedControlsExpanded(children) {
       callback(tmp);
     }
   }, items);
-  availableHeight(bottom[13]);
+  let obj = availableHeight(bottom[13]);
   const fn = function _() {
     const bound = Math.min(-1 * positionY.get() / closure_1_15, 1);
     const obj = { opacity: bound, pointerEvents: null };
@@ -44,7 +44,7 @@ function FocusedControlsExpanded(children) {
     obj[1] = str;
     return obj;
   };
-  let obj = { positionY, EXPANDED_DRAWER_SHOW_POSITION: c15 };
+  obj = { positionY, EXPANDED_DRAWER_SHOW_POSITION: c15 };
   fn.__closure = obj;
   fn.__workletHash = 10567472250823;
   fn.__initData = closure_21;
@@ -91,11 +91,11 @@ function FocusedControlsAboveActionBarView(positionY) {
   const aboveActionBar = positionY.aboveActionBar;
   ({ onPressHeader, isExpanded } = positionY);
   const tmp = callback3();
-  positionY(4115);
+  let obj = positionY(4115);
   const fn = function _() {
     return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - closure_1_15), 0) };
   };
-  let obj = { offsetY, EXPANDED_DRAWER_SHOW_POSITION: c15, positionY };
+  obj = { offsetY, EXPANDED_DRAWER_SHOW_POSITION: c15, positionY };
   fn.__closure = obj;
   fn.__workletHash = 5042367101380;
   fn.__initData = closure_25;
@@ -109,11 +109,11 @@ function FocusedControlsAboveActionBarView(positionY) {
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj2[0] = items1;
     obj2[1] = aboveActionBar;
-    tmp4Result = callback2(offsetY(4115).View, obj2);
+    tmp4Result = tmp4(offsetY(4115).View, obj2);
   }
   items[2] = tmp4Result;
   obj1[1] = items;
-  obj[6] = callback2(closure_5, obj1);
+  obj[6] = closure_14(closure_5, obj1);
   return callback2(closure_6, obj);
 }
 class FocusedControlsBottomDrawer {
@@ -177,7 +177,7 @@ class FocusedControlsBottomDrawer {
       num = 54;
       tmp15 = closure_0;
       sum1 = top + 54;
-      obj = require("obj132");
+      obj = require("set");
       num2 = 16;
       if (obj.isIOS()) {
         num2 = 48;
@@ -190,7 +190,7 @@ class FocusedControlsBottomDrawer {
     }
     tmp19 = closure_0;
     sum2 = top + 54;
-    obj2 = require("obj132");
+    obj2 = require("set");
     num5 = 16;
     if (obj2.isIOS()) {
       num5 = 48;
@@ -472,7 +472,7 @@ class FocusedControlsBottomDrawer {
     items2[1] = first1;
     animatedStyle = tmp19Result5.useAnimatedStyle(fn);
     effect = onClose.useEffect(() => {
-      const result = first1.set(reveal(sum3[20]).withTiming(0, obj4));
+      const result = first1.set(reveal(sum3[20]).withTiming(0, closure_1_20));
     }, items2);
     items3 = [, ];
     items3[0] = reveal;
@@ -485,8 +485,8 @@ class FocusedControlsBottomDrawer {
     items4 = [];
     items4[0] = first1;
     effect2 = onClose.useEffect(() => {
-      function handleSelectActivity(closure_1_2) {
-        const result = closure_8.set(handleSelectActivity(sum3[20]).withTiming(0, closure_1_20));
+      function handleSelectActivity(arg0) {
+        const result = closure_8.set(handleSelectActivity(closure_1_2[20]).withTiming(0, closure_1_20));
       }
       let ComponentDispatch = reveal(sum3[25]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(sharedValue3.SELECT_ACTIVITY, handleSelectActivity);
@@ -516,8 +516,8 @@ class FocusedControlsBottomDrawer {
       let ComponentDispatch = reveal(sum3[25]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(sharedValue3.TOGGLE_CALL_CONTROL_DRAWER, closure_9);
       return () => {
-        const ComponentDispatch = reveal(sum3[25]).ComponentDispatch;
-        ComponentDispatch.unsubscribe(sharedValue3.TOGGLE_CALL_CONTROL_DRAWER, closure_9);
+        const ComponentDispatch = closure_1_0(closure_1_2[25]).ComponentDispatch;
+        ComponentDispatch.unsubscribe(closure_1_12.TOGGLE_CALL_CONTROL_DRAWER, closure_9);
       };
     }, items5);
     tmp19Result7 = require("ManaContext");
@@ -564,7 +564,8 @@ function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
 
 }
-const createCacheKey = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
+createCacheKey = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -592,7 +593,8 @@ let closure_29 = { code: "function FocusedControlsBottomControlsTsx6(event){cons
 let closure_30 = { code: "function FocusedControlsBottomControlsTsx7(){const{runOnJS,clearFocusTimer,drawerOpen,positionY,CLOSE_DRAWER_POSITION,velocity,startY}=this.__closure;runOnJS(clearFocusTimer)();drawerOpen.set(positionY.get()!==CLOSE_DRAWER_POSITION);velocity.set(0);if(positionY.get()==null||!drawerOpen.get()){startY.set(0);}}" };
 let closure_31 = { code: "function FocusedControlsBottomControlsTsx8(){const{reveal,controlHeightWithOffset,sheetHeight,isLandscapeMode,safeAreaRight,sheetWidth,withTiming,TIMING_CONFIG}=this.__closure;const revealOffset=reveal?0:controlHeightWithOffset;return{position:'absolute',height:sheetHeight,overflow:'hidden',bottom:isLandscapeMode?16:0,right:isLandscapeMode?16+safeAreaRight:0,borderRadius:isLandscapeMode?8:0,width:sheetWidth,transform:[{translateY:withTiming(revealOffset,TIMING_CONFIG)}]};}" };
 let closure_32 = { code: "function FocusedControlsBottomControlsTsx9(){const{sheetHeight,offsetY,positionY}=this.__closure;return{height:sheetHeight,transform:[{translateY:offsetY+positionY.get()}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/FocusedControlsBottomControls.tsx");
+let obj2 = {};
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/FocusedControlsBottomControls.tsx");
 
 export default function FocusedControlsBottomControls(omitPTT) {
   let flag = omitPTT.omitPTT;
@@ -603,7 +605,8 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let _require;
   const tmp = callback3();
   [tmp3, c0] = callback(React.useState(0), 2);
-  let obj = {
+  let obj = { aboveActionBar: children, actionBarControlsHeight: tmp3, expandedControls, reveal, onDrawerClose, onDrawerOpen: omitPTT.onDrawerOpen, children: null };
+  obj = {
     onLayout: React.useCallback((nativeEvent) => {
       _undefined(nativeEvent.nativeEvent.layout.height);
     }, []),
@@ -617,12 +620,13 @@ export default function FocusedControlsBottomControls(omitPTT) {
     obj[1] = tmp.ptbButton;
     obj[2] = closure_8;
     obj[3] = closure_9;
-    tmp4Result = callback(CallPTTButtonLooksDefault, obj);
+    tmp4Result = tmp4(CallPTTButtonLooksDefault, obj);
+    const tmp11 = CallPTTButtonLooksDefault;
   }
   items[2] = tmp4Result;
   obj[1] = items;
-  obj[6] = callback2(closure_5, obj);
-  return callback(FocusedControlsBottomDrawer, obj);
+  obj[6] = closure_14(closure_5, obj);
+  return closure_13(FocusedControlsBottomDrawer, obj);
 };
 export const FOCUSED_CONTROLS_HEADER_HEIGHT = 54;
 export { FocusedControlsBottomDrawer };

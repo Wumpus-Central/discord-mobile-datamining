@@ -8,6 +8,7 @@ import TabRouter from "TabRouter" /* 1511 */;
 import StackRouter from "StackRouter" /* 1514 */;
 
 for (const key10013 in require("module_1506")) {
+  let tmp2 = key10013;
   arg5[key10013] = require("module_1506")[key10013];
   continue;
 }

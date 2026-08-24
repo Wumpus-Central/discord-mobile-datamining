@@ -6,9 +6,9 @@ import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 678 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
 
 export const FRACTIONAL_NITRO_COIN_SIZE = { CARD: 80, CHECKOUT: 45, COLLECTED_SHEET: 68 };
 export const FractionalNitroCoinIllustration = function FractionalNitroCoinIllustration(resizeMode) {

@@ -1,7 +1,7 @@
 // === Module 11479: isFetching ===
 
 // Module 11479 (isFetching)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import guildDirectoryEntryFromServer from "guildDirectoryEntryFromServer" /* 11471 */;
@@ -29,11 +29,11 @@ prototype["getCurrentCategoryId"] = function getCurrentCategoryId(id) {
   }
   return ALL;
 };
-prototype["getDirectoryEntries"] = function getDirectoryEntries(id, currentCategoryId) {
-  if (null != currentCategoryId) {
+prototype["getDirectoryEntries"] = function getDirectoryEntries(id, arg1) {
+  if (null != arg1) {
     let tmp5;
     if (dependencyMap2[id] != null) {
-      tmp5 = tmp4[currentCategoryId];
+      tmp5 = tmp4[arg1];
     }
     let tmp2 = tmp5;
   } else {
@@ -74,9 +74,10 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
     ({ channelId, entries } = arg0);
     c4 = false;
     let obj = {};
-    const item = entries.forEach((item, index) => {
+    obj = {};
+    const item = entries.forEach((entry) => {
       obj = obj(obj[1]);
-      const result = obj.guildDirectoryEntryFromServer(item);
+      const result = obj.guildDirectoryEntryFromServer(entry);
       obj[result.guildId] = result;
       if (null != obj[result.primaryCategoryId]) {
         tmp2[result.primaryCategoryId][result.guildId] = result;
@@ -103,9 +104,9 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
       }
       if (null == tmp2) {
         obj = {};
-        const merged = Object.assign(dependencyMap[channelId]);
+        const merged = Object.assign(tmp16[channelId]);
         obj[result.guildId] = result;
-        dependencyMap[channelId] = obj;
+        tmp16[channelId] = obj;
         let UNCATEGORIZED = result.primaryCategoryId;
         if (UNCATEGORIZED == null) {
           UNCATEGORIZED = DirectoryEntryCategories.UNCATEGORIZED;
@@ -123,17 +124,18 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
         dependencyMap2[channelId] = obj;
         if (null != dependencyMap3[channelId]) {
           let num;
-          if (dependencyMap3[channelId] != null) {
+          if (tmp12[channelId] != null) {
             num = tmp13[UNCATEGORIZED];
           }
           if (num == null) {
             num = 0;
           }
           const obj2 = {};
-          const merged3 = Object.assign(dependencyMap3[channelId]);
+          const merged3 = Object.assign(tmp12[channelId]);
           obj2[UNCATEGORIZED] = num + 1;
-          dependencyMap3[channelId] = obj2;
+          tmp12[channelId] = obj2;
         }
+        const tmp4 = dependencyMap2;
       }
     }
   },
@@ -146,7 +148,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
     if (null != tmp5) {
       const primaryCategoryId = tmp5.primaryCategoryId;
       const _Object2 = Object;
-      const merged = Object.assign({}, dependencyMap[channelId]);
+      const merged = Object.assign({}, tmp3[channelId]);
       delete tmp2[tmp];
       if (dependencyMap4[channelId] != null) {
         obj3.delete(guildId);
@@ -154,7 +156,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
       const _Set = Set;
       const set = new Set(dependencyMap4[channelId]);
       dependencyMap4[channelId] = set;
-      dependencyMap[channelId] = merged;
+      tmp3[channelId] = merged;
       const _Object = Object;
       const merged1 = Object.assign({}, dependencyMap2[channelId][primaryCategoryId]);
       delete tmp2[tmp];
@@ -163,15 +165,15 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
       obj[primaryCategoryId] = merged1;
       dependencyMap2[channelId] = obj;
       if (null != dependencyMap3[channelId]) {
-        const diff = dependencyMap3[channelId][primaryCategoryId] - 1;
+        const diff = tmp15[channelId][primaryCategoryId] - 1;
         obj = {};
-        const merged3 = Object.assign(dependencyMap3[channelId]);
+        const merged3 = Object.assign(tmp15[channelId]);
         let num2 = 0;
         if (0 <= diff) {
           num2 = diff;
         }
         obj[primaryCategoryId] = num2;
-        dependencyMap3[channelId] = obj;
+        tmp15[channelId] = obj;
       }
     }
   },
@@ -183,7 +185,8 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
     if (dependencyMap[channelId] != null) {
       tmp6 = tmp5[result.guildId];
     }
-    const merged = Object.assign(dependencyMap[channelId]);
+    obj = {};
+    const merged = Object.assign(tmp4[channelId]);
     obj = {};
     const merged1 = Object.assign(tmp6);
     const merged2 = Object.assign(result);
@@ -214,7 +217,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
       delete tmp2[tmp];
     }
     obj1 = {};
-    const merged4 = Object.assign(dependencyMap2[channelId]);
+    const merged4 = Object.assign(tmp14[channelId]);
     obj1[primaryCategoryId] = merged3;
     let tmp21;
     if (dependencyMap2[channelId] != null) {
@@ -241,7 +244,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
       let num2 = 0;
       if (tmp31 > 0) {
         let tmp33;
-        if (dependencyMap3[channelId] != null) {
+        if (tmp27[channelId] != null) {
           tmp33 = tmp32[primaryCategoryId];
         }
         num2 = tmp33 - 1;
@@ -266,13 +269,14 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
   },
   GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS: function handleFetchAdminEntries(channelId) {
     const entries = channelId.entries;
-    const set = new Set();
-    const item = entries.forEach((item, index) => {
-      set.add(set(dependencyMap[1]).guildDirectoryEntryFromServer(item).guildId);
+    let set;
+    set = new Set();
+    const item = entries.forEach((entry) => {
+      set.add(set(closure_1_1[1]).guildDirectoryEntryFromServer(entry).guildId);
     });
     closure_9[channelId.channelId] = set;
   }
 });
-let result = obj132.fileFinishedImporting("modules/directory_channels/GuildDirectoryStore.tsx");
+let result = set2.fileFinishedImporting("modules/directory_channels/GuildDirectoryStore.tsx");
 
 export default guildDirectoryStore;

@@ -3,9 +3,9 @@
 // Module 7068 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 7074 */;
 import RVMasonryLayoutManagerImpl from "_classCallCheck" /* 7050 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 7069 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 7071 */;
-import _get from "_get" /* 7072 */;
+import closure_1 from "_possibleConstructorReturn" /* 7069 */;
+import closure_2 from "_getPrototypeOf" /* 7071 */;
+import closure_3 from "_get" /* 7072 */;
 import importDefaultResult from "_createClass" /* 7051 */;
 
 function _isNativeReflectConstruct() {
@@ -33,7 +33,7 @@ class RVMasonryLayoutManagerImpl {
     tmp = RVMasonryLayoutManagerImpl(this, RVMasonryLayoutManagerImpl);
     items = [, ];
     items[0] = global;
-    items[1] = fn;
+    items[1] = arg1;
     tmp2 = closure_2;
     obj = closure_2(RVMasonryLayoutManagerImpl);
     tmp3 = closure_1;
@@ -65,7 +65,9 @@ let items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(windowSize) {
-      const self = this;
+      let self = this;
+      self = this;
+      closure_1 = undefined;
       ({ maxColumns, optimizeItemArrangement } = this);
       const tmp = callback2(callback(self.prototype), "updateLayoutParams", this);
       closure_1 = tmp;
@@ -156,6 +158,7 @@ let items = [
         do {
           let layout = self.getLayout(sum);
           let span = self.getSpan(sum, true);
+          let tmp6 = sum;
           if (self.optimizeItemArrangement) {
             if (1 === span) {
               let result1 = self.placeSingleColumnItem(layout);
@@ -205,6 +208,8 @@ let items = [
       let tmp3 = tmp;
       if (sum < self.currentColumn + span) {
         do {
+          let tmp4 = sum;
+          let tmp5 = tmp;
           let bound = tmp;
           if (sum < self.maxColumns) {
             let _Math = Math;
@@ -220,6 +225,7 @@ let items = [
       let currentColumn = self.currentColumn;
       if (currentColumn < self.currentColumn + span) {
         do {
+          let tmp7 = currentColumn;
           if (currentColumn < self.maxColumns) {
             self.columnHeights[currentColumn] = tmp3 + layout.height;
           }
@@ -242,6 +248,7 @@ let items = [
       let num3 = 0;
       if (1 < this.maxColumns) {
         do {
+          let tmp2 = num2;
           let tmp3 = first;
           let tmp4 = num;
           if (self.columnHeights[num2] < first) {
@@ -273,6 +280,7 @@ let items = [
         do {
           let bound = self.columnHeights[num];
           sum = num + 1;
+          let tmp3 = num;
           let tmp4 = MAX_VALUE;
           let tmp5 = num2;
           let tmp6 = bound;
@@ -291,6 +299,8 @@ let items = [
           let num6 = 0;
           if (0 < self.maxColumns) {
             while (true) {
+              let tmp9 = num4;
+              let tmp10 = num5;
               if (num <= num4) {
                 if (num4 < num + span) {
                   let sum3 = tmp6 + layout.height;
@@ -347,6 +357,7 @@ let items = [
           let rounded1 = Math.round(size.x / result);
           let _Math3 = Math;
           let bound = Math.min(rounded1 + rounded, self.maxColumns);
+          let tmp5 = num;
           sum = rounded1;
           if (rounded1 < bound) {
             do {

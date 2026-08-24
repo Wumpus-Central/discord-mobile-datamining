@@ -4,15 +4,15 @@
 import initialize from "initialize" /* 589 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import EmojiDefault from "Emoji" /* 6930 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getEmojiToGroupId" /* 6727 */;
+import set from "set" /* 11177 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 11177 */;
 
-require = fn;
+require = arg1;
 function EmojiIcon(arg0) {
   ({ emojiId: require, emojiName } = arg0);
   const tmp = callback4();
@@ -40,17 +40,19 @@ function EmojiIcon(arg0) {
   obj[4] = emojiName;
   return jsx(EmojiDefault, { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
-({ useForumChannelStore: closure_6, useForumChannelStoreApi: error } = require("set"));
+({ useForumChannelStore: closure_6, useForumChannelStoreApi: error } = set);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: c9, AnalyticsSections: c10 } = ME);
 let closure_12 = createCacheKey.createStyles({ emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" }, imageEmoji: { height: 18, width: 18 }, textEmoji: { fontSize: 14, lineHeight: 20 } });
-let result = require("obj132").fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");
+let result = set.fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");
 
 export default function ForumPostTagsActionSheet(channel) {
   channel = channel.channel;
+  closure_1 = undefined;
+  let first;
   let callback;
   closure_1 = callback3();
   const tmp2 = callback(React.useState(new Set(callback2(channel.id).tagFilter)), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   callback = tmp2[1];
   let obj = channel(first[8]);
   const unmountEffect = obj.useUnmountEffect(() => {
@@ -89,15 +91,16 @@ export default function ForumPostTagsActionSheet(channel) {
   const availableTags = channel.availableTags;
   obj3[0] = jsx(channel(first[14]).TableRowGroup, {
     hasIcons: true,
-    children: availableTags.map((item, index) => {
-      closure_0 = item;
-      let obj = { emojiId: item.emojiId, emojiName: item.emojiName };
-      obj[0] = <EmojiIcon emojiId={item.emojiId} emojiName={item.emojiName} />;
-      obj[1] = item.name;
+    children: availableTags.map((emojiId) => {
+      closure_0 = emojiId;
+      let obj = { icon: null, label: null, accessibilityLabel: null, checked: null, onPress: null };
+      obj = { emojiId: emojiId.emojiId, emojiName: emojiId.emojiName };
+      obj[0] = closure_1_11(closure_1_13, obj);
+      obj[1] = emojiId.name;
       const intl = channel(first[11]).intl;
-      obj = { tagName: item.name };
+      obj = { tagName: emojiId.name };
       obj[2] = intl.formatToPlainString(channel(first[11]).t.tXXD6v, obj);
-      obj[3] = first.has(item.id);
+      obj[3] = first.has(emojiId.id);
       obj[4] = function onPress() {
         let obj = closure_0;
         if (null != closure_0) {
@@ -126,7 +129,7 @@ export default function ForumPostTagsActionSheet(channel) {
           const obj2 = channel(first[7]);
         }
       };
-      return jsx(channel(first[15]).TableCheckboxRow, { tagName: item.name }, item.id);
+      return closure_1_11(channel(first[15]).TableCheckboxRow, obj, emojiId.id);
     })
   });
   obj1[2] = jsx(channel(first[13]).BottomSheetScrollView, { children: null });

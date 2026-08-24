@@ -1,10 +1,7 @@
 // === Module 947: captureError ===
 
 // Module 947 (captureError)
-import spanToJSON from "spanToJSON" /* 819 */;
-import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
 import getClient from "getClient" /* 848 */;
-import captureCheckIn from "captureCheckIn" /* 869 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -13,7 +10,7 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
   try {
     let obj = getClient;
     if (obj.getClient()) {
-      let tmpResult = spanToJSON;
+      let tmpResult = tmp(819);
       const activeSpan = tmpResult.getActiveSpan();
       let isRecordingResult;
       if (activeSpan != null) {
@@ -21,11 +18,11 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
       }
       if (isRecordingResult) {
         obj = { code: null, message: "internal_error" };
-        obj[0] = getSpanStatusFromHttpCode.SPAN_STATUS_ERROR;
-        obj4.setStatus(obj);
+        obj[0] = tmp(840).SPAN_STATUS_ERROR;
+        activeSpan.setStatus(obj);
       }
       let str = prompt_execution;
-      tmpResult = captureCheckIn;
+      tmpResult = tmp(869);
       if (!prompt_execution) {
         str = "handler_execution";
       }
@@ -37,7 +34,6 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
       obj1[2] = obj2;
       obj[0] = obj1;
       tmpResult.captureException(error, obj);
-      obj4 = activeSpan;
     }
   } catch (err) {
   }

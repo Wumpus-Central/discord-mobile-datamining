@@ -12,12 +12,12 @@ export const filterMcpPiiFromSpanData = function filterMcpPiiFromSpanData(arg0, 
   if (!BooleanResult) {
     const _Object = Object;
     const entries = Object.entries(arg0);
-    reduced = entries.reduce((acc, item, index) => {
-      [tmp, tmp2] = item;
+    reduced = entries.reduce((arg0, arg1) => {
+      [tmp, tmp2] = arg1;
       if (!set.has(tmp)) {
-        acc[tmp] = tmp2;
+        arg0[tmp] = tmp2;
       }
-      return acc;
+      return arg0;
     }, {});
   }
   return reduced;

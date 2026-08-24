@@ -5,13 +5,13 @@ import _mod7036 from "module_7036" /* 7036 */;
 import importAllResult from "noop" /* 19 */;
 import { RefreshControl } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 let obj;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   obj = { disabled: true };
 }
 function noop() {
@@ -26,7 +26,7 @@ let closure_8 = importDefaultResult.createAnimatedComponent(require("module_7036
 const forwardRefResult1 = importAllResult.forwardRef((arg0, ref) => {
   obj = { maintainVisibleContentPosition: obj, ref };
   const merged = Object.assign(arg0);
-  return <closure_8 maintainVisibleContentPosition={obj} ref={ref} />;
+  return <closure_8 maintainVisibleContentPosition={obj} ref={arg1} />;
 });
 const forwardRefResult2 = importAllResult.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0, Object.create(null));
@@ -43,14 +43,14 @@ const forwardRefResult3 = importAllResult.forwardRef((arg0, ref) => {
   const memo = importAllResult.useMemo(() => {
     let tmp2 = refreshControl;
     if (null == refreshControl) {
-      tmp2 = refreshControl;
+      tmp2 = tmp;
       if (true === preventNativeModalDismiss) {
-        obj = preventNativeModalDismiss(dependencyMap[3]);
-        tmp2 = refreshControl;
+        obj = preventNativeModalDismiss(closure_1_2[3]);
+        tmp2 = tmp;
         if (obj.isIOS()) {
           obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-          obj[1] = noop;
-          tmp2 = <RefreshControl refreshing={false} onRefresh={null} tintColor="transparent" />;
+          obj[1] = closure_1_7;
+          tmp2 = closure_1_5(closure_1_4, obj);
         }
       }
     }
@@ -61,37 +61,12 @@ const forwardRefResult3 = importAllResult.forwardRef((arg0, ref) => {
   obj.refreshControl = memo;
   return jsx(refreshControl(7035), { ref, maintainVisibleContentPosition: obj });
 });
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
+const result = set.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
 for (const key10063 in require("module_7036")) {
+  let tmp8 = key10063;
   arg5[key10063] = require("module_7036")[key10063];
   continue;
 }
-const forwardRefResult4 = importAllResult.forwardRef((arg0, ref) => {
-  ({ preventNativeModalDismiss, refreshControl } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  const items = [preventNativeModalDismiss, refreshControl];
-  obj = { ref, maintainVisibleContentPosition: obj, masonry: true, renderScrollComponent: null };
-  const memo = importAllResult.useMemo(() => {
-    let tmp2 = refreshControl;
-    if (null == refreshControl) {
-      tmp2 = refreshControl;
-      if (true === preventNativeModalDismiss) {
-        obj = preventNativeModalDismiss(dependencyMap[3]);
-        tmp2 = refreshControl;
-        if (obj.isIOS()) {
-          obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-          obj[1] = noop;
-          tmp2 = <RefreshControl refreshing={false} onRefresh={null} tintColor="transparent" />;
-        }
-      }
-    }
-    return tmp2;
-  }, items);
-  obj[3] = preventNativeModalDismiss(6952).BottomSheetScrollView;
-  const merged1 = Object.assign(merged);
-  obj.refreshControl = memo;
-  return <closure_9 ref={ref} maintainVisibleContentPosition={obj} masonry renderScrollComponent={null} />;
-});
 
 export const defaultMVCPConfig = obj;
 export const FlashList = forwardRefResult;
@@ -106,14 +81,14 @@ export const BottomSheetMasonryFlashList = importAllResult.forwardRef((arg0, ref
   const memo = importAllResult.useMemo(() => {
     let tmp2 = refreshControl;
     if (null == refreshControl) {
-      tmp2 = refreshControl;
+      tmp2 = tmp;
       if (true === preventNativeModalDismiss) {
-        obj = preventNativeModalDismiss(dependencyMap[3]);
-        tmp2 = refreshControl;
+        obj = preventNativeModalDismiss(closure_1_2[3]);
+        tmp2 = tmp;
         if (obj.isIOS()) {
           obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-          obj[1] = noop;
-          tmp2 = <RefreshControl refreshing={false} onRefresh={null} tintColor="transparent" />;
+          obj[1] = closure_1_7;
+          tmp2 = closure_1_5(closure_1_4, obj);
         }
       }
     }
@@ -122,5 +97,5 @@ export const BottomSheetMasonryFlashList = importAllResult.forwardRef((arg0, ref
   obj[3] = preventNativeModalDismiss(6952).BottomSheetScrollView;
   const merged1 = Object.assign(merged);
   obj.refreshControl = memo;
-  return <closure_9 ref={ref} maintainVisibleContentPosition={obj} masonry renderScrollComponent={null} />;
+  return <closure_9 ref={arg1} maintainVisibleContentPosition={obj} masonry renderScrollComponent={null} />;
 });

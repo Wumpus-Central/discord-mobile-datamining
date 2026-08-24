@@ -11,11 +11,11 @@ export default function useRefEffect(arg0) {
   const items = [arg0];
   return callback((arg0) => {
     if (ref.current) {
-      ref.current();
-      ref.current = undefined;
+      obj.current();
+      obj.current = undefined;
     }
     if (null != arg0) {
-      ref.current = callback(arg0);
+      obj.current = callback(arg0);
     }
   }, items);
 };

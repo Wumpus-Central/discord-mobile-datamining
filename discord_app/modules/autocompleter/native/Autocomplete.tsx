@@ -2,7 +2,6 @@
 
 // Module 11560 (AutocompleteLabel)
 import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4507 */;
@@ -12,44 +11,52 @@ import PressableBase from "PressableBase" /* 5433 */;
 import preloadDefault from "preload" /* 5449 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import TableRowTrailingText from "TableRowTrailingText" /* 6300 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 6683 */;
 import getChannelIcon from "getChannelIcon" /* 6832 */;
 import Form from "Form" /* 8083 */;
 import registerAssetDefault from "registerAsset" /* 8338 */;
 import StickerDefault from "Sticker" /* 10119 */;
 import useStickerPackCategories from "useStickerPackCategories" /* 10217 */;
 import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 11561 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function AutocompleteLabel(text) {
   const tmp = callback3();
   return callback(Form.FormRow.Label, { style: callback3().leading, text: text.text });
 }
 ({ ChannelTypes: closure_8, Fonts } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { height: require("AUTOCOMPLETE_ROW_HEIGHT").AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { row: null, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
+createCacheKey = { height: require("AUTOCOMPLETE_ROW_HEIGHT").AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { fontSize: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+let obj1 = { fontSize: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 createCacheKey[2] = { fontSize: 14, color: ThemesDefault.colors.TEXT_MUTED };
+const obj2 = { fontSize: 14, color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[3] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = { width: 32, height: 32 };
 createCacheKey[5] = { resizeMode: "contain" };
+let obj3 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[6] = { lineHeight: 32, fontSize: 27, textAlign: "center", color: ThemesDefault.colors.TEXT_DEFAULT };
+const obj4 = { lineHeight: 32, fontSize: 27, textAlign: "center", color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[7] = { width: 56, height: 56, marginHorizontal: 4, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[8] = { flex: 1, justifyContent: "center" };
+const obj5 = { width: 56, height: 56, marginHorizontal: 4, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 createCacheKey[10] = { opacity: 0.6 };
+const obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 createCacheKey[11] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
+const obj7 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[12] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
+const obj8 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 const obj9 = {
   User(user) {
     user = user.user;
@@ -73,13 +80,13 @@ const obj9 = {
       nick = guildId(4219).getName(user);
       const obj3 = guildId(4219);
     }
-    obj[3] = callback(AutocompleteLabel, { text: nick });
+    obj[3] = closure_9(AutocompleteLabel, { text: nick });
     obj = { status, user, size: tmp2(1297).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-    obj[4] = callback(user(1297).Avatar, obj);
+    obj[4] = closure_9(user(1297).Avatar, obj);
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = callback(guildId(9966), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return callback(user(8083).FormRow, obj);
+    obj[5] = closure_9(guildId(9966), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8083).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -90,17 +97,17 @@ const obj9 = {
       obj[0] = tmp.labelRow;
       obj = { text: null };
       obj[0] = text;
-      const items = [callback(AutocompleteLabel, obj), badge];
+      const items = [tmp2(AutocompleteLabel, obj), badge];
       obj[1] = items;
       let tmp2Result = callback2(View, obj);
     } else {
       obj1 = { text: null };
       obj1[0] = text;
-      tmp2Result = callback(AutocompleteLabel, obj1);
+      tmp2Result = tmp2(AutocompleteLabel, obj1);
     }
     obj[2] = tmp2Result;
-    obj[3] = callback(TableRowTrailingText.TableRowTrailingText, { text: description });
-    return callback(TableRowInner.TableRow, obj);
+    obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: description });
+    return closure_9(TableRowInner.TableRow, obj);
   },
   Role(colorString) {
     colorString = colorString.colorString;
@@ -115,14 +122,14 @@ const obj9 = {
     }
     obj = { style: items, text: "@" + name };
     items[1] = tmp5;
-    obj[2] = callback(Form.FormRow.Label, obj);
+    obj[2] = closure_9(Form.FormRow.Label, obj);
     let str = "";
     if (showDescription) {
-      const intl = getSystemLocale.intl;
-      str = intl.string(getSystemLocale.t.HrUmDH);
+      const intl = tmp3(1236).intl;
+      str = intl.string(tmp3(1236).t.HrUmDH);
     }
-    obj[3] = callback(TableRowTrailingText.TableRowTrailingText, { text: str });
-    return callback(TableRowInner.TableRow, obj);
+    obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: str });
+    return closure_9(TableRowInner.TableRow, obj);
   },
   Channel(onPress) {
     ({ channel, category } = onPress);
@@ -178,14 +185,16 @@ const obj9 = {
   },
   Choice(arg0) {
     ({ choice, onPress } = arg0);
-    const obj = { text: choice.displayName };
+    let obj = { onPress, accessibilityRole: "menuitem", label: null };
+    obj = { text: choice.displayName };
     obj[2] = callback(AutocompleteLabel, obj);
     return callback(Form.FormRow, obj);
   },
   ChoiceLoading() {
     const tmp = callback3();
     const memo = React.useMemo(() => callback(table[27]).random(100, 300), []);
-    const obj = { style: tmp.commandChoiceLoadingContainer, children: callback(View, { style: items }) };
+    let obj = { DEPRECATED_style: tmp.row, leading: null };
+    obj = { style: tmp.commandChoiceLoadingContainer, children: callback(View, { style: items }) };
     items = [tmp.commandChoiceLoadingItem, { width: memo }];
     obj[1] = callback(View, obj);
     return callback(Form.FormRow, obj);
@@ -208,21 +217,21 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = callback(UnknownGameIcon.UnknownGameIcon, obj);
-      let tmp8 = callback;
+      let tmp6Result = tmp6(tmp5(6683).UnknownGameIcon, obj);
+      let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };
       obj[0] = tmp.gameIcon;
       obj1 = { uri: null };
       obj1[0] = tmp4;
       obj[1] = obj1;
-      tmp6Result = callback(preloadDefault, obj);
-      tmp8 = callback;
+      tmp6Result = tmp6(preloadDefault, obj);
+      tmp8 = tmp6;
     }
     return tmp8(Form.FormRow, { onPress: game.onPress, accessibilityRole: "menuitem", leading: tmp6Result, label: tmp8(AutocompleteLabel, obj3) });
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
+const result = require("set").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
 
 export default obj9;
 export const AUTOCOMPLETE_STICKER_NODE_SIZE = 56;

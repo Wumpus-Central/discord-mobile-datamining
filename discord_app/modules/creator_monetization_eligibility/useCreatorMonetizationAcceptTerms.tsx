@@ -1,15 +1,15 @@
 // === Module 16905: useCreateCreatorMonetizationAcceptTermsRequest ===
 
 // Module 16905 (useCreateCreatorMonetizationAcceptTermsRequest)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
 
 export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg1) {
   const _require = arg0;
@@ -29,7 +29,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
   obj[0] = _require(589).useStateFromStores(items1, () => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
-      tmp3 = isGuildOwner(tmp2, tmp);
+      tmp3 = closure_1_7(tmp2, tmp);
     }
     return tmp3;
   }, items2);
@@ -73,14 +73,14 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = stateFromStores(16906).acceptCreatorMonetizationTerms(closure_1_0, tmp42);
+                obj1[0] = closure_1_2(16906).acceptCreatorMonetizationTerms(tmp56, tmp42);
                 return obj1;
               } else {
-                let obj2 = stateFromStores(16906);
+                let obj2 = closure_1_2(16906);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };
-                obj2[0] = obj2.acceptCreatorMonetizationTermsV2(closure_1_0);
+                obj2[0] = obj2.acceptCreatorMonetizationTermsV2(tmp56);
                 return obj2;
               }
             }

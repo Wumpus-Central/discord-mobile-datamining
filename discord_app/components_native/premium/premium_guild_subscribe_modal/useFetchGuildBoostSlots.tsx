@@ -1,14 +1,14 @@
 // === Module 13007: useFetchGuildBoostSlots ===
 
 // Module 13007 (useFetchGuildBoostSlots)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate" /* 4267 */;
-import getState from "getState" /* 7383 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
+import closure_7 from "getState" /* 7383 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
 
 export default function useFetchGuildBoostSlots() {
   let tmp = callback(React.useState(true), 2);

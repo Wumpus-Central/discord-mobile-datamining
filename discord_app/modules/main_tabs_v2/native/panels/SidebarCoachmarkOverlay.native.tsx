@@ -2,15 +2,16 @@
 
 // Module 15277 (SidebarCoachmarkOverlayLayer)
 import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 function SidebarCoachmarkOverlayLayer(manager) {
   manager = manager.manager;
+  closure_1 = undefined;
   closure_1 = callback(importAllResult.useState({}), 2)[1];
   const items = [manager];
   const effect = importAllResult.useEffect(() => {
@@ -27,19 +28,20 @@ function SidebarCoachmarkOverlayLayer(manager) {
     },
     onLayout: NOOP,
     pointerEvents: "box-none",
-    children: items1.map((item, index) => callback(React.Fragment, { children: item.component }, item.key))
+    children: items1.map((children) => callback(React.Fragment, { children: children.component }, children.key))
   });
 }
 let c4 = importAllResult;
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const context = importAllResult.createContext(null);
-let obj = {};
+let obj = { overlay: null };
+obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.zIndex = 1;
 obj[0] = obj;
 const styles = StyleSheet.create(obj);
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
 
 export const SidebarCoachmarkOverlayContext = context;
 export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled) {
@@ -62,5 +64,5 @@ export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled)
   }
   items[1] = tmp4;
   obj[1] = items;
-  return callback(context.Provider, obj);
+  return closure_8(context.Provider, obj);
 };

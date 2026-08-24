@@ -1,7 +1,7 @@
 // === Module 6784: shouldShowOnboarding ===
 
 // Module 6784 (shouldShowOnboarding)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME2 from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -65,7 +65,7 @@ obj = {
     if (dependencyMap[guildId] !== obj.STARTED) {
       return false;
     } else {
-      dependencyMap[guildId] = tmp ? obj.READY : obj.NOT_APPLICABLE;
+      dependencyMap[guildId] = tmp ? tmp2.READY : tmp2.NOT_APPLICABLE;
     }
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function handlePromptsFetchFailure(guildId) {
@@ -82,7 +82,7 @@ obj = {
   }
 };
 const guildOnboardingStore = new GuildOnboardingStore(dispatcherDefault, obj);
-const result = obj132.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
 
 export default guildOnboardingStore;
 export const GuildOnboardingStatus = obj;

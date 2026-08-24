@@ -4,17 +4,17 @@
 import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 1033 */;
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
-function _getGraphQLOperation(operationName) {
-  let tmp = typeof operationName === "object";
+function _getGraphQLOperation(obj) {
+  let tmp = typeof obj === "object";
   let tmp2 = tmp;
-  if (typeof operationName === "object") {
-    tmp2 = null !== operationName;
+  if (typeof obj === "object") {
+    tmp2 = null !== obj;
   }
   if (tmp2) {
-    tmp2 = typeof operationName.operationName === "string";
+    tmp2 = typeof obj.operationName === "string";
   }
   if (tmp2) {
-    const extensions = operationName.extensions;
+    const extensions = obj.extensions;
     let tmp3 = typeof extensions === "object";
     if (typeof extensions === "object") {
       tmp3 = null !== extensions;
@@ -22,7 +22,7 @@ function _getGraphQLOperation(operationName) {
     tmp2 = tmp3;
   }
   if (tmp2) {
-    const persistedQuery = operationName.extensions.persistedQuery;
+    const persistedQuery = obj.extensions.persistedQuery;
     let tmp4 = typeof persistedQuery === "object";
     if (typeof persistedQuery === "object") {
       tmp4 = null !== persistedQuery;
@@ -30,26 +30,26 @@ function _getGraphQLOperation(operationName) {
     tmp2 = tmp4;
   }
   if (tmp2) {
-    tmp2 = typeof operationName.extensions.persistedQuery.sha256Hash === "string";
+    tmp2 = typeof obj.extensions.persistedQuery.sha256Hash === "string";
   }
   if (tmp2) {
-    tmp2 = typeof operationName.extensions.persistedQuery.version === "number";
+    tmp2 = typeof obj.extensions.persistedQuery.version === "number";
   }
   if (tmp2) {
     const _HermesInternal2 = HermesInternal;
-    return "persisted " + operationName.operationName;
+    return "persisted " + obj.operationName;
   } else {
-    if (typeof operationName === "object") {
-      tmp = null !== operationName;
+    if (typeof obj === "object") {
+      tmp = null !== obj;
     }
     if (tmp) {
-      tmp = typeof operationName.query === "string";
+      tmp = typeof obj.query === "string";
     }
     if (tmp) {
-      ({ query, operationName } = operationName);
+      ({ query, operationName } = obj);
       const match = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)(\w+)(?:\s*)[{(]/);
       if (match) {
-        let obj = { operationType: null, operationName: null };
+        obj = { operationType: null, operationName: null };
         obj[0] = match[1];
         obj[1] = match[2];
       } else {
@@ -88,16 +88,16 @@ function isStandardRequest(parsed) {
   }
   return tmp;
 }
-function isPersistedRequest(operationName) {
-  let tmp = typeof operationName === "object";
-  if (typeof operationName === "object") {
-    tmp = null !== operationName;
+function isPersistedRequest(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
   if (tmp) {
-    tmp = typeof operationName.operationName === "string";
+    tmp = typeof obj.operationName === "string";
   }
   if (tmp) {
-    const extensions = operationName.extensions;
+    const extensions = obj.extensions;
     let tmp2 = typeof extensions === "object";
     if (typeof extensions === "object") {
       tmp2 = null !== extensions;
@@ -105,7 +105,7 @@ function isPersistedRequest(operationName) {
     tmp = tmp2;
   }
   if (tmp) {
-    const persistedQuery = operationName.extensions.persistedQuery;
+    const persistedQuery = obj.extensions.persistedQuery;
     let tmp3 = typeof persistedQuery === "object";
     if (typeof persistedQuery === "object") {
       tmp3 = null !== persistedQuery;
@@ -113,10 +113,10 @@ function isPersistedRequest(operationName) {
     tmp = tmp3;
   }
   if (tmp) {
-    tmp = typeof operationName.extensions.persistedQuery.sha256Hash === "string";
+    tmp = typeof obj.extensions.persistedQuery.sha256Hash === "string";
   }
   if (tmp) {
-    tmp = typeof operationName.extensions.persistedQuery.version === "number";
+    tmp = typeof obj.extensions.persistedQuery.version === "number";
   }
   return tmp;
 }
@@ -141,13 +141,16 @@ export const getRequestPayloadXhrOrFetch = function getRequestPayloadXhrOrFetch(
     const tmp7 = input.xhr[addClsInstrumentationHandler.SENTRY_XHR_DATA_KEY];
     let first = tmp7;
     if (tmp7) {
-      first = addClsInstrumentationHandler.getBodyString(tmp7.body)[0];
-      const tmp5Result = addClsInstrumentationHandler;
+      first = tmp5(1033).getBodyString(tmp7.body)[0];
+      const tmp5Result = tmp5(1033);
     }
     let first1 = first;
+    tmp5 = require;
   } else {
     const fetchRequestArgBody = addClsInstrumentationHandler.getFetchRequestArgBody(input.input);
+    const obj = addClsInstrumentationHandler;
     first1 = addClsInstrumentationHandler.getBodyString(fetchRequestArgBody)[0];
+    const obj2 = addClsInstrumentationHandler;
   }
   return first1;
 };
@@ -159,26 +162,26 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
       on.on("beforeOutgoingRequestSpan", (updateName, input) => {
         const tmp3 = lib(closure_1_1[0]).spanToJSON(updateName).data || {};
         if ("http.client" === tmp3[lib(undefined, closure_1_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_OP]) {
-          const tmp4 = tmp3[lib(undefined, closure_1_1[0]).SEMANTIC_ATTRIBUTE_URL_FULL] || tmp3["http.url"];
-          const tmp5 = tmp3[lib(undefined, closure_1_1[0]).SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] || tmp3["http.method"];
-          let tmpResult = lib(closure_1_1[0]);
+          const tmp4 = tmp3[tmp(undefined, tmp2[0]).SEMANTIC_ATTRIBUTE_URL_FULL] || tmp3["http.url"];
+          const tmp5 = tmp3[tmp(undefined, tmp2[0]).SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] || tmp3["http.method"];
+          let tmpResult = tmp(tmp2[0]);
           if (tmpResult.isString(tmp4)) {
-            tmpResult = lib(closure_1_1[0]);
+            tmpResult = tmp(tmp2[0]);
             if (tmpResult.isString(tmp5)) {
-              const result = lib(closure_1_1[0]).stringMatchesSomePattern(tmp4, lib.endpoints);
+              const result = tmp(tmp2[0]).stringMatchesSomePattern(tmp4, lib.endpoints);
               if ("xhr" in input) {
-                const tmp11 = input.xhr[lib(undefined, closure_1_1[1]).SENTRY_XHR_DATA_KEY];
+                const tmp11 = input.xhr[tmp(undefined, tmp2[1]).SENTRY_XHR_DATA_KEY];
                 let first = tmp11;
                 if (tmp11) {
-                  first = lib(closure_1_1[1]).getBodyString(tmp11.body)[0];
-                  const tmpResult2 = lib(closure_1_1[1]);
+                  first = tmp(tmp2[1]).getBodyString(tmp11.body)[0];
+                  const tmpResult2 = tmp(tmp2[1]);
                 }
                 let first1 = first;
               } else {
-                const fetchRequestArgBody = lib(closure_1_1[1]).getFetchRequestArgBody(input.input);
-                const tmpResult3 = lib(closure_1_1[1]);
-                first1 = lib(closure_1_1[1]).getBodyString(fetchRequestArgBody)[0];
-                const tmpResult4 = lib(closure_1_1[1]);
+                const fetchRequestArgBody = tmp(tmp2[1]).getFetchRequestArgBody(input.input);
+                const tmpResult3 = tmp(tmp2[1]);
+                first1 = tmp(tmp2[1]).getBodyString(fetchRequestArgBody)[0];
+                const tmpResult4 = tmp(tmp2[1]);
               }
               if (result) {
                 if (first1) {
@@ -232,11 +235,10 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
                   }
                 }
               }
-              const tmpResult1 = lib(closure_1_1[0]);
+              const tmpResult1 = tmp(tmp2[0]);
             }
           }
         }
-        const obj = lib(closure_1_1[0]);
       });
       on.on("beforeOutgoingRequestBreadcrumb", (type, input) => {
         ({ category, data } = type);
@@ -248,18 +250,18 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
             }
             const result = lib(closure_1_1[0]).stringMatchesSomePattern(url, lib.endpoints);
             if ("xhr" in input) {
-              const tmp10 = input.xhr[lib(undefined, closure_1_1[1]).SENTRY_XHR_DATA_KEY];
+              const tmp10 = input.xhr[tmp5(undefined, tmp6[1]).SENTRY_XHR_DATA_KEY];
               let first = tmp10;
               if (tmp10) {
-                let tmp5Result = lib(closure_1_1[1]);
+                let tmp5Result = tmp5(tmp6[1]);
                 first = tmp5Result.getBodyString(tmp10.body)[0];
               }
               let first1 = first;
             } else {
-              tmp5Result = lib(closure_1_1[1]);
+              tmp5Result = tmp5(tmp6[1]);
               const fetchRequestArgBody = tmp5Result.getFetchRequestArgBody(input.input);
-              first1 = lib(closure_1_1[1]).getBodyString(fetchRequestArgBody)[0];
-              const tmp5Result1 = lib(closure_1_1[1]);
+              first1 = tmp5(tmp6[1]).getBodyString(fetchRequestArgBody)[0];
+              const tmp5Result1 = tmp5(tmp6[1]);
             }
             if (result) {
               if (data) {

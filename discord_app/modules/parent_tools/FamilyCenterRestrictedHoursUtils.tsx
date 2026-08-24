@@ -1,10 +1,10 @@
 // === Module 10017: setsEqual ===
 
 // Module 10017 (setsEqual)
-import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1940 */;
 import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import set from "set" /* 2 */;
 
 function setsEqual(set, set2) {
   if (set.size !== set2.size) {
@@ -15,6 +15,7 @@ function setsEqual(set, set2) {
       if (set2.has(tmp3)) {
         continue;
       } else {
+        let tmp5 = obj;
         obj.return();
         let flag = false;
         return false;
@@ -28,25 +29,25 @@ function formatDays(days) {
   if (setsEqual(set, set2)) {
     const intl3 = set(1236).intl;
     return intl3.string(dateTimeFormat(2335).bPjqd1);
-  } else if (setsEqual(set, set)) {
+  } else if (tmp2(set, set)) {
     const intl2 = set(1236).intl;
     return intl2.string(dateTimeFormat(2335)["4dr9L9"]);
-  } else if (setsEqual(set, set1)) {
+  } else if (tmp2(set, set1)) {
     const intl = set(1236).intl;
     return intl.string(dateTimeFormat(2335)["6lTTJ+"]);
   } else {
     const _Intl = Intl;
     dateTimeFormat = new Intl.DateTimeFormat(set(1236).intl.currentLocale, { weekday: "short" });
-    const mapped = items.map((item, index) => {
+    const mapped = items.map((arg0, arg1) => {
       let formatResult = null;
-      if (set.has(item)) {
+      if (set.has(arg0)) {
         const _Date = Date;
-        const date = new Date(2025, 0, 5 + index);
+        const date = new Date(2025, 0, 5 + arg1);
         formatResult = dateTimeFormat.format(date);
       }
       return formatResult;
     });
-    const found = mapped.filter((item, index) => null !== item);
+    const found = mapped.filter((arg0) => null !== arg0);
     return found.join(", ");
   }
 }
@@ -77,12 +78,12 @@ let set = new Set(require("module_1"));
 const items1 = [items[0], items[6]];
 const set1 = new Set(items1);
 const set2 = new Set(items);
-let result = obj132.fileFinishedImporting("modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx");
+let result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx");
 
 export const DAYS_ORDERED = items;
 export const getShortDayLabels = function getShortDayLabels(narrow) {
   dateTimeFormat = new Intl.DateTimeFormat(dateTimeFormat(1236).intl.currentLocale, { weekday: narrow });
-  return items.map((item, index) => dateTimeFormat.format(new Date(2025, 0, 5 + index)));
+  return items.map((arg0, arg1) => dateTimeFormat.format(new Date(2025, 0, 5 + arg1)));
 };
 export const formatTime = function formatTime(hours) {
   const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
@@ -120,7 +121,8 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       const date = new Date(2025, 0, 1, startTime.hours, startTime.minutes);
       const endTime = startTime.endTime;
       const _Intl2 = Intl;
-      const tmp5 = formatDays(startTime.days);
+      const tmp4 = formatDays(startTime.days);
+      const tmp6 = require;
       const dateTimeFormat1 = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
       const _Date2 = Date;
       const date1 = new Date(2025, 0, 1, endTime.hours, endTime.minutes);
@@ -128,16 +130,16 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       const endTime2 = startTime.endTime;
       const formatResult = dateTimeFormat.format(date);
       if (60 * startTime2.hours + startTime2.minutes > 60 * endTime2.hours + endTime2.minutes) {
-        let OxveI8 = messagesProxyDefault.OxveI8;
+        ERTn_E = messagesProxyDefault.OxveI8;
       } else {
-        OxveI8 = messagesProxyDefault["ERTn+E"];
+        ERTn_E = messagesProxyDefault["ERTn+E"];
       }
-      const intl = getSystemLocale.intl;
+      const intl = tmp6(1236).intl;
       const obj = { days: null, startTime: null, endTime: null };
-      obj[0] = tmp5;
+      obj[0] = tmp4;
       obj[1] = formatResult;
       obj[2] = dateTimeFormat1.format(date1);
-      return intl.formatToPlainString(OxveI8, obj);
+      return intl.formatToPlainString(ERTn_E, obj);
     }
   }
   return null;
@@ -191,20 +193,19 @@ export const computeOverlappingInfo = function computeOverlappingInfo(first3, me
   closure_1 = memo1;
   closure_2 = memo;
   const conflictingEntries = [];
-  const item = conflictingEntries.forEach((item, index) => {
-    if (set.has(item)) {
-      const found = memo1.find((item, index) => {
-        const days = item.days;
+  const item = conflictingEntries.forEach((arg0, arg1) => {
+    if (arg0.has(arg0)) {
+      const found = memo1.find((days) => {
+        days = days.days;
         return days.includes(closure_0);
       });
       if (null != found) {
         const obj = { dayLabel: null, timeRange: null };
-        obj[0] = memo[index];
-        obj[1] = getScheduleRuleDateRange(found);
+        obj[0] = memo[arg1];
+        obj[1] = closure_1_9(found);
         conflictingEntries.push(obj);
       }
     }
-    set = item;
   });
   return { conflictingEntries };
 };

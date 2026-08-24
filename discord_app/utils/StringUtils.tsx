@@ -1,10 +1,10 @@
 // === Module 1903: isNullOrEmpty ===
 
 // Module 1903 (isNullOrEmpty)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import cssValueToNumber from "cssValueToNumber" /* 1904 */;
 
-const result = obj132.fileFinishedImporting("utils/StringUtils.tsx");
+const result = set.fileFinishedImporting("utils/StringUtils.tsx");
 
 export const isNullOrEmpty = function isNullOrEmpty(application_id) {
   let tmp = null == application_id;

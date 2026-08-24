@@ -2,28 +2,33 @@
 
 // Module 13373 (GuildSettingsServerTagPreview)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { GuildTagBadgeSize } from "items" /* 8168 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ Image: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-const createCacheKey = { padding: ThemesDefault.space.PX_16 };
+createCacheKey = { card: null, notice: null, message: null, unfocused: null, avatar: null, messageBody: null, usernameRow: null };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_12 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { flexDirection: "row", columnGap: ThemesDefault.space.PX_12, alignItems: "flex-start" };
 createCacheKey[3] = { opacity: 0.5 };
+let obj2 = { flexDirection: "row", columnGap: ThemesDefault.space.PX_12, alignItems: "flex-start" };
 createCacheKey[4] = { width: 40, height: 40, borderRadius: ThemesDefault.radii.round };
 createCacheKey[5] = { flex: 1 };
+let obj3 = { width: 40, height: 40, borderRadius: ThemesDefault.radii.round };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", columnGap: ThemesDefault.space.PX_4 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPreview.tsx");
+let obj4 = { flexDirection: "row", alignItems: "center", columnGap: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPreview.tsx");
 
 export default function GuildSettingsServerTagPreview(guildId) {
   guildId = guildId.guildId;
@@ -96,11 +101,11 @@ export default function GuildSettingsServerTagPreview(guildId) {
             let ok = tmp2;
             ok = undefined;
             dependencyMap(true);
-            obj1 = guildId(13374);
+            obj1 = closure_1_0(13374);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj1.adoptGuildIdentity(guildId, true);
+            obj1[0] = obj1.adoptGuildIdentity(closure_1_0, true);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -138,28 +143,28 @@ export default function GuildSettingsServerTagPreview(guildId) {
     stringResult = string(t.OVvzY0);
   }
   obj[3] = stringResult;
-  const items2 = [callback(guildId(4734).Text, obj), ];
+  const items2 = [closure_10(guildId(4734).Text, obj), ];
   obj = { spacing: tmp4(712).space.PX_12, children: null };
   obj1 = { style: items3, children: null };
   items3 = [, ];
   ({ message: arr4[0], unfocused: arr4[1] } = tmp);
   obj2 = { source: tmp4(10102), style: tmp.avatar, importantForAccessibility: "no" };
-  const items4 = [callback(closure_6, obj2), ];
+  const items4 = [closure_10(closure_6, obj2), ];
   obj3 = { style: tmp.messageBody, children: null };
-  const items5 = [callback(guildId(4734).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }), ];
+  const items5 = [closure_10(guildId(4734).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }), ];
   const obj4 = { variant: "text-md/normal", color: "text-default", children: null };
   const intl2 = tmp2(1236).intl;
   obj4[2] = intl2.string(guildId(1236).t.KZQ4mF);
-  items5[1] = callback(guildId(4734).Text, obj4);
+  items5[1] = closure_10(guildId(4734).Text, obj4);
   obj3[1] = items5;
-  items4[1] = callback2(closure_7, obj3);
+  items4[1] = closure_11(closure_7, obj3);
   obj1[1] = items4;
-  const items6 = [callback2(closure_7, obj1), , , ];
+  const items6 = [closure_11(closure_7, obj1), , , ];
   const obj5 = { style: tmp.message, children: null };
-  const items7 = [callback(closure_6, { source, style: tmp.avatar, importantForAccessibility: "no" }), ];
+  const items7 = [closure_10(closure_6, { source, style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj7 = { style: tmp.messageBody, children: null };
   const obj8 = { style: tmp.usernameRow, children: null };
-  const items8 = [callback(guildId(4734).Text, { variant: "text-md/semibold", color: "text-default", children: name }), ];
+  const items8 = [closure_10(guildId(4734).Text, { variant: "text-md/semibold", color: "text-default", children: name }), ];
   let tmp15Result = null != tag;
   if (tmp15Result) {
     tmp15Result = "" !== tag;
@@ -174,37 +179,40 @@ export default function GuildSettingsServerTagPreview(guildId) {
       obj10[1] = primaryColor;
       obj10[2] = secondaryColor;
       ({ SIZE_12: obj16[3], SIZE_12: obj16[4] } = GuildTagBadgeSize);
-      tmp15Result = callback(tmp2(13375).GuildBadge, obj10);
+      tmp15Result = tmp15(tmp2(13375).GuildBadge, obj10);
     }
     obj9[1] = tmp15Result;
-    tmp15Result = callback(tmp2(9509).BaseGuildTagChiplet, obj9);
+    tmp15Result = tmp15(tmp2(9509).BaseGuildTagChiplet, obj9);
   }
   items8[1] = tmp15Result;
   obj8[1] = items8;
-  const items9 = [callback2(closure_7, obj8), ];
+  const items9 = [closure_11(closure_7, obj8), ];
   const obj11 = { variant: "text-md/normal", color: "text-default", children: null };
   const intl3 = tmp2(1236).intl;
   obj11[2] = intl3.string(guildId(1236).t.LKsPRe);
-  items9[1] = callback(guildId(4734).Text, obj11);
+  items9[1] = closure_10(guildId(4734).Text, obj11);
   obj7[1] = items9;
-  items7[1] = callback2(closure_7, obj7);
+  items7[1] = closure_11(closure_7, obj7);
   obj5[1] = items7;
-  items6[1] = callback2(closure_7, obj5);
+  items6[1] = closure_11(closure_7, obj5);
   const obj12 = { style: items10, children: null };
   items10 = [, ];
   ({ message: arr11[0], unfocused: arr11[1] } = tmp);
+  const obj6 = { source, style: tmp.avatar, importantForAccessibility: "no" };
   const tmp10 = callback2(React.useState(false), 2);
-  const items11 = [callback(closure_6, { source: onAdopted(13419), style: tmp.avatar, importantForAccessibility: "no" }), ];
+  const tmp14 = closure_12;
+  const tmp18 = closure_6;
+  const items11 = [closure_10(tmp18, { source: onAdopted(13419), style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj14 = { style: tmp.messageBody, children: null };
-  const items12 = [callback(guildId(4734).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }), ];
+  const items12 = [closure_10(guildId(4734).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }), ];
   const obj15 = { variant: "text-md/normal", color: "text-default", children: null };
   const intl4 = tmp2(1236).intl;
   obj15[2] = intl4.string(guildId(1236).t.vtCg11);
-  items12[1] = callback(guildId(4734).Text, obj15);
+  items12[1] = closure_10(guildId(4734).Text, obj15);
   obj14[1] = items12;
-  items11[1] = callback2(closure_7, obj14);
+  items11[1] = closure_11(closure_7, obj14);
   obj12[1] = items11;
-  items6[2] = callback2(closure_7, obj12);
+  items6[2] = closure_11(closure_7, obj12);
   const obj16 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
   const intl5 = tmp2(1236).intl;
   obj16[1] = intl5.string(guildId(1236).t.cQDYRu);
@@ -224,17 +232,17 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj17 = { children: null };
   obj16[3] = isDirty;
   obj16[4] = callback;
-  items6[3] = callback(guildId(4745).Button, obj16);
+  items6[3] = closure_10(guildId(4745).Button, obj16);
   obj[1] = items6;
-  items2[1] = callback2(guildId(4733).Stack, obj);
+  items2[1] = closure_11(guildId(4733).Stack, obj);
   obj17[0] = items2;
-  const tmp13Result = callback2(closure_12, obj17);
+  const tmp13Result = closure_11(tmp14, obj17);
   let tmp15Result1 = tmp13Result;
   if ("plain" !== variant) {
     const obj18 = { variant: "secondary", radius: 16, style: null, children: null };
     obj18[2] = tmp.card;
     obj18[3] = tmp13Result;
-    tmp15Result1 = callback(tmp2(6292).Card, obj18);
+    tmp15Result1 = tmp15(tmp2(6292).Card, obj18);
   }
   return tmp15Result1;
 };

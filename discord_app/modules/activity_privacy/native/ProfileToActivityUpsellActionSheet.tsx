@@ -1,11 +1,11 @@
 // === Module 14209: ProfileToActivityUpsellActionSheet ===
 
 // Module 14209 (ProfileToActivityUpsellActionSheet)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx");
 
 export default function ProfileToActivityUpsellActionSheet(direction) {
   direction = direction.direction;

@@ -1,9 +1,9 @@
 // === Module 15932: CachedSearchResultParser ===
 
 // Module 15932 (CachedSearchResultParser)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-let result = obj132.fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");
+let result = set.fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");
 
 export const CachedSearchResultParser = function CachedSearchResultParser() {
   const obj = Object.create(new.target.prototype);

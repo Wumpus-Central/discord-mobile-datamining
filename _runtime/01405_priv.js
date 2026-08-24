@@ -6,10 +6,10 @@ import Yallist from "Yallist" /* 1408 */;
 
 function priv(self, lruList, max) {
   if (table[lruList]) {
-    let tmp3 = table[lruList];
+    let tmp3 = tmp[lruList];
   } else {
     tmp3 = callback(lruList);
-    table[lruList] = tmp3;
+    tmp[lruList] = tmp3;
   }
   if (2 === arguments.length) {
     let tmp4 = self[tmp3];
@@ -115,12 +115,12 @@ class LRUCache {
   keys() {
     obj = priv(this, "lruList");
     toArrayResult = obj.toArray();
-    return toArrayResult.map((item, index) => item.key, this);
+    return toArrayResult.map((key) => key.key, this);
   }
   values() {
     obj = priv(this, "lruList");
     toArrayResult = obj.toArray();
-    return toArrayResult.map((item, index) => item.value, this);
+    return toArrayResult.map((value) => value.value, this);
   }
   reset() {
     self = this;
@@ -137,11 +137,11 @@ class LRUCache {
     if (length) {
       str3 = "lruList";
       tmpResult = tmp(self, "lruList");
-      item = tmpResult.forEach(function(item, index) {
+      item = tmpResult.forEach(function(arg0) {
         const self = this;
         const tmp = callback(this, "dispose");
         const call = tmp.call;
-        ({ key, value } = item);
+        ({ key, value } = arg0);
         if (typeof call === "unknown") {
           tmp(key, value);
         } else {
@@ -158,23 +158,25 @@ class LRUCache {
   }
   dump() {
     arr = priv(this, "lruList");
-    mapped = arr.map(function(item, index) {
+    mapped = arr.map(function(maxAge) {
       let flag = false;
-      if (item) {
+      if (maxAge) {
         const self = this;
-        if (!item.maxAge) {
+        if (!maxAge.maxAge) {
           flag = false;
         }
         const _Date = Date;
-        const diff = Date.now() - item.now;
-        if (item.maxAge) {
+        const diff = Date.now() - maxAge.now;
+        if (maxAge.maxAge) {
+          let tmp5 = diff > maxAge.maxAge;
         } else {
-          const tmp5 = callback(self, "maxAge") && diff > callback(self, "maxAge");
+          tmp5 = callback(self, "maxAge") && diff > callback(self, "maxAge");
+          const tmp4 = callback;
         }
       }
       if (!flag) {
         const obj = { k: null, v: null, e: null };
-        ({ key: obj[0], value: obj[1], maxAge, now } = item);
+        ({ key: obj[0], value: obj[1], maxAge, now } = maxAge);
         if (!maxAge) {
           maxAge = 0;
         }
@@ -183,7 +185,7 @@ class LRUCache {
       }
     }, this);
     toArrayResult = mapped.toArray();
-    return toArrayResult.filter((item, index) => item);
+    return toArrayResult.filter((arg0) => arg0);
   }
   dumpLru() {
     return priv(this, "lruList");
@@ -276,7 +278,7 @@ class LRUCache {
     }
     c5 = false;
     tmpResult3 = tmp(self, "lruList");
-    item = tmpResult3.forEach(function(item, index) {
+    item = tmpResult3.forEach(function(key) {
       if (c5) {
         let table = `${closure_1},
         `;
@@ -289,12 +291,12 @@ class LRUCache {
         table = `${closure_1}
         `;
       }
-      let maxAge = item;
+      let maxAge = key;
       let obj = callback(table[2]);
-      const parts = obj.inspect(item.key).split("\n");
-      obj = { value: item.value };
+      const parts = obj.inspect(key.key).split("\n");
+      obj = { value: key.value };
       const joined = parts.join("\n  ");
-      if (item.maxAge !== closure_3) {
+      if (key.maxAge !== closure_3) {
         obj.maxAge = maxAge.maxAge;
       }
       if (callback2 !== c5) {
@@ -310,18 +312,21 @@ class LRUCache {
         const diff = Date.now() - maxAge.now;
         if (maxAge.maxAge) {
           maxAge = maxAge.maxAge;
+          let tmp12 = diff > maxAge;
         } else {
-          const tmp12 = callback2(self, "maxAge") && diff > callback2(self, "maxAge");
+          tmp12 = callback2(self, "maxAge") && diff > callback2(self, "maxAge");
+          const tmp11 = callback2;
         }
       }
       if (flag2) {
         obj.stale = true;
       }
-      const str4 = obj.inspect(item.key);
+      const str4 = obj.inspect(key.key);
+      const tmp5 = callback;
+      const tmp6 = table;
       const tmp5Result = callback(table[2]);
       const parts1 = callback(table[2]).inspect(obj, callback).split("\n");
       table = `${closure_1}${tmp7} => ${obj5.join("\n  ")}`;
-      const str7 = callback(table[2]).inspect(obj, callback);
     });
     tmp24 = c5;
     if (!c5) {
@@ -591,13 +596,13 @@ class LRUCache {
   prune() {
     self = this;
     arr = priv(this, "cache");
-    item = arr.forEach((item, index) => {
-      get(self, index, false);
+    item = arr.forEach((arg0, arg1) => {
+      closure_1_8(self, arg1, false);
     });
     return;
   }
 }
-function forEachStep(self, call, iter, self2) {
+function forEachStep(self, call, iter, arg3) {
   let removeNodeResult = iter.value;
   let flag = false;
   if (removeNodeResult) {
@@ -607,8 +612,10 @@ function forEachStep(self, call, iter, self2) {
     const _Date = Date;
     const diff = Date.now() - removeNodeResult.now;
     if (removeNodeResult.maxAge) {
+      let tmp5 = diff > removeNodeResult.maxAge;
     } else {
-      const tmp5 = priv(self, "maxAge") && diff > priv(self, "maxAge");
+      tmp5 = priv(self, "maxAge") && diff > priv(self, "maxAge");
+      const tmp4 = priv;
     }
   }
   let tmp7 = removeNodeResult;
@@ -620,8 +627,8 @@ function forEachStep(self, call, iter, self2) {
       let obj = priv;
       if (!priv(self, "dispose")) {
         key = obj(self, "length");
-        obj(self, "length", key - removeNodeResult.length);
-        const objResult = obj(self, "cache");
+        let objResult = obj(self, "length", key - removeNodeResult.length);
+        objResult = obj(self, "cache");
         objResult.delete(removeNodeResult.key);
         obj = obj(self, "lruList");
         removeNodeResult = obj.removeNode(iter);
@@ -642,7 +649,7 @@ function forEachStep(self, call, iter, self2) {
     if (typeof call2 === "unknown") {
       call(value3, key2, self);
     } else {
-      call2(self2, value3, key2, self);
+      call2(arg3, value3, key2, self);
     }
   }
 }
@@ -660,8 +667,9 @@ function get(self) {
       const _Date = Date;
       const diff = Date.now() - removeNodeResult.now;
       if (removeNodeResult.maxAge) {
+        let tmp5 = diff > removeNodeResult.maxAge;
       } else {
-        const tmp5 = priv(self, "maxAge") && diff > priv(self, "maxAge");
+        tmp5 = tmp(self, "maxAge") && diff > tmp(self, "maxAge");
       }
     }
     if (flag) {
@@ -669,16 +677,16 @@ function get(self) {
         let iter2 = removeNodeResult;
       } else {
         removeNodeResult = iter.value;
-        if (!priv(self, "dispose")) {
+        if (!tmp(self, "dispose")) {
           value2 = "length";
-          key = priv(self, "length");
-          priv(self, "length", key - removeNodeResult.length);
-          const tmpResult = priv(self, str);
+          key = tmp(self, "length");
+          let tmpResult = tmp(self, "length", key - removeNodeResult.length);
+          tmpResult = tmp(self, str);
           tmpResult.delete(removeNodeResult.key);
-          str = priv(self, "lruList");
+          str = tmp(self, "lruList");
           removeNodeResult = str.removeNode(iter);
         } else {
-          const tmpResult1 = priv(self, "dispose");
+          const tmpResult1 = tmp(self, "dispose");
           const call = tmpResult1.call;
           ({ key, value: value2 } = removeNodeResult);
           if (typeof call !== "unknown") {
@@ -690,9 +698,9 @@ function get(self) {
     } else {
       iter2 = removeNodeResult;
       if (arg2) {
-        priv(self, "lruList").unshiftNode(iter);
+        tmp(self, "lruList").unshiftNode(iter);
         iter2 = removeNodeResult;
-        const tmpResult2 = priv(self, "lruList");
+        const tmpResult2 = tmp(self, "lruList");
       }
     }
     value = iter2;
@@ -704,11 +712,12 @@ function get(self) {
 }
 function trim(self) {
   if (tmp2 > priv(self, "max")) {
-    let iter = priv(self, "lruList").tail;
-    if (tmpResult > priv(self, "max")) {
+    let iter = tmp(self, "lruList").tail;
+    if (tmpResult > tmp(self, "max")) {
       if (null !== iter) {
         const prev = iter.prev;
         while (!iter) {
+          let tmp9 = priv;
           let tmp10 = priv(self, "length");
           if (tmp10 > priv(self, "max")) {
             iter = prev;
@@ -733,9 +742,8 @@ function trim(self) {
         removeNodeResultResult2(key, removeNodeResultResult1);
       }
     }
-    tmpResult = priv(self, "length");
+    tmpResult = tmp(self, "length");
   }
-  tmp2 = priv(self, "length");
 }
 function Entry(key, value, length, now) {
   let num = arg4;
@@ -808,17 +816,17 @@ Object.defineProperty(LRUCache.prototype, "lengthCalculator", {
     }
     let self = this;
     if (tmp !== priv(this, "lengthCalculator")) {
-      priv(self, "lengthCalculator", tmp);
-      priv(self, "length", 0);
-      const item = priv(self, "lruList").forEach(function(item, index) {
+      tmp2(self, "lengthCalculator", tmp);
+      tmp2(self, "length", 0);
+      const item = tmp2(self, "lruList").forEach(function(arg0) {
         const self = this;
         const tmp2 = callback(this, "lengthCalculator");
         const call = tmp2.call;
-        ({ value, key } = item);
-        item.length = typeof call === "unknown" ? tmp2(value, key) : call(self, value, key);
-        callback(self, "length", callback(self, "length") + item.length);
+        ({ value, key } = arg0);
+        arg0.length = typeof call === "unknown" ? tmp2(value, key) : call(self, value, key);
+        callback(self, "length", callback(self, "length") + arg0.length);
       }, self);
-      const tmp2Result1 = priv(self, "lruList");
+      const tmp2Result1 = tmp2(self, "lruList");
     }
     trim(self);
   },

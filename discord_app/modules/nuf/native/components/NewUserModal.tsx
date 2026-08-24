@@ -2,44 +2,51 @@
 
 // Module 16661 (NewUserModal)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createNativeStackNavigator.createNativeStackNavigator();
+createNativeStackNavigator = { header: null };
 createNativeStackNavigator = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 createNativeStackNavigator[0] = createNativeStackNavigator;
 let closure_9 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/NewUserModal.tsx");
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/NewUserModal.tsx");
 
 export default function NewUserModal(arg0) {
   ({ initialRouteName, initialOnboardingStepIndex } = arg0);
+  let _require;
+  let first;
+  dependencyMap = undefined;
   let first1;
   let React;
-  const _require = callback2();
+  closure_5 = undefined;
+  let callback;
+  callback = undefined;
+  _require = callback2();
   const tmp = first1(React.useState(initialOnboardingStepIndex), 2);
-  const first = tmp[0];
+  first = tmp[0];
   dependencyMap = tmp[1];
   const tmp3 = first1(React.useState(initialOnboardingStepIndex), 2);
   first1 = tmp3[0];
   React = tmp3[1];
   closure_5 = React.useRef(null);
   let obj = _require(6312);
-  obj.useAccessibilityNativeStackOptions();
+  callback = obj.useAccessibilityNativeStackOptions();
   const items = [first1, first];
-  const callback = React.useCallback((flag) => {
+  callback = React.useCallback((flag) => {
     if (flag == null) {
       flag = false;
     }
     const nextOnboardingStep = lib(16659).getNextOnboardingStep(flag, first1, first);
-    nextOnboardingStep.then((result) => {
-      const onboardingStepIndex = result.onboardingStepIndex;
-      ({ lastShownStepIndex, continueNavigation } = result);
+    nextOnboardingStep.then((onboardingStepIndex) => {
+      onboardingStepIndex = onboardingStepIndex.onboardingStepIndex;
+      ({ lastShownStepIndex, continueNavigation } = onboardingStepIndex);
       callback(onboardingStepIndex);
       callback2(lastShownStepIndex);
       if (continueNavigation) {
@@ -48,8 +55,7 @@ export default function NewUserModal(arg0) {
           const obj2 = closure_1_0(closure_1_2[11]);
         }
       }
-      first(closure_1_2[12]).popWithKey(closure_1_0(closure_1_2[13]).NEW_USER_MODAL_KEY);
-      const obj = first(closure_1_2[12]);
+      closure_1_1(closure_1_2[12]).popWithKey(closure_1_0(closure_1_2[13]).NEW_USER_MODAL_KEY);
     });
   }, items);
   obj1 = _require(6318);
@@ -111,15 +117,15 @@ export default function NewUserModal(arg0) {
           const merged = Object.assign(arg0);
           obj.onPress = function onPress() {
             closure_0 = closure_7;
-            closure_1_0(closure_1_2[9]);
-            const obj = {
+            let obj = closure_1_0(closure_1_2[9]);
+            obj = {
               onConfirm() {
                 return callback(true);
               }
             };
             obj.openAlert("skip-avatar-upload", closure_1_6(closure_1_4.lazy(() => callback(paths[8])(paths[7], paths.paths)), obj));
           };
-          return closure_1_6(first(closure_1_2[18]), obj);
+          return closure_1_6(closure_1_1(closure_1_2[18]), obj);
         }
       };
     },

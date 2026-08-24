@@ -1,9 +1,9 @@
-// === Module 13556: obj132 ===
+// === Module 13556: set ===
 
-// Module 13556 (obj132)
-import obj132 from "obj132" /* 2 */;
+// Module 13556 (set)
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/tracking/TrackingConsentUtils.tsx");
+const result = set.fileFinishedImporting("modules/tracking/TrackingConsentUtils.tsx");
 
 export default {
   canUseInstallationId() {

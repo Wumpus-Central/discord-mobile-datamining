@@ -1,7 +1,7 @@
 // === Module 8716: getShelfItemTrackingProperties ===
 
 // Module 8716 (getShelfItemTrackingProperties)
-import obj132 from "obj132" /* 500 */;
+import set2 from "set" /* 500 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
@@ -10,27 +10,27 @@ import _modDef8666 from "module_8666" /* 8666 */;
 import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 8705 */;
 import getPlatformDefault from "getPlatform" /* 8718 */;
 import getShelfItemDataDefault from "getShelfItemData" /* 8719 */;
-import NativeModulesDefault from "NativeModules" /* 8720 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import getParticipants from "getParticipants" /* 4773 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "getParticipants" /* 4773 */;
 import { GUILD_VOCAL_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import initialize from "initialize" /* 8717 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createRTCConnection" /* 4539 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "initialize" /* 8717 */;
+import closure_12 from "participantFromServer" /* 1390 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function getShelfItemTrackingProperties(activity) {
   let releasePhase;
   if (activity != null) {
     activity = activity.activity;
     if (activity != null) {
-      const obj = obj132;
+      const obj = set2;
       releasePhase = activity.client_platform_config[getPlatformDefault(undefined, obj.getOS(obj))].release_phase;
+      const tmp4 = getPlatformDefault;
     }
   }
   return { releasePhase };
@@ -53,7 +53,6 @@ function handleActivityLaunchStart(arg0) {
     obj[2] = source;
     closure_19[applicationId] = obj;
   }
-  tmp = null != analyticsLocations || null != source;
 }
 function handleActivityClose() {
   const self = this;
@@ -67,7 +66,7 @@ function handleActivityClose() {
 }
 function _handleActivityClose() {
   const self = this;
-  const tmp = callback((arg0) => {
+  let tmp = callback((arg0) => {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
@@ -103,6 +102,7 @@ function _handleActivityClose() {
               let callback;
               lib = undefined;
               dependencyMap = undefined;
+              let tmp = callback;
               ({ applicationId: c0, location: c1, instanceId: c2 } = callback);
               embeddedActivityDurationMs = undefined;
               sessionId2 = undefined;
@@ -182,10 +182,15 @@ function _handleActivityClose() {
                   obj6[1] = channel;
                   obj6[2] = closure_5.mediaSessionIds[0];
                   obj6[3] = closure_5.activitySessionId;
+                  tmp = callback;
                   obj6[4] = callback;
+                  tmp = embeddedActivityDurationMs;
                   obj6[5] = embeddedActivityDurationMs;
+                  tmp = premiumType;
                   obj6[6] = premiumType.premiumType;
+                  tmp = constants;
                   obj6[7] = constants;
+                  tmp = releasePhase;
                   obj6[8] = releasePhase;
                   let shelf_rank;
                   if (activity != null) {
@@ -256,11 +261,11 @@ function handleOpenEmbeddedActivity(applicationId) {
   }
   obj1 = applicationId(8722);
   if (obj1.tryLaunchAsFrame({ applicationId })) {
-    tmp4(8723);
+    let tmp4Result = tmp4(8723);
     obj = { isStart: null, inviterUserId: null, channelId: null, guildId: null, locationKind: null, launchId: null, compositeInstanceId: null, activitiesInfraVersion: null };
     obj[0] = isStart;
     obj[1] = inviterUserId;
-    const tmp4Result = tmp4(4011);
+    tmp4Result = tmp4(4011);
     obj[2] = tmp4Result.getEmbeddedActivityLocationChannelId(_location);
     obj[3] = tmp4(4011).getEmbeddedActivityLocationGuildId(_location);
     obj[4] = _location.kind;
@@ -274,7 +279,7 @@ function handleOpenEmbeddedActivity(applicationId) {
     const tmp4Result1 = tmp4(4011);
   } else {
     importDefault = id.getId();
-    const found = participants.find((item, index) => item.userId === closure_1);
+    const found = participants.find((userId) => userId.userId === closure_1);
     const embeddedActivityLocationChannelId = tmp4(4011).getEmbeddedActivityLocationChannelId(_location);
     const tmp4Result2 = tmp4(4011);
     const embeddedActivityLocationGuildId = tmp4(4011).getEmbeddedActivityLocationGuildId(_location);
@@ -294,6 +299,7 @@ function handleOpenEmbeddedActivity(applicationId) {
     }
     if (isFirstActivityInChannel) {
       const participant = _modDef8666.selectParticipant(channel.id, null);
+      const obj6 = _modDef8666;
     }
     if (null != found) {
       const mediaSessionId = store2.getMediaSessionId();
@@ -328,7 +334,7 @@ function handleOpenEmbeddedActivity(applicationId) {
             obj[0] = applicationId;
             obj[1] = shelfActivities;
             const tmp55 = getShelfItemDataDefault(obj);
-            const sum = 1 + shelfOrder.findIndex((item, index) => item === applicationId);
+            const sum = 1 + shelfOrder.findIndex((arg0) => arg0 === applicationId);
             let release_phase;
             if (tmp55 != null) {
               const activity = tmp55.activity;
@@ -420,6 +426,7 @@ function handleOpenEmbeddedActivity(applicationId) {
             obj2[18] = interactionId;
             obj2[19] = _location.kind;
             expandEventPropertiesDefault.track(constants.ACTIVITY_SESSION_JOINED, obj2);
+            const tmp31 = constants;
             const tmp54Result1 = expandEventPropertiesDefault;
             let locations1;
             if (dependencyMap2[applicationId] != null) {
@@ -455,7 +462,7 @@ function handleOpenEmbeddedActivity(applicationId) {
             obj3[11] = tmp46;
             obj3[12] = num2;
             obj3[13] = _location.kind;
-            expandEventPropertiesDefault.track(constants.ACTIVITY_IFRAME_MOUNT, obj3);
+            expandEventPropertiesDefault.track(tmp31.ACTIVITY_IFRAME_MOUNT, obj3);
             const tmp54Result2 = expandEventPropertiesDefault;
           }
           const tmp4Result4 = tmp4(514);
@@ -482,19 +489,28 @@ class EmbeddedActivitiesManager extends tmp3 {
       const iter = values[Symbol.iterator]();
       while (iter !== undefined) {
         ({ location: _location, applicationId } = nextResult);
-        let obj2 = lib(dependencyMap[14]);
+        let tmp5 = lib;
+        let tmp4 = _location;
+        let tmp6 = closure_1_2;
+        let obj2 = lib(closure_1_2[14]);
         let embeddedActivityLocationChannelId = obj2.getEmbeddedActivityLocationChannelId(_location);
         let tmp8 = embeddedActivityLocationChannelId;
         let tmp9 = null != embeddedActivityLocationChannelId;
         if (tmp9) {
-          tmp9 = applyArgumentsResult(dependencyMap[28])(tmp8);
+          let tmp10 = applyArgumentsResult;
+          let tmp11 = embeddedActivityLocationChannelId;
+          tmp9 = applyArgumentsResult(tmp6[28])(tmp8);
         }
         if (tmp9) {
+          let tmp12 = embeddedActivityLocationChannelId;
           tmp9 = tmp8 !== voiceChannelId;
         }
         if (tmp9) {
+          let tmp13 = lib;
           let obj = { location: null, applicationId: null };
-          obj[0] = _location;
+          let tmp14 = _location;
+          obj[0] = tmp4;
+          let tmp15 = applicationId;
           obj[1] = applicationId;
           let leaveActivityResult = lib.leaveActivity(obj);
         }
@@ -503,14 +519,14 @@ class EmbeddedActivitiesManager extends tmp3 {
       if (null != voiceChannelId) {
         const embeddedActivitiesForChannel = closure_1_12.getEmbeddedActivitiesForChannel(voiceChannelId);
         lib = closure_1_6.getId();
-        const item = embeddedActivitiesForChannel.forEach((item, index) => {
-          const userIds = item.userIds;
+        const item = embeddedActivitiesForChannel.forEach((userIds) => {
+          userIds = userIds.userIds;
           if (userIds.has(lib)) {
-            let obj = lib(dependencyMap[14]);
-            const selfEmbeddedActivityForChannel = closure_2_12.getSelfEmbeddedActivityForChannel(obj.getEmbeddedActivityLocationChannelId(item.location));
+            let obj = lib(closure_2_2[14]);
+            const selfEmbeddedActivityForChannel = closure_2_12.getSelfEmbeddedActivityForChannel(obj.getEmbeddedActivityLocationChannelId(userIds.location));
             if (null == selfEmbeddedActivityForChannel) {
               obj = { location: null, applicationId: null };
-              ({ location: obj3[0], applicationId: obj3[1] } = item);
+              ({ location: obj3[0], applicationId: obj3[1] } = userIds);
               lib.leaveActivity(obj);
             } else if (null == voiceChannelId) {
               obj = { location: null, applicationId: null };
@@ -520,7 +536,6 @@ class EmbeddedActivitiesManager extends tmp3 {
           }
         });
       }
-      nextResult = iter.next();
     };
     applyArgumentsResult.handleActivityWebViewRelease = function handleActivityWebViewRelease() {
       lib.releaseWebView();
@@ -540,7 +555,6 @@ class EmbeddedActivitiesManager extends tmp3 {
       if (obj.isUsingDevShelfActivityUrlOverride()) {
         const result = lib.showDevShelfOverrideEnabled();
       }
-      obj = lib(dependencyMap[29]);
     };
     closure_0 = undefined;
     closure_1 = applyArgumentsResult;
@@ -698,7 +712,9 @@ class EmbeddedActivitiesManager extends tmp3 {
           for (const item10008 of values) {
             let _location = item10008.location;
             if (item10008.applicationId === id) {
+              let tmp2 = lib;
               let obj = { location: null, applicationId: null };
+              let tmp3 = _location;
               obj[0] = _location;
               obj[1] = id;
               let leaveActivityResult = lib.leaveActivity(obj);
@@ -709,9 +725,9 @@ class EmbeddedActivitiesManager extends tmp3 {
             obj = { rpc_close_code: null, rpc_message: null, application_id: null };
             ({ code: obj3[0], message: obj3[1] } = reason);
             obj[2] = id;
-            applyArgumentsResult(dependencyMap[17]).track(closure_1_13.ACTIVITY_CLOSED_RPC_ERROR, obj);
+            applyArgumentsResult(closure_1_2[17]).track(closure_1_13.ACTIVITY_CLOSED_RPC_ERROR, obj);
             lib.showErrorModal(reason, id);
-            const obj2 = applyArgumentsResult(dependencyMap[17]);
+            const obj2 = applyArgumentsResult(closure_1_2[17]);
           }
         }
       }
@@ -722,7 +738,6 @@ class EmbeddedActivitiesManager extends tmp3 {
       if (tmp2) {
         lib.handleCallEnded(channelId);
       }
-      tmp2 = null != voiceChannelId && voiceChannelId === channelId;
     };
     applyArgumentsResult.handleRTCConnectionState = function handleRTCConnectionState(state) {
       if (state.state === closure_1_16.DISCONNECTED) {
@@ -778,6 +793,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 c2 = undefined;
                 c3 = undefined;
                 c4 = undefined;
+                let tmp = c0;
                 ({ channelId: c0, applicationId: getChannel, analyticsLocations: c2, commandOrigin: c3, inviterUserId: c4 } = c0);
                 c5 = undefined;
                 c6 = undefined;
@@ -803,10 +819,19 @@ class EmbeddedActivitiesManager extends tmp3 {
                   obj1[0] = arg1;
                   return obj1;
                 } else {
+                  tmp = c3;
+                  tmp = c4;
+                  tmp = closure_1_7;
                   getChannel = closure_1_7.getChannel;
+                  tmp = callback;
                   const set = getChannel(callback);
+                  tmp = set;
                   if (undefined !== set) {
+                    tmp = c3;
+                    tmp = c4;
+                    tmp = null;
                     let type;
+                    tmp = set;
                     if (set != null) {
                       type = set.type;
                     }
@@ -839,7 +864,11 @@ class EmbeddedActivitiesManager extends tmp3 {
                   obj3[0] = arg1;
                   return obj3;
                 } else {
+                  tmp = c3;
+                  tmp = c4;
                   closure_7 = arg1;
+                  tmp = callback;
+                  tmp = closure_1_2;
                   if (!obj25.getIsActivitiesEnabledForCurrentPlatform()) {
                     const intl = callback(closure_1_2[33]).intl;
                     closure_1_1.showLaunchErrorModal(intl.string(callback(closure_1_2[33]).t.UXoQTp));
@@ -860,10 +889,15 @@ class EmbeddedActivitiesManager extends tmp3 {
                     closure_9 = arg1;
                     activityConfigs = closure_9.activityConfigs;
                     applications = closure_9.applications;
+                    tmp = closure_1_2;
                     const obj5 = { applicationId: null, activityConfigs: null, applications: null };
+                    tmp = getChannel;
                     obj5[0] = getChannel;
+                    tmp = activityConfigs;
                     obj5[1] = activityConfigs;
+                    tmp = applications;
                     obj5[2] = applications;
+                    tmp = null;
                     if (null == closure_1_1(closure_1_2[15])(obj5)) {
                       let obj9 = callback(closure_1_2[35]);
                       let obj6 = { guildId: null, force: true };
@@ -912,7 +946,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                   return obj;
                 }
                 const embeddedActivitiesForChannel = closure_1_12.getEmbeddedActivitiesForChannel(callback);
-                closure_13 = embeddedActivitiesForChannel.find((item, index) => item.applicationId === getChannel);
+                closure_13 = embeddedActivitiesForChannel.find((applicationId) => applicationId.applicationId === getChannel);
                 let size;
                 if (closure_13 != null) {
                   size = closure_13.userIds.size;
@@ -1003,13 +1037,13 @@ class EmbeddedActivitiesManager extends tmp3 {
     applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
       guild = guild.guild;
       const selfEmbeddedActivities = closure_1_12.getSelfEmbeddedActivities();
-      const item = selfEmbeddedActivities.forEach((item, index) => {
-        const _location = item.location;
-        let obj = guild(dependencyMap[14]);
+      const item = selfEmbeddedActivities.forEach((location) => {
+        const _location = location.location;
+        let obj = guild(closure_2_2[14]);
         if (guild.id === obj.getEmbeddedActivityLocationGuildId(_location)) {
           obj = { location: null, applicationId: null };
           obj[0] = _location;
-          obj[1] = item.applicationId;
+          obj[1] = location.applicationId;
           guild.leaveActivity(obj);
         }
       });
@@ -1026,13 +1060,13 @@ class EmbeddedActivitiesManager extends tmp3 {
       ({ nonce, data } = arg0);
       if (null == dependencyMap[data.applicationId]) {
         if (data.interactionType === lib(table[38]).InteractionTypes.APPLICATION_COMMAND) {
-          const items = [applyArgumentsResult(table[39]).INTERACTION_APPLICATION_COMMAND];
+          const items = [applyArgumentsResult(tmp8[39]).INTERACTION_APPLICATION_COMMAND];
           let tmp2 = items;
-        } else if (data.interactionType === lib(table[38]).InteractionTypes.MESSAGE_COMPONENT) {
-          const items1 = [applyArgumentsResult(table[39]).INTERACTION_MESSAGE_COMPONENT];
+        } else if (data.interactionType === tmp7(tmp8[38]).InteractionTypes.MESSAGE_COMPONENT) {
+          const items1 = [applyArgumentsResult(tmp8[39]).INTERACTION_MESSAGE_COMPONENT];
           tmp2 = items1;
-        } else if (data.interactionType === lib(table[38]).InteractionTypes.MODAL_SUBMIT) {
-          const items2 = [applyArgumentsResult(table[39]).INTERACTION_MODAL_SUBMIT];
+        } else if (data.interactionType === tmp7(tmp8[38]).InteractionTypes.MODAL_SUBMIT) {
+          const items2 = [applyArgumentsResult(tmp8[39]).INTERACTION_MODAL_SUBMIT];
           tmp2 = items2;
         }
         let obj = { applicationId: null, nonce: null, locations: null };
@@ -1112,19 +1146,33 @@ prototype["_initialize"] = function _initialize() {
   const ComponentDispatch2 = ComponentDispatcher.ComponentDispatch;
   const subscription1 = ComponentDispatch2.subscribe(constants2.OPEN_EMBEDDED_ACTIVITY, handleOpenEmbeddedActivity);
   const subscription2 = dispatcherDefault.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", handleActivityLaunchStart);
+  const obj = dispatcherDefault;
   const subscription3 = dispatcherDefault.subscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess);
+  const obj2 = dispatcherDefault;
   const subscription4 = dispatcherDefault.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail);
+  const obj3 = dispatcherDefault;
   const subscription5 = dispatcherDefault.subscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel);
+  const obj4 = dispatcherDefault;
   const subscription6 = dispatcherDefault.subscribe("EMBEDDED_ACTIVITY_CLOSE", handleActivityClose);
+  const obj5 = dispatcherDefault;
   const subscription7 = dispatcherDefault.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen);
+  const obj6 = dispatcherDefault;
   const subscription8 = dispatcherDefault.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect);
+  const obj7 = dispatcherDefault;
   const subscription9 = dispatcherDefault.subscribe("CALL_DELETE", this.handleCallDelete);
+  const obj8 = dispatcherDefault;
   const subscription10 = dispatcherDefault.subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState);
+  const obj9 = dispatcherDefault;
   const subscription11 = dispatcherDefault.subscribe("GUILD_DELETE", this.handleGuildDelete);
+  const obj10 = dispatcherDefault;
   const subscription12 = dispatcherDefault.subscribe("CHANNEL_DELETE", this.handleChannelDelete);
+  const obj11 = dispatcherDefault;
   const subscription13 = dispatcherDefault.subscribe("INTERACTION_QUEUE", this.handleInteractionQueue);
+  const obj12 = dispatcherDefault;
   const subscription14 = dispatcherDefault.subscribe("INTERACTION_CREATE", this.handleInteractionCreate);
+  const obj13 = dispatcherDefault;
   const subscription15 = dispatcherDefault.subscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess);
+  const obj14 = dispatcherDefault;
   const subscription16 = dispatcherDefault.subscribe("INTERACTION_FAILURE", this.handleInteractionFailure);
 };
 prototype["_terminate"] = function _terminate() {
@@ -1134,22 +1182,36 @@ prototype["_terminate"] = function _terminate() {
   const ComponentDispatch2 = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch2.unsubscribe(constants2.OPEN_EMBEDDED_ACTIVITY, handleOpenEmbeddedActivity);
   dispatcherDefault.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", handleActivityLaunchStart);
+  const obj = dispatcherDefault;
   dispatcherDefault.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess);
+  const obj2 = dispatcherDefault;
   dispatcherDefault.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel);
+  const obj4 = dispatcherDefault;
   dispatcherDefault.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", handleActivityClose);
+  const obj5 = dispatcherDefault;
   dispatcherDefault.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen);
+  const obj6 = dispatcherDefault;
   dispatcherDefault.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect);
+  const obj7 = dispatcherDefault;
   dispatcherDefault.unsubscribe("CALL_DELETE", this.handleCallDelete);
+  const obj8 = dispatcherDefault;
   dispatcherDefault.unsubscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState);
+  const obj9 = dispatcherDefault;
   dispatcherDefault.unsubscribe("GUILD_DELETE", this.handleGuildDelete);
+  const obj10 = dispatcherDefault;
   dispatcherDefault.unsubscribe("CHANNEL_DELETE", this.handleChannelDelete);
+  const obj11 = dispatcherDefault;
   dispatcherDefault.unsubscribe("INTERACTION_QUEUE", this.handleInteractionQueue);
+  const obj12 = dispatcherDefault;
   dispatcherDefault.unsubscribe("INTERACTION_CREATE", this.handleInteractionCreate);
+  const obj13 = dispatcherDefault;
   dispatcherDefault.unsubscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess);
+  const obj14 = dispatcherDefault;
   dispatcherDefault.unsubscribe("INTERACTION_FAILURE", this.handleInteractionFailure);
 };
-let result = require("obj132").fileFinishedImporting("modules/activities/EmbeddedActivitiesManager.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/EmbeddedActivitiesManager.tsx");
 
 export default EmbeddedActivitiesManager;
 export const trackFrameSessionStart = function trackFrameSessionStart(applicationId) {
@@ -1191,17 +1253,17 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       obj[0] = applicationId;
       obj[1] = shelfActivities;
       const tmp15 = getShelfItemDataDefault(obj);
-      const sum = 1 + shelfOrder.findIndex((item, index) => item === closure_0);
+      const sum = 1 + shelfOrder.findIndex((arg0) => arg0 === closure_0);
       let release_phase;
       if (tmp15 != null) {
         const activity = tmp15.activity;
         if (activity != null) {
-          let tmp14Result = getPlatformDefault;
+          let tmp14Result = tmp14(8718);
           tmpResult = tmp(500);
           release_phase = activity.client_platform_config[tmp14Result(undefined, tmpResult.getOS(tmpResult))].release_phase;
         }
       }
-      tmp14Result = NativeModulesDefault;
+      tmp14Result = tmp14(8720);
       const rawThermalState = tmp14Result.getRawThermalState();
       obj1 = { channel_id: null, guild_id: null, media_session_id: null, activity_session_id: null, application_id: null, location_stack: null, user_premium_tier: null, raw_thermal_state: null, n_participants: null, is_activity_start: null, release_phase: null, shelf_rank: null, shelf_sorted_rank: null, activity_user_session_id: null, channel_type: null, source: null, command_context_type: null, invite_inviter_id: null, interaction_id: null, embedded_activity_location_kind: null };
       obj1[0] = channelId;
@@ -1262,6 +1324,7 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       obj1[19] = locationKind;
       expandEventPropertiesDefault.track(constants.ACTIVITY_SESSION_JOINED, obj1);
       const tmp14Result1 = expandEventPropertiesDefault;
+      const tmp22 = constants;
       let locations1;
       if (dependencyMap2[applicationId] != null) {
         locations1 = tmp21.locations;
@@ -1296,7 +1359,7 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       obj2[11] = tmp37;
       obj2[12] = activitiesInfraVersion;
       obj2[13] = locationKind;
-      expandEventPropertiesDefault.track(constants.ACTIVITY_IFRAME_MOUNT, obj2);
+      expandEventPropertiesDefault.track(tmp22.ACTIVITY_IFRAME_MOUNT, obj2);
       const tmp14Result2 = expandEventPropertiesDefault;
     }
   }
@@ -1329,12 +1392,12 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       if (tmp13 != null) {
         const activity = tmp13.activity;
         if (activity != null) {
-          let tmp11Result = getPlatformDefault;
-          const obj2 = obj132;
+          let tmp11Result = tmp11(8718);
+          const obj2 = set2;
           release_phase = activity.client_platform_config[tmp11Result(undefined, obj2.getOS(obj2))].release_phase;
         }
       }
-      tmp11Result = NativeModulesDefault;
+      tmp11Result = tmp11(8720);
       const rawThermalState = tmp11Result.getRawThermalState();
       let diff = null;
       if (null != tmp3.connectedSince) {
@@ -1368,6 +1431,7 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       ({ mediaSessionIds: obj5[12], frameLocationKind: obj5[13] } = tmp3);
       expandEventPropertiesDefault.track(constants.ACTIVITY_SESSION_LEFT, obj);
       const tmp11Result1 = expandEventPropertiesDefault;
+      const tmp20 = constants;
       obj = { channel_id: null, guild_id: null, application_id: null, instance_ids: null, media_session_ids: null, activity_user_session_id: null, raw_thermal_state: null, duration_ms: null, embedded_activity_location_kind: null };
       obj[0] = frameChannelId;
       obj[1] = frameGuildId;
@@ -1382,7 +1446,7 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       obj[6] = rawThermalState;
       obj[7] = diff;
       obj[8] = tmp3.frameLocationKind;
-      expandEventPropertiesDefault.track(constants.ACTIVITY_IFRAME_UNMOUNT, obj);
+      expandEventPropertiesDefault.track(tmp20.ACTIVITY_IFRAME_UNMOUNT, obj);
       delete tmp[tmp2];
       const tmp11Result2 = expandEventPropertiesDefault;
     }

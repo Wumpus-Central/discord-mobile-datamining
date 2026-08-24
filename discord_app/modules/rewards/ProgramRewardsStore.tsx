@@ -2,13 +2,13 @@
 
 // Module 13272 (updateTtl)
 import initializeDefault from "initialize" /* 589 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import canFetchNitroProgramReward from "canFetchNitroProgramReward" /* 13274 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
+require = arg1;
 function updateTtl() {
   ({ state, msUntilReward } = (function getCacheTtlState() {
     value = value.getValue();
@@ -23,29 +23,49 @@ function updateTtl() {
       const obj7 = values[Symbol.iterator]();
       while (obj7 !== undefined) {
         let _Date = Date;
+        let tmp4 = new.target;
+        let tmp5 = new.target;
         let date1 = new Date(tmp2.next_reward_date);
+        let tmp6 = date1;
         let tmp7 = date1;
         let _isNaN = isNaN;
         if (!isNaN(date1.getTime())) {
+          let tmp8 = callback;
+          let tmp9 = table;
+          let tmp10 = tmp6;
           let tmp11 = callback(table[3])(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
             obj = { state: null };
+            let tmp18 = closure_8;
             obj[0] = closure_8.PAST_REWARD_DATE;
+            let tmp19 = obj7;
             obj7.return();
             return obj;
-          } else if (date >= tmp7) {
-            obj1 = { state: null, msUntilReward: null };
-            obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-            obj1[1] = callback(table[4])(tmp12, date);
-            obj7.return();
-            return obj1;
-          } else if (date >= callback(table[5])(tmp7, -1)) {
-            let obj2 = { state: null, msUntilReward: null };
-            obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-            obj2[1] = callback(table[4])(tmp12, date);
-            obj7.return();
-            return obj2;
+          } else {
+            let tmp29 = tmp6;
+            if (date >= tmp7) {
+              let tmp15 = tmp11;
+              obj1 = { state: null, msUntilReward: null };
+              let tmp16 = closure_8;
+              obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
+              obj1[1] = tmp8(tmp9[4])(tmp12, date);
+              let tmp17 = obj7;
+              obj7.return();
+              return obj1;
+            } else {
+              let tmp13 = tmp6;
+              if (date >= tmp8(tmp9[5])(tmp7, -1)) {
+                let tmp30 = tmp11;
+                let obj2 = { state: null, msUntilReward: null };
+                let tmp31 = closure_8;
+                obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
+                obj2[1] = tmp8(tmp9[4])(tmp12, date);
+                let tmp14 = obj7;
+                obj7.return();
+                return obj2;
+              }
+            }
           }
         }
         continue;
@@ -61,57 +81,12 @@ function updateTtl() {
     }
     let tmp4 = msUntilReward;
   } else {
-    if (closure_8.MORE_THAN_24H_BEFORE_REWARD !== state) {
-      const PAST_REWARD_DATE = closure_8.PAST_REWARD_DATE;
+    if (tmp3.MORE_THAN_24H_BEFORE_REWARD !== state) {
+      const PAST_REWARD_DATE = tmp3.PAST_REWARD_DATE;
     }
     tmp4 = c6;
   }
   networkTtlCache.setTtl(tmp4);
-  const tmp = (function getCacheTtlState() {
-    value = value.getValue();
-    if (null == value) {
-      obj = { state: null };
-      obj[0] = closure_8.MORE_THAN_24H_BEFORE_REWARD;
-      return obj;
-    } else {
-      const _Date2 = Date;
-      const date = new Date();
-      const values = value.values();
-      const obj7 = values[Symbol.iterator]();
-      while (obj7 !== undefined) {
-        let _Date = Date;
-        let date1 = new Date(tmp2.next_reward_date);
-        let tmp7 = date1;
-        let _isNaN = isNaN;
-        if (!isNaN(date1.getTime())) {
-          let tmp11 = callback(table[3])(tmp7, 10);
-          let tmp12 = tmp11;
-          if (date >= tmp11) {
-            obj = { state: null };
-            obj[0] = closure_8.PAST_REWARD_DATE;
-            obj7.return();
-            return obj;
-          } else if (date >= tmp7) {
-            obj1 = { state: null, msUntilReward: null };
-            obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-            obj1[1] = callback(table[4])(tmp12, date);
-            obj7.return();
-            return obj1;
-          } else if (date >= callback(table[5])(tmp7, -1)) {
-            let obj2 = { state: null, msUntilReward: null };
-            obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-            obj2[1] = callback(table[4])(tmp12, date);
-            obj7.return();
-            return obj2;
-          }
-        }
-        continue;
-      }
-      const obj3 = { state: null };
-      obj3[0] = closure_8.MORE_THAN_24H_BEFORE_REWARD;
-      return obj3;
-    }
-  })();
 }
 let obj = { NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD", CACHE_SHOULD_NOT_FETCH: "CACHE_SHOULD_NOT_FETCH" };
 let c6 = 86400000;
@@ -133,13 +108,19 @@ class ProgramRewardsStore extends PersistedStore {
       }
       obj = {};
       while (tmp2 !== undefined) {
+        let tmp4 = closure_1_3;
         let tmp5 = closure_1_3(tmp3, 2);
         [tmp6, tmp8] = tmp5;
-        let StringResult = applyArgumentsResult(dependencyMap[9]).RewardProgram[tmp6];
+        let tmp9 = applyArgumentsResult;
+        let tmp10 = closure_1_2;
+        let tmp7 = tmp6;
+        let StringResult = applyArgumentsResult(closure_1_2[9]).RewardProgram[tmp6];
         if (StringResult == null) {
           let _String = String;
-          StringResult = String(tmp6);
+          let tmp12 = tmp6;
+          StringResult = String(tmp7);
         }
+        let tmp13 = tmp8;
         obj[StringResult] = tmp8;
         continue;
       }
@@ -176,8 +157,8 @@ class ProgramRewardsStore extends PersistedStore {
               obj = { programRewards: null };
               const _Object2 = Object;
               const entries = Object.entries(rewards);
-              obj[0] = entries.map((item, index) => {
-                [tmp, tmp2] = item;
+              obj[0] = entries.map((arg0) => {
+                [tmp, tmp2] = arg0;
                 obj = {};
                 const merged = Object.assign(tmp2);
                 let NumberResult = callback(table[9]).RewardProgram[tmp];
@@ -229,29 +210,49 @@ prototype["initialize"] = function initialize(cache) {
       const obj7 = values[Symbol.iterator]();
       while (obj7 !== undefined) {
         let _Date = Date;
+        let tmp4 = new.target;
+        let tmp5 = new.target;
         let date1 = new Date(tmp2.next_reward_date);
+        let tmp6 = date1;
         let tmp7 = date1;
         let _isNaN = isNaN;
         if (!isNaN(date1.getTime())) {
+          let tmp8 = callback;
+          let tmp9 = table;
+          let tmp10 = tmp6;
           let tmp11 = callback(table[3])(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
             obj = { state: null };
+            let tmp18 = closure_8;
             obj[0] = closure_8.PAST_REWARD_DATE;
+            let tmp19 = obj7;
             obj7.return();
             return obj;
-          } else if (date >= tmp7) {
-            obj1 = { state: null, msUntilReward: null };
-            obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-            obj1[1] = callback(table[4])(tmp12, date);
-            obj7.return();
-            return obj1;
-          } else if (date >= callback(table[5])(tmp7, -1)) {
-            let obj2 = { state: null, msUntilReward: null };
-            obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-            obj2[1] = callback(table[4])(tmp12, date);
-            obj7.return();
-            return obj2;
+          } else {
+            let tmp29 = tmp6;
+            if (date >= tmp7) {
+              let tmp15 = tmp11;
+              obj1 = { state: null, msUntilReward: null };
+              let tmp16 = closure_8;
+              obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
+              obj1[1] = tmp8(tmp9[4])(tmp12, date);
+              let tmp17 = obj7;
+              obj7.return();
+              return obj1;
+            } else {
+              let tmp13 = tmp6;
+              if (date >= tmp8(tmp9[5])(tmp7, -1)) {
+                let tmp30 = tmp11;
+                let obj2 = { state: null, msUntilReward: null };
+                let tmp31 = closure_8;
+                obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
+                obj2[1] = tmp8(tmp9[4])(tmp12, date);
+                let tmp14 = obj7;
+                obj7.return();
+                return obj2;
+              }
+            }
           }
         }
         continue;
@@ -267,57 +268,12 @@ prototype["initialize"] = function initialize(cache) {
     }
     let tmp13 = msUntilReward;
   } else {
-    if (closure_8.MORE_THAN_24H_BEFORE_REWARD !== state) {
-      const PAST_REWARD_DATE = closure_8.PAST_REWARD_DATE;
+    if (tmp12.MORE_THAN_24H_BEFORE_REWARD !== state) {
+      const PAST_REWARD_DATE = tmp12.PAST_REWARD_DATE;
     }
     tmp13 = c6;
   }
   networkTtlCache.setTtl(tmp13);
-  const tmp10 = (function getCacheTtlState() {
-    value = value.getValue();
-    if (null == value) {
-      obj = { state: null };
-      obj[0] = closure_8.MORE_THAN_24H_BEFORE_REWARD;
-      return obj;
-    } else {
-      const _Date2 = Date;
-      const date = new Date();
-      const values = value.values();
-      const obj7 = values[Symbol.iterator]();
-      while (obj7 !== undefined) {
-        let _Date = Date;
-        let date1 = new Date(tmp2.next_reward_date);
-        let tmp7 = date1;
-        let _isNaN = isNaN;
-        if (!isNaN(date1.getTime())) {
-          let tmp11 = callback(table[3])(tmp7, 10);
-          let tmp12 = tmp11;
-          if (date >= tmp11) {
-            obj = { state: null };
-            obj[0] = closure_8.PAST_REWARD_DATE;
-            obj7.return();
-            return obj;
-          } else if (date >= tmp7) {
-            obj1 = { state: null, msUntilReward: null };
-            obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-            obj1[1] = callback(table[4])(tmp12, date);
-            obj7.return();
-            return obj1;
-          } else if (date >= callback(table[5])(tmp7, -1)) {
-            let obj2 = { state: null, msUntilReward: null };
-            obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-            obj2[1] = callback(table[4])(tmp12, date);
-            obj7.return();
-            return obj2;
-          }
-        }
-        continue;
-      }
-      const obj3 = { state: null };
-      obj3[0] = closure_8.MORE_THAN_24H_BEFORE_REWARD;
-      return obj3;
-    }
-  })();
 };
 prototype["getState"] = function getState() {
   const iter = networkTtlCache.serialize();
@@ -343,7 +299,7 @@ prototype["getTotalDaysInDuration"] = function getTotalDaysInDuration(arg0) {
       rounded = null;
       if (total_countdown_duration_ms > 0) {
         const _Math = Math;
-        rounded = Math.ceil(total_countdown_duration_ms / obj132Default.Millis.DAY);
+        rounded = Math.ceil(total_countdown_duration_ms / setDefault.Millis.DAY);
       }
     }
     return rounded;
@@ -366,6 +322,7 @@ prototype["isReady"] = function isReady() {
     let hasCachedValueResult = self.hasCachedValue();
     if (!hasCachedValueResult) {
       hasCachedValueResult = !canFetchNitroProgramReward.canFetchAnyProgramReward("ProgramRewardsStore");
+      obj = canFetchNitroProgramReward;
     }
     if (!hasCachedValueResult) {
       hasCachedValueResult = self.isError();
@@ -396,8 +353,8 @@ prototype["getStatus"] = function getStatus() {
   return networkTtlCache.getStatus();
 };
 prototype["getRewardForProgram"] = function getRewardForProgram(arg0) {
-  networkTtlCache.getValue();
-  let value;
+  let value = networkTtlCache.getValue();
+  value = undefined;
   if (value != null) {
     value = value.get(arg0);
   }
@@ -421,10 +378,10 @@ obj = {
     if (networkTtlCache.isLoading()) {
       const _Map = Map;
       map = new Map();
-      const item = programRewards.forEach((item, index) => {
-        const result = map.set(item.reward_program, item);
+      const item = programRewards.forEach((reward_program) => {
+        const result = map.set(reward_program.reward_program, reward_program);
       });
-      networkTtlCache.setValue(map);
+      obj.setValue(map);
       ({ state, msUntilReward } = (function getCacheTtlState() {
         value = value.getValue();
         if (null == value) {
@@ -438,29 +395,49 @@ obj = {
           const obj7 = values[Symbol.iterator]();
           while (obj7 !== undefined) {
             let _Date = Date;
+            let tmp4 = new.target;
+            let tmp5 = new.target;
             let date1 = new Date(tmp2.next_reward_date);
+            let tmp6 = date1;
             let tmp7 = date1;
             let _isNaN = isNaN;
             if (!isNaN(date1.getTime())) {
+              let tmp8 = callback;
+              let tmp9 = table;
+              let tmp10 = tmp6;
               let tmp11 = callback(table[3])(tmp7, 10);
               let tmp12 = tmp11;
               if (date >= tmp11) {
                 obj = { state: null };
+                let tmp18 = closure_8;
                 obj[0] = closure_8.PAST_REWARD_DATE;
+                let tmp19 = obj7;
                 obj7.return();
                 return obj;
-              } else if (date >= tmp7) {
-                obj1 = { state: null, msUntilReward: null };
-                obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-                obj1[1] = callback(table[4])(tmp12, date);
-                obj7.return();
-                return obj1;
-              } else if (date >= callback(table[5])(tmp7, -1)) {
-                let obj2 = { state: null, msUntilReward: null };
-                obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-                obj2[1] = callback(table[4])(tmp12, date);
-                obj7.return();
-                return obj2;
+              } else {
+                let tmp29 = tmp6;
+                if (date >= tmp7) {
+                  let tmp15 = tmp11;
+                  obj1 = { state: null, msUntilReward: null };
+                  let tmp16 = closure_8;
+                  obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
+                  obj1[1] = tmp8(tmp9[4])(tmp12, date);
+                  let tmp17 = obj7;
+                  obj7.return();
+                  return obj1;
+                } else {
+                  let tmp13 = tmp6;
+                  if (date >= tmp8(tmp9[5])(tmp7, -1)) {
+                    let tmp30 = tmp11;
+                    let obj2 = { state: null, msUntilReward: null };
+                    let tmp31 = closure_8;
+                    obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
+                    obj2[1] = tmp8(tmp9[4])(tmp12, date);
+                    let tmp14 = obj7;
+                    obj7.return();
+                    return obj2;
+                  }
+                }
               }
             }
             continue;
@@ -476,73 +453,29 @@ obj = {
         }
         let tmp10 = msUntilReward;
       } else {
-        if (closure_8.MORE_THAN_24H_BEFORE_REWARD !== state) {
-          const PAST_REWARD_DATE = closure_8.PAST_REWARD_DATE;
+        if (tmp9.MORE_THAN_24H_BEFORE_REWARD !== state) {
+          const PAST_REWARD_DATE = tmp9.PAST_REWARD_DATE;
         }
         tmp10 = c6;
       }
-      networkTtlCache.setTtl(tmp10);
-      const tmp8 = (function getCacheTtlState() {
-        value = value.getValue();
-        if (null == value) {
-          obj = { state: null };
-          obj[0] = closure_8.MORE_THAN_24H_BEFORE_REWARD;
-          return obj;
-        } else {
-          const _Date2 = Date;
-          const date = new Date();
-          const values = value.values();
-          const obj7 = values[Symbol.iterator]();
-          while (obj7 !== undefined) {
-            let _Date = Date;
-            let date1 = new Date(tmp2.next_reward_date);
-            let tmp7 = date1;
-            let _isNaN = isNaN;
-            if (!isNaN(date1.getTime())) {
-              let tmp11 = callback(table[3])(tmp7, 10);
-              let tmp12 = tmp11;
-              if (date >= tmp11) {
-                obj = { state: null };
-                obj[0] = closure_8.PAST_REWARD_DATE;
-                obj7.return();
-                return obj;
-              } else if (date >= tmp7) {
-                obj1 = { state: null, msUntilReward: null };
-                obj1[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-                obj1[1] = callback(table[4])(tmp12, date);
-                obj7.return();
-                return obj1;
-              } else if (date >= callback(table[5])(tmp7, -1)) {
-                let obj2 = { state: null, msUntilReward: null };
-                obj2[0] = closure_8.LESS_THAN_24H_BEFORE_REWARD;
-                obj2[1] = callback(table[4])(tmp12, date);
-                obj7.return();
-                return obj2;
-              }
-            }
-            continue;
-          }
-          const obj3 = { state: null };
-          obj3[0] = closure_8.MORE_THAN_24H_BEFORE_REWARD;
-          return obj3;
-        }
-      })();
+      obj.setTtl(tmp10);
     } else {
       return false;
     }
   },
   PROGRAM_REWARDS_FETCH_FAILURE: function handleProgramRewardsFetchFailure() {
     if (networkTtlCache.isLoading()) {
-      networkTtlCache.setError();
+      obj.setError();
     } else {
       return false;
     }
+    obj = networkTtlCache;
   },
   CURRENT_USER_UPDATE: updateTtl,
   CONNECTION_OPEN: updateTtl
 };
 const programRewardsStore = new ProgramRewardsStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("modules/rewards/ProgramRewardsStore.tsx");
+let result = require("set").fileFinishedImporting("modules/rewards/ProgramRewardsStore.tsx");
 
 export default programRewardsStore;
 export const DidNotFetchReason = obj;

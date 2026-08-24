@@ -4,8 +4,8 @@
 import _inheritsDefault from "_inherits" /* 98 */;
 import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
 import HeadlessJsTaskError from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {

@@ -4,7 +4,7 @@
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 const memoResult = importAllResult.memo((type) => {
   type = type.type;
   const options = type.options;
@@ -12,8 +12,8 @@ const memoResult = importAllResult.memo((type) => {
   let obj = maxValues;
   let items = [options];
   const memo = maxValues.useMemo(() => {
-    const found = options.filter((item, index) => item.default);
-    return found.map((item, index) => item.value);
+    const found = options.filter((arg0) => arg0.default);
+    return found.map((value) => value.value);
   }, items);
   let tmp3;
   if (memo.length > 0) {
@@ -29,41 +29,41 @@ const memoResult = importAllResult.memo((type) => {
   closure_5 = obj.useMemo(() => {
     type = undefined;
     if (state != null) {
-      type = state.type;
+      type = tmp.type;
     }
     return type === type ? state.values : [];
   }, items1);
   obj = {
     hasIcons: false,
-    children: options.map((item, index) => {
-      const hasItem = closure_5.includes(item.value);
-      let obj = {
-        label: item.label,
-        subLabel: item.description,
+    children: options.map((label) => {
+      const hasItem = closure_5.includes(label.value);
+      const obj = {
+        label: label.label,
+        subLabel: label.description,
         checked: hasItem,
         onPress: (arg0) => {
           if (arg0) {
             const items = [];
-            items[HermesBuiltin.arraySpread(closure_1_5, 0)] = closure_0;
+            items[HermesBuiltin.arraySpread(arr, 0)] = closure_0;
             let found = items;
           } else {
-            found = closure_1_5.filter((item, index) => item !== closure_0);
+            found = arr.filter((arg0) => arg0 !== closure_0);
           }
-          executeStateUpdate({ type: value, values: found });
+          closure_1_4({ type: value, values: found });
         },
         disabled: null
       };
-      type = item.value;
+      type = label.value;
       let tmp3 = closure_5.length >= maxValues;
       if (tmp3) {
         tmp3 = !hasItem;
       }
       obj[4] = tmp3;
-      return state(type(options[4]).TableCheckboxRow, obj, item.value);
+      return state(type(options[4]).TableCheckboxRow, obj, label.value);
     })
   };
   return state(type(options[3]).TableRowGroup, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxGroupActionComponent.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxGroupActionComponent.tsx");
 
 export default memoResult;

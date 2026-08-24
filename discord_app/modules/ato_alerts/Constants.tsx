@@ -1,10 +1,10 @@
 // === Module 10581: LIKELY_ATO_MORE_TIPS_MODAL_KEY ===
 
 // Module 10581 (LIKELY_ATO_MORE_TIPS_MODAL_KEY)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("modules/ato_alerts/Constants.tsx");
+const result = set.fileFinishedImporting("modules/ato_alerts/Constants.tsx");
 
 export const LIKELY_ATO_MORE_TIPS_MODAL_KEY = "LIKELY_ATO_MORE_TIPS_MODAL";
 export const LEARN_MORE_HC_ARTICLE = "https://discord.com/safety/understanding-and-avoiding-common-scams";

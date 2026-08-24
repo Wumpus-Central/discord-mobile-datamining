@@ -2,50 +2,55 @@
 
 // Module 8618 (EnterEmail)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ChangeEmailFields from "ChangeEmailFields" /* 8563 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ useChangeEmailError: c10, useChangeEmailStore: unpackModuleId, ChangeEmailFields: closure_12 } = ChangeEmailFields);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { background: null, container: null, title: null, prompt: null, input: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: 12, paddingHorizontal: 16 };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 createCacheKey[4] = { marginTop: 24, marginBottom: 16 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/verification/native/components/EnterEmail.tsx");
+let result = require("set").fileFinishedImporting("modules/verification/native/components/EnterEmail.tsx");
 
 export default function EnterEmail(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
   const changeEmailReason = isChangeEmail.changeEmailReason;
+  let navigation;
   let stateFromStores;
-  let emailToken;
+  let first;
   let callback;
+  let emailToken;
+  callback = undefined;
   const tmp = callback4();
   let obj = isChangeEmail(stateFromStores[10]);
-  const navigation = obj.useNavigation();
+  navigation = obj.useNavigation();
   obj1 = isChangeEmail(stateFromStores[11]);
   const items = [closure_9];
   stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = callback(emailToken.useState(""), 2);
-  const first = tmp6[0];
+  first = tmp6[0];
   const tmp8 = callback(callback2(constants.EMAIL), 2);
+  callback = tmp9;
   emailToken = callback3().emailToken;
   const items1 = [navigation];
   callback = emailToken.useCallback((arg0) => {
     closure_0 = arg0;
     const routes = navigation.getState().routes;
-    return routes.findIndex((item, index) => item.name === closure_0);
+    return routes.findIndex((name) => name.name === closure_0);
   }, items1);
   const items2 = [navigation, stateFromStores, tmp8[1], first, emailToken, callback, isChangeEmail, changeEmailReason];
   const callback1 = emailToken.useCallback(() => {
@@ -84,7 +89,7 @@ export default function EnterEmail(isChangeEmail) {
                 let tmp5 = null;
                 if (null != closure_1_3) {
                   closure_1_5(null);
-                  obj1 = navigation(stateFromStores[13]);
+                  obj1 = closure_2_2(closure_2_3[13]);
                   obj1 = { email: null, password: null, emailToken: null };
                   obj1[0] = closure_1_4;
                   obj1[1] = tmp20;
@@ -133,12 +138,12 @@ export default function EnterEmail(isChangeEmail) {
       if (closure_0) {
         let obj = { change_email_reason_enum: null };
         obj[0] = closure_1;
-        changeEmailReason(stateFromStores[14]).track(closure_1_13.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, obj);
-        const obj2 = changeEmailReason(stateFromStores[14]);
-        const result = navigation(stateFromStores[13]).finishChangeEmailFlow(closure_2, closure_4);
-        const obj4 = navigation(stateFromStores[13]);
+        closure_1_1(closure_1_3[14]).track(closure_1_13.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, obj);
+        const obj2 = closure_1_1(closure_1_3[14]);
+        const result = closure_1_2(closure_1_3[13]).finishChangeEmailFlow(closure_2, closure_4);
+        const obj4 = closure_1_2(closure_1_3[13]);
       } else {
-        obj = navigation(stateFromStores[13]);
+        obj = closure_1_2(closure_1_3[13]);
         const result1 = obj.finishVerifyEmailFlow(closure_2, closure_7);
       }
     };
@@ -160,7 +165,7 @@ export default function EnterEmail(isChangeEmail) {
       stringResult = intl.string(tmp2(tmp3[16]).t["CDTD/K"]);
     }
     obj1[4] = stringResult;
-    const items3 = [callback(tmp2(tmp3[15]).Text, obj1), , , ];
+    const items3 = [closure_14(tmp2(tmp3[15]).Text, obj1), , , ];
     let obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj2[0] = tmp.prompt;
     if (null != stateFromStores.email) {
@@ -173,7 +178,7 @@ export default function EnterEmail(isChangeEmail) {
       formatToPlainStringResult = intl3.string(tmp2(tmp3[16]).t.YXXMxK);
     }
     obj2[3] = formatToPlainStringResult;
-    items3[1] = callback(tmp2(tmp3[15]).Text, obj2);
+    items3[1] = closure_14(tmp2(tmp3[15]).Text, obj2);
     let obj4 = { style: null, label: null, textContentType: "emailAddress", keyboardType: "email-address", value: null, onChangeText: null, onSubmitEditing: null, placeholder: null, returnKeyType: "done", autoCapitalize: "none", error: null, autoFocus: true };
     obj4[0] = tmp.input;
     const intl5 = tmp2(tmp3[16]).intl;
@@ -184,16 +189,19 @@ export default function EnterEmail(isChangeEmail) {
     const intl6 = tmp2(tmp3[16]).intl;
     obj4[7] = intl6.string(tmp2(tmp3[16]).t.dI4d4S);
     obj4[10] = tmp8[0];
-    items3[2] = callback(changeEmailReason(tmp3[17]), obj4);
+    items3[2] = closure_14(changeEmailReason(tmp3[17]), obj4);
     const obj5 = { text: null, onPress: null, disabled: null };
     const intl7 = tmp2(tmp3[16]).intl;
     obj5[0] = intl7.string(tmp2(tmp3[16]).t.Vm8akB);
     obj5[1] = callback1;
     obj5[2] = "" === first || first === stateFromStores.email;
-    items3[3] = callback(tmp2(tmp3[18]).Button, obj5);
+    items3[3] = closure_14(tmp2(tmp3[18]).Button, obj5);
     obj[1] = items3;
-    obj[3] = callback2(callback, obj);
-    tmp13Result = callback(closure_8, obj);
+    obj[3] = closure_15(callback, obj);
+    tmp13Result = tmp13(closure_8, obj);
+    const tmp14 = closure_8;
+    const tmp15 = closure_15;
+    const tmp16 = callback;
     const tmp20 = changeEmailReason(tmp3[17]);
   }
   return tmp13Result;

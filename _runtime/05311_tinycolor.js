@@ -6,6 +6,8 @@ let min;
 let max;
 let random;
 let obj;
+obj = undefined;
+obj = undefined;
 class tinycolor {
   constructor(arg0, arg1) {
     obj = require;
@@ -734,17 +736,19 @@ function rgbToHex(arg0, arg1, arg2, arg3) {
           const sum = str13.charAt(0) + str14.charAt(0);
           let sum1 = sum + items[2].charAt(0);
           const charAtResult3 = str13.charAt(0);
+          const str15 = items[2];
         }
         return sum1;
       }
       charAtResult1 = items[1].charAt(0);
       str10 = items[1];
+      const str9 = items[1];
     }
     charAtResult = items[0].charAt(0);
+    const str7 = items[0];
     str8 = items[0];
   }
   sum1 = items.join("");
-  const str5 = round(arg2);
 }
 function rgbaToArgbHex(_r, _g, _b, _a) {
   let str = Math.round(255 * parseFloat(_a));
@@ -920,6 +924,7 @@ function analogous(toHslResult) {
   let diff = num - 1;
   while (diff) {
     toHslResult.h = (toHslResult.h + result) % 360;
+    let tmp4 = tinycolor;
     let arr = items.push(tinycolor(toHslResult));
     diff = diff - 1;
   }
@@ -937,6 +942,7 @@ function monochromatic(toHslResult) {
   let diff = tmp5 - 1;
   if (+num) {
     do {
+      let tmp7 = tinycolor;
       obj = { h: null, s: null, v: null };
       obj[0] = tmp2;
       obj[1] = tmp3;
@@ -1162,7 +1168,7 @@ tinycolor.prototype = {
       text = `${arr}`;
     }
     const items = [text, , , ];
-    let str3 = round(_g);
+    let str3 = tmp(_g);
     if (1 == str1.length) {
       let text1 = `0${arr3}`;
     } else {
@@ -1195,20 +1201,24 @@ tinycolor.prototype = {
               const sum1 = sum + items[2].charAt(0);
               let sum2 = sum1 + items[3].charAt(0);
               const charAtResult4 = str17.charAt(0);
+              const str19 = items[2];
+              const str20 = items[3];
             }
             return sum2;
           }
           charAtResult2 = items[2].charAt(0);
+          const str13 = items[2];
           str14 = items[2];
         }
         charAtResult1 = items[1].charAt(0);
+        const str11 = items[1];
         str12 = items[1];
       }
       charAtResult = items[0].charAt(0);
       str10 = items[0];
+      const str9 = items[0];
     }
     sum2 = items.join("");
-    const str7 = Math.round(255 * parseFloat(_a));
   },
   toHex8String(arg0) {
     return "#" + this.toHex8(arg0);
@@ -1392,6 +1402,7 @@ obj = { aliceblue: "f0f8ff", antiquewhite: "faebd7", aqua: "0ff", aquamarine: "7
 tinycolor.names = obj;
 obj = {};
 for (const key10080 in obj) {
+  let tmp9 = key10080;
   if (!obj.hasOwnProperty(key10080)) {
     continue;
   } else {

@@ -1,13 +1,13 @@
 // === Module 4371: InviteSendStates ===
 
 // Module 4371 (InviteSendStates)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 const obj = { GUILD: 0, [0]: "GUILD", GROUP_DM: 1, [1]: "GROUP_DM", FRIEND: 2, [2]: "FRIEND" };
 const items = [, ];
 ({ GUILD: arr[0], GROUP_DM: arr[1] } = obj);
-const set = new Set(items);
-const result = obj132.fileFinishedImporting("modules/instant_invite/Constants.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/instant_invite/Constants.tsx");
 
 export const InviteSendStates = { SENDING: "sending", SENT: "sent", ERROR: "error" };
 export const InviteTypes = obj;

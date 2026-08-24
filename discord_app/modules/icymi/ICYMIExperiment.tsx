@@ -2,12 +2,11 @@
 
 // Module 9058 (apexExperiment)
 import useLabFeatureDefault from "useLabFeature" /* 9061 */;
-import getUserAgnosticState from "getUserAgnosticState" /* 9059 */;
-import "ApexExperiment";
+import closure_2 from "getUserAgnosticState" /* 9059 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const hide_icymi_tab = "hide_icymi_tab";
-let ApexExperiment = { 1: null };
+ApexExperiment = { 1: null };
 ApexExperiment[1] = { enabled: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-icymi-staff-only", kind: "user", defaultConfig: { enabled: false }, variations: ApexExperiment });
 ApexExperiment = { 1: null };
@@ -16,13 +15,14 @@ const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2026-03-icy
 const obj1 = { 1: null };
 obj1[1] = { icymiDesktopEnabled: true };
 const apexExperiment2 = ApexExperiment.createApexExperiment({ name: "2026-03-icymi-desktop", kind: "user", defaultConfig: { icymiDesktopEnabled: false }, variations: obj1 });
-const result = require("obj132").fileFinishedImporting("modules/icymi/ICYMIExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/ICYMIExperiment.tsx");
 
 export const ICYMI_LAB_FEATURE = "hide_icymi_tab";
 export const ICYMIStaffOnlyExperiment = apexExperiment;
 export const useICYMIEnabled = function useICYMIEnabled(TabsNavigator) {
   const tmp = useLabFeatureDefault(hide_icymi_tab);
-  const obj = { location: TabsNavigator };
+  let obj = { location: TabsNavigator };
+  obj = { location: TabsNavigator };
   const config = apexExperiment2.useConfig(obj);
   let enabled = !tmp;
   if (!tmp) {

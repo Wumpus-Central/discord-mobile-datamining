@@ -5,9 +5,9 @@ import __exportStarResult32 from "__exportStarResult32" /* 13580 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.GetStringOrBooleanOption = function GetStringOrBooleanOption(result1, useGrouping, arg2, always, arg4, min2) {
+arg5.GetStringOrBooleanOption = function GetStringOrBooleanOption(result1, useGrouping, arg2, always, arg4, arg5) {
   if (undefined === result1[useGrouping]) {
-    return min2;
+    return arg5;
   } else if (true === tmp) {
     return always;
   } else {
@@ -15,8 +15,8 @@ arg5.GetStringOrBooleanOption = function GetStringOrBooleanOption(result1, useGr
     if (false === Boolean(tmp)) {
       return arg4;
     } else {
-      __exportStarResult32.ToString(tmp);
-      const str = "true";
+      let str = __exportStarResult32.ToString(tmp);
+      str = "true";
       if ("true" !== str) {
         if ("false" !== str) {
           let items = arg2;
@@ -33,7 +33,7 @@ arg5.GetStringOrBooleanOption = function GetStringOrBooleanOption(result1, useGr
           }
         }
       }
-      return min2;
+      return arg5;
     }
   }
 };

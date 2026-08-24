@@ -6,9 +6,9 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
 import result2 from "result" /* 11216 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
+require = arg1;
 const Store = initializeDefault.Store;
 class AppLauncherOnboardingStore extends Store {
 }
@@ -69,6 +69,6 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(dispatcherDefa
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx");
 
 export default appLauncherOnboardingStore;

@@ -1,12 +1,12 @@
 // === Module 9309: useEmojiPickerSearchState ===
 
 // Module 9309 (useEmojiPickerSearchState)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getEmojiToGroupId" /* 6727 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
 
 export default function useEmojiPickerSearchState(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -32,7 +32,7 @@ export default function useEmojiPickerSearchState(arg0, arg1, arg2) {
         obj[3] = closure_2;
         dependencyMap = closure_4.searchWithoutFetchingLatest(obj);
         callback(705).batchUpdates(() => {
-          ref.current = closure_0;
+          closure_1_3.current = closure_0;
           closure_1_4(closure_1);
         });
         const obj3 = callback(705);

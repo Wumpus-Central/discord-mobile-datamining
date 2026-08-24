@@ -3,11 +3,11 @@
 // Module 8720 (NativeModules)
 import enforcingDefault from "enforcing" /* 8721 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import keys from "keys" /* 644 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   let DCDDeviceThermalStateManager = enforcingDefault;
 } else {
   DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
@@ -20,16 +20,17 @@ let closure_5 = keys.create((arg0) => {
     if (tmpResult.getSystemVersionMajor() >= 29) {
       thermalState = enforcingDefault.getThermalState();
       let resolved = Promise.resolve(thermalState);
+      const obj3 = enforcingDefault;
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = tmp(4354);
+    tmpResult = _require(4354);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();
-    thermalState1.then(function updateThermalState(result) {
-      const callback = result;
-      callback(dependencyMap[5]).batchUpdates(() => state((rawThermalState) => {
+    thermalState1.then(function updateThermalState(arg0) {
+      const callback = arg0;
+      callback(closure_1_2[5]).batchUpdates(() => state((rawThermalState) => {
         let tmp = rawThermalState;
         if (rawThermalState.rawThermalState !== closure_0) {
           const obj = { rawThermalState: null };
@@ -41,7 +42,7 @@ let closure_5 = keys.create((arg0) => {
     });
     nativeEventEmitter.addListener("DeviceThermalStateDidChange", (state) => {
       state = state.state;
-      callback(dependencyMap[5]).batchUpdates(() => state((rawThermalState) => {
+      callback(closure_1_2[5]).batchUpdates(() => state((rawThermalState) => {
         let tmp = rawThermalState;
         if (rawThermalState.rawThermalState !== closure_0) {
           const obj = { rawThermalState: null };
@@ -53,10 +54,8 @@ let closure_5 = keys.create((arg0) => {
     });
     return { rawThermalState: "r" };
   }
-  obj = _require(500);
-  tmp = _require;
 });
-const result = obj132.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
+const result = set.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
 
 export default {
   getRawThermalState() {

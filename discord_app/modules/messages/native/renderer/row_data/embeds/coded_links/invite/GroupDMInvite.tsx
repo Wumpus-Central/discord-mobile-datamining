@@ -4,13 +4,13 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10511 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { InviteTypes } from "InviteSendStates" /* 4371 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
 
 export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, closure_2) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
@@ -30,10 +30,10 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   const t = getSystemLocale.t;
   if (arg1) {
     let str = string(t.qmtuXE);
-    let tmp8 = require;
+    let tmp8 = tmp7;
   } else {
     str = string(t["3p3/BK"]);
-    tmp8 = require;
+    tmp8 = tmp7;
   }
   const intl2 = tmp8(1236).intl;
   const string2 = intl2.string;
@@ -77,7 +77,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
     channelName = name;
   }
   if (!channelName) {
-    const mapped = recipients_.map((item, index) => item.username);
+    const mapped = recipients_.map((username) => username.username);
     channelName = mapped.join(", ");
   }
   if (!channelName) {

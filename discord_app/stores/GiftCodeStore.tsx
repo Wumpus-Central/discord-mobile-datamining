@@ -5,32 +5,33 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import tDefault from "t" /* 3975 */;
 import _resolveGiftCode from "_resolveGiftCode" /* 4381 */;
-import frozen from "frozen" /* 9626 */;
+import closure_3 from "frozen" /* 9626 */;
 import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function updateGiftCode(giftCode) {
   const fromServer = closure_3.createFromServer(giftCode);
   const code = fromServer.code;
   if (map.has(code)) {
-    let value = map.get(code);
+    let value = obj.get(code);
     const result = set(code, value.merge(fromServer));
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
       const timeout = new code(4259).Timeout();
-      table[code] = timeout;
-      value = map.get(code);
+      closure_7[code] = timeout;
+      value = obj.get(code);
       if (null != value) {
         if (null != value.expiresAt) {
           const expiresAt = value.expiresAt;
           const valueOfResult = expiresAt.valueOf();
           const diff = valueOfResult - tDefault().valueOf();
           if (diff <= 0) {
-            map.delete(code);
+            obj.delete(code);
             delete tmp2[tmp];
             giftCodeStore.emitChange();
-          } else if (null != table[code]) {
+          } else if (null != tmp18[code]) {
             const _Math = Math;
             obj2.start(Math.min(closure_5, diff), () => {
               let value = closure_1_8.get(closure_0);
@@ -40,10 +41,10 @@ function updateGiftCode(giftCode) {
                   let valueOfResult = expiresAt.valueOf();
                   let diff = valueOfResult - closure_1_1(closure_1_2[3])().valueOf();
                   if (diff <= 0) {
-                    closure_1_8.delete(closure_0);
+                    closure_1_8.delete(tmp3);
                     delete tmp[tmp2];
                     closure_1_18.emitChange();
-                  } else if (null != closure_1_7[closure_0]) {
+                  } else if (null != closure_1_7[tmp3]) {
                     let _Math = Math;
                     obj2.start(Math.min(closure_1_5, diff), () => {
                       let value = closure_1_8.get(closure_0);
@@ -53,10 +54,10 @@ function updateGiftCode(giftCode) {
                           let valueOfResult = expiresAt.valueOf();
                           let diff = valueOfResult - closure_1_1(closure_1_2[3])().valueOf();
                           if (diff <= 0) {
-                            closure_1_8.delete(closure_0);
+                            closure_1_8.delete(tmp3);
                             delete tmp[tmp2];
                             closure_1_18.emitChange();
-                          } else if (null != closure_1_7[closure_0]) {
+                          } else if (null != closure_1_7[tmp3]) {
                             let _Math = Math;
                             obj2.start(Math.min(closure_1_5, diff), () => {
                               let value = closure_1_8.get(closure_0);
@@ -66,10 +67,10 @@ function updateGiftCode(giftCode) {
                                   let valueOfResult = expiresAt.valueOf();
                                   let diff = valueOfResult - closure_1_1(closure_1_2[3])().valueOf();
                                   if (diff <= 0) {
-                                    closure_1_8.delete(closure_0);
+                                    closure_1_8.delete(tmp3);
                                     delete tmp[tmp2];
                                     closure_1_18.emitChange();
-                                  } else if (null != closure_1_7[closure_0]) {
+                                  } else if (null != closure_1_7[tmp3]) {
                                     let _Math = Math;
                                     obj2.start(Math.min(closure_1_5, diff), () => {
                                       let value = closure_1_8.get(closure_0);
@@ -79,10 +80,10 @@ function updateGiftCode(giftCode) {
                                           let valueOfResult = expiresAt.valueOf();
                                           let diff = valueOfResult - closure_1_1(closure_1_2[3])().valueOf();
                                           if (diff <= 0) {
-                                            closure_1_8.delete(closure_0);
+                                            closure_1_8.delete(tmp3);
                                             delete tmp[tmp2];
                                             closure_1_18.emitChange();
-                                          } else if (null != closure_1_7[closure_0]) {
+                                          } else if (null != closure_1_7[tmp3]) {
                                             let _Math = Math;
                                             obj2.start(Math.min(closure_1_5, diff), () => { ... });
                                           }
@@ -109,6 +110,7 @@ function updateGiftCode(giftCode) {
           const obj4 = tDefault();
         }
       }
+      tmp18 = closure_7;
     }
   }
 }
@@ -122,6 +124,7 @@ function resolveMessageGiftCodes(message, arg1) {
       return false;
     }
   }
+  let obj = _resolveGiftCode;
   const isGiftCodeEmbedResult = _resolveGiftCode.isGiftCodeEmbed(message);
   const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {
@@ -142,16 +145,16 @@ function resolveMessageGiftCodes(message, arg1) {
     findGiftCodesResult = findGiftCodes(message.content);
   }
   if (0 !== findGiftCodesResult.length) {
-    const item = findGiftCodesResult.forEach((item, index) => {
-      closure_0 = item;
-      let hasItem = items.includes(item);
+    const item = findGiftCodesResult.forEach((arg0) => {
+      closure_0 = arg0;
+      let hasItem = items.includes(arg0);
       if (!hasItem) {
-        hasItem = closure_11.includes(item);
+        hasItem = closure_11.includes(arg0);
       }
       if (!hasItem) {
-        if (!items.includes(item)) {
+        if (!items.includes(arg0)) {
           items = [];
-          items[HermesBuiltin.arraySpread(items, 0)] = item;
+          items[HermesBuiltin.arraySpread(items, 0)] = arg0;
         }
         callback(table[5]).wait(() => {
           const giftCode = closure_1_1(closure_1_2[6]).resolveGiftCode(closure_0, false, true);
@@ -170,8 +173,8 @@ function handleMessage(message) {
 function handleLoadMessages(messages) {
   messages = messages.messages;
   set1.add(messages.channelId);
-  const item = messages.forEach((item, index) => {
-    callback(item, true);
+  const item = messages.forEach((arg0) => {
+    callback(arg0, true);
     return false;
   });
 }
@@ -180,8 +183,8 @@ function handleLoadThreadsSuccess(firstMessages) {
   if (null == firstMessages) {
     return false;
   } else if (firstMessages != null) {
-    const item = firstMessages.forEach((item, index) => {
-      callback(item);
+    const item = firstMessages.forEach((arg0) => {
+      callback(arg0);
       return false;
     });
   }
@@ -192,7 +195,7 @@ const map = new Map();
 let closure_9 = [];
 let closure_10 = [];
 let closure_11 = [];
-const set = new Set();
+let set = new Set();
 let closure_13 = {};
 let closure_14 = {};
 const set1 = new Set();
@@ -222,16 +225,17 @@ prototype["getForGifterSKUAndPlan"] = function getForGifterSKUAndPlan(id, skuId,
   closure_0 = id;
   closure_1 = skuId;
   closure_2 = subscriptionPlanId;
-  return Array.from(map.values()).filter((item, index) => {
-    let tmp = item.userId === closure_0;
+  return Array.from(map.values()).filter((userId) => {
+    let tmp = userId.userId === closure_0;
     if (tmp) {
-      tmp = item.skuId === closure_1;
+      tmp = userId.skuId === closure_1;
     }
     if (tmp) {
-      tmp = null == closure_2 || item.subscriptionPlanId === tmp3;
+      tmp = null == closure_2 || userId.subscriptionPlanId === tmp3;
+      const tmp5 = null == closure_2 || userId.subscriptionPlanId === tmp3;
     }
     if (tmp) {
-      tmp = !item.isExpired();
+      tmp = !userId.isExpired();
     }
     return tmp;
   });
@@ -239,8 +243,8 @@ prototype["getForGifterSKUAndPlan"] = function getForGifterSKUAndPlan(id, skuId,
 prototype["getIsResolving"] = function getIsResolving(arg0) {
   return closure_9.includes(arg0);
 };
-prototype["getIsResolved"] = function getIsResolved(item) {
-  return closure_11.includes(item);
+prototype["getIsResolved"] = function getIsResolved(giftCode) {
+  return closure_11.includes(giftCode);
 };
 prototype["getIsAccepting"] = function getIsAccepting(code) {
   return closure_10.includes(code);
@@ -283,7 +287,7 @@ const giftCodeStore = new GiftCodeStore(dispatcherDefault, {
   },
   GIFT_CODE_RESOLVE_SUCCESS: function handleGiftCodeResolveSuccess(giftCode) {
     giftCode = giftCode.giftCode;
-    closure_9 = closure_9.filter((item, index) => item !== giftCode.code);
+    closure_9 = closure_9.filter((arg0) => arg0 !== giftCode.code);
     if (!items.includes(giftCode.code)) {
       items = [];
       items[HermesBuiltin.arraySpread(items, 0)] = giftCode.code;
@@ -293,7 +297,7 @@ const giftCodeStore = new GiftCodeStore(dispatcherDefault, {
   GIFT_CODE_RESOLVE_FAILURE: function handleGiftCodeResolveFailure(code) {
     code = code.code;
     error = code.error;
-    closure_9 = closure_9.filter((item, index) => item !== code);
+    closure_9 = closure_9.filter((arg0) => arg0 !== code);
     if (!items.includes(code)) {
       items = [];
       items[HermesBuiltin.arraySpread(items, 0)] = code;
@@ -311,7 +315,7 @@ const giftCodeStore = new GiftCodeStore(dispatcherDefault, {
   },
   GIFT_CODE_REDEEM_SUCCESS: function handleGiftCodeAcceptSuccess(code) {
     code = code.code;
-    closure_10 = closure_10.filter((item, index) => item !== code);
+    closure_10 = closure_10.filter((arg0) => arg0 !== code);
     let obj = map;
     const value = map.get(code);
     if (null != value) {
@@ -323,15 +327,15 @@ const giftCodeStore = new GiftCodeStore(dispatcherDefault, {
   GIFT_CODE_REDEEM_FAILURE: function handleGiftCodeAcceptFailure(code) {
     code = code.code;
     error = code.error;
-    closure_10 = closure_10.filter((item, index) => item !== code);
+    closure_10 = closure_10.filter((arg0) => arg0 !== code);
     const value = map.get(code);
     closure_14[code] = error;
     if (null != value) {
       const code2 = error.code;
       if (constants.UNKNOWN_GIFT_CODE === code2) {
-        const result = map.set(code, value.set("revoked", true));
+        const result = obj.set(code, value.set("revoked", true));
       } else if (tmp.INVALID_GIFT_REDEMPTION_EXHAUSTED === code2) {
-        const result1 = map.set(code, value.set("uses", value.maxUses));
+        const result1 = obj.set(code, value.set("uses", value.maxUses));
       }
     }
   },
@@ -373,25 +377,25 @@ const giftCodeStore = new GiftCodeStore(dispatcherDefault, {
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
   LOAD_RECENT_MENTIONS_SUCCESS: function handleLoadRecentMentions(messages) {
     messages = messages.messages;
-    const item = messages.forEach((item, index) => {
-      callback(item);
+    const item = messages.forEach((arg0) => {
+      callback(arg0);
       return false;
     });
   },
   LOAD_PINNED_MESSAGES_SUCCESS: function handleLoadPinnedMessages(pins) {
     pins = pins.pins;
-    const item = pins.forEach((item, index) => {
-      callback(item.message);
+    const item = pins.forEach((message) => {
+      callback(message.message);
       return false;
     });
   },
   SEARCH_MESSAGES_SUCCESS: function handleSearchMessagesSuccess(data) {
     data = data.data;
-    let item = data.forEach((item, index) => {
-      const messages = item.messages;
-      item = messages.forEach((item, index) => {
-        item = item.forEach((item, index) => {
-          callback(item);
+    let item = data.forEach((messages) => {
+      messages = messages.messages;
+      let item = messages.forEach((arr) => {
+        const item = arr.forEach((arg0) => {
+          callback(arg0);
           return false;
         });
       });
@@ -409,8 +413,8 @@ const giftCodeStore = new GiftCodeStore(dispatcherDefault, {
   LOAD_ARCHIVED_THREADS_SUCCESS: handleLoadThreadsSuccess,
   LOAD_FORUM_POSTS: function handleLoadForumPosts(threads) {
     const values = Object.values(threads.threads);
-    const mapped = values.map((item, index) => {
-      const first_message = item.first_message;
+    const mapped = values.map((first_message) => {
+      first_message = first_message.first_message;
       let flag = null != first_message;
       if (flag) {
         callback(first_message);
@@ -420,6 +424,6 @@ const giftCodeStore = new GiftCodeStore(dispatcherDefault, {
     });
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/GiftCodeStore.tsx");
+let result = set.fileFinishedImporting("stores/GiftCodeStore.tsx");
 
 export default giftCodeStore;

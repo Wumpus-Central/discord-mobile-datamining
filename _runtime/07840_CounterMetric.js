@@ -2,7 +2,7 @@
 
 // Module 7840 (CounterMetric)
 import _mod7835 from "module_7835" /* 7835 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 let SetMetric = require;
@@ -141,10 +141,10 @@ const items3 = [
   {
     key: "toString",
     value: function toString() {
-      const mapped = Array.from(this._value).map((item, index) => {
-        let simpleHashResult = item;
-        if (typeof item === "string") {
-          simpleHashResult = callback(table[2]).simpleHash(item);
+      const mapped = Array.from(this._value).map((str) => {
+        let simpleHashResult = str;
+        if (typeof str === "string") {
+          simpleHashResult = callback(table[2]).simpleHash(str);
           const obj = callback(table[2]);
         }
         return simpleHashResult;

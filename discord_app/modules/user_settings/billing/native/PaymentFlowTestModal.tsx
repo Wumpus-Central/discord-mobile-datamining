@@ -1,17 +1,33 @@
 // === Module 15145: ? ===
 
 // Module 15145
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9941 */;
 import TestViewDefault from "TestView" /* 15146 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
 const memoResult = importAllResult.memo(function PaymentFlowTestModal() {
   let obj = _require(6312);
   _require = obj.useAccessibilityNativeStackOptions();
+  obj = {
+    screenOptions(navigation) {
+      const obj = {
+        headerTitle(children) {
+          const merged = Object.assign(children, Object.create(null));
+          const merged1 = Object.assign(merged);
+          return callback2(callback(table[4]).GenericHeaderTitle, { title: children.children });
+        },
+        headerLeft: callback(closure_1_2[4]).getRenderModalCloseImage(navigation.navigation),
+        headerTitleAlign: "center"
+      };
+      let merged = Object.assign(callback);
+      let merged1 = Object.assign(closure_1_1(closure_1_2[5])());
+      return obj;
+    },
+    children: null
+  };
   obj = {
     name: "PaymentFlowTest",
     options() {
@@ -27,6 +43,6 @@ const memoResult = importAllResult.memo(function PaymentFlowTestModal() {
     return { title: "Payment Flow Test" };
   }} component={TestViewDefault} />;
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTestModal.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTestModal.tsx");
 
 export default memoResult;

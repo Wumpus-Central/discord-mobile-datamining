@@ -1,18 +1,14 @@
 // === Module 10496: getContextualEntrypointHeading ===
 
 // Module 10496 (getContextualEntrypointHeading)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _copy from "_copy" /* 7167 */;
-import AdCreativeType from "AdCreativeType" /* 7469 */;
-import trackQuestEvent from "trackQuestEvent" /* 7470 */;
 import apexExperiment from "apexExperiment" /* 9502 */;
-import emitClickEventWithCreative from "emitClickEventWithCreative" /* 9503 */;
-import AdUserActionType from "AdUserActionType" /* 9507 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 
 ({ QuestHomeSortMethods: obj1, RewardFilterTypes: c3, TaskFilterTypes: c4 } = QuestsExperimentLocations);
-let result = obj132.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
+let result = set.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
 
 export const getContextualEntrypointHeading = function getContextualEntrypointHeading(taskDetails) {
   ({ quest, thirdPartyTaskDetails } = taskDetails);
@@ -107,17 +103,17 @@ export const getDisclosureText = function getDisclosureText(isTargetedDisclosure
 export const getExternalCtaLabel = function getExternalCtaLabel(quest) {
   return quest.config.ctaConfig.buttonLabel;
 };
-export const getSortMethodText = function getSortMethodText(closure_16) {
-  if (constants.SUGGESTED === closure_16) {
+export const getSortMethodText = function getSortMethodText(arg0) {
+  if (constants.SUGGESTED === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.gBfXPZ);
-  } else if (constants.MOST_RECENT === closure_16) {
+  } else if (tmp.MOST_RECENT === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.K6oEu2);
-  } else if (constants.EXPIRING_SOON === closure_16) {
+  } else if (tmp.EXPIRING_SOON === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.IB22n3);
-  } else if (constants.RECENTLY_ENROLLED === closure_16) {
+  } else if (tmp.RECENTLY_ENROLLED === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["BB+2tX"]);
   }
@@ -126,10 +122,10 @@ export const getFilterTypeText = function getFilterTypeText(filter) {
   if (constants2.VIRTUAL_CURRENCY === filter) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t.ElYQFS);
-  } else if (constants2.COLLECTIBLE === filter) {
+  } else if (tmp.COLLECTIBLE === filter) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.Jg17Ut);
-  } else if (constants2.IN_GAME === filter) {
+  } else if (tmp.IN_GAME === filter) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t["O/J2kr"]);
   } else if (constants3.VIDEO === filter) {
@@ -159,16 +155,16 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
   ctaContent = ctaContent.ctaContent;
   let obj = apexExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "copy_share_link")) {
-    let tmpResult = emitClickEventWithCreative;
+    let tmpResult = tmp(9503);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
-    obj[0] = AdUserActionType.AdUserActionType.CLICK_INTERNAL;
-    obj[1] = AdCreativeType.AdCreativeType.QUEST;
+    obj[0] = tmp(9507).AdUserActionType.CLICK_INTERNAL;
+    obj[1] = tmp(7469).AdCreativeType.QUEST;
     obj[2] = id;
     obj[3] = ctaContent;
     ({ content: obj5[4], sourceQuestContent: obj5[5], position: obj5[6], impressionId: obj5[7] } = ctaContent);
     tmpResult.captureAdUserAction(obj);
   } else {
-    tmpResult = trackQuestEvent;
+    tmpResult = tmp(7470);
     obj = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     obj[0] = id;
     obj[1] = ctaContent.content;
@@ -177,7 +173,6 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
     const result = tmpResult.trackQuestContentClicked(obj);
   }
   _copy.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
-  const tmpResult1 = _copy;
 };
 export const getDefaultReward = function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {

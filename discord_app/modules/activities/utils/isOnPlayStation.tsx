@@ -1,11 +1,11 @@
 // === Module 12100: isOnPlayStation ===
 
 // Module 12100 (isOnPlayStation)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;
-const result = obj132.fileFinishedImporting("modules/activities/utils/isOnPlayStation.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/isOnPlayStation.tsx");
 
 export default function isOnPlayStation(platform) {
   platform = undefined;

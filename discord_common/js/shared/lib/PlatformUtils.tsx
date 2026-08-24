@@ -2,7 +2,9 @@
 
 // Module 4383 (isTablet)
 import importDefaultResult1 from "format" /* 669 */;
+import set from "set" /* 2 */;
 
+let set = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]);
 const set1 = new Set(["Android", "iOS", "Windows Phone"]);
 let platform;
 if (window != null) {
@@ -36,7 +38,7 @@ let str = importDefaultResult1.product;
 if (str == null) {
   str = "";
 }
-const tmp6 = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]).has(str) || tmp3;
+const tmp6 = set.has(str) || tmp3;
 let hasItem = !tmp6;
 if (!tmp6) {
   const importDefaultResult = importDefaultResult1;
@@ -67,11 +69,9 @@ if (importDefaultResult2 != null) {
     family1 = os3.family;
   }
 }
-const set = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]);
-const tmp14 = "iOS" === family;
-const result = require("obj132").fileFinishedImporting("../discord_common/js/shared/lib/PlatformUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/lib/PlatformUtils.tsx");
 
 export const isTablet = tmp6;
 export const isMobile = hasItem;
-export const isIOSWeb = tmp14;
+export const isIOSWeb = "iOS" === family;
 export const isAndroidWeb = "Android" === family1;

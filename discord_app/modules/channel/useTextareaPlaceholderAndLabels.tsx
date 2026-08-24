@@ -1,13 +1,13 @@
 // === Module 11157: useTextareaPlaceholderAndLabels ===
 
 // Module 11157 (useTextareaPlaceholderAndLabels)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import computeChannelNameDefault from "computeChannelName" /* 4984 */;
 import ME from "ME" /* 676 */;
 
 ({ ChannelTypes: c3, ChannelTypesSets: c4 } = ME);
-const result = obj132.fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");
+const result = set.fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");
 
 export default function useTextareaPlaceholderAndLabels(isCreatingThread) {
   ({ channel, isReadonly } = isCreatingThread);

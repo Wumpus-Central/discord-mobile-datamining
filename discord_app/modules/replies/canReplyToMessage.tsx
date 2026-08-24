@@ -1,18 +1,17 @@
 // === Module 8199: useCanReplyToMessage ===
 
 // Module 8199 (useCanReplyToMessage)
-import set from "set" /* 686 */;
 import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
 import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8200 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { Permissions } from "sum" /* 505 */;
 
-require = fn;
+require = arg1;
 ({ MessageFlags: c5, MessageStates: closure_6 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/replies/canReplyToMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/replies/canReplyToMessage.tsx");
 
 export const useCanReplyToMessage = function useCanReplyToMessage(channel, message) {
   const _require = channel;
@@ -32,16 +31,18 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
       tmp = null != message;
     }
     if (tmp) {
-      if (channel.isPrivate()) {
-        let hasItem = !channel.isSystemDM();
+      if (obj.isPrivate()) {
+        let hasItem = !obj.isSystemDM();
       } else {
-        hasItem = closure_1_3.can(Permissions.SEND_MESSAGES, channel) && closure_1_3.can(Permissions.READ_MESSAGE_HISTORY, channel);
+        hasItem = obj2.can(closure_1_7.SEND_MESSAGES, obj) && obj2.can(closure_1_7.READ_MESSAGE_HISTORY, obj);
+        const tmp4 = closure_1_7;
       }
       if (hasItem) {
         const REPLYABLE = channel(message[5]).MessageTypesSets.REPLYABLE;
-        hasItem = REPLYABLE.has(message.type);
+        hasItem = REPLYABLE.has(tmp3.type);
       }
       tmp = hasItem;
+      tmp3 = message;
     }
     return tmp;
   });
@@ -70,13 +71,15 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   return tmp6;
 };
 export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
+  const obj = useCanUnarchiveThread;
   if (isPrivate.isPrivate()) {
     let hasItem = !isPrivate.isSystemDM();
   } else {
-    hasItem = closure_3.can(Permissions.SEND_MESSAGES, isPrivate) && closure_3.can(Permissions.READ_MESSAGE_HISTORY, isPrivate);
+    hasItem = obj2.can(Permissions.SEND_MESSAGES, isPrivate) && obj2.can(Permissions.READ_MESSAGE_HISTORY, isPrivate);
+    const tmp4 = Permissions;
   }
   if (hasItem) {
-    const REPLYABLE = set.MessageTypesSets.REPLYABLE;
+    const REPLYABLE = tmp(686).MessageTypesSets.REPLYABLE;
     hasItem = REPLYABLE.has(type.type);
   }
   currentUser = currentUser.getCurrentUser();

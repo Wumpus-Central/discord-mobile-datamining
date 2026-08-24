@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 4339 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/ClockIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ClockIcon.tsx");
 
 export const ClockIcon = function ClockIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

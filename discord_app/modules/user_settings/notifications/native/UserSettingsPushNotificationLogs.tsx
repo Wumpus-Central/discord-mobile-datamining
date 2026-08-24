@@ -2,25 +2,29 @@
 
 // Module 14876 (UserSettingsPushNotificationLogs)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { wrap: null, list: null, searchWrap: null, shareButton: null, log: null, code: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { padding: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
+let obj2 = { padding: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, height: require("InputHeights").InputHeights.MD, width: require("InputHeights").InputHeights.MD, justifyContent: "center", alignItems: "center" };
 let obj3 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, height: require("InputHeights").InputHeights.MD, width: require("InputHeights").InputHeights.MD, justifyContent: "center", alignItems: "center" };
 createCacheKey[4] = { paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { fontFamily: require("ME").Fonts.CODE_BOLD };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsPushNotificationLogs.tsx");
+const obj4 = { paddingBottom: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsPushNotificationLogs.tsx");
 
 export default function UserSettingsPushNotificationLogs() {
   let tmp = callback2(React.useState(() => {
@@ -123,15 +127,16 @@ export default function UserSettingsPushNotificationLogs() {
         try {
           const _RegExp = RegExp;
           regExp = new RegExp(regExp, "i");
-          callback2(closure_1.filter((item, index) => {
-            let tmp2 = null != item.type.match(regExp);
+          callback2(closure_1.filter((type) => {
+            let tmp2 = null != type.type.match(regExp);
             if (!tmp2) {
-              tmp2 = null != item.title.match(regExp);
+              tmp2 = null != type.title.match(tmp);
+              const str2 = type.title;
             }
             if (!tmp2) {
               let match;
-              if (item.content != null) {
-                match = str3.match(regExp);
+              if (type.content != null) {
+                match = str3.match(tmp);
               }
               tmp2 = null != match;
             }
@@ -151,8 +156,10 @@ export default function UserSettingsPushNotificationLogs() {
   }, items);
   const tmp9 = callback5();
   callback2 = tmp9;
+  let obj = { style: tmp9.wrap, children: null };
+  obj = { style: tmp9.searchWrap, children: null };
   let items1 = [callback3(first(7337).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue: first }), ];
-  let obj = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
+  obj = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = first(1236).intl;
   obj[1] = intl.string(first(1236).t.leICvh);
   obj[2] = callback(function*() {
@@ -188,7 +195,7 @@ export default function UserSettingsPushNotificationLogs() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = first1(10133)();
+            obj1[0] = closure_1_1(10133)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -201,9 +208,9 @@ export default function UserSettingsPushNotificationLogs() {
           return obj2;
         } else {
           closure_0 = arg1;
-          obj = first(9067);
+          obj = closure_1_0(9067);
           const obj3 = { message: null };
-          obj3[0] = first1(10135)(closure_0, false);
+          obj3[0] = closure_1_1(10135)(closure_0, false);
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -230,7 +237,8 @@ export default function UserSettingsPushNotificationLogs() {
     if (item.silent) {
       str = "~silent~ ";
     }
-    let obj = { style: closure_4.code, variant: "text-xs/normal", children: new Date(item.receivedTimestamp).toISOString() };
+    let obj = { style: closure_4.log, children: null };
+    obj = { style: closure_4.code, variant: "text-xs/normal", children: new Date(item.receivedTimestamp).toISOString() };
     const items = [closure_1_7(first(4734).Text, obj), ];
     obj = { style: closure_4.code, variant: "text-sm/normal", children: null };
     const items1 = [str, "[", item.type, "]", " "];
@@ -238,7 +246,7 @@ export default function UserSettingsPushNotificationLogs() {
     obj[2] = items2;
     items[1] = closure_1_8(first(4734).Text, obj);
     obj[1] = items;
-    return closure_1_8(View, obj, item.index);
+    return closure_1_8(closure_1_6, obj, item.index);
   };
   items2[1] = callback3(first(8029).FlashList, obj1);
   obj[1] = items2;

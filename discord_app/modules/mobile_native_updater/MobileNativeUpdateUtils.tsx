@@ -2,13 +2,12 @@
 
 // Module 13366 (_checkForNewerBuild)
 import timestampDefault from "timestamp" /* 3 */;
-import obj132 from "obj132" /* 500 */;
 import keys from "keys" /* 691 */;
 import _mod4090 from "module_4090" /* 4090 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL" /* 4356 */;
 
-require = fn;
+require = arg1;
 function _checkForNewerBuild() {
   const self = this;
   const tmp = callback(function*() {
@@ -117,14 +116,13 @@ function openBuildInstallerUrl(install) {
       } else {
         openURLExternally(str.toString());
       }
-      obj = obj132;
     }
   } catch (err) {
   }
 }
 let closure_4 = new timestampDefault("MobileNativeUpdateUtils");
 const tmp2 = new timestampDefault("MobileNativeUpdateUtils");
-const result = require("obj132").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
 
 export const checkForNewerBuild = function checkForNewerBuild() {
   const self = this;

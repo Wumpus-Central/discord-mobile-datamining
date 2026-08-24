@@ -2,15 +2,16 @@
 
 // Module 12812 (parents)
 import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12811 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
 
 export default function _default(parents) {
   parents = parents.parents;
+  importDefault = undefined;
   const tmp = callback(React.useState(false), 2);
   importDefault = tmp[1];
   [][0] = parents;

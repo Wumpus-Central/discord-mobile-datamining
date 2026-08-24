@@ -1,12 +1,12 @@
 // === Module 11375: usePollDurationOptions ===
 
 // Module 11375 (usePollDurationOptions)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
 
 const PollDurations = POLL_ATTACHMENT_FOLDER.PollDurations;
-const result = obj132.fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");
+const result = set.fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");
 
 export default function usePollDurationOptions() {
   const obj = {};

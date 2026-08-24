@@ -1,14 +1,13 @@
 // === Module 13907: _terminate ===
 
 // Module 13907 (_terminate)
-import obj132 from "obj132" /* 2 */;
-import obj1322 from "obj132" /* 500 */;
+import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
 import enforcingDefault from "enforcing" /* 13908 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
 
 ({ AppState: c3, NativeModules: c4 } = get_ActivityIndicator);
 initializeDefault;
@@ -25,7 +24,6 @@ class VoiceMessagesPlaybackManager extends tmp3 {
         const DCDAccessibilityManager = closure_4.DCDAccessibilityManager;
         const result1 = DCDAccessibilityManager.handleSetPrefersReducedMotion(prefersReducedMotion.prefersReducedMotion);
       }
-      obj = applyArgumentsResult(500);
     };
     applyArgumentsResult.handleMessageDelete = function handleMessageDelete(id) {
       id = id.id;
@@ -52,7 +50,6 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           DCDAudioPlayerManager.pauseCurrentPlayer(false);
         }
       }
-      obj = applyArgumentsResult(500);
     };
     applyArgumentsResult.handleAppStateChanged = function handleAppStateChanged(state) {
       state = state.state;
@@ -61,9 +58,10 @@ class VoiceMessagesPlaybackManager extends tmp3 {
         applyArgumentsResult.appState = state;
         if ("active" === state) {
           if ("active" !== appState) {
-            let tmpResult = applyArgumentsResult(dependencyMap[3]);
+            let tmpResult = tmp(tmp2[3]);
             if (tmpResult.isAndroid()) {
-              const result = enforcingDefault.maybePlayCurrentPlayer();
+              const result = closure_1_1(tmp2[4]).maybePlayCurrentPlayer();
+              const obj5 = closure_1_1(tmp2[4]);
             } else {
               const DCDAudioPlayerManager2 = closure_1_4.DCDAudioPlayerManager;
               if (DCDAudioPlayerManager2 != null) {
@@ -73,9 +71,10 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           }
         }
         if (tmp4) {
-          tmpResult = applyArgumentsResult(dependencyMap[3]);
+          tmpResult = tmp(tmp2[3]);
           if (tmpResult.isAndroid()) {
-            enforcingDefault.pauseCurrentPlayer(true);
+            closure_1_1(tmp2[4]).pauseCurrentPlayer(true);
+            const obj3 = closure_1_1(tmp2[4]);
           } else {
             const DCDAudioPlayerManager = closure_1_4.DCDAudioPlayerManager;
             if (DCDAudioPlayerManager != null) {
@@ -85,7 +84,6 @@ class VoiceMessagesPlaybackManager extends tmp3 {
         }
         tmp4 = "active" !== state && "active" === appState;
       }
-      obj = applyArgumentsResult(dependencyMap[3]);
     };
     return applyArgumentsResult;
   }
@@ -93,53 +91,58 @@ class VoiceMessagesPlaybackManager extends tmp3 {
 const prototype = VoiceMessagesPlaybackManager.prototype;
 prototype["_terminate"] = function _terminate() {
   dispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
+  const obj = dispatcherDefault;
   dispatcherDefault.unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const obj2 = dispatcherDefault;
   dispatcherDefault.unsubscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
+  const obj3 = dispatcherDefault;
   dispatcherDefault.unsubscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
 };
 prototype["_initialize"] = function _initialize() {
   let obj = dispatcherDefault;
   const subscription = obj.subscribe("LOGOUT", this.handleLogout);
   const subscription1 = dispatcherDefault.subscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const obj2 = dispatcherDefault;
   const subscription2 = dispatcherDefault.subscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
+  const obj3 = dispatcherDefault;
   const subscription3 = dispatcherDefault.subscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
   obj = { type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", prefersReducedMotion: obj.rawPrefersReducedMotion };
   const result = this.handleSetPrefersReducedMotion(obj);
 };
 const voiceMessagesPlaybackManager = new VoiceMessagesPlaybackManager();
-let result = obj132.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx");
+let result = set.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx");
 
 export default voiceMessagesPlaybackManager;
 export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
   if (obj.isAndroid()) {
     enforcingDefault.pauseCurrentPlayer(arg0);
+    const obj2 = enforcingDefault;
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
       DCDAudioPlayerManager.pauseCurrentPlayer(arg0);
     }
   }
-  obj = obj1322;
 };
 export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
   if (obj.isAndroid()) {
     const result = enforcingDefault.maybePlayCurrentPlayer();
+    const obj2 = enforcingDefault;
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
       const result1 = DCDAudioPlayerManager.maybePlayCurrentPlayer();
     }
   }
-  obj = obj1322;
 };
 export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) {
   if (obj.isAndroid()) {
     const result = enforcingDefault.handleVoiceMessageDeleted(id);
+    const obj2 = enforcingDefault;
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
       const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
     }
   }
-  obj = obj1322;
 };

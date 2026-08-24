@@ -3,13 +3,13 @@
 // Module 16714 (maybeShowUrgentMessageModal)
 import initializeDefault from "initialize" /* 5038 */;
 import _fetchProfileAll from "_fetchProfile" /* 8418 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { SYSTEM_USER } from "SYSTEM_USER" /* 16715 */;
 import { UserFlags } from "ME" /* 676 */;
 
-function maybeShowUrgentMessageModal(fn) {
+function maybeShowUrgentMessageModal(arg0) {
   const currentUser = authStore2.getCurrentUser();
   if (null != currentUser) {
     channelId = channelId.getChannelId();
@@ -18,7 +18,7 @@ function maybeShowUrgentMessageModal(fn) {
       if (dMFromUserId !== channelId) {
         if (!c7) {
           c7 = true;
-          fn();
+          arg0();
         }
       }
     }
@@ -34,6 +34,7 @@ function maybeShowUrgentMessageModal(fn) {
     if (hasUrgentMessagesResult) {
       c7 = false;
       _fetchProfileAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
+      const obj5 = _fetchProfileAll;
     }
   }
 }
@@ -50,6 +51,7 @@ function maybeClearUrgentMessage(channelId) {
   if (hasUrgentMessagesResult) {
     c7 = false;
     _fetchProfileAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
+    const obj2 = _fetchProfileAll;
   }
 }
 let c7 = false;
@@ -60,10 +62,10 @@ const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAler
   closure_0 = tmp2;
   tmp2.actions = {
     POST_CONNECTION_OPEN() {
-      maybeShowUrgentMessageModal(closure_0.handleShowUrgentMessageAlert);
+      closure_1_8(closure_0.handleShowUrgentMessageAlert);
     },
     MESSAGE_CREATE() {
-      maybeShowUrgentMessageModal(closure_0.handleShowUrgentMessageAlert);
+      closure_1_8(closure_0.handleShowUrgentMessageAlert);
     },
     CHANNEL_SELECT: maybeClearUrgentMessage
   };
@@ -72,6 +74,6 @@ const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAler
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("obj132").fileFinishedImporting("modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx");
+const result = require("set").fileFinishedImporting("modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx");
 
 export default prototype;

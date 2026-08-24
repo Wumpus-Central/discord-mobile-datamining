@@ -9,19 +9,21 @@ import ManaContext from "ManaContext" /* 4104 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ Pressable: c3, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = {};
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
+createCacheKey = { fill: StyleSheet.absoluteFillObject, backdrop: null, backdropOpaque: null, accessibilityDismiss: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
 createCacheKey[3] = { position: "absolute", top: 0, left: 0, right: 0, height: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("design/components/Backdrop/native/Backdrop.native.tsx");
+let obj1 = { backgroundColor: ThemesDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
+const result = require("set").fileFinishedImporting("design/components/Backdrop/native/Backdrop.native.tsx");
 
 export const Backdrop = function Backdrop(animatedProps) {
   animatedProps = animatedProps.animatedProps;
@@ -43,7 +45,9 @@ export const Backdrop = function Backdrop(animatedProps) {
     accessibilityLabel = intl.string(getSystemLocale.t.WAI6xu);
   }
   let backgroundColor = callback2();
-  const obj = { style: items, pointerEvents: "box-none", animatedProps, children: null };
+  let obj = ManaContext;
+  obj = { onPress: onDismiss, "aria-hidden": true };
+  obj = { style: items, pointerEvents: "box-none", animatedProps, children: null };
   items = [backgroundColor.fill, style];
   let tmp4 = null != onDismiss;
   if (tmp4) {
@@ -73,7 +77,7 @@ export const Backdrop = function Backdrop(animatedProps) {
       obj4[3] = backgroundColor.backdrop.backgroundColor;
       backgroundColor = backgroundColor.backdrop.backgroundColor;
       obj4[4] = backgroundColor;
-      obj3.children = callback(tmp15, obj4);
+      obj3.children = tmp7(tmp15, obj4);
     } else if ("subtle" !== str) {
       num = 0.25;
     }
@@ -83,8 +87,8 @@ export const Backdrop = function Backdrop(animatedProps) {
     const merged1 = Object.assign(obj);
     const items3 = [backgroundColor.fill, flag ? backgroundColor.backdropOpaque : backgroundColor.backdrop];
     obj5.style = items3;
-    items2[1] = callback(tmp8, obj5);
+    items2[1] = tmp7(tmp8, obj5);
     obj[3] = items2;
-    return callback(_modDef4115.View, obj);
+    return closure_5(_modDef4115.View, obj);
   }
 };

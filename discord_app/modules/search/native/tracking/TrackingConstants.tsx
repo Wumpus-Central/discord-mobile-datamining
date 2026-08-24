@@ -1,13 +1,14 @@
 // === Module 8506: SearchEntrypointAnalyticsLocations ===
 
 // Module 8506 (SearchEntrypointAnalyticsLocations)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 
 ({ SearchHistoryItemTypes, SearchTabs } = MessageEmbedTypes);
 let obj = { RECENT: "recent", CHANNELS: "channels", MEDIA: "media", PINS: "pins", LINKS: "links", FILES: "files", MESSAGES: "messages", PEOPLE: "people", MEMBERS: "members", THREADS: "threads" };
+obj = { [SearchTabs.RECENT]: obj.RECENT, [SearchTabs.GUILD_CHANNELS]: obj.CHANNELS, [SearchTabs.MEDIA]: obj.MEDIA, [SearchTabs.PINS]: obj.PINS, [SearchTabs.LINKS]: obj.LINKS, [SearchTabs.FILES]: obj.FILES, [SearchTabs.MESSAGES]: obj.MESSAGES, [SearchTabs.PEOPLE]: obj.PEOPLE, [SearchTabs.MEMBERS]: obj.MEMBERS, [SearchTabs.THREADS]: obj.THREADS };
 obj = { GUILD_CHANNEL: "guild_channel", GDM_CHANNEL: "gdm_channel", DM_CHANNEL: "dm_channel", PLAINTEXT: "plaintext" };
-const result = obj132.fileFinishedImporting("modules/search/native/tracking/TrackingConstants.tsx");
+const result = set.fileFinishedImporting("modules/search/native/tracking/TrackingConstants.tsx");
 
 export const SearchEntrypointAnalyticsLocations = { GUILD: "guild", CHANNEL_HEADER: "channel_header", CHANNEL_DETAILS_HEADER: "channel_details_header", DM_LIST: "dm_list", INDIVIDUAL_DM: "individual_dm" };
 export const AnalyticsSearchTabs = obj;

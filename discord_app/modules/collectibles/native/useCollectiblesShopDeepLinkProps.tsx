@@ -1,18 +1,19 @@
 // === Module 14955: useCollectiblesShopDeepLinkProps ===
 
 // Module 14955 (useCollectiblesShopDeepLinkProps)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
-import items from "items" /* 5325 */;
+import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "items" /* 5325 */;
 
 const useMemo = noop.useMemo;
 let closure_5 = {};
-const result = obj132.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
 
 export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeepLinkProps(categories) {
   categories = categories.categories;
   const products = categories.products;
+  let initialCategorySkuId;
   let initialBaseProductSkuId;
   let initialVariantIndex;
   const items = [initialBaseProductSkuId, initialVariantIndex];
@@ -37,7 +38,7 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
           initialBaseProductSkuId = productByStoreListingId.skuId;
           const _Math = Math;
           const variants = productByStoreListingId.variants;
-          initialVariantIndex = Math.max(0, variants.findIndex((item, index) => item.skuId === initialProductSkuId));
+          initialVariantIndex = Math.max(0, variants.findIndex((skuId) => skuId.skuId === initialProductSkuId));
         }
       }
     }
@@ -48,7 +49,7 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
     }
     return { initialCategorySkuId, initialBaseProductSkuId, initialVariantIndex };
   });
-  let initialCategorySkuId = stateFromStoresObject.initialCategorySkuId;
+  initialCategorySkuId = stateFromStoresObject.initialCategorySkuId;
   initialBaseProductSkuId = stateFromStoresObject.initialBaseProductSkuId;
   initialVariantIndex = stateFromStoresObject.initialVariantIndex;
   const items1 = [initialBaseProductSkuId, initialVariantIndex, initialCategorySkuId, products, categories];
@@ -62,16 +63,17 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
         let bound;
         if (null != products) {
           const _Math = Math;
-          bound = Math.max(0, products.findIndex((item, index) => item.skuId === closure_3));
+          bound = Math.max(0, obj3.findIndex((skuId) => skuId.skuId === closure_3));
         }
         obj[3] = bound;
         obj = categories;
         let bound1;
         if (null != categories) {
           const _Math2 = Math;
-          bound1 = Math.max(0, obj.findIndex((item, index) => item.skuId === closure_2));
+          bound1 = Math.max(0, obj.findIndex((skuId) => skuId.skuId === closure_2));
         }
         obj[4] = bound1;
+        obj3 = products;
       }
       return obj;
     }

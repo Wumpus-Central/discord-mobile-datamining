@@ -4,28 +4,29 @@
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 let closure_4 = { code: "function MediaKeyboardButtonIconTsx1(){const{keyboard,KeyboardTypes,chatInputFloating,withTiming,timingStandard}=this.__closure;const isActive=keyboard===KeyboardTypes.MEDIA||chatInputFloating&&keyboard===KeyboardTypes.APP_LAUNCHER;return{transform:[{rotate:withTiming(isActive?'45deg':'0deg',timingStandard)}]};}" };
-const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx");
 
 export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
+    let _require;
     let chatInputFloating;
     const merged = Object.assign(arg0, undefined);
     const tmp6 = chatInputFloating(4239)();
-    const _require = tmp6;
+    _require = tmp6;
     let obj = _require(1367);
     chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "MediaKeyboardButtonIcon" }).chatInputFloating;
     obj1 = _require(4115);
     const fn = function s() {
-      let tmp4 = callback === callback(dependencyMap[5]).KeyboardTypes.MEDIA;
+      let tmp4 = callback === callback(closure_1_2[5]).KeyboardTypes.MEDIA;
       if (!tmp4) {
         let tmp5 = chatInputFloating;
         if (chatInputFloating) {
-          tmp5 = callback === callback(dependencyMap[5]).KeyboardTypes.APP_LAUNCHER;
+          tmp5 = callback === tmp2(tmp3[5]).KeyboardTypes.APP_LAUNCHER;
         }
         tmp4 = tmp5;
       }
@@ -33,7 +34,8 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
       if (tmp4) {
         str = "45deg";
       }
-      const obj = { rotate: callback(dependencyMap[6]).withTiming(str, callback(dependencyMap[7]).timingStandard) };
+      let obj = { transform: null };
+      obj = { rotate: callback(closure_1_2[6]).withTiming(str, tmp2(tmp3[7]).timingStandard) };
       const items = [obj];
       obj[0] = items;
       return obj;

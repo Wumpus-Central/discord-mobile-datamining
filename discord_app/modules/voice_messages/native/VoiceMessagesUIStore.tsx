@@ -1,7 +1,7 @@
 // === Module 11147: VoiceMessageRecordingStatus ===
 
 // Module 11147 (VoiceMessageRecordingStatus)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import _mod4115 from "module_4115" /* 4115 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
@@ -16,7 +16,7 @@ let obj = keys.create(() => {
   obj[6] = [];
   return obj;
 });
-let result = obj132.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesUIStore.tsx");
+let result = set.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesUIStore.tsx");
 
 export const VoiceMessageRecordingStatus = { REQUESTED: 0, [0]: "REQUESTED", STARTED: 1, [1]: "STARTED" };
 export const useVoiceMessagesUIStore = obj;
@@ -64,7 +64,6 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   waveformVersion(705).batchUpdates(() => {
     closure_1_4.setState({ waveformVersion: waveformVersion + 1 });
   });
-  const obj2 = waveformVersion(705);
 };
 export const showVoiceMessagesTooltip = function showVoiceMessagesTooltip() {
   batchUpdates.batchUpdates(() => {

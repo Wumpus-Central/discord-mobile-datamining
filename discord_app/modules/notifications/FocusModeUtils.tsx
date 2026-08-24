@@ -3,14 +3,14 @@
 // Module 10024 (useFocusModeEnabled)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import obj132Default from "obj132" /* 4827 */;
-import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
+import setDefault from "set" /* 4827 */;
+import closure_3 from "filterPlayingActivities" /* 7250 */;
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags" /* 4033 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 ({ AnalyticEvents: c5, StatusTypes: closure_6 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
 
 export const useFocusModeEnabled = function useFocusModeEnabled() {
   const FocusMode = explicitContentFromProto.FocusMode;
@@ -58,7 +58,7 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
   const setting = FocusMode.getSetting();
   const PreloadedUserSettingsActionCreators = _require(1374).PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("notifications", (arg0) => {
-    const BoolValue = quiet_mode_enabled(dependencyMap[5]).BoolValue;
+    const BoolValue = quiet_mode_enabled(closure_1_2[5]).BoolValue;
     arg0.quietMode = BoolValue.create({ value: quiet_mode_enabled });
     let str = "0";
     if (quiet_mode_enabled) {
@@ -71,7 +71,8 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
     }
     arg0.focusModeExpiresAtMs = str;
   }, _require(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
-  let obj = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
+  let obj = expandEventPropertiesDefault;
+  obj = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
   let tmp7 = status.getStatus() === constants3.DND && quiet_mode_enabled;
   if (tmp7) {
@@ -90,7 +91,7 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
     obj[4] = function onConfirm() {
       callback(table[9])({ nextStatus: constants.ONLINE });
     };
-    obj132Default.show(obj);
-    const tmp5Result = obj132Default;
+    setDefault.show(obj);
+    const tmp5Result = setDefault;
   }
 };

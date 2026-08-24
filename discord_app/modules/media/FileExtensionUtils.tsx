@@ -1,11 +1,11 @@
 // === Module 6924: decideFileExtension ===
 
 // Module 6924 (decideFileExtension)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 
 let closure_2 = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };
-const result = obj132.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
+const result = set.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
 
 export const decideFileExtension = function decideFileExtension(closure_1_0, closure_1_1, arg2) {
   let flag = arg2;
@@ -34,11 +34,12 @@ export const decideFileExtension = function decideFileExtension(closure_1_0, clo
       }
     }
     tmp = tmp7;
+    const obj = isDiscordProxiedAssetUrlDefault;
   }
   if (tmp == null) {
     let tmp9;
-    if (null != dependencyMap) {
-      const str6 = dependencyMap.toLowerCase();
+    if (null != closure_1_1) {
+      const str6 = closure_1_1.toLowerCase();
       if (obj2.test(str6)) {
         tmp9 = table[str6];
         if (null == tmp9) {
@@ -81,6 +82,7 @@ export const decideFileExtension = function decideFileExtension(closure_1_0, clo
       tmp15 = tmp14;
     }
     tmp = tmp15;
+    const obj3 = isDiscordProxiedAssetUrlDefault;
   }
   return tmp;
 };

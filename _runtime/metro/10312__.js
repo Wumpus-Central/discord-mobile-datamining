@@ -9,7 +9,7 @@ import context from "context" /* 10321 */;
 import CarouselLayout from "CarouselLayout" /* 10322 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 
 export default noopDefault.forwardRef((defaultIndex, ref) => {
   let obj = useInitProps;

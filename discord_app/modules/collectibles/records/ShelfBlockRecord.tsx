@@ -1,10 +1,11 @@
 // === Module 5348: fromServer ===
 
 // Module 5348 (fromServer)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ShopBlockType from "ShopBlockType" /* 5339 */;
 
-const prototype = function ShelfBlockRecord(show_button) {
+let prototype;
+prototype = function ShelfBlockRecord(show_button) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.SHELF;
   ({ name: tmp.name, ranked_sku_ids: tmp.rankedSkuIds, category_sku_id } = show_button);
@@ -69,6 +70,6 @@ prototype["fromServer"] = function fromServer(show_button) {
   obj.mobileBackgroundImage = prop1;
   return obj;
 };
-const result = obj132.fileFinishedImporting("modules/collectibles/records/ShelfBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/ShelfBlockRecord.tsx");
 
 export const ShelfBlockRecord = prototype;

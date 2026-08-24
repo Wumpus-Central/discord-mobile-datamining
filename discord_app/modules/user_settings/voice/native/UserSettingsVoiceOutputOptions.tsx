@@ -1,22 +1,20 @@
 // === Module 12552: UserSettingsVoiceOutputOptions ===
 
 // Module 12552 (UserSettingsVoiceOutputOptions)
-import _modDef38 from "module_38" /* 38 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
 import VolumeSliderDefault from "VolumeSlider" /* 12139 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import reset from "reset" /* 4652 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import closure_5 from "reset" /* 4652 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ slider: { marginTop: 4 } });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
 
 export default function UserSettingsVoiceOutputOptions() {
   const tmp = callback2();
@@ -42,13 +40,13 @@ export default function UserSettingsVoiceOutputOptions() {
   const stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let num = 0;
     if (null != stateFromStores1) {
-      num = closure_1_7.getLocalVolume(tmp.ownerId, MediaEngineContextTypes.STREAM);
+      num = closure_1_7.getLocalVolume(tmp.ownerId, closure_1_8.STREAM);
     }
     return num;
   });
   const callback = React.useCallback((arg0) => {
-    _modDef38(null != stateFromStores1, "Can not set stream volume without active stream");
-    trackDeviceChangedDefault.setLocalVolume(stateFromStores1.ownerId, arg0, MediaEngineContextTypes.STREAM);
+    closure_1_1(closure_1_2[9])(null != stateFromStores1, "Can not set stream volume without active stream");
+    closure_1_1(closure_1_2[10]).setLocalVolume(stateFromStores1.ownerId, arg0, closure_1_8.STREAM);
   }, items3);
   obj = { title: null, hasIcons: false, children: null };
   const intl = stateFromStores1(1236).intl;
@@ -82,5 +80,5 @@ export default function UserSettingsVoiceOutputOptions() {
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return callback(stateFromStores1(12547).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(12547).UserSettingsTableRowGroup, obj);
 };

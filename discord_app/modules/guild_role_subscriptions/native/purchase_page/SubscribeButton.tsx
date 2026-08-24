@@ -2,17 +2,17 @@
 
 // Module 15803 (emphasisHook)
 import Text from "Text" /* 4734 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
+import closure_8 from "handleConnectionOpen" /* 1979 */;
+import closure_9 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
 import { AnalyticsLocations } from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function emphasisHook(children) {
   return callback3(Text.Text, { variant: "text-xs/semibold", color: "text-default", children });
 }
@@ -20,9 +20,10 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  changeToListingId(14573);
+  let obj = changeToListingId(14573);
   obj1 = activeListingId(3975)(activeSubscription.currentPeriodEnd);
-  let obj = { variant: "text-xs/normal", color: "text-muted", children: null };
+  obj = { children: null };
+  obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1236).intl;
   obj1 = { activeListingName: callback2(obj.useName(activeListingId), 1)[0], billingEndDate: obj1.format("MMMM Do"), emphasisHook };
   obj[2] = intl.format(activeSubscription(1236).t.lA7ztO, obj1);
@@ -31,16 +32,16 @@ function SwitchTiersButton(activeSubscription) {
   const intl2 = activeSubscription(1236).intl;
   obj2[0] = intl2.string(activeSubscription(1236).t.SACegK);
   obj2[1] = function onPress() {
-    activeListingId(dependencyMap[19]);
-    const obj = { activeSubscription, activeListingId, changeToListingId };
-    obj.openLazy(activeSubscription(dependencyMap[21])(dependencyMap[20], dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
+    let obj = activeListingId(closure_1_3[19]);
+    obj = { activeSubscription, activeListingId, changeToListingId };
+    obj.openLazy(activeSubscription(closure_1_3[21])(closure_1_3[20], closure_1_3.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
   };
   items[2] = callback3(activeSubscription(15797).ArrowButton, obj2);
   obj[0] = items;
   return callback4(View, obj);
 }
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx");
 
 export default function SubscribeButton(listingId) {
   listingId = listingId.listingId;
@@ -113,7 +114,7 @@ export default function SubscribeButton(listingId) {
             v0 = 2;
             c4 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = createSubscription();
+            obj1[0] = closure_1_0();
             return obj1;
           }
         } else if (1 === tmp7) {

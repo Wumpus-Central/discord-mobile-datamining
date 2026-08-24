@@ -1,13 +1,13 @@
 // === Module 11067: _getSafetyHubData ===
 
 // Module 11067 (_getSafetyHubData)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
 import SafetyHubView from "SafetyHubView" /* 5438 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _getSafetyHubData() {
   const self = this;
   const tmp = callback(function*() {
@@ -65,15 +65,15 @@ function _getSafetyHubData() {
               const obj4 = v0(result[6]);
             }
             const obj9 = v02(closure_1_2[5]);
-            postResult.then((result) => {
-              ({ classifications, guild_classifications, appeal_eligibility, account_standing, is_dsa_eligible, username, is_appeal_eligible } = result.body);
-              const mapped = classifications.map((item, index) => {
-                if (null != item.flagged_content) {
-                  if (item.flagged_content.length > 0) {
-                    const first = item.flagged_content[0];
+            postResult.then((body) => {
+              ({ classifications, guild_classifications, appeal_eligibility, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+              const mapped = classifications.map((flagged_content) => {
+                if (null != flagged_content.flagged_content) {
+                  if (flagged_content.flagged_content.length > 0) {
+                    const first = flagged_content.flagged_content[0];
                     const attachments = first.attachments;
-                    first.attachments = attachments.filter((item, index) => {
-                      const filename = item.filename;
+                    first.attachments = attachments.filter((filename) => {
+                      filename = filename.filename;
                       let isImageFileResult = callback(table[7]).isImageFile(filename);
                       if (!isImageFileResult) {
                         isImageFileResult = callback(table[7]).isVideoFile(filename);
@@ -86,11 +86,11 @@ function _getSafetyHubData() {
                     } else {
                       items = [first];
                     }
-                    item.flagged_content = items;
+                    flagged_content.flagged_content = items;
                     obj = callback(table[8]);
                   }
                 }
-                return item;
+                return flagged_content;
               });
               if (guild_classifications == null) {
                 guild_classifications = [];
@@ -101,10 +101,10 @@ function _getSafetyHubData() {
               }
               obj[6] = appeal_eligibility;
               v1(709).dispatch(obj);
-            }).catch((error) => {
+            }).catch((body) => {
               let str;
-              if (error != null) {
-                const body = error.body;
+              if (body != null) {
+                body = body.body;
                 if (body != null) {
                   str = body.message;
                 }
@@ -116,15 +116,15 @@ function _getSafetyHubData() {
             });
             v02 = 1;
             v0 = 1;
-            const nextPromise = postResult.then((result) => {
-              ({ classifications, guild_classifications, appeal_eligibility, account_standing, is_dsa_eligible, username, is_appeal_eligible } = result.body);
-              const mapped = classifications.map((item, index) => {
-                if (null != item.flagged_content) {
-                  if (item.flagged_content.length > 0) {
-                    const first = item.flagged_content[0];
+            const nextPromise = postResult.then((body) => {
+              ({ classifications, guild_classifications, appeal_eligibility, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+              const mapped = classifications.map((flagged_content) => {
+                if (null != flagged_content.flagged_content) {
+                  if (flagged_content.flagged_content.length > 0) {
+                    const first = flagged_content.flagged_content[0];
                     const attachments = first.attachments;
-                    first.attachments = attachments.filter((item, index) => {
-                      const filename = item.filename;
+                    first.attachments = attachments.filter((filename) => {
+                      filename = filename.filename;
                       let isImageFileResult = callback(table[7]).isImageFile(filename);
                       if (!isImageFileResult) {
                         isImageFileResult = callback(table[7]).isVideoFile(filename);
@@ -137,11 +137,11 @@ function _getSafetyHubData() {
                     } else {
                       items = [first];
                     }
-                    item.flagged_content = items;
+                    flagged_content.flagged_content = items;
                     obj = callback(table[8]);
                   }
                 }
-                return item;
+                return flagged_content;
               });
               if (guild_classifications == null) {
                 guild_classifications = [];
@@ -244,16 +244,16 @@ function _getSafetyHubDataForClassification() {
                 postResult = HTTP.get(obj3);
               }
               const obj9 = v0(table[5]);
-              postResult.then((result) => {
-                ({ classifications, account_standing, is_dsa_eligible, username, is_appeal_eligible } = result.body);
-                const found = classifications.find((item, index) => item.id === closure_0);
+              postResult.then((body) => {
+                ({ classifications, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+                const found = classifications.find((id) => id.id === closure_0);
                 if (null != found) {
                   if (null != found.flagged_content) {
                     if (found.flagged_content.length > 0) {
                       const first = found.flagged_content[0];
                       const attachments = first.attachments;
-                      first.attachments = attachments.filter((item, index) => {
-                        const filename = item.filename;
+                      first.attachments = attachments.filter((filename) => {
+                        filename = filename.filename;
                         let isImageFileResult = callback(table[7]).isImageFile(filename);
                         if (!isImageFileResult) {
                           isImageFileResult = callback(table[7]).isVideoFile(filename);
@@ -279,16 +279,16 @@ function _getSafetyHubDataForClassification() {
                   v3(709).dispatch(obj);
                   const obj4 = v3(709);
                 } else {
-                  v3(709);
+                  obj = v3(709);
                   obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE", error: "Classification not found.", classificationId: null };
                   obj[2] = callback;
                   obj.dispatch(obj);
                 }
-              }).catch((error) => {
+              }).catch((body) => {
                 let obj = v3(709);
                 let str;
-                if (error != null) {
-                  const body = error.body;
+                if (body != null) {
+                  body = body.body;
                   if (body != null) {
                     str = body.message;
                   }
@@ -301,16 +301,16 @@ function _getSafetyHubDataForClassification() {
               });
               table = 1;
               v0 = 1;
-              const nextPromise = postResult.then((result) => {
-                ({ classifications, account_standing, is_dsa_eligible, username, is_appeal_eligible } = result.body);
-                const found = classifications.find((item, index) => item.id === closure_0);
+              const nextPromise = postResult.then((body) => {
+                ({ classifications, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+                const found = classifications.find((id) => id.id === closure_0);
                 if (null != found) {
                   if (null != found.flagged_content) {
                     if (found.flagged_content.length > 0) {
                       const first = found.flagged_content[0];
                       const attachments = first.attachments;
-                      first.attachments = attachments.filter((item, index) => {
-                        const filename = item.filename;
+                      first.attachments = attachments.filter((filename) => {
+                        filename = filename.filename;
                         let isImageFileResult = callback(table[7]).isImageFile(filename);
                         if (!isImageFileResult) {
                           isImageFileResult = callback(table[7]).isVideoFile(filename);
@@ -336,7 +336,7 @@ function _getSafetyHubDataForClassification() {
                   v3(709).dispatch(obj);
                   const obj4 = v3(709);
                 } else {
-                  v3(709);
+                  obj = v3(709);
                   obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE", error: "Classification not found.", classificationId: null };
                   obj[2] = callback;
                   obj.dispatch(obj);
@@ -408,17 +408,17 @@ function _requestReview() {
             } else {
               suspendedUserToken = suspendedUserToken.getSuspendedUserToken();
               if (null != suspendedUserToken) {
-                let result = closure_1_8.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(callback);
+                let result = closure_1_8.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(tmp21);
               } else {
-                result = closure_1_8.SAFETY_HUB_REQUEST_REVIEW(callback);
+                result = closure_1_8.SAFETY_HUB_REQUEST_REVIEW(tmp21);
               }
               if (null != suspendedUserToken) {
                 const HTTP2 = callback(530).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
                 obj1[0] = result;
                 const obj2 = { signal: null, user_input: null, token: null };
-                obj2[0] = callback2;
-                obj2[1] = dependencyMap;
+                obj2[0] = tmp22;
+                obj2[1] = tmp23;
                 obj2[2] = suspendedUserToken;
                 obj1[1] = obj2;
                 result = callback(530).rejectWithMigratedError();
@@ -430,8 +430,8 @@ function _requestReview() {
                 let obj3 = { url: null, body: null, rejectWithError: null };
                 obj3[0] = result;
                 const obj4 = { signal: null, user_input: null };
-                obj4[0] = callback2;
-                obj4[1] = dependencyMap;
+                obj4[0] = tmp22;
+                obj4[1] = tmp23;
                 obj3[1] = obj4;
                 obj3 = callback(530);
                 obj3[2] = obj3.rejectWithMigratedError();
@@ -439,14 +439,14 @@ function _requestReview() {
               }
               callback2(709).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" });
               const obj8 = callback2(709);
-              putResult.then((result) => {
-                closure_1_1(closure_1_2[5]);
-                const obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: closure_0 };
+              putResult.then(() => {
+                let obj = closure_1_1(closure_1_2[5]);
+                obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: closure_0 };
                 obj.dispatch(obj);
-              }).catch((error) => {
+              }).catch((body) => {
                 let str;
-                if (error != null) {
-                  const body = error.body;
+                if (body != null) {
+                  body = body.body;
                   if (body != null) {
                     str = body.message;
                   }
@@ -455,13 +455,13 @@ function _requestReview() {
                   str = "Unknown error";
                 }
                 callback(table[5]).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE", error: str });
-                throw error;
+                throw body;
               });
               suspendedUserToken = 1;
               c3 = 1;
-              const nextPromise = putResult.then((result) => {
-                closure_1_1(closure_1_2[5]);
-                const obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: closure_0 };
+              const nextPromise = putResult.then(() => {
+                let obj = closure_1_1(closure_1_2[5]);
+                obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: closure_0 };
                 obj.dispatch(obj);
               });
             }
@@ -542,13 +542,13 @@ function _requestSuspendedUserAgeVerification() {
               dependencyMap = 1;
               v0 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1).then((result) => {
-                ({ verification_request_id, verification_webview_url } = result.body);
+              obj3[0] = HTTP.post(obj1).then((body) => {
+                ({ verification_request_id, verification_webview_url } = body.body);
                 v3(709).dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", verificationRequestId: verification_request_id, verificationWebviewUrl: verification_webview_url });
-              }).catch((error) => {
+              }).catch((body) => {
                 let str;
-                if (error != null) {
-                  const body = error.body;
+                if (body != null) {
+                  body = body.body;
                   if (body != null) {
                     str = body.message;
                   }
@@ -643,8 +643,8 @@ function _checkSuspendedUserAgeVerification() {
             v02 = 1;
             v0 = 1;
             const obj3 = { value: null, done: false };
-            obj3[0] = HTTP.post(obj1).then((result) => {
-              const success = result.body.success;
+            obj3[0] = HTTP.post(obj1).then((body) => {
+              const success = body.body.success;
               let tmp = !success;
               if (!success) {
                 tmp = c0 < closure_1_7;
@@ -654,11 +654,10 @@ function _checkSuspendedUserAgeVerification() {
                 const timerId = setTimeout(() => callback(), closure_1_6);
               }
               v1(closure_1_2[5]).dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", success });
-              const obj = v1(closure_1_2[5]);
-            }).catch((error) => {
+            }).catch((body) => {
               let str;
-              if (error != null) {
-                const body = error.body;
+              if (body != null) {
+                body = body.body;
                 if (body != null) {
                   str = body.message;
                 }
@@ -698,7 +697,7 @@ function _checkSuspendedUserAgeVerification() {
   return applyArgumentsResult;
 }
 ({ AGE_CHECK_POLL_INTERVAL_MS: closure_6, AGE_CHECK_MAX_POLL_ATTEMPTS: error } = SafetyHubView);
-let result = require("obj132").fileFinishedImporting("modules/safety_hub/SafetyHubActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubActionCreators.tsx");
 
 export const getSafetyHubData = function getSafetyHubData() {
   const self = this;

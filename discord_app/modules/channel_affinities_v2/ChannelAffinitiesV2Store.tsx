@@ -1,7 +1,7 @@
 // === Module 15538: map ===
 
 // Module 15538 (map)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import result2 from "result" /* 15539 */;
@@ -22,8 +22,8 @@ prototype["initialize"] = function initialize(channelAffinities) {
     obj.lastFetched = channelAffinities.lastFetched;
     const _Map = Map;
     channelAffinities = obj.channelAffinities;
-    map = new Map(channelAffinities.map((item, index) => {
-      const items = [item.channelId, item];
+    map = new Map(channelAffinities.map((channelId) => {
+      const items = [channelId.channelId, channelId];
       return items;
     }));
   }
@@ -79,8 +79,8 @@ obj = {
     c2 = false;
     obj.channelAffinities = affineChannels.affineChannels;
     const channelAffinities = obj.channelAffinities;
-    map = new Map(channelAffinities.map((item, index) => {
-      const items = [item.channelId, item];
+    map = new Map(channelAffinities.map((channelId) => {
+      const items = [channelId.channelId, channelId];
       return items;
     }));
   },
@@ -88,12 +88,13 @@ obj = {
     c2 = false;
   },
   LOGOUT: function handleLogout() {
+    obj = {};
     const merged = Object.assign(frozen);
     map = new Map();
     c2 = false;
   }
 };
 const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(dispatcherDefault, obj);
-const result = obj132.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
+const result = set.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
 
 export default channelAffinitiesV2Store;

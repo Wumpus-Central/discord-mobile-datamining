@@ -1,10 +1,10 @@
 // === Module 10485: bountyCtaFromServer ===
 
 // Module 10485 (bountyCtaFromServer)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import resolveAsset from "resolveAsset" /* 10486 */;
 
-const result = obj132.fileFinishedImporting("modules/ads/BountyTypes.tsx");
+const result = set.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
 export const bountyCtaFromServer = function bountyCtaFromServer(url) {
   let obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
@@ -29,7 +29,9 @@ export const bountyFromServer = function bountyFromServer(creative_content) {
   obj1 = resolveAsset;
   obj[3] = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
   obj[4] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
+  const obj3 = resolveAsset;
   obj[5] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
+  const obj4 = resolveAsset;
   obj[6] = resolveAsset.resolveAdCreativeCdnUrl(creative_content.video_hls);
   const cta = creative_content.cta;
   obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };

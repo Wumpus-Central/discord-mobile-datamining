@@ -5,16 +5,17 @@ import noopAll from "noop" /* 19 */;
 import _modDef4656 from "module_4656" /* 4656 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/activities/native/openIgnoreThermalStateAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/native/openIgnoreThermalStateAlert.tsx");
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
   closure_0 = arg0;
-  let obj = {
+  let obj = _modDef4656;
+  obj = {
     importer() {
-      return callback(dependencyMap[4])(dependencyMap[3], dependencyMap.paths).then((result) => {
-        const IgnoreThermalStateAlert = result.IgnoreThermalStateAlert;
+      return callback(closure_1_2[4])(closure_1_2[3], closure_1_2.paths).then((IgnoreThermalStateAlert) => {
+        IgnoreThermalStateAlert = IgnoreThermalStateAlert.IgnoreThermalStateAlert;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);

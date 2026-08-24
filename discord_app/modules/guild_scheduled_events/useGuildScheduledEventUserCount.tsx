@@ -1,12 +1,12 @@
 // === Module 8795: useGuildScheduledEventUserCount ===
 
 // Module 8795 (useGuildScheduledEventUserCount)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import scheduledEventSort from "scheduledEventSort" /* 4370 */;
+import closure_4 from "scheduledEventSort" /* 4370 */;
 
 const useEffect = noop.useEffect;
-const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");
+const result = set.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");
 
 export default function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
   const _require = arg0;
@@ -29,6 +29,7 @@ export default function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
       }
       const guildEventUserCounts = callback(table[3]).getGuildEventUserCounts(closure_0, callback, items1);
       const obj = callback(table[3]);
+      const tmp6 = callback;
     }
   }, items1);
   return stateFromStores;

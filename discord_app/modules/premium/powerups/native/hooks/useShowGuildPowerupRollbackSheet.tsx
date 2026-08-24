@@ -1,12 +1,12 @@
 // === Module 11680: useShowGuildPowerupRollbackSheet ===
 
 // Module 11680 (useShowGuildPowerupRollbackSheet)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx");
 
 export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   let flag = arg2;
@@ -53,7 +53,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
       obj[2] = modalConfig.primaryButtonText;
       obj[3] = function onCtaPress() {
         callback(closure_1_5.TAKE_ACTION);
-        first(closure_1_2[6]).hideActionSheet(modalConfig(closure_1_2[5]).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
+        closure_1_1(closure_1_2[6]).hideActionSheet(closure_1_0(closure_1_2[5]).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
       };
       obj[4] = function onDismiss() {
         callback(closure_1_5.USER_DISMISS);

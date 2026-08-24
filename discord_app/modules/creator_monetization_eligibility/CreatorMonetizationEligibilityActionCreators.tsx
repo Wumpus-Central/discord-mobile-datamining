@@ -2,11 +2,11 @@
 
 // Module 16906 (_createCreatorMonetizationEnableRequest)
 import sendRequest from "sendRequest" /* 530 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
 
-require = fn;
+require = arg1;
 function _createCreatorMonetizationEnableRequest() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -414,7 +414,7 @@ function _removeMonetization() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx");
 
 export const createCreatorMonetizationEnableRequest = function createCreatorMonetizationEnableRequest(arg0) {
   const self = this;
@@ -436,7 +436,7 @@ export const getCreatorMonetizationEligibility = function getCreatorMonetization
   }
   return applyArgumentsResult;
 };
-export const acceptCreatorMonetizationTerms = function acceptCreatorMonetizationTerms(closure_1_0, arg1) {
+export const acceptCreatorMonetizationTerms = function acceptCreatorMonetizationTerms(arg0, arg1) {
   const self = this;
   const apply = _acceptCreatorMonetizationTerms.apply;
   if (typeof apply === "unknown") {
@@ -446,7 +446,7 @@ export const acceptCreatorMonetizationTerms = function acceptCreatorMonetization
   }
   return applyArgumentsResult;
 };
-export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizationTermsV2(closure_1_0) {
+export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizationTermsV2(arg0) {
   const self = this;
   const apply = _acceptCreatorMonetizationTermsV.apply;
   if (typeof apply === "unknown") {

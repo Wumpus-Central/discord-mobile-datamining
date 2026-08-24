@@ -1,9 +1,9 @@
 // === Module 5439: ContentIdType ===
 
 // Module 5439 (ContentIdType)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");
+const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");
 
 export const ContentIdType = { MESSAGE: "message" };
 export const MemberType = { OWNER: 1, [1]: "OWNER", MEMBER: 2, [2]: "MEMBER" };

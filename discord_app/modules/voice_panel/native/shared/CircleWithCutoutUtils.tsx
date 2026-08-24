@@ -6,11 +6,11 @@ import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = Math.PI / 180;
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
 
 export default function CircleWithCutout(arg0) {
   ({ circleRadius, cutoutPositionInDegrees } = arg0);
@@ -18,7 +18,9 @@ export default function CircleWithCutout(arg0) {
   ({ cutoutRadius, enableCutout, circleFillColor } = arg0);
   const sum = circleRadius + circleRadius * Math.sin(cutoutPositionInDegrees * closure_5);
   const diff = circleRadius - circleRadius * Math.cos(cutoutPositionInDegrees * closure_5);
-  const obj = { id: "mask", children: null };
+  let obj = { height: result, width: result, children: null };
+  obj = { children: null };
+  obj = { id: "mask", children: null };
   const items = [callback(inlineStyles.Rect, { width: result, height: result, fill: "white" }), callback(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" })];
   obj[1] = items;
   obj[0] = callback2(inlineStyles.Mask, obj);

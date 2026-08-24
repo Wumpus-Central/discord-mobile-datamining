@@ -8,33 +8,34 @@ import Button from "Button" /* 4745 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
 import registerAssetDefault from "registerAsset" /* 9854 */;
 import registerAssetDefault2 from "registerAsset" /* 9855 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 4540 */;
+import closure_10 from "set" /* 4540 */;
 import { ComponentActions } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function TransferFooter(arg0) {
   ({ onPress, transferring } = arg0);
-  { bottom: true, style: callback3().footerContainer, children: null };
-  const obj = { loading: transferring, disabled: null, onPress: null, text: null, grow: true };
+  let obj = { bottom: true, style: callback3().footerContainer, children: null };
+  obj = { loading: transferring, disabled: null, onPress: null, text: null, grow: true };
   if (!transferring) {
     transferring = null == onPress;
   }
   obj[1] = transferring;
   obj[2] = onPress;
-  const intl = getSystemLocale.intl;
+  const intl = tmp3(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.FYi3ry);
-  obj[2] = callback(Button.Button, obj);
-  return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  obj[2] = closure_12(Button.Button, obj);
+  return closure_12(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function DeviceOption(children) {
   const tmp = callback3();
-  let obj = { style: tmp.deviceIcon, source: registerAssetDefault };
+  let obj = { style: tmp.deviceOption, children: null };
+  obj = { style: tmp.deviceIcon, source: registerAssetDefault };
   const items = [callback(closure_8, obj), ];
   obj = { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name };
   items[1] = callback(Text.Text, obj);
@@ -43,7 +44,8 @@ function DeviceOption(children) {
 }
 function EmptyState() {
   const tmp = callback3();
-  let obj = { source: registerAssetDefault2, style: tmp.emptyArt };
+  let obj = { style: tmp.emptyContainer, children: null };
+  obj = { source: registerAssetDefault2, style: tmp.emptyArt };
   const items = [callback(closure_8, obj), , ];
   obj = { style: tmp.emptyHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
@@ -58,9 +60,11 @@ function EmptyState() {
 }
 ({ Pressable: closure_6, View: error, Image: closure_8, ActivityIndicator: c9 } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 };
+createCacheKey = { container: { padding: 16, justifyContent: "center", paddingBottom: 90 }, loading: { minHeight: 56 }, footerContainer: null, radioItem: null, deviceIcon: null, deviceOption: null, deviceText: null, emptyContainer: null, emptyArt: null, emptyHeader: null, emptyBody: null, infoBox: null };
+createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xs, padding: 16 };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xs, padding: 16 };
 createCacheKey[4] = { marginRight: 16, width: 32, height: 32, tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center", marginRight: 24 };
 createCacheKey[6] = { flexShrink: 1 };
@@ -70,11 +74,13 @@ createCacheKey[9] = { marginBottom: 8, textAlign: "center" };
 createCacheKey[10] = { textAlign: "center" };
 createCacheKey[11] = { marginTop: 8 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/game_console/native/GameConsoleDeviceListActionSheet.tsx");
+let obj2 = { marginRight: 16, width: 32, height: 32, tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let result = require("set").fileFinishedImporting("modules/game_console/native/GameConsoleDeviceListActionSheet.tsx");
 
 export default function GameConsoleListActionSheet(arg0) {
   ({ platform: require, channel: importDefault } = arg0);
   let stateFromStores;
+  let stateFromStores2;
   let first;
   let React;
   c6 = undefined;
@@ -156,7 +162,7 @@ export default function GameConsoleListActionSheet(arg0) {
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_10.getFetchingDevices(closure_0));
   let obj2 = require(stateFromStores[15]);
   const items2 = [closure_10];
-  const stateFromStores2 = obj2.useStateFromStores(items2, () => closure_1_10.getLastSelectedDeviceByPlatform(closure_0));
+  stateFromStores2 = obj2.useStateFromStores(items2, () => closure_1_10.getLastSelectedDeviceByPlatform(closure_0));
   const tmp7 = first(React.useState(null), 2);
   first = tmp7[0];
   React = tmp7[1];
@@ -177,13 +183,14 @@ export default function GameConsoleListActionSheet(arg0) {
       items = [];
     }
     const values = Object.values(items);
-    return values.map((item, index) => {
-      { value: item.id, name: callback(closure_17, obj) };
-      obj = { name: item.name, platform: item.platform };
+    return values.map((id) => {
+      obj = { value: id.id, name: callback(closure_17, obj) };
+      obj = { name: id.name, platform: id.platform };
       return obj;
     });
   }, items4);
   if (memo.length > 0) {
+    obj = { children: null };
     obj = { style: null, options: null, value: null, withDividers: false, withSpacing: true, disabled: null, onChange: null };
     obj[0] = tmp.radioItem;
     obj[1] = memo;
@@ -192,13 +199,13 @@ export default function GameConsoleListActionSheet(arg0) {
     obj[6] = function onChange(value) {
       value = value.value;
       callback(value);
-      const result = require(stateFromStores[16]).persistSelectedDeviceId(closure_0, value);
+      const result = closure_1_0(stateFromStores[16]).persistSelectedDeviceId(closure_0, value);
     };
-    const items5 = [callback(require(tmp3[21]).RadioGroup, obj), ];
+    const items5 = [callback(tmp2(tmp3[21]).RadioGroup, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.infoBox;
-    const intl = require(tmp3[11]).intl;
-    obj1[1] = intl.string(require(tmp3[11]).t.dI4HFq);
+    const intl = tmp2(tmp3[11]).intl;
+    obj1[1] = intl.string(tmp2(tmp3[11]).t.dI4HFq);
     items5[1] = callback(importDefault(tmp3[22]), obj1);
     obj[0] = items5;
     let tmp12Result = callback2(closure_14, obj);
@@ -225,7 +232,7 @@ export default function GameConsoleListActionSheet(arg0) {
   const obj3 = { footer: tmp12(TransferFooter, obj2), header: null, scrollable: true, children: null };
   obj2[1] = handleTransferVoice;
   const obj4 = { title: null, trailing: null };
-  const intl2 = require(tmp3[11]).intl;
+  const intl2 = tmp2(tmp3[11]).intl;
   obj4[0] = intl2.string(require(stateFromStores[11]).t.aUuz7W);
   let tmp22 = stateFromStores1;
   if (!stateFromStores1) {
@@ -234,12 +241,12 @@ export default function GameConsoleListActionSheet(arg0) {
   const obj5 = {
     disabled: tmp22,
     onPress() {
-      return require(stateFromStores[16]).fetchDevices(closure_0);
+      return closure_1_0(stateFromStores[16]).fetchDevices(closure_0);
     },
     children: null
   };
   const obj6 = { variant: "text-md/semibold", color: "text-brand", children: null };
-  const intl3 = require(tmp3[11]).intl;
+  const intl3 = tmp2(tmp3[11]).intl;
   obj6[2] = intl3.string(require(stateFromStores[11]).t.hb12iG);
   obj5[2] = tmp12(require(stateFromStores[13]).Text, obj6);
   obj4[1] = tmp12(c6, obj5);

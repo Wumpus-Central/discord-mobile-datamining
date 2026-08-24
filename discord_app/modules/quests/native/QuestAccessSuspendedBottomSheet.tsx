@@ -4,18 +4,19 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 4745 */;
 import PromoSheet from "PromoSheet" /* 8017 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11059 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
 
 export default function QuestAccessSuspendedBottomSheet() {
   const callback = React.useCallback(() => {
     let obj = callback2(4342);
     obj.hideActionSheet(callback(14470).ACTION_SHEET_KEY);
+    obj = { screen: constants.ACCOUNT, params: obj };
     obj = { initialTab: constants2.STANDING };
     callback(7360).openUserSettings(obj);
   }, []);

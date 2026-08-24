@@ -1,14 +1,12 @@
 // === Module 4098: getSemanticColorContextFromThemeContext ===
 
 // Module 4098 (getSemanticColorContextFromThemeContext)
-import obj132 from "obj132" /* 2 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
+import set from "set" /* 2 */;
 import nDefault from "n" /* 689 */;
-import getNodeText from "getNodeText" /* 4099 */;
 import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4103 */;
 import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4194 */;
 
-const result = obj132.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
+const result = set.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
 export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(themeContext) {
   let obj = getGradientThemeFromFlags;
@@ -21,9 +19,9 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
     ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
     let tmp9 = null;
     if (null != primaryColor2) {
-      let tmpResult = int2hslRaw;
+      let tmpResult = tmp(688);
       const int2hexResult = tmpResult.int2hex(primaryColor2);
-      tmpResult = int2hslRaw;
+      tmpResult = tmp(688);
       if (secondaryColor == null) {
         secondaryColor = primaryColor2;
       }
@@ -47,7 +45,7 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
       obj[6] = int2hexResult1;
       obj[1] = obj;
       tmp9 = obj;
-      tmpResult1 = getNodeText;
+      tmpResult1 = tmp(4099);
     }
     gradientThemeMetadata = tmp9;
   }

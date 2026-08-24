@@ -1,10 +1,10 @@
 // === Module 4306: GuildThemeSourcePreference ===
 
 // Module 4306 (GuildThemeSourcePreference)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import create from "create" /* 1306 */;
 
-const result = obj132.fileFinishedImporting("flow/Client.tsx");
+const result = set.fileFinishedImporting("flow/Client.tsx");
 
 export const GuildThemeSourcePreference = create.GuildThemeSourcePreference;
 export const JumpType = { ANIMATED: "ANIMATED", INSTANT: "INSTANT" };

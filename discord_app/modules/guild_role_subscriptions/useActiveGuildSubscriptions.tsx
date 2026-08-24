@@ -2,13 +2,13 @@
 
 // Module 14557 (useActiveGuildSubscriptions)
 import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 14552 */;
-import noop from "noop" /* 19 */;
-import reset from "reset" /* 4045 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "reset" /* 4045 */;
 import { UserGuildRoleSubscriptionRelationship as closure_6 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 
-const require = fn;
+const require = arg1;
 let closure_7 = [];
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
 
 export default function useActiveGuildSubscriptions() {
   let obj = arg0;
@@ -19,6 +19,8 @@ export default function useActiveGuildSubscriptions() {
   if (flag === undefined) {
     flag = false;
   }
+  importDefault = undefined;
+  closure_2 = undefined;
   const tmp = useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   importDefault = tmp;
   const items = [closure_5];
@@ -52,8 +54,8 @@ export default function useActiveGuildSubscriptions() {
     }
     if (tmp5) {
       ref.current = true;
-      const subscriptions = ref(dependencyMap[5]).fetchSubscriptions();
-      const obj2 = ref(dependencyMap[5]);
+      const subscriptions = ref(closure_1_3[5]).fetchSubscriptions();
+      const obj2 = ref(closure_1_3[5]);
     }
   }, items1);
   if (stateFromStores == null) {

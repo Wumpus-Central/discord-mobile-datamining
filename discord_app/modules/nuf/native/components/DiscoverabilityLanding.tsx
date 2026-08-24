@@ -2,17 +2,18 @@
 
 // Module 11927 (DiscoverabilityLanding)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { useContactSyncModalStore } from "ContactSyncModes" /* 11850 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, headerContainer: null, header: null, image: null, button: null, title: null, subtitle: null, formRow: null, formText: null, footerContainer: null, info: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 0, justifyContent: "center", marginBottom: 24 };
 createCacheKey[2] = { paddingHorizontal: 16, alignItems: "center" };
@@ -21,13 +22,14 @@ createCacheKey[4] = { flexGrow: 0, marginHorizontal: 16, marginBottom: 24 };
 createCacheKey[5] = { textAlign: "center", marginTop: 16 };
 createCacheKey[6] = { textAlign: "center", marginTop: 8 };
 createCacheKey[7] = { paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj1 = { paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let obj2 = {};
 const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
 createCacheKey[8] = obj2;
 createCacheKey[9] = { flexGrow: 1, width: "100%" };
 createCacheKey[10] = { paddingHorizontal: 16, marginTop: 8, marginBottom: 24 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityLanding.tsx");
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityLanding.tsx");
 
 export default function DiscoverabilityLanding(onNext) {
   const tmp = callback3();
@@ -37,11 +39,12 @@ export default function DiscoverabilityLanding(onNext) {
   const allowPhone = tmp2.allowPhone;
   const items = [allowPhone, allowEmail];
   React = React.useCallback(() => {
-    allowEmail(allowPhone[9]);
-    const obj = { allowPhone, allowEmail };
+    let obj = allowEmail(allowPhone[9]);
+    obj = { allowPhone, allowEmail };
     obj.openLazy(onNext(allowPhone[11])(allowPhone[10], allowPhone.paths), "Discoverability Landing", obj);
   }, items);
-  let obj = { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: allowEmail(allowPhone[8])().bottom + 16 };
+  let obj = { style: tmp.container, contentContainerStyle: null, children: null };
+  obj = { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: allowEmail(allowPhone[8])().bottom + 16 };
   obj[1] = obj;
   obj = { style: tmp.headerContainer, children: null };
   obj1 = { style: tmp.header, children: null };

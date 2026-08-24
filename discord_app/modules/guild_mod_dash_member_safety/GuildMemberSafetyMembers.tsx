@@ -8,16 +8,16 @@ import getJoinedAtDateFormatter from "getJoinedAtDateFormatter" /* 5092 */;
 import getSortValueForMember from "getSortValueForMember" /* 5094 */;
 import hasMemberSupplemental from "hasMemberSupplemental" /* 5095 */;
 import isSpamSupported from "isSpamSupported" /* 5231 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
+require = arg1;
 function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {
   if (isCurrentGuildMemberByTimestamp.isCurrentGuildMemberByTimestamp) {
-    let NEW_GUILD_MEMBER = obj.CURRENT_GUILD_MEMBER;
-    let tmp2 = obj;
+    let NEW_GUILD_MEMBER = tmp.CURRENT_GUILD_MEMBER;
+    let tmp2 = tmp;
   } else {
-    NEW_GUILD_MEMBER = obj.NEW_GUILD_MEMBER;
-    tmp2 = obj;
+    NEW_GUILD_MEMBER = tmp.NEW_GUILD_MEMBER;
+    tmp2 = tmp;
   }
   const items = [NEW_GUILD_MEMBER];
   if (isCurrentGuildMemberByTimestamp.isIncludedInSearchResults) {
@@ -30,7 +30,7 @@ function getGuildMemberSecondarySortBy(arg0) {
 }
 let closure_4 = Date.now();
 let obj = { NEW_GUILD_MEMBER: "NEW_GUILD_MEMBER", CURRENT_GUILD_MEMBER: "CURRENT_GUILD_MEMBER", INCLUDED_IN_SEARCH_RESULTS: "INCLUDED_IN_SEARCH_RESULTS" };
-let result = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
 class GuildMemberSafetyMembers {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -66,6 +66,8 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
   obj.isIncludedInSearchResults = false;
   obj.user = user;
+  const obj2 = getJoinedAtDateFormatter;
+  const tmp = require;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
     ORDER_BY_UNSPECIFIED = result2.OrderBy.ORDER_BY_UNSPECIFIED;
@@ -116,7 +118,7 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const _Date = Date;
     const date = new Date(unusualDMActivityUntil);
     const time = date.getTime();
-    tmp9 = time >= closure_4 - result2.UNUSUAL_DM_COMPARISON_DELTA;
+    tmp9 = time >= closure_4 - tmp(5091).UNUSUAL_DM_COMPARISON_DELTA;
   }
   obj[6] = tmp9;
   obj[7] = isSpamSupported.isSpammer(userId);
@@ -132,6 +134,7 @@ prototype["updateMember"] = function updateMember(userId) {
     const _membersMap2 = self._membersMap;
     return _membersMap2.set(userId.userId, userId);
   } else {
+    obj = {};
     const merged = Object.assign(userId);
     obj = {};
     const merged1 = Object.assign(arg1);
@@ -171,7 +174,10 @@ prototype["updateMember"] = function updateMember(userId) {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
+        let tmp14 = tmp6;
         let tmp15 = obj[tmp6];
+        let tmp16 = importDefault;
+        let tmp17 = dependencyMap;
         if (isEqualDefault(tmp15, obj[tmp6])) {
           continue;
         } else {

@@ -3,10 +3,10 @@
 // Module 16093 (useMessageRequestTimestampText)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import tDefault from "t" /* 3975 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import closure_3 from "generateOldThreadCutoff" /* 4772 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
 
 export const useMessageRequestTimestampText = function useMessageRequestTimestampText(channel) {
   const _require = channel;
@@ -19,6 +19,7 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
   if (obj.loaded) {
     if (null != message) {
       let extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
+      const obj5 = DISCORD_EPOCHDefault;
     }
     let str = "";
     if (null != extractTimestampResult) {
@@ -30,8 +31,8 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
   extractTimestampResult = null;
   if (null != lastMessageId) {
     extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(lastMessageId);
+    const obj4 = DISCORD_EPOCHDefault;
   }
-  const obj3 = _require(589);
 };
 export const useMessageRequestRelativeTimestampText = function useMessageRequestRelativeTimestampText(channel) {
   const _require = channel;
@@ -44,18 +45,18 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
   if (obj.loaded) {
     if (null != message) {
       let extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
+      const obj5 = DISCORD_EPOCHDefault;
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tmp(7528).getTimestampString(extractTimestampResult);
-      const tmpResult = tmp(7528);
+      str = _require(7528).getTimestampString(extractTimestampResult);
+      const tmpResult = _require(7528);
     }
     return str;
   }
   extractTimestampResult = null;
   if (null != lastMessageId) {
     extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(lastMessageId);
+    const obj4 = DISCORD_EPOCHDefault;
   }
-  const obj3 = _require(589);
-  tmp = _require;
 };

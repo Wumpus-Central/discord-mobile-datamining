@@ -5,11 +5,11 @@ import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import handleSaveTheme from "handleSaveTheme" /* 14528 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
-import "createToggle";
+import closure_3 from "handleThemeChange" /* 1302 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.c445ix);
@@ -36,6 +36,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx");
 
 export default createToggle;

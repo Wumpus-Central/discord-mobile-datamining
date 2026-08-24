@@ -1,25 +1,26 @@
 // === Module 16245: ? ===
 
 // Module 16245
-import updateActivities from "updateActivities" /* 7251 */;
-import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
+import closure_3 from "updateActivities" /* 7251 */;
+import closure_4 from "filterPlayingActivities" /* 7250 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 const memoResult = importAllResult.memo(function InviteActivityButton(applicationId) {
   applicationId = applicationId.applicationId;
+  let stateFromStores;
   let obj = applicationId(589);
   const items = [closure_3, closure_4];
   const items1 = [applicationId];
-  const stateFromStores = obj.useStateFromStores(items, () => stateFromStores(dependencyMap[8])(closure_1_3, closure_1_4, applicationId), items1);
+  stateFromStores = obj.useStateFromStores(items, () => stateFromStores(closure_1_2[8])(closure_1_3, closure_1_4, applicationId), items1);
   let tmp4 = null;
   if (null != stateFromStores) {
     obj = { onPress: null, icon: null, text: null, accessibilityLabel: null, variant: "secondary-overlay", size: "sm", shrink: true, maxFontSizeMultiplier: 1 };
     obj[0] = function onPress() {
-      stateFromStores(dependencyMap[4]);
-      const obj = { activity: stateFromStores };
-      obj.openLazy(applicationId(dependencyMap[6])(dependencyMap[5], dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, obj);
+      let obj = stateFromStores(closure_1_2[4]);
+      obj = { activity: stateFromStores };
+      obj.openLazy(applicationId(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), "ActivityInviteSheet-" + stateFromStores.session_id, obj);
     };
     obj[1] = stateFromStores(9992);
     const intl = tmp(1236).intl;
@@ -30,6 +31,6 @@ const memoResult = importAllResult.memo(function InviteActivityButton(applicatio
   }
   return tmp4;
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/InviteActivityButton.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/InviteActivityButton.tsx");
 
 export default memoResult;

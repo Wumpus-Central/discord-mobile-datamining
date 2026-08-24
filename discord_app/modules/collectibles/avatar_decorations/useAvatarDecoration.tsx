@@ -1,11 +1,11 @@
 // === Module 4797: useAvatarDecoration ===
 
 // Module 4797 (useAvatarDecoration)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
 
 export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
   const _require = user;
@@ -17,8 +17,8 @@ export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
     let member = null;
     if (null != closure_1) {
       member = null;
-      if (null != user) {
-        member = first.getMember(closure_1, user.id);
+      if (null != tmp) {
+        member = first.getMember(closure_1, tmp.id);
       }
     }
     let avatarDecoration;
@@ -27,15 +27,15 @@ export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
     }
     if (avatarDecoration == null) {
       let avatarDecoration1;
-      if (user != null) {
-        avatarDecoration1 = user.avatarDecoration;
+      if (tmp != null) {
+        avatarDecoration1 = tmp.avatarDecoration;
       }
       avatarDecoration = avatarDecoration1;
     }
     return avatarDecoration;
   });
 };
-export const getAvatarDecoration = function getAvatarDecoration(user, guildId) {
+export const getAvatarDecoration = function getAvatarDecoration(user, closure_2) {
   let tmp = arg2;
   if (arg2 === undefined) {
     const items = [closure_3];
@@ -43,10 +43,10 @@ export const getAvatarDecoration = function getAvatarDecoration(user, guildId) {
   }
   const first = callback(tmp, 1)[0];
   let member = null;
-  if (null != guildId) {
+  if (null != closure_2) {
     member = null;
     if (null != user) {
-      member = first.getMember(guildId, user.id);
+      member = first.getMember(closure_2, user.id);
     }
   }
   let avatarDecoration;

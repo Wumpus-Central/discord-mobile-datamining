@@ -1,16 +1,18 @@
 // === Module 6902: reactParserFor ===
 
 // Module 6902 (reactParserFor)
+import set from "set" /* 2 */;
 import saferParse from "saferParse" /* 6903 */;
-import obj132 from "obj132" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParser.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParser.tsx");
 for (const key10026 in require("collectAst")) {
+  let tmp3 = key10026;
   arg5[key10026] = require("collectAst")[key10026];
   continue;
 }
-for (const key10030 in require("obj132")) {
-  arg5[key10030] = require("obj132")[key10030];
+for (const key10030 in require("set")) {
+  let tmp4 = key10030;
+  arg5[key10030] = require("set")[key10030];
   continue;
 }
 

@@ -3,16 +3,16 @@
 // Module 4232 (useChatLayout)
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4233 */;
 import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4233 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/chat/native/useChatLayout.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/chat/native/useChatLayout.tsx");
 
 export default function useChatLayout() {
   const tmp = useWindowSizeClassifierDefault();
   closure_0 = tmp;
   const items = [tmp];
-  return React.useMemo(() => ({ isChatBesideChannelList: callback >= callback(dependencyMap[1]).WindowSizeClassifier.LARGE, isChatLockedOpen: callback >= callback(dependencyMap[1]).WindowSizeClassifier.XLARGE }), items);
+  return React.useMemo(() => ({ isChatBesideChannelList: callback >= callback(closure_1_2[1]).WindowSizeClassifier.LARGE, isChatLockedOpen: callback >= callback(closure_1_2[1]).WindowSizeClassifier.XLARGE }), items);
 };
 export const getChatLayout = function getChatLayout() {
   let obj = useWindowSizeClassifier;

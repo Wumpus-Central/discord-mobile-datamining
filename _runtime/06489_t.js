@@ -4,9 +4,9 @@
 import tagMessage from "tagMessage" /* 6382 */;
 import _mod6383 from "module_6383" /* 6383 */;
 
-require = fn;
+require = arg1;
 const dependencyMap = arg6;
-fn = function t(arg0) {
+const fn = function t(arg0, arg1) {
   const _globalThis = globalThis;
   if (globalThis._setGestureStateSync) {
     _globalThis._setGestureStateSync(arg0, arg1);
@@ -23,6 +23,7 @@ let obj = { tagMessage: require("tagMessage").tagMessage };
 fn.__closure = obj;
 fn.__workletHash = 727405139747;
 fn.__initData = { code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}" };
+obj = { activate: null, fail: null, deactivate: null };
 const fn2 = function _(arg0) {
   const ACTIVE = _mod6383.State.ACTIVE;
   if (typeof fn !== "function") {

@@ -3,7 +3,7 @@
 // Module 8757 (recurseReplaceContentTree)
 import applyDefault from "apply" /* 12 */;
 import sendRequest from "sendRequest" /* 530 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import UrlDefault from "Url" /* 1489 */;
 import set from "set" /* 4375 */;
 import getNicknameDefault from "getNickname" /* 4796 */;
@@ -11,24 +11,24 @@ import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
 import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
 import prototypeDefault from "prototype" /* 8752 */;
 import transformUserDefault from "transformUser" /* 8758 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import addApplication from "addApplication" /* 4478 */;
-import createExecutable from "createExecutable" /* 4479 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "addApplication" /* 4478 */;
+import closure_5 from "createExecutable" /* 4479 */;
 import { GUILD_VOCAL_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import createdAt from "createdAt" /* 1930 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import sortActivity from "sortActivity" /* 4559 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_7 from "createdAt" /* 1930 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_11 from "reinjectEphemerals" /* 4994 */;
+import closure_12 from "sortActivity" /* 4559 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_14 from "updateVoiceState" /* 4542 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
 import ME from "ME" /* 676 */;
 import importDefaultResult from "isDiscordProxiedAssetUrl" /* 1487 */;
-import importDefaultResult1 from "obj132" /* 4362 */;
+import importDefaultResult1 from "set" /* 4362 */;
 
-require = fn;
+require = arg1;
 function recurseReplaceContentTree(type) {
   if ("customEmoji" === type.type) {
     type.type = "emoji";
@@ -62,6 +62,7 @@ function validateOrigin(arg0) {
   return items.indexOf(arg0) > -1;
 }
 function transformInternalTextMessage(message) {
+  obj = get_defaultRulesDefault;
   obj = { channelId: message.channel_id };
   const mapped = obj.parseToAST(message.content, true, obj).map(recurseReplaceContentTree);
   let tmp4;
@@ -72,6 +73,7 @@ function transformInternalTextMessage(message) {
   let userAuthor;
   if (null != message.author) {
     userAuthor = useNullableMessageAuthor.getUserAuthor(tmp4, channel);
+    const obj3 = useNullableMessageAuthor;
   }
   obj = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: null, nick: null, author_color: null, edited_timestamp: null, timestamp: null, tts: null, mentions: null, mention_everyone: null, mention_roles: null, embeds: null, attachments: null, author: null, pinned: null, type: null };
   let tmp10;
@@ -105,7 +107,7 @@ function transformInternalTextMessage(message) {
 function fetchApplicationRPC(arg0) {
   const HTTP = sendRequest.HTTP;
   const value = HTTP.get({ url: closure_19.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true });
-  return value.then((result) => result.body, () => {
+  return value.then((body) => body.body, () => {
     throw new callback(table[26])({ closeCode: constants.INVALID_CLIENTID }, "Invalid Client ID");
   });
 }
@@ -157,8 +159,8 @@ function _validateSocketApplication() {
               let parentId;
               callback2 = closure_1_4.getApplication(callback);
               if (typeof dependencyMap === "string") {
-                if (transport.transport === closure_1_16.POST_MESSAGE) {
-                  const tmp21 = callback(8710)(callback);
+                if (tmp67.transport === closure_1_16.POST_MESSAGE) {
+                  const tmp21 = callback(8710)(tmp68);
                   if (null != tmp21) {
                     const items = [tmp21];
                   }
@@ -170,7 +172,7 @@ function _validateSocketApplication() {
                   name = 1;
                   icon = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = closure_1_30(callback);
+                  obj2[0] = closure_1_30(tmp68);
                   return obj2;
                 }
               }
@@ -197,9 +199,11 @@ function _validateSocketApplication() {
                 obj4[3] = icon;
                 obj4[4] = coverImage;
                 obj4[5] = flags;
-                transport.application = obj4;
+                closure_0.application = obj4;
                 icon = 3;
               }
+              tmp67 = closure_0;
+              const tmp69 = dependencyMap;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -404,10 +408,10 @@ function transformVoiceState(closure_2, id, userId) {
 }
 const escapeResult = importDefaultResult1.escape("https://");
 const regExp = new RegExp("^" + escapeResult + "(?:[a-z]+\\.)?(" + importDefaultResult1.escape(tmp5) + "|discordapp.com|discord.com)$");
-const MINUTE = obj132Default.Millis.MINUTE;
+const MINUTE = setDefault.Millis.MINUTE;
 let obj = {};
 const importDefaultResult2 = importDefaultResult1;
-const result = require("obj132").fileFinishedImporting("modules/rpc/RPCHelpers.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/RPCHelpers.tsx");
 
 export const VALIDATE_SOCKET_CALLS_PER_PERIOD_LOW = 2;
 export const VALIDATE_SOCKET_CALLS_PER_PERIOD_HIGH = 60;
@@ -429,29 +433,29 @@ export const transformChannel = function transformChannel(channel, arg1) {
     const promise = new Promise((arg0) => {
       const nSFW = arg0;
       closure_1_11.whenReady(nSFW.id, () => callback());
-      callback(table[18]);
+      obj = callback(table[18]);
       obj = { channelId: nSFW.id, limit: closure_1_20 };
       const messages = obj.fetchMessages(obj);
     });
     items.push(promise);
   }
-  return Promise.all(items).then((result) => {
+  return Promise.all(items).then(() => {
     if (!nSFW.isNSFW()) {
       if (closure_1) {
-        const messages = closure_1_11.getMessages(nSFW.id);
-        const mapped = messages.toArray().map(transformInternalTextMessage);
+        const messages = closure_1_11.getMessages(tmp.id);
+        const mapped = messages.toArray().map(closure_1_29);
         const toArrayResult = messages.toArray();
       }
       const _Object = Object;
-      const values = Object.values(closure_1_14.getVoiceStatesForChannel(nSFW.id));
+      const values = Object.values(closure_1_14.getVoiceStatesForChannel(tmp.id));
       obj = { id: null, name: null, type: null, topic: null, bitrate: null, user_limit: null, guild_id: null, position: null, messages: null, voice_states: null };
-      ({ id: obj2[0], name: obj2[1], type: obj2[2], topic: obj2[3], bitrate: obj2[4], userLimit: obj2[5] } = nSFW);
+      ({ id: obj2[0], name: obj2[1], type: obj2[2], topic: obj2[3], bitrate: obj2[4], userLimit: obj2[5] } = tmp);
       obj[6] = closure_2;
-      obj[7] = nSFW.position;
+      obj[7] = tmp.position;
       obj[8] = [];
-      obj[9] = values.map((item, index) => {
-        const userId = item.userId;
-        ({ mute, deaf, selfMute, selfDeaf, suppress } = item);
+      obj[9] = values.map((userId) => {
+        userId = userId.userId;
+        ({ mute, deaf, selfMute, selfDeaf, suppress } = userId);
         const user = closure_1_13.getUser(userId);
         if (null == user) {
           const _Error = Error;
@@ -460,7 +464,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           throw error;
         } else {
           obj = { nick: null, mute: null, volume: null, pan: null, voice_state: null, user: null };
-          obj[0] = closure_1_1(closure_1_2[22]).getName(closure_2, id.id, user);
+          obj[0] = closure_1_1(closure_1_2[22]).getName(tmp, id.id, user);
           obj[1] = closure_1_10.isLocalMute(user.id);
           obj[2] = closure_1_10.getLocalVolume(user.id);
           obj[3] = closure_1_10.getLocalPan(user.id);
@@ -474,6 +478,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           obj[5] = closure_1_1(closure_1_2[21])(user);
           return obj;
         }
+        tmp = closure_2;
       });
       return obj;
     } else {
@@ -488,18 +493,19 @@ export const transformChannel = function transformChannel(channel, arg1) {
 export { transformInternalTextMessage };
 export { transformVoiceState };
 export const transformBaseRelationship = function transformBaseRelationship(relationshipType, user) {
-  { type: relationshipType, user: transformUserDefault(user), presence: null };
+  obj = { type: relationshipType, user: transformUserDefault(user), presence: null };
   obj = { status: store2.getStatus(user.id, null), activity: null };
   obj[2] = obj;
   return obj;
 };
 export const transformApplicationRelationship = function transformApplicationRelationship(closure_0, id) {
-  let tmp = _require;
+  let tmp = closure_0;
   if (null != id) {
-    const merged = Object.assign(_require);
     obj = {};
-    const merged1 = Object.assign(_require.presence);
-    let applicationActivity = store2.getApplicationActivity(_require.user.id, id);
+    const merged = Object.assign(closure_0);
+    obj = {};
+    const merged1 = Object.assign(closure_0.presence);
+    let applicationActivity = store2.getApplicationActivity(closure_0.user.id, id);
     if (applicationActivity == null) {
       applicationActivity = null;
     }
@@ -530,9 +536,10 @@ export const isMatchingOrigin = function isMatchingOrigin(str) {
             const isMatch = regExp.test(str);
             let tmp8 = !isMatch;
             if (isMatch) {
-              tmp8 = !regExp.test(origin);
+              tmp8 = !obj2.test(origin);
             }
             tmp6 = !tmp8;
+            obj2 = regExp;
           }
           tmp4 = tmp6;
         }
@@ -558,8 +565,8 @@ export const hasMessageReadPermission = function hasMessageReadPermission(channe
 };
 export const getVoiceConnectionState = function getVoiceConnectionState(state) {
   if (constants5.RTC_CONNECTED !== state) {
-    if (constants5.RTC_CONNECTING !== state) {
-      if (constants5.RTC_DISCONNECTED !== state) {
+    if (tmp.RTC_CONNECTING !== state) {
+      if (tmp.RTC_DISCONNECTED !== state) {
         return state;
       }
     }
@@ -587,7 +594,7 @@ export const validateSocketApplication = function validateSocketApplication(clos
   }
   return applyArgumentsResult;
 };
-export const processSocketThrottlers = function processSocketThrottlers(dependencyMap, arg1, signal) {
+export const processSocketThrottlers = function processSocketThrottlers(arg0, arg1, signal) {
   const self = this;
   const apply = _processSocketThrottlers.apply;
   if (typeof apply === "unknown") {
@@ -600,30 +607,32 @@ export const processSocketThrottlers = function processSocketThrottlers(dependen
 export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSocket(closure_0, closure_1) {
   if (null == closure_1) {
     const items = [closure_15];
-    _require.authorization.scopes = items;
+    closure_0.authorization.scopes = items;
   }
 };
-export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(fn) {
+export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(arg0) {
   const settings = store.getSettings();
+  obj = { input: null, output: null, mode: null, automatic_gain_control: null, echo_cancellation: null, noise_suppression: null, qos: null, silence_warning: null, deaf: null, mute: null };
   obj = { available_devices: null, device_id: null, volume: null };
   let values = Object.values(store.getInputDevices());
   const sorted = values.sort((index, index2) => index.index - index2.index);
-  obj[0] = sorted.map((item, index) => ({ id: item.id, name: item.name }));
+  obj[0] = sorted.map((id) => ({ id: id.id, name: id.name }));
   ({ inputDeviceId: obj2[1], inputVolume: obj2[2] } = settings);
   obj[0] = obj;
   obj = { available_devices: null, device_id: null, volume: null };
   values = Object.values(store.getOutputDevices());
   const sorted1 = values.sort((index, index2) => index.index - index2.index);
-  obj[0] = sorted1.map((item, index) => ({ id: item.id, name: item.name }));
+  obj[0] = sorted1.map((id) => ({ id: id.id, name: id.name }));
   ({ outputDeviceId: obj4[1], outputVolume: obj4[2] } = settings);
   obj[1] = obj;
-  obj[2] = { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: fn(settings), delay: settings.modeOptions.delay };
+  obj[2] = { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: arg0(settings), delay: settings.modeOptions.delay };
   ({ automaticGainControl: obj[3], echoCancellation: obj[4], noiseSuppression: obj[5], qos: obj[6], silenceWarning: obj[7], deaf: obj[8], mute: obj[9] } = settings);
   return obj;
 };
-export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcut(arg0, fn) {
+export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcut(arg0, arg1) {
   const settings = store.getSettings(arg0);
-  obj = { type: settings.mode, shortcut: fn(settings) };
+  obj = { input_mode: null, local_mutes: null, local_volumes: null, self_mute: null, self_deaf: null };
+  obj = { type: settings.mode, shortcut: arg1(settings) };
   obj[0] = obj;
   obj[1] = Object.keys(settings.localMutes);
   ({ localVolumes: obj[2], mute: obj[3], deaf: obj[4] } = settings);

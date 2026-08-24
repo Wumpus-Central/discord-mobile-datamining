@@ -2,7 +2,7 @@
 
 // Module 15443
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import hairlineWidth from "hairlineWidth" /* 10055 */;
 import { AnalyticEvents } from "ME" /* 676 */;
@@ -10,7 +10,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ getScaledSearchBarHeight: c5, VIEWABILITY_CONFIG: closure_6 } = hairlineWidth);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -101,8 +101,8 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   }, items1);
   const effect1 = obj.useEffect(() => {
     if (shown) {
-      shown(onPress[13]);
-      const obj = { is_mention: null, position: null };
+      let obj = shown(onPress[13]);
+      obj = { is_mention: null, position: null };
       obj[0] = first;
       obj[1] = position;
       obj.trackWithMetadata(endReachedCounter.CHANNEL_LIST_UNREAD_BADGE_VIEWED, obj);
@@ -110,8 +110,8 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   }, items2);
   const items3 = [onPress, position, first];
   const callback1 = obj.useCallback(() => {
-    shown(onPress[13]);
-    const obj = { is_mention: first, position };
+    let obj = shown(onPress[13]);
+    obj = { is_mention: first, position };
     obj.trackWithMetadata(endReachedCounter.CHANNEL_LIST_UNREAD_BADGE_CLICKED, obj);
     onPress();
   }, items3);
@@ -308,6 +308,6 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   obj[8] = items9;
   return first(closure_10, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx");
 
 export default memoResult;

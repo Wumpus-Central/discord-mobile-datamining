@@ -1,9 +1,9 @@
 // === Module 1433: areSetsEqual ===
 
 // Module 1433 (areSetsEqual)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");
+const result = set2.fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");
 
 export const areSetsEqual = function areSetsEqual(set, set1) {
   if (set === set1) {
@@ -16,6 +16,7 @@ export const areSetsEqual = function areSetsEqual(set, set1) {
       if (set1.has(tmp3)) {
         continue;
       } else {
+        let tmp5 = obj;
         obj.return();
         let flag = false;
         return false;

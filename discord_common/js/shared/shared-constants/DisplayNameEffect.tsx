@@ -1,8 +1,8 @@
 // === Module 1935: DisplayNameEffect ===
 
 // Module 1935 (DisplayNameEffect)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx");
 
 export const DisplayNameEffect = { SOLID: 1, [1]: "SOLID", GRADIENT: 2, [2]: "GRADIENT", NEON: 3, [3]: "NEON", TOON: 4, [4]: "TOON", POP: 5, [5]: "POP", GLOW: 6, [6]: "GLOW", PRISM: 7, [7]: "PRISM", GUMMY: 8, [8]: "GUMMY", TEST_1: 1001, [1001]: "TEST_1", TEST_2: 1002, [1002]: "TEST_2", TEST_3: 1003, [1003]: "TEST_3", TEST_4: 1004, [1004]: "TEST_4" };

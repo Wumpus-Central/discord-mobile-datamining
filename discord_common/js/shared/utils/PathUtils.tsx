@@ -1,7 +1,7 @@
 // === Module 507: getAuthenticationPath ===
 
 // Module 507 (getAuthenticationPath)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 function getAuthenticationPath(login, arg1, flag, arg3) {
   let tmp = arg1;
@@ -51,7 +51,7 @@ class UnescapedPathParam {
 UnescapedPathParam.prototype["toString"] = function toString() {
   return this.value;
 };
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/PathUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/PathUtils.tsx");
 
 export const getLoginPath = function getLoginPath(arg0, flag) {
   if (flag === undefined) {
@@ -72,30 +72,30 @@ export const wrapPaths = function wrapPaths(frozen, arg1) {
   function _loop() {
     const table = tmp2;
     if (typeof table[closure_3] !== "function") {
-      obj[closure_3] = tmp2;
+      obj[tmp] = tmp2;
       return 1;
     } else {
-      obj[closure_3] = () => {
+      obj[tmp] = () => {
         const items = [...arguments];
         const callback = closure_1_1;
-        return callback(...items.map((item, index) => {
-          if (null == item) {
-            return item;
-          } else if (item instanceof closure_1_1) {
-            let str = item.toString();
+        return callback(...items.map((arg0) => {
+          if (null == arg0) {
+            return arg0;
+          } else if (arg0 instanceof closure_1_1) {
+            let str = arg0.toString();
           } else if (null == closure_0) {
             let _encodeURIComponent = encodeURIComponent;
-            str = encodeURIComponent(item);
+            str = encodeURIComponent(arg0);
           } else {
             const _String = String;
-            str = String(item);
+            str = String(arg0);
             const parts = str.split("");
-            const mapped = parts.map((item, index) => {
+            const mapped = parts.map((arg0) => {
               if (null == closure_0) {
                 const _encodeURIComponent = encodeURIComponent;
-                let encodeURIComponentResult = encodeURIComponent(item);
+                let encodeURIComponentResult = encodeURIComponent(arg0);
               } else {
-                encodeURIComponentResult = item;
+                encodeURIComponentResult = arg0;
               }
               return encodeURIComponentResult;
             });

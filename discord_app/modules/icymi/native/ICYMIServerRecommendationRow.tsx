@@ -3,26 +3,22 @@
 // Module 15773 (CutoutGuildBanner)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import Text from "Text" /* 4734 */;
-import preloadDefault from "preload" /* 5449 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
 import SolidCutoutDefault from "SolidCutout" /* 8402 */;
 import _modDef8636 from "module_8636" /* 8636 */;
-import Separator from "Separator" /* 15747 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import filterStaffGuild from "filterStaffGuild" /* 9044 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "filterStaffGuild" /* 9044 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-require = fn;
+require = arg1;
 function CutoutGuildBanner(guild) {
   guild = guild.guild;
   const tmp = callback5();
@@ -37,12 +33,14 @@ function CutoutGuildBanner(guild) {
   if (null != guild.banner) {
     obj1 = getAvatarURLDefault;
     const animatableSourceWithFallback = obj1.getAnimatableSourceWithFallback(hasItem, (hasItem) => {
-      const obj = { id: guild.id, banner: guild.banner };
+      let obj = closure_1_1(closure_1_2[12]);
+      obj = { id: guild.id, banner: guild.banner };
       return obj.getGuildBannerSource(obj, hasItem);
     });
   }
   const items1 = [guild];
-  const memo = React.useMemo(() => guild(dependencyMap[13]).fromClientDiscoverableGuild(guild), items1);
+  obj = { style: tmp.bannerImage, children: null };
+  const memo = React.useMemo(() => guild(closure_1_2[13]).fromClientDiscoverableGuild(guild), items1);
   obj = { cutouts: null, children: null };
   obj1 = { shape: guild(8402).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const items2 = [obj1];
@@ -51,25 +49,28 @@ function CutoutGuildBanner(guild) {
     const obj2 = { style: null, source: null, resizeMode: "cover" };
     obj2[0] = tmp.bannerImage;
     obj2[1] = animatableSourceWithFallback;
-    let tmp12Result = callback(preloadDefault, obj2);
+    let tmp12Result = tmp12(tmp13(5449), obj2);
   } else {
     const obj3 = { style: null };
     const items3 = [, ];
     ({ bannerImage: arr4[0], emptyBanner: arr4[1] } = tmp);
     obj3[0] = items3;
-    tmp12Result = callback(View, obj3);
+    tmp12Result = tmp12(tmp11, obj3);
   }
   obj[1] = tmp12Result;
-  const items4 = [callback(SolidCutoutDefault, obj), ];
+  const items4 = [closure_14(SolidCutoutDefault, obj), ];
   const obj4 = { style: tmp.guildIcon, guild: memo, size: null, animate: null };
+  const tmp10 = closure_15;
+  const tmp14 = SolidCutoutDefault;
   obj4[2] = guild(7188).GuildIconSizes.LARGE;
   obj4[3] = !stateFromStores;
-  items4[1] = callback(GuildIconSizesDefault, obj4);
+  items4[1] = closure_14(GuildIconSizesDefault, obj4);
   obj[1] = items4;
-  return callback2(View, obj);
+  return tmp10(View, obj);
 }
 function FeaturedServer(guild) {
   guild = guild.guild;
+  closure_1 = undefined;
   const tmp = callback5();
   let obj = guild(589);
   let items = [closure_8];
@@ -109,11 +110,11 @@ function FeaturedServer(guild) {
             closure_1_1(9057).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
             const obj17 = closure_1_1(9057);
             obj1 = { itemId: null, itemType: "recommended_guilds", actionParameters: null };
-            obj1[0] = guild.id;
+            obj1[0] = closure_1_0.id;
             obj1[2] = { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "join", actionDestinationType: "guild" };
             closure_1_1(9057).feedItemActioned(obj1);
             const obj18 = closure_1_1(9057);
-            const items = [guild.id];
+            const items = [closure_1_0.id];
             dependencyMap = 1;
             c3 = 1;
             let obj2 = { value: null, done: false };
@@ -225,8 +226,8 @@ function FeaturedServer(guild) {
             callback(false);
             obj1 = closure_1_1(4094);
             obj9 = { key: "RecommeendedServersRow", content: null };
-            const intl = guild(1236).intl;
-            obj9[1] = intl.string(guild(1236).t.CG4Hks);
+            const intl = closure_1_0(1236).intl;
+            obj9[1] = intl.string(closure_1_0(1236).t.CG4Hks);
             obj1.open(obj9);
             c3 = 3;
             const obj10 = { value: null, done: true };
@@ -254,6 +255,7 @@ function FeaturedServer(guild) {
   }), items1);
   const tmp4 = callback(React.useState(false), 2);
   closure_1 = tmp4[1];
+  obj = { style: tmp.featuredServerContainer, children: null };
   const items2 = [callback3(CutoutGuildBanner, { guild }), , ];
   obj = { style: tmp.featuredServerInnerContainer, children: null };
   const items3 = [callback3(guild(4734).Text, { maxFontSizeMultiplier: 1, lineClamp: 1, style: tmp.featuredServerTitle, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guild.name }), callback3(guild(4734).Text, { maxFontSizeMultiplier: 1, lineClamp: 3, variant: "text-xs/normal", color: "text-default", children: guild.description })];
@@ -288,27 +290,34 @@ function RecommendedGuildsRow(discoverableGuilds) {
     obj[2] = tmp;
     obj[4] = 200 + ThemesDefault.space.PX_16;
     tmp2 = callback3(_modDef8636, obj);
+    const tmp6 = _modDef8636;
   }
   return tmp2;
 }
 ({ AnalyticsObjects: c10, AnalyticsPages: unpackModuleId, AnalyticsSections: closure_12, GuildFeatures: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
-  let obj = { marginVertical: ThemesDefault.space.PX_24 };
+  let obj = { container: null, title: null, subtitle: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, featuredServerContainer: null };
+  obj = { marginVertical: ThemesDefault.space.PX_24 };
   obj[0] = obj;
   obj = { marginBottom: ThemesDefault.space.PX_8, marginHorizontal: marginHorizontal.margin };
   obj[1] = obj;
   obj[2] = { marginBottom: ThemesDefault.space.PX_16, marginHorizontal: marginHorizontal.margin };
+  obj1 = { marginBottom: ThemesDefault.space.PX_16, marginHorizontal: marginHorizontal.margin };
   obj[3] = { marginHorizontal: ThemesDefault.space.PX_12, marginTop: 36 };
+  const obj2 = { marginHorizontal: ThemesDefault.space.PX_12, marginTop: 36 };
   obj[4] = { position: "absolute", bottom: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12 };
+  const obj3 = { position: "absolute", bottom: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12 };
   obj[5] = { marginBottom: ThemesDefault.space.PX_8 };
   obj[6] = { position: "absolute", top: 50, left: 12 };
   obj[7] = { height: 72, width: 200 };
+  const obj4 = { marginBottom: ThemesDefault.space.PX_8 };
   obj[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+  const obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   obj[9] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, height: 244, width: 200, overflow: "hidden" };
   return obj;
 });
-let result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMIServerRecommendationRow.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIServerRecommendationRow.tsx");
 
 export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRow() {
   let obj = initialize;
@@ -317,23 +326,24 @@ export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRo
   const tmp3 = callback5();
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
+    obj = { children: null };
     obj = { style: null, children: null };
     obj[0] = tmp3.container;
     obj1 = { style: null, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp3.title;
-    const intl = getSystemLocale.intl;
-    obj1[3] = intl.string(getSystemLocale.t.lv1tce);
-    const items1 = [callback3(Text.Text, obj1), , ];
+    const intl = tmp(1236).intl;
+    obj1[3] = intl.string(tmp(1236).t.lv1tce);
+    const items1 = [callback3(tmp(4734).Text, obj1), , ];
     const obj2 = { style: null, variant: "heading-sm/normal", color: "text-muted", children: null };
     obj2[0] = tmp3.subtitle;
-    const intl2 = getSystemLocale.intl;
-    obj2[3] = intl2.string(getSystemLocale.t.x4OezN);
-    items1[1] = callback3(Text.Text, obj2);
+    const intl2 = tmp(1236).intl;
+    obj2[3] = intl2.string(tmp(1236).t.x4OezN);
+    items1[1] = callback3(tmp(4734).Text, obj2);
     const obj3 = { discoverableGuilds: null };
     obj3[0] = stateFromStoresArray;
     items1[2] = callback3(RecommendedGuildsRow, obj3);
     obj[1] = items1;
-    const items2 = [callback4(View, obj), callback3(Separator.Separator, {})];
+    const items2 = [callback4(View, obj), callback3(tmp(15747).Separator, {})];
     obj[0] = items2;
     tmp4 = callback4(closure_16, obj);
   }

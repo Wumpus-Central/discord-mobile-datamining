@@ -2,11 +2,11 @@
 
 // Module 8679 (useIsActivityFocused)
 import sortKey from "sortKey" /* 4777 */;
-import getParticipants from "getParticipants" /* 4773 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "participantFromServer" /* 1390 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
 
 export default function useIsActivityFocused(arg0) {
   const _require = arg0;
@@ -16,8 +16,8 @@ export default function useIsActivityFocused(arg0) {
     const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
     let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
     if (tmp3) {
-      callback(dependencyMap[2]);
-      const obj = { applicationId: null, instanceId: null };
+      let obj = callback(closure_1_1[2]);
+      obj = { applicationId: null, instanceId: null };
       obj[0] = currentEmbeddedActivity.applicationId;
       let compositeInstanceId;
       if (currentEmbeddedActivity != null) {
@@ -35,7 +35,8 @@ export const isActivityFocused = function isActivityFocused(channelId) {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
   if (tmp3) {
-    const obj = { applicationId: null, instanceId: null };
+    let obj = sortKey;
+    obj = { applicationId: null, instanceId: null };
     obj[0] = currentEmbeddedActivity.applicationId;
     let compositeInstanceId;
     if (currentEmbeddedActivity != null) {

@@ -1,10 +1,10 @@
 // === Module 10569: LOCATION_CONTEXT_MOBILE ===
 
 // Module 10569 (LOCATION_CONTEXT_MOBILE)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("modules/self_mod/Constants.tsx");
+const result = set.fileFinishedImporting("modules/self_mod/Constants.tsx");
 
 export const LOCATION_CONTEXT_MOBILE = "SAFETY_WARNING_BANNER_MOBILE";
 export const LOCATION_CONTEXT_WEB = "SAFETY_WARNING_BANNER_WEB";

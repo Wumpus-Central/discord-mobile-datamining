@@ -4,16 +4,16 @@
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.createConsoleTemplateAttributes = function createConsoleTemplateAttributes(args, substr) {
+arg5.createConsoleTemplateAttributes = function createConsoleTemplateAttributes(first, substr) {
   const obj = {};
   const array = new Array(substr.length);
-  obj["sentry.message.template"] = "" + args + " " + array.fill("{}").join(" ");
-  const item = substr.forEach((item, index) => {
-    obj["sentry.message.parameter." + index] = item;
+  obj["sentry.message.template"] = "" + first + " " + array.fill("{}").join(" ");
+  const item = substr.forEach((arg0, arg1) => {
+    obj["sentry.message.parameter." + arg1] = arg0;
   });
   return obj;
 };
-arg5.formatConsoleArgs = function formatConsoleArgs(args, normalizeDepth, normalizeMaxBreadth) {
+arg5.formatConsoleArgs = function formatConsoleArgs(args, arg1, arg2) {
   if ("util" in _require(821).GLOBAL_OBJ) {
     if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(821).GLOBAL_OBJ.util;
@@ -24,35 +24,35 @@ arg5.formatConsoleArgs = function formatConsoleArgs(args, normalizeDepth, normal
     }
     return applyResult;
   }
-  _require = normalizeDepth;
-  dependencyMap = normalizeMaxBreadth;
-  const mapped = args.map((item, index) => {
-    if (obj.isPrimitive(item)) {
+  _require = arg1;
+  dependencyMap = arg2;
+  const mapped = args.map((arg0) => {
+    if (obj.isPrimitive(arg0)) {
       const _String = String;
-      let StringResult = String(item);
+      let StringResult = String(arg0);
     } else {
       const _JSON = JSON;
-      const normalizer = normalizeDepth(normalizeMaxBreadth[2]);
-      StringResult = JSON.stringify(normalizer.normalize(item, normalizeDepth, normalizeMaxBreadth));
+      StringResult = JSON.stringify(callback(table[2]).normalize(arg0, callback, table));
+      const tmpResult = callback(table[2]);
     }
     return StringResult;
   });
   applyResult = mapped.join(" ");
 };
-arg5.hasConsoleSubstitutions = function hasConsoleSubstitutions(args) {
-  return /%[sdifocO]/.test(args);
+arg5.hasConsoleSubstitutions = function hasConsoleSubstitutions(arg0) {
+  return /%[sdifocO]/.test(arg0);
 };
 arg5.safeJoinConsoleArgs = function safeJoinConsoleArgs(arr) {
   closure_0 = arg1;
   closure_1 = arg2;
-  const mapped = arr.map((item, index) => {
-    if (obj.isPrimitive(item)) {
+  const mapped = arr.map((arg0) => {
+    if (obj.isPrimitive(arg0)) {
       const _String = String;
-      let StringResult = String(item);
+      let StringResult = String(arg0);
     } else {
       const _JSON = JSON;
-      const normalizer = normalizeDepth(normalizeMaxBreadth[2]);
-      StringResult = JSON.stringify(normalizer.normalize(item, normalizeDepth, normalizeMaxBreadth));
+      StringResult = JSON.stringify(callback(table[2]).normalize(arg0, callback, table));
+      const tmpResult = callback(table[2]);
     }
     return StringResult;
   });

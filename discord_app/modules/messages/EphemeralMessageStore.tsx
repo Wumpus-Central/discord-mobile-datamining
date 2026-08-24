@@ -5,10 +5,10 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import { MessageFlags } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function dropChannelIfEmpty(channelId, value) {
   if (0 === value.size) {
     map.delete(channelId);
@@ -18,8 +18,9 @@ function clearAll() {
   if (0 === map.size) {
     return false;
   } else {
-    map.clear();
+    obj.clear();
   }
+  obj = map;
 }
 let closure_4 = [];
 let map = new Map();
@@ -54,7 +55,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(dispatcherDefault, {
       if (null == value) {
         const _Map = Map;
         map = new Map();
-        const result = obj2.set(channelId, map);
+        const result = map.set(channelId, map);
         value = map;
       }
       const result1 = value.set(message.id, createMinimalMessageRecord.createMessageRecord(message));
@@ -68,12 +69,11 @@ const ephemeralMessageStore = new EphemeralMessageStore(dispatcherDefault, {
         }
         const iter = value.keys();
       }
-      obj2 = map;
-      const tmpResult = createMinimalMessageRecord;
     } else {
       return false;
     }
     obj = hasFlag;
+    const tmp = require;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
@@ -130,10 +130,11 @@ const ephemeralMessageStore = new EphemeralMessageStore(dispatcherDefault, {
   CLEAR_MESSAGES: function handleClearMessages(channelId) {
     channelId = channelId.channelId;
     if (map.has(channelId)) {
-      map.delete(channelId);
+      obj.delete(channelId);
     } else {
       return false;
     }
+    obj = map;
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     if (!map.delete(channel.channel.id)) {
@@ -150,12 +151,16 @@ const ephemeralMessageStore = new EphemeralMessageStore(dispatcherDefault, {
       return false;
     } else {
       let flag = false;
-      const keys = map.keys();
+      const keys = obj.keys();
       const iter = keys[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
+        let tmp10 = channel;
         let tmp9 = nextResult;
         if (null == channel.getChannel(nextResult)) {
+          let tmp11 = map;
+          let tmp12 = map;
+          let tmp13 = nextResult;
           let deleteResult = map.delete(tmp9);
           flag = true;
         }
@@ -163,12 +168,13 @@ const ephemeralMessageStore = new EphemeralMessageStore(dispatcherDefault, {
       }
       return flag && undefined;
     }
+    obj = map;
   },
   CACHE_LOADED: clearAll,
   CONNECTION_OPEN: clearAll,
   OVERLAY_INITIALIZE: clearAll,
   LOGOUT: clearAll
 });
-let result = require("obj132").fileFinishedImporting("modules/messages/EphemeralMessageStore.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/EphemeralMessageStore.tsx");
 
 export default ephemeralMessageStore;

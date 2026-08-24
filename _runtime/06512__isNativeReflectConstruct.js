@@ -4,15 +4,15 @@
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6510 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_classCallCheck" /* 41 */;
+import closure_6 from "_possibleConstructorReturn" /* 93 */;
+import closure_7 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const TouchableOpacity = fn;
+const TouchableOpacity = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -73,16 +73,15 @@ class TouchableOpacity {
       }
       obj[3] = flag;
       closure_1_8.timing(store.opacity, obj).start();
-      const timingResult = closure_1_8.timing(store.opacity, obj);
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === store(dependencyMap[9]).TOUCHABLE_STATE.BEGAN) {
+      if (arg1 === store(closure_1_2[9]).TOUCHABLE_STATE.BEGAN) {
         store.setOpacityTo(store.props.activeOpacity, 0);
       } else {
         if (!tmp3) {
           store.setOpacityTo(store.getChildStyleOpacityWithDefault(), 150);
         }
-        tmp3 = arg1 !== store(dependencyMap[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== store(dependencyMap[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
+        tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     return tmp3Result;
@@ -107,7 +106,7 @@ let obj = {
     if (self.props.children) {
       let children = self.props.children;
     } else {
-      children = <closure_11 />;
+      children = tmp2(closure_11, {});
     }
     obj.children = children;
     return jsx(_isNativeReflectConstructDefault, {});

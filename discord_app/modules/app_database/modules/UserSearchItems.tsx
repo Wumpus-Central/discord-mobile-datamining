@@ -3,15 +3,15 @@
 // Module 5405 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
 import itemsDefault from "items" /* 1955 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import recountRelationshipTypes from "recountRelationshipTypes" /* 5406 */;
-import recomputeAffinities from "recomputeAffinities" /* 5407 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "recountRelationshipTypes" /* 5406 */;
+import closure_5 from "recomputeAffinities" /* 5407 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { RelationshipTypes } from "ME" /* 676 */;
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-let obj132 = fn;
+let set = arg1;
 let closure_9 = new timestampDefault("UserSearchItems");
 let c10 = false;
 class UserSearchItems {
@@ -123,16 +123,23 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
+    let tmp4 = authStore2;
     let user = authStore2.getUser(nextResult);
     let tmp6 = user;
     if (null != user) {
-      let obj5 = obj132(5409);
+      let tmp14 = set;
+      let tmp15 = dependencyMap;
+      let obj5 = set(5409);
+      let tmp16 = user;
       let names = obj5.getNames(tmp6);
+      let tmp18 = nextResult;
       obj = { id: null, type: null, user: null, names: null, nick: null, affinity: null };
       obj[0] = tmp3;
+      let tmp19 = RelationshipTypes;
       obj[1] = RelationshipTypes.FRIEND;
       obj[2] = tmp6;
       ({ names: obj6[3], nick: obj6[4] } = names);
+      let tmp20 = authStore;
       let userAffinity = authStore.getUserAffinity(tmp3);
       let num;
       if (userAffinity != null) {
@@ -148,19 +155,27 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   }
   gameRelationships = gameRelationships.getGameRelationships();
   const values = gameRelationships.values();
-  const found = values.filter((item, index) => item.type === constants.FRIEND);
+  const found = values.filter((type) => type.type === constants.FRIEND);
   for (const item10033 of found) {
+    let tmp8 = item10033;
+    let tmp9 = authStore2;
     let user1 = authStore2.getUser(item10033.id);
     let tmp11 = user1;
     if (null != user1) {
-      let obj7 = obj132(5409);
+      let tmp22 = set;
+      let tmp23 = dependencyMap;
+      let obj7 = set(5409);
+      let tmp24 = user1;
       let names1 = obj7.getNames(tmp11);
+      let tmp26 = item10033;
       obj = { id: null, type: null, user: null, names: null, nick: null, affinity: null };
-      obj[0] = item10033.id;
+      obj[0] = tmp8.id;
+      let tmp27 = RelationshipTypes;
       obj[1] = RelationshipTypes.FRIEND;
       obj[2] = tmp11;
       ({ names: obj8[3], nick: obj8[4] } = names1);
-      let userAffinity1 = authStore.getUserAffinity(item10033.id);
+      let tmp28 = authStore;
+      let userAffinity1 = authStore.getUserAffinity(tmp8.id);
       let num2;
       if (userAffinity1 != null) {
         num2 = userAffinity1.communicationProbability;
@@ -169,7 +184,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
         num2 = 0;
       }
       obj[5] = num2;
-      obj[item10033.id] = obj;
+      obj[tmp8.id] = obj;
     }
     continue;
   }
@@ -177,13 +192,13 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   result.delete();
   result.putAll(Object.values(obj));
 };
-obj132 = Object.create(UserSearchItems.prototype);
-obj132.actions = {
-  POST_CONNECTION_OPEN: obj132.handlePostConnectionOpen,
+set = Object.create(UserSearchItems.prototype);
+set.actions = {
+  POST_CONNECTION_OPEN: set.handlePostConnectionOpen,
   WRITE_CACHES(arg0, arg1) {
     return obj.handleWriteCaches(arg1);
   }
 };
-let result = obj132.fileFinishedImporting("modules/app_database/modules/UserSearchItems.tsx");
+let result = set.fileFinishedImporting("modules/app_database/modules/UserSearchItems.tsx");
 
-export default obj132;
+export default set;

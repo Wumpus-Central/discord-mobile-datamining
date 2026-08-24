@@ -5,15 +5,15 @@ import apply2 from "apply" /* 12 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import nDefault from "n" /* 689 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import { ThemeTypes } from "ME" /* 676 */;
-import "apply";
 import apply from "apply" /* 12 */;
 
-require = fn;
-const memoizeResult = apply.memoize((memo) => {
-  const obj = { base: "#ffffff", contrastRatio: AccessibilityAnnouncer.WCAGContrastRatios.HighContrastText };
-  const contrastingColor = obj.getContrastingColor(memo, obj);
+require = arg1;
+const memoizeResult = apply.memoize((arg0) => {
+  let obj = AccessibilityAnnouncer;
+  obj = { base: "#ffffff", contrastRatio: AccessibilityAnnouncer.WCAGContrastRatios.HighContrastText };
+  const contrastingColor = obj.getContrastingColor(arg0, obj);
   return int2hslRaw.hex2int(contrastingColor);
 }, (arg0) => arg0);
 const memoizeResult1 = apply.memoize((hex2intResult) => {
@@ -31,24 +31,27 @@ const memoizeResult1 = apply.memoize((hex2intResult) => {
     }
   }
   const obj2 = nDefault;
+  const tmp8 = importDefault;
   const mixResult = obj2.mix(nDefault(hex2intResult), nDefault(arg1), 0.5, "lab");
   const result = Math.round(100 * mixResult.get("hsl.l")) / 100;
   if (tmp !== ThemeTypes.LIGHT) {
     let clampResult = apply2.clamp(result, 0, 0.1);
+    const obj5 = apply2;
   } else {
     clampResult = apply2.clamp(result, 0.8, 1);
+    const obj4 = apply2;
   }
   const tmp10 = nDefault(hex2intResult);
   const result1 = nDefault(mixResult).set("hsl.l", clampResult);
   return result1.num();
 }, (arg0, arg1, arg2) => "" + arg0 + "-" + arg1 + "-" + arg2);
-let result = require("obj132").fileFinishedImporting("modules/user_profile/UserProfileGradientUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/UserProfileGradientUtils.tsx");
 
-export const getProfileTheme = function getProfileTheme(tmp4Result1) {
-  if (null == tmp4Result1) {
+export const getProfileTheme = function getProfileTheme(first) {
+  if (null == first) {
     return null;
   } else {
-    if (obj.getDarkness(tmp4Result1) > 0.5) {
+    if (obj.getDarkness(first) > 0.5) {
       let LIGHT = ThemeTypes.DARK;
     } else {
       LIGHT = ThemeTypes.LIGHT;
@@ -59,10 +62,7 @@ export const getProfileTheme = function getProfileTheme(tmp4Result1) {
 export const getValueInColorGradientByPercentage = function getValueInColorGradientByPercentage(items, items1, arg2) {
   const result = arg2 / 100;
   const diff = 1 - result;
-  items = [, , ];
-  items[0] = Math.round(items[0] * diff + items1[0] * result);
-  items[1] = Math.round(items[1] * diff + items1[1] * result);
-  items[2] = Math.round(items[2] * diff + items1[2] * result);
+  items = [Math.round(items[0] * diff + items1[0] * result), Math.round(items[1] * diff + items1[1] * result), Math.round(items[2] * diff + items1[2] * result)];
   return items;
 };
 export const calculateOverlayedColor = function calculateOverlayedColor(secondaryColor, overlay) {
@@ -80,8 +80,8 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
       items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = int2rgbArrayResult;
       alpha = parseStringResult.alpha;
-      [tmp8, tmp9, tmp10] = callback(items.map((item, index) => Math.floor(alpha * item + (1 - alpha) * items1[index])), 3);
-      const tmp7 = callback(items.map((item, index) => Math.floor(alpha * item + (1 - alpha) * items1[index])), 3);
+      [tmp8, tmp9, tmp10] = callback(items.map((arg0, arg1) => Math.floor(alpha * arg0 + (1 - alpha) * items1[arg1])), 3);
+      const tmp7 = callback(items.map((arg0, arg1) => Math.floor(alpha * arg0 + (1 - alpha) * items1[arg1])), 3);
       const _HermesInternal = HermesInternal;
       return tmp(688).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
     }
@@ -102,6 +102,7 @@ export const calculateGradientSplitColors = function calculateGradientSplitColor
     return [];
   } else {
     const int2rgbArrayResult = int2hslRaw.int2rgbArray(modalV2BackgroundColor);
+    const obj = int2hslRaw;
     const int2rgbArrayResult1 = int2hslRaw.int2rgbArray(modalV2BackgroundColor);
     const result = 100 * arg3 / arg2 / 100;
     const diff = 1 - result;
@@ -132,22 +133,26 @@ export const getUserProfileGradientContainerColors = function getUserProfileGrad
     let int2rgbaResult = int2rgbaResult1;
     if (null != result) {
       int2rgbaResult = int2hslRaw.int2rgba(result, 1);
+      const obj3 = int2hslRaw;
     }
     const items = [int2rgbaResult, ];
     if (null != result1) {
       int2rgbaResult1 = int2hslRaw.int2rgba(result1, 1);
+      const obj4 = int2hslRaw;
     }
     items[1] = int2rgbaResult1;
     let items1 = items;
   } else {
     if (null != result) {
       let int2rgbaResult2 = int2hslRaw.int2rgba(result, 1);
+      const obj = int2hslRaw;
     } else {
       int2rgbaResult2 = int2rgbaResult1[0];
     }
     items1 = [int2rgbaResult2, ];
     if (null != result1) {
       let int2rgbaResult3 = int2hslRaw.int2rgba(result1, 1);
+      const obj2 = int2hslRaw;
     } else {
       int2rgbaResult3 = int2rgbaResult1[1];
     }

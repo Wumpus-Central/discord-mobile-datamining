@@ -1,11 +1,11 @@
 // === Module 7288: createResolvedGuildTemplate ===
 
 // Module 7288 (createResolvedGuildTemplate)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7289 */;
 
 const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;
-const result = obj132.fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");
+const result = set.fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");
 
 export default function createResolvedGuildTemplate(code) {
   const obj = { code: code.code, state: GuildTemplateStates.RESOLVED, name: code.name, description: null, creatorId: null, creator: null, createdAt: null, updatedAt: null, sourceGuildId: null, serializedSourceGuild: null, usageCount: null, isDirty: null };

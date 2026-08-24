@@ -1,7 +1,7 @@
 // === Module 1319: MessageType ===
 
 // Module 1319 (MessageType)
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const MessageType = require;
@@ -47,8 +47,8 @@ const items = [
   {
     key: "clone",
     value: function clone(arr) {
-      this.create();
-      const obj = MessageType(1331);
+      let obj = this.create();
+      obj = MessageType(1331);
       const result = obj.reflectionMergePartial(this, obj, arr);
       return obj;
     }
@@ -85,8 +85,8 @@ const items = [
   },
   {
     key: "mergePartial",
-    value: function mergePartial(EmojiFrecency, arr) {
-      const result = MessageType(1331).reflectionMergePartial(this, EmojiFrecency, arr);
+    value: function mergePartial(reflectionCreateResult, arr) {
+      const result = MessageType(1331).reflectionMergePartial(this, reflectionCreateResult, arr);
     }
   },
   {

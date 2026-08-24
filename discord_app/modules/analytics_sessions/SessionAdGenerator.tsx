@@ -2,15 +2,15 @@
 
 // Module 7473 (getOrRefreshAdSession)
 import v1 from "v1" /* 514 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import result2 from "result" /* 5063 */;
 
-require = fn;
-let closure_3 = 12 * obj132Default.Millis.HOUR;
+require = arg1;
+let closure_3 = 12 * setDefault.Millis.HOUR;
 let c4 = null;
-const result = require("obj132").fileFinishedImporting("modules/analytics_sessions/SessionAdGenerator.tsx");
+const result = require("set").fileFinishedImporting("modules/analytics_sessions/SessionAdGenerator.tsx");
 
 export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtendSession) {
   let flag = shouldExtendSession;
@@ -22,6 +22,7 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     const _Date = Date;
     const timestamp1 = Date.now();
     if (timestamp1 < obj.createdAtTimestamp) {
+      obj = _modDef1208;
       obj = { category: "ad", message: null };
       const _HermesInternal = HermesInternal;
       obj[1] = "future facing timestamp Date.now(): " + timestamp1 + ", initialized timestamp: " + tmp11.createdAtTimestamp;
@@ -40,6 +41,7 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     return tmp9;
   }
   obj = { uuid: v1.v4(), createdAtTimestamp: timestamp, lastUsedTimestamp: timestamp, version: result2.CLIENT_SESSION_STORAGE_VERSION };
+  const obj4 = v1;
   dispatcherDefault.dispatch({ type: "AD_SESSION_RESET" });
   tmp9 = obj;
 };
@@ -52,7 +54,8 @@ export function getCurrentAdSession() {
 export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp) {
   const timestamp = Date.now();
   if (timestamp < createdAtTimestamp.createdAtTimestamp) {
-    const obj = { category: "ad", message: null };
+    let obj = _modDef1208;
+    obj = { category: "ad", message: null };
     const _HermesInternal = HermesInternal;
     obj[1] = "future facing timestamp Date.now(): " + timestamp + ", initialized timestamp: " + createdAtTimestamp.createdAtTimestamp;
     obj.addBreadcrumb(obj);

@@ -1,18 +1,23 @@
 // === Module 15764: iCYMIStyles ===
 
 // Module 15764 (iCYMIStyles)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-require = fn;
+require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
-  let obj = { marginHorizontal: marginBottom.margin, paddingBottom: null, paddingTop: null };
+  let num = 0;
+  if (!arg1) {
+    num = marginBottom.margin;
+  }
+  let obj = { pressable: { marginTop: num }, container: null, screenshotContainer: null, header: null, headerInfo: null, title: null, subTitleContainer: null };
+  obj = { marginHorizontal: marginBottom.margin, paddingBottom: null, paddingTop: null };
   let num2 = 0;
   if (!arg1) {
     num2 = marginBottom.margin;
@@ -33,11 +38,12 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
     num4 = -1;
   }
   obj[5] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 6, marginBottom: num4, marginTop: 2 };
-  obj4 = obj132;
+  obj4 = set;
+  const tmp = importDefault;
   obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
 
 export default function ContentInventoryEntryContainer(contentId) {
   contentId = contentId.contentId;
@@ -103,25 +109,25 @@ export default function ContentInventoryEntryContainer(contentId) {
     const obj3 = { animate: true, size: null, user: null, guildId: "Array" };
     obj3[1] = tmp3(tmp4[12]).AvatarSizes.NORMAL;
     obj3[2] = stateFromStores;
-    const items3 = [callback(tmp3(tmp4[12]).Avatar, obj3, stateFromStores.id), ];
+    const items3 = [closure_6(tmp3(tmp4[12]).Avatar, obj3, stateFromStores.id), ];
     let obj4 = { style: null, children: null };
     obj4[0] = tmp.headerInfo;
     let obj5 = { style: null, children: null };
     obj5[0] = tmp.title;
     obj5[1] = title;
-    const items4 = [callback(View, obj5), ];
+    const items4 = [closure_6(View, obj5), ];
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.subTitleContainer;
     obj6[1] = subtitle;
-    items4[1] = callback(View, obj6);
+    items4[1] = closure_6(View, obj6);
     obj4[1] = items4;
-    items3[1] = callback2(View, obj4);
+    items3[1] = closure_7(View, obj4);
     obj2[1] = items3;
-    const items5 = [callback2(View, obj2), contentId.children];
+    const items5 = [closure_7(View, obj2), contentId.children];
     obj1[1] = items5;
-    obj[2] = callback2(View, obj1);
-    obj[4] = callback(tmp3(tmp4[11]).SimplePost, obj);
-    tmp7Result = callback(tmp3(tmp4[10]).PressableHighlight, obj);
+    obj[2] = closure_7(View, obj1);
+    obj[4] = closure_6(tmp3(tmp4[11]).SimplePost, obj);
+    tmp7Result = tmp7(tmp3(tmp4[10]).PressableHighlight, obj);
   }
   return tmp7Result;
 };

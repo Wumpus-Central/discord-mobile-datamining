@@ -1,13 +1,13 @@
 // === Module 5550: BotIllocon ===
 
 // Module 5550 (BotIllocon)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import metadataDefault from "metadata" /* 5551 */;
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/BotIllocon.native.tsx");
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BotIllocon.native.tsx");
 
 export const BotIllocon = function BotIllocon(size) {
   let num = size.size;
@@ -15,7 +15,8 @@ export const BotIllocon = function BotIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  const obj = { uri: metadataDefault };
+  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  obj = { uri: metadataDefault };
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;

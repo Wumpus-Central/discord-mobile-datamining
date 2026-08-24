@@ -5,12 +5,12 @@ import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import createFromServer from "createFromServer" /* 4043 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createFromServer" /* 4043 */;
 import { StripeErrorTypes } from "StripeErrorTypes" /* 4468 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _validatePaymentSourceBillingAddress() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -118,11 +118,12 @@ function _popupBridgeState() {
     c4 = 0;
     return (function*(arg0, body) {
       const table = tmp2;
+      let state = tmp5;
       const HTTP = callback(closure_1_2[4]).HTTP;
       obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
       obj1[0] = closure_1_7.BILLING_POPUP_BRIDGE(callback);
       yield HTTP.post(obj1);
-      const state = body.body.state;
+      state = body.body.state;
       const obj = state(table[6]);
       const obj4 = { type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state: null, paymentSourceType: null };
       obj4[1] = state;
@@ -261,7 +262,7 @@ function _createPaymentSource() {
                     adyen_redirect_url1 = body2.adyen_redirect_url;
                   }
                 }
-                tmp47.fields.adyen_redirect_url = adyen_redirect_url1;
+                closure_7.fields.adyen_redirect_url = adyen_redirect_url1;
               }
             })(closure_7, c8);
             if (closure_7.code !== callback(user[5]).ErrorCodes.CONFIRMATION_REQUIRED) {
@@ -317,7 +318,7 @@ function _createPaymentSource() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: closure_6, Endpoints: error } = ME);
-let result = require("obj132").fileFinishedImporting("modules/billing/actions/BillingSharedActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/billing/actions/BillingSharedActionCreators.tsx");
 
 export const validatePaymentSourceBillingAddress = function validatePaymentSourceBillingAddress(closure_0) {
   const self = this;
@@ -381,12 +382,12 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
     tmp12 = obj1;
     billingError = billingError1;
     flag2 = flag;
-    tmp15 = require;
+    tmp15 = tmp4;
     if (429 === billingError1.code) {
       flag2 = false;
       tmp12 = obj1;
       billingError = billingError1;
-      tmp15 = require;
+      tmp15 = tmp4;
     }
   }
   dispatcherDefault.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: billingError });

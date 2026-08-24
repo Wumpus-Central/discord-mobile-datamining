@@ -1,10 +1,10 @@
 // === Module 12476: _createWebviewHtmlFile ===
 
 // Module 12476 (_createWebviewHtmlFile)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
-const require = fn;
+const require = arg1;
 function _createWebviewHtmlFile() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -171,7 +171,7 @@ function _createWebviewHtmlFile() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/activities/native/createWebviewHtmlFile.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/native/createWebviewHtmlFile.tsx");
 
 export default function createWebviewHtmlFile() {
   const self = this;

@@ -1,13 +1,13 @@
 // === Module 10935: canStreamWithSettings ===
 
 // Module 10935 (canStreamWithSettings)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 10936 */;
 import canUseStreamSettingDefault from "canUseStreamSetting" /* 10937 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
 
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: c4 } = RESOLUTION_720);
-const result = obj132.fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");
+const result = set.fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");
 
 export default function canStreamWithSettings(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg0 === constants.PRESET_AUTO) {
@@ -18,15 +18,26 @@ export default function canStreamWithSettings(arg0, arg1, arg2, arg3, arg4, arg5
     while (iter !== undefined) {
       let tmp4 = nextResult;
       if (null == nextResult.preset) {
+        let tmp6 = nextResult;
         if (arg1 === tmp4.resolution) {
+          let tmp7 = nextResult;
           if (arg2 === tmp4.fps) {
+            let tmp8 = importDefault;
+            let tmp9 = dependencyMap;
+            let tmp10 = nextResult;
+            let tmp11 = arg3;
+            let tmp12 = arg4;
+            let tmp13 = arg5;
             if (canUseStreamSettingDefault(tmp4, arg3, arg4, arg5)) {
+              let tmp14 = iter;
               iter.return();
               let flag = true;
               return true;
             }
           }
         }
+      } else {
+        let tmp5 = nextResult;
       }
       continue;
     }

@@ -8,10 +8,11 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles((height) => {
-  let obj = { paddingBottom: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: ThemesDefault.radii.xs, width: "100%", height, flex: 1 };
+  let obj = { container: null, gifImage: null, gifImageSelected: null };
+  obj = { paddingBottom: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: ThemesDefault.radii.xs, width: "100%", height, flex: 1 };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, flex: 1 };
   obj[1] = obj;
@@ -20,9 +21,11 @@ let closure_6 = createCacheKey.createStyles((height) => {
 });
 const memoResult = importAllResult.memo((height) => {
   const tmp = callback(height.height);
+  obj = { style: tmp.container, children: <View {...obj} /> };
+  obj = { style: tmp.gifImage };
   return <View style={tmp.gifImage} />;
 });
-let result = require("obj132").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
+let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
 
 export default function GIFPickerItemView(onPressGIF) {
   onPressGIF = onPressGIF.onPressGIF;
@@ -38,8 +41,8 @@ export default function GIFPickerItemView(onPressGIF) {
   }, items);
   const items2 = [index, item.src];
   const callback1 = importAllResult.useCallback(() => {
-    item(index[7]);
-    const obj = { item };
+    let obj = item(index[7]);
+    obj = { item };
     obj.openLazy(onPressGIF(index[9])(index[8], index.paths), "GIFPickerItemActionSheet", obj, "stack");
     const result = onPressGIF(index[6]).dismissGlobalKeyboard();
   }, items1);

@@ -1,12 +1,12 @@
 // === Module 12578: useDeafStates ===
 
 // Module 12578 (useDeafStates)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "updateVoiceState" /* 4542 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
 
 export default function useDeafStates(arg0) {
   const _require = arg0;
@@ -15,15 +15,15 @@ export default function useDeafStates(arg0) {
   return _require(589).useStateFromStoresObject(items, () => {
     let obj = closure_0;
     if (closure_1_4 !== undefined) {
-      if (closure_1_3 !== undefined) {
-        if (closure_1_2 !== undefined) {
+      if (obj3 !== undefined) {
+        if (obj4 !== undefined) {
           let voiceState = null;
           if (null != obj) {
             const guildId = obj.getGuildId();
-            voiceState = closure_1_4.getVoiceState(guildId, closure_1_2.getId());
+            voiceState = closure_1_4.getVoiceState(guildId, obj4.getId());
           }
           obj = { selfDeaf: null, deaf: null };
-          obj[0] = closure_1_3.isSelfDeaf();
+          obj[0] = obj3.isSelfDeaf();
           let flag;
           if (voiceState != null) {
             flag = voiceState.deaf;

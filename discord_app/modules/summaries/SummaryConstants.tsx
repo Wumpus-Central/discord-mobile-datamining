@@ -1,13 +1,13 @@
 // === Module 10552: result ===
 
 // Module 10552 (result)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-require = fn;
+require = arg1;
 let obj = { DUPLICATED: "DUPLICATED", TOO_GENERIC: "TOO_GENERIC", TOO_MANY: "TOO_MANY", INACCURATE: "INACCURATE", NOT_USEFUL: "NOT_USEFUL", OTHER: "OTHER" };
-const result = 5 * obj132Default.Millis.SECOND;
-const result1 = require("obj132").fileFinishedImporting("modules/summaries/SummaryConstants.tsx");
+const result = 5 * setDefault.Millis.SECOND;
+const result1 = require("set").fileFinishedImporting("modules/summaries/SummaryConstants.tsx");
 
 export const SUMMARY_POLL_INTERVAL = result;
 export const SummariesSidebarToggledSource = { TOOLBAR_BUTTON: "toolbar button", PILL: "pill" };

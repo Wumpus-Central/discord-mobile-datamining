@@ -3,7 +3,7 @@
 // Module 387 (createAnimatedComponent)
 import noopAll from "noop" /* 19 */;
 import addListenersToPropsValueDefault from "addListenersToPropsValue" /* 388 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

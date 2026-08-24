@@ -2,11 +2,11 @@
 
 // Module 8772 (canInstallApplication)
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
-import getIndexKey from "getIndexKey" /* 8448 */;
+import closure_2 from "getIndexKey" /* 8448 */;
 import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 
 export const canInstallApplication = function canInstallApplication(application) {
   const integrationTypesConfig = application.integrationTypesConfig;
@@ -16,16 +16,16 @@ export const canInstallApplication = function canInstallApplication(application)
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some((item, index) => {
+      someResult = values.some((oauth2_install_params) => {
         let prop;
-        if (item != null) {
-          prop = item.oauth2_install_params;
+        if (oauth2_install_params != null) {
+          prop = oauth2_install_params.oauth2_install_params;
         }
         let tmp2 = null != prop;
         if (!tmp2) {
           let oauth2InstallParams;
-          if (item != null) {
-            oauth2InstallParams = item.oauth2InstallParams;
+          if (oauth2_install_params != null) {
+            oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
           }
           tmp2 = null != oauth2InstallParams;
         }
@@ -44,16 +44,16 @@ export const isAppUserInstallable = function isAppUserInstallable(integrationTyp
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some((item, index) => {
+      someResult = values.some((oauth2_install_params) => {
         let prop;
-        if (item != null) {
-          prop = item.oauth2_install_params;
+        if (oauth2_install_params != null) {
+          prop = oauth2_install_params.oauth2_install_params;
         }
         let tmp2 = null != prop;
         if (!tmp2) {
           let oauth2InstallParams;
-          if (item != null) {
-            oauth2InstallParams = item.oauth2InstallParams;
+          if (oauth2_install_params != null) {
+            oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
           }
           tmp2 = null != oauth2InstallParams;
         }

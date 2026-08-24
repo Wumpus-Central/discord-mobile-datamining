@@ -1,12 +1,12 @@
 // === Module 13491: RNTextInput ===
 
 // Module 13491 (RNTextInput)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import _modDef8115 from "module_8115" /* 8115 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 13492 */;
 
-const result = obj132.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
+const result = set.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
 
 export const RNTextInput = get_ActivityIndicator.TextInput;
 export const TextInputProps = get_ActivityIndicator.TextInputProps;

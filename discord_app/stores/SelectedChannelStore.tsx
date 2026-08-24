@@ -1,7 +1,6 @@
 // === Module 1979: handleConnectionOpen ===
 
 // Module 1979 (handleConnectionOpen)
-import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import fromStringAll from "fromString" /* 506 */;
 import initializeDefault from "initialize" /* 589 */;
@@ -10,14 +9,15 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import set2 from "set" /* 1398 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import handleConnectionOpen2 from "handleConnectionOpen" /* 4197 */;
+import closure_13 from "fetchFingerprint" /* 1218 */;
+import closure_14 from "ensureGuildLoaded" /* 1391 */;
+import closure_15 from "comparator" /* 1980 */;
+import closure_16 from "createGuildRecordFromRust" /* 1910 */;
+import closure_17 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_18 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_19 from "handleConnectionOpen" /* 4197 */;
 import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
 function handleConnectionOpen(sessionId) {
   sessionId = sessionId.sessionId;
@@ -28,6 +28,7 @@ function handleConnectionOpen(sessionId) {
       let isPrivateResult = channel.isPrivate();
       if (!isPrivateResult) {
         isPrivateResult = closure_18.can(fromStringAll.combine(constants2.VIEW_CHANNEL, constants2.CONNECT), channel);
+        const obj2 = fromStringAll;
       }
       tmp3 = isPrivateResult;
     }
@@ -37,18 +38,18 @@ function handleConnectionOpen(sessionId) {
   }
   let _require = false;
   const guildsArray = store3.getGuildsArray();
-  applyDefault.each(closure_25, (channelId) => {
-    let tmp4 = null != channelId;
+  applyDefault.each(closure_25, (arg0, arg1) => {
+    let tmp4 = null != arg0;
     if (tmp4) {
-      let hasChannelResult = closure_1_14.hasChannel(channelId);
+      let hasChannelResult = closure_1_14.hasChannel(arg0);
       if (!hasChannelResult) {
-        hasChannelResult = channelId === selectedChannelId;
+        hasChannelResult = arg0 === selectedChannelId;
       }
       if (!hasChannelResult) {
-        hasChannelResult = set.has(channelId);
+        hasChannelResult = closure_1_28.has(arg0);
       }
       if (!hasChannelResult) {
-        hasChannelResult = isGuildHomeChannel(channelId);
+        hasChannelResult = closure_1_23(arg0);
       }
       tmp4 = hasChannelResult;
     }
@@ -58,12 +59,13 @@ function handleConnectionOpen(sessionId) {
       c0 = true;
     }
   });
+  const obj3 = applyDefault;
   applyDefault.each(closure_27, (arg0, arg1) => {
     let tmp3 = null != arg0;
     if (tmp3) {
       let hasChannelResult = closure_1_14.hasChannel(arg0);
       if (!hasChannelResult) {
-        hasChannelResult = set.has(arg0);
+        hasChannelResult = closure_1_28.has(arg0);
       }
       tmp3 = hasChannelResult;
     }
@@ -72,9 +74,9 @@ function handleConnectionOpen(sessionId) {
       c0 = true;
     }
   });
-  const item = guildsArray.forEach((item, index) => {
-    if (null == dependencyMap[item.id]) {
-      const id = item.id;
+  const item = guildsArray.forEach((id) => {
+    if (null == dependencyMap[id.id]) {
+      id = id.id;
       if (null != id) {
         if (null != tmp) {
           if (dependencyMap[id] !== tmp) {
@@ -116,15 +118,15 @@ function handleConnectionOpen(sessionId) {
     obj[3] = closure_9;
     obj[4] = closure_25;
     obj[5] = closure_27;
-    const values = applyDefault(closure_25).values();
-    const obj6 = applyDefault(closure_25);
-    const combined = values.concat(applyDefault.values(closure_27));
+    const values = tmp9(12)(closure_25).values();
+    const obj6 = tmp9(12)(closure_25);
+    const combined = values.concat(tmp9(12).values(closure_27));
     const found = combined.filter(_require(1370).isNotNullish);
-    const tmp9Result = applyDefault;
+    const tmp9Result = tmp9(12);
     const uniqResult = found.uniq();
-    obj[6] = found.uniq().filter((item, index) => {
-      basicChannel = basicChannel.getBasicChannel(item);
-      let hasItem = set2.has(item);
+    obj[6] = found.uniq().filter((arg0) => {
+      basicChannel = basicChannel.getBasicChannel(arg0);
+      let hasItem = set2.has(arg0);
       if (!hasItem) {
         let hasItem1 = null != basicChannel;
         if (hasItem1) {
@@ -135,9 +137,9 @@ function handleConnectionOpen(sessionId) {
       return hasItem;
     }).value();
     const result = Storage.set(SelectedChannelStore, obj);
-    const iter = found.uniq().filter((item, index) => {
-      basicChannel = basicChannel.getBasicChannel(item);
-      let hasItem = set2.has(item);
+    const iter = found.uniq().filter((arg0) => {
+      basicChannel = basicChannel.getBasicChannel(arg0);
+      let hasItem = set2.has(arg0);
       if (!hasItem) {
         let hasItem1 = null != basicChannel;
         if (hasItem1) {
@@ -179,10 +181,11 @@ function navigateAwayFromChannel(id, guild_id, parent_id) {
     const obj2 = applyDefault(dependencyMap);
     const combined = values.concat(applyDefault.values(closure_27));
     const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
+    const obj4 = applyDefault;
     const uniqResult = found.uniq();
-    obj[6] = found.uniq().filter((item, index) => {
-      basicChannel = basicChannel.getBasicChannel(item);
-      let hasItem = set2.has(item);
+    obj[6] = found.uniq().filter((arg0) => {
+      basicChannel = basicChannel.getBasicChannel(arg0);
+      let hasItem = set2.has(arg0);
       if (!hasItem) {
         let hasItem1 = null != basicChannel;
         if (hasItem1) {
@@ -193,9 +196,9 @@ function navigateAwayFromChannel(id, guild_id, parent_id) {
       return hasItem;
     }).value();
     const result = Storage.set(SelectedChannelStore, obj);
-    const iter = found.uniq().filter((item, index) => {
-      basicChannel = basicChannel.getBasicChannel(item);
-      let hasItem = set2.has(item);
+    const iter = found.uniq().filter((arg0) => {
+      basicChannel = basicChannel.getBasicChannel(arg0);
+      let hasItem = set2.has(arg0);
       if (!hasItem) {
         let hasItem1 = null != basicChannel;
         if (hasItem1) {
@@ -363,18 +366,18 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
     }
     c0 = false;
     const guildsArray = store3.getGuildsArray();
-    applyDefault.each(closure_25, (channelId) => {
-      let tmp4 = null != channelId;
+    applyDefault.each(closure_25, (arg0, arg1) => {
+      let tmp4 = null != arg0;
       if (tmp4) {
-        let hasChannelResult = closure_1_14.hasChannel(channelId);
+        let hasChannelResult = closure_1_14.hasChannel(arg0);
         if (!hasChannelResult) {
-          hasChannelResult = channelId === selectedChannelId;
+          hasChannelResult = arg0 === selectedChannelId;
         }
         if (!hasChannelResult) {
-          hasChannelResult = set.has(channelId);
+          hasChannelResult = closure_1_28.has(arg0);
         }
         if (!hasChannelResult) {
-          hasChannelResult = isGuildHomeChannel(channelId);
+          hasChannelResult = closure_1_23(arg0);
         }
         tmp4 = hasChannelResult;
       }
@@ -384,12 +387,13 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         c0 = true;
       }
     });
+    const obj2 = applyDefault;
     applyDefault.each(dependencyMap3, (arg0, arg1) => {
       let tmp3 = null != arg0;
       if (tmp3) {
         let hasChannelResult = closure_1_14.hasChannel(arg0);
         if (!hasChannelResult) {
-          hasChannelResult = set.has(arg0);
+          hasChannelResult = closure_1_28.has(arg0);
         }
         tmp3 = hasChannelResult;
       }
@@ -398,9 +402,9 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         c0 = true;
       }
     });
-    const item = guildsArray.forEach((item, index) => {
-      if (null == dependencyMap[item.id]) {
-        const id = item.id;
+    const item = guildsArray.forEach((id) => {
+      if (null == dependencyMap[id.id]) {
+        id = id.id;
         if (null != id) {
           if (null != tmp) {
             if (dependencyMap[id] !== tmp) {
@@ -501,10 +505,11 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       const obj3 = applyDefault(dependencyMap);
       const combined = values.concat(applyDefault.values(dependencyMap3));
       const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
+      const obj5 = applyDefault;
       const uniqResult = found.uniq();
-      obj[6] = found.uniq().filter((item, index) => {
-        basicChannel = basicChannel.getBasicChannel(item);
-        let hasItem = set2.has(item);
+      obj[6] = found.uniq().filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
         if (!hasItem) {
           let hasItem1 = null != basicChannel;
           if (hasItem1) {
@@ -515,18 +520,6 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         return hasItem;
       }).value();
       const result = Storage.set(SelectedChannelStore, obj);
-      const iter = found.uniq().filter((item, index) => {
-        basicChannel = basicChannel.getBasicChannel(item);
-        let hasItem = set2.has(item);
-        if (!hasItem) {
-          let hasItem1 = null != basicChannel;
-          if (hasItem1) {
-            hasItem1 = set.has(basicChannel.type);
-          }
-          hasItem = hasItem1;
-        }
-        return hasItem;
-      });
     }
   },
   CHANNEL_CREATE: function handleChannelCreate(channel) {
@@ -564,7 +557,10 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
     while (iter !== undefined) {
       let tmp = nextResult;
       if (nextResult.isScheduledForDeletion()) {
+        let tmp2 = set;
+        let tmp3 = nextResult;
         let hasItem = set.has(tmp.type);
+        let tmp5 = navigateAwayFromChannel;
         let tmp6 = navigateAwayFromChannel(tmp.id, tmp.guild_id, tmp.parent_id);
       }
       continue;
@@ -617,10 +613,11 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       const obj3 = applyDefault(dependencyMap);
       const combined = values.concat(applyDefault.values(dependencyMap3));
       const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
+      const obj5 = applyDefault;
       const uniqResult = found.uniq();
-      obj[6] = found.uniq().filter((item, index) => {
-        basicChannel = basicChannel.getBasicChannel(item);
-        let hasItem = set2.has(item);
+      obj[6] = found.uniq().filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
         if (!hasItem) {
           let hasItem1 = null != basicChannel;
           if (hasItem1) {
@@ -631,9 +628,9 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         return hasItem;
       }).value();
       const result = Storage.set(SelectedChannelStore, obj);
-      const iter = found.uniq().filter((item, index) => {
-        basicChannel = basicChannel.getBasicChannel(item);
-        let hasItem = set2.has(item);
+      const iter = found.uniq().filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
         if (!hasItem) {
           let hasItem1 = null != basicChannel;
           if (hasItem1) {
@@ -667,10 +664,11 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       const obj2 = applyDefault(dependencyMap);
       const combined = values.concat(applyDefault.values(closure_27));
       const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
+      const obj4 = applyDefault;
       const uniqResult = found.uniq();
-      obj[6] = found.uniq().filter((item, index) => {
-        basicChannel = basicChannel.getBasicChannel(item);
-        let hasItem = set2.has(item);
+      obj[6] = found.uniq().filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
         if (!hasItem) {
           let hasItem1 = null != basicChannel;
           if (hasItem1) {
@@ -681,18 +679,6 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         return hasItem;
       }).value();
       const result = Storage.set(SelectedChannelStore, obj);
-      const iter = found.uniq().filter((item, index) => {
-        basicChannel = basicChannel.getBasicChannel(item);
-        let hasItem = set2.has(item);
-        if (!hasItem) {
-          let hasItem1 = null != basicChannel;
-          if (hasItem1) {
-            hasItem1 = set.has(basicChannel.type);
-          }
-          hasItem = hasItem1;
-        }
-        return hasItem;
-      });
     }
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
@@ -719,6 +705,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           }
         }
         dependencyMap[guild_id] = id;
+        const tmp6 = dependencyMap;
       }
     }
     const Storage = Storage3.Storage;
@@ -727,10 +714,11 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
     const obj2 = applyDefault(dependencyMap);
     const combined = values.concat(applyDefault.values(closure_27));
     const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
+    const obj4 = applyDefault;
     const uniqResult = found.uniq();
-    obj[6] = found.uniq().filter((item, index) => {
-      basicChannel = basicChannel.getBasicChannel(item);
-      let hasItem = set2.has(item);
+    obj[6] = found.uniq().filter((arg0) => {
+      basicChannel = basicChannel.getBasicChannel(arg0);
+      let hasItem = set2.has(arg0);
       if (!hasItem) {
         let hasItem1 = null != basicChannel;
         if (hasItem1) {
@@ -741,23 +729,11 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       return hasItem;
     }).value();
     const result = Storage.set(SelectedChannelStore, obj);
-    const iter = found.uniq().filter((item, index) => {
-      basicChannel = basicChannel.getBasicChannel(item);
-      let hasItem = set2.has(item);
-      if (!hasItem) {
-        let hasItem1 = null != basicChannel;
-        if (hasItem1) {
-          hasItem1 = set.has(basicChannel.type);
-        }
-        hasItem = hasItem1;
-      }
-      return hasItem;
-    });
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((acc, item, index) => {
-      if (item.sessionId === closure_4) {
+    return voiceStates.reduce((arg0, sessionId) => {
+      if (sessionId.sessionId === closure_4) {
         const _clearInterval = clearInterval;
         clearInterval(interval);
         const channel = store.getChannel(channelId);
@@ -766,7 +742,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           guildId = channel.getGuildId();
         }
         if (!tmp26) {
-          channelId = item.channelId;
+          channelId = sessionId.channelId;
         }
         const _Date = Date;
         c9 = Date.now();
@@ -782,9 +758,9 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
             const found = combined.filter(callback(1370).isNotNullish);
             const obj4 = callback2(12);
             const uniqResult = found.uniq();
-            obj[6] = found.uniq().filter((item, index) => {
-              basicChannel = basicChannel.getBasicChannel(item);
-              let hasItem = set2.has(item);
+            obj[6] = found.uniq().filter((arg0) => {
+              basicChannel = basicChannel.getBasicChannel(arg0);
+              let hasItem = set2.has(arg0);
               if (!hasItem) {
                 let hasItem1 = null != basicChannel;
                 if (hasItem1) {
@@ -807,14 +783,14 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         obj[5] = closure_27;
         let values = callback2(12)(closure_25).values();
         const obj9 = callback2(12)(closure_25);
-        tmp26 = item.guildId !== guildId && null == item.channelId;
+        tmp26 = sessionId.guildId !== guildId && null == sessionId.channelId;
         let combined = values.concat(callback2(12).values(closure_27));
         let found = combined.filter(callback(1370).isNotNullish);
         const obj11 = callback2(12);
         let uniqResult = found.uniq();
-        obj[6] = found.uniq().filter((item, index) => {
-          basicChannel = basicChannel.getBasicChannel(item);
-          let hasItem = set2.has(item);
+        obj[6] = found.uniq().filter((arg0) => {
+          basicChannel = basicChannel.getBasicChannel(arg0);
+          let hasItem = set2.has(arg0);
           if (!hasItem) {
             let hasItem1 = null != basicChannel;
             if (hasItem1) {
@@ -825,9 +801,9 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           return hasItem;
         }).value();
         let result = Storage2.set(closure_24, obj);
-        const iter2 = found.uniq().filter((item, index) => {
-          basicChannel = basicChannel.getBasicChannel(item);
-          let hasItem = set2.has(item);
+        const iter2 = found.uniq().filter((arg0) => {
+          basicChannel = basicChannel.getBasicChannel(arg0);
+          let hasItem = set2.has(arg0);
           if (!hasItem) {
             let hasItem1 = null != basicChannel;
             if (hasItem1) {
@@ -837,8 +813,8 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           }
           return hasItem;
         });
-      } else if (item.userId !== id.getId()) {
-        return acc;
+      } else if (sessionId.userId !== id.getId()) {
+        return arg0;
       } else {
         const _clearInterval2 = clearInterval;
         clearInterval(interval);
@@ -849,14 +825,14 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         if (channel1 != null) {
           guildId1 = channel1.getGuildId();
         }
-        const channel2 = store.getChannel(item.channelId);
+        const channel2 = store.getChannel(sessionId.channelId);
         let guildId2;
         if (channel2 != null) {
           guildId2 = channel2.getGuildId();
         }
         let tmp3 = null != guildId1 && guildId2 === guildId1;
         if (!tmp3) {
-          tmp3 = channelId === item.channelId;
+          tmp3 = channelId === sessionId.channelId;
         }
         if (tmp3) {
           channelId = null;
@@ -870,14 +846,15 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         obj[4] = closure_25;
         obj[5] = closure_27;
         values = callback2(12)(closure_25).values();
+        const obj13 = store;
         const obj3 = callback2(12)(closure_25);
         const combined1 = values.concat(callback2(12).values(closure_27));
         const found1 = combined1.filter(callback(1370).isNotNullish);
         const obj5 = callback2(12);
         const uniqResult1 = found1.uniq();
-        obj[6] = found1.uniq().filter((item, index) => {
-          basicChannel = basicChannel.getBasicChannel(item);
-          let hasItem = set2.has(item);
+        obj[6] = found1.uniq().filter((arg0) => {
+          basicChannel = basicChannel.getBasicChannel(arg0);
+          let hasItem = set2.has(arg0);
           if (!hasItem) {
             let hasItem1 = null != basicChannel;
             if (hasItem1) {
@@ -888,9 +865,9 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           return hasItem;
         }).value();
         const result1 = Storage.set(closure_24, obj);
-        const iter = found1.uniq().filter((item, index) => {
-          basicChannel = basicChannel.getBasicChannel(item);
-          let hasItem = set2.has(item);
+        const iter = found1.uniq().filter((arg0) => {
+          basicChannel = basicChannel.getBasicChannel(arg0);
+          let hasItem = set2.has(arg0);
           if (!hasItem) {
             let hasItem1 = null != basicChannel;
             if (hasItem1) {
@@ -926,10 +903,11 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       const obj3 = applyDefault(closure_25);
       const combined = values.concat(applyDefault.values(closure_27));
       const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
+      const obj5 = applyDefault;
       const uniqResult = found.uniq();
-      obj[6] = found.uniq().filter((item, index) => {
-        basicChannel = basicChannel.getBasicChannel(item);
-        let hasItem = set2.has(item);
+      obj[6] = found.uniq().filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
         if (!hasItem) {
           let hasItem1 = null != basicChannel;
           if (hasItem1) {
@@ -940,9 +918,9 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         return hasItem;
       }).value();
       const result = Storage.set(SelectedChannelStore, obj);
-      const iter = found.uniq().filter((item, index) => {
-        basicChannel = basicChannel.getBasicChannel(item);
-        let hasItem = set2.has(item);
+      const iter = found.uniq().filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
         if (!hasItem) {
           let hasItem1 = null != basicChannel;
           if (hasItem1) {
@@ -965,7 +943,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
     Storage.remove(SelectedChannelStore);
   }
 });
-let result = obj132.fileFinishedImporting("stores/SelectedChannelStore.tsx");
+let result = set.fileFinishedImporting("stores/SelectedChannelStore.tsx");
 
 export default selectedChannelStore;
 export const findFirstVoiceChannelId = function findFirstVoiceChannelId(id) {

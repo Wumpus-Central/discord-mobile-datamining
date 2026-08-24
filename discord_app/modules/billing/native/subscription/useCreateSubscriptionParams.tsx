@@ -2,10 +2,10 @@
 
 // Module 7700 (useCreateSubscriptionParams)
 import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 7701 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/billing/native/subscription/useCreateSubscriptionParams.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useCreateSubscriptionParams.tsx");
 
 export default function useCreateSubscriptionParams(arg0, arg1) {
   closure_0 = arg0;
@@ -26,11 +26,12 @@ export default function useCreateSubscriptionParams(arg0, arg1) {
           obj[0] = tmp.id;
           const items = [obj];
           obj[1] = items;
-          ({ country: obj[2], currency: obj[3] } = closure_1);
+          ({ country: obj[2], currency: obj[3] } = tmp3);
           tmp2 = obj;
           const obj2 = callback(table[2]);
         }
       }
+      tmp3 = closure_1;
     }
     return tmp2;
   }, items);

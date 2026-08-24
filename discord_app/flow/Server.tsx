@@ -1,9 +1,9 @@
 // === Module 1954: PermissionOverwriteType ===
 
 // Module 1954 (PermissionOverwriteType)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("flow/Server.tsx");
+const result = set.fileFinishedImporting("flow/Server.tsx");
 
 export const PermissionOverwriteType = { ROLE: 0, [0]: "ROLE", MEMBER: 1, [1]: "MEMBER" };
 export const GuildBoostUpsellType = { FIRST_BOOSTER: 0, [0]: "FIRST_BOOSTER" };

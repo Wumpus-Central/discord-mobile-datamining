@@ -10,10 +10,10 @@ import GuildVisibility from "GuildVisibility" /* 9155 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ icon: { marginRight: 8 } });
-const result = require("obj132").fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
+const result = require("set").fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
 
 export default function GuildBadgeV2(arg0) {
   ({ guild, size } = arg0);
@@ -25,7 +25,7 @@ export default function GuildBadgeV2(arg0) {
   if (null == guild) {
     return null;
   } else {
-    const guildBadgeImageSource = badgeVariants.getGuildBadgeImageSource(guild, tmp8);
+    const guildBadgeImageSource = tmp5(9153).getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
       const obj = { size: null, source: null, style: null, disableColor: true };
@@ -33,7 +33,7 @@ export default function GuildBadgeV2(arg0) {
       obj[1] = guildBadgeImageSource;
       obj[2] = tmp4.icon;
       const merged1 = Object.assign(merged);
-      tmp10 = jsx(Button.Icon, { size: null, source: null, style: null, disableColor: true });
+      tmp10 = jsx(tmp5(1297).Icon, { size: null, source: null, style: null, disableColor: true });
     }
     return tmp10;
   }
@@ -41,6 +41,8 @@ export default function GuildBadgeV2(arg0) {
 };
 export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult) {
   const guildTraits = GuildVisibility.getGuildTraits(fromGuildProfileResult);
+  const obj = GuildVisibility;
+  const tmp = require;
   const badgeCategory = BadgeCategory.getBadgeCategory(guildTraits);
   const tmp5 = badgeVariants.badgeVariants[badgeCategory];
   let tmp6 = null != tmp5;

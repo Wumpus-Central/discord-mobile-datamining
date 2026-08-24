@@ -6,8 +6,9 @@ import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
 function dateTimestampInSeconds() {
   return Date.now() / 1000;
 }
+let _performance;
 let timeOrigin;
-const _performance = getGlobalSingleton.GLOBAL_OBJ.performance;
+_performance = getGlobalSingleton.GLOBAL_OBJ.performance;
 let fn = dateTimestampInSeconds;
 if (_performance) {
   fn = dateTimestampInSeconds;

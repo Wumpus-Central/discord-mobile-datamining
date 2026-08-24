@@ -8,12 +8,12 @@ import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import TableRowArrow from "TableRowArrow" /* 6297 */;
 import KeyIcon from "KeyIcon" /* 8595 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function showAgeVerificationTestModal() {
   const self = this;
   const apply = _showAgeVerificationTestModal.apply;
@@ -68,16 +68,19 @@ function _showAgeVerificationTestModal() {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, content: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx");
+let obj1 = { padding: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx");
 
 export default function DevToolsAgeVerificationScreen() {
   const tmp = callback4();
+  let obj = { style: tmp.container, contentContainerStyle: null, children: null };
   const items = [tmp.content, ];
-  let obj = { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom };
+  obj = { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
   obj[1] = items;
   obj = { title: "Quick Actions", hasIcons: true, children: null };
@@ -86,8 +89,8 @@ export default function DevToolsAgeVerificationScreen() {
   items1[1] = callback2(TableRowInner.TableRow, {
     label: "Launch Age Verification Modal",
     onPress() {
-      callback2(5428);
-      const obj = { entryPoint: callback(5254).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
+      let obj = callback2(5428);
+      obj = { entryPoint: callback(5254).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
     icon: callback2(KeyIcon.KeyIcon, {}),

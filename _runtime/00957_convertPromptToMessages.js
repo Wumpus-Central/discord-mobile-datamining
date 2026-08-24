@@ -4,7 +4,6 @@
 import _mod956 from "module_956" /* 956 */;
 import _mod958 from "module_958" /* 958 */;
 import map2 from "map" /* 959 */;
-import buildMethodPath from "buildMethodPath" /* 960 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -78,17 +77,17 @@ arg5.applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
     tmp6 = value.inputTokens > 0 || value.outputTokens > 0;
   }
 };
-arg5.convertAvailableToolsToJsonString = function convertAvailableToolsToJsonString(data) {
-  return JSON.stringify(data.map((item, index) => {
-    if (typeof item === "string") {
+arg5.convertAvailableToolsToJsonString = function convertAvailableToolsToJsonString(arr) {
+  return JSON.stringify(arr.map((str) => {
+    if (typeof str === "string") {
       try {
         const _JSON = JSON;
-        return JSON.parse(item);
+        return JSON.parse(str);
       } catch (err) {
         return tmp;
       }
     } else {
-      return item;
+      return str;
     }
   }));
 };
@@ -639,19 +638,19 @@ arg5.getSpanOpFromName = function getSpanOpFromName(description) {
 };
 arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute, data) {
   if (data[_mod956.AI_PROMPT_ATTRIBUTE]) {
-    let tmpResult = buildMethodPath;
-    const attr = setAttribute.setAttribute("gen_ai.prompt", tmpResult.getTruncatedJsonString(data[_mod956.AI_PROMPT_ATTRIBUTE]));
+    let tmpResult = tmp(960);
+    const attr = setAttribute.setAttribute("gen_ai.prompt", tmpResult.getTruncatedJsonString(data[tmp(undefined, 956).AI_PROMPT_ATTRIBUTE]));
   }
   const tmp4 = data[_mod956.AI_PROMPT_ATTRIBUTE];
   if (typeof tmp4 === "string") {
-    if (!data[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE]) {
-      if (!data[_mod956.AI_PROMPT_MESSAGES_ATTRIBUTE]) {
+    if (!data[tmp(undefined, 958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE]) {
+      if (!data[tmp(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE]) {
         const arr = convertPromptToMessages(tmp4);
         if (arr.length) {
           let obj = {};
-          tmpResult = buildMethodPath;
-          obj[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmpResult.getTruncatedJsonString(arr);
-          obj[_mod958.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = arr.length;
+          tmpResult = tmp(960);
+          obj[tmp(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmpResult.getTruncatedJsonString(arr);
+          obj[tmp(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = arr.length;
           setAttribute.setAttributes(obj);
         }
       }
@@ -660,15 +659,15 @@ arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute
   if (typeof data[_mod956.AI_PROMPT_MESSAGES_ATTRIBUTE] === "string") {
     try {
       const _JSON = JSON;
-      const parsed = JSON.parse(data[_mod956.AI_PROMPT_MESSAGES_ATTRIBUTE]);
+      const parsed = JSON.parse(data[tmp(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE]);
       const _Array = Array;
       if (Array.isArray(parsed)) {
         obj = {};
-        obj[_mod956.AI_PROMPT_MESSAGES_ATTRIBUTE] = undefined;
-        obj[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = buildMethodPath.getTruncatedJsonString(parsed);
-        obj[_mod958.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = parsed.length;
+        obj[tmp(956).AI_PROMPT_MESSAGES_ATTRIBUTE] = undefined;
+        obj[tmp(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp(960).getTruncatedJsonString(parsed);
+        obj[tmp(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = parsed.length;
         setAttribute.setAttributes(obj);
-        const tmpResult1 = buildMethodPath;
+        const tmpResult1 = tmp(960);
       }
     } catch (err) {
     }

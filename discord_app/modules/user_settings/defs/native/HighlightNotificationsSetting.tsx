@@ -3,15 +3,15 @@
 // Module 14829 (useHighlightNotifications)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
+require = arg1;
 function useHighlightNotifications() {
   const items = [closure_2];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-{
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.o8Bypv);
@@ -31,7 +31,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
 
 export default createToggle;
 export { useHighlightNotifications };

@@ -1,11 +1,11 @@
 // === Module 10: isTracing ===
 
 // Module 10 (isTracing)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 
-fn = globalThis.__getTotalRequireTime;
+let fn = globalThis.__getTotalRequireTime;
 if (fn == null) {
-  fn = (arg0) => 0;
+  fn = () => 0;
 }
 let closure_2 = typeof performance !== "undefined";
 class AppStartPerformance {
@@ -89,7 +89,7 @@ prototype["mark"] = function mark(arg0, arg1, arg2) {
 };
 prototype["markAndLog"] = function markAndLog(closure_20, arg1, arg2) {
   const self = this;
-  logger.log(arg2);
+  closure_20.log(arg2);
   if (this.isTracing) {
     const logs = self.logs;
     const obj = { emoji: null, prefix: null, log: null, delta: null, timestamp: null };
@@ -130,6 +130,7 @@ prototype["markAt"] = function markAt(arg0, app_opened, JSBundleLoadedTimestamp)
     if (0 < self.logs.length) {
       while (true) {
         let timestamp = self.logs[num3].timestamp;
+        let tmp3 = num3;
         if (null == timestamp) {
           num3 = num3 + 1;
           num4 = num3;
@@ -173,7 +174,7 @@ prototype["addDetail"] = function addDetail(TTI, closure_5) {
     logs.push(obj);
   }
 };
-prototype["time"] = function time(arg0, arg1, fn) {
+prototype["time"] = function time(arg0, arg1, arg2) {
   const self = this;
   if (this.isTracing) {
     const _HermesInternal = HermesInternal;
@@ -187,9 +188,9 @@ prototype["time"] = function time(arg0, arg1, fn) {
     const _HermesInternal2 = HermesInternal;
     const diff = Date.now() - timestamp;
     self.mark(arg0, "Finish " + arg1, diff);
-    return fn();
+    return arg2();
   } else {
-    return fn();
+    return arg2();
   }
 };
 prototype["timeAsync"] = function timeAsync(emoji, name, closure_1_0) {
@@ -204,7 +205,7 @@ prototype["timeAsync"] = function timeAsync(emoji, name, closure_1_0) {
       return v0();
     }
     const _HermesInternal2 = HermesInternal;
-    c3.mark(emoji, "Start " + name);
+    c3.mark(closure_1_0, "Start " + closure_1_1);
     const _Date2 = Date;
     closure_0 = Date.now();
     closure_1 = yield v0();
@@ -224,6 +225,6 @@ let items = [obj];
 obj[3] = items;
 obj.logs = obj.logGroups[0].logs;
 obj.prefix = "";
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
 
 export default obj;

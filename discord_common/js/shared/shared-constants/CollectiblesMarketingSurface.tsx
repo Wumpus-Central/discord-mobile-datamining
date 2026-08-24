@@ -1,8 +1,8 @@
 // === Module 13446: CollectiblesMarketingSurface ===
 
 // Module 13446 (CollectiblesMarketingSurface)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingSurface.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingSurface.tsx");
 
 export const CollectiblesMarketingSurface = { DESKTOP_SHOP_BUTTON: 0, [0]: "DESKTOP_SHOP_BUTTON", MOBILE_SHOP_BUTTON: 1, [1]: "MOBILE_SHOP_BUTTON", EDIT_PROFILE_SETTINGS: 2, [2]: "EDIT_PROFILE_SETTINGS" };

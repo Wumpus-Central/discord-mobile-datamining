@@ -1,12 +1,12 @@
 // === Module 5050: guildHasOnboardingHome ===
 
 // Module 5050 (guildHasOnboardingHome)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
 import ME from "ME" /* 676 */;
 
 ({ GuildFeatures: obj1, ME: c3 } = ME);
-const result = obj132.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
+const result = set.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
 
 export default function guildHasOnboardingHome(id) {
   let isFavoritesGuildIdResult = null == id;
@@ -15,6 +15,7 @@ export default function guildHasOnboardingHome(id) {
   }
   if (!isFavoritesGuildIdResult) {
     isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id.id);
+    const obj = getFavoritesAwareGuildName;
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

@@ -1,24 +1,27 @@
 // === Module 678: items ===
 
 // Module 678 (items)
-import obj132 from "obj132" /* 2 */;
 import set2 from "set" /* 679 */;
 import CollectibleSearchItemType from "CollectibleSearchItemType" /* 680 */;
 import CollectibleSearchSortType from "CollectibleSearchSortType" /* 681 */;
 import CollectibleSearchSortDirection from "CollectibleSearchSortDirection" /* 682 */;
+import set from "set" /* 2 */;
 
 let obj = { HOME: "home", CATALOG: "catalog", ORBS: "orbs", AVATAR_DECORATIONS: "avatar-decorations", PROFILE_EFFECTS: "profile-effects", NAMEPLATES: "nameplates", PROFILE_FRAMES: "profile-frames", BUNDLES: "bundles", COLLABS: "collabs", OFFER_ELIGIBLE: "offer-eligible", LAYOUT: "layout", COLLECTION_INDEX: "collection-index", GAME_SHOPS: "game-shops", GAME_SERVERS: "game-servers" };
 const items = [, , , , ];
 ({ AVATAR_DECORATIONS: arr[0], PROFILE_EFFECTS: arr[1], NAMEPLATES: arr[2], PROFILE_FRAMES: arr[3], BUNDLES: arr[4] } = obj);
 obj = { ORB_PROFILE_BADGE: "1342211853484429445", FRACTIONAL_PREMIUM: set2.FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY, FRACTIONAL_PREMIUM_1_DAY: set2.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY };
-const set = new Set(Object.values(obj));
+let set = new Set(Object.values(obj));
 const items1 = [CollectibleSearchItemType.CollectibleSearchItemType.AVATAR_DECORATION, CollectibleSearchItemType.CollectibleSearchItemType.NAMEPLATE, CollectibleSearchItemType.CollectibleSearchItemType.PROFILE_EFFECT, CollectibleSearchItemType.CollectibleSearchItemType.PROFILE_FRAME, CollectibleSearchItemType.CollectibleSearchItemType.BUNDLE];
 obj = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RELEVANCE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
 const items2 = [obj, { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC }, , , ];
+const obj1 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
 items2[2] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.ASC };
+const obj2 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.ASC };
 items2[3] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
+const obj3 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
 items2[4] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.POPULARITY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
-const result = obj132.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
 const items3 = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
 
 export const POPULAR_PICK_PRODUCTS = ["1212569433839636530", "1232073608168472638", "1232071712695386162", "1212570343567261736", "1232071157746765906", "1144308439720394944", "1139323093991575696", "1232070870093008937", "1232073286582538261", "1228234634379132958", "1144307957425778779", "1197344764174008452", "1212569856189407352", "1139323093551165533", "1232073448415821854"];

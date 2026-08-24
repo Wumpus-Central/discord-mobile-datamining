@@ -2,27 +2,27 @@
 
 // Module 10989 (useExperimentAssignment)
 import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import getHash from "getHash" /* 4288 */;
-import initialize from "initialize" /* 1212 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "getHash" /* 4288 */;
+import closure_4 from "initialize" /* 1212 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/experiments/client_override_hooks/useExperimentAssignments.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useExperimentAssignments.tsx");
 
-export const useExperimentAssignment = function useExperimentAssignment(experiment, maybeExtractIdResult) {
+export const useExperimentAssignment = function useExperimentAssignment(experiment, arg1) {
   const _require = experiment;
-  dependencyMap = maybeExtractIdResult;
+  dependencyMap = arg1;
   const items = [closure_3, closure_4];
   return _require(589).useStateFromStores(items, () => {
-    if (experiment.system === experiment(maybeExtractIdResult[4]).ExperimentSystem.LEGACY) {
-      const userExperimentDescriptor = closure_1_3.getUserExperimentDescriptor(experiment.name);
+    if (experiment.system === experiment(table[4]).ExperimentSystem.LEGACY) {
+      const userExperimentDescriptor = closure_1_3.getUserExperimentDescriptor(tmp.name);
       let bucket;
       if (userExperimentDescriptor != null) {
         bucket = userExperimentDescriptor.bucket;
       }
       let variantId = bucket;
     } else {
-      const assignment = closure_1_4.getAssignment(experiment.kind, maybeExtractIdResult, experiment.name);
+      const assignment = closure_1_4.getAssignment(tmp.kind, table, tmp.name);
       if (assignment != null) {
         variantId = assignment.variantId;
       }
@@ -45,11 +45,10 @@ export const getExperimentServerAssignment = function getExperimentServerAssignm
   } else {
     loadedUserExperiment = obj2.getServerAssignment(name.kind, id, name.name);
   }
-  const tmp4 = callback(tmp, 2);
 };
-export const useExperimentServerAssignment = function useExperimentServerAssignment(experiment, maybeExtractIdResult) {
+export const useExperimentServerAssignment = function useExperimentServerAssignment(experiment, arg1) {
   const _require = experiment;
-  dependencyMap = maybeExtractIdResult;
+  dependencyMap = arg1;
   let items = [closure_3, closure_4];
   return _require(589).useStateFromStores(items, () => {
     let name = experiment;
@@ -57,12 +56,11 @@ export const useExperimentServerAssignment = function useExperimentServerAssignm
     [obj, obj2] = closure_1_2(items, 2);
     if (null == experiment) {
       return null;
-    } else if (name.system === experiment(maybeExtractIdResult[4]).ExperimentSystem.LEGACY) {
+    } else if (name.system === experiment(table[4]).ExperimentSystem.LEGACY) {
       name = name.name;
       let loadedUserExperiment = obj.getLoadedUserExperiment(name);
     } else {
-      loadedUserExperiment = obj2.getServerAssignment(name.kind, maybeExtractIdResult, name.name);
+      loadedUserExperiment = obj2.getServerAssignment(name.kind, table, name.name);
     }
-    const tmp2 = closure_1_2(items, 2);
   });
 };

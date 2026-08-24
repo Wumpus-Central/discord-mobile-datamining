@@ -1,17 +1,17 @@
 // === Module 1653: controlEdgeToEdgeValues ===
 
 // Module 1653 (controlEdgeToEdgeValues)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_0 from "get ActivityIndicator" /* 17 */;
 
 
 export (arg0) => {
 
 }
 export const isEdgeToEdge = () => {
-  const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+  TurboModuleRegistry = TurboModuleRegistry.TurboModuleRegistry;
   let tmp2 = null != TurboModuleRegistry.get("RNEdgeToEdge");
   if (!tmp2) {
-    const TurboModuleRegistry2 = get_ActivityIndicator.TurboModuleRegistry;
+    const TurboModuleRegistry2 = TurboModuleRegistry.TurboModuleRegistry;
     const value = TurboModuleRegistry2.get("DeviceInfo");
     let getConstants;
     if (null != value) {

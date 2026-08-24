@@ -1,10 +1,10 @@
 // === Module 11558: getBarText ===
 
 // Module 11558 (getBarText)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
+const result = set.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
 
 export const getBarText = function getBarText(flag, results) {
   if (flag) {
@@ -15,7 +15,7 @@ export const getBarText = function getBarText(flag, results) {
     if (null != results) {
       const intl = getSystemLocale.intl;
       const obj = { total: null };
-      obj[0] = results.reduce((acc, item, index) => acc + item, 0);
+      obj[0] = results.reduce((arg0, arg1) => arg0 + arg1, 0);
       str = intl.formatToPlainString(getSystemLocale.t.xU4pF1, obj);
     }
   }

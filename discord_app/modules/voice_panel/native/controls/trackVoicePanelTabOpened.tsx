@@ -2,10 +2,10 @@
 
 // Module 16385 (trackVoicePanelTabOpened)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import closure_2 from "generateOldThreadCutoff" /* 4772 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 
 export default function trackVoicePanelTabOpened(arg0, tab, source) {
   let obj = closure_2;

@@ -2,14 +2,14 @@
 
 // Module 10673
 import _modDef4770 from "module_4770" /* 4770 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-const require = fn;
+const require = arg1;
 ({ Endpoints: c5, ActivityTypes: closure_6, AnalyticEvents: error, LoggingInviteTypes: closure_8 } = ME);
-const result = require("obj132").fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
 export default {
   updateActivity(share_activity) {
@@ -45,20 +45,20 @@ export default {
     }
     let obj = distributor(num[4]);
     obj.wait(() => {
-      distributor(num[4]);
-      const obj = { type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor };
+      let obj = distributor(num[4]);
+      obj = { type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor };
       return obj.dispatch(obj);
     });
     const HTTP = applicationId(num[5]).HTTP;
     obj = { url: constants.ACTIVITIES, body: { application_id: applicationId, token, duration: num, share_activity: share_activity.shareActivity, distributor, closed: flag, exePath, voice_channel_id: voiceChannelId, session_id: sessionId, media_session_id: mediaSessionId }, retries: 1, oldFormErrors: true, rejectWithError: true };
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((result) => {
-      distributor(num[4]);
-      const obj = { type: "ACTIVITY_UPDATE_SUCCESS", applicationId, token: result.body.token, duration: num, distributor };
+    HTTP.post(obj).then((body) => {
+      let obj = distributor(num[4]);
+      obj = { type: "ACTIVITY_UPDATE_SUCCESS", applicationId, token: body.body.token, duration: num, distributor };
       obj.dispatch(obj);
-    }).catch((error) => {
-      distributor(num[4]);
-      const obj = { type: "ACTIVITY_UPDATE_FAIL", applicationId };
+    }).catch(() => {
+      let obj = distributor(num[4]);
+      obj = { type: "ACTIVITY_UPDATE_FAIL", applicationId };
       obj.dispatch(obj);
     });
   },
@@ -76,16 +76,19 @@ export default {
       }
       const parsed = importDefault(channel[6]).parse(channel, content);
       const tmp7Result = importDefault(channel[7]);
-      let obj = { type: null, activity: null, targetUserId: null };
+      let obj = { activityAction: null, location: null };
+      obj = { type: null, activity: null, targetUserId: null };
       obj[0] = type;
       obj[1] = activity;
       obj[2] = targetUserId;
       obj[0] = obj;
       obj[1] = MessageSendLocation.ACTIVITY_SHARE;
       const obj4 = importDefault(channel[6]);
-      return tmp7Result.sendMessage(channel.id, parsed, false, obj).then((result) => {
-        importDefault(channel[8]);
-        const obj = { location: closure_1, invite_type: null, application_id: null, guild_id: null, channel_id: null, message_id: null };
+      const tmp7 = importDefault;
+      const tmp8 = channel;
+      return tmp7Result.sendMessage(channel.id, parsed, false, obj).then((body) => {
+        let obj = closure_1_1(channel[8]);
+        obj = { location: closure_1, invite_type: null, application_id: null, guild_id: null, channel_id: null, message_id: null };
         if (activity.type === closure_1_6.LISTENING) {
           let APPLICATION = closure_1_8.SPOTIFY;
         } else {
@@ -96,15 +99,15 @@ export default {
         obj[3] = channel.getGuildId();
         obj[4] = channel.id;
         let id = null;
-        if (null != result) {
-          id = result.body.id;
+        if (null != body) {
+          id = body.body.id;
         }
         obj[5] = id;
         obj.trackWithMetadata(closure_1_7.INVITE_SENT, obj);
-        const activitySessionKey = activity(channel[9]).getActivitySessionKey(activity);
+        const activitySessionKey = activity(channel[9]).getActivitySessionKey(tmp2);
         if (null != activitySessionKey) {
-          activity(channel[10]).markChannelInvited(activitySessionKey, channel.id);
-          const tmp8Result = activity(channel[10]);
+          activity(tmp[10]).markChannelInvited(activitySessionKey, tmp5.id);
+          const tmp8Result = activity(tmp[10]);
         }
         return Promise.resolve(channel);
       }, (arg0) => Promise.reject(arg0));
@@ -113,7 +116,8 @@ export default {
   sendActivityInviteUser(userId) {
     const self = this;
     ({ type: importDefault, activity: dependencyMap, content: closure_3, location: require } = userId);
-    return _modDef4770.ensurePrivateChannel(userId.userId).then((result) => self.sendActivityInvite({ channelId: result, type: closure_1, activity: closure_2, content: closure_3, location: closure_0 }));
+    const obj = _modDef4770;
+    return _modDef4770.ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: closure_3, location: closure_0 }));
   },
   getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
     closure_0 = arg0;
@@ -146,7 +150,7 @@ export default {
   subscribeActivities(items) {
     closure_0 = items;
     return callback(function*() {
-      const mapped = v0.map((item, index) => ({ user_id: item.userId, application_id: item.applicationId, party_id: item.partyId, message_id: item.messageId, channel_id: item.channelId }));
+      const mapped = v0.map((userId) => ({ user_id: userId.userId, application_id: userId.applicationId, party_id: userId.partyId, message_id: userId.messageId, channel_id: userId.channelId }));
       const HTTP = v0(closure_1_2[5]).HTTP;
       obj1 = { url: null, body: null, retries: 1, rejectWithError: null };
       obj1[0] = closure_1_5.USER_ACTIVITY_SUBSCRIBE;
@@ -155,7 +159,7 @@ export default {
       obj1[1] = obj2;
       obj1[3] = v0(closure_1_2[5]).rejectWithMigratedError();
       yield HTTP.post(obj1);
-      return body.body;
+      return arg1.body;
     })();
   }
 };

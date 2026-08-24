@@ -2,14 +2,15 @@
 
 // Module 11607
 import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(channel) {
   channel = channel.channel;
+  importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
   function _onAcceptClick() {
@@ -161,8 +162,8 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
   obj = {
     user: stateFromStores,
     onError: function handleRequestError() {
-      arr(_undefined[8]);
-      const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      let obj = arr(_undefined[8]);
+      obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = channel(_undefined[9]).intl;
       obj[1] = intl.string(channel(_undefined[9]).t["EDYbS+"]);
       obj[2] = arr(_undefined[10]);
@@ -235,6 +236,6 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
   obj[10] = isRejectLoading;
   return tmp7(ChatInputGuardDefault, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
 
 export default memoResult;

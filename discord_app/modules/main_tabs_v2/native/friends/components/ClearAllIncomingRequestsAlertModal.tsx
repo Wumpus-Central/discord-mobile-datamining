@@ -4,10 +4,10 @@
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function handleConfirm() {
   const self = this;
   const apply = _handleConfirm.apply;
@@ -83,7 +83,7 @@ function _handleConfirm() {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx");
 
 export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
   let obj = { title: null, content: null, actions: null };
@@ -91,6 +91,7 @@ export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount)
   obj[0] = intl.string(getSystemLocale.t.z2pFjo);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.formatToPlainString(getSystemLocale.t["0nTvEw"], { incomingRequestCount: incomingRequestCount.incomingRequestCount });
+  obj = { children: null };
   obj = { variant: "destructive", onPress: handleConfirm, text: null };
   const intl3 = getSystemLocale.intl;
   obj[2] = intl3.string(getSystemLocale.t["cY+Oob"]);

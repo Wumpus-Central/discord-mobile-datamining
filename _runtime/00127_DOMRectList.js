@@ -3,11 +3,11 @@
 // Module 127 (DOMRectList)
 import _createClassDefault from "_createClass" /* 42 */;
 import _classPrivateFieldKeyDefault from "_classPrivateFieldKey" /* 91 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_classPrivateFieldBase" /* 90 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
-const DOMRectList = fn;
+const DOMRectList = arg1;
 let closure_4 = _classPrivateFieldKeyDefault("length");
 class DOMRectList {
   constructor(arg0) {

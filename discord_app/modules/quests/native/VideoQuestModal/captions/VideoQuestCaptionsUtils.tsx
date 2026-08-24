@@ -1,9 +1,9 @@
 // === Module 14500: findActiveCaption ===
 
 // Module 14500 (findActiveCaption)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");
 
 export const findActiveCaption = function findActiveCaption(arg0, currentTime) {
   let tmp3;
@@ -15,6 +15,7 @@ export const findActiveCaption = function findActiveCaption(arg0, currentTime) {
       let rounded = Math.floor((num + diff) / 2);
       tmp3 = arg0[rounded];
       let diff1 = diff;
+      let tmp5 = num;
       if (currentTime >= tmp3.start) {
         if (currentTime <= tmp3.end) {
           break;

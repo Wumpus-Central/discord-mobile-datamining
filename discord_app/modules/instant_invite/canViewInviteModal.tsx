@@ -1,11 +1,11 @@
 // === Module 8802: canViewInviteModal ===
 
 // Module 8802 (canViewInviteModal)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const Permissions = ME.Permissions;
-const result = obj132.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
+const result = set.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
 
 export const canViewInviteModal = function canViewInviteModal(closure_6, guild, closure_0, stageInstanceByChannel) {
   let tmp = closure_0;
@@ -18,6 +18,7 @@ export const canViewInviteModal = function canViewInviteModal(closure_6, guild, 
   }
   if (!canResult) {
     canResult = null != guild && null != guild.vanityURLCode;
+    const tmp5 = null != guild && null != guild.vanityURLCode;
   }
   if (!canResult) {
     let invite_code;

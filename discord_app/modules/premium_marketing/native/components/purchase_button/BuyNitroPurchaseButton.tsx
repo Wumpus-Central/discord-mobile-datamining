@@ -1,18 +1,18 @@
 // === Module 8021: BuyNitroPurchaseButton ===
 
 // Module 8021 (BuyNitroPurchaseButton)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import updateProduct from "updateProduct" /* 5319 */;
+import closure_6 from "updateProduct" /* 5319 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { width: "100%" }, buttonStack: { width: "100%" }, hiddenFlow: { position: "absolute", width: 0, height: 0, overflow: "hidden", opacity: 0 } });
-let result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButton.tsx");
+let result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButton.tsx");
 
 export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   ({ planSelection, location: _location } = sourceAnalyticsLocations);
@@ -21,6 +21,9 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
     _location = priceStringByProductId(applyOrderPriceOverride[7]).PREMIUM_MARKETING_FOOTER;
   }
   let prop = sourceAnalyticsLocations.sourceAnalyticsLocations;
+  let selection;
+  priceStringByProductId = undefined;
+  applyOrderPriceOverride = undefined;
   let first;
   let React;
   c5 = undefined;
@@ -28,7 +31,7 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   let callback;
   ({ applicationId, onHostSheetClose } = sourceAnalyticsLocations);
   const tmp3 = callback2();
-  const selection = planSelection.selection;
+  selection = planSelection.selection;
   priceStringByProductId = planSelection.priceStringByProductId;
   applyOrderPriceOverride = planSelection.applyOrderPriceOverride;
   let obj = selection(applyOrderPriceOverride[8]);
@@ -77,7 +80,7 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   }, items);
   const effect1 = React.useEffect(() => () => {
     if (null != ref.current) {
-      const BuyNitroPurchaseLock = selection(applyOrderPriceOverride[14]).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = closure_1_0(closure_1_2[14]).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
     }
   }, []);
@@ -115,8 +118,8 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
     if (null != selection.item) {
       applyOrderPriceOverride(tmp.item.productId, arg0);
     }
-    priceStringByProductId(applyOrderPriceOverride[17]);
-    const obj = { title: null, body: null, hideActionSheet: false };
+    let obj = priceStringByProductId(applyOrderPriceOverride[17]);
+    obj = { title: null, body: null, hideActionSheet: false };
     const intl = selection(applyOrderPriceOverride[9]).intl;
     obj[0] = intl.string(selection(applyOrderPriceOverride[9]).t["2DyOxw"]);
     const intl2 = selection(applyOrderPriceOverride[9]).intl;
@@ -133,12 +136,13 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
       beginResult = BuyNitroPurchaseLock.begin();
     }
     if (beginResult) {
-      let value = priceStringByProductId.get(selection.item.productId);
+      let value = priceStringByProductId.get(tmp.item.productId);
       if (value == null) {
         value = null;
       }
-      _undefined(value);
-      callback(selection.item);
+      c5(value);
+      callback(tmp.item);
+      const tmp5 = c5;
     }
   }, items3);
   const items4 = [callback(selection(applyOrderPriceOverride[18]).Button, { text: stringResult, variant: str, size: "lg", grow: true, onPress: callback2, loading: stateFromStores, disabled: isBuyNitroPurchaseBlocked }), ];
@@ -151,7 +155,7 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   }
   items4[1] = tmp31Result;
   obj1[1] = items4;
-  const items5 = [callback(c5, obj1), , ];
+  const items5 = [closure_9(c5, obj1), , ];
   tmp31Result = !result;
   if (!result) {
     const obj3 = { item: null, ctaText: null, isTrial: null, isDiscounted: null };
@@ -182,5 +186,5 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   }
   items5[2] = tmp31Result1;
   obj[1] = items5;
-  return callback(c5, obj);
+  return closure_9(c5, obj);
 };

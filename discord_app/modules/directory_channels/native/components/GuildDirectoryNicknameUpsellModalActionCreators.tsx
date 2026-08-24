@@ -1,12 +1,12 @@
 // === Module 11834: ? ===
 
 // Module 11834
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
 let c3 = "GUILD_DIRECTORY_NICKNAME_UPSELL_MODAL_KEY";
-const result = obj132.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModalActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModalActionCreators.tsx");
 
 export default {
   open(closure_0) {

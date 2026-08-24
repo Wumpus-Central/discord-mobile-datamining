@@ -2,17 +2,17 @@
 
 // Module 8837 (getEventChannelsByType)
 import canManageResource from "canManageResource" /* 8839 */;
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import comparator from "comparator" /* 1980 */;
+import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_3 from "comparator" /* 1980 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
 import VIEW_CHANNEL from "VIEW_CHANNEL" /* 8838 */;
 
-require = fn;
-function getEventChannelsByType(id, channelTypeFromEntity, items) {
-  let tmp = items;
-  if (items === undefined) {
-    items = [closure_3];
+require = arg1;
+function getEventChannelsByType(id, channelTypeFromEntity) {
+  let tmp = arg2;
+  if (arg2 === undefined) {
+    const items = [closure_3];
     tmp = items;
   }
   [obj] = tmp;
@@ -24,18 +24,24 @@ function getEventChannelsByType(id, channelTypeFromEntity, items) {
     for (const item10016 of tmp17) {
       let channel = item10016.channel;
       let obj2 = channel;
+      let tmp4 = require;
+      let tmp5 = dependencyMap;
       let obj3 = canManageResource;
       let manageResourcePermissions = obj3.getManageResourcePermissions(channel);
       let canManageAllEvents = manageResourcePermissions.canCreateGuildEvent;
       if (!canManageAllEvents) {
         canManageAllEvents = manageResourcePermissions.canManageAllEvents;
       }
+      let tmp7 = canManageAllEvents;
+      let tmp8 = channel;
       if (obj2.type === arg1) {
+        let tmp9 = channel;
         let isGuildVoiceResult = obj2.isGuildVoice();
         if (isGuildVoiceResult) {
           isGuildVoiceResult = canManageAllEvents;
         }
         if (!isGuildVoiceResult) {
+          let tmp11 = channel;
           let isGuildStageVoiceResult = obj2.isGuildStageVoice();
           if (isGuildStageVoiceResult) {
             isGuildStageVoiceResult = canManageAllEvents;
@@ -43,6 +49,7 @@ function getEventChannelsByType(id, channelTypeFromEntity, items) {
           isGuildVoiceResult = isGuildStageVoiceResult;
         }
         if (isGuildVoiceResult) {
+          let tmp13 = channel;
           let arr = items1.push(obj2);
         }
       }
@@ -52,7 +59,7 @@ function getEventChannelsByType(id, channelTypeFromEntity, items) {
   }
 }
 ({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_6, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: error } = VIEW_CHANNEL);
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
 
 export const useCanCreateEventInStageChannel = function useCanCreateEventInStageChannel(isGuildStageVoice) {
   const _require = isGuildStageVoice;
@@ -84,6 +91,6 @@ export const useGetEventChannelsByType = function useGetEventChannelsByType(id, 
   const items1 = [id, channelType];
   return _require(589).useStateFromStoresArray(items, () => {
     const items = [closure_1_3];
-    return getEventChannelsByType(closure_0, closure_1, items);
+    return closure_1_8(closure_0, closure_1, items);
   }, items1);
 };

@@ -2,14 +2,15 @@
 
 // Module 13100 (useIsSpatialAudioAvailable)
 import apexExperimentDefault from "apexExperiment" /* 13101 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
 import { Features } from "DesktopSources" /* 4529 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/spatial_audio/useIsSpatialAudioAvailable.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/spatial_audio/useIsSpatialAudioAvailable.tsx");
 
 export default function useIsSpatialAudioAvailable(location) {
-  const obj = { location };
+  let obj = apexExperimentDefault;
+  obj = { location };
   let enabled = obj.useConfig(obj).enabled;
   const items = [closure_3];
   if (enabled) {
@@ -18,7 +19,8 @@ export default function useIsSpatialAudioAvailable(location) {
   return enabled;
 };
 export const isSpatialAudioAvailable = function isSpatialAudioAvailable(RTCConnectionStore) {
-  const obj = { location: RTCConnectionStore };
+  let obj = apexExperimentDefault;
+  obj = { location: RTCConnectionStore };
   let enabled = obj.getConfig(obj).enabled;
   if (enabled) {
     enabled = closure_3.supports(Features.SPATIAL_AUDIO);

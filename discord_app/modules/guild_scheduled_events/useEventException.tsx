@@ -1,10 +1,10 @@
 // === Module 8790: useEventException ===
 
 // Module 8790 (useEventException)
-import scheduledEventSort from "scheduledEventSort" /* 4370 */;
+import closure_2 from "scheduledEventSort" /* 4370 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");
 
 export default function useEventException(arg0, arg1) {
   let _require = arg1;
@@ -23,7 +23,7 @@ export default function useEventException(arg0, arg1) {
   _require = arg0;
   let found;
   if (stateFromStoresArray != null) {
-    found = stateFromStoresArray.find((item, index) => item.event_exception_id === closure_0);
+    found = stateFromStoresArray.find((event_exception_id) => event_exception_id.event_exception_id === closure_0);
   }
   return found;
 };
@@ -39,7 +39,7 @@ export const getEventException = function getEventException(recurrenceId, eventI
   closure_0 = recurrenceId;
   let found;
   if (prop != null) {
-    found = prop.find((item, index) => item.event_exception_id === closure_0);
+    found = prop.find((event_exception_id) => event_exception_id.event_exception_id === closure_0);
   }
   return found;
 };

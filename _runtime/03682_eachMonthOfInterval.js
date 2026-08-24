@@ -36,6 +36,7 @@ export default function eachMonthOfInterval(arg0) {
     defaultResult1.setDate(1);
     if (defaultResult1.getTime() <= time) {
       do {
+        let tmp11 = _typeof;
         let arr = items.push(_typeof.default(defaultResult1));
         let setMonthResult = defaultResult1.setMonth(defaultResult1.getMonth() + 1);
         time1 = defaultResult1.getTime();

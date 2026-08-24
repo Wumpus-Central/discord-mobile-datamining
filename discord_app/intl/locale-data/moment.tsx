@@ -1,10 +1,10 @@
 // === Module 3973: momentLocales ===
 
 // Module 3973 (momentLocales)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 
-const result = obj132.fileFinishedImporting("intl/locale-data/moment.tsx");
+const result = set.fileFinishedImporting("intl/locale-data/moment.tsx");
 
 export const momentLocales = {
   bg() {

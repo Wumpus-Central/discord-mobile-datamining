@@ -5,11 +5,12 @@ import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _modDef13351 from "module_13351" /* 13351 */;
 import _modDef13352 from "module_13352" /* 13352 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
 
-require = fn;
+require = arg1;
+let obj = { "server-subscriptions-onboarding": _modDef13351, "server-subscriptions-create-tier-from-template": _modDef13352 };
 let closure_6 = {
   title() {
     const intl = getSystemLocale.intl;
@@ -34,10 +35,10 @@ let closure_6 = {
   canCreateGuild: true,
   useIsGuildSupported() {
     const items = [closure_4];
-    return initialize.useStateFromStores(items, () => (closure_0) => closure_4.canAccessGuildSettings(closure_0), [], initialize.statesWillNeverBeEqual);
+    return initialize.useStateFromStores(items, () => (guild) => closure_4.canAccessGuildSettings(guild), [], initialize.statesWillNeverBeEqual);
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");
 
 export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeature(feature) {
   let tmp2;

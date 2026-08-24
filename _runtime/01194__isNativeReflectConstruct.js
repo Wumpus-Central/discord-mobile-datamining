@@ -2,14 +2,14 @@
 
 // Module 1194 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const TouchEventBoundary = fn;
+const TouchEventBoundary = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -79,8 +79,6 @@ let items = [
         }
         const tmpResult = TouchEventBoundary(1192);
       }
-      const obj = TouchEventBoundary(817);
-      tmp5 = null === addIntegration || undefined === addIntegration;
     }
   },
   {
@@ -137,16 +135,16 @@ let items = [
         HermesBuiltin.arraySpread(self.props.ignoredDisplayNames, HermesBuiltin.arraySpread(tmp, 0));
         obj = items;
       }
-      return obj.some((item, index) => {
-        let tmp = typeof item === "string";
-        if (typeof item === "string") {
-          tmp = label === item;
+      return obj.some((str) => {
+        let tmp = typeof str === "string";
+        if (typeof str === "string") {
+          tmp = label === str;
         }
         if (!tmp) {
           const _RegExp = RegExp;
-          let match = item instanceof RegExp;
+          let match = str instanceof RegExp;
           if (match) {
-            match = label.match(item);
+            match = label.match(str);
           }
           tmp = match;
         }
@@ -176,6 +174,7 @@ let items = [
                 while (true) {
                   labelName = self.props.labelName;
                   let elementType = _targetInst.elementType;
+                  let tmp3 = _targetInst;
                   if (null !== elementType) {
                     if (undefined !== elementType) {
                       displayName = elementType.displayName;
@@ -202,6 +201,7 @@ let items = [
                               displayName1 = elementType2.displayName;
                             }
                           }
+                          let tmp22 = TouchEventBoundary;
                           _targetInst = _return;
                         }
                       }
@@ -210,13 +210,13 @@ let items = [
                 }
                 let tmp10 = typeof tmp9 === "string";
                 if (typeof tmp4[c10] === "string") {
-                  tmp10 = tmp4[c10].length > 0;
+                  tmp10 = tmp4[tmp8].length > 0;
                 }
                 if (tmp10) {
-                  tmp10 = "unknown" !== tmp4[c10];
+                  tmp10 = "unknown" !== tmp4[tmp8];
                 }
                 if (tmp10) {
-                  tmp10 = tmp4[c10];
+                  tmp10 = tmp4[tmp8];
                 }
                 if (!tmp10) {
                   tmp10 = displayName;
@@ -225,24 +225,24 @@ let items = [
                 obj[0] = tmp10;
                 let tmp13 = typeof tmp12 === "string";
                 if (typeof tmp4[c11] === "string") {
-                  tmp13 = tmp4[c11].length > 0;
+                  tmp13 = tmp4[tmp11].length > 0;
                 }
                 if (tmp13) {
-                  tmp13 = "unknown" !== tmp4[c11];
+                  tmp13 = "unknown" !== tmp4[tmp11];
                 }
                 if (tmp13) {
-                  tmp13 = tmp4[c11];
+                  tmp13 = tmp4[tmp11];
                 }
                 obj[1] = tmp13;
                 let tmp16 = typeof tmp15 === "string";
                 if (typeof tmp4[c12] === "string") {
-                  tmp16 = tmp4[c12].length > 0;
+                  tmp16 = tmp4[tmp14].length > 0;
                 }
                 if (tmp16) {
-                  tmp16 = "unknown" !== tmp4[c12];
+                  tmp16 = "unknown" !== tmp4[tmp14];
                 }
                 if (tmp16) {
-                  tmp16 = tmp4[c12];
+                  tmp16 = tmp4[tmp14];
                 }
                 obj[2] = tmp16;
                 if (typeof tmp4[c9] !== "string") {
@@ -257,13 +257,13 @@ let items = [
                   obj[3] = tmp18;
                   obj2.dropUndefinedKeys(obj);
                 }
-                tmp18 = tmp4[c9];
+                tmp18 = tmp4[tmp17];
                 obj2 = TouchEventBoundary(817);
               }
             }
           }
         }
-        const found = items.find((item, index) => item.label);
+        const found = items.find((label) => label.label);
         let label;
         if (null !== found) {
           if (undefined !== found) {

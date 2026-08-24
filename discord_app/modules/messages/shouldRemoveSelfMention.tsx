@@ -1,11 +1,11 @@
 // === Module 5386: shouldRemoveSelfMention ===
 
 // Module 5386 (shouldRemoveSelfMention)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const MessageTypesSets = ME.MessageTypesSets;
-const result = obj132.fileFinishedImporting("modules/messages/shouldRemoveSelfMention.tsx");
+const result = set.fileFinishedImporting("modules/messages/shouldRemoveSelfMention.tsx");
 
 export default function shouldRemoveSelfMention(type) {
   const SELF_MENTIONABLE_SYSTEM = MessageTypesSets.SELF_MENTIONABLE_SYSTEM;

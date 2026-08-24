@@ -2,61 +2,68 @@
 
 // Module 9822 (styles)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { createChannelRecord } from "createChannelRecord" /* 1395 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.xs };
+createCacheKey = { selectorGroup: { flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+let obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
 createCacheKey[3] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const WebhookGuildChannelSelector = "WebhookGuildChannelSelector";
-const result = require("obj132").fileFinishedImporting("modules/oauth2/native/WebhookGuildChannelSelector.tsx");
+let obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
+const result = require("set").fileFinishedImporting("modules/oauth2/native/WebhookGuildChannelSelector.tsx");
 
 export default function WebhookGuildChannelSelector(selectedGuildId) {
   selectedGuildId = selectedGuildId.selectedGuildId;
   const selectedChannelId = selectedGuildId.selectedChannelId;
   const onChannelChange = selectedGuildId.onChannelChange;
   error = selectedGuildId.error;
+  let first;
   let callback;
   let React;
   let tmp = createCacheKey();
   let tmp2 = callback(React.useState(null), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
+  callback = tmp2[1];
   React = React.useRef(false);
   const items = [first, onChannelChange, selectedChannelId, selectedGuildId];
   const items1 = [onChannelChange, selectedGuildId];
   callback = React.useCallback(() => {
     let tmp2 = null != first;
     if (tmp2) {
-      tmp2 = first.guildId === selectedGuildId;
+      tmp2 = tmp.guildId === selectedGuildId;
     }
     if (tmp2) {
-      selectedChannelId(onChannelChange[10]);
-      let obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      let obj = selectedChannelId(onChannelChange[10]);
+      obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
       const intl = selectedGuildId(onChannelChange[13]).intl;
       obj[0] = intl.string(selectedGuildId(onChannelChange[13]).t["Re/64R"]);
-      const channels = first.channels;
-      obj[1] = channels.map((item, index) => {
-        const obj = { label: callback(4984).computeChannelName(callback2(item), closure_9, closure_8), value: item.id };
+      const channels = tmp.channels;
+      obj[1] = channels.map((id) => {
+        const obj = { label: callback(4984).computeChannelName(callback2(id), closure_9, closure_8), value: id.id };
         return obj;
       });
       obj[2] = function onItemSelect(arg0) {
         dependencyMap(arg0);
-        selectedChannelId(onChannelChange[10]).hideActionSheet(closure_1_13);
+        closure_1_1(closure_1_2[10]).hideActionSheet(closure_1_13);
       };
       obj[3] = selectedChannelId;
-      obj.openLazy(selectedGuildId(onChannelChange[12])(onChannelChange[11], onChannelChange.paths), WebhookGuildChannelSelector, obj);
+      obj.openLazy(selectedGuildId(onChannelChange[12])(onChannelChange[11], onChannelChange.paths), closure_1_13, obj);
       const tmp7 = selectedGuildId(onChannelChange[12])(onChannelChange[11], onChannelChange.paths);
+      const tmp8 = closure_1_13;
+      const tmp9 = selectedChannelId;
     }
   }, items);
   const effect = React.useEffect(() => {
@@ -165,7 +172,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         }
       } else {
         const channels = tmp.channels;
-        if (!channels.some((item, index) => item.id === closure_1)) {
+        if (!channels.some((id) => id.id === closure_1)) {
           onChannelChange(null);
         }
       }
@@ -177,7 +184,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
     let found;
     if (first != null) {
       let channels = first.channels;
-      found = channels.find((item, index) => item.id === selectedChannelId);
+      found = channels.find((id) => id.id === selectedChannelId);
     }
     let obj = { style: null, children: null };
     obj[0] = tmp.selectorGroup;
@@ -192,7 +199,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         obj = { style: null, children: null };
         obj[0] = tmp.error;
         obj[1] = error;
-        tmp10Result = callback2(tmp11(tmp12[17]).LegacyText, obj);
+        tmp10Result = tmp10(tmp11(tmp12[17]).LegacyText, obj);
       }
     }
     items3[1] = tmp10Result;
@@ -217,7 +224,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
     obj2[1] = intl3.string(selectedGuildId(onChannelChange[13]).t.kQXMfN);
     items3[3] = callback2(selectedGuildId(onChannelChange[17]).LegacyText, obj2);
     obj[1] = items3;
-    return callback(View, obj);
+    return closure_11(View, obj);
   }
 };
 export const useStyles = createCacheKey;

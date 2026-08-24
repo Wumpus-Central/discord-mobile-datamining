@@ -12,4 +12,5 @@ export default (arg0) => {
     const tmp6 = new TypeError(_mod13705(arg0) + " is not a function");
     throw tmp6;
   }
+  const tmp = require;
 };

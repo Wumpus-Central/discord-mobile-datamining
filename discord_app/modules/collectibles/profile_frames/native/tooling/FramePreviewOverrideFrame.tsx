@@ -1,12 +1,12 @@
 // === Module 8968: OverrideProfileFrameLayer ===
 
 // Module 8968 (OverrideProfileFrameLayer)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8965 */;
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 function OverrideProfileFrameLayer(layer) {
   layer = layer.layer;
@@ -15,6 +15,8 @@ function OverrideProfileFrameLayer(layer) {
   const overflowBottom = layer.overflowBottom;
   const overflowHorizontal = layer.overflowHorizontal;
   ({ containerWidth, containerHeight } = layer);
+  c5 = undefined;
+  c6 = undefined;
   const tmp = callback();
   const sum = containerWidth + 2 * overflowHorizontal;
   c5 = sum;
@@ -32,12 +34,12 @@ function OverrideProfileFrameLayer(layer) {
       obj = {};
       const merged = Object.assign(obj);
       let tmp12;
-      if ("top" === layer.anchor) {
+      if ("top" === tmp2.anchor) {
         tmp12 = -overflowTop;
       }
       obj.top = tmp12;
       let tmp14;
-      if ("bottom" === layer.anchor) {
+      if ("bottom" === tmp2.anchor) {
         tmp14 = -overflowBottom;
       }
       obj.bottom = tmp14;
@@ -46,9 +48,9 @@ function OverrideProfileFrameLayer(layer) {
       obj = {};
       const merged1 = Object.assign(obj);
       let str2 = "center";
-      if ("center" !== layer.anchor) {
+      if ("center" !== tmp2.anchor) {
         let str3 = "flex-end";
-        if ("top" === layer.anchor) {
+        if ("top" === tmp2.anchor) {
           str3 = "flex-start";
         }
         str2 = str3;
@@ -85,7 +87,11 @@ function OverrideProfileFrameLayer(layer) {
               const _Array = Array;
               obj = { length: null };
               obj[0] = Math.ceil(containerHeight / result);
-              obj[1] = Array.from(obj, (arg0, arg1) => jsx(layer(uri[6]), { uri }, arg1));
+              obj[1] = Array.from(obj, (arg0, arg1) => {
+                obj = { source: obj, resizeMode: "cover", width: c5, height: c6 };
+                obj = { uri };
+                return closure_1_7(layer(uri[6]), obj, arg1);
+              });
               return <overflowBottom length={null} />;
             }
           }
@@ -110,7 +116,8 @@ function OverrideProfileFrameLayer(layer) {
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: c4, PROFILE_FRAME_Z_INDEX: c5 } = PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO);
-const createCacheKey = {};
+createCacheKey = { container: null, layer: null };
+createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.pointerEvents = "none";
 createCacheKey[0] = createCacheKey;
@@ -120,7 +127,7 @@ obj1.alignItems = "center";
 obj1.overflow = "hidden";
 createCacheKey[1] = obj1;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx");
 
 export default function FramePreviewOverrideFrame(override) {
   override = override.override;
@@ -134,20 +141,20 @@ export default function FramePreviewOverrideFrame(override) {
   const items = [override.layers, frameOrder, profileThemeType, filterLayer];
   const memo = React.useMemo(() => {
     const layers = override.layers;
-    return layers.filter((item, index) => {
-      let tmp2 = null == closure_4 || tmp === item.order;
+    return layers.filter((order) => {
+      let tmp2 = null == closure_4 || tmp === order.order;
       if (tmp2) {
         let tmp4 = null != closure_5;
         if (tmp4) {
-          tmp4 = !tmp3(item);
+          tmp4 = !tmp3(order);
         }
         let tmp5 = !tmp4;
         if (!tmp4) {
           let tmp8 = closure_3 === closure_1_6.PREVIEW;
           if (!tmp8) {
-            let tmp9 = "top" === item.anchor;
+            let tmp9 = "top" === order.anchor;
             if (tmp9) {
-              tmp9 = "staple" === item.type;
+              tmp9 = "staple" === order.type;
             }
             tmp8 = tmp9;
           }
@@ -166,10 +173,10 @@ export default function FramePreviewOverrideFrame(override) {
       callback = override.overflowHorizontal * result;
       let obj = { style: null, children: null };
       obj[0] = tmp.container;
-      obj[1] = memo.map((item, index) => {
-        const obj = { layer: item, uri: null, ratio: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null, containerWidth: null, containerHeight: null };
+      obj[1] = memo.map((id) => {
+        const obj = { layer: id, uri: null, ratio: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null, containerWidth: null, containerHeight: null };
         let uri;
-        if (override.layerAssetById[item.id] != null) {
+        if (override.layerAssetById[id.id] != null) {
           uri = tmp.uri;
         }
         if (uri == null) {
@@ -177,7 +184,7 @@ export default function FramePreviewOverrideFrame(override) {
         }
         obj[1] = uri;
         let num;
-        if (override.layerAssetById[item.id] != null) {
+        if (override.layerAssetById[id.id] != null) {
           num = tmp.ratio;
         }
         if (num == null) {
@@ -185,11 +192,11 @@ export default function FramePreviewOverrideFrame(override) {
         }
         obj[2] = num;
         obj[3] = closure_6;
-        obj[4] = callback;
+        obj[4] = closure_7;
         obj[5] = closure_8;
         obj[6] = containerWidth;
         obj[7] = closure_2;
-        return callback(OverrideProfileFrameLayer, obj, item.id);
+        return closure_7(closure_1_9, obj, id.id);
       });
       return <profileThemeType style={null}>{null}</profileThemeType>;
     }

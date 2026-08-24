@@ -2,18 +2,19 @@
 
 // Module 14391 (BountiesScrollIndicatorOverlay)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
 let closure_9 = 5000 + require("timingNone").timingSlowDuration;
 let closure_10 = createCacheKey.createStyles(() => {
-  let obj = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
+  let obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
+  obj = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   obj = { position: "absolute", bottom: 124, left: 0, right: 0, alignItems: "center", justifyContent: "flex-start", gap: ThemesDefault.space.PX_8 };
   obj[1] = obj;
@@ -24,14 +25,17 @@ let closure_11 = { code: "function BountiesScrollIndicatorOverlayTsx1(){const{wi
 let closure_12 = { code: "function BountiesScrollIndicatorOverlayTsx2(){const{runOnJS,animationCallbackJSThread}=this.__closure;runOnJS(animationCallbackJSThread)();}" };
 let closure_13 = { code: "function BountiesScrollIndicatorOverlayTsx3(){const{withTiming,visible,isEndCardVisible,enabled,timingStandard,timingSlow}=this.__closure;return{opacity:withTiming(visible&&!isEndCardVisible?1:0,isEndCardVisible||!enabled?timingStandard:timingSlow)};}" };
 let closure_14 = { code: "function BountiesScrollIndicatorOverlayTsx4(){const{withTiming,visible,timingStandard}=this.__closure;return{transform:[{scale:withTiming(visible?1:0.9,timingStandard)}]};}" };
-const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorOverlay.tsx");
 
 export default function BountiesScrollIndicatorOverlay(enabled) {
   enabled = enabled.enabled;
   const isEndCardVisible = enabled.isEndCardVisible;
+  importDefault = isEndCardVisible;
   let first;
   let callback;
+  callback = undefined;
   const tmp = callback4();
+  importDefault = undefined;
   let obj = callback;
   const tmp3 = callback(callback.useState(true), 2);
   importDefault = tmp4;
@@ -45,6 +49,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
   let items = [enabled];
   const effect = obj.useEffect(() => {
     if (timeout) {
+      timeout = false;
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
         closure_2_1(closure_0);
@@ -78,9 +83,9 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
   if (enabled) {
     first = tmp3[0];
   }
-  tmp2(obj.useState(first), 2);
+  let tmp2Result = tmp2(obj.useState(first), 2);
   callback = tmp11;
-  const tmp2Result = tmp2(obj.useState(first), 2);
+  tmp2Result = tmp2(obj.useState(first), 2);
   if (first !== tmp2Result[0]) {
     tmp2Result[1](first);
     if (first) {
@@ -104,7 +109,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
       tmp4 = enabled ? tmpResult.timingSlow : tmpResult.timingStandard;
       obj = { opacity: null };
       fn = function t() {
-        enabled(first[7]).runOnJS(closure_4)();
+        closure_1_0(closure_1_2[7]).runOnJS(closure_4)();
       };
       obj1 = { runOnJS: tmp(tmp2[7]).runOnJS, animationCallbackJSThread: closure_4 };
       fn.__closure = obj1;
@@ -131,13 +136,13 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
     }
     if (!closure_1) {
       if (enabled) {
-        let timingStandard = enabled(first[4]).timingSlow;
+        let timingStandard = tmp(tmp2[4]).timingSlow;
       }
       obj = { opacity: null };
       obj[0] = obj.withTiming(num, timingStandard);
       return obj;
     }
-    timingStandard = enabled(first[4]).timingStandard;
+    timingStandard = tmp(tmp2[4]).timingStandard;
   };
   obj = { withTiming: enabled(first[8]).withTiming, visible: first, isEndCardVisible, enabled, timingStandard: enabled(first[4]).timingStandard, timingSlow: enabled(first[4]).timingSlow };
   fn.__closure = obj;

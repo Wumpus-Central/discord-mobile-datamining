@@ -4,6 +4,6 @@
 import importAllResult from "noop" /* 19 */;
 
 const context = importAllResult.createContext(undefined);
-const result = require("obj132").fileFinishedImporting("modules/guild/GuildIDContext.tsx");
+const result = require("set").fileFinishedImporting("modules/guild/GuildIDContext.tsx");
 
 export default context;

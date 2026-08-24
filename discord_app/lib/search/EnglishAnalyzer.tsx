@@ -1,12 +1,12 @@
 // === Module 15933: stripPossessive ===
 
 // Module 15933 (stripPossessive)
-import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import snowballStem from "snowballStem" /* 15934 */;
+import set from "set" /* 2 */;
 
-function stripPossessive(item) {
-  return item.replace(/('|\u2019|\uFF07)(s|S)$/, "");
+function stripPossessive(str) {
+  return str.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
 function lowercase(str) {
   return str.toLowerCase();
@@ -17,12 +17,12 @@ function isStopWord(arg0) {
 function isBlank(arg0) {
   return 0 === arg0.length;
 }
-function shouldHighlight(item, set, closure_1) {
-  let flag = closure_1;
-  if (closure_1 === undefined) {
+function shouldHighlight(arg0, set) {
+  let flag = arg2;
+  if (arg2 === undefined) {
     flag = false;
   }
-  const tmp = lowercase(stripPossessive(item));
+  const tmp = lowercase(stripPossessive(arg0));
   if (isBlank(tmp)) {
     return false;
   } else if (isStopWord(tmp)) {
@@ -33,6 +33,7 @@ function shouldHighlight(item, set, closure_1) {
       const values = set.values();
       for (const item10025 of values) {
         if (snowballStemResult.includes(item10025)) {
+          let tmp9 = obj3;
           obj3.return();
           let flag2 = true;
           return true;
@@ -42,39 +43,42 @@ function shouldHighlight(item, set, closure_1) {
     } else {
       return set.has(snowballStemResult);
     }
+    const obj = snowballStem;
   }
 }
-function highlightAST(content, closure_0, closure_1) {
+function highlightAST(content, arg1, arg2) {
+  closure_0 = arg1;
+  closure_1 = arg2;
   if (Array.isArray(content)) {
-    const item = content.forEach((item, index) => {
-      highlightAST(item, closure_0, closure_1);
-      return item;
+    const item = content.forEach((arg0) => {
+      closure_1_9(arg0, closure_0, closure_1);
+      return arg0;
     });
   } else if ("list" === content.type) {
     const items = content.items;
-    const item1 = items.forEach((item, index) => {
-      highlightAST(item, closure_0, closure_1);
-      return item;
+    const item1 = items.forEach((arg0) => {
+      closure_1_9(arg0, closure_0, closure_1);
+      return arg0;
     });
   } else {
     if (typeof content.content === "string") {
       if ("codeBlock" !== content.type) {
         const items1 = [];
         const parts = content.content.split(/(\W+)/g);
-        const item2 = parts.forEach((item, index) => {
+        const item2 = parts.forEach((arg0) => {
           let arr = closure_3;
-          if (shouldHighlight(item, closure_0, closure_1)) {
+          if (closure_1_8(arg0, closure_0, closure_1)) {
             if (arr.length > 0) {
               let obj = { type: "text", content: null };
               obj[1] = closure_3;
               arr = items1.push(obj);
             }
             obj = { type: "highlight", content: null };
-            obj[1] = item;
+            obj[1] = arg0;
             arr = items1.push(obj);
             closure_3 = "";
           } else {
-            closure_3 = arr + item;
+            closure_3 = arr + arg0;
           }
         });
         if (items1.length > 0) {
@@ -92,18 +96,20 @@ function highlightAST(content, closure_0, closure_1) {
             content.content = items2;
           }
         }
+        const str3 = content.content;
       }
     }
     if (null != content.content) {
-      highlightAST(content.content, closure_0, closure_1);
+      highlightAST(content.content, arg1, arg2);
     }
   }
   return content;
 }
 let set = new Set(["a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with"]);
-const result = obj132.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
+const result = set.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
 export const analyze = function analyze(str) {
+  const tmp = applyDefault;
   const mapped = applyDefault(str.split(/\W+/)).map(stripPossessive);
   const tmpResult = applyDefault(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
@@ -132,12 +138,12 @@ export const createASTHighlighter = function createASTHighlighter(str) {
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
   set = new Set(mapped1.reject(isStopWord).map(flag(set[1]).snowballStem).value());
-  return (content) => {
+  return (arg0) => {
     let tmp3 = closure_1;
     if (closure_1) {
       tmp3 = flag;
     }
-    highlightAST(content, set, tmp3);
-    return content;
+    closure_1_9(arg0, set, tmp3);
+    return arg0;
   };
 };

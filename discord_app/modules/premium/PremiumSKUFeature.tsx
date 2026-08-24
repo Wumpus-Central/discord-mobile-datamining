@@ -1,9 +1,9 @@
-// === Module 13441: obj132 ===
+// === Module 13441: set ===
 
-// Module 13441 (obj132)
-import obj132 from "obj132" /* 2 */;
+// Module 13441 (set)
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
+const result = set.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
 
 export default function PremiumSKUFeature(name, getFeatureValue, description) {
   let obj = Object.create(new.target.prototype);

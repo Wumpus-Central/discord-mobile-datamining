@@ -1,9 +1,9 @@
 // === Module 8726: prototype ===
 
 // Module 8726 (prototype)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");
+const result = set.fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");
 const prototype = function EmbeddedActivityClientError(reason, detailCode) {
   const obj = Object.create(new.target.prototype);
   obj.reason = reason;

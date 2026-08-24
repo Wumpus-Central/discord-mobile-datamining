@@ -1,17 +1,16 @@
 // === Module 11838: GuildNSFW ===
 
 // Module 11838 (GuildNSFW)
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
 import GatedContentDefault from "GatedContent" /* 11839 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import { AgeGateSource } from "result" /* 1221 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["modalType"];
-let result = require("obj132").fileFinishedImporting("components_native/warnings/GuildNSFW.tsx");
+let result = require("set").fileFinishedImporting("components_native/warnings/GuildNSFW.tsx");
 
 export default function GuildNSFW(channelId) {
   const _require = channelId;
@@ -25,8 +24,8 @@ export default function GuildNSFW(channelId) {
   const maybePerformReactiveCheckForSource = obj2.useMaybePerformReactiveCheckForSource(AgeGateSource.NSFW_SERVER);
   obj = {};
   const callback = React.useCallback(() => {
-    callback(5428);
-    const obj = { entryPoint: channelId(5254).AgeVerificationModalEntryPoint.NSFW_GUILD };
+    let obj = callback(5428);
+    obj = { entryPoint: channelId(5254).AgeVerificationModalEntryPoint.NSFW_GUILD };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   }, []);
   const merged = Object.assign(callback(ageGateVerifyContentForGuild, closure_3));
@@ -35,7 +34,7 @@ export default function GuildNSFW(channelId) {
     id = stateFromStores.id;
   }
   function handleDisagree() {
-    showTooManyUserGuildsAlertDefault.nsfwReturnToSafety(channelId.guildId);
+    closure_1_1(closure_1_2[8]).nsfwReturnToSafety(channelId.guildId);
     if (channelId.onReturnToSafety != null) {
       onReturnToSafety();
     }
@@ -56,7 +55,7 @@ export default function GuildNSFW(channelId) {
         obj1 = { modalType: null, onAgree: null, onDisagree: null };
         obj1[0] = modalType;
         obj1[1] = function handleAgree() {
-          showTooManyUserGuildsAlertDefault.nsfwAgree(channelId.guildId);
+          closure_1_1(closure_1_2[8]).nsfwAgree(channelId.guildId);
         };
         obj1[2] = handleDisagree;
         const merged2 = Object.assign(obj);

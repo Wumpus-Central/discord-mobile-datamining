@@ -4,8 +4,8 @@
 import hasFlagAll from "hasFlag" /* 1403 */;
 import toJSDefault from "toJS" /* 1931 */;
 import tDefault from "t" /* 3975 */;
-import addApplication from "addApplication" /* 4478 */;
-import createFromServer from "createFromServer" /* 4514 */;
+import closure_3 from "addApplication" /* 4478 */;
+import closure_4 from "createFromServer" /* 4514 */;
 import ME from "ME" /* 676 */;
 
 toJSDefault;
@@ -25,7 +25,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   let obj = { id: id.application.id, branchId: id.branch_id, entitlements: null, branch: null, flags: null, createdAt: null, sku: null };
   if (null != id.entitlements) {
     let entitlements = id.entitlements;
-    let mapped = entitlements.map((item, index) => closure_4.createFromServer(item));
+    let mapped = entitlements.map((arg0) => closure_4.createFromServer(arg0));
   } else {
     mapped = [];
   }
@@ -107,7 +107,7 @@ prototype["isEntitled"] = function isEntitled(currentUser, closure_4) {
   let someResult = this.isTestMode;
   if (!someResult) {
     const entitlements = this.entitlements;
-    someResult = entitlements.some((item, index) => item.isValid(closure_1, closure_0, self.branchId));
+    someResult = entitlements.some((isValid) => isValid.isValid(closure_1, closure_0, self.branchId));
   }
   return someResult;
 };
@@ -155,6 +155,6 @@ prototype["getAnalyticsData"] = function getAnalyticsData() {
   obj[3] = self.getDistributor();
   return obj;
 };
-const result = require("obj132").fileFinishedImporting("records/LibraryApplicationRecord.tsx");
+const result = require("set").fileFinishedImporting("records/LibraryApplicationRecord.tsx");
 
 export default LibraryApplicationRecord;

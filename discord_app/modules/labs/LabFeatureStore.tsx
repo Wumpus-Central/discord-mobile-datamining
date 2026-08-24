@@ -15,7 +15,9 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 prototype["initialize"] = function initialize(toggleStates) {
   for (const key10008 in hide_icymi_tabDefault) {
+    let tmp = key10008;
     let flag;
+    let tmp2 = closure_2;
     if (arg0 != null) {
       toggleStates = arg0.toggleStates;
       if (toggleStates != null) {
@@ -25,7 +27,7 @@ prototype["initialize"] = function initialize(toggleStates) {
     if (flag == null) {
       flag = false;
     }
-    closure_2[key10008] = flag;
+    tmp2[key10008] = flag;
     continue;
   }
 };
@@ -47,6 +49,6 @@ const labFeatureStore = new LabFeatureStore(dispatcherDefault, {
     closure_2[labFeature.labFeature] = labFeature.enabled;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/labs/LabFeatureStore.tsx");
+const result = require("set").fileFinishedImporting("modules/labs/LabFeatureStore.tsx");
 
 export default labFeatureStore;

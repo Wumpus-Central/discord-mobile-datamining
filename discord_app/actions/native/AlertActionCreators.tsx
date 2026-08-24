@@ -6,12 +6,12 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import useAlertStore from "useAlertStore" /* 4657 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let c6 = null;
 let c7 = 0;
-const result = require("obj132").fileFinishedImporting("actions/native/AlertActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/native/AlertActionCreators.tsx");
 
 export default {
   openLazy(hideActionSheet) {
@@ -23,20 +23,20 @@ export default {
     if (flag2 === undefined) {
       flag2 = false;
     }
-    return hideActionSheet.importer().then((result) => {
+    return hideActionSheet.importer().then((alert) => {
       if (flag) {
-        let obj = flag2(dependencyMap[2]);
+        let obj = flag2(closure_1_2[2]);
         obj.hideActionSheet();
       }
-      obj = { type: "ALERT_OPEN", alert: result, isDismissable: flag2 };
-      flag2(dependencyMap[3]).dispatch(obj);
-      const obj2 = flag2(dependencyMap[3]);
+      obj = { type: "ALERT_OPEN", alert, isDismissable: flag2 };
+      flag2(closure_1_2[3]).dispatch(obj);
     });
   },
   close() {
     if (null != c6) {
       c6 = null;
       useAlertStore.dismissAlert(tmp);
+      const obj = useAlertStore;
     }
     dispatcherDefault.dispatch({ type: "ALERT_CLOSE" });
   },
@@ -73,6 +73,7 @@ export default {
       }
       if (!tmp11) {
         tmp11 = null != confirmText2 && typeof confirmText2 !== "string";
+        const tmp12 = null != confirmText2 && typeof confirmText2 !== "string";
       }
       if (!tmp11) {
         tmp11 = tmp9;
@@ -192,8 +193,8 @@ export default {
     }
     this.openLazy({
       importer() {
-        return confirmText(_undefined[10])(_undefined[9], _undefined.paths).then((result) => {
-          closure_0 = result.default;
+        return confirmText(_undefined[10])(_undefined[9], _undefined.paths).then((arg0) => {
+          closure_0 = arg0.default;
           return (arg0) => {
             const obj = {};
             merged = Object.assign(arg0);
@@ -219,8 +220,8 @@ export default {
         cancelText: null,
         onCancel: null
       };
-      const intl = callback(dependencyMap[5]).intl;
-      obj[1] = intl.string(callback(dependencyMap[5]).t["ETE/oC"]);
+      const intl = callback(closure_1_2[5]).intl;
+      obj[1] = intl.string(callback(closure_1_2[5]).t["ETE/oC"]);
       obj[2] = function onCancel() {
         callback(false);
       };

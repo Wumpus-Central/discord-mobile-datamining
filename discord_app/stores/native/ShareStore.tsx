@@ -7,15 +7,15 @@ import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import enforcingDefault from "enforcing" /* 9068 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import handleConnectionOpen2 from "handleConnectionOpen" /* 4197 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
+import closure_10 from "handleConnectionOpen" /* 4197 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import { AppStates } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function handleTokenUpdated(token) {
   token = token.token;
   return false;
@@ -34,6 +34,7 @@ const shareStore = new ShareStore(dispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     enforcingDefault.setSelectedChannel(null, null);
+    const obj = enforcingDefault;
     const obj2 = enforcingDefault;
     const result = obj2.setAuthenticationToken(null, expandEventPropertiesDefault.getSuperPropertiesBase64());
     c5 = null;
@@ -72,21 +73,24 @@ const shareStore = new ShareStore(dispatcherDefault, {
         enforcingDefault.setSelectedChannel(json1, json);
         c3 = null;
         c4 = null;
+        const obj3 = enforcingDefault;
       }
     }
     if (null != c5) {
       obj = { client_app_state: null };
       obj[0] = state;
       const result = encodeProperties.extendSuperProperties(obj);
+      const obj4 = encodeProperties;
       const obj6 = enforcingDefault;
       const result1 = obj6.setAuthenticationToken(c5, expandEventPropertiesDefault.getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {
         c5 = null;
       }
+      const obj7 = expandEventPropertiesDefault;
     }
     return false;
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/native/ShareStore.tsx");
+let result = require("set").fileFinishedImporting("stores/native/ShareStore.tsx");
 
 export default shareStore;

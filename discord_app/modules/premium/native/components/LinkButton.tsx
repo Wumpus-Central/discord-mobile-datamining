@@ -7,11 +7,11 @@ import PressableBase from "PressableBase" /* 5433 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = createCacheKey.createStyles({ defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }, disabledContainerStyle: { opacity: 0.5 } });
-const result = require("obj132").fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");
 
 export const LinkButton = function LinkButton(textColor) {
   ({ disabled, variant } = textColor);
@@ -34,5 +34,5 @@ export const LinkButton = function LinkButton(textColor) {
   items[2] = containerStyle;
   const items1 = [callback(Text.Text, { style: textStyle, variant, color: str, children: text }), textColor.iconRight];
   obj[6] = items1;
-  return callback(PressableBase.PressableOpacity, obj);
+  return closure_3(PressableBase.PressableOpacity, obj);
 };

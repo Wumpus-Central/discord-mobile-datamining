@@ -3,8 +3,8 @@
 // Module 7396 (createFromOrder)
 import toJSDefault from "toJS" /* 1931 */;
 import { BaseInvoiceRecord } from "createFromServer" /* 4048 */;
-import createFromServer from "createFromServer" /* 7397 */;
-import createFromServer2 from "createFromServer" /* 7398 */;
+import closure_1 from "createFromServer" /* 7397 */;
+import closure_2 from "createFromServer" /* 7398 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
 toJSDefault;
@@ -155,7 +155,7 @@ prototype["firstUnsatisfiedConstraintReasonCode"] = function firstUnsatisfiedCon
   }
   return reason_code;
 };
-const result = require("obj132").fileFinishedImporting("modules/payments/records/OrderRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/payments/records/OrderRecord.tsx");
 
 export default OrderRecord;
 export { BillingFacetRecord };

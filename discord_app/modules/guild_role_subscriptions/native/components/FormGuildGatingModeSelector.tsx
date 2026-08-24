@@ -1,19 +1,20 @@
 // === Module 16944: FormGuildGatingModeSelector ===
 
 // Module 16944 (FormGuildGatingModeSelector)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { padding: 16 }, space: { height: 8 }, alertHeader: { paddingBottom: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx");
 
 export default function FormGuildGatingModeSelector(isFullServerGating) {
   isFullServerGating = isFullServerGating.isFullServerGating;
   const onChange = isFullServerGating.onChange;
+  dependencyMap = undefined;
   const tmp = callback3();
   dependencyMap = tmp;
   let obj = isFullServerGating(16945);
@@ -23,10 +24,11 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   const callback = React.useCallback(() => {
     onChange(false);
   }, items);
+  obj = { style: tmp.container, accessibilityRole: "radiogroup", accessibilityState: { disabled: roleSubscriptionSettingsDisabled }, children: null };
   const callback1 = React.useCallback(() => {
     if (!isFullServerGating) {
-      onChange(alertHeader[5]);
-      let obj = { confirmText: null, children: null };
+      let obj = onChange(alertHeader[5]);
+      obj = { confirmText: null, children: null };
       const intl = isFullServerGating(alertHeader[6]).intl;
       obj[0] = intl.string(isFullServerGating(alertHeader[6]).t["NX+WJN"]);
       obj = { children: null };
@@ -55,6 +57,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj[5] = roleSubscriptionSettingsDisabled;
   const items2 = [callback(onChange(16947), obj), callback(View, { style: tmp.space }), ];
   let obj2 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
+  obj1 = { style: tmp.space };
   const tmp5 = onChange(16947);
   obj2[0] = onChange(16948);
   let intl3 = isFullServerGating(1236).intl;

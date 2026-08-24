@@ -9,7 +9,7 @@ import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 class ActionSheetRow {
   constructor(arg0) {
     str = global.variant;
@@ -29,13 +29,14 @@ let context = importAllResult.createContext("default");
 ActionSheetRow.Icon = function ActionSheetRowIcon(IconComponent) {
   IconComponent = IconComponent.IconComponent;
   const context = importAllResult.useContext(closure_5);
+  const obj = { source: IconComponent.source, IconComponent, variant: context };
   return jsx(TableRowIcon.TableRowIcon, { source: IconComponent.source, IconComponent, variant: context });
 };
 ActionSheetRow.Group = function ActionSheetRowGroup(arg0) {
   ({ children, title, hasIcons } = arg0);
   return <View>{jsx(TableRowGroupTitle.TableRowGroup, { hasIcons, title, children })}</View>;
 };
-const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/ActionSheetRow.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetRow.native.tsx");
 
 export { ActionSheetRow };
 export const ActionSheetSwitchRow = function ActionSheetSwitchRow(arg0) {

@@ -1,15 +1,15 @@
 // === Module 17028: _reportSessionMeaningfullyOnline ===
 
 // Module 17028 (_reportSessionMeaningfullyOnline)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import initializeDefault from "initialize" /* 5038 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
-import initialize from "initialize" /* 17029 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "filterPlayingActivities" /* 7250 */;
+import closure_5 from "initialize" /* 17029 */;
 import { Endpoints } from "ME" /* 676 */;
 import { StatusTypes } from "sum" /* 505 */;
 
-let require = fn;
+let require = arg1;
 function _reportSessionMeaningfullyOnline() {
   const self = this;
   const tmp = callback(function*() {
@@ -58,7 +58,7 @@ function _reportSessionMeaningfullyOnline() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = 5 * obj132Default.Millis.MINUTE;
+let closure_8 = 5 * setDefault.Millis.MINUTE;
 initializeDefault;
 class FriendOnlineTimerManager extends tmp2 {
   constructor() {
@@ -83,7 +83,7 @@ class FriendOnlineTimerManager extends tmp2 {
           }
     };
     applyArgumentsResult.start = function start() {
-      const NotifyFriendsOnComeOnline = applyArgumentsResult(dependencyMap[10]).NotifyFriendsOnComeOnline;
+      const NotifyFriendsOnComeOnline = applyArgumentsResult(closure_1_2[10]).NotifyFriendsOnComeOnline;
       let setting = NotifyFriendsOnComeOnline.getSetting();
       if (setting) {
         setting = closure_1_5.isCooldownElapsed();
@@ -93,7 +93,7 @@ class FriendOnlineTimerManager extends tmp2 {
       }
       if (setting) {
         let items = [, ];
-        ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
+        ({ ONLINE: arr[0], STREAMING: arr[1] } = closure_1_7);
         setting = items.includes(closure_1_4.getStatus());
       }
       if (setting) {
@@ -124,8 +124,8 @@ class FriendOnlineTimerManager extends tmp2 {
     applyArgumentsResult.clear = function clear() {
       if (null != applyArgumentsResult.timerId) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(applyArgumentsResult.timerId);
-        applyArgumentsResult.timerId = null;
+        clearTimeout(tmp.timerId);
+        tmp.timerId = null;
       }
     };
     return applyArgumentsResult;
@@ -139,6 +139,6 @@ prototype["_terminate"] = function _terminate() {
   this.clear();
 };
 const friendOnlineTimerManager = new FriendOnlineTimerManager();
-const result = require("obj132").fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimer.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimer.tsx");
 
 export default friendOnlineTimerManager;

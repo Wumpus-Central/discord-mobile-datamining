@@ -20,7 +20,7 @@ const memoResult = noopDefault.memo((date) => {
     nativeEvent = nativeEvent.nativeEvent;
     ({ date, id } = nativeEvent);
     if (null === id) {
-      if (typeof fromIsoWithTimeZoneOffset !== "function") {
+      if (typeof closure_1_12 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const _Date = Date;
@@ -44,14 +44,15 @@ const memoResult = noopDefault.memo((date) => {
     }
     if (!tmp) {
       if (date.onStateChange) {
-        date.onStateChange(nativeEvent.spinnerState);
+        obj.onStateChange(nativeEvent.spinnerState);
       }
+      obj = date;
     }
   }, items1);
   const callback2 = tmp2;
   const items2 = [tmp, tmp2];
   callback2(() => {
-    const obj = new NativeEventEmitter(closure_1_8);
+    const obj = new closure_1_5(closure_1_8);
     obj.addListener("dateChange", closure_2);
     obj.addListener("spinnerStateChange", closure_3);
     return () => {
@@ -92,7 +93,7 @@ const memoResult = noopDefault.memo((date) => {
     HermesBuiltin.throwTypeError();
   }
   let prop;
-  if (null != date.date.timeZoneOffsetInMinutes) {
+  if (null != date.timeZoneOffsetInMinutes) {
     prop = date.timeZoneOffsetInMinutes;
   }
   obj.timezoneOffsetInMinutes = prop;
@@ -100,17 +101,17 @@ const memoResult = noopDefault.memo((date) => {
     HermesBuiltin.throwTypeError();
   }
   let num = 310;
-  if ("time" === date.date.mode) {
+  if ("time" === date.mode) {
     num = 240;
   }
-  const items3 = [{ width: num, height: 180 }, date.date.style];
+  const items3 = [{ width: num, height: 180 }, date.style];
   obj.style = items3;
   obj.onChange = tmp;
   obj.onStateChange = tmp2;
   const str = Math.random();
   const modal = _require(current[4]).useModal({ props: obj, id: current });
   let tmp11 = null;
-  if (!date.date.modal) {
+  if (!date.modal) {
     obj = {};
     const merged1 = Object.assign(obj);
     tmp11 = <closure_7 />;

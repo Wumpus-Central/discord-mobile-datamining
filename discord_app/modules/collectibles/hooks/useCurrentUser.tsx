@@ -3,10 +3,10 @@
 // Module 9176 (useCurrentUser)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 589 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useCurrentUser.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCurrentUser.tsx");
 
 export const useCurrentUser = function useCurrentUser() {
   const items = [closure_3];

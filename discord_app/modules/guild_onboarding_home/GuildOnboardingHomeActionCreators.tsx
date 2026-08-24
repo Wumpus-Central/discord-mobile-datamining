@@ -1,18 +1,17 @@
 // === Module 11452: _fetchGuildHomeSettings ===
 
 // Module 11452 (_fetchGuildHomeSettings)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionToChannel from "transitionToChannel" /* 4768 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import initialize from "initialize" /* 1982 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess" /* 5048 */;
-import set from "set" /* 5049 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 1982 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_7 from "set" /* 5049 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _fetchGuildHomeSettings() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -21,13 +20,16 @@ function _fetchGuildHomeSettings() {
     c6 = 0;
     c4 = 0;
     return (function*(arg0) {
+      dependencyMap = tmp3;
       obj1 = { type: "GUILD_HOME_SETTINGS_FETCH_START", guildId: null };
       obj1[1] = callback;
       closure_1_1(closure_1_2[6]).dispatch(obj1);
+      c4 = 1;
       const HTTP = callback(closure_1_2[7]).HTTP;
       let obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
       obj2[0] = closure_1_9.GUILD_HOME_SETTINGS(callback);
       yield HTTP.get(obj2);
+      c4 = 0;
       obj2 = lib(709);
       const obj4 = { type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: null };
       obj4[1] = callback;
@@ -95,12 +97,12 @@ function _fetchNewMemberActions() {
               if (!isFullServerPreviewResult) {
                 let obj4 = closure_1_1(closure_1_2[6]);
                 obj1 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START", guildId: null };
-                obj1[1] = callback;
+                obj1[1] = tmp38;
                 obj4.dispatch(obj1);
                 fullServerPreview = 1;
                 const HTTP = callback(closure_1_2[7]).HTTP;
                 let obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
-                obj2[0] = closure_1_9.GUILD_MEMBER_ACTIONS(callback);
+                obj2[0] = closure_1_9.GUILD_MEMBER_ACTIONS(tmp38);
                 c5 = 2;
                 c6 = 1;
                 const obj3 = { value: null, done: false };
@@ -207,7 +209,7 @@ function _clearNewMemberActions() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: closure_8, Endpoints: c9 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx");
 
 export const fetchGuildHomeSettings = function fetchGuildHomeSettings(guildId) {
   const self = this;
@@ -258,13 +260,15 @@ export const selectHomeResourceChannel = function selectHomeResourceChannel(clos
       isFullServerPreviewResult = null == resourceForChannel;
     }
     if (!isFullServerPreviewResult) {
-      const obj = { guild_id: null, channel_id: null, server_guide_channel_type: "resource", channel_action_type: -1 };
+      let obj = expandEventPropertiesDefault;
+      obj = { guild_id: null, channel_id: null, server_guide_channel_type: "resource", channel_action_type: -1 };
       obj[0] = closure_0;
       obj[1] = channel.id;
       obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
     }
     if (flag) {
       transitionToChannel.transitionToChannel(channelId, { navigationReplace: false });
+      const obj3 = transitionToChannel;
     }
   }
 };
@@ -282,7 +286,8 @@ export const selectNewMemberActionChannel = function selectNewMemberActionChanne
     isFullServerPreviewResult = null == actionForChannel;
   }
   if (!isFullServerPreviewResult) {
-    const obj = { guild_id: null, channel_id: null, server_guide_channel_type: "member action", channel_action_type: null };
+    let obj = expandEventPropertiesDefault;
+    obj = { guild_id: null, channel_id: null, server_guide_channel_type: "member action", channel_action_type: null };
     obj[0] = guild_id;
     obj[1] = channel.id;
     obj[3] = actionForChannel.actionType;
@@ -291,31 +296,32 @@ export const selectNewMemberActionChannel = function selectNewMemberActionChanne
   transitionToChannel.transitionToChannel(id);
 };
 export const completeNewMemberAction = function completeNewMemberAction(c0, c1) {
-  let obj = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId: c0, channelId: c1 };
+  let obj = dispatcherDefault;
+  obj = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId: c0, channelId: c1 };
   obj.dispatch(obj);
   if (!closure_4.isFullServerPreview(c0)) {
     const channel = store.getChannel(c1);
     const actionForChannel = store2.getActionForChannel(c0, c1);
     if (null != channel) {
       if (null != actionForChannel) {
-        let tmpResult = DISCORD_EPOCHDefault;
+        let tmpResult = tmp(11);
         completedActions = completedActions.getCompletedActions(c0);
         if (completedActions == null) {
           completedActions = {};
         }
         const _require = tmpResult.keys(completedActions);
-        let newMemberActions = store2.getNewMemberActions(c0);
+        let newMemberActions = obj3.getNewMemberActions(c0);
         if (newMemberActions == null) {
           newMemberActions = [];
         }
-        tmpResult = expandEventPropertiesDefault;
+        tmpResult = tmp(698);
         obj = { guild_id: null, channel_id: null, channel_action_type: null, has_completed_all: null };
         ({ guild_id: obj6[0], id: obj6[1] } = channel);
         obj[2] = actionForChannel.actionType;
-        obj[3] = newMemberActions.reduce((acc, item, index) => {
-          let hasItem = acc;
-          if (acc) {
-            hasItem = closure_0.includes(item.channelId);
+        obj[3] = newMemberActions.reduce((arg0, channelId) => {
+          let hasItem = arg0;
+          if (arg0) {
+            hasItem = closure_0.includes(channelId.channelId);
           }
           return hasItem;
         }, true);
@@ -326,5 +332,6 @@ export const completeNewMemberAction = function completeNewMemberAction(c0, c1) 
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = closure_9.GUILD_MEMBER_ACTION_UPDATE(c0, c1);
     HTTP.post(obj1);
+    obj3 = store2;
   }
 };

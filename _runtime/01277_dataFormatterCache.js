@@ -1,7 +1,7 @@
 // === Module 1277: dataFormatterCache ===
 
 // Module 1277 (dataFormatterCache)
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import FormatterCache from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 class FormatterCache {
@@ -22,29 +22,28 @@ class FormatterCache {
     return;
   }
 }
-_classCallCheck = FormatterCache;
 const items = [
   {
     key: "getDateTimeFormatter",
-    value: function getDateTimeFormatter(closure_0, merged) {
+    value: function getDateTimeFormatter(arg0, merged) {
       return this._getCached(this.dateTime, HermesBuiltin.copyRestArgs(), (arg0) => Intl.DateTimeFormat(...arg0));
     }
   },
   {
     key: "getDurationFormatter",
-    value: function getDurationFormatter(closure_0, merged) {
+    value: function getDurationFormatter(arg0, merged) {
       return this._getCached(this.duration, HermesBuiltin.copyRestArgs(), (arg0) => Intl.DurationFormat(...arg0));
     }
   },
   {
     key: "getListFormatter",
-    value: function getListFormatter(closure_0, merged) {
+    value: function getListFormatter(arg0, merged) {
       return this._getCached(this.list, HermesBuiltin.copyRestArgs(), (arg0) => Intl.ListFormat(...arg0));
     }
   },
   {
     key: "getNumberFormatter",
-    value: function getNumberFormatter(closure_0, merged) {
+    value: function getNumberFormatter(arg0, merged) {
       return this._getCached(this.number, HermesBuiltin.copyRestArgs(), (arg0) => Intl.NumberFormat(...arg0));
     }
   },
@@ -56,19 +55,19 @@ const items = [
   },
   {
     key: "getRelativeTimeFormatter",
-    value: function getRelativeTimeFormatter(closure_0, merged) {
+    value: function getRelativeTimeFormatter(arg0, merged) {
       return this._getCached(this.relativeTime, HermesBuiltin.copyRestArgs(), (arg0) => Intl.RelativeTimeFormat(...arg0));
     }
   },
   {
     key: "_getCached",
-    value: function _getCached(dateTime, closure_0, fn) {
-      const _getKeyResult = this._getKey(closure_0);
+    value: function _getCached(dateTime, arg1, arg2) {
+      const _getKeyResult = this._getKey(arg1);
       const value = dateTime.get(_getKeyResult);
       if (value) {
         return value;
       } else {
-        const tmp4 = fn(closure_0);
+        const tmp4 = arg2(arg1);
         const result = dateTime.set(_getKeyResult, tmp4);
         return tmp4;
       }
@@ -76,7 +75,7 @@ const items = [
   },
   {
     key: "_getKey",
-    value: function _getKey(closure_0) {
+    value: function _getKey(arg0) {
       return JSON.stringify(HermesBuiltin.copyRestArgs());
     }
   }

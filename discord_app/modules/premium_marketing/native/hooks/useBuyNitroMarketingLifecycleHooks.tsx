@@ -2,23 +2,27 @@
 
 // Module 7926 (useBuyNitroMarketingLifecycleHooks)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7392 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ reset: c4, usePremiumPlanPurchasedStore: c5 } = usePremiumPlanPurchasedStore);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopWidth: 0 };
+createCacheKey = { navigator: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopWidth: 0 };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroMarketingLifecycleHooks.tsx");
+let result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroMarketingLifecycleHooks.tsx");
 
 export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingLifecycleHooks(nativeStackNavigation, initialLoadCompleted) {
+  let _require = nativeStackNavigation;
+  let promotionMarketingComponent = initialLoadCompleted;
   let tmp = callback();
   dependencyMap = tmp;
-  const _require = initialLoadCompleted;
-  const promotionMarketingComponent = _require(7927).usePromotionMarketingComponent(_require(7931).MarketingComponentType.PREMIUM_TAB);
+  _require = initialLoadCompleted;
+  promotionMarketingComponent = undefined;
+  promotionMarketingComponent = _require(7927).usePromotionMarketingComponent(_require(7931).MarketingComponentType.PREMIUM_TAB);
   const items = [initialLoadCompleted, promotionMarketingComponent];
   const effect = React.useEffect(() => {
     let tmp = initialLoadCompleted;
@@ -34,7 +38,7 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     }
     if (tmp) {
       obj = { dismissAction: null };
-      obj[0] = ContentDismissActionType.AUTO_DISMISS;
+      obj[0] = closure_1_6.AUTO_DISMISS;
       const result = promotionMarketingComponent(_navigator[9]).markSnowflakeBoundDismissibleContentAsDismissed(initialLoadCompleted(_navigator[8]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionMarketingComponent.promotionId, obj);
       const obj2 = promotionMarketingComponent(_navigator[9]);
     }

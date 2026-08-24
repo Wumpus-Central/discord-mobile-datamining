@@ -6,15 +6,16 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import GenericHeaderTitle from "GenericHeaderTitle" /* 8492 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey = { button: null, insideNavigatorButton: null };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingRight: 16 };
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
 
 export default function SkipHeaderButton(label) {
   const tmp = callback();

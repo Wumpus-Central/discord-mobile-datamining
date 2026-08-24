@@ -1,9 +1,9 @@
 // === Module 8585: getAuthenticationErrorsFromAPIError ===
 
 // Module 8585 (getAuthenticationErrorsFromAPIError)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");
+const result = set.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");
 
 export const getAuthenticationErrorsFromAPIError = function getAuthenticationErrorsFromAPIError(c6) {
   const obj = { error_code: c6.code };

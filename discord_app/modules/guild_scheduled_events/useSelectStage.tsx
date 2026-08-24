@@ -1,18 +1,19 @@
 // === Module 12403: useSelectStage ===
 
 // Module 12403 (useSelectStage)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
 
 export default function useSelectStage() {
   const items = [closure_6];
   const stateFromStores = _require(first[5]).useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
+  _require = stateFromStores;
   const tmp2 = callback2(React.useState(stateFromStores), 2);
   first = tmp2[0];
   const callback = tmp2[1];
@@ -25,6 +26,7 @@ export default function useSelectStage() {
       clearTimeout(closure_0);
     };
   }, items1);
+  _require = undefined;
   _require = callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -35,7 +37,7 @@ export default function useSelectStage() {
       closure_2 = tmp3;
       c5 = 1;
       if (closure_1 === closure_1) {
-        const channel = closure_2_5.getChannel(closure_1);
+        const channel = closure_2_5.getChannel(tmp31);
         if (null != channel) {
           callback(first[6]).navigateToStage(channel);
           c5 = 0;

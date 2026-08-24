@@ -5,12 +5,12 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9747 */;
 import getConsoleIconDefault from "getConsoleIcon" /* 9884 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function getConsoleInfo(type) {
   type = type.type;
   if (PlatformTypes.XBOX === type) {
@@ -35,11 +35,13 @@ function getConsoleInfo(type) {
     return null;
   }
 }
-const createCacheKey = { borderRadius: ThemesDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { consoleIconContainer: null, consoleIcon: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.WHITE };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx");
+const obj1 = { tintColor: ThemesDefault.colors.WHITE };
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx");
 
 export default function VoicePanelConsoleFacepile() {
   const tmp = callback();
@@ -49,14 +51,15 @@ export default function VoicePanelConsoleFacepile() {
   let items = [tmp2];
   const items1 = [tmp];
   items = React.useMemo(() => {
-    const mapped = lib2.map(getConsoleInfo);
-    return mapped.filter(lib(dependencyMap[8]).isNotNullish);
+    const mapped = lib2.map(closure_1_7);
+    return mapped.filter(lib(closure_1_2[8]).isNotNullish);
   }, items);
   const renderItem = React.useCallback((backgroundColor) => {
-    const items = [lib.consoleIconContainer, { backgroundColor: backgroundColor.color }];
-    const obj = { style: lib.consoleIcon, size: lib(dependencyMap[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon };
-    obj[1] = jsx(lib(dependencyMap[10]).Icon, { style: lib.consoleIcon, size: lib(dependencyMap[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon });
-    return jsx(lib2(dependencyMap[9]), { style: lib.consoleIcon, size: lib(dependencyMap[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon });
+    let obj = { style: items, children: null };
+    items = [lib.consoleIconContainer, { backgroundColor: backgroundColor.color }];
+    obj = { style: lib.consoleIcon, size: lib(closure_1_2[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon };
+    obj[1] = closure_1_5(lib(closure_1_2[10]).Icon, obj);
+    return closure_1_5(lib2(closure_1_2[9]), obj);
   }, items1);
   return jsx(_require(1297).SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
 };

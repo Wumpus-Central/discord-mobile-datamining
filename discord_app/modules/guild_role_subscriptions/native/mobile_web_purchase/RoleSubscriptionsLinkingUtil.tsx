@@ -1,11 +1,11 @@
 // === Module 7278: performRoleSubscriptionUpsellRedirect ===
 
 // Module 7278 (performRoleSubscriptionUpsellRedirect)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
 
-const require = fn;
+const require = arg1;
 function performRoleSubscriptionUpsellRedirect(guildId) {
   const self = this;
   const apply = _performRoleSubscriptionUpsellRedirect.apply;
@@ -366,7 +366,7 @@ function _performDeveloperPortalRedirectWithTokenHandoff() {
   return applyArgumentsResult;
 }
 ({ RelativeMarketingURLs: c4, Routes: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx");
 
 export default {
   performRoleSubscriptionUpsellRedirect,
@@ -391,7 +391,7 @@ export default {
     return applyArgumentsResult;
   },
   maybePerformRoleSubscriptionUpsellRedirect(closure_2) {
-    const guildId = dependencyMap.guildId;
+    const guildId = closure_2.guildId;
     if (null != guildId) {
       if (tmp === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
         let resolved = performRoleSubscriptionUpsellRedirect(guildId);

@@ -7,7 +7,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = fn;
+require = arg1;
 function announceActioned(intl) {
   const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -21,7 +21,7 @@ let closure_9 = { code: "function ActionStatusSubLabelTsx2(){const{actioned,line
 let closure_10 = { code: "function ActionStatusSubLabelTsx3(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};}" };
 let closure_11 = { code: "function ActionStatusSubLabelTsx4(){const{actioned}=this.__closure;return actioned.get();}" };
 let closure_12 = { code: "function ActionStatusSubLabelTsx5(actioned,actionedPrev){const{actionStatusAccessibilityLabel,runOnJS,announceActioned}=this.__closure;const isActioned=actioned&&actionedPrev===false;if(!isActioned||actionStatusAccessibilityLabel==null){return;}runOnJS(announceActioned)(actionStatusAccessibilityLabel);}" };
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
 
 export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   let num = lineHeight.lineHeight;
@@ -35,11 +35,13 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   const actioned = lineHeight.actioned;
   ({ secondaryLabel, actionStatusAccessibilityLabel } = lineHeight);
   ({ maxFontSizeMultiplier, animate } = lineHeight);
+  closure_4 = undefined;
+  let fontScale;
   let tmp = null != secondaryLabel;
   closure_4 = tmp;
   ({ label, actionStatus } = lineHeight);
   let obj = num(actionStatusAccessibilityLabel[6]);
-  const fontScale = obj.useFontScale();
+  fontScale = obj.useFontScale();
   const tmp3 = fontScale();
   obj1 = num(actionStatusAccessibilityLabel[4]);
   class L {
@@ -184,7 +186,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
       tmp = null != actionStatusAccessibilityLabel;
     }
     if (tmp) {
-      num(actionStatusAccessibilityLabel[4]).runOnJS(announceActioned)(actionStatusAccessibilityLabel);
+      num(actionStatusAccessibilityLabel[4]).runOnJS(closure_1_6)(actionStatusAccessibilityLabel);
       const obj = num(actionStatusAccessibilityLabel[4]);
     }
   };
@@ -202,7 +204,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
     obj4[1] = maxFontSizeMultiplier;
     obj4[2] = animatedStyle1;
     obj4[5] = secondaryLabel;
-    tmp = animate(closure_7, obj4);
+    tmp = tmp9(tmp10, obj4);
   }
   items1[1] = tmp;
   const items2 = [tmp3.actionStatus, animatedStyle2];

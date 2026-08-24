@@ -1,11 +1,11 @@
 // === Module 9099: _getDeepLinkUrl ===
 
 // Module 9099 (_getDeepLinkUrl)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 function _getDeepLinkUrl() {
   const self = this;
   const tmp = callback2((arg0) => {
@@ -75,6 +75,7 @@ function _getDeepLinkUrl() {
                   obj3[0] = "" + closure_6 + "://store/" + callback;
                   return obj3;
                 }
+                const str2 = lib.pathname;
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -98,6 +99,7 @@ function _getDeepLinkUrl() {
                 obj[0] = lib(9100).buildXboxGamePassStoreDeepLinkUrl(decodeURIComponent(dependencyMap));
                 return obj;
               }
+              const str = lib.pathname;
             }
             c4 = 3;
             return { value: null, done: true };
@@ -129,12 +131,14 @@ function _getDeepLinkUrl() {
 const steam = "steam";
 const re7 = /^\/app\/(\d+)(?:\/)?/;
 const re8 = /^\/games\/store\/title\/([^/]+)/;
-let result = require("obj132").fileFinishedImporting("modules/game_profile/hooks/useOpenExternalUrlFromGameProfile.tsx");
+let result = require("set").fileFinishedImporting("modules/game_profile/hooks/useOpenExternalUrlFromGameProfile.tsx");
 
 export default function useOpenExternalUrlFromGameProfile(arg0) {
+  closure_0 = arg0;
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   closure_2 = tmp[1];
+  closure_0 = undefined;
   closure_0 = callback2((arg0) => {
     closure_0 = arg0;
     c4 = 0;
@@ -224,7 +228,7 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
             (function openDeepLink(closure_1_2, closure_1_22) {
               closure_0 = closure_1_22;
               uRL = setTimeout(() => callback(true), 5000);
-              const listener = window.addEventListener("blur", (event) => clearTimeout(closure_1), { once: true });
+              const listener = window.addEventListener("blur", () => clearTimeout(closure_1), { once: true });
               uRL(_null[5])(closure_1_2);
             })(closure_1_2, closure_1_2);
           }

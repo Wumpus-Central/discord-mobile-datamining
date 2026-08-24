@@ -1,14 +1,14 @@
 // === Module 12079: getMediaViewerStateForScreen ===
 
 // Module 12079 (getMediaViewerStateForScreen)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import isValidImageAttachment from "isValidImageAttachment" /* 8994 */;
 
-let result = obj132.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
+let result = set.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 
-export default function getMediaViewerStateForScreen(arg0, arg1, arr) {
+export default function getMediaViewerStateForScreen(arg0, arg1, closure_1) {
   let obj = isValidImageAttachment;
-  const size = obj.flattenSource(arr, true);
+  const size = obj.flattenSource(closure_1, true);
   if (null == size) {
     obj = { maximumZoomScale: 1, width: null, height: null };
     obj[1] = arg0;

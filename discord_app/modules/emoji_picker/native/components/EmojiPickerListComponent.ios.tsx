@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import IMAGE_SIZE from "IMAGE_SIZE" /* 9301 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ ROW_HEIGHT: c4, LABEL_HEIGHT: c5, LABEL_TOP_PADDING: closure_6, LABEL_BOTTOM_PADDING: error } = IMAGE_SIZE);
 const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
@@ -13,6 +13,7 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
   const stickyHeaderIndices = data.headerIndices;
   paddingTop = paddingTop.paddingTop;
   const paddingBottom = paddingTop.paddingBottom;
+  ref = undefined;
   ({ onShowNitroUpsell, renderItem } = paddingTop);
   ref = paddingBottom.useRef(null);
   const items = [paddingTop, paddingBottom];
@@ -23,13 +24,13 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
     type = type.type;
     if (callback(paddingTop[3]).EmojiPickerItemType.PLACEHOLDER === type) {
       arg0.size = 0;
-    } else if (callback(paddingTop[3]).EmojiPickerItemType.TITLE === type) {
+    } else if (tmp(tmp2[3]).EmojiPickerItemType.TITLE === type) {
       arg0.size = closure_5 + closure_6 + closure_7;
     } else {
-      if (callback(paddingTop[3]).EmojiPickerItemType.EMOJI_ROW !== type) {
-        if (callback(paddingTop[3]).EmojiPickerItemType.EMOJI_ROW_NSFW !== type) {
-          if (callback(paddingTop[3]).EmojiPickerItemType.FOOTER_UPSELL === type) {
-            arg0.size = callback(paddingTop[4]).EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT;
+      if (tmp(tmp2[3]).EmojiPickerItemType.EMOJI_ROW !== type) {
+        if (tmp(tmp2[3]).EmojiPickerItemType.EMOJI_ROW_NSFW !== type) {
+          if (tmp(tmp2[3]).EmojiPickerItemType.FOOTER_UPSELL === type) {
+            arg0.size = tmp(tmp2[4]).EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT;
           }
         }
       }
@@ -61,19 +62,22 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
       }
     },
     onStickyHeaderRendered(arg0) {
+      let arr;
       let num = 0;
       let num2 = 0;
       let num3 = 0;
       if (0 < length.length) {
         do {
+          let tmp = num2;
           let tmp2 = num3;
+          arr = length;
           if (arg0 >= length[num2]) {
             tmp2 = num2;
           }
           num2 = num2 + 1;
           num3 = tmp2;
           num = tmp2;
-        } while (num2 < length.length);
+        } while (num2 < arr.length);
       }
       const result = closure_0.set(num);
     }
@@ -81,6 +85,6 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
   const preventNativeModalDismiss = require(paddingTop[6]).useIsPortalKeyboardInModal();
   return jsx(require(paddingTop[7]).BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref, renderItem, stickyHeaderIndices });
 });
-let result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx");
+let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx");
 
 export default forwardRefResult;

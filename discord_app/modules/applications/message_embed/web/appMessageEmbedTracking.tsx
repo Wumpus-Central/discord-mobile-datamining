@@ -2,11 +2,11 @@
 
 // Module 7446 (ClickArea)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTracking.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTracking.tsx");
 
 export const ClickArea = { VIEW: "view", PLAY: "play", CLOUD_PLAY: "cloud_play", JOIN: "join", ADD_APP: "add_app", JOIN_SERVER: "join_server", INVITE: "invite", SYNC: "sync", CONTENT: "content", BANNER: "banner", STREAM: "stream", CONNECT_ACCOUNT: "connect_account" };
 export const trackAppEmbedClick = function trackAppEmbedClick(arg0) {
@@ -34,8 +34,8 @@ export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
         onView();
       }
       ({ id, linkType, referrerId, activityCustomId, guildId, channelId, messageId, appEmbedState } = onView);
-      ref(dependencyMap[2]);
-      const obj = { application_id: null, link_type: null, referrer_id: null, custom_id: null, guild_id: null, channel_id: null, message_id: null, app_embed_state: null };
+      let obj = ref(closure_1_2[2]);
+      obj = { application_id: null, link_type: null, referrer_id: null, custom_id: null, guild_id: null, channel_id: null, message_id: null, app_embed_state: null };
       obj[0] = id;
       obj[1] = linkType;
       obj[2] = referrerId;
@@ -44,11 +44,13 @@ export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
       obj[5] = channelId;
       obj[6] = messageId;
       obj[7] = appEmbedState;
-      obj.track(AnalyticEvents.APP_EMBED_VIEWED, obj);
+      obj.track(closure_1_4.APP_EMBED_VIEWED, obj);
+      const tmp3 = onView;
     }
   }, undefined);
 };
 export const trackAppEmbedLinkSent = function trackAppEmbedLinkSent(applicationId, ACTIVITY_INVITE, closure_5, customId) {
-  const obj = { application_id: applicationId, link_type: ACTIVITY_INVITE, referrer_id: closure_5, custom_id: customId };
+  let obj = expandEventPropertiesDefault;
+  obj = { application_id: applicationId, link_type: ACTIVITY_INVITE, referrer_id: closure_5, custom_id: customId };
   obj.track(AnalyticEvents.APP_EMBED_LINK_SENT, obj);
 };

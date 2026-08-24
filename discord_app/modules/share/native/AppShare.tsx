@@ -1,29 +1,32 @@
 // === Module 17143: AppShare ===
 
 // Module 17143 (AppShare)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import "result";
+import result from "result" /* 5053 */;
 import handleTokenUpdated from "handleTokenUpdated" /* 13771 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { MultiAccountSwitchLocation as closure_9 } from "MAX_ACCOUNTS" /* 11586 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ BackHandler: c5, NativeModules: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const share = "share";
-const result = require("obj132").fileFinishedImporting("modules/share/native/AppShare.tsx");
+result = require("set").fileFinishedImporting("modules/share/native/AppShare.tsx");
 
 export default function AppShare(targetUserId) {
-  targetUserId = targetUserId.targetUserId;
   let stateFromStores = targetUserId;
+  targetUserId = targetUserId.targetUserId;
+  stateFromStores = targetUserId;
+  let first;
+  dependencyMap = undefined;
   let callback;
   let obj = React;
   let tmp2 = callback(React.useState(false), 2);
-  let first = tmp2[0];
+  first = tmp2[0];
   dependencyMap = tmp2[1];
   let tmp4 = null == targetUserId;
   if (!tmp4) {
@@ -48,8 +51,8 @@ export default function AppShare(targetUserId) {
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const obj = stateFromStores(closure_1_2[13]);
-        stateFromStores(closure_1_2[13]).switchAccount(closure_0, false, closure_1_9.SHARE_EXTENSION).then((result) => {
+        const obj = closure_1_0(closure_1_2[13]);
+        closure_1_0(closure_1_2[13]).switchAccount(closure_0, false, closure_1_9.SHARE_EXTENSION).then(() => {
           callback(true);
         });
       }, 18);
@@ -78,15 +81,15 @@ export default function AppShare(targetUserId) {
     let obj = first(698);
     let tmp2 = null != stateFromStores.text;
     if (tmp2) {
-      tmp2 = stateFromStores.text.length > 0;
+      tmp2 = tmp.text.length > 0;
     }
-    obj = { has_content: tmp2, has_attachment: stateFromStores.attachments.length > 0 };
-    obj.track(AnalyticEvents.EXTERNAL_SHARE_OPENED, obj);
+    obj = { has_content: tmp2, has_attachment: tmp.attachments.length > 0 };
+    obj.track(closure_1_8.EXTERNAL_SHARE_OPENED, obj);
   }, items4);
   first(4761)(() => {
     const attachments = stateFromStores.attachments;
-    const mapped = attachments.map((item, index) => {
-      let str = item.mimeType;
+    const mapped = attachments.map((mimeType) => {
+      let str = mimeType.mimeType;
       if (str == null) {
         str = "unknown";
       }
@@ -97,7 +100,7 @@ export default function AppShare(targetUserId) {
   obj = { appEntryKey: share, children: null };
   if (first) {
     obj = { appEntryKey: null, sharedContent: null, onClose: null };
-    obj[0] = share;
+    obj[0] = tmp18;
     obj[1] = targetUserId;
     const tmp14Result = tmp14(13360);
     if (tmp9Result.isMetaQuest()) {
@@ -106,16 +109,16 @@ export default function AppShare(targetUserId) {
       exitApp = exitApp.exitApp;
     }
     obj[2] = exitApp;
-    callback(tmp14Result, obj);
+    tmp19(tmp14Result, obj);
     tmp9Result = tmp9(1625);
   } else {
-    const items5 = [callback(tmp9(6549).SceneLoadingIndicator, {}), , , ];
+    const items5 = [tmp19(tmp9(6549).SceneLoadingIndicator, {}), , , ];
     obj1 = { appEntryKey: null };
-    obj1[0] = share;
-    items5[1] = callback(tmp9(16124).ActionSheetContainer, obj1);
-    items5[2] = callback(tmp14(16172), {});
-    items5[3] = callback(tmp9(4660).AlertModalContainer, {});
+    obj1[0] = tmp18;
+    items5[1] = tmp19(tmp9(16124).ActionSheetContainer, obj1);
+    items5[2] = tmp19(tmp14(16172), {});
+    items5[3] = tmp19(tmp9(4660).AlertModalContainer, {});
     obj[1] = items5;
-    return callback2(tmp17, obj);
+    return closure_11(tmp17, obj);
   }
 };

@@ -29,15 +29,16 @@ if (!hasOwnPropertyResult) {
   }
   const _Object3 = Object;
   const keys = Object.keys(feedbackAsyncIntegration);
-  const item = keys.forEach((item, index) => {
-    if ("default" === item) {
+  const item = keys.forEach((key10009) => {
+    if ("default" === key10009) {
       if (!tmp) {
-        exports[item] = feedbackAsyncIntegration[item];
+        exports[key10009] = feedbackAsyncIntegration[key10009];
       }
     } else {
       const _Object = Object;
       const call = hasOwnProperty.call;
-      typeof call === "unknown" ? hasOwnProperty(item) : call(exports, item);
+      typeof call === "unknown" ? hasOwnProperty(key10009) : call(exports, key10009);
+      const tmp3 = exports;
     }
   });
 } else {

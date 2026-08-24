@@ -5,9 +5,9 @@ import _inheritsDefault from "_inherits" /* 98 */;
 import setDefault from "set" /* 357 */;
 import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
 import AnimatedWithChildren from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
@@ -65,6 +65,7 @@ let items = [
           for (let num3 = 0; num3 < length; num3 = num3 + 1) {
             let obj = _children[num3];
             let __makeNativeResult = obj.__makeNative(arg0);
+            let tmp2 = connectAnimatedNodes;
             let __getNativeTagResult = self.__getNativeTag();
             let tmp4 = connectAnimatedNodes(__getNativeTagResult, obj.__getNativeTag());
           }
@@ -126,7 +127,8 @@ let items = [
   {
     key: "__callListeners",
     value: function __callListeners(arg0) {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback2(callback(self.prototype), "__callListeners", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
@@ -139,6 +141,7 @@ let items = [
         if (0 < _children.length) {
           do {
             let obj = _children[num];
+            let tmp2 = num;
             if (obj.__getValue) {
               let __callListenersResult = obj.__callListeners(obj.__getValue());
             }

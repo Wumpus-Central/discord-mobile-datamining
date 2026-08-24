@@ -12,12 +12,12 @@ import registerAssetDefault5 from "registerAsset" /* 10756 */;
 import registerAssetDefault6 from "registerAsset" /* 11948 */;
 import registerAssetDefault7 from "registerAsset" /* 14922 */;
 import registerAssetDefault8 from "registerAsset" /* 14923 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function DemoContextMenu(align) {
   ({ label: require, triggerOnLongPress } = align);
   if (triggerOnLongPress === undefined) {
@@ -36,24 +36,25 @@ function DemoContextMenu(align) {
     str = "flex-start";
   }
   items = [num, num2];
+  let obj = { style: { alignSelf: str }, children: null };
   const memo = num2.useMemo(() => {
     if (closure_2 > 1) {
       const _Array = Array;
       let obj = { length: null };
       obj[0] = tmp;
       let arr = Array.from(obj);
-      let mapped = arr.map((item, index) => {
+      let mapped = arr.map(() => {
         const callback = dependencyMap;
         let obj = callback(12);
         dependencyMap = obj.shuffle(closure_1_8);
         closure_2 = callback(12).shuffle(closure_1_7);
         obj = { length: dependencyMap };
         const obj2 = callback(12);
-        return Array.from(obj).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: -1795161802, variant: 2030044001, action: 1426063874 };
-          obj[2] = length2[index % length2.length];
+        return Array.from(obj).map((arg0, arg1) => {
+          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: -1795161802, variant: 2030044001, action: 1426063874 };
+          obj[2] = length2[arg1 % length2.length];
           let str = "default";
-          if (index === closure_0 - 1) {
+          if (arg1 === closure_0 - 1) {
             str = "destructive";
           }
           obj[3] = str;
@@ -65,18 +66,18 @@ function DemoContextMenu(align) {
       });
     } else {
       closure_0 = closure_1;
-      closure_1 = require(num[13]).shuffle(closure_1_8);
-      let obj2 = require(num[13]);
-      closure_2 = require(num[13]).shuffle(items);
+      closure_1 = closure_1_0(num[13]).shuffle(closure_1_8);
+      let obj2 = closure_1_0(num[13]);
+      closure_2 = closure_1_0(num[13]).shuffle(closure_1_7);
       const _Array2 = Array;
       obj = { length: null };
       obj[0] = closure_1;
       arr = Array.from(obj);
-      mapped = arr.map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: -1795161802, variant: 2030044001, action: 1426063874 };
-        obj[2] = length2[index % length2.length];
+      mapped = arr.map((arg0, arg1) => {
+        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: -1795161802, variant: 2030044001, action: 1426063874 };
+        obj[2] = length2[arg1 % length2.length];
         let str = "default";
-        if (index === closure_0 - 1) {
+        if (arg1 === closure_0 - 1) {
           str = "destructive";
         }
         obj[3] = str;
@@ -85,11 +86,11 @@ function DemoContextMenu(align) {
         };
         return obj;
       });
-      const obj3 = require(num[13]);
+      const obj3 = closure_1_0(num[13]);
     }
     return mapped;
   }, items);
-  let obj = {
+  obj = {
     triggerOnLongPress,
     items: memo,
     align: align.align,
@@ -100,7 +101,7 @@ function DemoContextMenu(align) {
       const merged1 = Object.assign(merged);
       obj.text = closure_0;
       obj.variant = "primary";
-      return closure_1_5(require(num[15]).Button, obj);
+      return closure_1_5(closure_1_0(num[15]).Button, obj);
     }
   };
   obj[1] = callback(require(num[14]).ContextMenu, obj);
@@ -110,14 +111,17 @@ function DemoContextMenu(align) {
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let items = [registerAssetDefault6, registerAssetDefault3, registerAssetDefault2, registerAssetDefault4, registerAssetDefault, registerAssetDefault7, registerAssetDefault8, registerAssetDefault5];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
-const createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 12 };
+createCacheKey = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: null };
+createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 12 };
 createCacheKey[2] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx");
 
 export default function UserSettingsDesignSystemAlertModal() {
   const tmp = callback3();
-  const obj = { style: tmp.card, children: null };
+  let obj = { children: null };
+  obj = { style: tmp.container, children: null };
+  obj = { style: tmp.card, children: null };
   items = [callback(Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You press the button to open the menu and then select an action, or tap and pan down in a single gesture." }), callback(DemoContextMenu, { label: "Open Menu" })];
   obj[1] = items;
   const items1 = [callback2(PressableCard.Card, obj), , , , , ];

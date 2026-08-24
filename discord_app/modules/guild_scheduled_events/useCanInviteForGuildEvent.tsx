@@ -3,16 +3,16 @@
 // Module 8801 (canEveryoneRoleViewEvent)
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
 import canViewInviteModal from "canViewInviteModal" /* 8802 */;
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "comparator" /* 1980 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
 import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
 import { GuildScheduledEventEntityTypes as closure_9 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { Permissions } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function canEveryoneRoleViewEvent(guildEvent, items1) {
   let tmp = items1;
   if (items1 === undefined) {
@@ -33,14 +33,15 @@ function canEveryoneRoleViewEvent(guildEvent, items1) {
     let canEveryoneRoleResult = null != channel;
     if (canEveryoneRoleResult) {
       canEveryoneRoleResult = applyOverwritesAll.canEveryoneRole(Permissions.VIEW_CHANNEL, channel);
+      const obj3 = applyOverwritesAll;
     }
     return canEveryoneRoleResult;
   }
 }
-function isGuildEventInvitable(guildEvent, items) {
-  let tmp = items;
-  if (items === undefined) {
-    items = [closure_5, closure_4, closure_6, closure_3];
+function isGuildEventInvitable(guildEvent) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    const items = [closure_5, closure_4, closure_6, closure_3];
     tmp = items;
   }
   [obj, obj2, obj3, obj4] = tmp;
@@ -68,7 +69,7 @@ function isGuildEventInvitable(guildEvent, items) {
     return canViewInviteModalResult;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");
 
 export default function useCanInviteForGuildEvent(arg0) {
   const _require = arg0;
@@ -76,7 +77,7 @@ export default function useCanInviteForGuildEvent(arg0) {
   const items1 = [arg0];
   return _require(589).useStateFromStores(items, () => {
     const items = [closure_1_5, closure_1_4, closure_1_6, closure_1_3];
-    return isGuildEventInvitable(closure_0, items);
+    return closure_1_12(closure_0, items);
   }, items1);
 };
 export { canEveryoneRoleViewEvent };

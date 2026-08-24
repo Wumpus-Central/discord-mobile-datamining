@@ -1,10 +1,10 @@
 // === Module 15486: getChannelSubtitleData ===
 
 // Module 15486 (getChannelSubtitleData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
+const result = set.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
 export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {
   if (null == subtitle) {

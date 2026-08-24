@@ -20,7 +20,7 @@ function contentUnionToMessages(contents, user) {
   } else {
     const _Array = Array;
     if (Array.isArray(contents)) {
-      flatMapResult = contents.flatMap((item, index) => contentUnionToMessages(item, str));
+      flatMapResult = contents.flatMap((arg0) => closure_1_2(arg0, str));
     } else {
       if (typeof contents === "object") {
         if (contents) {
@@ -48,8 +48,8 @@ function contentUnionToMessages(contents, user) {
   return flatMapResult;
 }
 arg5.contentUnionToMessages = contentUnionToMessages;
-arg5.isStreamingMethod = function isStreamingMethod(closure_0) {
-  return _require.includes("Stream");
+arg5.isStreamingMethod = function isStreamingMethod(arr) {
+  return arr.includes("Stream");
 };
 arg5.shouldInstrument = function shouldInstrument(str) {
   const GOOGLE_GENAI_INSTRUMENTED_METHODS = _mod974.GOOGLE_GENAI_INSTRUMENTED_METHODS;
@@ -60,4 +60,5 @@ arg5.shouldInstrument = function shouldInstrument(str) {
     const GOOGLE_GENAI_INSTRUMENTED_METHODS2 = _mod974.GOOGLE_GENAI_INSTRUMENTED_METHODS;
     return GOOGLE_GENAI_INSTRUMENTED_METHODS2.includes(parts.pop());
   }
+  const tmp = require;
 };

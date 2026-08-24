@@ -5,12 +5,13 @@ import initialize from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import "createToggle";
+import closure_3 from "initialize" /* 1212 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
+require = arg1;
 const name = require("useIsMobileVisualRefreshExperimentEnabled").MobileVisualRefreshExperiment.definition.name;
-let createToggle = {
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.s3amTp);
@@ -49,6 +50,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx");
 
 export default createToggle;

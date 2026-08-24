@@ -1,9 +1,9 @@
-// === Module 8601: obj132 ===
+// === Module 8601: set ===
 
-// Module 8601 (obj132)
-import obj132 from "obj132" /* 2 */;
+// Module 8601 (set)
+import set from "set" /* 2 */;
 import useStableCallbackDefault from "useStableCallback" /* 8602 */;
 
-const result = obj132.fileFinishedImporting("hooks/useStableCallback.tsx");
+const result = set.fileFinishedImporting("hooks/useStableCallback.tsx");
 
 export default useStableCallbackDefault;

@@ -14,6 +14,6 @@ prototype["_terminate"] = function _terminate() {
 
 };
 const callKitLifecycleManager = new CallKitLifecycleManager();
-const result = require("obj132").fileFinishedImporting("modules/calls/mobile/CallKitManager.android.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/mobile/CallKitManager.android.tsx");
 
 export default callKitLifecycleManager;

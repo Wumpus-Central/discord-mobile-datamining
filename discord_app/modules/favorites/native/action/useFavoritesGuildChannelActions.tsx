@@ -1,12 +1,12 @@
 // === Module 10515: useFavoritesGuildChannelActions ===
 
 // Module 10515 (useFavoritesGuildChannelActions)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import initializeFromUserSettings from "initializeFromUserSettings" /* 1394 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "initializeFromUserSettings" /* 1394 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
 
 export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
   const _require = channelId;

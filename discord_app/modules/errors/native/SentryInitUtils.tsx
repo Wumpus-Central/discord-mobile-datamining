@@ -5,16 +5,14 @@ import timestampDefault from "timestamp" /* 3 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import set from "set" /* 5011 */;
-import set2 from "set" /* 13567 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import { PRIMARY_DOMAIN } from "sum" /* 505 */;
 import addBreadcrumb from "addBreadcrumb" /* 810 */;
 import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 13568 */;
 
-require = fn;
+require = arg1;
 function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -70,7 +68,7 @@ function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
               c2 = 1;
               table = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = Promise.race(items).catch((error) => null);
+              obj1[0] = Promise.race(items).catch(() => null);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -88,12 +86,12 @@ function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
             }
             if (isArray) {
               const entries = closure_1.entries;
-              lib.breadcrumbs = entries.map((item, index) => {
-                let key = item.message;
+              lib.breadcrumbs = entries.map((data) => {
+                let key = data.message;
                 if (key == null) {
-                  key = item.key;
+                  key = data.key;
                 }
-                return { message: key, category: "telemetry_ring", timestamp: item.timestamp / 1000, data: item.data };
+                return { message: key, category: "telemetry_ring", timestamp: data.timestamp / 1000, data: data.data };
               });
             }
           }
@@ -176,6 +174,7 @@ function filterError(event_id, originalException) {
     }
     if (tmp17) {
       _modDef1208.markCrashHandled(event_id);
+      const obj = _modDef1208;
     }
   } else {
     let originalException2;
@@ -192,6 +191,10 @@ function filterError(event_id, originalException) {
       }
       event_id.tags.httpStatusCode = status1;
     }
+    let tmp10 = c12;
+    if ("error" === event_id.level) {
+      tmp10 = c13;
+    }
     if (!c14) {
       if (callback2()) {
         const _Math = Math;
@@ -202,14 +205,14 @@ function filterError(event_id, originalException) {
       closure_1 = tmp3;
       closure_0 = tmp3;
       c2 = 1;
-      const ZoomedInTelemetry = event_id(table[6]).ZoomedInTelemetry;
+      const ZoomedInTelemetry = closure_1_0(table[6]).ZoomedInTelemetry;
       items = [ZoomedInTelemetry.flushNow(), ];
       const promise = new Promise((arg0) => setTimeout(arg0, 200));
       items[1] = promise;
       yield Promise.race(items);
       if (1 === tmp7) {
         c2 = 0;
-        closure_1_19(event_id, originalException);
+        closure_1_19(closure_1_0, closure_1_1);
         c4 = 3;
       } else if (2 === tmp7) {
         if (arg0 === 1) {
@@ -333,7 +336,7 @@ function getErrorStackTrace(exception) {
     if (stacktrace != null) {
       const frames = stacktrace.frames;
       if (frames != null) {
-        const mapped = frames.map((item, index) => "" + item.filename + ":" + item.lineno + ":" + item.colno);
+        const mapped = frames.map((filename) => "" + filename.filename + ":" + filename.lineno + ":" + filename.colno);
         joined = mapped.join("\n");
       }
     }
@@ -529,9 +532,9 @@ function trackCrash(event, hint, arg2) {
       }
     }
     obj[13] = tmp37;
-    track(constants.APP_NATIVE_CRASH, obj);
-    let tmp25 = importDefault;
-    let tmp26 = importDefault;
+    track(tmp20.APP_NATIVE_CRASH, obj);
+    let tmp25 = tmp18;
+    let tmp26 = tmp18;
   } else {
     obj = { path: null, client_track_timestamp: null, sentry_issue_id: null, extra: null, error_message: null, error_level: null, error_stack: null };
     obj[0] = obj3.getHistory().location.pathname;
@@ -541,9 +544,10 @@ function trackCrash(event, hint, arg2) {
     obj[4] = getCrashErrorMessage(event);
     obj[5] = level;
     obj[6] = getErrorStackTrace(event);
-    track(constants.APP_CRASHED, obj);
-    tmp25 = importDefault;
-    tmp26 = importDefault;
+    track(tmp20.APP_CRASHED, obj);
+    tmp25 = tmp18;
+    tmp26 = tmp18;
+    const tmp22 = level;
   }
   const event_id2 = event.event_id;
   let tmp39 = typeof event_id2 === "string";
@@ -554,9 +558,10 @@ function trackCrash(event, hint, arg2) {
     tmp25(1208).markCrashHandled(event_id2);
     const tmp25Result = tmp25(1208);
   }
-  const AppCrashedReasons = set2.AppCrashedReasons;
+  const AppCrashedReasons = tmp11(13567).AppCrashedReasons;
+  const tmp19 = expandEventPropertiesDefault;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: set.MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: tmp11(5011).MetricEvents.APP_CRASHED, tags: null };
   items = ["reason:" + tmp41, ];
   if (level == null) {
     level = "unknown";
@@ -564,7 +569,6 @@ function trackCrash(event, hint, arg2) {
   items[1] = "level:" + level;
   obj1[1] = items;
   tmp26(5006).increment(obj1, true);
-  const tmp26Result = tmp26(5006);
 }
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
@@ -581,7 +585,7 @@ let c13 = 0.005;
 let c14 = false;
 let closure_20 = IGNORE_ANALYTICS_BREADCRUMB_EVENTS.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 let tmp7 = new timestampDefault("Sentry");
-const result1 = require("obj132").fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
+const result1 = require("set").fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
 
 export const routingInstrumentation = addBreadcrumb;
 export const initSentry = function initSentry() {
@@ -594,21 +598,21 @@ export const initSentry = function initSentry() {
       const ReleaseChannel = constants.ReleaseChannel;
       if (-1 === ReleaseChannel.indexOf("debug")) {
         if (-1 === ReleaseChannel.indexOf("developer")) {
-          const isStable = callback(table[15]).isStable;
+          const isStable = callback(tmp[15]).isStable;
           obj = { releaseChannel: null, isProductionChannel: null };
           obj[0] = ReleaseChannel;
           obj[1] = isStable;
           closure_10.verbose("Initialize", obj);
           if (obj15.isAndroid()) {
             if (isStable) {
-              let tmp14Result = callback(table[17]);
+              let tmp14Result = tmp14(tmp[17]);
               const device = tmp14Result.getDevice();
             }
           }
           c12 = 0.05;
           const SentryDsn = constants.SentryDsn;
           if (isStable) {
-            tmp14Result = callback(table[18]);
+            tmp14Result = tmp14(tmp[18]);
             let SentryStaffDsn = SentryDsn;
             if (tmp14Result.isMetaQuest()) {
               c12 = 1;
@@ -623,22 +627,22 @@ export const initSentry = function initSentry() {
             SentryStaffDsn = constants.SentryStaffDsn;
             c12 = 1;
           }
-          obj15 = callback(table[16]);
-          const lastCrashReport = callback2(table[13]).getLastCrashReport();
-          const obj4 = callback2(table[13]);
-          lastCrashReport.then((result) => {
-            if (null != result) {
-              callback2(result, { crash_event_source: "startup_reconcile" });
+          obj15 = callback(tmp[16]);
+          const lastCrashReport = callback2(tmp[13]).getLastCrashReport();
+          const obj4 = callback2(tmp[13]);
+          lastCrashReport.then((arg0) => {
+            if (null != arg0) {
+              callback2(arg0, { crash_event_source: "startup_reconcile" });
             }
-          }).catch((error) => {
-            logger.warn("Failed to replay pending crash report", error);
+          }).catch((arg0) => {
+            logger.warn("Failed to replay pending crash report", arg0);
           });
-          const nextPromise = lastCrashReport.then((result) => {
-            if (null != result) {
-              callback2(result, { crash_event_source: "startup_reconcile" });
+          const nextPromise = lastCrashReport.then((arg0) => {
+            if (null != arg0) {
+              callback2(arg0, { crash_event_source: "startup_reconcile" });
             }
           });
-          const tmp14Result1 = callback(table[4]);
+          const tmp14Result1 = callback(tmp[4]);
           let str2 = "ios";
           if (tmp14Result2.isAndroid()) {
             str2 = "android";
@@ -652,15 +656,15 @@ export const initSentry = function initSentry() {
           items = [closure_7];
           obj[10] = items;
           const items1 = [closure_8, , ];
-          tmp14Result2 = callback(table[16]);
-          items1[1] = callback(table[4]).featureFlagsIntegration();
-          const tmp14Result3 = callback(table[4]);
+          tmp14Result2 = callback(tmp[16]);
+          items1[1] = callback(tmp[4]).featureFlagsIntegration();
+          const tmp14Result3 = callback(tmp[4]);
           obj1 = { shouldCreateSpanForRequest: null };
-          obj1[0] = function shouldCreateSpanForRequest(url) {
-            closure_0 = url;
-            return !closure_9.some((item, index) => null != url.match(item));
+          obj1[0] = function shouldCreateSpanForRequest(arg0) {
+            closure_0 = arg0;
+            return !closure_9.some((arg0) => null != closure_0.match(arg0));
           };
-          items1[2] = callback(table[4]).reactNativeTracingIntegration(obj1);
+          items1[2] = callback(tmp[4]).reactNativeTracingIntegration(obj1);
           obj[11] = items1;
           obj[12] = function beforeBreadcrumb(data) {
             if (null == data.data) {
@@ -671,6 +675,8 @@ export const initSentry = function initSentry() {
               data.data.client_performance_memory = currentMemoryUsageKB;
             }
             const obj = callback(table[19]);
+            const tmp = callback;
+            const tmp2 = table;
             const currentCPUUsagePercent = callback(table[19]).getCurrentCPUUsagePercent();
             if (null != currentCPUUsagePercent) {
               data.data.client_performance_cpu = currentCPUUsagePercent;
@@ -678,14 +684,14 @@ export const initSentry = function initSentry() {
             return data;
           };
           tmp14Result1.init(obj);
-          const tmp14Result4 = callback(table[4]);
-          callback(table[4]).setTag("buildNumber", "6244");
-          const tmp14Result5 = callback(table[4]);
-          callback(table[4]).setTag("appVersion", constants.Version);
-          const tmp14Result6 = callback(table[4]);
+          const tmp14Result4 = callback(tmp[4]);
+          callback(tmp[4]).setTag("buildNumber", "6244");
+          const tmp14Result5 = callback(tmp[4]);
+          callback(tmp[4]).setTag("appVersion", constants.Version);
+          const tmp14Result6 = callback(tmp[4]);
           const _HermesInternal = HermesInternal;
-          callback(table[4]).setTag("design_id", "" + callback(table[20]).DesignIds.DESIGN_TABS_IA);
-          const tmp14Result7 = callback(table[4]);
+          callback(tmp[4]).setTag("design_id", "" + callback(tmp[20]).DesignIds.DESIGN_TABS_IA);
+          const tmp14Result7 = callback(tmp[4]);
         }
       }
     });

@@ -1,10 +1,10 @@
 // === Module 10571: useIsSpamMessageRequest ===
 
 // Module 10571 (useIsSpamMessageRequest)
-import processChannel from "processChannel" /* 4800 */;
+import closure_2 from "processChannel" /* 4800 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");
 
 export const useIsSpamMessageRequest = function useIsSpamMessageRequest(id) {
   const _require = id;

@@ -3,7 +3,8 @@
 // Module 1716 (StretchInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 
-let obj = { 0: { transform: items }, 100: null };
+obj = { StretchInX: { name: "StretchInX", style: obj, duration: 0.3 }, StretchInY: { name: "StretchInY", style: obj, duration: 0.3 } };
+obj = { 0: { transform: items }, 100: null };
 items = [{ scaleX: 0 }];
 const items1 = [{ scaleX: 1 }];
 obj[100] = { transform: items1 };

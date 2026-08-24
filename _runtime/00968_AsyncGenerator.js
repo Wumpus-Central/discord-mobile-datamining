@@ -18,19 +18,19 @@ class AsyncGenerator {
           v = value;
         }
         const resolved = Promise.resolve(v);
-        resolved.then((result) => {
-          let value = result;
+        resolved.then((done) => {
+          let value = done;
           if (callback) {
             let str = "next";
             if ("return" === dependencyMap) {
               str = "return";
             }
             if (_null.k) {
-              if (!result.done) {
-                value = dependencyMap[str](result).value;
+              if (!done.done) {
+                value = dependencyMap[str](done).value;
               }
             }
-            callback(str, result);
+            callback(str, done);
           }
           let str3 = "normal";
           if (next.done) {
@@ -86,7 +86,7 @@ class AsyncGenerator {
         if (obj) {
           obj.next = obj;
         } else {
-          resume(tmp, tmp2);
+          closure_1_3(tmp, tmp2);
         }
       });
     };
@@ -127,7 +127,7 @@ export default function _wrapAsyncGenerator(arg0) {
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
-    let obj = Object.create(AsyncGenerator.prototype);
+    let obj = Object.create(closure_1_2.prototype);
     closure_0 = applyArgumentsResult;
     c1 = undefined;
     c2 = undefined;
@@ -145,19 +145,19 @@ export default function _wrapAsyncGenerator(arg0) {
           v = value;
         }
         const resolved = Promise.resolve(v);
-        resolved.then((result) => {
-          let value = result;
+        resolved.then((done) => {
+          let value = done;
           if (callback) {
             let str = "next";
             if ("return" === dependencyMap) {
               str = "return";
             }
             if (_null.k) {
-              if (!result.done) {
-                value = dependencyMap[str](result).value;
+              if (!done.done) {
+                value = dependencyMap[str](done).value;
               }
             }
-            callback(str, result);
+            callback(str, done);
           }
           let str3 = "normal";
           if (next.done) {
@@ -213,7 +213,7 @@ export default function _wrapAsyncGenerator(arg0) {
         if (obj) {
           obj.next = obj;
         } else {
-          resume(tmp, tmp2);
+          closure_1_3(tmp, tmp2);
         }
       });
     };

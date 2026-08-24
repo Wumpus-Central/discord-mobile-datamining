@@ -1,9 +1,8 @@
 // === Module 6831: match ===
 
 // Module 6831 (match)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
 import tDefault from "t" /* 4092 */;
@@ -15,7 +14,30 @@ import getGameMentionData from "getGameMentionData" /* 6898 */;
 
 const Image = get_ActivityIndicator.Image;
 const re4 = /^[\u200B-\u200D\uFEFF\u180E\u061C]/;
-let obj = {};
+obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };
+obj = {
+  requiredFirstCharacters: ["\\"],
+  match(arg0, allowEscape) {
+    if (false === allowEscape.allowEscape) {
+      return null;
+    } else {
+      const match = /^\\([^0-9A-Za-z\s])/.exec(arg0);
+      if (null == match) {
+        let tmp3 = match;
+      } else {
+        tmp3 = null;
+        if (!obj.hasSurrogates(match[0])) {
+          const _JSON = JSON;
+          const json = JSON.stringify(match[0]);
+          tmp3 = null;
+        }
+        obj = parseRawEmojiObjectDefault;
+      }
+      return tmp3;
+    }
+  }
+};
+obj = {};
 let merged = Object.assign(tDefault.defaultRules.escape);
 obj.requiredFirstCharacters = undefined;
 obj.match = function match(arg0) {
@@ -26,7 +48,7 @@ obj.parse = function parse() {
 };
 obj[1] = obj;
 obj[2] = {
-  parse(arg0, fn, nested) {
+  parse(arg0, arg1, nested) {
     if (nested.nested) {
       let obj = { content: null };
       obj[0] = arg0[0];
@@ -42,7 +64,7 @@ obj[2] = {
         obj1 = {};
         const merged = Object.assign(nested);
         obj1.nested = true;
-        tmp9 = fn(result, obj1);
+        tmp9 = arg1(result, obj1);
       }
       return tmp9;
     }
@@ -67,7 +89,8 @@ obj[4] = {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = { id: tmp3, animated: "a" === tmp, size: 48 };
+    let obj = getAvatarURLDefault;
+    obj = { id: tmp3, animated: "a" === tmp, size: 48 };
     let emojiURL = obj.getEmojiURL(obj);
     const emojiURL1 = getAvatarURLDefault.getEmojiURL({ id: tmp3, animated: false, size: 48 });
     obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
@@ -96,12 +119,12 @@ obj[5] = {
           const items = [content];
           arr2 = items;
         }
-        mapped = arr2.map((item, index) => {
-          let tmp = item;
-          if ("channel" === item.type) {
+        mapped = arr2.map((type) => {
+          let tmp = type;
+          if ("channel" === type.type) {
             const obj = {};
-            const merged = Object.assign(item);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(item.iconType));
+            const merged = Object.assign(type);
+            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
@@ -126,12 +149,12 @@ obj[5] = {
           const items1 = [inContent];
           arr4 = items1;
         }
-        mapped1 = arr4.map((item, index) => {
-          let tmp = item;
-          if ("channel" === item.type) {
+        mapped1 = arr4.map((type) => {
+          let tmp = type;
+          if ("channel" === type.type) {
             const obj = {};
-            const merged = Object.assign(item);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(item.iconType));
+            const merged = Object.assign(type);
+            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
@@ -162,8 +185,8 @@ obj[6] = {
       gameName = gameMentionData.gameName;
     }
     if (gameName == null) {
-      const intl = getSystemLocale.intl;
-      gameName = intl.string(getSystemLocale.t["11pdXZ"]);
+      const intl = tmp2(1236).intl;
+      gameName = intl.string(tmp2(1236).t["11pdXZ"]);
     }
     obj[4] = gameName;
     return obj;
@@ -186,12 +209,12 @@ obj[7] = {
           const items = [content];
           arr2 = items;
         }
-        mapped = arr2.map((item, index) => {
-          let tmp = item;
-          if ("channel" === item.type) {
+        mapped = arr2.map((type) => {
+          let tmp = type;
+          if ("channel" === type.type) {
             const obj = {};
-            const merged = Object.assign(item);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(item.iconType));
+            const merged = Object.assign(type);
+            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
@@ -216,12 +239,12 @@ obj[7] = {
           const items1 = [inContent];
           arr4 = items1;
         }
-        mapped1 = arr4.map((item, index) => {
-          let tmp = item;
-          if ("channel" === item.type) {
+        mapped1 = arr4.map((type) => {
+          let tmp = type;
+          if ("channel" === type.type) {
             const obj = {};
-            const merged = Object.assign(item);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(item.iconType));
+            const merged = Object.assign(type);
+            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
@@ -255,12 +278,12 @@ obj[8] = {
           const items = [content];
           arr2 = items;
         }
-        mapped = arr2.map((item, index) => {
-          let tmp = item;
-          if ("channel" === item.type) {
+        mapped = arr2.map((type) => {
+          let tmp = type;
+          if ("channel" === type.type) {
             const obj = {};
-            const merged = Object.assign(item);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(item.iconType));
+            const merged = Object.assign(type);
+            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
@@ -285,12 +308,12 @@ obj[8] = {
           const items1 = [inContent];
           arr4 = items1;
         }
-        mapped1 = arr4.map((item, index) => {
-          let tmp = item;
-          if ("channel" === item.type) {
+        mapped1 = arr4.map((type) => {
+          let tmp = type;
+          if ("channel" === type.type) {
             const obj = {};
-            const merged = Object.assign(item);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(item.iconType));
+            const merged = Object.assign(type);
+            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
@@ -313,6 +336,31 @@ obj[9] = {
     return attachmentLink.parse(arg0, arg1, arg2);
   }
 };
+let obj1 = {
+  order: textRegexpDefault.order,
+  requiredFirstCharacters: ["<"],
+  match(arg0) {
+    return /^<(a)?:(\w+):(\d+)>/.exec(arg0);
+  },
+  parse(arg0, arg1, disableAnimatedEmoji) {
+    [, tmp, tmp2, tmp3] = arg0;
+    let flag = disableAnimatedEmoji.disableAnimatedEmoji;
+    if (flag === undefined) {
+      flag = false;
+    }
+    let obj = getAvatarURLDefault;
+    obj = { id: tmp3, animated: "a" === tmp, size: 48 };
+    let emojiURL = obj.getEmojiURL(obj);
+    const emojiURL1 = getAvatarURLDefault.getEmojiURL({ id: tmp3, animated: false, size: 48 });
+    obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
+    if (flag) {
+      emojiURL = emojiURL1;
+    }
+    obj[2] = emojiURL;
+    obj[3] = emojiURL1;
+    return obj;
+  }
+};
 obj[10] = {
   order: textRegexpDefault.order,
   requiredFirstCharacters: ["@"],
@@ -323,7 +371,17 @@ obj[10] = {
     return { type: "text", content: content[0] };
   }
 };
-let result = obj132.fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
+let obj2 = {
+  order: textRegexpDefault.order,
+  requiredFirstCharacters: ["@"],
+  match(arg0) {
+    return /^(@silent(?![^\s]))/.exec(arg0);
+  },
+  parse(content) {
+    return { type: "text", content: content[0] };
+  }
+};
+let result = set.fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
 
 export default obj;
 export const decorateWithIcon = function decorateWithIcon(str) {
@@ -337,12 +395,12 @@ export const decorateWithIcon = function decorateWithIcon(str) {
         const items = [str];
         arr2 = items;
       }
-      mapped = arr2.map((item, index) => {
-        let tmp = item;
-        if ("channel" === item.type) {
+      mapped = arr2.map((type) => {
+        let tmp = type;
+        if ("channel" === type.type) {
           const obj = {};
-          const merged = Object.assign(item);
-          const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(item.iconType));
+          const merged = Object.assign(type);
+          const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;

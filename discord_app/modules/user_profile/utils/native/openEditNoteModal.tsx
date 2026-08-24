@@ -1,11 +1,11 @@
 // === Module 12165: openEditNoteModal ===
 
 // Module 12165 (openEditNoteModal)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
-const result = obj132.fileFinishedImporting("modules/user_profile/utils/native/openEditNoteModal.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/utils/native/openEditNoteModal.tsx");
 
 export default function openEditNoteModal(closure_0) {
   _modDef5260.pushLazy(asyncRequireImpl(12166, dependencyMap.paths), closure_0, undefined, { presentation: "modal" });

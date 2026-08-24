@@ -3,8 +3,9 @@
 // Module 7202 (handleUserSettingsStoreUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_1 from "_getSystemLocale" /* 1994 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import set from "set" /* 2 */;
 
 function handleUserSettingsStoreUpdate() {
   if (locale === closure_1.locale) {
@@ -213,7 +214,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
     } else if (null == dependencyMap4[interactionId]) {
       const _Object = Object;
       const values = Object.values(obj);
-      if (values.some((item, index) => "checking" === item.state)) {
+      if (values.some((state) => "checking" === state.state)) {
         if (set.size >= 25) {
           set.delete(set.values().next().value);
           const iter = set.values();
@@ -440,33 +441,33 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
     config = config.config;
     const obj = { state: "success", config, fetchedAt: Date.now() };
     const storefronts = config.storefronts;
-    set = new Set(storefronts.map((item, index) => item.applicationId));
+    set = new Set(storefronts.map((applicationId) => applicationId.applicationId));
     const storefronts1 = config.storefronts;
-    const found = storefronts1.filter((item, index) => null != item.guildId);
-    set1 = new Set(found.map((item, index) => item.guildId));
+    const found = storefronts1.filter((guildId) => null != guildId.guildId);
+    set1 = new Set(found.map((guildId) => guildId.guildId));
     const storefronts2 = config.storefronts;
-    closure_17 = storefronts2.reduce((acc, item, index) => {
-      if (null != item.guildId) {
-        acc[item.guildId] = item.applicationId;
+    closure_17 = storefronts2.reduce((arg0, guildId) => {
+      if (null != guildId.guildId) {
+        arg0[guildId.guildId] = guildId.applicationId;
       }
-      return acc;
+      return arg0;
     }, {});
     const storefronts3 = config.storefronts;
-    closure_18 = storefronts3.reduce((acc, item, index) => {
-      if (null != item.guildId) {
-        ({ guildId: acc[item.applicationId], guildId: acc[item.gameId] } = item);
+    closure_18 = storefronts3.reduce((arg0, guildId) => {
+      if (null != guildId.guildId) {
+        ({ guildId: arg0[guildId.applicationId], guildId: arg0[guildId.gameId] } = guildId);
       }
-      return acc;
+      return arg0;
     }, {});
     const storefronts4 = config.storefronts;
-    closure_19 = storefronts4.reduce((acc, item, index) => {
-      ({ applicationId: acc[item.gameId], applicationId: acc[item.applicationId] } = item);
-      return acc;
+    closure_19 = storefronts4.reduce((arg0, arg1) => {
+      ({ applicationId: arg0[arg1.gameId], applicationId: arg0[arg1.applicationId] } = arg1);
+      return arg0;
     }, {});
     const storefronts5 = config.storefronts;
-    closure_20 = storefronts5.reduce((acc, item, index) => {
-      acc[item.applicationId] = item;
-      return acc;
+    closure_20 = storefronts5.reduce((arg0, applicationId) => {
+      arg0[applicationId.applicationId] = applicationId;
+      return arg0;
     }, {});
   },
   SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE: function handleStorefrontConfigFetchFailure() {
@@ -592,6 +593,6 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
     c22 = null;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontStore.tsx");
+const result = set.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontStore.tsx");
 
 export default socialLayerStorefrontStore;

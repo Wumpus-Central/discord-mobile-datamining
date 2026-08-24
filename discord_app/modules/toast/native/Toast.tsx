@@ -5,13 +5,13 @@ import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import map from "map" /* 4097 */;
 import Text from "Text" /* 4734 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function ToastIcon(recolorLegacyIcon) {
   ({ icon, IconComponent, iconColor } = recolorLegacyIcon);
   let obj = map;
@@ -62,16 +62,19 @@ function ToastContent(content) {
   return tmp4;
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.xxl, padding: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
+createCacheKey = { container: null, multilineContainer: null, contentContainer: null };
+createCacheKey = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.xxl, padding: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { marginLeft: 8, flexShrink: 1 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/toast/native/Toast.tsx");
+let obj1 = { paddingLeft: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/toast/native/Toast.tsx");
 
 export default function Toast(arg0) {
   c0 = undefined;
+  closure_1 = undefined;
   ({ icon, iconColor, IconComponent, content, containerStyle, recolorLegacyIcon } = arg0);
   const tmp = callback3();
   [tmp3, c0] = callback(React.useState(false), 2);
@@ -92,5 +95,5 @@ export default function Toast(arg0) {
   items[2] = containerStyle;
   const items1 = [callback2(ToastIcon, { icon, iconColor, IconComponent, recolorLegacyIcon }), callback2(ToastContent, { content, onTextLayout: callback })];
   obj[2] = items1;
-  return callback(View, obj);
+  return closure_7(View, obj);
 };

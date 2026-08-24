@@ -3,12 +3,12 @@
 // Module 16121 (useAutoSettingsSearchSessionAnalytics)
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
 import usePreviousDefault from "usePrevious" /* 6701 */;
-import noop from "noop" /* 19 */;
-import getState from "getState" /* 7383 */;
-import zustandStore from "zustandStore" /* 13993 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getState" /* 7383 */;
+import closure_5 from "zustandStore" /* 13993 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
 export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSearchSessionAnalytics() {
   const items = [closure_4];
@@ -35,10 +35,10 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
       tmp3 = field;
     }
     if (tmp3) {
-      callback(dependencyMap[7]).initialize();
-      const obj = callback(dependencyMap[7]);
+      callback(closure_1_2[7]).initialize();
+      const obj = callback(closure_1_2[7]);
     }
-    let tmp8 = !stateFromStores;
+    let tmp8 = !tmp2;
     if (!stateFromStores) {
       tmp8 = callback;
     }
@@ -46,8 +46,8 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
       tmp8 = field;
     }
     if (tmp8) {
-      callback(dependencyMap[7]).terminate();
-      const obj2 = callback(dependencyMap[7]);
+      callback(closure_1_2[7]).terminate();
+      const obj2 = callback(closure_1_2[7]);
     }
   }, items1);
   const items2 = [stateFromStores];

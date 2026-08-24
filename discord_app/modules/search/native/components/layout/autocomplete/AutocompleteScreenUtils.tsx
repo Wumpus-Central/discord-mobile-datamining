@@ -3,28 +3,17 @@
 // Module 15946 (getSearchQueryChannelIds)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import LinkIcon from "LinkIcon" /* 4318 */;
-import ImageIcon from "ImageIcon" /* 6882 */;
-import StickerIcon from "StickerIcon" /* 7990 */;
-import SoundboardIcon from "SoundboardIcon" /* 7993 */;
-import VideoIcon from "VideoIcon" /* 7998 */;
 import ForwardingIconDefault from "ForwardingIcon" /* 9087 */;
-import EmbedIcon from "EmbedIcon" /* 9828 */;
-import RobotIcon from "RobotIcon" /* 9832 */;
-import AttachmentIcon from "AttachmentIcon" /* 10051 */;
-import PollsIcon from "PollsIcon" /* 10272 */;
-import UserIcon from "UserIcon" /* 11004 */;
 import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import WebhookIcon from "WebhookIcon" /* 15947 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import prototype from "prototype" /* 11510 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "prototype" /* 11510 */;
 import { SearchListItemTypes } from "MessageEmbedTypes" /* 8507 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
 
 export const getSearchQueryChannelIds = function getSearchQueryChannelIds(items) {
   return new Set(store2.getChannelIds(items));
@@ -37,46 +26,47 @@ export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
     return set;
   } else {
     const _Set = Set;
-    const set1 = new Set(store2.getUserIds(items, prefixTag.searchTokenType));
+    const set1 = new Set(obj.getUserIds(items, prefixTag.searchTokenType));
     return set1;
   }
+  obj = store2;
 };
 export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
   const intl = getSystemLocale.intl;
   if (intl.string(getSystemLocale.t.nrpA5E) === text) {
     return ForwardingIconDefault;
   } else {
-    const intl3 = getSystemLocale.intl;
-    if (intl3.string(getSystemLocale.t.ZNR2fi) === text) {
-      return LinkIcon.LinkIcon;
+    const intl3 = tmp(1236).intl;
+    if (intl3.string(tmp(1236).t.ZNR2fi) === text) {
+      return tmp(4318).LinkIcon;
     } else {
-      const intl4 = getSystemLocale.intl;
-      if (intl4.string(getSystemLocale.t["20uQR3"]) === text) {
-        return EmbedIcon.EmbedIcon;
+      const intl4 = tmp(1236).intl;
+      if (intl4.string(tmp(1236).t["20uQR3"]) === text) {
+        return tmp(9828).EmbedIcon;
       } else {
-        const intl5 = getSystemLocale.intl;
-        if (intl5.string(getSystemLocale.t.L4lxyE) === text) {
-          return PollsIcon.PollsIcon;
+        const intl5 = tmp(1236).intl;
+        if (intl5.string(tmp(1236).t.L4lxyE) === text) {
+          return tmp(10272).PollsIcon;
         } else {
-          const intl6 = getSystemLocale.intl;
-          if (intl6.string(getSystemLocale.t["AV/v6i"]) === text) {
-            return AttachmentIcon.AttachmentIcon;
+          const intl6 = tmp(1236).intl;
+          if (intl6.string(tmp(1236).t["AV/v6i"]) === text) {
+            return tmp(10051).AttachmentIcon;
           } else {
-            const intl7 = getSystemLocale.intl;
-            if (intl7.string(getSystemLocale.t.XM9XGP) === text) {
-              return VideoIcon.VideoIcon;
+            const intl7 = tmp(1236).intl;
+            if (intl7.string(tmp(1236).t.XM9XGP) === text) {
+              return tmp(7998).VideoIcon;
             } else {
-              const intl8 = getSystemLocale.intl;
-              if (intl8.string(getSystemLocale.t.TNLcpx) === text) {
-                return ImageIcon.ImageIcon;
+              const intl8 = tmp(1236).intl;
+              if (intl8.string(tmp(1236).t.TNLcpx) === text) {
+                return tmp(6882).ImageIcon;
               } else {
-                const intl9 = getSystemLocale.intl;
-                if (intl9.string(getSystemLocale.t.F8Wf0e) === text) {
-                  return SoundboardIcon.SoundboardIcon;
+                const intl9 = tmp(1236).intl;
+                if (intl9.string(tmp(1236).t.F8Wf0e) === text) {
+                  return tmp(7993).SoundboardIcon;
                 } else {
-                  const intl2 = getSystemLocale.intl;
-                  if (intl2.string(getSystemLocale.t.PJgX2h) === text) {
-                    return StickerIcon.StickerIcon;
+                  const intl2 = tmp(1236).intl;
+                  if (intl2.string(tmp(1236).t.PJgX2h) === text) {
+                    return tmp(7990).StickerIcon;
                   }
                 }
               }
@@ -90,15 +80,15 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
 export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
   const intl = getSystemLocale.intl;
   if (intl.string(getSystemLocale.t.tPZo4p) === text) {
-    return UserIcon.UserIcon;
+    return tmp(11004).UserIcon;
   } else {
-    const intl3 = getSystemLocale.intl;
-    if (intl3.string(getSystemLocale.t.JL7sRS) === text) {
-      return RobotIcon.RobotIcon;
+    const intl3 = tmp(1236).intl;
+    if (intl3.string(tmp(1236).t.JL7sRS) === text) {
+      return tmp(9832).RobotIcon;
     } else {
-      const intl2 = getSystemLocale.intl;
-      if (intl2.string(getSystemLocale.t.WjkIKU) === text) {
-        return WebhookIcon.WebhookIcon;
+      const intl2 = tmp(1236).intl;
+      if (intl2.string(tmp(1236).t.WjkIKU) === text) {
+        return tmp(15947).WebhookIcon;
       }
     }
   }
@@ -118,6 +108,7 @@ export const toSearchListUserItem = function toSearchListUserItem(items, user, c
     }
     if (nickname == null) {
       nickname = nameFromUserDefault.getName(user);
+      const obj2 = nameFromUserDefault;
     }
     obj = { type: null, props: null };
     obj[0] = SearchListItemTypes.DM;
@@ -148,6 +139,7 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
       let nickname = store.getNickname(user.id);
       if (nickname == null) {
         nickname = nameFromUserDefault.getName(user);
+        const obj6 = nameFromUserDefault;
       }
       obj[2] = nickname;
       obj[3] = function onPress() {
@@ -160,14 +152,14 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
   } else {
     obj = { type: null, props: null };
     if (channel.isGroupDM()) {
-      obj[0] = SearchListItemTypes.GROUP_DM;
+      obj[0] = tmp.GROUP_DM;
       obj1 = { channel: null, onPress: null };
       obj1[0] = channel;
       obj1[1] = closure_1_8;
       obj[1] = obj1;
       let tmp2 = obj;
     } else {
-      obj[0] = SearchListItemTypes.GUILD_TEXT_CHANNEL;
+      obj[0] = tmp.GUILD_TEXT_CHANNEL;
       const obj2 = { channel: null, onPress: null };
       obj2[0] = channel;
       obj2[1] = closure_1_8;

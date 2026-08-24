@@ -1,13 +1,14 @@
 // === Module 11161: __INTERNAL_VIEW_CONFIG ===
 
 // Module 11161 (__INTERNAL_VIEW_CONFIG)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import result2 from "result" /* 26 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-let obj = { textColor: result2.colorAttribute, editable: true, shouldShowCursor: true, placeholder: true, placeholderColor: result2.colorAttribute, markAsSpoilerTitle: true, keyboardAppearance: true, selectionColor: result2.colorAttribute, setNoExtractUI: true, keyboardType: true, maxHeight: true, verticalInset: true };
+let obj = { uiViewClassName: "DCDChatInput", directEventTypes: { topChangeContentSize: { registrationName: "onChangeContentSize" }, topEndBlur: { registrationName: "onEndBlur" }, topBeginFocus: { registrationName: "onBeginFocus" }, topSelectionOrTextChange: { registrationName: "onSelectionOrTextChange" }, topTextFlushed: { registrationName: "onTextFlushed" }, topPasteImage: { registrationName: "onPasteImage" }, topPasteCommand: { registrationName: "onPasteCommand" }, topRequestSend: { registrationName: "onRequestSend" }, topTapAction: { registrationName: "onTapAction" } }, validAttributes: null };
+obj = { textColor: result2.colorAttribute, editable: true, shouldShowCursor: true, placeholder: true, placeholderColor: result2.colorAttribute, markAsSpoilerTitle: true, keyboardAppearance: true, selectionColor: result2.colorAttribute, setNoExtractUI: true, keyboardType: true, maxHeight: true, verticalInset: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onChangeContentSize: true, onEndBlur: true, onBeginFocus: true, onSelectionOrTextChange: true, onTextFlushed: true, onPasteImage: true, onPasteCommand: true, onRequestSend: true, onTapAction: true }));
 obj[2] = obj;
 obj = {
@@ -51,7 +52,7 @@ obj = {
   }
 };
 const value = setRuntimeConfigProvider.get("DCDChatInput", () => obj);
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx");
 
 export default value;
 export const __INTERNAL_VIEW_CONFIG = obj;

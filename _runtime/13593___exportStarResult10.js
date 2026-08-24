@@ -15,8 +15,8 @@ arg5.IsWellFormedUnitIdentifier = function IsWellFormedUnitIdentifier(GetOptionR
       return false;
     } else {
       [tmp3, tmp4] = parts;
-      if (__exportStarResult7.IsSanctionedSimpleUnitIdentifier(tmp3)) {
-        if (__exportStarResult7.IsSanctionedSimpleUnitIdentifier(tmp4)) {
+      if (tmp(13590).IsSanctionedSimpleUnitIdentifier(tmp3)) {
+        if (tmp(13590).IsSanctionedSimpleUnitIdentifier(tmp4)) {
           return true;
         }
       }

@@ -4,6 +4,7 @@
 import setEnabledDefault from "setEnabled" /* 4346 */;
 
 for (const key10016 in require("isRingerSilent")) {
+  let tmp2 = key10016;
   arg5[key10016] = require("isRingerSilent")[key10016];
   continue;
 }

@@ -4,13 +4,13 @@
 import reset from "reset" /* 7264 */;
 import subscribeMembers from "subscribeMembers" /* 7276 */;
 import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8462 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import getMemberListId from "getMemberListId" /* 7249 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getMemberListId" /* 7249 */;
 
-require = fn;
+require = arg1;
 let c6 = "@here";
-const result = require("obj132").fileFinishedImporting("modules/channel_text_area/ChatInputContentCallbacks.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_text_area/ChatInputContentCallbacks.tsx");
 
 export const tryUpdateSubscriptionForHereMention = function tryUpdateSubscriptionForHereMention(arr, maxMessageLength, guild_id, id) {
   const groups = props.getProps(guild_id, id).groups;
@@ -34,6 +34,7 @@ export const tryUpdateSubscriptionForHereMention = function tryUpdateSubscriptio
       if (flag) {
         subscribeMembers.subscribeChannel(guild_id, id, reset.DEFAULT_RANGES);
         flag = true;
+        const obj = subscribeMembers;
       }
       tmp7 = flag;
     }
@@ -65,7 +66,7 @@ export const useHereMentionCallback = function useHereMentionCallback(arg0, arg1
     if (!tmp6) {
       let tmp9 = !tmp8;
       if (!(arr.length < 5 || arr.length > closure_3)) {
-        let flag = -1 !== arr.indexOf(memo);
+        let flag = -1 !== arr.indexOf(closure_1_6);
         if (flag) {
           closure_1_0(closure_1_2[3]).subscribeChannel(closure_1, closure_2, closure_1_0(closure_1_2[4]).DEFAULT_RANGES);
           flag = true;

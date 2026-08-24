@@ -6,24 +6,24 @@ export default function _iterableToArrayLimit(iterable) {
   let tmp7 = null;
   if (null != iterable) {
     const _Symbol = Symbol;
-    let prop = typeof Symbol !== "undefined";
+    iterable = typeof Symbol !== "undefined";
     if (typeof Symbol !== "undefined") {
       const _Symbol2 = Symbol;
-      prop = iterable[Symbol.iterator];
+      iterable = iterable[Symbol.iterator];
     }
-    if (!prop) {
-      prop = iterable[Symbol.iterator];
+    if (!iterable) {
+      iterable = iterable[Symbol.iterator];
     }
-    tmp7 = prop;
+    tmp7 = iterable;
   }
   if (null != tmp7) {
     let flag2 = false;
     try {
       const items = [];
       try {
-        const call = tmp10.call;
+        const call = tmp9.call;
         if (typeof call === "unknown") {
-          let iter = tmp10();
+          let iter = tmp9();
         } else {
           iter = call(iterable);
         }
@@ -35,11 +35,11 @@ export default function _iterableToArrayLimit(iterable) {
               if (flag2) {
                 throw tmp6;
               }
-            } catch (tmp23) {
+            } catch (tmp22) {
               if (tmp2) {
                 throw tmp;
               } else {
-                throw tmp23;
+                throw tmp22;
               }
             }
           } else {
@@ -59,7 +59,9 @@ export default function _iterableToArrayLimit(iterable) {
             if (items.length !== arg1) {
               while (true) {
                 let flag4 = true;
+                let tmp14 = next;
                 let call2 = next.call;
+                let tmp15 = iter;
                 if (typeof call2 === "unknown") {
                   let iter4 = next();
                 } else {
@@ -70,6 +72,7 @@ export default function _iterableToArrayLimit(iterable) {
                 if (done2) {
                   break;
                 } else {
+                  let tmp16 = iter4;
                   let arr = items.push(iter5.value);
                   if (items.length !== arg1) {
                     continue;
@@ -99,17 +102,17 @@ export default function _iterableToArrayLimit(iterable) {
           } else {
             return items;
           }
-        } catch (tmp35) {
+        } catch (tmp34) {
           if (tmp2) {
             throw tmp;
           } else {
-            throw tmp35;
+            throw tmp34;
           }
         }
       } catch (tmp6) {
         flag2 = true;
       }
-    } catch (tmp38) {
+    } catch (tmp37) {
       try {
         if (!tmp4) {
           if (tmp5 != obj.return) {
@@ -127,13 +130,13 @@ export default function _iterableToArrayLimit(iterable) {
         if (tmp2) {
           throw tmp;
         } else {
-          throw tmp38;
+          throw tmp37;
         }
-      } catch (tmp47) {
+      } catch (tmp46) {
         if (tmp2) {
           throw tmp;
         } else {
-          throw tmp47;
+          throw tmp46;
         }
       }
     }

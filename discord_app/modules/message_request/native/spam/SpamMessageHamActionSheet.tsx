@@ -10,22 +10,25 @@ import Background from "Background" /* 6950 */;
 import ActionSheetCloseButton from "ActionSheetCloseButton" /* 7176 */;
 import Form from "Form" /* 8083 */;
 import useMessageRequestActions from "useMessageRequestActions" /* 11610 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { header: null, container: null, buttonContainer: null, switch: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj1 = { marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { paddingHorizontal: 0 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
+const obj2 = { marginTop: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
 
 export default function SpamMessageRequestHamActionSheet(arg0) {
   ({ channel: require, onConfirm: importDefault, onCancel: dependencyMap } = arg0);
@@ -43,14 +46,14 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj = {
     user: stateFromStores,
     onError() {
-      callback(4094);
-      const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      let obj = callback(4094);
+      obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1236).intl;
       obj[1] = intl.string(recipientId(1236).t["EDYbS+"]);
       obj[2] = callback(8555);
       obj.open(obj);
     },
-    onAcceptSuccess(onRejectSuccess) {
+    onAcceptSuccess(arg0) {
       callback(4342).hideActionSheet();
     }
   };
@@ -67,7 +70,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj1[0] = intl.string(getSystemLocale.t["9ty6yc"]);
   obj1[1] = callback(ActionSheetCloseButton.ActionSheetCloseButton, {
     onPress() {
-      importDefault(closure_1_2[12]).hideActionSheet();
+      closure_1_1(closure_1_2[12]).hideActionSheet();
       dependencyMap();
     }
   });
@@ -111,7 +114,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj5[1] = callback(Button.Button, obj6);
   items2[1] = callback(c5, obj5);
   obj3[1] = items2;
-  items1[1] = callback(c5, obj3);
+  items1[1] = closure_8(c5, obj3);
   obj[1] = items1;
-  return callback(Background.BottomSheet, obj);
+  return closure_8(Background.BottomSheet, obj);
 };

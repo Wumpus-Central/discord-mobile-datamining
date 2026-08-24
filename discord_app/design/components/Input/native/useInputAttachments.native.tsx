@@ -3,12 +3,12 @@
 // Module 7344 (InputAttachmentContainer)
 import Text from "Text" /* 4734 */;
 import ICON_SIZE from "ICON_SIZE" /* 7187 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 class InputAttachmentContainer {
   constructor(arg0) {
     ({ content, style } = global);
@@ -55,7 +55,7 @@ class InputAttachmentContainer {
   }
 }
 ({ Platform, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
-const result = require("obj132").fileFinishedImporting("design/components/Input/native/useInputAttachments.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Input/native/useInputAttachments.native.tsx");
 
 export const estimateAttachmentWidth = function estimateAttachmentWidth(arg0, arg1) {
   let num = 0;
@@ -80,8 +80,8 @@ export const renderInputAttachment = function renderInputAttachment(arg0, leadin
 };
 export { InputAttachmentContainer };
 export const useInputAttachments = function useInputAttachments(size, leading) {
-  inputStyles(trailingIcon[7]);
-  let obj = { size: size.size, hasLeadingIcon: null != size.leadingIcon, isRefreshEnabled: leadingIcon(trailingIcon[6])("useInputAttachments") };
+  let obj = inputStyles(trailingIcon[7]);
+  obj = { size: size.size, hasLeadingIcon: null != size.leadingIcon, isRefreshEnabled: leadingIcon(trailingIcon[6])("useInputAttachments") };
   inputStyles = obj.useInputStyles(obj);
   leadingIcon = size.leadingIcon;
   ({ leadingText, trailingIcon } = size);
@@ -173,18 +173,25 @@ export const useInputAttachments = function useInputAttachments(size, leading) {
       }
       leadingIcon2 = inputStyles.leadingIcon;
     } else if (null != trailingIcon) {
-    } else if (null != trailingText) {
-      const obj4 = { variant: "text-md/normal", style: null, children: null };
-      obj4[1] = tmp12;
-      obj4[2] = trailingText;
-      const tmp13 = jsx(tmp3(trailingIcon[5]).Text, { variant: "text-md/normal", style: null, children: null });
+      let tmp13 = <trailingIcon size="xs" color="input-icon-default" />;
+    } else {
+      tmp13 = null;
+      if (null != trailingText) {
+        const obj4 = { variant: "text-md/normal", style: null, children: null };
+        obj4[1] = tmp12;
+        obj4[2] = trailingText;
+        tmp13 = jsx(tmp3(tmp[5]).Text, { variant: "text-md/normal", style: null, children: null });
+      }
     }
   } else if (null != leadingIcon) {
-  } else if (null != leadingText) {
-    const obj5 = { variant: "text-md/normal", style: null, children: null };
-    obj5[1] = tmp6;
-    obj5[2] = leadingText;
-    const tmp7 = jsx(tmp3(trailingIcon[5]).Text, { variant: "text-md/normal", style: null, children: null });
+    let tmp7 = <leadingIcon size="xs" color="input-icon-default" />;
+  } else {
+    tmp7 = null;
+    if (null != leadingText) {
+      const obj5 = { variant: "text-md/normal", style: null, children: null };
+      obj5[1] = tmp6;
+      obj5[2] = leadingText;
+      tmp7 = jsx(tmp3(tmp[5]).Text, { variant: "text-md/normal", style: null, children: null });
+    }
   }
-  const tmp2 = leadingIcon(trailingIcon[6])("useInputAttachments");
 };

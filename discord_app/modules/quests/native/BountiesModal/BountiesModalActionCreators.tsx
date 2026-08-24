@@ -1,12 +1,12 @@
 // === Module 14359: BOUNTIES_MODAL_KEY ===
 
 // Module 14359 (BOUNTIES_MODAL_KEY)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
 const BOUNTIES_MODAL = "BOUNTIES_MODAL";
-const result = obj132.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx");
 
 export default {
   showModal(arg0) {

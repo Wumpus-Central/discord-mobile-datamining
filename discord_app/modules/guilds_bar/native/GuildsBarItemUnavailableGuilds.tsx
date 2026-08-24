@@ -2,19 +2,19 @@
 
 // Module 15612
 import ThemesDefault from "Themes" /* 712 */;
-import obj132Default from "obj132" /* 4827 */;
 import registerAssetDefault from "registerAsset" /* 15603 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4826 */;
+import closure_5 from "handleConnectionOpen" /* 4826 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ Image: c3, Pressable: c4 } = get_ActivityIndicator);
-let obj = { marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" };
+let obj = { unavailableGuilds: null, unavailableGuildsIcon: null };
+obj = { marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" };
 obj[0] = obj;
-const createCacheKey = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+createCacheKey = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj[1] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarItemUnavailableGuilds() {
@@ -24,17 +24,19 @@ const memoResult = importAllResult.memo(function GuildsBarItemUnavailableGuilds(
   stateFromStores = obj.useStateFromStores(items, () => obj.totalUnavailableGuilds);
   let tmp5 = null;
   if (stateFromStores > 0) {
+    obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     let intl = tmp2(1236).intl;
     obj = { count: null };
     obj[0] = stateFromStores;
     obj[1] = intl.formatToPlainString(tmp2(1236).t["MEpX+2"], obj);
     obj[2] = function onPress() {
-      let obj = { title: null, body: null };
-      const intl = stateFromStores(dependencyMap[7]).intl;
-      obj[0] = intl.string(stateFromStores(dependencyMap[7]).t.R0RpRX);
-      const intl2 = stateFromStores(dependencyMap[7]).intl;
+      let obj = closure_1_1(closure_1_2[6]);
+      obj = { title: null, body: null };
+      const intl = stateFromStores(closure_1_2[7]).intl;
+      obj[0] = intl.string(stateFromStores(closure_1_2[7]).t.R0RpRX);
+      const intl2 = stateFromStores(closure_1_2[7]).intl;
       obj = { count: stateFromStores };
-      obj[1] = intl2.format(stateFromStores(dependencyMap[7]).t["TnH05/"], obj);
+      obj[1] = intl2.format(stateFromStores(closure_1_2[7]).t["TnH05/"], obj);
       obj.show(obj);
     };
     obj[3] = tmp.unavailableGuilds;
@@ -46,6 +48,6 @@ const memoResult = importAllResult.memo(function GuildsBarItemUnavailableGuilds(
   }
   return tmp5;
 });
-const result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx");
+const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx");
 
 export default memoResult;

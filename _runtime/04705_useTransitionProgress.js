@@ -2,7 +2,7 @@
 
 // Module 4705 (useTransitionProgress)
 import noopDefault from "noop" /* 4684 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 
 export default function useTransitionProgress() {

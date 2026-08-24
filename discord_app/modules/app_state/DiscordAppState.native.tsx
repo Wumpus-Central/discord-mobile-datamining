@@ -2,13 +2,13 @@
 
 // Module 10501
 import initialize from "initialize" /* 589 */;
-import getState from "getState" /* 7383 */;
+import closure_2 from "getState" /* 7383 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/app_state/DiscordAppState.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_state/DiscordAppState.native.tsx");
 
 export default {
-  canUIRequestGatewaySocket(closure_1_2) {
+  canUIRequestGatewaySocket(arg0) {
     return "active" === store.getState();
   },
   getState() {

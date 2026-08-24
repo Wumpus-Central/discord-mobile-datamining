@@ -4,6 +4,10 @@
 import _mod741 from "module_741" /* 741 */;
 
 const match = /[^.]+$/.exec(_mod741 && _mod741.keys && _mod741.keys.IE_PROTO || "");
+let str = "";
+if (match) {
+  str = `Symbol(src)_1.${tmp2}`;
+}
 
 export default function isMasked(arg0) {
   let tmp2 = str;

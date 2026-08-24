@@ -1,7 +1,7 @@
 // === Module 5082: recordChannelFetchStart ===
 
 // Module 5082 (recordChannelFetchStart)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 class MessageCacheStats {
   constructor() {
@@ -18,7 +18,7 @@ class MessageCacheStats {
   }
 }
 const prototype = MessageCacheStats.prototype;
-prototype["recordChannelFetchStart"] = function recordChannelFetchStart(channelId, timestamp, before, after, limit) {
+prototype["recordChannelFetchStart"] = function recordChannelFetchStart(channelId, arg1, before, after, limit) {
   let tmp = before;
   const channelsFetchStarted = this.channelsFetchStarted;
   channelsFetchStarted.add(channelId);
@@ -33,7 +33,7 @@ prototype["recordChannelFetchStart"] = function recordChannelFetchStart(channelI
     tmp5 = null;
   }
   const obj = { channelId, before: null, after: null, limit: null, startTime: null };
-  const combined = "" + channelId + ":" + timestamp + ":" + tmp3 + ":" + tmp5 + ":" + limit;
+  const combined = "" + channelId + ":" + arg1 + ":" + tmp3 + ":" + tmp5 + ":" + limit;
   if (tmp == null) {
     tmp = null;
   }
@@ -73,19 +73,19 @@ prototype["recordChannelFetchedLocal"] = function recordChannelFetchedLocal(basi
     value.localMessageDetails = obj;
   }
 };
-prototype["recordChannelFetchedNetwork"] = function recordChannelFetchedNetwork(closure_0, closure_1_10, closure_1_1, closure_1_2, closure_1_3, body) {
-  let tmp = closure_1_1;
+prototype["recordChannelFetchedNetwork"] = function recordChannelFetchedNetwork(arg0, arg1, arg2, arg3, arg4, body) {
+  let tmp = arg2;
   const channelsFetchedNetwork = this.channelsFetchedNetwork;
-  channelsFetchedNetwork.add(closure_0);
+  channelsFetchedNetwork.add(arg0);
   const fetchLogs = this.fetchLogs;
-  if (closure_1_1 == null) {
+  if (arg2 == null) {
     tmp = null;
   }
-  let tmp3 = obj1;
-  if (obj1 == null) {
+  let tmp3 = arg3;
+  if (arg3 == null) {
     tmp3 = null;
   }
-  const value = fetchLogs.get("" + closure_0 + ":" + closure_1_10 + ":" + tmp + ":" + tmp3 + ":" + closure_1_3);
+  const value = fetchLogs.get("" + arg0 + ":" + arg1 + ":" + tmp + ":" + tmp3 + ":" + arg4);
   if (null != value) {
     const obj = { loadTime: null, count: null, lastMessageId: null };
     const _Date = Date;
@@ -101,15 +101,14 @@ prototype["recordChannelFetchedNetwork"] = function recordChannelFetchedNetwork(
   }
 };
 let obj = Object.create(MessageCacheStats.prototype);
-obj[0] = new Set();
 let set = new Set();
+obj[0] = set;
 obj[1] = new Set();
 let set1 = new Set();
 obj[2] = new Set();
 let set2 = new Set();
 obj[3] = new Map();
-const map = new Map();
-let result = obj132.fileFinishedImporting("modules/local_message_caching/MessageCacheStats.tsx");
+let result = set.fileFinishedImporting("modules/local_message_caching/MessageCacheStats.tsx");
 
 export default obj;
 export const INITIAL_MESSAGE_FETCH_KEY = "NativeAppStartup";

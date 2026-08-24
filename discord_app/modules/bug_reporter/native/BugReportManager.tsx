@@ -2,13 +2,13 @@
 
 // Module 10155 (showNotification)
 import initializeDefault from "initialize" /* 5038 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import refreshSourceMapCookie from "refreshSourceMapCookie" /* 706 */;
+import closure_6 from "refreshSourceMapCookie" /* 706 */;
 import { InAppNotificationTypes } from "ME" /* 676 */;
 import { NativePermissionStatus } from "NativePermissionStatus" /* 4839 */;
 
-const require = fn;
+const require = arg1;
 function showNotification(uri) {
   function _getAndroidScreenshot() {
     const self = this;
@@ -289,6 +289,6 @@ prototype["initBugReporter"] = function initBugReporter() {
   })();
 };
 const bugReportManager = new BugReportManager();
-const result = require("obj132").fileFinishedImporting("modules/bug_reporter/native/BugReportManager.tsx");
+const result = require("set").fileFinishedImporting("modules/bug_reporter/native/BugReportManager.tsx");
 
 export default bugReportManager;

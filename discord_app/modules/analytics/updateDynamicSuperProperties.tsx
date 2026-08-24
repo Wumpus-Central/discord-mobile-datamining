@@ -1,12 +1,12 @@
 // === Module 16494: updateDynamicSuperProperties ===
 
 // Module 16494 (updateDynamicSuperProperties)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import trackHeartbeat from "trackHeartbeat" /* 5054 */;
 import _modDef10501 from "module_10501" /* 10501 */;
 
-let result = obj132.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
+let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
   let obj = trackHeartbeat;
@@ -24,6 +24,8 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   if (uuid !== prop) {
     obj.client_heartbeat_session_id = uuid;
   }
+  const obj2 = encodeProperties;
+  const tmp = require;
   const state = _modDef10501.getState();
   let client_app_state;
   if (superProperties != null) {

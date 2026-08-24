@@ -1,22 +1,21 @@
 // === Module 11761: useDMMessageToReport ===
 
 // Module 11761 (useDMMessageToReport)
-import obj132 from "obj132" /* 2 */;
-import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 11618 */;
-import loadMessageRequestData from "loadMessageRequestData" /* 11763 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
+const result = set.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
 
 export const useDMMessageToReport = function useDMMessageToReport(channel, id, arg2) {
   let isReportable = arg2;
   if (!arg2) {
     isReportable = obj.useIsRelationshipTypeSpamReportable(id);
   }
-  let tmp2Result = useLongestChannelMessageBeforeReply;
+  let tmp2Result = tmp2(11618);
   const longestChannelMessageBeforeReply = tmp2Result.useLongestChannelMessageBeforeReply(channel.id, id);
-  tmp2Result = loadMessageRequestData;
+  tmp2Result = tmp2(11763);
   const messageRequestPreview = tmp2Result.useMessageRequestPreview(channel, { enabled: isReportable });
-  let message = longestChannelMessageBeforeReply;
+  let message = messageRequestPreview.message;
+  message = longestChannelMessageBeforeReply;
   ({ loaded, error } = messageRequestPreview);
   if (longestChannelMessageBeforeReply == null) {
     id = undefined;

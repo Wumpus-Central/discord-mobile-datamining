@@ -5,7 +5,7 @@ import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
@@ -23,7 +23,7 @@ function handleUserSettingsProtoStoreChange() {
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
     const mapped = recentUses.map(Number);
-    obj.recentUses = mapped.filter((item, index) => item > 0);
+    obj.recentUses = mapped.filter((arg0) => arg0 > 0);
     return obj;
   }), closure_6.pendingUsages);
 }
@@ -123,46 +123,52 @@ obj = {
 };
 const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(dispatcherDefault, obj);
 let tmp3 = new DEFAULT_FRECENCYDefault(obj);
-const result = require("obj132").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
 
 export default applicationCommandFrecencyStore;
 export const getTopRealCommands = function getTopRealCommands(arg0) {
   const set = new Set();
   const iter = arg0[Symbol.iterator]();
   while (iter !== undefined) {
+    let tmp = closure_4;
     let first = str.split(closure_4)[0];
     let _Number = Number;
     let tmp3 = first;
     if (Number(first) > 0) {
+      let tmp4 = first;
       let addResult = set.add(tmp3);
     }
+    let tmp6 = closure_3;
     if (set.size >= closure_3) {
+      let tmp7 = iter;
       iter.return();
       break;
     }
     let items = [];
+    let tmp8 = items;
+    let tmp9 = set;
+    let num = 0;
     let arraySpreadResult = HermesBuiltin.arraySpread(set, 0);
     return items;
   }
-  str = iter.next();
 };
 export const getFilteredTopCommands = function getFilteredTopCommands(arr) {
   closure_0 = arg1;
-  const found = arr.filter((item, index) => {
-    const hasItem = item.includes(":");
+  const found = arr.filter((arr) => {
+    const hasItem = arr.includes(":");
     let tmp2 = !hasItem;
     if (hasItem) {
       let guild;
       if (closure_0 != null) {
-        guild = closure_0.guild;
+        guild = tmp3.guild;
       }
       let tmp6 = null != guild;
       if (tmp6) {
-        tmp6 = closure_0.guild.id === item.split(":")[1];
+        tmp6 = tmp3.guild.id === arr.split(":")[1];
       }
       tmp2 = tmp6;
     }
     return tmp2;
   });
-  return found.map((item, index) => item.split(":")[0]);
+  return found.map((arg0) => arg0.split(":")[0]);
 };

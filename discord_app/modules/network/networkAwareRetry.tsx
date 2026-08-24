@@ -1,10 +1,10 @@
 // === Module 13063: _networkAwareRetry ===
 
 // Module 13063 (_networkAwareRetry)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
 
-const require = fn;
+const require = arg1;
 function _networkAwareRetry() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -162,7 +162,7 @@ function _networkAwareRetry() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/network/networkAwareRetry.tsx");
+const result = require("set").fileFinishedImporting("modules/network/networkAwareRetry.tsx");
 
 export default function networkAwareRetry() {
   const self = this;

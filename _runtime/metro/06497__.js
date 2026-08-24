@@ -32,7 +32,7 @@ arg5.GestureObjects = {
     const rotationGesture = new _isNativeReflectConstruct6.RotationGesture();
     return rotationGesture;
   },
-  Fling(clonedAndRemappedConfig) {
+  Fling() {
     const flingGesture = new _isNativeReflectConstruct7.FlingGesture();
     return flingGesture;
   },

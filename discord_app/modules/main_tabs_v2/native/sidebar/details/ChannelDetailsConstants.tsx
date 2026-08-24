@@ -1,11 +1,11 @@
 // === Module 9922: ChannelDetailsNavigatorScreens ===
 
 // Module 9922 (ChannelDetailsNavigatorScreens)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 
 const sum = MessageEmbedTypes.SEARCH_BAR_HEIGHT + 40;
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
 
 export const ChannelDetailsNavigatorScreens = { DETAILS: "root", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", PINNED_MESSAGES: "pinned-messages" };
 export const ChannelDetailsButtonTypes = { SEARCH: "search", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", MORE: "more" };

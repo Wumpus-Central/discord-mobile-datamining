@@ -1,10 +1,10 @@
 // === Module 8639: useFastestListUnexpectedItemSizeCallback ===
 
 // Module 8639 (useFastestListUnexpectedItemSizeCallback)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
 
 export default function useFastestListUnexpectedItemSizeCallback(arg0) {
   closure_0 = arg0;
@@ -69,8 +69,7 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
       obj[2] = str;
       obj[3] = joined;
       obj[4] = ref.current.listId;
-      ref(dependencyMap[1]).logFastestListError("Expected item size mismatch.", obj);
-      const obj3 = ref(dependencyMap[1]);
+      ref(closure_1_1[1]).logFastestListError("Expected item size mismatch.", obj);
     }
     let type1;
     if (type != null) {

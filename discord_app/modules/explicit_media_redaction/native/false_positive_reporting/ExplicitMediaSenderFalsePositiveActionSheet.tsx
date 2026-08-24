@@ -1,25 +1,27 @@
 // === Module 11100: ExplicitMediaObscuredFalsePositiveActionSheet ===
 
 // Module 11100 (ExplicitMediaObscuredFalsePositiveActionSheet)
-import noop from "noop" /* 19 */;
-import getFpMessageInfo from "getFpMessageInfo" /* 5002 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getFpMessageInfo" /* 5002 */;
 import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx");
 
 export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
+  dependencyMap = undefined;
+  let React;
   let reportFalsePositive;
   let obj = channelId(647);
   const items = [reportFalsePositive];
   const stateFromStores = obj.useStateFromStores(items, () => reportFalsePositive.getFpMessageInfo(messageId));
   const attachments = stateFromStores.attachments;
-  dependencyMap = attachments.map((item, index) => item.id);
+  dependencyMap = attachments.map((id) => id.id);
   const attachments1 = stateFromStores.attachments;
-  const React = attachments1.map((item, index) => item.filename);
+  React = attachments1.map((filename) => filename.filename);
   obj = {
     onSuccess() {
       channelId(10871).handleSuccess(closure_1_5);

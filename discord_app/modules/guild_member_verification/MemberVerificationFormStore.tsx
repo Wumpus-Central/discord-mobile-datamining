@@ -6,7 +6,7 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
 
-require = fn;
+require = arg1;
 let obj = { version: "", description: "", formFields: [] };
 let closure_4 = {};
 const Store = initializeDefault.Store;
@@ -41,6 +41,7 @@ obj = {
       obj[3] = guild;
       closure_4[guild.id] = obj;
       flag = true;
+      const tmp = closure_4;
     }
     return flag;
   },
@@ -57,6 +58,7 @@ obj = {
       const merged = Object.assign(tmp2);
       const merged1 = Object.assign(form);
       dependencyMap[guildId] = obj;
+      const tmp = dependencyMap;
     }
   },
   MEMBER_VERIFICATION_FORM_FETCH_FAIL: function handleVerificationFormFetchFail(guildId) {
@@ -76,7 +78,7 @@ obj = {
   }
 };
 const memberVerificationFormStore = new MemberVerificationFormStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/MemberVerificationFormStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/MemberVerificationFormStore.tsx");
 
 export default memberVerificationFormStore;
 export const NO_MEMBER_VERIFICATION_FORM = obj;

@@ -1,13 +1,14 @@
 // === Module 9579: getBundleDescription ===
 
 // Module 9579 (getBundleDescription)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 
-function getBundleDescription(bundledProducts, flag) {
-  if (flag === undefined) {
+function getBundleDescription(bundledProducts) {
+  let flag = arg1;
+  if (arg1 === undefined) {
     flag = false;
   }
   if (flag) {
@@ -28,23 +29,45 @@ function getBundleDescription(bundledProducts, flag) {
     const items = [];
     let flag2 = false;
     for (const item10012 of bundledProducts1) {
+      let tmp4 = item10012;
       let type = item10012.type;
+      let tmp5 = require;
+      let tmp6 = require;
+      let tmp7 = dependencyMap;
+      let tmp8 = dependencyMap;
       if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-        let intl2 = getSystemLocale.intl;
+        let tmp13 = tmp5;
+        let tmp14 = tmp7;
+        let intl2 = tmp6(1236).intl;
         obj = { itemName: null };
-        obj[0] = item10012.name;
-        let arr = items.push(intl2.formatToPlainString(getSystemLocale.t.Ntv9Jt, obj));
-      } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-        let intl = getSystemLocale.intl;
-        obj = { itemName: null };
-        obj[0] = item10012.name;
-        arr = items.push(intl.formatToPlainString(getSystemLocale.t["3Y8q7a"], obj));
-      } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-        let intl6 = getSystemLocale.intl;
-        obj1 = { itemName: null };
-        obj1[0] = item10012.name;
-        let arr1 = items.push(intl6.formatToPlainString(getSystemLocale.t["2keXky"], obj1));
-        flag2 = true;
+        let tmp15 = item10012;
+        obj[0] = tmp4.name;
+        let arr = items.push(intl2.formatToPlainString(tmp6(1236).t.Ntv9Jt, obj));
+      } else {
+        let tmp33 = tmp5;
+        let tmp34 = tmp7;
+        if (tmp6(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+          let tmp9 = tmp5;
+          let tmp10 = tmp7;
+          let intl = tmp6(1236).intl;
+          obj = { itemName: null };
+          let tmp11 = item10012;
+          obj[0] = tmp4.name;
+          arr = items.push(intl.formatToPlainString(tmp6(1236).t["3Y8q7a"], obj));
+        } else {
+          let tmp35 = tmp5;
+          let tmp36 = tmp7;
+          if (tmp6(1949).CollectiblesItemType.NAMEPLATE === type) {
+            let tmp37 = tmp5;
+            let tmp38 = tmp7;
+            let intl6 = tmp6(1236).intl;
+            obj1 = { itemName: null };
+            let tmp39 = item10012;
+            obj1[0] = tmp4.name;
+            let arr1 = items.push(intl6.formatToPlainString(tmp6(1236).t["2keXky"], obj1));
+            flag2 = true;
+          }
+        }
       }
       continue;
     }
@@ -65,7 +88,7 @@ function getBundleDescription(bundledProducts, flag) {
   }
 }
 const useMemo = noop.useMemo;
-const result = obj132.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
 
 export const useProductDescription = function useProductDescription(product) {
   closure_0 = product;
@@ -76,21 +99,21 @@ export const useProductDescription = function useProductDescription(product) {
   const items = [product, flag];
   return useMemo(() => {
     if (null != product) {
-      if (null != product.summary) {
-        if ("" !== product.summary) {
-          if (product.type === product(flag[2]).CollectiblesItemType.BUNDLE) {
-            const summary = product.summary;
+      if (null != tmp.summary) {
+        if ("" !== tmp.summary) {
+          if (tmp.type === product(flag[2]).CollectiblesItemType.BUNDLE) {
+            const summary = tmp.summary;
             if (summary.includes("{joinedItems}")) {
-              return product.summary.replace("{joinedItems}", getBundleDescription(product, flag));
+              return tmp.summary.replace("{joinedItems}", closure_1_3(tmp, flag));
             }
           }
-          return product.summary;
+          return tmp.summary;
         }
       }
     }
     let type;
     if (product != null) {
-      type = product.type;
+      type = tmp.type;
     }
     if (product(flag[2]).CollectiblesItemType.AVATAR_DECORATION === type) {
       const intl4 = product(flag[1]).intl;
@@ -105,7 +128,7 @@ export const useProductDescription = function useProductDescription(product) {
       const intl = product(flag[1]).intl;
       return intl.string(product(flag[1]).t.fWzWPp);
     } else if (product(flag[2]).CollectiblesItemType.BUNDLE === type) {
-      return getBundleDescription(product, flag);
+      return closure_1_3(tmp, flag);
     } else {
       return "";
     }

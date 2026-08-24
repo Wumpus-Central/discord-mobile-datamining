@@ -1,13 +1,13 @@
 // === Module 9652: enforcing ===
 
 // Module 9652 (enforcing)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 let obj = { SPEAKERPHONE: "SPEAKERPHONE", WIRED_HEADSET: "WIRED_HEADSET", EARPIECE: "EARPIECE", BLUETOOTH_HEADSET: "BLUETOOTH_HEADSET", INVALID: "INVALID" };
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAudioManagerModule");
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
 
 export default enforcing;
 export const AudioDeviceType = obj;

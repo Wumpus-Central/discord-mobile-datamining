@@ -3,11 +3,11 @@
 // Module 14827 (route)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeAlertSettings from "computeAlertSettings" /* 10014 */;
+import closure_2 from "computeAlertSettings" /* 10014 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-{
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.D9yVAH);
@@ -30,6 +30,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");
 
 export default createToggle;

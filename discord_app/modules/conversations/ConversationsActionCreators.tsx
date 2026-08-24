@@ -6,13 +6,13 @@ import trackInviteDefault from "trackInvite" /* 7427 */;
 import fetchSurveyDetailsDefault from "fetchSurveyDetails" /* 9873 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 9880 */;
 import ConversationsAnalytics2 from "ConversationsAnalytics" /* 12686 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import removePendingListFetch from "removePendingListFetch" /* 5014 */;
-import initialize from "initialize" /* 12685 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "removePendingListFetch" /* 5014 */;
+import closure_5 from "initialize" /* 12685 */;
 import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 5016 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _fetchChannelConversations() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -119,6 +119,7 @@ function _fetchChannelConversations() {
                         dependencyMap = undefined;
                       }
                       obj3.message_limit = dependencyMap;
+                      const tmp60 = obj3;
                     }
                     c6 = 1;
                     const HTTP = callback(530).HTTP;
@@ -266,7 +267,7 @@ function _fetchConversationMessages() {
                 dependencyMap = tmp18;
                 let obj3 = closure_1_4;
                 ({ includeMessageReferences, includeReactions } = previewLimit);
-                const conversationMetadata = closure_1_4.getConversationMetadata(callback, tmp50);
+                const conversationMetadata = closure_1_4.getConversationMetadata(tmp48, tmp50);
                 if (null == previewLimit) {
                   let fullyHydrated;
                   if (!tmp20) {
@@ -284,14 +285,14 @@ function _fetchConversationMessages() {
                   if (!obj3.isConversationFetchPending(tmp50, tmp18)) {
                     let obj4 = callback2(709);
                     obj1 = { type: "CONVERSATION_FETCH_START", channelId: null, conversationId: null, full: null };
-                    obj1[1] = callback;
+                    obj1[1] = tmp48;
                     obj1[2] = tmp50;
                     obj1[3] = tmp18;
                     obj4.dispatch(obj1);
                     c8 = 1;
-                    const HTTP = callback(530).HTTP;
+                    const HTTP = tmp52(530).HTTP;
                     const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
-                    obj2[0] = closure_1_7.CHANNEL_CONVERSATION_MESSAGES(callback, tmp50);
+                    obj2[0] = closure_1_7.CHANNEL_CONVERSATION_MESSAGES(tmp48, tmp50);
                     obj3 = { limit: null, include_message_references: null, include_reactions: null };
                     obj3[0] = previewLimit;
                     obj3[1] = includeMessageReferences;
@@ -306,6 +307,7 @@ function _fetchConversationMessages() {
                 }
               }
               obj14 = callback(12682);
+              tmp52 = callback;
             }
           } else {
             if (1 === tmp7) {
@@ -359,7 +361,7 @@ function _fetchConversationMessages() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
 
 export const fetchChannelConversations = function fetchChannelConversations(arg0) {
   const self = this;
@@ -379,7 +381,8 @@ export const setSelectedConversation = function setSelectedConversation(channelI
   if (arg3 === undefined) {
     flag = true;
   }
-  let obj = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
+  let obj = dispatcherDefault;
+  obj = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
   obj.dispatch(obj);
   fetchConversationMessages(channelId, guildId, conversationId, { includeReactions: true, includeMessageReferences: true });
   conversationMetadata = conversationMetadata.getConversationMetadata(channelId, conversationId);
@@ -399,11 +402,13 @@ export const setSelectedConversation = function setSelectedConversation(channelI
   }
 };
 export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
-  const obj = { type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId };
+  let obj = dispatcherDefault;
+  obj = { type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId };
   obj.dispatch(obj);
 };
 export const setConversationFeedbackRating = function setConversationFeedbackRating(closure_0, closure_1, down) {
-  const obj = { type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: closure_0, conversationId: closure_1, rating: down };
+  let obj = dispatcherDefault;
+  obj = { type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: closure_0, conversationId: closure_1, rating: down };
   obj.dispatch(obj);
 };
 export { fetchConversationMessages };
@@ -412,6 +417,7 @@ export const trackTopicalNavigationEntrypointImpression = function trackTopicalN
   const result = ConversationsAnalytics.trackEntrypointImpression({ channelId: id, conversationCount: stateFromStores1 });
   if (closure_5.shouldTriggerOnNextExposure()) {
     fetchSurveyDetailsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
+    const obj2 = fetchSurveyDetailsDefault;
   }
   dispatcherDefault.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
 };

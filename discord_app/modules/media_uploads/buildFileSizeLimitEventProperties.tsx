@@ -1,9 +1,9 @@
 // === Module 8469: buildFileSizeLimitEventProperties ===
 
 // Module 8469 (buildFileSizeLimitEventProperties)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
+const result = set.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
 export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
   ({ guildId, channelId } = arg0);

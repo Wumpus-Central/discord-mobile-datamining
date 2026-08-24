@@ -1,11 +1,11 @@
 // === Module 9929: useNavigatorBackHandler ===
 
 // Module 9929 (useNavigatorBackHandler)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 let closure_3 = {};
-const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
 
 export default function useNavigatorBackHandler() {
   let tmp = arg0;
@@ -32,7 +32,7 @@ export default function useNavigatorBackHandler() {
     if (ref.current) {
       let isIOSResult = "POP" === data.data.action.type;
       if (isIOSResult) {
-        let obj = onBeforeGoBack(navigation[2]);
+        let obj = closure_1_0(closure_1_1[2]);
         isIOSResult = obj.isIOS();
       }
       if (closure_0 != null) {

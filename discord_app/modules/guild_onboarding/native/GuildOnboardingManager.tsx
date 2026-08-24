@@ -2,13 +2,13 @@
 
 // Module 16584 (prototype)
 import initializeDefault from "initialize" /* 5038 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "handleConnectionOpen" /* 4197 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 
-let require = fn;
+let require = arg1;
 let c8 = null;
 let c9 = null;
 initializeDefault;
@@ -94,6 +94,6 @@ let prototype = function GuildOnboardingManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
 
 export default prototype;

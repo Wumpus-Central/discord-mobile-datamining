@@ -1,10 +1,10 @@
 // === Module 8347: getFallbackHeroColor ===
 
 // Module 8347 (getFallbackHeroColor)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 
-const result = obj132.fileFinishedImporting("modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx");
+const result = set.fileFinishedImporting("modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx");
 
 export const getFallbackHeroColor = function getFallbackHeroColor(stateFromStores1, saturation) {
   const internal = ThemesDefault.internal;

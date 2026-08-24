@@ -1,35 +1,40 @@
 // === Module 15568: Wrapper ===
 
 // Module 15568 (Wrapper)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel" /* 5383 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_5 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "insertUnsortedGuilds" /* 5078 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_9 from "updateVoiceState" /* 4542 */;
 import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function Wrapper(folder) {
   folder = folder.folder;
+  closure_1 = undefined;
+  let memo;
   let stateFromStoresArray;
+  let stateFromStoresArray1;
   let stateFromStoresArray2;
   let formatResult3;
+  c7 = undefined;
   const tmp = callback2();
   closure_1 = tmp;
-  const memo = stateFromStoresArray.useMemo(() => ({ isMuted: false }), []);
+  let obj = stateFromStoresArray;
+  memo = stateFromStoresArray.useMemo(() => ({ isMuted: false }), []);
   obj1 = folder(memo[10]);
   let items = [stateFromStoresArray2, closure_8];
   stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const guildIds = folder.guildIds;
-    return guildIds.filter((item, index) => {
-      const isMutedResult = muted.isMuted(item);
+    return guildIds.filter((arg0) => {
+      const isMutedResult = muted.isMuted(arg0);
       let tmp2 = !isMutedResult;
       if (!isMutedResult) {
-        tmp2 = mentionCount.getMentionCount(item) > 0;
+        tmp2 = mentionCount.getMentionCount(arg0) > 0;
       }
       return tmp2;
     });
@@ -51,13 +56,13 @@ function Wrapper(folder) {
   });
   let obj3 = folder(memo[10]);
   const items2 = [stateFromStoresArray2, closure_8];
-  const stateFromStoresArray1 = obj3.useStateFromStoresArray(items2, () => {
+  stateFromStoresArray1 = obj3.useStateFromStoresArray(items2, () => {
     const guildIds = folder.guildIds;
-    return guildIds.filter((item, index) => {
-      const isMutedResult = muted.isMuted(item);
+    return guildIds.filter((arg0) => {
+      const isMutedResult = muted.isMuted(arg0);
       let hasUnreadResult = !isMutedResult;
       if (!isMutedResult) {
-        hasUnreadResult = closure_5.hasUnread(item);
+        hasUnreadResult = closure_5.hasUnread(arg0);
       }
       return hasUnreadResult;
     });
@@ -80,36 +85,39 @@ function Wrapper(folder) {
   const items4 = [closure_9, formatResult3, closure_8];
   stateFromStoresArray2 = folder(memo[10]).useStateFromStoresArray(items4, () => {
     const guildIds = folder.guildIds;
-    return guildIds.filter((item, index) => {
-      closure_0 = item;
-      if (muted.isMuted(item)) {
+    return guildIds.filter((arg0) => {
+      closure_0 = arg0;
+      if (muted.isMuted(arg0)) {
         return false;
       } else {
-        guild = guild.getGuild(item);
+        guild = guild.getGuild(arg0);
         if (guild != null) {
           const afkChannelId = guild.afkChannelId;
         }
         const _Set = Set;
         const set = new Set();
         const _Object = Object;
-        const values = Object.values(voiceStates.getVoiceStates(item));
+        const values = Object.values(voiceStates.getVoiceStates(arg0));
         for (const item10027 of values) {
+          let tmp12 = item10027;
           let tmp13 = null != item10027.channelId;
           if (tmp13) {
-            tmp13 = item10027.channelId !== afkChannelId;
+            let tmp14 = item10027;
+            tmp13 = tmp12.channelId !== afkChannelId;
           }
           if (tmp13) {
-            let addResult = set.add(item10027.channelId);
+            let tmp15 = item10027;
+            let addResult = set.add(tmp12.channelId);
           }
           continue;
         }
         const items = [];
         HermesBuiltin.arraySpread(set, 0);
-        return items.some((item, index) => {
-          const isCategoryMutedResult = closure_1_8.isCategoryMuted(closure_0, item);
+        return items.some((id) => {
+          const isCategoryMutedResult = closure_1_8.isCategoryMuted(closure_0, id);
           let tmp3 = !isCategoryMutedResult;
           if (!isCategoryMutedResult) {
-            tmp3 = !closure_1_8.isChannelMuted(closure_0, item);
+            tmp3 = !closure_1_8.isChannelMuted(closure_0, id);
           }
           return tmp3;
         });
@@ -137,10 +145,11 @@ function Wrapper(folder) {
     if (memo.isMuted) {
       let BellSlashIcon = folder(memo[11]).BellSlashIcon;
     } else {
-      BellSlashIcon = NOOP;
+      BellSlashIcon = closure_1_10;
     }
+    let obj = { style: closure_1.title, children: null };
     const items = [closure_1_11(BellSlashIcon, { size: "xs" }), ];
-    const obj = { variant: "text-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
+    obj = { variant: "text-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
     let folderName = folder.folderName;
     if (folderName == null) {
       const intl = folder(memo[13]).intl;
@@ -152,7 +161,7 @@ function Wrapper(folder) {
     return closure_1_12(stateFromStoresArray1, obj);
   }, items6);
   let intl = folder(memo[13]).intl;
-  let obj = { num: folder.guildIds.length };
+  obj = { num: folder.guildIds.length };
   const formatResult = intl.format(folder(memo[13]).t.knOfkb, obj);
   formatResult3 = formatResult;
   c7 = "text-muted";
@@ -176,7 +185,7 @@ function Wrapper(folder) {
       tmp20 = memo2;
     }
     obj1[1] = tmp20;
-    return callback(tmp3(tmp4[14]).HomeDrawerSharedItem, obj1);
+    return closure_11(tmp3(tmp4[14]).HomeDrawerSharedItem, obj1);
   }
   if (stateFromStoresArray2.length > 0) {
     if (null != stateFromStores2) {
@@ -206,11 +215,10 @@ function Wrapper(folder) {
     str = "text-muted";
     tmp14 = formatResult3;
   }
-  const obj7 = folder(memo[10]);
 }
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
-const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
 
 export default function HomeDrawerFolderExpandedChildren(folderId) {
   folderId = folderId.folderId;

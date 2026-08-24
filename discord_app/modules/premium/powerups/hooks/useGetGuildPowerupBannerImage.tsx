@@ -2,10 +2,10 @@
 
 // Module 11689 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 589 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
 
 export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
   initialize;
@@ -24,19 +24,19 @@ export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
     staticImageUrl = animatedImageUrl.staticImageUrl;
   }
 };
-export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(arr, closure_1_4, arg2) {
-  if (null != arr) {
+export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(found, closure_1_4, arg2) {
+  if (null != found) {
     if (!closure_1_4) {
       if (false !== arg2) {
         if (!arg3) {
-          let staticImageUrl = arr.animatedImageUrl;
+          let staticImageUrl = found.animatedImageUrl;
           if (staticImageUrl == null) {
-            staticImageUrl = arr.staticImageUrl;
+            staticImageUrl = found.staticImageUrl;
           }
         }
         return staticImageUrl;
       }
     }
-    staticImageUrl = arr.staticImageUrl;
+    staticImageUrl = found.staticImageUrl;
   }
 };

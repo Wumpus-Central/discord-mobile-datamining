@@ -2,7 +2,7 @@
 
 // Module 343 (KeyboardImpl)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const KeyboardImpl = importDefault;
 class KeyboardImpl {
@@ -67,14 +67,14 @@ const items = [
         tmp = 0 !== duration;
       }
       if (tmp) {
-        KeyboardImpl(342);
-        let obj = { duration: null, update: null };
+        let obj = KeyboardImpl(342);
+        obj = { duration: null, update: null };
         obj[0] = duration;
         obj = { duration: null, type: null };
         obj[0] = duration;
         let str = null != easing;
         if (str) {
-          str = KeyboardImpl(342).Types[easing];
+          str = tmp2(342).Types[easing];
         }
         if (!str) {
           str = "keyboard";
@@ -82,6 +82,7 @@ const items = [
         obj[1] = str;
         obj[1] = obj;
         obj.configureNext(obj);
+        tmp2 = KeyboardImpl;
       }
     }
   }

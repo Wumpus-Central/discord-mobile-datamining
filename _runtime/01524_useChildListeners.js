@@ -1,7 +1,7 @@
 // === Module 1524: useChildListeners ===
 
 // Module 1524 (useChildListeners)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
 
 export const useChildListeners = function useChildListeners() {
@@ -23,7 +23,8 @@ export const useChildListeners = function useChildListeners() {
         }
         if (tmp4) {
           c2 = true;
-          table[table].splice(index, 1);
+          table[tmp2].splice(index, 1);
+          const arr2 = table[tmp2];
         }
       };
     }, items)

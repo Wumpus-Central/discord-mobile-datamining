@@ -9,15 +9,16 @@ import contextDefault from "context" /* 14533 */;
 import QuestDockWithGestureAnimation from "QuestDockWithGestureAnimation" /* 14534 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_5 = { isRendered: true, isVisibleToUser: true };
-const createCacheKey = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, zIndex: 1001, elevation: 1001 };
+createCacheKey = { overlay: { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1000, elevation: 1000, pointerEvents: "box-none" }, questDockContainer: null };
+createCacheKey = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, zIndex: 1001, elevation: 1001 };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/quests/native/QuestBarPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/quests/native/QuestBarPreview.tsx");
 
 export const QuestBarPreview = function QuestBarPreview(quest) {
   quest = quest.quest;

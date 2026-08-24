@@ -7,7 +7,7 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 noopAll;
 let closure_1 = createCacheKey.createStyles({ icon: { flexShrink: 0 } });
-const result = require("obj132").fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
 
 export default function ActivityStatusIcon(arg0) {
   ({ icon, style } = arg0);

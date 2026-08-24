@@ -5,10 +5,10 @@ import items from "items" /* 4830 */;
 import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 4834 */;
 import getCreateAttachmentURLDefault from "getCreateAttachmentURL" /* 4872 */;
 import getCreateAttachmentURLDefault2 from "getCreateAttachmentURL" /* 4874 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 ({ Endpoints: c5, MAX_UPLOAD_COUNT: closure_6 } = ME);
 class MessageAttachmentUploadTarget {
 }
@@ -40,18 +40,18 @@ Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   set: undefined
 });
 const obj = { MESSAGE_ATTACHMENT: 0, [0]: "MESSAGE_ATTACHMENT", GUILD_PRODUCT_ATTACHMENT: 1, [1]: "GUILD_PRODUCT_ATTACHMENT", GRAVITY_ATTACHMENT: 2, [2]: "GRAVITY_ATTACHMENT" };
-const result = require("obj132").fileFinishedImporting("lib/uploader/UploadTargets.tsx");
+const result = require("set").fileFinishedImporting("lib/uploader/UploadTargets.tsx");
 
 export const UploadTargets = obj;
 export const getUploadTarget = function getUploadTarget(target) {
   if (obj.GUILD_PRODUCT_ATTACHMENT === target) {
     const tmp14 = new getCreateAttachmentURLDefault();
     return tmp14;
-  } else if (obj.GRAVITY_ATTACHMENT === target) {
+  } else if (tmp.GRAVITY_ATTACHMENT === target) {
     const tmp8 = new getCreateAttachmentURLDefault2();
     return tmp8;
   } else {
-    const MESSAGE_ATTACHMENT = obj.MESSAGE_ATTACHMENT;
+    const MESSAGE_ATTACHMENT = tmp.MESSAGE_ATTACHMENT;
     if (typeof MessageAttachmentUploadTarget !== "function") {
       HermesBuiltin.throwTypeError();
     }

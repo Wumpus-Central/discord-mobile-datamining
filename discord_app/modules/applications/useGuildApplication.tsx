@@ -1,13 +1,13 @@
 // === Module 16900: useGuildApplication ===
 
 // Module 16900 (useGuildApplication)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import addApplication from "addApplication" /* 4478 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "addApplication" /* 4478 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/applications/useGuildApplication.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/applications/useGuildApplication.tsx");
 
 export default function useGuildApplication(arg0, arg1) {
   const _require = arg0;
@@ -51,12 +51,12 @@ export default function useGuildApplication(arg0, arg1) {
           } else {
             closure_1 = tmp4;
             closure_0 = tmp8;
-            if (null == application) {
+            if (null == closure_1_2) {
               if (null != closure_1_0) {
                 closure_1_6(true);
                 v0(true);
                 v0 = 2;
-                obj1 = closure_1_1(application[5]);
+                obj1 = closure_1_1(closure_1_2[5]);
                 obj1 = { type: null, includeTeam: true };
                 obj1[0] = closure_1_1;
                 v02 = 3;
@@ -72,7 +72,7 @@ export default function useGuildApplication(arg0, arg1) {
           if (2 === tmp8) {
             v0 = 1;
             closure_0 = closure_2;
-            const aPIError = new closure_1_0(application[6]).APIError(closure_0);
+            const aPIError = new closure_1_0(closure_1_2[6]).APIError(closure_0);
             v02(aPIError);
           } else if (arg0 === 1) {
             c5 = 3;

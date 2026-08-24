@@ -6,9 +6,9 @@ import useReplyActions from "useReplyActions" /* 15762 */;
 import UploadPlaceholderDefault from "UploadPlaceholder" /* 15767 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");
 
 export default function CustomStatusEntryRow(content) {
   content = content.content;

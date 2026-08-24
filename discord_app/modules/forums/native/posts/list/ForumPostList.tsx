@@ -7,17 +7,17 @@ import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11179 */;
 import ForumPostAppliedTagPills from "ForumPostAppliedTagPills" /* 11189 */;
 import ForumPostListBodyDefault from "ForumPostListBody" /* 11199 */;
 import ForumPostListFooterDefault from "ForumPostListFooter" /* 11202 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ChannelFlags } from "set" /* 1398 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 }, content: { flex: 1, marginBottom: 12 } });
-const result = require("obj132").fileFinishedImporting("modules/forums/native/posts/list/ForumPostList.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/list/ForumPostList.tsx");
 
 export default function ForumPostList(arg0) {
   ({ firstMessage, hasUnreads, thread } = arg0);
@@ -50,12 +50,12 @@ export default function ForumPostList(arg0) {
     }
     items[1] = tmp13;
     obj[1] = items;
-    tmp6Result = callback(View, obj);
+    tmp6Result = tmp6(tmp8, obj);
   }
   const obj2 = { children: null };
   const items1 = [tmp6Result, callback2(ForumPostListBodyDefault, { thread, firstMessage, hasUnreads, isNew, messageContent, media, isEmbed, isLocalDeviceMedia, firstMessageLoaded, senderModifier })];
   obj[1] = items1;
-  const items2 = [callback(View, obj), callback2(ForumPostListFooterDefault, { thread, firstMessage, hasUnreads, parentChannel })];
+  const items2 = [closure_7(View, obj), callback2(ForumPostListFooterDefault, { thread, firstMessage, hasUnreads, parentChannel })];
   obj2[0] = items2;
-  return callback(closure_8, obj2);
+  return closure_7(closure_8, obj2);
 };

@@ -7,7 +7,7 @@ import VoicePanelModes from "VoicePanelModes" /* 11440 */;
 import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: c5, VoicePanelModes: closure_6 } = VoicePanelModes);
 let closure_9 = { code: "function VoicePanelControlsDimOverlayTsx1(){const{windowDimensions,getDrawerSpec,safeArea,controlsSpecs,VoicePanelControlsModes,mode,VoicePanelModes,interpolate,wrapperSpecs,BACKDROP_OPAQUE_MAX_OPACITY}=this.__closure;const{height:height}=windowDimensions.get();const{minHeight:minHeight,maxHeight:maxHeight}=getDrawerSpec(height,safeArea.get().top);if(controlsSpecs.get().mode!==VoicePanelControlsModes.DRAWER||mode.get()!==VoicePanelModes.PANEL){return 0;}return interpolate(wrapperSpecs.get().height,[minHeight,maxHeight],[0,BACKDROP_OPAQUE_MAX_OPACITY],'clamp');}" };
@@ -19,14 +19,16 @@ const memoResult = importAllResult.memo(function VoicePanelControlsDimOverlay(wr
   let windowDimensions;
   let setControlsMode;
   let controlsSpecs;
+  let safeArea;
+  let mode;
   let derivedValue;
   let derivedValue1;
   const context = controlsSpecs.useContext(windowDimensions(setControlsMode[5]));
   windowDimensions = context.windowDimensions;
   setControlsMode = context.setControlsMode;
   controlsSpecs = context.controlsSpecs;
-  const safeArea = context.safeArea;
-  const mode = context.mode;
+  safeArea = context.safeArea;
+  mode = context.mode;
   let obj = wrapperSpecs(setControlsMode[6]);
   class A {
     constructor() {
@@ -113,6 +115,6 @@ const memoResult = importAllResult.memo(function VoicePanelControlsDimOverlay(wr
   }, items);
   return jsx(wrapperSpecs(setControlsMode[10]).Backdrop, { onDismiss, style, animatedProps, opaque: true, "aria-hidden": true });
 });
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDimOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDimOverlay.tsx");
 
 export default memoResult;

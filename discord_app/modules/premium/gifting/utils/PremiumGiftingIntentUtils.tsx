@@ -1,7 +1,7 @@
 // === Module 10994: GiftIntentType ===
 
 // Module 10994 (GiftIntentType)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -14,7 +14,7 @@ items1[1] = items2;
 const items3 = [AnalyticsLocations.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK, GiftIntentType.FRIEND_ANNIVERSARY];
 items1[2] = items3;
 const map = new Map(items1);
-const result = obj132.fileFinishedImporting("modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx");
+const result = set.fileFinishedImporting("modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx");
 
 export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGiftingIntentAnalyticsLocation(arg0) {
   if (arg0 === GiftIntentType.FRIEND_ANNIVERSARY) {

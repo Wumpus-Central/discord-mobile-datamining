@@ -1,12 +1,12 @@
 // === Module 12877: useNextTenureBadge ===
 
 // Module 12877 (useNextTenureBadge)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import usePremiumSince from "usePremiumSince" /* 9496 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 ({ TIERED_TENURE_BADGE_ORDER: obj1, TENURE_BADGES: c3 } = GuildFeatures);
-const result = obj132.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx");
+const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx");
 
 export const useNextTenureBadge = function useNextTenureBadge() {
   const tieredTenureBadgeData = usePremiumSince.useTieredTenureBadgeData();
@@ -25,4 +25,6 @@ export const useNextTenureBadge = function useNextTenureBadge() {
     }
     return tmp7;
   }
+  const obj = usePremiumSince;
+  const tmp = require;
 };

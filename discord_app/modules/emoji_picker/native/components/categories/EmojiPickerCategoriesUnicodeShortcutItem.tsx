@@ -1,20 +1,20 @@
 // === Module 9440: EmojiPickerCategoriesUnicodeShortcutItem ===
 
 // Module 9440 (EmojiPickerCategoriesUnicodeShortcutItem)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = ME);
-const createCacheKey = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
+createCacheKey = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 let closure_8 = createCacheKey.createStyles({ itemInner: createCacheKey, fadedItemOpacity: { opacity: 0.5 } });
 let closure_9 = { code: "function EmojiPickerCategoriesUnicodeShortcutItemTsx1(){const{blockRef}=this.__closure;return blockRef.get();}" };
 let closure_10 = { code: "function EmojiPickerCategoriesUnicodeShortcutItemTsx2(blockRef,previous){const{cheapWorkletShallowEqual,categoryIndex,EXPRESSION_FOOTER_HEIGHT,unicodeShortcutVisible,runOnJS,setUnicodeShortcutVisible}=this.__closure;if(blockRef==null||cheapWorkletShallowEqual(blockRef,previous!==null&&previous!==void 0?previous:undefined)){return;}const categoryScrollPos=categoryIndex*EXPRESSION_FOOTER_HEIGHT;const categoryUnicodeShortcutVisible=categoryScrollPos>blockRef.end-(unicodeShortcutVisible?0:EXPRESSION_FOOTER_HEIGHT);runOnJS(setUnicodeShortcutVisible)(categoryUnicodeShortcutVisible);}" };
-let result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesUnicodeShortcutItem.tsx");
+let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesUnicodeShortcutItem.tsx");
 
 export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
   blockRef = blockRef.blockRef;
@@ -22,10 +22,11 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
   const categoryIndex = blockRef.categoryIndex;
   const onPress = blockRef.onPress;
   let first;
+  closure_5 = undefined;
   let tmp = onPress(first.useState(false), 2);
   first = tmp[0];
   closure_5 = tmp3;
-  blockRef(categoryIndex[6]);
+  let obj = blockRef(categoryIndex[6]);
   const fn = function f() {
     return blockRef.get();
   };
@@ -41,14 +42,16 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
           num = closure_1_6;
         }
         const diff = end.end - num;
-        blockRef(categoryIndex[6]).runOnJS(closure_5)(result > diff);
-        const tmp2Result = blockRef(categoryIndex[6]);
+        tmp2(tmp3[6]).runOnJS(closure_5)(result > diff);
+        const tmp2Result = tmp2(tmp3[6]);
       }
       obj = blockRef(categoryIndex[7]);
       tmp = current;
+      tmp2 = blockRef;
+      tmp3 = categoryIndex;
     }
   };
-  let obj = { cheapWorkletShallowEqual: blockRef(categoryIndex[7]).cheapWorkletShallowEqual, categoryIndex, EXPRESSION_FOOTER_HEIGHT: closure_6, unicodeShortcutVisible: first, runOnJS: blockRef(categoryIndex[6]).runOnJS, setUnicodeShortcutVisible: tmp3 };
+  obj = { cheapWorkletShallowEqual: blockRef(categoryIndex[7]).cheapWorkletShallowEqual, categoryIndex, EXPRESSION_FOOTER_HEIGHT: closure_6, unicodeShortcutVisible: first, runOnJS: blockRef(categoryIndex[6]).runOnJS, setUnicodeShortcutVisible: tmp3 };
   fn2.__closure = obj;
   fn2.__workletHash = 4994136030029;
   fn2.__initData = closure_10;

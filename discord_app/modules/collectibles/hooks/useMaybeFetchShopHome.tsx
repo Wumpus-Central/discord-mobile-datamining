@@ -1,35 +1,44 @@
 // === Module 14953: useMaybeFetchCollectiblesShopHome ===
 
 // Module 14953 (useMaybeFetchCollectiblesShopHome)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import getHash from "getHash" /* 4288 */;
-import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
-import map from "map" /* 5352 */;
+import closure_6 from "getHash" /* 4288 */;
+import closure_7 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_8 from "map" /* 5352 */;
 import items from "items" /* 678 */;
 
-const require = fn;
+const require = arg1;
 ({ useEffect: c3, useCallback: c4, useMemo: c5 } = noop);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: c9, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: c10 } = items);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchShopHome.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchShopHome.tsx");
 
-export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo, flag) {
+export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo) {
   const _require = HOME;
   dependencyMap = arg1;
   const callback = memo;
-  if (flag === undefined) {
+  let flag = arg3;
+  if (arg3 === undefined) {
     flag = false;
   }
+  let stateFromStores;
+  let stateFromStores1;
+  let callback2;
   closure_6 = undefined;
   closure_7 = undefined;
   closure_8 = undefined;
+  closure_9 = undefined;
+  closure_10 = undefined;
+  closure_11 = undefined;
+  closure_12 = undefined;
+  closure_13 = undefined;
   let hasExpiredShopBlocks;
   closure_15 = undefined;
   let obj = _require(589);
   let items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_7];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
+  stateFromStores1 = _require(589).useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
   const obj2 = _require(589);
   const items2 = [closure_8];
   const tmp3 = callback(_require(589).useStateFromStoresArray(items2, () => {
@@ -39,7 +48,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
       num = 0;
     }
     items[1] = num;
-    let num2 = store.getLastErrorTimestamp(closure_0);
+    let num2 = obj.getLastErrorTimestamp(tmp);
     if (num2 == null) {
       num2 = 0;
     }
@@ -52,7 +61,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
     return items;
   }), 8);
   [tmp4, tmp5] = tmp3;
-  const callback2 = tmp5;
+  callback2 = tmp5;
   closure_6 = tmp6;
   closure_7 = tmp7;
   closure_8 = tmp8;

@@ -1,16 +1,18 @@
 // === Module 12452: videoStreamTimedOut ===
 
 // Module 12452 (videoStreamTimedOut)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = obj132.fileFinishedImporting("modules/errors/VideoStreamReadyActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/errors/VideoStreamReadyActionCreators.tsx");
 
 export const videoStreamTimedOut = function videoStreamTimedOut(current, closure_1, closure_6, closure_2) {
-  const obj = { type: "VIDEO_STREAM_READY_TIMEOUT", videoStreamId: current, mediaContext: closure_6, userId: closure_1, streamKey: closure_2 };
+  let obj = dispatcherDefault;
+  obj = { type: "VIDEO_STREAM_READY_TIMEOUT", videoStreamId: current, mediaContext: closure_6, userId: closure_1, streamKey: closure_2 };
   obj.dispatch(obj);
 };
 export const clearVideoStreamTimeout = function clearVideoStreamTimeout(DEFAULT, closure_0) {
-  const obj = { type: "CLEAR_VIDEO_STREAM_READY_TIMEOUT", mediaContext: DEFAULT, userId: closure_0 };
+  let obj = dispatcherDefault;
+  obj = { type: "CLEAR_VIDEO_STREAM_READY_TIMEOUT", mediaContext: DEFAULT, userId: closure_0 };
   obj.dispatch(obj);
 };

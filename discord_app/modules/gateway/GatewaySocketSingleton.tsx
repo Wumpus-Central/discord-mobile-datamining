@@ -5,13 +5,13 @@ import timestampDefault from "timestamp" /* 3 */;
 import setRequestedByAll from "setRequestedBy" /* 675 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import obj132Default from "obj132" /* 4004 */;
+import setDefault from "set" /* 4004 */;
 import _modDef10501 from "module_10501" /* 10501 */;
 import noopDefault from "noop" /* 13188 */;
 import getInitialStateDefault from "getInitialState" /* 13227 */;
 import guildIdDefault from "guildId" /* 13230 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import obj132 from "obj132" /* 500 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import set from "set" /* 500 */;
 import importDefaultResult from "awaitOnline" /* 1474 */;
 
 let closure_4 = new timestampDefault("ConnectionStore");
@@ -20,6 +20,7 @@ const tmp3 = new getInitialStateDefault(obj);
 let closure_6 = tmp3;
 const tmp2 = new timestampDefault("ConnectionStore");
 obj.handleIdentify = () => {
+  obj = token;
   token = token.getToken();
   obj = { hasToken: null != token };
   closure_4.verbose("handleIdentify called", obj);
@@ -31,9 +32,11 @@ obj.handleIdentify = () => {
     obj = { token: null, properties: null, presence: null };
     obj[0] = token;
     obj1 = {};
+    const obj5 = _modDef10501;
     const merged = Object.assign(expandEventPropertiesDefault.getSuperProperties());
     obj1.client_app_state = state;
     obj1.is_fast_connect = false;
+    const obj8 = expandEventPropertiesDefault;
     obj1.gateway_connect_reasons = setRequestedByAll.describeConnectionReasons();
     if (null != installationForTracking) {
       const obj2 = { installation_id: null };
@@ -48,8 +51,8 @@ obj.handleIdentify = () => {
     return obj;
   }
 };
-if (obj132.isDesktop()) {
-  const powerMonitor = obj132Default.powerMonitor;
+if (set.isDesktop()) {
+  const powerMonitor = setDefault.powerMonitor;
   powerMonitor.on("resume", () => {
     obj.expeditedHeartbeat(5000, "power monitor resumed");
   });
@@ -69,7 +72,7 @@ obj.on("close", (arg0) => {
   ({ code, reason } = arg0);
   dispatcherDefault.dispatch({ type: "CONNECTION_INTERRUPTED", code, reason });
 });
-const result = obj132.fileFinishedImporting("modules/gateway/GatewaySocketSingleton.tsx");
+const result = set.fileFinishedImporting("modules/gateway/GatewaySocketSingleton.tsx");
 
 export const socket = obj;
 export const localPresenceState = tmp3;

@@ -11,6 +11,6 @@ importDefaultResult = new importDefaultResult(require("validateSocketClient").va
   info.info(combined, stripSensitiveLoggingDataDefault(arg0));
 });
 const tmp2 = new timestampDefault("RPCServer:PostMessage");
-const result = require("obj132").fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
 
 export default importDefaultResult;

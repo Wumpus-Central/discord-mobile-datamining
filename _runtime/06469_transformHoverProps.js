@@ -38,11 +38,12 @@ fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_useH
 const items = [["effect", "hoverEffect"]];
 const map = new Map(items);
 let closure_6 = {};
-arg5.useHoverGesture = function useHoverGesture(closure_6) {
-  let tmp = closure_6;
-  if (closure_6 === undefined) {
+arg5.useHoverGesture = function useHoverGesture(gestureHandlerProps) {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
     tmp = closure_6;
   }
   const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp, map, transformHoverProps);
+  const obj = isGestureEnabled;
   return useGesture.useGesture(ComposedGestureName.SingleGestureName.Hover, clonedAndRemappedConfig);
 };

@@ -5,16 +5,15 @@ import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
 import computeChannelNameDefault from "computeChannelName" /* 4984 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
 import TextIcon3 from "TextIcon" /* 6876 */;
 import stylesDefault from "styles" /* 11357 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 class ChannelIcon {
   constructor(arg0) {
     ({ channel, size } = global);
@@ -55,30 +54,36 @@ function ChannelListItem(arg0) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey = { channelIconWrapper: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx");
 
 export default function AppLauncherChannelListActionSheet(channel) {
   ({ onChannelPress: require, onActionSheetDismiss } = channel);
   channel = channel.channel;
   const option = channel.option;
   let first;
+  closure_5 = undefined;
+  let ref;
+  let first1;
+  closure_8 = undefined;
   const tmp = option(first.useState(""), 2);
   first = tmp[0];
   closure_5 = tmp[1];
-  const ref = first.useRef(null);
+  ref = first.useRef(null);
   const tmp4 = option(first.useState([]), 2);
-  const first1 = tmp4[0];
+  first1 = tmp4[0];
   closure_8 = tmp4[1];
   const items = [first, channel, option];
   const effect = first.useEffect(() => {
-    onActionSheetDismiss(channel[9]);
-    const obj = { query: first, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true };
+    let obj = onActionSheetDismiss(channel[9]);
+    obj = { query: first, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true };
     callback2(obj.queryApplicationCommandChannelResults(obj).channels);
   }, items);
-  let obj = {
+  let obj = { onDismiss: onActionSheetDismiss, option, children: null };
+  obj = {
     onChange(str) {
       callback(str.toLowerCase());
       const current = ref.current;
@@ -89,25 +94,25 @@ export default function AppLauncherChannelListActionSheet(channel) {
   };
   const items1 = [ref(require(channel[12]).AppLauncherListSearchBar, obj), ];
   if (0 === first1.length) {
-    let tmp9Result = tmp9(require(tmp8[12]).AppLauncherListEmptyState, {});
+    let tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherListEmptyState, {});
   } else {
     obj = { ref: null, data: null, renderItem: null };
     obj[0] = ref;
     obj[1] = first1;
     obj[2] = function renderItem(index) {
       const item = index.item;
-      return ref(ChannelListItem, {
+      return ref(closure_1_11, {
         channel: item,
         index: index.index,
         totalCount: first1.length,
         onPress() {
           item({ channel: item });
-          onActionSheetDismiss(channel[10]).hideActionSheet(closure_1_8);
-          onActionSheetDismiss();
+          closure_1_1(closure_1_2[10]).hideActionSheet(closure_1_8);
+          closure_1_1();
         }
       });
     };
-    tmp9Result = tmp9(require(tmp8[12]).AppLauncherList, obj);
+    tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherList, obj);
   }
   items1[1] = tmp9Result;
   obj[2] = items1;

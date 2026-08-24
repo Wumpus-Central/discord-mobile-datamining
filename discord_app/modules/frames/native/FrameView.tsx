@@ -2,14 +2,14 @@
 
 // Module 16263 (FrameViewInner)
 import initialize from "initialize" /* 589 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import map from "map" /* 8708 */;
+import closure_5 from "map" /* 8708 */;
 import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
 import { ActivityPlatform } from "items3" /* 4481 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function FrameViewInner(frame) {
   frame = frame.frame;
   const layoutMode = frame.layoutMode;
@@ -23,8 +23,8 @@ function FrameViewInner(frame) {
   const items = [layoutMode, , ];
   ({ applicationId: arr[1], id: arr[2] } = frame);
   const layoutEffect = importAllResult.useLayoutEffect(() => {
-    layoutMode(setIsResetting[7]);
-    const obj = { type: "FRAME_UPDATE_LAYOUT_MODE", layoutMode, applicationId: frame.applicationId, frameId: frame.id };
+    let obj = layoutMode(setIsResetting[7]);
+    obj = { type: "FRAME_UPDATE_LAYOUT_MODE", layoutMode, applicationId: frame.applicationId, frameId: frame.id };
     obj.dispatch(obj);
   }, items);
   const items1 = [frame.id];
@@ -39,6 +39,7 @@ function FrameViewInner(frame) {
   let tmpResult = tmp(tmp2[10]);
   const baseActivityView = tmpResult.useBaseActivityView({ orientationLockState: orientationLock, showLoadingIndicator: first, setShowLoadingStateForLockingOrientation: tmp3[1], application: data, setOrientationLockState: callback1 });
   setIsResetting = baseActivityView.setIsResetting;
+  obj = { instance_id: "example-cl-instance", platform: ActivityPlatform.MOBILE, discord_proxy_ticket: frame.data.proxyTicket };
   ({ isResetting, isLandscape } = baseActivityView);
   obj = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
   obj1 = {
@@ -98,7 +99,7 @@ const memoResult = importAllResult.memo(function FrameViewGate(arg0) {
   }
   return tmp2;
 });
-const result = require("obj132").fileFinishedImporting("modules/frames/native/FrameView.tsx");
+const result = require("set").fileFinishedImporting("modules/frames/native/FrameView.tsx");
 
 export default memoResult;
 export const FrameView = memoResult;

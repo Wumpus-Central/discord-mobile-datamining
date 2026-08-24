@@ -1,10 +1,10 @@
 // === Module 11650: useLoadGuildPowerups ===
 
 // Module 11650 (useLoadGuildPowerups)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
 
 export default function useLoadGuildPowerups(guildId) {
   const _require = guildId;

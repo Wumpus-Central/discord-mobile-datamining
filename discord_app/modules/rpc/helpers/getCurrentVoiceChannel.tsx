@@ -1,11 +1,11 @@
 // === Module 7333: getCurrentVoiceChannel ===
 
 // Module 7333 (getCurrentVoiceChannel)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_0 from "fetchFingerprint" /* 1218 */;
+import closure_1 from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "updateVoiceState" /* 4542 */;
 
-const result = require("obj132").fileFinishedImporting("modules/rpc/helpers/getCurrentVoiceChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurrentVoiceChannel.tsx");
 
 export default function getCurrentVoiceChannel() {
   const id = store.getId();

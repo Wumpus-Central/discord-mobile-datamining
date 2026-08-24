@@ -16,11 +16,12 @@ function transformLongPressProps(shouldCancelWhenOutside) {
 const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
 const map = new Map(items);
 let closure_4 = {};
-arg5.useLongPressGesture = function useLongPressGesture(closure_6) {
-  let tmp = closure_6;
-  if (closure_6 === undefined) {
+arg5.useLongPressGesture = function useLongPressGesture(gestureHandlerProps) {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
     tmp = closure_4;
   }
   const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp, map, transformLongPressProps);
+  const obj = isGestureEnabled;
   return useGesture.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
 };

@@ -2,10 +2,10 @@
 
 // Module 15457
 import importAllResult from "noop" /* 19 */;
-import handleChange from "handleChange" /* 5280 */;
+import closure_3 from "handleChange" /* 5280 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
   const section = guildId.section;
@@ -26,9 +26,9 @@ const memoResult = importAllResult.memo((guildId) => {
           const obj = { animated: false, section: null, item: 0, paddingStart: null };
           obj[1] = closure_1;
           const _Math = Math;
-          obj[3] = Math.round(0.3 * guildId(section[5]).getWindowDimensions().height);
+          obj[3] = Math.round(0.3 * closure_1_0(closure_1_1[5]).getWindowDimensions().height);
           current.scrollToLocation(obj);
-          const obj2 = guildId(section[5]);
+          const obj2 = closure_1_0(closure_1_1[5]);
         }
       }, 0);
     } else {
@@ -47,9 +47,9 @@ const memoResult = importAllResult.memo((guildId) => {
   } else {
     stringResult = string(t.Q2gPWl);
   }
-  obj = { text: stringResult, icon: jsx(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" };
-  return jsx(guildId(section[6]).Button, { text: stringResult, icon: jsx(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" });
+  obj = { text: stringResult, icon: tmp5(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" };
+  return jsx(guildId(section[6]).Button, { text: stringResult, icon: tmp5(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" });
 });
-let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx");
 
 export default memoResult;

@@ -1,10 +1,10 @@
 // === Module 10366: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
 
 // Module 10366 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
-import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate" /* 7202 */;
+import closure_2 from "handleUserSettingsStoreUpdate" /* 7202 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx");
 
 export const useSocialLayerStorefrontMobileAccountLinkingDisabled = function useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId) {
   const _require = applicationId;

@@ -1,7 +1,7 @@
 // === Module 4845: initialize ===
 
 // Module 4845 (initialize)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
@@ -50,7 +50,8 @@ prototype["handleSetNativePermission"] = function handleSetNativePermission(arg0
   let NONE = permissionStates[permissionType];
   permissionStates[permissionType] = state;
   if (NONE !== state) {
-    const obj = { type: null, action: null, previous_action: null };
+    let obj = expandEventPropertiesDefault;
+    obj = { type: null, action: null, previous_action: null };
     obj[0] = permissionType;
     obj[1] = state;
     if (NONE == null) {
@@ -62,6 +63,6 @@ prototype["handleSetNativePermission"] = function handleSetNativePermission(arg0
 };
 NativePermissionStore.displayName = "NativePermissionStore";
 NativePermissionStore.persistKey = "NativePermissionsStore";
-const result = obj132.fileFinishedImporting("modules/native_permissions/NativePermissionStore.tsx");
+const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionStore.tsx");
 
 export default NativePermissionStore;

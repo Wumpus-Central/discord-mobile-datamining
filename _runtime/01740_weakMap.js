@@ -13,7 +13,7 @@ arg5.makeElementVisible = function makeElementVisible(_componentDOMRef, arg1) {
   } else {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
-      _componentDOMRef(dependencyMap[0])._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
+      _componentDOMRef(closure_1_1[0])._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
     }, 1000 * arg1);
   }
 };

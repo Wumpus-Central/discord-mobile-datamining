@@ -3,10 +3,10 @@
 // Module 8571 (_confirmEmailChange)
 import encodeProperties from "encodeProperties" /* 503 */;
 import _modDef5227 from "module_5227" /* 5227 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _confirmEmailChange() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -36,14 +36,16 @@ function _confirmEmailChange() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
 
 export const sendConfirmationCode = function sendConfirmationCode() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
-  const obj = { event: encodeProperties.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
+  let obj = _modDef5227;
+  obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
+  obj = { event: encodeProperties.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
   obj[1] = obj;
   return obj.put(obj);
 };

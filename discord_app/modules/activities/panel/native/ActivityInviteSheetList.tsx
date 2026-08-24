@@ -6,19 +6,20 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import Text from "Text" /* 4734 */;
 import PressableBase from "PressableBase" /* 5433 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { Fonts } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = fn;
+require = arg1;
 function keyExtractor(item) {
   return item.item.id;
 }
 function FriendsEmptyComponent() {
   const tmp = callback3();
-  let obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
+  let obj = { children: null };
+  obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.dz4UlO);
   const intl2 = getSystemLocale.intl;
@@ -54,7 +55,8 @@ function FriendsEmptyComponent() {
   return callback2(closure_5, obj);
 }
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
+createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
 createCacheKey.textTransform = "none";
 createCacheKey.lineHeight = 24;
@@ -67,7 +69,7 @@ createCacheKey[1] = obj1;
 createCacheKey[2] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetList.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetList.tsx");
 
 export default function ActivityInviteSheetList(data) {
   data = data.data;
@@ -82,7 +84,8 @@ export default function ActivityInviteSheetList(data) {
     const obj = { start: 0 === index, end: index === data.length - 1, row: item, onPressAvatar, onInviteSent, isSubmitting, error, sendState: getSendState(item) };
     return onInviteSent(error(getSendState[12]), obj);
   }, items);
-  let obj = { paddingBottom: error(getSendState[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom + error(getSendState[5]).space.PX_16, paddingHorizontal: error(getSendState[5]).space.PX_12 };
+  let obj = { contentContainerStyle: null, bounces: false, renderItem: null, data: null, keyExtractor: null, keyboardShouldPersistTaps: "always", ListEmptyComponent: null };
+  obj = { paddingBottom: error(getSendState[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom + error(getSendState[5]).space.PX_16, paddingHorizontal: error(getSendState[5]).space.PX_12 };
   obj[0] = obj;
   obj[2] = callback;
   obj[3] = data;

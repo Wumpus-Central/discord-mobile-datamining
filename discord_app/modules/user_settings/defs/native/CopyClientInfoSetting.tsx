@@ -8,12 +8,12 @@ import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBa
 import ActionSheet from "ActionSheet" /* 7175 */;
 import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
 import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 10968 */;
-import getCurrentBuildOverride from "getCurrentBuildOverride" /* 10638 */;
+import closure_3 from "getCurrentBuildOverride" /* 10638 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createToggle from "createToggle" /* 10669 */;
 import importAllResult from "getConstants" /* 1626 */;
 
-require = fn;
+require = arg1;
 function getClientInfo() {
   const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
   let tmp;
@@ -22,9 +22,9 @@ function getClientInfo() {
   }
   let str2 = "N/A";
   if (str.trim().length > 0) {
-    str2 = Manifest.Manifest;
+    str2 = tmp4.Manifest;
   }
-  const Build = Manifest.Build;
+  const Build = tmp4.Build;
   let str3 = "N/A";
   if (null != Build) {
     str3 = "N/A";
@@ -43,7 +43,7 @@ function getClientInfo() {
       str6 = str5;
     }
   }
-  const Version = Manifest.Version;
+  const Version = tmp4.Version;
   let str8 = "N/A";
   if (null != Version) {
     str8 = "N/A";
@@ -52,7 +52,7 @@ function getClientInfo() {
     }
   }
   const obj = { appVersion: str8, buildNumber: str3, buildOverride: str6, manifest: str2, releaseChannel: null };
-  const ReleaseChannel = Manifest.ReleaseChannel;
+  const ReleaseChannel = tmp4.ReleaseChannel;
   let str10 = "N/A";
   if (null != ReleaseChannel) {
     str10 = "N/A";
@@ -64,7 +64,8 @@ function getClientInfo() {
   return obj;
 }
 function ClientClientInfoActionSheet() {
-  let obj = { title: null };
+  let obj = { header: null, startExpanded: true, children: null };
+  obj = { title: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.Na2lF9);
   obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
@@ -152,7 +153,8 @@ const pressable = createToggle.createPressable({
   parent: null,
   IconComponent: require("ClipboardListIcon").ClipboardListIcon,
   onPress: function handleClientInfoPress() {
-    const obj = { default: ClientClientInfoActionSheet };
+    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
+    obj = { default: ClientClientInfoActionSheet };
     obj.openLazy(Promise.resolve(obj), "ClientClientInfoActionSheet");
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
@@ -166,13 +168,14 @@ let obj = {
   parent: null,
   IconComponent: require("ClipboardListIcon").ClipboardListIcon,
   onPress: function handleClientInfoPress() {
-    const obj = { default: ClientClientInfoActionSheet };
+    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
+    obj = { default: ClientClientInfoActionSheet };
     obj.openLazy(Promise.resolve(obj), "ClientClientInfoActionSheet");
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
   withArrow: true
 };
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
 
 export default pressable;
 export const getClientInfoString = function getClientInfoString(ReleaseChannel) {

@@ -1,12 +1,12 @@
 // === Module 11295: useFetchDeveloperActivityShelfItems ===
 
 // Module 11295 (useFetchDeveloperActivityShelfItems)
-import noop from "noop" /* 19 */;
-import initialize from "initialize" /* 7872 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "initialize" /* 7872 */;
 import { DevShelfFetchState } from "initialize" /* 7872 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 
 export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperActivityShelfItems() {
   isActivitiesEnabledForCurrentPlatform = isActivitiesEnabledForCurrentPlatform(setting[2]).useIsActivitiesEnabledForCurrentPlatform();
@@ -22,7 +22,7 @@ export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperAct
       tmp = setting;
     }
     if (tmp) {
-      tmp = stateFromStores === DevShelfFetchState.INITIALIZED;
+      tmp = stateFromStores === closure_1_4.INITIALIZED;
     }
     if (tmp) {
       const developerApplications = isActivitiesEnabledForCurrentPlatform(setting[5]).fetchDeveloperApplications();

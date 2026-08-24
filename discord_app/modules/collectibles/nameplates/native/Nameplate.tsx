@@ -1,12 +1,12 @@
 // === Module 9221: NameplateInner ===
 
 // Module 9221 (NameplateInner)
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function NameplateInner(isFocused) {
   ({ nameplate, isPressed } = isFocused);
   if (isPressed === undefined) {
@@ -54,10 +54,10 @@ function NameplateInner(isFocused) {
   const items1 = [sharedValue, flag6];
   const effect = React.useEffect(() => {
     if (flag6) {
-      flag6(dependencyMap[7]);
-      const obj = { duration: 100, easing: null };
-      const Easing = flag6(dependencyMap[6]).Easing;
-      obj[1] = Easing.in(flag6(dependencyMap[6]).Easing.ease);
+      let obj = flag6(closure_1_2[7]);
+      obj = { duration: 100, easing: null };
+      const Easing = flag6(closure_1_2[6]).Easing;
+      obj[1] = Easing.in(flag6(closure_1_2[6]).Easing.ease);
       const result = sharedValue.set(obj.withTiming(1, obj));
     }
   }, items1);
@@ -108,9 +108,11 @@ function NameplateInner(isFocused) {
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
     obj[3] = items3;
     tmp15Result = callback(tmp5(4756), obj);
+    const tmp15 = callback;
     const tmp5Result = tmp5(4756);
   }
   const items4 = [tmp15Result, ];
+  const tmp13 = closure_6;
   const tmpResult1 = flag6(9222);
   if (tmpResult2.isAndroid()) {
     if (tmp12) {
@@ -121,10 +123,9 @@ function NameplateInner(isFocused) {
     }
     items4[1] = tmp17;
     obj[1] = items4;
-    return callback(tmp5(4115).View, obj);
+    return tmp13(tmp5(4115).View, obj);
   }
   tmp17 = callback(tmp5(5449), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
-  tmpResult2 = flag6(500);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
@@ -138,6 +139,16 @@ let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
       }
     }
     if (arg1) {
+      let num5 = 0.6;
+      if (arg4) {
+        num5 = 0.3;
+      }
+      let num4 = num5;
+    } else {
+      num4 = 0.4;
+      if (arg2) {
+        num4 = 0.8;
+      }
     }
   }
   obj[1] = { position: "absolute", width: "100%", height: "100%", opacity: num2 };
@@ -148,13 +159,23 @@ let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
       }
     }
     if (arg1) {
+      let num8 = 0.5;
+      if (arg4) {
+        num8 = 0.4;
+      }
+      let num7 = num8;
+    } else {
+      num7 = 0.6;
+      if (arg2) {
+        num7 = 0.8;
+      }
     }
   }
   obj[2] = { position: "absolute", height: "100%", right: 0, aspectRatio: 5.333333333333333, opacity: num };
   return obj;
 });
 let closure_8 = { code: "function NameplateTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let result = require("obj132").fileFinishedImporting("modules/collectibles/nameplates/native/Nameplate.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/Nameplate.tsx");
 
 export default function Nameplate(nameplate) {
   nameplate = nameplate.nameplate;

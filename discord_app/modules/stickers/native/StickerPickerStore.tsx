@@ -1,7 +1,7 @@
 // === Module 10220: useStickerPickerStore ===
 
 // Module 10220 (useStickerPickerStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let obj = keys.create((arg0) => {
@@ -10,7 +10,7 @@ let obj = keys.create((arg0) => {
     packToScrollTo: null,
     setPackToScrollTo(pack_id) {
       const callback = pack_id;
-      return callback(dependencyMap[1]).batchUpdates(() => {
+      return callback(closure_1_1[1]).batchUpdates(() => {
         pack_id((packToScrollTo) => {
           let tmp = packToScrollTo;
           if (packToScrollTo.packToScrollTo !== closure_0) {
@@ -24,6 +24,6 @@ let obj = keys.create((arg0) => {
     }
   };
 });
-const result = obj132.fileFinishedImporting("modules/stickers/native/StickerPickerStore.tsx");
+const result = set.fileFinishedImporting("modules/stickers/native/StickerPickerStore.tsx");
 
 export const useStickerPickerStore = obj;

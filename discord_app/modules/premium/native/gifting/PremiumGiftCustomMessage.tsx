@@ -9,7 +9,7 @@ import { CUSTOM_GIFT_MESSAGE_MAX_LENGTH as closure_4 } from "GuildFeatures" /* 1
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 class GiftCustomMessage {
   constructor(arg0) {
     ({ setMessagePosition, setCustomGiftMessage } = global);
@@ -41,7 +41,8 @@ class GiftCustomMessage {
     return jsx(View, obj);
   }
 }
-let obj = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16 };
+let obj = { container: null };
+obj = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
@@ -51,7 +52,7 @@ const memoResult = importAllResult.memo((arg0) => {
   obj = { onFocusMessage, setMessagePosition, customGiftMessage: nativeGiftContext.customGiftMessage, setCustomGiftMessage: nativeGiftContext.setCustomGiftMessage };
   return <GiftCustomMessage onFocusMessage={onFocusMessage} setMessagePosition={setMessagePosition} customGiftMessage={nativeGiftContext.customGiftMessage} setCustomGiftMessage={nativeGiftContext.setCustomGiftMessage} />;
 });
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomMessage.tsx");
 
 export default memoResult;
 export { GiftCustomMessage };

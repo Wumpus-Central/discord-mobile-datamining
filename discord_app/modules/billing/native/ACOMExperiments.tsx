@@ -1,7 +1,7 @@
 // === Module 7696: apexExperiment ===
 
 // Module 7696 (apexExperiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { 1: null };
@@ -22,7 +22,7 @@ const apexExperiment4 = ApexExperiment.createApexExperiment({ name: "2026-07-nit
 const obj4 = { 1: null };
 obj4[1] = { enabled: true };
 const apexExperiment5 = ApexExperiment.createApexExperiment({ name: "2026-07-nitro-acom-discounts", kind: "user", defaultConfig: { enabled: false }, variations: obj4 });
-const result = obj132.fileFinishedImporting("modules/billing/native/ACOMExperiments.tsx");
+const result = set.fileFinishedImporting("modules/billing/native/ACOMExperiments.tsx");
 
 export const NitroACOMSubscriptionExperiment = apexExperiment;
 export const ACOMModifyDarkLaunchExperiment = apexExperiment1;

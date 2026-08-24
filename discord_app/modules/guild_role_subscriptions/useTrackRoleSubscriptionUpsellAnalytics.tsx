@@ -1,33 +1,36 @@
 // === Module 15792: useTrackRoleSubscriptionUpsellAnalytics ===
 
 // Module 15792 (useTrackRoleSubscriptionUpsellAnalytics)
-import noop from "noop" /* 19 */;
-import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx");
 
 export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   guildId = guildId.guildId;
   const groupListingId = guildId.groupListingId;
   const _location = guildId.location;
   const relevantSubscriptionListingIds = guildId.relevantSubscriptionListingIds;
+  let groupListingsFetchContext;
+  closure_5 = undefined;
+  let stateFromStoresArray;
   let analyticsLocations;
   closure_8 = undefined;
-  const groupListingsFetchContext = guildId(_location[3]).useGroupListingsFetchContext("useTrackRoleSubscriptionUpsellAnalytics");
+  groupListingsFetchContext = guildId(_location[3]).useGroupListingsFetchContext("useTrackRoleSubscriptionUpsellAnalytics");
   const tmp2 = null != groupListingId(_location[4])(groupListingId).activeSubscription;
   closure_5 = tmp2;
   let obj = guildId(_location[3]);
   let items = [groupListingsFetchContext];
   const items1 = [relevantSubscriptionListingIds];
-  const stateFromStoresArray = guildId(_location[5]).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = guildId(_location[5]).useStateFromStoresArray(items, () => {
     let items = relevantSubscriptionListingIds;
     if (relevantSubscriptionListingIds == null) {
       items = [];
     }
-    return items.filter((item, index) => {
-      subscriptionListing = subscriptionListing.getSubscriptionListing(item);
+    return items.filter((editStateId) => {
+      subscriptionListing = subscriptionListing.getSubscriptionListing(editStateId);
       let published;
       if (subscriptionListing != null) {
         published = subscriptionListing.published;
@@ -57,8 +60,8 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
     }
     if (tmp) {
       ref.current = true;
-      groupListingId(_location[8]);
-      const obj = { role_subscription_group_listing_id: null, role_subscription_listing_ids: null, is_premium_member: null, location_stack: null, location: null };
+      let obj = groupListingId(_location[8]);
+      obj = { role_subscription_group_listing_id: null, role_subscription_listing_ids: null, is_premium_member: null, location_stack: null, location: null };
       obj[0] = groupListingId;
       obj[1] = stateFromStoresArray;
       obj[2] = constants;

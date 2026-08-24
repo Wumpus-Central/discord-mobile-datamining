@@ -3,9 +3,10 @@
 // Module 7489 (parseEncoder)
 import getSamples from "getSamples" /* 7490 */;
 import getStatsDefault from "getStats" /* 7496 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function parseEncoder(encoderImplementationName) {
   if (null == encoderImplementationName) {
     return obj.UNKNOWN;
@@ -13,8 +14,11 @@ function parseEncoder(encoderImplementationName) {
     const _Object = Object;
     const keys = Object.keys(table);
     for (const item10012 of keys) {
+      let tmp6 = item10012;
       let formatted = arg0.toLowerCase();
       if (formatted.includes(item10012)) {
+        let tmp7 = table;
+        let tmp8 = obj;
         obj.return();
         return table[item10012];
       }
@@ -29,8 +33,11 @@ function parseDecoder(decoderImplementationName) {
     const _Object = Object;
     const keys = Object.keys(table2);
     for (const item10012 of keys) {
+      let tmp6 = item10012;
       let formatted = arg0.toLowerCase();
       if (formatted.includes(item10012)) {
+        let tmp7 = table2;
+        let tmp8 = obj;
         obj.return();
         return table2[item10012];
       }
@@ -44,7 +51,9 @@ let closure_6 = [720, 480, 360];
 let closure_7 = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "networkFramesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "totalDecodeTime", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches", "screenshareFramesUnique"];
 let set = new Set(["passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount"]);
 let closure_9 = ["bytes", "packets", "framesNetwork", "framesCodec"];
-let obj = { VIDEOTOOLBOX: "videotoolbox", VP8_LIBVPX: "vp8_libvpx", ELECTRON: "electron", FFMPEG: "ffmpeg", DAV1D: "dav1d", WEBRTC: "WebRTC", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", UNCATEGORIZED: "uncategorized", D3D11VIDEODECODER: "d3d11videodecoder", ANDROID: "android", UNKNOWN: "unknown" };
+let obj = { H264: "H264", H265: "H265", VP8: "VP8", VP9: "VP9", AV1: "AV1", UNKNOWN: "UNKNOWN" };
+obj = { NVIDIA_CUDA: "nvidia_cuda", NVIDIA_DIRECT_3D: "nvidia_direct_3d", NVIDIA_VULKAN: "nvidia_vulkan", OPENH264: "openh264", VIDEOTOOLBOX: "videotoolbox", AMD_DIRECT_3D: "amd_direct_3d", AMD_VAAPI: "amd_vaapi", INTEL: "intel", INTEL_DIRECT_3D: "intel_direct_3d", INTEL_VAAPI: "intel_vaapi", VP8_LIBVPX: "vp8_libvpx", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", WMF_SW: "wmf_sw", WMF_HW: "wmf_hw", WMF_DIRECT_3D: "wmf_direct_3d", WMF_DIRECT_3D_INTEL: "wmf_direct_3d_intel", WMF_DIRECT_3D_NVIDIA: "wmf_direct_3d_nvidia", WMF_DIRECT_3D_AMD: "wmf_direct_3d_amd", WMF_CHROME: "wmf_chrome", UNCATEGORIZED: "uncategorized", UNKNOWN: "unknown" };
+obj = { VIDEOTOOLBOX: "videotoolbox", VP8_LIBVPX: "vp8_libvpx", ELECTRON: "electron", FFMPEG: "ffmpeg", DAV1D: "dav1d", WEBRTC: "WebRTC", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", UNCATEGORIZED: "uncategorized", D3D11VIDEODECODER: "d3d11videodecoder", ANDROID: "android", UNKNOWN: "unknown" };
 let closure_13 = Object.freeze({ "mediafoundation direct3d intel": obj.WMF_DIRECT_3D_INTEL, "mediafoundation direct3d nvidia": obj.WMF_DIRECT_3D_NVIDIA, "mediafoundation direct3d amd": obj.WMF_DIRECT_3D_AMD, mediafoundationvideoencodeaccelerator: obj.WMF_CHROME, "nvidia: cuda": obj.NVIDIA_CUDA, "nvidia: direct3d": obj.NVIDIA_DIRECT_3D, "nvidia: vulkan": obj.NVIDIA_VULKAN, "amd: direct3d": obj.AMD_DIRECT_3D, "amd: vaapi": obj.AMD_VAAPI, "intel: direct3d": obj.INTEL_DIRECT_3D, "intel: vaapi": obj.INTEL_VAAPI, intel: obj.INTEL, videotoolbox: obj.VIDEOTOOLBOX, openh264: obj.OPENH264, libvpx: obj.VP8_LIBVPX, "c2.exynos": obj.EXYNOS, "omx.exynos": obj.EXYNOS, "c2.qti": obj.QUALCOMM, "omx.qcom": obj.QUALCOMM, "c2.mtk": obj.MEDIATEK, "omx.mtk": obj.MEDIATEK, "mediafoundation sw": obj.WMF_SW, "mediafoundation hw": obj.WMF_HW, "mediafoundation direct3d": obj.WMF_DIRECT_3D });
 let closure_14 = Object.freeze({ videotoolbox: obj.VIDEOTOOLBOX, libvpx: obj.VP8_LIBVPX, electron: obj.ELECTRON, ffmpeg: obj.FFMPEG, dav1d: obj.DAV1D, webrtc: obj.WEBRTC, "c2.exynos": obj.EXYNOS, "omx.exynos": obj.EXYNOS, "c2.qti": obj.QUALCOMM, "omx.qcom": obj.QUALCOMM, "c2.mtk": obj.MEDIATEK, "omx.mtk": obj.MEDIATEK, d3d11videodecoder: obj.D3D11VIDEODECODER, "c2.android": obj.ANDROID, "omx.google": obj.ANDROID });
 const obj3 = { None: 0, [0]: "None", ClientSideDisableVideo: 1, [1]: "ClientSideDisableVideo", SenderStopped: 2, [2]: "SenderStopped" };
@@ -354,8 +363,8 @@ class InboundStats {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     values = Object.values(closure_12);
-    obj.decoderBuckets = Object.fromEntries(values.map((item, index) => {
-      const items = [item, 0];
+    obj.decoderBuckets = Object.fromEntries(values.map((arg0) => {
+      const items = [arg0, 0];
       return items;
     }));
     obj.codecBuckets = { H264: 0, H265: 0, VP8: 0, VP9: 0, AV1: 0, UNKNOWN: 0 };
@@ -396,14 +405,14 @@ class InboundStats {
     obj.startTime = global.now();
     stopWatch = new require("sleep").StopWatch(global);
     obj.videoStoppedWatch = stopWatch;
-    item = closure_4.forEach((item, index) => {
-      obj.bitrateBuckets[item] = 0;
+    item = closure_4.forEach((arg0) => {
+      obj.bitrateBuckets[arg0] = 0;
     });
-    item1 = closure_5.forEach((item, index) => {
-      obj.fpsBuckets[item] = 0;
+    item1 = closure_5.forEach((arg0) => {
+      obj.fpsBuckets[arg0] = 0;
     });
-    item2 = closure_6.forEach((item, index) => {
-      obj.resolutionBuckets[item] = 0;
+    item2 = closure_6.forEach((arg0) => {
+      obj.resolutionBuckets[arg0] = 0;
     });
     return obj;
   }
@@ -433,36 +442,37 @@ prototype["collectAggregationStats"] = function collectAggregationStats(parseInb
     let tmp5 = parseInboundStatsResult[nextResult];
     let tmp6 = tmp5;
     if (null !== tmp5) {
+      let tmp7 = nextResult;
       let num = previousAggregationStats[tmp4];
       if (num == null) {
         num = 0;
       }
       let tmp8 = num;
       if (someResult) {
+        let tmp9 = set;
+        let tmp10 = nextResult;
         if (!set.has(tmp4)) {
           let aggregatedProperties = self.aggregatedProperties;
+          let tmp11 = nextResult;
+          let tmp12 = tmp5;
           aggregatedProperties[tmp4] = aggregatedProperties[tmp4] + tmp6;
         }
       }
+      let tmp13 = nextResult;
+      let tmp15 = num;
+      let tmp16 = tmp5;
       if (tmp8 <= tmp6) {
+        let tmp18 = tmp5;
+        let tmp19 = num;
         let diff = tmp6 - tmp8;
         self.aggregatedProperties[tmp4] = tmp14 + diff;
+      } else {
+        let tmp17 = nextResult;
       }
       diff = tmp5;
     }
     continue;
   }
-  someResult = closure_9.some((item, index) => {
-    let tmp2 = null != tmp;
-    if (tmp2) {
-      let num = previousAggregationStats[item];
-      if (num == null) {
-        num = 0;
-      }
-      tmp2 = num > tmp;
-    }
-    return tmp2;
-  });
 };
 prototype["setVideoStopped"] = function setVideoStopped(arg0, SenderStopped) {
   const self = this;
@@ -482,7 +492,8 @@ prototype["setVideoStopped"] = function setVideoStopped(arg0, SenderStopped) {
   }
 };
 prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInboundStatsResult) {
-  const self = this;
+  let self = this;
+  self = this;
   if (!this.isVideoStopped) {
     const statsWindow = self.statsWindow;
     statsWindow.push(parseInboundStatsResult);
@@ -577,25 +588,25 @@ prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInb
       }
       if (self.statsWindow.length >= 6) {
         ({ bytes: bytes2, framesCodec: framesCodec2, timestamp: timestamp2 } = self.statsWindow[self.statsWindow.length - 3]);
-        const item = closure_6.forEach((item, index) => {
-          if (resolution <= item) {
+        const item = closure_6.forEach((arg0) => {
+          if (resolution <= arg0) {
             const resolutionBuckets = self.resolutionBuckets;
-            resolutionBuckets[item] = resolutionBuckets[item] + result1;
+            resolutionBuckets[arg0] = resolutionBuckets[arg0] + result1;
           }
         });
         const result2 = (timestamp - timestamp2) / 1000;
         const result3 = 8 * (bytes - bytes2) / result2;
         const result4 = (framesCodec - framesCodec2) / result2;
-        const item1 = self.forEach((item, index) => {
-          if (result3 <= item) {
+        const item1 = self.forEach((arg0) => {
+          if (result3 <= arg0) {
             const bitrateBuckets = self.bitrateBuckets;
-            bitrateBuckets[item] = bitrateBuckets[item] + result1;
+            bitrateBuckets[arg0] = bitrateBuckets[arg0] + result1;
           }
         });
-        const item2 = closure_5.forEach((item, index) => {
-          if (result4 <= item) {
+        const item2 = closure_5.forEach((arg0) => {
+          if (result4 <= arg0) {
             const fpsBuckets = self.fpsBuckets;
-            fpsBuckets[item] = fpsBuckets[item] + result1;
+            fpsBuckets[arg0] = fpsBuckets[arg0] + result1;
           }
         });
         const resolutionHistogram = self.resolutionHistogram;
@@ -627,22 +638,24 @@ prototype["getCodecsUsed"] = function getCodecsUsed() {
   set = new Set();
   const entries = Object.entries(this.codecBuckets);
   while (tmp2 !== undefined) {
+    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     let first = tmp5[0];
     if (tmp5[1] > 0) {
+      let tmp7 = first;
       let addResult = set.add(first);
     }
     continue;
   }
   return set;
 };
-let result = require("obj132").fileFinishedImporting("lib/VideoQualityStats.tsx");
+let result = set.fileFinishedImporting("lib/VideoQualityStats.tsx");
 class OutboundStats extends InboundStats {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     values = Object.values(closure_11);
-    applyArgumentsResult.encoderBuckets = Object.fromEntries(values.map((item, index) => {
-      const items = [item, 0];
+    applyArgumentsResult.encoderBuckets = Object.fromEntries(values.map((arg0) => {
+      const items = [arg0, 0];
       return items;
     }));
     applyArgumentsResult.encoderCodec = closure_10.UNKNOWN;

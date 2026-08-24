@@ -2,11 +2,11 @@
 
 // Module 14099 (WebAuthnSuccessStep)
 import CodeRowDefault from "CodeRow" /* 14100 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");
 
 export default function WebAuthnSuccessStep() {
   let obj = navigation(1500);
@@ -14,7 +14,7 @@ export default function WebAuthnSuccessStep() {
   const items = [navigation];
   const layoutEffect = React.useLayoutEffect(() => {
     const obj = {
-      headerLeft: navigation(dependencyMap[3]).getHeaderCloseButton(() => {
+      headerLeft: navigation(closure_1_2[3]).getHeaderCloseButton(() => {
         closure_0.popToTop();
         const result = closure_1_1(closure_1_2[4]).closePasskeyUpsellModal();
       })

@@ -2,15 +2,15 @@
 
 // Module 5428 (openIncodeAgeVerificationModal)
 import _modDef4090 from "module_4090" /* 4090 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import set from "set" /* 5427 */;
 import { AGE_VERIFICATION_INCODE_PATH as closure_9 } from "AGE_VERIFICATION_INCODE_PATH" /* 5429 */;
 import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
 import { SafetyToastType } from "SafetyToastType" /* 5430 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 5427 */;
 
-const require = fn;
+const require = arg1;
 function openIncodeAgeVerificationModal(arg0) {
   ({ onClose: require, onComplete: importDefault } = arg0);
   let combined;
@@ -28,6 +28,9 @@ function openIncodeAgeVerificationModal(arg0) {
       const uRL = new URL("https:" + WEBAPP_ENDPOINT);
       const hostname = uRL.hostname;
       if ("localhost" !== hostname) {
+        if ("127.0.0.1" !== hostname) {
+          const obj = /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/;
+        }
         const _HermesInternal = HermesInternal;
         combined = "" + str3 + WEBAPP_ENDPOINT + closure_9;
       }
@@ -63,6 +66,7 @@ function openIncodeAgeVerificationModal(arg0) {
           c4 = 1;
           const obj3 = { value: null, done: false };
           obj3[0] = obj1.pushLazy(v0(function*() {
+            closure_0 = tmp2;
             yield closure_1_0(paths[10])(paths[9], paths.paths);
             closure_0 = arg1.default;
             return () => closure_2_12(closure_0, { webviewUrl: c2, onClose: closure_0, onComplete: c1 });
@@ -82,12 +86,14 @@ function openIncodeAgeVerificationModal(arg0) {
   }
   return flag;
 }
-({ AGE_VERIFICATION_MODAL_KEY: c5, AGE_VERIFICATION_GET_STARTED_MODAL_KEY: closure_6, AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: error, VerificationVendorName: closure_8 } = require("set"));
-let obj = {
+({ AGE_VERIFICATION_MODAL_KEY: c5, AGE_VERIFICATION_GET_STARTED_MODAL_KEY: closure_6, AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: error, VerificationVendorName: closure_8 } = set);
+const result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationActionCreators.native.tsx");
+
+export default {
   showAgeVerification(onClose) {
     let fn = onClose.onClose;
     if (fn === undefined) {
-      fn = function o(merged) {
+      fn = function o(arg0) {
 
       };
     }
@@ -111,7 +117,8 @@ let obj = {
       flag = null != webviewUrl;
       if (flag) {
         webviewUrl(tmp3[8]).pushLazy(callback(function*() {
-          yield fn(paths[10])(paths[16], paths.paths);
+          closure_0 = tmp2;
+          yield closure_1_0(paths[10])(paths[16], paths.paths);
           closure_0 = arg1.default;
           return () => {
             merged = Object.assign(c2);
@@ -149,8 +156,8 @@ let obj = {
           prop = currentUser.ageVerificationStatus;
         }
         function handleClose() {
-          onClose(_undefined[19]);
-          const obj = { type: "CLOSE_AGE_VERIFICATION_MODAL", status: prop };
+          let obj = onClose(_undefined[19]);
+          obj = { type: "CLOSE_AGE_VERIFICATION_MODAL", status: prop };
           obj.dispatch(obj);
           if (onClose != null) {
             onClose();
@@ -165,18 +172,17 @@ let obj = {
         if (!openIncodeAgeVerificationModal(obj)) {
           obj = { type: "CLOSE_AGE_VERIFICATION_MODAL", status: null };
           obj[1] = prop;
-          tmp16(709).dispatch(obj);
+          onClose(709).dispatch(obj);
           if (onClose != null) {
             onClose();
           }
-          const tmp16Result = tmp16(709);
+          const tmp16Result = onClose(709);
         }
-        const obj9 = onClose(709);
-        tmp16 = onClose;
       } else {
         if (tmpResult3.isExpressiveModalV2Enabled(entryPoint)) {
           onClose(5260).pushLazy(prop(function*() {
-            yield entryPoint(paths[10])(paths[21], paths.paths);
+            closure_0 = tmp2;
+            yield closure_1_0(paths[10])(paths[21], paths.paths);
             closure_0 = arg1.default;
             return () => closure_2_12(closure_0, {
               entryPoint: closure_0,
@@ -194,7 +200,8 @@ let obj = {
           currentUser = tmp(6688).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
           const tmpResult4 = tmp(6688);
           onClose(5260).pushLazy(prop(function*() {
-            yield entryPoint(paths[10])(paths[23], paths.paths);
+            closure_0 = tmp2;
+            yield closure_1_0(paths[10])(paths[23], paths.paths);
             closure_0 = arg1.default;
             return () => closure_2_12(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: closure_1_4 });
           }), {}, closure_6);
@@ -209,6 +216,3 @@ let obj = {
     _modDef4090.openURL(arg0);
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/AgeVerificationActionCreators.native.tsx");
-
-export default obj;

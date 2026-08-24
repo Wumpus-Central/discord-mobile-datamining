@@ -1,7 +1,7 @@
 // === Module 10649: prototype ===
 
 // Module 10649 (prototype)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import prototype2 from "prototype" /* 10650 */;
 
 const RevenueError = prototype2.RevenueError;
@@ -13,6 +13,6 @@ const prototype = function CheckoutError(arg0) {
 }.prototype;
 class prototype extends RevenueError {
 }
-const result = obj132.fileFinishedImporting("modules/checkout/CheckoutError.tsx");
+const result = set.fileFinishedImporting("modules/checkout/CheckoutError.tsx");
 
 export const CheckoutError = prototype;

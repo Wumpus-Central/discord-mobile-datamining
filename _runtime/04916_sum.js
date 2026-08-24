@@ -2,10 +2,9 @@
 
 // Module 4916 (sum)
 import getDataView from "getDataView" /* 4910 */;
-import _modDef4913 from "module_4913" /* 4913 */;
 
 require = arg1;
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 let c3 = 2;
 let c4 = 65496;
@@ -55,10 +54,13 @@ arg5.default = {
   findJpegOffsets(byteLength) {
     let tmp17;
     let tmp2;
+    let tmp3;
+    let tmp4;
     let tmp5;
     let tmp6;
     let tmp7;
-    let tmp = c5;
+    let tmp8;
+    sum = c5;
     let tmp10 = c5;
     let tmp11;
     let tmp12;
@@ -69,6 +71,9 @@ arg5.default = {
     let tmp18;
     if (c5 + c6 + 5 <= byteLength.byteLength) {
       while (true) {
+        let tmp19 = module;
+        let tmp20 = dependencyMap;
+        let tmp21 = sum;
         let tmp22 = tmp2;
         let tmp23 = tmp3;
         let tmp24 = tmp4;
@@ -76,202 +81,301 @@ arg5.default = {
         let tmp26 = tmp6;
         let tmp27 = tmp7;
         let tmp28 = tmp8;
-        let sum7 = tmp9;
-        if (_modDef4913.USE_FILE) {
-          if (byteLength.getUint16(tmp) === c19) {
+        let sum5 = tmp9;
+        if (module(4913).USE_FILE) {
+          let tmp30 = c19;
+          if (byteLength.getUint16(sum) === c19) {
             break;
           }
         }
-        if (_modDef4913.USE_FILE) {
-          if (byteLength.getUint16(tmp) === c20) {
-            sum = tmp + c7;
+        if (tmp19(4913).USE_FILE) {
+          let tmp31 = c20;
+          if (byteLength.getUint16(sum) === c20) {
+            sum = c7;
+            sum = sum + c7;
             let uint16 = byteLength.getUint16(sum);
-            let sum2 = tmp2;
-            let sum5 = tmp5;
-            let sum4 = tmp6;
-            let sum3 = tmp7;
+            let sum1 = tmp2;
+            let tmp85 = tmp3;
+            let tmp86 = tmp4;
+            let sum4 = tmp5;
+            let sum3 = tmp6;
+            let sum2 = tmp7;
+            let tmp90 = sum;
+            let tmp91 = sum5;
             let tmp82 = c7;
           }
-          let sum1 = tmp + (tmp82 + uint16);
-          uint16 = byteLength.getUint16(tmp + c7);
-          sum2 = tmp + c14;
-          sum5 = tmp5;
-          sum4 = tmp6;
-          sum3 = tmp7;
+          sum = sum + (tmp82 + uint16);
+          sum = sum1;
+          sum = tmp85;
+          sum = tmp86;
+          sum = sum4;
+          sum = sum3;
+          sum = sum2;
+          sum = tmp90;
+          sum = tmp91;
+          let tmp92 = c7;
+          uint16 = byteLength.getUint16(sum + c7);
+          let tmp93 = c14;
+          sum1 = sum + c14;
+          tmp85 = tmp3;
+          tmp86 = tmp4;
+          sum4 = tmp5;
+          sum3 = tmp6;
+          sum2 = tmp7;
+          tmp90 = tmp8;
+          tmp91 = sum5;
           tmp82 = c7;
         }
-        if (_modDef4913.USE_JFIF) {
+        if (tmp19(4913).USE_JFIF) {
           let length = JFIF.length;
-          let tmp34 = byteLength.getUint16(tmp) === c25;
+          let tmp32 = JFIF;
+          let tmp33 = c25;
+          let tmp34 = byteLength.getUint16(sum) === c25;
           if (tmp34) {
+            let tmp35 = require;
             let obj = getDataView;
-            tmp34 = obj.getStringFromDataView(byteLength, tmp + c6, length) === JFIF;
+            let tmp36 = c6;
+            tmp34 = obj.getStringFromDataView(byteLength, sum + c6, length) === tmp32;
           }
           if (tmp34) {
-            tmp34 = 0 === byteLength.getUint8(tmp + c6 + length);
+            let tmp37 = c6;
+            tmp34 = 0 === byteLength.getUint8(sum + c6 + length);
           }
           if (tmp34) {
-            uint16 = byteLength.getUint16(tmp + c7);
-            sum3 = tmp + c8;
-            sum2 = tmp2;
-            sum5 = tmp5;
-            sum4 = tmp6;
+            sum = c7;
+            uint16 = byteLength.getUint16(sum + c7);
+            sum = c8;
+            sum2 = sum + c8;
+            sum1 = tmp2;
+            tmp85 = tmp3;
+            tmp86 = tmp4;
+            sum4 = tmp5;
+            sum3 = tmp6;
+            tmp90 = tmp8;
+            tmp91 = sum5;
             tmp82 = c7;
           }
         }
-        if (_modDef4913.USE_EXIF) {
+        if (tmp19(4913).USE_EXIF) {
           let length2 = Exif.length;
-          let tmp40 = byteLength.getUint16(tmp) === c26;
+          let tmp38 = Exif;
+          let tmp39 = c26;
+          let tmp40 = byteLength.getUint16(sum) === c26;
           if (tmp40) {
+            let tmp41 = require;
             obj1 = getDataView;
-            tmp40 = obj1.getStringFromDataView(byteLength, tmp + c6, length2) === Exif;
+            let tmp42 = c6;
+            tmp40 = obj1.getStringFromDataView(byteLength, sum + c6, length2) === tmp38;
           }
           if (tmp40) {
-            tmp40 = 0 === byteLength.getUint8(tmp + c6 + length2);
+            let tmp43 = c6;
+            tmp40 = 0 === byteLength.getUint8(sum + c6 + length2);
           }
           if (tmp40) {
-            uint16 = byteLength.getUint16(tmp + c7);
-            sum4 = tmp + c9;
-            sum2 = tmp2;
-            sum5 = tmp5;
-            sum3 = tmp7;
+            sum = c7;
+            uint16 = byteLength.getUint16(sum + c7);
+            sum = c9;
+            sum3 = sum + c9;
+            sum1 = tmp2;
+            tmp85 = tmp3;
+            tmp86 = tmp4;
+            sum4 = tmp5;
+            sum2 = tmp7;
+            tmp90 = tmp8;
+            tmp91 = sum5;
             tmp82 = c7;
           }
         }
-        if (_modDef4913.USE_XMP) {
-          let tmp45 = byteLength.getUint16(tmp) === c26;
+        if (tmp19(4913).USE_XMP) {
+          let tmp44 = c26;
+          let tmp45 = byteLength.getUint16(sum) === c26;
           if (tmp45) {
+            let tmp46 = length3;
+            let tmp47 = require;
             let obj2 = getDataView;
-            tmp45 = obj2.getStringFromDataView(byteLength, tmp + c6, length3.length) === length3;
+            let tmp48 = c6;
+            tmp45 = obj2.getStringFromDataView(byteLength, sum + c6, length3.length) === length3;
           }
           if (tmp45) {
             let items = tmp4;
             if (!tmp4) {
               items = [];
             }
-            let uint161 = byteLength.getUint16(tmp + c7);
+            sum = c7;
+            sum = byteLength.getUint16(sum + c7);
             obj = { dataOffset: null, length: null };
-            obj[0] = tmp + c11;
-            obj[1] = uint161 - 31;
-            let arr = items.push(obj);
-            sum2 = tmp2;
-            sum5 = tmp5;
-            sum4 = tmp6;
-            sum3 = tmp7;
-            uint16 = uint161;
+            sum = c11;
+            obj[0] = sum + c11;
+            obj[1] = sum - 31;
+            sum = items.push(obj);
+            tmp86 = items;
+            sum1 = tmp2;
+            tmp85 = tmp3;
+            sum4 = tmp5;
+            sum3 = tmp6;
+            sum2 = tmp7;
+            tmp90 = tmp8;
+            tmp91 = sum5;
+            uint16 = sum;
             tmp82 = c7;
           }
         }
-        if (_modDef4913.USE_XMP) {
-          let tmp50 = byteLength.getUint16(tmp) === c26;
+        if (tmp19(4913).USE_XMP) {
+          let tmp49 = c26;
+          let tmp50 = byteLength.getUint16(sum) === c26;
           if (tmp50) {
+            let tmp51 = length4;
+            let tmp52 = require;
             let obj4 = getDataView;
-            tmp50 = obj4.getStringFromDataView(byteLength, tmp + c6, length4.length) === length4;
+            let tmp53 = c6;
+            tmp50 = obj4.getStringFromDataView(byteLength, sum + c6, length4.length) === length4;
           }
           if (tmp50) {
             let items1 = tmp4;
             if (!tmp4) {
               items1 = [];
             }
-            let uint162 = byteLength.getUint16(tmp + c7);
+            sum = c7;
+            sum = byteLength.getUint16(sum + c7);
             obj = { dataOffset: null, length: null };
-            obj[0] = tmp + c12;
-            obj[1] = uint162 - 77;
-            arr = items1.push(obj);
-            sum2 = tmp2;
-            sum5 = tmp5;
-            sum4 = tmp6;
-            sum3 = tmp7;
-            uint16 = uint162;
+            sum = c12;
+            obj[0] = sum + c12;
+            obj[1] = sum - 77;
+            sum = items1.push(obj);
+            tmp86 = items1;
+            sum1 = tmp2;
+            tmp85 = tmp3;
+            sum4 = tmp5;
+            sum3 = tmp6;
+            sum2 = tmp7;
+            tmp90 = tmp8;
+            tmp91 = sum5;
+            uint16 = sum;
             tmp82 = c7;
           }
         }
-        if (_modDef4913.USE_IPTC) {
+        if (tmp19(4913).USE_IPTC) {
           length3 = length5.length;
-          let tmp56 = byteLength.getUint16(tmp) === c28;
+          let tmp54 = length5;
+          let tmp55 = c28;
+          let tmp56 = byteLength.getUint16(sum) === c28;
           if (tmp56) {
+            let tmp57 = require;
             let obj5 = getDataView;
-            tmp56 = obj5.getStringFromDataView(byteLength, tmp + c6, length3) === length5;
+            let tmp58 = c6;
+            tmp56 = obj5.getStringFromDataView(byteLength, sum + c6, length3) === tmp54;
           }
           if (tmp56) {
-            tmp56 = 0 === byteLength.getUint8(tmp + c6 + length3);
+            let tmp59 = c6;
+            tmp56 = 0 === byteLength.getUint8(sum + c6 + length3);
           }
           if (tmp56) {
-            uint16 = byteLength.getUint16(tmp + c7);
-            sum5 = tmp + c10;
-            sum2 = tmp2;
-            sum4 = tmp6;
-            sum3 = tmp7;
+            sum = c7;
+            uint16 = byteLength.getUint16(sum + c7);
+            sum = c10;
+            sum4 = sum + c10;
+            sum1 = tmp2;
+            tmp85 = tmp3;
+            tmp86 = tmp4;
+            sum3 = tmp6;
+            sum2 = tmp7;
+            tmp90 = tmp8;
+            tmp91 = sum5;
             tmp82 = c7;
           }
         }
-        if (_modDef4913.USE_ICC) {
+        if (tmp19(4913).USE_ICC) {
           let tmp60 = length;
-          let tmp62 = byteLength.getUint16(tmp) === c27;
+          let tmp61 = c27;
+          let tmp62 = byteLength.getUint16(sum) === c27;
           if (tmp62) {
+            let tmp63 = require;
             let obj6 = getDataView;
-            tmp62 = obj6.getStringFromDataView(byteLength, tmp + c6, length.length) === tmp60;
+            let tmp64 = c6;
+            tmp62 = obj6.getStringFromDataView(byteLength, sum + c6, length.length) === tmp60;
           }
           if (tmp62) {
-            let uint163 = byteLength.getUint16(tmp + c7);
-            let diff = uint163 - 16;
-            let uint8 = byteLength.getUint8(tmp + closure_16);
+            let tmp94 = c7;
+            let uint161 = byteLength.getUint16(sum + c7);
+            let tmp98 = closure_16;
+            let tmp96 = c13;
+            let diff = uint161 - 16;
+            sum = closure_17;
+            let uint8 = byteLength.getUint8(sum + closure_16);
             let items2 = tmp3;
-            let uint81 = byteLength.getUint8(tmp + closure_17);
+            sum = byteLength.getUint8(sum + closure_17);
             if (!tmp3) {
               items2 = [];
             }
             obj1 = { offset: null, length: null, chunkNumber: null, chunksTotal: null };
-            obj1[0] = tmp + c13;
+            obj1[0] = sum + tmp96;
             obj1[1] = diff;
             obj1[2] = uint8;
-            obj1[3] = uint81;
-            let arr1 = items2.push(obj1);
-            sum2 = tmp2;
-            sum5 = tmp5;
-            sum4 = tmp6;
-            sum3 = tmp7;
-            uint16 = uint163;
-            tmp82 = c7;
+            obj1[3] = sum;
+            sum = items2.push(obj1);
+            tmp85 = items2;
+            sum1 = tmp2;
+            tmp86 = tmp4;
+            sum4 = tmp5;
+            sum3 = tmp6;
+            sum2 = tmp7;
+            tmp90 = tmp8;
+            tmp91 = sum5;
+            uint16 = uint161;
+            tmp82 = tmp94;
           }
         }
-        if (!_modDef4913.USE_MPF) {
-          let uint164 = byteLength.getUint16(tmp);
-          let tmp72 = uint164 >= c25;
+        if (!tmp19(4913).USE_MPF) {
+          let uint162 = byteLength.getUint16(sum);
+          let tmp71 = c25;
+          let tmp72 = uint162 >= c25;
           if (tmp72) {
-            tmp72 = uint164 <= c29;
+            let tmp73 = c29;
+            tmp72 = uint162 <= c29;
           }
           if (!tmp72) {
-            tmp72 = uint164 === c30;
+            let tmp74 = c30;
+            tmp72 = uint162 === c30;
           }
           if (!tmp72) {
-            tmp72 = uint164 === c19;
+            let tmp75 = c19;
+            tmp72 = uint162 === c19;
           }
           if (!tmp72) {
-            tmp72 = uint164 === c20;
+            let tmp76 = c20;
+            tmp72 = uint162 === c20;
           }
           if (!tmp72) {
-            tmp72 = uint164 === c21;
+            let tmp77 = c21;
+            tmp72 = uint162 === c21;
           }
           if (!tmp72) {
-            tmp72 = uint164 === c22;
+            let tmp78 = c22;
+            tmp72 = uint162 === c22;
           }
           if (!tmp72) {
-            tmp72 = uint164 === c23;
+            let tmp79 = c23;
+            tmp72 = uint162 === c23;
           }
           if (!tmp72) {
-            tmp72 = uint164 === c24;
+            let tmp80 = c24;
+            tmp72 = uint162 === c24;
           }
           let getUint16 = byteLength.getUint16;
           if (tmp72) {
             tmp82 = c7;
-            uint16 = getUint16(tmp + c7);
-            sum2 = tmp2;
-            sum5 = tmp5;
-            sum4 = tmp6;
-            sum3 = tmp7;
+            uint16 = getUint16(sum + c7);
+            sum1 = tmp2;
+            tmp85 = tmp3;
+            tmp86 = tmp4;
+            sum4 = tmp5;
+            sum3 = tmp6;
+            sum2 = tmp7;
+            tmp90 = tmp8;
+            tmp91 = sum5;
           } else {
-            tmp10 = tmp;
+            let tmp81 = c31;
+            tmp10 = sum;
             tmp11 = tmp2;
             tmp12 = tmp3;
             tmp13 = tmp4;
@@ -279,10 +383,18 @@ arg5.default = {
             tmp15 = tmp6;
             tmp16 = tmp7;
             tmp17 = tmp8;
-            tmp18 = sum7;
-            if (getUint16(tmp) === c31) {
-              let sum6 = tmp + 1;
-              tmp = sum6;
+            tmp18 = sum5;
+            if (getUint16(sum) === c31) {
+              sum = sum + 1;
+              sum = tmp2;
+              sum = tmp3;
+              sum = tmp4;
+              sum = tmp5;
+              sum = tmp6;
+              sum = tmp7;
+              sum = tmp8;
+              sum = sum5;
+              sum = c6;
               tmp2 = tmp22;
               tmp3 = tmp23;
               tmp4 = tmp24;
@@ -290,8 +402,8 @@ arg5.default = {
               tmp6 = tmp26;
               tmp7 = tmp27;
               tmp8 = tmp28;
-              tmp9 = sum7;
-              tmp10 = sum6;
+              tmp9 = sum5;
+              tmp10 = sum;
               tmp11 = tmp22;
               tmp12 = tmp23;
               tmp13 = tmp24;
@@ -299,24 +411,32 @@ arg5.default = {
               tmp15 = tmp26;
               tmp16 = tmp27;
               tmp17 = tmp28;
-              tmp18 = sum7;
+              tmp18 = sum5;
             }
           }
         } else {
           let tmp65 = length2;
-          let tmp67 = byteLength.getUint16(tmp) === c27;
+          let tmp66 = c27;
+          let tmp67 = byteLength.getUint16(sum) === c27;
           if (tmp67) {
+            let tmp68 = require;
             let obj7 = getDataView;
-            tmp67 = obj7.getStringFromDataView(byteLength, tmp + c6, length2.length) === tmp65;
+            let tmp69 = c6;
+            tmp67 = obj7.getStringFromDataView(byteLength, sum + c6, length2.length) === tmp65;
           }
         }
       }
-      sum7 = tmp + c7;
-      uint16 = byteLength.getUint16(sum7);
-      sum2 = tmp2;
-      sum5 = tmp5;
-      sum4 = tmp6;
-      sum3 = tmp7;
+      sum = c7;
+      sum5 = sum + c7;
+      uint16 = byteLength.getUint16(sum5);
+      sum1 = tmp2;
+      tmp85 = tmp3;
+      tmp86 = tmp4;
+      sum4 = tmp5;
+      sum3 = tmp6;
+      sum2 = tmp7;
+      tmp90 = tmp8;
+      tmp91 = sum5;
       tmp82 = c7;
     }
     obj2 = { hasAppMarkers: tmp10 > c5, fileDataOffset: null, jfifDataOffset: null, tiffHeaderOffset: null, iptcDataOffset: null, xmpChunks: null, iccChunks: null, mpfDataOffset: null };

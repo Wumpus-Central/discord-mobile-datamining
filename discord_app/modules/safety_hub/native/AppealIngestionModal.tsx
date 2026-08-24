@@ -3,20 +3,21 @@
 // Module 11081 (AppealIngestionModal)
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
 import SafetyHubView from "SafetyHubView" /* 5438 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: c9, AppealIngestionSections: c10 } = SafetyHubView);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, headerContainer: null, header: null, subheader: null, separator: null, footerContainer: null, footerText: null, footerButton: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 };
 createCacheKey[2] = { marginBottom: 8, textAlign: "center" };
@@ -26,16 +27,18 @@ createCacheKey[5] = { marginBottom: 16 };
 createCacheKey[6] = { marginBottom: 16, textAlign: "center" };
 createCacheKey[7] = { paddingHorizontal: 16 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/AppealIngestionModal.tsx");
+let obj1 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionModal.tsx");
 
 export default function AppealIngestionModal(classificationId) {
   let _require;
+  let flag;
   let flag2;
   let flag3;
   let obj = _require(flag3[12]);
   const safetyHubClassification = obj.useSafetyHubClassification(classificationId.classificationId);
   ({ isDsaEligible: c0, classification } = safetyHubClassification);
-  let flag;
+  flag = undefined;
   if (classification != null) {
     flag = classification.is_spam;
   }
@@ -61,7 +64,8 @@ export default function AppealIngestionModal(classificationId) {
   obj = {
     initialRouteName: constants.SPEED_BUMP,
     screens: flag(flag3[29])(() => {
-      let obj = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
+      let obj = {};
+      obj = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       let obj2 = _undefined(flag3[21]);
       obj[0] = obj2.getHeaderCloseButton(flag(flag3[15]).close);
       obj[1] = function headerTitle() {
@@ -169,14 +173,17 @@ export const AppealIngestionModalHeader = function AppealIngestionModalHeader(ar
   }
   items[1] = tmp8;
   obj[1] = items;
-  return callback(View, obj);
+  return closure_13(View, obj);
 };
 export const AppealIngestionModalScreen = function AppealIngestionModalScreen(children) {
   let safetyHubAppealSignal;
+  let stateFromStores1;
+  let stateFromStores2;
   let navigation;
+  let callback;
   let first;
   let React;
-  let callback;
+  callback = undefined;
   let footerText = callback3();
   let stringResult = navigation;
   let obj = safetyHubAppealSignal(navigation[11]);
@@ -186,10 +193,10 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
   safetyHubAppealSignal = obj1.useSafetyHubAppealSignal();
   let obj2 = safetyHubAppealSignal(navigation[11]);
   const items1 = [closure_8];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => store.getFreeTextAppealReason());
+  stateFromStores1 = obj2.useStateFromStores(items1, () => store.getFreeTextAppealReason());
   let obj3 = safetyHubAppealSignal(navigation[11]);
   const items2 = [closure_8];
-  const stateFromStores2 = obj3.useStateFromStores(items2, () => store.getAppealClassificationId());
+  stateFromStores2 = obj3.useStateFromStores(items2, () => store.getAppealClassificationId());
   let obj4 = safetyHubAppealSignal(navigation[12]);
   let tmp7 = stateFromStores2;
   if (stateFromStores2 == null) {
@@ -232,17 +239,17 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
       callback(store.getState().routes[store.getState(store).routes.length - 1].name);
     });
     return () => {
-      navigation.removeListener("state", closure_0);
+      closure_1_3.removeListener("state", closure_0);
     };
   }, items3);
   const items4 = [navigation, first];
   callback = React.useCallback(() => {
     if (first === closure_1_10.SPEED_BUMP) {
-      navigation.push(closure_1_10.COLLECT_SIGNAL);
-    } else if (first === closure_1_10.COLLECT_SIGNAL) {
-      navigation.push(closure_1_10.CONFIRM_SUBMISSION);
-    } else if (first === closure_1_10.CONFIRM_SUBMISSION) {
-      navigation.push(closure_1_10.REQUEST_SENT);
+      navigation.push(tmp2.COLLECT_SIGNAL);
+    } else if (tmp === tmp2.COLLECT_SIGNAL) {
+      navigation.push(tmp2.CONFIRM_SUBMISSION);
+    } else if (tmp === tmp2.CONFIRM_SUBMISSION) {
+      navigation.push(tmp2.REQUEST_SENT);
     } else {
       stateFromStores1(navigation[15]).close();
       const obj = stateFromStores1(navigation[15]);
@@ -278,13 +285,13 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
           } else {
             closure_1 = tmp3;
             let body = tmp7;
-            if (null !== stateFromStores2) {
+            if (null !== closure_1_2) {
               dependencyMap = 1;
               v0("");
               v0 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = stateFromStores2(11067).requestReview(tmp36, safetyHubAppealSignal, stateFromStores1);
+              obj1[0] = closure_1_2(11067).requestReview(tmp36, closure_1_0, closure_1_1);
               return obj1;
             }
           }
@@ -292,13 +299,14 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
           if (1 === tmp7) {
             dependencyMap = 0;
             body = closure_2;
-            obj1 = safetyHubAppealSignal(5437);
+            obj1 = closure_1_0(5437);
             body = body.body;
             let code;
             if (body != null) {
               code = body.code;
             }
             v0(obj1.getRequestReviewErrorFromCode(code));
+            const tmp15 = v0;
           } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
@@ -324,6 +332,7 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
       }
     }
   }), items5);
+  obj = { style: footerText.container, children: null };
   const items6 = [children.children, ];
   obj = { style: footerText.footerContainer, children: null };
   obj1 = { style: footerText.separator };
@@ -331,9 +340,9 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
   if (tmp11) {
     items7[1] = tmp12;
     obj[1] = items7;
-    items6[1] = callback(tmp19, obj);
+    items6[1] = tmp18(tmp19, obj);
     obj[1] = items6;
-    return callback(tmp19, obj);
+    return tmp18(tmp19, obj);
   } else {
     obj2 = { bottom: true, style: null, children: null };
     obj2[1] = footerText.footerButton;
@@ -342,14 +351,14 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
       obj3[2] = footerText.footerText;
       const intl4 = tmp(stringResult[19]).intl;
       obj3[3] = intl4.string(tmp(stringResult[19]).t["d6qgY/"]);
-      const items8 = [callback2(tmp(stringResult[10]).Text, obj3), , ];
+      const items8 = [tmp20(tmp(stringResult[10]).Text, obj3), , ];
       let tmp20Result = `` !== intl;
       if (tmp20Result) {
         obj4 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null, children: null };
         footerText = footerText.footerText;
         obj4[2] = footerText;
         obj4[3] = intl;
-        tmp20Result = callback2(tmp(stringResult[10]).Text, obj4);
+        tmp20Result = tmp20(tmp(stringResult[10]).Text, obj4);
       }
       obj5 = { children: null };
       items8[1] = tmp20Result;
@@ -361,25 +370,25 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
       obj6[1] = stringResult;
       obj6[3] = stateFromStores;
       obj6[4] = stateFromStores;
-      items8[2] = callback2(tmp(stringResult[20]).Button, obj6);
+      items8[2] = tmp20(tmp(stringResult[20]).Button, obj6);
       obj5[0] = items8;
-      tmp20Result = callback(closure_14, obj5);
+      tmp20Result = tmp18(closure_14, obj5);
+      const tmp24 = closure_14;
     } else {
       const obj7 = { onPress: null, text: null };
       obj7[0] = callback;
-      if (first !== constants.REQUEST_SENT) {
-        if (first !== constants.THANKS) {
+      if (first !== tmp21.REQUEST_SENT) {
+        if (first !== tmp21.THANKS) {
           const intl2 = tmp(stringResult[19]).intl;
           let stringResult1 = intl2.string(tmp(stringResult[19]).t.XiOHRX);
         }
         obj7[1] = stringResult1;
-        tmp20Result = callback2(tmp27, obj7);
+        tmp20Result = tmp20(tmp27, obj7);
       }
       const intl3 = tmp(stringResult[19]).intl;
       stringResult1 = intl3.string(tmp(stringResult[19]).t.i4jeWR);
     }
     obj2[2] = tmp20Result;
-    callback2(tmp(stringResult[18]).SafeAreaPaddingView, obj2);
+    tmp20(tmp(stringResult[18]).SafeAreaPaddingView, obj2);
   }
-  const tmp13 = first(React.useState(""), 2);
 };

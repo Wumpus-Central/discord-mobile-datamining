@@ -1,20 +1,20 @@
 // === Module 12988: useOutboundPromotionRedemptionEndDate ===
 
 // Module 12988 (useOutboundPromotionRedemptionEndDate)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import closure_4 from "module_30" /* 30 */;
 import importDefaultResult from "t" /* 3975 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");
 
 export default function useOutboundPromotionRedemptionEndDate(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
   return React.useMemo(() => {
-    let tmp = dependencyMap;
-    lib(dependencyMap[2]);
+    let tmp = closure_1_2;
+    lib(closure_1_2[2]);
     if (callback) {
       let outboundRedemptionEndDate = lib;
       if (null != lib.outboundRedemptionEndDate) {

@@ -1,7 +1,7 @@
 // === Module 1297: Button ===
 
 // Module 1297 (Button)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import STATUS_PADDING from "STATUS_PADDING" /* 1298 */;
 import PX_16 from "PX_16" /* 1299 */;
 import getTextStyles from "getTextStyles" /* 1300 */;
@@ -66,7 +66,7 @@ import BadgeColors from "BadgeColors" /* 13546 */;
 import EmptyState from "EmptyState" /* 13547 */;
 import EmptyStateDefault2 from "EmptyState" /* 13547 */;
 
-const result = obj132.fileFinishedImporting("design/void/native.tsx");
+const result = set.fileFinishedImporting("design/void/native.tsx");
 
 export const Button = getTextStylesDefault;
 export const BUTTON_CORNER_RADIUS = getTextStyles.BUTTON_CORNER_RADIUS;

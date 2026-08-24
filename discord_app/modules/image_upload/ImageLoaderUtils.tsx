@@ -1,25 +1,22 @@
 // === Module 1469: handleImageLoad ===
 
 // Module 1469 (handleImageLoad)
-import applyDefault from "apply" /* 12 */;
 import privDefault from "priv" /* 1405 */;
-import items2 from "items" /* 1471 */;
-import parseDefault from "parse" /* 1484 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 import fit from "fit" /* 1491 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function handleImageLoad(arg0, callbacks) {
   c0 = true;
   closure_1 = callbacks;
   callbacks = callbacks.callbacks;
   store.del(callbacks.url);
   if (null != callbacks) {
-    const item = callbacks.forEach((item, index) => item(c0, obj));
+    const item = callbacks.forEach((arg0) => arg0(c0, obj));
   }
 }
 function getSrcWithWidthAndHeight(quality) {
@@ -45,7 +42,7 @@ function getSrcWithWidthAndHeight(quality) {
     if (!obj.isDiscordCdnUrl(src)) {
       const items = [, ];
       [arr[0], tmp6] = callback(src.split("?"), 2);
-      let tmp2Result = parseDefault;
+      let tmp2Result = tmp2(1484);
       items[1] = tmp2Result.parse(tmp6);
       let tmp5 = callback(src.split("?"), 2);
       [tmp8, tmp9] = callback(items, 2);
@@ -77,6 +74,7 @@ function getSrcWithWidthAndHeight(quality) {
       obj[1] = targetHeight;
       obj[2] = closure_6;
       obj[3] = closure_6;
+      const obj3 = fit;
       ({ width, height } = fit.fit(obj));
       if (width !== sourceWidth) {
         const tmp18 = (function getAttachmentLadderConfig(arg0) {
@@ -97,13 +95,14 @@ function getSrcWithWidthAndHeight(quality) {
         size[0] = width;
         size[1] = height;
         if (null != tmp18) {
+          let tmp15Result = tmp15(1471);
           obj = { targetWidth: null, targetHeight: null, sourceWidth: null, sourceHeight: null, maxUpscale: null };
           obj[0] = width;
           obj[1] = height;
           obj[2] = sourceWidth;
           obj[3] = sourceHeight;
-          const tmp15Result = items2;
-          obj[4] = tmp15Result.getSnapDownMaxUpscale(tmp18, getDevicePixelRatioDefault());
+          tmp15Result = tmp15(1471);
+          obj[4] = tmp15Result.getSnapDownMaxUpscale(tmp18, tmp2(1896)());
           size = tmp15Result.snapAttachmentDimensions(obj);
         }
         if (!tmp19) {
@@ -112,10 +111,10 @@ function getSrcWithWidthAndHeight(quality) {
         }
         tmp19 = size.width === sourceWidth && size.height === sourceHeight;
       }
-      tmp2Result = applyDefault;
+      tmp2Result = tmp2(12);
       let text = tmp8;
       if (!tmp2Result.isEmpty(tmp9)) {
-        parseDefault;
+        tmp2(1484);
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -129,7 +128,7 @@ const re8 = /\.avif($|\?|#)/i;
 let closure_9 = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096];
 let closure_10 = new privDefault({ max: 1000 });
 const tmp3 = new privDefault({ max: 1000 });
-let result = require("obj132").fileFinishedImporting("modules/image_upload/ImageLoaderUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/image_upload/ImageLoaderUtils.tsx");
 
 export const getDevicePixelRatio = getDevicePixelRatioDefault;
 export const isImageLoaded = function isImageLoaded(arg0) {
@@ -137,27 +136,27 @@ export const isImageLoaded = function isImageLoaded(arg0) {
   return null != value && value.loaded;
 };
 export const loadImage = function loadImage(arg0, bind) {
-  let obj = store;
+  let obj = arg0;
+  obj = store;
   let value = store.get(arg0);
   let backoff = value;
   if (null != value) {
     if (value.loaded) {
       if (null != bind) {
         const obj2 = image(backoff[6]);
-        image(backoff[6]).awaitOnline().then((result) => {
+        image(backoff[6]).awaitOnline().then(() => {
           if (tmp2) {
-            const callbacks = backoff.callbacks;
-            const item = callbacks.forEach((item, index) => {
+            const callbacks = tmp.callbacks;
+            const item = callbacks.forEach((arg0) => {
               if (null != closure_2) {
-                item(false, tmp);
+                arg0(false, tmp);
               } else {
                 obj = { url: null, loaded: true };
                 obj[0] = closure_0;
-                item(true, obj);
+                arg0(true, obj);
               }
             });
           }
-          tmp2 = null != backoff && null != backoff.callbacks;
         });
         const awaitOnlineResult = image(backoff[6]).awaitOnline();
       }
@@ -168,7 +167,9 @@ export const loadImage = function loadImage(arg0, bind) {
   if (null == value) {
     obj = { url: null, loaded: false };
     obj[0] = arg0;
+    backoff = obj;
     const result = obj.set(arg0, obj);
+    image = undefined;
     image = new globalThis.Image();
     backoff = undefined;
     if (null == obj.backoff) {
@@ -205,7 +206,7 @@ export const loadImage = function loadImage(arg0, bind) {
             } else {
               closure_1 = tmp2;
               closure_0 = tmp2;
-              let obj1 = image(c2[6]);
+              let obj1 = closure_1_1(c2[6]);
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -227,9 +228,9 @@ export const loadImage = function loadImage(arg0, bind) {
                 backoff = undefined;
                 if (null == tmp2.backoff) {
                   let tmp7 = new tmp22(table[5])();
-                  tmp2.backoff = tmp7;
+                  tmp.backoff = tmp7;
                 }
-                backoff = tmp2.backoff;
+                backoff = tmp.backoff;
                 image.onerror = closure_1_4(function*() {
                   if (c3 === 2) {
                     c3 = 3;
@@ -259,7 +260,7 @@ export const loadImage = function loadImage(arg0, bind) {
                         } else {
                           closure_1 = tmp2;
                           closure_0 = tmp2;
-                          let obj1 = image(c2[6]);
+                          let obj1 = closure_1_1(c2[6]);
                           c2 = 1;
                           c3 = 1;
                           obj1 = { value: null, done: false };
@@ -281,9 +282,9 @@ export const loadImage = function loadImage(arg0, bind) {
                             backoff = undefined;
                             if (null == tmp2.backoff) {
                               let tmp7 = new tmp22(table[5])();
-                              tmp2.backoff = tmp7;
+                              tmp.backoff = tmp7;
                             }
-                            backoff = tmp2.backoff;
+                            backoff = tmp.backoff;
                             image.onerror = closure_1_4(/* F103843 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = tmp2.url;
@@ -310,7 +311,7 @@ export const loadImage = function loadImage(arg0, bind) {
                   obj = { url, loaded: true, width: obj.width, height: obj.height };
                   const result = closure_1_10.set(url, obj);
                   if (null != callbacks) {
-                    const item = callbacks.forEach((item, index) => item(c0, obj));
+                    const item = callbacks.forEach((arg0) => arg0(c0, obj));
                   }
                 };
                 image.src = tmp2.url;
@@ -337,7 +338,7 @@ export const loadImage = function loadImage(arg0, bind) {
       obj = { url, loaded: true, width: obj.width, height: obj.height };
       const result = closure_1_10.set(url, obj);
       if (null != callbacks) {
-        const item = callbacks.forEach((item, index) => item(c0, obj));
+        const item = callbacks.forEach((arg0) => arg0(c0, obj));
       }
     };
     image.src = obj.url;
@@ -378,7 +379,7 @@ export const getBestMediaProxySize = function getBestMediaProxySize(size, closur
     flag = false;
   }
   if (flag) {
-    const found = closure_9.filter((item, index) => item <= closure_0);
+    const found = closure_9.filter((arg0) => arg0 <= closure_0);
     const arr = found.pop();
     if (null != arr) {
       if (size / arr <= 1.25) {
@@ -386,9 +387,9 @@ export const getBestMediaProxySize = function getBestMediaProxySize(size, closur
       }
     }
   }
-  let found1 = closure_9.find((item, index) => closure_0 <= item);
+  let found1 = closure_9.find((arg0) => closure_0 <= arg0);
   if (found1 == null) {
-    found1 = closure_9[closure_9.length - 1];
+    found1 = arr2[arr2.length - 1];
   }
   return found1;
 };

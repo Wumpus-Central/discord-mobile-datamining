@@ -5,9 +5,9 @@ import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 4745 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/mfa/native/components/button.tsx");
+const result = require("set").fileFinishedImporting("modules/mfa/native/components/button.tsx");
 
 export default function MFAButton(arg0) {
   const merged = Object.assign(arg0);

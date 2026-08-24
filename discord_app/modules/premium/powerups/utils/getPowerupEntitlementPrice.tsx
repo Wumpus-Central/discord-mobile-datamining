@@ -1,9 +1,9 @@
 // === Module 4283: getPowerupEntitlementPrice ===
 
 // Module 4283 (getPowerupEntitlementPrice)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");
 
 export default function getPowerupEntitlementPrice(tenant_metadata) {
   let guild_monetization;

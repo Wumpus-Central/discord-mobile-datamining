@@ -10,20 +10,21 @@ import registerAssetDefault2 from "registerAsset" /* 15338 */;
 import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 15345 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function IconOrPreview(arg0) {
   ({ userId, activity, stream, game } = arg0);
+  let _require;
   importDefault = undefined;
   dependencyMap = undefined;
   const tmp = callback2();
-  const _require = tmp;
+  _require = tmp;
   let guildId;
   if (stream != null) {
     guildId = stream.guildId;
@@ -184,7 +185,7 @@ function StageStreamAvatars(stage) {
   stage = stage.stage;
   let obj = useLiveStageData;
   const liveStageData = obj.useLiveStageData(stage);
-  { style: callback2().avatarStackContainer, children: null };
+  obj = { style: callback2().avatarStackContainer, children: null };
   ({ audienceCount, audienceFriends } = liveStageData);
   obj = { users: null, guildId: null, userCount: null, isStage: true, avatarSize: null };
   items = [stage.user];
@@ -203,20 +204,24 @@ let c3 = importAllResult;
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
 let items = [registerAssetDefault, registerAssetDefault2];
-let obj = { backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: ThemesDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
+let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: null, cardAvatar: null, cardImage: null, cardImageStream: null, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
+obj = { backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: ThemesDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
 obj[1] = obj;
 obj[2] = { marginBottom: 2 };
 obj[3] = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" };
 obj[4] = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" };
-const createCacheKey = { flex: 1, borderRadius: ThemesDefault.radii.sm - 1 };
+createCacheKey = { flex: 1, borderRadius: ThemesDefault.radii.sm - 1 };
 obj[5] = createCacheKey;
 obj[6] = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
+let obj2 = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
 obj[7] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj3 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[8] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[9] = { top: 4, left: 4, position: "absolute" };
 obj[10] = { fontSize: 10, lineHeight: 13, fontFamily: require("sum").Fonts.PRIMARY_BOLD };
 obj[11] = { marginRight: 12, flexDirection: "column", height: "100%" };
 let closure_16 = createCacheKey.createStyles(obj);
+let obj4 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 const memoResult = importAllResult.memo((userId) => {
   userId = userId.userId;
   const guildId = userId.guildId;
@@ -228,9 +233,10 @@ const memoResult = importAllResult.memo((userId) => {
   if (panelVariant === undefined) {
     panelVariant = false;
   }
+  let analyticsLocations;
   let stateFromStores;
   const tmp = callback2();
-  const analyticsLocations = guildId(index[12])().analyticsLocations;
+  analyticsLocations = guildId(index[12])().analyticsLocations;
   let obj = userId(index[13]);
   items = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getUser(userId));
@@ -285,21 +291,21 @@ const memoResult = importAllResult.memo((userId) => {
       }
       STATUS_CARD = closure_1_7.STATUS_CARD;
     }
-    guildId(index[15]);
-    const obj = { type: STATUS_CARD, order: index, guild_id: guildId, highlighted_user_ids: items, destination_channel_id: null };
+    let obj = guildId(index[15]);
+    obj = { type: STATUS_CARD, order: index, guild_id: guildId, highlighted_user_ids: items, destination_channel_id: null };
     items = [userId];
     let channelId;
     if (stream != null) {
-      channelId = stream.channelId;
+      channelId = tmp.channelId;
     }
     obj[4] = channelId;
     obj.track(closure_1_10.ACTIVITY_CARD_CLICKED, obj);
     if (null != stream) {
-      userId(index[17])(index[16], index.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = userId(index[17])(index[16], index.paths);
+      userId(tmp6[17])(tmp6[16], tmp6.paths).then((arg0) => arg0.default(channelId.channelId, true));
+      const promise2 = userId(tmp6[17])(tmp6[16], tmp6.paths);
     } else {
-      userId(index[17])(index[18], index.paths).then((result) => result.default({ userId: closure_0, localUser: closure_6, sourceAnalyticsLocations: closure_5 }));
-      const promise = userId(index[17])(index[18], index.paths);
+      userId(tmp6[17])(tmp6[18], tmp6.paths).then((arg0) => arg0.default({ userId: closure_0, localUser: closure_6, sourceAnalyticsLocations: closure_5 }));
+      const promise = userId(tmp6[17])(tmp6[18], tmp6.paths);
     }
   }, items2);
   if (null == stateFromStores) {
@@ -360,7 +366,7 @@ const memoResult = importAllResult.memo((userId) => {
         const obj6 = { children: null };
         items3[1] = tmp23Result;
         obj2[1] = items3;
-        const items4 = [callback(stream, obj2), ];
+        const items4 = [tmp25(stream, obj2), ];
         const obj7 = { stage: null, renderingContext: null, guildId: null, streamingUser: null };
         obj7[0] = stateFromStores1;
         obj7[1] = renderingContext;
@@ -369,6 +375,7 @@ const memoResult = importAllResult.memo((userId) => {
         items4[1] = tmp23(tmp4(tmp3[23]).HappeningNowLiveStageContent, obj7);
         obj6[0] = items4;
         let obj8 = obj6;
+        const tmp16 = stream;
       } else {
         obj8 = { children: null };
         const obj9 = { style: null, children: null };
@@ -399,16 +406,17 @@ const memoResult = importAllResult.memo((userId) => {
         obj14[1] = stream;
         items6[2] = tmp23(tmp4(tmp3[25]).HappeningNowActivityCardSubtitle, obj14);
         obj11[1] = items6;
-        items5[1] = callback(stream, obj11);
+        items5[1] = tmp25(stream, obj11);
         obj8[0] = items5;
       }
-      obj1[4] = callback(closure_13, obj8);
+      obj1[4] = closure_12(closure_13, obj8);
       tmp23Result = tmp23(tmp2Result, obj1);
+      const tmp26 = closure_13;
     }
     return tmp23Result;
   }
   const tmp4Result = userId(index[13]);
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx");
 
 export default memoResult;

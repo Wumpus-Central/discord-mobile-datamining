@@ -1,7 +1,7 @@
 // === Module 15000: useDataToSupportQuests3PSettingValue ===
 
 // Module 15000 (useDataToSupportQuests3PSettingValue)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
@@ -18,6 +18,7 @@ function useDataToSupportQuests3PSettingIsDisabled() {
   let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
   const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
   const setting = DropsOptedOut.useSetting();
+  const obj = useAdPersonalizationTogglesDisabled;
   const isParentallyControlled = useParentalControlledExplicitContentSettings.useIsParentallyControlled();
   if (!adPersonalizationTogglesDisabled) {
     adPersonalizationTogglesDisabled = setting;
@@ -58,7 +59,7 @@ obj = {
   useIsDisabled: useDataToSupportQuests3PSettingIsDisabled
 };
 const toggle1 = createToggle.createToggle(obj);
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
 
 export default toggle;
 export const UseDataForQuests3PSponsoredContentSetting = toggle1;

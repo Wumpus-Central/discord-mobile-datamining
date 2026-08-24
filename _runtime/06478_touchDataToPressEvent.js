@@ -54,17 +54,17 @@ arg5.gestureToPressableEvent = (handlerTag) => {
 arg5.gestureTouchToPressableEvent = (handlerTag) => {
   const timestamp = Date.now();
   const nativeEvent = {
-    touches: allTouches.map((item, index) => {
+    touches: allTouches.map((id) => {
       if (typeof timestamp !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      return { identifier: item.id, locationX: item.x, locationY: item.y, pageX: item.absoluteX, pageY: item.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
+      return { identifier: id.id, locationX: id.x, locationY: id.y, pageX: id.absoluteX, pageY: id.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
     }),
-    changedTouches: changedTouches.map((item, index) => {
+    changedTouches: changedTouches.map((id) => {
       if (typeof timestamp !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      return { identifier: item.id, locationX: item.x, locationY: item.y, pageX: item.absoluteX, pageY: item.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
+      return { identifier: id.id, locationX: id.x, locationY: id.y, pageX: id.absoluteX, pageY: id.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
     }),
     identifier: handlerTag.handlerTag,
     locationX: null,

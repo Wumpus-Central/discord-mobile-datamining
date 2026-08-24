@@ -1,10 +1,10 @@
-// === Module 7245: obj132 ===
+// === Module 7245: set ===
 
-// Module 7245 (obj132)
-import obj132 from "obj132" /* 2 */;
+// Module 7245 (set)
+import set from "set" /* 2 */;
 
 let c0 = "not supported";
-const result = obj132.fileFinishedImporting("utils/GameUtils.native.tsx");
+const result = set.fileFinishedImporting("utils/GameUtils.native.tsx");
 
 export default {
   waitSubscribed() {

@@ -1,7 +1,7 @@
 // === Module 1735: withSequence ===
 
 // Module 1735 (withSequence)
-const require = fn;
+const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_sequenceTs2(){const{getReduceMotionForAnimation,reduceMotion}=this.__closure;return{onStart:function(animation,value){return animation.current=value;},onFrame:function(){return true;},current:0,animationIndex:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };
 let closure_3 = { code: "function pnpm_sequenceTs3(){const{_animations,getReduceMotionForAnimation,reduceMotion}=this.__closure;const animations=_animations.map(function(a){const result=typeof a==='function'?a():a;result.finished=false;return result;});function findNextNonReducedMotionAnimationIndex(index){while(index<animations.length-1&&animations[index].reduceMotion){index++;}return index;}const callback=function(finished){if(finished){return;}animations.forEach(function(animation){if(typeof animation.callback==='function'&&!animation.finished){animation.callback(finished);}});};function sequence(animation,now){const currentAnim=animations[animation.animationIndex];const finished=currentAnim.onFrame(currentAnim,now);animation.current=currentAnim.current;if(finished){if(currentAnim.callback){currentAnim.callback(true);}currentAnim.finished=true;animation.animationIndex=findNextNonReducedMotionAnimationIndex(animation.animationIndex+1);if(animation.animationIndex<animations.length){const nextAnim=animations[animation.animationIndex];nextAnim.onStart(nextAnim,currentAnim.current,now,currentAnim);return false;}return true;}return false;}function onStart(animation,value,now,previousAnimation){animations.forEach(function(anim){if(anim.reduceMotion===undefined){anim.reduceMotion=animation.reduceMotion;}});animation.animationIndex=findNextNonReducedMotionAnimationIndex(0);if(previousAnimation===undefined){previousAnimation=animations[animations.length-1];}const currentAnimation=animations[animation.animationIndex];currentAnimation.onStart(currentAnimation,value,now,previousAnimation);}return{isHigherOrder:true,onFrame:sequence,onStart:onStart,animationIndex:0,current:animations[0].current,callback:callback,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };
@@ -36,12 +36,12 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
       let defineAnimationResult = substr(1694).defineAnimation(0, fn2);
       const obj3 = substr(1694);
     } else {
-      substr(1694);
+      obj = substr(1694);
       const fn = function s() {
-        mapped = mapped.map((item, index) => {
-          let tmp = item;
-          if (typeof item === "function") {
-            tmp = item();
+        mapped = mapped.map((fn) => {
+          let tmp = fn;
+          if (typeof fn === "function") {
+            tmp = fn();
           }
           tmp.finished = false;
           return tmp;
@@ -57,10 +57,10 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
               obj.finished = true;
               const sum = animationIndex.animationIndex + 1;
               let tmp3 = sum;
-              if (sum < mapped.length - 1) {
+              if (sum < arr.length - 1) {
                 let tmp4 = sum;
                 tmp3 = sum;
-                if (mapped[sum].reduceMotion) {
+                if (arr[sum].reduceMotion) {
                   const sum1 = tmp4 + 1;
                   tmp3 = sum1;
                   while (sum1 < mapped.length - 1) {
@@ -73,8 +73,8 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
                 }
               }
               animationIndex.animationIndex = tmp3;
-              if (animationIndex.animationIndex < mapped.length) {
-                mapped[animationIndex.animationIndex].onStart(mapped[animationIndex.animationIndex], obj.current, arg1, obj);
+              if (animationIndex.animationIndex < arr.length) {
+                arr[animationIndex.animationIndex].onStart(arr[animationIndex.animationIndex], obj.current, arg1, obj);
                 return false;
               } else {
                 return true;
@@ -85,9 +85,9 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
           },
           onStart(arg0, arg1, arg2, arg3) {
             mapped = arg0;
-            const item = mapped.forEach((item, index) => {
-              if (undefined === item.reduceMotion) {
-                item.reduceMotion = reduceMotion.reduceMotion;
+            const item = mapped.forEach((reduceMotion) => {
+              if (undefined === reduceMotion.reduceMotion) {
+                reduceMotion.reduceMotion = reduceMotion.reduceMotion;
               }
             });
             let num = 0;
@@ -118,14 +118,14 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
           callback(arg0) {
             mapped = arg0;
             if (!arg0) {
-              const item = mapped.forEach((item, index) => {
-                const callback = item.callback;
+              const item = mapped.forEach((callback) => {
+                callback = callback.callback;
                 let finished = typeof callback !== "function";
                 if (typeof callback === "function") {
-                  finished = item.finished;
+                  finished = callback.finished;
                 }
                 if (!finished) {
-                  item.callback(closure_0);
+                  callback.callback(closure_0);
                 }
               });
             }
@@ -146,6 +146,7 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
     return defineAnimationResult;
   } else if (typeof withTimingResult === "string") {
     dependencyMap = withTimingResult;
+    let tmp = withTimingResult;
   } else {
     substr.unshift(withTimingResult);
   }

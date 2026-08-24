@@ -3,15 +3,15 @@
 // Module 13095 (round)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import obj132 from "obj132" /* 500 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
 import onDefault from "on" /* 4572 */;
 import parseEncoder from "parseEncoder" /* 7489 */;
 import _initStatsDefault from "_initStats" /* 13092 */;
 
-require = fn;
+require = arg1;
 function round(arg0) {
-  let num = 0;
+  let num;
+  num = 0;
   if (null != arg0) {
     const _Math = Math;
     num = Math.round(arg0);
@@ -22,8 +22,8 @@ let obj = { FpsUpdate: "fps-update" };
 onDefault;
 class VideoQuality extends tmp2 {
   constructor(arg0) {
-    TimeStampProducer = fn;
-    if (fn === undefined) {
+    TimeStampProducer = arg1;
+    if (arg1 === undefined) {
       tmp5 = closure_0;
       tmp6 = closure_2;
       TimeStampProducer = require("sleep").TimeStampProducer;
@@ -53,8 +53,8 @@ class VideoQuality extends tmp2 {
         const result1 = closure_0.updateSystemResourceStats();
         const result2 = closure_0.updateVideoEffectStats(transport);
         if (null != transport) {
-          const connection = closure_0.connection;
-          closure_0.receivedStats(nowResult, transport, connection.getStreamParameters());
+          const connection = obj.connection;
+          obj.receivedStats(nowResult, transport, connection.getStreamParameters());
         }
       }
     };
@@ -116,11 +116,11 @@ prototype["start"] = function start() {
   const connection = this.connection;
   connection.on(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
 };
-prototype["setOutboundSsrc"] = function setOutboundSsrc(item) {
+prototype["setOutboundSsrc"] = function setOutboundSsrc(ssrc) {
   const self = this;
-  if (null == this.outboundStats[item]) {
+  if (null == this.outboundStats[ssrc]) {
     const outboundStats = new parseEncoder.OutboundStats(self.timestampProducer);
-    self.outboundStats[item] = outboundStats;
+    self.outboundStats[ssrc] = outboundStats;
   }
 };
 prototype["getOrCreateInboundStats"] = function getOrCreateInboundStats(userId) {
@@ -171,6 +171,7 @@ prototype["pause"] = function pause() {
   const item = applyDefault.forEach(self.outboundStats, (arg0) => {
     arg0.statsWindow = [];
   });
+  const arr = applyDefault;
   const item1 = applyDefault.forEach(self.inboundStats, (arg0) => {
     arg0.statsWindow = [];
   });
@@ -216,12 +217,19 @@ prototype["getEncoderUsageStats"] = function getEncoderUsageStats() {
   const self = this;
   const map = new Map();
   for (const key10011 in this.outboundStats) {
+    let tmp6 = key10011;
     let _Map = Map;
+    let tmp7 = new.target;
+    let tmp8 = new.target;
     map1 = new Map();
+    let tmp9 = map1;
     let obj3 = self.outboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
+    let tmp11 = codecsUsed;
+    let tmp = codecsUsed;
     for (const item10013 of codecsUsed) {
       let formatted = item10013.toUpperCase();
+      let tmp3 = round;
       let result = map1.set(formatted, round(self.outboundStats[key10011].codecBuckets[formatted]));
       let _parseInt = parseInt;
       let result1 = map.set(parseInt(key10011), map1);
@@ -234,12 +242,19 @@ prototype["getDecoderUsageStats"] = function getDecoderUsageStats() {
   const self = this;
   const map = new Map();
   for (const key10011 in this.inboundStats) {
+    let tmp6 = key10011;
     let _Map = Map;
+    let tmp7 = new.target;
+    let tmp8 = new.target;
     map1 = new Map();
+    let tmp9 = map1;
     let obj3 = self.inboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
+    let tmp11 = codecsUsed;
+    let tmp = codecsUsed;
     for (const item10013 of codecsUsed) {
       let formatted = item10013.toUpperCase();
+      let tmp3 = round;
       let result = map1.set(formatted, round(self.inboundStats[key10011].codecBuckets[formatted]));
       let result1 = map.set(key10011, map1);
       continue;
@@ -264,27 +279,27 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
         num = 0;
       }
       obj[1] = num;
-      let num2 = value.get(parseEncoder.CodecTypes.H265);
+      let num2 = value.get(tmp2(7489).CodecTypes.H265);
       if (num2 == null) {
         num2 = 0;
       }
       obj[2] = num2;
-      let num3 = value.get(parseEncoder.CodecTypes.VP8);
+      let num3 = value.get(tmp2(7489).CodecTypes.VP8);
       if (num3 == null) {
         num3 = 0;
       }
       obj[3] = num3;
-      let num4 = value.get(parseEncoder.CodecTypes.VP9);
+      let num4 = value.get(tmp2(7489).CodecTypes.VP9);
       if (num4 == null) {
         num4 = 0;
       }
       obj[4] = num4;
-      let num5 = value.get(parseEncoder.CodecTypes.AV1);
+      let num5 = value.get(tmp2(7489).CodecTypes.AV1);
       if (num5 == null) {
         num5 = 0;
       }
       obj[5] = num5;
-      let num6 = value.get(parseEncoder.CodecTypes.UNKNOWN);
+      let num6 = value.get(tmp2(7489).CodecTypes.UNKNOWN);
       if (num6 == null) {
         num6 = 0;
       }
@@ -304,27 +319,27 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
     num8 = 0;
   }
   obj[1] = num8;
-  let num9 = map.get(parseEncoder.CodecTypes.H265);
+  let num9 = map.get(tmp7(7489).CodecTypes.H265);
   if (num9 == null) {
     num9 = 0;
   }
   obj[2] = num9;
-  let num10 = map.get(parseEncoder.CodecTypes.VP8);
+  let num10 = map.get(tmp7(7489).CodecTypes.VP8);
   if (num10 == null) {
     num10 = 0;
   }
   obj[3] = num10;
-  let num11 = map.get(parseEncoder.CodecTypes.VP9);
+  let num11 = map.get(tmp7(7489).CodecTypes.VP9);
   if (num11 == null) {
     num11 = 0;
   }
   obj[4] = num11;
-  let num12 = map.get(parseEncoder.CodecTypes.AV1);
+  let num12 = map.get(tmp7(7489).CodecTypes.AV1);
   if (num12 == null) {
     num12 = 0;
   }
   obj[5] = num12;
-  let num13 = map.get(parseEncoder.CodecTypes.UNKNOWN);
+  let num13 = map.get(tmp7(7489).CodecTypes.UNKNOWN);
   if (num13 == null) {
     num13 = 0;
   }
@@ -340,7 +355,8 @@ prototype["getCameraDurationStats"] = function getCameraDurationStats() {
 prototype["getOutboundStats"] = function getOutboundStats() {
   const self = this;
   let items = [];
-  let item = self(12).forEach(this.outboundStats, (vmafHistogram, items) => {
+  let item = self(12).forEach(this.outboundStats, (vmafHistogram) => {
+    items = arg1;
     obj = self;
     const connection = self.connection;
     let streamParameters;
@@ -348,9 +364,9 @@ prototype["getOutboundStats"] = function getOutboundStats() {
       streamParameters = connection.getStreamParameters();
     }
     if (streamParameters.length > 1) {
-      const item = streamParameters.forEach((item, index) => {
-        if (parseInt(closure_0) === item.ssrc) {
-          let num = item.quality;
+      const item = streamParameters.forEach((ssrc) => {
+        if (parseInt(closure_0) === ssrc.ssrc) {
+          let num = ssrc.quality;
           if (num == null) {
             num = 50;
           }
@@ -371,9 +387,9 @@ prototype["getOutboundStats"] = function getOutboundStats() {
     const report4 = videoEntropy.getReport(items1);
     const result = vmafHistogram.aggregationDuration / 1000;
     if (!obj2.isWeb()) {
-      let tmp9Result = tmp9(dependencyMap[7]);
+      let tmp9Result = tmp9(tmp10[7]);
       if (!tmp9Result.isIOS()) {
-        tmp9Result = tmp9(dependencyMap[7]);
+        tmp9Result = tmp9(tmp10[7]);
         if (!tmp9Result.isAndroid()) {
           let framesCodec = vmafHistogram.aggregatedProperties.screenshareFramesUnique;
         }
@@ -394,7 +410,7 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           context = connection2.context;
         }
         let result1 = null;
-        if (context === tmp9(dependencyMap[4]).MediaEngineContextTypes.STREAM) {
+        if (context === tmp9(tmp10[4]).MediaEngineContextTypes.STREAM) {
           result1 = null;
           if (0 < result) {
             result1 = framesCodec / result;
@@ -498,98 +514,98 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           tmp33 = report3.percentiles[99];
         }
         obj.outbound_bandwidth_surplus_percentile99 = tmp33;
-        const tmp34 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.NVIDIA_CUDA];
+        const tmp34 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.NVIDIA_CUDA];
         let num13 = 0;
         if (null != tmp34) {
           const _Math = Math;
           num13 = Math.round(tmp34);
         }
         obj.duration_encoder_nvidia_cuda = num13;
-        const tmp36 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.NVIDIA_DIRECT_3D];
+        const tmp36 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.NVIDIA_DIRECT_3D];
         let num14 = 0;
         if (null != tmp36) {
           const _Math2 = Math;
           num14 = Math.round(tmp36);
         }
         obj.duration_encoder_nvidia_direct3d = num14;
-        const tmp38 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.NVIDIA_VULKAN];
+        const tmp38 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.NVIDIA_VULKAN];
         let num15 = 0;
         if (null != tmp38) {
           const _Math3 = Math;
           num15 = Math.round(tmp38);
         }
         obj.duration_encoder_nvidia_vulkan = num15;
-        const tmp40 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.OPENH264];
+        const tmp40 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.OPENH264];
         let num16 = 0;
         if (null != tmp40) {
           const _Math4 = Math;
           num16 = Math.round(tmp40);
         }
         obj.duration_encoder_openh264 = num16;
-        const tmp42 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.VIDEOTOOLBOX];
+        const tmp42 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.VIDEOTOOLBOX];
         let num17 = 0;
         if (null != tmp42) {
           const _Math5 = Math;
           num17 = Math.round(tmp42);
         }
         obj.duration_encoder_videotoolbox = num17;
-        const tmp44 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.AMD_DIRECT_3D];
+        const tmp44 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.AMD_DIRECT_3D];
         let num18 = 0;
         if (null != tmp44) {
           const _Math6 = Math;
           num18 = Math.round(tmp44);
         }
         obj.duration_encoder_amd_direct3d = num18;
-        const tmp46 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.AMD_VAAPI];
+        const tmp46 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.AMD_VAAPI];
         let num19 = 0;
         if (null != tmp46) {
           const _Math7 = Math;
           num19 = Math.round(tmp46);
         }
         obj.duration_encoder_amd_vaapi = num19;
-        const tmp48 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.INTEL];
+        const tmp48 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.INTEL];
         let num20 = 0;
         if (null != tmp48) {
           const _Math8 = Math;
           num20 = Math.round(tmp48);
         }
         obj.duration_encoder_intel = num20;
-        const tmp50 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.INTEL_DIRECT_3D];
+        const tmp50 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.INTEL_DIRECT_3D];
         let num21 = 0;
         if (null != tmp50) {
           const _Math9 = Math;
           num21 = Math.round(tmp50);
         }
         obj.duration_encoder_intel_direct3d = num21;
-        const tmp52 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.INTEL_VAAPI];
+        const tmp52 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.INTEL_VAAPI];
         let num22 = 0;
         if (null != tmp52) {
           const _Math10 = Math;
           num22 = Math.round(tmp52);
         }
         obj.duration_encoder_intel_vaapi = num22;
-        const tmp54 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.VP8_LIBVPX];
+        const tmp54 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.VP8_LIBVPX];
         let num23 = 0;
         if (null != tmp54) {
           const _Math11 = Math;
           num23 = Math.round(tmp54);
         }
         obj.duration_encoder_vp8_libvpx = num23;
-        const tmp56 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.UNCATEGORIZED];
+        const tmp56 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.UNCATEGORIZED];
         let num24 = 0;
         if (null != tmp56) {
           const _Math12 = Math;
           num24 = Math.round(tmp56);
         }
         obj.duration_encoder_uncategorized = num24;
-        const tmp58 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.WMF_CHROME];
+        const tmp58 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.WMF_CHROME];
         let num25 = 0;
         if (null != tmp58) {
           const _Math13 = Math;
           num25 = Math.round(tmp58);
         }
         obj.duration_encoder_wmf_chrome = num25;
-        const tmp60 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.UNKNOWN];
+        const tmp60 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.UNKNOWN];
         let num26 = 0;
         if (null != tmp60) {
           const _Math14 = Math;
@@ -749,53 +765,56 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           tmp94 = report4.percentiles[99];
         }
         obj.video_entropy_percentile99 = tmp94;
-        const tmp95 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.EXYNOS];
+        const tmp95 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.EXYNOS];
         let num32 = 0;
         if (null != tmp95) {
           const _Math20 = Math;
           num32 = Math.round(tmp95);
         }
         obj.duration_encoder_exynos = num32;
-        const tmp97 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.QUALCOMM];
+        const tmp97 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.QUALCOMM];
         let num33 = 0;
         if (null != tmp97) {
           const _Math21 = Math;
           num33 = Math.round(tmp97);
         }
         obj.duration_encoder_qualcomm = num33;
-        const tmp99 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.MEDIATEK];
+        const tmp99 = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.MEDIATEK];
         let num34 = 0;
         if (null != tmp99) {
+          streamParameters = globalThis;
           const _Math22 = Math;
           num34 = Math.round(tmp99);
         }
         obj.duration_encoder_mediatek = num34;
-        const tmp101 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.WMF_SW];
+        streamParameters = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.WMF_SW];
         let num35 = 0;
-        if (null != tmp101) {
+        if (null != streamParameters) {
+          streamParameters = globalThis;
           const _Math23 = Math;
-          num35 = Math.round(tmp101);
+          num35 = Math.round(streamParameters);
         }
         obj.duration_encoder_wmf_sw = num35;
-        const tmp103 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.WMF_HW];
+        streamParameters = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.WMF_HW];
         let num36 = 0;
-        if (null != tmp103) {
+        if (null != streamParameters) {
+          streamParameters = globalThis;
           const _Math24 = Math;
-          num36 = Math.round(tmp103);
+          num36 = Math.round(streamParameters);
         }
         obj.duration_encoder_wmf_hw = num36;
-        const tmp105 = vmafHistogram.encoderBuckets[tmp9(undefined, dependencyMap[5]).Encoders.WMF_DIRECT_3D];
+        streamParameters = vmafHistogram.encoderBuckets[tmp9(undefined, tmp10[5]).Encoders.WMF_DIRECT_3D];
         let num37 = 0;
-        if (null != tmp105) {
+        if (null != streamParameters) {
+          streamParameters = globalThis;
           const _Math25 = Math;
-          num37 = Math.round(tmp105);
+          num37 = Math.round(streamParameters);
         }
         obj.duration_encoder_wmf_direct3d = num37;
-        items.push(obj);
+        streamParameters = items.push(obj);
       }
     }
     framesCodec = vmafHistogram.aggregatedProperties.framesCodec;
-    obj2 = items(dependencyMap[7]);
   });
   return items;
 };
@@ -823,6 +842,7 @@ prototype["updateSendState"] = function updateSendState(paused) {
       arg0.statsWindow = items;
       return items;
     });
+    const arr = applyDefault;
   }
 };
 prototype["getStats"] = function getStats(aggregationDuration) {
@@ -1275,7 +1295,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       if (!tmp45Result.isWeb()) {
         obj.frames_dropped_render = framesDropped;
       }
-      tmp45Result = obj132;
+      tmp45Result = tmp45(500);
     }
     obj = {};
     const merged1 = Object.assign(obj);
@@ -1324,7 +1344,8 @@ prototype["getStats"] = function getStats(aggregationDuration) {
   }
 };
 prototype["receivedStats"] = function receivedStats(nowResult, transport, streamParameters) {
-  const self = this;
+  let self = this;
+  self = this;
   importDefault = nowResult;
   dependencyMap = transport;
   closure_3 = streamParameters;
@@ -1370,14 +1391,15 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   }
   obj = videoEntropy(500);
   tmp13 = self.cameraDuration.value && !self.cameraDuration.value;
-  closure_7 = applyDefault.max(streamParameters.map((item, index) => item.quality));
+  const tmp14 = importDefault;
+  closure_7 = applyDefault.max(streamParameters.map((quality) => quality.quality));
   const outbound = transport.rtp.outbound;
-  const first = outbound.filter((item, index) => {
-    let tmp = "video" === item.type;
+  const first = outbound.filter((type) => {
+    let tmp = "video" === type.type;
     if (tmp) {
       videoEntropy = undefined;
-      if (item != null) {
-        videoEntropy = item.videoEntropy;
+      if (type != null) {
+        videoEntropy = type.videoEntropy;
       }
       tmp = null != videoEntropy;
     }
@@ -1388,21 +1410,21 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     videoEntropy = first.videoEntropy;
   }
   const outbound1 = transport.rtp.outbound;
-  let found = outbound1.filter((item, index) => "video" === item.type);
-  const item = found.forEach((item, index) => {
-    if (null != item) {
-      const ssrc = item.ssrc;
+  let found = outbound1.filter((type) => "video" === type.type);
+  const item = found.forEach((ssrc) => {
+    if (null != ssrc) {
+      ssrc = ssrc.ssrc;
       obj = self.outboundStats[ssrc];
       if (null == obj) {
-        const outboundStats = new videoEntropy(transport[5]).OutboundStats(self.timestampProducer);
-        self.outboundStats[ssrc] = outboundStats;
+        const outboundStats = new videoEntropy(transport[5]).OutboundStats(tmp63.timestampProducer);
+        tmp63.outboundStats[ssrc] = outboundStats;
         obj = outboundStats;
       }
       let tmp7 = null == obj.timeToFirstFrame;
       if (tmp7) {
-        let tmp8 = item.framesEncoded > 0;
+        let tmp8 = ssrc.framesEncoded > 0;
         if (!tmp8) {
-          let num2 = item.frameRateInput;
+          let num2 = ssrc.frameRateInput;
           if (num2 == null) {
             num2 = 0;
           }
@@ -1419,13 +1441,13 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         tmp12 = tmp11 >= 0;
       }
       if (tmp12) {
-        videoEntropy = self.videoEntropy;
+        videoEntropy = tmp63.videoEntropy;
         videoEntropy.addSample(tmp11);
       }
-      const found = streamParameters.find((item, index) => item.ssrc === ssrc);
+      const found = streamParameters.find((ssrc) => ssrc.ssrc === ssrc);
       let flag = true;
       if (self.connection.context === videoEntropy(transport[4]).MediaEngineContextTypes.STREAM) {
-        const connection = self.connection;
+        const connection = tmp63.connection;
         let num5 = connection.getRemoteVideoSinkWants(ssrc);
         let tmp18 = null != num5;
         if (tmp18) {
@@ -1439,7 +1461,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
           tmp18 = quality !== closure_7;
         }
         if (!tmp18) {
-          const connection2 = self.connection;
+          const connection2 = tmp63.connection;
           num5 = connection2.getRemoteVideoSinkWants("any");
         }
         if (num5 == null) {
@@ -1452,8 +1474,8 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       }
       if (!(self.videoStopped.value || !flag)) {
         const RawVideoStats = videoEntropy(transport[5]).RawVideoStats;
-        const parseOutboundStatsResult = RawVideoStats.parseOutboundStats(item, closure_1);
-        if (self.connection.context === videoEntropy(transport[4]).MediaEngineContextTypes.STREAM) {
+        const parseOutboundStatsResult = RawVideoStats.parseOutboundStats(ssrc, closure_1);
+        if (tmp63.connection.context === videoEntropy(transport[4]).MediaEngineContextTypes.STREAM) {
           let num18 = transport.screenshare;
           if (null == num18) {
             parseOutboundStatsResult.screenshareFramesUnique = parseOutboundStatsResult.framesCodec;
@@ -1524,25 +1546,27 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
           }
         }
         const result = obj.appendAndIncrementStats(parseOutboundStatsResult);
-        let tmp41 = null != item.minResolutionWidth;
+        let tmp41 = null != ssrc.minResolutionWidth;
         if (tmp41) {
-          tmp41 = item.minResolutionWidth > 0;
-        }
-        if (tmp41) {
-          tmp41 = null == obj.minWidth || item.minResolutionWidth < obj.minWidth;
+          tmp41 = ssrc.minResolutionWidth > 0;
         }
         if (tmp41) {
-          obj.minWidth = item.minResolutionWidth;
+          tmp41 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
+          const tmp42 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
         }
-        let tmp43 = null != item.minResolutionHeight;
+        if (tmp41) {
+          obj.minWidth = ssrc.minResolutionWidth;
+        }
+        let tmp43 = null != ssrc.minResolutionHeight;
         if (tmp43) {
-          tmp43 = item.minResolutionHeight > 0;
+          tmp43 = ssrc.minResolutionHeight > 0;
         }
         if (tmp43) {
-          tmp43 = null == obj.minHeight || item.minResolutionHeight < obj.minHeight;
+          tmp43 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
+          const tmp44 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
         }
         if (tmp43) {
-          obj.minHeight = item.minResolutionHeight;
+          obj.minHeight = ssrc.minResolutionHeight;
         }
         if (obj.encoderCodec !== videoEntropy(transport[5]).CodecTypes.UNKNOWN) {
           set.add(obj.encoderCodec);
@@ -1555,7 +1579,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         if (found != null) {
           maxFrameRate = found.maxFrameRate;
         }
-        let bitrateTarget = item.bitrateTarget;
+        let bitrateTarget = ssrc.bitrateTarget;
         if (bitrateTarget == null) {
           let num21 = transport.availableOutgoingBitrate;
           if (num21 == null) {
@@ -1568,72 +1592,72 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
           bitrateTarget = Math.min(num21, num22);
         }
         obj.appendTargetRates(maxFrameRate, bitrateTarget, maxBitrate, transport.availableOutgoingBitrate);
-        let num23 = item.averageEncodeTime;
+        let num23 = ssrc.averageEncodeTime;
         if (num23 == null) {
           num23 = 0;
         }
         obj.averageEncodeTime = num23;
-        let prop = item.framesDroppedRateLimiter;
+        let prop = ssrc.framesDroppedRateLimiter;
         if (prop == null) {
           prop = null;
         }
         obj.framesDroppedRateLimiter = prop;
-        let prop1 = item.framesDroppedEncoderQueue;
+        let prop1 = ssrc.framesDroppedEncoderQueue;
         if (prop1 == null) {
           prop1 = null;
         }
         obj.framesDroppedEncoderQueue = prop1;
-        let prop2 = item.framesDroppedCongestionWindow;
+        let prop2 = ssrc.framesDroppedCongestionWindow;
         if (prop2 == null) {
           prop2 = null;
         }
         obj.framesDroppedCongestionWindow = prop2;
-        let framesDroppedEncoder = item.framesDroppedEncoder;
+        let framesDroppedEncoder = ssrc.framesDroppedEncoder;
         if (framesDroppedEncoder == null) {
           framesDroppedEncoder = null;
         }
         obj.framesDroppedEncoder = framesDroppedEncoder;
-        let flag2 = item.hqSimulcastStreamEncoded;
+        let flag2 = ssrc.hqSimulcastStreamEncoded;
         if (flag2 == null) {
           flag2 = false;
         }
-        self.hqSimulcastStreamEncoded.value = flag2;
-        let flag3 = item.lqSimulcastStreamEncoded;
+        tmp63.hqSimulcastStreamEncoded.value = flag2;
+        let flag3 = ssrc.lqSimulcastStreamEncoded;
         if (flag3 == null) {
           flag3 = false;
         }
-        self.lqSimulcastStreamEncoded.value = flag3;
-        let value = self.hqSimulcastStreamEncoded.value;
+        tmp63.lqSimulcastStreamEncoded.value = flag3;
+        let value = tmp63.hqSimulcastStreamEncoded.value;
         if (value) {
-          value = self.lqSimulcastStreamEncoded.value;
+          value = tmp63.lqSimulcastStreamEncoded.value;
         }
-        self.bothSimulcastStreamsEncoded.value = value;
-        let flag4 = item.bandwidthLimitedResolution;
+        tmp63.bothSimulcastStreamsEncoded.value = value;
+        let flag4 = ssrc.bandwidthLimitedResolution;
         if (flag4 == null) {
           flag4 = false;
         }
-        self.bandwidthLimitedResolution.value = flag4;
-        let flag5 = item.bandwidthLimitedFrameRate;
+        tmp63.bandwidthLimitedResolution.value = flag4;
+        let flag5 = ssrc.bandwidthLimitedFrameRate;
         if (flag5 == null) {
           flag5 = false;
         }
-        self.bandwidthLimitedFramerate.value = flag5;
+        tmp63.bandwidthLimitedFramerate.value = flag5;
       }
     }
   });
   if (!self.paused.value) {
     const item1 = applyDefault.forEach(transport.rtp.inbound, (arr) => {
-      const found = arr.find((item, index) => "video" === item.type);
+      const found = arr.find((type) => "video" === type.type);
       if (null != found) {
         obj = self.inboundStats[arg1];
         if (null == obj) {
-          const inboundStats = new videoEntropy(transport[5]).InboundStats(self.timestampProducer);
-          self.inboundStats[arg1] = inboundStats;
+          const inboundStats = new videoEntropy(transport[5]).InboundStats(obj2.timestampProducer);
+          obj2.inboundStats[arg1] = inboundStats;
           obj = inboundStats;
         }
         const RawVideoStats = videoEntropy(transport[5]).RawVideoStats;
         const parseInboundStatsResult = RawVideoStats.parseInboundStats(found, closure_1);
-        const statCollectionPausedUsers = self.statCollectionPausedUsers;
+        const statCollectionPausedUsers = obj2.statCollectionPausedUsers;
         if (!statCollectionPausedUsers.has(arg1)) {
           const result = obj.appendAndIncrementStats(parseInboundStatsResult);
           obj.appendTransportStats(transport);
@@ -1644,6 +1668,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         }
         if (tmp15) {
           tmp15 = null == obj.minWidth || found.minResolutionWidth < obj.minWidth;
+          const tmp16 = null == obj.minWidth || found.minResolutionWidth < obj.minWidth;
         }
         if (tmp15) {
           obj.minWidth = found.minResolutionWidth;
@@ -1654,19 +1679,21 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         }
         if (tmp17) {
           tmp17 = null == obj.minHeight || found.minResolutionHeight < obj.minHeight;
+          const tmp18 = null == obj.minHeight || found.minResolutionHeight < obj.minHeight;
         }
         if (tmp17) {
           obj.minHeight = found.minResolutionHeight;
         }
         if (parseInboundStatsResult.packets > 0) {
-          self.emit(transport.FpsUpdate, arg1, parseInboundStatsResult.framesCodec, parseInboundStatsResult.timestamp);
+          obj2.emit(transport.FpsUpdate, arg1, parseInboundStatsResult.framesCodec, parseInboundStatsResult.timestamp);
         }
         if (obj.decoderCodec !== videoEntropy(transport[5]).CodecTypes.UNKNOWN) {
           set1.add(obj.decoderCodec);
         }
         if (tmp27) {
-          obj.timeToFirstFrame = closure_1 - obj.startTime;
+          obj.timeToFirstFrame = tmp10 - obj.startTime;
         }
+        tmp10 = closure_1;
         tmp27 = null == obj.timeToFirstFrame && found.framesDecoded > 0;
       }
     });
@@ -1684,11 +1711,13 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
 prototype["updateSystemResourceStats"] = function updateSystemResourceStats() {
   const self = this;
   for (const key10003 in this.outboundStats) {
+    let tmp = key10003;
     obj = self.outboundStats[key10003];
     let addSystemResourcesResult = obj.addSystemResources();
     continue;
   }
   for (const key10006 in self.inboundStats) {
+    let tmp3 = key10006;
     let obj2 = self.inboundStats[key10006];
     let addSystemResourcesResult1 = obj2.addSystemResources();
     continue;
@@ -1698,7 +1727,7 @@ prototype["updateVideoEffectStats"] = function updateVideoEffectStats(rtp) {
   let found;
   if (rtp != null) {
     const outbound = rtp.rtp.outbound;
-    found = outbound.find((item, index) => "video" === item.type);
+    found = outbound.find((type) => "video" === type.type);
   }
   let type;
   if (found != null) {
@@ -1706,7 +1735,7 @@ prototype["updateVideoEffectStats"] = function updateVideoEffectStats(rtp) {
   }
   this.videoEffectDuration.value = "video" === type && null != found.filter;
 };
-let result = require("obj132").fileFinishedImporting("lib/VideoQuality.tsx");
+let result = require("set").fileFinishedImporting("lib/VideoQuality.tsx");
 
 export const VideoQualityEvent = obj;
 export { VideoQuality };

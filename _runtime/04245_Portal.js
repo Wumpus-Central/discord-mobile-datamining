@@ -10,9 +10,15 @@ const memoResult = noop.memo((name) => {
   const handleOnUnmount = name.handleOnUnmount;
   const handleOnUpdate = name.handleOnUpdate;
   const children = name.children;
+  let addPortal;
+  let removePortal;
+  closure_7 = undefined;
+  closure_8 = undefined;
+  closure_9 = undefined;
+  closure_10 = undefined;
   const portal = name(handleOnMount[1]).usePortal(name.hostName);
-  const addPortal = portal.addPortal;
-  const removePortal = portal.removePortal;
+  addPortal = portal.addPortal;
+  removePortal = portal.removePortal;
   const items = [name];
   closure_7 = children(() => {
     let nanoidResult = name;

@@ -1,13 +1,13 @@
 // === Module 6691: useIsManualAgeVerificationHidden ===
 
 // Module 6691 (useIsManualAgeVerificationHidden)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const obj = { 1: null };
 obj[1] = { isHidden: true };
 let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-11-hide-manual-link", defaultConfig: { isHidden: false }, variations: obj });
-const result = obj132.fileFinishedImporting("modules/age_assurance/HideManualAgeVerificationExperiment.tsx");
+const result = set.fileFinishedImporting("modules/age_assurance/HideManualAgeVerificationExperiment.tsx");
 
 export const useIsManualAgeVerificationHidden = function useIsManualAgeVerificationHidden(age_verification_get_started_modal) {
   return closure_0.useConfig({ location: age_verification_get_started_modal }).isHidden;

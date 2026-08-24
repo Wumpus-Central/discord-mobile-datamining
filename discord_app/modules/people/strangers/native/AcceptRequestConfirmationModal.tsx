@@ -4,19 +4,19 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import obj132Default from "obj132" /* 4827 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { textAlign: "center", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+createCacheKey = { bodyText: null, text: null };
+createCacheKey = { textAlign: "center", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/people/strangers/native/AcceptRequestConfirmationModal.tsx");
+const result = require("set").fileFinishedImporting("modules/people/strangers/native/AcceptRequestConfirmationModal.tsx");
 
 export default function AcceptRequestConfirmationModal(onConfirm) {
   onConfirm = onConfirm.onConfirm;
@@ -28,9 +28,10 @@ export default function AcceptRequestConfirmationModal(onConfirm) {
   obj[1] = intl2.string(onConfirm(1236).t["ETE/oC"]);
   obj[2] = function onConfirm() {
     onConfirm();
-    obj132Default.close();
+    closure_1_1(closure_1_2[7]).close();
   };
   obj[3] = onConfirm.onCancel;
+  obj = { style: tmp.bodyText, children: null };
   obj = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
   const intl3 = onConfirm(1236).intl;
   obj[3] = intl3.string(onConfirm(1236).t.eJzSDT);

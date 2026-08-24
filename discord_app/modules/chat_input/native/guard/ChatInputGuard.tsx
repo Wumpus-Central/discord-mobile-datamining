@@ -6,29 +6,24 @@ import Radius from "Radius" /* 806 */;
 import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
 import ButtonGroup from "ButtonGroup" /* 6687 */;
-import IconButton from "IconButton" /* 8035 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import TwinButtons from "TwinButtons" /* 8811 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
-import componentDidMountDefault from "componentDidMount" /* 9946 */;
-import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 9951 */;
 import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 11425 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11434 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { updateChatInputContainerHeight as closure_6 } from "updateChatInputContainerHeight" /* 8682 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { paddingHorizontal: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_8 };
+  let obj = { container: null, content: null, underlay: null, wrapper: null, floating: null, text: null, subtext: null, spacing: null };
+  obj = { paddingHorizontal: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_8 };
   obj[0] = obj;
   let lg;
   if (arg0) {
-    lg = ThemesDefault.radii.lg;
+    lg = tmp(712).radii.lg;
   }
   obj = { borderRadius: lg, overflow: null };
   let str;
@@ -42,13 +37,16 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj1.top = undefined;
   obj[2] = obj1;
   obj[3] = { borderColor: ThemesDefault.colors.BORDER_MUTED, paddingHorizontal: ThemesDefault.space.PX_12, paddingTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
+  const obj2 = { borderColor: ThemesDefault.colors.BORDER_MUTED, paddingHorizontal: ThemesDefault.space.PX_12, paddingTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
   obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: ThemesDefault.colors.BORDER_MUTED, borderWidth: 1 };
   obj[5] = { textAlign: "center" };
+  const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: ThemesDefault.colors.BORDER_MUTED, borderWidth: 1 };
   obj[6] = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
+  const obj4 = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
   obj[7] = { marginTop: ThemesDefault.space.PX_8 };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuard.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuard.tsx");
 
 export default function ChatInputGuard(type) {
   const tmp3 = callback2(useIsUsingClientThemeDefault());
@@ -66,20 +64,20 @@ export default function ChatInputGuard(type) {
         obj1[0] = actionLabel;
         if (actionIcon == null) {
           const obj2 = { color: null };
-          obj2[0] = ThemesDefault.colors.WHITE;
-          actionIcon = callback(ArrowSmallRightIcon.ArrowSmallRightIcon, obj2);
+          obj2[0] = tmp(712).colors.WHITE;
+          actionIcon = tmp7(tmp9(9951).ArrowSmallRightIcon, obj2);
         }
         obj1[1] = actionIcon;
         obj1[3] = actionOnPress;
-        let tmp7Result = callback(IconButton.IconButton, obj1);
+        let tmp7Result = tmp7(tmp9(8035).IconButton, obj1);
       }
       obj[6] = tmp7Result;
       const obj3 = { variant: "text-sm/semibold", children: null };
       obj3[1] = message;
-      obj[7] = callback(Text.Text, obj3);
+      obj[7] = tmp7(tmp9(4734).Text, obj3);
       obj[8] = subtext;
-      obj[1] = callback(tmp10, obj);
-      return callback(closure_5, obj);
+      obj[1] = tmp7(tmp10, obj);
+      return tmp7(tmp8, obj);
     }
     tmp7Result = null;
     if (null != countdown) {
@@ -88,8 +86,9 @@ export default function ChatInputGuard(type) {
       ({ text: arr3[0], spacing: arr3[1] } = tmp3);
       obj4[0] = items;
       obj4[1] = countdown;
-      tmp7Result = callback(componentDidMountDefault, obj4);
+      tmp7Result = tmp7(tmp(9946), obj4);
     }
+    tmp8 = closure_5;
   } else {
     ({ subtext: subtext2, buttonSecondaryText, buttonSecondaryOnPress, countdown: countdown2 } = type);
     ({ message: message2, buttonPrimaryText, buttonPrimaryOnPress, buttonPrimaryDisabled, buttonPrimaryLoading, buttonPrimaryVariant, buttonSecondaryDisabled, buttonSecondaryLoading } = type);
@@ -115,7 +114,7 @@ export default function ChatInputGuard(type) {
           obj = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
           obj[0] = tmp3.subtext;
           obj[3] = subtext2;
-          tmp13Result = callback(Text.Text, obj);
+          tmp13Result = tmp13(tmp14(4734).Text, obj);
         }
       }
     }
@@ -131,9 +130,9 @@ export default function ChatInputGuard(type) {
         obj9[1] = buttonSecondaryLoading;
         obj9[2] = buttonSecondaryText;
         obj9[3] = buttonSecondaryOnPress;
-        items2[1] = callback(Button.Button, obj9);
+        items2[1] = tmp13(tmp14(4745).Button, obj9);
         obj8[0] = items2;
-        tmp16Result = callback(TwinButtons.TwinButtons, obj8);
+        tmp16Result = tmp16(tmp14(8811).TwinButtons, obj8);
       }
     }
     const obj10 = { children: null };
@@ -146,11 +145,11 @@ export default function ChatInputGuard(type) {
       ({ text: arr2[0], spacing: arr2[1] } = tmp3);
       obj11[0] = items3;
       obj11[1] = countdown2;
-      tmp13Result = callback(componentDidMountDefault, obj11);
+      tmp13Result = tmp13(tmp(9946), obj11);
     }
     items1[3] = tmp13Result;
     obj6[1] = items1;
-    return callback(closure_5, obj6);
+    return closure_8(closure_5, obj6);
   }
 };
 export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIndex) {
@@ -184,17 +183,17 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   if (!tmp3) {
     obj1 = { style: null };
     obj1[0] = tmp6.underlay;
-    tmp13 = callback(closure_5, obj1);
+    tmp13 = callback(tmp9, obj1);
   }
   const items3 = [tmp13, , ];
   const obj2 = { style: tmp6.content, children: null };
   let tmp15 = null;
   if (tmp3) {
-    tmp15 = callback(getMixedGradientColorDefault, { absolute: true, wide: true, tall: true, mix: true });
+    tmp15 = callback(tmp(9091), { absolute: true, wide: true, tall: true, mix: true });
   }
   const items4 = [tmp15, children];
   obj2[1] = items4;
-  items3[1] = callback(closure_5, obj2);
+  items3[1] = closure_8(closure_5, obj2);
   let tmp17 = null;
   if (tmp4Result.isIOS()) {
     tmp17 = null;
@@ -203,12 +202,12 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
       obj3[0] = channelId;
       obj3[1] = screenIndex;
       obj3[2] = onJumpToPresent;
-      tmp17 = callback(JumpToPresentButtonDefault, obj3);
+      tmp17 = callback(tmp(11434), obj3);
     }
   }
   items3[2] = tmp17;
   obj[1] = items3;
-  items2[1] = callback(closure_5, obj);
+  items2[1] = closure_8(closure_5, obj);
   obj[3] = items2;
-  return callback(closure_5, obj);
+  return closure_8(closure_5, obj);
 };

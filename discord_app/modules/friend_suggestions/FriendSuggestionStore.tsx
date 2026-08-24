@@ -6,8 +6,8 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef5411 from "module_5411" /* 5411 */;
 import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 5412 */;
-import createdAt from "createdAt" /* 1930 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "createdAt" /* 1930 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 let closure_4 = {};
 let c5 = 0;
@@ -25,8 +25,8 @@ prototype["getSuggestionCount"] = function getSuggestionCount() {
 };
 prototype["getSuggestions"] = function getSuggestions() {
   const entries = Object.entries(closure_4);
-  return entries.map((item, index) => {
-    [, tmp] = item;
+  return entries.map((arg0) => {
+    [, tmp] = arg0;
     return tmp;
   });
 };
@@ -48,6 +48,7 @@ const friendSuggestionStore = new FriendSuggestionStore(dispatcherDefault, {
         c6 = true;
         c7 = false;
         const response = _modDef5411.fetch();
+        const obj = _modDef5411;
       }
     } else {
       maybeDispatchDevOnlyDummyFriendSuggestionsDefault();
@@ -80,32 +81,35 @@ const friendSuggestionStore = new FriendSuggestionStore(dispatcherDefault, {
         const merged = Object.assign(obj);
         obj[obj.key] = obj;
       }
+      const obj2 = applyDefault;
     }
   },
   FRIEND_SUGGESTION_DELETE: function handleFriendSuggestionDelete(arg0) {
     const diff = closure_5 - 1;
+    closure_5 = diff;
     closure_5 = Math.max(0, diff);
     delete tmp2[tmp];
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function handleLoadFriendSuggestionsSuccess(suggestions) {
     c6 = false;
-    const mapped = applyDefault.chain(suggestions.suggestions).map((item, index) => {
-      if (null != item.contact_names) {
-        if (item.contact_names.length >= 2) {
-          const contact_names = item.contact_names;
+    let obj = applyDefault;
+    const mapped = applyDefault.chain(suggestions.suggestions).map((contact_names) => {
+      if (null != contact_names.contact_names) {
+        if (contact_names.contact_names.length >= 2) {
+          contact_names = contact_names.contact_names;
           const substr = contact_names.slice(0, 2);
         }
         const obj = { key: null, name: null, user: null, mutualFriendsCount: null, contactNames: null };
-        obj[0] = item.suggested_user.id;
-        const firstResult = callback(table[2]).first(item.reasons);
+        obj[0] = contact_names.suggested_user.id;
+        const firstResult = callback(table[2]).first(contact_names.reasons);
         let name;
         if (firstResult != null) {
           name = firstResult.name;
         }
         obj[1] = name;
-        const tmp9 = new closure_2(item.suggested_user);
+        const tmp9 = new closure_2(contact_names.suggested_user);
         obj[2] = tmp9;
-        obj[3] = item.mutual_friends_count;
+        obj[3] = contact_names.mutual_friends_count;
         obj[4] = [];
         return obj;
       }
@@ -120,27 +124,28 @@ const friendSuggestionStore = new FriendSuggestionStore(dispatcherDefault, {
     closure_4 = {};
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionStore.tsx");
+const result = require("set").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionStore.tsx");
 
 export default friendSuggestionStore;
 export const transformFriendSuggestions = function transformFriendSuggestions(arg0) {
-  const mapped = applyDefault.chain(arg0).map((item, index) => {
-    if (null != item.contact_names) {
-      if (item.contact_names.length >= 2) {
-        const contact_names = item.contact_names;
+  const obj = applyDefault;
+  const mapped = applyDefault.chain(arg0).map((contact_names) => {
+    if (null != contact_names.contact_names) {
+      if (contact_names.contact_names.length >= 2) {
+        contact_names = contact_names.contact_names;
         const substr = contact_names.slice(0, 2);
       }
       const obj = { key: null, name: null, user: null, mutualFriendsCount: null, contactNames: null };
-      obj[0] = item.suggested_user.id;
-      const firstResult = callback(table[2]).first(item.reasons);
+      obj[0] = contact_names.suggested_user.id;
+      const firstResult = callback(table[2]).first(contact_names.reasons);
       let name;
       if (firstResult != null) {
         name = firstResult.name;
       }
       obj[1] = name;
-      const tmp9 = new closure_2(item.suggested_user);
+      const tmp9 = new closure_2(contact_names.suggested_user);
       obj[2] = tmp9;
-      obj[3] = item.mutual_friends_count;
+      obj[3] = contact_names.mutual_friends_count;
       obj[4] = [];
       return obj;
     }

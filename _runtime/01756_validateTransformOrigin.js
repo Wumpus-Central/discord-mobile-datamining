@@ -2,7 +2,7 @@
 
 // Module 1756 (validateTransformOrigin)
 import t from "t" /* 1665 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;
 function validateTransformOrigin(arg0) {
@@ -47,6 +47,7 @@ function processTransformOrigin(str) {
       while (true) {
         str = match[0];
         let formatted = str.toLowerCase();
+        let tmp2 = num4;
         let sum = num4 + 1;
         if ("left" !== formatted) {
           if ("right" !== formatted) {
@@ -54,8 +55,15 @@ function processTransformOrigin(str) {
               if ("bottom" !== formatted) {
                 if ("center" === formatted) {
                   if (2 === num4) {
+                    let tmp11 = require;
+                    let tmp12 = dependencyMap;
                     let _HermesInternal2 = HermesInternal;
+                    let str3 = " cannot be used for z-position";
+                    let str4 = "Transform-origin value ";
+                    let tmp13 = new.target;
+                    let tmp14 = new.target;
                     let reanimatedError = new t.ReanimatedError("Transform-origin value " + str + " cannot be used for z-position");
+                    let tmp16 = reanimatedError;
                     throw reanimatedError;
                   } else {
                     items1[num4] = "50%";
@@ -78,8 +86,15 @@ function processTransformOrigin(str) {
               }
             }
             if (2 === num4) {
+              let tmp24 = require;
+              let tmp25 = dependencyMap;
               let _HermesInternal4 = HermesInternal;
+              let str7 = " can only be used for y-position";
+              let str8 = "Transform-origin ";
+              let tmp26 = new.target;
+              let tmp27 = new.target;
               let reanimatedError1 = new t.ReanimatedError("Transform-origin " + str + " can only be used for y-position");
+              let tmp29 = reanimatedError1;
               throw reanimatedError1;
             } else {
               let num2 = "100%";
@@ -107,8 +122,14 @@ function processTransformOrigin(str) {
                     items1[0] = "50%";
                     num = 2;
                   } else {
+                    let tmp18 = require;
+                    let tmp19 = dependencyMap;
                     let _HermesInternal3 = HermesInternal;
+                    let str6 = "Could not parse transform-origin: ";
+                    let tmp20 = new.target;
+                    let tmp21 = new.target;
                     let reanimatedError2 = new t.ReanimatedError("Could not parse transform-origin: " + str);
+                    let tmp23 = reanimatedError2;
                     throw reanimatedError2;
                   }
                 }
@@ -120,8 +141,15 @@ function processTransformOrigin(str) {
           items = items1;
         }
         if (0 !== num4) {
+          let tmp37 = require;
+          let tmp38 = dependencyMap;
           let _HermesInternal5 = HermesInternal;
+          let str10 = " can only be used for x-position";
+          let str11 = "Transform-origin ";
+          let tmp39 = new.target;
+          let tmp40 = new.target;
           let reanimatedError3 = new t.ReanimatedError("Transform-origin " + str + " can only be used for x-position");
+          let tmp42 = reanimatedError3;
           throw reanimatedError3;
         } else {
           let num3 = "100%";

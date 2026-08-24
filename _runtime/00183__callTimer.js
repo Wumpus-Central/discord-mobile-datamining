@@ -5,14 +5,14 @@ import _mod38 from "module_38" /* 38 */;
 import toError from "toError" /* 184 */;
 import TimingDefault from "Timing" /* 185 */;
 
-require = fn;
-function _callTimer(arr, _performance, arg2) {
-  const _global = _performance;
-  if (arr > c12) {
+require = arg1;
+function _callTimer(arg0, arg1) {
+  const _global = arg1;
+  if (arg0 > c12) {
     const _console = console;
-    console.warn("Tried to call timer with ID %s but no such timer exists.", arr);
+    console.warn("Tried to call timer with ID %s but no such timer exists.", arg0);
   }
-  const index = closure_7.indexOf(arr);
+  const index = closure_7.indexOf(arg0);
   if (-1 !== index) {
     if (table[index]) {
       if (tmp21) {
@@ -24,7 +24,7 @@ function _callTimer(arr, _performance, arg2) {
             if ("setInterval" !== tmp21) {
               if ("queueReactNativeMicrotask" !== tmp21) {
                 if ("requestAnimationFrame" === tmp21) {
-                  _performance = _global.performance;
+                  let _performance = _global.performance;
                   tmp23(_performance.now());
                 } else if ("requestIdleCallback" === tmp21) {
                   obj = { timeRemaining: null, didTimeout: null };
@@ -43,12 +43,13 @@ function _callTimer(arr, _performance, arg2) {
           }
           tmp23();
         } catch (tmp15) {
-          arr = arr4.push(toError.default(tmp15));
+          arr4.push(toError.default(tmp15));
+          const obj2 = toError;
         }
       }
     }
     const _console2 = console;
-    console.error(`No callback found for timerID ${arr}`);
+    console.error(`No callback found for timerID ${arg0}`);
   }
 }
 function _clearIndex(index) {
@@ -134,6 +135,7 @@ let obj = {
     closure_6[length] = "requestAnimationFrame";
     const timestamp = Date.now();
     _mod38(TimingDefault, "NativeTiming is available");
+    const tmp4 = _mod38;
     const timer = TimingDefault.createTimer(tmp, 1, timestamp, false);
     return +closure_12;
   },
@@ -152,7 +154,7 @@ let obj = {
     if (null != timeout) {
       fn = (arg0) => {
         if (closure_1_11[closure_1]) {
-          obj.clearTimeout(tmp3);
+          closure_1_17.clearTimeout(tmp3);
           delete tmp2[tmp];
         }
         return lib(arg0);
@@ -173,23 +175,24 @@ let obj = {
         if (index > -1) {
           closure_1_10.splice(index, 1);
           const _performance = lib.performance;
-          _callTimer(callback, _performance.now(), true);
+          closure_1_15(callback, _performance.now(), true);
         }
         delete tmp[tmp2];
         if (0 === closure_1_10.length) {
-          callback(dependencyMap[1])(TimingDefault, "NativeTiming is available");
-          const tmp12 = callback(dependencyMap[1]);
-          TimingDefault.setSendIdleEvents(false);
+          callback(closure_1_3[1])(closure_1_2(closure_1_3[2]), "NativeTiming is available");
+          const tmp12 = callback(closure_1_3[1]);
+          closure_1_2(closure_1_3[2]).setSendIdleEvents(false);
+          obj = closure_1_2(closure_1_3[2]);
         }
       }, timeout);
     }
     return +closure_12;
   },
-  cancelIdleCallback(dependencyMap) {
-    if (null != dependencyMap) {
-      const index = closure_7.indexOf(dependencyMap);
+  cancelIdleCallback(closure_4) {
+    if (null != closure_4) {
+      const index = closure_7.indexOf(closure_4);
       if (-1 !== index) {
-        closure_7[index] = null;
+        tmp22[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         arr = arr.push(index);
@@ -200,28 +203,32 @@ let obj = {
         if (tmp3) {
           _mod38(TimingDefault, "NativeTiming is available");
           obj = TimingDefault;
-          obj.deleteTimer(dependencyMap);
+          obj.deleteTimer(closure_4);
+          const tmp6 = _mod38;
         }
       }
+      tmp22 = closure_7;
     }
-    const index1 = arr3.indexOf(dependencyMap);
+    const index1 = arr3.indexOf(closure_4);
     if (-1 !== index1) {
       arr3.splice(index1, 1);
     }
-    if (table2[dependencyMap]) {
+    if (table2[closure_4]) {
       obj.clearTimeout(tmp13);
       delete tmp[tmp2];
     }
     if (0 === arr3.length) {
       _mod38(TimingDefault, "NativeTiming is available");
+      const tmp18 = _mod38;
       TimingDefault.setSendIdleEvents(false);
+      const obj2 = TimingDefault;
     }
   },
   clearTimeout(arg0) {
     if (null != arg0) {
       const index = closure_7.indexOf(arg0);
       if (-1 !== index) {
-        closure_7[index] = null;
+        tmp8[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         arr = arr.push(index);
@@ -231,16 +238,19 @@ let obj = {
         }
         if (tmp) {
           _mod38(TimingDefault, "NativeTiming is available");
+          const tmp4 = _mod38;
           TimingDefault.deleteTimer(arg0);
+          obj = TimingDefault;
         }
       }
+      tmp8 = closure_7;
     }
   },
   clearInterval(closure_0) {
     if (null != closure_0) {
       const index = closure_7.indexOf(closure_0);
       if (-1 !== index) {
-        closure_7[index] = null;
+        tmp8[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         arr = arr.push(index);
@@ -250,16 +260,19 @@ let obj = {
         }
         if (tmp) {
           _mod38(TimingDefault, "NativeTiming is available");
+          const tmp4 = _mod38;
           TimingDefault.deleteTimer(closure_0);
+          obj = TimingDefault;
         }
       }
+      tmp8 = closure_7;
     }
   },
   clearReactNativeMicrotask(arg0) {
     if (null != arg0) {
       const index = closure_7.indexOf(arg0);
       if (-1 !== index) {
-        closure_7[index] = null;
+        tmp11[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         arr = arr.push(index);
@@ -269,9 +282,12 @@ let obj = {
         }
         if (tmp) {
           _mod38(TimingDefault, "NativeTiming is available");
+          const tmp4 = _mod38;
           TimingDefault.deleteTimer(arg0);
+          obj = TimingDefault;
         }
       }
+      tmp11 = closure_7;
     }
     const index1 = arr2.indexOf(arg0);
     if (-1 !== index1) {
@@ -282,7 +298,7 @@ let obj = {
     if (null != closure_0) {
       const index = closure_7.indexOf(closure_0);
       if (-1 !== index) {
-        closure_7[index] = null;
+        tmp8[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         arr = arr.push(index);
@@ -292,9 +308,12 @@ let obj = {
         }
         if (tmp) {
           _mod38(TimingDefault, "NativeTiming is available");
+          const tmp4 = _mod38;
           TimingDefault.deleteTimer(closure_0);
+          obj = TimingDefault;
         }
       }
+      tmp8 = closure_7;
     }
   },
   callTimers(arg0) {
@@ -304,21 +323,24 @@ let obj = {
     let num = 0;
     if (0 < arg0.length) {
       do {
+        let tmp2 = _callTimer;
         let tmp3 = _callTimer(arg0[num], 0);
         num = num + 1;
         length = arg0.length;
       } while (num < length);
     }
     if (arr4.length > 0) {
-      let tmp5 = arr4;
+      let tmp5 = tmp4;
       if (length2 > 1) {
         let num2 = 1;
-        tmp5 = arr4;
+        tmp5 = tmp4;
         if (1 < length2) {
           do {
+            let tmp7 = obj;
             let fn = (arg0) => {
               throw arg0;
             };
+            let tmp8 = arr4;
             let timerId = obj.setTimeout(fn.bind(null, arr4[num2]), 0);
             num2 = num2 + 1;
             tmp5 = arr4;
@@ -328,16 +350,17 @@ let obj = {
       throw tmp5[0];
     }
   },
-  callIdleCallbacks(_performance) {
+  callIdleCallbacks(arg0) {
     let length;
-    if (c4 - (Date.now() - _performance) >= 1) {
+    if (c4 - (Date.now() - arg0) >= 1) {
       arr4.length = 0;
       if (arr3.length > 0) {
         arr3 = [];
         let num = 0;
         if (0 < arr3.length) {
           do {
-            let tmp2 = _callTimer(arr[num], _performance);
+            let tmp = _callTimer;
+            let tmp2 = _callTimer(arr[num], arg0);
             num = num + 1;
             length = arr.length;
           } while (num < length);
@@ -345,10 +368,12 @@ let obj = {
       }
       if (0 === arr3.length) {
         _mod38(TimingDefault, "NativeTiming is available");
+        const tmp6 = _mod38;
         TimingDefault.setSendIdleEvents(false);
+        obj = TimingDefault;
       }
-      const item = arr4.forEach((item, index) => {
-        closure_0 = item;
+      const item = arr4.forEach((arg0) => {
+        closure_0 = arg0;
         return timeout.setTimeout(() => {
           throw closure_0;
         }, 0);
@@ -365,6 +390,7 @@ let obj = {
       let num2 = 0;
       if (0 < arr2.length) {
         do {
+          let tmp = _callTimer;
           let tmp2 = _callTimer(arr[num2], 0);
           num2 = num2 + 1;
           length = arr.length;
@@ -374,23 +400,26 @@ let obj = {
     }
     if (flag) {
       do {
+        let tmp4 = arr2;
         flag2 = false;
         if (0 !== arr2.length) {
           arr2 = [];
           let num3 = 0;
           if (0 < arr2.length) {
             do {
+              let tmp5 = _callTimer;
               let tmp6 = _callTimer(arr2[num3], 0);
               num3 = num3 + 1;
               length2 = arr2.length;
             } while (num3 < length2);
           }
+          let tmp7 = arr2;
           flag2 = arr2.length > 0;
         }
       } while (flag2);
     }
-    const item = arr4.forEach((item, index) => {
-      closure_0 = item;
+    const item = arr4.forEach((arg0) => {
+      closure_0 = arg0;
       return timeout.setTimeout(() => {
         throw closure_0;
       }, 0);

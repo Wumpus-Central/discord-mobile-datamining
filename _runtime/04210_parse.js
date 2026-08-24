@@ -22,6 +22,8 @@ function parse(str, delimiter) {
     let index = match.index;
     let text = `${str.slice(num, index)}`;
     let sum = index + match[0].length;
+    let tmp6 = num2;
+    let tmp7 = match;
     if (tmp3) {
       let str5 = `${str.slice(num, index)}${tmp3[1]}`;
       let sum1 = num2;
@@ -71,7 +73,9 @@ function parse(str, delimiter) {
       obj[7] = str7;
       arr = items.push(obj);
     }
+    let tmp18 = regExp;
     match = regExp.exec(str);
+    let tmp2 = str5;
     num2 = sum1;
     num = sum;
     str2 = str5;
@@ -89,7 +93,7 @@ function parse(str, delimiter) {
 function encodeURIComponentPretty(arg0) {
   return encodeURI(arg0).replace(/[\/?#]/g, (str) => {
     str = str.charCodeAt(0);
-    return "%" + str.toString(16).toUpperCase();
+    return "%" + str.charCodeAt(0).toString(16).toUpperCase();
   });
 }
 function tokensToRegExp(arg0, items, arg2) {
@@ -114,6 +118,8 @@ function tokensToRegExp(arg0, items, arg2) {
   if (0 < arg0.length) {
     while (true) {
       str3 = arg0[num];
+      let tmp2 = num;
+      let tmp3 = str;
       if (typeof str3 === "string") {
         let text = `${str3.replace(/([.+*?=^!:${}()[\]|\/\\])/g, "\\$1")}`;
       } else {
@@ -206,11 +212,13 @@ function pathToRegexp(source, items, arg2) {
     }
     source.keys = items;
     let tmp6 = source;
+    const str5 = source.source;
   } else if (_mod4211(source)) {
     const items1 = [];
     let num = 0;
     if (0 < source.length) {
       do {
+        let tmp7 = pathToRegexp;
         arr = items1.push(pathToRegexp(source[num], items, obj).source);
         num = num + 1;
         length = source.length;
@@ -232,11 +240,16 @@ function pathToRegexp(source, items, arg2) {
 module.exports.parse = parse;
 module.exports.compile = function compile(arg0, arg1) {
   let arr = parse(arg0, arg1);
-  const array = new Array(arr.length);
+  let array;
+  array = new Array(arr.length);
   for (let num = 0; num < arr.length; num = num + 1) {
+    let tmp2 = num;
     if (typeof arr[num] === "object") {
       let _RegExp = RegExp;
+      let tmp3 = new.target;
+      let tmp4 = new.target;
       regExp = new RegExp("^(?:" + arr[num].pattern + ")$");
+      let tmp6 = regExp;
       array[num] = regExp;
     }
   }
@@ -252,7 +265,7 @@ module.exports.compile = function compile(arg0, arg1) {
       obj = {};
     }
     if (obj.pretty) {
-      let _encodeURIComponent = encodeURIComponentPretty;
+      let _encodeURIComponent = closure_1_4;
     } else {
       _encodeURIComponent = encodeURIComponent;
     }
@@ -261,7 +274,10 @@ module.exports.compile = function compile(arg0, arg1) {
     let str2 = "";
     if (0 < arr.length) {
       while (true) {
+        let tmp2 = arr;
         tmp3 = arr[num];
+        let tmp4 = num;
+        let tmp5 = str;
         if (typeof tmp3 !== "string") {
           arr = obj[tmp3.name];
           if (null == arr) {
@@ -272,67 +288,99 @@ module.exports.compile = function compile(arg0, arg1) {
               }
             } else {
               let _TypeError5 = TypeError;
+              let str17 = "Expected \"";
+              let tmp32 = new.target;
+              let str18 = "\" to be defined";
+              let tmp33 = new.target;
               let typeError = new TypeError("Expected \"" + tmp3.name + "\" to be defined");
+              let tmp35 = typeError;
               throw typeError;
             }
-          } else if (arr(array[0])(arr)) {
-            if (tmp3.repeat) {
-              if (0 === arr.length) {
-                text = str;
-                if (!tmp3.optional) {
-                  let _TypeError4 = TypeError;
-                  let typeError1 = new TypeError("Expected \"" + tmp3.name + "\" to not be empty");
-                  throw typeError1;
+          } else {
+            let tmp37 = arr;
+            let tmp38 = array;
+            if (arr(array[0])(arr)) {
+              if (tmp3.repeat) {
+                if (0 === arr.length) {
+                  text = str;
+                  if (!tmp3.optional) {
+                    let _TypeError4 = TypeError;
+                    let str15 = "Expected \"";
+                    let tmp28 = new.target;
+                    let str16 = "\" to not be empty";
+                    let tmp29 = new.target;
+                    let typeError1 = new TypeError("Expected \"" + tmp3.name + "\" to not be empty");
+                    let tmp31 = typeError1;
+                    throw typeError1;
+                  }
+                } else {
+                  let num2 = 0;
+                  let sum = str;
+                  text = str;
+                  if (0 < arr.length) {
+                    let _encodeURIComponentResult = _encodeURIComponent(arr[num2]);
+                    let tmp19 = array;
+                    let obj4 = array[num];
+                    let tmp20 = num2;
+                    let tmp21 = sum;
+                    while (obj4.test(_encodeURIComponentResult)) {
+                      sum = sum + ((0 === num2 ? tmp3.prefix : tmp3.delimiter) + _encodeURIComponentResult);
+                      num2 = num2 + 1;
+                      text = sum;
+                      continue;
+                    }
+                    let _TypeError3 = TypeError;
+                    let str11 = "Expected all \"";
+                    let str12 = "\" to match \"";
+                    let _JSON2 = JSON;
+                    let text1 = `Expected all "${tmp3.name}" to match "${tmp3.pattern}`;
+                    let str13 = "\", but received `";
+                    let tmp23 = new.target;
+                    let str14 = "`";
+                    let tmp24 = new.target;
+                    let typeError2 = new TypeError(text1 + "\", but received `" + JSON.stringify(_encodeURIComponentResult) + "`");
+                    let tmp26 = typeError2;
+                    throw typeError2;
+                  }
                 }
               } else {
-                let num2 = 0;
-                let sum = str;
-                text = str;
-                if (0 < arr.length) {
-                  let _encodeURIComponentResult = _encodeURIComponent(arr[num2]);
-                  let obj4 = array[num];
-                  while (obj4.test(_encodeURIComponentResult)) {
-                    sum = sum + ((0 === num2 ? tmp3.prefix : tmp3.delimiter) + _encodeURIComponentResult);
-                    num2 = num2 + 1;
-                    text = sum;
-                    continue;
-                  }
-                  let _TypeError3 = TypeError;
-                  let _JSON2 = JSON;
-                  let text1 = `Expected all "${tmp3.name}" to match "${tmp3.pattern}`;
-                  let typeError2 = new TypeError(text1 + "\", but received `" + JSON.stringify(_encodeURIComponentResult) + "`");
-                  throw typeError2;
-                }
+                let _TypeError2 = TypeError;
+                let str8 = "Expected \"";
+                let _JSON = JSON;
+                let text2 = `Expected "${tmp3.name}`;
+                let str9 = "\" to not repeat, but received `";
+                let tmp14 = new.target;
+                let str10 = "`";
+                let tmp15 = new.target;
+                let typeError3 = new TypeError(`Expected "${tmp3.name}` + "\" to not repeat, but received `" + JSON.stringify(arr) + "`");
+                let tmp17 = typeError3;
+                throw typeError3;
               }
             } else {
-              let _TypeError2 = TypeError;
-              let _JSON = JSON;
-              let text2 = `Expected "${tmp3.name}`;
-              let typeError3 = new TypeError(`Expected "${tmp3.name}` + "\" to not repeat, but received `" + JSON.stringify(arr) + "`");
-              throw typeError3;
-            }
-          } else {
-            if (tmp3.asterisk) {
-              let _encodeURI = encodeURI;
-              let str3 = encodeURI(arr);
-              replaced = str3.replace(/[?#]/g, (str) => {
-                str = str.charCodeAt(0);
-                return "%" + str.toString(16).toUpperCase();
-              });
-            } else {
-              replaced = _encodeURIComponent(arr);
-            }
-            let obj3 = array[num];
-            if (!obj3.test(replaced)) {
-              break;
-            } else {
-              text = str + (tmp3.prefix + replaced);
+              if (tmp3.asterisk) {
+                let _encodeURI = encodeURI;
+                let str3 = encodeURI(arr);
+                replaced = str3.replace(/[?#]/g, (str) => {
+                  str = str.charCodeAt(0);
+                  return "%" + str.charCodeAt(0).toString(16).toUpperCase();
+                });
+              } else {
+                replaced = _encodeURIComponent(arr);
+              }
+              let tmp7 = array;
+              let obj3 = array[num];
+              if (!obj3.test(replaced)) {
+                break;
+              } else {
+                text = str + (tmp3.prefix + replaced);
+              }
             }
           }
         } else {
           text = str + tmp3;
         }
         num = num + 1;
+        let tmp36 = arr;
         str = text;
         str2 = text;
       }
@@ -347,9 +395,13 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
   closure_0 = arg0;
   const array = new Array(arg0.length);
   for (let num = 0; num < arg0.length; num = num + 1) {
+    let tmp2 = num;
     if (typeof arg0[num] === "object") {
       let _RegExp = RegExp;
+      let tmp3 = new.target;
+      let tmp4 = new.target;
       regExp = new RegExp("^(?:" + arg0[num].pattern + ")$");
+      let tmp6 = regExp;
       array[num] = regExp;
     }
   }
@@ -365,7 +417,7 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
       obj = {};
     }
     if (obj.pretty) {
-      let _encodeURIComponent = encodeURIComponentPretty;
+      let _encodeURIComponent = closure_1_4;
     } else {
       _encodeURIComponent = encodeURIComponent;
     }
@@ -374,7 +426,10 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
     let str2 = "";
     if (0 < arr.length) {
       while (true) {
+        let tmp2 = arr;
         tmp3 = arr[num];
+        let tmp4 = num;
+        let tmp5 = str;
         if (typeof tmp3 !== "string") {
           arr = obj[tmp3.name];
           if (null == arr) {
@@ -385,67 +440,99 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
               }
             } else {
               let _TypeError5 = TypeError;
+              let str17 = "Expected \"";
+              let tmp32 = new.target;
+              let str18 = "\" to be defined";
+              let tmp33 = new.target;
               let typeError = new TypeError("Expected \"" + tmp3.name + "\" to be defined");
+              let tmp35 = typeError;
               throw typeError;
             }
-          } else if (arr(array[0])(arr)) {
-            if (tmp3.repeat) {
-              if (0 === arr.length) {
-                text = str;
-                if (!tmp3.optional) {
-                  let _TypeError4 = TypeError;
-                  let typeError1 = new TypeError("Expected \"" + tmp3.name + "\" to not be empty");
-                  throw typeError1;
+          } else {
+            let tmp37 = arr;
+            let tmp38 = array;
+            if (arr(array[0])(arr)) {
+              if (tmp3.repeat) {
+                if (0 === arr.length) {
+                  text = str;
+                  if (!tmp3.optional) {
+                    let _TypeError4 = TypeError;
+                    let str15 = "Expected \"";
+                    let tmp28 = new.target;
+                    let str16 = "\" to not be empty";
+                    let tmp29 = new.target;
+                    let typeError1 = new TypeError("Expected \"" + tmp3.name + "\" to not be empty");
+                    let tmp31 = typeError1;
+                    throw typeError1;
+                  }
+                } else {
+                  let num2 = 0;
+                  let sum = str;
+                  text = str;
+                  if (0 < arr.length) {
+                    let _encodeURIComponentResult = _encodeURIComponent(arr[num2]);
+                    let tmp19 = array;
+                    let obj4 = array[num];
+                    let tmp20 = num2;
+                    let tmp21 = sum;
+                    while (obj4.test(_encodeURIComponentResult)) {
+                      sum = sum + ((0 === num2 ? tmp3.prefix : tmp3.delimiter) + _encodeURIComponentResult);
+                      num2 = num2 + 1;
+                      text = sum;
+                      continue;
+                    }
+                    let _TypeError3 = TypeError;
+                    let str11 = "Expected all \"";
+                    let str12 = "\" to match \"";
+                    let _JSON2 = JSON;
+                    let text1 = `Expected all "${tmp3.name}" to match "${tmp3.pattern}`;
+                    let str13 = "\", but received `";
+                    let tmp23 = new.target;
+                    let str14 = "`";
+                    let tmp24 = new.target;
+                    let typeError2 = new TypeError(text1 + "\", but received `" + JSON.stringify(_encodeURIComponentResult) + "`");
+                    let tmp26 = typeError2;
+                    throw typeError2;
+                  }
                 }
               } else {
-                let num2 = 0;
-                let sum = str;
-                text = str;
-                if (0 < arr.length) {
-                  let _encodeURIComponentResult = _encodeURIComponent(arr[num2]);
-                  let obj4 = array[num];
-                  while (obj4.test(_encodeURIComponentResult)) {
-                    sum = sum + ((0 === num2 ? tmp3.prefix : tmp3.delimiter) + _encodeURIComponentResult);
-                    num2 = num2 + 1;
-                    text = sum;
-                    continue;
-                  }
-                  let _TypeError3 = TypeError;
-                  let _JSON2 = JSON;
-                  let text1 = `Expected all "${tmp3.name}" to match "${tmp3.pattern}`;
-                  let typeError2 = new TypeError(text1 + "\", but received `" + JSON.stringify(_encodeURIComponentResult) + "`");
-                  throw typeError2;
-                }
+                let _TypeError2 = TypeError;
+                let str8 = "Expected \"";
+                let _JSON = JSON;
+                let text2 = `Expected "${tmp3.name}`;
+                let str9 = "\" to not repeat, but received `";
+                let tmp14 = new.target;
+                let str10 = "`";
+                let tmp15 = new.target;
+                let typeError3 = new TypeError(`Expected "${tmp3.name}` + "\" to not repeat, but received `" + JSON.stringify(arr) + "`");
+                let tmp17 = typeError3;
+                throw typeError3;
               }
             } else {
-              let _TypeError2 = TypeError;
-              let _JSON = JSON;
-              let text2 = `Expected "${tmp3.name}`;
-              let typeError3 = new TypeError(`Expected "${tmp3.name}` + "\" to not repeat, but received `" + JSON.stringify(arr) + "`");
-              throw typeError3;
-            }
-          } else {
-            if (tmp3.asterisk) {
-              let _encodeURI = encodeURI;
-              let str3 = encodeURI(arr);
-              replaced = str3.replace(/[?#]/g, (str) => {
-                str = str.charCodeAt(0);
-                return "%" + str.toString(16).toUpperCase();
-              });
-            } else {
-              replaced = _encodeURIComponent(arr);
-            }
-            let obj3 = array[num];
-            if (!obj3.test(replaced)) {
-              break;
-            } else {
-              text = str + (tmp3.prefix + replaced);
+              if (tmp3.asterisk) {
+                let _encodeURI = encodeURI;
+                let str3 = encodeURI(arr);
+                replaced = str3.replace(/[?#]/g, (str) => {
+                  str = str.charCodeAt(0);
+                  return "%" + str.charCodeAt(0).toString(16).toUpperCase();
+                });
+              } else {
+                replaced = _encodeURIComponent(arr);
+              }
+              let tmp7 = array;
+              let obj3 = array[num];
+              if (!obj3.test(replaced)) {
+                break;
+              } else {
+                text = str + (tmp3.prefix + replaced);
+              }
             }
           }
         } else {
           text = str + tmp3;
         }
         num = num + 1;
+        let tmp36 = arr;
         str = text;
         str2 = text;
       }

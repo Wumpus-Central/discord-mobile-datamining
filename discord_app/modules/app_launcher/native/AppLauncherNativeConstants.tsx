@@ -1,12 +1,12 @@
 // === Module 1499: APP_LAUNCHER_BUILT_IN_SECTION_ICON ===
 
 // Module 1499 (APP_LAUNCHER_BUILT_IN_SECTION_ICON)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useNavigation from "useNavigation" /* 1500 */;
 import registerAssetDefault from "registerAsset" /* 1623 */;
 
-const result = obj132.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
+const result = set.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
 export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = registerAssetDefault;
 export const AppLauncherRouteName = { HOME: "home", APPLICATION_VIEW: "application_view", COMMAND_VIEW: "command_view", APP_LIST_VIEW: "app_list_view" };

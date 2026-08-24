@@ -1,58 +1,58 @@
 // === Module 8728: handlePressJoinActivity ===
 
 // Module 8728 (handlePressJoinActivity)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import obj132Default from "obj132" /* 4827 */;
+import setDefault from "set" /* 4827 */;
 import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 8729 */;
-import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 8730 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import createExecutable from "createExecutable" /* 4479 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createExecutable" /* 4479 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "updateVoiceState" /* 4542 */;
+import closure_10 from "participantFromServer" /* 1390 */;
 
-require = fn;
+require = arg1;
 function handlePressJoinActivity(arg0) {
   ({ embeddedActivityJoinability, handleCanJoin } = arg0);
   if (getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN === embeddedActivityJoinability) {
     if (handleCanJoin != null) {
       handleCanJoin();
     }
-  } else if (getEmbeddedActivityJoinability.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
-    const result = showActivitiesInvalidPermissionsAlert.showActivitiesInvalidPermissionsAlert();
-    const tmpResult = showActivitiesInvalidPermissionsAlert;
-  } else if (getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
+  } else if (tmp(8729).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
+    const result = tmp(8730).showActivitiesInvalidPermissionsAlert();
+    const tmpResult = tmp(8730);
+  } else if (tmp(8729).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
     let obj = { title: null, body: null, hideActionSheet: false };
-    const intl7 = getSystemLocale.intl;
-    obj[0] = intl7.string(getSystemLocale.t.PtobXW);
-    const intl8 = getSystemLocale.intl;
-    obj[1] = intl8.string(getSystemLocale.t.UXoQTp);
-    obj132Default.show(obj);
-  } else if (getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
+    const intl7 = tmp(1236).intl;
+    obj[0] = intl7.string(tmp(1236).t.PtobXW);
+    const intl8 = tmp(1236).intl;
+    obj[1] = intl8.string(tmp(1236).t.UXoQTp);
+    setDefault.show(obj);
+    const obj7 = setDefault;
+  } else if (tmp(8729).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
     obj = { title: null, body: null, hideActionSheet: false };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t.PtobXW);
-    const intl6 = getSystemLocale.intl;
-    obj[1] = intl6.string(getSystemLocale.t.uGDCcw);
-    obj132Default.show(obj);
-  } else if (getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
-    let obj2 = obj132Default;
+    const intl5 = tmp(1236).intl;
+    obj[0] = intl5.string(tmp(1236).t.PtobXW);
+    const intl6 = tmp(1236).intl;
+    obj[1] = intl6.string(tmp(1236).t.uGDCcw);
+    setDefault.show(obj);
+    const obj5 = setDefault;
+  } else if (tmp(8729).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
+    let obj2 = setDefault;
     obj1 = { title: null, body: null, hideActionSheet: false };
-    const intl3 = getSystemLocale.intl;
-    obj1[0] = intl3.string(getSystemLocale.t.PtobXW);
-    const intl4 = getSystemLocale.intl;
-    obj1[1] = intl4.string(getSystemLocale.t["4WuFRE"]);
+    const intl3 = tmp(1236).intl;
+    obj1[0] = intl3.string(tmp(1236).t.PtobXW);
+    const intl4 = tmp(1236).intl;
+    obj1[1] = intl4.string(tmp(1236).t["4WuFRE"]);
     obj2.show(obj1);
   } else {
-    obj = obj132Default;
+    obj = setDefault;
     obj2 = { title: null, body: null, hideActionSheet: false };
-    const intl = getSystemLocale.intl;
-    obj2[0] = intl.string(getSystemLocale.t.PtobXW);
-    const intl2 = getSystemLocale.intl;
-    obj2[1] = intl2.string(getSystemLocale.t.FUCQco);
+    const intl = tmp(1236).intl;
+    obj2[0] = intl.string(tmp(1236).t.PtobXW);
+    const intl2 = tmp(1236).intl;
+    obj2[1] = intl2.string(tmp(1236).t.FUCQco);
     obj.show(obj2);
   }
 }
@@ -189,10 +189,11 @@ function _maybeJoinEmbeddedActivity() {
                 return obj1;
               } else {
                 embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(callback);
-                currentUser = embeddedActivitiesForChannel.find((item, index) => {
-                  let tmp = item.applicationId === c1;
+                currentUser = embeddedActivitiesForChannel.find((applicationId) => {
+                  let tmp = applicationId.applicationId === c1;
                   if (tmp) {
-                    tmp = null == c2 || item.launchId === tmp2;
+                    tmp = null == c2 || applicationId.launchId === tmp2;
+                    const tmp4 = null == c2 || applicationId.launchId === tmp2;
                   }
                   return tmp;
                 });
@@ -249,6 +250,7 @@ function _maybeJoinEmbeddedActivity() {
                   return applyArgumentsResult;
                 };
                 id(obj3);
+                const tmp49 = id;
                 const tmp52 = callback2(8729);
               }
             }
@@ -273,7 +275,7 @@ function _maybeJoinEmbeddedActivity() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/activities/handlePressJoinActivity.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/handlePressJoinActivity.tsx");
 
 export default handlePressJoinActivity;
 export const maybeJoinEmbeddedActivity = function maybeJoinEmbeddedActivity(arg0) {

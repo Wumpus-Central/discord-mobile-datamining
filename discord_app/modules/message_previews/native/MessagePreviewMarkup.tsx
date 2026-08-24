@@ -9,15 +9,17 @@ import combineMarkupRulesDefault from "combineMarkupRules" /* 6808 */;
 import parseLinkDefault from "parseLink" /* 6809 */;
 import defaultReactFnDefault from "defaultReactFn" /* 10054 */;
 
-require = fn;
+require = arg1;
 function getOrParseMessagePreviewMarkupAST(arg0) {
   ({ content, layout, color, initialParserState, postProcessor, fontScale, maxFontSizeMultiplier } = arg0);
-  const value = store.get(content);
+  const value = closure_3.get(content);
   if (null != value) {
     return value;
   } else {
     const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout, color, fontScale, maxFontSizeMultiplier)];
+    const tmp11 = combineMarkupRulesDefault;
     const tmp11Result = combineMarkupRulesDefault(items);
+    const obj3 = get_defaultRulesDefault;
     let startsWithResult = content.startsWith("```");
     let tmp3;
     if (!startsWithResult) {
@@ -29,17 +31,19 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
       tmp3 = content;
     }
     const astParserForResultResult = get_defaultRulesDefault.astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
-    const result = store.set(content, astParserForResultResult);
+    const result = obj.set(content, astParserForResultResult);
     return astParserForResultResult;
   }
+  obj = closure_3;
 }
 const tmp2 = new privDefault({ max: 2000 });
 let closure_3 = tmp2;
-let result = require("obj132").fileFinishedImporting("modules/message_previews/native/MessagePreviewMarkup.tsx");
+let result = require("set").fileFinishedImporting("modules/message_previews/native/MessagePreviewMarkup.tsx");
 
 export const renderASTToReact = function renderASTToReact(layout) {
   ({ tree, initialParserState, color, fontScale, maxFontSizeMultiplier } = layout);
   const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
+  const tmp = combineMarkupRulesDefault;
   const tmpResult = combineMarkupRulesDefault(items);
   const obj = tDefault;
   return obj.reactFor(tDefault.ruleOutput(tmpResult, "react"))(tree, initialParserState);
@@ -47,6 +51,7 @@ export const renderASTToReact = function renderASTToReact(layout) {
 export const getMessagePreviewASTParser = function getMessagePreviewASTParser(layout) {
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
   const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
+  const tmp = combineMarkupRulesDefault;
   const tmpResult = combineMarkupRulesDefault(items);
   return get_defaultRulesDefault.astParserFor(tmpResult);
 };
@@ -88,6 +93,7 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
     obj[6] = postProcessor;
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
     const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout, color, num, maxFontSizeMultiplier)];
+    const tmp7 = combineMarkupRulesDefault;
     const tmp7Result = combineMarkupRulesDefault(items);
     const obj2 = tDefault;
     return obj2.reactFor(tDefault.ruleOutput(tmp7Result, "react"))(tmp4, obj);

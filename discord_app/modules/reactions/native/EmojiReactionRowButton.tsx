@@ -4,21 +4,21 @@
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import EmojiTypes from "EmojiTypes" /* 4037 */;
 import PressableBase from "PressableBase" /* 5433 */;
 import EmojiDefault from "Emoji" /* 6930 */;
 import ReactionIcon from "ReactionIcon" /* 7939 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
-  const obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
+  let obj = { emojiContainer: null };
+  obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
   obj[0] = obj;
   return obj;
 });
@@ -27,22 +27,25 @@ let closure_7 = createCacheKey.createStyles((width, fontSize, lineHeight) => {
   if (arg3) {
     tmp = lineHeight;
   }
-  const obj = { lineHeight, fontSize, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
+  obj = { emojiImage: obj, emojiText: null };
+  obj = { width, height: width };
+  obj = { lineHeight, fontSize, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
   const merged = Object.assign(tmp2);
   obj[1] = obj;
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/reactions/native/EmojiReactionRowButton.tsx");
+const result = require("set").fileFinishedImporting("modules/reactions/native/EmojiReactionRowButton.tsx");
 
 export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   let str = iconSize.iconSize;
   ({ onPress, styles } = iconSize);
   let obj = AccessibilityAnnouncer;
   const tmp = callback(iconSize.emojiContainerSize);
+  const obj2 = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   const isThemeLightResult = AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme);
   obj = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, style: null, children: null };
-  const intl = getSystemLocale.intl;
+  const intl = tmp2(1236).intl;
   obj[2] = intl.string(getSystemLocale.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
@@ -59,9 +62,10 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
   ({ emoji: animated, emojiSize } = emojiContainerSize);
   ({ emojiFontSize, emojiLineHeight, onPress, styles } = emojiContainerSize);
   let getEmojiURL = importDefault;
+  let obj = dependencyMap;
   const tmp = callback(emojiContainerSize.emojiContainerSize);
   const memo = React.useMemo(() => ({ foreground: true }), []);
-  let obj = { androidRippleConfig: memo, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: 4, onPress: null, style: null, children: null };
+  obj = { androidRippleConfig: memo, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: 4, onPress: null, style: null, children: null };
   const intl = getSystemLocale.intl;
   let name;
   if (animated != null) {
@@ -74,7 +78,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
   obj[7] = items;
   if (null == animated) {
     obj[8] = null;
-    return jsx(PressableBase.PressableOpacity, obj);
+    return tmp4(PressableBase.PressableOpacity, obj);
   } else {
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
     ({ emojiText: obj3[0], emojiImage: obj3[1] } = tmp2);
@@ -96,13 +100,12 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
       url = animated.url;
     }
     obj[3] = url;
-    <emojiURL textEmojiStyle={null} fastImageStyle={null} name={null} src={null} />;
+    tmp4(emojiURL, obj);
   }
-  tmp2 = callback2(emojiSize, emojiFontSize, emojiLineHeight, useIsMobileVisualRefreshExperimentEnabledDefault("EmojiReactionRowButton"));
 };
-export const getEmojiKey = function getEmojiKey(type, index) {
+export const getEmojiKey = function getEmojiKey(type, arg1) {
   if (null == type) {
-    return index;
+    return arg1;
   } else {
     type.type === EmojiTypes.EmojiTypes.UNICODE ? type.surrogates : type.id;
   }

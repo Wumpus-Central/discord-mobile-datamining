@@ -2,37 +2,41 @@
 
 // Module 16399 (ConnectButton)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
-const createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingLeft: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8 };
+const require = arg1;
+createCacheKey = { connectButton: null, connectText: null };
+createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingLeft: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
 
 export default function ConnectButton(props) {
+  let _require;
   let channelId;
   let guildId;
   let canConnect;
+  let isAtMaxCapacity;
+  let isChannelContentGated;
   let isChannelSpoilerGated;
   const tmp = isChannelSpoilerGated();
-  const _require = tmp;
+  _require = tmp;
   let obj = canConnect;
   const context = canConnect.useContext(channelId(guildId[5]));
   channelId = context.channelId;
   guildId = context.guildId;
   const tmp5 = channelId(guildId[6])(channelId);
   canConnect = tmp5.canConnect;
-  const isAtMaxCapacity = tmp5.isAtMaxCapacity;
+  isAtMaxCapacity = tmp5.isAtMaxCapacity;
   const items = [isAtMaxCapacity];
   const stateFromStores = _require(guildId[7]).useStateFromStores(items, () => isAtMaxCapacity.getChannel(channelId));
   const obj2 = _require(guildId[7]);
   const tmp2 = channelId;
-  let isChannelContentGated = _require(guildId[8]).useIsChannelContentGated(stateFromStores);
+  isChannelContentGated = _require(guildId[8]).useIsChannelContentGated(stateFromStores);
   if (isChannelContentGated) {
     isChannelContentGated = null != guildId;
   }

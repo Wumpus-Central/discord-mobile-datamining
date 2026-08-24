@@ -2,13 +2,13 @@
 
 // Module 1191 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_5 from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const ReactNativeProfiler = fn;
+const ReactNativeProfiler = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -63,7 +63,8 @@ let items = [
   {
     key: "componentDidMount",
     value: function componentDidMount() {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback3(callback2(self.prototype), "componentDidMount", this);
       if (typeof fn === "function") {
         fn = (arg0) => fn.apply(self, arg0);
@@ -105,7 +106,6 @@ let items = [
         const _captureAppStartResult1 = _captureAppStart(1153);
         tmp4 = null === addIntegration || undefined === addIntegration;
       }
-      const obj = ReactNativeProfiler(1135);
     }
   }
 ];

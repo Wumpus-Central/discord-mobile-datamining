@@ -2,10 +2,10 @@
 
 // Module 8067 (_startStageInstance)
 import sendRequest from "sendRequest" /* 530 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _startStageInstance() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3, arg4) => {
@@ -71,7 +71,7 @@ function _updateStageInstance() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
 
 export const startStageInstance = function startStageInstance(channel_id, c4, GUILD_ONLY, flag, c5) {
   const self = this;

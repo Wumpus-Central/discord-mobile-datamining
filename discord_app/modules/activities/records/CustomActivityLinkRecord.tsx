@@ -1,12 +1,10 @@
 // === Module 12413: getAssetURL ===
 
 // Module 12413 (getAssetURL)
-import obj132 from "obj132" /* 2 */;
-import updateAssets from "updateAssets" /* 7247 */;
-import fetchCustomActivityLink from "fetchCustomActivityLink" /* 12411 */;
+import set from "set" /* 2 */;
 import CustomLinkType from "CustomLinkType" /* 12414 */;
 
-let result = obj132.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
+let result = set.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
   constructor(arg0) {
     obj = require("CustomLinkType");
@@ -38,10 +36,10 @@ class CustomActivityLinkRecord {
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
   if (this.type === CustomLinkType.CustomLinkType.MANAGED) {
-    let tmpResult = updateAssets;
+    let tmpResult = tmp(7247);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === CustomLinkType.CustomLinkType.QUICK) {
-    tmpResult = fetchCustomActivityLink;
+  } else if (self.type === tmp(12414).CustomLinkType.QUICK) {
+    tmpResult = tmp(12411);
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

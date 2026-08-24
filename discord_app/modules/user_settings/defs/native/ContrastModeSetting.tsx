@@ -3,13 +3,13 @@
 // Module 14720 (slider)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createToggle";
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["TYyfO/"]);
@@ -23,6 +23,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createSlider(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ContrastModeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ContrastModeSetting.tsx");
 
 export default createToggle;

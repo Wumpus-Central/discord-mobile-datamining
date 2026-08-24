@@ -1,12 +1,12 @@
 // === Module 6915: _setEnabled ===
 
 // Module 6915 (_setEnabled)
-import obj1322 from "obj132" /* 500 */;
-import obj132Default from "obj132" /* 4004 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import obj132 from "obj132" /* 500 */;
+import set2 from "set" /* 500 */;
+import setDefault from "set" /* 4004 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import set from "set" /* 500 */;
 
-require = fn;
+require = arg1;
 function _setEnabled() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -535,33 +535,33 @@ function _replaceWithCorrection() {
   return applyArgumentsResult;
 }
 require("processCallbacks").addPostConnectionCallback;
-obj132 = obj132.isDesktop();
-if (obj132) {
-  const importDefaultResult = obj132Default;
+set = set.isDesktop();
+if (set) {
+  const importDefaultResult = setDefault;
   let spellCheck;
   if (importDefaultResult != null) {
     spellCheck = importDefaultResult.spellCheck;
   }
-  obj132 = null != spellCheck;
+  set = null != spellCheck;
 }
 let promise = null;
-if (obj132) {
+if (set) {
   promise = new Promise((arg0) => {
     closure_0 = arg0;
     const resolved = Promise.resolve();
-    resolved.then((result) => addPostConnectionCallback(() => callback(closure_1_0(closure_1_2[4]).install())));
+    resolved.then(() => closure_1_4(() => callback(closure_1_0(closure_1_2[4]).install())));
   });
 }
 let c6 = null;
 if (promise != null) {
-  promise.then((result) => {
-    closure_6 = result;
+  promise.then((arg0) => {
+    closure_6 = arg0;
   });
 }
 function isSupported() {
-  let isDesktopResult = obj1322.isDesktop();
+  let isDesktopResult = set2.isDesktop();
   if (isDesktopResult) {
-    const tmp4 = obj132Default;
+    const tmp4 = setDefault;
     let spellCheck;
     if (tmp4 != null) {
       spellCheck = tmp4.spellCheck;
@@ -570,7 +570,7 @@ function isSupported() {
   }
   return isDesktopResult;
 }
-const result = obj132.fileFinishedImporting("utils/SpellcheckUtils.tsx");
+const result = set.fileFinishedImporting("utils/SpellcheckUtils.tsx");
 
 export { isSupported };
 export const setEnabled = function setEnabled() {
@@ -639,13 +639,13 @@ export const setAppLocale = function setAppLocale(arg0) {
   }
 };
 export const addResultListener = function addResultListener(arg0) {
-  const tmp3 = obj132Default;
+  const tmp3 = setDefault;
   let spellCheck;
   if (tmp3 != null) {
     spellCheck = tmp3.spellCheck;
   }
   if (null != spellCheck) {
-    spellCheck = obj132Default.spellCheck;
+    spellCheck = setDefault.spellCheck;
     let fn2 = spellCheck.on("spellcheck-result", arg0);
     if (fn2 == null) {
       fn2 = () => {

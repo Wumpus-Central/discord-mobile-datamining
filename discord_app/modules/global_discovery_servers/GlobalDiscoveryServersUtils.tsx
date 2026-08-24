@@ -5,13 +5,13 @@ import v1 from "v1" /* 514 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import prototypeDefault from "prototype" /* 17048 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _getSystemLocale from "_getSystemLocale" /* 1994 */;
-import map from "map" /* 13254 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "map" /* 13254 */;
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 8876 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _navigateToGuild() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -118,28 +118,28 @@ function _navigateToGuild() {
   return applyArgumentsResult;
 }
 ({ GlobalDiscoveryServerTab: error, FEATURED_GUILDS_CACHE_DURATION: closure_8, FEATURED_GUILDS_SEARCH_OPTIONS: c9, CategoryId: c10, DISCOVERY_ALL_CATEGORIES_ID: unpackModuleId, getLanguageOptions: closure_12, HUBS_CATEGORY_ID: map1 } = DEFAULT_DISCOVERY_CATEGORY_ID);
-const result = require("obj132").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
 export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServersTabTitle(arg0) {
   if (constants.FEATURED === arg0) {
     const intl7 = getSystemLocale.intl;
     return intl7.string(getSystemLocale.t["RU+DCe"]);
-  } else if (constants.GAMING === arg0) {
+  } else if (tmp.GAMING === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t["CD/USA"]);
-  } else if (constants.MUSIC === arg0) {
+  } else if (tmp.MUSIC === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t["nt9PL+"]);
-  } else if (constants.ENTERTAINMENT === arg0) {
+  } else if (tmp.ENTERTAINMENT === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.gSbmdt);
-  } else if (constants.TECH === arg0) {
+  } else if (tmp.TECH === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t["0A0By5"]);
-  } else if (constants.EDUCATION === arg0) {
+  } else if (tmp.EDUCATION === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.Gy9woq);
-  } else if (constants.HUBS === arg0) {
+  } else if (tmp.HUBS === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["q469/Z"]);
   }
@@ -148,22 +148,22 @@ export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryS
   if (constants.FEATURED === arg0) {
     const intl7 = getSystemLocale.intl;
     return intl7.string(getSystemLocale.t.OlDfzP);
-  } else if (constants.GAMING === arg0) {
+  } else if (tmp.GAMING === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t["CD/USA"]);
-  } else if (constants.MUSIC === arg0) {
+  } else if (tmp.MUSIC === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t["nt9PL+"]);
-  } else if (constants.ENTERTAINMENT === arg0) {
+  } else if (tmp.ENTERTAINMENT === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.gSbmdt);
-  } else if (constants.TECH === arg0) {
+  } else if (tmp.TECH === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t["0A0By5"]);
-  } else if (constants.EDUCATION === arg0) {
+  } else if (tmp.EDUCATION === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.Gy9woq);
-  } else if (constants.HUBS === arg0) {
+  } else if (tmp.HUBS === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.X5xPlb);
   } else {
@@ -177,22 +177,22 @@ export const getGlobalDiscoveryServersBannerDescription = function getGlobalDisc
   if (constants.FEATURED === arg0) {
     const intl7 = getSystemLocale.intl;
     return intl7.string(getSystemLocale.t.SdMhrk);
-  } else if (constants.GAMING === arg0) {
+  } else if (tmp.GAMING === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t.AAJ5ov);
-  } else if (constants.MUSIC === arg0) {
+  } else if (tmp.MUSIC === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t["SOio+D"]);
-  } else if (constants.ENTERTAINMENT === arg0) {
+  } else if (tmp.ENTERTAINMENT === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.R09vf0);
-  } else if (constants.TECH === arg0) {
+  } else if (tmp.TECH === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.Ew4d56);
-  } else if (constants.EDUCATION === arg0) {
+  } else if (tmp.EDUCATION === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.sasIWU);
-  } else if (constants.HUBS === arg0) {
+  } else if (tmp.HUBS === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["F/IQCI"]);
   } else {
@@ -206,19 +206,19 @@ export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscov
   if (constants.FEATURED === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t.crt84X);
-  } else if (constants.GAMING === arg0) {
+  } else if (tmp.GAMING === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t.fWbIpf);
-  } else if (constants.MUSIC === arg0) {
+  } else if (tmp.MUSIC === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.nfgDzz);
-  } else if (constants.ENTERTAINMENT === arg0) {
+  } else if (tmp.ENTERTAINMENT === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.k1CYxv);
-  } else if (constants.TECH === arg0) {
+  } else if (tmp.TECH === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t["4dawps"]);
-  } else if (constants.EDUCATION === arg0) {
+  } else if (tmp.EDUCATION === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.uexPgT);
   } else {
@@ -228,17 +228,17 @@ export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscov
 export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(arg0) {
   if (constants.FEATURED === arg0) {
     return closure_11;
-  } else if (constants.GAMING === arg0) {
+  } else if (tmp.GAMING === arg0) {
     return closure_10.Activity;
-  } else if (constants.MUSIC === arg0) {
+  } else if (tmp.MUSIC === arg0) {
     return closure_10.Music;
-  } else if (constants.ENTERTAINMENT === arg0) {
+  } else if (tmp.ENTERTAINMENT === arg0) {
     return closure_10.Television;
-  } else if (constants.TECH === arg0) {
+  } else if (tmp.TECH === arg0) {
     return closure_10.Science;
-  } else if (constants.EDUCATION === arg0) {
+  } else if (tmp.EDUCATION === arg0) {
     return closure_10.Education;
-  } else if (constants.HUBS === arg0) {
+  } else if (tmp.HUBS === arg0) {
     return closure_13;
   } else {
     isDiscordFrontendDevelopment.assertNever(arg0);
@@ -269,9 +269,10 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
     tmp = items;
   }
   [tmp3] = tmp;
+  let locale;
   const arr2 = callback2();
-  const locale = tmp3.locale;
-  let found = arr2.find((item, index) => item.code === locale);
+  locale = tmp3.locale;
+  let found = arr2.find((code) => code.code === locale);
   if (found == null) {
     found = arr2[0];
   }
@@ -294,6 +295,7 @@ export const handleTabPressPrefetch = function handleTabPressPrefetch() {
   if (!isInitialFetchComplete) {
     if (!isFetching) {
       const featuredGuilds = prototypeDefault.fetchFeaturedGuilds();
+      const obj = prototypeDefault;
     }
   }
   if (isInitialFetchComplete) {
@@ -304,8 +306,10 @@ export const handleTabPressPrefetch = function handleTabPressPrefetch() {
   }
   if (isInitialFetchComplete) {
     const featuredGuilds1 = prototypeDefault.fetchFeaturedGuilds({ forceRefresh: true });
+    const obj2 = prototypeDefault;
   }
 };
 export const makeAnalyticsID = function makeAnalyticsID() {
+  const obj = v1;
   return v1.v4().replace(/-/g, "");
 };

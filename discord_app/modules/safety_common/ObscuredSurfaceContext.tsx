@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 
 let c0 = importAllResult;
 const context = importAllResult.createContext({ obscured: false });
-const result = require("obj132").fileFinishedImporting("modules/safety_common/ObscuredSurfaceContext.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_common/ObscuredSurfaceContext.tsx");
 
 export const ObscuredSurfaceContext = context;
 export const OBSCURED_VALUE = { obscured: true };

@@ -4,32 +4,40 @@
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ AnalyticEvents: closure_6, AnalyticsPages: error, AnalyticsSections: closure_8 } = ME);
 ({ PremiumSubscriptionSKUs: c9, PremiumUpsellTypes: c10, SubscriptionPlans: unpackModuleId } = GuildFeatures);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { paddingTop: ThemesDefault.space.PX_8 };
+let obj = { container: null, premiumSearchUpsell: null, premiumSearchUpsellContent: null, nitroIcon: null };
+obj = { paddingTop: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-const createCacheKey = { height: 56, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", alignItems: "center", alignContent: "center" };
+createCacheKey = { height: 56, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", alignItems: "center", alignContent: "center" };
 obj[1] = createCacheKey;
 obj[2] = { flex: 0.8, flexDirection: "row" };
 obj[3] = { marginRight: 8, alignSelf: "center" };
 let closure_14 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((analyticsLocations) => {
   const tmp = callback2();
+  let guildId;
+  let analyticsLocations2;
   analyticsLocations = analyticsLocations.analyticsLocations;
+  guildId = analyticsLocations;
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
+  analyticsLocations2 = useTier0UpsellContent;
   const items = [analyticsLocations, useTier0UpsellContent];
-  const guildId = analyticsLocations.guildId;
-  const analyticsLocations2 = analyticsLocations.analyticsLocations;
-  const useTier0UpsellContent2 = analyticsLocations.useTier0UpsellContent;
+  guildId = undefined;
+  analyticsLocations2 = undefined;
+  let useTier0UpsellContent2;
+  guildId = analyticsLocations.guildId;
+  analyticsLocations2 = analyticsLocations.analyticsLocations;
+  useTier0UpsellContent2 = analyticsLocations.useTier0UpsellContent;
   let ref;
   const callback = ref.useCallback(() => {
     const currentUser = closure_1_5.getCurrentUser();
@@ -54,8 +62,8 @@ const memoResult = importAllResult.memo((analyticsLocations) => {
   const effect = ref.useEffect(() => {
     if (!ref.current) {
       tmp.current = true;
-      analyticsLocations2(useTier0UpsellContent2[8]);
-      let trackResult = { type: null, location: null, location_stack: null, sku_id: null };
+      let trackResult = analyticsLocations2(useTier0UpsellContent2[8]);
+      trackResult = { type: null, location: null, location_stack: null, sku_id: null };
       trackResult[0] = closure_1_10.EMOJI_PICKER_SEARCH;
       if (null != guildId) {
         let DM_CHANNEL = closure_1_7.GUILD_CHANNEL;
@@ -71,7 +79,8 @@ const memoResult = importAllResult.memo((analyticsLocations) => {
       trackResult = trackResult.track(closure_1_6.PREMIUM_UPSELL_VIEWED, trackResult);
     }
   }, items1);
-  let obj = { style: tmp.nitroIcon, source: analyticsLocations2(useTier0UpsellContent2[14]), disableColor: true, size: guildId(useTier0UpsellContent2[13]).Icon.Sizes.MEDIUM };
+  let obj = { style: tmp.premiumSearchUpsellContent, children: null };
+  obj = { style: tmp.nitroIcon, source: analyticsLocations2(useTier0UpsellContent2[14]), disableColor: true, size: guildId(useTier0UpsellContent2[13]).Icon.Sizes.MEDIUM };
   const items2 = [callback(guildId(useTier0UpsellContent2[13]).Icon, obj), ];
   const intl = guildId(useTier0UpsellContent2[16]).intl;
   if (analyticsLocations.useTier0UpsellContent) {
@@ -85,7 +94,7 @@ const memoResult = importAllResult.memo((analyticsLocations) => {
   items2[1] = callback(guildId(useTier0UpsellContent2[15]).Text, { lineClamp: 2, variant: "text-sm/medium", color: "interactive-text-active", children: formatToPlainStringResult });
   obj[1] = items2;
   obj1 = { style: tmp.premiumSearchUpsell, accessibilityRole: "button", onPress: callback, children: null };
-  const items3 = [callback(View, obj), ];
+  const items3 = [closure_13(View, obj), ];
   const intl2 = tmp8(tmp9[16]).intl;
   const string = intl2.string;
   const t = tmp8(tmp9[16]).t;
@@ -96,10 +105,10 @@ const memoResult = importAllResult.memo((analyticsLocations) => {
   }
   items3[1] = callback(guildId(useTier0UpsellContent2[15]).Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
   obj1[3] = items3;
-  const tmp5Result = callback(View, obj);
-  return callback(View, { style: tmp.container, collapsable: false, children: callback(guildId(useTier0UpsellContent2[17]).PressableOpacity, obj1) });
+  const tmp5Result = closure_13(View, obj);
+  return callback(View, { style: tmp.container, collapsable: false, children: closure_13(guildId(useTier0UpsellContent2[17]).PressableOpacity, obj1) });
 });
-let result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerPremiumSearchUpsell.tsx");
+let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerPremiumSearchUpsell.tsx");
 
 export const EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT = 56;
 export const useEmojiPickerPremiumSearchUpsellViewed = function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
@@ -112,8 +121,8 @@ export const useEmojiPickerPremiumSearchUpsellViewed = function useEmojiPickerPr
   const effect = ref.useEffect(() => {
     if (!ref.current) {
       tmp.current = true;
-      analyticsLocations2(useTier0UpsellContent2[8]);
-      let trackResult = { type: null, location: null, location_stack: null, sku_id: null };
+      let trackResult = analyticsLocations2(useTier0UpsellContent2[8]);
+      trackResult = { type: null, location: null, location_stack: null, sku_id: null };
       trackResult[0] = closure_1_10.EMOJI_PICKER_SEARCH;
       if (null != guildId) {
         let DM_CHANNEL = closure_1_7.GUILD_CHANNEL;

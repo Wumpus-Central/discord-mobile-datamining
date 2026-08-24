@@ -5,12 +5,12 @@ import ManaContext from "ManaContext" /* 4104 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
 import useUserProfileColors from "useUserProfileColors" /* 8979 */;
 import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8980 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 const memoResult = importAllResult.memo((style) => {
   style = style.style;
@@ -19,6 +19,8 @@ const memoResult = importAllResult.memo((style) => {
   const themeContext = obj.useThemeContext();
   ({ primaryColor, secondaryColor, theme } = themeContext);
   const gradientFallbackBackground = useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
+  const obj2 = useUserProfileColors;
+  const obj3 = useUserProfileGradientColors;
   const first = callback(useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
   if (null != primaryColor) {
     if (null != secondaryColor) {
@@ -39,6 +41,6 @@ const memoResult = importAllResult.memo((style) => {
   style[2] = style;
   return <closure_5 style={style} pointerEvents="none" />;
 });
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
 
 export default memoResult;

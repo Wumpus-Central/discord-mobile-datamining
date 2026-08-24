@@ -1,12 +1,12 @@
 // === Module 16432: getStreamIssueReportOptions ===
 
 // Module 16432 (getStreamIssueReportOptions)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import StreamIssueReportReasons2 from "StreamIssueReportReasons" /* 4532 */;
 
 const StreamIssueReportReasons = StreamIssueReportReasons2.StreamIssueReportReasons;
-const result = obj132.fileFinishedImporting("modules/go_live/utils/getStreamIssueReportOptions.tsx");
+const result = set.fileFinishedImporting("modules/go_live/utils/getStreamIssueReportOptions.tsx");
 
 export default function getStreamIssueReportOptions(isEndStream) {
   isEndStream = isEndStream.isEndStream;
@@ -16,14 +16,14 @@ export default function getStreamIssueReportOptions(isEndStream) {
   const t = getSystemLocale.t;
   if (isEndStream) {
     let stringResult = string(t["0X5Zbq"]);
-    let tmp6 = require;
+    let tmp6 = tmp2;
   } else {
     stringResult = string(t.fxiRNr);
-    tmp6 = require;
+    tmp6 = tmp2;
   }
   obj[2] = stringResult;
   const items = [obj, , , , , , , , ];
-  obj = { id: "blurry", value: StreamIssueReportReasons.BLURRY, label: null };
+  obj = { id: "blurry", value: tmp.BLURRY, label: null };
   const intl2 = tmp6(1236).intl;
   const string2 = intl2.string;
   const t2 = tmp6(1236).t;
@@ -34,7 +34,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
   }
   obj[2] = string2Result;
   items[1] = obj;
-  obj = { id: "lagging", value: StreamIssueReportReasons.LAGGING, label: null };
+  obj = { id: "lagging", value: tmp.LAGGING, label: null };
   const intl3 = tmp6(1236).intl;
   const string3 = intl3.string;
   const t3 = tmp6(1236).t;

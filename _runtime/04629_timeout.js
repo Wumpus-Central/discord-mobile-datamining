@@ -30,9 +30,9 @@ exports.exports.timeout = (arg0, arg1) => {
       callback(closure_1_2);
     }, closure_0);
   });
-  return Promise.race(items).then((result) => {
+  return Promise.race(items).then((arg0) => {
     clearTimeout(closure_1);
-    return result;
+    return arg0;
   }, (arg0) => {
     clearTimeout(closure_1);
     throw arg0;

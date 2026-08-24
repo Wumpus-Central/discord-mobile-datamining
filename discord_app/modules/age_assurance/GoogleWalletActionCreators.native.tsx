@@ -1,10 +1,10 @@
 // === Module 6568: _requestGoogleWalletVerification ===
 
 // Module 6568 (_requestGoogleWalletVerification)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _requestGoogleWalletVerification() {
   const self = this;
   const tmp = callback(function*() {
@@ -13,7 +13,7 @@ function _requestGoogleWalletVerification() {
     obj1[0] = closure_1_4.GOOGLE_WALLET_REQUEST;
     obj1[1] = {};
     yield HTTP.post(obj1);
-    return body.body;
+    return arg1.body;
   });
   closure_5 = tmp;
   const apply = tmp.apply;
@@ -220,9 +220,10 @@ function _getGoogleWalletCredential() {
                 table = 1;
                 v0 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = tmp6(tmp7[3]).getCredential(closure_0);
+                obj1[0] = tmp6(tmp7[3]).getCredential(tmp5);
                 return obj1;
               }
+              tmp5 = closure_0;
               tmp6 = v0;
               tmp7 = table;
             }
@@ -256,7 +257,7 @@ function _getGoogleWalletCredential() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/GoogleWalletActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/GoogleWalletActionCreators.native.tsx");
 
 export const requestGoogleWalletVerification = function requestGoogleWalletVerification() {
   const self = this;

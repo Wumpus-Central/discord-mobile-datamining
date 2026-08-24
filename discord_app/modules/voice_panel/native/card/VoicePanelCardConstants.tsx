@@ -1,10 +1,10 @@
 // === Module 11443: CARD_SIZE ===
 
 // Module 11443 (CARD_SIZE)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 
-const result = obj132.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardConstants.tsx");
+const result = set.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardConstants.tsx");
 
 export const CARD_SIZE = 165;
 export const CALL_TILE_GUTTER = 12;

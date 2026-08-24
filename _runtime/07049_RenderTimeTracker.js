@@ -2,7 +2,7 @@
 
 // Module 7049 (RenderTimeTracker)
 import _createClassDefault from "_createClass" /* 7051 */;
-import _classCallCheck from "_classCallCheck" /* 7050 */;
+import closure_2 from "_classCallCheck" /* 7050 */;
 
 const RenderTimeTracker = arg1;
 class RenderTimeTracker {

@@ -2,26 +2,27 @@
 
 // Module 4523 (result)
 import timestampDefault from "timestamp" /* 3 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 
 let obj = {};
-const result = 30 * obj132Default.Millis.SECOND;
+const result = 30 * setDefault.Millis.SECOND;
 obj.SECONDS_30 = result;
 obj[result] = "SECONDS_30";
-const MINUTE = obj132Default.Millis.MINUTE;
+const MINUTE = setDefault.Millis.MINUTE;
 obj.MINUTES_1 = MINUTE;
 obj[MINUTE] = "MINUTES_1";
-const result1 = 2 * obj132Default.Millis.MINUTE;
+const result1 = 2 * setDefault.Millis.MINUTE;
 obj.MINUTES_2 = result1;
 obj[result1] = "MINUTES_2";
-const result2 = 6 * obj132Default.Millis.SECOND;
-const result3 = 60 * obj132Default.Millis.SECOND;
+const result2 = 6 * setDefault.Millis.SECOND;
+const result3 = 60 * setDefault.Millis.SECOND;
+obj = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
 obj = { TEXT: "text" };
 const obj1 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
-const result4 = 14 * obj132Default.Millis.DAY;
+const result4 = 14 * setDefault.Millis.DAY;
 const obj2 = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: obj1.NONE, strokeColor: "#000000" };
 const tmp5 = new timestampDefault("Clips");
-const result5 = require("obj132").fileFinishedImporting("modules/clips/ClipsConstants.tsx");
+const result5 = require("set").fileFinishedImporting("modules/clips/ClipsConstants.tsx");
 
 export const ClipsLengthSettings = obj;
 export const ClipsViewerConnectivitySettings = { ALL: 0, [0]: "ALL", FRIENDS: 1, [1]: "FRIENDS" };

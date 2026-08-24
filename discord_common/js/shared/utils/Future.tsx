@@ -1,9 +1,9 @@
 // === Module 8451: Future ===
 
 // Module 8451 (Future)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
 
 export const Future = function Future() {
   const obj = Object.create(new.target.prototype);

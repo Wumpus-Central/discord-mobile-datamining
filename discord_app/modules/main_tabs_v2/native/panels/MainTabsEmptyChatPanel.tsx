@@ -10,11 +10,12 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 let closure_6 = createCacheKey.createStyles((left, marginTop) => {
-  const obj = {};
+  let obj = { container: null };
+  obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj.left = left;
   obj.marginTop = marginTop;
@@ -27,11 +28,12 @@ let closure_6 = createCacheKey.createStyles((left, marginTop) => {
   obj[0] = obj;
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsEmptyChatPanel.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsEmptyChatPanel.tsx");
 
 export default function MainTabsEmptyChatPanel() {
   let obj = sum;
   const drawerWidth = obj.useDrawerWidth();
+  const tmp3 = importDefault;
   const tmp4 = callback(drawerWidth, useSafeAreaInsetsDefault().top);
   let tmp5 = null;
   if (obj2.useIsFavoritesGuildSelected()) {

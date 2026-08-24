@@ -5,11 +5,11 @@ import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import context2 from "context" /* 8101 */;
 import FormRadio from "FormRadio" /* 8102 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");
 
 export const TableRadioRow = function TableRadioRow(value) {
   value = value.value;

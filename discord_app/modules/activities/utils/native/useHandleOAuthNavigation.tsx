@@ -1,21 +1,21 @@
 // === Module 16233: useHandleOAuthNavigation ===
 
 // Module 16233 (useHandleOAuthNavigation)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { ComponentActions } from "ME" /* 676 */;
 import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
 
 export default function useHandleOAuthNavigation() {
   const effect = React.useEffect(() => {
-    function showOAuth2Modal(closure_2) {
+    function showOAuth2Modal(arg0) {
       let obj = callback(paths[3]);
       obj.popWithKey(closure_5);
       obj = {};
       const obj2 = callback(paths[3]);
-      const merged = Object.assign(closure_2);
+      const merged = Object.assign(arg0);
       obj.dismissOAuthModal = function dismissOAuthModal() {
         callback(table[3]).popWithKey(closure_5);
       };

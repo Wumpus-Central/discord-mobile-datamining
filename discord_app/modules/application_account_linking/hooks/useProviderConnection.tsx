@@ -1,13 +1,12 @@
 // === Module 7158: useProviderConnection ===
 
 // Module 7158 (useProviderConnection)
-import callbackDefault from "callback" /* 5223 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
-import set from "set" /* 5221 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "set" /* 5221 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");
 
 export const useProviderConnection = function useProviderConnection(provider_id) {
   let _require = provider_id;
@@ -26,6 +25,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
   if (tmp3) {
     tmp3 = !stateFromStores.revoked;
   }
+  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c3 = 0;
@@ -67,7 +67,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
                 return obj1;
               } else {
                 c5 = 1;
-                let obj4 = callbackDefault;
+                let obj4 = closure_2_1(closure_2_2[4]);
                 c1 = tmp27;
                 if (tmp27 == null) {
                   c1 = "Account Linking";

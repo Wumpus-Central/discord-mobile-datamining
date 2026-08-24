@@ -6,7 +6,7 @@ import _createClassDefault from "_createClass" /* 42 */;
 import BlobModuleDefault from "BlobModule" /* 201 */;
 import Blob from "Blob" /* 203 */;
 import map from "map" /* 204 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_4 from "_classCallCheck" /* 41 */;
 
 const BlobManager = global;
 require = arg1;
@@ -29,17 +29,17 @@ const items = [
         }
         return str.toString(16);
       });
-      const mapped = arr.map((item, index) => {
-        if (!(item instanceof ArrayBuffer)) {
+      const mapped = arr.map((data) => {
+        if (!(data instanceof ArrayBuffer)) {
           const _ArrayBuffer = ArrayBuffer;
-          if (!ArrayBuffer.isView(item)) {
-            if (item instanceof callback(table[4]).default) {
+          if (!ArrayBuffer.isView(data)) {
+            if (data instanceof callback(table[4]).default) {
               let obj = { data: null, type: "blob" };
-              obj[0] = item.data;
+              obj[0] = data.data;
             } else {
               obj = { data: null, type: "string" };
               const _String = String;
-              obj[0] = String(item);
+              obj[0] = String(data);
             }
             return obj;
           }
@@ -47,12 +47,12 @@ const items = [
         error = new Error("Creating blobs from 'ArrayBuffer' and 'ArrayBufferView' are not supported");
         throw error;
       });
-      const reduced = mapped.reduce((acc, item, index) => {
-        if ("string" === item.type) {
+      const reduced = mapped.reduce((arg0, type) => {
+        if ("string" === type.type) {
           const _encodeURI = encodeURI;
-          let sum = acc + closure_0.unescape(encodeURI(item.data)).length;
+          let sum = arg0 + closure_0.unescape(encodeURI(type.data)).length;
         } else {
-          sum = acc + item.data.size;
+          sum = arg0 + type.data.size;
         }
         return sum;
       }, 0);
@@ -86,10 +86,11 @@ const items = [
         const merged = Object.assign(_response);
         let result = null;
         if (null != BlobManager.__blobCollectorProvider) {
-          result = BlobManager.__blobCollectorProvider(tmp7);
+          result = obj3.__blobCollectorProvider(tmp7);
         }
         obj.__collector = result;
         data = obj;
+        obj3 = BlobManager;
       }
       return Object.assign(obj, { data });
     }
@@ -98,18 +99,21 @@ const items = [
     key: "release",
     value: function release(arg0) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
+      const tmp = importDefault;
+      const tmp3 = _modDef38;
       map.unregister(arg0);
+      const obj = map;
       if (!obj2.has(arg0)) {
         BlobModuleDefault.release(arg0);
         const tmpResult = BlobModuleDefault;
       }
-      obj2 = map;
     }
   },
   {
     key: "addNetworkingHandler",
     value: function addNetworkingHandler() {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
+      const tmp = _modDef38;
       BlobModuleDefault.addNetworkingHandler();
     }
   },
@@ -117,6 +121,7 @@ const items = [
     key: "addWebSocketHandler",
     value: function addWebSocketHandler(arg0) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
+      const tmp = _modDef38;
       BlobModuleDefault.addWebSocketHandler(arg0);
     }
   },
@@ -124,6 +129,7 @@ const items = [
     key: "removeWebSocketHandler",
     value: function removeWebSocketHandler(arg0) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
+      const tmp = _modDef38;
       const result = BlobModuleDefault.removeWebSocketHandler(arg0);
     }
   },
@@ -131,6 +137,7 @@ const items = [
     key: "sendOverSocket",
     value: function sendOverSocket(data) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
+      const tmp = _modDef38;
       BlobModuleDefault.sendOverSocket(data.data, arg1);
     }
   }

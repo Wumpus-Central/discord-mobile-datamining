@@ -5,13 +5,13 @@ import ThemesDefault from "Themes" /* 712 */;
 import calculateTimestampDurations from "calculateTimestampDurations" /* 8348 */;
 import ActiveTimestampAll from "ActiveTimestamp" /* 12105 */;
 import TrendingType from "TrendingType" /* 12110 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-require = fn;
+require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let obj = { Badge: ActiveTimestampAll.NewGameBadge, predicate: require("calculateTimestampDurations").isEntryNew };
 let items = [obj, , , , ];
@@ -30,11 +30,19 @@ obj = {
   Badge: ActiveTimestampAll.TrendingBadge,
   predicate(entry) {
     const trendingType = calculateTimestampDurations.getTrendingType(entry);
+    const obj = calculateTimestampDurations;
+    const tmp = require;
     return null != trendingType && trendingType !== TrendingType.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   }
 };
 items[2] = obj;
 items[3] = {
+  Badge: ActiveTimestampAll.ResurrectedBadge,
+  predicate() {
+    return true;
+  }
+};
+let obj1 = {
   Badge: ActiveTimestampAll.ResurrectedBadge,
   predicate() {
     return true;
@@ -47,26 +55,35 @@ items[4] = {
   }
 };
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
-  let obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+  let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
+  obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
   obj[0] = obj;
   obj[1] = { overflow: "hidden", flex: 1 };
   obj = { width: 72, height: 72, borderRadius: ThemesDefault.radii.sm };
   obj[2] = obj;
   obj[3] = { maxWidth: 275, color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
+  obj1 = { maxWidth: 275, color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
   obj[4] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", marginTop: 6 };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");
+let obj2 = {
+  Badge: ActiveTimestampAll.MarathonBadge,
+  predicate(entry) {
+    return true === calculateTimestampDurations.isEntryMarathon(entry);
+  }
+};
+const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");
 
 export default function GamingLikeEntryRow(content) {
   content = content.content;
   const renderForScreenshot = content.renderForScreenshot;
+  let author_id;
   closure_2 = undefined;
   let openReplyActionSheet;
   const tmp = callback();
   const application_id = content.extra.application_id;
-  const author_id = content.author_id;
+  author_id = content.author_id;
   let obj = content(openReplyActionSheet[9]);
   items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(author_id));
@@ -102,10 +119,10 @@ export default function GamingLikeEntryRow(content) {
       items = [closure_1_7(callback(openReplyActionSheet[4]).TopGameBadge, obj, "topgame")];
       let found = items;
     } else {
-      const mapped = closure_1_10.map((item, index) => {
-        const Badge = item.Badge;
+      const mapped = closure_1_10.map((Badge) => {
+        Badge = Badge.Badge;
         let tmp2 = null;
-        if (item.predicate(closure_0)) {
+        if (Badge.predicate(closure_0)) {
           const obj = { entry: null };
           obj[0] = closure_0;
           tmp2 = closure_1_7(Badge, obj, Badge.name);
@@ -119,20 +136,20 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = React.useCallback(() => {
-    content(openReplyActionSheet[18])(openReplyActionSheet[17], openReplyActionSheet.paths).then((result) => {
-      const GameShareModal = result.GameShareModal;
+    content(openReplyActionSheet[18])(openReplyActionSheet[17], openReplyActionSheet.paths).then((GameShareModal) => {
+      GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
-        let obj = author_id(openReplyActionSheet[19]);
+        let obj = closure_1_1(closure_1_3[19]);
         obj.itemInteracted(GameShareModal.id, "hotwheels_gaming_activity", "press_forward");
         obj = { itemId: null, itemType: "hotwheels_gaming_activity", actionParameters: null };
         obj[0] = GameShareModal.id;
         obj[2] = { actionGestureType: "press", actionTargetElement: "forward_button", actionIntentType: "share", actionDestinationType: null };
-        author_id(openReplyActionSheet[19]).feedItemActioned(obj);
-        const obj4 = author_id(openReplyActionSheet[20]);
+        closure_1_1(closure_1_3[19]).feedItemActioned(obj);
+        const obj4 = closure_1_1(closure_1_3[20]);
         obj = { content: null };
         obj[0] = GameShareModal;
         obj4.pushLazy(() => Promise.resolve(GameShareModal), obj, "GameShareModal", { presentation: "modal" });
-        const obj2 = author_id(openReplyActionSheet[19]);
+        const obj2 = closure_1_1(closure_1_3[19]);
       }
     });
   }, items3);
@@ -166,15 +183,16 @@ export default function GamingLikeEntryRow(content) {
         const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
         obj3[2] = tmp20;
         isEntryActiveResult = tmp2Result.isEntryActive(content);
+        const tmp19 = closure_8;
         obj3[3] = tmp5(tmp3[25]).getName(stateFromStores);
-        const items5 = [callback(tmp2(tmp3[24]).Text, obj3), ];
+        const items5 = [closure_7(tmp2(tmp3[24]).Text, obj3), ];
         let obj4 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
         const tmp5Result1 = tmp5(tmp3[25]);
         const tmp2Result1 = tmp2(tmp3[26]);
         obj4[3] = tmp2Result1.getRelativeTimestamp(tmp5(tmp3[27]).extractTimestamp(content.id));
-        items5[1] = callback(tmp2(tmp3[24]).Text, obj4);
+        items5[1] = closure_7(tmp2(tmp3[24]).Text, obj4);
         obj2[0] = items5;
-        obj[5] = callback2(closure_8, obj2);
+        obj[5] = closure_9(tmp19, obj2);
         const tmp5Result2 = tmp5(tmp3[27]);
         let str = "text-default";
         if (tmp2Result2.isEntryActive(content)) {
@@ -183,7 +201,7 @@ export default function GamingLikeEntryRow(content) {
         const obj5 = { variant: "text-sm/normal", lineClamp: 1, color: null, children: null };
         obj5[2] = str;
         obj5[3] = stringResult;
-        obj[6] = callback(tmp2(tmp3[24]).Text, obj5);
+        obj[6] = closure_7(tmp2(tmp3[24]).Text, obj5);
         const items6 = [tmp.card, ];
         let tmp22 = null;
         if (null != primaryColor) {
@@ -208,8 +226,8 @@ export default function GamingLikeEntryRow(content) {
         obj11[0] = iconURL1;
         obj10[0] = obj11;
         obj10[1] = tmp.image;
-        obj8[4] = callback(tmp5(tmp3[30]), obj10);
-        const items7 = [callback(tmp2(tmp3[29]).PressableOpacity, obj8), ];
+        obj8[4] = closure_7(tmp5(tmp3[30]), obj10);
+        const items7 = [closure_7(tmp2(tmp3[29]).PressableOpacity, obj8), ];
         const obj12 = { style: null, children: null };
         obj12[0] = tmp.cardInnerContainer;
         const obj13 = { onPress: null, disabled: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -222,8 +240,8 @@ export default function GamingLikeEntryRow(content) {
         const obj15 = { variant: "text-md/semibold", style: null, children: null };
         obj15[1] = tmp.gameName;
         obj15[2] = getOrFetchApplication.name;
-        obj13[4] = callback(tmp2(tmp3[24]).Text, obj15);
-        const items8 = [callback(tmp2(tmp3[29]).PressableOpacity, obj13), ];
+        obj13[4] = closure_7(tmp2(tmp3[24]).Text, obj15);
+        const items8 = [closure_7(tmp2(tmp3[29]).PressableOpacity, obj13), ];
         let tmp16Result = null != memo;
         if (tmp16Result) {
           tmp16Result = memo.length > 0;
@@ -232,13 +250,13 @@ export default function GamingLikeEntryRow(content) {
           const obj16 = { style: null, children: null };
           obj16[0] = tmp.badges;
           obj16[1] = memo;
-          tmp16Result = callback(View, obj16);
+          tmp16Result = tmp16(tmp21, obj16);
         }
         items8[1] = tmp16Result;
         obj12[1] = items8;
-        items7[1] = callback2(View, obj12);
+        items7[1] = closure_9(View, obj12);
         obj7[1] = items7;
-        const items9 = [callback2(View, obj7), ];
+        const items9 = [closure_9(View, obj7), ];
         tmp16Result = null;
         if (!renderForScreenshot) {
           obj17 = { reactText: null, onReply: null, onForward: null };
@@ -248,14 +266,14 @@ export default function GamingLikeEntryRow(content) {
           obj17[0] = intl3.formatToPlainString(tmp2(tmp3[22]).t.ghWi8V, obj18);
           obj17[1] = openReplyActionSheet;
           obj17[2] = callback1;
-          tmp16Result = callback(tmp2(tmp3[31]).ContentInventoryReplyRow, obj17);
+          tmp16Result = tmp16(tmp2(tmp3[31]).ContentInventoryReplyRow, obj17);
           const tmp5Result3 = tmp5(tmp3[25]);
         }
         const obj19 = { children: null };
         items9[1] = tmp16Result;
         obj19[0] = items9;
-        obj[7] = callback2(View, obj19);
-        return callback(tmp5Result, obj);
+        obj[7] = closure_9(View, obj19);
+        return closure_7(tmp5Result, obj);
       }
     }
   }

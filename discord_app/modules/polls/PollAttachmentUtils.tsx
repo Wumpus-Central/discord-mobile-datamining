@@ -1,7 +1,7 @@
 // === Module 11380: _downloadPollGif ===
 
 // Module 11380 (_downloadPollGif)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
 
 function _downloadPollGif() {
@@ -35,7 +35,7 @@ function _downloadPollGif() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/polls/PollAttachmentUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/PollAttachmentUtils.tsx");
 
 export const getFileNameFromGifUrl = function getFileNameFromGifUrl(closure_1, closure_2) {
   const parts = decodeURIComponent(closure_2).split("/");

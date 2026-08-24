@@ -36,13 +36,12 @@ arg5.createTransport = function createTransport(bufferSize) {
         } else {
           items.push(arg0);
         }
-        obj2 = items(7803);
       });
       if (0 === items.length) {
-        let tmpResult = bufferSize(tmp2[3]);
+        let tmpResult = tmp(tmp2[3]);
         return tmpResult.resolvedSyncPromise({});
       } else {
-        tmpResult = bufferSize(tmp2[1]);
+        tmpResult = tmp(tmp2[1]);
         table = tmpResult.createEnvelope(arg0[0], items);
         function recordEnvelopeLoss(arg0) {
 
@@ -50,25 +49,25 @@ arg5.createTransport = function createTransport(bufferSize) {
         return recordEnvelopeLoss.add(() => {
           const obj = { body: items(7782).serializeEnvelope(dependencyMap) };
           const obj2 = items(7782);
-          return dependencyMap(obj).then((result) => {
-            let DEBUG_BUILD = undefined !== result.statusCode;
+          return dependencyMap(obj).then((statusCode) => {
+            let DEBUG_BUILD = undefined !== statusCode.statusCode;
             if (DEBUG_BUILD) {
-              let tmp = result.statusCode < 200;
+              let tmp = statusCode.statusCode < 200;
               if (!tmp) {
-                tmp = result.statusCode >= 300;
+                tmp = statusCode.statusCode >= 300;
               }
               DEBUG_BUILD = tmp;
             }
             if (DEBUG_BUILD) {
-              DEBUG_BUILD = items(closure_1_1[4]).DEBUG_BUILD;
+              DEBUG_BUILD = closure_1_0(closure_1_1[4]).DEBUG_BUILD;
             }
             if (DEBUG_BUILD) {
-              const logger = items(closure_1_1[5]).logger;
+              const logger = closure_1_0(closure_1_1[5]).logger;
               const _HermesInternal = HermesInternal;
-              logger.warn("Sentry responded with status code " + result.statusCode + " to sent event.");
+              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
             }
-            closure_3 = items(closure_1_1[2]).updateRateLimits(closure_3, result);
-            return result;
+            closure_3 = closure_1_0(closure_1_1[2]).updateRateLimits(closure_3, statusCode);
+            return statusCode;
           }, (arg0) => {
             if (typeof closure_2 !== "function") {
               HermesBuiltin.throwTypeError();
@@ -83,21 +82,21 @@ arg5.createTransport = function createTransport(bufferSize) {
                 }
                 const tmp = tmp4;
               }
-              network_error.recordDroppedEvent(network_error, items(closure_2_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              network_error.recordDroppedEvent(network_error, closure_2_0(closure_2_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
             });
             throw arg0;
           });
-        }).then((result) => result, (arg0) => {
+        }).then((arg0) => arg0, (arg0) => {
           if (arg0 instanceof items(7795).SentryError) {
-            if (items(7766).DEBUG_BUILD) {
-              const logger = items(7738).logger;
+            if (tmp(7766).DEBUG_BUILD) {
+              const logger = tmp(7738).logger;
               logger.error("Skipped sending event because buffer is full.");
             }
             if (typeof recordEnvelopeLoss !== "function") {
               HermesBuiltin.throwTypeError();
             }
             const queue_overflow = "queue_overflow";
-            let tmpResult = items(7782);
+            let tmpResult = tmp(7782);
             tmpResult.forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
               if ("event" === arg1) {
                 const _Array = Array;
@@ -107,9 +106,9 @@ arg5.createTransport = function createTransport(bufferSize) {
                 }
                 const tmp = tmp4;
               }
-              network_error.recordDroppedEvent(network_error, items(closure_2_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              network_error.recordDroppedEvent(network_error, closure_2_0(closure_2_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
             });
-            tmpResult = items(7762);
+            tmpResult = tmp(7762);
             return tmpResult.resolvedSyncPromise({});
           } else {
             throw arg0;

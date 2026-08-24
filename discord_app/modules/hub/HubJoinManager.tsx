@@ -3,10 +3,10 @@
 // Module 11918 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-let require = fn;
+let require = arg1;
 initializeDefault;
 class HubJoinManager extends tmp2 {
   constructor() {
@@ -19,7 +19,7 @@ class HubJoinManager extends tmp2 {
         const features = guild.features;
         let hasItem;
         if (features != null) {
-          hasItem = features.has(GuildFeatures.HUB);
+          hasItem = features.has(closure_1_4.HUB);
         }
         tmp2 = hasItem;
       }
@@ -28,8 +28,8 @@ class HubJoinManager extends tmp2 {
         if (onClose != null) {
           onClose();
         }
-        applyArgumentsResult(dependencyMap[4]).transitionToGuild(guild.id);
-        const obj = applyArgumentsResult(dependencyMap[4]);
+        applyArgumentsResult(closure_1_2[4]).transitionToGuild(guild.id);
+        const obj = applyArgumentsResult(closure_1_2[4]);
       }
     };
     return applyArgumentsResult;
@@ -44,6 +44,6 @@ prototype["_terminate"] = function _terminate() {
   dispatcherDefault.unsubscribe("GUILD_CREATE", this.handleGuildCreate);
 };
 const hubJoinManager = new HubJoinManager();
-const result = require("obj132").fileFinishedImporting("modules/hub/HubJoinManager.tsx");
+const result = require("set").fileFinishedImporting("modules/hub/HubJoinManager.tsx");
 
 export default hubJoinManager;

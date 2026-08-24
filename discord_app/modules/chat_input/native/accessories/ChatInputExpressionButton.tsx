@@ -6,16 +6,16 @@ import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles((arg0, arg1, height) => {
   const radii = ThemesDefault.radii;
   if (arg0) {
     let round = radii.sm;
-    let tmp4 = importDefault;
+    let tmp4 = tmp;
   } else {
     round = radii.round;
-    tmp4 = importDefault;
+    tmp4 = tmp;
   }
   let obj = { borderRadius: round, height, width: height };
   if (arg0) {
@@ -48,6 +48,7 @@ const memoResult = importAllResult.memo((active) => {
   ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
   const token = onPress(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   const obj2 = onPress(4097);
+  const tmp4 = importDefault;
   const token1 = onPress(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_PILL_PADDING);
   const obj3 = onPress(4097);
   const token2 = onPress(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH);
@@ -84,10 +85,10 @@ const memoResult = importAllResult.memo((active) => {
   }
   const items2 = [expressionButtonIconPosition, tmp11.expressionButtonIconTint];
   obj[1] = items2;
-  obj[2] = importDefault(showKeyboardIcon ? 10449 : 7940);
+  obj[2] = tmp4(showKeyboardIcon ? 10449 : 7940);
   obj[7] = jsx(onPress(1297).Icon, { size: token3, style: null, source: null });
   return jsx(onPress(5433).PressableOpacity, { size: token3, style: null, source: null });
 });
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
 
 export default memoResult;

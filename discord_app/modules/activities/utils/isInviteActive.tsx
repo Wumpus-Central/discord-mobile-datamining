@@ -2,10 +2,10 @@
 
 // Module 10917 (result)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 
-const result = 2 * obj132Default.Millis.HOUR;
-const result1 = require("obj132").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
+const result = 2 * setDefault.Millis.HOUR;
+const result1 = require("set").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
 
 export default function isInviteActive(party, activity) {
   if (null == party) {
@@ -27,6 +27,7 @@ export default function isInviteActive(party, activity) {
     const _Date = Date;
     const sum = DISCORD_EPOCHDefault.extractTimestamp(activity.id) + closure_2;
     let tmp10 = null != party.application_id;
+    const obj = DISCORD_EPOCHDefault;
     if (tmp10) {
       tmp10 = party.application_id !== arg2;
     }

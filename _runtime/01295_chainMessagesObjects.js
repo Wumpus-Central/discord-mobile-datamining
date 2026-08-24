@@ -35,7 +35,8 @@ arg5.chainMessagesObjects = function chainMessagesObjects(importDefaultResult, $
 };
 arg5.makeMessagesProxy = function makeMessagesProxy(loader) {
   closure_0 = loader;
-  let obj = {
+  let obj = {};
+  obj = {
     ownKeys(arg0) {
       return Reflect.ownKeys(arg0);
     },

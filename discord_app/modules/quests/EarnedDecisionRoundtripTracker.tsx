@@ -5,11 +5,11 @@ import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 5052 */;
 import isForegrounded from "isForegrounded" /* 5055 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
-import handleConnectionInfoChange from "handleConnectionInfoChange" /* 4564 */;
+import closure_3 from "handleConnectionInfoChange" /* 4564 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-require = fn;
+require = arg1;
 function trackRoundtrip(apiResponseTimestamp) {
   if (Math.random() <= 0.1) {
     let diff = null;
@@ -32,6 +32,7 @@ function trackRoundtrip(apiResponseTimestamp) {
     const merged1 = Object.assign(tmp10);
     ({ callerSource: obj3.caller_source, requestId: obj3.request_id, fetchedAt: obj3.fetched_at } = apiResponseTimestamp);
     const obj2 = expandEventPropertiesDefault;
+    const tmp2 = require;
     obj.is_foregrounded = isForegrounded.isForegrounded();
     obj2.track(AnalyticEvents.EARNED_DECISION_ROUNDTRIP, obj);
     const tmp2Result = isForegrounded;
@@ -55,7 +56,7 @@ prototype["recordEarnedRequestAttempt"] = function recordEarnedRequestAttempt(ar
     const pendingRequests = self.pendingRequests;
     const value = pendingRequests.get(closure_0);
     if (null != value) {
-      trackRoundtrip(value);
+      closure_1_5(value);
       const pendingRequests2 = self.pendingRequests;
       pendingRequests2.delete(closure_0);
     }
@@ -85,8 +86,8 @@ prototype["recordEarnedRequestApiResponse"] = function recordEarnedRequestApiRes
     pendingRequests2.delete(closure_0);
   }
 };
-let obj132 = Object.create(EarnedDecisionRoundtripTracker.prototype);
-obj132[0] = new Map();
-let result = obj132.fileFinishedImporting("modules/quests/EarnedDecisionRoundtripTracker.tsx");
+let set = Object.create(EarnedDecisionRoundtripTracker.prototype);
+set[0] = new Map();
+let result = set.fileFinishedImporting("modules/quests/EarnedDecisionRoundtripTracker.tsx");
 
-export default obj132;
+export default set;

@@ -7,12 +7,13 @@ import getIllustrationSource from "getIllustrationSource" /* 7907 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsEmoji.tsx");
+const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsEmoji.tsx");
 
 export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettingsEmojiSource(theme) {
-  const obj = {
+  let obj = getIllustrationSource;
+  obj = {
     dark() {
       return callback(16791);
     },
@@ -26,7 +27,8 @@ export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettings
   return obj.getIllustrationSource(theme, obj);
 };
 export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettingsEmojiSource() {
-  const obj = {
+  let obj = AccessibilityAnnouncer;
+  obj = {
     dark() {
       return callback(16791);
     },
@@ -40,7 +42,19 @@ export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettings
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const EmptyServerSettingsEmoji = function EmptyServerSettingsEmoji(arg0) {
-  const obj = {};
+  let obj = AccessibilityAnnouncer;
+  obj = {
+    dark() {
+      return callback(16791);
+    },
+    darker() {
+      return callback(16792);
+    },
+    light() {
+      return callback(16793);
+    }
+  };
+  obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

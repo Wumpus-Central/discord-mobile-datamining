@@ -3,19 +3,19 @@
 // Module 10198 (transformFavoriteGifUrl)
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 import shouldRefreshAttachmentUrl from "shouldRefreshAttachmentUrl" /* 9085 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 function transformFavoriteGifUrl(url) {
   let combined = url;
   const str = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
   if (null != str) {
     if (obj6.isExternalProxiedAttachmentUrl(str)) {
       const formatted = str.pathname.toLowerCase();
-      formatted.endsWith(".webp");
       const formatted1 = str.pathname.toLowerCase();
       let endsWithResult1 = formatted1.endsWith(".avif");
       const formatted2 = str.pathname.toLowerCase();
+      const endsWithResult2 = formatted2.endsWith(".gif");
       if (!endsWithResult1) {
         endsWithResult1 = endsWithResult2;
       }
@@ -27,9 +27,10 @@ function transformFavoriteGifUrl(url) {
       const result1 = searchParams2.set("animated", "true");
       return str.toString();
     } else {
-      shouldRefreshAttachmentUrl;
+      const tmp14Result = tmp14(9085);
     }
     obj6 = shouldRefreshAttachmentUrl;
+    tmp14 = require;
   }
   if (regex.test(arg1)) {
     const match = regex3.exec(arg1);
@@ -49,12 +50,13 @@ function transformFavoriteGifUrl(url) {
     }
     return combined;
   }
+  const obj = isDiscordProxiedAssetUrlDefault;
 }
 require("ME").GIFPickerResultTypes;
 const re5 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
 const re6 = /(tenor\.com)/;
 const re7 = /-(?:.(?!-))+$/;
-let result = require("obj132").fileFinishedImporting("modules/gif_picker/native/GIFPickerUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerUtils.tsx");
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
@@ -67,11 +69,11 @@ export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
       let tmp2;
       if (sortedFavoriteGIFs.length > 0) {
         const obj = { type: null, name: null, src: null, format: null };
-        obj[0] = GIFPickerResultTypes.FAVORITES;
-        const intl = sortedFavoriteGIFs(dependencyMap[5]).intl;
-        obj[1] = intl.string(sortedFavoriteGIFs(dependencyMap[5]).t.k8fFjp);
-        obj[2] = sortedFavoriteGIFs[0].src;
-        obj[3] = sortedFavoriteGIFs[0].format;
+        obj[0] = closure_1_4.FAVORITES;
+        const intl = sortedFavoriteGIFs(closure_1_2[5]).intl;
+        obj[1] = intl.string(sortedFavoriteGIFs(closure_1_2[5]).t.k8fFjp);
+        obj[2] = tmp[0].src;
+        obj[3] = tmp[0].format;
         tmp2 = obj;
       }
       return tmp2;

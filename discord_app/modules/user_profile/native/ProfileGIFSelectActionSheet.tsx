@@ -7,21 +7,22 @@ import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBa
 import Background from "Background" /* 6950 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
 import _modDef10193 from "module_10193" /* 10193 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { flex: 1, marginTop: ThemesDefault.space.PX_4, marginLeft: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 };
+createCacheKey = { titleWrapper: { flex: 0 }, titleContainer: { justifyContent: "flex-start" }, gifPicker: null };
+createCacheKey = { flex: 1, marginTop: ThemesDefault.space.PX_4, marginLeft: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 };
 createCacheKey[2] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { AVATAR: 0, [0]: "AVATAR", BANNER: 1, [1]: "BANNER" };
 let obj2 = { PROFILE_EDIT: 0, [0]: "PROFILE_EDIT", PROFILE_TRY_IT_OUT: 1, [1]: "PROFILE_TRY_IT_OUT" };
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/ProfileGIFSelectActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/ProfileGIFSelectActionSheet.tsx");
 
 export default function ProfileGIFSelectActionSheet(arg0) {
   ({ profileAssetType: require, selectionContext: importDefault, guildId: dependencyMap } = arg0);
@@ -117,7 +118,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
                 });
                 const items = [promise, ];
                 const obj22 = lib2(closure_1_2[7]);
-                items[1] = lib2(closure_1_2[7]).fromBlob(closure_2).catch((error) => null);
+                items[1] = lib2(closure_1_2[7]).fromBlob(closure_2).catch(() => null);
                 dependencyMap = 3;
                 c5 = 1;
                 let obj5 = { value: null, done: false };
@@ -198,7 +199,8 @@ export default function ProfileGIFSelectActionSheet(arg0) {
   }
   let tmp = callback3();
   const ref = React.useRef(null);
-  let obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
+  let obj = { ref, scrollable: true, startExpanded: true, children: null };
+  obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["xsC+/y"]);
   obj[1] = callback(NitroWheelIcon.NitroWheelIcon, {});

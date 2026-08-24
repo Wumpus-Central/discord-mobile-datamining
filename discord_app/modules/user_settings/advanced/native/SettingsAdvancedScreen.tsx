@@ -7,12 +7,13 @@ import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import { MarketingURLs } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   const node = importAllResult.useMemo(() => {
-    callback(10669);
-    const obj = { label: null, settings: null, subLabel: null };
+    let obj = callback(10669);
+    obj = { sections: null };
+    obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t["+U02+i"]);
     const items = [constants.DEVELOPER_MODE];
@@ -38,6 +39,6 @@ const memoResult = importAllResult.memo(() => {
   }, []);
   return jsx(_modDef13991, { node });
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
 
 export default memoResult;

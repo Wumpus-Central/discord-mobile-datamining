@@ -8,21 +8,22 @@ import messagesProxyDefault from "messagesProxy" /* 2693 */;
 import Text from "Text" /* 4734 */;
 import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9452 */;
 import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 9453 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function ChatPreview(arg0) {
   ({ user, guildId } = arg0);
   ({ displayName, displayNameStyles } = arg0);
   const tmp = callback3();
+  let obj = { style: tmp.chatContainer, pointerEvents: "none", children: null };
   const memo = React.useMemo(() => {
     const obj = callback(table[11]);
     return obj.calendarFormat(new Date(), true);
   }, []);
-  let obj = { user, size: Button.AvatarSizes.NORMAL, guildId };
+  obj = { user, size: Button.AvatarSizes.NORMAL, guildId };
   const items = [callback(Button.Avatar, obj), ];
   obj = { style: tmp.chatContent, children: null };
   obj1 = { style: tmp.chatHeader, children: null };
@@ -40,10 +41,12 @@ function ChatPreview(arg0) {
   return callback2(View, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { marginBottom: ThemesDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 };
+createCacheKey = { previewSection: null, chatPreviewWrapper: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: -18, alignSelf: "flex-end", width: 260, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[2] = { marginTop: -6, width: 260 };
+let obj1 = { marginTop: -18, alignSelf: "flex-end", width: 260, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[3] = { flexDirection: "row", borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, gap: ThemesDefault.space.PX_12 };
 createCacheKey[4] = { flex: 1 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "baseline", gap: 6 };
@@ -51,7 +54,8 @@ createCacheKey[6] = { flexShrink: 1, minWidth: 0 };
 createCacheKey[7] = { marginTop: -8, flexShrink: 0 };
 createCacheKey[8] = {};
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx");
+let obj2 = { flexDirection: "row", borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, gap: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx");
 
 export default function DisplayNameStylesEditPreview(selectedEffectId) {
   ({ user, displayName, guildId, selectedFontId } = selectedEffectId);
@@ -65,6 +69,7 @@ export default function DisplayNameStylesEditPreview(selectedEffectId) {
   let nameplateData = obj1.getNameplateData(guildNameplate);
   const items = [selectedFontId, selectedEffectId, selectedColors];
   const memo = React.useMemo(() => ({ fontId: selectedFontId, effectId: selectedEffectId, colors: selectedColors }), items);
+  obj = { style: tmp.previewSection, children: null };
   obj = { user, displayName, guildId, displayNameStylesOverride: memo, compact: true, hideFrame: true, maxWidth: 320, accessibilityLabel: null };
   const intl = selectedFontId(selectedColors[8]).intl;
   obj[7] = intl.string(selectedEffectId(selectedColors[9]).zoh6MT);
@@ -87,5 +92,5 @@ export default function DisplayNameStylesEditPreview(selectedEffectId) {
   obj2[1] = callback(selectedFontId(selectedColors[10]).NameplatePreview, obj3);
   items1[2] = callback(View, obj2);
   obj[1] = items1;
-  return callback(View, obj);
+  return closure_6(View, obj);
 };

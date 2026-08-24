@@ -7,9 +7,9 @@ import CircleXIcon from "CircleXIcon" /* 7341 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
 
 export const useInputClearButton = function useInputClearButton(clearProps, clearState) {
   let tmp;

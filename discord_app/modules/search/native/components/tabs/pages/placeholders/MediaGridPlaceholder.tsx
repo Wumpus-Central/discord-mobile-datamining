@@ -5,23 +5,23 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import Text from "Text" /* 4734 */;
-import performKeyboardAwareNavigation from "performKeyboardAwareNavigation" /* 11509 */;
 import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 15870 */;
 import _modDef15872 from "module_15872" /* 15872 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ MEDIA_NUM_COLUMNS: c5, MEDIA_ITEM_GAP_WIDTH: closure_6, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = MessageEmbedTypes);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey = { container: { zIndex: 1, position: "absolute", width: "100%" }, recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING }, row: { flexDirection: "row" }, section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: SEARCH_LIST_SECTION_TOP_PADDING, paddingBottom: 8 }, sectionItem: null, sectionText: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { opacity: 0 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/MediaGridPlaceholder.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/MediaGridPlaceholder.tsx");
 
 export default function MediaGridPlaceholderItem(arg0) {
   ({ size, containerStyle } = arg0);
@@ -33,16 +33,19 @@ export default function MediaGridPlaceholderItem(arg0) {
 };
 export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(visible) {
   ({ size: require, numRows } = visible);
+  dependencyMap = undefined;
   let memo;
+  let memo1;
   let tmp = callback3();
   dependencyMap = tmp;
   const items = [numRows];
-  memo = memo.useMemo(() => require(row[9]).range(0, numRows * closure_1_5), items);
+  memo = memo.useMemo(() => closure_1_0(row[9]).range(0, numRows * closure_1_5), items);
   const items1 = [memo];
-  const memo1 = memo.useMemo(() => require(row[9]).chunk(memo, closure_1_5), items1);
+  memo1 = memo.useMemo(() => closure_1_0(row[9]).chunk(memo, closure_1_5), items1);
   let obj = useFullscreenPlaceholderCount;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(visible.visible);
-  const items2 = [, , ];
+  obj = { style: items2, pointerEvents: "none", children: null };
+  items2 = [, , ];
   ({ container: arr4[0], recentsContainer: arr4[1] } = tmp);
   items2[2] = placeholderAnimatedStyle;
   obj = { style: tmp.section, children: null };
@@ -61,26 +64,27 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
   obj[1] = items3;
   const items4 = [
     callback2(memo1, obj),
-    memo1.map((item, index) => {
-      closure_0 = index;
+    memo1.map((arr) => {
+      closure_0 = arg1;
       const children = [
         closure_1_7(memo1, {
           style: row.row,
-          children: item.map((item, index) => {
+          children: arr.map((arg0, arg1) => {
+            let obj = { height: closure_0, width: closure_0, style: null };
             const tmp = numRows(15872);
-            const obj = { itemIndex: closure_0 * closure_2_5 + index, numItems: memo.length, numColumns: closure_2_5, spacing: closure_2_6 };
-            obj[2] = performKeyboardAwareNavigation.getMediaGridItemStyles(obj);
-            return closure_2_7(tmp, obj, index);
+            obj = { itemIndex: closure_0 * closure_2_5 + arg1, numItems: closure_1_3.length, numColumns: closure_2_5, spacing: closure_2_6 };
+            obj[2] = closure_2_0(11509).getMediaGridItemStyles(obj);
+            return closure_2_7(tmp, obj, arg1);
           })
         }),
 
       ];
-      let tmp2Result = index < memo1.length - 1;
+      let tmp2Result = arg1 < memo1.length - 1;
       if (tmp2Result) {
-        tmp2Result = closure_1_7(require(row[13]).MediaVerticalSeparator, {});
+        tmp2Result = closure_1_7(closure_1_0(row[13]).MediaVerticalSeparator, {});
       }
       children[1] = tmp2Result;
-      return closure_1_8(memo.Fragment, { children }, index);
+      return closure_1_8(memo.Fragment, { children }, arg1);
     })
   ];
   obj[2] = items4;

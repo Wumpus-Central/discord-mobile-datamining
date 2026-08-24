@@ -4,8 +4,8 @@
 let propertyIsEnumerable = {}.propertyIsEnumerable;
 if (!getOwnPropertyDescriptor) {
   if (getOwnPropertyDescriptor) {
-    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
-      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+    propertyIsEnumerable = function propertyIsEnumerable(SymbolResult) {
+      const tmp = getOwnPropertyDescriptor(this, SymbolResult);
       return tmp && tmp.enumerable;
     };
   }

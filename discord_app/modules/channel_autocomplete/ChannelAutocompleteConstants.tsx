@@ -1,12 +1,12 @@
 // === Module 6810: regExp ===
 
 // Module 6810 (regExp)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
 let closure_0 = [];
 const tmp2 = /^<@\$(\d+)>/;
 const regExp = new RegExp(tmp2.source.replace(/^\^/, ""), "g");
-const result = obj132.fileFinishedImporting("modules/channel_autocomplete/ChannelAutocompleteConstants.tsx");
+const result = set.fileFinishedImporting("modules/channel_autocomplete/ChannelAutocompleteConstants.tsx");
 
 export const MENTION_SENTINEL = "@";
 export const GAME_MENTION_SENTINEL = "$";
@@ -28,7 +28,7 @@ export const extractGameMentionIds = function extractGameMentionIds(arr) {
   if (arr.includes("<@$")) {
     const items = [];
     HermesBuiltin.arraySpread(arr.matchAll(regExp), 0);
-    let mapped = items.map((item, index) => item[1]);
+    let mapped = items.map((arg0) => arg0[1]);
     if (mapped.length <= 0) {
       mapped = closure_0;
     }

@@ -1,35 +1,35 @@
 // === Module 14954: useHasExpiredShopBlocks ===
 
 // Module 14954 (useHasExpiredShopBlocks)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { MAX_TIMEOUT_MS } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");
 
-export const useHasExpiredShopBlocks = (arg0, flag2, flag) => {
+export const useHasExpiredShopBlocks = (arg0, arg1, arg2) => {
   closure_0 = arg0;
-  closure_1 = flag2;
-  const callback = flag;
+  closure_1 = arg1;
+  const callback = arg2;
   const tmp = callback(callback3(false), 2);
   const callback2 = tmp[1];
-  const items = [flag2, flag, arg0];
+  const items = [arg1, arg2, arg0];
   callback2(() => {
     let timeout = null;
-    const item = timeout.forEach((item, index) => {
-      if (item.type === callback(flag2[3]).ShopBlockType.IMMERSIVE_BANNER) {
+    const item = timeout.forEach((type) => {
+      if (type.type === callback(closure_1_1[3]).ShopBlockType.IMMERSIVE_BANNER) {
         let time = null;
-        if (null != item.endTime) {
-          const endTime2 = item.endTime;
+        if (null != type.endTime) {
+          const endTime2 = type.endTime;
           time = endTime2.getTime();
         }
         let time1 = time;
       } else {
         time1 = null;
-        if (item.type === callback(flag2[3]).ShopBlockType.COUNTDOWN_TIMER) {
-          const endTime = item.endTime;
+        if (type.type === callback(closure_1_1[3]).ShopBlockType.COUNTDOWN_TIMER) {
+          const endTime = type.endTime;
           time1 = endTime.getTime();
         }
       }
@@ -55,7 +55,7 @@ export const useHasExpiredShopBlocks = (arg0, flag2, flag) => {
             const _Math = Math;
             timeout = setTimeout(() => {
               callback2(true);
-            }, Math.min(MAX_TIMEOUT_MS, diff));
+            }, Math.min(closure_1_5, diff));
             return () => clearTimeout(closure_0);
           }
         }

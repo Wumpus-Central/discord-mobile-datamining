@@ -1,8 +1,7 @@
 // === Module 16717: handleChannelDelete ===
 
 // Module 16717 (handleChannelDelete)
-import obj132 from "obj132" /* 2 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 5038 */;
 import getNextPositionFromChannels from "getNextPositionFromChannels" /* 9978 */;
 import items from "items" /* 15464 */;
@@ -21,14 +20,12 @@ function handleCategoryCollapseAll(guildId) {
     const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(true);
     const tmpResult = getNextPositionFromChannels;
   }
-  obj = getFavoritesAwareGuildName;
 }
 function handleCategoryExpandAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
     const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(false);
     const tmpResult = getNextPositionFromChannels;
   }
-  obj = getFavoritesAwareGuildName;
 }
 function handleLogout() {
   callback(closure_2);
@@ -43,6 +40,6 @@ let prototype = function FavoriteManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = obj132.fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
+let result = set.fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
 
 export default prototype;

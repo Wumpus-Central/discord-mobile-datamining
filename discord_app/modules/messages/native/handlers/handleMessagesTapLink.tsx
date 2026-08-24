@@ -1,12 +1,11 @@
 // === Module 10802: handleMessagesTapURLLink ===
 
 // Module 10802 (handleMessagesTapURLLink)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import AbortCodes from "AbortCodes" /* 1235 */;
-import set from "set" /* 1398 */;
+import set2 from "set" /* 1398 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import parseQueryDefault from "parseQuery" /* 4355 */;
-import InviteTypes from "InviteTypes" /* 4369 */;
 import str2 from "str2" /* 5259 */;
 import getIndexKey from "getIndexKey" /* 8448 */;
 import isLinkTrusted from "isLinkTrusted" /* 8775 */;
@@ -14,15 +13,14 @@ import _mod9096 from "module_9096" /* 9096 */;
 import GameProfileEmbedAction from "GameProfileEmbedAction" /* 9101 */;
 import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 10736 */;
 import isLinkTrusted2 from "isLinkTrusted" /* 10800 */;
-import handleAcceptEventInstantInviteDefault from "handleAcceptEventInstantInvite" /* 10801 */;
-import addApplication from "addApplication" /* 4478 */;
-import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod" /* 8163 */;
-import handleQuickSwitcherUpdate from "handleQuickSwitcherUpdate" /* 10551 */;
-import createdAt from "createdAt" /* 1930 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import updateInvite from "updateInvite" /* 4359 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "addApplication" /* 4478 */;
+import closure_5 from "handleMessageSendFailedAutomod" /* 8163 */;
+import closure_6 from "handleQuickSwitcherUpdate" /* 10551 */;
+import closure_7 from "createdAt" /* 1930 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "updateInvite" /* 4359 */;
+import closure_10 from "reinjectEphemerals" /* 4994 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 function handleMessagesTapURLLink(data, channelId) {
@@ -45,17 +43,19 @@ function handleMessagesTapURLLink(data, channelId) {
             invite = invite.getInvite(payload.inviteCode);
             let num = null == invite;
             if (!num) {
-              num = !InviteTypes.isGuildScheduledEventInviteEmbed(invite);
-              const tmp2Result = InviteTypes;
+              num = !tmp2(4369).isGuildScheduledEventInviteEmbed(invite);
+              const tmp2Result = tmp2(4369);
             }
             if (!num) {
-              handleAcceptEventInstantInviteDefault(invite);
+              tmp4(10801)(invite);
               num = 0;
             }
             flag2 = !num;
           }
         }
+        tmp4 = importDefault;
       }
+      tmp2 = require;
     }
     if (!flag2) {
       const payload2 = parseQueryDefault(data.url).payload;
@@ -92,14 +92,16 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[0] = data.url;
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = isLinkTrusted2.isLinkTrusted(data.node);
-        const tmp19Result = isLinkTrusted2;
+        isLinkTrustedResult = tmp19(10800).isLinkTrusted(data.node);
+        const tmp19Result = tmp19(10800);
       }
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;
       obj1[3] = channelId;
       isLinkTrusted.handleClick(obj1);
       flag = true;
+      const obj5 = isLinkTrusted;
+      tmp19 = require;
     }
   }
   return flag;
@@ -107,10 +109,10 @@ function handleMessagesTapURLLink(data, channelId) {
 const getSection = getIndexKey.getSection;
 ({ AnalyticsLocations: closure_12, LinkingTypes: map1, Routes: closure_14 } = ME);
 const AppLauncherRouteName = APP_LAUNCHER_BUILT_IN_SECTION_ICON.AppLauncherRouteName;
-const StaticChannelRoute = set.StaticChannelRoute;
+const StaticChannelRoute = set2.StaticChannelRoute;
 const NotificationTypes = str2.NotificationTypes;
 let closure_18 = AbortCodes.OpenThreadAnalyticsLocations;
-const result = obj132.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapLink.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapLink.tsx");
 
 export { handleMessagesTapURLLink };
 export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData) {
@@ -121,12 +123,22 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
     if (messageChannel != null) {
       id = messageChannel.id;
     }
-    if (!handleMessagesTapURLLink(data, id)) {
+    if (!tmp4(data, id)) {
       if (null != data.action) {
-        const action = data.action;
+        if (chatInputRef != null) {
+          const current = chatInputRef.current;
+          if (current != null) {
+            let flag = data.addSpace;
+            if (flag == null) {
+              flag = true;
+            }
+            current.insertText(data.text, null, flag);
+          }
+        }
       }
     }
+    tmp4 = handleMessagesTapURLLink;
   } else {
-    isAlertOrActionSheetOpen;
+    const obj = isAlertOrActionSheetOpen;
   }
 };

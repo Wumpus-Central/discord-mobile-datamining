@@ -1,11 +1,11 @@
 // === Module 16047: isGuildEligibleForStageChannels ===
 
 // Module 16047 (isGuildEligibleForStageChannels)
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/useGuildEligibleForStageChannels.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/useGuildEligibleForStageChannels.tsx");
 
 export const isGuildEligibleForStageChannels = function isGuildEligibleForStageChannels(id) {
   let tmp = arg1;
@@ -33,7 +33,7 @@ export const useGuildEligibleForStageChannels = function useGuildEligibleForStag
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(GuildFeatures.COMMUNITY);
+      hasItem = features.has(closure_1_3.COMMUNITY);
     }
     return Boolean(hasItem);
   }, items1);

@@ -1,29 +1,31 @@
 // === Module 11898: InviteRolesList ===
 
 // Module 11898 (InviteRolesList)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 } });
-const result = require("obj132").fileFinishedImporting("modules/accept_invite/native/InviteRolesList.tsx");
+const result = require("set").fileFinishedImporting("modules/accept_invite/native/InviteRolesList.tsx");
 
 export default function InviteRolesList(invite) {
   invite = invite.invite;
-  const guild = invite.guild;
-  const roles = invite.roles;
+  let guild;
+  let roles;
+  guild = invite.guild;
+  roles = invite.roles;
   let items = [guild, roles];
   const memo = React.useMemo(() => {
     if (null != guild) {
       if (null != roles) {
-        if (0 !== roles.length) {
+        if (0 !== arr.length) {
           const items = [];
-          HermesBuiltin.arraySpread(roles, 0);
-          const sorted = items.sort(guild(dependencyMap[4]).sortInviteRoles);
-          const mapped = sorted.map((item, index) => guild(closure_1_2[4]).inviteRoleToDisplayData(id.id, item));
+          HermesBuiltin.arraySpread(arr, 0);
+          const sorted = items.sort(guild(closure_1_2[4]).sortInviteRoles);
+          const mapped = sorted.map((id) => closure_1_0(closure_1_2[4]).inviteRoleToDisplayData(id.id, id));
         }
         return [];
       }
@@ -41,7 +43,7 @@ export default function InviteRolesList(invite) {
       const items1 = [callback(guild(4734).Text, obj), ];
       obj = { style: null, children: null };
       obj[0] = tmp.rolesRow;
-      obj[1] = memo.map((item, index) => closure_1_5(roles(dependencyMap[8]), { role: item, guildId: guild.id }, item.id));
+      obj[1] = memo.map((id) => closure_1_5(roles(closure_1_2[8]), { role: id, guildId: guild.id }, id.id));
       items1[1] = callback(View, obj);
       obj[2] = items1;
       tmp2 = callback2(guild(4733).Stack, obj);

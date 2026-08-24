@@ -5,14 +5,14 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import obj132Default from "obj132" /* 4827 */;
+import setDefault from "set" /* 4827 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
 import _copy from "_copy" /* 7167 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8929 */;
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10781 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
-require = fn;
+require = arg1;
 let obj = {
   onLongPressLink(nativeEvent) {
     const url = nativeEvent.nativeEvent.url;
@@ -238,6 +238,7 @@ obj[3] = function onTapMention(closure_0) {
     const items = [QUICK_SWITCHERDefault.USER_MENTION];
     obj[2] = items;
     showUserProfileActionSheetDefault(obj);
+    const tmp15 = showUserProfileActionSheetDefault;
   } else {
     if (null != roleId) {
       if (null != guildId) {
@@ -245,7 +246,8 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(parsedUserId(2007)(10784, dependencyMap.paths), "RoleMembersActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2007)(10784, tmp2.paths), "RoleMembersActionSheet", obj);
+        const obj9 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
     if ("@everyone" === roleName) {
@@ -253,33 +255,35 @@ obj[3] = function onTapMention(closure_0) {
         obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
         const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
-        const tmp10 = parsedUserId(2007)(10784, dependencyMap.paths);
+        const tmp10 = tmp(2007)(10784, tmp2.paths);
         obj1[1] = DISCORD_EPOCHDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
+        const obj8 = DISCORD_EPOCHDefault;
       }
     }
     if (null == roleName) {
-      const DeveloperMode = parsedUserId(4066).DeveloperMode;
+      const DeveloperMode = tmp(4066).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj2 = { secondaryConfirmText: null, onConfirmSecondary: null };
-          const intl = parsedUserId(1236).intl;
-          obj2[0] = intl.string(parsedUserId(1236).t["/AXYnE"]);
+          const intl = tmp(1236).intl;
+          obj2[0] = intl.string(tmp(1236).t["/AXYnE"]);
           obj2[1] = function onConfirmSecondary() {
-            parsedUserId(dependencyMap[14]).copy(parsedUserId);
-            const obj = parsedUserId(dependencyMap[14]);
-            const result = parsedUserId(dependencyMap[15]).presentCopiedToClipboard();
+            parsedUserId(closure_1_2[14]).copy(parsedUserId);
+            const obj = parsedUserId(closure_1_2[14]);
+            const result = parsedUserId(closure_1_2[15]).presentCopiedToClipboard();
           };
           let obj4 = obj2;
         }
-        const obj3 = { title: null, body: null, confirmText: null, isDismissable: true };
-        const intl2 = parsedUserId(1236).intl;
-        obj3[0] = intl2.string(parsedUserId(1236).t.r0DLNm);
-        const intl3 = parsedUserId(1236).intl;
-        obj3[1] = intl3.string(parsedUserId(1236).t.Fqqbhg);
-        const intl4 = parsedUserId(1236).intl;
-        obj3[2] = intl4.string(parsedUserId(1236).t.BddRzS);
+        let obj3 = setDefault;
+        obj3 = { title: null, body: null, confirmText: null, isDismissable: true };
+        const intl2 = tmp(1236).intl;
+        obj3[0] = intl2.string(tmp(1236).t.r0DLNm);
+        const intl3 = tmp(1236).intl;
+        obj3[1] = intl3.string(tmp(1236).t.Fqqbhg);
+        const intl4 = tmp(1236).intl;
+        obj3[2] = intl4.string(tmp(1236).t.BddRzS);
         const merged = Object.assign(obj4);
         obj3.show(obj3);
       }
@@ -294,13 +298,14 @@ obj[5] = function onTapInlineCode(nativeEvent) {
   const node = nativeEvent.nativeEvent.node;
   if (tmp) {
     _copy.copy(node.content);
+    const obj = _copy;
     const result = presentAddedFriendToast.presentCopiedToClipboard();
+    const obj2 = presentAddedFriendToast;
   }
-  tmp = null != node.content && typeof node.content === "string";
 };
 obj[6] = function onTapEmoji(emojiNode) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9400, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
-let result = require("obj132").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
+let result = require("set").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 
 export const contentHandlers = obj;

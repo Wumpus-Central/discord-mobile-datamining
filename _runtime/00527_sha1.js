@@ -71,6 +71,9 @@ arg5.default = function sha1(str) {
       do {
         let _Math = Math;
         let rounded1 = Math.floor(num10 / 20);
+        let tmp28 = num10;
+        let tmp29 = tmp24;
+        let tmp32 = tmp21;
         let tmp26 = tmp20 << 5;
         let tmp27 = tmp20 >>> 27;
         let tmp30 = tmp23;

@@ -1,13 +1,13 @@
 // === Module 13183: logger ===
 
 // Module 13183 (logger)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER as closure_5 } from "StreamIssueReportReasons" /* 4532 */;
 
-const require = fn;
+const require = arg1;
 const logger = new require("log").Logger("InputWatcher");
-const result = require("obj132").fileFinishedImporting("modules/media_engine/InputWatcher.tsx");
+const result = require("set").fileFinishedImporting("modules/media_engine/InputWatcher.tsx");
 class InputWatcher {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -45,7 +45,7 @@ class InputWatcher {
               return obj;
             } else {
               closure_1 = tmp3;
-              let guid = closure_1_6;
+              let guid = tmp29;
               guid = undefined;
               closure_1 = undefined;
               dependencyMap = undefined;
@@ -73,7 +73,7 @@ class InputWatcher {
                       c4 = 2;
                       c5 = 1;
                       obj1 = { value: null, done: false };
-                      obj1[0] = closure_1_0(closure_1_2[9]).default.ensureModule("discord_voice");
+                      obj1[0] = tmp55(closure_1_2[9]).default.ensureModule("discord_voice");
                       return obj1;
                     }
                   }
@@ -86,12 +86,14 @@ class InputWatcher {
                 }
               }
               obj10 = closure_1_0(closure_1_2[6]);
+              tmp55 = closure_1_0;
             }
           } else if (1 === tmp7) {
             closure_3 = 0;
             closure_5 = dependencyMap;
             const _HermesInternal = HermesInternal;
             closure_1_6.warn("Failed to get device OS volume and/or mute state: " + closure_5);
+            tmp29 = closure_1_6;
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c5 = 3;
@@ -211,7 +213,7 @@ class InputWatcher {
       }));
     };
     obj.mediaEngine = global;
-    obj.mediaEngineStore = fn;
+    obj.mediaEngineStore = arg1;
     mediaEngine = obj.mediaEngine;
     onResult = mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.Silence, obj.handleSilence);
     return obj;

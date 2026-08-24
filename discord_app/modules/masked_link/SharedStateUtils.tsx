@@ -1,11 +1,11 @@
 // === Module 12421: useUrlParts ===
 
 // Module 12421 (useUrlParts)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/masked_link/SharedStateUtils.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/masked_link/SharedStateUtils.tsx");
 
 export const useUrlParts = function useUrlParts(url) {
   closure_0 = url;
@@ -29,9 +29,10 @@ export const useModalState = function useModalState(url) {
   const onConfirm = url.onConfirm;
   const onCancel = url.onCancel;
   const onClose = url.onClose;
+  let first;
   let obj = onCancel;
   const tmp = onConfirm(onCancel.useState(false), 2);
-  const first = tmp[0];
+  first = tmp[0];
   const items = [str];
   const memo = onCancel.useMemo(() => {
     const obj = { protocol: str(trustUrl[2]).getProtocol(str), hostname: null };

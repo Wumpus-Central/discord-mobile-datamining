@@ -2,12 +2,12 @@
 
 // Module 14782 (UserSettingsSwipeRightToLeft)
 import _modDef13991 from "module_13991" /* 13991 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx");
 
 export default function UserSettingsSwipeRightToLeft() {
   const node = React.useMemo(() => {

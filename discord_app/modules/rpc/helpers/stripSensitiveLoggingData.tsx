@@ -1,12 +1,12 @@
 // === Module 8749: stripSensitiveLoggingData ===
 
 // Module 8749 (stripSensitiveLoggingData)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const RPCCommands = ME.RPCCommands;
 let c1 = "<removed>";
-const result = obj132.fileFinishedImporting("modules/rpc/helpers/stripSensitiveLoggingData.tsx");
+const result = set.fileFinishedImporting("modules/rpc/helpers/stripSensitiveLoggingData.tsx");
 
 export default function stripSensitiveLoggingData(arg0) {
   let obj = {};
@@ -44,6 +44,7 @@ export default function stripSensitiveLoggingData(arg0) {
     const cmd = obj.cmd;
     if (RPCCommands.AUTHENTICATE !== cmd) {
       if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd) {
+        let obj2 = {};
         const merged4 = Object.assign(obj);
       }
     }
@@ -54,5 +55,6 @@ export default function stripSensitiveLoggingData(arg0) {
     obj = c1;
     obj4.access_token = c1;
     obj3.args = obj4;
+    obj2 = obj3;
   }
 };

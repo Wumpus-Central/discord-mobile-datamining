@@ -1,10 +1,10 @@
 // === Module 8489: SavedMessageSortTypes ===
 
 // Module 8489 (SavedMessageSortTypes)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
 
-const result = obj132.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
+const result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
 
 export const SavedMessageSortTypes = { ALL: "ALL", REMINDER: "REMINDER", BOOKMARK: "BOOKMARK" };
 export const savedMessageDataToClient = function savedMessageDataToClient(save_data) {
@@ -35,6 +35,7 @@ export const savedMessageCreateObjectToClient = function savedMessageCreateObjec
     let obj = createMinimalMessageRecord;
     messageRecord = obj.createMessageRecord(body.message);
   }
+  obj = { message: messageRecord, saveData: null };
   const save_data = body.save_data;
   obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: new Date(save_data.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
   ({ author_summary: obj3[3], channel_summary: obj3[4], message_summary: obj3[5] } = save_data);

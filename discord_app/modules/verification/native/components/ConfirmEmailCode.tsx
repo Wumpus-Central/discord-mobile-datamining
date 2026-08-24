@@ -2,32 +2,36 @@
 
 // Module 8574 (ConfirmEmailCode)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ChangeEmailFields from "ChangeEmailFields" /* 8563 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ useChangeEmailError: c9, ChangeEmailFields: c10 } = ChangeEmailFields);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { background: null, title: null, prompt: null, input: null, contentContainer: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 createCacheKey[3] = { marginTop: ThemesDefault.space.PX_24 };
+let obj1 = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { gap: ThemesDefault.space.PX_24 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ConfirmEmailCode.tsx");
+let obj2 = { gap: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailCode.tsx");
 
 export default function ConfirmEmailCode(onFormSubmit) {
   onFormSubmit = onFormSubmit.onFormSubmit;
   const onSuccess = onFormSubmit.onSuccess;
   const onResend = onFormSubmit.onResend;
+  let first;
   let callback;
   let React;
   ({ headerText, confirmButtonText } = onFormSubmit);
@@ -36,7 +40,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp5 = callback(React.useState(""), 2);
-  const first = tmp5[0];
+  first = tmp5[0];
   const tmp7 = callback(callback2(constants.EMAIL_TOKEN), 2);
   callback = tmp8;
   [tmp10, c5] = callback(React.useState(false), 2);
@@ -78,7 +82,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
             v0 = 3;
             v02 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = onFormSubmit(c3);
+            obj1[0] = closure_1_0(c3);
             return obj1;
           }
         } else if (1 === tmp8) {
@@ -88,7 +92,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            const tmp26 = new onSuccess(onResend[10])(closure_2);
+            const tmp26 = new closure_1_1(closure_1_2[10])(closure_2);
             anyErrorMessage = tmp26;
             v0(anyErrorMessage.getAnyErrorMessage());
             c3 = 0;
@@ -105,6 +109,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
             }
             anyErrorMessage(token);
             c3 = 1;
+            const tmp11 = anyErrorMessage;
           }
           c3 = 0;
           v02(false);
@@ -128,6 +133,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
   }), items1);
   let tmp13 = null;
   if (null != stateFromStores) {
+    obj = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     ({ background: obj2[0], contentContainer: obj2[3] } = tmp);
     obj = { children: null };
     obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -154,16 +160,16 @@ export default function ConfirmEmailCode(onFormSubmit) {
     obj4[2] = first(function*() {
       closure_1 = tmp3;
       c3 = 1;
-      yield onResend();
+      yield closure_1_2();
       if (1 === tmp7) {
         c3 = 0;
         closure_1 = closure_2;
-        let obj3 = new onSuccess(onResend[10])(closure_1);
+        let obj3 = new closure_1_1(closure_1_2[10])(closure_1);
         const anyErrorMessage = obj3.getAnyErrorMessage();
         if (null != anyErrorMessage) {
-          const obj4 = onSuccess(onResend[15]);
+          const obj4 = closure_1_1(closure_1_2[15]);
           const obj2 = { key: "CONFIRM_EMAIL_ERROR", content: null };
-          obj2[1] = onFormSubmit;
+          obj2[1] = closure_1_0;
           obj4.open(obj2);
         }
         c5 = 3;
@@ -171,10 +177,10 @@ export default function ConfirmEmailCode(onFormSubmit) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj = onSuccess(onResend[15]);
+        const obj = closure_1_1(closure_1_2[15]);
         obj3 = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: null };
-        const intl = onFormSubmit(onResend[12]).intl;
-        obj3[1] = intl.string(onFormSubmit(onResend[12]).t["84yeoz"]);
+        const intl = closure_1_0(closure_1_2[12]).intl;
+        obj3[1] = intl.string(closure_1_0(closure_1_2[12]).t["84yeoz"]);
         obj.open(obj3);
         c3 = 0;
       }

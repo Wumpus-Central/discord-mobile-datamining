@@ -1,14 +1,14 @@
 // === Module 15229: RegisterPhoneOrEmailInput ===
 
 // Module 15229 (RegisterPhoneOrEmailInput)
-import noop from "noop" /* 19 */;
-import handleSetLocationMetadata from "handleSetLocationMetadata" /* 8581 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleSetLocationMetadata" /* 8581 */;
 import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ setRegistrationErrors: c5, useRegistrationUIStore: closure_6 } = useRegistrationUIStore);
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
 
 export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(loginPhone) {
   loginPhone = loginPhone.loginPhone;
@@ -17,13 +17,15 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   const setLoginEmail = loginPhone.setLoginEmail;
   const inputMode = loginPhone.inputMode;
   ({ inputError, autoFocus } = loginPhone);
+  let navigation;
+  let ref;
   closure_7 = undefined;
   let callback;
   closure_9 = undefined;
   ({ onSubmit, submitBehavior } = loginPhone);
   let obj = loginPhone(setLoginPhone[4]);
-  const navigation = obj.useNavigation();
-  const ref = setLoginEmail.useRef(null);
+  navigation = obj.useNavigation();
+  ref = setLoginEmail.useRef(null);
   obj = { inputRef: ref, enabled: null };
   if (autoFocus == null) {
     autoFocus = false;
@@ -40,7 +42,7 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   callback = obj2.useCallback((arg0) => {
     if (null != table[arg0]) {
       const obj = {};
-      const merged = Object.assign(table);
+      const merged = Object.assign(tmp3);
       delete tmp2[tmp];
       navigation(obj);
     }
@@ -63,8 +65,8 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   const items4 = [inputMode, loginEmail, loginPhone];
   const layoutEffect = obj2.useLayoutEffect(() => {
     if (ref.current !== inputMode) {
-      ref.current = inputMode;
-      if (inputMode === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {
+      ref.current = tmp;
+      if (tmp === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {
         const current2 = ref.current;
         if (current2 != null) {
           current2.setText(loginPhone);

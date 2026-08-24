@@ -2,36 +2,44 @@
 
 // Module 12881 (mapToUser)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import emitChanges from "emitChanges" /* 7423 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "emitChanges" /* 7423 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function mapToUser(arg0) {
   const items = [arg0, user.getUser(arg0)];
   return items;
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
+createCacheKey = { searchBarContainer: null, searchBarRowContainer: null, header: null, subtitle: null, centeredContainer: null, errorImage: null, emptyImage: null, footer: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8 };
+let obj1 = { paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { height: ThemesDefault.space.PX_64 };
+let obj2 = { height: ThemesDefault.space.PX_64 };
 createCacheKey[3] = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { alignItems: "center" };
+let obj3 = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { height: 200, width: 180, marginVertical: ThemesDefault.space.PX_16 };
+let obj4 = { height: 200, width: 180, marginVertical: ThemesDefault.space.PX_16 };
 createCacheKey[6] = { height: 200, width: 240, marginTop: ThemesDefault.space.PX_16 };
+let obj5 = { height: 200, width: 240, marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_48 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheet.tsx");
+let obj6 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_48 };
+const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheet.tsx");
 
 export default function ReferralProgramShareActionSheet() {
   let tmp = memo2();
+  let obj = memo;
   const ref = memo.useRef(null);
   let _require = ref;
   obj1 = _require(first[10]);
@@ -40,6 +48,7 @@ export default function ReferralProgramShareActionSheet() {
   [str, tmp7] = callback2(memo.useState(""), 2);
   const tmp8 = callback2(memo.useState([]), 2);
   first = tmp8[0];
+  let callback = tmp8[1];
   const arr3 = stateFromStores(first[11])(str, 400);
   const tmp6 = callback2(memo.useState(""), 2);
   [tmp11, closure_4] = callback2(memo.useState(false), 2);
@@ -72,7 +81,7 @@ export default function ReferralProgramShareActionSheet() {
   const hasError = referralProgramEligibleUsers.hasError;
   const resendUsers = referralProgramEligibleUsers.resendUsers;
   const items4 = [first, resendUsers];
-  memo2 = memo.useMemo(() => first.filter((item, index) => !set.has(item)), items4);
+  memo2 = memo.useMemo(() => first.filter((arg0) => !set.has(arg0)), items4);
   const items5 = [isFetching, hasError, eligibleUsers];
   const memo3 = memo.useMemo(() => {
     let tmp = isFetching;
@@ -86,13 +95,13 @@ export default function ReferralProgramShareActionSheet() {
   }, items5);
   let intl = _require(first[16]).intl;
   const tmp10 = callback2(memo.useState(false), 2);
-  const callback = memo.useCallback((arg0) => {
+  callback = memo.useCallback((arg0) => {
     closure_0 = arg0;
     callback((arr) => {
       const index = arr.indexOf(id.id);
       const items = [...arr];
       if (-1 === index) {
-        arr = items.push(id.id);
+        items.push(id.id);
       } else {
         items.splice(index, 1);
       }
@@ -119,12 +128,13 @@ export default function ReferralProgramShareActionSheet() {
   const items8 = [eligibleUsers, callback, first, resendUsers, stateFromStores, memo2];
   callback2 = memo.useCallback(() => ({ type: "section", props: { hideTitle: true } }), []);
   const callback3 = memo.useCallback((arg0, row) => {
-    ref(first[18]);
-    const obj = { eligibleUsers, row, selectedUserIds: first, resendUsers, referralsRemaining: stateFromStores, selectedNotResendUsers: memo2, onSelectUser: callback };
+    let obj = ref(first[18]);
+    obj = { eligibleUsers, row, selectedUserIds: first, resendUsers, referralsRemaining: stateFromStores, selectedNotResendUsers: memo2, onSelectUser: callback };
     return obj.buildReferralUserRow(obj);
   }, items8);
   let stringResult = intl.string(_require(first[16]).t.DXgoi2);
   const analyticsLocations = stateFromStores(first[19])(stateFromStores(first[20]).PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL).analyticsLocations;
+  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c4 = 0;
@@ -135,10 +145,10 @@ export default function ReferralProgramShareActionSheet() {
       c3 = 1;
       v0(true);
       obj1 = { location_stack: null };
-      obj1[0] = analyticsLocations;
+      obj1[0] = closure_1_14;
       stateFromStores(first[21]).track(isFetching.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, obj1);
       const obj8 = stateFromStores(first[21]);
-      yield lib(first[22]).createReferralTrials(lib.map((item, index) => item.id));
+      yield lib(first[22]).createReferralTrials(lib.map((id) => id.id));
       if (1 === tmp7) {
         c3 = 0;
         v0(false);
@@ -175,6 +185,7 @@ export default function ReferralProgramShareActionSheet() {
     return applyArgumentsResult;
   }, items9);
   const items10 = [stateFromStores];
+  obj = { style: tmp.header, children: null };
   const memo5 = memo.useMemo(() => {
     if (0 === stateFromStores) {
       const intl2 = ref(first[16]).intl;
@@ -186,7 +197,7 @@ export default function ReferralProgramShareActionSheet() {
     return stringResult;
   }, items10);
   const items11 = [hasError(_require(first[27]).BottomSheetTitleHeader, { title: memo5 }), ];
-  let obj = { variant: "text-xs/medium", color: "text-default", lineClamp: 2, style: tmp.subtitle, children: stringResult };
+  obj = { variant: "text-xs/medium", color: "text-default", lineClamp: 2, style: tmp.subtitle, children: stringResult };
   items11[1] = hasError(_require(first[28]).Text, obj);
   obj[1] = items11;
   if (hasError) {
@@ -256,7 +267,7 @@ export default function ReferralProgramShareActionSheet() {
   }, items14);
   const obj12 = { style: items15, children: null };
   items15 = [tmp.footer];
-  tmp29(tmp3(tmp4[33]).ActivityIndicator, {});
+  let tmp29Result = tmp29(tmp3(tmp4[33]).ActivityIndicator, {});
   const obj13 = { size: "lg", text: null, onPress: null, loading: null, disabled: null };
   const intl6 = tmp3(tmp4[16]).intl;
   obj13[1] = intl6.string(_require(first[16]).t.ItpQxk);
@@ -266,7 +277,7 @@ export default function ReferralProgramShareActionSheet() {
   obj13[3] = tmp11;
   obj13[4] = tmp11;
   obj12[1] = hasError(_require(first[34]).Button, obj13);
-  const tmp29Result = tmp29(tmp28, obj12);
+  tmp29Result = tmp29(tmp28, obj12);
   const obj14 = { scrollable: true, startExpanded: true, header: tmp27Result, footer: tmp29Result, children: null };
   const obj15 = { style: tmp.searchBarContainer, children: null };
   const obj16 = { onChangeText: tmp7, onRemove: callback1, tags: memo1, placeholder: null };

@@ -1,9 +1,9 @@
 // === Module 1404: exact ===
 
 // Module 1404 (exact)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/type-utils/TypeUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/type-utils/TypeUtils.tsx");
 
 export function exact(arg0) {
   return arg0;
@@ -11,8 +11,8 @@ export function exact(arg0) {
 export const hasOwnProperty = function hasOwnProperty(key10009, type) {
   return key10009.hasOwnProperty(type);
 };
-export const dangerouslyCast = function dangerouslyCast(reduced, UnknownChannelRecord) {
-  return Object.setPrototypeOf(reduced, UnknownChannelRecord.prototype);
+export const dangerouslyCast = function dangerouslyCast(reduced, ForumChannelRecord) {
+  return Object.setPrototypeOf(reduced, ForumChannelRecord.prototype);
 };
 export const assertUnreachable = function assertUnreachable(closure_0, arg1) {
   let obj = arg1;

@@ -6,7 +6,7 @@ import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15167 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/SelectMenuNativeComponent.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/SelectMenuNativeComponent.tsx");
 
 export default function SelectMenuNativeComponent(arg0) {
   const obj = {};

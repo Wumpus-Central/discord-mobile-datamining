@@ -1,13 +1,13 @@
 // === Module 4364: regExp ===
 
 // Module 4364 (regExp)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
 import getFirstEligibleUserExperimentDefault from "getFirstEligibleUserExperiment" /* 4365 */;
 import getExperimentVariantsForDevTools from "getExperimentVariantsForDevTools" /* 4366 */;
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
-const result = obj132.fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
+const result = set.fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
 export const isExperimentEmbedURL = function isExperimentEmbedURL(target) {
@@ -52,18 +52,19 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
       const system2 = system.system;
       if (trackExposureToExperiment.ExperimentSystem.LEGACY === system2) {
         return getFirstEligibleUserExperimentDefault.getExperimentBucketName(experimentServerAssignment.bucket);
-      } else if (trackExposureToExperiment.ExperimentSystem.APEX === system2) {
+      } else if (tmp4(4296).ExperimentSystem.APEX === system2) {
         const _HermesInternal = HermesInternal;
         return "Variant " + experimentServerAssignment.variantId;
       } else {
         system = system.system;
         return null;
       }
+      tmp4 = require;
     }
   }
   return null;
 };
 export const getExperimentBuckets = function getExperimentBuckets(experiment) {
   const experimentVariantsForDevTools = getExperimentVariantsForDevTools.getExperimentVariantsForDevTools(experiment);
-  return experimentVariantsForDevTools.map((item, index) => ({ id: item.id, label: item.label, value: item.id }));
+  return experimentVariantsForDevTools.map((id) => ({ id: id.id, label: id.label, value: id.id }));
 };

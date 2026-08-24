@@ -2,19 +2,20 @@
 
 // Module 10626 (ForumPostActionBar)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import initialize from "initialize" /* 4022 */;
-import storeThread from "storeThread" /* 4023 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "initialize" /* 4022 */;
+import closure_7 from "storeThread" /* 4023 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
+createCacheKey = { actionBarContainer: null, actionRow: null, reactionRow: null, actionButton: null, actionButtonsContainer: null, lastActionButton: null, buttonText: null };
+createCacheKey = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
 createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
@@ -23,10 +24,14 @@ createCacheKey[4] = { justifyContent: "flex-end" };
 createCacheKey[5] = { marginRight: 0 };
 createCacheKey[6] = { marginLeft: 8 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/forums/native/ForumPostActionBar.tsx");
+let obj1 = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+let result = require("set").fileFinishedImporting("modules/forums/native/ForumPostActionBar.tsx");
 
 export default function ForumPostActionBar(channel) {
   channel = channel.channel;
+  let stateFromStores1;
+  dependencyMap = undefined;
+  let width;
   let React;
   const tmp = callback2();
   let obj = channel(589);
@@ -36,7 +41,7 @@ export default function ForumPostActionBar(channel) {
   const firstMessage = obj1.useFirstForumPostMessage(channel).firstMessage;
   let obj2 = channel(589);
   const items1 = [closure_7];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_7.hasJoined(channel.id));
+  stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_7.hasJoined(channel.id));
   dependencyMap = channel.getGuildId();
   let obj3 = channel(589);
   const items2 = [closure_6];
@@ -47,7 +52,7 @@ export default function ForumPostActionBar(channel) {
     }
     return isLurkingResult;
   });
-  const width = stateFromStores1(1494)().width;
+  width = stateFromStores1(1494)().width;
   const tmp7 = width(React.useState(0), 2);
   React = tmp7[1];
   const items3 = [width];
@@ -68,7 +73,7 @@ export default function ForumPostActionBar(channel) {
     obj1[2] = firstMessage;
     obj1[3] = tmp7[0];
     obj[1] = callback(tmp2(10627).ForumPostActionBarReactions, obj1);
-    tmp11 = callback(View, obj);
+    tmp11 = callback(tmp10, obj);
   }
   const items5 = [tmp11, ];
   obj2 = { style: items6, onLayout: callback, children: null };
@@ -83,9 +88,9 @@ export default function ForumPostActionBar(channel) {
     obj3[3] = function onPress() {
       const guildId = channel.getGuildId();
       if (null != guildId) {
-        channel(10454);
-        const obj = { section: null };
-        obj[0] = AnalyticsSections.CHANNEL_HEADER;
+        let obj = channel(10454);
+        obj = { section: null };
+        obj[0] = closure_1_9.CHANNEL_HEADER;
         const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj);
       }
     };
@@ -98,16 +103,16 @@ export default function ForumPostActionBar(channel) {
     ({ actionButton: arr12[0], lastActionButton: arr12[1] } = tmp);
     obj4[2] = items8;
     obj4[3] = function onPress() {
-      stateFromStores1(7427);
-      const obj = { channelId: channel.id, messageId: stateFromStores1(11).castChannelIdAsMessageId(channel.id), flash: true, jumpType: channel(4306).JumpType.ANIMATED };
+      let obj = stateFromStores1(7427);
+      obj = { channelId: channel.id, messageId: stateFromStores1(11).castChannelIdAsMessageId(channel.id), flash: true, jumpType: channel(4306).JumpType.ANIMATED };
       obj.jumpToMessage(obj);
     };
     obj4[4] = callback(tmp2(10628).ArrowLargeUpIcon, { size: "xs" });
     items7[2] = callback(tmp2(5433).PressableOpacity, obj4);
     obj2[2] = items7;
-    items5[1] = callback(View, obj2);
+    items5[1] = tmp9(tmp10, obj2);
     obj[1] = items5;
-    return callback(View, obj);
+    return tmp9(tmp10, obj);
   } else {
     let items9 = function handleFollow() {
       const result = channel(10454).handleToggleFollowForumPost(channel, stateFromStores1);
@@ -145,6 +150,6 @@ export default function ForumPostActionBar(channel) {
       obj5[4] = items11;
       tmp15 = obj5;
     }
-    callback(tmp2(5433).PressableOpacity, tmp15);
+    tmp9(tmp2(5433).PressableOpacity, tmp15);
   }
 };

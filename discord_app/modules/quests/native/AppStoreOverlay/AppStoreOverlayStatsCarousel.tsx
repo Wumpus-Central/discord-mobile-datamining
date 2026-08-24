@@ -9,9 +9,9 @@ import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 10698 */;
 import FractionalStarDefault from "FractionalStar" /* 10699 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function AppStoreOverlayStatCardItem(stat) {
   stat = stat.stat;
   const type = stat.type;
@@ -24,12 +24,12 @@ function AppStoreOverlayStatCardItem(stat) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = formatAppStoreRatingValue;
-      result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, getSystemLocale.intl.currentLocale);
+      let tmp9Result = tmp9(10698);
+      result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
     }
-    tmp9Result = formatAppStoreRatingValue;
+    tmp9Result = tmp9(10698);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
-    const intl = getSystemLocale.intl;
+    const intl = tmp9(1236).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
     obj[0] = stat.label;
     obj[1] = result;
@@ -67,6 +67,7 @@ function AppStoreOverlayStatCardItem(stat) {
     obj[1] = result2;
     obj[2] = stat.category;
     tmp6 = obj;
+    const obj11 = formatAppStoreRatingValue;
   }
   ({ secondaryText, secondaryContent, ratingCount } = tmp6);
   const obj3 = { style: callback2().statCard, accessible: true, accessibilityRole: "text", accessibilityLabel: tmp6.accessibilityLabel, children: null };
@@ -77,29 +78,32 @@ function AppStoreOverlayStatCardItem(stat) {
     str9 = "(" + ratingCount + ")";
   }
   items[2] = str9;
-  const items1 = [callback(Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: items }), callback(Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 1, children: tmp6.primaryText }), ];
+  const items1 = [closure_6(Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: items }), callback(Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 1, children: tmp6.primaryText }), ];
   if (null == secondaryContent) {
     let tmp21Result = null != secondaryText;
     if (tmp21Result) {
       const obj4 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
       obj4[3] = secondaryText;
-      tmp21Result = callback(Text.Text, obj4);
+      tmp21Result = callback(tmp18(4734).Text, obj4);
     }
     secondaryContent = tmp21Result;
   }
   items1[2] = secondaryContent;
   obj3[4] = items1;
-  return callback(closure_4, obj3);
+  return closure_6(closure_4, obj3);
 }
 noopAll;
 ({ ScrollView: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16 };
+createCacheKey = { carousel: null, carouselContent: null, statCard: null };
+createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
+let obj1 = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { width: 130, height: 87, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
+let obj2 = { width: 130, height: 87, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
 
 export default function AppStoreOverlayStatsCarousel(stats) {
   stats = stats.stats;
@@ -107,7 +111,7 @@ export default function AppStoreOverlayStatsCarousel(stats) {
   if (0 !== stats.length) {
     const obj = { horizontal: true, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, children: null };
     ({ carousel: obj[3], carouselContent: obj[4] } = tmp);
-    obj[5] = stats.map((item, index) => callback(closure_8, { stat: item }, item.type));
+    obj[5] = stats.map((stat) => callback(closure_8, { stat }, stat.type));
     tmp2 = callback(closure_3, obj);
   }
   return tmp2;

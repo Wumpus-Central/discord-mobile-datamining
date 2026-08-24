@@ -22,4 +22,5 @@ export default function isFunction(arg0) {
   } else {
     return false;
   }
+  const tmp = require;
 };

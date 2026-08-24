@@ -1,20 +1,18 @@
 // === Module 15695: ForYouSuggestedFriendRow ===
 
 // Module 15695 (ForYouSuggestedFriendRow)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
 import contextDefault from "context" /* 7139 */;
 import getLayoutStyles from "getLayoutStyles" /* 10056 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ AnalyticEvents: error, RelationshipTypes: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((layout) => {
@@ -22,6 +20,7 @@ let closure_12 = createCacheKey.createStyles((layout) => {
   const layoutStyles = obj.getLayoutStyles(layout);
   obj1 = getLayoutStyles;
   const sizeStyle = obj1.makeSizeStyle(layoutStyles.icon.wrapper.size);
+  obj = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null };
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
   obj[0] = obj;
   obj[1] = { flex: 1 };
@@ -38,7 +37,7 @@ let closure_12 = createCacheKey.createStyles((layout) => {
   obj[4] = obj2;
   return obj;
 });
-let result = require("obj132").fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendRow.tsx");
+let result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendRow.tsx");
 
 export default function ForYouSuggestedFriendRow(suggestedFriend) {
   suggestedFriend = suggestedFriend.suggestedFriend;
@@ -46,12 +45,13 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
   if (panelVariant === undefined) {
     panelVariant = false;
   }
+  let analyticsLocations;
   let sharedValue;
   let stateFromStores;
   let obj = suggestedFriend(10056);
   const messagesTabLayout = obj.useMessagesTabLayout(panelVariant);
   const tmp4 = callback2(messagesTabLayout);
-  const analyticsLocations = contextDefault().analyticsLocations;
+  analyticsLocations = contextDefault().analyticsLocations;
   obj1 = suggestedFriend(10056);
   const layoutStyles = obj1.getLayoutStyles(messagesTabLayout);
   let obj2 = suggestedFriend(4751);
@@ -114,6 +114,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj5[3] = tmp4.nameText;
       obj5[4] = friendSuggestionName;
       const items6 = [callback(tmp(4734).Text, obj5), ];
+      const tmp20 = closure_11;
       const tmpResult3 = tmp(15697);
       let num3 = 0;
       if (tmpResult4.isAndroid()) {
@@ -140,7 +141,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj6[1] = callback(tmp(15698).ActionStatusSubLabel, obj8);
       items6[1] = callback(sharedValue, obj6);
       obj4[1] = items6;
-      items5[1] = callback(sharedValue, obj4);
+      items5[1] = closure_10(sharedValue, obj4);
       const obj9 = { user: null, added: null, size: null, onAddSuggestion: null, onFinishAnimation: null, animate: null };
       obj9[0] = suggestedFriend.user;
       obj9[1] = sharedValue;
@@ -152,7 +153,8 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const obj10 = { children: null };
       obj9[2] = str4;
       obj9[3] = function onAddSuggestion(id) {
-        const obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: "Notifications Tab" };
+        let obj = closure_1_1(closure_1_2[26]);
+        obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: "Notifications Tab" };
         obj.track(closure_1_7.FRIEND_SUGGESTION_ADDED, obj);
         callback(suggestedFriend);
       };
@@ -166,15 +168,15 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj11[0] = messagesTabLayout;
       obj11[1] = fontScale;
       obj11[2] = panelVariant;
-      obj[4] = tmpResult3.renderChannelWrapper(callback(closure_11, obj10), obj11);
+      obj[4] = tmpResult3.renderChannelWrapper(closure_10(tmp20, obj10), obj11);
       const obj12 = { layout: null, panelVariant: null };
       obj12[0] = messagesTabLayout;
       obj12[1] = panelVariant;
       return tmpResult2.renderChannelPressableWrapper(callback(tmp(5433).PressableHighlight, obj), obj12);
     }
-    let tmp5Result = nameFromUserDefault;
+    let tmp5Result = tmp5(4219);
     formatToPlainStringResult = tmp5Result.getName(suggestedFriend.user);
   }
-  tmp5Result = nameFromUserDefault;
+  tmp5Result = tmp5(4219);
   friendSuggestionName = tmp5Result.getName(suggestedFriend.user);
 };

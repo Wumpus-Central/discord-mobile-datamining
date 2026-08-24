@@ -1,9 +1,9 @@
 // === Module 8594: getError ===
 
 // Module 8594 (getError)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/auth/native/getError.tsx");
+const result = set.fileFinishedImporting("modules/auth/native/getError.tsx");
 
 export default function getError(arg0, arg1) {
   let tmp2 = null;

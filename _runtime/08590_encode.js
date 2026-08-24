@@ -23,6 +23,9 @@ arg5.encode = (arg0) => {
   if (0 < buffer.length) {
     do {
       let tmp6 = buffer[num4];
+      let tmp7 = num2;
+      let tmp8 = num3;
+      let tmp9 = num4;
       if (3 < num2) {
         let sum1 = num4 + 1;
         let num6 = 0;

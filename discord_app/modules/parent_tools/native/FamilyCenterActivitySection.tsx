@@ -2,19 +2,17 @@
 
 // Module 14256 (FamilyCenterActivitySectionHeader)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
 import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
 import useActionsForDisplayType from "useActionsForDisplayType" /* 14251 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import items from "items" /* 5297 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function FamilyCenterActivitySectionHeader(displayType) {
   displayType = displayType.displayType;
   const tmp = callback3();
@@ -23,6 +21,7 @@ function FamilyCenterActivitySectionHeader(displayType) {
   const activityTypeTextConfigs = obj.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
   const actionsForDisplayType = useActionsForDisplayType.useActionsForDisplayType(displayType);
+  const obj4 = useActionsForDisplayType;
   const formattedTotalForDisplayType = useActionsForDisplayType.useFormattedTotalForDisplayType(displayType);
   if (displayType === constants.PURCHASES) {
     let length = formattedTotalForDisplayType;
@@ -48,36 +47,41 @@ function FamilyCenterActivitySectionHeader(displayType) {
     obj = { variant: "text-sm/semibold", style: null, children: null };
     obj[1] = tmp.header;
     obj[2] = sectionHeaderResult;
-    const items = [callback2(Text.Text, obj), ];
+    const items = [callback2(tmp3(4734).Text, obj), ];
     let tmp14Result = null;
     if (null !== tmp10) {
       obj = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
       obj[2] = tmp.description;
       obj[3] = tmp10;
-      tmp14Result = callback2(Text.Text, obj);
+      tmp14Result = callback2(tmp3(4734).Text, obj);
     }
     obj1 = { children: null };
     items[1] = tmp14Result;
     obj1[0] = items;
-    return callback(closure_6, obj1);
+    return closure_10(closure_6, obj1);
   }
   length = actionsForDisplayType.length;
 }
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: error, TeenActionDisplayType: closure_8 } = items);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let createCacheKey = { marginBottom: ThemesDefault.space.PX_4 };
+createCacheKey = { header: null, description: null };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_8 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { container: { display: "flex" }, loadMoreContainer: { display: "flex", flexDirection: "row", flex: 1, alignItems: "center", justifyContent: "center", width: "100%" }, loadMore: null, loadMoreButton: null };
+let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
 obj2[2] = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: ThemesDefault.radii.sm, borderBottomLeftRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
 obj2[3] = { paddingVertical: 4 };
 let closure_13 = createCacheKey.createStyles(obj2);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivitySection.tsx");
+let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: ThemesDefault.radii.sm, borderBottomLeftRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivitySection.tsx");
 
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
+  let loadMore;
+  dependencyMap = undefined;
   let loadMoreButton = callback4();
   let obj = displayType(14251);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
@@ -85,7 +89,7 @@ export default function FamilyCenterActivitySection(displayType) {
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
   let obj2 = displayType(11104);
   const familyCenterActions = obj2.useFamilyCenterActions({});
-  const loadMore = familyCenterActions.loadMore;
+  loadMore = familyCenterActions.loadMore;
   const tmp6 = callback(React.useState(closure_7), 2);
   dependencyMap = tmp6[1];
   const substr = actionsForDisplayType.slice(0, tmp6[0]);
@@ -102,11 +106,11 @@ export default function FamilyCenterActivitySection(displayType) {
     obj[0] = loadMoreButton.container;
     obj1 = { displayType: null };
     obj1[0] = displayType;
-    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((item, index) => callback(loadMore(14257), { action: item }, item.event_id)), ];
+    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14257), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj[1] = items1;
-      return callback(closure_6, obj);
+      return tmp15(tmp16, obj);
     } else {
       obj2 = { style: null, children: null };
       obj2[0] = loadMoreButton.loadMoreContainer;
@@ -116,8 +120,8 @@ export default function FamilyCenterActivitySection(displayType) {
         const obj4 = { style: null, animating: true, color: "#fff", size: "small" };
         loadMoreButton = loadMoreButton.loadMoreButton;
         obj4[0] = loadMoreButton;
-        obj3[1] = callback2(closure_5, obj4);
-        let tmp17Result = callback2(closure_6, obj3);
+        obj3[1] = tmp17(closure_5, obj4);
+        let tmp17Result = tmp17(tmp16, obj3);
       } else {
         const obj5 = { style: null, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
         obj5[0] = loadMoreButton.loadMore;
@@ -126,11 +130,12 @@ export default function FamilyCenterActivitySection(displayType) {
         const obj6 = { style: null, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
         obj6[0] = loadMoreButton.loadMoreButton;
         obj6[3] = formatToPlainStringResult;
-        obj5[4] = callback2(tmp(4734).Text, obj6);
-        tmp17Result = callback2(tmp(5433).PressableOpacity, obj5);
+        obj5[4] = tmp17(tmp(4734).Text, obj6);
+        tmp17Result = tmp17(tmp(5433).PressableOpacity, obj5);
       }
       obj2[1] = tmp17Result;
-      tmp17Result = callback2(closure_6, obj2);
+      tmp17Result = tmp17(tmp16, obj2);
     }
+    tmp15 = closure_10;
   }
 };

@@ -4,10 +4,10 @@
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
 import useEquippedCollectibleSkuIds from "useEquippedCollectibleSkuIds" /* 8960 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
 
 export const useShopThisLookMarketing = function useShopThisLookMarketing(id, guildId, isShopThisLookMobileEnabled) {
   let obj = useEquippedCollectibleSkuIds;
@@ -22,5 +22,4 @@ export const useShopThisLookMarketing = function useShopThisLookMarketing(id, gu
     obj[1] = tmp8[1];
     return obj;
   }
-  tmp3 = obj.useEquippedCollectibleSkuIds(id, guildId).length > 0;
 };

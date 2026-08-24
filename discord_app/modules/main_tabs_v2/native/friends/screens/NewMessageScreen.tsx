@@ -3,22 +3,21 @@
 // Module 15972 (isPrivateChannelMatch)
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef4115 from "module_4115" /* 4115 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 15974 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { PrivateChannelRecord } from "createChannelRecord" /* 1395 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import makeSortedChannel from "makeSortedChannel" /* 5388 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "markAllUserIdListsStale" /* 4030 */;
+import closure_10 from "makeSortedChannel" /* 5388 */;
 import { UserRowModes } from "UserRowModes" /* 9081 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 
-const require = fn;
+const require = arg1;
 function isPrivateChannelMatch(arr, recipients) {
   recipients = recipients.recipients;
   if (recipients.length !== arr.length) {
@@ -28,6 +27,7 @@ function isPrivateChannelMatch(arr, recipients) {
       if (arg0.includes(item10009)) {
         continue;
       } else {
+        let tmp3 = obj;
         obj.return();
         let flag = false;
         return false;
@@ -36,10 +36,10 @@ function isPrivateChannelMatch(arr, recipients) {
     return true;
   }
 }
-function findLocalMatchingPrivateChannelId(navigation) {
-  closure_0 = navigation;
-  if (1 === navigation.length) {
-    dMFromUserId = dMFromUserId.getDMFromUserId(navigation[0]);
+function findLocalMatchingPrivateChannelId(arg0) {
+  closure_0 = arg0;
+  if (1 === arg0.length) {
+    dMFromUserId = dMFromUserId.getDMFromUserId(arg0[0]);
     if (dMFromUserId == null) {
       dMFromUserId = null;
     }
@@ -50,16 +50,18 @@ function findLocalMatchingPrivateChannelId(navigation) {
     const iter = items[Symbol.iterator]();
     const tmp3 = callback2(sortedChannels.getSortedChannels(), 2);
     while (iter !== undefined) {
-      let found = nextResult.find((item, index) => {
-        const channel = closure_1_8.getChannel(item.channelId);
+      let found = nextResult.find((channelId) => {
+        const channel = closure_1_8.getChannel(channelId.channelId);
         const tmp = null == channel || !channel.isPrivate();
         let tmp2 = !tmp;
         if (!tmp) {
-          tmp2 = isPrivateChannelMatch(closure_0, channel);
+          tmp2 = closure_1_21(closure_0, channel);
         }
         return tmp2;
       });
+      let tmp9 = found;
       if (null != found) {
+        let tmp10 = iter;
         iter.return();
         return found.channelId;
       }
@@ -101,13 +103,13 @@ function _findMatchingPrivateChannelId() {
               obj[0] = arg1;
               return obj;
             } else {
-              const tmp20 = closure_1_22(length);
+              const tmp20 = closure_1_22(closure_0);
               if (null != tmp20) {
                 v0 = 3;
                 obj1 = { value: null, done: true };
                 obj1[0] = tmp20;
                 return obj1;
-              } else if (length.length > 1) {
+              } else if (arr.length > 1) {
                 v0 = 3;
                 return { value: null, done: true };
               } else {
@@ -116,7 +118,7 @@ function _findMatchingPrivateChannelId() {
                 table = 2;
                 v0 = 1;
                 obj2 = { value: null, done: false };
-                obj2[0] = obj2.getDMChannel(length[0]);
+                obj2[0] = obj2.getDMChannel(arr[0]);
                 return obj2;
               }
             }
@@ -164,10 +166,10 @@ function _findMatchingPrivateChannelId() {
 function Header(title) {
   const numInGroup = title.numInGroup;
   const items = [numInGroup];
-  const memo = React.useMemo(() => getGroupDMRecipientLimitDefault() - (numInGroup + 1), items);
-  numInGroup(4115);
+  const memo = React.useMemo(() => closure_1_1(closure_1_2[22])() - (numInGroup + 1), items);
+  let obj = numInGroup(4115);
   const fn = function s() {
-    let obj = numInGroup(dependencyMap[23]);
+    let obj = numInGroup(closure_1_2[23]);
     let num = 0;
     if (numInGroup >= 5) {
       num = 1;
@@ -177,10 +179,10 @@ function Header(title) {
     if (numInGroup >= 5) {
       num2 = 20;
     }
-    obj[1] = numInGroup(dependencyMap[23]).withTiming(num2);
+    obj[1] = numInGroup(closure_1_2[23]).withTiming(num2);
     return obj;
   };
-  let obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4664).withTiming };
+  obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4664).withTiming };
   fn.__closure = obj;
   fn.__workletHash = 12426216833792;
   fn.__initData = closure_24;
@@ -205,7 +207,7 @@ function Header(title) {
   obj1[3] = stringResult;
   items1[1] = callback3(closure_19, obj1);
   obj[1] = items1;
-  return callback(View, obj);
+  return closure_18(View, obj);
 }
 function ChatPreview(channelId) {
   channelId = channelId.channelId;
@@ -214,19 +216,21 @@ function ChatPreview(channelId) {
   const items = [channelId];
   const effect = React.useEffect(() => {
     if (null != channelId) {
-      navigateToChannel(dependencyMap[16]).preload(closure_1_15, tmp);
-      const obj = navigateToChannel(dependencyMap[16]);
+      navigateToChannel(closure_1_2[16]).preload(closure_1_15, tmp);
+      const obj = navigateToChannel(closure_1_2[16]);
     }
   }, items);
   const items1 = [channelId, navigateToChannel];
   const callback = React.useCallback(() => {
-    navigateToChannel(dependencyMap[20]);
-    const obj = { channel_id: channelId };
+    let obj = navigateToChannel(closure_1_2[20]);
+    obj = { channel_id: channelId };
     obj.track(closure_1_12.MESSAGE_COMPOSER_TRANSITIONED, obj);
     navigateToChannel(channelId);
   }, items1);
   navigateToChannel(15973)(callback);
-  let obj = { guildId: closure_15, channelId, chatInputRef: React.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
+  let obj = { style: tmp.background, children: null };
+  obj = { style: tmp.container, children: null };
+  obj = { guildId: closure_15, channelId, chatInputRef: React.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
   const items2 = [callback3(navigateToChannel(10546), obj), ];
   obj1 = { portal: null };
   const ref = React.useRef(null);
@@ -239,10 +243,11 @@ function ChatPreview(channelId) {
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = _modDef4115.createAnimatedComponent(require("Text").Text);
-let obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { container: { flex: 1 }, background: null, header: null, emptyContainer: null, emptyKeyboardView: null, addFriendsButtonContainer: null };
+obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[1] = obj;
 let str = "center";
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   str = "flex-start";
 }
 obj[2] = { flexDirection: "column", alignItems: str };
@@ -252,12 +257,14 @@ createCacheKey = { marginBottom: ThemesDefault.space.PX_16, flexDirection: "row"
 obj[5] = createCacheKey;
 let closure_20 = createCacheKey.createStyles(obj);
 let closure_24 = { code: "function NewMessageScreenTsx1(){const{numInGroup,NUM_IN_GROUP_THRESHOLD,withTiming}=this.__closure;const show=numInGroup>=NUM_IN_GROUP_THRESHOLD;return{opacity:withTiming(show?1:0),maxHeight:withTiming(show?20:0)};}" };
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/NewMessageScreen.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/NewMessageScreen.tsx");
 
 export default function NewMessageScreen(navigation) {
   navigation = navigation.navigation;
   let _require = navigation;
   ({ defaultSelectedUserId, sourcePage: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } = navigation.route.params);
+  dependencyMap = undefined;
+  let stateFromStores;
   let first;
   let React;
   c6 = undefined;
@@ -269,10 +276,10 @@ export default function NewMessageScreen(navigation) {
   let tmp = callback5();
   dependencyMap = tmp;
   const insets = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5441)({ includeKeyboardHeight: true }).insets;
-  let stateFromStores = insets;
+  stateFromStores = insets;
   FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4761)(() => {
-    FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[20]);
-    const obj = { source_page: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID };
+    let obj = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[20]);
+    obj = { source_page: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID };
     obj.track(closure_1_12.MESSAGE_COMPOSER_OPENED, obj);
   });
   let obj = React;
@@ -286,11 +293,14 @@ export default function NewMessageScreen(navigation) {
   first = tmp6[0];
   React = tmp6[1];
   let tmp2 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
-  const tmp4 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(7139);
+  let tmp4 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(7139);
   [tmp8, c6] = first(obj.useState(false), 2);
   let tmp7 = first(obj.useState(false), 2);
   [tmp10, c7] = first(obj.useState(false), 2);
   _require = first;
+  FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = undefined;
+  dependencyMap = undefined;
+  stateFromStores = undefined;
   const tmp11 = first(obj.useState(null), 2);
   FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp11[0];
   dependencyMap = tmp11[1];
@@ -301,8 +311,9 @@ export default function NewMessageScreen(navigation) {
       if (channel.id !== handleChannelCreate(closure_1_2[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
         if (channel.isPrivate()) {
           if (closure_1_21(handleChannelCreate, channel)) {
-            dependencyMap(closure_1_22(handleChannelCreate));
+            dependencyMap(closure_1_22(tmp2));
           }
+          tmp2 = handleChannelCreate;
         }
       }
     }
@@ -398,6 +409,7 @@ export default function NewMessageScreen(navigation) {
               }
               c2(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID);
               c3 = 3;
+              const tmp9 = c2;
             }
           } catch (tmp18) {
             c3 = tmp;
@@ -417,10 +429,10 @@ export default function NewMessageScreen(navigation) {
     if (0 !== _doAction.length) {
       let isPrivateResult;
       if (stateFromStores != null) {
-        isPrivateResult = stateFromStores.isPrivate();
+        isPrivateResult = obj.isPrivate();
       }
       if (isPrivateResult) {
-        isPrivateResult = isPrivateChannelMatch(tmp, stateFromStores);
+        isPrivateResult = closure_1_21(tmp, obj);
       }
       if (!isPrivateResult) {
         (function doAction() {
@@ -441,25 +453,26 @@ export default function NewMessageScreen(navigation) {
   const items5 = [first, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID];
   const effect2 = obj.useEffect(() => {
     if (null == FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-      if (null == findLocalMatchingPrivateChannelId(navigation)) {
-        FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[18]);
-        let obj = { id: null, type: null, name: "", guild_id: null, recipients: null };
+      if (null == closure_1_22(navigation)) {
+        let obj = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[18]);
+        obj = { id: null, type: null, name: "", guild_id: null, recipients: null };
         let tmp7 = c7;
         obj[0] = navigation(lib[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
-        if (1 === navigation.length) {
+        if (1 === arr.length) {
           let GROUP_DM = closure_1_14.DM;
         } else {
           GROUP_DM = closure_1_14.GROUP_DM;
         }
         obj = { type: "CHANNEL_CREATE", channel: null };
         obj[1] = GROUP_DM;
-        obj[4] = navigation;
+        obj[4] = arr;
         tmp7 = new tmp7(obj);
         obj[1] = tmp7;
         obj.dispatch(obj);
         return () => {
-          callback2(709);
-          const obj = { id: callback(5389).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "text" };
+          let obj = callback2(709);
+          obj = { type: "CHANNEL_DELETE", channel: null };
+          obj = { id: callback(5389).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "text" };
           obj[1] = obj;
           obj.dispatch(obj);
         };
@@ -470,12 +483,12 @@ export default function NewMessageScreen(navigation) {
   const effect3 = obj.useEffect(() => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
-      tmp2 = stateFromStores.id === navigation(lib[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      tmp2 = tmp.id === navigation(lib[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
     }
     if (tmp2) {
-      FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[18]);
-      const obj = { type: "LOAD_MESSAGES_SUCCESS", channelId: null, messages: null, isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "ct", isStale: "custom" };
-      obj[1] = stateFromStores.id;
+      let obj = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[18]);
+      obj = { type: "LOAD_MESSAGES_SUCCESS", channelId: null, messages: null, isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "ct", isStale: "custom" };
+      obj[1] = tmp.id;
       obj[2] = [];
       obj.dispatch(obj);
     }
@@ -491,11 +504,12 @@ export default function NewMessageScreen(navigation) {
         let tmp2 = null;
         if (null !== closure_8) {
           tmp2 = null;
-          if (closure_8 !== closure_1_0(closure_1_2[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+          if (tmp !== closure_1_0(closure_1_2[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
             const obj = { channelId: null, screenIndex: "new-message" };
-            obj[0] = closure_8;
-            tmp2 = closure_1_17(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(closure_1_2[32]), obj);
+            obj[0] = tmp;
+            tmp2 = closure_1_17(closure_1_1(tmp4[32]), obj);
           }
+          tmp4 = closure_1_2;
         }
         return tmp2;
       }
@@ -506,6 +520,7 @@ export default function NewMessageScreen(navigation) {
     navigation.goBack();
     navigation(lib[33]).transitionTo(closure_1_16.CHANNEL(closure_1_15, arg0));
   }, items8);
+  _require = undefined;
   _require = stateFromStores((arg0) => {
     closure_0 = arg0;
     c3 = 0;
@@ -636,6 +651,8 @@ export default function NewMessageScreen(navigation) {
         obj[1] = callback;
         obj[2] = ref;
         tmp26Result = callback3(ChatPreview, obj, tmp24);
+        const tmp26 = callback3;
+        const tmp27 = ChatPreview;
       }
     }
   }
@@ -683,8 +700,9 @@ export default function NewMessageScreen(navigation) {
     return items;
   }, items12);
   const memo2 = obj.useMemo(() => {
-    const items = [lib.emptyKeyboardView, ];
-    let obj = { paddingBottom: stateFromStores.bottom };
+    let obj = { style: items, children: null };
+    items = [lib.emptyKeyboardView, ];
+    obj = { paddingBottom: stateFromStores.bottom };
     items[1] = obj;
     obj = { title: null, subtitle: null, containerStyle: null, fullHeight: true, children: null };
     const intl = navigation(lib[25]).intl;

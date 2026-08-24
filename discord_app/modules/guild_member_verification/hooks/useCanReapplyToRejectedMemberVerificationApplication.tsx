@@ -1,15 +1,15 @@
 // === Module 8540: useCanReapplyToRejectedMemberVerificationApplication ===
 
 // Module 8540 (useCanReapplyToRejectedMemberVerificationApplication)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import updateInvite from "updateInvite" /* 4359 */;
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "updateInvite" /* 4359 */;
+import closure_7 from "handleGatewayJoinRequestUpdate" /* 4198 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx");
 
 export const useCanReapplyToRejectedMemberVerificationApplication = function useCanReapplyToRejectedMemberVerificationApplication(guildId) {
   let _require = guildId;
@@ -23,6 +23,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication = function use
     }
     return joinRequestGuild;
   });
+  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -63,9 +64,10 @@ export const useCanReapplyToRejectedMemberVerificationApplication = function use
                 c2 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj1.fetchVerificationForm(closure_0, inviteKeyForGuildId);
+                obj1[0] = obj1.fetchVerificationForm(tmp30, inviteKeyForGuildId);
                 return obj1;
               }
+              tmp30 = closure_0;
             }
           } else if (1 === tmp7) {
             c4 = 0;

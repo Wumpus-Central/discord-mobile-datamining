@@ -1,11 +1,11 @@
 // === Module 7630: createFromServer ===
 
 // Module 7630 (createFromServer)
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
 import toJSDefault from "toJS" /* 1931 */;
 
-const require = fn;
+const require = arg1;
 toJSDefault;
 let MarketingComponentRecord;
 class MarketingComponentRecord extends tmp2 {
@@ -49,8 +49,8 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
   const PremiumMarketingComponentProperties = textDecoder(7631).PremiumMarketingComponentProperties;
   const fromBinary = PremiumMarketingComponentProperties.fromBinary;
   const obj2 = textDecoder(1307);
-  function readerFactory(dependencyMap) {
-    const binaryReader = new textDecoder(dependencyMap[2]).BinaryReader(dependencyMap, textDecoder);
+  function readerFactory(buf) {
+    const binaryReader = new textDecoder(closure_1_2[2]).BinaryReader(buf, textDecoder);
     return binaryReader;
   }
   const fromBinaryResult = fromBinary(obj2.base64decode(start_date.properties), { readUnknownField: true, readerFactory });
@@ -94,13 +94,13 @@ prototype["isIncludedInRollout"] = function isIncludedInRollout(id, date) {
       const diff = time - effectiveStartDate.getTime();
       const _Math = Math;
       const _Math2 = Math;
-      const result = 10000 * Math.min(1, Math.max(0, 0.2 * (diff / obj132Default.Millis.HOUR)));
+      const result = 10000 * Math.min(1, Math.max(0, 0.2 * (diff / setDefault.Millis.HOUR)));
       const _HermesInternal = HermesInternal;
       return MurmurHashV3Default.v3("" + self.promotionId + ":" + id) % 10000 < result;
     }
   }
   return true;
 };
-let result = require("obj132").fileFinishedImporting("modules/premium/promotions/MarketingComponentRecord.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/promotions/MarketingComponentRecord.tsx");
 
 export default MarketingComponentRecord;

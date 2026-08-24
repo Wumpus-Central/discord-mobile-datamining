@@ -4,25 +4,29 @@
 import initialize from "initialize" /* 589 */;
 import useProfileEffectDefault from "useProfileEffect" /* 8969 */;
 import sortEffectLayers from "sortEffectLayers" /* 9211 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import getState from "getState" /* 7383 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_8 from "getState" /* 7383 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function StaticEffect(useThumbnail) {
   ({ profileEffect, bannerAdjustment } = useThumbnail);
   if (bannerAdjustment === undefined) {
     bannerAdjustment = 0;
   }
   useThumbnail = useThumbnail.useThumbnail;
+  c0 = useThumbnail;
+  let thumbnailUrlOverride = useThumbnail.thumbnailUrlOverride;
+  let reducedMotionSrc;
+  dependencyMap = undefined;
   let callback;
-  let thumbnailUrlOverride;
+  thumbnailUrlOverride = undefined;
   const tmp = callback2();
-  let reducedMotionSrc = profileEffect.reducedMotionSrc;
+  reducedMotionSrc = profileEffect.reducedMotionSrc;
   c0 = undefined;
   let obj = thumbnailUrlOverride;
   ({ thumbnailPreviewSrc, accessibilityLabel } = profileEffect);
@@ -73,7 +77,7 @@ function StaticEffect(useThumbnail) {
     obj3[2] = 0 - bannerAdjustment;
     items1[1] = obj3;
     obj1[7] = items1;
-    obj[3] = jsx(tmp4(5449), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null });
+    obj[3] = tmp10(tmp4(5449), obj1);
     const tmp4Result = tmp4(5449);
   }
   return <closure_5 {...obj} />;
@@ -82,25 +86,45 @@ function StaticEffect(useThumbnail) {
 let closure_10 = createCacheKey.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
 function ProfileEffect(profileEffect) {
   profileEffect = profileEffect.profileEffect;
+  let memo = profileEffect;
   ({ replayOnNavigationFocus, style } = profileEffect);
   let memo1 = style;
   const paused = profileEffect.paused;
+  dependencyMap = paused;
+  let ref;
   let React;
+  let accessibilityLabel;
+  memo = undefined;
+  ref = undefined;
+  closure_8 = undefined;
+  jsx = undefined;
   let callback2;
   c11 = undefined;
+  closure_12 = undefined;
+  closure_13 = undefined;
+  closure_14 = undefined;
+  let stop;
+  let reset;
+  let stateFromStores;
+  closure_18 = undefined;
   const tmp = callback2();
-  let ref = tmp;
+  ref = tmp;
+  memo = undefined;
   const tmp2 = ref(React.useState(0), 2);
+  memo = tmp2[1];
   const height = memo1(1494)().height;
   React = tmp2[0];
-  const accessibilityLabel = profileEffect.accessibilityLabel;
+  accessibilityLabel = profileEffect.accessibilityLabel;
   let items = [profileEffect.effects];
   const callback = React.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const memo = React.useMemo(() => memo(ref[8]).sortEffectLayers(memo.effects), items);
+  memo = React.useMemo(() => memo(ref[8]).sortEffectLayers(memo.effects), items);
+  memo1 = undefined;
+  dependencyMap = undefined;
+  ref = undefined;
   const items1 = [memo];
-  memo1 = React.useMemo(() => new Set(memo.map((item, index) => item.src)), items1);
+  memo1 = React.useMemo(() => new Set(memo.map((src) => src.src)), items1);
   dependencyMap = React.useRef(memo1);
   ref = React.useRef(false);
   const items2 = [memo1];
@@ -127,7 +151,7 @@ function ProfileEffect(profileEffect) {
     closure_14.current = memo;
     closure_13.current = false;
     closure_9.current = -memo(ref[9]).PROFILE_EFFECT_INTRO_DELAY;
-    const mapped = memo.map((item, index) => memo(closure_1_2[10]).shouldAnimate(item, ref.current));
+    const mapped = memo.map((start) => closure_1_0(closure_1_2[10]).shouldAnimate(start, ref.current));
     closure_12.current = mapped;
     _undefined2(mapped);
   }, items3);
@@ -144,38 +168,39 @@ function ProfileEffect(profileEffect) {
       const current = ref5.current;
       const current1 = ref3.current;
       closure_1 = current.length !== current1.length;
-      const mapped = current.map((item, index) => {
-        const shouldAnimateResult = memo(table[10]).shouldAnimate(item, closure_1_9.current);
-        if (shouldAnimateResult !== current1[index]) {
+      const mapped = current.map((start) => {
+        const shouldAnimateResult = memo(table[10]).shouldAnimate(start, closure_1_9.current);
+        if (shouldAnimateResult !== current1[arg1]) {
           c1 = true;
         }
         return shouldAnimateResult;
       });
       if (closure_1) {
-        ref3.current = mapped;
+        tmp9.current = mapped;
         _undefined2(mapped);
       }
+      tmp9 = ref3;
     }
   }, items4));
-  const stop = tmp9Result.stop;
-  const reset = tmp9Result.reset;
+  stop = tmp9Result.stop;
+  reset = tmp9Result.reset;
   let obj = memo(589);
   const items5 = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items5, () => state.getState());
+  stateFromStores = obj.useStateFromStores(items5, () => state.getState());
   closure_18 = React.useRef(null);
   const items6 = [stateFromStores, stop, reset];
   const effect2 = React.useEffect(() => {
     if (null !== ref6.current) {
-      if (ref6.current !== stateFromStores) {
-        if (stateFromStores === memo(ref[13]).AppStates.ACTIVE) {
+      if (tmp.current !== stateFromStores) {
+        if (tmp3 === memo(ref[13]).AppStates.ACTIVE) {
           reset();
         } else {
           stop();
         }
-        ref6.current = stateFromStores;
+        tmp.current = tmp3;
       }
     } else {
-      ref6.current = stateFromStores;
+      tmp.current = stateFromStores;
     }
   }, items6);
   const items7 = [paused, stop, reset];
@@ -194,28 +219,28 @@ function ProfileEffect(profileEffect) {
     }, items8),
     pointerEvents: "none",
     onLayout: callback,
-    children: memo.map((item, index) => {
-      let flag = _undefined[index];
-      const sum = item.src + index;
+    children: memo.map((layerConfig) => {
+      let flag = _undefined[arg1];
+      const sum = layerConfig.src + arg1;
       if (flag == null) {
         flag = false;
       }
-      return ref2(memo1(ref[14]), { layerConfig: item, animate: flag, paused: ref, width: closure_4, accessibilityLabel, onLoad: closure_8, loaded: ref.current }, sum);
+      return ref2(memo1(ref[14]), { layerConfig, animate: flag, paused: ref, width: closure_4, accessibilityLabel, onLoad: closure_8, loaded: ref.current }, sum);
     })
   };
   return <accessibilityLabel style={React.useMemo(() => {
     const items = [ref.profileEffects, memo1];
     return items;
-  }, items8)} pointerEvents="none" onLayout={callback}>{memo.map((item, index) => {
-    let flag = _undefined[index];
-    const sum = item.src + index;
+  }, items8)} pointerEvents="none" onLayout={callback}>{memo.map((layerConfig) => {
+    let flag = _undefined[arg1];
+    const sum = layerConfig.src + arg1;
     if (flag == null) {
       flag = false;
     }
-    return ref2(memo1(ref[14]), { layerConfig: item, animate: flag, paused: ref, width: closure_4, accessibilityLabel, onLoad: closure_8, loaded: ref.current }, sum);
+    return ref2(memo1(ref[14]), { layerConfig, animate: flag, paused: ref, width: closure_4, accessibilityLabel, onLoad: closure_8, loaded: ref.current }, sum);
   })}</accessibilityLabel>;
 }
-const result = require("obj132").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffect.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffect.tsx");
 
 export default function WrappedProfileEffect(skuId) {
   let thumbnailUrlOverride = skuId;
@@ -232,6 +257,7 @@ export default function WrappedProfileEffect(skuId) {
         obj = { profileEffect: null };
         obj[0] = useThumbnail;
         const merged = Object.assign(thumbnailUrlOverride);
+        let tmp8 = <ProfileEffect profileEffect={null} />;
       }
     }
     obj = { profileEffect: null, bannerAdjustment: null, useThumbnail: null, thumbnailUrlOverride: null };
@@ -240,12 +266,13 @@ export default function WrappedProfileEffect(skuId) {
     obj[2] = useThumbnail;
     thumbnailUrlOverride = thumbnailUrlOverride.thumbnailUrlOverride;
     obj[3] = thumbnailUrlOverride;
+    tmp8 = <StaticEffect profileEffect={null} bannerAdjustment={null} useThumbnail={null} thumbnailUrlOverride={null} />;
   }
 };
 export const usePreloadProfileEffect = function usePreloadProfileEffect(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  const memo = React.useMemo(() => new Set(memo.map((item, index) => item.src)), items);
+  const memo = React.useMemo(() => new Set(memo.map((src) => src.src)), items);
   closure_2 = React.useRef(memo);
   const ref = React.useRef(false);
   const items1 = [memo];

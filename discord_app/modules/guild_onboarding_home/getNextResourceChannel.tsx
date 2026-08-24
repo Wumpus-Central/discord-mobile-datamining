@@ -1,14 +1,15 @@
 // === Module 11451: getCurrentAndNextResourceChannel ===
 
 // Module 11451 (getCurrentAndNextResourceChannel)
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_2 from "handleSettingsLoadSuccess" /* 5048 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/getNextResourceChannel.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/getNextResourceChannel.tsx");
 
-export default function getCurrentAndNextResourceChannel(closure_0, closure_0) {
+export default function getCurrentAndNextResourceChannel(closure_0) {
+  closure_0 = arg1;
   resourceChannels = resourceChannels.getResourceChannels(closure_0);
-  const findIndexResult = resourceChannels.findIndex((item, index) => item.channelId === closure_0);
+  const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === closure_0);
   if (findIndexResult < 0) {
     let items = [null, null];
   } else {
@@ -21,7 +22,7 @@ export const usePreviousAndNextResourceChannel = function usePreviousAndNextReso
   dependencyMap = id;
   const items = [closure_2];
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_2.getResourceChannels(closure_0));
-  const findIndexResult = stateFromStores.findIndex((item, index) => item.channelId === closure_1);
+  const findIndexResult = stateFromStores.findIndex((channelId) => channelId.channelId === closure_1);
   if (findIndexResult >= 0) {
     if (stateFromStores.length > 1) {
       if (2 === stateFromStores.length) {

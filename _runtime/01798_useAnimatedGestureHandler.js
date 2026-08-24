@@ -22,44 +22,45 @@ arg5.useAnimatedGestureHandler = function useAnimatedGestureHandler(handlers, it
     if (onStart) {
       handlers.onStart(nativeEvent, context);
     }
-    let onActive = nativeEvent.state === useWeb.ACTIVE;
+    let onActive = nativeEvent.state === tmp.ACTIVE;
     if (onActive) {
       onActive = handlers.onActive;
     }
     if (onActive) {
       handlers.onActive(nativeEvent, context);
     }
-    let onEnd = nativeEvent.oldState === useWeb.ACTIVE && nativeEvent.state === useWeb.END;
+    let onEnd = nativeEvent.oldState === tmp.ACTIVE && nativeEvent.state === tmp.END;
     if (onEnd) {
       onEnd = handlers.onEnd;
     }
     if (onEnd) {
       handlers.onEnd(nativeEvent, context);
     }
-    let onFail = nativeEvent.oldState === useWeb.BEGAN && nativeEvent.state === useWeb.FAILED;
+    let onFail = nativeEvent.oldState === tmp.BEGAN && nativeEvent.state === tmp.FAILED;
     if (onFail) {
       onFail = handlers.onFail;
     }
     if (onFail) {
       handlers.onFail(nativeEvent, context);
     }
-    let onCancel = nativeEvent.oldState === useWeb.ACTIVE && nativeEvent.state === useWeb.CANCELLED;
+    let onCancel = nativeEvent.oldState === tmp.ACTIVE && nativeEvent.state === tmp.CANCELLED;
     if (onCancel) {
       onCancel = handlers.onCancel;
     }
     if (onCancel) {
       handlers.onCancel(nativeEvent, context);
     }
-    let tmp22 = nativeEvent.oldState !== useWeb.BEGAN && nativeEvent.oldState !== useWeb.ACTIVE || nativeEvent.state === useWeb.BEGAN || nativeEvent.state === useWeb.ACTIVE;
+    let tmp22 = nativeEvent.oldState !== tmp.BEGAN && nativeEvent.oldState !== tmp.ACTIVE || nativeEvent.state === tmp.BEGAN || nativeEvent.state === tmp.ACTIVE;
     if (!tmp22) {
       tmp22 = !handlers.onFinish;
     }
     if (!tmp22) {
-      let tmp26 = nativeEvent.state === useWeb.CANCELLED;
+      let tmp26 = nativeEvent.state === tmp.CANCELLED;
       if (!tmp26) {
-        tmp26 = nativeEvent.state === useWeb.FAILED;
+        tmp26 = nativeEvent.state === tmp.FAILED;
       }
       handlers.onFinish(nativeEvent, context, tmp26);
+      const tmp25 = context;
     }
   };
   obj = { useWeb, EVENT_TYPE: useWeb, handlers, context };

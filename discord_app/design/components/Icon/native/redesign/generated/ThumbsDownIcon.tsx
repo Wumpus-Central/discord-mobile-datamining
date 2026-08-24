@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 12182 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/ThumbsDownIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ThumbsDownIcon.tsx");
 
 export const ThumbsDownIcon = function ThumbsDownIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

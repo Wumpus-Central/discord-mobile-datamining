@@ -6,18 +6,17 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2693 */;
 import Stack from "Stack" /* 4733 */;
 import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
 import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9452 */;
 import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 9453 */;
 import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 9457 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function effectName(arg0) {
   const intl = getSystemLocale.intl;
   let OpWJ3f = DISPLAY_NAME_STYLES_EFFECT_NAMES.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
@@ -28,23 +27,24 @@ function effectName(arg0) {
 }
 function OptionButtons(children) {
   ({ options, value: require, onChange: importDefault } = children);
+  let obj = { spacing: 8, children: null };
   items = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-subtle", children: children.caption }), ];
-  let obj = {
+  obj = {
     direction: "horizontal",
     spacing: 8,
     style: callback4().optionButtons,
-    children: options.map((item, index) => {
-      closure_0 = item;
-      const obj = { size: "sm", text: item.label, variant: null, onPress: null };
+    children: options.map((label) => {
+      closure_0 = label;
+      const obj = { size: "sm", text: label.label, variant: null, onPress: null };
       let str = "secondary";
-      if (item.value === closure_0) {
+      if (label.value === closure_0) {
         str = "primary";
       }
       obj[2] = str;
       obj[3] = function onPress() {
-        return closure_1_1(item.value);
+        return closure_1_1(label.value);
       };
-      return closure_1_8(Button.Button, obj, String(item.value));
+      return closure_1_8(closure_1_0(closure_1_2[15]).Button, obj, String(label.value));
     })
   };
   items[1] = callback2(Stack.Stack, obj);
@@ -53,7 +53,8 @@ function OptionButtons(children) {
 }
 function BenchmarkRow(arg0) {
   ({ userId, effect, userName, style } = arg0);
-  let obj = { style, children: null };
+  let obj = DISPLAY_NAME_STYLES_EFFECT_NAMES;
+  obj = { style, children: null };
   const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(effect);
   obj = { userId, userName, effectDisplayType: DisplayNameStyleColorPreset.EffectDisplayType.STATIC, pendingDisplayNameStyles: displayNameStylesEffectConfig.previewStyles, variant: "text-md/semibold" };
   obj[1] = callback2(AVERAGE_FONT_WIDTH_RATIODefault, obj);
@@ -64,13 +65,15 @@ function BenchmarkRow(arg0) {
 let items = [...require("items3").EFFECT_ORDER, require("DisplayNameEffect").DisplayNameEffect.GUMMY];
 let closure_12 = [10, 50, 100, 200];
 let items1 = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { wrap: null, container: null, batchRow: null, optionButtons: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { paddingVertical: 2 };
 createCacheKey[3] = { flexWrap: "wrap" };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx");
+let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx");
 
 export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   let tmp = memo3();
@@ -110,11 +113,11 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   callback = first1.useCallback((arg0) => {
     addScroll(arg0);
   }, items1);
-  const memo = first1.useMemo(() => memo2.find((item, index) => item.key === closure_5).name, items2);
+  const memo = first1.useMemo(() => memo2.find((key) => key.key === closure_5).name, items2);
   const items3 = [memo];
   const memo1 = first1.useMemo(() => lib(first[7]).splitGraphemes(memo).length, items3);
   const items4 = [first];
-  const memo2 = first1.useMemo(() => measure.filter((item, index) => set.has(item)), items4);
+  const memo2 = first1.useMemo(() => measure.filter((arg0) => set.has(arg0)), items4);
   const items5 = [memo2];
   memo3 = first1.useMemo(() => {
     let str = "All (rotation)";
@@ -161,6 +164,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   if (tmp18) {
     tmp18 = memo2.length > 0;
   }
+  obj = { style: tmp.wrap, contentContainerStyle: tmp.container, children: null };
   obj = { title: "Configuration", hasIcons: false, children: null };
   obj1 = { label: null };
   obj2 = { spacing: 8, children: null };
@@ -168,20 +172,20 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
     run(_require(first[14]).Text, { variant: "text-sm/semibold", color: "text-subtle", children: "Effects (checked render in rotation)" }),
     run(_require(first[13]).Stack, {
       spacing: 4,
-      children: measure.map((item, index) => {
-        const lib = item;
+      children: measure.map((arg0) => {
+        const lib = arg0;
         const intl = lib(first[8]).intl;
-        let OpWJ3f = lib(first[9]).DISPLAY_NAME_STYLES_EFFECT_NAMES[item];
+        let OpWJ3f = lib(first[9]).DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
         if (OpWJ3f == null) {
           OpWJ3f = stateFromStores(first[10]).OpWJ3f;
         }
         return run(lib(first[22]).Checkbox, {
           label: intl.string(OpWJ3f),
-          checked: first.has(item),
+          checked: first.has(arg0),
           onToggle(arg0) {
             return closure_1_15(closure_0, arg0);
           }
-        }, item);
+        }, arg0);
       })
     })
   ];
@@ -191,29 +195,29 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   const obj4 = { label: null };
   const obj3 = {
     spacing: 4,
-    children: measure.map((item, index) => {
-      const lib = item;
+    children: measure.map((arg0) => {
+      const lib = arg0;
       const intl = lib(first[8]).intl;
-      let OpWJ3f = lib(first[9]).DISPLAY_NAME_STYLES_EFFECT_NAMES[item];
+      let OpWJ3f = lib(first[9]).DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
       if (OpWJ3f == null) {
         OpWJ3f = stateFromStores(first[10]).OpWJ3f;
       }
       return run(lib(first[22]).Checkbox, {
         label: intl.string(OpWJ3f),
-        checked: first.has(item),
+        checked: first.has(arg0),
         onToggle(arg0) {
           return closure_1_15(closure_0, arg0);
         }
-      }, item);
+      }, arg0);
     })
   };
   const tmp20 = first2;
   const tmp21 = begin;
-  obj4[0] = run(closure_15, { caption: "Rows", value: first1, onChange: tmp7[1], options: memo1.map((item, index) => ({ value: item, label: String(item) })) });
+  obj4[0] = run(closure_15, { caption: "Rows", value: first1, onChange: tmp7[1], options: memo1.map((value) => ({ value, label: String(value) })) });
   items9[1] = run(_require(first[21]).TableRow, obj4);
   const obj6 = { label: null };
-  const obj5 = { caption: "Rows", value: first1, onChange: tmp7[1], options: memo1.map((item, index) => ({ value: item, label: String(item) })) };
-  obj6[0] = run(closure_15, { caption: "Name length (" + memo1 + " graphemes)", value: first2, onChange: tmp9[1], options: memo2.map((item, index) => ({ value: item.key, label: item.label })) });
+  const obj5 = { caption: "Rows", value: first1, onChange: tmp7[1], options: memo1.map((value) => ({ value, label: String(value) })) };
+  obj6[0] = run(closure_15, { caption: "Name length (" + memo1 + " graphemes)", value: first2, onChange: tmp9[1], options: memo2.map((key) => ({ value: key.key, label: key.label })) });
   items9[2] = run(_require(first[21]).TableRow, obj6);
   obj[2] = items9;
   const items10 = [begin(_require(first[20]).TableRowGroup, obj), , , ];
@@ -231,8 +235,8 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
       const obj11 = { batchKey: null, onCancel: null, onMeasure: null, children: null };
       obj11[0] = run.batchKey;
       obj11[1] = mountTimer.cancel;
-      obj11[2] = function onMeasure(onMeasureTruncated) {
-        return callback2(onMeasureTruncated, run.params);
+      obj11[2] = function onMeasure(arg0) {
+        return callback2(arg0, run.params);
       };
       const _Array = Array;
       const obj12 = { length: null };
@@ -242,6 +246,8 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
+        const tmp = run;
+        const tmp2 = closure_16;
         const splitGraphemesResult = lib(first[7]).splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
@@ -250,7 +256,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         }
         obj[2] = sum;
         obj[3] = lib.batchRow;
-        return run(closure_16, obj, arg1);
+        return tmp(tmp2, obj, arg1);
       });
       obj10[1] = tmp19(tmp2(tmp3[19]).MountMeasure, obj11, run.batchKey);
       tmp19Result = tmp19(tmp2(tmp3[23]).DisplayNameStylesContext.Provider, obj10);

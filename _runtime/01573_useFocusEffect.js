@@ -1,7 +1,7 @@
 // === Module 1573: useFocusEffect ===
 
 // Module 1573 (useFocusEffect)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 

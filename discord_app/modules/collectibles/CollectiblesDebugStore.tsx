@@ -1,7 +1,7 @@
 // === Module 5323: useCollectiblesDebugStore ===
 
 // Module 5323 (useCollectiblesDebugStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let obj = keys.create((arg0) => {
@@ -24,7 +24,7 @@ let obj = keys.create((arg0) => {
     }
   };
 });
-const result = obj132.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
 
 export const useCollectiblesDebugStore = obj;
 export const addDebugLog = function addDebugLog(arg0) {

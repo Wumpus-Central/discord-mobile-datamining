@@ -1,10 +1,10 @@
 // === Module 11420: downsampleWaveform ===
 
 // Module 11420 (downsampleWaveform)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
 
-const result = obj132.fileFinishedImporting("modules/voice_messages/downsampleWaveform.tsx");
+const result = set.fileFinishedImporting("modules/voice_messages/downsampleWaveform.tsx");
 
 export default function downsampleWaveform(arg0, arg1) {
   _modDef38(arg0.length >= arg1, "Waveform smaller than samples");

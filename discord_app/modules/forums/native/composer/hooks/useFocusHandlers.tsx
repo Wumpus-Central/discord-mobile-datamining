@@ -1,11 +1,11 @@
 // === Module 10173: PostComposerInputs ===
 
 // Module 10173 (PostComposerInputs)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 const obj = { TITLE: 0, [0]: "TITLE", CONTENT: 1, [1]: "CONTENT" };
-const result = require("obj132").fileFinishedImporting("modules/forums/native/composer/hooks/useFocusHandlers.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/useFocusHandlers.tsx");
 
 export const PostComposerInputs = obj;
 export const useFocusHandlers = function useFocusHandlers(arg0) {

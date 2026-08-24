@@ -4,10 +4,13 @@
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
-new Set();
-const set1 = new Set();
+let set = new Set();
+let set1 = set;
 let c3 = false;
+set1 = new Set();
+c3 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class UnenrolledActivityQuestStore extends PersistedStore {
 }
@@ -53,7 +56,7 @@ const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(dispatcher
       const _Math = Math;
       const substr = sorted.slice(Math.floor(10));
       const _Set = Set;
-      set = new Set(substr.map((item, index) => item.toString()));
+      set = new Set(substr.map((arg0) => arg0.toString()));
       const arr = Array.from(set);
     }
     set.add(questId.questId);
@@ -64,7 +67,6 @@ const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(dispatcher
     return true;
   }
 });
-let set = new Set();
-const result = require("obj132").fileFinishedImporting("modules/quests/UnenrolledActivityQuestStore.tsx");
+const result = set.fileFinishedImporting("modules/quests/UnenrolledActivityQuestStore.tsx");
 
 export default unenrolledActivityQuestStore;

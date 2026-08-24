@@ -2,16 +2,14 @@
 
 // Module 13927 (_isNativeReflectConstruct)
 import noopDefault from "noop" /* 19 */;
-import ReanimatedNativeStackScreenDefault from "ReanimatedNativeStackScreen" /* 13928 */;
-import ReanimatedScreenDefault from "ReanimatedScreen" /* 13931 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const ReanimatedScreenWrapper = fn;
+const ReanimatedScreenWrapper = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -77,9 +75,9 @@ let items = [
     value: function render() {
       const self = this;
       if (this.props.isNativeStack) {
-        let tmpResult = ReanimatedNativeStackScreenDefault;
+        let tmpResult = tmp(13928);
       } else {
-        tmpResult = ReanimatedScreenDefault;
+        tmpResult = tmp(13931);
       }
       const obj = {};
       const merged = Object.assign(self.props);

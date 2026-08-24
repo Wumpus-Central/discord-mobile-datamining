@@ -3,12 +3,12 @@
 // Module 162 (_isNativeReflectConstruct)
 import nullthrowsDefault from "nullthrows" /* 70 */;
 import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_1 from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import closure_4 from "_get" /* 96 */;
+import closure_5 from "_classPrivateFieldBase" /* 90 */;
 import importDefaultResult2 from "_classPrivateFieldKey" /* 91 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
@@ -106,7 +106,8 @@ let items = [
   {
     key: "toJSON",
     value: function toJSON() {
-      const self = this;
+      let self = this;
+      self = this;
       const tmp = callback3(callback2(self.prototype), "toJSON", this);
       closure_1 = tmp;
       let fn = tmp;

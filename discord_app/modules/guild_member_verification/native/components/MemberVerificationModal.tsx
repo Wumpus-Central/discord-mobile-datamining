@@ -2,38 +2,42 @@
 
 // Module 8524 (MemberVerificationModal)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import get from "get" /* 6801 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "get" /* 6801 */;
 import BANNER_RATIO_HEIGHT_16_9 from "BANNER_RATIO_HEIGHT_16_9" /* 8525 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = fn;
+const require = arg1;
 ({ SCROLL_EVENT_TIMER_MS: error, useBannerHeight: closure_8 } = BANNER_RATIO_HEIGHT_16_9);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = importDefaultResult.createAnimatedComponent(require("Button").Icon);
-let obj = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { flex: { flex: 1 }, flexLoading: null, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
+obj = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[1] = obj;
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[2] = createCacheKey;
 obj[3] = { position: "absolute", right: 0 };
 obj[4] = { position: "relative", marginTop: 10, marginRight: 20, width: 24, height: 24 };
 obj[5] = { position: "absolute", tintColor: ThemesDefault.colors.WHITE };
+let obj2 = { position: "absolute", tintColor: ThemesDefault.colors.WHITE };
 obj[6] = { position: "absolute", tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 obj[7] = { marginHorizontal: 16, marginVertical: 12 };
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = { code: "function MemberVerificationModalTsx1({contentOffset:{y:y}}){const{scrollTop}=this.__closure;return scrollTop.set(y);}" };
 let closure_14 = { code: "function MemberVerificationModalTsx2(){const{interpolate,scrollTop,bannerHeight,safeAreaTop,theme}=this.__closure;return{opacity:interpolate(scrollTop.get(),[0,bannerHeight-safeAreaTop],[1,theme==='dark'?1:0],'clamp')};}" };
 let closure_15 = { code: "function MemberVerificationModalTsx3(){const{interpolate,scrollTop,bannerHeight,safeAreaTop}=this.__closure;return{opacity:interpolate(scrollTop.get(),[0,bannerHeight-safeAreaTop],[0,1],'clamp')};}" };
-let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationModal.tsx");
+let obj3 = { position: "absolute", tintColor: ThemesDefault.colors.TEXT_DEFAULT };
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationModal.tsx");
 
 export default function MemberVerificationModal(guildId) {
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
   let top;
+  let sharedValue;
   closure_4 = undefined;
   closure_5 = undefined;
   let stateFromStores;
@@ -43,7 +47,7 @@ export default function MemberVerificationModal(guildId) {
   const rect = onClose(top[10])();
   top = rect.top;
   let obj = guildId(top[6]);
-  const sharedValue = obj.useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
   obj1 = guildId(top[6]);
   class A {
     constructor(arg0) {
@@ -114,7 +118,7 @@ export default function MemberVerificationModal(guildId) {
     if (stateFromStores != null) {
       const formFields = stateFromStores.formFields;
       if (formFields != null) {
-        flag = formFields.some((item, index) => item.field_type !== callback(table[15]).VerificationFormFieldTypes.TERMS);
+        flag = formFields.some((field_type) => field_type.field_type !== callback(table[15]).VerificationFormFieldTypes.TERMS);
       }
     }
     if (flag == null) {
@@ -135,7 +139,7 @@ export default function MemberVerificationModal(guildId) {
       formFields = [];
     }
     closure_0 = Object.values(guildId(top[15]).VerificationFormFieldTypes);
-    return formFields.some((item, index) => !closure_0.includes(item.field_type));
+    return formFields.some((field_type) => !closure_0.includes(field_type.field_type));
   }, items3);
   callback = obj8.useRef(onClose);
   const effect = obj8.useEffect(() => {
@@ -149,7 +153,7 @@ export default function MemberVerificationModal(guildId) {
         if (current != null) {
           current();
         }
-        const result = guildId(top[17]).openMemberVerificationUpdateAlert();
+        const result = closure_1_0(closure_1_2[17]).openMemberVerificationUpdateAlert();
       });
       const obj = onClose(top[16]);
     }
@@ -177,12 +181,14 @@ export default function MemberVerificationModal(guildId) {
         obj6 = { guild: null, onSuccess: null, onClose: null };
         obj6[0] = tmp12;
         obj6[1] = function onSuccess(application_status) {
+          const tmp = guildId;
           const tmp2 = null != selfMember.getSelfMember(guildId);
+          const tmp3 = guildId;
+          const tmp4 = top;
           if (!tmp5) {
-            const result = guildId(top[17]).openMemberVerificationPendingAlert(guildId);
-            const tmp3Result = guildId(top[17]);
+            const result = tmp3(tmp4[17]).openMemberVerificationPendingAlert(tmp);
+            const tmp3Result = tmp3(tmp4[17]);
           }
-          tmp5 = application_status.application_status !== guildId(top[15]).GuildJoinRequestApplicationStatuses.SUBMITTED || null != selfMember.getSelfMember(guildId);
         };
         obj6[2] = onClose;
         class A {
@@ -257,5 +263,4 @@ export default function MemberVerificationModal(guildId) {
   }
   animatedScrollHandler = obj1.useAnimatedScrollHandler(A);
   tmp28 = callback2(closure_4, { style: tmp.flexLoading, children: callback2(guildId(top[18]).ActivityIndicator, {}) });
-  const obj12 = { style: tmp.flexLoading, children: callback2(guildId(top[18]).ActivityIndicator, {}) };
 };

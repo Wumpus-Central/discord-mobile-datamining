@@ -9,10 +9,10 @@ import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import hexToRgba from "hexToRgba" /* 4223 */;
 
-require = fn;
+require = arg1;
 function PremiumText(basePlanId) {
   ({ style, isCurrentPlan, isGift, product, text } = basePlanId);
   const tmp = callback2();
@@ -41,7 +41,7 @@ function PremiumText(basePlanId) {
     obj1[1] = text;
     obj[2] = intl3.formatToPlainString(getSystemLocale.t.E0lS2r, obj1);
     obj[3] = text;
-    const items = [callback(Button.LegacyText, obj), ];
+    const items = [closure_7(Button.LegacyText, obj), ];
     let tmp16Result = null;
     if (null != combined) {
       const obj2 = { style: null, children: null };
@@ -49,12 +49,12 @@ function PremiumText(basePlanId) {
       const obj3 = { style: null, numberOfLines: 1, children: null };
       obj3[0] = style;
       obj3[2] = combined;
-      obj2[1] = callback(Button.LegacyText, obj3);
-      tmp16Result = callback(View, obj2);
+      obj2[1] = tmp16(Button.LegacyText, obj3);
+      tmp16Result = tmp16(tmp15, obj2);
     }
     items[1] = tmp16Result;
     obj[1] = items;
-    return callback2(View, obj);
+    return closure_8(View, obj);
   } else {
     let priceString;
     if (product != null) {
@@ -94,12 +94,13 @@ function PremiumText(basePlanId) {
 noopAll;
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: c4, PRICE_PLACEHOLDER: c5, SubscriptionIntervalTypes: closure_6 } = GuildFeatures);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
+createCacheKey = { discount: null, premiumText: null };
+createCacheKey = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
 createCacheKey[1] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.3);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/premium/native/renderPremiumButtonText.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/renderPremiumButtonText.tsx");
 
 export default function renderPremiumText(arg0) {
   const merged = Object.assign(arg0);

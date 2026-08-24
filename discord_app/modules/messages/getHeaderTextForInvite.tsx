@@ -1,10 +1,10 @@
 // === Module 12761: getHeaderTextForInvite ===
 
 // Module 12761 (getHeaderTextForInvite)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = obj132.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
+const result = set.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);

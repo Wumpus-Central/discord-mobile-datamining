@@ -1,11 +1,11 @@
 // === Module 15328: isActivityTemporaryCustomStatus ===
 
 // Module 15328 (isActivityTemporaryCustomStatus)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const ActivityTypes = ME.ActivityTypes;
-const result = obj132.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
+const result = set.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
 
 export const isActivityTemporaryCustomStatus = function isActivityTemporaryCustomStatus(type) {
   let tmp = type.type === ActivityTypes.CUSTOM_STATUS;

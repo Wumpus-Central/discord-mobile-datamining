@@ -1,11 +1,11 @@
 // === Module 9289: enforcing ===
 
 // Module 9289 (enforcing)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeFontModule");
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeFontModule.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeFontModule.tsx");
 
 export default enforcing;

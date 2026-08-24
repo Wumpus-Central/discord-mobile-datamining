@@ -5,17 +5,18 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = {};
+createCacheKey = { header: null };
+createCacheKey = {};
 const merged = Object.assign(importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 createCacheKey.textAlign = "center";
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/atoms/AuthHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/atoms/AuthHeader.tsx");
 
 export default function AuthHeader(arg0) {
   ({ children, style } = arg0);

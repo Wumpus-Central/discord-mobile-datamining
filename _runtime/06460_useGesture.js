@@ -29,14 +29,15 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
     const items = [tmp2, , , ];
     ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
     let tmpResult = tmp(() => {
-      Fling(clonedAndRemappedConfig[4]);
-      const obj = { simultaneousWith: clonedAndRemappedConfig.simultaneousWith, requireToFail: clonedAndRemappedConfig.requireToFail, block: clonedAndRemappedConfig.block };
+      let obj = Fling(clonedAndRemappedConfig[4]);
+      obj = { simultaneousWith: clonedAndRemappedConfig.simultaneousWith, requireToFail: clonedAndRemappedConfig.requireToFail, block: clonedAndRemappedConfig.block };
       return obj.prepareRelations(obj, closure_2);
     }, items);
     closure_6 = tmpResult;
     const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
     tmpResult = tmp(() => {
-      const obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
+      obj = { handlerTag: closure_2, type: closure_0, config: closure_1, detectorCallbacks: obj, gestureRelations: closure_6 };
+      obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
       return obj;
     }, items1);
     closure_7 = tmpResult;
@@ -46,9 +47,9 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
       NativeProxy.createGestureHandler(Fling, closure_2, {});
       let result = Fling(clonedAndRemappedConfig[6]).scheduleFlushOperations();
       return () => {
-        const NativeProxy = Fling(clonedAndRemappedConfig[5]).NativeProxy;
+        const NativeProxy = closure_1_0(closure_1_1[5]).NativeProxy;
         NativeProxy.dropGestureHandler(closure_2);
-        const result = Fling(clonedAndRemappedConfig[6]).scheduleFlushOperations();
+        const result = closure_1_0(closure_1_1[6]).scheduleFlushOperations();
       };
     }, items2);
     const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult];
@@ -63,9 +64,9 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
       const obj3 = Fling(clonedAndRemappedConfig[4]);
       Fling(clonedAndRemappedConfig[7]).registerGesture(closure_2, closure_7);
       return () => {
-        Fling(clonedAndRemappedConfig[4]).unbindSharedValues(closure_1, closure_2);
-        const obj = Fling(clonedAndRemappedConfig[4]);
-        Fling(clonedAndRemappedConfig[7]).unregisterGesture(closure_2);
+        closure_1_0(closure_1_1[4]).unbindSharedValues(closure_1, closure_2);
+        const obj = closure_1_0(closure_1_1[4]);
+        closure_1_0(closure_1_1[7]).unregisterGesture(closure_2);
       };
     }, items3);
     return tmpResult;

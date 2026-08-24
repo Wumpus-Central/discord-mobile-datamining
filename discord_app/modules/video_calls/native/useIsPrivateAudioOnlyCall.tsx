@@ -1,21 +1,21 @@
 // === Module 8673: areParticipantStatesEqual ===
 
 // Module 8673 (areParticipantStatesEqual)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
-import getParticipants from "getParticipants" /* 4773 */;
-import reset from "reset" /* 4652 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "getParticipants" /* 4773 */;
+import closure_5 from "reset" /* 4652 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
 import { isActivityParticipant } from "ParticipantTypes" /* 4544 */;
 
-const require = fn;
+const require = arg1;
 function areParticipantStatesEqual(arg0, arg1) {
   [, tmp] = arg0;
   [, tmp2] = arg1;
   return tmp === tmp2;
 }
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
 
 export default function useIsPrivateAudioOnlyCall(id) {
   const _require = id;
@@ -30,21 +30,22 @@ export default function useIsPrivateAudioOnlyCall(id) {
   }
   dependencyMap = tmp3;
   obj = _require(589);
+  const tmp = _require;
   const items2 = [closure_7, closure_6, closure_5];
   const items3 = [id, tmp3];
   return _require(589).useStateFromStores(items2, () => {
     let isPrivateResult = _private.isPrivate();
     if (isPrivateResult) {
-      isPrivateResult = !closure_1_7.hasVideo(_private.id);
+      isPrivateResult = !closure_1_7.hasVideo(tmp.id);
     }
     if (isPrivateResult) {
       isPrivateResult = !closure_1;
     }
     if (isPrivateResult) {
-      isPrivateResult = 0 === closure_1_5.getAllApplicationStreamsForChannel(_private.id).length;
+      isPrivateResult = 0 === closure_1_5.getAllApplicationStreamsForChannel(tmp.id).length;
     }
     if (isPrivateResult) {
-      isPrivateResult = 0 === closure_1_5.getAllActiveStreamsForChannel(_private.id).length;
+      isPrivateResult = 0 === closure_1_5.getAllActiveStreamsForChannel(tmp.id).length;
     }
     if (isPrivateResult) {
       isPrivateResult = !closure_1_6.isVideoEnabled();

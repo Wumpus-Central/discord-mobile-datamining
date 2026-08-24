@@ -1,19 +1,19 @@
 // === Module 4974: checkIdleAFK ===
 
 // Module 4974 (checkIdleAFK)
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import initializeDefault from "initialize" /* 589 */;
 import debounceDefault from "debounce" /* 636 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import obj132Default2 from "obj132" /* 4004 */;
+import setDefault2 from "set" /* 4004 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import _modDef4975 from "module_4975" /* 4975 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
 import { SpeakingFlags } from "DesktopSources" /* 4529 */;
 
-require = fn;
+require = arg1;
 function checkIdleAFK() {
   if (Date.now() - closure_8 <= closure_5) {
     let tmp2 = c11;
@@ -21,13 +21,14 @@ function checkIdleAFK() {
       tmp2 = c12;
     }
     if (!tmp2) {
-      let obj = obj132;
+      let obj = set;
       tmp2 = obj.isAndroid() && c13;
       const tmp5 = obj.isAndroid() && c13;
     }
     if (!tmp2) {
       if (c9) {
         dispatcherDefault.dispatch({ type: "IDLE", idle: false });
+        const obj2 = dispatcherDefault;
       }
     }
     const AfkTimeout = explicitContentFromProto.AfkTimeout;
@@ -37,33 +38,37 @@ function checkIdleAFK() {
         const _Date = Date;
         const _Math = Math;
         const diff = Date.now() - closure_8;
-        if (diff <= Math.min(setting * obj132Default.Millis.SECOND, tmp)) {
+        if (diff <= Math.min(setting * setDefault.Millis.SECOND, tmp)) {
           let tmp17 = c11;
           if (!c11) {
             tmp17 = c12;
           }
           if (!tmp17) {
-            const tmp14Result = obj132;
-            tmp17 = obj132.isAndroid() && c13;
-            const tmp18 = obj132.isAndroid() && c13;
+            const tmp14Result = tmp14(500);
+            tmp17 = tmp14(500).isAndroid() && c13;
+            const tmp18 = tmp14(500).isAndroid() && c13;
           }
           if (!tmp17) {
             if (c10) {
-              dispatcherDefault.dispatch({ type: "AFK", afk: false });
-              const tmp28Result = dispatcherDefault;
+              tmp28(709).dispatch({ type: "AFK", afk: false });
+              const tmp28Result = tmp28(709);
             }
           }
         }
+        tmp28 = importDefault;
       }
     }
     if (!c10) {
       dispatcherDefault.dispatch({ type: "AFK", afk: true });
+      const obj7 = dispatcherDefault;
     }
+    tmp14 = require;
   }
   if (!c9) {
     obj = { type: "IDLE", idle: true, idleSince: null };
     obj[2] = closure_8;
     dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
   }
 }
 ({ IDLE_DURATION: c5, AppStates: closure_6 } = ME);
@@ -73,15 +78,15 @@ let c10 = false;
 let c11 = false;
 let c12 = false;
 let c13 = false;
-if (require("obj132").isPlatformEmbedded) {
-  const importDefaultResult = obj132Default2;
+if (require("set").isPlatformEmbedded) {
+  const importDefaultResult = setDefault2;
   let powerMonitor;
   if (importDefaultResult != null) {
     powerMonitor = importDefaultResult.powerMonitor;
   }
   if (null != powerMonitor) {
     function checkNativeIdle() {
-      const tmp3 = obj132Default2;
+      const tmp3 = setDefault2;
       let getSystemIdleTimeMs;
       if (tmp3 != null) {
         const powerMonitor = tmp3.powerMonitor;
@@ -90,11 +95,11 @@ if (require("obj132").isPlatformEmbedded) {
         }
       }
       if (null != getSystemIdleTimeMs) {
-        const powerMonitor2 = obj132Default2.powerMonitor;
+        const powerMonitor2 = tmp(4004).powerMonitor;
         const systemIdleTimeMs = powerMonitor2.getSystemIdleTimeMs();
         if (systemIdleTimeMs instanceof Promise) {
-          systemIdleTimeMs.then(function handleIdleTime(result) {
-            const diff = Date.now() - result;
+          systemIdleTimeMs.then(function handleIdleTime(arg0) {
+            const diff = Date.now() - arg0;
             let tmp2 = null == c3;
             if (!tmp2) {
               tmp2 = diff > c3;
@@ -121,24 +126,24 @@ if (require("obj132").isPlatformEmbedded) {
           }
           checkIdleAFK();
           const _setTimeout = setTimeout;
-          let timerId = setTimeout(checkNativeIdle, 10 * obj132Default.Millis.SECOND);
+          let timerId = setTimeout(checkNativeIdle, 10 * tmp(687).Millis.SECOND);
         }
       }
     }
     checkNativeIdle();
-    powerMonitor = obj132Default2.powerMonitor;
+    powerMonitor = setDefault2.powerMonitor;
     powerMonitor.on("resume", () => {
       c11 = false;
       checkIdleAFK();
     });
-    let powerMonitor2 = obj132Default2.powerMonitor;
+    let powerMonitor2 = setDefault2.powerMonitor;
     powerMonitor2.on("suspend", () => {
       c11 = true;
       closure_3 = Date.now();
       checkIdleAFK();
       _modDef4975.disconnect();
     });
-    const powerMonitor3 = obj132Default2.powerMonitor;
+    const powerMonitor3 = setDefault2.powerMonitor;
     class IdleStore extends r10079 {
     }
     powerMonitor3.on("lock-screen", () => {
@@ -275,7 +280,7 @@ if (require("obj132").isPlatformEmbedded) {
   obj[8] = handleGenericAction;
   obj[9] = handleGenericAction;
   const idleStore = new IdleStore(dispatcherDefault, obj);
-  const result = require("obj132").fileFinishedImporting("stores/IdleStore.tsx");
+  const result = require("set").fileFinishedImporting("stores/IdleStore.tsx");
   exports.default = idleStore;
 }
-let timerId = setInterval(checkIdleAFK, 30 * obj132Default.Millis.SECOND);
+let timerId = setInterval(checkIdleAFK, 30 * setDefault.Millis.SECOND);

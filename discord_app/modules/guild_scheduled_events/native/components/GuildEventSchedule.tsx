@@ -1,12 +1,12 @@
 // === Module 8809: GuildEventSchedule ===
 
 // Module 8809 (GuildEventSchedule)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx");
 
 export default function GuildEventSchedule(schedule) {
   schedule = schedule.schedule;
@@ -15,7 +15,7 @@ export default function GuildEventSchedule(schedule) {
   let obj = onChange(3975)();
   const addResult = obj.add(schedule(8785).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
   const items = [schedule.startDate];
-  const memo = React.useMemo(() => onChange(dependencyMap[2])(schedule.startDate).add(15, "minutes"), items);
+  const memo = React.useMemo(() => onChange(closure_1_2[2])(schedule.startDate).add(15, "minutes"), items);
   const tmp2 = onChange(3975)();
   const addResult1 = onChange(3975)().add(schedule(8785).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
   if (null != recurrenceId) {
@@ -59,5 +59,5 @@ export default function GuildEventSchedule(schedule) {
     tmp9Result = callback(tmp3(8810).GuildEventDatetime, obj);
   }
   children[1] = tmp9Result;
-  return callback(closure_5, { children });
+  return closure_6(closure_5, { children });
 };

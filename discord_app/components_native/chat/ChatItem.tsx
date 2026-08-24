@@ -4,18 +4,16 @@
 import set from "set" /* 686 */;
 import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
 import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 10067 */;
-import __INTERNAL_VIEW_CONFIG2 from "__INTERNAL_VIEW_CONFIG" /* 10068 */;
-import __INTERNAL_VIEW_CONFIG3 from "__INTERNAL_VIEW_CONFIG" /* 10069 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { MessageTypes } from "ME" /* 676 */;
 import Changeset from "Changeset" /* 8158 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function DCDChatItem(message) {
   message = message.message;
   const merged = Object.assign(message, Object.create(null));
@@ -28,15 +26,15 @@ function DCDChatItem(message) {
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = callback(__INTERNAL_VIEW_CONFIG2.default, obj);
+      tmp3Result = callback(tmp21(10068).default, obj);
     } else if (isSystemMessageDefault(message)) {
       obj1 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = callback(__INTERNAL_VIEW_CONFIG3.default, obj1);
+      tmp3Result = tmp3(tmp21(10069).default, obj1);
     } else {
       obj = {};
       const merged4 = Object.assign(merged);
-      tmp3Result = callback(__INTERNAL_VIEW_CONFIG2.default, obj);
+      tmp3Result = tmp3(tmp21(10068).default, obj);
     }
   }
   return tmp3Result;
@@ -47,7 +45,7 @@ let closure_13 = createCacheKey.createStyles((marginLeft, marginTop) => {
   const offset = { marginTop: -marginTop, marginLeft: -marginLeft };
   return { container: { position: "relative", overflow: "hidden" }, offset, gradient: { position: "absolute", bottom: 0, height: 24, width: "100%" }, itemRow: { backgroundColor: "transparent" } };
 });
-const result = require("obj132").fileFinishedImporting("components_native/chat/ChatItem.tsx");
+const result = require("set").fileFinishedImporting("components_native/chat/ChatItem.tsx");
 
 export default function _default(rowGenerator) {
   rowGenerator = rowGenerator.rowGenerator;
@@ -65,11 +63,15 @@ export default function _default(rowGenerator) {
   }
   const gradientColors = rowGenerator.gradientColors;
   let roleStyle;
+  let first;
+  closure_8 = undefined;
+  roleStyle = undefined;
+  let rawRow;
   let token;
   let obj = messageSizeCacheRef;
   [tmp4, c6] = onLayout(messageSizeCacheRef.useState(0), 2);
   const tmp5 = onLayout(messageSizeCacheRef.useState(undefined), 2);
-  const first = tmp5[0];
+  first = tmp5[0];
   closure_8 = tmp5[1];
   roleStyle = roleStyle.roleStyle;
   let items = [first, roleStyle, message, modifyRow, rowGenerator];
@@ -86,7 +88,7 @@ export default function _default(rowGenerator) {
     obj[1] = JSON.stringify({ index: 0 });
     return obj;
   }, items);
-  const rawRow = memo.rawRow;
+  rawRow = memo.rawRow;
   const items1 = [rawRow.contextType];
   const memo1 = messageSizeCacheRef.useMemo(() => {
     let num = 0;
@@ -113,8 +115,8 @@ export default function _default(rowGenerator) {
     const height = nativeEvent.nativeEvent.layout.height;
     if (height > 0) {
       if (null != messageSizeCacheRef) {
-        if (messageSizeCacheRef.current[message.id] !== height) {
-          messageSizeCacheRef.current[tmp3.id] = height;
+        if (tmp.current[message.id] !== height) {
+          tmp.current[tmp3.id] = height;
         }
       }
       _undefined(height);
@@ -133,7 +135,7 @@ export default function _default(rowGenerator) {
   if (tmp14Result) {
     tmp13 = maxHeight;
   }
-  { style: tmp9.offset, onLayout: callback1, children: rawRow(DCDChatItem, obj) };
+  obj = { style: tmp9.offset, onLayout: callback1, children: rawRow(DCDChatItem, obj) };
   obj = { message, row: memo.row, style: tmp9.itemRow };
   const tmp14 = rawRow;
   const tmp15 = gradientColors;

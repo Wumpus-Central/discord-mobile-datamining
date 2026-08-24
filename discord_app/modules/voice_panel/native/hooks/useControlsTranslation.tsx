@@ -1,13 +1,13 @@
 // === Module 16393: useControlsTranslation ===
 
 // Module 16393 (useControlsTranslation)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 11440 */;
 import { CALL_TILE_GUTTER } from "CARD_SIZE" /* 11443 */;
 
-const require = fn;
+const require = arg1;
 let closure_6 = { code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useControlsTranslation.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useControlsTranslation.tsx");
 
 export default function useControlsTranslation(arg0, wrapperSpecs, viewHeight) {
   const _require = wrapperSpecs;

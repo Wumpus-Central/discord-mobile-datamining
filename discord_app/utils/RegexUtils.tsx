@@ -1,9 +1,9 @@
-// === Module 4362: obj132 ===
+// === Module 4362: set ===
 
-// Module 4362 (obj132)
-import obj132 from "obj132" /* 2 */;
+// Module 4362 (set)
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("utils/RegexUtils.tsx");
+const result = set.fileFinishedImporting("utils/RegexUtils.tsx");
 
 export default {
   escape(str) {

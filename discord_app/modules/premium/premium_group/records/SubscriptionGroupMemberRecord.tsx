@@ -2,7 +2,7 @@
 
 // Module 12922 (createFromServer)
 import toJSDefault from "toJS" /* 1931 */;
-import createdAt from "createdAt" /* 1930 */;
+import closure_0 from "createdAt" /* 1930 */;
 
 toJSDefault;
 const obj = { PRIMARY: 1, [1]: "PRIMARY", MEMBER: 2, [2]: "MEMBER" };
@@ -45,7 +45,7 @@ prototype["isInvited"] = function isInvited() {
   }
   return tmp;
 };
-const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx");
 
 export default SubscriptionGroupMemberRecord;
 export const SubscriptionMemberTypes = obj;

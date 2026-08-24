@@ -7,13 +7,13 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
 import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
 import apexExperimentDefault from "apexExperiment" /* 12136 */;
-import reset from "reset" /* 4652 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import "createToggle";
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.pEAl4b);
@@ -57,6 +57,7 @@ let createToggle = {
   usePredicate: function useHasStreamVolumeSetting() {
     const obj = apexExperimentDefault;
     let items = [closure_3, closure_4];
+    const obj2 = initialize;
     return initialize.useStateFromStores(items, () => {
       const items = [closure_3, closure_4];
       [obj, obj2] = items;
@@ -80,6 +81,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
 
 export default createToggle;

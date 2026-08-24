@@ -4,7 +4,7 @@
 import _createClassDefault from "_createClass" /* 42 */;
 import _classPrivateFieldKeyDefault from "_classPrivateFieldKey" /* 91 */;
 import EventEmitter from "_classCallCheck" /* 41 */;
-import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
+import closure_1 from "_classPrivateFieldBase" /* 90 */;
 
 let closure_2 = _classPrivateFieldKeyDefault("registry");
 class EventEmitter {

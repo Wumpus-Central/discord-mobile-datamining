@@ -24,9 +24,11 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, sdk) {
   }
   if (tmp) {
     obj.dsn = dsnFromString.dsnToString(arg4);
+    const obj4 = dsnFromString;
   }
   if (arg1) {
     obj.trace = addNonEnumerableProperty.dropUndefinedKeys(arg1);
+    const obj5 = addNonEnumerableProperty;
   }
   const items = [{ type: "check_in" }, arg0];
   const date = new Date();

@@ -4,17 +4,18 @@
 import noopAll from "noop" /* 19 */;
 import ApplicationRejectedNoticeDefault from "ApplicationRejectedNotice" /* 16955 */;
 import getMaxRoleSubscriptionEmojiSlotsDefault from "getMaxRoleSubscriptionEmojiSlots" /* 17001 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importDefaultResult from "apply" /* 12 */;
 
-const require = fn;
+const require = arg1;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
+  let stateFromStores;
   let obj = guildId(16945);
   const roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
   const items = [closure_3];
-  const stateFromStores = guildId(589).useStateFromStores(items, () => closure_1_3.getGuild(guildId));
+  stateFromStores = guildId(589).useStateFromStores(items, () => closure_1_3.getGuild(guildId));
   if (null == stateFromStores) {
     return null;
   } else {
@@ -25,8 +26,8 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
     obj[0] = stateFromStores;
     obj[1] = intl.formatToPlainString(tmp(1236).t.H9Jxp6, obj);
     obj[2] = closure_5;
-    obj[3] = function onSelectRolesForEmoji(emoji) {
-      closure_0 = emoji;
+    obj[3] = function onSelectRolesForEmoji(arg0) {
+      closure_0 = arg0;
       if (null == stateFromStores) {
         const _Error = Error;
         error = new Error("guild cannot be null");
@@ -35,8 +36,8 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
         rejectResult = new Promise((arg0, arg1) => {
           closure_0 = arg0;
           closure_1 = arg1;
-          stateFromStores(dependencyMap[10]);
-          const obj = {
+          let obj = stateFromStores(closure_2_2[10]);
+          obj = {
             guildId: closure_1_1.id,
             emoji: closure_0,
             onSave(arg0) {
@@ -49,7 +50,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
               callback2(error);
             }
           };
-          obj.openLazy(guildId(dependencyMap[12])(dependencyMap[11], dependencyMap.paths), "role-subscription-emoji-" + closure_1_1.id, obj);
+          obj.openLazy(guildId(closure_2_2[12])(closure_2_2[11], closure_2_2.paths), "role-subscription-emoji-" + closure_1_1.id, obj);
         });
       }
       return rejectResult;
@@ -62,7 +63,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
 noopAll;
 let closure_5 = importDefaultResult.memoize((arr) => {
   const _require = arg1;
-  const found = arr.filter((item, index) => lib(dependencyMap[4]).isRoleSubscriptionEmoji(item, lib.id));
+  const found = arr.filter((roles) => lib(closure_1_2[4]).isRoleSubscriptionEmoji(roles, lib.id));
   if (0 === found.length) {
     return [];
   } else {
@@ -75,9 +76,10 @@ let closure_5 = importDefaultResult.memoize((arr) => {
     return items;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx");
 
 export default function GuildSettingsRoleSubscriptionEmojis(guildId) {
   guildId = guildId.guildId;
+  const obj = { guildId, children: <GuildSettingsRoleSubscriptionEmojisInner guildId={guildId} /> };
   return jsx(ApplicationRejectedNoticeDefault, { guildId, children: <GuildSettingsRoleSubscriptionEmojisInner guildId={guildId} /> });
 };

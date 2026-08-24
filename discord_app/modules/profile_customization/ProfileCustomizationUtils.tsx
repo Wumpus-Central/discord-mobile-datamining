@@ -4,13 +4,13 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer4 from "AccessibilityAnnouncer" /* 1363 */;
-import noop from "noop" /* 19 */;
-import handleFormOpen from "handleFormOpen" /* 8370 */;
-import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleFormOpen" /* 8370 */;
+import closure_4 from "createUserWidgetFromServer" /* 5365 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/profile_customization/ProfileCustomizationUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/profile_customization/ProfileCustomizationUtils.tsx");
 
 export const useAvatarsWithGuilds = function useAvatarsWithGuilds(arg0) {
   closure_0 = arg0;
@@ -19,6 +19,8 @@ export const useAvatarsWithGuilds = function useAvatarsWithGuilds(arg0) {
     const mutableAllGuildsAndMembers = closure_1_5.getMutableAllGuildsAndMembers();
     const obj = {};
     for (const key10008 in mutableAllGuildsAndMembers) {
+      let tmp4 = key10008;
+      let tmp5 = closure_0;
       let tmp6 = mutableAllGuildsAndMembers[key10008][closure_0];
       let avatar;
       if (tmp6 != null) {
@@ -37,7 +39,7 @@ export const useAvatarsWithGuilds = function useAvatarsWithGuilds(arg0) {
       continue;
     }
     const entries = Object.entries(obj);
-    return entries.map((item, index) => item[1][0]);
+    return entries.map((arg0) => arg0[1][0]);
   }, items);
 };
 export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndUserPendingNameplate(user, guildId) {
@@ -240,20 +242,20 @@ export const showRemoveAvatar = function showRemoveAvatar(pendingAvatar, avatar)
   }
   return tmp2;
 };
-export const showRemoveBanner = function showRemoveBanner(pendingBanner, banner) {
-  if (undefined === pendingBanner) {
+export const showRemoveBanner = function showRemoveBanner(arg0, banner) {
+  if (undefined === arg0) {
     let tmp2 = null != banner;
   } else {
-    tmp2 = null != pendingBanner;
+    tmp2 = null != arg0;
   }
   return tmp2;
 };
-export const announcePendingAvatarChange = function announcePendingAvatarChange(remove) {
-  if ("set" === remove) {
+export const announcePendingAvatarChange = function announcePendingAvatarChange(set) {
+  if ("set" === set) {
     const AccessibilityAnnouncer3 = AccessibilityAnnouncer4.AccessibilityAnnouncer;
     const intl3 = getSystemLocale.intl;
     AccessibilityAnnouncer3.announce(intl3.string(getSystemLocale.t.dyU5c5));
-  } else if ("remove" === remove) {
+  } else if ("remove" === set) {
     const AccessibilityAnnouncer2 = AccessibilityAnnouncer4.AccessibilityAnnouncer;
     const intl2 = getSystemLocale.intl;
     AccessibilityAnnouncer2.announce(intl2.string(getSystemLocale.t["f1+oNk"]));

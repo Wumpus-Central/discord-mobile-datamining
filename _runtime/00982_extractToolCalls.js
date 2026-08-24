@@ -15,17 +15,26 @@ function extractToolCalls(substr) {
       while (iter !== undefined) {
         let tmp4 = nextResult;
         if (nextResult) {
+          let tmp5 = nextResult;
           if (typeof tmp4 === "object") {
+            let tmp17 = nextResult;
             let tool_calls = tmp4.tool_calls;
             let tmp18 = tool_calls;
             if (tool_calls) {
               let _Array = Array;
+              let tmp6 = tool_calls;
               tool_calls = Array.isArray(tmp18);
             }
             if (tool_calls) {
               let push = items.push;
+              let tmp7 = tmp18;
               let items1 = [];
+              let tmp8 = items1;
+              let num2 = 0;
               let arraySpreadResult = HermesBuiltin.arraySpread(tmp18, 0);
+              let tmp10 = push;
+              let tmp11 = items1;
+              let tmp12 = items;
               let applyResult = HermesBuiltin.apply(items1, items);
             }
           }
@@ -125,7 +134,7 @@ arg5.extractModelMetadata = extractModelMetadata;
 arg5.extractTokenUsageFromMessage = extractTokenUsageFromMessage;
 arg5.extractToolCalls = extractToolCalls;
 arg5.extractToolsFromCompiledGraph = function extractToolsFromCompiledGraph(closure_0) {
-  const builder = _require.builder;
+  const builder = closure_0.builder;
   let tools;
   if (builder != null) {
     const nodes = builder.nodes;
@@ -140,7 +149,7 @@ arg5.extractToolsFromCompiledGraph = function extractToolsFromCompiledGraph(clos
     }
   }
   if (tools) {
-    const builder2 = _require.builder;
+    const builder2 = closure_0.builder;
     let tools1;
     if (builder2 != null) {
       const nodes2 = builder2.nodes;
@@ -161,20 +170,20 @@ arg5.extractToolsFromCompiledGraph = function extractToolsFromCompiledGraph(clos
       if (Array.isArray(tools1)) {
         mapped = null;
         if (0 !== tools1.length) {
-          mapped = tools1.map((item, index) => {
-            const lc_kwargs = item.lc_kwargs;
+          mapped = tools1.map((lc_kwargs) => {
+            lc_kwargs = lc_kwargs.lc_kwargs;
             let name;
             if (lc_kwargs != null) {
               name = lc_kwargs.name;
             }
             const obj = { name, description: null, schema: null };
-            const lc_kwargs2 = item.lc_kwargs;
+            const lc_kwargs2 = lc_kwargs.lc_kwargs;
             let description;
             if (lc_kwargs2 != null) {
               description = lc_kwargs2.description;
             }
             obj[1] = description;
-            const lc_kwargs3 = item.lc_kwargs;
+            const lc_kwargs3 = lc_kwargs.lc_kwargs;
             let schema;
             if (lc_kwargs3 != null) {
               schema = lc_kwargs3.schema;
@@ -192,15 +201,15 @@ arg5.extractToolsFromCompiledGraph = function extractToolsFromCompiledGraph(clos
 };
 arg5.setResponseAttributes = function setResponseAttributes(setAttribute, c2, closure_3) {
   let messages;
-  if (extractTokenUsageFromMessage != null) {
-    messages = extractTokenUsageFromMessage.messages;
+  if (closure_3 != null) {
+    messages = closure_3.messages;
   }
   if (messages) {
     const _Array = Array;
     if (Array.isArray(messages)) {
       let num;
-      if (extractToolCalls != null) {
-        num = extractToolCalls.length;
+      if (c2 != null) {
+        num = c2.length;
       }
       if (num == null) {
         num = 0;
@@ -223,10 +232,15 @@ arg5.setResponseAttributes = function setResponseAttributes(setAttribute, c2, cl
         let num4 = 0;
         let num5 = 0;
         for (const item10050 of substr) {
+          let tmp13 = extractTokenUsageFromMessage;
           let tmp14 = extractTokenUsageFromMessage(item10050);
+          let tmp15 = num3;
           num3 = num3 + tmp14.inputTokens;
+          let tmp16 = num4;
           num4 = num4 + tmp14.outputTokens;
+          let tmp17 = num5;
           num5 = num5 + tmp14.totalTokens;
+          let tmp18 = extractModelMetadata;
           let tmp19 = extractModelMetadata(arg0, item10050);
           continue;
         }
@@ -239,6 +253,7 @@ arg5.setResponseAttributes = function setResponseAttributes(setAttribute, c2, cl
         if (num5 > 0) {
           const attr4 = setAttribute.setAttribute(_mod958.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE, num5);
         }
+        const obj = asString;
       }
     }
   }

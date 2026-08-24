@@ -4,15 +4,15 @@
 import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7217 */;
 import computeHasRoleSubscriptionsInGuild from "computeHasRoleSubscriptionsInGuild" /* 7218 */;
 import computeHasRoleSubscriptionsInGuildDefault from "computeHasRoleSubscriptionsInGuild" /* 7218 */;
-import initialize from "initialize" /* 1982 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "initialize" /* 1982 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-require = fn;
-function computeCanEveryoneInGuildSeeRoleSubscriptions(c0, items) {
-  let tmp = items;
-  if (items === undefined) {
-    items = [closure_4, closure_3];
+require = arg1;
+function computeCanEveryoneInGuildSeeRoleSubscriptions(c0) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    const items = [closure_4, closure_3];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -33,12 +33,13 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(c0, items) {
     return isViewingServerShopResult;
   }
 }
-let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
 
 export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(c0, closure_3) {
   let hasRoleSubscriptionsInGuild = computeCanEveryoneInGuildSeeRoleSubscriptions(c0);
   if (!hasRoleSubscriptionsInGuild) {
     hasRoleSubscriptionsInGuild = computeHasRoleSubscriptionsInGuild.computeHasRoleSubscriptionsInGuild(c0, closure_3);
+    const obj = computeHasRoleSubscriptionsInGuild;
   }
   return hasRoleSubscriptionsInGuild;
 };
@@ -49,7 +50,7 @@ export const useRoleSubscriptionsVisibleInGuild = function useRoleSubscriptionsV
   const items1 = [id1];
   let stateFromStores = _require(589).useStateFromStores(items, () => {
     const items = [closure_1_4, closure_1_3];
-    return computeCanEveryoneInGuildSeeRoleSubscriptions(closure_0, items);
+    return closure_1_6(closure_0, items);
   }, items1);
   const obj = _require(589);
   const shouldHideGuildPurchaseEntryPoints = _require(7219).useShouldHideGuildPurchaseEntryPoints(id1).shouldHideGuildPurchaseEntryPoints;
@@ -70,7 +71,7 @@ export const useShowRoleSubscriptionsInChannelList = function useShowRoleSubscri
   const items1 = [id];
   let stateFromStores = _require(589).useStateFromStores(items, () => {
     const items = [closure_1_4, closure_1_3];
-    return computeCanEveryoneInGuildSeeRoleSubscriptions(closure_0, items);
+    return closure_1_6(closure_0, items);
   }, items1);
   const obj = _require(589);
   const shouldHideGuildPurchaseEntryPoints = _require(7219).useShouldHideGuildPurchaseEntryPoints(id).shouldHideGuildPurchaseEntryPoints;

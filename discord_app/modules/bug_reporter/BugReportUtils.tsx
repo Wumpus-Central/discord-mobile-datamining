@@ -2,11 +2,11 @@
 
 // Module 10130 (_fetchBugReportConfig)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import handleThemeChange from "handleThemeChange" /* 1302 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function _fetchBugReportConfig() {
   const self = this;
   const tmp = callback(function*() {
@@ -14,7 +14,7 @@ function _fetchBugReportConfig() {
     obj1 = { url: null, rejectWithError: false };
     obj1[0] = closure_1_6.BUG_REPORTS;
     yield HTTP.get(obj1);
-    return body.body;
+    return arg1.body;
   });
   closure_7 = tmp;
   const apply = tmp.apply;
@@ -94,7 +94,7 @@ function _submitReport() {
               if (null != priority.experimentOverrides) {
                 const obj8 = { name: "experiment_overrides", value: null };
                 const experimentOverrides = priority.experimentOverrides;
-                const mapped = experimentOverrides.map((item, index) => "" + item.experimentId + ":" + item.variantId);
+                const mapped = experimentOverrides.map((experimentId) => "" + experimentId.experimentId + ":" + experimentId.variantId);
                 obj8[1] = mapped.join(", ");
                 items.push(obj8);
               }
@@ -129,26 +129,26 @@ function _submitReport() {
               }
               if (lib2.overridePlatformInformation) {
                 const obj11 = { name: "device", value: null };
-                obj11[1] = lib2.device;
+                obj11[1] = tmp39.device;
                 items.push(obj11);
                 const obj12 = { name: "os", value: null };
-                obj12[1] = lib2.operatingSystem;
+                obj12[1] = tmp39.operatingSystem;
                 items.push(obj12);
                 const obj13 = { name: "os_version", value: null };
-                obj13[1] = lib2.operatingSystemVersion;
+                obj13[1] = tmp39.operatingSystemVersion;
                 items.push(obj13);
                 const obj14 = { name: "client_version", value: null };
-                obj14[1] = lib2.clientVersion;
+                obj14[1] = tmp39.clientVersion;
                 items.push(obj14);
                 const obj15 = { name: "client_build_number", value: null };
-                obj15[1] = lib2.clientBuildNumber;
+                obj15[1] = tmp39.clientBuildNumber;
                 items.push(obj15);
                 const obj16 = { name: "release_channel", value: null };
                 const _window = window;
                 obj16[1] = window.GLOBAL_ENV.RELEASE_CHANNEL;
                 items.push(obj16);
                 const obj17 = { name: "locale", value: null };
-                obj17[1] = lib2.locale;
+                obj17[1] = tmp39.locale;
                 items.push(obj17);
               }
               let obj19 = dependencyMap;
@@ -180,6 +180,8 @@ function _submitReport() {
               uploadDebugLogFiles = obj18.post(obj18);
               theme = 2;
               c3 = 1;
+              const tmp25 = lib;
+              const tmp40 = dependencyMap;
             }
           } else if (1 === tmp6) {
             constants = 0;
@@ -225,7 +227,7 @@ function _submitReport() {
   return applyArgumentsResult;
 }
 ({ DebugLogCategory: c5, Endpoints: closure_6 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");
 
 export const fetchBugReportConfig = function fetchBugReportConfig() {
   const self = this;

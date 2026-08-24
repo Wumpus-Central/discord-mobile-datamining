@@ -12,20 +12,21 @@ import getNicknameDefault from "getNickname" /* 4796 */;
 import preloadDefault from "preload" /* 5449 */;
 import RoleIconDefault from "RoleIcon" /* 7165 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, avatar: null, content: null, contextRow: null };
+createCacheKey = { flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 40, height: 40, borderRadius: 20 };
 createCacheKey[2] = { marginStart: 16 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateRolePreview.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateRolePreview.tsx");
 
 export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRolePreview(content) {
   content = content.content;
@@ -40,7 +41,8 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj1 = getNicknameDefault;
-  const items1 = [tmp3.container, style];
+  obj = { style: items1, children: null };
+  items1 = [tmp3.container, style];
   const name = obj1.useName(guildId, null, stateFromStores);
   obj = { style: tmp3.avatar, source: { uri: roleImage } };
   const items2 = [callback(preloadDefault, obj), ];

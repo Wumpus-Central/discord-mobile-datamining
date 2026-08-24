@@ -1,11 +1,11 @@
 // === Module 8227: createGuildDiscoveryDisqualifiedSystemMessage ===
 
 // Module 8227 (createGuildDiscoveryDisqualifiedSystemMessage)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
 
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");
 
 export const createGuildDiscoveryDisqualifiedSystemMessage = function createGuildDiscoveryDisqualifiedSystemMessage(message) {
   const obj = { content: null };

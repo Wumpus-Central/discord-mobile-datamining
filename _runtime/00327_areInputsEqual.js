@@ -10,10 +10,12 @@ function areInputsEqual(arg0, arg1) {
       while (true) {
         let tmp = arg0[num];
         let tmp2 = arg1[num];
+        let tmp3 = num;
         if (tmp !== tmp2) {
+          let tmp4 = ponyfill;
           if (!ponyfill(tmp)) {
             break;
-          } else if (!ponyfill(tmp2)) {
+          } else if (!tmp4(tmp2)) {
             break;
           }
         }

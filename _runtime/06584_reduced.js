@@ -3,9 +3,9 @@
 // Module 6584 (reduced)
 let obj = { meet: 0, slice: 1, none: 2 };
 const items = ["xMinYMin", "xMidYMin", "xMaxYMin", "xMinYMid", "xMidYMid", "xMaxYMid", "xMinYMax", "xMidYMax", "xMaxYMax", "none"];
-const reduced = items.reduce((acc, item, index) => {
-  acc[item] = item;
-  return acc;
+const reduced = items.reduce((arg0, arg1) => {
+  arg0[arg1] = arg1;
+  return arg0;
 }, {});
 const re2 = /\s+/;
 arg5.default = function extractViewBox(arg0) {

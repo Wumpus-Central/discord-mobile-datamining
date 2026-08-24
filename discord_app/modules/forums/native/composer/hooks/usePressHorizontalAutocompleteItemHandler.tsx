@@ -1,13 +1,14 @@
 // === Module 10175: set ===
 
 // Module 10175 (set)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
+import set from "set" /* 2 */;
 
-const require = fn;
+const require = arg1;
 let items = [, , , ];
 ({ USER: arr[0], ROLE: arr[1], CHANNEL: arr[2], EMOJI: arr[3] } = require("ME").AutoCompleteResultTypes);
-const set = new Set(items);
-const result = require("obj132").fileFinishedImporting("modules/forums/native/composer/hooks/usePressHorizontalAutocompleteItemHandler.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/forums/native/composer/hooks/usePressHorizontalAutocompleteItemHandler.tsx");
 
 export const usePressHorizontalAutocompleteItemHandler = function usePressHorizontalAutocompleteItemHandler(draftContent) {
   draftContent = draftContent.draftContent;

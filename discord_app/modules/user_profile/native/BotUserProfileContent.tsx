@@ -3,12 +3,12 @@
 // Module 12085
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: error } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
@@ -60,6 +60,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
   }, items1);
   let tmp7Result = tmp7(tmp2[14]);
   const subscribeGuildMembers = tmp7Result.useSubscribeGuildMembers(memo, "BotUserProfileContent");
+  const tmp4 = ACTION_SHEET_MAX_WIDTH;
   const tmp6 = channel(trackUserProfileAction[8])({ scrollPosition, bannerHeight: tmp5 });
   const tmp16 = channel(trackUserProfileAction[16])(user.id);
   const tmp15 = channel(trackUserProfileAction[15])(displayProfile);
@@ -117,8 +118,8 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       obj7[0] = tmp16;
       obj7[1] = null != primaryColor;
       obj7[2] = function onPressTruncatedStatus() {
-        channel(trackUserProfileAction[26]);
-        const obj = { user, guildId: guild_id, channelId: null };
+        let obj = channel(trackUserProfileAction[26]);
+        obj = { user, guildId: guild_id, channelId: null };
         let id;
         if (channel != null) {
           id = channel.id;
@@ -163,7 +164,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       items7[1] = callback(tmp(tmp2[31]), obj10);
       const obj11 = { style: null, maxWidth: null, primaryButton: null, secondaryButton: null };
       obj11[0] = tmp3.primaryButtons;
-      obj11[1] = ACTION_SHEET_MAX_WIDTH;
+      obj11[1] = tmp4;
       let tmp37Result;
       if (null != application) {
         if (tmp7Result1.canInstallApplication(application)) {
@@ -172,7 +173,9 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
           obj12[1] = user.id;
           obj12[2] = channel;
           obj12[3] = guild_id;
-          tmp37Result = callback(tmp(tmp2[34]), obj12);
+          tmp37Result = tmp37(tmp(tmp2[34]), obj12);
+          const tmp29 = channel;
+          const tmp30 = guild_id;
           const tmpResult2 = tmp(tmp2[34]);
         }
         tmp7Result1 = tmp7(tmp2[33]);
@@ -202,7 +205,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       obj11[3] = callback(tmp7(tmp2[35]).Button, obj13);
       items7[2] = callback(tmpResult1, obj11);
       obj8[1] = items7;
-      items6[1] = callback(guild_id, obj8);
+      items6[1] = closure_10(guild_id, obj8);
       let tmp35Result = null;
       if (null != stateFromStores) {
         const items8 = [tmp3.card, ];
@@ -216,20 +219,20 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
         obj18[1] = stateFromStores;
         obj18[2] = guild_id;
         obj18[3] = items8;
-        const items9 = [callback(tmp(tmp2[40]), obj18), , , ];
+        const items9 = [tmp37(tmp(tmp2[40]), obj18), , , ];
         const obj19 = { userId: null, displayProfile: null, channel: null, style: null };
         obj19[0] = user.id;
         obj19[1] = displayProfile;
         obj19[2] = channel;
         obj19[3] = items8;
-        items9[1] = callback(tmp(tmp2[41]), obj19);
+        items9[1] = tmp37(tmp(tmp2[41]), obj19);
         tmp35Result = null != guild_id;
         if (tmp35Result) {
           const obj20 = { userId: null, guildId: null, style: null };
           obj20[0] = user.id;
           obj20[1] = guild_id;
           obj20[2] = items8;
-          const items10 = [callback(tmp(tmp2[42]), obj20), ];
+          const items10 = [tmp37(tmp(tmp2[42]), obj20), ];
           const obj21 = { user: null, currentUser: null, guildId: null, channelId: null, showUserProfile: null, style: null };
           obj21[0] = user;
           obj21[1] = stateFromStores;
@@ -242,9 +245,9 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
           obj21[3] = id1;
           obj21[4] = showUserProfileActionSheet;
           obj21[5] = items8;
-          items10[1] = callback(tmp(tmp2[43]), obj21);
+          items10[1] = tmp37(tmp(tmp2[43]), obj21);
           obj22[0] = items10;
-          tmp35Result = callback(closure_11, obj22);
+          tmp35Result = tmp35(tmp36, obj22);
           const tmpResult4 = tmp(tmp2[43]);
         }
         items9[2] = tmp35Result;
@@ -252,22 +255,22 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
         obj23[0] = user.id;
         obj23[1] = items8;
         obj23[2] = showUserProfileActionSheet;
-        items9[3] = callback(tmp(tmp2[44]), obj23);
+        items9[3] = tmp37(tmp(tmp2[44]), obj23);
         obj17[1] = items9;
-        tmp35Result = callback(tmp22, obj17);
+        tmp35Result = tmp35(tmp22, obj17);
       }
       const obj24 = { children: null };
       items6[2] = tmp35Result;
       obj5[1] = items6;
-      items4[1] = callback(guild_id, obj5);
+      items4[1] = closure_10(guild_id, obj5);
       obj2[1] = items4;
-      items2[2] = callback(tmp(tmp2[22]).View, obj2);
+      items2[2] = closure_10(tmp(tmp2[22]).View, obj2);
       obj24[0] = items2;
-      return callback(closure_11, obj24);
+      return closure_10(closure_11, obj24);
     }
   }
   return null;
 });
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/BotUserProfileContent.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/BotUserProfileContent.tsx");
 
 export default memoResult;

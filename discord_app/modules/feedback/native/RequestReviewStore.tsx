@@ -6,27 +6,25 @@ import Storage2 from "Storage" /* 595 */;
 import keys from "keys" /* 691 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
 import sleep from "sleep" /* 4548 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7349 */;
 import apexExperiment from "apexExperiment" /* 13246 */;
 import _showAndroidRatingRequestDefault from "_showAndroidRatingRequest" /* 13247 */;
 import getFirstInstallTimeMillis from "getFirstInstallTimeMillis" /* 13249 */;
-import getHash from "getHash" /* 4288 */;
-import initialize from "initialize" /* 1212 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import closure_4 from "getHash" /* 4288 */;
+import closure_5 from "initialize" /* 1212 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function showReviewRequestModal() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    let tmpResult = coerceMainRoute;
+    let tmpResult = tmp(4229);
     tmp3 = null != tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
   }
-  tmpResult = useKeyboardIsOpen;
+  tmpResult = tmp(7349);
   const keyboardIsOpen = tmpResult.getKeyboardIsOpen();
   const tmp5 = null != voiceChannelId.getVoiceChannelId();
   if (tmp3) {
@@ -34,20 +32,22 @@ function showReviewRequestModal() {
       if (!tmp5) {
         expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_SHOW_ATTEMPTED);
         closure_9.revision = 1;
-        const Storage = Storage2.Storage;
+        const Storage = tmp(595).Storage;
         const result = Storage.set(RequestReviewStore, closure_9);
         _showAndroidRatingRequestDefault();
         c10 = false;
+        const obj5 = expandEventPropertiesDefault;
       }
     }
   }
+  const obj = getRootNavigationRef;
   expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
   if (-1 !== timeout) {
     const _clearTimeout = clearTimeout;
     clearTimeout(timeout);
     timeout = -1;
   }
-  const RequestReviewNoTTIExperiment = apexExperiment.RequestReviewNoTTIExperiment;
+  const RequestReviewNoTTIExperiment = tmp(13246).RequestReviewNoTTIExperiment;
   let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
   let tmp18 = c10;
   if (c10) {
@@ -62,7 +62,7 @@ function showReviewRequestModal() {
   }
   if (tmp18) {
     const _setTimeout = setTimeout;
-    timeout = setTimeout(showReviewRequestModal, sleep.MS_PER_MINUTE);
+    timeout = setTimeout(showReviewRequestModal, tmp(4548).MS_PER_MINUTE);
   }
 }
 function handleConnectionClosedOrInterrupted() {
@@ -91,15 +91,17 @@ RequestReviewStore.displayName = "RequestReviewStore";
 const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    let obj = { from: "authed", unit: sleep.TimeUnits.DAYS };
+    let obj = getFirstInstallTimeMillis;
+    obj = { from: "authed", unit: sleep.TimeUnits.DAYS };
     let tmp3 = obj.getFirstInstallTimeElapsed(obj) >= 10;
-    const someResult = guilds.some((item, index) => item.member_count >= 5);
+    const someResult = guilds.some((member_count) => member_count.member_count >= 5);
     if (revision.revision < 1) {
       obj = { is_hfu: true, is_install_old_enough: null, is_in_large_enough_guild: null, is_account_verified: null };
       obj[1] = tmp3;
       obj[2] = someResult;
       obj[3] = tmp5;
       expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj);
+      const obj3 = expandEventPropertiesDefault;
     }
     if (tmp3) {
       tmp3 = tmp5;
@@ -116,7 +118,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = apexExperiment.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = tmp(13246).RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp13 = closure_10;
     if (closure_10) {
@@ -131,7 +133,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
     }
     if (tmp13) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, sleep.MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, tmp(4548).MS_PER_MINUTE);
     }
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
@@ -192,7 +194,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
         clearTimeout(timeout);
         timeout = -1;
       }
-      const RequestReviewNoTTIExperiment = apexExperiment.RequestReviewNoTTIExperiment;
+      const RequestReviewNoTTIExperiment = tmp(13246).RequestReviewNoTTIExperiment;
       let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
       let tmp8 = c10;
       if (c10) {
@@ -207,7 +209,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(showReviewRequestModal, sleep.MS_PER_MINUTE);
+        timeout = setTimeout(showReviewRequestModal, tmp(4548).MS_PER_MINUTE);
       }
     } else if (-1 !== timeout) {
       const _clearTimeout2 = clearTimeout;
@@ -216,6 +218,6 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/feedback/native/RequestReviewStore.tsx");
+let result = require("set").fileFinishedImporting("modules/feedback/native/RequestReviewStore.tsx");
 
 export default requestReviewStore;

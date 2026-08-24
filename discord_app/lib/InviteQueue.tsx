@@ -2,12 +2,12 @@
 
 // Module 11889 (sum)
 import timestampDefault from "timestamp" /* 3 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import enqueueDefault from "enqueue" /* 5041 */;
 import trackInviteDefault from "trackInvite" /* 7427 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
-const sum = obj132Default.Millis.SECOND + 10;
+const sum = setDefault.Millis.SECOND + 10;
 let c3 = sum;
 let obj = { GROUP_DM: 0, [0]: "GROUP_DM", USER: 1, [1]: "USER", CHANNEL: 2, [2]: "CHANNEL" };
 enqueueDefault;
@@ -23,10 +23,12 @@ class InviteQueue extends tmp4 {
 const prototype = InviteQueue.prototype;
 prototype["_sendInvite"] = function _sendInvite(channel, inviteKey, _location, inviteAnalyticsMetadata, closure_2) {
   importDefault = closure_2;
-  trackInviteDefault.sendInvite(channel.id, inviteKey, _location, inviteAnalyticsMetadata).then((result) => callback(null, true), () => callback(null, false));
+  obj = trackInviteDefault;
+  trackInviteDefault.sendInvite(channel.id, inviteKey, _location, inviteAnalyticsMetadata).then(() => callback(null, true), () => callback(null, false));
 };
 function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, dependencyMap, arg8) {
-  const self = this;
+  let self = this;
+  self = this;
   dependencyMap = location;
   closure_2 = sum;
   const _location = location.location;
@@ -36,8 +38,8 @@ function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, depende
     if (tmp.CHANNEL !== type) {
       if (tmp.USER === type) {
         obj = inviteAnalyticsMetadata(4770);
-        inviteAnalyticsMetadata(4770).ensurePrivateChannel(location.user.id).then((result) => {
-          const channel = sum.getChannel(result);
+        inviteAnalyticsMetadata(4770).ensurePrivateChannel(location.user.id).then((arg0) => {
+          const channel = sum.getChannel(arg0);
           if (null != channel) {
             self._sendInvite(channel, _location.inviteKey, _location, inviteAnalyticsMetadata, sum);
           } else {
@@ -54,7 +56,7 @@ prototype["drain"] = drain;
 drain = new drain(new timestampDefault("InviteQueue"), sum, tmp, prototype, new.target, InviteQueue, drain, dependencyMap, new.target);
 // ThrowIfThisInitialized (0x7c)
 const tmp5 = new timestampDefault("InviteQueue");
-const result = require("obj132").fileFinishedImporting("lib/InviteQueue.tsx");
+const result = require("set").fileFinishedImporting("lib/InviteQueue.tsx");
 
 export default drain;
 export const InvitePropertiesType = obj;

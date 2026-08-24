@@ -5,15 +5,17 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 noopAll;
 ({ jsx: closure_1, jsxs: obj1 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: ThemesDefault.radii.xs, marginTop: 4, height: 12, width: 24 };
+createCacheKey = { topicEllipsis: null, topicEllipsisDot: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: ThemesDefault.radii.xs, marginTop: 4, height: 12, width: 24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.TEXT_MUTED, borderRadius: 2, margin: 1, height: 4, width: 4 };
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("components_native/common/DescriptionEllipsis.tsx");
+obj1 = { backgroundColor: ThemesDefault.colors.TEXT_MUTED, borderRadius: 2, margin: 1, height: 4, width: 4 };
+const result = require("set").fileFinishedImporting("components_native/common/DescriptionEllipsis.tsx");
 
 export default function DescriptionEllipsis(dotStyle) {
   dotStyle = dotStyle.dotStyle;

@@ -1,9 +1,9 @@
 // === Module 6773: HeaderRecord ===
 
 // Module 6773 (HeaderRecord)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");
+const result = set.fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");
 
 export const HeaderRecord = function HeaderRecord(id) {
   const obj = Object.create(new.target.prototype);

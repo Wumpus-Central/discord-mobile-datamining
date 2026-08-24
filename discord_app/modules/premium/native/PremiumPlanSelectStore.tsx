@@ -1,11 +1,11 @@
 // === Module 12974: usePremiumPlanSelectStore ===
 
 // Module 12974 (usePremiumPlanSelectStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 const obj = keys.create(() => ({ isPurchasing: false, purchasingProductId: null }));
-const result = obj132.fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");
 
 export const usePremiumPlanSelectStore = obj;
 export const setIsPurchasing = function setIsPurchasing(arg0) {

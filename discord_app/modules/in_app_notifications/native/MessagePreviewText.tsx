@@ -8,16 +8,15 @@ import preloadDefault from "preload" /* 5449 */;
 import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10029 */;
 import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10049 */;
 import PreviewIcon from "PreviewIcon" /* 10050 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import set from "set" /* 10030 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
-import "createCacheKey";
-import set from "set" /* 10030 */;
 
-require = fn;
+require = arg1;
 function NativeMessagePreviewContent(arg0) {
   ({ message, lineClamp, maxHeight } = arg0);
   const tmp = useTruncatedGradientColorsDefault();
@@ -48,7 +47,7 @@ function EmbedMediaThumbnail(media) {
       num = result;
     }
   }
-  { style: items, children: callback(preloadDefault, obj) };
+  obj = { style: items, children: callback(preloadDefault, obj) };
   items = [tmp.embedMediaContainer, { aspectRatio: num }];
   obj = { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" };
   return callback(View, obj);
@@ -80,12 +79,13 @@ function EmbedCard(embed) {
   let obj = { style: tmp.embedContainer, children: null };
   let tmp7 = null != color;
   if (tmp7) {
+    obj = { style: null };
     const items = [tmp.embedAccentBar, ];
     obj = { backgroundColor: null };
     obj[0] = color;
     items[1] = obj;
     obj[0] = items;
-    tmp7 = callback(View, obj);
+    tmp7 = callback(tmp6, obj);
   }
   const items1 = [tmp7, , ];
   obj1 = { style: tmp.embedTextContainer, children: null };
@@ -116,6 +116,7 @@ function EmbedCard(embed) {
     obj4[2] = num2;
     obj4[3] = rawTitle;
     tmp18Result = callback(Text.Text, obj4);
+    const tmp18 = callback;
   }
   items2[2] = tmp18Result;
   let tmp21 = null != embed.rawDescription;
@@ -126,7 +127,7 @@ function EmbedCard(embed) {
   }
   items2[3] = tmp21;
   obj1[1] = items2;
-  items1[1] = callback(View, obj1);
+  items1[1] = closure_9(View, obj1);
   let tmp25 = null != thumbnail;
   if (tmp25) {
     const obj6 = { media: null };
@@ -135,15 +136,16 @@ function EmbedCard(embed) {
   }
   items1[2] = tmp25;
   obj[1] = items1;
-  return callback(View, obj);
+  return closure_9(View, obj);
 }
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = require("set"));
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let str = "ggsans-MediumItalic, NotoSans-MediumItalic";
 if (PlatformTypes.isIOS()) {
   str = "ggsans-NormalItalic, NotoSans-NormalItalic";
 }
 let closure_10 = createCacheKey.createStyles({ italic: { fontStyle: "italic", fontFamily: str } });
+createCacheKey = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 createCacheKey = { borderRadius: ThemesDefault.radii.sm, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 PlatformTypes = { width: 4, marginTop: -ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_8, alignSelf: "stretch" };
@@ -153,7 +155,7 @@ createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "accessibilityRole" };
 createCacheKey[4] = { width: "100%", height: "100%" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
+let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
 
 export default function MessagePreviewText(message) {
   message = message.message;
@@ -177,7 +179,7 @@ export default function MessagePreviewText(message) {
   const items = [message.embeds];
   const memo = React.useMemo(() => {
     const embeds = message.embeds;
-    return embeds.filter((item, index) => null != item.image || null != item.thumbnail);
+    return embeds.filter((image) => null != image.image || null != image.thumbnail);
   }, items);
   if (memo.length > 0) {
     const first = memo[0];

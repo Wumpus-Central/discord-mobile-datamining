@@ -1,14 +1,13 @@
 // === Module 86: pickScale ===
 
 // Module 86 (pickScale)
-import PixelRatioDefault from "PixelRatio" /* 87 */;
-
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.pickScale = function pickScale(scales, _default) {
   let value = _default;
   if (_default == null) {
-    value = PixelRatioDefault.get();
+    value = module(87).get();
+    const obj = module(87);
   }
   let num = 0;
   if (0 < scales.length) {

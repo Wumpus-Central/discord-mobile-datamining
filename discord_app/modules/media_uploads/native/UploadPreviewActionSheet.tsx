@@ -2,22 +2,24 @@
 
 // Module 10268 (UploadPreviewActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { DraftType } from "handleChanged" /* 4825 */;
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, width: "100%" };
+createCacheKey = { contentContainer: { padding: 16 }, imageWrap: null, imageContainer: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, width: "100%" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { overflow: "hidden", alignSelf: "center", borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
+let obj1 = { overflow: "hidden", alignSelf: "center", borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
 
 export default function UploadPreviewActionSheet(onAdd) {
   onAdd = onAdd.onAdd;
@@ -29,16 +31,22 @@ export default function UploadPreviewActionSheet(onAdd) {
     disableAddDescription = false;
   }
   const upload = onAdd.upload;
+  closure_5 = undefined;
+  let id;
+  let isVideo;
+  let item;
+  let spoiler;
+  let width;
   let callback;
   const tmp = callback();
   closure_5 = tmp;
-  const id = upload.id;
-  const isVideo = upload.isVideo;
+  id = upload.id;
+  isVideo = upload.isVideo;
   ({ isImage, isThumbnail } = upload);
-  const item = upload.item;
-  const spoiler = upload.spoiler;
+  item = upload.item;
+  spoiler = upload.spoiler;
   onEdit(onRemove[8])(item.platform === onAdd(onRemove[9]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
-  const width = onEdit(onRemove[10])().width;
+  width = onEdit(onRemove[10])().width;
   const bottom = onEdit(onRemove[11])().bottom;
   onEdit(onRemove[12])(() => () => {
     if (closure_4 != null) {
@@ -74,7 +82,6 @@ export default function UploadPreviewActionSheet(onAdd) {
     if (onRemove != null) {
       tmp2(id);
     }
-    const obj = onEdit(onRemove[13]);
   }, items1);
   const items3 = [onEdit, item];
   const callback1 = React.useCallback(() => {
@@ -101,17 +108,17 @@ export default function UploadPreviewActionSheet(onAdd) {
     obj[3] = tmp3;
     const obj2 = onEdit(onRemove[14]);
     const launchCropperResult = onEdit(onRemove[14]).launchCropper(obj);
-    onEdit(onRemove[14]).launchCropper(obj).then((result) => {
+    onEdit(onRemove[14]).launchCropper(obj).then((path) => {
       if (closure_1 != null) {
-        tmp(onAdd(onRemove[15]).cropResultToUploadItem(result));
-        const obj = onAdd(onRemove[15]);
+        tmp(closure_1_0(closure_1_2[15]).cropResultToUploadItem(path));
+        const obj = closure_1_0(closure_1_2[15]);
       }
-    }).catch((error) => {
-      if ("E_PICKER_CANCELLED" !== error.code) {
-        callback2(4094);
-        const obj = { key: "CROP_ERROR", IconComponent: null, content: null };
+    }).catch((code) => {
+      if ("E_PICKER_CANCELLED" !== code.code) {
+        let obj = callback2(4094);
+        obj = { key: "CROP_ERROR", IconComponent: null, content: null };
         obj[1] = callback(8074).CircleErrorIcon;
-        obj[2] = error.message;
+        obj[2] = code.message;
         obj.open(obj);
       }
     });
@@ -141,6 +148,7 @@ export default function UploadPreviewActionSheet(onAdd) {
   if (isImage) {
     isImage = null != onEdit;
   }
+  obj = { scrollable: true, startHeight: sum2, children: null };
   obj = { contentContainerStyle: null, children: null };
   const tmp17 = channelId(obj.useState(undefined), 2);
   obj[0] = { padding: onEdit(onRemove[7]).space.PX_16, paddingBottom: bottom };
@@ -156,6 +164,7 @@ export default function UploadPreviewActionSheet(onAdd) {
   const obj5 = { style: items6, children: null };
   items6 = [tmp.imageContainer, { width: size.width, height: size.height }];
   obj1 = { padding: onEdit(onRemove[7]).space.PX_16, paddingBottom: bottom };
+  const obj3 = { variant: "text-md/semibold", children: item.filename };
   if (tmp6Result.isIOS()) {
     if (isVideo) {
       const uri = item.uri;
@@ -167,6 +176,7 @@ export default function UploadPreviewActionSheet(onAdd) {
         obj8[0] = item.uri;
         obj6[1] = obj8;
         let tmp22Result = tmp22(tmp6(tmp4[26]).VideoComponent, obj6);
+        const obj7 = { width: null, height: null };
       }
       const items7 = [tmp22Result, ];
       tmp22Result = null != memo;
@@ -218,8 +228,8 @@ export default function UploadPreviewActionSheet(onAdd) {
         const obj12 = { icon: null, onPress: null, label: null, arrow: true };
         obj12[0] = tmp22(tmp6(tmp4[30]).ImageFileIcon, {});
         obj12[1] = function onPress() {
-          onEdit(onRemove[31]);
-          const obj = { source: item, channelId, id };
+          let obj = onEdit(onRemove[31]);
+          obj = { source: item, channelId, id };
           return obj.open(obj);
         };
         const intl = tmp6(tmp4[32]).intl;

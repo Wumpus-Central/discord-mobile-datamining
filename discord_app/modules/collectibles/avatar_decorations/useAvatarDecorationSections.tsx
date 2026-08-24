@@ -1,14 +1,16 @@
 // === Module 8393: useAvatarDecorationSections ===
 
 // Module 8393 (useAvatarDecorationSections)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
-import map from "map" /* 5324 */;
+import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_5 from "map" /* 5324 */;
 
-const require = fn;
-let obj = { skuId: "Shop" };
-let result = require("obj132").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationSections.tsx");
+const require = arg1;
+let obj = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };
+obj = { skuId: "None" };
+obj = { skuId: "Shop" };
+let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationSections.tsx");
 
 export default function useAvatarDecorationSections() {
   let items = [closure_5];
@@ -26,26 +28,26 @@ export default function useAvatarDecorationSections() {
   return useMemo(() => {
     obj = stateFromStores(first[5]);
     const avatarDecorations = obj.getAvatarDecorations(stateFromStores, first);
-    const reduced = avatarDecorations.reduce((acc, item, index) => {
-      const value = closure_0.get(item.skuId);
+    const reduced = avatarDecorations.reduce((premium_purchase, skuId) => {
+      const value = closure_0.get(skuId.skuId);
       if (null != value) {
-        let result = stateFromStores(first[5]).isPremiumCollectiblesPurchase(value);
-        const obj2 = stateFromStores(first[5]);
+        let result = closure_1_0(closure_1_1[5]).isPremiumCollectiblesPurchase(value);
+        const obj2 = closure_1_0(closure_1_1[5]);
       } else {
-        result = stateFromStores(first[5]).isPremiumCollectiblesProduct(closure_2.get(item.skuId));
-        obj = stateFromStores(first[5]);
+        result = closure_1_0(closure_1_1[5]).isPremiumCollectiblesProduct(closure_2.get(skuId.skuId));
+        obj = closure_1_0(closure_1_1[5]);
       }
       if (result) {
-        const premium_purchase = acc.premium_purchase;
-        premium_purchase.push(item);
+        premium_purchase = premium_purchase.premium_purchase;
+        premium_purchase.push(skuId);
       } else if (null != value) {
-        const purchase = acc.purchase;
-        purchase.push(item);
+        const purchase = premium_purchase.purchase;
+        purchase.push(skuId);
       } else {
-        const preview = acc.preview;
-        preview.push(item);
+        const preview = premium_purchase.preview;
+        preview.push(skuId);
       }
-      return acc;
+      return premium_purchase;
     }, { purchase: [], premium_purchase: [], preview: [] });
     obj = { section: closure_1_6.PURCHASE, items, height: 12, header: null };
     items = [closure_1_7, closure_1_8, ...reduced.purchase];
@@ -60,7 +62,7 @@ export default function useAvatarDecorationSections() {
     const intl3 = stateFromStores(first[6]).intl;
     obj1[3] = intl3.string(stateFromStores(first[6]).t["1vbbee"]);
     items1[2] = obj1;
-    return items1.filter((item, index) => item.items.length > 0);
+    return items1.filter((items) => items.items.length > 0);
   }, items2);
 };
 export const Section = obj;

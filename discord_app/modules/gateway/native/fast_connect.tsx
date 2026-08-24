@@ -1,7 +1,7 @@
 // === Module 15: createFastConnectSocket ===
 
 // Module 15 (createFastConnectSocket)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import serializeDefault from "serialize" /* 9 */;
 import HELLO_KEY from "HELLO_KEY" /* 499 */;
@@ -60,7 +60,7 @@ function createFastConnectSocket() {
       obj[1] = combined;
       obj[3] = [];
       tmp12.onopen = () => {
-        obj = obj(dependencyMap[13]);
+        obj = obj(closure_1_3[13]);
         obj.mark("\u{1F310}", "Fastconnect socket opened");
         closure_1_7.log("connected and identified in " + Date.now() - closure_0 + "ms didIdentify:" + obj.identify);
         obj.open = true;
@@ -73,7 +73,7 @@ function createFastConnectSocket() {
       tmp12.onerror = fn;
       tmp12.onclose = fn;
       tmp12.onmessage = (arg0) => {
-        obj = obj(dependencyMap[13]);
+        obj = obj(closure_1_3[13]);
         obj.mark("\u{1F310}", "Fastconnect socket message");
         const messages = obj.messages;
         messages.push(arg0);
@@ -99,7 +99,7 @@ let obj = new timestampDefault("FAST CONNECT");
 obj.info("initial app state (import time)", AppState.currentState);
 let c8 = null;
 const fastConnectSocket = createFastConnectSocket();
-let result = obj132.fileFinishedImporting("modules/gateway/native/fast_connect.tsx");
+let result = set.fileFinishedImporting("modules/gateway/native/fast_connect.tsx");
 
 export { createFastConnectSocket };
 export const closeFastConnectSocket = function closeFastConnectSocket() {
@@ -177,8 +177,9 @@ export const identifyWebSocket = function identifyWebSocket() {
           client_state[0] = measureResult;
           obj = {};
           isCacheEnabledResultResult = isCacheEnabledResult(prepareIdentifyResult[4]);
+          const tmp10 = currentState;
           const merged = Object.assign(callback3(prepareIdentifyResult[6]).getSuperProperties());
-          obj.client_app_state = currentState.currentState;
+          obj.client_app_state = tmp10.currentState;
           obj.is_fast_connect = true;
           const obj9 = callback3(prepareIdentifyResult[6]);
           obj.gateway_connect_reasons = callback3(prepareIdentifyResult[7]).describeConnectionReasons();

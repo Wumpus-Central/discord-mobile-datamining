@@ -1,11 +1,11 @@
 // === Module 9767: get ActivityIndicator ===
 
 // Module 9767 (get ActivityIndicator)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
-const result = obj132.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
+const result = set.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
 
 export default {
   checkIfOAuthRequest(closure_0) {

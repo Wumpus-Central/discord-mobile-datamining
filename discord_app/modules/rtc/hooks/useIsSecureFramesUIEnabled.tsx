@@ -1,12 +1,12 @@
 // === Module 9726: useIsSecureFramesUIEnabled ===
 
 // Module 9726 (useIsSecureFramesUIEnabled)
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "createRTCConnection" /* 4539 */;
 import { END_TO_END_ENCRYPTION_DISABLED as closure_4 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 
 export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(channelId) {
   channelId = channelId.channelId;
@@ -18,8 +18,8 @@ export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(ch
     let flag = false;
     if (null != channelId) {
       flag = false;
-      if (obj.getChannelId() === channelId) {
-        const channel = obj2.getChannel(channelId);
+      if (obj.getChannelId() === tmp) {
+        const channel = obj2.getChannel(tmp);
         flag = false;
         if (null != channel) {
           flag = false;

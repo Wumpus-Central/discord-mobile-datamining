@@ -2,23 +2,25 @@
 
 // Module 14473 (QuestBottomSheetHeader)
 import ThemesDefault from "Themes" /* 712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { display: "flex", gap: 6, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey = { container: null, containerWithActionSheet: null, title: null, titleWithActionSheet: null, actionSheetButton: null };
+createCacheKey = { display: "flex", gap: 6, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { textAlign: "left", flex: 1 };
 createCacheKey[4] = { flexGrow: 0, flexShrink: 0 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHeader.tsx");
+let obj1 = { alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHeader.tsx");
 
 export default function QuestBottomSheetHeader(arg0) {
   ({ quest, step, withActionSheet } = arg0);
@@ -26,10 +28,11 @@ export default function QuestBottomSheetHeader(arg0) {
     withActionSheet = false;
   }
   let isScreenReaderEnabled;
+  let ref;
   let tmp = hasWatchVideoOnMobileTasks();
   let obj = isScreenReaderEnabled(14444);
   isScreenReaderEnabled = quest;
-  let ref = step;
+  ref = step;
   dependencyMap = undefined;
   let gameTitle;
   let React;
@@ -60,8 +63,8 @@ export default function QuestBottomSheetHeader(arg0) {
   targetMinutes = questTaskDetails.targetMinutes;
   const items = [quest];
   memo = React.useMemo(() => {
-    isScreenReaderEnabled(7476);
-    const obj = { quest: isScreenReaderEnabled };
+    let obj = isScreenReaderEnabled(7476);
+    obj = { quest: isScreenReaderEnabled };
     return obj.hasStreamOnDesktopTask(obj);
   }, items);
   const tmp2Result2 = isScreenReaderEnabled(10684);
@@ -144,8 +147,8 @@ export default function QuestBottomSheetHeader(arg0) {
       tmp = null != ref.current;
     }
     if (tmp) {
-      isScreenReaderEnabled(4731);
-      const obj = { ref: null, delay: 100 };
+      let obj = isScreenReaderEnabled(4731);
+      obj = { ref: null, delay: 100 };
       obj[0] = ref;
       const result = obj.setAccessibilityFocus(obj);
     }
@@ -170,6 +173,7 @@ export default function QuestBottomSheetHeader(arg0) {
     obj[4] = items5;
     obj[5] = memo1;
     tmp23Result = targetMinutes(tmp2(4734).Text, obj);
+    const tmp23 = targetMinutes;
   }
   const items6 = [tmp23Result, ];
   if (withActionSheet) {

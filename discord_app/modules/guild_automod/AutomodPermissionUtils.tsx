@@ -1,13 +1,13 @@
 // === Module 4027: GuildMemberFlags ===
 
 // Module 4027 (GuildMemberFlags)
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 
-const require = fn;
+const require = arg1;
 let items = [, , ];
 ({ AUTOMOD_QUARANTINED_BIO: arr[0], AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1], AUTOMOD_QUARANTINED_SERVER_TAG: arr[2] } = GuildMemberFlags);
-const result = require("obj132").fileFinishedImporting("modules/guild_automod/AutomodPermissionUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodPermissionUtils.tsx");
 
 export const AUTOMOD_QUARANTINED_PROFILE_FLAGS = items;
 export const getAutomodQuarantinedProfileFlags = function getAutomodQuarantinedProfileFlags(flags) {
@@ -17,15 +17,15 @@ export const getAutomodQuarantinedProfileFlags = function getAutomodQuarantinedP
     let set = new Set();
   } else {
     const _Set = Set;
-    set = new Set(items.reduce((acc, item, index) => {
+    set = new Set(items.reduce((arr) => {
       let num = flags;
       if (flags == null) {
         num = 0;
       }
-      if (obj.hasFlag(num, item)) {
-        acc.push(item);
+      if (obj.hasFlag(num, arg1)) {
+        arr.push(arg1);
       }
-      return acc;
+      return arr;
     }, []));
   }
   return set;
@@ -41,15 +41,15 @@ export const getAutomodQuarantinedGuildMemberFlags = function getAutomodQuaranti
       set = new Set();
     } else {
       const _Set = Set;
-      set = new Set(items.reduce((acc, item, index) => {
+      set = new Set(items.reduce((arr) => {
         let num = flags;
         if (flags == null) {
           num = 0;
         }
-        if (obj.hasFlag(num, item)) {
-          acc.push(item);
+        if (obj.hasFlag(num, arg1)) {
+          arr.push(arg1);
         }
-        return acc;
+        return arr;
       }, []));
     }
   }
@@ -57,13 +57,13 @@ export const getAutomodQuarantinedGuildMemberFlags = function getAutomodQuaranti
 };
 export const getAutomodReason = function getAutomodReason(automodQuarantinedGuildMemberFlags) {
   if (automodQuarantinedGuildMemberFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
-    let prop = GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME;
-  } else if (automodQuarantinedGuildMemberFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_BIO)) {
-    prop = GuildMemberFlags.AUTOMOD_QUARANTINED_BIO;
+    let prop = tmp.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME;
+  } else if (automodQuarantinedGuildMemberFlags.has(tmp.AUTOMOD_QUARANTINED_BIO)) {
+    prop = tmp.AUTOMOD_QUARANTINED_BIO;
   } else {
     prop = null;
-    if (automodQuarantinedGuildMemberFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG)) {
-      prop = GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG;
+    if (automodQuarantinedGuildMemberFlags.has(tmp.AUTOMOD_QUARANTINED_SERVER_TAG)) {
+      prop = tmp.AUTOMOD_QUARANTINED_SERVER_TAG;
     }
   }
   return prop;
@@ -74,12 +74,12 @@ export const hasAutomodQuarantinedProfile = function hasAutomodQuarantinedProfil
   if (tmp) {
     let someResult = null != member.flags;
     if (someResult) {
-      someResult = items.some((item, index) => {
+      someResult = items.some((arg0) => {
         let num = selfMember.flags;
         if (num == null) {
           num = 0;
         }
-        return selfMember(closure_1_1[2]).hasFlag(num, item);
+        return selfMember(closure_1_1[2]).hasFlag(num, arg0);
       });
     }
     tmp = someResult;
@@ -98,12 +98,12 @@ export const useCurrentUserAutomodQuaratinedProfile = function useCurrentUserAut
       if (tmp5) {
         let someResult = null != selfMember.flags;
         if (someResult) {
-          someResult = items.some((item, index) => {
+          someResult = closure_1_4.some((arg0) => {
             let num = selfMember.flags;
             if (num == null) {
               num = 0;
             }
-            return selfMember(closure_1_1[2]).hasFlag(num, item);
+            return selfMember(closure_1_1[2]).hasFlag(num, arg0);
           });
         }
         tmp5 = someResult;

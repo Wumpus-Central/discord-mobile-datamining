@@ -1,15 +1,15 @@
 // === Module 13608: __exportStarResult24 ===
 
 // Module 13608 (__exportStarResult24)
-import digitsToString2 from "digitsToString" /* 13581 */;
+import digitsToString from "digitsToString" /* 13581 */;
 import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
 import __exportStarResult13 from "__exportStarResult13" /* 13596 */;
 import __exportStarResult21 from "__exportStarResult21" /* 13598 */;
-import formatToParts2 from "formatToParts" /* 13603 */;
+import formatToParts from "formatToParts" /* 13603 */;
 import e from "e" /* 1281 */;
 
-const digitsToString = e.__importDefault(digitsToString2);
-const formatToParts = e.__importDefault(formatToParts2);
+let closure_2 = e.__importDefault(digitsToString);
+let closure_3 = e.__importDefault(formatToParts);
 
 export const PartitionNumberPattern = function PartitionNumberPattern(internalSlots, isNaN) {
   ({ pl, dataLocaleData } = internalSlots);
@@ -29,10 +29,11 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
         timesResult = isNaN.times(100);
       }
       [tmp7, num4] = __exportStarResult13.ComputeExponent(internalSlots, timesResult);
-      timesResult1 = timesResult.times(digitsToString.default.pow(10, -tmp7));
+      timesResult1 = timesResult.times(mod.default.pow(10, -tmp7));
       num3 = tmp7;
       const ComputeExponentResult = __exportStarResult13.ComputeExponent(internalSlots, timesResult);
-      const _default = digitsToString.default;
+      const _default = mod.default;
+      const tmp3 = require;
     }
     const result = __exportStarResult21.FormatNumericToString(internalSlots, timesResult1);
     ({ formattedString, roundedNumber } = result);
@@ -83,5 +84,5 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
       num7 = num8;
     }
   }
-  return formatToParts.default({ roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 }, internalSlots.dataLocaleData, pl, internalSlots);
+  return closure_3.default({ roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 }, internalSlots.dataLocaleData, pl, internalSlots);
 };

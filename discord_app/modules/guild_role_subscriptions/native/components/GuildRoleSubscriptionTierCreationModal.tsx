@@ -2,21 +2,22 @@
 
 // Module 16961 (GuildRoleSubscriptionTierCreationModal)
 import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import usePriceTiers from "usePriceTiers" /* 16950 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import closure_7 from "usePriceTiers" /* 16950 */;
 import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: c9 } = MAX_SUBSCRIPTION_TIERS);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierCreationModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierCreationModal.tsx");
 
 export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   guildId = guildId.guildId;
   const groupListingId = guildId.groupListingId;
   ({ onClose: importAll, onAfterTierCreation: dependencyMap } = guildId);
+  let first;
   let callback;
   let React;
   error = undefined;
@@ -96,7 +97,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     return applyArgumentsResult;
   }
   let tmp = callback(React.useState(guildId.editStateId), 2);
-  const first = tmp[0];
+  first = tmp[0];
   callback = tmp[1];
   let obj = getRoleEmojisAll;
   const createOrUpdateListingFromEditState = obj.useCreateOrUpdateListingFromEditState();
@@ -106,11 +107,11 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     if (null != error) {
       let anyErrorMessage = error.getAnyErrorMessage();
       if (anyErrorMessage == null) {
-        const intl = guildId(dependencyMap[8]).intl;
-        anyErrorMessage = intl.string(guildId(dependencyMap[8]).t.R0RpRX);
+        const intl = tmp(tmp2[8]).intl;
+        anyErrorMessage = intl.string(tmp(tmp2[8]).t.R0RpRX);
       }
-      guildId(dependencyMap[7]).presentError(anyErrorMessage);
-      const obj2 = guildId(dependencyMap[7]);
+      guildId(closure_1_3[7]).presentError(anyErrorMessage);
+      const obj2 = guildId(closure_1_3[7]);
     }
   }, items);
   const memo = React.useMemo(() => {
@@ -118,6 +119,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     ({ DETAILS: arr[0], CHANNEL_BENEFITS: arr[1], INTANGIBLE_BENEFITS: arr[2], DESIGN: arr[3], CONFIRMATION: arr[4] } = _handleCreate);
     return items;
   }, []);
+  obj = { guildId, editStateId: first, groupListingId, children: null };
   obj = { guildId, children: jsx(groupListingId(16963), obj1) };
   obj[3] = jsx(guildId(16945).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: jsx(groupListingId(16963), obj1) });
   return jsx(guildId(16962).EditStateContextProvider, { guildId, children: jsx(groupListingId(16963), obj1) });

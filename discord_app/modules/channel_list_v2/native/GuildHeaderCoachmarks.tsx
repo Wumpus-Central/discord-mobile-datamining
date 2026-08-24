@@ -1,27 +1,29 @@
 // === Module 15417: GuildHeaderCoachmarks ===
 
 // Module 15417 (GuildHeaderCoachmarks)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "ME" /* 676 */;
 import { DismissibleContentGroupName as closure_7 } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/GuildHeaderCoachmarks.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/GuildHeaderCoachmarks.tsx");
 
 export default function GuildHeaderCoachmarks(arg0) {
   ({ targetRef, guild } = arg0);
+  let stateFromStores;
   let mobileBoostProgressBarEnabled;
+  let callback;
   let obj = guild(mobileBoostProgressBarEnabled[6]);
   let items = [closure_5];
   const items1 = [guild];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.can(Permissions.MANAGE_GUILD, guild), items1);
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_5.can(closure_1_6.MANAGE_GUILD, guild), items1);
   obj1 = guild(mobileBoostProgressBarEnabled[7]);
   mobileBoostProgressBarEnabled = obj1.useMobileBoostProgressBarEnabled("GuildHeaderCoachmarks");
   const tmp6 = stateFromStores(mobileBoostProgressBarEnabled[8])(guild.id);
-  const callback = tmp6;
+  callback = tmp6;
   stateFromStores(mobileBoostProgressBarEnabled[9])(guild.id);
   const tmp8 = stateFromStores(mobileBoostProgressBarEnabled[10])(guild.id);
   const tmp10 = stateFromStores(mobileBoostProgressBarEnabled[12])(guild.id);
@@ -46,6 +48,7 @@ export default function GuildHeaderCoachmarks(arg0) {
   }, items2);
   const tmp11 = stateFromStores(mobileBoostProgressBarEnabled[13])();
   const obj3 = guild(mobileBoostProgressBarEnabled[15]);
+  const tmp13 = constants;
   const tmp14 = callback;
   [tmp16, tmp17] = callback(guild(mobileBoostProgressBarEnabled[15]).useSelectedDismissibleContent(memo, constants.GUILD_HEADER_TOOLTIPS), 2);
   const tmp15 = callback(guild(mobileBoostProgressBarEnabled[15]).useSelectedDismissibleContent(memo, constants.GUILD_HEADER_TOOLTIPS), 2);
@@ -59,7 +62,7 @@ export default function GuildHeaderCoachmarks(arg0) {
   if (tmp18) {
     tmp18 = tmp11;
   }
-  const tmp14Result = tmp14(guild(mobileBoostProgressBarEnabled[16]).useBoostToUnlockCoachmarkDCF(tmp18, guild.id, constants.GUILD_HEADER_TOOLTIPS), 2);
+  const tmp14Result = tmp14(guild(mobileBoostProgressBarEnabled[16]).useBoostToUnlockCoachmarkDCF(tmp18, guild.id, tmp13.GUILD_HEADER_TOOLTIPS), 2);
   if (first == null) {
     first = tmp14Result[0];
   }
@@ -69,13 +72,13 @@ export default function GuildHeaderCoachmarks(arg0) {
     obj[1] = guild;
     obj[2] = tmp17;
     return jsx(tmp5(tmp2[17]), { targetRef: null, guild: null, markAsDismissed: null });
-  } else if (guild(tmp2[14]).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
+  } else if (tmp(tmp2[14]).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
     obj = { guildId: null, targetRef: null, markAsDismissed: null };
     obj[0] = guild.id;
     obj[1] = targetRef;
     obj[2] = tmp17;
     return jsx(tmp5(tmp2[18]), { guildId: null, targetRef: null, markAsDismissed: null });
-  } else if (guild(tmp2[14]).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
+  } else if (tmp(tmp2[14]).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
     let tmp21 = null;
     if (null != tmp10) {
       obj1 = { guildId: null, powerup: null, targetRef: null, markAsDismissed: null };

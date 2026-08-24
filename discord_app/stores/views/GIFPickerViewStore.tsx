@@ -1,7 +1,7 @@
 // === Module 10194: getFormatFromUrl ===
 
 // Module 10194 (getFormatFromUrl)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -84,7 +84,7 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
       query = query.query;
     }
     const items = query.items;
-    closure_8 = items.map((item, index) => ({ width: item.width, height: item.height, src: item.src, gifSrc: item.gif_src, url: item.url, id: item.id, format: closure_4 }));
+    closure_8 = items.map((width) => ({ width: width.width, height: width.height, src: width.src, gifSrc: width.gif_src, url: width.url, id: width.id, format: closure_4 }));
   },
   GIF_PICKER_QUERY_FAILURE: function handleQueryFailure(query) {
     query = query.query;
@@ -110,12 +110,12 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
     }
     const items2 = [
       ...items1,
-      ...trendingCategories.map((item, index) => {
+      ...trendingCategories.map((src) => {
         const obj = {};
-        const merged = Object.assign(item);
-        obj.src = item.src;
+        const merged = Object.assign(src);
+        obj.src = src.src;
         obj.type = constants.TRENDING_CATEGORY;
-        obj.format = callback(item.src);
+        obj.format = callback(src.src);
         return obj;
       })
     ];
@@ -127,6 +127,6 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
     items = items.items;
   }
 });
-const result = obj132.fileFinishedImporting("stores/views/GIFPickerViewStore.tsx");
+const result = set.fileFinishedImporting("stores/views/GIFPickerViewStore.tsx");
 
 export default gIFPickerViewStore;

@@ -1,9 +1,9 @@
 // === Module 10731: getEmbeddedActivityKey ===
 
 // Module 10731 (getEmbeddedActivityKey)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");
 
 export default function getEmbeddedActivityKey(location) {
   return "" + location.location.id + ":" + location.applicationId + ":" + location.launchId;

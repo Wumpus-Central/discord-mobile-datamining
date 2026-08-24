@@ -1,7 +1,7 @@
 // === Module 13151: Comparator ===
 
 // Module 13151 (Comparator)
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const Comparator = require;
@@ -46,10 +46,10 @@ let obj = {
     const t = Comparator(13127).t;
     if (this.options.loose) {
       let tmp3 = safeRe[t.COMPARATORLOOSE];
-      let tmp5 = Comparator;
+      let tmp5 = tmp;
     } else {
       tmp3 = safeRe[t.COMPARATOR];
-      tmp5 = Comparator;
+      tmp5 = tmp;
     }
     const match = str.match(tmp3);
     if (match) {
@@ -93,12 +93,12 @@ const items = [
         if (tmp !== tmp5) {
           if (typeof tmp === "string") {
             try {
-              tmp = new Comparator(13123)(tmp, self.options);
+              tmp = new tmp2(13123)(tmp, self.options);
             } catch (err) {
               return false;
             }
           }
-          return Comparator(13149)(tmp, self.operator, self.semver, self.options);
+          return tmp2(13149)(tmp, self.operator, self.semver, self.options);
         }
       }
       return true;
@@ -129,6 +129,7 @@ const items = [
           tmp8 = !includePrerelease2;
           if (includePrerelease2) {
             tmp8 = "<0.0.0-0" !== self.value && "<0.0.0-0" !== value.value;
+            const tmp7 = "<0.0.0-0" !== self.value && "<0.0.0-0" !== value.value;
           }
           if (tmp8) {
             const includePrerelease = tmp45.includePrerelease;

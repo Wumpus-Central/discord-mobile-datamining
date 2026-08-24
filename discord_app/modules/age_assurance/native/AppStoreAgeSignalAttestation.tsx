@@ -1,9 +1,9 @@
 // === Module 16672: buildRequestHashPayload ===
 
 // Module 16672 (buildRequestHashPayload)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = fn;
+const require = arg1;
 function buildRequestHashPayload(arg0, platform) {
   const items = [arg0, platform.platform, , , ];
   let str = "";
@@ -55,6 +55,7 @@ function _requestPlayIntegrityToken() {
         tmp9 = v0;
       }
       yield "HermesInternal";
+      c3 = 0;
       yield "HermesInternal";
       c3 = 0;
       return arg1;
@@ -109,10 +110,12 @@ function _getAgeSignalIntegrityToken() {
                 c3 = 1;
                 v0 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = callback(closure_1_2[3]).requestAgeSignalChallenge();
+                obj1[0] = tmp21(tmp22[3]).requestAgeSignalChallenge();
                 return obj1;
               }
               obj9 = callback(closure_1_2[2]);
+              tmp21 = callback;
+              tmp22 = closure_1_2;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -174,7 +177,7 @@ function _getAgeSignalIntegrityToken() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalAttestation.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalAttestation.tsx");
 
 export { buildRequestHashPayload };
 export const getAgeSignalIntegrityToken = function getAgeSignalIntegrityToken(closure_0) {

@@ -6,7 +6,10 @@ import addLogBoxLog from "addLogBoxLog" /* 1658 */;
 let c0 = require;
 let RNScreensTurboModule = global.RNScreensTurboModule;
 if (!RNScreensTurboModule) {
-  const obj = { topScreenId: -1, belowTopScreenId: -1, canStartTransition: false };
+  let obj = { code: "function pnpm_RNScreensTurboModuleTs1(){const{logger,defaultReturnValue}=this.__closure;logger.warn('RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.');return defaultReturnValue;}" };
+  obj = { startTransition: null, updateTransition: null, finishTransition: null };
+  obj = { topScreenId: -1, belowTopScreenId: -1, canStartTransition: false };
+  c0 = obj;
   const fn = function t() {
     const logger = _undefined(1658).logger;
     logger.warn("RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.");
@@ -19,6 +22,7 @@ if (!RNScreensTurboModule) {
   fn.__workletHash = 6450550757460;
   fn.__initData = obj;
   obj[0] = fn;
+  c0 = undefined;
   const fn2 = function t() {
     const logger = _undefined(1658).logger;
     logger.warn("RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.");

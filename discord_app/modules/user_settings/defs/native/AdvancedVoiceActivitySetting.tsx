@@ -4,11 +4,11 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import "createToggle";
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.BbESsg);
@@ -20,7 +20,8 @@ let createToggle = {
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
     mode = mode.getMode();
-    const obj = { vadUseKrisp };
+    let obj = trackDeviceChangedDefault;
+    obj = { vadUseKrisp };
     obj.setMode(mode, obj);
   },
   useDescription: function useAdvancedVoiceActivitySettingDescription() {
@@ -33,6 +34,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx");
 
 export default createToggle;

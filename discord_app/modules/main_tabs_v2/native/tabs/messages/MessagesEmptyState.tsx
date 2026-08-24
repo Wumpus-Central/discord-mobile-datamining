@@ -6,19 +6,17 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useNavigation from "useNavigation" /* 1500 */;
 import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
-import getIsScreenLandscape from "getIsScreenLandscape" /* 8944 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14452 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
 
 export default function MessagesEmptyState() {
   const tmp = callback2();
@@ -43,9 +41,9 @@ export default function MessagesEmptyState() {
     width = tmp5;
   }
   const result = 0.9 * width;
-  let tmp7Result = getIsScreenLandscape;
+  let tmp7Result = tmp7(8944);
   const isScreenLandscape = tmp7Result.useIsScreenLandscape();
-  tmp7Result = useYouBarTotalHeight;
+  tmp7Result = tmp7(14452);
   const items1 = [tmp.scrollViewContentContainer, ];
   let tmp18;
   if (isScreenLandscape) {
@@ -64,30 +62,32 @@ export default function MessagesEmptyState() {
     num = result / 622 * 350;
   }
   const tmp10 = navigation(9177);
+  const tmp17 = closure_7;
+  const tmp21 = closure_6;
   obj5[2] = { height: num, width: Math.min(result, 622) };
-  obj4[1] = callback(closure_6, obj5);
-  const items2 = [callback(closure_5, obj4), ];
+  obj4[1] = closure_8(tmp21, obj5);
+  const items2 = [closure_8(closure_5, obj4), ];
   const obj7 = { style: tmp.textWrapper, children: null };
   const obj8 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
-  const intl = getSystemLocale.intl;
+  const intl = tmp7(1236).intl;
   obj8[3] = intl.string(getSystemLocale.t["8JZof8"]);
-  const items3 = [callback(Text.Heading, obj8), ];
+  const items3 = [closure_8(Text.Heading, obj8), ];
   const obj9 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp7(1236).intl;
   obj9[3] = intl2.string(getSystemLocale.t["qm+H7x"]);
-  items3[1] = callback(Text.Text, obj9);
+  items3[1] = closure_8(Text.Text, obj9);
   obj7[1] = items3;
-  items2[1] = callback2(closure_5, obj7);
+  items2[1] = closure_9(closure_5, obj7);
   obj3[1] = items2;
-  const items4 = [callback2(closure_5, obj3), ];
+  const items4 = [closure_9(closure_5, obj3), ];
   const obj10 = { style: tmp.buttonWrapper, children: null };
   const obj11 = { text: null, onPress: null, size: "lg" };
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp7(1236).intl;
   obj11[0] = intl3.string(getSystemLocale.t.zIJnA6);
   obj11[1] = callback1;
-  obj10[1] = callback(Button.Button, obj11);
-  items4[1] = callback(closure_5, obj10);
+  obj10[1] = closure_8(Button.Button, obj11);
+  items4[1] = closure_8(closure_5, obj10);
   obj2[2] = items4;
-  obj1[3] = callback2(closure_5, obj2);
-  return callback(closure_7, obj1);
+  obj1[3] = closure_9(closure_5, obj2);
+  return closure_8(tmp17, obj1);
 };

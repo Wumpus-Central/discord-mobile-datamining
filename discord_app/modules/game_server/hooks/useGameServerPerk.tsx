@@ -1,13 +1,13 @@
 // === Module 11745: useGameServerPerk ===
 
 // Module 11745 (useGameServerPerk)
-import noop from "noop" /* 19 */;
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated" /* 4282 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleGameServerInstanceCreated" /* 4282 */;
 import { GAME_SERVER_POWERUP_SKU_ID as closure_5 } from "str11" /* 4263 */;
 import { GuildPowerupType } from "BoostedGuildTiers" /* 4262 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
 export default function useGameServerPerk(guildId) {
   const _require = guildId;
@@ -35,7 +35,7 @@ export default function useGameServerPerk(guildId) {
         obj[2] = intl2.format(gameServerEnabled(stateFromStores[8])["+UqyGU"], obj);
         obj[3] = tmp2;
         obj[4] = [];
-        obj[5] = GuildPowerupType.PERK;
+        obj[5] = closure_1_6.PERK;
         obj[6] = gameServerEnabled(stateFromStores[9]);
         obj[7] = gameServerEnabled(stateFromStores[9]);
         tmp = obj;

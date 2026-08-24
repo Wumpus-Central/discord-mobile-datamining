@@ -1,7 +1,7 @@
 // === Module 9201: useSlayerStorefrontDevOverrideStore ===
 
 // Module 9201 (useSlayerStorefrontDevOverrideStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 const tmp2 = keys.create()((arg0) => {
@@ -21,7 +21,7 @@ const tmp2 = keys.create()((arg0) => {
       if (null != str) {
         recommendationApplicationIds = str.split(",");
       }
-      return callback({ recommendationApplicationIds });
+      return closure_0({ recommendationApplicationIds });
     },
     overrideNitroEligibilityForSocialLayerStorefront: false,
     setOverrideNitroEligibilityForSocialLayerStorefront(overrideNitroEligibilityForSocialLayerStorefront) {
@@ -33,6 +33,6 @@ const tmp2 = keys.create()((arg0) => {
     }
   };
 });
-const result = obj132.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
+const result = set.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
 
 export const useSlayerStorefrontDevOverrideStore = tmp2;

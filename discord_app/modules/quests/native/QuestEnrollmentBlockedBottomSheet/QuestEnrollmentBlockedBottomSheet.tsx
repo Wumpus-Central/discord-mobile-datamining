@@ -8,11 +8,11 @@ import Text from "Text" /* 4734 */;
 import Background from "Background" /* 6950 */;
 import useCountdownDefault from "useCountdown" /* 7410 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import initializeState from "initializeState" /* 7453 */;
+import closure_4 from "initializeState" /* 7453 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
   questEnrollmentBlockedUntil = questEnrollmentBlockedUntil.questEnrollmentBlockedUntil;
   const tmp = callback();
@@ -23,6 +23,7 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
   }
   const tmp3Result = useCountdownDefault(date);
   ({ minutes, seconds } = tmp3Result);
+  const tmp3 = useCountdownDefault;
   const padStartResult = String(tmp3Result.hours).padStart(2, "0");
   const StringResult = String(tmp3Result.hours);
   const padStartResult1 = String(minutes).padStart(2, "0");
@@ -30,7 +31,8 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
   const padStartResult2 = String(seconds).padStart(2, "0");
   let tmp12 = null;
   if (null != questEnrollmentBlockedUntil) {
-    const obj = { style: null, children: null };
+    let obj = { header: null, footer: null, startExpanded: true, children: null };
+    obj = { style: null, children: null };
     obj[0] = tmp.heading;
     obj1 = { variant: "heading-xl/bold", children: null };
     const intl = getSystemLocale.intl;
@@ -52,11 +54,13 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
   return tmp12;
 }
 noopAll;
-const createCacheKey = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
+createCacheKey = { heading: null, container: null };
+createCacheKey = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestEnrollmentBlockedBottomSheet/QuestEnrollmentBlockedBottomSheet.tsx");
+let obj1 = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestEnrollmentBlockedBottomSheet/QuestEnrollmentBlockedBottomSheet.tsx");
 
 export default function QuestEnrollmentBlockedBottomSheetConnected(questContentPosition) {
   ({ questId: require, questEnrollmentBlockedUntil: importDefault, sourceQuestContent } = questContentPosition);
@@ -67,13 +71,13 @@ export default function QuestEnrollmentBlockedBottomSheetConnected(questContentP
   if (null != stateFromStores) {
     obj = { overrideVisibility: true, questOrQuests: null, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null };
     obj[1] = stateFromStores;
-    obj[2] = require(sourceQuestContent[8]).QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET;
+    obj[2] = tmp(tmp2[8]).QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET;
     obj[3] = questContentPosition.questContentPosition;
     obj[4] = sourceQuestContent;
     obj[5] = function children() {
-      return <QuestEnrollmentBlockedBottomSheet questId={closure_0} questEnrollmentBlockedUntil={closure_1} sourceQuestContent={sourceQuestContent} />;
+      return closure_1_5(closure_1_7, { questId: closure_0, questEnrollmentBlockedUntil: closure_1, sourceQuestContent });
     };
-    tmp4 = jsx(require(sourceQuestContent[7]).QuestContentImpressionTrackerNative, { overrideVisibility: true, questOrQuests: null, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null });
+    tmp4 = jsx(tmp(tmp2[7]).QuestContentImpressionTrackerNative, { overrideVisibility: true, questOrQuests: null, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null });
   }
   return tmp4;
 };

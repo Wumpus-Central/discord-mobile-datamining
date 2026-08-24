@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import Version from "Version" /* 4290 */;
 
-require = fn;
+require = arg1;
 let obj = { NotResolved: 0, [0]: "NotResolved", Resolving: 1, [1]: "Resolving", Resolved: 2, [2]: "Resolved", Invalid: 3, [3]: "Invalid" };
 const NotResolved = obj.NotResolved;
 let c5 = null;
@@ -19,9 +19,9 @@ prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
     Resolving = obj.Resolving;
     obj = Version;
     const buildOverride = obj.getBuildOverride();
-    buildOverride.then((result) => {
-      callback(table[1]);
-      obj = { type: "CURRENT_BUILD_OVERRIDE_RESOLVED", overrides: result };
+    buildOverride.then((overrides) => {
+      obj = callback(table[1]);
+      obj = { type: "CURRENT_BUILD_OVERRIDE_RESOLVED", overrides };
       obj.dispatch(obj);
     });
   }
@@ -34,6 +34,7 @@ prototype["getBuildOverride"] = function getBuildOverride(target) {
     obj = _require(4290);
     const validateURLResult = obj.validateURL(target);
     if (null != validateURLResult) {
+      obj = {};
       const merged = Object.assign(obj1);
       obj = { url: null, validatedURL: null, payload: null, state: null };
       obj[0] = target;
@@ -44,8 +45,9 @@ prototype["getBuildOverride"] = function getBuildOverride(target) {
       obj[target] = obj;
       obj1 = obj;
       const buildOverrideMeta = tmp(4290).getBuildOverrideMeta(validateURLResult.url);
-      buildOverrideMeta.then((result) => {
-        obj = { type: "BUILD_OVERRIDE_RESOLVED", url: closure_0, override: result };
+      buildOverrideMeta.then((override) => {
+        obj = closure_1_1(closure_1_2[1]);
+        obj = { type: "BUILD_OVERRIDE_RESOLVED", url: closure_0, override };
         obj.dispatch(obj);
       });
       const tmpResult = tmp(4290);
@@ -87,7 +89,7 @@ obj = {
   }
 };
 const buildOverrideStore = new BuildOverrideStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/build_overrides/BuildOverrideStore.tsx");
+const result = require("set").fileFinishedImporting("modules/build_overrides/BuildOverrideStore.tsx");
 
 export default buildOverrideStore;
 export const State = obj;

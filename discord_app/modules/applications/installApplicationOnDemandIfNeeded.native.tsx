@@ -1,12 +1,12 @@
 // === Module 8771: _installApplicationOnDemandIfNeeded ===
 
 // Module 8771 (_installApplicationOnDemandIfNeeded)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import createExecutable from "createExecutable" /* 4479 */;
-import addApplication from "addApplication" /* 4478 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "createExecutable" /* 4479 */;
+import closure_4 from "addApplication" /* 4478 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _installApplicationOnDemandIfNeeded() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -133,13 +133,14 @@ function _installApplicationOnDemandIfNeeded() {
                 callback(location) {
                   if (null != location.location) {
                     if (null != closure_1_3) {
-                      callback(table[7]);
-                      const obj = { application_id: null, location: null, section_name: null, source: null };
+                      let obj = callback(table[7]);
+                      obj = { application_id: null, location: null, section_name: null, source: null };
                       obj[0] = callback;
-                      ({ location: obj2[1], sectionName: obj2[2], entrypoint: obj2[3] } = closure_1_3);
+                      ({ location: obj2[1], sectionName: obj2[2], entrypoint: obj2[3] } = tmp3);
                       obj.trackWithMetadata(obj.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj);
                     }
                     callback({ isAuthorized: true });
+                    tmp3 = closure_1_3;
                   } else {
                     callback({ isAuthorized: false });
                   }
@@ -170,7 +171,7 @@ function _installApplicationOnDemandIfNeeded() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
 
 export const installApplicationOnDemandIfNeeded = function installApplicationOnDemandIfNeeded(arg0) {
   const self = this;

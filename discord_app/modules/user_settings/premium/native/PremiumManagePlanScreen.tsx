@@ -6,7 +6,7 @@ import ManagePlanHeaderDefault from "ManagePlanHeader" /* 12928 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlanScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlanScreen.tsx");
 
 export default function PremiumPlanSelectSettingScreen() {
   return jsx(ManagePlanHeaderDefault, {});

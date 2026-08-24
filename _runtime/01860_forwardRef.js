@@ -4,7 +4,7 @@
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import noop from "noop" /* 19 */;
-import noop2 from "noop" /* 19 */;
+import closure_5 from "noop" /* 19 */;
 
 ({ useCallback: c3, useMemo: c4, forwardRef } = noop);
 const View = get_ActivityIndicator.View;
@@ -32,6 +32,8 @@ export default forwardRef((behavior) => {
   }
   ({ style, onLayout } = behavior);
   let merged = Object.assign(behavior, Object.create(null));
+  let sharedValue;
+  let ref;
   let derivedValue;
   let translate;
   let padding;
@@ -43,8 +45,8 @@ export default forwardRef((behavior) => {
   let animatedStyle;
   let contentContainerStyle;
   let obj = behavior(num[3]);
-  const sharedValue = obj.useSharedValue(null);
-  const ref = sharedValue.useRef(null);
+  sharedValue = obj.useSharedValue(null);
+  ref = sharedValue.useRef(null);
   obj1 = behavior(num[3]);
   class K {
     constructor() {
@@ -127,13 +129,13 @@ export default forwardRef((behavior) => {
       if (null !== findNodeHandleResult) {
         const KeyboardControllerNative = behavior(num[7]).KeyboardControllerNative;
         const viewPositionInWindowResult = KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult);
-        return KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult).then((result) => {
-          behavior(num[3]);
-          const obj = {};
+        return KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult).then((arg0) => {
+          let obj = behavior(num[3]);
+          obj = {};
           const merged = Object.assign(layout);
-          ({ x: obj2.x, y: obj2.y } = result);
+          ({ x: obj2.x, y: obj2.y } = arg0);
           obj.runOnUI(closure_1_14)(obj);
-        }).catch((error) => {
+        }).catch(() => {
           behavior(num[3]).runOnUI(closure_1_14)(layout);
         });
       }

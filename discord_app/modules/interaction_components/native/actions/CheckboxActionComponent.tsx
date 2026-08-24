@@ -4,7 +4,7 @@
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo((type) => {
   type = type.type;
@@ -25,7 +25,7 @@ const memoResult = importAllResult.memo((type) => {
   const memo = importAllResult.useMemo(() => {
     type = undefined;
     if (state != null) {
-      type = state.type;
+      type = iter.type;
     }
     return type === type && state.value;
   }, items);
@@ -60,6 +60,6 @@ const memoResult = importAllResult.memo((type) => {
     }
   });
 });
-const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
 
 export default memoResult;

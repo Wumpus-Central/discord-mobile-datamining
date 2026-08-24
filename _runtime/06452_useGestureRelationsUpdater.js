@@ -22,9 +22,9 @@ export const useGestureRelationsUpdater = function useGestureRelationsUpdater(ge
     if (closure_1) {
       const _requestAnimationFrame = requestAnimationFrame;
       closure_0 = requestAnimationFrame(() => {
-        const item = closure_1.forEach((item, index) => {
+        const item = closure_1.forEach((arg0, arg1) => {
           const NativeProxy = callback(table[2]).NativeProxy;
-          NativeProxy.configureRelations(index, item);
+          NativeProxy.configureRelations(arg1, arg0);
         });
       });
       return () => cancelAnimationFrame(closure_0);

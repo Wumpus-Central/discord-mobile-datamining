@@ -4,8 +4,8 @@
 import _inheritsDefault from "_inherits" /* 98 */;
 import importDefaultResult1Default from "importDefaultResult1" /* 125 */;
 import DOMRect from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
@@ -93,10 +93,10 @@ obj = {
   value: function fromRect(arg0) {
     if (arg0) {
       ({ x, y, width, height } = arg0);
-      let tmpResult = DOMRect(x, y, width, height);
-      const obj = Object.create(DOMRect.prototype);
+      let tmpResult = tmp(x, y, width, height);
+      const obj = Object.create(tmp.prototype);
     } else {
-      tmpResult = DOMRect();
+      tmpResult = tmp();
     }
     return tmpResult;
   }

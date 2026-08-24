@@ -1,11 +1,11 @@
 // === Module 15877: GroupDMRow ===
 
 // Module 15877 (GroupDMRow)
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/GroupDMRow.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GroupDMRow.tsx");
 
 export default function GroupDMRow(channel) {
   channel = channel.channel;
@@ -24,7 +24,7 @@ export default function GroupDMRow(channel) {
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     obj[3] = recipientsLabel;
-    tmp3Result = jsx(tmp5(4734).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null });
+    tmp3Result = tmp3(tmp5(4734).Text, obj);
   }
   let str2 = str;
   if (str == null) {

@@ -13,38 +13,40 @@ if (true === global.RN$Bridgeless) {
 }
 let obj = {};
 const merged = Object.assign(_default);
-obj.measure = function measure(arg0, fn) {
+obj.measure = function measure(arg0, arg1) {
   if (arg0 % 2 === 0) {
     const tmp5 = nullthrowsDefault;
     const tmp5Result = tmp5(getFabricUIManager.getFabricUIManager());
     const result = tmp5Result.findShadowNodeByTag_DEPRECATED(arg0);
     if (result) {
-      tmp5Result.measure(result, fn);
+      tmp5Result.measure(result, arg1);
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.warn("measure cannot find view with tag #" + arg0);
-      fn();
+      arg1();
     }
+    const obj = getFabricUIManager;
   } else {
-    _default.measure(arg0, fn);
+    _default.measure(arg0, arg1);
   }
 };
-obj.measureInWindow = function measureInWindow(arg0, fn) {
+obj.measureInWindow = function measureInWindow(arg0, arg1) {
   if (arg0 % 2 === 0) {
     const tmp5 = nullthrowsDefault;
     const tmp5Result = tmp5(getFabricUIManager.getFabricUIManager());
     const result = tmp5Result.findShadowNodeByTag_DEPRECATED(arg0);
     if (result) {
-      tmp5Result.measureInWindow(result, fn);
+      tmp5Result.measureInWindow(result, arg1);
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.warn("measure cannot find view with tag #" + arg0);
-      fn();
+      arg1();
     }
+    const obj = getFabricUIManager;
   } else {
-    _default.measureInWindow(arg0, fn);
+    _default.measureInWindow(arg0, arg1);
   }
 };
 obj.measureLayout = function measureLayout(arg0, arg1, arg2, arg3) {
@@ -85,7 +87,7 @@ obj.dispatchViewManagerCommand = function dispatchViewManagerCommand(num) {
     const _Error = Error;
     error = new Error("dispatchViewManagerCommand: found null reactTag");
     throw error;
-  } else if (2 % 2 === 0) {
+  } else if (num % 2 === 0) {
     const tmp5 = nullthrowsDefault;
     const tmp5Result = tmp5(getFabricUIManager.getFabricUIManager());
     const result = tmp5Result.findShadowNodeByTag_DEPRECATED(num);
@@ -93,6 +95,7 @@ obj.dispatchViewManagerCommand = function dispatchViewManagerCommand(num) {
       const _HermesInternal = HermesInternal;
       tmp5Result.dispatchCommand(result, "" + arg1, arg2);
     }
+    const obj = getFabricUIManager;
   } else {
     const result1 = _default.dispatchViewManagerCommand(num, arg1, arg2);
   }

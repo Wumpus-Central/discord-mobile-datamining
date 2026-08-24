@@ -2,10 +2,10 @@
 
 // Module 1773 (_isNativeReflectConstruct)
 import FadeOutDown from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_1 from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -56,7 +56,8 @@ class FadeIn {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        let obj = { opacity: delayFunction(delay, first(1, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)) };
         obj[0] = obj;
         obj = { opacity: 0 };
         const merged = Object.assign(initialValues);
@@ -112,8 +113,9 @@ class FadeInRight {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        const obj = { translateX: delayFunction(delay, first(0, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -171,8 +173,9 @@ class FadeInLeft {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        const obj = { translateX: delayFunction(delay, first(0, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -230,8 +233,9 @@ class FadeInUp {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        const obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -290,8 +294,9 @@ class FadeInDown {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        const obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -350,7 +355,8 @@ class FadeOut {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        let obj = { opacity: delayFunction(delay, first(0, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)) };
         obj[0] = obj;
         obj = { opacity: 1 };
         const merged = Object.assign(initialValues);
@@ -407,8 +413,9 @@ class FadeOutRight {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        const obj = { translateX: delayFunction(delay, first(25, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(25, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -467,8 +474,9 @@ class FadeOutLeft {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        const obj = { translateX: delayFunction(delay, first(-25, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateX: delayFunction(delay, first(-25, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -527,8 +535,9 @@ class FadeOutUp {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        const obj = { translateY: delayFunction(delay, first(-25, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateY: delayFunction(delay, first(-25, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;
@@ -587,8 +596,9 @@ class FadeOutDown {
       const initialValues = delayFunction.initialValues;
       const delay = delayFunction.getDelay();
       const fn = function t() {
-        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        const obj = { translateY: delayFunction(delay, first(25, closure_2)) };
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        obj = { translateY: delayFunction(delay, first(25, closure_2)) };
         const items = [obj];
         obj[1] = items;
         obj[0] = obj;

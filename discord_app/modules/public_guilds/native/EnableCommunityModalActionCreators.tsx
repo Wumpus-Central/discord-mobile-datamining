@@ -1,12 +1,12 @@
 // === Module 16882: ? ===
 
 // Module 16882
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
 const ENABLED_COMMUNITY_MODAL_KEY = "ENABLED_COMMUNITY_MODAL_KEY";
-const result = obj132.fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
 
 export default {
   open() {

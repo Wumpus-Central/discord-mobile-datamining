@@ -1,15 +1,15 @@
 // === Module 15991: ContactSuggestionRow ===
 
 // Module 15991 (ContactSuggestionRow)
-import noop from "noop" /* 19 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: c5, InstantInviteSources: closure_6, RelationshipTypes: error } = ME);
 let closure_9 = { ADD: "add" };
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
 
 export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFriend) {
   suggestedFriend = suggestedFriend.suggestedFriend;
@@ -110,8 +110,8 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
     obj2[0] = suggestedFriend.user;
     obj2[1] = sharedValue;
     obj2[2] = function onAddSuggestion(id) {
-      added(onAddSuggestion[13]);
-      const obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
+      let obj = added(onAddSuggestion[13]);
+      obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
       let ADD_FRIENDS_MODAL = merged.location;
       if (ADD_FRIENDS_MODAL == null) {
         ADD_FRIENDS_MODAL = closure_1_6.ADD_FRIENDS_MODAL;

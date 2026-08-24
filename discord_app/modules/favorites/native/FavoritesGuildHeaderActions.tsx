@@ -7,9 +7,9 @@ import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction"
 import handleCreateCategory from "handleCreateCategory" /* 15413 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/favorites/native/FavoritesGuildHeaderActions.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildHeaderActions.tsx");
 
 export const FavoritesGuildHeaderActionButton = function FavoritesGuildHeaderActionButton() {
   ({ isPreview, exitPreview, label } = useFavoritesGuildHeaderActionDefault());

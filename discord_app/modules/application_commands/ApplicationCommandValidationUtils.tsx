@@ -1,7 +1,7 @@
 // === Module 11333: validateOptionContent ===
 
 // Module 11333 (validateOptionContent)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
 import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
@@ -15,7 +15,8 @@ function validateOptionContent(allowEmptyValues) {
   }
   let str = "";
   if (null != content) {
-    let obj = { content: null };
+    let obj = getString;
+    obj = { content: null };
     obj[0] = content;
     str = obj.getString(obj, "content").trim();
     const str3 = obj.getString(obj, "content");
@@ -63,7 +64,7 @@ function validateOptionContent(allowEmptyValues) {
   }
 }
 const getValidationErrorText = TRUE_OPTION_NAME.getValidationErrorText;
-const result = obj132.fileFinishedImporting("modules/application_commands/ApplicationCommandValidationUtils.tsx");
+const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandValidationUtils.tsx");
 
 export const getValidationResults = function getValidationResults(activeCommand, optionValues, guild_id, id, arg4) {
   let obj = {};
@@ -72,6 +73,7 @@ export const getValidationResults = function getValidationResults(activeCommand,
     return obj;
   } else {
     for (const item10012 of options) {
+      let tmp3 = validateOptionContent;
       obj = { option: null, content: null, guildId: null, channelId: null, allowEmptyValues: null };
       obj[0] = item10012;
       obj[1] = arg1[item10012.name];

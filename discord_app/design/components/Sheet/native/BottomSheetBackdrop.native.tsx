@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let closure_4 = createCacheKey.createStyles({ container: { flex: 1 } });
 let closure_5 = { code: "function BottomSheetBackdropNativeTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
 let closure_6 = { code: "function BottomSheetBackdropNativeTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity}=this.__closure;return{opacity:interpolate(animatedIndex.get(),[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity])};}" };
@@ -29,15 +29,19 @@ const memoResult = importAllResult.memo((animatedIndex) => {
   }
   const onPress = animatedIndex.onPress;
   const style = animatedIndex.style;
+  closure_7 = undefined;
+  let snapToIndex;
+  let close;
+  let callback;
   let animatedStyle;
   const tmp = str();
   closure_7 = tmp;
   let obj = animatedIndex(num[3]);
   const bottomSheet = obj.useBottomSheet();
-  const snapToIndex = bottomSheet.snapToIndex;
-  const close = bottomSheet.close;
+  snapToIndex = bottomSheet.snapToIndex;
+  close = bottomSheet.close;
   let items = [snapToIndex, close, num3, str, onPress];
-  const callback = num2.useCallback(() => {
+  callback = num2.useCallback(() => {
     if (onPress != null) {
       tmp();
     }
@@ -98,6 +102,6 @@ const memoResult = importAllResult.memo((animatedIndex) => {
   }
   return tmp9Result;
 });
-const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/BottomSheetBackdrop.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheetBackdrop.native.tsx");
 
 export const BottomSheetBackdrop = memoResult;

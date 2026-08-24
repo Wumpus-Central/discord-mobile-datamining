@@ -1,11 +1,11 @@
 // === Module 12673: useSelectedActiveStream ===
 
 // Module 12673 (useSelectedActiveStream)
-import getParticipants from "getParticipants" /* 4773 */;
-import reset from "reset" /* 4652 */;
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "reset" /* 4652 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
 
 export default function useSelectedActiveStream(arg0) {
   const _require = arg0;

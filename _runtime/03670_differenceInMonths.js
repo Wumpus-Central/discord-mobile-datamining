@@ -64,7 +64,7 @@ export default function differenceInMonths(date, friendsSince) {
       defaultResult1.setDate(30);
     }
     defaultResult1.setMonth(defaultResult1.getMonth() - defaultResult3 * absolute);
-    const defaultResult4 = compareAsc.default(defaultResult1, defaultResult2);
+    const defaultResult4 = obj3.default(defaultResult1, defaultResult2);
     const tmp9 = -defaultResult3;
     let flag = defaultResult4 === tmp9;
     if (tmp11) {
@@ -72,7 +72,7 @@ export default function differenceInMonths(date, friendsSince) {
     }
     const _Number = Number;
     num = defaultResult3 * (absolute - Number(flag));
-    tmp11 = isLastDayOfMonth.default(_typeof.default(date)) && 1 === absolute && 1 === compareAsc.default(date, defaultResult2);
+    tmp11 = isLastDayOfMonth.default(_typeof.default(date)) && 1 === absolute && 1 === obj3.default(date, defaultResult2);
   }
   let num4 = 0;
   if (0 !== num) {

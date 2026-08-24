@@ -2,21 +2,24 @@
 
 // Module 11972 (UnifiedGiftModalSuccessScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24, alignItems: "center" };
+createCacheKey = { alertContainer: null, image: null, title: null, description: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "relative", top: -50 };
 createCacheKey[2] = { marginTop: -ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { marginTop: -ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx");
+let obj2 = { marginBottom: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx");
 
 export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   giftBadgeProgress = giftBadgeProgress.giftBadgeProgress;
@@ -33,8 +36,8 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
       tmp2 = null != giftBadgeProgress;
     }
     if (tmp2) {
-      onClose(enabled[8]);
-      const obj = { giftBadgeProgress: null };
+      let obj = onClose(enabled[8]);
+      obj = { giftBadgeProgress: null };
       obj[0] = giftBadgeProgress;
       obj.pushLazy(giftBadgeProgress(enabled[10])(enabled[9], enabled.paths), obj, "collectibles_shop_gift_badge_modal");
     }
@@ -42,11 +45,12 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   const items1 = [onClose];
   const callback1 = React.useCallback(() => {
     onClose();
-    giftBadgeProgress(enabled[11]);
-    const obj = { screen: UserSettingsSections.PREMIUM_GIFTING, params: {} };
+    let obj = giftBadgeProgress(enabled[11]);
+    obj = { screen: closure_1_5.PREMIUM_GIFTING, params: {} };
     obj.openUserSettings(obj);
   }, items1);
-  let obj = { source: giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle], style: tmp.image };
+  let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
+  obj = { source: giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle], style: tmp.image };
   const items2 = [callback(Image, obj), , , ];
   obj = { variant: "heading-lg/bold", style: tmp.title, children: null };
   const intl = giftBadgeProgress(enabled[14]).intl;
@@ -62,11 +66,9 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
       let cpT0Cq = tmp2(tmp3[14]).t.PDTjLN;
     }
     obj2[1] = tmp9(cpT0Cq);
-    items2[3] = tmp8(giftBadgeProgress(enabled[15]).BaseTextButton, obj2);
+    items2[3] = callback(giftBadgeProgress(enabled[15]).BaseTextButton, obj2);
     obj[3] = items2;
-    return callback(tmp7, obj);
+    return closure_7(tmp7, obj);
   }
   cpT0Cq = tmp2(tmp3[14]).t.cpT0Cq;
-  tmp7 = onClose(enabled[12]);
-  tmp8 = callback;
 };

@@ -4,20 +4,22 @@
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((height) => {
-  let obj = { paddingHorizontal: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
+  let obj = { row: null, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
+  obj = { paddingHorizontal: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
   obj[0] = obj;
   obj = { marginHorizontal: ThemesDefault.space.PX_16, flex: 1 };
   obj[1] = obj;
   obj[2] = { alignItems: "center", flexDirection: "row" };
   obj[3] = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj1 = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[4] = { height: 20, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   return obj;
 });
@@ -44,16 +46,16 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   const items1 = [flag, sharedValue];
   const effect = importAllResult.useEffect(() => {
     if (flag) {
-      sharedValue(dependencyMap[6]);
-      const obj2 = sharedValue(dependencyMap[6]);
-      let obj = { duration: null };
-      obj[0] = 2 * sharedValue(dependencyMap[9]).timingSlowDuration;
-      const obj3 = sharedValue(dependencyMap[8]);
-      const withTimingResult = sharedValue(dependencyMap[8]).withTiming(0.3, obj);
+      let obj = sharedValue(closure_1_2[6]);
+      const obj2 = sharedValue(closure_1_2[6]);
       obj = { duration: null };
-      obj[0] = 2 * sharedValue(dependencyMap[9]).timingSlowDuration;
-      const result = set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(dependencyMap[8]).withTiming(1, obj)), -1, true));
-      const obj5 = sharedValue(dependencyMap[8]);
+      obj[0] = 2 * sharedValue(closure_1_2[9]).timingSlowDuration;
+      const obj3 = sharedValue(closure_1_2[8]);
+      const withTimingResult = sharedValue(closure_1_2[8]).withTiming(0.3, obj);
+      obj = { duration: null };
+      obj[0] = 2 * sharedValue(closure_1_2[9]).timingSlowDuration;
+      const result = set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(closure_1_2[8]).withTiming(1, obj)), -1, true));
+      const obj5 = sharedValue(closure_1_2[8]);
     } else {
       const result1 = set(1);
     }
@@ -65,7 +67,8 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   fn.__workletHash = 10137317865125;
   fn.__initData = closure_9;
   const animatedStyle = sharedValue(4115).useAnimatedStyle(fn);
-  const items2 = [tmp3.row, animatedStyle];
+  obj = { style: items2, collapsable: false, children: null };
+  items2 = [tmp3.row, animatedStyle];
   obj = { style: tmp3.placeholderAvatar };
   const items3 = [callback(View, obj), ];
   obj1 = { style: tmp3.rowInner, children: null };
@@ -83,6 +86,6 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   obj[2] = items3;
   return callback2(flag(4115).View, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx");
 
 export default memoResult;

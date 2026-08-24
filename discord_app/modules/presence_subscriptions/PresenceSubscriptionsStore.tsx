@@ -4,8 +4,8 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef10673 from "module_10673" /* 10673 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import sortActivity from "sortActivity" /* 4559 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "sortActivity" /* 4559 */;
 import { INVITE_EXPIRATION_MS } from "items3" /* 4481 */;
 
 function handleConnectionOpenOrResumed() {
@@ -18,17 +18,20 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
   const items = [];
   const entries = Object.entries(closure_6);
   while (tmp4 !== undefined) {
+    let tmp6 = callback;
     let tmp7 = callback(tmp5, 2);
     [tmp8, tmp9] = tmp7;
     let arr = items.push(tmp9);
+    let tmp11 = closure_5;
     closure_5[tmp8] = tmp9;
+    let tmp12 = closure_6;
     delete tmp[tmp2];
     continue;
   }
   if (0 !== items.length) {
     _modDef10673.subscribeActivities(items);
+    const obj = _modDef10673;
   }
-  tmp4 = entries[Symbol.iterator]();
 });
 const Store = initializeDefault.Store;
 class PresenceSubscriptionsStore extends Store {
@@ -54,8 +57,11 @@ const presenceSubscriptionsStore = new PresenceSubscriptionsStore(dispatcherDefa
       const timestamp = Date.now();
       const entries = Object.entries(closure_5);
       while (tmp7 !== undefined) {
+        let tmp9 = callback;
         let tmp10 = callback(tmp8, 2);
         if (tmp10[1].expiresAt < timestamp) {
+          let tmp12 = closure_5;
+          let tmp13 = tmp11;
           delete tmp4[tmp3];
           flag = true;
         }
@@ -63,8 +69,11 @@ const presenceSubscriptionsStore = new PresenceSubscriptionsStore(dispatcherDefa
       }
       const entries1 = Object.entries(closure_6);
       for (const item10033 of entries1) {
+        let tmp15 = callback;
         let tmp16 = callback(item10033, 2);
         if (tmp16[1].expiresAt < timestamp) {
+          let tmp18 = closure_6;
+          let tmp19 = tmp17;
           delete tmp2[tmp];
           flag = true;
         }
@@ -96,11 +105,12 @@ const presenceSubscriptionsStore = new PresenceSubscriptionsStore(dispatcherDefa
         obj[2] = partyId;
         obj[3] = messageId;
         obj[4] = channelId;
-        obj[5] = INVITE_EXPIRATION_MS + Date.now();
+        obj[5] = tmp5 + Date.now();
         closure_6[combined1] = obj;
         delayedCall.delay();
         return true;
       }
+      tmp5 = INVITE_EXPIRATION_MS;
     }
   },
   CONNECTION_OPEN: handleConnectionOpenOrResumed,
@@ -110,6 +120,6 @@ const presenceSubscriptionsStore = new PresenceSubscriptionsStore(dispatcherDefa
     closure_6 = {};
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsStore.tsx");
 
 export default presenceSubscriptionsStore;

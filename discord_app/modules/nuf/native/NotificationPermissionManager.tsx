@@ -4,19 +4,19 @@
 import tDefault from "t" /* 3975 */;
 import initializeDefault from "initialize" /* 5038 */;
 import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken" /* 11584 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import storeThread from "storeThread" /* 4023 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
-import set from "set" /* 11578 */;
+import closure_5 from "storeThread" /* 4023 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_9 from "set" /* 11578 */;
 import { PermissionPromptType } from "set" /* 11578 */;
 import EventActionType from "EventActionType" /* 11582 */;
 import ME from "ME" /* 676 */;
 import { NotificationAuthorizationStatus as closure_16 } from "NativePermissionStatus" /* 4839 */;
 
-require = fn;
+require = arg1;
 function haveNotSeenPromptSince(arg0, arg1) {
   const tmp = state.getState().promptLastSeen[arg0];
   let tmp2 = null == tmp;
@@ -48,6 +48,7 @@ function _shouldShowPrompt() {
     c4 = 0;
     return (function*(arg0) {
       closure_2 = tmp2;
+      closure_1 = tmp3;
       const NativePermissionManager = obj.NativePermissionManager;
       closure_1 = yield NativePermissionManager.getNotificationAuthorizationStatus();
       let tmp11 = closure_1 === constants.UNDETERMINED;
@@ -114,14 +115,14 @@ function showPrompt(arg0, arg1, arg2) {
     clearTimeout(timeout);
   }
   timeout = setTimeout(() => {
-    let obj = callback(dependencyMap[15]);
+    let obj = callback(closure_1_2[15]);
     const result = obj.setPushPermissionReactivationSeen(callback);
     obj = { impressionName: null, impressionProperties: null, location: null };
-    const obj2 = callback2(dependencyMap[10]);
-    obj[0] = callback(dependencyMap[13]).ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
+    const obj2 = callback2(closure_1_2[10]);
+    obj[0] = callback(closure_1_2[13]).ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj[1] = { action_location: callback2 };
     obj[2] = callback2;
-    obj2.openLazy(callback(dependencyMap[12])(dependencyMap[11], dependencyMap.paths), closure_1_11, obj);
+    obj2.openLazy(callback(closure_1_2[12])(closure_1_2[11], closure_1_2.paths), closure_1_11, obj);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -872,6 +873,7 @@ prototype["handleMessageCreateForNudge"] = function handleMessageCreateForNudge(
             }
             if (!isMutedResult) {
               const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
+              const obj = getOrRefreshPushSyncToken;
             }
           }
         }
@@ -892,12 +894,13 @@ prototype["handleReactionAddForNudge"] = function handleReactionAddForNudge(opti
         }
         if (!isMutedResult) {
           const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
+          const obj = getOrRefreshPushSyncToken;
         }
       }
     }
   }
 };
 const notificationPermissionManager = new NotificationPermissionManager();
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/NotificationPermissionManager.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/NotificationPermissionManager.tsx");
 
 export default notificationPermissionManager;

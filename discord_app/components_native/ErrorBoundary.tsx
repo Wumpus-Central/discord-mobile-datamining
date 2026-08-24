@@ -8,15 +8,15 @@ import Button from "Button" /* 1297 */;
 import Text from "Text" /* 4734 */;
 import Button2 from "Button" /* 4745 */;
 import getAppCrashSource from "getAppCrashSource" /* 12362 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getCurrentBuildOverride from "getCurrentBuildOverride" /* 10638 */;
+import closure_8 from "getCurrentBuildOverride" /* 10638 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function MaybeClearBuildOverride() {
   function _clearOverride() {
     const self = this;
@@ -104,6 +104,7 @@ prototype["triggerSoftCrash"] = function triggerSoftCrash(error, extra) {
   this.setState(obj);
   obj = { extra };
   _modDef1208.captureCrash(error, obj);
+  const obj2 = _modDef1208;
   dispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
 };
 prototype["handleReload"] = function handleReload() {
@@ -158,26 +159,26 @@ prototype["render"] = function render() {
       str = "Unknown Error";
     }
     obj[3] = str;
-    const items = [callback(Text.Text, obj), , ];
+    const items = [closure_9(Text.Text, obj), , ];
     obj = { style: null, children: null };
     obj[0] = tmp.buttons;
-    const items1 = [callback(MaybeClearBuildOverride, {}), ];
+    const items1 = [closure_9(MaybeClearBuildOverride, {}), ];
     obj1 = { text: null, onPress: null };
-    const intl3 = getSystemLocale.intl;
+    const intl3 = tmp3(1236).intl;
     obj1[0] = intl3.string(getSystemLocale.t["4n8OJn"]);
     obj1[1] = self.handleReload;
-    items1[1] = callback(Button2.Button, obj1);
+    items1[1] = closure_9(Button2.Button, obj1);
     obj[1] = items1;
-    items[1] = callback2(closure_7, obj);
+    items[1] = closure_10(closure_7, obj);
     items[2] = null;
     obj[5] = items;
-    let children = callback2(Button.EmptyState, obj);
+    let children = tmp2(Button.EmptyState, obj);
   } else {
     children = self.props.children;
   }
   return children;
 };
 ErrorBoundary.contextType = require("ManaContext").ThemeContext;
-const result = require("obj132").fileFinishedImporting("components_native/ErrorBoundary.tsx");
+const result = require("set").fileFinishedImporting("components_native/ErrorBoundary.tsx");
 
 export default ErrorBoundary;

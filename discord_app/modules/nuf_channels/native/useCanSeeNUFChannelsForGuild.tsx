@@ -1,14 +1,14 @@
 // === Module 15513: useCanSeeNUFChannelsForGuild ===
 
 // Module 15513 (useCanSeeNUFChannelsForGuild)
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");
 
 export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuild(id) {
   const _require = id;
@@ -21,32 +21,33 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
         const guild = closure_1_3.getGuild(id);
         if (null != guild) {
           const features2 = guild.features;
-          if (!features2.has(GuildFeatures.HUB)) {
+          if (!features2.has(closure_1_5.HUB)) {
             const selfMember = closure_1_2.getSelfMember(id);
             const features = guild.features;
-            let hasFlagResult = features.has(GuildFeatures.GUILD_ONBOARDING) && null != selfMember;
+            let hasFlagResult = features.has(tmp12.GUILD_ONBOARDING) && null != selfMember;
             if (hasFlagResult) {
-              let tmp10Result = id(dependencyMap[7]);
+              let tmp10Result = tmp10(tmp11[7]);
               let num = selfMember.flags;
               if (num == null) {
                 num = 0;
               }
-              hasFlagResult = tmp10Result.hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
+              hasFlagResult = tmp10Result.hasFlag(num, closure_1_6.STARTED_ONBOARDING);
             }
             if (hasFlagResult) {
-              tmp10Result = id(dependencyMap[7]);
+              tmp10Result = tmp10(tmp11[7]);
               let num2 = selfMember.flags;
               if (num2 == null) {
                 num2 = 0;
               }
-              hasFlagResult = !tmp10Result.hasFlag(num2, GuildMemberFlags.COMPLETED_ONBOARDING);
+              hasFlagResult = !tmp10Result.hasFlag(num2, closure_1_6.COMPLETED_ONBOARDING);
             }
             return !hasFlagResult;
           }
+          tmp12 = closure_1_5;
         }
         return false;
       }
-      obj3 = id(dependencyMap[6]);
+      obj3 = id(closure_1_1[6]);
     }
     return false;
   }, items1);

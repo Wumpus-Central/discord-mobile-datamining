@@ -1,7 +1,7 @@
 // === Module 10187: PADDING_HORIZONTAL ===
 
 // Module 10187 (PADDING_HORIZONTAL)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import StickerFormat from "StickerFormat" /* 4964 */;
 import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
 
@@ -9,7 +9,7 @@ const PADDING_VERTICAL = ExpressionPickerViewType.PADDING_VERTICAL;
 ({ PADDING_HORIZONTAL, MIN_MARGIN } = ExpressionPickerViewType);
 const result = 2 * PADDING_VERTICAL;
 const items = [StickerFormat.StickerFormat.GIF, StickerFormat.StickerFormat.PNG, StickerFormat.StickerFormat.APNG];
-const result1 = obj132.fileFinishedImporting("modules/stickers/native/StickerPickerConstants.tsx");
+const result1 = set.fileFinishedImporting("modules/stickers/native/StickerPickerConstants.tsx");
 
 export { PADDING_HORIZONTAL };
 export { PADDING_VERTICAL };

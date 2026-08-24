@@ -3,7 +3,8 @@
 // Module 1719 (LightSpeedInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 
-let obj = { 0: { transform: items, opacity: 0 }, 70: null, 85: null, 100: null };
+obj = { LightSpeedInRight: { name: "LightSpeedInRight", style: obj, duration: 0.3 }, LightSpeedInLeft: { name: "LightSpeedInLeft", style: obj, duration: 0.3 } };
+obj = { 0: { transform: items, opacity: 0 }, 70: null, 85: null, 100: null };
 items = [{ translateX: "100vw", skewX: "-45deg" }];
 const items1 = [{ skewX: "10deg" }];
 obj[70] = { transform: items1 };

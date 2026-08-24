@@ -1,21 +1,22 @@
 // === Module 12144: getUserProfileLiveActivities ===
 
 // Module 12144 (getUserProfileLiveActivities)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 import ME from "ME" /* 676 */;
 
 const ActivityTypes = ME.ActivityTypes;
-const result = obj132.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
 export const getUserProfileLiveActivities = function getUserProfileLiveActivities(stateFromStores1) {
-  return apply.uniqWith(stateFromStores1.filter((item, index) => {
-    const type = item.type;
+  return apply.uniqWith(stateFromStores1.filter((type) => {
+    type = type.type;
     return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
   }), (application_id, application_id2) => {
     let tmp = null != application_id.application_id && null != application_id2.application_id && application_id.application_id === application_id2.application_id;
     if (!tmp) {
       tmp = null != application_id.name && null != application_id2.name && application_id.name === application_id2.name;
+      const tmp2 = null != application_id.name && null != application_id2.name && application_id.name === application_id2.name;
     }
     return tmp;
   });

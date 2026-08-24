@@ -2,10 +2,10 @@
 
 // Module 8333 (getInitialStringSelectOptions)
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import getInteractionComponentStates from "getInteractionComponentStates" /* 8327 */;
+import closure_2 from "getInteractionComponentStates" /* 8327 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
 
 export const getInitialStringSelectOptions = function getInitialStringSelectOptions(selectionActionComponent, containerId) {
   interactionComponentState = interactionComponentState.getInteractionComponentState(containerId, selectionActionComponent.id);
@@ -17,8 +17,8 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
     let mapped = interactionComponentState.values;
   } else {
     const options = selectionActionComponent.options;
-    const found = options.filter((item, index) => item.default);
-    mapped = found.map((item, index) => item.value);
+    const found = options.filter((arg0) => arg0.default);
+    mapped = found.map((value) => value.value);
   }
   return mapped;
 };

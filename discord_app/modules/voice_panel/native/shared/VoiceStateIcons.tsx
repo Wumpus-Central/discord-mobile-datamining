@@ -3,22 +3,17 @@
 // Module 9677 (VideoDisabledSvgIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import isStableVoiceStateEqual from "isStableVoiceStateEqual" /* 9678 */;
-import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9679 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9681 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9683 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9685 */;
 import registerAssetDefault from "registerAsset" /* 9687 */;
 import registerAssetDefault2 from "registerAsset" /* 9688 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function VideoDisabledSvgIcon(size) {
   let MEDIUM = size.size;
   if (MEDIUM === undefined) {
@@ -48,9 +43,10 @@ function VideoDisabledSvgIcon(size) {
   return callback2(inlineStylesDefault, obj);
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL };
+let obj = { redTint: null, defaultTint: null, noTint: null };
+obj = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj[0] = obj;
-const createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[1] = createCacheKey;
 obj[2] = { tintColor: "r" };
 let closure_6 = createCacheKey.createStyles(obj);
@@ -69,13 +65,13 @@ const memoResult = importAllResult.memo((arg0) => {
     let obj = { style: null, size: "xs" };
     items[1] = redTint;
     obj[0] = items;
-    return callback(HeadphonesDenyIcon.HeadphonesDenyIcon, obj);
-  } else if (isStableVoiceStateEqual.MuteDeafenIconState.DEAFENED === state) {
+    return callback(tmp2(9679).HeadphonesDenyIcon, obj);
+  } else if (tmp2(9678).MuteDeafenIconState.DEAFENED === state) {
     obj = { style: null, size: "xs" };
     const items1 = [style];
     obj[0] = items1;
-    return callback(HeadphonesSlashIcon.HeadphonesSlashIcon, obj);
-  } else if (isStableVoiceStateEqual.MuteDeafenIconState.MUTED_SERVER === state) {
+    return callback(tmp2(9681).HeadphonesSlashIcon, obj);
+  } else if (tmp2(9678).MuteDeafenIconState.MUTED_SERVER === state) {
     const items2 = [style, ];
     let redTint1 = null;
     if (!alwaysWhite) {
@@ -84,20 +80,19 @@ const memoResult = importAllResult.memo((arg0) => {
     obj1 = { style: null, size: "xs" };
     items2[1] = redTint1;
     obj1[0] = items2;
-    return callback(MicrophoneDenyIcon.MicrophoneDenyIcon, obj1);
-  } else if (isStableVoiceStateEqual.MuteDeafenIconState.MUTED_LOCAL === state) {
+    return callback(tmp2(9683).MicrophoneDenyIcon, obj1);
+  } else if (tmp2(9678).MuteDeafenIconState.MUTED_LOCAL === state) {
     const obj2 = { style: null, size: "xs" };
     const items3 = [style];
     obj2[0] = items3;
-    return callback(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
-  } else if (isStableVoiceStateEqual.MuteDeafenIconState.MUTED === state) {
+    return callback(tmp2(9683).MicrophoneDenyIcon, obj2);
+  } else if (tmp2(9678).MuteDeafenIconState.MUTED === state) {
     const obj3 = { style: null, size: "xs" };
     const items4 = [style];
     obj3[0] = items4;
-    return callback(MicrophoneSlashIcon.MicrophoneSlashIcon, obj3);
+    return callback(tmp2(9685).MicrophoneSlashIcon, obj3);
   } else {
-    isDiscordFrontendDevelopment.assertNever(state);
-    const tmp2Result = isDiscordFrontendDevelopment;
+    tmp2(1370).assertNever(state);
   }
 });
 const memoResult1 = importAllResult.memo((state) => {
@@ -109,23 +104,22 @@ const memoResult1 = importAllResult.memo((state) => {
     obj.source = registerAssetDefault;
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
-    return callback(Button.Icon, obj);
-  } else if (isStableVoiceStateEqual.VideoIconState.VIDEO_DISABLED_LOCAL === state) {
+    return callback(tmp3(1297).Icon, obj);
+  } else if (tmp3(9678).VideoIconState.VIDEO_DISABLED_LOCAL === state) {
     obj = {};
     const merged2 = Object.assign(merged);
     return callback(VideoDisabledSvgIcon, obj);
-  } else if (isStableVoiceStateEqual.VideoIconState.VIDEO_ACTIVE === state) {
+  } else if (tmp3(9678).VideoIconState.VIDEO_ACTIVE === state) {
     obj1 = {};
     const merged3 = Object.assign(merged);
     obj1.source = registerAssetDefault2;
-    return callback(Button.Icon, obj1);
+    return callback(tmp3(1297).Icon, obj1);
   } else {
-    isDiscordFrontendDevelopment.assertNever(state);
-    const tmp3Result = isDiscordFrontendDevelopment;
+    tmp3(1370).assertNever(state);
   }
   tmp2 = callback3();
 });
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/shared/VoiceStateIcons.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoiceStateIcons.tsx");
 
 export const MuteDeafenIcon = memoResult;
 export const VideoIcon = memoResult1;

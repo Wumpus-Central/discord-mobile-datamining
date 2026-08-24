@@ -1,7 +1,7 @@
 // === Module 14187: pressable ===
 
 // Module 14187 (pressable)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
 import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
@@ -26,14 +26,15 @@ const pressable = createToggle.createPressable({
     return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
   },
   onPress: function onObscuredContentGuildsOnPress() {
+    let obj = resolveExplicitContentSettingWithDefaults;
     const intl = getSystemLocale.intl;
     const stringResult = intl.string(getSystemLocale.t.GYpoAq);
-    let obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
+    obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["FP+a42"]);
     obj[2] = function handlePress(explicitContentGuilds) {
-      callback(table[5]);
-      const obj = { explicitContentGuilds };
+      let obj = callback(table[5]);
+      obj = { explicitContentGuilds };
       return obj.updateExplicitContentSetting(obj);
     };
     const items = [create.ExplicitContentRedaction.BLOCK];
@@ -52,12 +53,13 @@ const pressable = createToggle.createPressable({
   },
   useIsDisabled() {
     let userIsTeen = useUserIsTeen.useUserIsTeen();
+    const obj = useUserIsTeen;
     if (!userIsTeen) {
       userIsTeen = obj2.useIsParentallyControlled();
     }
     return userIsTeen;
   }
 });
-let result = obj132.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
 
 export default pressable;

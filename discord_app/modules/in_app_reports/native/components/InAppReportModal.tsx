@@ -3,16 +3,14 @@
 // Module 8141 (InAppReportModal)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import NavigationStack from "NavigationStack" /* 6312 */;
-import _showReportModal from "_showReportModal" /* 8138 */;
-import getReportMenu from "getReportMenu" /* 8140 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8142 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
 
 export default function InAppReportModal(arg0) {
   ({ reportType: require, menu } = arg0);
@@ -21,6 +19,8 @@ export default function InAppReportModal(arg0) {
   let React;
   c6 = undefined;
   jsx = undefined;
+  let first;
+  closure_9 = undefined;
   c10 = undefined;
   c11 = undefined;
   c12 = undefined;
@@ -36,22 +36,27 @@ export default function InAppReportModal(arg0) {
     });
   }
   function closeModal() {
-    const result = getReportMenu.trackCloseReportModalAnalytics(closure_0, c12, first);
-    _showReportModal.hideReportModal();
-    const item = _undefined2.forEach((item, index) => item());
+    const result = closure_1_0(closure_1_2[11]).trackCloseReportModalAnalytics(closure_0, c12, first);
+    const obj = closure_1_0(closure_1_2[11]);
+    const tmp = closure_1_0;
+    const tmp2 = closure_1_2;
+    const tmp3 = closure_0;
+    const tmp4 = first;
+    closure_1_0(closure_1_2[12]).hideReportModal();
+    const item = _undefined2.forEach((arg0) => arg0());
     if (closure_3) {
-      const result1 = getReportMenu.showInAppReportsFeedbackModal(closure_0, first);
-      const tmpResult = getReportMenu;
+      const result1 = tmp(tmp2[11]).showInAppReportsFeedbackModal(tmp3, tmp4);
+      const tmpResult = tmp(tmp2[11]);
     }
   }
   ({ nodes: c4, root_node_id: c5, success_node_id: c6, fail_node_id: c7 } = menu);
   let tmp = callback(React.useState(undefined), 2);
-  const first = tmp[0];
+  first = tmp[0];
   closure_9 = tmp[1];
   [c10, c11] = callback(React.useState(undefined), 2);
-  const tmp3 = callback(React.useState(undefined), 2);
+  let tmp3 = callback(React.useState(undefined), 2);
   [c12, c13] = callback(React.useState([]), 2);
-  const tmp4 = callback(React.useState([]), 2);
+  let tmp4 = callback(React.useState([]), 2);
   [c14, c15] = callback(React.useState([]), 2);
   menu(4761)(() => {
     const orFetchLinkedUsers = callback(table[10]).getOrFetchLinkedUsers();
@@ -148,17 +153,18 @@ export default function InAppReportModal(arg0) {
       return applyArgumentsResult;
     }
     if (null == _undefined[closure_5]) {
-      let obj = getReportMenu;
+      let obj = closure_1_0(closure_1_2[11]);
       const result = obj.trackCloseReportModalAnalytics(_onSubmit, c12, onSubmit);
-      obj1 = _showReportModal;
+      obj1 = closure_1_0(closure_1_2[12]);
       obj1.hideReportModal();
-      const item = _undefined2.forEach((item, index) => item());
+      const item = _undefined2.forEach((arg0) => arg0());
       if (closure_3) {
-        const result1 = getReportMenu.showInAppReportsFeedbackModal(_onSubmit, onSubmit);
-        const tmp3Result = getReportMenu;
+        const result1 = closure_1_0(closure_1_2[11]).showInAppReportsFeedbackModal(_onSubmit, onSubmit);
+        const tmp3Result = closure_1_0(closure_1_2[11]);
       }
       return {};
     } else {
+      obj = { initialStack: null, screens: null };
       obj = { name: null, params: null };
       obj[0] = c6;
       obj1 = { node: null, history: null };
@@ -216,7 +222,7 @@ export default function InAppReportModal(arg0) {
         obj.onSubmit = function onSubmit(arg0) {
           const items = [];
           items[HermesBuiltin.arraySpread(history.history, 0)] = arg0;
-          return onSubmit(items);
+          return closure_1_8(items);
         };
         obj.closeModal = closure_6;
         obj.addOnCloseCallback = callback2;

@@ -1,17 +1,17 @@
 // === Module 1237: getAvailableLocales ===
 
 // Module 1237 (getAvailableLocales)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("intl/util.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
   _require = _require(1238).default;
-  const found = _require(1296).filter((item, index) => item.enabled);
-  const mapped = found.map((item, index) => {
-    const code = item.code;
-    const obj = { value: code, name: item.name, localizedName: null };
+  const found = _require(1296).filter((enabled) => enabled.enabled);
+  const mapped = found.map((code) => {
+    code = code.code;
+    const obj = { value: code, name: code.name, localizedName: null };
     const obj2 = dependencyMap(closure_1_1[2]);
     obj[2] = dependencyMap[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
@@ -33,13 +33,13 @@ export const getAvailableLocales = function getAvailableLocales() {
 export const getLanguages = function getLanguages() {
   return require(1296) /* items */;
 };
-export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) {
-  const found = parts(1296).filter((item, index) => item.enabled);
-  const mapped = found.map((item, index) => item.code);
-  if (mapped.includes(Language)) {
-    return Language;
+export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
+  const found = parts(1296).filter((enabled) => enabled.enabled);
+  const mapped = found.map((code) => code.code);
+  if (mapped.includes(str)) {
+    return str;
   } else {
-    parts = Language.split("-");
+    parts = str.split("-");
     const first = parts[0];
     if (mapped.includes(parts[0])) {
       let found2 = first;
@@ -47,7 +47,7 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
       if ("zh" === first) {
         if (parts.length > 1) {
           if ("Hant" === parts[1]) {
-            let found1 = mapped.find((item, index) => "zh-TW" === item);
+            let found1 = mapped.find((arg0) => "zh-TW" === arg0);
             if (found1 == null) {
               found1 = arg1;
             }
@@ -55,7 +55,7 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
           }
         }
       }
-      found2 = mapped.find((item, index) => item.split("-")[0] === parts[0]);
+      found2 = mapped.find((arg0) => arg0.split("-")[0] === parts[0]);
       if (found2 == null) {
         found2 = arg1;
       }

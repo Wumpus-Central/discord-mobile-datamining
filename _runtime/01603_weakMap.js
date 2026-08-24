@@ -1,12 +1,12 @@
 // === Module 1603: weakMap ===
 
 // Module 1603 (weakMap)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { I18nManager } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const weakMap = new WeakMap();
 globalThis.REACT_NAVIGATION_DEVTOOLS = weakMap;
@@ -65,7 +65,7 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
             obj.enabled = closure_1;
             let prefixes;
             if (closure_0 != null) {
-              prefixes = closure_0.prefixes;
+              prefixes = tmp.prefixes;
             }
             if (prefixes == null) {
               prefixes = [];
@@ -73,26 +73,26 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
             obj.prefixes = prefixes;
             let getStateFromPath;
             if (closure_0 != null) {
-              getStateFromPath = closure_0.getStateFromPath;
+              getStateFromPath = tmp.getStateFromPath;
             }
             if (getStateFromPath == null) {
-              getStateFromPath = linking(closure_1_1[5]).getStateFromPath;
+              getStateFromPath = closure_1_0(closure_1_1[5]).getStateFromPath;
             }
             obj.getStateFromPath = getStateFromPath;
             let getPathFromState;
             if (closure_0 != null) {
-              getPathFromState = closure_0.getPathFromState;
+              getPathFromState = tmp.getPathFromState;
             }
             if (getPathFromState == null) {
-              getPathFromState = linking(closure_1_1[5]).getPathFromState;
+              getPathFromState = closure_1_0(closure_1_1[5]).getPathFromState;
             }
             obj.getPathFromState = getPathFromState;
             let getActionFromState;
             if (closure_0 != null) {
-              getActionFromState = closure_0.getActionFromState;
+              getActionFromState = tmp.getActionFromState;
             }
             if (getActionFromState == null) {
-              getActionFromState = linking(closure_1_1[5]).getActionFromState;
+              getActionFromState = closure_1_0(closure_1_1[5]).getActionFromState;
             }
             obj.getActionFromState = getActionFromState;
             return obj;
@@ -117,14 +117,14 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
     }
     obj2.initialState = initialState;
     obj2.ref = ref;
-    obj1[1] = jsx(tmp12(1503).BaseNavigationContainer, {});
-    obj[1] = jsx(tmp12(1600).LinkingContext.Provider, { value: null, children: null });
+    obj1[1] = tmp23(tmp12(1503).BaseNavigationContainer, obj2);
+    obj[1] = tmp23(tmp12(1600).LinkingContext.Provider, obj1);
     let tmp24 = obj;
   } else {
     obj3 = { value: null, children: null };
     obj3[0] = DefaultTheme;
     obj3[1] = fallback;
-    obj[1] = jsx(tmp12(1503).ThemeProvider, { value: null, children: null });
+    obj[1] = tmp23(tmp12(1503).ThemeProvider, obj3);
     tmp24 = obj;
   }
   return jsx(linking(1611).LocaleDirContext.Provider, tmp24);

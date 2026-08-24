@@ -34,7 +34,7 @@ const topicalNavigationSurveyStore = new TopicalNavigationSurveyStore(dispatcher
     closure_0 = closure_0 + 1;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/conversations/TopicalNavigationSurveyStore.tsx");
+const result = require("set").fileFinishedImporting("modules/conversations/TopicalNavigationSurveyStore.tsx");
 
 export default topicalNavigationSurveyStore;
 export const MIN_EXPOSURES_FOR_SURVEY = 3;

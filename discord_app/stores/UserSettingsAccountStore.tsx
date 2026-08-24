@@ -3,7 +3,7 @@
 // Module 7361 (handleFormClose)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_0 from "mergeGuildAvatar" /* 1922 */;
 import { FormStates } from "ME" /* 676 */;
 
 function handleFormClose() {
@@ -105,6 +105,6 @@ const userSettingsAccountStore = new UserSettingsAccountStore(dispatcherDefault,
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/UserSettingsAccountStore.tsx");
+const result = require("set").fileFinishedImporting("stores/UserSettingsAccountStore.tsx");
 
 export default userSettingsAccountStore;

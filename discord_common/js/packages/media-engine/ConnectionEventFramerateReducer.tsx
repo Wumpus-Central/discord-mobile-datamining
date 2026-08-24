@@ -1,13 +1,13 @@
 // === Module 4583: logger ===
 
 // Module 4583 (logger)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import log from "log" /* 4 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
 
 ({ SpeakingFlags: obj1, VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: c3 } = DesktopSources);
 const logger = new log.Logger("ConnectionEventFramerateReducer");
-let result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/ConnectionEventFramerateReducer.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/ConnectionEventFramerateReducer.tsx");
 class ConnectionEventFramerateReducer {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -39,7 +39,8 @@ prototype["initialize"] = function initialize() {
   this.userSpeakingChange(true);
 };
 prototype["userSpeakingChange"] = function userSpeakingChange(arg0) {
-  const self = this;
+  let self = this;
+  self = this;
   const connection = this.connection;
   if (!connection.hasDesktopSource()) {
     let result = self.destroyFramerateScaleFactorTimers();
@@ -48,10 +49,10 @@ prototype["userSpeakingChange"] = function userSpeakingChange(arg0) {
       self.framerateReductionTimeout = setTimeout(() => {
         if (!self.connection.destroyed) {
           const _HermesInternal = HermesInternal;
-          logger.info("BaseConnection.userSpeakingChange: Reduced framerate after " + closure_1_3 + " ms.");
-          self.framerateReductionTimeout = undefined;
-          self.sinkWants.isMuted = true;
-          const result = self.updateRemoteWantsFramerate();
+          closure_1_4.info("BaseConnection.userSpeakingChange: Reduced framerate after " + closure_1_3 + " ms.");
+          obj.framerateReductionTimeout = undefined;
+          obj.sinkWants.isMuted = true;
+          const result = obj.updateRemoteWantsFramerate();
         }
       }, closure_3);
     } else if (self.sinkWants.isMuted) {

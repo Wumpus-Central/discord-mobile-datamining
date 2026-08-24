@@ -1,23 +1,23 @@
 // === Module 12827: shouldShowVoiceChannelChangeConfirmation ===
 
 // Module 12827 (shouldShowVoiceChannelChangeConfirmation)
-import set from "set" /* 4540 */;
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import updateVoiceState from "updateVoiceState" /* 4542 */;
+import closure_0 from "set" /* 4540 */;
+import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "updateVoiceState" /* 4542 */;
 
-const result = require("obj132").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 
 export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoiceChannelChangeConfirmation(id) {
-  if (voiceStateForSession.disableVoiceChannelChangeAlert) {
+  if (obj.disableVoiceChannelChangeAlert) {
     return false;
   } else {
     remoteSessionId = remoteSessionId.getRemoteSessionId();
     if (null != voiceStateForSession.getVoiceStateForSession(id.getId(), remoteSessionId)) {
       return false;
-    } else if (voiceStateForSession.isCurrentClientInVoiceChannel()) {
-      if (voiceStateForSession.isInChannel(id.id)) {
+    } else if (obj.isCurrentClientInVoiceChannel()) {
+      if (obj.isInChannel(id.id)) {
         return false;
       } else {
         guild = guild.getGuild(id.getGuildId());
@@ -25,7 +25,7 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
         if (guild != null) {
           afkChannelId = guild.afkChannelId;
         }
-        return null == afkChannelId || !voiceStateForSession.isInChannel(guild.afkChannelId);
+        return null == afkChannelId || !obj.isInChannel(guild.afkChannelId);
       }
     } else {
       return false;

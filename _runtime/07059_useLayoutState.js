@@ -1,10 +1,10 @@
 // === Module 7059: useLayoutState ===
 
 // Module 7059 (useLayoutState)
-import _slicedToArray from "_slicedToArray" /* 7041 */;
+import closure_2 from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 
-const require = fn;
+const require = arg1;
 ({ useState: c3, useCallback: c4 } = noop);
 
 export const useLayoutState = function useLayoutState(arg0) {
@@ -24,8 +24,9 @@ export const useLayoutState = function useLayoutState(arg0) {
     });
     if (!arg1) {
       if (recyclerViewContext != null) {
-        recyclerViewContext.layout();
+        obj.layout();
       }
+      obj = recyclerViewContext;
     }
   }, items1);
   return items;

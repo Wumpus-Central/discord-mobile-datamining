@@ -2,12 +2,12 @@
 
 // Module 9304 (maybeFetchTopEmojisByGuild)
 import fetchTopEmojis from "fetchTopEmojis" /* 9305 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
-import initialize from "initialize" /* 6730 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "getEmojiToGroupId" /* 6727 */;
+import closure_4 from "initialize" /* 6730 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
 
 export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(guildId) {
   if (null != guildId) {
@@ -21,6 +21,7 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
       }
       if (!isFetching.getIsFetching(guildId)) {
         const topEmojis = fetchTopEmojis.fetchTopEmojis(guildId);
+        const obj = fetchTopEmojis;
       }
     }
   }

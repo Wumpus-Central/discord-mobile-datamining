@@ -2,22 +2,19 @@
 
 // Module 16659 (_shouldSkipContactSyncStep)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 import trackNUFStep from "trackNUFStep" /* 11856 */;
-import setNewUser from "setNewUser" /* 11925 */;
 import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 16660 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import initialize from "initialize" /* 15224 */;
-import set from "set" /* 5221 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "initialize" /* 15224 */;
+import closure_6 from "set" /* 5221 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
 import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4839 */;
 
-require = fn;
+require = arg1;
 function _shouldSkipContactSyncStep() {
   const self = this;
   const tmp = importDefaultResult(function*() {
@@ -90,16 +87,17 @@ function _shouldSkipContactSyncStep() {
 }
 function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
+  const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef5260.popWithKey(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY);
+    _modDef5260.popWithKey(tmp(16660).NEW_USER_MODAL_KEY);
+    const obj3 = _modDef5260;
   }
-  let tmpResult = transitionTo;
+  let tmpResult = tmp(1222);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = setNewUser;
+  tmpResult = tmp(11925);
   const result = tmpResult.setNewUserFlowCompleted();
-  obj2 = coerceMainRoute;
 }
-function getNextOnboardingStep(flag, first1, arg2) {
+function getNextOnboardingStep(flag, first1, first) {
   const self = this;
   const apply = _getNextOnboardingStep.apply;
   if (typeof apply === "unknown") {
@@ -276,7 +274,18 @@ function _getNextOnboardingStep() {
 }
 let c3 = importDefaultResult;
 ({ PlatformTypes: closure_8, Routes: c9 } = ME);
-let obj = { key: "enable-notification", shouldShowStep: null };
+let obj = {
+  key: "choose-avatar",
+  shouldShowStep() {
+    currentUser = currentUser.getCurrentUser();
+    let avatar;
+    if (currentUser != null) {
+      avatar = currentUser.avatar;
+    }
+    return null == avatar;
+  }
+};
+obj = { key: "enable-notification", shouldShowStep: null };
 let closure_13 = importDefaultResult(function*() {
   if (table === 2) {
     table = 3;
@@ -305,9 +314,9 @@ let closure_13 = importDefaultResult(function*() {
           return obj;
         } else {
           closure_0 = tmp4;
-          obj1 = require(table[9]);
+          obj1 = closure_1_0(table[9]);
           if (obj1.isIOS()) {
-            const NativePermissionManager = NativeModules.NativePermissionManager;
+            const NativePermissionManager = closure_1_4.NativePermissionManager;
             c1 = 1;
             table = 1;
             obj1 = { value: null, done: false };
@@ -448,7 +457,7 @@ let obj1 = {
     dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");
 
 export const getKeyForOnboardingStep = function getKeyForOnboardingStep(onboardingStepIndex) {
   let key;
@@ -472,7 +481,7 @@ export const continueToNextStep = function continueToNextStep(onboardingStepInde
       const routes = state.routes;
       if (2 === routes.length) {
         items = [routes[1]];
-        const CommonActions = state(dependencyMap[12]).CommonActions;
+        const CommonActions = state(closure_1_2[12]).CommonActions;
         obj = {};
         const merged = Object.assign(state);
         obj.routes = items;

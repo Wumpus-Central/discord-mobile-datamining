@@ -1,9 +1,9 @@
 // === Module 5074: isPrivateChannel ===
 
 // Module 5074 (isPrivateChannel)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/app_database/modules/messages/isPrivateChannel.tsx");
+const result = set.fileFinishedImporting("modules/app_database/modules/messages/isPrivateChannel.tsx");
 
 export const isPrivateChannel = function isPrivateChannel(basicChannel) {
   return null == basicChannel.guild_id;

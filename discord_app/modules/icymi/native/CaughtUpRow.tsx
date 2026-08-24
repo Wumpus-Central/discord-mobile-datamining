@@ -2,27 +2,31 @@
 
 // Module 15771 (ExploreServersRow)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = importDefaultResult.createAnimatedComponent(require("Text").Text);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
-  let obj = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: ThemesDefault.space.PX_32 };
+  let obj = { container: null, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
+  obj = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: ThemesDefault.space.PX_32 };
   obj[0] = obj;
   obj = { marginHorizontal: margin.margin, marginBottom: ThemesDefault.space.PX_24 };
   obj[1] = obj;
   obj[2] = { flex: 1, marginBottom: ThemesDefault.space.PX_24 };
+  obj1 = { flex: 1, marginBottom: ThemesDefault.space.PX_24 };
   obj[3] = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_24 };
   obj[4] = { height: 40, width: 40 };
+  const obj2 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_24 };
   obj[5] = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
   obj[6] = { alignSelf: "center", textAlign: "center" };
+  const obj3 = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
   obj[7] = { flex: 1, width: "100%", gap: ThemesDefault.space.PX_12, paddingHorizontal: margin.margin };
   obj[8] = { position: "absolute", top: 0, left: 0, right: 0, height: 150 };
   return obj;
@@ -30,13 +34,15 @@ let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
 let closure_11 = { code: "function CaughtUpRowTsx1(){const{visibleSharedValue,withTiming,Easing}=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withTiming(0,{duration:250,easing:Easing.bezier(0.5,1.8,0.5,1)}):-80}],opacity:visibleSharedValue.get()?withTiming(1,{duration:100,easing:Easing.out(Easing.bezierFn(0.33,1,0.68,1))}):0};}" };
 let closure_12 = { code: "function CaughtUpRowTsx2(){const{visibleSharedValue,withDelay,withSequence,withTiming,Easing}=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withDelay(80,withSequence(withTiming(8,{duration:100,easing:Easing.inOut(Easing.ease)}),withTiming(0,{duration:300,easing:Easing.out(Easing.ease)}))):0}]};}" };
 let closure_13 = { code: "function CaughtUpRowTsx3(){const{visibleSharedValue,withDelay,withSequence,withTiming,Easing}=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withDelay(115,withSequence(withTiming(8,{duration:150,easing:Easing.inOut(Easing.ease)}),withTiming(0,{duration:300,easing:Easing.out(Easing.ease)}))):0}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/icymi/native/CaughtUpRow.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/CaughtUpRow.tsx");
 
 export default function ExploreServersRow(visible) {
   visible = visible.visible;
+  let sharedValue;
+  dependencyMap = undefined;
   const tmp = callback5();
   let obj = visible(4115);
-  const sharedValue = obj.useSharedValue(false);
+  sharedValue = obj.useSharedValue(false);
   let items = [visible, sharedValue];
   const effect = React.useEffect(() => {
     let tmp2 = visible;
@@ -90,7 +96,7 @@ export default function ExploreServersRow(visible) {
             v0 = 1;
             dependencyMap = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = visible(15725).maybeFetchGuildDiscoveryCategories();
+            obj2[0] = closure_1_0(15725).maybeFetchGuildDiscoveryCategories();
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -188,9 +194,9 @@ export default function ExploreServersRow(visible) {
   const fn = function b() {
     let num = 0;
     if (sharedValue.get()) {
-      visible(4115);
+      let obj = visible(4115);
       const obj2 = visible(4115);
-      let obj = { duration: 100, easing: null };
+      obj = { duration: 100, easing: null };
       const Easing = visible(4115).Easing;
       obj[1] = Easing.inOut(visible(4115).Easing.ease);
       const obj3 = visible(4664);
@@ -213,9 +219,9 @@ export default function ExploreServersRow(visible) {
   const fn2 = function x() {
     let num = 0;
     if (sharedValue.get()) {
-      visible(4115);
+      let obj = visible(4115);
       const obj2 = visible(4115);
-      let obj = { duration: 150, easing: null };
+      obj = { duration: 150, easing: null };
       const Easing = visible(4115).Easing;
       obj[1] = Easing.inOut(visible(4115).Easing.ease);
       const obj3 = visible(4664);

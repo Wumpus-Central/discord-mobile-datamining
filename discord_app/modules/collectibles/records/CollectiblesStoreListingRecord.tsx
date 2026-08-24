@@ -3,9 +3,10 @@
 // Module 5310 (fromServer)
 import toJSDefault from "toJS" /* 1931 */;
 
-const require = fn;
+const require = arg1;
 toJSDefault;
-const prototype = function CollectiblesStoreListingRecord(styles) {
+let prototype;
+prototype = function CollectiblesStoreListingRecord(styles) {
   const tmp2 = new prototype(tmp, new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ storeListingId: tmp2.storeListingId, skuId: tmp2.skuId, name: tmp2.name, summary } = styles);
@@ -33,19 +34,19 @@ prototype["fromServer"] = function fromServer(styles) {
   if (null != styles) {
     obj = { backgroundColors: null, buttonColors: null, confettiColors: null };
     const background_colors = styles.background_colors;
-    obj[0] = background_colors.map((item, index) => {
+    obj[0] = background_colors.map((color) => {
       const tmp = callback2(5311);
-      return tmp(callback(688).int2hex(item));
+      return tmp(callback(688).int2hex(color));
     });
     const button_colors = styles.button_colors;
-    obj[1] = button_colors.map((item, index) => {
+    obj[1] = button_colors.map((color) => {
       const tmp = callback2(5311);
-      return tmp(callback(688).int2hex(item));
+      return tmp(callback(688).int2hex(color));
     });
     const confetti_colors = styles.confetti_colors;
-    obj[2] = confetti_colors.map((item, index) => {
+    obj[2] = confetti_colors.map((color) => {
       const tmp = callback2(5311);
-      return tmp(callback(688).int2hex(item));
+      return tmp(callback(688).int2hex(color));
     });
     tmp5 = obj;
   }
@@ -65,6 +66,6 @@ prototype["fromServer"] = function fromServer(styles) {
   tmp6.styles = obj.styles;
   return tmp6;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingRecord.tsx");
 
 export default prototype;

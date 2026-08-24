@@ -1,10 +1,11 @@
 // === Module 13182: apexExperiment ===
 
 // Module 13182 (apexExperiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { resetSilenceWarningOnDeviceChange: false, resetSilenceWarningAfterNMinutes: "ct", enableHardwareSilenceWarning: true };
+obj = { name: "2026-02-silence-warning-aggression", kind: "user", defaultConfig: obj, variations: null };
 obj = { 1: null, 2: null, 3: null };
 const obj1 = {};
 const merged = Object.assign(obj);
@@ -20,6 +21,6 @@ obj3.enableHardwareSilenceWarning = true;
 obj[3] = obj3;
 obj[3] = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const result = obj132.fileFinishedImporting("modules/media_engine/SilenceWarningExperiment.tsx");
+const result = set.fileFinishedImporting("modules/media_engine/SilenceWarningExperiment.tsx");
 
 export default apexExperiment;

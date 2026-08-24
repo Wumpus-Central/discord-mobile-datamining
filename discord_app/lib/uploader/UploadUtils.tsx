@@ -1,13 +1,12 @@
 // === Module 4836: doesImageMatchUpload ===
 
 // Module 4836 (doesImageMatchUpload)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import isBlockedDomain from "isBlockedDomain" /* 1917 */;
 import cancel from "cancel" /* 4829 */;
-import _getAttachmentFile from "_getAttachmentFile" /* 4837 */;
 
-const result = obj132.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
+const result = set.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {
 }
 const prototype = DefaultHttpClient.prototype;
@@ -79,9 +78,9 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body) {
 };
 
 export const doesImageMatchUpload = function doesImageMatchUpload(image, closure_0) {
-  if (_require.id !== image.uri) {
-    if (_require.item.platform === cancel.UploadPlatform.REACT_NATIVE) {
-      const item = _require.item;
+  if (closure_0.id !== image.uri) {
+    if (closure_0.item.platform === cancel.UploadPlatform.REACT_NATIVE) {
+      const item = closure_0.item;
       const filename = image.filename;
       let tmp3 = item.originalUri === image.uri;
       if (!tmp3) {
@@ -119,11 +118,11 @@ export const canUploadNatively = function canUploadNatively(item) {
     fileIsInAppDirResult = null != item.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = _getAttachmentFile;
+    let tmpResult = tmp(4837);
     fileIsInAppDirResult = tmpResult.fileIsInAppDir(item.uri);
   }
   if (fileIsInAppDirResult) {
-    tmpResult = isBlockedDomain;
+    tmpResult = tmp(1917);
     fileIsInAppDirResult = tmpResult.isLibdiscoreInitialized();
   }
   return fileIsInAppDirResult;

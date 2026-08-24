@@ -6,9 +6,9 @@ import map from "map" /* 4097 */;
 import IconSizesDefault from "IconSizes" /* 4747 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
+const result = require("set").fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
 
 export default function ThemedIcon(themedColor) {
   const merged = Object.assign(themedColor, Object.create(null));

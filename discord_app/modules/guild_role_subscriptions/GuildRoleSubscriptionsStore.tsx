@@ -1,12 +1,12 @@
 // === Module 4015: makeGroupListingIndexSubscriptionListingTag ===
 
 // Module 4015 (makeGroupListingIndexSubscriptionListingTag)
-import obj132 from "obj132" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import CreatorMonetizationRestrictions from "CreatorMonetizationRestrictions" /* 4016 */;
 import version from "version" /* 4017 */;
+import set from "set" /* 2 */;
 
 function makeGroupListingIndexSubscriptionListingTag(arg0) {
   return "subscription_listing:" + arg0;
@@ -22,10 +22,10 @@ function saveGroupListing(groupListing) {
     prop = [];
   }
   while (tmp3 !== undefined) {
+    let tmp5 = saveListing;
     let tmp6 = saveListing(tmp4);
     continue;
   }
-  tmp3 = prop[Symbol.iterator]();
 }
 function saveListing(id) {
   const result = secondaryIndexMap1.set(id.id, id);
@@ -34,6 +34,7 @@ function saveBenefitChannels(benefitChannels) {
   const iter = benefitChannels[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp2 = map1;
     let result = map1.set(nextResult.id, nextResult);
     continue;
   }
@@ -50,7 +51,7 @@ const secondaryIndexMap1 = new version.SecondaryIndexMap((application_id) => {
   return items;
 }, (id) => id.id);
 let closure_7 = {};
-const set = new Set();
+let set = new Set();
 let closure_9 = {};
 let closure_10 = {};
 let closure_11 = {};
@@ -69,8 +70,8 @@ prototype["getSubscriptionGroupListingsForGuildFetchState"] = function getSubscr
   }
   return NOT_FETCHED;
 };
-prototype["getDidFetchListingForSubscriptionPlanId"] = function getDidFetchListingForSubscriptionPlanId(item) {
-  return set.has(item);
+prototype["getDidFetchListingForSubscriptionPlanId"] = function getDidFetchListingForSubscriptionPlanId(arg0) {
+  return set.has(arg0);
 };
 prototype["getSubscriptionGroupListing"] = function getSubscriptionGroupListing(arg0) {
   return secondaryIndexMap.get(arg0);
@@ -111,11 +112,11 @@ prototype["getSubscriptionSettings"] = function getSubscriptionSettings(id) {
 prototype["getSubscriptionTrial"] = function getSubscriptionTrial(id) {
   return table3[id];
 };
-prototype["getMonetizationRestrictions"] = function getMonetizationRestrictions(closure_1_8) {
-  return table4[set];
+prototype["getMonetizationRestrictions"] = function getMonetizationRestrictions(id) {
+  return table4[id];
 };
-prototype["getMonetizationRestrictionsFetchState"] = function getMonetizationRestrictionsFetchState(closure_1_8) {
-  let NOT_FETCHED = table5[set];
+prototype["getMonetizationRestrictionsFetchState"] = function getMonetizationRestrictionsFetchState(id) {
+  let NOT_FETCHED = table5[id];
   if (NOT_FETCHED == null) {
     NOT_FETCHED = obj.NOT_FETCHED;
   }
@@ -149,31 +150,35 @@ obj = {
     guildId = guildId.guildId;
     closure_7[guildId] = obj.FETCHING;
     for (const item10012 of tmp) {
+      let tmp2 = secondaryIndexMap;
       let deleteResult = secondaryIndexMap.delete(item10012.id);
       let subscription_listings_ids = item10012.subscription_listings_ids;
+      let tmp4 = subscription_listings_ids;
+      let tmp5 = subscription_listings_ids;
       for (const item10022 of subscription_listings_ids) {
+        let tmp6 = secondaryIndexMap1;
         let deleteResult1 = secondaryIndexMap1.delete(item10022);
         continue;
       }
       continue;
     }
-    const tmp = getSubscriptionGroupListingsForGuild(guildId);
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function handleFetchListingsSuccess(arg0) {
     ({ guildId, groupListings, subscriptionTrials } = arg0);
     closure_7[guildId] = obj.FETCHED;
     ({ benefitChannels, settings } = arg0);
     while (tmp !== undefined) {
+      let tmp3 = saveGroupListing;
       let tmp4 = saveGroupListing(tmp2);
       continue;
     }
     closure_9[guildId] = settings;
     for (const item10023 of subscriptionTrials) {
+      let tmp5 = closure_10;
       closure_10[item10023.id] = item10023;
       continue;
     }
     saveBenefitChannels(benefitChannels);
-    tmp = groupListings[Symbol.iterator]();
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function handleFetchListingsFailure(guildId) {
     closure_7[guildId.guildId] = obj.FETCHED;
@@ -228,7 +233,7 @@ obj = {
   }
 };
 const guildRoleSubscriptionsStore = new GuildRoleSubscriptionsStore(dispatcherDefault, obj);
-let result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx");
+let result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx");
 
 export default guildRoleSubscriptionsStore;
 export const FetchState = obj;

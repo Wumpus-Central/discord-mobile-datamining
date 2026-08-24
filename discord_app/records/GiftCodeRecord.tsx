@@ -3,12 +3,12 @@
 // Module 9626 (frozen)
 import toJSDefault from "toJS" /* 1931 */;
 import tDefault from "t" /* 3975 */;
-import createFromServer from "createFromServer" /* 7426 */;
-import createFromServer2 from "createFromServer" /* 7629 */;
-import createFromServer3 from "createFromServer" /* 4040 */;
+import closure_3 from "createFromServer" /* 7426 */;
+import closure_4 from "createFromServer" /* 7629 */;
+import closure_5 from "createFromServer" /* 4040 */;
 import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures" /* 1924 */;
 
-const require = fn;
+const require = arg1;
 toJSDefault;
 const frozen = Object.freeze({ PAYMENT_SOURCE_REQUIRED: 1, EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2, NOT_SELF_REDEEMABLE: 4 });
 let GiftCodeRecord;
@@ -56,16 +56,18 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   let fromServer1 = null;
   if (null != user.subscription_trial) {
     fromServer1 = closure_3.createFromServer(user.subscription_trial);
+    const tmp11 = closure_3;
   }
   const promotion = user.promotion;
   let fromServer2 = null;
   if (null != promotion) {
     fromServer2 = closure_4.createFromServer(user.promotion);
+    const tmp12 = closure_4;
   }
   if (typeof GiftCodeRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp14 = new GiftCodeRecord("Trying to call a non-function", closure_3, closure_4, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp4, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches);
+  const tmp14 = new GiftCodeRecord("Trying to call a non-function", tmp11, tmp12, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp4, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches);
   // ThrowIfThisInitialized (0x7c)
   tmp14.userId = id;
   tmp14.code = code;
@@ -146,7 +148,7 @@ Object.defineProperty(prototype, "isExistingPremiumSubscriptionDisallowed", {
   set: undefined
 });
 Object.defineProperty(prototype, "analyticsData", {
-  get: function analyticsData(dependencyMap) {
+  get: function analyticsData(arg0) {
     return { gift_code: this.code, gift_code_max_uses: this.maxUses };
   },
   set: undefined
@@ -154,7 +156,7 @@ Object.defineProperty(prototype, "analyticsData", {
 prototype["toString"] = function toString() {
   return this.code;
 };
-const result = require("obj132").fileFinishedImporting("records/GiftCodeRecord.tsx");
+const result = require("set").fileFinishedImporting("records/GiftCodeRecord.tsx");
 
 export default GiftCodeRecord;
 export const GiftCodeFlags = frozen;

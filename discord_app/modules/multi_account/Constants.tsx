@@ -1,9 +1,9 @@
 // === Module 11586: MAX_ACCOUNTS ===
 
 // Module 11586 (MAX_ACCOUNTS)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/multi_account/Constants.tsx");
+const result = set.fileFinishedImporting("modules/multi_account/Constants.tsx");
 
 export const MAX_ACCOUNTS = 5;
 export const SWITCH_ACCOUNTS_MODAL_KEY = "switch-accounts-modal";

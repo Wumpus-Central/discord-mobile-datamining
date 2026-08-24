@@ -2,11 +2,11 @@
 
 // Module 15006 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-{
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.OAuOHD);
@@ -30,6 +30,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
 
 export default createToggle;

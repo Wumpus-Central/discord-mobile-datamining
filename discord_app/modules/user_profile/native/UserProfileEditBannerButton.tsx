@@ -6,12 +6,12 @@ import PressableBase from "PressableBase" /* 5433 */;
 import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8972 */;
 import UserProfileBannerDefault from "UserProfileBanner" /* 8987 */;
 import PencilIcon from "PencilIcon" /* 9925 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
   let analyticsLocations;
@@ -41,17 +41,19 @@ function EditButton(disabled) {
   if (flag === undefined) {
     flag = false;
   }
-  { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: callback2().editButton, children: null };
-  const obj = { size: "xs", color: ThemesDefault.colors.WHITE };
+  let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: callback2().editButton, children: null };
+  obj = { size: "xs", color: ThemesDefault.colors.WHITE };
   obj[5] = callback(PencilIcon.PencilIcon, obj);
   return callback(PressableBase.PressableOpacity, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round };
+createCacheKey = { container: { position: "relative" }, editButton: null, previewButton: null };
+createCacheKey = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
+const obj1 = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
 
 export default function UserProfileEditBannerButton(arg0) {
   ({ user, showProfilePreviewButton, showEditButton } = arg0);
@@ -69,7 +71,7 @@ export default function UserProfileEditBannerButton(arg0) {
   if (showProfilePreviewButton) {
     obj = { userId: null };
     obj[0] = user.id;
-    showProfilePreviewButton = callback(ProfilePreviewButton, obj);
+    showProfilePreviewButton = tmp5(ProfilePreviewButton, obj);
   }
   items[1] = showProfilePreviewButton;
   if (showEditButton) {
@@ -77,9 +79,9 @@ export default function UserProfileEditBannerButton(arg0) {
     obj[0] = onPressEdit;
     obj[1] = editButtonAccessibilityLabel;
     obj[2] = editDisabled;
-    showEditButton = callback(EditButton, obj);
+    showEditButton = tmp5(EditButton, obj);
   }
   items[2] = showEditButton;
   obj[1] = items;
-  return callback(View, obj);
+  return closure_6(View, obj);
 };

@@ -2,28 +2,30 @@
 
 // Module 14039 (UserProfileBadgesEditButton)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { getBadgeAssetFromCDN } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+createCacheKey = { content: null, badge: null, hideBadgesLink: null, overflowCount: null };
+createCacheKey = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 32, height: 32 };
 createCacheKey[2] = { marginLeft: "auto" };
 createCacheKey[3] = { marginLeft: 2 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileBadgesEditButton.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileBadgesEditButton.tsx");
 
 export default function UserProfileBadgesEditButton(arg0) {
   ({ badges, catalogBadges } = arg0);
+  let _require;
   let analyticsLocations;
   const tmp = callback2();
-  const _require = tmp;
+  _require = tmp;
   let obj = _require(14024);
   const isBadgeManagementEnabled = obj.useIsBadgeManagementEnabled({ location: "UserProfileBadgesEditButton" });
   analyticsLocations = analyticsLocations(7139)().analyticsLocations;
@@ -51,10 +53,10 @@ export default function UserProfileBadgesEditButton(arg0) {
     const diff = length - Math.min(length, 6);
     let mapped;
     if (substr1 != null) {
-      mapped = substr1.map((item, index) => item.name);
+      mapped = substr1.map((name) => name.name);
     }
     if (mapped == null) {
-      mapped = substr.map((item, index) => item.description);
+      mapped = substr.map((description) => description.description);
     }
     const intl = tmp2(1236).intl;
     obj = { badge_names: null, overflow_count: null };
@@ -72,16 +74,16 @@ export default function UserProfileBadgesEditButton(arg0) {
     const obj2 = { style: null, "aria-hidden": true, children: null };
     obj2[0] = tmp.content;
     if (null != substr1) {
-      let mapped1 = substr1.map((item, index) => closure_1_7(analyticsLocations(dependencyMap[15]), { badge: item, size: 32, style: lib.badge }, item.badge_id));
+      let mapped1 = substr1.map((badge) => closure_1_7(analyticsLocations(closure_1_2[15]), { badge, size: 32, style: lib.badge }, badge.badge_id));
     } else {
-      mapped1 = substr.map((item, index) => {
+      mapped1 = substr.map((iconSrc) => {
         const obj = { style: lib.badge, source: null };
-        let iconSrc = item.iconSrc;
+        iconSrc = iconSrc.iconSrc;
         if (iconSrc == null) {
-          iconSrc = getBadgeAssetFromCDN(item.icon);
+          iconSrc = closure_1_6(iconSrc.icon);
         }
         obj[1] = { uri: iconSrc };
-        return closure_1_7(closure_1_4, obj, item.id);
+        return closure_1_7(closure_1_4, obj, iconSrc.id);
       });
     }
     const items = [mapped1, ];
@@ -95,7 +97,7 @@ export default function UserProfileBadgesEditButton(arg0) {
     }
     items[1] = tmp13Result;
     obj2[2] = items;
-    obj[2] = callback(closure_5, obj2);
+    obj[2] = closure_8(closure_5, obj2);
     let tmp18;
     if (mapped.length > 0) {
       const obj4 = { text: null };

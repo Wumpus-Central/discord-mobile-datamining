@@ -1,11 +1,11 @@
 // === Module 1314: _isNativeReflectConstruct ===
 
 // Module 1314 (_isNativeReflectConstruct)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_5 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 let PbLong = require;
@@ -132,11 +132,11 @@ const items1 = [
     value: function toBigInt() {
       if (obj) {
         const self = this;
-        const V = obj.V;
+        const V = tmp.V;
         V.setInt32(0, this.lo, true);
-        const V2 = obj.V;
+        const V2 = tmp.V;
         V2.setInt32(4, this.hi, true);
-        const V3 = obj.V;
+        const V3 = tmp.V;
         return V3.getBigUint64(0, true);
       } else {
         const _Error = Error;
@@ -209,7 +209,7 @@ const items2 = [
               const tmp28 = PbLong(tmp25, tmp26);
               return tmp28;
             }
-            tmp24 = _slicedToArray(PbLong(1313).int64fromString(trimmed), 3);
+            tmp24 = callback(PbLong(1313).int64fromString(trimmed), 3);
           } else {
             const _Error3 = Error;
             const error4 = new Error("string is no integer");
@@ -307,11 +307,11 @@ const items3 = [
     value: function toBigInt() {
       if (obj) {
         const self = this;
-        const V = obj.V;
+        const V = tmp.V;
         V.setInt32(0, this.lo, true);
-        const V2 = obj.V;
+        const V2 = tmp.V;
         V2.setInt32(4, this.hi, true);
-        const V3 = obj.V;
+        const V3 = tmp.V;
         return V3.getBigInt64(0, true);
       } else {
         const _Error = Error;
@@ -376,7 +376,7 @@ const items4 = [
           trimmed = trimmed.trim();
           if (re8.test(trimmed)) {
             const obj3 = PbLong(1313);
-            [tmp24, tmp26, tmp27] = _slicedToArray(PbLong(1313).int64fromString(trimmed), 3);
+            [tmp24, tmp26, tmp27] = callback(PbLong(1313).int64fromString(trimmed), 3);
             const obj4 = PbLong(tmp26, tmp27);
             let negateResult = obj4;
             if (tmp24) {
@@ -402,6 +402,7 @@ const items4 = [
               const result1 = -trimmed / c9;
               const obj2 = PbLong(-trimmed, result1);
               negateResult1 = obj2.negate();
+              const tmp7 = -trimmed;
             }
             return negateResult1;
           } else {
@@ -417,6 +418,201 @@ const items4 = [
   }
 ];
 const _module1Result2 = _createClass(PbLong, items3, items4);
+const obj1 = {
+  key: "from",
+  value: function from(trimmed) {
+    const self = this;
+    if (obj) {
+      if ("string" === tmp) {
+        if ("0" == trimmed) {
+          return self.ZERO;
+        } else if ("" == trimmed) {
+          const _Error7 = Error;
+          error = new Error("string is no integer");
+          throw error;
+        } else {
+          let CResult = obj.C(trimmed);
+        }
+      } else {
+        CResult = trimmed;
+        if ("number" !== tmp) {
+          let CResult1 = trimmed;
+        }
+        if (CResult1) {
+          if (CResult1 < obj.UMIN) {
+            const _Error6 = Error;
+            const error1 = new Error("signed value for ulong");
+            throw error1;
+          } else if (CResult1 > obj.UMAX) {
+            const _Error5 = Error;
+            const error2 = new Error("ulong too large");
+            throw error2;
+          } else {
+            const V = obj.V;
+            V.setBigUint64(0, CResult1, true);
+            ({ V: V2, V: V3 } = obj);
+            const int32 = V2.getInt32(0, true);
+            const int321 = V3.getInt32(4, true);
+            const tmp42 = PbLong(int32, int321);
+            return tmp42;
+          }
+        } else {
+          return self.ZERO;
+        }
+      }
+      if (0 === CResult) {
+        return self.ZERO;
+      } else {
+        CResult1 = obj.C(CResult);
+      }
+    } else if ("string" === tmp) {
+      if ("0" == trimmed) {
+        return self.ZERO;
+      } else {
+        trimmed = trimmed.trim();
+        if (re8.test(trimmed)) {
+          const obj2 = PbLong(1313);
+          if (tmp24[0]) {
+            const _Error4 = Error;
+            const error3 = new Error("signed value");
+            throw error3;
+          } else {
+            const tmp28 = PbLong(tmp25, tmp26);
+            return tmp28;
+          }
+          tmp24 = callback(PbLong(1313).int64fromString(trimmed), 3);
+        } else {
+          const _Error3 = Error;
+          const error4 = new Error("string is no integer");
+          throw error4;
+        }
+      }
+    } else if ("number" === tmp) {
+      if (0 == trimmed) {
+        return self.ZERO;
+      } else {
+        const _Number = Number;
+        if (Number.isSafeInteger(trimmed)) {
+          if (trimmed < 0) {
+            const _Error2 = Error;
+            const error5 = new Error("signed value for ulong");
+            throw error5;
+          } else {
+            const result = trimmed / c9;
+            const tmp10 = PbLong(trimmed, result);
+            return tmp10;
+          }
+        } else {
+          const _Error = Error;
+          const error6 = new Error("number is no integer");
+          throw error6;
+        }
+      }
+    }
+    const error7 = new Error("unknown value " + tmp);
+    throw error7;
+  }
+};
+let obj2 = {
+  key: "isNegative",
+  value: function isNegative() {
+    return 2147483648 & this.hi;
+  }
+};
+let obj3 = {
+  key: "from",
+  value: function from(trimmed) {
+    const self = this;
+    if (obj) {
+      if ("string" === tmp) {
+        if ("0" == trimmed) {
+          return self.ZERO;
+        } else if ("" == trimmed) {
+          const _Error5 = Error;
+          error = new Error("string is no integer");
+          throw error;
+        } else {
+          let CResult = obj.C(trimmed);
+        }
+      } else {
+        CResult = trimmed;
+        if ("number" !== tmp) {
+          let CResult1 = trimmed;
+        }
+        if (CResult1) {
+          if (CResult1 < obj.MIN) {
+            const _Error4 = Error;
+            const error1 = new Error("ulong too small");
+            throw error1;
+          } else if (CResult1 > obj.MAX) {
+            const _Error3 = Error;
+            const error2 = new Error("ulong too large");
+            throw error2;
+          } else {
+            const V = obj.V;
+            V.setBigInt64(0, CResult1, true);
+            ({ V: V2, V: V3 } = obj);
+            const int32 = V2.getInt32(0, true);
+            const int321 = V3.getInt32(4, true);
+            const tmp37 = PbLong(int32, int321);
+            return tmp37;
+          }
+        } else {
+          return self.ZERO;
+        }
+      }
+      if (0 === CResult) {
+        return self.ZERO;
+      } else {
+        CResult1 = obj.C(CResult);
+      }
+    } else if ("string" === tmp) {
+      if ("0" == trimmed) {
+        return self.ZERO;
+      } else {
+        trimmed = trimmed.trim();
+        if (re8.test(trimmed)) {
+          const obj3 = PbLong(1313);
+          [tmp24, tmp26, tmp27] = callback(PbLong(1313).int64fromString(trimmed), 3);
+          const obj4 = PbLong(tmp26, tmp27);
+          let negateResult = obj4;
+          if (tmp24) {
+            negateResult = obj4.negate();
+          }
+          return negateResult;
+        } else {
+          const _Error2 = Error;
+          const error3 = new Error("string is no integer");
+          throw error3;
+        }
+      }
+    } else if ("number" === tmp) {
+      if (0 == trimmed) {
+        return self.ZERO;
+      } else {
+        const _Number = Number;
+        if (Number.isSafeInteger(trimmed)) {
+          if (trimmed > 0) {
+            const result = trimmed / c9;
+            let negateResult1 = PbLong(trimmed, result);
+          } else {
+            const result1 = -trimmed / c9;
+            const obj2 = PbLong(-trimmed, result1);
+            negateResult1 = obj2.negate();
+            const tmp7 = -trimmed;
+          }
+          return negateResult1;
+        } else {
+          const _Error = Error;
+          const error4 = new Error("number is no integer");
+          throw error4;
+        }
+      }
+    }
+    const error5 = new Error("unknown value " + tmp);
+    throw error5;
+  }
+};
 const tmp2Result1 = new _module1Result1(0, 0);
 _module1Result2.ZERO = new _module1Result2(0, 0);
 

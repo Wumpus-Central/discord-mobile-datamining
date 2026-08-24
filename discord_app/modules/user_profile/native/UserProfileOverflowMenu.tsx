@@ -1,29 +1,32 @@
 // === Module 12330: UserProfileOverflowMenu ===
 
 // Module 12330 (UserProfileOverflowMenu)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getParticipants from "getParticipants" /* 4773 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "getParticipants" /* 4773 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
 import ME from "ME" /* 676 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: unpackModuleId, AVATAR_MAX_SIZE: closure_12, ChannelTypesSets: map1, NOOP: closure_14, RelationshipTypes: closure_15 } = ME);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_17, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_18 } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileOverflowMenu.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileOverflowMenu.tsx");
 
 export default function UserProfileOverflowMenu(user) {
   user = user.user;
   ({ currentUser, displayProfile } = user);
   const channel = user.channel;
+  let selectedChannel;
+  let selectedVoiceChannelId;
+  let selectedVoiceChannel;
   let context;
   let trackUserProfileAction;
   let analyticsLocations;
@@ -47,9 +50,9 @@ export default function UserProfileOverflowMenu(user) {
     ({ getChannel, getChannel: getChannel2 } = trackUserProfileAction);
     return { selectedChannel: getChannel(newestAnalyticsLocation.getChannelId()), selectedVoiceChannelId: newestAnalyticsLocation.getVoiceChannelId(), selectedVoiceChannel: getChannel2(newestAnalyticsLocation.getVoiceChannelId()) };
   });
-  const selectedChannel = stateFromStoresObject1.selectedChannel;
-  const selectedVoiceChannelId = stateFromStoresObject1.selectedVoiceChannelId;
-  const selectedVoiceChannel = stateFromStoresObject1.selectedVoiceChannel;
+  selectedChannel = stateFromStoresObject1.selectedChannel;
+  selectedVoiceChannelId = stateFromStoresObject1.selectedVoiceChannelId;
+  selectedVoiceChannel = stateFromStoresObject1.selectedVoiceChannel;
   let obj2 = user(channel[13]);
   [arr3, arr4] = selectedChannel(obj2.useServerInviteRows(user.id), 2);
   const tmp5 = selectedChannel(obj2.useServerInviteRows(user.id), 2);
@@ -63,12 +66,12 @@ export default function UserProfileOverflowMenu(user) {
   const userProfileAnalyticsContext = tmpResult.useUserProfileAnalyticsContext();
   context = userProfileAnalyticsContext.context;
   trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
-  let tmp7Result = displayProfile(tmp2[17]);
+  let tmp7Result = tmp7(tmp2[17]);
   const tmp7ResultResult = tmp7Result(displayProfile(tmp2[18]).USER_PROFILE_OVERFLOW_MENU);
   analyticsLocations = tmp7ResultResult.analyticsLocations;
   newestAnalyticsLocation = tmp7ResultResult.newestAnalyticsLocation;
   let guild_id;
-  tmp7Result = displayProfile(tmp2[19]);
+  tmp7Result = tmp7(tmp2[19]);
   if (channel != null) {
     guild_id = channel.guild_id;
   }
@@ -88,8 +91,8 @@ export default function UserProfileOverflowMenu(user) {
   const items2 = [user.id, guildId];
   ({ isVisible, markAsDismissed } = shopThisLookMarketing);
   const callback = selectedVoiceChannelId.useCallback(() => {
-    user(channel[23]);
-    const obj = { userId: user.id, guildId };
+    let obj = user(channel[23]);
+    obj = { userId: user.id, guildId };
     const result = obj.openShopThisLookActionSheet(obj);
   }, items2);
   const tmpResult3 = user(tmp2[22]);
@@ -243,14 +246,14 @@ export default function UserProfileOverflowMenu(user) {
       };
       items7.push(obj4);
     }
-    if (relationshipType !== tmp29.FRIEND) {
+    if (relationshipType !== id.FRIEND) {
       if (tmp30) {
         const obj5 = { label: null, action: null };
         let intl5 = tmp(tmp2[30]).intl;
         obj5[0] = intl5.string(tmp(tmp2[30]).t.xNdRDO);
         obj5[1] = function action() {
-          user(channel[23]);
-          const obj = { userId: id, guildId };
+          let obj = user(channel[23]);
+          obj = { userId: id, guildId };
           const result = obj.openShopThisLookActionSheet(obj);
         };
         arr2 = items6.push(obj5);
@@ -268,7 +271,6 @@ export default function UserProfileOverflowMenu(user) {
             }
             displayProfile(channel[36]).unignoreUser(id, newestAnalyticsLocation, id);
             callback();
-            const obj2 = displayProfile(channel[36]);
           };
           arr3 = items7.push(obj6);
         }
@@ -297,8 +299,8 @@ export default function UserProfileOverflowMenu(user) {
           const intl8 = tmp(tmp2[30]).intl;
           obj8[0] = intl8.string(tmp(tmp2[30]).t.l4Emac);
           obj8[2] = function action() {
-            displayProfile(channel[32]);
-            let obj = { userId: id, channelId: null, onSuccess: null, impressionName: null };
+            let obj = displayProfile(channel[32]);
+            obj = { userId: id, channelId: null, onSuccess: null, impressionName: null };
             id = undefined;
             if (channel != null) {
               id = channel.id;
@@ -309,12 +311,10 @@ export default function UserProfileOverflowMenu(user) {
               if (id != null) {
                 id = id.id;
               }
-              const result = displayProfile(channel[38]).showBlockSuccessToast(closure_15, id);
-              const obj = displayProfile(channel[38]);
+              const result = closure_1_1(closure_1_2[38]).showBlockSuccessToast(closure_15, id);
             };
             obj[3] = user(channel[28]).ImpressionNames.BLOCK_USER_CONFIRMATION;
             obj.openLazy(user(channel[35])(channel[39], channel.paths), closure_17, obj, "stack");
-            const tmp3 = user(channel[35])(channel[39], channel.paths);
           };
           push(obj8);
           if (result) {
@@ -325,14 +325,14 @@ export default function UserProfileOverflowMenu(user) {
               trackUserProfileAction({ action: "REPORT", analyticsLocations });
               let tmp3;
               if ("@me" !== guildId1) {
-                if (null !== guildId1) {
-                  tmp3 = guildId1;
+                if (null !== tmp2) {
+                  tmp3 = tmp2;
                 }
               }
               const result = user(channel[40]).showReportModalForUser(user, tmp3);
+              const obj = { action: "REPORT", analyticsLocations };
               const obj2 = user(channel[40]);
               displayProfile(channel[32]).hideActionSheet();
-              const obj3 = displayProfile(channel[32]);
             };
             items7.push(obj9);
           } else {
@@ -372,6 +372,8 @@ export default function UserProfileOverflowMenu(user) {
           let obj = { action: "IGNORE", analyticsLocations };
           trackUserProfileAction(obj);
           const obj2 = displayProfile(channel[32]);
+          const tmp2 = channel;
+          const tmp3 = user;
           obj = { userId: id, channelId: null, onSuccess: null, impressionName: null };
           id = undefined;
           if (channel != null) {
@@ -379,9 +381,8 @@ export default function UserProfileOverflowMenu(user) {
           }
           obj[1] = id;
           obj[2] = closure_14;
-          obj[3] = user(channel[28]).ImpressionNames.IGNORE_USER_CONFIRMATION;
+          obj[3] = tmp3(tmp2[28]).ImpressionNames.IGNORE_USER_CONFIRMATION;
           obj2.openLazy(user(channel[35])(channel[37], channel.paths), closure_1_18, obj, "stack");
-          const tmp4 = user(channel[35])(channel[37], channel.paths);
         };
         items7.push(obj12);
       }
@@ -420,6 +421,7 @@ export default function UserProfileOverflowMenu(user) {
       obj14[0] = intl14.string(tmp(tmp2[30]).t.y5MwJy);
       obj14[1] = function action() {
         trackUserProfileAction({ action: "COPY_USERNAME", analyticsLocations });
+        const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = user(channel[47]);
         obj2.copy(displayProfile(channel[48]).getUserTag(user, { decoration: "never", identifiable: "always" }));
         const obj3 = displayProfile(channel[48]);
@@ -442,10 +444,11 @@ export default function UserProfileOverflowMenu(user) {
           obj[0] = intl.string(user(channel[30]).t.y5MwJy);
           obj[1] = function onPress() {
             callback({ action: "COPY_USERNAME", analyticsLocations: closure_8 });
-            const obj2 = bannerURL(channel[47]);
-            obj2.copy(displayProfile(channel[48]).getUserTag(bannerURL, { decoration: "never", identifiable: "always" }));
-            const obj3 = displayProfile(channel[48]);
-            const result = bannerURL(channel[49]).presentUsernameCopied();
+            const obj = { action: "COPY_USERNAME", analyticsLocations: closure_8 };
+            const obj2 = bannerURL(closure_1_2[47]);
+            obj2.copy(closure_1_1(closure_1_2[48]).getUserTag(bannerURL, { decoration: "never", identifiable: "always" }));
+            const obj3 = closure_1_1(closure_1_2[48]);
+            const result = bannerURL(closure_1_2[49]).presentUsernameCopied();
           };
           items.push(obj);
           obj = { label: null, onPress: null };
@@ -453,9 +456,10 @@ export default function UserProfileOverflowMenu(user) {
           obj[0] = intl2.string(user(channel[30]).t["/AXYnE"]);
           obj[1] = function onPress() {
             callback({ action: "COPY_USER_ID", analyticsLocations: closure_8 });
-            bannerURL(channel[47]).copy(closure_15);
-            const obj2 = bannerURL(channel[47]);
-            bannerURL(channel[49]).presentIdCopied();
+            bannerURL(closure_1_2[47]).copy(closure_15);
+            const obj = { action: "COPY_USER_ID", analyticsLocations: closure_8 };
+            const obj2 = bannerURL(closure_1_2[47]);
+            bannerURL(closure_1_2[49]).presentIdCopied();
           };
           items.push(obj);
           let obj2 = bannerURL;
@@ -469,20 +473,20 @@ export default function UserProfileOverflowMenu(user) {
           }
           if (hasAvatarForGuildResult) {
             obj = { label: null, onPress: null };
-            const intl3 = user(channel[30]).intl;
-            obj[0] = intl3.string(user(channel[30]).t.gERDvM);
+            const intl3 = tmp(tmp2[30]).intl;
+            obj[0] = intl3.string(tmp(tmp2[30]).t.gERDvM);
             obj[1] = function onPress() {
               callback({ action: "COPY_AVATAR_IMAGE_LINK", analyticsLocations: closure_8 });
               guildId = undefined;
               if (guildId != null) {
                 guildId = guildId.guildId;
               }
-              const avatarURL = bannerURL.getAvatarURL(guildId, enabled, true);
+              const avatarURL = bannerURL.getAvatarURL(guildId, closure_1_12, true);
               if (null != avatarURL) {
-                bannerURL(channel[47]).copy(avatarURL);
-                const obj2 = bannerURL(channel[47]);
-                bannerURL(channel[49]).presentLinkCopied();
-                const obj3 = bannerURL(channel[49]);
+                bannerURL(closure_1_2[47]).copy(avatarURL);
+                const obj2 = bannerURL(closure_1_2[47]);
+                bannerURL(closure_1_2[49]).presentLinkCopied();
+                const obj3 = bannerURL(closure_1_2[49]);
               }
             };
             items.push(obj);
@@ -494,11 +498,12 @@ export default function UserProfileOverflowMenu(user) {
             bannerURL = obj4.getBannerURL(obj1);
             if (null != bannerURL) {
               obj2 = { label: null, onPress: null };
-              const intl4 = user(channel[30]).intl;
-              obj2[0] = intl4.string(user(channel[30]).t.hsNv0R);
+              const intl4 = tmp(tmp2[30]).intl;
+              obj2[0] = intl4.string(tmp(tmp2[30]).t.hsNv0R);
               obj2[1] = function onPress() {
-                trackUserProfileAction({ action: "COPY_BANNER_IMAGE_LINK", analyticsLocations });
+                closure_1_7({ action: "COPY_BANNER_IMAGE_LINK", analyticsLocations: closure_1_8 });
                 user(channel[47]).copy(bannerURL);
+                const obj = { action: "COPY_BANNER_IMAGE_LINK", analyticsLocations: closure_1_8 };
                 const obj2 = user(channel[47]);
                 user(channel[49]).presentLinkCopied();
               };
@@ -507,11 +512,10 @@ export default function UserProfileOverflowMenu(user) {
           }
           let obj3 = { options: items, key: "copy-info", header: null, stackingBehavior: "stack", hasIcons: false };
           obj4 = { title: null };
-          const intl5 = user(channel[30]).intl;
+          const intl5 = tmp(tmp2[30]).intl;
           obj4[0] = intl5.string(user(channel[30]).t.QvQeLv);
           obj3[2] = obj4;
           let result = user(channel[50]).showSimpleActionSheet(obj3);
-          const tmpResult = user(channel[50]);
         };
         push2(obj15);
       } else {
@@ -519,6 +523,7 @@ export default function UserProfileOverflowMenu(user) {
         obj15[1] = function action() {
           trackUserProfileAction({ action: "COPY_USER_ID", analyticsLocations });
           user(channel[47]).copy(id);
+          const obj = { action: "COPY_USER_ID", analyticsLocations };
           const obj2 = user(channel[47]);
           user(channel[49]).presentIdCopied();
         };
@@ -572,7 +577,7 @@ export default function UserProfileOverflowMenu(user) {
       obj20[1] = isVisible;
       obj20[2] = markAsDismissed;
       obj20[3] = callback;
-      items9[1] = callback(displayProfile(tmp2[57]), obj20);
+      items9[1] = callback(tmp7(tmp2[57]), obj20);
       obj17[1] = items9;
       let tmp59 = callback2(tmp(tmp2[17]).AnalyticsLocationProvider, obj17);
     } else {
@@ -617,6 +622,4 @@ export default function UserProfileOverflowMenu(user) {
     };
     t2 = items6.push(obj21);
   }
-  tmp29 = id;
-  const tmp7Result3 = displayProfile(tmp2[27]);
 };

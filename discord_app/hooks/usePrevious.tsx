@@ -1,11 +1,11 @@
 // === Module 6701: usePrevious ===
 
 // Module 6701 (usePrevious)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 
 ({ useRef: c0, useEffect: closure_1 } = noop);
-const result = obj132.fileFinishedImporting("hooks/usePrevious.tsx");
+const result = set.fileFinishedImporting("hooks/usePrevious.tsx");
 
 export default function usePrevious(arg0) {
   const callback = arg0;
@@ -21,6 +21,7 @@ export const usePreviousWhen = function usePreviousWhen(value) {
   value = value.value;
   const callback = value;
   const shouldUpdate = value.shouldUpdate;
+  closure_2 = undefined;
   const tmp = callback(null);
   closure_2 = tmp;
   const items = [value, shouldUpdate];
@@ -34,6 +35,7 @@ export const usePreviousWhen = function usePreviousWhen(value) {
 export const useCurrentWhen = function useCurrentWhen(value) {
   let current = value.value;
   const shouldUpdate = value.shouldUpdate;
+  closure_2 = undefined;
   const tmp = current(null);
   closure_2 = tmp;
   const items = [current, shouldUpdate];

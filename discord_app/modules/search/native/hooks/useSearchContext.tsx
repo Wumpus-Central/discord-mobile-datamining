@@ -2,40 +2,40 @@
 
 // Module 11466 (useGuildSearchContext)
 import _modDef38 from "module_38" /* 38 */;
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { SearchTypes } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/search/native/hooks/useSearchContext.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/search/native/hooks/useSearchContext.tsx");
 
 export const useGuildSearchContext = function useGuildSearchContext(guildId) {
   closure_0 = guildId;
   const items = [guildId];
-  return React.useMemo(() => ({ type: SearchTypes.GUILD, guildId: closure_0 }), items);
+  return React.useMemo(() => ({ type: closure_1_5.GUILD, guildId: closure_0 }), items);
 };
 export const useGuildChannelSearchContext = function useGuildChannelSearchContext(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
-  return React.useMemo(() => ({ type: SearchTypes.GUILD_CHANNEL, guildId: closure_0, channelId: closure_1 }), items);
+  return React.useMemo(() => ({ type: closure_1_5.GUILD_CHANNEL, guildId: closure_0, channelId: closure_1 }), items);
 };
-export const getChannelDetailsSearchContext = function getChannelDetailsSearchContext(channelId, guildId, isThreadResult) {
+export const getChannelDetailsSearchContext = function getChannelDetailsSearchContext(id, guildId, isThreadResult) {
   if (isThreadResult) {
     _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
     let obj = { type: null, guildId: null, channelId: null };
     obj[0] = SearchTypes.THREAD;
     obj[1] = guildId;
-    obj[2] = channelId;
+    obj[2] = id;
   } else if (null == guildId) {
     obj = { type: null, channelId: null };
     obj[0] = SearchTypes.CHANNEL;
-    obj[1] = channelId;
+    obj[1] = id;
   } else {
     obj = { type: null, guildId: null, channelId: null };
     obj[0] = SearchTypes.GUILD_CHANNEL;
     obj[1] = guildId;
-    obj[2] = channelId;
+    obj[2] = id;
   }
   return obj;
 };
@@ -57,20 +57,20 @@ export const useChannelDetailsSearchContext = function useChannelDetailsSearchCo
   const items1 = [channelId, guildId, stateFromStores];
   return React.useMemo(() => {
     if (stateFromStores) {
-      guildId(stateFromStores[3])(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
+      guildId(stateFromStores[3])(null != tmp2, "[useChannelDetailsSearchContext] Thread must have a guild id");
       let obj = { type: null, guildId: null, channelId: null };
-      obj[0] = SearchTypes.THREAD;
-      obj[1] = guildId;
-      obj[2] = closure_0;
-    } else if (null == guildId) {
+      obj[0] = closure_1_5.THREAD;
+      obj[1] = tmp2;
+      obj[2] = tmp;
+    } else if (null == tmp2) {
       obj = { type: null, channelId: null };
-      obj[0] = SearchTypes.CHANNEL;
-      obj[1] = closure_0;
+      obj[0] = closure_1_5.CHANNEL;
+      obj[1] = tmp;
     } else {
       obj = { type: null, guildId: null, channelId: null };
-      obj[0] = SearchTypes.GUILD_CHANNEL;
-      obj[1] = guildId;
-      obj[2] = closure_0;
+      obj[0] = closure_1_5.GUILD_CHANNEL;
+      obj[1] = tmp2;
+      obj[2] = tmp;
     }
     return obj;
   }, items1);

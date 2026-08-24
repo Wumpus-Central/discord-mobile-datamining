@@ -5,25 +5,26 @@ import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import isVoiceMuted from "isVoiceMuted" /* 4543 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "isVoiceMuted" /* 4543 */;
 import { ME } from "ME" /* 676 */;
 import { VoicePlatforms } from "ParticipantTypes" /* 4544 */;
+import set from "set" /* 2 */;
 
-require = fn;
-function updateVoiceState(arg0, arg1, fn) {
+require = arg1;
+function updateVoiceState(arg0, arg1, arg2) {
   let tmp5 = arg0;
   let tmp7 = arg0;
   if (arg0 == null) {
     tmp7 = ME;
   }
-  let tmp8 = dependencyMap[tmp7];
+  let tmp8 = tmp6[tmp7];
   if (null == tmp8) {
     let obj = {};
-    dependencyMap[tmp7] = obj;
+    tmp6[tmp7] = obj;
     tmp8 = obj;
   }
-  const tmp10 = fn(tmp8[arg1]);
+  const tmp10 = arg2(tmp8[arg1]);
   if (tmp8[arg1] === tmp10) {
     const items = [false, tmp10, tmp9];
     let items1 = items;
@@ -106,8 +107,9 @@ function updateVoiceState(arg0, arg1, fn) {
             const _Set4 = Set;
             const set2 = new Set(tmp38);
             set2.add(arg1);
-            const result1 = map.set(tmp5, set2);
+            const result1 = obj10.set(tmp5, set2);
           }
+          obj10 = map;
         }
       }
       if (null != tmp10.sessionId) {
@@ -127,11 +129,11 @@ function updateVoiceState(arg0, arg1, fn) {
 function mergeVoiceState(guildId, userId) {
   closure_0 = userId;
   return updateVoiceState(guildId, userId.userId, (merge) => {
-    if (null == item.channelId) {
+    if (null == guildId.channelId) {
       return null;
     } else {
       const obj = { channelId: null, deaf: null, mute: null, requestToSpeakTimestamp: null, selfDeaf: null, selfMute: null, selfStream: null, selfVideo: null, sessionId: null, suppress: null, userId: null, discoverable: null, connectedAt: null };
-      ({ channelId: obj[0], deaf: obj[1], mute: obj[2], requestToSpeakTimestamp: obj[3], selfDeaf: obj[4], selfMute: obj[5], selfStream: obj[6], selfVideo: obj[7], sessionId: obj[8], suppress: obj[9], userId: obj[10], discoverable: obj[11], connectedAt: obj[12] } = item);
+      ({ channelId: obj[0], deaf: obj[1], mute: obj[2], requestToSpeakTimestamp: obj[3], selfDeaf: obj[4], selfMute: obj[5], selfStream: obj[6], selfVideo: obj[7], sessionId: obj[8], suppress: obj[9], userId: obj[10], discoverable: obj[11], connectedAt: obj[12] } = tmp);
       if (null != merge) {
         let mergeResult = merge.merge(obj);
       } else {
@@ -139,12 +141,13 @@ function mergeVoiceState(guildId, userId) {
       }
       return mergeResult;
     }
+    tmp = guildId;
   });
 }
 function handleGuildCreateOrDelete(guild) {
   guild = guild.guild;
   const item = applyDefault.forEach(dependencyMap[guild.id], (userId) => {
-    updateVoiceState(guild.id, userId.userId, () => null);
+    closure_1_18(guild.id, userId.userId, () => null);
   });
   delete tmp2[tmp];
 }
@@ -172,10 +175,10 @@ prototype["getVoiceStates"] = function getVoiceStates(arg0) {
   if (arg0 == null) {
     tmp = ME;
   }
-  let tmp3 = dependencyMap[tmp];
+  let tmp3 = tmp2[tmp];
   if (null == tmp3) {
     const obj = {};
-    dependencyMap[tmp] = obj;
+    tmp2[tmp] = obj;
     tmp3 = obj;
   }
   return tmp3;
@@ -246,7 +249,7 @@ prototype["getDiscoverableVoiceStateForUser"] = function getDiscoverableVoiceSta
     tmp2 = obj;
   }
   const values = Object.values(tmp2);
-  return values.find((item, index) => false !== item.discoverable);
+  return values.find((discoverable) => false !== discoverable.discoverable);
 };
 prototype["getVoiceStateForSession"] = function getVoiceStateForSession(id, remoteSessionId) {
   let tmp = null;
@@ -287,8 +290,8 @@ prototype["getCurrentClientVoiceChannelId"] = function getCurrentClientVoiceChan
   }
   return channelId;
 };
-prototype["getUsersWithVideo"] = function getUsersWithVideo(afkChannelId) {
-  let value = map.get(afkChannelId);
+prototype["getUsersWithVideo"] = function getUsersWithVideo(arg0) {
+  let value = map.get(arg0);
   if (value == null) {
     value = set;
   }
@@ -353,6 +356,7 @@ prototype["getVoicePlatformForChannel"] = function getVoicePlatformForChannel(ch
   if (id === closure_3) {
     if (channelId === tmp) {
       isMetaQuest.isMetaQuest() ? VoicePlatforms.QUEST : VoicePlatforms.MOBILE;
+      const obj = isMetaQuest;
     }
   }
   return table["" + id + ":" + channelId];
@@ -399,24 +403,28 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
     ({ user, sessionId } = voiceStates);
     const entries = Object.entries(voiceStates.voiceStates);
     while (tmp2 !== undefined) {
+      let tmp4 = callback;
       let tmp5 = callback(tmp3, 2);
       closure_0 = tmp5[0];
       function _loop(arg0) {
         closure_0 = arg0;
-        updateVoiceState(closure_0, closure_1, () => new closure_1_6(closure_0));
+        closure_1_18(closure_0, closure_1, () => new closure_1_6(closure_0));
       }
       let _Object = Object;
       let entries1 = Object.entries(tmp5[1]);
+      let tmp7 = entries1;
+      let tmp8 = entries1;
       for (const item10031 of entries1) {
+        let tmp9 = callback;
         let tmp10 = callback(item10031, 2);
         closure_1 = tmp10[0];
+        let tmp11 = _loop;
         let _loopResult = _loop(tmp10[1]);
         continue;
       }
       continue;
     }
     const id = user.id;
-    tmp2 = entries[Symbol.iterator]();
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     channelId = channelId.channelId;
@@ -430,15 +438,15 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((acc, item, index) => {
-      let flag = acc;
-      closure_0 = item;
-      const tmp = callback(callback2(item.guildId, item.userId, (merge) => {
-        if (null == item.channelId) {
+    return voiceStates.reduce((arg0, guildId) => {
+      let flag = arg0;
+      closure_0 = guildId;
+      let tmp = callback(callback2(guildId.guildId, guildId.userId, (merge) => {
+        if (null == guildId.channelId) {
           return null;
         } else {
           const obj = { channelId: null, deaf: null, mute: null, requestToSpeakTimestamp: null, selfDeaf: null, selfMute: null, selfStream: null, selfVideo: null, sessionId: null, suppress: null, userId: null, discoverable: null, connectedAt: null };
-          ({ channelId: obj[0], deaf: obj[1], mute: obj[2], requestToSpeakTimestamp: obj[3], selfDeaf: obj[4], selfMute: obj[5], selfStream: obj[6], selfVideo: obj[7], sessionId: obj[8], suppress: obj[9], userId: obj[10], discoverable: obj[11], connectedAt: obj[12] } = item);
+          ({ channelId: obj[0], deaf: obj[1], mute: obj[2], requestToSpeakTimestamp: obj[3], selfDeaf: obj[4], selfMute: obj[5], selfStream: obj[6], selfVideo: obj[7], sessionId: obj[8], suppress: obj[9], userId: obj[10], discoverable: obj[11], connectedAt: obj[12] } = tmp);
           if (null != merge) {
             let mergeResult = merge.merge(obj);
           } else {
@@ -446,9 +454,10 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
           }
           return mergeResult;
         }
+        tmp = guildId;
       }), 3);
       if (tmp[0]) {
-        let tmp5 = item.sessionId === closure_4;
+        let tmp5 = guildId.sessionId === closure_4;
         if (tmp5) {
           tmp5 = null != tmp2;
         }
@@ -477,7 +486,7 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
     }
     applyDefault.each(obj, (channelId) => {
       if (channelId.channelId === channelId) {
-        updateVoiceState(ME, arg1, () => null);
+        closure_1_18(closure_1_7, arg1, () => null);
       }
     });
   },
@@ -489,13 +498,15 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
     }
     applyDefault.each(obj, (channelId) => {
       if (channelId.channelId === channelId) {
-        updateVoiceState(ME, arg1, () => null);
+        closure_1_18(closure_1_7, arg1, () => null);
       }
     });
   },
   PASSIVE_UPDATE_V2: function handlePassiveUpdateV2(guildId) {
     let flag = false;
     while (tmp !== undefined) {
+      let tmp3 = mergeVoiceState;
+      let tmp4 = callback;
       let first = flag;
       if (!flag) {
         first = callback(mergeVoiceState(guildId.guildId, tmp2), 1)[0];
@@ -504,6 +515,7 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
       continue;
     }
     for (const item10024 of tmp6) {
+      let tmp7 = updateVoiceState;
       let tmp8 = updateVoiceState(arg0.guildId, item10024, () => null);
       flag = true;
       continue;
@@ -517,6 +529,6 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
     closure_17["" + userId.userId + ":" + userId.channelId] = userId.platform;
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/VoiceStateStore.tsx");
+let result = set.fileFinishedImporting("stores/VoiceStateStore.tsx");
 
 export default voiceStateStore;

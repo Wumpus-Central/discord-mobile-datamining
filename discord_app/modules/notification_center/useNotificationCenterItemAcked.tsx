@@ -1,10 +1,10 @@
 // === Module 15675: useNotificationCenterItemAcked ===
 
 // Module 15675 (useNotificationCenterItemAcked)
-import handleLoadFinished from "handleLoadFinished" /* 15668 */;
+import closure_2 from "handleLoadFinished" /* 15668 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
 
 export const useNotificationCenterItemAcked = function useNotificationCenterItemAcked(item, ackedBeforeId) {
   const _require = item;

@@ -1,9 +1,9 @@
-// === Module 7507: obj132 ===
+// === Module 7507: set ===
 
-// Module 7507 (obj132)
-import obj132 from "obj132" /* 2 */;
+// Module 7507 (set)
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/messages/SentMessageIntentsHandler.android.tsx");
+const result = set.fileFinishedImporting("modules/messages/SentMessageIntentsHandler.android.tsx");
 
 export default {
   init() {

@@ -7,12 +7,13 @@ import getIllustrationSource from "getIllustrationSource" /* 7907 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamFailed.tsx");
+const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamFailed.tsx");
 
 export const getStreamFailedSource = function getStreamFailedSource(theme) {
-  const obj = {
+  let obj = getIllustrationSource;
+  obj = {
     dark() {
       return callback(12072);
     },
@@ -23,7 +24,8 @@ export const getStreamFailedSource = function getStreamFailedSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useStreamFailedSource = function useStreamFailedSource() {
-  const obj = {
+  let obj = AccessibilityAnnouncer;
+  obj = {
     dark() {
       return callback(12072);
     },
@@ -34,7 +36,16 @@ export const useStreamFailedSource = function useStreamFailedSource() {
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const StreamFailed = function StreamFailed(arg0) {
-  const obj = {};
+  let obj = AccessibilityAnnouncer;
+  obj = {
+    dark() {
+      return callback(12072);
+    },
+    darker() {
+      return callback(12073);
+    }
+  };
+  obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

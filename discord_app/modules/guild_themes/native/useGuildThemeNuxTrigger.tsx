@@ -3,11 +3,11 @@
 // Module 15421 (useGuildThemeNuxTrigger)
 import initialize from "initialize" /* 589 */;
 import useGuildThemeNuxTriggerDefault from "useGuildThemeNuxTrigger" /* 15427 */;
-import noop from "noop" /* 19 */;
-import setContent from "setContent" /* 4086 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "setContent" /* 4086 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");
 
 export default function useGuildThemeNuxTrigger(arg0) {
   const items = [closure_4];

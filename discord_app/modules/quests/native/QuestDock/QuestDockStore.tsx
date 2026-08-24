@@ -1,16 +1,17 @@
 // === Module 14445: QuestDockMode ===
 
 // Module 14445 (QuestDockMode)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 import QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED from "QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED" /* 14446 */;
 
 const QuestDockMode = QuestsExperimentLocations.QuestDockMode;
+let c5 = false;
 let COLLAPSED = QuestDockMode.COLLAPSED;
 let c3 = null;
-let c5 = false;
+c5 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class QuestDockStore extends PersistedStore {
 }
@@ -18,7 +19,8 @@ const prototype = QuestDockStore.prototype;
 prototype["initialize"] = function initialize(questDockSoftDismissedAt) {
   if (null != questDockSoftDismissedAt) {
     questDockSoftDismissedAt = questDockSoftDismissedAt.questDockSoftDismissedAt;
-    closure_2 = QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED.isSoftDismissed(questDockSoftDismissedAt) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED;
+    closure_2 = QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED.isSoftDismissed(questDockSoftDismissedAt) ? tmp4.SOFT_DISMISSED : tmp4.COLLAPSED;
+    const obj = QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED;
   }
 };
 prototype["getState"] = function getState() {
@@ -64,6 +66,6 @@ const questDockStore = new QuestDockStore(dispatcherDefault, {
     isEligibleToBeVisible = isEligibleToBeVisible.isEligibleToBeVisible;
   }
 });
-const result = obj132.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockStore.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockStore.tsx");
 
 export default questDockStore;

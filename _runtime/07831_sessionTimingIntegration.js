@@ -10,8 +10,9 @@ export const sessionTimingIntegration = setupIntegration.defineIntegration(() =>
   obj = {
     name: "SessionTiming",
     processEvent(extra) {
-      let obj = callback(dependencyMap[0]);
+      let obj = callback(closure_1_1[0]);
       const result = 1000 * obj.timestampInSeconds();
+      obj = {};
       const merged = Object.assign(extra);
       obj = {};
       const merged1 = Object.assign(extra.extra);

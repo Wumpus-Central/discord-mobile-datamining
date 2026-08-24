@@ -2,7 +2,6 @@
 
 // Module 7781 (createEventEnvelope)
 import forEachEnvelopeItem from "forEachEnvelopeItem" /* 7782 */;
-import dsnFromString from "dsnFromString" /* 7785 */;
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
 import consoleSandbox from "consoleSandbox" /* 7738 */;
 
@@ -50,11 +49,11 @@ export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk)
     HermesBuiltin.arraySpread(tmp17, arraySpreadResult1);
     type.sdk.packages = items1;
   }
-  let tmp3Result = forEachEnvelopeItem;
+  let tmp3Result = tmp3(7782);
   const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, arg1);
   delete tmp[tmp2];
   const items2 = [{ type: str }, type];
-  tmp3Result = forEachEnvelopeItem;
+  tmp3Result = tmp3(7782);
   const items3 = [items2];
   return tmp3Result.createEnvelope(eventEnvelopeHeaders, items3);
 };
@@ -72,7 +71,7 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON) {
   let tmp6 = arg3 && arg1;
   if (tmp6) {
     obj1 = { dsn: null };
-    let tmpResult = dsnFromString;
+    let tmpResult = tmp(7785);
     obj1[0] = tmpResult.dsnToString(arg1);
     tmp6 = obj1;
   }
@@ -83,7 +82,7 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON) {
   } else {
     items1 = [{ type: "session" }, toJSON.toJSON()];
   }
-  tmpResult = forEachEnvelopeItem;
+  tmpResult = tmp(7782);
   const items2 = [items1];
   return tmpResult.createEnvelope(obj, items2);
 };
@@ -111,9 +110,9 @@ export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
   let tmp9 = tunnel && dsn;
   if (tmp9) {
     obj1 = { dsn: null };
-    obj1[0] = tmp2(7785).dsnToString(dsn);
+    obj1[0] = beforeSendSpan(7785).dsnToString(dsn);
     tmp9 = obj1;
-    const tmp2Result = tmp2(7785);
+    const tmp2Result = beforeSendSpan(7785);
   }
   const merged1 = Object.assign(tmp9);
   beforeSendSpan = getDsn;
@@ -122,10 +121,10 @@ export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
   }
   if (beforeSendSpan) {
     const fn2 = (arg0) => {
-      const tmp3 = beforeSendSpan(beforeSendSpan(dependencyMap[5]).spanToJSON(arg0));
+      const tmp3 = beforeSendSpan(beforeSendSpan(closure_1_1[5]).spanToJSON(arg0));
       if (!tmp3) {
-        beforeSendSpan(dependencyMap[5]).showSpanDropWarning();
-        const tmpResult = beforeSendSpan(dependencyMap[5]);
+        beforeSendSpan(closure_1_1[5]).showSpanDropWarning();
+        const tmpResult = beforeSendSpan(closure_1_1[5]);
       }
       return tmp3;
     };
@@ -133,6 +132,4 @@ export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
     const fn = (arg0) => beforeSendSpan(table[5]).spanToJSON(arg0);
   }
   arg0[Symbol.iterator]();
-  const date = new Date();
-  tmp2 = beforeSendSpan;
 };

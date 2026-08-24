@@ -1,11 +1,11 @@
 // === Module 9943: useAnnounceAsyncCompletion ===
 
 // Module 9943 (useAnnounceAsyncCompletion)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 import { AccessibilityInfo } from "get ActivityIndicator" /* 17 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/a11y/native/useAnnounceAsyncCompletion.native.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/a11y/native/useAnnounceAsyncCompletion.native.tsx");
 
 export default function useAnnounceAsyncCompletion() {
   closure_0 = React.useRef(null);
@@ -21,7 +21,7 @@ export default function useAnnounceAsyncCompletion() {
     if (polite === undefined) {
       str = "assertive";
     }
-    const AccessibilityAnnouncer = ref(dependencyMap[2]).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = ref(closure_1_1[2]).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(intl, str);
     if (obj.isIOS()) {
       if (tmpResult.getIsScreenReaderEnabled()) {
@@ -39,7 +39,7 @@ export default function useAnnounceAsyncCompletion() {
             }
             return currentResult;
           }, 1800);
-          closure_2 = AccessibilityInfo.addEventListener("announcementFinished", (event) => {
+          closure_2 = closure_2_3.addEventListener("announcementFinished", (announcement) => {
             if (tmp) {
               const current = ref.current;
               if (current != null) {
@@ -58,6 +58,5 @@ export default function useAnnounceAsyncCompletion() {
       return resolved;
     }
     resolved = Promise.resolve();
-    obj = intl(dependencyMap[3]);
   }, []);
 };

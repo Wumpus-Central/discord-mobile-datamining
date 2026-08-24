@@ -3,6 +3,7 @@
 // Module 13280 (reset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
 function reset() {
   c0 = false;
@@ -85,6 +86,7 @@ const scheduledMessageStore = new ScheduledMessageStore(dispatcherDefault, {
   FETCH_SCHEDULED_MESSAGES_SUCCESS: function handleFetchScheduledMessagesSuccess(arg0) {
     closure_1 = {};
     for (const item10007 of tmp) {
+      let tmp2 = closure_1;
       closure_1[item10007.scheduledMessageId] = item10007;
       continue;
     }
@@ -100,6 +102,6 @@ const scheduledMessageStore = new ScheduledMessageStore(dispatcherDefault, {
   LOGOUT: reset,
   CONNECTION_OPEN: reset
 });
-const result = require("obj132").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageStore.tsx");
+const result = set.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageStore.tsx");
 
 export default scheduledMessageStore;

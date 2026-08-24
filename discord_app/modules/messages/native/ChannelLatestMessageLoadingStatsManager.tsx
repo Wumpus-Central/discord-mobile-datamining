@@ -1,9 +1,9 @@
 // === Module 10733: start ===
 
 // Module 10733 (start)
-import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import isClickstreamEnabled from "isClickstreamEnabled" /* 5057 */;
+import set from "set" /* 2 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let ChannelLatestMessageLoadingStatsManager;
@@ -30,20 +30,23 @@ prototype["finish"] = function finish(channelId) {
       const diff = Date.now() - latestChannelMessagesLoad.startMs;
       const hasItem = seenChannelIds2.has(channelId.channelId);
       if (!hasItem) {
-        const seenChannelIds = ChannelLatestMessageLoadingStatsManager.seenChannelIds;
+        const seenChannelIds = tmp10.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
-      const obj = { load_duration_ms: null, were_messages_cached: null, is_first_load: null };
+      let obj = isClickstreamEnabled;
+      obj = { load_duration_ms: null, were_messages_cached: null, is_first_load: null };
       obj[0] = diff;
       obj[1] = channelId.areMessagesCached;
       obj[2] = !hasItem;
       obj.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj);
       tmp.latestChannelMessagesLoad = undefined;
+      tmp10 = ChannelLatestMessageLoadingStatsManager;
+      const tmp12 = !hasItem;
     }
   }
 };
-ChannelLatestMessageLoadingStatsManager.seenChannelIds = new Set();
-const set = new Set();
-const result = obj132.fileFinishedImporting("modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx");
+let set = new Set();
+ChannelLatestMessageLoadingStatsManager.seenChannelIds = set;
+const result = set.fileFinishedImporting("modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx");
 
 export default ChannelLatestMessageLoadingStatsManager;

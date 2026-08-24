@@ -1,9 +1,9 @@
 // === Module 8223: getNumSubscriptionsPurchasedFromSystemMessage ===
 
 // Module 8223 (getNumSubscriptionsPurchasedFromSystemMessage)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");
+const result = set.fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");
 
 export default function getNumSubscriptionsPurchasedFromSystemMessage(content) {
   const NumberResult = Number(content.content);

@@ -2,13 +2,13 @@
 
 // Module 12013 (GameProfileWebsiteButton)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { IGDB_ATTRIBUTION_LINK } from "ContentInventoryFeedKey" /* 9064 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function GameProfileWebsiteButton(action) {
   action = action.action;
   const trackAction = action.trackAction;
@@ -19,7 +19,7 @@ function GameProfileWebsiteButton(action) {
     accessibilityRole: "button",
     accessibilityLabel: title,
     onPress: React.useCallback(() => {
-      trackAction(dependencyMap[6]).openURL(url);
+      trackAction(closure_1_3[6]).openURL(url);
       trackAction(action);
     }, items),
     hitSlop: trackAction(712).space.PX_4,
@@ -28,28 +28,38 @@ function GameProfileWebsiteButton(action) {
 }
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { gap: ThemesDefault.space.PX_8 };
+createCacheKey = { container: null, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
+createCacheKey = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj2 = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_12 };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_12 };
 createCacheKey[4] = { flexDirection: "column", flexShrink: 1, paddingLeft: ThemesDefault.space.PX_32 };
+let obj4 = { flexDirection: "column", flexShrink: 1, paddingLeft: ThemesDefault.space.PX_32 };
 createCacheKey[5] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj5 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+let obj6 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileDetails.tsx");
+let obj7 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileDetails.tsx");
 
 export default function GameProfileDetails(game) {
   game = game.game;
   const trackAction = game.trackAction;
+  closure_2 = undefined;
+  let memo;
   const tmp = callback3();
   closure_2 = tmp;
   let items = [, , , ];
   ({ linksContainer: arr[0], platformsContainer: arr[1] } = tmp);
   items[2] = game;
   items[3] = trackAction;
-  const memo = React.useMemo(() => {
+  memo = React.useMemo(() => {
     let obj = game;
     if (null == game) {
       return [];
@@ -70,7 +80,7 @@ export default function GameProfileDetails(game) {
         if (obj != null) {
           companyByRole = obj.getCompanyByRole(game(memo[9]).GameCompanyRole.PUBLISHER);
         }
-        const mapped1 = companyByRole.map((item, index) => item.name);
+        const mapped1 = companyByRole.map((name) => name.name);
         const joined1 = mapped1.join(", ");
         let tmp19 = null != joined1;
         if (tmp19) {
@@ -81,7 +91,7 @@ export default function GameProfileDetails(game) {
           if (obj != null) {
             companyByRole1 = obj.getCompanyByRole(game(memo[9]).GameCompanyRole.DEVELOPER);
           }
-          const mapped2 = companyByRole1.map((item, index) => item.name);
+          const mapped2 = companyByRole1.map((name) => name.name);
           const joined2 = mapped2.join(", ");
           let tmp34 = null != joined2;
           if (tmp34) {
@@ -119,8 +129,8 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item, index) => callback2(12023)(item, callback2(712).colors.ICON_SUBTLE));
-                  found = mapped3.filter((item, index) => null != item);
+                  const mapped3 = websites.map((arg0) => callback2(12023)(arg0, callback2(712).colors.ICON_SUBTLE));
+                  found = mapped3.filter((arg0) => null != arg0);
                 }
               }
               if (found == null) {
@@ -136,9 +146,9 @@ export default function GameProfileDetails(game) {
                 obj[0] = intl10.string(game(memo[8]).t["Oj3o1/"]);
                 obj1 = { style: null, children: null };
                 obj1[0] = lib.linksContainer;
-                obj1[1] = found.map((item, index) => {
-                  const url = item.url;
-                  return closure_1_8(closure_1_11, { icon: item.icon, action: item.action, title: item.title, url, trackAction: closure_1 }, url);
+                obj1[1] = found.map((icon) => {
+                  const url = icon.url;
+                  return closure_1_8(closure_1_11, { icon: icon.icon, action: icon.action, title: icon.title, url, trackAction: closure_1 }, url);
                 });
                 obj[1] = closure_1_8(closure_1_5, obj1);
                 items.push(obj);
@@ -149,7 +159,7 @@ export default function GameProfileDetails(game) {
                 obj2[0] = intl11.string(game(memo[8]).t["BwQ+9e"]);
                 const intl12 = game(memo[8]).intl;
                 const obj3 = { igdbLink: null };
-                obj3[0] = IGDB_ATTRIBUTION_LINK;
+                obj3[0] = closure_1_7;
                 obj2[1] = intl12.format(game(memo[8]).t.XPFZVl, obj3);
                 items.push(obj2);
               }
@@ -166,7 +176,7 @@ export default function GameProfileDetails(game) {
               obj4[0] = stringResult;
               const obj5 = { style: null, children: null };
               obj5[0] = lib.platformsContainer;
-              obj5[1] = platforms.map((item, index) => callback3(callback(12014).GameUpdatePlatformIcon, { platform: item, size: "md", color: callback2(712).colors.ICON_SUBTLE }, item));
+              obj5[1] = platforms.map((platform) => callback3(callback(12014).GameUpdatePlatformIcon, { platform, size: "md", color: callback2(712).colors.ICON_SUBTLE }, platform));
               obj4[1] = closure_1_8(closure_1_5, obj5);
               items.push(obj4);
             }
@@ -222,29 +232,30 @@ export default function GameProfileDetails(game) {
     let items1 = [callback(game(memo[13]).Text, obj), ];
     obj = { style: null, children: null };
     obj[0] = tmp.detailsContainer;
-    obj[1] = memo.map((item, index) => {
+    obj[1] = memo.map((children) => {
       const items = [lib.detailsRow, ];
       let prop = null;
       if (memo.length > 1) {
         prop = null;
-        if (index < arr2.length - 1) {
-          prop = lib.detailsRowBottomBorder;
+        if (arg1 < arr2.length - 1) {
+          prop = tmp3.detailsRowBottomBorder;
         }
       }
+      let obj = { style: items, children: null };
       items[1] = prop;
-      let obj = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, children: item.label };
+      obj = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, children: children.label };
       const items1 = [closure_1_8(game(memo[13]).Text, obj), ];
-      if (typeof item.value === "string") {
+      if (typeof children.value === "string") {
         obj = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, style: null, children: null };
-        obj[3] = lib.detailsRowValue;
-        obj[4] = item.value;
+        obj[3] = tmp3.detailsRowValue;
+        obj[4] = children.value;
         let value = closure_1_8(game(memo[13]).Text, obj);
       } else {
-        value = item.value;
+        value = children.value;
       }
       items1[1] = value;
       obj[1] = items1;
-      return closure_1_9(closure_1_5, obj, item.label);
+      return closure_1_9(closure_1_5, obj, children.label);
     });
     items1[1] = callback(closure_5, obj);
     obj[1] = items1;

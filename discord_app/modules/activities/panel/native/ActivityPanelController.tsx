@@ -2,19 +2,19 @@
 
 // Module 16226 (BaseActivityPanelController)
 import _runPrimaryAppCommandOrJoinEmbeddedActivityAll from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 8701 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import addApplication from "addApplication" /* 4478 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "addApplication" /* 4478 */;
 import closure_7 from "module_9010" /* 9010 */;
 import closure_8 from "module_12485" /* 12485 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import closure_10 from "participantFromServer" /* 1390 */;
 import items3 from "items3" /* 4481 */;
 import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
 import { jsx } from "jsxProd" /* 21 */;
 import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
 
-const require = fn;
+const require = arg1;
 class BaseActivityPanelController {
   constructor(arg0) {
     ({ orientationLockStateForApp, mode } = global);
@@ -66,7 +66,7 @@ class BaseActivityPanelController {
     tmp14 = require("useHandleOAuthNavigation")();
     tmp5Result2 = require("useNavigatorBackPressHandler");
     navigatorBackPressHandler = tmp5Result2.useNavigatorBackPressHandler(() => {
-      let flag = sharedValue1 === ActivityPanelModes.PANEL;
+      let flag = sharedValue1 === closure_1_14.PANEL;
       if (flag) {
         first(tmp.PIP);
         flag = true;
@@ -85,31 +85,31 @@ class BaseActivityPanelController {
         if (null == ref2.current) {
           if (!isActivityPanelFullscreen(12469)(closure_10.isWindowLandscape, defaultOrientationLockState)) {
             if (!closure_8) {
-              first(ActivityPanelModes.LAUNCHING_WITH_ORIENTATION_CHANGE);
+              first(closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE);
             }
           }
-          first(ActivityPanelModes.PANEL);
+          first(closure_1_14.PANEL);
         }
-        ref2.current = isActivityPanelFullscreen;
+        ref2.current = tmp;
       }
       if (null == isActivityPanelFullscreen) {
         if (null != ref2.current) {
-          first(ActivityPanelModes.DISCONNECTED);
+          first(closure_1_14.DISCONNECTED);
         }
       }
-      let tmp4 = sharedValue1 === ActivityPanelModes.LAUNCHING_WITH_ORIENTATION_CHANGE;
+      let tmp4 = sharedValue1 === closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE;
       if (tmp4) {
         tmp4 = isActivityPanelFullscreen(12469)(closure_10.isWindowLandscape, defaultOrientationLockState);
       }
       if (tmp4) {
-        first(ActivityPanelModes.PANEL);
+        first(closure_1_14.PANEL);
       }
     }, items);
     items1 = [, ];
     items1[0] = mode;
     items1[1] = sharedValue1;
     effect1 = obj3.useEffect(() => {
-      let tmp3 = sharedValue1 === ActivityPanelModes.PANEL;
+      let tmp3 = sharedValue1 === closure_1_14.PANEL;
       if (tmp3) {
         tmp3 = ref.current !== tmp2.PANEL;
       }
@@ -137,7 +137,7 @@ class BaseActivityPanelController {
     items2[4] = isVoicePanelFullscreen;
     layoutEffect = obj3.useLayoutEffect(() => {
       if (!first) {
-        if (isActivityPanelFullscreen === ActivityPanelModes.PANEL) {
+        if (isActivityPanelFullscreen === closure_1_14.PANEL) {
           if (sharedValue1) {
             isActivityPanelFullscreen(16228)(dependencyMap);
           }
@@ -259,7 +259,7 @@ let closure_17 = areArraysShallowlyEqual.cachedFunction((arg0, arg1, arg2, arg3)
     obj[0] = Math.max(width, height);
     const _Math4 = Math;
     obj[1] = Math.min(height, width);
-  } else if (constants.PORTRAIT === arg2) {
+  } else if (tmp2.PORTRAIT === arg2) {
     if (arg3) {
       if (tmp) {
         obj1 = { width: null, height: null, isLandscape: false, isWindowLandscape: null };
@@ -276,7 +276,7 @@ let closure_17 = areArraysShallowlyEqual.cachedFunction((arg0, arg1, arg2, arg3)
     const _Math2 = Math;
     obj2[1] = Math.max(height, width) - arg1;
   } else {
-    const UNLOCKED = constants.UNLOCKED;
+    const UNLOCKED = tmp2.UNLOCKED;
     obj = { width: null, height: null, isLandscape: null, isWindowLandscape: null };
     obj[0] = width;
     let diff = height;
@@ -291,10 +291,11 @@ let closure_17 = areArraysShallowlyEqual.cachedFunction((arg0, arg1, arg2, arg3)
 });
 let closure_18 = { code: "function ActivityPanelControllerTsx1(){const{wrapperOffset}=this.__closure;return wrapperOffset.get().gestureActive;}" };
 let closure_19 = { code: "function ActivityPanelControllerTsx2(gestureActive,previous){const{runOnJS,setWrapperGestureInProgress}=this.__closure;if(gestureActive===previous)return;runOnJS(setWrapperGestureInProgress)(gestureActive);}" };
-let result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelController.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelController.tsx");
 
 export default function ActivityPanelController(children) {
   let mode;
+  let connectedActivityInTextChannelId;
   let obj = mode(589);
   const items = [closure_10, closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
@@ -330,23 +331,23 @@ export default function ActivityPanelController(children) {
     return obj;
   }, []);
   mode = stateFromStoresObject.mode;
-  const connectedActivityInTextChannelId = stateFromStoresObject.connectedActivityInTextChannelId;
+  connectedActivityInTextChannelId = stateFromStoresObject.connectedActivityInTextChannelId;
   const items1 = [mode, connectedActivityInTextChannelId];
   ({ hasConnectedActivity, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
   const effect = React.useEffect(() => {
-    if (mode === ActivityPanelModes.PANEL) {
+    if (mode === closure_1_14.PANEL) {
       const channel = closure_1_9.getChannel(connectedActivityInTextChannelId);
       if (undefined !== channel) {
-        connectedActivityInTextChannelId(dependencyMap[29]);
-        const obj = { guildId: null, channelId: null };
+        let obj = connectedActivityInTextChannelId(closure_1_3[29]);
+        obj = { guildId: null, channelId: null };
         ({ guild_id: obj2[0], id: obj2[1] } = channel);
         const channel1 = obj.selectChannel(obj);
-        mode(dependencyMap[30]).transitionToChannel(channel.id);
-        const obj3 = mode(dependencyMap[30]);
+        mode(closure_1_3[30]).transitionToChannel(channel.id);
+        const obj3 = mode(closure_1_3[30]);
       }
     }
   }, items1);
   obj = { context: connectedActivityInTextChannelId(16234), orientationLockStateForApp, mode, hasConnectedActivity, connectedActivityAppId, currentApp, updateActivityPanelMode: _runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode, children: children.children };
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16234)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={_runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16234)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={_runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode}>{arg0.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

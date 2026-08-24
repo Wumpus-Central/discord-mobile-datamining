@@ -1,12 +1,12 @@
 // === Module 11306: useNavigationTransitionEnded ===
 
 // Module 11306 (useNavigationTransitionEnded)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 
 export default function useNavigationTransitionEnded() {
   const tmp = route(React.useState(false), 2);

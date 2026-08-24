@@ -1,9 +1,9 @@
 // === Module 4499: inject ===
 
 // Module 4499 (inject)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");
 
 export function inject(arg0) {
   closure_0 = arg0;

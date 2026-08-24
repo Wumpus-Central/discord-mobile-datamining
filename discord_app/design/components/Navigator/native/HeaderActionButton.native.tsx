@@ -11,9 +11,10 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { color: ThemesDefault.colors.TEXT_BRAND, textTransform: "capitalize" };
+let obj = { button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" }, text: null, buttonFont: null, buttonDisabled: null };
+obj = { color: ThemesDefault.colors.TEXT_BRAND, textTransform: "capitalize" };
 obj[1] = obj;
 obj[2] = { fontSize: 16, maxWidth: 80 };
 obj[3] = { opacity: 0.6 };
@@ -66,8 +67,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj1[10] = disabled;
   const items2 = [tmp2, icon];
   obj1[11] = items2;
-  return callback(PressableBase.PressableOpacity, obj1);
+  return closure_5(PressableBase.PressableOpacity, obj1);
 });
-const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
 
 export const HeaderActionButton = forwardRefResult;

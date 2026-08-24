@@ -5,13 +5,17 @@ import noopAll from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ useImperativeHandle: obj1, useRef: c3 } = noop);
 let items = [...require("items").nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
 
 export default function createNativeWrapper(displayName) {
   closure_0 = displayName;
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
   let str;
   if (displayName != null) {
     str = displayName.displayName;

@@ -1,18 +1,17 @@
 // === Module 15953: GuildChannelDetailsTopic ===
 
 // Module 15953 (GuildChannelDetailsTopic)
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
 import { VerticalGradient } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import obj132 from "obj132" /* 500 */;
+import set from "set" /* 500 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 function GuildChannelDetailsTopic(channel) {
   channel = channel.channel;
   let flag = channel.initialExpanded;
@@ -22,6 +21,11 @@ function GuildChannelDetailsTopic(channel) {
   let token;
   let first;
   importAllResult = undefined;
+  let first1;
+  let absoluteFill;
+  let sharedValue;
+  let sharedValue1;
+  let sharedValue2;
   const tmp = callback2();
   let obj = channel(token[9]);
   token = obj.useToken(flag(token[10]).colors.BACKGROUND_BASE_LOWER);
@@ -35,22 +39,22 @@ function GuildChannelDetailsTopic(channel) {
   first = tmp7[0];
   importAllResult = tmp7[1];
   const tmp9 = first(importAllResult.useState(flag), 2);
-  const first1 = tmp9[0];
-  const absoluteFill = tmp9[1];
+  first1 = tmp9[0];
+  absoluteFill = tmp9[1];
   obj1 = channel(token[12]);
-  const sharedValue = obj1.useSharedValue(undefined);
+  sharedValue = obj1.useSharedValue(undefined);
   let obj2 = channel(token[12]);
-  const sharedValue1 = obj2.useSharedValue(undefined);
+  sharedValue1 = obj2.useSharedValue(undefined);
   let obj3 = channel(token[12]);
-  const sharedValue2 = obj3.useSharedValue(constants.HIDDEN);
+  sharedValue2 = obj3.useSharedValue(constants.HIDDEN);
   let obj4 = channel(token[12]);
   const fn = function _() {
-    sharedValue1.get();
-    const value = sharedValue.get();
+    let value = sharedValue1.get();
+    value = sharedValue.get();
     if (null != value) {
       if (null != value) {
-        channel(token[13]);
-        let obj = { height: null };
+        let obj = channel(token[13]);
+        obj = { height: null };
         obj[0] = obj.withSpring(value, sharedValue2);
       }
       return obj;
@@ -108,7 +112,7 @@ function GuildChannelDetailsTopic(channel) {
   const callback1 = importAllResult.useCallback((nativeEvent) => sharedValue1.set(nativeEvent.nativeEvent.layout.height), items2);
   const memo1 = importAllResult.useMemo(() => first ? (() => {
     callback(!closure_5);
-    const result = closure_9.set(closure_5 ? closure_1_17.VISIBLE : closure_1_17.HIDDEN);
+    const result = closure_9.set(closure_5 ? tmp2.VISIBLE : tmp2.HIDDEN);
   }) : undefined, items3);
   const items4 = [sharedValue];
   const items5 = [, ];
@@ -117,15 +121,15 @@ function GuildChannelDetailsTopic(channel) {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.height);
   }, items4);
   let memo2 = importAllResult.useMemo(() => {
-    flag(token[14]);
-    const obj = { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: num };
+    let obj = flag(token[14]);
+    obj = { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: closure_1_14 };
     return obj.parseTopic("" + channel.topic.replace(/(\r\n|\n|\r)/gm, " "), true, obj);
   }, items5);
   const items6 = [, ];
   ({ id: arr7[0], topic: arr7[1] } = channel);
   const memo3 = importAllResult.useMemo(() => {
-    flag(token[14]);
-    const obj = { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: num };
+    let obj = flag(token[14]);
+    obj = { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: closure_1_14 };
     return obj.parseTopic(channel.topic, true, obj);
   }, items6);
   const items7 = [channel.id, sharedValue, sharedValue1, flag];
@@ -172,9 +176,9 @@ function GuildChannelDetailsTopic(channel) {
   const items12 = [absoluteFill.absoluteFill, animatedStyle2];
   items11[1] = callback(flag(token[12]).View, { style: items12, pointerEvents: "none", children: callback(flag(token[17]), obj10) });
   obj3[1] = items11;
-  items8[1] = callback(flag(token[12]).View, obj3);
+  items8[1] = closure_12(flag(token[12]).View, obj3);
   obj8[0] = items8;
-  return callback(closure_13, obj8);
+  return closure_12(closure_13, obj8);
 }
 function PrivateChannelDetailsTopic(channel) {
   channel = channel.channel;
@@ -188,12 +192,14 @@ function PrivateChannelDetailsTopic(channel) {
     }
     let userTag = null;
     if (!isProvisional) {
-      userTag = nameFromUserDefault.getUserTag(user);
+      userTag = closure_1_1(closure_1_2[19]).getUserTag(user);
+      const obj = closure_1_1(closure_1_2[19]);
     }
     return userTag;
   });
   let tmp4 = null;
   if (null != stateFromStores) {
+    obj = { variant: "heading-sm/normal", color: "interactive-text-default", style: null, children: null };
     obj = { textAlign: null };
     obj[0] = channel.textAlign;
     obj[2] = obj;
@@ -206,9 +212,10 @@ function GroupDMChannelDetailsTopic(channel) {
   channel = channel.channel;
   let obj = channel(589);
   const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => channel(dependencyMap[20]).getPrivateChannelUserTagsString(channel.recipients, closure_1_7));
+  const stateFromStores = obj.useStateFromStores(items, () => channel(closure_1_2[20]).getPrivateChannelUserTagsString(channel.recipients, closure_1_7));
   let tmp4 = null;
   if (null != stateFromStores) {
+    obj = { variant: "heading-sm/normal", color: "interactive-text-default", style: null, children: null };
     obj = { textAlign: null };
     obj[0] = channel.textAlign;
     obj[2] = obj;
@@ -221,13 +228,17 @@ let c4 = importAllResult;
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: c9 } = ChannelDetailsNavigatorScreens);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
+let num = 2;
+if (set.isAndroid()) {
+  num = 4;
+}
 let closure_15 = createCacheKey.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
 let closure_16 = {};
 let closure_17 = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
 let closure_18 = { code: "function ChannelDetailsTopicTsx1(){const{expandedHeight,truncatedHeight,EMPTY_STYLE,withSpring,expanded,SPRING_CHANNEL_DETAILS}=this.__closure;const _expandedHeight=expandedHeight.get();const _truncatedHeight=truncatedHeight.get();if(_truncatedHeight==null||_expandedHeight==null)return EMPTY_STYLE;return{height:withSpring(expanded?_expandedHeight:_truncatedHeight,SPRING_CHANNEL_DETAILS)};}" };
 let closure_19 = { code: "function ChannelDetailsTopicTsx2(){const{expandedHeight,EMPTY_STYLE}=this.__closure;if(expandedHeight.get()==null)return EMPTY_STYLE;return{height:expandedHeight.get()};}" };
 let closure_20 = { code: "function ChannelDetailsTopicTsx3(){const{withSpring,gradient,SPRING_CHANNEL_DETAILS}=this.__closure;return{opacity:withSpring(gradient.get(),SPRING_CHANNEL_DETAILS)};}" };
-let result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopic.tsx");
+let result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopic.tsx");
 
 export default importAllResult.memo(function ChannelDetailsTopic(initialExpanded) {
   ({ channel, textAlign } = initialExpanded);
@@ -252,6 +263,7 @@ export default importAllResult.memo(function ChannelDetailsTopic(initialExpanded
     let tmp2 = null != channel.topic;
     if (tmp2) {
       tmp2 = "" !== channel.topic.trim();
+      const str = channel.topic;
     }
     if (tmp2) {
       obj = { channel: null, textAlign: null, initialExpanded: null };

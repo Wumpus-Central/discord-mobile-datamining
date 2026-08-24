@@ -1,13 +1,12 @@
 // === Module 9651: nativeEventEmitter ===
 
 // Module 9651 (nativeEventEmitter)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
 import enforcingDefault from "enforcing" /* 9652 */;
 import enforcing from "enforcing" /* 9652 */;
@@ -26,23 +25,25 @@ const prototype = AudioManagerStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   const audioDevices = enforcingDefault.getAudioDevices();
-  audioDevices.then((result) => {
-    closure_6 = result;
+  audioDevices.then((arg0) => {
+    closure_6 = arg0;
     self.emitChange();
-    nativeEventEmitter.addListener("android-audio-devices-updated", (devices) => {
+    closure_1_5.addListener("android-audio-devices-updated", (devices) => {
       devices = devices.devices;
       closure_0.emitChange();
     });
   });
+  const obj = enforcingDefault;
   const activeAudioDevice = enforcingDefault.getActiveAudioDevice();
-  activeAudioDevice.then((result) => {
-    closure_7 = result;
+  activeAudioDevice.then((arg0) => {
+    closure_7 = arg0;
     self.emitChange();
-    nativeEventEmitter.addListener("android-active-audio-device-changed", (device) => {
+    closure_1_5.addListener("android-active-audio-device-changed", (device) => {
       device = device.device;
       closure_0.emitChange();
     });
   });
+  const obj2 = enforcingDefault;
   enforcingDefault.setSCORetryCount(4);
 };
 prototype["getAudioDevices"] = function getAudioDevices() {
@@ -69,18 +70,20 @@ const audioManagerStore = new AudioManagerStore(dispatcherDefault, {
           tmp8 = simpleDeviceType.simpleDeviceType !== enforcing.AudioDeviceType.INVALID;
         }
         if (tmp8) {
-          let tmp4Result = applyDefault;
+          let tmp4Result = tmp4(12);
           if (tmp4Result.isString(simpleDeviceType)) {
-            tmp4Result = _modDef1208;
-            let obj = { deviceString: null };
-            obj[0] = simpleDeviceType;
+            tmp4Result = tmp4(1208);
+            let obj = { extra: null };
+            obj = { deviceString: null };
+            obj[0] = tmp10;
             obj[0] = obj;
             tmp4Result.captureMessage("AudioManagerStore received a string for an android audio device", obj);
           } else {
-            enforcingDefault.setActiveAudioDevice(simpleDeviceType);
-            const tmp4Result1 = enforcingDefault;
+            tmp4(9652).setActiveAudioDevice(tmp10);
+            const tmp4Result1 = tmp4(9652);
           }
         }
+        const obj2 = enforcingDefault;
       } else if (tmp13.DISCONNECTED === state) {
         if (!context.willReconnect) {
           c9 = false;
@@ -95,18 +98,19 @@ const audioManagerStore = new AudioManagerStore(dispatcherDefault, {
     if (c9) {
       let obj = applyDefault;
       if (obj.isString(device)) {
-        let tmpResult = _modDef1208;
+        let tmpResult = tmp(1208);
+        obj = { extra: null };
         obj = { deviceString: null };
         obj[0] = device;
         obj[0] = obj;
         tmpResult.captureMessage("AudioManagerStore received a string for an android audio device", obj);
       } else {
-        tmpResult = enforcingDefault;
+        tmpResult = tmp(9652);
         tmpResult.setActiveAudioDevice(device);
       }
     }
   }
 });
-let result = obj132.fileFinishedImporting("modules/voice_calls/native/AudioManagerStore.android.tsx");
+let result = set.fileFinishedImporting("modules/voice_calls/native/AudioManagerStore.android.tsx");
 
 export default audioManagerStore;

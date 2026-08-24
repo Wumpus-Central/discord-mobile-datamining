@@ -5,11 +5,11 @@ import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
 import apexExperimentDefault from "apexExperiment" /* 12136 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import "createToggle";
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.xPHVBs);
@@ -33,6 +33,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
 
 export default createToggle;

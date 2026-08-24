@@ -6,14 +6,15 @@ import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/client_themes/images/native/SynchronizeIconNative.tsx");
+const result = require("set").fileFinishedImporting("modules/client_themes/images/native/SynchronizeIconNative.tsx");
 
 export default function SynchronizeIcon(iconStyles) {
   const fill = iconStyles.fill;
-  let obj = { id: "Frame_-_24px", children: callback(inlineStyles.Rect, { y: "0", fill: "none", width: "24", height: "24" }) };
+  let obj = { style: iconStyles.iconStyles, x: "0px", y: "0px", width: "24", height: "24", viewBox: "0 0 24 24", fill, children: null };
+  obj = { id: "Frame_-_24px", children: callback(inlineStyles.Rect, { y: "0", fill: "none", width: "24", height: "24" }) };
   const items = [callback(inlineStyles.G, obj), ];
   obj = { id: "Filled_Icons", children: null };
   obj1 = { children: null };

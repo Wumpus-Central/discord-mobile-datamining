@@ -9,11 +9,15 @@ export default function _default() {
   const items = [...arguments];
   return items((current) => {
     for (const item10007 of items) {
+      let tmp = item10007;
       if (item10007) {
-        if (typeof item10007 === "function") {
-          let tmpResult = item10007(arg0);
+        let tmp2 = item10007;
+        if (typeof tmp === "function") {
+          let tmp3 = item10007;
+          let tmpResult = tmp(arg0);
         } else {
-          item10007.current = arg0;
+          let tmp5 = item10007;
+          tmp.current = arg0;
         }
       }
       continue;

@@ -1,47 +1,48 @@
 // === Module 6904: collectAst ===
 
 // Module 6904 (collectAst)
-import obj132 from "obj132" /* 2 */;
+import set2 from "set" /* 2 */;
 
-function collectAst(content) {
+function collectAst(arr) {
   let items = arg1;
   if (arg1 === undefined) {
     items = [];
   }
-  if (Array.isArray(content)) {
-    const item = content.forEach((item, index) => {
+  if (Array.isArray(arr)) {
+    const item = arr.forEach((arr) => {
       let items = items1;
       if (items1 === undefined) {
         items = [];
       }
       items1 = items;
-      if (Array.isArray(item)) {
-        item = item.forEach((item, index) => {
+      if (Array.isArray(arr)) {
+        let item = arr.forEach((arr) => {
           let items = items1;
           if (items1 === undefined) {
             items = [];
           }
           items1 = items;
-          if (Array.isArray(item)) {
-            item = item.forEach((item, index) => {
+          if (Array.isArray(arr)) {
+            let item = arr.forEach((arr) => {
               let items = items1;
               if (items1 === undefined) {
                 items = [];
               }
               items1 = items;
-              if (Array.isArray(item)) {
-                item = item.forEach((item, index) => {
+              if (Array.isArray(arr)) {
+                let item = arr.forEach((arr) => {
                   let items = items1;
                   if (items1 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(item)) {
-                    item = item.forEach(() => { ... });
-                  } else if (typeof item.content === "string") {
-                    items.push(item.content);
-                  } else if (null != item.content) {
-                    let content = item.content;
+                  if (Array.isArray(arr)) {
+                    let item = arr.forEach(() => { ... });
+                  } else if (typeof arr.content === "string") {
+                    items.push(arr.content);
+                  } else if (null != arr.content) {
+                    let content = arr.content;
+                    items1 = undefined;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
@@ -57,28 +58,30 @@ function collectAst(content) {
                   }
                   return items;
                 });
-              } else if (typeof item.content === "string") {
-                items.push(item.content);
-              } else if (null != item.content) {
-                let content = item.content;
+              } else if (typeof arr.content === "string") {
+                items.push(arr.content);
+              } else if (null != arr.content) {
+                let content = arr.content;
+                items1 = undefined;
                 items1 = items;
                 if (items === undefined) {
                   items1 = [];
                 }
                 let _Array = Array;
                 if (Array.isArray(content)) {
-                  let item1 = content.forEach((item, index) => {
+                  let item1 = content.forEach((arr) => {
                     let items = items1;
                     if (items1 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(item)) {
-                      item = item.forEach(() => { ... });
-                    } else if (typeof item.content === "string") {
-                      items.push(item.content);
-                    } else if (null != item.content) {
-                      let content = item.content;
+                    if (Array.isArray(arr)) {
+                      let item = arr.forEach(() => { ... });
+                    } else if (typeof arr.content === "string") {
+                      items.push(arr.content);
+                    } else if (null != arr.content) {
+                      let content = arr.content;
+                      items1 = undefined;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -102,35 +105,37 @@ function collectAst(content) {
               }
               return items;
             });
-          } else if (typeof item.content === "string") {
-            items.push(item.content);
-          } else if (null != item.content) {
-            let content = item.content;
+          } else if (typeof arr.content === "string") {
+            items.push(arr.content);
+          } else if (null != arr.content) {
+            let content = arr.content;
+            items1 = undefined;
             items1 = items;
             if (items === undefined) {
               items1 = [];
             }
             let _Array = Array;
             if (Array.isArray(content)) {
-              let item1 = content.forEach((item, index) => {
+              let item1 = content.forEach((arr) => {
                 let items = items1;
                 if (items1 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(item)) {
-                  item = item.forEach((item, index) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach((arr) => {
                     let items = items1;
                     if (items1 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(item)) {
-                      item = item.forEach(() => { ... });
-                    } else if (typeof item.content === "string") {
-                      items.push(item.content);
-                    } else if (null != item.content) {
-                      let content = item.content;
+                    if (Array.isArray(arr)) {
+                      let item = arr.forEach(() => { ... });
+                    } else if (typeof arr.content === "string") {
+                      items.push(arr.content);
+                    } else if (null != arr.content) {
+                      let content = arr.content;
+                      items1 = undefined;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -146,28 +151,30 @@ function collectAst(content) {
                     }
                     return items;
                   });
-                } else if (typeof item.content === "string") {
-                  items.push(item.content);
-                } else if (null != item.content) {
-                  let content = item.content;
+                } else if (typeof arr.content === "string") {
+                  items.push(arr.content);
+                } else if (null != arr.content) {
+                  let content = arr.content;
+                  items1 = undefined;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((item, index) => {
+                    let item1 = content.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -199,42 +206,44 @@ function collectAst(content) {
           }
           return items;
         });
-      } else if (typeof item.content === "string") {
-        items.push(item.content);
-      } else if (null != item.content) {
-        let content = item.content;
+      } else if (typeof arr.content === "string") {
+        items.push(arr.content);
+      } else if (null != arr.content) {
+        let content = arr.content;
+        items1 = undefined;
         items1 = items;
         if (items === undefined) {
           items1 = [];
         }
         let _Array = Array;
         if (Array.isArray(content)) {
-          let item1 = content.forEach((item, index) => {
+          let item1 = content.forEach((arr) => {
             let items = items1;
             if (items1 === undefined) {
               items = [];
             }
             items1 = items;
-            if (Array.isArray(item)) {
-              item = item.forEach((item, index) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
                 let items = items1;
                 if (items1 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(item)) {
-                  item = item.forEach((item, index) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach((arr) => {
                     let items = items1;
                     if (items1 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(item)) {
-                      item = item.forEach(() => { ... });
-                    } else if (typeof item.content === "string") {
-                      items.push(item.content);
-                    } else if (null != item.content) {
-                      let content = item.content;
+                    if (Array.isArray(arr)) {
+                      let item = arr.forEach(() => { ... });
+                    } else if (typeof arr.content === "string") {
+                      items.push(arr.content);
+                    } else if (null != arr.content) {
+                      let content = arr.content;
+                      items1 = undefined;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -250,28 +259,30 @@ function collectAst(content) {
                     }
                     return items;
                   });
-                } else if (typeof item.content === "string") {
-                  items.push(item.content);
-                } else if (null != item.content) {
-                  let content = item.content;
+                } else if (typeof arr.content === "string") {
+                  items.push(arr.content);
+                } else if (null != arr.content) {
+                  let content = arr.content;
+                  items1 = undefined;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((item, index) => {
+                    let item1 = content.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -295,35 +306,37 @@ function collectAst(content) {
                 }
                 return items;
               });
-            } else if (typeof item.content === "string") {
-              items.push(item.content);
-            } else if (null != item.content) {
-              let content = item.content;
+            } else if (typeof arr.content === "string") {
+              items.push(arr.content);
+            } else if (null != arr.content) {
+              let content = arr.content;
+              items1 = undefined;
               items1 = items;
               if (items === undefined) {
                 items1 = [];
               }
               let _Array = Array;
               if (Array.isArray(content)) {
-                let item1 = content.forEach((item, index) => {
+                let item1 = content.forEach((arr) => {
                   let items = items1;
                   if (items1 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(item)) {
-                    item = item.forEach((item, index) => {
+                  if (Array.isArray(arr)) {
+                    let item = arr.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -339,28 +352,30 @@ function collectAst(content) {
                       }
                       return items;
                     });
-                  } else if (typeof item.content === "string") {
-                    items.push(item.content);
-                  } else if (null != item.content) {
-                    let content = item.content;
+                  } else if (typeof arr.content === "string") {
+                    items.push(arr.content);
+                  } else if (null != arr.content) {
+                    let content = arr.content;
+                    items1 = undefined;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
                     }
                     let _Array = Array;
                     if (Array.isArray(content)) {
-                      let item1 = content.forEach((item, index) => {
+                      let item1 = content.forEach((arr) => {
                         let items = items1;
                         if (items1 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(item)) {
-                          item = item.forEach(() => { ... });
-                        } else if (typeof item.content === "string") {
-                          items.push(item.content);
-                        } else if (null != item.content) {
-                          let content = item.content;
+                        if (Array.isArray(arr)) {
+                          let item = arr.forEach(() => { ... });
+                        } else if (typeof arr.content === "string") {
+                          items.push(arr.content);
+                        } else if (null != arr.content) {
+                          let content = arr.content;
+                          items1 = undefined;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -400,15 +415,16 @@ function collectAst(content) {
       }
       return items;
     });
-  } else if (typeof content.content === "string") {
-    items.push(content.content);
-  } else if (null != content.content) {
-    items(content.content, items);
+  } else if (typeof arr.content === "string") {
+    items.push(arr.content);
+  } else if (null != arr.content) {
+    items(arr.content, items);
   }
   return items;
 }
 let closure_1 = {};
-const prototype = function MarkupParserNodeTypeError(arg0) {
+let prototype;
+prototype = function MarkupParserNodeTypeError(arg0) {
   let _Array;
   let tmp8;
   let tmp9;
@@ -422,7 +438,11 @@ const prototype = function MarkupParserNodeTypeError(arg0) {
         if (Array.isArray(arr)) {
           let push3 = items.push;
           let items1 = [];
+          let tmp16 = items1;
+          let tmp17 = arr;
+          let num3 = 0;
           let arraySpreadResult = HermesBuiltin.arraySpread(arr, 0);
+          let tmp19 = push3;
           tmp8 = items1;
           tmp9 = items;
           let applyResult = HermesBuiltin.apply(items1, items);
@@ -436,7 +456,10 @@ const prototype = function MarkupParserNodeTypeError(arg0) {
           if (isArray) {
             let push = items.push;
             let items2 = [];
+            let tmp5 = items2;
+            let num = 0;
             arraySpreadResult = HermesBuiltin.arraySpread(arr.content, 0);
+            let tmp7 = push;
             tmp8 = items2;
             tmp9 = items;
             let applyResult1 = HermesBuiltin.apply(items2, items);
@@ -449,7 +472,10 @@ const prototype = function MarkupParserNodeTypeError(arg0) {
           if (isArray1) {
             let push2 = items.push;
             let items3 = [];
+            let tmp12 = items3;
+            let num2 = 0;
             let arraySpreadResult1 = HermesBuiltin.arraySpread(arr.items, 0);
+            let tmp14 = push2;
             tmp8 = items3;
             tmp9 = items;
             let applyResult2 = HermesBuiltin.apply(items3, items);
@@ -469,7 +495,7 @@ class prototype extends Error {
 prototype["getMessage"] = function getMessage(join) {
   return "MarkupParserNodeTypeError: Unknown AST node type in \"" + join.join(", ") + "\" caused rendering failure";
 };
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/markup/MarkupASTUtils.tsx");
+const result = set2.fileFinishedImporting("../discord_common/js/packages/markup/MarkupASTUtils.tsx");
 function flattenAst(isSlate, content, content) {
   closure_0 = isSlate;
   let tmp3 = content;
@@ -479,8 +505,10 @@ function flattenAst(isSlate, content, content) {
   if (Array.isArray(content)) {
     const items = [];
     for (let num3 = 0; num3 < length; num3 = num3 + 1) {
+      let tmp6 = flattenAst;
       let arr3 = flattenAst(isSlate, content[num3], tmp3);
       let _Array = Array;
+      let tmp7 = num3;
       if (Array.isArray(arr3)) {
         let length2 = arr3.length;
         for (let num4 = 0; num4 < length2; num4 = num4 + 1) {
@@ -496,6 +524,8 @@ function flattenAst(isSlate, content, content) {
       if (0 < items.length) {
         do {
           let tmp12 = items[num5];
+          let tmp13 = num5;
+          let tmp14 = tmp11;
           let diff = num5;
           let tmp16 = tmp12;
           if (null != tmp11) {
@@ -535,10 +565,10 @@ function flattenAst(isSlate, content, content) {
     }
     if ("list" === content.type) {
       const items1 = content.items;
-      content.items = items1.map((item, index) => {
-        let tmp = item;
-        if (Array.isArray(item)) {
-          tmp = flattenAst(closure_0, item, null);
+      content.items = items1.map((arg0) => {
+        let tmp = arg0;
+        if (Array.isArray(arg0)) {
+          tmp = closure_1_4(closure_0, arg0, null);
         }
         return tmp;
       });
@@ -558,7 +588,7 @@ function constrainAst(content, arg1) {
   }
   if (Array.isArray(content)) {
     let num = 0;
-    if (0 < length) {
+    if (0 < content.length) {
       const ast = constrainAst(content[num], obj).ast;
       while (ast !== closure_1) {
         content[num] = ast;
@@ -567,7 +597,6 @@ function constrainAst(content, arg1) {
       obj.hasBailedAst = true;
       content.length = num;
     }
-    length = content.length;
   } else if ("text" !== content.type) {
     obj.limit = obj.limit - 1;
     if (obj.limit <= 0) {
@@ -582,7 +611,7 @@ function constrainAst(content, arg1) {
       }
       if ("list" === content.type) {
         const items = content.items;
-        content.items = items.map((item, index) => constrainAst(item, obj).ast);
+        content.items = items.map((arg0) => closure_1_5(arg0, obj).ast);
       }
     }
   }
@@ -594,39 +623,40 @@ export const NUM_MAX_AST_NODES = 200;
 export const astToString = function astToString(applicationSubscriptionSystemMessageASTContent) {
   let items = [];
   if (Array.isArray(applicationSubscriptionSystemMessageASTContent)) {
-    const item = applicationSubscriptionSystemMessageASTContent.forEach((item, index) => {
+    const item = applicationSubscriptionSystemMessageASTContent.forEach((arr) => {
       let items = items1;
       if (items1 === undefined) {
         items = [];
       }
       items1 = items;
-      if (Array.isArray(item)) {
-        item = item.forEach((item, index) => {
+      if (Array.isArray(arr)) {
+        let item = arr.forEach((arr) => {
           let items = items1;
           if (items1 === undefined) {
             items = [];
           }
           items1 = items;
-          if (Array.isArray(item)) {
-            item = item.forEach((item, index) => {
+          if (Array.isArray(arr)) {
+            let item = arr.forEach((arr) => {
               let items = items1;
               if (items1 === undefined) {
                 items = [];
               }
               items1 = items;
-              if (Array.isArray(item)) {
-                item = item.forEach((item, index) => {
+              if (Array.isArray(arr)) {
+                let item = arr.forEach((arr) => {
                   let items = items1;
                   if (items1 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(item)) {
-                    item = item.forEach(() => { ... });
-                  } else if (typeof item.content === "string") {
-                    items.push(item.content);
-                  } else if (null != item.content) {
-                    let content = item.content;
+                  if (Array.isArray(arr)) {
+                    let item = arr.forEach(() => { ... });
+                  } else if (typeof arr.content === "string") {
+                    items.push(arr.content);
+                  } else if (null != arr.content) {
+                    let content = arr.content;
+                    items1 = undefined;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
@@ -642,28 +672,30 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   }
                   return items;
                 });
-              } else if (typeof item.content === "string") {
-                items.push(item.content);
-              } else if (null != item.content) {
-                let content = item.content;
+              } else if (typeof arr.content === "string") {
+                items.push(arr.content);
+              } else if (null != arr.content) {
+                let content = arr.content;
+                items1 = undefined;
                 items1 = items;
                 if (items === undefined) {
                   items1 = [];
                 }
                 let _Array = Array;
                 if (Array.isArray(content)) {
-                  let item1 = content.forEach((item, index) => {
+                  let item1 = content.forEach((arr) => {
                     let items = items1;
                     if (items1 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(item)) {
-                      item = item.forEach(() => { ... });
-                    } else if (typeof item.content === "string") {
-                      items.push(item.content);
-                    } else if (null != item.content) {
-                      let content = item.content;
+                    if (Array.isArray(arr)) {
+                      let item = arr.forEach(() => { ... });
+                    } else if (typeof arr.content === "string") {
+                      items.push(arr.content);
+                    } else if (null != arr.content) {
+                      let content = arr.content;
+                      items1 = undefined;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -687,35 +719,37 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
               }
               return items;
             });
-          } else if (typeof item.content === "string") {
-            items.push(item.content);
-          } else if (null != item.content) {
-            let content = item.content;
+          } else if (typeof arr.content === "string") {
+            items.push(arr.content);
+          } else if (null != arr.content) {
+            let content = arr.content;
+            items1 = undefined;
             items1 = items;
             if (items === undefined) {
               items1 = [];
             }
             let _Array = Array;
             if (Array.isArray(content)) {
-              let item1 = content.forEach((item, index) => {
+              let item1 = content.forEach((arr) => {
                 let items = items1;
                 if (items1 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(item)) {
-                  item = item.forEach((item, index) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach((arr) => {
                     let items = items1;
                     if (items1 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(item)) {
-                      item = item.forEach(() => { ... });
-                    } else if (typeof item.content === "string") {
-                      items.push(item.content);
-                    } else if (null != item.content) {
-                      let content = item.content;
+                    if (Array.isArray(arr)) {
+                      let item = arr.forEach(() => { ... });
+                    } else if (typeof arr.content === "string") {
+                      items.push(arr.content);
+                    } else if (null != arr.content) {
+                      let content = arr.content;
+                      items1 = undefined;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -731,28 +765,30 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     }
                     return items;
                   });
-                } else if (typeof item.content === "string") {
-                  items.push(item.content);
-                } else if (null != item.content) {
-                  let content = item.content;
+                } else if (typeof arr.content === "string") {
+                  items.push(arr.content);
+                } else if (null != arr.content) {
+                  let content = arr.content;
+                  items1 = undefined;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((item, index) => {
+                    let item1 = content.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -784,42 +820,44 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
           }
           return items;
         });
-      } else if (typeof item.content === "string") {
-        items.push(item.content);
-      } else if (null != item.content) {
-        let content = item.content;
+      } else if (typeof arr.content === "string") {
+        items.push(arr.content);
+      } else if (null != arr.content) {
+        let content = arr.content;
+        items1 = undefined;
         items1 = items;
         if (items === undefined) {
           items1 = [];
         }
         let _Array = Array;
         if (Array.isArray(content)) {
-          let item1 = content.forEach((item, index) => {
+          let item1 = content.forEach((arr) => {
             let items = items1;
             if (items1 === undefined) {
               items = [];
             }
             items1 = items;
-            if (Array.isArray(item)) {
-              item = item.forEach((item, index) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
                 let items = items1;
                 if (items1 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(item)) {
-                  item = item.forEach((item, index) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach((arr) => {
                     let items = items1;
                     if (items1 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(item)) {
-                      item = item.forEach(() => { ... });
-                    } else if (typeof item.content === "string") {
-                      items.push(item.content);
-                    } else if (null != item.content) {
-                      let content = item.content;
+                    if (Array.isArray(arr)) {
+                      let item = arr.forEach(() => { ... });
+                    } else if (typeof arr.content === "string") {
+                      items.push(arr.content);
+                    } else if (null != arr.content) {
+                      let content = arr.content;
+                      items1 = undefined;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -835,28 +873,30 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     }
                     return items;
                   });
-                } else if (typeof item.content === "string") {
-                  items.push(item.content);
-                } else if (null != item.content) {
-                  let content = item.content;
+                } else if (typeof arr.content === "string") {
+                  items.push(arr.content);
+                } else if (null != arr.content) {
+                  let content = arr.content;
+                  items1 = undefined;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((item, index) => {
+                    let item1 = content.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -880,35 +920,37 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                 }
                 return items;
               });
-            } else if (typeof item.content === "string") {
-              items.push(item.content);
-            } else if (null != item.content) {
-              let content = item.content;
+            } else if (typeof arr.content === "string") {
+              items.push(arr.content);
+            } else if (null != arr.content) {
+              let content = arr.content;
+              items1 = undefined;
               items1 = items;
               if (items === undefined) {
                 items1 = [];
               }
               let _Array = Array;
               if (Array.isArray(content)) {
-                let item1 = content.forEach((item, index) => {
+                let item1 = content.forEach((arr) => {
                   let items = items1;
                   if (items1 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(item)) {
-                    item = item.forEach((item, index) => {
+                  if (Array.isArray(arr)) {
+                    let item = arr.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -924,28 +966,30 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof item.content === "string") {
-                    items.push(item.content);
-                  } else if (null != item.content) {
-                    let content = item.content;
+                  } else if (typeof arr.content === "string") {
+                    items.push(arr.content);
+                  } else if (null != arr.content) {
+                    let content = arr.content;
+                    items1 = undefined;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
                     }
                     let _Array = Array;
                     if (Array.isArray(content)) {
-                      let item1 = content.forEach((item, index) => {
+                      let item1 = content.forEach((arr) => {
                         let items = items1;
                         if (items1 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(item)) {
-                          item = item.forEach(() => { ... });
-                        } else if (typeof item.content === "string") {
-                          items.push(item.content);
-                        } else if (null != item.content) {
-                          let content = item.content;
+                        if (Array.isArray(arr)) {
+                          let item = arr.forEach(() => { ... });
+                        } else if (typeof arr.content === "string") {
+                          items.push(arr.content);
+                        } else if (null != arr.content) {
+                          let content = arr.content;
+                          items1 = undefined;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -992,39 +1036,40 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
     items = undefined;
     const _Array = Array;
     if (Array.isArray(content)) {
-      const item1 = content.forEach((item, index) => {
+      const item1 = content.forEach((arr) => {
         let items = items1;
         if (items1 === undefined) {
           items = [];
         }
         items1 = items;
-        if (Array.isArray(item)) {
-          item = item.forEach((item, index) => {
+        if (Array.isArray(arr)) {
+          let item = arr.forEach((arr) => {
             let items = items1;
             if (items1 === undefined) {
               items = [];
             }
             items1 = items;
-            if (Array.isArray(item)) {
-              item = item.forEach((item, index) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
                 let items = items1;
                 if (items1 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(item)) {
-                  item = item.forEach((item, index) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach((arr) => {
                     let items = items1;
                     if (items1 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(item)) {
-                      item = item.forEach(() => { ... });
-                    } else if (typeof item.content === "string") {
-                      items.push(item.content);
-                    } else if (null != item.content) {
-                      let content = item.content;
+                    if (Array.isArray(arr)) {
+                      let item = arr.forEach(() => { ... });
+                    } else if (typeof arr.content === "string") {
+                      items.push(arr.content);
+                    } else if (null != arr.content) {
+                      let content = arr.content;
+                      items1 = undefined;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -1040,28 +1085,30 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     }
                     return items;
                   });
-                } else if (typeof item.content === "string") {
-                  items.push(item.content);
-                } else if (null != item.content) {
-                  let content = item.content;
+                } else if (typeof arr.content === "string") {
+                  items.push(arr.content);
+                } else if (null != arr.content) {
+                  let content = arr.content;
+                  items1 = undefined;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((item, index) => {
+                    let item1 = content.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -1085,35 +1132,37 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                 }
                 return items;
               });
-            } else if (typeof item.content === "string") {
-              items.push(item.content);
-            } else if (null != item.content) {
-              let content = item.content;
+            } else if (typeof arr.content === "string") {
+              items.push(arr.content);
+            } else if (null != arr.content) {
+              let content = arr.content;
+              items1 = undefined;
               items1 = items;
               if (items === undefined) {
                 items1 = [];
               }
               let _Array = Array;
               if (Array.isArray(content)) {
-                let item1 = content.forEach((item, index) => {
+                let item1 = content.forEach((arr) => {
                   let items = items1;
                   if (items1 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(item)) {
-                    item = item.forEach((item, index) => {
+                  if (Array.isArray(arr)) {
+                    let item = arr.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -1129,28 +1178,30 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof item.content === "string") {
-                    items.push(item.content);
-                  } else if (null != item.content) {
-                    let content = item.content;
+                  } else if (typeof arr.content === "string") {
+                    items.push(arr.content);
+                  } else if (null != arr.content) {
+                    let content = arr.content;
+                    items1 = undefined;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
                     }
                     let _Array = Array;
                     if (Array.isArray(content)) {
-                      let item1 = content.forEach((item, index) => {
+                      let item1 = content.forEach((arr) => {
                         let items = items1;
                         if (items1 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(item)) {
-                          item = item.forEach(() => { ... });
-                        } else if (typeof item.content === "string") {
-                          items.push(item.content);
-                        } else if (null != item.content) {
-                          let content = item.content;
+                        if (Array.isArray(arr)) {
+                          let item = arr.forEach(() => { ... });
+                        } else if (typeof arr.content === "string") {
+                          items.push(arr.content);
+                        } else if (null != arr.content) {
+                          let content = arr.content;
+                          items1 = undefined;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -1182,42 +1233,44 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
             }
             return items;
           });
-        } else if (typeof item.content === "string") {
-          items.push(item.content);
-        } else if (null != item.content) {
-          let content = item.content;
+        } else if (typeof arr.content === "string") {
+          items.push(arr.content);
+        } else if (null != arr.content) {
+          let content = arr.content;
+          items1 = undefined;
           items1 = items;
           if (items === undefined) {
             items1 = [];
           }
           let _Array = Array;
           if (Array.isArray(content)) {
-            let item1 = content.forEach((item, index) => {
+            let item1 = content.forEach((arr) => {
               let items = items1;
               if (items1 === undefined) {
                 items = [];
               }
               items1 = items;
-              if (Array.isArray(item)) {
-                item = item.forEach((item, index) => {
+              if (Array.isArray(arr)) {
+                let item = arr.forEach((arr) => {
                   let items = items1;
                   if (items1 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(item)) {
-                    item = item.forEach((item, index) => {
+                  if (Array.isArray(arr)) {
+                    let item = arr.forEach((arr) => {
                       let items = items1;
                       if (items1 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(item)) {
-                        item = item.forEach(() => { ... });
-                      } else if (typeof item.content === "string") {
-                        items.push(item.content);
-                      } else if (null != item.content) {
-                        let content = item.content;
+                      if (Array.isArray(arr)) {
+                        let item = arr.forEach(() => { ... });
+                      } else if (typeof arr.content === "string") {
+                        items.push(arr.content);
+                      } else if (null != arr.content) {
+                        let content = arr.content;
+                        items1 = undefined;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -1233,28 +1286,30 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof item.content === "string") {
-                    items.push(item.content);
-                  } else if (null != item.content) {
-                    let content = item.content;
+                  } else if (typeof arr.content === "string") {
+                    items.push(arr.content);
+                  } else if (null != arr.content) {
+                    let content = arr.content;
+                    items1 = undefined;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
                     }
                     let _Array = Array;
                     if (Array.isArray(content)) {
-                      let item1 = content.forEach((item, index) => {
+                      let item1 = content.forEach((arr) => {
                         let items = items1;
                         if (items1 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(item)) {
-                          item = item.forEach(() => { ... });
-                        } else if (typeof item.content === "string") {
-                          items.push(item.content);
-                        } else if (null != item.content) {
-                          let content = item.content;
+                        if (Array.isArray(arr)) {
+                          let item = arr.forEach(() => { ... });
+                        } else if (typeof arr.content === "string") {
+                          items.push(arr.content);
+                        } else if (null != arr.content) {
+                          let content = arr.content;
+                          items1 = undefined;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -1278,35 +1333,37 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   }
                   return items;
                 });
-              } else if (typeof item.content === "string") {
-                items.push(item.content);
-              } else if (null != item.content) {
-                let content = item.content;
+              } else if (typeof arr.content === "string") {
+                items.push(arr.content);
+              } else if (null != arr.content) {
+                let content = arr.content;
+                items1 = undefined;
                 items1 = items;
                 if (items === undefined) {
                   items1 = [];
                 }
                 let _Array = Array;
                 if (Array.isArray(content)) {
-                  let item1 = content.forEach((item, index) => {
+                  let item1 = content.forEach((arr) => {
                     let items = items1;
                     if (items1 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(item)) {
-                      item = item.forEach((item, index) => {
+                    if (Array.isArray(arr)) {
+                      let item = arr.forEach((arr) => {
                         let items = items1;
                         if (items1 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(item)) {
-                          item = item.forEach(() => { ... });
-                        } else if (typeof item.content === "string") {
-                          items.push(item.content);
-                        } else if (null != item.content) {
-                          let content = item.content;
+                        if (Array.isArray(arr)) {
+                          let item = arr.forEach(() => { ... });
+                        } else if (typeof arr.content === "string") {
+                          items.push(arr.content);
+                        } else if (null != arr.content) {
+                          let content = arr.content;
+                          items1 = undefined;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -1322,28 +1379,30 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         }
                         return items;
                       });
-                    } else if (typeof item.content === "string") {
-                      items.push(item.content);
-                    } else if (null != item.content) {
-                      let content = item.content;
+                    } else if (typeof arr.content === "string") {
+                      items.push(arr.content);
+                    } else if (null != arr.content) {
+                      let content = arr.content;
+                      items1 = undefined;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
                       }
                       let _Array = Array;
                       if (Array.isArray(content)) {
-                        let item1 = content.forEach((item, index) => {
+                        let item1 = content.forEach((arr) => {
                           let items = items1;
                           if (items1 === undefined) {
                             items = [];
                           }
                           items1 = items;
-                          if (Array.isArray(item)) {
-                            item = item.forEach(() => { ... });
-                          } else if (typeof item.content === "string") {
-                            items.push(item.content);
-                          } else if (null != item.content) {
-                            let content = item.content;
+                          if (Array.isArray(arr)) {
+                            let item = arr.forEach(() => { ... });
+                          } else if (typeof arr.content === "string") {
+                            items.push(arr.content);
+                          } else if (null != arr.content) {
+                            let content = arr.content;
+                            items1 = undefined;
                             items1 = items;
                             if (items === undefined) {
                               items1 = [];
@@ -1397,13 +1456,13 @@ export const getIndexedAST = function getIndexedAST(arr) {
   closure_0 = arr;
   closure_1 = arg1;
   c2 = 0;
-  return arr.map((item, index) => {
+  return arr.map((type) => {
     let num = 0;
     if (0 !== c2) {
       num = content2[tmp - 1].endIndex;
     }
     c2 = c2 + 1;
-    let type = item.type;
+    type = type.type;
     if ("spoiler" !== type) {
       if ("u" !== type) {
         if ("s" !== type) {
@@ -1413,22 +1472,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                 if ("emoji" !== type) {
                   if ("inlineCode" !== type) {
                     if ("text" === type) {
-                      item.startIndex = startIndex + num;
-                      item.endIndex = item.startIndex + item.content.length;
-                      return item;
+                      type.startIndex = startIndex + num;
+                      type.endIndex = type.startIndex + type.content.length;
+                      return type;
                     } else {
-                      item.startIndex = startIndex + num;
-                      let content = item.content;
+                      type.startIndex = startIndex + num;
+                      let content = type.content;
                       content2 = content;
-                      startIndex = item.startIndex;
+                      startIndex = type.startIndex;
                       c2 = 0;
-                      let mapped = content.map((item, index) => {
+                      let mapped = content.map((type) => {
                         let num = 0;
                         if (0 !== c2) {
                           num = content2[tmp - 1].endIndex;
                         }
                         c2 = c2 + 1;
-                        let type = item.type;
+                        type = type.type;
                         if ("spoiler" !== type) {
                           if ("u" !== type) {
                             if ("s" !== type) {
@@ -1438,22 +1497,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                     if ("emoji" !== type) {
                                       if ("inlineCode" !== type) {
                                         if ("text" === type) {
-                                          item.startIndex = startIndex + num;
-                                          item.endIndex = item.startIndex + item.content.length;
-                                          return item;
+                                          type.startIndex = startIndex + num;
+                                          type.endIndex = type.startIndex + type.content.length;
+                                          return type;
                                         } else {
-                                          item.startIndex = startIndex + num;
-                                          let content = item.content;
+                                          type.startIndex = startIndex + num;
+                                          let content = type.content;
                                           content2 = content;
-                                          startIndex = item.startIndex;
+                                          startIndex = type.startIndex;
                                           c2 = 0;
-                                          let mapped = content.map((item, index) => {
+                                          let mapped = content.map((type) => {
                                             let num = 0;
                                             if (0 !== c2) {
                                               num = content2[tmp - 1].endIndex;
                                             }
                                             c2 = c2 + 1;
-                                            let type = item.type;
+                                            type = type.type;
                                             if ("spoiler" !== type) {
                                               if ("u" !== type) {
                                                 if ("s" !== type) {
@@ -1463,22 +1522,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         if ("emoji" !== type) {
                                                           if ("inlineCode" !== type) {
                                                             if ("text" === type) {
-                                                              item.startIndex = startIndex + num;
-                                                              item.endIndex = item.startIndex + item.content.length;
-                                                              return item;
+                                                              type.startIndex = startIndex + num;
+                                                              type.endIndex = type.startIndex + type.content.length;
+                                                              return type;
                                                             } else {
-                                                              item.startIndex = startIndex + num;
-                                                              let content = item.content;
+                                                              type.startIndex = startIndex + num;
+                                                              let content = type.content;
                                                               content2 = content;
-                                                              startIndex = item.startIndex;
+                                                              startIndex = type.startIndex;
                                                               c2 = 0;
-                                                              let mapped = content.map((item, index) => {
+                                                              let mapped = content.map((type) => {
                                                                 let num = 0;
                                                                 if (0 !== c2) {
                                                                   num = content2[tmp - 1].endIndex;
                                                                 }
                                                                 c2 = c2 + 1;
-                                                                let type = item.type;
+                                                                type = type.type;
                                                                 if ("spoiler" !== type) {
                                                                   if ("u" !== type) {
                                                                     if ("s" !== type) {
@@ -1488,62 +1547,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                             if ("emoji" !== type) {
                                                                               if ("inlineCode" !== type) {
                                                                                 if ("text" === type) {
-                                                                                  item.startIndex = startIndex + num;
-                                                                                  item.endIndex = item.startIndex + item.content.length;
-                                                                                  return item;
+                                                                                  type.startIndex = startIndex + num;
+                                                                                  type.endIndex = type.startIndex + type.content.length;
+                                                                                  return type;
                                                                                 } else {
-                                                                                  item.startIndex = startIndex + num;
-                                                                                  let content = item.content;
+                                                                                  type.startIndex = startIndex + num;
+                                                                                  let content = type.content;
                                                                                   content2 = content;
-                                                                                  startIndex = item.startIndex;
+                                                                                  startIndex = type.startIndex;
                                                                                   c2 = 0;
                                                                                   let mapped = content.map(() => { ... });
-                                                                                  item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                                                  return item;
+                                                                                  type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                                                  return type;
                                                                                 }
                                                                               }
                                                                             }
                                                                           }
                                                                         }
-                                                                        item.startIndex = startIndex + num;
-                                                                        let content1 = item.content;
+                                                                        type.startIndex = startIndex + num;
+                                                                        let content1 = type.content;
                                                                         content2 = content1;
-                                                                        startIndex = item.startIndex + 1;
+                                                                        startIndex = type.startIndex + 1;
                                                                         c2 = 0;
                                                                         let mapped1 = content1.map(() => { ... });
-                                                                        item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                                        return item;
+                                                                        type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                                        return type;
                                                                       }
                                                                     }
                                                                   }
                                                                 }
-                                                                item.startIndex = startIndex + num;
-                                                                content2 = item.content;
-                                                                startIndex = item.startIndex + 2;
+                                                                type.startIndex = startIndex + num;
+                                                                content2 = type.content;
+                                                                startIndex = type.startIndex + 2;
                                                                 c2 = 0;
                                                                 let mapped2 = content2.map(() => { ... });
-                                                                item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                                                return item;
+                                                                type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                                                return type;
                                                               });
-                                                              item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                              return item;
+                                                              type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                              return type;
                                                             }
                                                           }
                                                         }
                                                       }
                                                     }
-                                                    item.startIndex = startIndex + num;
-                                                    let content1 = item.content;
+                                                    type.startIndex = startIndex + num;
+                                                    let content1 = type.content;
                                                     content2 = content1;
-                                                    startIndex = item.startIndex + 1;
+                                                    startIndex = type.startIndex + 1;
                                                     c2 = 0;
-                                                    let mapped1 = content1.map((item, index) => {
+                                                    let mapped1 = content1.map((type) => {
                                                       let num = 0;
                                                       if (0 !== c2) {
                                                         num = content2[tmp - 1].endIndex;
                                                       }
                                                       c2 = c2 + 1;
-                                                      let type = item.type;
+                                                      type = type.type;
                                                       if ("spoiler" !== type) {
                                                         if ("u" !== type) {
                                                           if ("s" !== type) {
@@ -1553,60 +1612,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   if ("emoji" !== type) {
                                                                     if ("inlineCode" !== type) {
                                                                       if ("text" === type) {
-                                                                        item.startIndex = startIndex + num;
-                                                                        item.endIndex = item.startIndex + item.content.length;
-                                                                        return item;
+                                                                        type.startIndex = startIndex + num;
+                                                                        type.endIndex = type.startIndex + type.content.length;
+                                                                        return type;
                                                                       } else {
-                                                                        item.startIndex = startIndex + num;
-                                                                        let content = item.content;
+                                                                        type.startIndex = startIndex + num;
+                                                                        let content = type.content;
                                                                         content2 = content;
-                                                                        startIndex = item.startIndex;
+                                                                        startIndex = type.startIndex;
                                                                         c2 = 0;
                                                                         let mapped = content.map(() => { ... });
-                                                                        item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                                        return item;
+                                                                        type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                                        return type;
                                                                       }
                                                                     }
                                                                   }
                                                                 }
                                                               }
-                                                              item.startIndex = startIndex + num;
-                                                              let content1 = item.content;
+                                                              type.startIndex = startIndex + num;
+                                                              let content1 = type.content;
                                                               content2 = content1;
-                                                              startIndex = item.startIndex + 1;
+                                                              startIndex = type.startIndex + 1;
                                                               c2 = 0;
                                                               let mapped1 = content1.map(() => { ... });
-                                                              item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                              return item;
+                                                              type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                              return type;
                                                             }
                                                           }
                                                         }
                                                       }
-                                                      item.startIndex = startIndex + num;
-                                                      content2 = item.content;
-                                                      startIndex = item.startIndex + 2;
+                                                      type.startIndex = startIndex + num;
+                                                      content2 = type.content;
+                                                      startIndex = type.startIndex + 2;
                                                       c2 = 0;
                                                       let mapped2 = content2.map(() => { ... });
-                                                      item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                                      return item;
+                                                      type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                                      return type;
                                                     });
-                                                    item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                    return item;
+                                                    type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                    return type;
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            content2 = item.content;
-                                            startIndex = item.startIndex + 2;
+                                            type.startIndex = startIndex + num;
+                                            content2 = type.content;
+                                            startIndex = type.startIndex + 2;
                                             c2 = 0;
-                                            let mapped2 = content2.map((item, index) => {
+                                            let mapped2 = content2.map((type) => {
                                               let num = 0;
                                               if (0 !== c2) {
                                                 num = content2[tmp - 1].endIndex;
                                               }
                                               c2 = c2 + 1;
-                                              let type = item.type;
+                                              type = type.type;
                                               if ("spoiler" !== type) {
                                                 if ("u" !== type) {
                                                   if ("s" !== type) {
@@ -1616,65 +1675,65 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           if ("emoji" !== type) {
                                                             if ("inlineCode" !== type) {
                                                               if ("text" === type) {
-                                                                item.startIndex = startIndex + num;
-                                                                item.endIndex = item.startIndex + item.content.length;
-                                                                return item;
+                                                                type.startIndex = startIndex + num;
+                                                                type.endIndex = type.startIndex + type.content.length;
+                                                                return type;
                                                               } else {
-                                                                item.startIndex = startIndex + num;
-                                                                let content = item.content;
+                                                                type.startIndex = startIndex + num;
+                                                                let content = type.content;
                                                                 content2 = content;
-                                                                startIndex = item.startIndex;
+                                                                startIndex = type.startIndex;
                                                                 c2 = 0;
                                                                 let mapped = content.map(() => { ... });
-                                                                item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                                return item;
+                                                                type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                                return type;
                                                               }
                                                             }
                                                           }
                                                         }
                                                       }
-                                                      item.startIndex = startIndex + num;
-                                                      let content1 = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content1 = type.content;
                                                       content2 = content1;
-                                                      startIndex = item.startIndex + 1;
+                                                      startIndex = type.startIndex + 1;
                                                       c2 = 0;
                                                       let mapped1 = content1.map(() => { ... });
-                                                      item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                      return item;
+                                                      type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
-                                              item.startIndex = startIndex + num;
-                                              content2 = item.content;
-                                              startIndex = item.startIndex + 2;
+                                              type.startIndex = startIndex + num;
+                                              content2 = type.content;
+                                              startIndex = type.startIndex + 2;
                                               c2 = 0;
                                               let mapped2 = content2.map(() => { ... });
-                                              item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                              return item;
+                                              type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                              return type;
                                             });
-                                            item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                            return item;
+                                            type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                            return type;
                                           });
-                                          item.endIndex = mapped[mapped.length - 1].endIndex;
-                                          return item;
+                                          type.endIndex = mapped[mapped.length - 1].endIndex;
+                                          return type;
                                         }
                                       }
                                     }
                                   }
                                 }
-                                item.startIndex = startIndex + num;
-                                let content1 = item.content;
+                                type.startIndex = startIndex + num;
+                                let content1 = type.content;
                                 content2 = content1;
-                                startIndex = item.startIndex + 1;
+                                startIndex = type.startIndex + 1;
                                 c2 = 0;
-                                let mapped1 = content1.map((item, index) => {
+                                let mapped1 = content1.map((type) => {
                                   let num = 0;
                                   if (0 !== c2) {
                                     num = content2[tmp - 1].endIndex;
                                   }
                                   c2 = c2 + 1;
-                                  let type = item.type;
+                                  type = type.type;
                                   if ("spoiler" !== type) {
                                     if ("u" !== type) {
                                       if ("s" !== type) {
@@ -1684,22 +1743,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               if ("emoji" !== type) {
                                                 if ("inlineCode" !== type) {
                                                   if ("text" === type) {
-                                                    item.startIndex = startIndex + num;
-                                                    item.endIndex = item.startIndex + item.content.length;
-                                                    return item;
+                                                    type.startIndex = startIndex + num;
+                                                    type.endIndex = type.startIndex + type.content.length;
+                                                    return type;
                                                   } else {
-                                                    item.startIndex = startIndex + num;
-                                                    let content = item.content;
+                                                    type.startIndex = startIndex + num;
+                                                    let content = type.content;
                                                     content2 = content;
-                                                    startIndex = item.startIndex;
+                                                    startIndex = type.startIndex;
                                                     c2 = 0;
-                                                    let mapped = content.map((item, index) => {
+                                                    let mapped = content.map((type) => {
                                                       let num = 0;
                                                       if (0 !== c2) {
                                                         num = content2[tmp - 1].endIndex;
                                                       }
                                                       c2 = c2 + 1;
-                                                      let type = item.type;
+                                                      type = type.type;
                                                       if ("spoiler" !== type) {
                                                         if ("u" !== type) {
                                                           if ("s" !== type) {
@@ -1709,62 +1768,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   if ("emoji" !== type) {
                                                                     if ("inlineCode" !== type) {
                                                                       if ("text" === type) {
-                                                                        item.startIndex = startIndex + num;
-                                                                        item.endIndex = item.startIndex + item.content.length;
-                                                                        return item;
+                                                                        type.startIndex = startIndex + num;
+                                                                        type.endIndex = type.startIndex + type.content.length;
+                                                                        return type;
                                                                       } else {
-                                                                        item.startIndex = startIndex + num;
-                                                                        let content = item.content;
+                                                                        type.startIndex = startIndex + num;
+                                                                        let content = type.content;
                                                                         content2 = content;
-                                                                        startIndex = item.startIndex;
+                                                                        startIndex = type.startIndex;
                                                                         c2 = 0;
                                                                         let mapped = content.map(() => { ... });
-                                                                        item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                                        return item;
+                                                                        type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                                        return type;
                                                                       }
                                                                     }
                                                                   }
                                                                 }
                                                               }
-                                                              item.startIndex = startIndex + num;
-                                                              let content1 = item.content;
+                                                              type.startIndex = startIndex + num;
+                                                              let content1 = type.content;
                                                               content2 = content1;
-                                                              startIndex = item.startIndex + 1;
+                                                              startIndex = type.startIndex + 1;
                                                               c2 = 0;
                                                               let mapped1 = content1.map(() => { ... });
-                                                              item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                              return item;
+                                                              type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                              return type;
                                                             }
                                                           }
                                                         }
                                                       }
-                                                      item.startIndex = startIndex + num;
-                                                      content2 = item.content;
-                                                      startIndex = item.startIndex + 2;
+                                                      type.startIndex = startIndex + num;
+                                                      content2 = type.content;
+                                                      startIndex = type.startIndex + 2;
                                                       c2 = 0;
                                                       let mapped2 = content2.map(() => { ... });
-                                                      item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                                      return item;
+                                                      type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                                      return type;
                                                     });
-                                                    item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                    return item;
+                                                    type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                    return type;
                                                   }
                                                 }
                                               }
                                             }
                                           }
-                                          item.startIndex = startIndex + num;
-                                          let content1 = item.content;
+                                          type.startIndex = startIndex + num;
+                                          let content1 = type.content;
                                           content2 = content1;
-                                          startIndex = item.startIndex + 1;
+                                          startIndex = type.startIndex + 1;
                                           c2 = 0;
-                                          let mapped1 = content1.map((item, index) => {
+                                          let mapped1 = content1.map((type) => {
                                             let num = 0;
                                             if (0 !== c2) {
                                               num = content2[tmp - 1].endIndex;
                                             }
                                             c2 = c2 + 1;
-                                            let type = item.type;
+                                            type = type.type;
                                             if ("spoiler" !== type) {
                                               if ("u" !== type) {
                                                 if ("s" !== type) {
@@ -1774,60 +1833,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         if ("emoji" !== type) {
                                                           if ("inlineCode" !== type) {
                                                             if ("text" === type) {
-                                                              item.startIndex = startIndex + num;
-                                                              item.endIndex = item.startIndex + item.content.length;
-                                                              return item;
+                                                              type.startIndex = startIndex + num;
+                                                              type.endIndex = type.startIndex + type.content.length;
+                                                              return type;
                                                             } else {
-                                                              item.startIndex = startIndex + num;
-                                                              let content = item.content;
+                                                              type.startIndex = startIndex + num;
+                                                              let content = type.content;
                                                               content2 = content;
-                                                              startIndex = item.startIndex;
+                                                              startIndex = type.startIndex;
                                                               c2 = 0;
                                                               let mapped = content.map(() => { ... });
-                                                              item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                              return item;
+                                                              type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                              return type;
                                                             }
                                                           }
                                                         }
                                                       }
                                                     }
-                                                    item.startIndex = startIndex + num;
-                                                    let content1 = item.content;
+                                                    type.startIndex = startIndex + num;
+                                                    let content1 = type.content;
                                                     content2 = content1;
-                                                    startIndex = item.startIndex + 1;
+                                                    startIndex = type.startIndex + 1;
                                                     c2 = 0;
                                                     let mapped1 = content1.map(() => { ... });
-                                                    item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                    return item;
+                                                    type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                    return type;
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            content2 = item.content;
-                                            startIndex = item.startIndex + 2;
+                                            type.startIndex = startIndex + num;
+                                            content2 = type.content;
+                                            startIndex = type.startIndex + 2;
                                             c2 = 0;
                                             let mapped2 = content2.map(() => { ... });
-                                            item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                            return item;
+                                            type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                            return type;
                                           });
-                                          item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                          return item;
+                                          type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                          return type;
                                         }
                                       }
                                     }
                                   }
-                                  item.startIndex = startIndex + num;
-                                  content2 = item.content;
-                                  startIndex = item.startIndex + 2;
+                                  type.startIndex = startIndex + num;
+                                  content2 = type.content;
+                                  startIndex = type.startIndex + 2;
                                   c2 = 0;
-                                  let mapped2 = content2.map((item, index) => {
+                                  let mapped2 = content2.map((type) => {
                                     let num = 0;
                                     if (0 !== c2) {
                                       num = content2[tmp - 1].endIndex;
                                     }
                                     c2 = c2 + 1;
-                                    let type = item.type;
+                                    type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
                                         if ("s" !== type) {
@@ -1837,63 +1896,63 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      item.startIndex = startIndex + num;
-                                                      item.endIndex = item.startIndex + item.content.length;
-                                                      return item;
+                                                      type.startIndex = startIndex + num;
+                                                      type.endIndex = type.startIndex + type.content.length;
+                                                      return type;
                                                     } else {
-                                                      item.startIndex = startIndex + num;
-                                                      let content = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content = type.content;
                                                       content2 = content;
-                                                      startIndex = item.startIndex;
+                                                      startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
-                                                      item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                      return item;
+                                                      type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            let content1 = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content1 = type.content;
                                             content2 = content1;
-                                            startIndex = item.startIndex + 1;
+                                            startIndex = type.startIndex + 1;
                                             c2 = 0;
                                             let mapped1 = content1.map(() => { ... });
-                                            item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                            return item;
+                                            type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    content2 = item.content;
-                                    startIndex = item.startIndex + 2;
+                                    type.startIndex = startIndex + num;
+                                    content2 = type.content;
+                                    startIndex = type.startIndex + 2;
                                     c2 = 0;
                                     let mapped2 = content2.map(() => { ... });
-                                    item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                    return item;
+                                    type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                    return type;
                                   });
-                                  item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                  return item;
+                                  type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                  return type;
                                 });
-                                item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                return item;
+                                type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                return type;
                               }
                             }
                           }
                         }
-                        item.startIndex = startIndex + num;
-                        content2 = item.content;
-                        startIndex = item.startIndex + 2;
+                        type.startIndex = startIndex + num;
+                        content2 = type.content;
+                        startIndex = type.startIndex + 2;
                         c2 = 0;
-                        let mapped2 = content2.map((item, index) => {
+                        let mapped2 = content2.map((type) => {
                           let num = 0;
                           if (0 !== c2) {
                             num = content2[tmp - 1].endIndex;
                           }
                           c2 = c2 + 1;
-                          let type = item.type;
+                          type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
                               if ("s" !== type) {
@@ -1903,22 +1962,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            item.startIndex = startIndex + num;
-                                            item.endIndex = item.startIndex + item.content.length;
-                                            return item;
+                                            type.startIndex = startIndex + num;
+                                            type.endIndex = type.startIndex + type.content.length;
+                                            return type;
                                           } else {
-                                            item.startIndex = startIndex + num;
-                                            let content = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content = type.content;
                                             content2 = content;
-                                            startIndex = item.startIndex;
+                                            startIndex = type.startIndex;
                                             c2 = 0;
-                                            let mapped = content.map((item, index) => {
+                                            let mapped = content.map((type) => {
                                               let num = 0;
                                               if (0 !== c2) {
                                                 num = content2[tmp - 1].endIndex;
                                               }
                                               c2 = c2 + 1;
-                                              let type = item.type;
+                                              type = type.type;
                                               if ("spoiler" !== type) {
                                                 if ("u" !== type) {
                                                   if ("s" !== type) {
@@ -1928,62 +1987,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           if ("emoji" !== type) {
                                                             if ("inlineCode" !== type) {
                                                               if ("text" === type) {
-                                                                item.startIndex = startIndex + num;
-                                                                item.endIndex = item.startIndex + item.content.length;
-                                                                return item;
+                                                                type.startIndex = startIndex + num;
+                                                                type.endIndex = type.startIndex + type.content.length;
+                                                                return type;
                                                               } else {
-                                                                item.startIndex = startIndex + num;
-                                                                let content = item.content;
+                                                                type.startIndex = startIndex + num;
+                                                                let content = type.content;
                                                                 content2 = content;
-                                                                startIndex = item.startIndex;
+                                                                startIndex = type.startIndex;
                                                                 c2 = 0;
                                                                 let mapped = content.map(() => { ... });
-                                                                item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                                return item;
+                                                                type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                                return type;
                                                               }
                                                             }
                                                           }
                                                         }
                                                       }
-                                                      item.startIndex = startIndex + num;
-                                                      let content1 = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content1 = type.content;
                                                       content2 = content1;
-                                                      startIndex = item.startIndex + 1;
+                                                      startIndex = type.startIndex + 1;
                                                       c2 = 0;
                                                       let mapped1 = content1.map(() => { ... });
-                                                      item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                      return item;
+                                                      type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
-                                              item.startIndex = startIndex + num;
-                                              content2 = item.content;
-                                              startIndex = item.startIndex + 2;
+                                              type.startIndex = startIndex + num;
+                                              content2 = type.content;
+                                              startIndex = type.startIndex + 2;
                                               c2 = 0;
                                               let mapped2 = content2.map(() => { ... });
-                                              item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                              return item;
+                                              type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                              return type;
                                             });
-                                            item.endIndex = mapped[mapped.length - 1].endIndex;
-                                            return item;
+                                            type.endIndex = mapped[mapped.length - 1].endIndex;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  item.startIndex = startIndex + num;
-                                  let content1 = item.content;
+                                  type.startIndex = startIndex + num;
+                                  let content1 = type.content;
                                   content2 = content1;
-                                  startIndex = item.startIndex + 1;
+                                  startIndex = type.startIndex + 1;
                                   c2 = 0;
-                                  let mapped1 = content1.map((item, index) => {
+                                  let mapped1 = content1.map((type) => {
                                     let num = 0;
                                     if (0 !== c2) {
                                       num = content2[tmp - 1].endIndex;
                                     }
                                     c2 = c2 + 1;
-                                    let type = item.type;
+                                    type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
                                         if ("s" !== type) {
@@ -1993,60 +2052,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      item.startIndex = startIndex + num;
-                                                      item.endIndex = item.startIndex + item.content.length;
-                                                      return item;
+                                                      type.startIndex = startIndex + num;
+                                                      type.endIndex = type.startIndex + type.content.length;
+                                                      return type;
                                                     } else {
-                                                      item.startIndex = startIndex + num;
-                                                      let content = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content = type.content;
                                                       content2 = content;
-                                                      startIndex = item.startIndex;
+                                                      startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
-                                                      item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                      return item;
+                                                      type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            let content1 = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content1 = type.content;
                                             content2 = content1;
-                                            startIndex = item.startIndex + 1;
+                                            startIndex = type.startIndex + 1;
                                             c2 = 0;
                                             let mapped1 = content1.map(() => { ... });
-                                            item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                            return item;
+                                            type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    content2 = item.content;
-                                    startIndex = item.startIndex + 2;
+                                    type.startIndex = startIndex + num;
+                                    content2 = type.content;
+                                    startIndex = type.startIndex + 2;
                                     c2 = 0;
                                     let mapped2 = content2.map(() => { ... });
-                                    item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                    return item;
+                                    type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                    return type;
                                   });
-                                  item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                  return item;
+                                  type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                  return type;
                                 }
                               }
                             }
                           }
-                          item.startIndex = startIndex + num;
-                          content2 = item.content;
-                          startIndex = item.startIndex + 2;
+                          type.startIndex = startIndex + num;
+                          content2 = type.content;
+                          startIndex = type.startIndex + 2;
                           c2 = 0;
-                          let mapped2 = content2.map((item, index) => {
+                          let mapped2 = content2.map((type) => {
                             let num = 0;
                             if (0 !== c2) {
                               num = content2[tmp - 1].endIndex;
                             }
                             c2 = c2 + 1;
-                            let type = item.type;
+                            type = type.type;
                             if ("spoiler" !== type) {
                               if ("u" !== type) {
                                 if ("s" !== type) {
@@ -2056,68 +2115,68 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         if ("emoji" !== type) {
                                           if ("inlineCode" !== type) {
                                             if ("text" === type) {
-                                              item.startIndex = startIndex + num;
-                                              item.endIndex = item.startIndex + item.content.length;
-                                              return item;
+                                              type.startIndex = startIndex + num;
+                                              type.endIndex = type.startIndex + type.content.length;
+                                              return type;
                                             } else {
-                                              item.startIndex = startIndex + num;
-                                              let content = item.content;
+                                              type.startIndex = startIndex + num;
+                                              let content = type.content;
                                               content2 = content;
-                                              startIndex = item.startIndex;
+                                              startIndex = type.startIndex;
                                               c2 = 0;
                                               let mapped = content.map(() => { ... });
-                                              item.endIndex = mapped[mapped.length - 1].endIndex;
-                                              return item;
+                                              type.endIndex = mapped[mapped.length - 1].endIndex;
+                                              return type;
                                             }
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    let content1 = item.content;
+                                    type.startIndex = startIndex + num;
+                                    let content1 = type.content;
                                     content2 = content1;
-                                    startIndex = item.startIndex + 1;
+                                    startIndex = type.startIndex + 1;
                                     c2 = 0;
                                     let mapped1 = content1.map(() => { ... });
-                                    item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                    return item;
+                                    type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                    return type;
                                   }
                                 }
                               }
                             }
-                            item.startIndex = startIndex + num;
-                            content2 = item.content;
-                            startIndex = item.startIndex + 2;
+                            type.startIndex = startIndex + num;
+                            content2 = type.content;
+                            startIndex = type.startIndex + 2;
                             c2 = 0;
                             let mapped2 = content2.map(() => { ... });
-                            item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                            return item;
+                            type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                            return type;
                           });
-                          item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                          return item;
+                          type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                          return type;
                         });
-                        item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                        return item;
+                        type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                        return type;
                       });
-                      item.endIndex = mapped[mapped.length - 1].endIndex;
-                      return item;
+                      type.endIndex = mapped[mapped.length - 1].endIndex;
+                      return type;
                     }
                   }
                 }
               }
             }
-            item.startIndex = startIndex + num;
-            let content1 = item.content;
+            type.startIndex = startIndex + num;
+            let content1 = type.content;
             content2 = content1;
-            startIndex = item.startIndex + 1;
+            startIndex = type.startIndex + 1;
             c2 = 0;
-            let mapped1 = content1.map((item, index) => {
+            let mapped1 = content1.map((type) => {
               let num = 0;
               if (0 !== c2) {
                 num = content2[tmp - 1].endIndex;
               }
               c2 = c2 + 1;
-              let type = item.type;
+              type = type.type;
               if ("spoiler" !== type) {
                 if ("u" !== type) {
                   if ("s" !== type) {
@@ -2127,22 +2186,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                           if ("emoji" !== type) {
                             if ("inlineCode" !== type) {
                               if ("text" === type) {
-                                item.startIndex = startIndex + num;
-                                item.endIndex = item.startIndex + item.content.length;
-                                return item;
+                                type.startIndex = startIndex + num;
+                                type.endIndex = type.startIndex + type.content.length;
+                                return type;
                               } else {
-                                item.startIndex = startIndex + num;
-                                let content = item.content;
+                                type.startIndex = startIndex + num;
+                                let content = type.content;
                                 content2 = content;
-                                startIndex = item.startIndex;
+                                startIndex = type.startIndex;
                                 c2 = 0;
-                                let mapped = content.map((item, index) => {
+                                let mapped = content.map((type) => {
                                   let num = 0;
                                   if (0 !== c2) {
                                     num = content2[tmp - 1].endIndex;
                                   }
                                   c2 = c2 + 1;
-                                  let type = item.type;
+                                  type = type.type;
                                   if ("spoiler" !== type) {
                                     if ("u" !== type) {
                                       if ("s" !== type) {
@@ -2152,22 +2211,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               if ("emoji" !== type) {
                                                 if ("inlineCode" !== type) {
                                                   if ("text" === type) {
-                                                    item.startIndex = startIndex + num;
-                                                    item.endIndex = item.startIndex + item.content.length;
-                                                    return item;
+                                                    type.startIndex = startIndex + num;
+                                                    type.endIndex = type.startIndex + type.content.length;
+                                                    return type;
                                                   } else {
-                                                    item.startIndex = startIndex + num;
-                                                    let content = item.content;
+                                                    type.startIndex = startIndex + num;
+                                                    let content = type.content;
                                                     content2 = content;
-                                                    startIndex = item.startIndex;
+                                                    startIndex = type.startIndex;
                                                     c2 = 0;
-                                                    let mapped = content.map((item, index) => {
+                                                    let mapped = content.map((type) => {
                                                       let num = 0;
                                                       if (0 !== c2) {
                                                         num = content2[tmp - 1].endIndex;
                                                       }
                                                       c2 = c2 + 1;
-                                                      let type = item.type;
+                                                      type = type.type;
                                                       if ("spoiler" !== type) {
                                                         if ("u" !== type) {
                                                           if ("s" !== type) {
@@ -2177,62 +2236,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   if ("emoji" !== type) {
                                                                     if ("inlineCode" !== type) {
                                                                       if ("text" === type) {
-                                                                        item.startIndex = startIndex + num;
-                                                                        item.endIndex = item.startIndex + item.content.length;
-                                                                        return item;
+                                                                        type.startIndex = startIndex + num;
+                                                                        type.endIndex = type.startIndex + type.content.length;
+                                                                        return type;
                                                                       } else {
-                                                                        item.startIndex = startIndex + num;
-                                                                        let content = item.content;
+                                                                        type.startIndex = startIndex + num;
+                                                                        let content = type.content;
                                                                         content2 = content;
-                                                                        startIndex = item.startIndex;
+                                                                        startIndex = type.startIndex;
                                                                         c2 = 0;
                                                                         let mapped = content.map(() => { ... });
-                                                                        item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                                        return item;
+                                                                        type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                                        return type;
                                                                       }
                                                                     }
                                                                   }
                                                                 }
                                                               }
-                                                              item.startIndex = startIndex + num;
-                                                              let content1 = item.content;
+                                                              type.startIndex = startIndex + num;
+                                                              let content1 = type.content;
                                                               content2 = content1;
-                                                              startIndex = item.startIndex + 1;
+                                                              startIndex = type.startIndex + 1;
                                                               c2 = 0;
                                                               let mapped1 = content1.map(() => { ... });
-                                                              item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                              return item;
+                                                              type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                              return type;
                                                             }
                                                           }
                                                         }
                                                       }
-                                                      item.startIndex = startIndex + num;
-                                                      content2 = item.content;
-                                                      startIndex = item.startIndex + 2;
+                                                      type.startIndex = startIndex + num;
+                                                      content2 = type.content;
+                                                      startIndex = type.startIndex + 2;
                                                       c2 = 0;
                                                       let mapped2 = content2.map(() => { ... });
-                                                      item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                                      return item;
+                                                      type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                                      return type;
                                                     });
-                                                    item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                    return item;
+                                                    type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                    return type;
                                                   }
                                                 }
                                               }
                                             }
                                           }
-                                          item.startIndex = startIndex + num;
-                                          let content1 = item.content;
+                                          type.startIndex = startIndex + num;
+                                          let content1 = type.content;
                                           content2 = content1;
-                                          startIndex = item.startIndex + 1;
+                                          startIndex = type.startIndex + 1;
                                           c2 = 0;
-                                          let mapped1 = content1.map((item, index) => {
+                                          let mapped1 = content1.map((type) => {
                                             let num = 0;
                                             if (0 !== c2) {
                                               num = content2[tmp - 1].endIndex;
                                             }
                                             c2 = c2 + 1;
-                                            let type = item.type;
+                                            type = type.type;
                                             if ("spoiler" !== type) {
                                               if ("u" !== type) {
                                                 if ("s" !== type) {
@@ -2242,60 +2301,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         if ("emoji" !== type) {
                                                           if ("inlineCode" !== type) {
                                                             if ("text" === type) {
-                                                              item.startIndex = startIndex + num;
-                                                              item.endIndex = item.startIndex + item.content.length;
-                                                              return item;
+                                                              type.startIndex = startIndex + num;
+                                                              type.endIndex = type.startIndex + type.content.length;
+                                                              return type;
                                                             } else {
-                                                              item.startIndex = startIndex + num;
-                                                              let content = item.content;
+                                                              type.startIndex = startIndex + num;
+                                                              let content = type.content;
                                                               content2 = content;
-                                                              startIndex = item.startIndex;
+                                                              startIndex = type.startIndex;
                                                               c2 = 0;
                                                               let mapped = content.map(() => { ... });
-                                                              item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                              return item;
+                                                              type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                              return type;
                                                             }
                                                           }
                                                         }
                                                       }
                                                     }
-                                                    item.startIndex = startIndex + num;
-                                                    let content1 = item.content;
+                                                    type.startIndex = startIndex + num;
+                                                    let content1 = type.content;
                                                     content2 = content1;
-                                                    startIndex = item.startIndex + 1;
+                                                    startIndex = type.startIndex + 1;
                                                     c2 = 0;
                                                     let mapped1 = content1.map(() => { ... });
-                                                    item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                    return item;
+                                                    type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                    return type;
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            content2 = item.content;
-                                            startIndex = item.startIndex + 2;
+                                            type.startIndex = startIndex + num;
+                                            content2 = type.content;
+                                            startIndex = type.startIndex + 2;
                                             c2 = 0;
                                             let mapped2 = content2.map(() => { ... });
-                                            item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                            return item;
+                                            type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                            return type;
                                           });
-                                          item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                          return item;
+                                          type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                          return type;
                                         }
                                       }
                                     }
                                   }
-                                  item.startIndex = startIndex + num;
-                                  content2 = item.content;
-                                  startIndex = item.startIndex + 2;
+                                  type.startIndex = startIndex + num;
+                                  content2 = type.content;
+                                  startIndex = type.startIndex + 2;
                                   c2 = 0;
-                                  let mapped2 = content2.map((item, index) => {
+                                  let mapped2 = content2.map((type) => {
                                     let num = 0;
                                     if (0 !== c2) {
                                       num = content2[tmp - 1].endIndex;
                                     }
                                     c2 = c2 + 1;
-                                    let type = item.type;
+                                    type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
                                         if ("s" !== type) {
@@ -2305,65 +2364,65 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      item.startIndex = startIndex + num;
-                                                      item.endIndex = item.startIndex + item.content.length;
-                                                      return item;
+                                                      type.startIndex = startIndex + num;
+                                                      type.endIndex = type.startIndex + type.content.length;
+                                                      return type;
                                                     } else {
-                                                      item.startIndex = startIndex + num;
-                                                      let content = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content = type.content;
                                                       content2 = content;
-                                                      startIndex = item.startIndex;
+                                                      startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
-                                                      item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                      return item;
+                                                      type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            let content1 = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content1 = type.content;
                                             content2 = content1;
-                                            startIndex = item.startIndex + 1;
+                                            startIndex = type.startIndex + 1;
                                             c2 = 0;
                                             let mapped1 = content1.map(() => { ... });
-                                            item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                            return item;
+                                            type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    content2 = item.content;
-                                    startIndex = item.startIndex + 2;
+                                    type.startIndex = startIndex + num;
+                                    content2 = type.content;
+                                    startIndex = type.startIndex + 2;
                                     c2 = 0;
                                     let mapped2 = content2.map(() => { ... });
-                                    item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                    return item;
+                                    type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                    return type;
                                   });
-                                  item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                  return item;
+                                  type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                  return type;
                                 });
-                                item.endIndex = mapped[mapped.length - 1].endIndex;
-                                return item;
+                                type.endIndex = mapped[mapped.length - 1].endIndex;
+                                return type;
                               }
                             }
                           }
                         }
                       }
-                      item.startIndex = startIndex + num;
-                      let content1 = item.content;
+                      type.startIndex = startIndex + num;
+                      let content1 = type.content;
                       content2 = content1;
-                      startIndex = item.startIndex + 1;
+                      startIndex = type.startIndex + 1;
                       c2 = 0;
-                      let mapped1 = content1.map((item, index) => {
+                      let mapped1 = content1.map((type) => {
                         let num = 0;
                         if (0 !== c2) {
                           num = content2[tmp - 1].endIndex;
                         }
                         c2 = c2 + 1;
-                        let type = item.type;
+                        type = type.type;
                         if ("spoiler" !== type) {
                           if ("u" !== type) {
                             if ("s" !== type) {
@@ -2373,22 +2432,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                     if ("emoji" !== type) {
                                       if ("inlineCode" !== type) {
                                         if ("text" === type) {
-                                          item.startIndex = startIndex + num;
-                                          item.endIndex = item.startIndex + item.content.length;
-                                          return item;
+                                          type.startIndex = startIndex + num;
+                                          type.endIndex = type.startIndex + type.content.length;
+                                          return type;
                                         } else {
-                                          item.startIndex = startIndex + num;
-                                          let content = item.content;
+                                          type.startIndex = startIndex + num;
+                                          let content = type.content;
                                           content2 = content;
-                                          startIndex = item.startIndex;
+                                          startIndex = type.startIndex;
                                           c2 = 0;
-                                          let mapped = content.map((item, index) => {
+                                          let mapped = content.map((type) => {
                                             let num = 0;
                                             if (0 !== c2) {
                                               num = content2[tmp - 1].endIndex;
                                             }
                                             c2 = c2 + 1;
-                                            let type = item.type;
+                                            type = type.type;
                                             if ("spoiler" !== type) {
                                               if ("u" !== type) {
                                                 if ("s" !== type) {
@@ -2398,62 +2457,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         if ("emoji" !== type) {
                                                           if ("inlineCode" !== type) {
                                                             if ("text" === type) {
-                                                              item.startIndex = startIndex + num;
-                                                              item.endIndex = item.startIndex + item.content.length;
-                                                              return item;
+                                                              type.startIndex = startIndex + num;
+                                                              type.endIndex = type.startIndex + type.content.length;
+                                                              return type;
                                                             } else {
-                                                              item.startIndex = startIndex + num;
-                                                              let content = item.content;
+                                                              type.startIndex = startIndex + num;
+                                                              let content = type.content;
                                                               content2 = content;
-                                                              startIndex = item.startIndex;
+                                                              startIndex = type.startIndex;
                                                               c2 = 0;
                                                               let mapped = content.map(() => { ... });
-                                                              item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                              return item;
+                                                              type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                              return type;
                                                             }
                                                           }
                                                         }
                                                       }
                                                     }
-                                                    item.startIndex = startIndex + num;
-                                                    let content1 = item.content;
+                                                    type.startIndex = startIndex + num;
+                                                    let content1 = type.content;
                                                     content2 = content1;
-                                                    startIndex = item.startIndex + 1;
+                                                    startIndex = type.startIndex + 1;
                                                     c2 = 0;
                                                     let mapped1 = content1.map(() => { ... });
-                                                    item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                    return item;
+                                                    type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                    return type;
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            content2 = item.content;
-                                            startIndex = item.startIndex + 2;
+                                            type.startIndex = startIndex + num;
+                                            content2 = type.content;
+                                            startIndex = type.startIndex + 2;
                                             c2 = 0;
                                             let mapped2 = content2.map(() => { ... });
-                                            item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                            return item;
+                                            type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                            return type;
                                           });
-                                          item.endIndex = mapped[mapped.length - 1].endIndex;
-                                          return item;
+                                          type.endIndex = mapped[mapped.length - 1].endIndex;
+                                          return type;
                                         }
                                       }
                                     }
                                   }
                                 }
-                                item.startIndex = startIndex + num;
-                                let content1 = item.content;
+                                type.startIndex = startIndex + num;
+                                let content1 = type.content;
                                 content2 = content1;
-                                startIndex = item.startIndex + 1;
+                                startIndex = type.startIndex + 1;
                                 c2 = 0;
-                                let mapped1 = content1.map((item, index) => {
+                                let mapped1 = content1.map((type) => {
                                   let num = 0;
                                   if (0 !== c2) {
                                     num = content2[tmp - 1].endIndex;
                                   }
                                   c2 = c2 + 1;
-                                  let type = item.type;
+                                  type = type.type;
                                   if ("spoiler" !== type) {
                                     if ("u" !== type) {
                                       if ("s" !== type) {
@@ -2463,60 +2522,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               if ("emoji" !== type) {
                                                 if ("inlineCode" !== type) {
                                                   if ("text" === type) {
-                                                    item.startIndex = startIndex + num;
-                                                    item.endIndex = item.startIndex + item.content.length;
-                                                    return item;
+                                                    type.startIndex = startIndex + num;
+                                                    type.endIndex = type.startIndex + type.content.length;
+                                                    return type;
                                                   } else {
-                                                    item.startIndex = startIndex + num;
-                                                    let content = item.content;
+                                                    type.startIndex = startIndex + num;
+                                                    let content = type.content;
                                                     content2 = content;
-                                                    startIndex = item.startIndex;
+                                                    startIndex = type.startIndex;
                                                     c2 = 0;
                                                     let mapped = content.map(() => { ... });
-                                                    item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                    return item;
+                                                    type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                    return type;
                                                   }
                                                 }
                                               }
                                             }
                                           }
-                                          item.startIndex = startIndex + num;
-                                          let content1 = item.content;
+                                          type.startIndex = startIndex + num;
+                                          let content1 = type.content;
                                           content2 = content1;
-                                          startIndex = item.startIndex + 1;
+                                          startIndex = type.startIndex + 1;
                                           c2 = 0;
                                           let mapped1 = content1.map(() => { ... });
-                                          item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                          return item;
+                                          type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                          return type;
                                         }
                                       }
                                     }
                                   }
-                                  item.startIndex = startIndex + num;
-                                  content2 = item.content;
-                                  startIndex = item.startIndex + 2;
+                                  type.startIndex = startIndex + num;
+                                  content2 = type.content;
+                                  startIndex = type.startIndex + 2;
                                   c2 = 0;
                                   let mapped2 = content2.map(() => { ... });
-                                  item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                  return item;
+                                  type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                  return type;
                                 });
-                                item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                return item;
+                                type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                return type;
                               }
                             }
                           }
                         }
-                        item.startIndex = startIndex + num;
-                        content2 = item.content;
-                        startIndex = item.startIndex + 2;
+                        type.startIndex = startIndex + num;
+                        content2 = type.content;
+                        startIndex = type.startIndex + 2;
                         c2 = 0;
-                        let mapped2 = content2.map((item, index) => {
+                        let mapped2 = content2.map((type) => {
                           let num = 0;
                           if (0 !== c2) {
                             num = content2[tmp - 1].endIndex;
                           }
                           c2 = c2 + 1;
-                          let type = item.type;
+                          type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
                               if ("s" !== type) {
@@ -2526,63 +2585,63 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            item.startIndex = startIndex + num;
-                                            item.endIndex = item.startIndex + item.content.length;
-                                            return item;
+                                            type.startIndex = startIndex + num;
+                                            type.endIndex = type.startIndex + type.content.length;
+                                            return type;
                                           } else {
-                                            item.startIndex = startIndex + num;
-                                            let content = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content = type.content;
                                             content2 = content;
-                                            startIndex = item.startIndex;
+                                            startIndex = type.startIndex;
                                             c2 = 0;
                                             let mapped = content.map(() => { ... });
-                                            item.endIndex = mapped[mapped.length - 1].endIndex;
-                                            return item;
+                                            type.endIndex = mapped[mapped.length - 1].endIndex;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  item.startIndex = startIndex + num;
-                                  let content1 = item.content;
+                                  type.startIndex = startIndex + num;
+                                  let content1 = type.content;
                                   content2 = content1;
-                                  startIndex = item.startIndex + 1;
+                                  startIndex = type.startIndex + 1;
                                   c2 = 0;
                                   let mapped1 = content1.map(() => { ... });
-                                  item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                  return item;
+                                  type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                  return type;
                                 }
                               }
                             }
                           }
-                          item.startIndex = startIndex + num;
-                          content2 = item.content;
-                          startIndex = item.startIndex + 2;
+                          type.startIndex = startIndex + num;
+                          content2 = type.content;
+                          startIndex = type.startIndex + 2;
                           c2 = 0;
                           let mapped2 = content2.map(() => { ... });
-                          item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                          return item;
+                          type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                          return type;
                         });
-                        item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                        return item;
+                        type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                        return type;
                       });
-                      item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                      return item;
+                      type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                      return type;
                     }
                   }
                 }
               }
-              item.startIndex = startIndex + num;
-              content2 = item.content;
-              startIndex = item.startIndex + 2;
+              type.startIndex = startIndex + num;
+              content2 = type.content;
+              startIndex = type.startIndex + 2;
               c2 = 0;
-              let mapped2 = content2.map((item, index) => {
+              let mapped2 = content2.map((type) => {
                 let num = 0;
                 if (0 !== c2) {
                   num = content2[tmp - 1].endIndex;
                 }
                 c2 = c2 + 1;
-                let type = item.type;
+                type = type.type;
                 if ("spoiler" !== type) {
                   if ("u" !== type) {
                     if ("s" !== type) {
@@ -2592,22 +2651,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                             if ("emoji" !== type) {
                               if ("inlineCode" !== type) {
                                 if ("text" === type) {
-                                  item.startIndex = startIndex + num;
-                                  item.endIndex = item.startIndex + item.content.length;
-                                  return item;
+                                  type.startIndex = startIndex + num;
+                                  type.endIndex = type.startIndex + type.content.length;
+                                  return type;
                                 } else {
-                                  item.startIndex = startIndex + num;
-                                  let content = item.content;
+                                  type.startIndex = startIndex + num;
+                                  let content = type.content;
                                   content2 = content;
-                                  startIndex = item.startIndex;
+                                  startIndex = type.startIndex;
                                   c2 = 0;
-                                  let mapped = content.map((item, index) => {
+                                  let mapped = content.map((type) => {
                                     let num = 0;
                                     if (0 !== c2) {
                                       num = content2[tmp - 1].endIndex;
                                     }
                                     c2 = c2 + 1;
-                                    let type = item.type;
+                                    type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
                                         if ("s" !== type) {
@@ -2617,62 +2676,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      item.startIndex = startIndex + num;
-                                                      item.endIndex = item.startIndex + item.content.length;
-                                                      return item;
+                                                      type.startIndex = startIndex + num;
+                                                      type.endIndex = type.startIndex + type.content.length;
+                                                      return type;
                                                     } else {
-                                                      item.startIndex = startIndex + num;
-                                                      let content = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content = type.content;
                                                       content2 = content;
-                                                      startIndex = item.startIndex;
+                                                      startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
-                                                      item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                      return item;
+                                                      type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            let content1 = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content1 = type.content;
                                             content2 = content1;
-                                            startIndex = item.startIndex + 1;
+                                            startIndex = type.startIndex + 1;
                                             c2 = 0;
                                             let mapped1 = content1.map(() => { ... });
-                                            item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                            return item;
+                                            type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    content2 = item.content;
-                                    startIndex = item.startIndex + 2;
+                                    type.startIndex = startIndex + num;
+                                    content2 = type.content;
+                                    startIndex = type.startIndex + 2;
                                     c2 = 0;
                                     let mapped2 = content2.map(() => { ... });
-                                    item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                    return item;
+                                    type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                    return type;
                                   });
-                                  item.endIndex = mapped[mapped.length - 1].endIndex;
-                                  return item;
+                                  type.endIndex = mapped[mapped.length - 1].endIndex;
+                                  return type;
                                 }
                               }
                             }
                           }
                         }
-                        item.startIndex = startIndex + num;
-                        let content1 = item.content;
+                        type.startIndex = startIndex + num;
+                        let content1 = type.content;
                         content2 = content1;
-                        startIndex = item.startIndex + 1;
+                        startIndex = type.startIndex + 1;
                         c2 = 0;
-                        let mapped1 = content1.map((item, index) => {
+                        let mapped1 = content1.map((type) => {
                           let num = 0;
                           if (0 !== c2) {
                             num = content2[tmp - 1].endIndex;
                           }
                           c2 = c2 + 1;
-                          let type = item.type;
+                          type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
                               if ("s" !== type) {
@@ -2682,60 +2741,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            item.startIndex = startIndex + num;
-                                            item.endIndex = item.startIndex + item.content.length;
-                                            return item;
+                                            type.startIndex = startIndex + num;
+                                            type.endIndex = type.startIndex + type.content.length;
+                                            return type;
                                           } else {
-                                            item.startIndex = startIndex + num;
-                                            let content = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content = type.content;
                                             content2 = content;
-                                            startIndex = item.startIndex;
+                                            startIndex = type.startIndex;
                                             c2 = 0;
                                             let mapped = content.map(() => { ... });
-                                            item.endIndex = mapped[mapped.length - 1].endIndex;
-                                            return item;
+                                            type.endIndex = mapped[mapped.length - 1].endIndex;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  item.startIndex = startIndex + num;
-                                  let content1 = item.content;
+                                  type.startIndex = startIndex + num;
+                                  let content1 = type.content;
                                   content2 = content1;
-                                  startIndex = item.startIndex + 1;
+                                  startIndex = type.startIndex + 1;
                                   c2 = 0;
                                   let mapped1 = content1.map(() => { ... });
-                                  item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                  return item;
+                                  type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                  return type;
                                 }
                               }
                             }
                           }
-                          item.startIndex = startIndex + num;
-                          content2 = item.content;
-                          startIndex = item.startIndex + 2;
+                          type.startIndex = startIndex + num;
+                          content2 = type.content;
+                          startIndex = type.startIndex + 2;
                           c2 = 0;
                           let mapped2 = content2.map(() => { ... });
-                          item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                          return item;
+                          type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                          return type;
                         });
-                        item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                        return item;
+                        type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                        return type;
                       }
                     }
                   }
                 }
-                item.startIndex = startIndex + num;
-                content2 = item.content;
-                startIndex = item.startIndex + 2;
+                type.startIndex = startIndex + num;
+                content2 = type.content;
+                startIndex = type.startIndex + 2;
                 c2 = 0;
-                let mapped2 = content2.map((item, index) => {
+                let mapped2 = content2.map((type) => {
                   let num = 0;
                   if (0 !== c2) {
                     num = content2[tmp - 1].endIndex;
                   }
                   c2 = c2 + 1;
-                  let type = item.type;
+                  type = type.type;
                   if ("spoiler" !== type) {
                     if ("u" !== type) {
                       if ("s" !== type) {
@@ -2745,66 +2804,66 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               if ("emoji" !== type) {
                                 if ("inlineCode" !== type) {
                                   if ("text" === type) {
-                                    item.startIndex = startIndex + num;
-                                    item.endIndex = item.startIndex + item.content.length;
-                                    return item;
+                                    type.startIndex = startIndex + num;
+                                    type.endIndex = type.startIndex + type.content.length;
+                                    return type;
                                   } else {
-                                    item.startIndex = startIndex + num;
-                                    let content = item.content;
+                                    type.startIndex = startIndex + num;
+                                    let content = type.content;
                                     content2 = content;
-                                    startIndex = item.startIndex;
+                                    startIndex = type.startIndex;
                                     c2 = 0;
                                     let mapped = content.map(() => { ... });
-                                    item.endIndex = mapped[mapped.length - 1].endIndex;
-                                    return item;
+                                    type.endIndex = mapped[mapped.length - 1].endIndex;
+                                    return type;
                                   }
                                 }
                               }
                             }
                           }
-                          item.startIndex = startIndex + num;
-                          let content1 = item.content;
+                          type.startIndex = startIndex + num;
+                          let content1 = type.content;
                           content2 = content1;
-                          startIndex = item.startIndex + 1;
+                          startIndex = type.startIndex + 1;
                           c2 = 0;
                           let mapped1 = content1.map(() => { ... });
-                          item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                          return item;
+                          type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                          return type;
                         }
                       }
                     }
                   }
-                  item.startIndex = startIndex + num;
-                  content2 = item.content;
-                  startIndex = item.startIndex + 2;
+                  type.startIndex = startIndex + num;
+                  content2 = type.content;
+                  startIndex = type.startIndex + 2;
                   c2 = 0;
                   let mapped2 = content2.map(() => { ... });
-                  item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                  return item;
+                  type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                  return type;
                 });
-                item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                return item;
+                type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                return type;
               });
-              item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-              return item;
+              type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+              return type;
             });
-            item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-            return item;
+            type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+            return type;
           }
         }
       }
     }
-    item.startIndex = startIndex + num;
-    content2 = item.content;
-    startIndex = item.startIndex + 2;
+    type.startIndex = startIndex + num;
+    content2 = type.content;
+    startIndex = type.startIndex + 2;
     c2 = 0;
-    let mapped2 = content2.map((item, index) => {
+    let mapped2 = content2.map((type) => {
       let num = 0;
       if (0 !== c2) {
         num = content2[tmp - 1].endIndex;
       }
       c2 = c2 + 1;
-      let type = item.type;
+      type = type.type;
       if ("spoiler" !== type) {
         if ("u" !== type) {
           if ("s" !== type) {
@@ -2814,22 +2873,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                   if ("emoji" !== type) {
                     if ("inlineCode" !== type) {
                       if ("text" === type) {
-                        item.startIndex = startIndex + num;
-                        item.endIndex = item.startIndex + item.content.length;
-                        return item;
+                        type.startIndex = startIndex + num;
+                        type.endIndex = type.startIndex + type.content.length;
+                        return type;
                       } else {
-                        item.startIndex = startIndex + num;
-                        let content = item.content;
+                        type.startIndex = startIndex + num;
+                        let content = type.content;
                         content2 = content;
-                        startIndex = item.startIndex;
+                        startIndex = type.startIndex;
                         c2 = 0;
-                        let mapped = content.map((item, index) => {
+                        let mapped = content.map((type) => {
                           let num = 0;
                           if (0 !== c2) {
                             num = content2[tmp - 1].endIndex;
                           }
                           c2 = c2 + 1;
-                          let type = item.type;
+                          type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
                               if ("s" !== type) {
@@ -2839,22 +2898,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            item.startIndex = startIndex + num;
-                                            item.endIndex = item.startIndex + item.content.length;
-                                            return item;
+                                            type.startIndex = startIndex + num;
+                                            type.endIndex = type.startIndex + type.content.length;
+                                            return type;
                                           } else {
-                                            item.startIndex = startIndex + num;
-                                            let content = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content = type.content;
                                             content2 = content;
-                                            startIndex = item.startIndex;
+                                            startIndex = type.startIndex;
                                             c2 = 0;
-                                            let mapped = content.map((item, index) => {
+                                            let mapped = content.map((type) => {
                                               let num = 0;
                                               if (0 !== c2) {
                                                 num = content2[tmp - 1].endIndex;
                                               }
                                               c2 = c2 + 1;
-                                              let type = item.type;
+                                              type = type.type;
                                               if ("spoiler" !== type) {
                                                 if ("u" !== type) {
                                                   if ("s" !== type) {
@@ -2864,62 +2923,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           if ("emoji" !== type) {
                                                             if ("inlineCode" !== type) {
                                                               if ("text" === type) {
-                                                                item.startIndex = startIndex + num;
-                                                                item.endIndex = item.startIndex + item.content.length;
-                                                                return item;
+                                                                type.startIndex = startIndex + num;
+                                                                type.endIndex = type.startIndex + type.content.length;
+                                                                return type;
                                                               } else {
-                                                                item.startIndex = startIndex + num;
-                                                                let content = item.content;
+                                                                type.startIndex = startIndex + num;
+                                                                let content = type.content;
                                                                 content2 = content;
-                                                                startIndex = item.startIndex;
+                                                                startIndex = type.startIndex;
                                                                 c2 = 0;
                                                                 let mapped = content.map(() => { ... });
-                                                                item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                                return item;
+                                                                type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                                return type;
                                                               }
                                                             }
                                                           }
                                                         }
                                                       }
-                                                      item.startIndex = startIndex + num;
-                                                      let content1 = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content1 = type.content;
                                                       content2 = content1;
-                                                      startIndex = item.startIndex + 1;
+                                                      startIndex = type.startIndex + 1;
                                                       c2 = 0;
                                                       let mapped1 = content1.map(() => { ... });
-                                                      item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                                      return item;
+                                                      type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
-                                              item.startIndex = startIndex + num;
-                                              content2 = item.content;
-                                              startIndex = item.startIndex + 2;
+                                              type.startIndex = startIndex + num;
+                                              content2 = type.content;
+                                              startIndex = type.startIndex + 2;
                                               c2 = 0;
                                               let mapped2 = content2.map(() => { ... });
-                                              item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                              return item;
+                                              type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                              return type;
                                             });
-                                            item.endIndex = mapped[mapped.length - 1].endIndex;
-                                            return item;
+                                            type.endIndex = mapped[mapped.length - 1].endIndex;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  item.startIndex = startIndex + num;
-                                  let content1 = item.content;
+                                  type.startIndex = startIndex + num;
+                                  let content1 = type.content;
                                   content2 = content1;
-                                  startIndex = item.startIndex + 1;
+                                  startIndex = type.startIndex + 1;
                                   c2 = 0;
-                                  let mapped1 = content1.map((item, index) => {
+                                  let mapped1 = content1.map((type) => {
                                     let num = 0;
                                     if (0 !== c2) {
                                       num = content2[tmp - 1].endIndex;
                                     }
                                     c2 = c2 + 1;
-                                    let type = item.type;
+                                    type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
                                         if ("s" !== type) {
@@ -2929,60 +2988,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      item.startIndex = startIndex + num;
-                                                      item.endIndex = item.startIndex + item.content.length;
-                                                      return item;
+                                                      type.startIndex = startIndex + num;
+                                                      type.endIndex = type.startIndex + type.content.length;
+                                                      return type;
                                                     } else {
-                                                      item.startIndex = startIndex + num;
-                                                      let content = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content = type.content;
                                                       content2 = content;
-                                                      startIndex = item.startIndex;
+                                                      startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
-                                                      item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                      return item;
+                                                      type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            let content1 = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content1 = type.content;
                                             content2 = content1;
-                                            startIndex = item.startIndex + 1;
+                                            startIndex = type.startIndex + 1;
                                             c2 = 0;
                                             let mapped1 = content1.map(() => { ... });
-                                            item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                            return item;
+                                            type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    content2 = item.content;
-                                    startIndex = item.startIndex + 2;
+                                    type.startIndex = startIndex + num;
+                                    content2 = type.content;
+                                    startIndex = type.startIndex + 2;
                                     c2 = 0;
                                     let mapped2 = content2.map(() => { ... });
-                                    item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                    return item;
+                                    type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                    return type;
                                   });
-                                  item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                  return item;
+                                  type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                  return type;
                                 }
                               }
                             }
                           }
-                          item.startIndex = startIndex + num;
-                          content2 = item.content;
-                          startIndex = item.startIndex + 2;
+                          type.startIndex = startIndex + num;
+                          content2 = type.content;
+                          startIndex = type.startIndex + 2;
                           c2 = 0;
-                          let mapped2 = content2.map((item, index) => {
+                          let mapped2 = content2.map((type) => {
                             let num = 0;
                             if (0 !== c2) {
                               num = content2[tmp - 1].endIndex;
                             }
                             c2 = c2 + 1;
-                            let type = item.type;
+                            type = type.type;
                             if ("spoiler" !== type) {
                               if ("u" !== type) {
                                 if ("s" !== type) {
@@ -2992,65 +3051,65 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         if ("emoji" !== type) {
                                           if ("inlineCode" !== type) {
                                             if ("text" === type) {
-                                              item.startIndex = startIndex + num;
-                                              item.endIndex = item.startIndex + item.content.length;
-                                              return item;
+                                              type.startIndex = startIndex + num;
+                                              type.endIndex = type.startIndex + type.content.length;
+                                              return type;
                                             } else {
-                                              item.startIndex = startIndex + num;
-                                              let content = item.content;
+                                              type.startIndex = startIndex + num;
+                                              let content = type.content;
                                               content2 = content;
-                                              startIndex = item.startIndex;
+                                              startIndex = type.startIndex;
                                               c2 = 0;
                                               let mapped = content.map(() => { ... });
-                                              item.endIndex = mapped[mapped.length - 1].endIndex;
-                                              return item;
+                                              type.endIndex = mapped[mapped.length - 1].endIndex;
+                                              return type;
                                             }
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    let content1 = item.content;
+                                    type.startIndex = startIndex + num;
+                                    let content1 = type.content;
                                     content2 = content1;
-                                    startIndex = item.startIndex + 1;
+                                    startIndex = type.startIndex + 1;
                                     c2 = 0;
                                     let mapped1 = content1.map(() => { ... });
-                                    item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                    return item;
+                                    type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                    return type;
                                   }
                                 }
                               }
                             }
-                            item.startIndex = startIndex + num;
-                            content2 = item.content;
-                            startIndex = item.startIndex + 2;
+                            type.startIndex = startIndex + num;
+                            content2 = type.content;
+                            startIndex = type.startIndex + 2;
                             c2 = 0;
                             let mapped2 = content2.map(() => { ... });
-                            item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                            return item;
+                            type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                            return type;
                           });
-                          item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                          return item;
+                          type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                          return type;
                         });
-                        item.endIndex = mapped[mapped.length - 1].endIndex;
-                        return item;
+                        type.endIndex = mapped[mapped.length - 1].endIndex;
+                        return type;
                       }
                     }
                   }
                 }
               }
-              item.startIndex = startIndex + num;
-              let content1 = item.content;
+              type.startIndex = startIndex + num;
+              let content1 = type.content;
               content2 = content1;
-              startIndex = item.startIndex + 1;
+              startIndex = type.startIndex + 1;
               c2 = 0;
-              let mapped1 = content1.map((item, index) => {
+              let mapped1 = content1.map((type) => {
                 let num = 0;
                 if (0 !== c2) {
                   num = content2[tmp - 1].endIndex;
                 }
                 c2 = c2 + 1;
-                let type = item.type;
+                type = type.type;
                 if ("spoiler" !== type) {
                   if ("u" !== type) {
                     if ("s" !== type) {
@@ -3060,22 +3119,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                             if ("emoji" !== type) {
                               if ("inlineCode" !== type) {
                                 if ("text" === type) {
-                                  item.startIndex = startIndex + num;
-                                  item.endIndex = item.startIndex + item.content.length;
-                                  return item;
+                                  type.startIndex = startIndex + num;
+                                  type.endIndex = type.startIndex + type.content.length;
+                                  return type;
                                 } else {
-                                  item.startIndex = startIndex + num;
-                                  let content = item.content;
+                                  type.startIndex = startIndex + num;
+                                  let content = type.content;
                                   content2 = content;
-                                  startIndex = item.startIndex;
+                                  startIndex = type.startIndex;
                                   c2 = 0;
-                                  let mapped = content.map((item, index) => {
+                                  let mapped = content.map((type) => {
                                     let num = 0;
                                     if (0 !== c2) {
                                       num = content2[tmp - 1].endIndex;
                                     }
                                     c2 = c2 + 1;
-                                    let type = item.type;
+                                    type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
                                         if ("s" !== type) {
@@ -3085,62 +3144,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      item.startIndex = startIndex + num;
-                                                      item.endIndex = item.startIndex + item.content.length;
-                                                      return item;
+                                                      type.startIndex = startIndex + num;
+                                                      type.endIndex = type.startIndex + type.content.length;
+                                                      return type;
                                                     } else {
-                                                      item.startIndex = startIndex + num;
-                                                      let content = item.content;
+                                                      type.startIndex = startIndex + num;
+                                                      let content = type.content;
                                                       content2 = content;
-                                                      startIndex = item.startIndex;
+                                                      startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
-                                                      item.endIndex = mapped[mapped.length - 1].endIndex;
-                                                      return item;
+                                                      type.endIndex = mapped[mapped.length - 1].endIndex;
+                                                      return type;
                                                     }
                                                   }
                                                 }
                                               }
                                             }
-                                            item.startIndex = startIndex + num;
-                                            let content1 = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content1 = type.content;
                                             content2 = content1;
-                                            startIndex = item.startIndex + 1;
+                                            startIndex = type.startIndex + 1;
                                             c2 = 0;
                                             let mapped1 = content1.map(() => { ... });
-                                            item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                            return item;
+                                            type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    content2 = item.content;
-                                    startIndex = item.startIndex + 2;
+                                    type.startIndex = startIndex + num;
+                                    content2 = type.content;
+                                    startIndex = type.startIndex + 2;
                                     c2 = 0;
                                     let mapped2 = content2.map(() => { ... });
-                                    item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                                    return item;
+                                    type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                                    return type;
                                   });
-                                  item.endIndex = mapped[mapped.length - 1].endIndex;
-                                  return item;
+                                  type.endIndex = mapped[mapped.length - 1].endIndex;
+                                  return type;
                                 }
                               }
                             }
                           }
                         }
-                        item.startIndex = startIndex + num;
-                        let content1 = item.content;
+                        type.startIndex = startIndex + num;
+                        let content1 = type.content;
                         content2 = content1;
-                        startIndex = item.startIndex + 1;
+                        startIndex = type.startIndex + 1;
                         c2 = 0;
-                        let mapped1 = content1.map((item, index) => {
+                        let mapped1 = content1.map((type) => {
                           let num = 0;
                           if (0 !== c2) {
                             num = content2[tmp - 1].endIndex;
                           }
                           c2 = c2 + 1;
-                          let type = item.type;
+                          type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
                               if ("s" !== type) {
@@ -3150,60 +3209,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            item.startIndex = startIndex + num;
-                                            item.endIndex = item.startIndex + item.content.length;
-                                            return item;
+                                            type.startIndex = startIndex + num;
+                                            type.endIndex = type.startIndex + type.content.length;
+                                            return type;
                                           } else {
-                                            item.startIndex = startIndex + num;
-                                            let content = item.content;
+                                            type.startIndex = startIndex + num;
+                                            let content = type.content;
                                             content2 = content;
-                                            startIndex = item.startIndex;
+                                            startIndex = type.startIndex;
                                             c2 = 0;
                                             let mapped = content.map(() => { ... });
-                                            item.endIndex = mapped[mapped.length - 1].endIndex;
-                                            return item;
+                                            type.endIndex = mapped[mapped.length - 1].endIndex;
+                                            return type;
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  item.startIndex = startIndex + num;
-                                  let content1 = item.content;
+                                  type.startIndex = startIndex + num;
+                                  let content1 = type.content;
                                   content2 = content1;
-                                  startIndex = item.startIndex + 1;
+                                  startIndex = type.startIndex + 1;
                                   c2 = 0;
                                   let mapped1 = content1.map(() => { ... });
-                                  item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                  return item;
+                                  type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                  return type;
                                 }
                               }
                             }
                           }
-                          item.startIndex = startIndex + num;
-                          content2 = item.content;
-                          startIndex = item.startIndex + 2;
+                          type.startIndex = startIndex + num;
+                          content2 = type.content;
+                          startIndex = type.startIndex + 2;
                           c2 = 0;
                           let mapped2 = content2.map(() => { ... });
-                          item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                          return item;
+                          type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                          return type;
                         });
-                        item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                        return item;
+                        type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                        return type;
                       }
                     }
                   }
                 }
-                item.startIndex = startIndex + num;
-                content2 = item.content;
-                startIndex = item.startIndex + 2;
+                type.startIndex = startIndex + num;
+                content2 = type.content;
+                startIndex = type.startIndex + 2;
                 c2 = 0;
-                let mapped2 = content2.map((item, index) => {
+                let mapped2 = content2.map((type) => {
                   let num = 0;
                   if (0 !== c2) {
                     num = content2[tmp - 1].endIndex;
                   }
                   c2 = c2 + 1;
-                  let type = item.type;
+                  type = type.type;
                   if ("spoiler" !== type) {
                     if ("u" !== type) {
                       if ("s" !== type) {
@@ -3213,63 +3272,63 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               if ("emoji" !== type) {
                                 if ("inlineCode" !== type) {
                                   if ("text" === type) {
-                                    item.startIndex = startIndex + num;
-                                    item.endIndex = item.startIndex + item.content.length;
-                                    return item;
+                                    type.startIndex = startIndex + num;
+                                    type.endIndex = type.startIndex + type.content.length;
+                                    return type;
                                   } else {
-                                    item.startIndex = startIndex + num;
-                                    let content = item.content;
+                                    type.startIndex = startIndex + num;
+                                    let content = type.content;
                                     content2 = content;
-                                    startIndex = item.startIndex;
+                                    startIndex = type.startIndex;
                                     c2 = 0;
                                     let mapped = content.map(() => { ... });
-                                    item.endIndex = mapped[mapped.length - 1].endIndex;
-                                    return item;
+                                    type.endIndex = mapped[mapped.length - 1].endIndex;
+                                    return type;
                                   }
                                 }
                               }
                             }
                           }
-                          item.startIndex = startIndex + num;
-                          let content1 = item.content;
+                          type.startIndex = startIndex + num;
+                          let content1 = type.content;
                           content2 = content1;
-                          startIndex = item.startIndex + 1;
+                          startIndex = type.startIndex + 1;
                           c2 = 0;
                           let mapped1 = content1.map(() => { ... });
-                          item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                          return item;
+                          type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                          return type;
                         }
                       }
                     }
                   }
-                  item.startIndex = startIndex + num;
-                  content2 = item.content;
-                  startIndex = item.startIndex + 2;
+                  type.startIndex = startIndex + num;
+                  content2 = type.content;
+                  startIndex = type.startIndex + 2;
                   c2 = 0;
                   let mapped2 = content2.map(() => { ... });
-                  item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                  return item;
+                  type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                  return type;
                 });
-                item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                return item;
+                type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                return type;
               });
-              item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-              return item;
+              type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+              return type;
             }
           }
         }
       }
-      item.startIndex = startIndex + num;
-      content2 = item.content;
-      startIndex = item.startIndex + 2;
+      type.startIndex = startIndex + num;
+      content2 = type.content;
+      startIndex = type.startIndex + 2;
       c2 = 0;
-      let mapped2 = content2.map((item, index) => {
+      let mapped2 = content2.map((type) => {
         let num = 0;
         if (0 !== c2) {
           num = content2[tmp - 1].endIndex;
         }
         c2 = c2 + 1;
-        let type = item.type;
+        type = type.type;
         if ("spoiler" !== type) {
           if ("u" !== type) {
             if ("s" !== type) {
@@ -3279,22 +3338,22 @@ export const getIndexedAST = function getIndexedAST(arr) {
                     if ("emoji" !== type) {
                       if ("inlineCode" !== type) {
                         if ("text" === type) {
-                          item.startIndex = startIndex + num;
-                          item.endIndex = item.startIndex + item.content.length;
-                          return item;
+                          type.startIndex = startIndex + num;
+                          type.endIndex = type.startIndex + type.content.length;
+                          return type;
                         } else {
-                          item.startIndex = startIndex + num;
-                          let content = item.content;
+                          type.startIndex = startIndex + num;
+                          let content = type.content;
                           content2 = content;
-                          startIndex = item.startIndex;
+                          startIndex = type.startIndex;
                           c2 = 0;
-                          let mapped = content.map((item, index) => {
+                          let mapped = content.map((type) => {
                             let num = 0;
                             if (0 !== c2) {
                               num = content2[tmp - 1].endIndex;
                             }
                             c2 = c2 + 1;
-                            let type = item.type;
+                            type = type.type;
                             if ("spoiler" !== type) {
                               if ("u" !== type) {
                                 if ("s" !== type) {
@@ -3304,62 +3363,62 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         if ("emoji" !== type) {
                                           if ("inlineCode" !== type) {
                                             if ("text" === type) {
-                                              item.startIndex = startIndex + num;
-                                              item.endIndex = item.startIndex + item.content.length;
-                                              return item;
+                                              type.startIndex = startIndex + num;
+                                              type.endIndex = type.startIndex + type.content.length;
+                                              return type;
                                             } else {
-                                              item.startIndex = startIndex + num;
-                                              let content = item.content;
+                                              type.startIndex = startIndex + num;
+                                              let content = type.content;
                                               content2 = content;
-                                              startIndex = item.startIndex;
+                                              startIndex = type.startIndex;
                                               c2 = 0;
                                               let mapped = content.map(() => { ... });
-                                              item.endIndex = mapped[mapped.length - 1].endIndex;
-                                              return item;
+                                              type.endIndex = mapped[mapped.length - 1].endIndex;
+                                              return type;
                                             }
                                           }
                                         }
                                       }
                                     }
-                                    item.startIndex = startIndex + num;
-                                    let content1 = item.content;
+                                    type.startIndex = startIndex + num;
+                                    let content1 = type.content;
                                     content2 = content1;
-                                    startIndex = item.startIndex + 1;
+                                    startIndex = type.startIndex + 1;
                                     c2 = 0;
                                     let mapped1 = content1.map(() => { ... });
-                                    item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                                    return item;
+                                    type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                                    return type;
                                   }
                                 }
                               }
                             }
-                            item.startIndex = startIndex + num;
-                            content2 = item.content;
-                            startIndex = item.startIndex + 2;
+                            type.startIndex = startIndex + num;
+                            content2 = type.content;
+                            startIndex = type.startIndex + 2;
                             c2 = 0;
                             let mapped2 = content2.map(() => { ... });
-                            item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                            return item;
+                            type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                            return type;
                           });
-                          item.endIndex = mapped[mapped.length - 1].endIndex;
-                          return item;
+                          type.endIndex = mapped[mapped.length - 1].endIndex;
+                          return type;
                         }
                       }
                     }
                   }
                 }
-                item.startIndex = startIndex + num;
-                let content1 = item.content;
+                type.startIndex = startIndex + num;
+                let content1 = type.content;
                 content2 = content1;
-                startIndex = item.startIndex + 1;
+                startIndex = type.startIndex + 1;
                 c2 = 0;
-                let mapped1 = content1.map((item, index) => {
+                let mapped1 = content1.map((type) => {
                   let num = 0;
                   if (0 !== c2) {
                     num = content2[tmp - 1].endIndex;
                   }
                   c2 = c2 + 1;
-                  let type = item.type;
+                  type = type.type;
                   if ("spoiler" !== type) {
                     if ("u" !== type) {
                       if ("s" !== type) {
@@ -3369,60 +3428,60 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               if ("emoji" !== type) {
                                 if ("inlineCode" !== type) {
                                   if ("text" === type) {
-                                    item.startIndex = startIndex + num;
-                                    item.endIndex = item.startIndex + item.content.length;
-                                    return item;
+                                    type.startIndex = startIndex + num;
+                                    type.endIndex = type.startIndex + type.content.length;
+                                    return type;
                                   } else {
-                                    item.startIndex = startIndex + num;
-                                    let content = item.content;
+                                    type.startIndex = startIndex + num;
+                                    let content = type.content;
                                     content2 = content;
-                                    startIndex = item.startIndex;
+                                    startIndex = type.startIndex;
                                     c2 = 0;
                                     let mapped = content.map(() => { ... });
-                                    item.endIndex = mapped[mapped.length - 1].endIndex;
-                                    return item;
+                                    type.endIndex = mapped[mapped.length - 1].endIndex;
+                                    return type;
                                   }
                                 }
                               }
                             }
                           }
-                          item.startIndex = startIndex + num;
-                          let content1 = item.content;
+                          type.startIndex = startIndex + num;
+                          let content1 = type.content;
                           content2 = content1;
-                          startIndex = item.startIndex + 1;
+                          startIndex = type.startIndex + 1;
                           c2 = 0;
                           let mapped1 = content1.map(() => { ... });
-                          item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                          return item;
+                          type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                          return type;
                         }
                       }
                     }
                   }
-                  item.startIndex = startIndex + num;
-                  content2 = item.content;
-                  startIndex = item.startIndex + 2;
+                  type.startIndex = startIndex + num;
+                  content2 = type.content;
+                  startIndex = type.startIndex + 2;
                   c2 = 0;
                   let mapped2 = content2.map(() => { ... });
-                  item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-                  return item;
+                  type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+                  return type;
                 });
-                item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                return item;
+                type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                return type;
               }
             }
           }
         }
-        item.startIndex = startIndex + num;
-        content2 = item.content;
-        startIndex = item.startIndex + 2;
+        type.startIndex = startIndex + num;
+        content2 = type.content;
+        startIndex = type.startIndex + 2;
         c2 = 0;
-        let mapped2 = content2.map((item, index) => {
+        let mapped2 = content2.map((type) => {
           let num = 0;
           if (0 !== c2) {
             num = content2[tmp - 1].endIndex;
           }
           c2 = c2 + 1;
-          let type = item.type;
+          type = type.type;
           if ("spoiler" !== type) {
             if ("u" !== type) {
               if ("s" !== type) {
@@ -3432,51 +3491,51 @@ export const getIndexedAST = function getIndexedAST(arr) {
                       if ("emoji" !== type) {
                         if ("inlineCode" !== type) {
                           if ("text" === type) {
-                            item.startIndex = startIndex + num;
-                            item.endIndex = item.startIndex + item.content.length;
-                            return item;
+                            type.startIndex = startIndex + num;
+                            type.endIndex = type.startIndex + type.content.length;
+                            return type;
                           } else {
-                            item.startIndex = startIndex + num;
-                            let content = item.content;
+                            type.startIndex = startIndex + num;
+                            let content = type.content;
                             content2 = content;
-                            startIndex = item.startIndex;
+                            startIndex = type.startIndex;
                             c2 = 0;
                             let mapped = content.map(() => { ... });
-                            item.endIndex = mapped[mapped.length - 1].endIndex;
-                            return item;
+                            type.endIndex = mapped[mapped.length - 1].endIndex;
+                            return type;
                           }
                         }
                       }
                     }
                   }
-                  item.startIndex = startIndex + num;
-                  let content1 = item.content;
+                  type.startIndex = startIndex + num;
+                  let content1 = type.content;
                   content2 = content1;
-                  startIndex = item.startIndex + 1;
+                  startIndex = type.startIndex + 1;
                   c2 = 0;
                   let mapped1 = content1.map(() => { ... });
-                  item.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
-                  return item;
+                  type.endIndex = mapped1[mapped1.length - 1].endIndex + 1;
+                  return type;
                 }
               }
             }
           }
-          item.startIndex = startIndex + num;
-          content2 = item.content;
-          startIndex = item.startIndex + 2;
+          type.startIndex = startIndex + num;
+          content2 = type.content;
+          startIndex = type.startIndex + 2;
           c2 = 0;
           let mapped2 = content2.map(() => { ... });
-          item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-          return item;
+          type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+          return type;
         });
-        item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-        return item;
+        type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+        return type;
       });
-      item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-      return item;
+      type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+      return type;
     });
-    item.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
-    return item;
+    type.endIndex = mapped2[mapped2.length - 1].endIndex + 2;
+    return type;
   });
 };
 export const MarkupParserNodeTypeError = prototype;

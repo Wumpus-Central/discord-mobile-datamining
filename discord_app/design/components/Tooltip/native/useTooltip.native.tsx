@@ -3,19 +3,20 @@
 // Module 9270 (useTooltip)
 import timestampDefault from "timestamp" /* 3 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let closure_7 = new timestampDefault("useTooltip.native");
 const tmp2 = new timestampDefault("useTooltip.native");
-const result = require("obj132").fileFinishedImporting("design/components/Tooltip/native/useTooltip.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Tooltip/native/useTooltip.native.tsx");
 
 export const useTooltip = function useTooltip(ref, memo) {
-  context1.useRef(ref(callback[5]).v4());
+  ref = context1.useRef(ref(callback[5]).v4());
   ref = memo;
+  importDefault = undefined;
   const context = context1.useContext(ref(callback[6]).LayerContext);
   importDefault = context;
   if (null == context) {
@@ -30,6 +31,11 @@ export const useTooltip = function useTooltip(ref, memo) {
     set.add(arg0, ref2(ref(callback[7]).AnimatedTooltip, obj));
   }, items);
   importDefault = ref;
+  closure_3 = undefined;
+  closure_4 = undefined;
+  context1 = undefined;
+  closure_6 = undefined;
+  callback1 = undefined;
   const tmp8 = importDefault(callback[8])();
   closure_3 = tmp8;
   closure_4 = obj.useRef(tmp8);
@@ -40,7 +46,7 @@ export const useTooltip = function useTooltip(ref, memo) {
     current = current.current;
     return () => {
       if (null != current) {
-        context1.remove(tmp);
+        closure_1_5.remove(tmp);
       }
       current.current = null;
     };
@@ -133,7 +139,7 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
     current = current.current;
     return () => {
       if (null != current) {
-        context1.remove(tmp);
+        closure_1_5.remove(tmp);
       }
       current.current = null;
     };

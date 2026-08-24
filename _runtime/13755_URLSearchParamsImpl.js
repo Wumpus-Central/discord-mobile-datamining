@@ -2,7 +2,7 @@
 
 // Module 13755 (URLSearchParamsImpl)
 import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 
 const URLSearchParamsImpl = require;
 class URLSearchParamsImpl {
@@ -113,6 +113,7 @@ let items = [
       let num = 0;
       if (0 < this._list.length) {
         do {
+          let tmp = num;
           if (self._list[num][0] === arg0) {
             let _list = self._list;
             let spliceResult = _list.splice(num, 1);
@@ -130,7 +131,9 @@ let items = [
     key: "get",
     value: function get(arg0) {
       for (const item10008 of tmp) {
+        let tmp2 = item10008;
         if (item10008[0] === arg0) {
+          let tmp3 = obj;
           obj.return();
           return item10008[1];
         }
@@ -144,6 +147,7 @@ let items = [
       const items = [];
       for (const item10009 of tmp) {
         if (item10009[0] === arg0) {
+          let tmp3 = item10009;
           let arr = items.push(tmp2[1]);
         }
         continue;
@@ -156,6 +160,7 @@ let items = [
     value: function has(arg0) {
       for (const item10007 of tmp) {
         if (item10007[0] === arg0) {
+          let tmp2 = obj;
           obj.return();
           let flag = true;
           return true;
@@ -174,6 +179,8 @@ let items = [
       let flag2 = false;
       if (0 < this._list.length) {
         do {
+          let tmp = num;
+          let tmp2 = flag;
           if (self._list[num][0] === arg0) {
             let _list = self._list;
             if (flag) {
@@ -208,7 +215,7 @@ let items = [
       const _list = this._list;
       const mapped = _list.map((item, index) => ({ item, index }));
       const sorted = mapped.sort((index, index2) => index.item[0] > index2.item[0] || index.index - index2.index);
-      this._list = sorted.map((item, index) => item.item);
+      this._list = sorted.map((item) => item.item);
       this._updateSteps();
     }
   },

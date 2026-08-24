@@ -2,9 +2,9 @@
 
 // Module 16696 (_refreshSavedMessages)
 import initializeDefault from "initialize" /* 5038 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-let require = fn;
+let require = arg1;
 function _refreshSavedMessages() {
   const self = this;
   const tmp = callback(function*() {
@@ -98,6 +98,6 @@ let prototype = function SavedMessagesManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
+let result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
 
 export default prototype;

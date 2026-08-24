@@ -1,12 +1,12 @@
 // === Module 10624: useUnreadSettingNotice ===
 
 // Module 10624 (useUnreadSettingNotice)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING as closure_5 } from "createChannelRecord" /* 1395 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx");
 
 export default function useUnreadSettingNotice(id) {
   const _require = id;
@@ -24,17 +24,17 @@ export default function useUnreadSettingNotice(id) {
   const effect1 = React.useEffect(() => {
     let hasItem = closure_1_5.has(id.type);
     if (hasItem) {
-      hasItem = first !== id.id;
+      hasItem = first !== tmp.id;
     }
     if (hasItem) {
       hasItem = shouldUseNewNotificationSystem;
     }
     if (hasItem) {
-      hasItem = shouldUseNewNotificationSystem(first[5]).maybeAutoUpgradeChannel(id.id);
+      hasItem = shouldUseNewNotificationSystem(first[5]).maybeAutoUpgradeChannel(tmp.id);
       const obj = shouldUseNewNotificationSystem(first[5]);
     }
     if (hasItem) {
-      callback(id.id);
+      callback(tmp.id);
     }
   }, items2);
   obj = { showUnreadsNotice: first === id.id, clearUnreadsNotice: React.useCallback(() => callback(""), []) };

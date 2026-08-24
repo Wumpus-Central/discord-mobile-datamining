@@ -4,22 +4,24 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import obj132Default from "obj132" /* 7190 */;
+import setDefault from "set" /* 7190 */;
 import registerAssetDefault from "registerAsset" /* 16402 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { alignItems: "center", justifyContent: "center", alignSelf: "center", width: 64, height: 64, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
+createCacheKey = { container: null, icon: null };
+createCacheKey = { alignItems: "center", justifyContent: "center", alignSelf: "center", width: 64, height: 64, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = {};
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
 
 export default function VoicePanelLockedIcon() {
   const tmp = callback();
-  const obj = { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE };
+  let obj = { style: tmp.container, children: null };
+  obj = { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE };
   obj[1] = jsx(Button.Icon, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
-  return jsx(obj132Default, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
+  return jsx(setDefault, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
 };

@@ -1,17 +1,17 @@
 // === Module 16310: usePanelOpenState ===
 
 // Module 16310 (usePanelOpenState)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import withEqualityFn from "withEqualityFn" /* 8664 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "withEqualityFn" /* 8664 */;
 import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
 import ME from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 ({ ComponentActions: error, Routes: closure_8 } = ME);
 let closure_9 = { code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}" };
 let closure_10 = { code: "function usePanelOpenStateTsx2(props,previous){const{runOnJS,doCloseChannel}=this.__closure;const isConnected=props.connected;const wasConnected=(previous===null||previous===void 0?void 0:previous.connected)===true;if(wasConnected&&!isConnected){runOnJS(doCloseChannel)();}}" };
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
 
 export default function usePanelOpenState(arg0, arg1, arg2, connected) {
   const _require = arg0;
@@ -68,7 +68,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
           dependencyMap(tmp5.PIP);
         }
       } else {
-        const state = first.getState();
+        const state = closure_1_5.getState();
         state.closeChannel(componentActionOpen);
       }
     }
@@ -91,20 +91,21 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
     closure_0 = callback2(12640).addRouteChangeListener((pathname) => {
       if (closure_5 !== pathname.pathname) {
         callback2(tmp);
-        callback(closure_1_2[8]);
-        const obj = { path: null };
+        let obj = callback(closure_1_2[8]);
+        obj = { path: null };
         const RouteParam = callback(closure_1_2[9]).RouteParam;
         const RouteParam2 = callback(closure_1_2[9]).RouteParam;
         obj[0] = closure_1_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
         const matchPathResult = obj.matchPath(pathname.pathname, obj);
         const guildIdResult = RouteParam.guildId();
+        const tmp9 = closure_1_2;
         if (null == obj3.extractParamsFromVoiceModalRoute(pathname).voiceChannelId) {
           let tmp2 = null != matchPathResult;
           if (tmp2) {
             tmp2 = matchPathResult.params.channelId === callback;
           }
           if (!tmp2) {
-            closure_1_1(closure_1_2[11])();
+            closure_1_1(tmp9[11])();
           }
         }
         obj3 = callback(closure_1_2[10]);

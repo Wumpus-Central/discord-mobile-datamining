@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const require = fn;
+const require = arg1;
 let closure_2 = [];
 let closure_3 = {};
 let closure_4 = {};
@@ -52,14 +52,16 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefaul
   },
   GUILD_DIRECTORY_SEARCH_SUCCESS: function handleSearchSuccess(query) {
     ({ channelId, results } = query);
+    let items;
     let obj = {};
     const merged = Object.assign(dependencyMap[channelId]);
     obj.fetching = false;
     dependencyMap[channelId] = obj;
-    const items = [];
-    const item = results.forEach((item, index) => {
-      items.push(items(dependencyMap[0]).guildDirectoryEntryFromServer(item));
+    items = [];
+    const item = results.forEach((entry) => {
+      items.push(items(closure_1_1[0]).guildDirectoryEntryFromServer(entry));
     });
+    obj = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
     obj = { results: items(11471).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj[query.query] = obj;
@@ -87,17 +89,18 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefaul
     if (null != mostRecentQuery) {
       if (null != dependencyMap2[channelId][mostRecentQuery]) {
         const results = tmp5.results;
-        const found = results.filter((item, index) => item.guildId !== closure_0);
-        const merged = Object.assign(dependencyMap2[channelId]);
-        const obj = {};
+        let obj = {};
+        const found = results.filter((guildId) => guildId.guildId !== closure_0);
+        const merged = Object.assign(tmp4[channelId]);
+        obj = {};
         const merged1 = Object.assign(tmp5);
         obj.results = found;
         obj[dependencyMap[channelId].mostRecentQuery] = obj;
-        dependencyMap2[channelId] = obj;
+        tmp4[channelId] = obj;
       }
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/directory_channels/GuildDirectorySearchStore.tsx");
+const result = require("set").fileFinishedImporting("modules/directory_channels/GuildDirectorySearchStore.tsx");
 
 export default guildDirectorySearchStore;

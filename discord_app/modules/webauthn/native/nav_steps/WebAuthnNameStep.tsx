@@ -6,21 +6,23 @@ import Button from "Button" /* 1297 */;
 import useNavigation from "useNavigation" /* 1500 */;
 import Button2 from "Button" /* 4745 */;
 import Form from "Form" /* 8083 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { WebAuthnScreens } from "WebAuthnScreens" /* 14078 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ margin: { margin: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
+const result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
 
 export default function WebAuthnNameStep(arg0) {
   ({ ticket: require, credential: importDefault, name } = arg0);
+  dependencyMap = undefined;
+  closure_3 = undefined;
   let callback;
   let first;
   function _onPress() {
@@ -131,10 +133,11 @@ export default function WebAuthnNameStep(arg0) {
   }
   const tmp5Result = callback(first.useState(name), 2);
   first = tmp5Result[0];
+  obj = { children: null };
   obj = { showTopContainer: false, value: first, onChange: tmp5Result[1], style: tmp.margin, error: tmp8, title: null, placeholder: null, disabled: null, clearButtonVisibility: null, autoFocus: true, showBorder: true, required: true, large: true };
-  let intl = getSystemLocale.intl;
+  let intl = tmp2(1236).intl;
   obj[5] = intl.string(getSystemLocale.t["Jzd+z/"]);
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp2(1236).intl;
   obj[6] = intl2.string(getSystemLocale.t["I/sJtJ"]);
   obj[7] = tmp6[0];
   obj[8] = Button.ClearButtonVisibility.WITH_CONTENT;
@@ -155,7 +158,7 @@ export default function WebAuthnNameStep(arg0) {
     disabled: null,
     size: "lg"
   };
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp2(1236).intl;
   obj2[1] = intl3.string(getSystemLocale.t["5dyZ1S"]);
   obj2[2] = "" === first;
   obj1[1] = callback2(Button2.Button, obj2);

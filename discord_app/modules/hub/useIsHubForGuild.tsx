@@ -1,11 +1,11 @@
 // === Module 11547: useIsHubForGuild ===
 
 // Module 11547 (useIsHubForGuild)
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
 
 export default function useIsHubForGuild(arg0) {
   const _require = arg0;
@@ -19,7 +19,7 @@ export default function useIsHubForGuild(arg0) {
       let flag;
       if (guild != null) {
         const features = guild.features;
-        flag = features.has(GuildFeatures.HUB);
+        flag = features.has(closure_1_3.HUB);
       }
       if (flag == null) {
         flag = false;

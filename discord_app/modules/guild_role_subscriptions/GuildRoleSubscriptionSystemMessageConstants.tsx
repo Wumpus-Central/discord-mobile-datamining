@@ -1,7 +1,7 @@
 // === Module 8212: getJoinButtonLabels ===
 
 // Module 8212 (getJoinButtonLabels)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import StickerFormat from "StickerFormat" /* 4964 */;
 
@@ -12,8 +12,10 @@ items[1] = obj;
 obj = { id: "781323769960202280", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco sparkles", name: "OMG" };
 items[2] = obj;
 items[3] = { id: "781324722394103808", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco cheers", name: "Cheer" };
+const obj1 = { id: "781324722394103808", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco cheers", name: "Cheer" };
 items[4] = { id: "813951723822645278", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco gives thumbs up", name: "Nice" };
-const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx");
+const obj2 = { id: "813951723822645278", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco gives thumbs up", name: "Nice" };
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx");
 
 export const getJoinButtonLabels = function getJoinButtonLabels() {
   const intl = getSystemLocale.intl;

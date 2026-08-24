@@ -69,7 +69,9 @@ let obj = { easeInEaseOut: { duration: 300, create: { type: "easeInEaseOut", pro
 obj = {
   configureNext,
   create: function createLayoutAnimation(duration, type, property) {
-    const obj = { type };
+    obj = { duration, create: obj, update: obj, delete: obj1 };
+    obj = { type, property };
+    obj = { type };
     return obj;
   },
   Types: Object.freeze({ spring: "spring", linear: "linear", easeInEaseOut: "easeInEaseOut", easeIn: "easeIn", easeOut: "easeOut", keyboard: "keyboard" }),

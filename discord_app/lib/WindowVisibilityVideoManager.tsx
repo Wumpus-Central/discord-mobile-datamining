@@ -2,13 +2,12 @@
 
 // Module 12450 (isIncomingVideoEnabled)
 import timestampDefault from "timestamp" /* 3 */;
-import obj132Default from "obj132" /* 687 */;
+import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import onDefault from "on" /* 4572 */;
 import NativeEventEmitterDefault from "NativeEventEmitter" /* 10027 */;
-import isDiscordVisibleDefault from "isDiscordVisible" /* 12451 */;
 
-const require = fn;
+const require = arg1;
 let obj = { WindowVisibilityChanged: "window-visibility-changed", IncomingVideoEnabledChanged: "incoming-video-enabled-changed" };
 onDefault;
 class WindowVisibilityVideoManager extends tmp2 {
@@ -23,17 +22,17 @@ class WindowVisibilityVideoManager extends tmp2 {
     tmp6.lastEnabledChange = performance.now();
     tmp8 = new require("timestamp")("WindowVisibilityVideoManager");
     tmp6.logger = tmp8;
-    tmp6.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * require("obj132").Millis.SECOND;
+    tmp6.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * require("set").Millis.SECOND;
     tmp6.update = function update() {
-      if (discordVisible.discordVisible !== isDiscordVisibleDefault()) {
-        discordVisible.discordVisible = isDiscordVisibleDefault();
-        discordVisible.emit(obj.WindowVisibilityChanged, discordVisible.discordVisible);
-        const disableVideoTimer = discordVisible.disableVideoTimer;
-        if (discordVisible.discordVisible) {
+      if (discordVisible.discordVisible !== closure_1_1(closure_1_2[6])()) {
+        obj.discordVisible = closure_1_1(closure_1_2[6])();
+        obj.emit(closure_1_3.WindowVisibilityChanged, obj.discordVisible);
+        const disableVideoTimer = obj.disableVideoTimer;
+        if (obj.discordVisible) {
           disableVideoTimer.stop();
-          let result = discordVisible.setIncomingVideoEnabled(true);
+          let result = obj.setIncomingVideoEnabled(true);
         } else {
-          disableVideoTimer.start(discordVisible.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS, () => {
+          disableVideoTimer.start(obj.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS, () => {
             const result = incomingVideoEnabled.setIncomingVideoEnabled(false);
           });
         }
@@ -68,7 +67,7 @@ prototype["setIncomingVideoEnabled"] = function setIncomingVideoEnabled(incoming
   }
 };
 const windowVisibilityVideoManager = new WindowVisibilityVideoManager();
-let result = require("obj132").fileFinishedImporting("lib/WindowVisibilityVideoManager.tsx");
+let result = require("set").fileFinishedImporting("lib/WindowVisibilityVideoManager.tsx");
 
 export const WindowVisibilityEvent = obj;
 export const WindowVisibilityVideoManager = windowVisibilityVideoManager;

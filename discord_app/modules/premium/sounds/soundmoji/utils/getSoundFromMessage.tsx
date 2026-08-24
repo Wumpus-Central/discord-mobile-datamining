@@ -1,25 +1,25 @@
 // === Module 6823: getSoundFromSounds ===
 
 // Module 6823 (getSoundFromSounds)
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import closure_2 from "reinjectEphemerals" /* 4994 */;
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
 
-const require = fn;
+const require = arg1;
 function getSoundFromSounds(arr) {
   closure_0 = arg1;
   let found;
   if (arr != null) {
-    found = arr.find((item, index) => String(item.sound_id) === String(closure_0));
+    found = arr.find((sound_id) => String(sound_id.sound_id) === String(closure_0));
   }
   return found;
 }
-const result = require("obj132").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
 
 export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
   let _require = arg2;
   let found;
   if (arr != null) {
-    found = arr.find((item, index) => String(item.sound_id) === String(closure_0));
+    found = arr.find((sound_id) => String(sound_id.sound_id) === String(closure_0));
   }
   if (null != found) {
     let guild_id2 = found.guild_id;
@@ -50,12 +50,15 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
           while (obj !== undefined) {
             let message = tmp2.message;
             let soundboardSounds;
+            let tmp3 = closure_4;
             if (message != null) {
               soundboardSounds = message.soundboardSounds;
             }
-            let tmp3Result = callback(soundboardSounds, arg1);
+            let tmp3Result = tmp3(soundboardSounds, arg1);
+            let tmp6 = tmp3Result;
             if (null != tmp3Result) {
               let tmp = tmp3Result;
+              let tmp7 = obj;
               obj.return();
               break;
             }
@@ -69,7 +72,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
         }
         _require = arg2;
         if (soundboardSounds != null) {
-          found1 = soundboardSounds.find((item, index) => String(item.sound_id) === String(closure_0));
+          found1 = soundboardSounds.find((sound_id) => String(sound_id.sound_id) === String(closure_0));
         }
       }
       if (null != found1) {

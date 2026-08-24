@@ -1,9 +1,9 @@
 // === Module 4813: ActionComponentState ===
 
 // Module 4813 (ActionComponentState)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");
+const result = set.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");
 
 export const ActionComponentState = { NORMAL: 0, [0]: "NORMAL", LOADING: 1, [1]: "LOADING", DISABLED: 2, [2]: "DISABLED" };
 export function asComponentId(componentId) {

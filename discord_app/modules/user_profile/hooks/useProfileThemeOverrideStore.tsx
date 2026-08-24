@@ -1,7 +1,7 @@
 // === Module 8971: useProfileThemeOverrideStore ===
 
 // Module 8971 (useProfileThemeOverrideStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import useThemeDefault from "useTheme" /* 4310 */;
@@ -23,7 +23,7 @@ let tmp2 = keys.create()((arg0) => {
   };
 });
 let closure_4 = tmp2;
-const result = obj132.fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
 
 export const useProfileThemeOverrideStore = tmp2;
 export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
@@ -73,17 +73,18 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       tmp5 = null;
     }
     if (themeType !== ThemeTypes.DARK) {
-      let isThemeLightResult = themeType === ThemeTypes.DARK;
+      let isThemeLightResult = themeType === tmp11.DARK;
       if (isThemeLightResult) {
         isThemeLightResult = AccessibilityAnnouncer.isThemeLight(tmp3);
+        const obj3 = AccessibilityAnnouncer;
       }
       let DARKER = themeType;
       if (isThemeLightResult) {
-        DARKER = ThemeTypes.DARKER;
+        DARKER = tmp11.DARKER;
       }
     } else {
-      AccessibilityAnnouncer;
       DARKER = tmp3;
+      const obj2 = AccessibilityAnnouncer;
     }
     obj = { theme: null, primaryColor: null, secondaryColor: null };
     obj[0] = DARKER;

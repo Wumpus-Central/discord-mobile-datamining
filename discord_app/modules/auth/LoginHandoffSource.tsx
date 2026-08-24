@@ -1,16 +1,15 @@
 // === Module 7283: LoginHandoffSource ===
 
 // Module 7283 (LoginHandoffSource)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import set from "set" /* 1398 */;
+import set2 from "set" /* 1398 */;
 import ME from "ME" /* 4488 */;
-import settingsPathToRoute from "settingsPathToRoute" /* 6725 */;
 
-const StaticChannelRoute = set.StaticChannelRoute;
+const StaticChannelRoute = set2.StaticChannelRoute;
 const UserSettingsPath = MAX_FAVORITES.UserSettingsPath;
 let obj = { ROLE_SUBSCRIPTION: "role_subscription", ROLE_SUBSCRIPTION_SETTING: "role_subscription_setting" };
-const result = obj132.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
+const result = set.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
 
 export const LoginHandoffSource = obj;
 export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(closure_0) {
@@ -27,5 +26,4 @@ export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourc
   if (formatted === tmpResult.settingsPathToRoute(UserSettingsPath.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS)) {
     ROLE_SUBSCRIPTION_SETTING = obj.ROLE_SUBSCRIPTION_SETTING;
   }
-  tmpResult = settingsPathToRoute;
 };

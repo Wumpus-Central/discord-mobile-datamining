@@ -4,13 +4,13 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _fetchWebAuthnConditionalChallenge from "_fetchWebAuthnConditionalChallenge" /* 5264 */;
-import noop from "noop" /* 19 */;
-import hasFetchedCredentials from "hasFetchedCredentials" /* 14077 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "hasFetchedCredentials" /* 14077 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = fn;
-{
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.y7SXYX);
@@ -27,8 +27,8 @@ require = fn;
         flag = false;
       }
       if (!flag) {
-        callback2(4827);
-        const obj = { title: null, body: null };
+        let obj = callback2(4827);
+        obj = { title: null, body: null };
         const intl = callback(1236).intl;
         obj[0] = intl.string(callback(1236).t.v740sh);
         const intl2 = callback(1236).intl;
@@ -41,6 +41,7 @@ require = fn;
   useTrailing: function useAccountSecurityKeysSettingTrailing() {
     if (!closure_4.hasFetchedCredentials()) {
       const webAuthnCredentials = _fetchWebAuthnConditionalChallenge.fetchWebAuthnCredentials();
+      const obj = _fetchWebAuthnConditionalChallenge;
     }
     const items = [closure_4];
     return initialize.useStateFromStores(items, () => {
@@ -58,6 +59,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
 
 export default createToggle;

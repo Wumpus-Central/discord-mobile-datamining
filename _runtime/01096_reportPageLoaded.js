@@ -10,6 +10,7 @@ arg5.reportPageLoaded = function reportPageLoaded() {
   let client = arg0;
   if (arg0 === undefined) {
     client = registerSpanErrorInstrumentation.getClient();
+    const obj2 = registerSpanErrorInstrumentation;
   }
   if (client != null) {
     client.emit("endPageloadSpan");

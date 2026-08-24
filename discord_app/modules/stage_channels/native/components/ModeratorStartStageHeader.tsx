@@ -8,9 +8,10 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = fn;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
+let obj = { header: null };
+obj = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
 obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((channel) => {
@@ -25,14 +26,14 @@ const memoResult = importAllResult.memo((channel) => {
   if (speaker) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    speaker = callback(HideStageChannelCallIcon.MusicMuteButton, obj);
+    speaker = tmp7(tmp8(12587).MusicMuteButton, obj);
   }
   items[2] = speaker;
   obj = { channelId: channel.id };
   items[3] = callback(HideStageChannelCallIcon.StageInviteButton, obj);
   obj[2] = items;
-  return callback(View, obj);
+  return closure_5(View, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
 
 export default memoResult;

@@ -1,9 +1,9 @@
 // === Module 5291: getGuildModeratorReportChannelId ===
 
 // Module 5291 (getGuildModeratorReportChannelId)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");
+const result = set.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");
 
 export default function getGuildModeratorReportChannelId(moderatorReporting) {
   moderatorReporting = moderatorReporting.moderatorReporting;

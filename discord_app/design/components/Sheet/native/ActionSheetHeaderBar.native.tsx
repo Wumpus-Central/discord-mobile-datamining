@@ -11,7 +11,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ Pressable: c3, StyleSheet: c4, TouchableWithoutFeedback: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
@@ -25,16 +25,16 @@ let closure_10 = createCacheKey.createStyles((arg0, height, marginBottom) => {
   obj[0] = obj;
   if ("default" === arg0) {
     const obj2 = { backgroundColor: null };
-    obj2[0] = ThemesDefault.colors.BACKGROUND_MOD_STRONG;
+    obj2[0] = tmp2(712).colors.BACKGROUND_MOD_STRONG;
     let tmp4 = obj2;
   } else if ("floating" === arg0) {
     const obj3 = { backgroundColor: null };
-    obj3[0] = ThemesDefault.colors.BACKGROUND_MOD_MUTED;
+    obj3[0] = tmp2(712).colors.BACKGROUND_MOD_MUTED;
     tmp4 = obj3;
   } else if ("overlay" === arg0) {
     const obj4 = { backgroundColor: null };
-    obj4[0] = ThemesDefault.unsafe_rawColors.WHITE;
-    const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
+    obj4[0] = tmp2(712).unsafe_rawColors.WHITE;
+    const merged1 = Object.assign(tmp2(712).shadows.SHADOW_LOW);
     tmp4 = obj4;
   }
   const merged2 = Object.assign(tmp4);
@@ -46,7 +46,7 @@ let closure_10 = createCacheKey.createStyles((arg0, height, marginBottom) => {
   obj[2] = obj5;
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderBar.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderBar.native.tsx");
 
 export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityLabel) {
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
@@ -61,6 +61,7 @@ export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityL
   let obj = map;
   const tmp3 = callback3(variant, useWindowDimensionsDefault().height, obj.useToken(ThemesDefault.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
   obj1 = SCREEN_READER_ENABLED_GETTER;
+  obj = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
   obj = { style: items, children: null };
   items = [tmp3.header, style];
   const items1 = [tmp3.indicator, tabStyle];

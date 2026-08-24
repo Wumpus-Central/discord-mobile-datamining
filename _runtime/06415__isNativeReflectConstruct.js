@@ -3,14 +3,14 @@
 // Module 6415 (_isNativeReflectConstruct)
 import noopDefault from "noop" /* 19 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6404 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import importDefaultResult3 from "PlatformConstants" /* 6416 */;
 
-const ForceTouchFallback = fn;
+const ForceTouchFallback = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;

@@ -1,18 +1,18 @@
 // === Module 12480: useLeadingEdgeDebounce ===
 
 // Module 12480 (useLeadingEdgeDebounce)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("hooks/useLeadingEdgeDebounce.tsx");
+const result = require("set").fileFinishedImporting("hooks/useLeadingEdgeDebounce.tsx");
 
-export const useLeadingEdgeDebounce = (stateFromStores1, arg1) => {
-  const callback = stateFromStores1;
+export const useLeadingEdgeDebounce = (arg0, arg1) => {
+  const callback = arg0;
   const React = arg1;
   closure_2 = React.useRef(true);
-  const tmp = callback(React.useState(stateFromStores1), 2);
+  const tmp = callback(React.useState(arg0), 2);
   closure_3 = tmp[1];
-  const items = [stateFromStores1, arg1];
+  const items = [arg0, arg1];
   const effect = React.useEffect(() => {
     const timeout = setTimeout(() => {
       callback(closure_0);

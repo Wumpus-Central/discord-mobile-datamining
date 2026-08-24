@@ -1,44 +1,46 @@
 // === Module 1137: captureReactException ===
 
 // Module 1137 (captureReactException)
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 function captureReactException(closure_1, closure_2, arg2) {
-  let weakSet = dependencyMap;
-  const componentStack = noop.componentStack;
+  let weakSet = closure_1;
+  const componentStack = closure_2.componentStack;
   let recurse = componentStack;
-  noop = arg2;
-  const match = noop.version.match(/^([^.]+)/);
+  const version = arg2;
+  const match = version.version.match(/^([^.]+)/);
   let tmp2 = null !== match;
   if (tmp2) {
     const _parseInt = parseInt;
     tmp2 = parseInt(match[0]) >= 17;
   }
   if (tmp2) {
-    if (obj.isError(dependencyMap)) {
+    if (obj.isError(closure_1)) {
       if (componentStack) {
         const _Error = Error;
-        error = new Error(dependencyMap.message);
+        error = new Error(closure_1.message);
         const _HermesInternal = HermesInternal;
-        error.name = "React ErrorBoundary " + dependencyMap.name;
+        error.name = "React ErrorBoundary " + closure_1.name;
         error.stack = componentStack;
+        weakSet = undefined;
         const _WeakSet = WeakSet;
         weakSet = new WeakSet();
         recurse = function recurse(cause, error) {
           if (!weakSet.has(cause)) {
             if (cause.cause) {
-              weakSet.add(cause);
+              obj.add(cause);
               const tmp2 = recurse(cause.cause, error);
             } else {
               cause.cause = error;
             }
             return tmp2;
           }
+          obj = weakSet;
         };
-        if (!weakSet.has(dependencyMap)) {
-          if (dependencyMap.cause) {
-            weakSet.add(dependencyMap);
-            const cause = dependencyMap.cause;
+        if (!weakSet.has(closure_1)) {
+          if (closure_1.cause) {
+            weakSet.add(closure_1);
+            const cause = closure_1.cause;
             if (!weakSet.has(cause)) {
               if (cause.cause) {
                 weakSet.add(cause);
@@ -48,7 +50,7 @@ function captureReactException(closure_1, closure_2, arg2) {
               }
             }
           } else {
-            dependencyMap.cause = error;
+            closure_1.cause = error;
           }
         }
       }
@@ -74,9 +76,9 @@ export const isAtLeastReact17 = function isAtLeastReact17(str) {
 };
 export function reactErrorHandler(arg0) {
   closure_0 = arg0;
-  return (table, closure_2) => {
-    if (callback) {
-      callback(table, closure_2, captureReactException(table, closure_2, { mechanism: { handled: callback, type: "auto.function.react.error_handler" } }));
+  return (arg0, arg1) => {
+    if (closure_0) {
+      closure_0(arg0, arg1, closure_1_3(arg0, arg1, { mechanism: { handled: tmp2, type: "auto.function.react.error_handler" } }));
     }
   };
 }
@@ -85,13 +87,14 @@ export const setCause = function setCause(cause, cause2) {
   function recurse(cause, error) {
     if (!weakSet.has(cause)) {
       if (cause.cause) {
-        weakSet.add(cause);
+        obj.add(cause);
         const tmp2 = recurse(cause.cause, error);
       } else {
         cause.cause = error;
       }
       return tmp2;
     }
+    obj = weakSet;
   }
   if (!weakSet.has(cause)) {
     if (cause.cause) {

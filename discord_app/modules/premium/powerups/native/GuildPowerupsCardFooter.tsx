@@ -1,14 +1,13 @@
 // === Module 11693: GuildPowerupCardFooterActive ===
 
 // Module 11693 (GuildPowerupCardFooterActive)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2367 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4335 */;
 import Text from "Text" /* 4734 */;
-import BoostGemIcon from "BoostGemIcon" /* 7979 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
 import apexExperiment from "apexExperiment" /* 8307 */;
 import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 11669 */;
@@ -138,7 +137,7 @@ class GuildPowerupCardFooterCost {
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { justifyContent: "space-between" }, inline: { flexDirection: "row", alignItems: "center", gap: 2 } });
-const result = obj132.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCardFooter.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCardFooter.tsx");
 
 export { GuildPowerupCardFooterActive };
 export { GuildPowerupCardFooterExpiring };
@@ -146,10 +145,11 @@ export { GuildPowerupCardFooterRemoving };
 export { GuildPowerupCardFooterStatus };
 export { GuildPowerupCardFooterCost };
 export const GuildPowerupsCardFooter = function GuildPowerupsCardFooter(status) {
-  const items = [, , ];
+  let obj = { style: items, children: null };
+  items = [, , ];
   ({ inline: arr[0], container: arr[1] } = callback3());
   items[2] = status.style;
-  const obj = { cost: status.cost, costDecorator: status.costDecorator };
+  obj = { cost: status.cost, costDecorator: status.costDecorator };
   const items1 = [callback(GuildPowerupCardFooterCost, obj), callback(GuildPowerupCardFooterStatus, { status: status.status })];
   obj[1] = items1;
   return callback2(View, obj);

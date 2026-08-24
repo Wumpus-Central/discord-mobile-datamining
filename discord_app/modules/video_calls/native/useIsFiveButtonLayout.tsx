@@ -1,11 +1,11 @@
 // === Module 8697: useIsFiveButtonLayout ===
 
 // Module 8697 (useIsFiveButtonLayout)
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useIsFiveButtonLayout.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsFiveButtonLayout.tsx");
 
 export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   const _require = id;

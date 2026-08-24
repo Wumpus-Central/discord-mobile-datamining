@@ -4,6 +4,6 @@
 import timestampDefault from "timestamp" /* 3 */;
 
 const tmp2 = new timestampDefault("MainNavigationLogger");
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/helpers/MainNavigationLogger.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/helpers/MainNavigationLogger.tsx");
 
 export default tmp2;

@@ -17,18 +17,25 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
   }
   handleHeight = simultaneousHandlers.handleHeight;
   let handleComponent = simultaneousHandlers.handleComponent;
+  let activeOffsetX;
+  let activeOffsetY;
   let failOffsetX;
+  let failOffsetY;
+  let waitFor;
+  let simultaneousHandlers2;
+  let handlePanGestureHandler;
+  closure_10 = undefined;
   ({ handleStyle, handleIndicatorStyle } = simultaneousHandlers);
   const tmp3 = failOffsetX(null);
   let obj = simultaneousHandlers(handleHeight[3]);
   const bottomSheetInternal = obj.useBottomSheetInternal();
-  const activeOffsetX = bottomSheetInternal.activeOffsetX;
-  const activeOffsetY = bottomSheetInternal.activeOffsetY;
+  activeOffsetX = bottomSheetInternal.activeOffsetX;
+  activeOffsetY = bottomSheetInternal.activeOffsetY;
   failOffsetX = bottomSheetInternal.failOffsetX;
-  const failOffsetY = bottomSheetInternal.failOffsetY;
-  const waitFor = bottomSheetInternal.waitFor;
-  const simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
-  const handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers().handlePanGestureHandler;
+  failOffsetY = bottomSheetInternal.failOffsetY;
+  waitFor = bottomSheetInternal.waitFor;
+  simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
+  handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers().handlePanGestureHandler;
   let items = [simultaneousHandlers2, simultaneousHandlers];
   const tmp7 = activeOffsetY(() => {
     const items = [];
@@ -38,12 +45,12 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
     if (simultaneousHandlers2) {
       const _Array = Array;
       const push = items.push;
-      if (Array.isArray(simultaneousHandlers2)) {
+      if (Array.isArray(tmp3)) {
         const items1 = [];
-        HermesBuiltin.arraySpread(simultaneousHandlers2, 0);
+        HermesBuiltin.arraySpread(tmp3, 0);
         HermesBuiltin.apply(items1, items);
       } else {
-        push(simultaneousHandlers2);
+        push(tmp3);
       }
     }
     return items;
@@ -100,6 +107,7 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
   if (handleComponent == null) {
     handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
   }
+  obj = { gesture: tmp8, children: null };
   obj = { ref: tmp3, onLayout: tmp9, children: failOffsetY(handleComponent, { animatedIndex, animatedPosition, style: handleStyle, indicatorStyle: handleIndicatorStyle }) };
   obj[1] = failOffsetY(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View, obj, "BottomSheetHandleContainer");
   return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj);

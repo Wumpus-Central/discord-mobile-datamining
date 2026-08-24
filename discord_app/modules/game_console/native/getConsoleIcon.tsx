@@ -1,15 +1,16 @@
 // === Module 9884: getConsoleIcon ===
 
 // Module 9884 (getConsoleIcon)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import ParticipantTypes from "ParticipantTypes" /* 4544 */;
 import registerAssetDefault from "registerAsset" /* 9839 */;
 import registerAssetDefault2 from "registerAsset" /* 9885 */;
 
 const VoicePlatforms = ParticipantTypes.VoicePlatforms;
+const obj = { [XBOX]: registerAssetDefault, [PLAYSTATION]: registerAssetDefault2, [PLAYSTATION_STAGING]: registerAssetDefault2 };
 ({ XBOX, PLAYSTATION, PLAYSTATION_STAGING } = ME.PlatformTypes);
-const result = obj132.fileFinishedImporting("modules/game_console/native/getConsoleIcon.tsx");
+const result = set.fileFinishedImporting("modules/game_console/native/getConsoleIcon.tsx");
 
 export default function getConsoleIcon(arg0) {
   return obj[arg0];

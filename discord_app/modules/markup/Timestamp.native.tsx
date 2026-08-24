@@ -3,17 +3,17 @@
 // Module 10064 (Timestamp)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
 import itemsDefault from "items" /* 10065 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-const createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey = { timestamp: null };
+createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/markup/Timestamp.native.tsx");
+const result = require("set").fileFinishedImporting("modules/markup/Timestamp.native.tsx");
 
 export default function Timestamp(node) {
   node = node.node;
@@ -23,10 +23,12 @@ export default function Timestamp(node) {
     style = node.style;
   }
   const tmp2 = itemsDefault(node);
-  return jsx(node(1297).LegacyText, {
+  const tmp3 = jsx;
+  return tmp3(node(1297).LegacyText, {
     style,
     onPress() {
-      const obj = { key: "TIMESTAMP", content: node.full };
+      let obj = closure_1_1(closure_1_2[6]);
+      obj = { key: "TIMESTAMP", content: node.full };
       obj.open(obj);
     },
     children: itemsDefault(node)

@@ -5,7 +5,7 @@ import noopDefault from "noop" /* 19 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopDefault;
 
 export const BottomSheetDraggableScrollable = function BottomSheetDraggableScrollable(arg0) {

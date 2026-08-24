@@ -1,9 +1,9 @@
 // === Module 11875: ContactSyncBackToLanding ===
 
 // Module 11875 (ContactSyncBackToLanding)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-let result = obj132.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
+let result = set.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 
 export default function ContactSyncBackToLanding(arg0) {
   const _require = arg0;

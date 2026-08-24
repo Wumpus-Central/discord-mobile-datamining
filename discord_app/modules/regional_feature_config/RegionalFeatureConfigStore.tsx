@@ -1,7 +1,7 @@
 // === Module 4073: getRegionalFeatureConfig ===
 
 // Module 4073 (getRegionalFeatureConfig)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isFeatureTeenByDefault from "isFeatureTeenByDefault" /* 4078 */;
@@ -19,8 +19,8 @@ prototype["getRegionalFeatureConfig"] = function getRegionalFeatureConfig() {
 };
 prototype["isFeatureAgeGated"] = function isFeatureAgeGated(arg0) {
   let flag;
-  if (_null != null) {
-    flag = _null.isFeatureAgeGated(arg0);
+  if (c4 != null) {
+    flag = c4.isFeatureAgeGated(arg0);
   }
   if (flag == null) {
     flag = false;
@@ -29,8 +29,8 @@ prototype["isFeatureAgeGated"] = function isFeatureAgeGated(arg0) {
 };
 prototype["isSettingTeenByDefault"] = function isSettingTeenByDefault(arg0) {
   let flag;
-  if (_null != null) {
-    flag = _null.isFeatureTeenByDefault(arg0);
+  if (c4 != null) {
+    flag = c4.isFeatureTeenByDefault(arg0);
   }
   if (flag == null) {
     flag = false;
@@ -39,8 +39,8 @@ prototype["isSettingTeenByDefault"] = function isSettingTeenByDefault(arg0) {
 };
 prototype["hasAgeGatedFeatures"] = function hasAgeGatedFeatures() {
   let flag;
-  if (_null != null) {
-    flag = _null.hasAgeGatedFeatures();
+  if (c4 != null) {
+    flag = c4.hasAgeGatedFeatures();
   }
   if (flag == null) {
     flag = false;
@@ -49,8 +49,8 @@ prototype["hasAgeGatedFeatures"] = function hasAgeGatedFeatures() {
 };
 prototype["hasTeenDefaults"] = function hasTeenDefaults() {
   let flag;
-  if (_null != null) {
-    flag = _null.hasTeenDefaults();
+  if (c4 != null) {
+    flag = c4.hasTeenDefaults();
   }
   if (flag == null) {
     flag = false;
@@ -59,8 +59,8 @@ prototype["hasTeenDefaults"] = function hasTeenDefaults() {
 };
 prototype["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal() {
   let flag;
-  if (_null != null) {
-    flag = _null.shouldCollectAppStoreSignal();
+  if (c4 != null) {
+    flag = c4.shouldCollectAppStoreSignal();
   }
   if (flag == null) {
     flag = false;
@@ -100,6 +100,6 @@ const regionalFeatureConfigStore = new RegionalFeatureConfigStore(dispatcherDefa
     return false;
   }
 });
-const result = obj132.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigStore.tsx");
+const result = set.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigStore.tsx");
 
 export default regionalFeatureConfigStore;

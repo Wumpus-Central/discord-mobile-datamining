@@ -6,16 +6,15 @@ import serializeDefault from "serialize" /* 9 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage4 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getToken from "getToken" /* 1371 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import handleConnectionOpen2 from "handleConnectionOpen" /* 4197 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_handleConnectionOpen" /* 4495 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "handleConnectionOpen" /* 1979 */;
+import closure_8 from "handleConnectionOpen" /* 4197 */;
 import ME from "ME" /* 676 */;
 
-require = fn;
+require = arg1;
 function handleClearCaches(type) {
   closure_13.log("Clearing cache store");
   closure_16 = Date.now();
@@ -154,267 +153,313 @@ function _loadEarlyCache() {
       if (dependencyMap2 === 2) {
         dependencyMap2 = 3;
         HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
       } else {
-        try {
-          dependencyMap2 = 2;
-          if (0 === guildId) {
-            if (arg0 === 1) {
-              dependencyMap2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_7 = tmp2;
-              closure_6 = tmp3;
-              let callback2;
-              c4 = undefined;
-              c5 = undefined;
-              closure_6 = undefined;
-              closure_7 = undefined;
-              guildId = undefined;
-              dependencyMap2 = undefined;
-              closure_10 = undefined;
-              closure_11 = undefined;
-              let length;
-              closure_13 = undefined;
-              closure_14 = undefined;
-              closure_15 = undefined;
-              let length2;
-              let length3;
-              closure_18 = undefined;
-              closure_19 = undefined;
-              closure_20 = undefined;
-              guildId = undefined;
-              closure_1_13.verbose("loading early cache");
-              const socket = closure_1_5.getSocket();
-              callback2 = socket;
-              socket.connect();
-              guildId = guildId.getGuildId();
-              callback2 = guildId;
-              if (guildId == null) {
-                callback2 = null;
-              }
-              c4 = callback2;
-              let channelId = closure_1_7.getChannelId();
-              c4 = channelId;
-              if (channelId == null) {
-                c4 = null;
-              }
-              c5 = c4;
-              let allResult = globalThis;
-              const _performance = performance;
-              closure_6 = performance.now();
-              const loadCachedMessages = callback(9).loadCachedMessages;
-              const result = loadCachedMessages.measureAsyncWithoutNesting(() => (function loadChannelHistory(closure_0, c4, c5) {
-                const self = this;
-                const apply = closure_20.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(closure_0, c4, c5));
-              const fetchGuildCache = callback(9).fetchGuildCache;
-              const fetchGuildCache2 = callback(9).fetchGuildCache;
-              const measureAsyncResult = fetchGuildCache.measureAsync(() => (function loadInitialGuilds(closure_0, closure_2) {
-                const self = this;
-                const apply = closure_23.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(closure_0, closure_2));
-              if (null != name) {
-                let timeAsyncResult = callback(10).timeAsync("\u{1F4BE}", "cache: private_channels", () => callback2(1975).getAsync(closure_0, null));
-                const obj8 = callback(10);
-              } else {
-                timeAsyncResult = Promise.resolve([]);
-              }
-              if (null == name) {
-                let resolved = Promise.resolve({});
-              } else {
-                resolved = callback(10).timeAsync("\u{1F4BE}", "cache: user_settings", () => callback2(5083).getAll(closure_0));
-                const obj9 = callback(10);
-              }
-              if (null == name) {
-                let resolved1 = Promise.resolve([]);
-              } else {
-                resolved1 = callback(10).timeAsync("\u{1F4BE}", "cache: read_states", () => callback2(5084).getAll(closure_0));
-                const obj10 = callback(10);
-              }
-              if (null == name) {
-                let resolveResult = allResult.Promise.resolve([]);
-                const _Promise5 = allResult.Promise;
-              } else {
-                resolveResult = callback(10).timeAsync("\u{1F4BE}", "cache: user_guild_settings", () => callback2(5085).getAll(closure_0));
-                const obj11 = callback(10);
-              }
-              callback(5086)("AllCacheStores", () => callback(5087));
-              callback(5086)("MobileAppDatabaseManager", () => callback(5390));
-              let items = [
-                result,
-                measureAsyncResult,
-                fetchGuildCache2.measureAsync(() => (function loadInitialGuildChannels(closure_0, closure_2) {
-                          const self = this;
-                          const apply = closure_24.apply;
-                          if (typeof apply === "unknown") {
-                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                          } else {
-                            applyArgumentsResult = apply(self, arguments);
-                          }
-                          return applyArgumentsResult;
-                        })(closure_0, closure_2)),
-                timeAsyncResult,
-                resolved,
-                resolved1,
-                resolveResult
-              ];
-              allResult = allResult.Promise.all(items);
-              guildId = 1;
-              dependencyMap2 = 1;
-              const _Promise6 = allResult.Promise;
-              const measureAsyncResult1 = fetchGuildCache2.measureAsync(() => (function loadInitialGuildChannels(closure_0, closure_2) {
-                const self = this;
-                const apply = closure_24.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(closure_0, closure_2));
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              dependencyMap2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap2 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              closure_7 = arg1;
-              guildId = callback2(closure_7, 7);
-              dependencyMap2 = callback2(guildId[0], 2);
-              closure_10 = 32;
-              closure_11 = 5;
-              length = guildId[1];
-              closure_13 = guildId[2];
-              closure_14 = guildId[3];
-              closure_15 = guildId[4];
-              length2 = guildId[5];
-              length3 = guildId[6];
-              const _performance2 = performance;
-              closure_18 = performance.now() - closure_6;
-              const _HermesInternal2 = HermesInternal;
-              closure_13.verbose("cache loaded in " + closure_18 + "ms (channel_history " + closure_10 + "ms)");
-              if (null == closure_11) {
-                callback(5413)("database:history_cache_null");
-                closure_13.verbose("finished without dispatching CACHE_LOADED");
-                const items1 = [false, null, 0];
-                dependencyMap2 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = items1;
-                return obj2;
-              } else {
-                const _Object2 = Object;
-                const members = closure_11.members;
-                closure_19 = Object.fromEntries(members.map((item, index) => {
-                  const items = [item.userId, item];
-                  return items;
-                }));
-                let tmp52 = null != closure_13.guildId;
-                if (tmp52) {
-                  tmp52 = null != closure_13.channels;
-                }
-                closure_20 = tmp52;
-                guildId = closure_13.guildId;
-                const promise = new Promise((arg0, arg1) => {
-                  closure_0 = arg0;
-                  const callback2 = arg1;
-                  const Emitter = callback2(589).Emitter;
-                  return Emitter.batched(() => {
-                    callback(10).time("\u{1F4BE}", "Dispatch Mini Cache", () => { ... });
-                    let obj = callback(10);
-                    callback(10).time("\u{1F4BE}", "socket.processFirstQueuedDispatch()", () => { ... });
-                  });
-                });
-                guildId = 2;
-                dependencyMap2 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = promise;
-                return obj3;
-              }
-            }
-          } else if (arg0 === 1) {
-            dependencyMap2 = 3;
+        let verboseResult = arg1;
+        verboseResult = arg0;
+        verboseResult = tmp4;
+        if (tmp5 === 3) {
+          if (arg0 === 1) {
             throw arg1;
           } else if (arg0 === 2) {
-            dependencyMap2 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           } else {
-            const _JSON = JSON;
-            const json = JSON.stringify(dependencyMap);
-            name = undefined;
-            if (name != null) {
-              name = name.name;
-            }
-            length = closure_14.length;
-            guildId = closure_11.guildId;
-            channelId = closure_11.channelId;
-            length2 = closure_11.messages.length;
-            length3 = closure_11.members.length;
-            let channels = closure_13.channels;
-            length = undefined;
-            if (channels != null) {
-              length = channels.length;
-            }
-            const _Object = Object;
-            const _HermesInternal = HermesInternal;
-            closure_13.verbose("early_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: " + callback + "\n          selected_guild: " + c4 + "\n          selected_channel: " + c5 + "\n          navigation_state: " + json + "\n          database: " + null != name + "\n            name: " + name + "\n        data:\n          database:\n            private_channels: " + length + "\n            channel_history:\n              guild: " + guildId + "\n              channel: " + channelId + "\n              messages: " + length2 + "\n                members: " + length3 + "\n                users: " + closure_11.users.length + "\n            initial_guild:\n              id: " + guildId + "\n              channels: " + length + "\n            user_settings: " + Object.keys(closure_15).length + "\n            read_states: " + length2.length + "\n            user_guild_settings: " + length3.length + "\n      )");
-            obj = callback(9);
-            const obj5 = { guilds: null };
-            obj5[0] = length.length;
-            obj.setEarlyCacheInfo(obj5);
-            closure_13.verbose("finished dispatching CACHE_LOADED");
-            const items2 = [true, , ];
-            let tmp45 = null;
-            if (closure_20) {
-              c5 = guildId;
-              if (guildId == null) {
-                c5 = null;
-              }
-              tmp45 = c5;
-            }
-            items2[1] = tmp45;
-            items2[2] = closure_14.length;
-            dependencyMap2 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = items2;
-            return obj6;
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
-        } catch (tmp97) {
-          dependencyMap2 = tmp;
-          throw tmp97;
+        } else {
+          try {
+            dependencyMap2 = 2;
+            if (0 === guildId) {
+              if (arg0 === 1) {
+                dependencyMap2 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                dependencyMap2 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                closure_7 = tmp2;
+                closure_6 = tmp3;
+                verboseResult = name;
+                verboseResult = callback;
+                verboseResult = dependencyMap;
+                let callback2;
+                c4 = undefined;
+                c5 = undefined;
+                closure_6 = undefined;
+                closure_7 = undefined;
+                guildId = undefined;
+                dependencyMap2 = undefined;
+                closure_10 = undefined;
+                closure_11 = undefined;
+                let length;
+                closure_13 = undefined;
+                closure_14 = undefined;
+                closure_15 = undefined;
+                let length2;
+                let length3;
+                closure_18 = undefined;
+                closure_19 = undefined;
+                closure_20 = undefined;
+                guildId = undefined;
+                verboseResult = closure_1_13;
+                verboseResult = closure_1_13.verbose("loading early cache");
+                verboseResult = closure_1_5;
+                const socket = closure_1_5.getSocket();
+                callback2 = socket;
+                verboseResult = socket.connect();
+                verboseResult = guildId;
+                verboseResult = guildId.getGuildId();
+                callback2 = verboseResult;
+                verboseResult = null;
+                if (verboseResult == null) {
+                  callback2 = null;
+                }
+                c4 = callback2;
+                let channelId = closure_1_7.getChannelId();
+                c4 = channelId;
+                if (channelId == null) {
+                  c4 = null;
+                }
+                c5 = c4;
+                let allResult = globalThis;
+                const _performance = performance;
+                closure_6 = performance.now();
+                const loadCachedMessages = callback(9).loadCachedMessages;
+                const result = loadCachedMessages.measureAsyncWithoutNesting(() => (function loadChannelHistory(closure_0, c4, c5) {
+                  const self = this;
+                  const apply = closure_20.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_0, c4, c5));
+                const fetchGuildCache = callback(9).fetchGuildCache;
+                const fetchGuildCache2 = callback(9).fetchGuildCache;
+                const measureAsyncResult = fetchGuildCache.measureAsync(() => (function loadInitialGuilds(closure_0, closure_2) {
+                  const self = this;
+                  const apply = closure_23.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_0, closure_2));
+                if (null != verboseResult) {
+                  let timeAsyncResult = callback(10).timeAsync("\u{1F4BE}", "cache: private_channels", () => callback2(1975).getAsync(closure_0, null));
+                  const obj8 = callback(10);
+                } else {
+                  timeAsyncResult = Promise.resolve([]);
+                }
+                if (null == verboseResult) {
+                  let resolved = Promise.resolve({});
+                } else {
+                  resolved = callback(10).timeAsync("\u{1F4BE}", "cache: user_settings", () => callback2(5083).getAll(closure_0));
+                  const obj9 = callback(10);
+                }
+                if (null == verboseResult) {
+                  let resolved1 = Promise.resolve([]);
+                } else {
+                  resolved1 = callback(10).timeAsync("\u{1F4BE}", "cache: read_states", () => callback2(5084).getAll(closure_0));
+                  const obj10 = callback(10);
+                }
+                if (null == verboseResult) {
+                  let resolveResult = allResult.Promise.resolve([]);
+                  const _Promise5 = allResult.Promise;
+                } else {
+                  resolveResult = callback(10).timeAsync("\u{1F4BE}", "cache: user_guild_settings", () => callback2(5085).getAll(closure_0));
+                  const obj11 = callback(10);
+                }
+                callback(5086)("AllCacheStores", () => callback(5087));
+                callback(5086)("MobileAppDatabaseManager", () => callback(5390));
+                let items = [
+                  result,
+                  measureAsyncResult,
+                  fetchGuildCache2.measureAsync(() => (function loadInitialGuildChannels(closure_0, closure_2) {
+                              const self = this;
+                              const apply = closure_24.apply;
+                              if (typeof apply === "unknown") {
+                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                              } else {
+                                applyArgumentsResult = apply(self, arguments);
+                              }
+                              return applyArgumentsResult;
+                            })(closure_0, closure_2)),
+                  timeAsyncResult,
+                  resolved,
+                  resolved1,
+                  resolveResult
+                ];
+                allResult = allResult.Promise.all(items);
+                guildId = 1;
+                dependencyMap2 = 1;
+                const _Promise6 = allResult.Promise;
+                const measureAsyncResult1 = fetchGuildCache2.measureAsync(() => (function loadInitialGuildChannels(closure_0, closure_2) {
+                  const self = this;
+                  const apply = closure_24.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_0, closure_2));
+              }
+            } else if (1 === tmp6) {
+              if (arg0 === 1) {
+                dependencyMap2 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                dependencyMap2 = 3;
+                obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                verboseResult = closure_6;
+                verboseResult = closure_7;
+                closure_7 = arg1;
+                verboseResult = callback2;
+                verboseResult = closure_7;
+                guildId = callback2(closure_7, 7);
+                verboseResult = guildId;
+                dependencyMap2 = callback2(guildId[0], 2);
+                verboseResult = dependencyMap2;
+                closure_10 = 32;
+                verboseResult = dependencyMap2;
+                closure_11 = 5;
+                verboseResult = guildId;
+                length = guildId[1];
+                verboseResult = guildId;
+                closure_13 = guildId[2];
+                verboseResult = guildId;
+                closure_14 = guildId[3];
+                verboseResult = guildId;
+                closure_15 = guildId[4];
+                verboseResult = guildId;
+                length2 = guildId[5];
+                verboseResult = guildId;
+                length3 = guildId[6];
+                verboseResult = globalThis;
+                const _performance2 = performance;
+                verboseResult = closure_6;
+                closure_18 = performance.now() - closure_6;
+                verboseResult = closure_13;
+                verboseResult = closure_18;
+                verboseResult = closure_10;
+                const _HermesInternal2 = HermesInternal;
+                verboseResult = closure_13.verbose("cache loaded in " + closure_18 + "ms (channel_history " + closure_10 + "ms)");
+                verboseResult = closure_11;
+                verboseResult = null;
+                if (null == closure_11) {
+                  callback(5413)("database:history_cache_null");
+                  closure_13.verbose("finished without dispatching CACHE_LOADED");
+                  const items1 = [false, null, 0];
+                  dependencyMap2 = 3;
+                  const obj2 = { value: null, done: true };
+                  obj2[0] = items1;
+                  return obj2;
+                } else {
+                  verboseResult = closure_6;
+                  const _Object2 = Object;
+                  verboseResult = closure_11;
+                  const members = closure_11.members;
+                  closure_19 = Object.fromEntries(members.map((userId) => {
+                    const items = [userId.userId, userId];
+                    return items;
+                  }));
+                  verboseResult = closure_13;
+                  let tmp52 = null != closure_13.guildId;
+                  if (tmp52) {
+                    tmp52 = null != closure_13.channels;
+                  }
+                  closure_20 = tmp52;
+                  guildId = closure_13.guildId;
+                  const promise = new Promise((arg0, arg1) => {
+                    closure_0 = arg0;
+                    const callback2 = arg1;
+                    const Emitter = callback2(589).Emitter;
+                    return Emitter.batched(() => {
+                      callback(10).time("\u{1F4BE}", "Dispatch Mini Cache", () => { ... });
+                      let obj = callback(10);
+                      callback(10).time("\u{1F4BE}", "socket.processFirstQueuedDispatch()", () => { ... });
+                    });
+                  });
+                  guildId = 2;
+                  dependencyMap2 = 1;
+                  const obj3 = { value: null, done: false };
+                  obj3[0] = promise;
+                  return obj3;
+                }
+              }
+            } else if (arg0 === 1) {
+              dependencyMap2 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              dependencyMap2 = 3;
+              const obj4 = { value: null, done: true };
+              obj4[0] = arg1;
+              return obj4;
+            } else {
+              verboseResult = closure_6;
+              verboseResult = closure_7;
+              verboseResult = callback;
+              verboseResult = c4;
+              verboseResult = c5;
+              verboseResult = globalThis;
+              const _JSON = JSON;
+              verboseResult = dependencyMap;
+              verboseResult = closure_13;
+              verboseResult = JSON.stringify(dependencyMap);
+              verboseResult = name;
+              verboseResult = null;
+              verboseResult = null != name;
+              name = undefined;
+              if (name != null) {
+                name = name.name;
+              }
+              length = closure_14.length;
+              guildId = closure_11.guildId;
+              channelId = closure_11.channelId;
+              length2 = closure_11.messages.length;
+              length3 = closure_11.members.length;
+              let channels = closure_13.channels;
+              length = undefined;
+              if (channels != null) {
+                length = channels.length;
+              }
+              const _Object = Object;
+              const _HermesInternal = HermesInternal;
+              closure_13.verbose("early_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: " + verboseResult + "\n          selected_guild: " + verboseResult + "\n          selected_channel: " + verboseResult + "\n          navigation_state: " + verboseResult + "\n          database: " + verboseResult + "\n            name: " + name + "\n        data:\n          database:\n            private_channels: " + length + "\n            channel_history:\n              guild: " + guildId + "\n              channel: " + channelId + "\n              messages: " + length2 + "\n                members: " + length3 + "\n                users: " + closure_11.users.length + "\n            initial_guild:\n              id: " + guildId + "\n              channels: " + length + "\n            user_settings: " + Object.keys(closure_15).length + "\n            read_states: " + length2.length + "\n            user_guild_settings: " + length3.length + "\n      )");
+              obj = callback(9);
+              const obj5 = { guilds: null };
+              obj5[0] = length.length;
+              obj.setEarlyCacheInfo(obj5);
+              closure_13.verbose("finished dispatching CACHE_LOADED");
+              const items2 = [true, , ];
+              let tmp45 = null;
+              if (closure_20) {
+                c5 = guildId;
+                if (guildId == null) {
+                  c5 = null;
+                }
+                tmp45 = c5;
+              }
+              items2[1] = tmp45;
+              items2[2] = closure_14.length;
+              dependencyMap2 = 3;
+              const obj6 = { value: null, done: true };
+              obj6[0] = items2;
+              return obj6;
+            }
+          } catch (tmp97) {
+            dependencyMap2 = verboseResult;
+            throw tmp97;
+          }
         }
       }
     })();
@@ -472,11 +517,11 @@ function _loadInitialGuilds() {
                 obj1[0] = [];
                 return obj1;
               } else {
-                const page = lib.page;
+                const page = tmp36.page;
                 if ("private-channels" !== page) {
                   if ("guild-channels" !== page) {
                     if ("other" === page) {
-                      if ("@me" === lib.guildId) {
+                      if ("@me" === tmp36.guildId) {
                         c22 = true;
                       }
                     }
@@ -859,7 +904,7 @@ function _loadLateLazyCache() {
                   }
                   c6 = 3;
                   c7 = 1;
-                  let obj5 = { value: null, done: false };
+                  const obj5 = { value: null, done: false };
                   obj5[0] = obj1.waitSafelyForPostTTI(num4);
                   return obj5;
                 }
@@ -882,7 +927,6 @@ function _loadLateLazyCache() {
                 callback2(709).dispatch({ type: "CLEAR_CACHES", reason: "database:not_ok" });
                 const obj10 = callback2(709);
                 callback2(709).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
-                const obj11 = callback2(709);
               } else {
                 if (null != c7) {
                   if (null != closure_8) {
@@ -893,13 +937,11 @@ function _loadLateLazyCache() {
                         callback2(709).dispatch({ type: "CLEAR_CACHES", reason: "database:versionless" });
                         const obj6 = callback2(709);
                         callback2(709).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
-                        const obj7 = callback2(709);
                       }
                       if (closure_1_18) {
                         callback2(5413)("already_connected");
                         closure_1_13.log("Skipping lazy cache; already connected.");
                         callback2(709).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
-                        const obj5 = callback2(709);
                       } else {
                         closure_10.addAnalytics({ hadCacheAtStartup: true });
                         let obj = { type: "CACHE_LOADED_LAZY", guilds: null, guildChannels: null, basicGuildChannels: null, initialGuildId: null };
@@ -929,19 +971,19 @@ function _loadLateLazyCache() {
                         const _HermesInternal = HermesInternal;
                         closure_1_13.verbose("late lazy cache loaded (ok: true, took: " + performance.now() - tmp + "ms)");
                         closure_10.addAnalytics({ usedCacheAtStartup: true });
-                        const reduced = closure_9.reduce((acc, item, index) => {
-                          [, arr] = item;
-                          return acc + arr.length;
+                        const reduced = closure_9.reduce((arg0, arg1) => {
+                          [, arr] = arg1;
+                          return arg0 + arr.length;
                         }, 0);
                         const all = closure_8.all;
-                        const reduced1 = all.reduce((acc, item, index) => {
-                          [, arr] = item;
-                          return acc + arr.length;
+                        const reduced1 = all.reduce((arg0, arg1) => {
+                          [, arr] = arg1;
+                          return arg0 + arr.length;
                         }, 0);
                         const channels = closure_8.channels;
-                        const reduced2 = channels.reduce((acc, item, index) => {
-                          [, arr] = item;
-                          return acc + arr.length;
+                        const reduced2 = channels.reduce((arg0, arg1) => {
+                          [, arr] = arg1;
+                          return arg0 + arr.length;
                         }, 0);
                         const diff = reduced1 - reduced2;
                         let str3 = "";
@@ -964,7 +1006,6 @@ function _loadLateLazyCache() {
                         obj[4] = reduced;
                         obj[5] = closure_9.length;
                         callback2(9).setLazyCacheInfo(obj);
-                        const tmp10Result = callback2(9);
                       }
                     }
                   }
@@ -975,7 +1016,6 @@ function _loadLateLazyCache() {
                 callback2(709).dispatch({ type: "CLEAR_CACHES", reason: "database:load_failed" });
                 const obj8 = callback2(709);
                 callback2(709).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
-                const obj9 = callback2(709);
               }
             });
             c7 = 3;
@@ -1011,7 +1051,7 @@ function resumeFluxAndSocket(arg0) {
         const loadLazyCache = lib(9).loadLazyCache;
         loadLazyCache.recordEnd();
         closure_1_13.verbose("Processing First Queued Dispatch");
-        const dispatcher3 = lib.dispatcher;
+        const dispatcher3 = tmp3.dispatcher;
         const _Set = Set;
         const set = new Set(["READY", "INITIAL_GUILD"]);
         const result = dispatcher3.processFirstQueuedDispatch(set);
@@ -1023,7 +1063,7 @@ function resumeFluxAndSocket(arg0) {
         }, 100);
       } else {
         closure_1_13.verbose("Unpausing Dispatch Queue");
-        const dispatcher2 = lib.dispatcher;
+        const dispatcher2 = tmp3.dispatcher;
         dispatcher2.unpauseDispatchQueue();
       }
     } catch (tmp19) {
@@ -1089,7 +1129,6 @@ prototype["canWriteCaches"] = function canWriteCaches(flag) {
     closure_13.log("Not writing cache because not authenticated");
     return false;
   }
-  obj = getToken;
 };
 prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
   closure_0 = arg0;
@@ -1249,7 +1288,7 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                         const loadLazyCache = lib(9).loadLazyCache;
                         loadLazyCache.recordEnd();
                         closure_1_13.verbose("Processing First Queued Dispatch");
-                        const dispatcher3 = lib.dispatcher;
+                        const dispatcher3 = tmp3.dispatcher;
                         const _Set = Set;
                         const set = new Set(["READY", "INITIAL_GUILD"]);
                         const result = dispatcher3.processFirstQueuedDispatch(set);
@@ -1261,7 +1300,7 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                         }, 100);
                       } else {
                         closure_1_13.verbose("Unpausing Dispatch Queue");
-                        const dispatcher2 = lib.dispatcher;
+                        const dispatcher2 = tmp3.dispatcher;
                         dispatcher2.unpauseDispatchQueue();
                       }
                     } catch (tmp19) {
@@ -1355,8 +1394,43 @@ const cacheStoreClass = new CacheStoreClass(dispatcherDefault, {
     Storage3.remove(closure_11);
   }
 });
+let obj = {
+  CONNECTION_OPEN: function handleConnectionOpen() {
+    c18 = true;
+    c19 = true;
+    return false;
+  },
+  LOGOUT: handleClearCaches,
+  CONNECTION_CLOSED: function handleConnectionClose() {
+    c18 = false;
+    c19 = true;
+    return false;
+  },
+  CACHE_LOADED: function handleCacheLoaded() {
+    c17 = true;
+  },
+  CACHE_LOADED_LAZY: function handleCacheLoadedLazy() {
+    c17 = true;
+    c15 = "cache-loaded";
+  },
+  CACHE_LOADED_LAZY_NO_CACHE: function handleCacheLoadedLazyNoCache() {
+    c15 = "no-cache";
+  },
+  CLEAR_CACHES: handleClearCaches,
+  WRITE_CACHES: function saveCaches() {
+    closure_13.verbose("Writing cache now");
+    closure_16 = Date.now();
+    c17 = true;
+    const Storage = Storage4.Storage;
+    Storage.remove(closure_10);
+    const Storage2 = Storage4.Storage;
+    Storage2.remove(closure_12);
+    const Storage3 = Storage4.Storage;
+    Storage3.remove(closure_11);
+  }
+};
 const tmp3 = new timestampDefault("CacheStore");
-let result = require("obj132").fileFinishedImporting("modules/cache/CacheStore.tsx");
+let result = require("set").fileFinishedImporting("modules/cache/CacheStore.tsx");
 
 export default cacheStoreClass;
 export const ENABLE_CACHE_STORE = true;

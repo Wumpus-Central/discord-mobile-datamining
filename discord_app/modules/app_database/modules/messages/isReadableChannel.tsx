@@ -1,16 +1,16 @@
 // === Module 5075: isReadableChannel ===
 
 // Module 5075 (isReadableChannel)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_1 from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
 const isTextChannel = createChannelRecord.isTextChannel;
 ({ ChannelTypes: c3, BasicPermissions } = ME);
 let closure_4 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
-const result = obj132.fileFinishedImporting("modules/app_database/modules/messages/isReadableChannel.tsx");
+const result = set.fileFinishedImporting("modules/app_database/modules/messages/isReadableChannel.tsx");
 
 export const isReadableChannel = function isReadableChannel(basicChannel) {
   let tmp = null != basicChannel;

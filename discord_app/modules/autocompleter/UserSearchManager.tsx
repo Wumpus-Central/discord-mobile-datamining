@@ -1,9 +1,7 @@
 // === Module 7597: getTransformedUser ===
 
 // Module 7597 (getTransformedUser)
-import obj132 from "obj132" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
@@ -11,11 +9,11 @@ import createChannelRecord from "createChannelRecord" /* 1395 */;
 import hasFlagAll from "hasFlag" /* 1403 */;
 import initializeDefault from "initialize" /* 5038 */;
 import UserSearchWorkerManager from "UserSearchWorkerManager" /* 7598 */;
-import createdAt from "createdAt" /* 1930 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createdAt" /* 1930 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 
 function getTransformedUser(author) {
   if (null != author) {
@@ -46,12 +44,13 @@ function getTransformedUser(author) {
             num = 0;
           }
           isProvisional = hasFlagAll.hasFlag(num, UserFlags.PROVISIONAL_ACCOUNT);
+          const obj3 = hasFlagAll;
         }
       }
       obj.isProvisional = isProvisional;
-      if (blockedOrIgnored.isFriend(author.id)) {
+      if (obj5.isFriend(author.id)) {
         obj.isFriend = true;
-        obj.friendNickname = blockedOrIgnored.getNickname(author.id);
+        obj.friendNickname = obj5.getNickname(author.id);
       }
       if (author instanceof closure_5) {
         let isStaffResult = author.isStaff();
@@ -63,6 +62,7 @@ function getTransformedUser(author) {
             num2 = 0;
           }
           isStaffResult = hasFlagAll.hasFlag(num2, UserFlags.STAFF);
+          const obj4 = hasFlagAll;
         }
       }
       obj.isStaff = isStaffResult;
@@ -71,16 +71,16 @@ function getTransformedUser(author) {
   }
   return null;
 }
-function setNick(nicknames, id, nick) {
+function setNick(nicknames) {
   if (null != nicknames) {
     let tmp2 = null;
-    if (null != nick) {
+    if (null != arg2) {
       tmp2 = null;
-      if ("" !== nick) {
-        tmp2 = nick;
+      if ("" !== arg2) {
+        tmp2 = arg2;
       }
     }
-    nicknames.nicknames[id] = tmp2;
+    nicknames.nicknames[arg1] = tmp2;
   }
 }
 function getDMUpdates(type) {
@@ -92,8 +92,8 @@ function getDMUpdates(type) {
       if (undefined === recipients) {
         recipients = [];
       }
-      const item = recipients.forEach((item, index) => {
-        const tmp = closure_1_12(closure_1_9.getUser(item));
+      const item = recipients.forEach((arg0) => {
+        const tmp = closure_1_12(closure_1_9.getUser(arg0));
         if (null != channel) {
           if (null != tmp) {
             tmp.nicknames[tmp2] = null;
@@ -106,13 +106,13 @@ function getDMUpdates(type) {
   }
   return items;
 }
-function updateMembersList(arr, guildId) {
-  closure_0 = guildId;
+function updateMembersList(arr) {
+  closure_0 = arg1;
   const items = [];
-  const item = arr.forEach((item, index) => {
-    const tmp = closure_1_12(item.user);
+  const item = arr.forEach((user) => {
+    const tmp = closure_1_12(user.user);
     if (null != tmp) {
-      const nick = item.nick;
+      const nick = user.nick;
       if (null != tmp) {
         let tmp3 = null;
         if (null != nick) {
@@ -148,8 +148,8 @@ function getUsersFromMessage(arg0) {
     }
     const mentions = message.mentions;
     if (mentions != null) {
-      const item = mentions.forEach((item, index) => {
-        const tmp = getTransformedUser(item);
+      const item = mentions.forEach((arg0) => {
+        const tmp = closure_1_12(arg0);
         if (null != tmp) {
           items.push(tmp);
           if (null != nicknameContextId) {
@@ -258,11 +258,10 @@ prototype["clearQuery"] = function clearQuery() {
     obj[1] = constants.QUERY_CLEAR;
     _worker.postMessage(obj);
   }
-  tmp = null != this._worker && self._subscribed;
 };
 prototype["setQuery"] = function setQuery(closure_0) {
-  ({ boosters, boosterFallback } = _require);
-  const obj = { query: _require.query, filters: _require.filters, blacklist: _require.blacklist, boosters: null, boosterFallback: null, limit: null };
+  ({ boosters, boosterFallback } = closure_0);
+  const obj = { query: closure_0.query, filters: closure_0.filters, blacklist: closure_0.blacklist, boosters: null, boosterFallback: null, limit: null };
   if (boosters == null) {
     boosters = {};
   }
@@ -400,17 +399,19 @@ class UserSearchManager extends tmp2 {
           obj[tmp11.id] = tmp11;
           const _Object2 = Object;
           const values = Object.values(obj.getUsers());
-          const item = values.forEach((item, index) => {
-            obj[item.id] = closure_1_12(item);
+          const item = values.forEach((id) => {
+            obj[id.id] = closure_1_12(id);
           });
           const mutableAllGuildsAndMembers = closure_1_7.getMutableAllGuildsAndMembers();
           for (const key10004 in mutableAllGuildsAndMembers) {
+            let tmp17 = key10004;
             let keys = Object.keys();
             if (keys === undefined) {
               continue;
             } else {
               let tmp3 = keys[tmp];
               while (tmp3 !== undefined) {
+                let tmp19 = tmp3;
                 let tmp20 = obj[tmp3];
                 let tmp21 = mutableAllGuildsAndMembers[key10004][tmp3];
                 let nick;
@@ -418,6 +419,8 @@ class UserSearchManager extends tmp2 {
                   nick = tmp21.nick;
                 }
                 if (nick == null) {
+                  let tmp5 = closure_1_1;
+                  let tmp6 = closure_1_3;
                   let obj2 = closure_1_1(closure_1_3[7]);
                   nick = obj2.getGlobalName(tmp20);
                 }
@@ -452,13 +455,13 @@ class UserSearchManager extends tmp2 {
     applyArgumentsResult._handleConnectionOpenSupplemental = function _handleConnectionOpenSupplemental(guilds) {
       guilds = guilds.guilds;
       const timerId = setTimeout(() => {
-        applyDefault.flatMap(guilds, (arg0) => {
+        closure_2_1(closure_2_3[14]).flatMap(guilds, (arg0) => {
           ({ members, id: closure_0 } = arg0);
           const items = [];
-          const item = members.forEach((item, index) => {
-            const tmp = closure_1_12(item.user);
+          const item = members.forEach((user) => {
+            const tmp = closure_1_12(user.user);
             if (null != tmp) {
-              const nick = item.nick;
+              const nick = user.nick;
               if (null != tmp) {
                 let tmp3 = null;
                 if (null != nick) {
@@ -474,16 +477,18 @@ class UserSearchManager extends tmp2 {
           });
           return items;
         });
+        const obj = closure_2_1(closure_2_3[14]);
+        const obj2 = closure_2_1(closure_2_3[14]);
         let items = [
-          ...applyDefault.flatMap(guilds, (activity_instances) => {
+          ...closure_2_1(closure_2_3[14]).flatMap(guilds, (activity_instances) => {
             closure_0 = activity_instances;
             const items = [];
             activity_instances = activity_instances.activity_instances;
             if (activity_instances != null) {
-              let item = activity_instances.forEach((item, index) => {
-                const participants = item.participants;
-                item = participants.forEach((item, index) => {
-                  const member = item.member;
+              let item = activity_instances.forEach((participants) => {
+                participants = participants.participants;
+                const item = participants.forEach((member) => {
+                  member = member.member;
                   if (null != member) {
                     const tmp2 = closure_1_12(member.user);
                     if (null != tmp2) {
@@ -516,32 +521,47 @@ class UserSearchManager extends tmp2 {
       const iter = users[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let result = map.set(nextResult.id, getTransformedUser(nextResult));
+        let tmp2 = closure_1_12;
+        let result = map.set(nextResult.id, closure_1_12(nextResult));
         continue;
       }
-      const keys = DISCORD_EPOCHDefault.keys(guildMembers);
+      const keys = closure_1_1(closure_1_3[15]).keys(guildMembers);
       const iter2 = keys[Symbol.iterator]();
       const nextResult1 = iter2.next();
       while (iter2 !== undefined) {
         let tmp7 = guildMembers[nextResult1];
         let tmp8 = tmp7;
         if (null != tmp7) {
-          let obj3 = DISCORD_EPOCHDefault;
+          let tmp27 = closure_1_1;
+          let tmp28 = closure_1_3;
+          let obj3 = closure_1_1(closure_1_3[15]);
+          let tmp29 = tmp7;
           let keys1 = obj3.keys(tmp8);
+          let tmp31 = keys1;
+          let tmp9 = keys1;
           for (const item10043 of keys1) {
+            let tmp10 = item10043;
             let value = map.get(item10043);
             let tmp12 = value;
+            let tmp13 = tmp7;
             let tmp14 = tmp8[item10043];
             let tmp15 = null != value;
             if (tmp15) {
+              let tmp16 = tmp14;
               tmp15 = null != tmp14;
             }
             if (tmp15) {
+              let tmp17 = tmp14;
               tmp15 = null != tmp14.nick;
             }
             if (tmp15) {
-              let tmp22 = setNick(tmp12, tmp6, tmp14.nick);
-              let result1 = map.set(item10043, tmp12);
+              let tmp18 = closure_1_13;
+              let tmp19 = value;
+              let tmp20 = nextResult1;
+              let tmp21 = tmp14;
+              let tmp22 = closure_1_13(tmp12, tmp6, tmp14.nick);
+              let tmp23 = item10043;
+              let result1 = map.set(tmp10, tmp12);
             }
             continue;
           }
@@ -552,7 +572,7 @@ class UserSearchManager extends tmp2 {
       map.clear();
     };
     applyArgumentsResult._handleCurrentUserUpdate = function _handleCurrentUserUpdate(user) {
-      const tmp = getTransformedUser(user.user);
+      const tmp = closure_1_12(user.user);
       if (null != tmp) {
         const items = [tmp];
         applyArgumentsResult.updateUsers(items, "current_user_update");
@@ -563,10 +583,10 @@ class UserSearchManager extends tmp2 {
       const members = guild.members;
       const id = guild.id;
       const items = [];
-      const item = members.forEach((item, index) => {
-        const tmp = closure_1_12(item.user);
+      const item = members.forEach((user) => {
+        const tmp = closure_1_12(user.user);
         if (null != tmp) {
-          const nick = item.nick;
+          const nick = user.nick;
           if (null != tmp) {
             let tmp3 = null;
             if (null != nick) {
@@ -588,8 +608,14 @@ class UserSearchManager extends tmp2 {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let push = items.push;
+        let tmp2 = closure_1_15;
         let items1 = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(updateMembersList(nextResult.members, nextResult.guildId), 0);
+        let tmp3 = items1;
+        let num = 0;
+        let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_15(nextResult.members, nextResult.guildId), 0);
+        let tmp5 = push;
+        let tmp6 = items1;
+        let tmp7 = items;
         let applyResult = HermesBuiltin.apply(items1, items);
         continue;
       }
@@ -597,7 +623,7 @@ class UserSearchManager extends tmp2 {
     };
     applyArgumentsResult._handleGuildMemberUpdate = function _handleGuildMemberUpdate(nick) {
       nick = nick.nick;
-      const tmp = getTransformedUser(nick.user);
+      const tmp = closure_1_12(nick.user);
       if (null != tmp) {
         if (null != tmp) {
           let tmp2 = null;
@@ -616,10 +642,10 @@ class UserSearchManager extends tmp2 {
     applyArgumentsResult._handlePassiveUpdateV2 = function _handlePassiveUpdateV2(arg0) {
       ({ members, guildId: closure_0 } = arg0);
       const items = [];
-      const item = members.forEach((item, index) => {
-        const tmp = closure_1_12(item.user);
+      const item = members.forEach((user) => {
+        const tmp = closure_1_12(user.user);
         if (null != tmp) {
-          const nick = item.nick;
+          const nick = user.nick;
           if (null != tmp) {
             let tmp3 = null;
             if (null != nick) {
@@ -636,15 +662,15 @@ class UserSearchManager extends tmp2 {
       applyArgumentsResult.updateUsers(items, "passive_update_v2");
     };
     applyArgumentsResult._handleRelationshipAdd = function _handleRelationshipAdd(relationship) {
-      const items = [getTransformedUser(relationship.relationship.user)];
+      const items = [closure_1_12(relationship.relationship.user)];
       applyArgumentsResult.updateUsers(items, "relationship_add");
     };
     applyArgumentsResult._handleRelationshipUpdate = function _handleRelationshipUpdate(relationship) {
-      const items = [getTransformedUser(closure_1_9.getUser(relationship.relationship.id))];
+      const items = [closure_1_12(closure_1_9.getUser(relationship.relationship.id))];
       applyArgumentsResult.updateUsers(items, "relationship_update");
     };
     applyArgumentsResult._handleRelationshipRemove = function _handleRelationshipRemove(relationship) {
-      const items = [getTransformedUser(closure_1_9.getUser(relationship.relationship.id))];
+      const items = [closure_1_12(closure_1_9.getUser(relationship.relationship.id))];
       applyArgumentsResult.updateUsers(items, "relationship_remove");
     };
     applyArgumentsResult._handleDMCreate = function _handleDMCreate(channel) {
@@ -652,13 +678,13 @@ class UserSearchManager extends tmp2 {
       channel = closure_1_6.getChannel(id);
       const items = [];
       if (null != channel) {
-        if (isPrivate(channel.type)) {
+        if (closure_1_4(channel.type)) {
           let recipients = channel.recipients;
           if (undefined === recipients) {
             recipients = [];
           }
-          const item = recipients.forEach((item, index) => {
-            const tmp = closure_1_12(closure_1_9.getUser(item));
+          const item = recipients.forEach((arg0) => {
+            const tmp = closure_1_12(closure_1_9.getUser(arg0));
             if (null != channel) {
               if (null != tmp) {
                 tmp.nicknames[tmp2] = null;
@@ -669,7 +695,7 @@ class UserSearchManager extends tmp2 {
         }
       }
       if (0 !== items.length) {
-        const tmp6 = getTransformedUser(closure_1_9.getCurrentUser());
+        const tmp6 = closure_1_12(closure_1_9.getCurrentUser());
         if (null != tmp6) {
           tmp6.nicknames[id] = null;
         }
@@ -681,13 +707,21 @@ class UserSearchManager extends tmp2 {
       const iter = arg0.channels[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
+        let tmp3 = closure_1_14;
+        let tmp4 = closure_1_6;
         let tmp2 = nextResult;
-        let arr = getDMUpdates(closure_1_6.getChannel(nextResult.id));
+        let arr = closure_1_14(closure_1_6.getChannel(nextResult.id));
         let arr2 = arr;
         if (0 !== arr.length) {
-          let tmp7 = getTransformedUser(closure_1_9.getCurrentUser());
-          let tmp10 = setNick(tmp7, tmp2.id);
+          let tmp5 = closure_1_12;
+          let tmp6 = closure_1_9;
+          let tmp7 = closure_1_12(closure_1_9.getCurrentUser());
+          let tmp8 = closure_1_13;
+          let tmp9 = nextResult;
+          let tmp10 = closure_1_13(tmp7, tmp2.id);
+          let tmp11 = arr;
           arr = arr2.push(tmp7);
+          let tmp13 = applyArgumentsResult;
           let updateUsersResult = applyArgumentsResult.updateUsers(arr2, "dm_updates");
         }
         continue;
@@ -695,7 +729,7 @@ class UserSearchManager extends tmp2 {
     };
     applyArgumentsResult._handleRecipientChanges = function _handleRecipientChanges(isMember) {
       if (isMember.isMember) {
-        const tmp4 = getTransformedUser(tmp2);
+        const tmp4 = closure_1_12(tmp2);
         if (null != tmp4) {
           tmp4.nicknames[tmp] = null;
         }
@@ -708,8 +742,8 @@ class UserSearchManager extends tmp2 {
       let items;
       if (null != mostRecentMessages) {
         items = [];
-        let item = mostRecentMessages.forEach((item, index) => {
-          item = closure_1_16({ message: item, nicknameContextId: closure_0 }).forEach((item, index) => arr.push(item));
+        let item = mostRecentMessages.forEach((message) => {
+          const item = closure_1_16({ message, nicknameContextId: closure_0 }).forEach((arg0) => arr.push(arg0));
         });
         applyArgumentsResult.updateUsers(items, "thread_list_sync");
       }
@@ -718,29 +752,29 @@ class UserSearchManager extends tmp2 {
       guildId = guildId.guildId;
       let items = [];
       const values = Object.values(guildId.threads);
-      let item = values.forEach((item, index) => {
-        ({ first_message, most_recent_message, owner } = item);
+      let item = values.forEach((arg0) => {
+        ({ first_message, most_recent_message, owner } = arg0);
         if (null != first_message) {
           let obj = { message: null, nicknameContextId: null };
           obj[0] = first_message;
           obj[1] = closure_0;
-          item = closure_1_16(obj).forEach((item, index) => items1.push(item));
+          const item = closure_1_16(obj).forEach((arg0) => items1.push(arg0));
           const arr = closure_1_16(obj);
         }
         if (null != most_recent_message) {
           obj = { message: null, nicknameContextId: null };
           obj[0] = most_recent_message;
           obj[1] = closure_0;
-          const item1 = closure_1_16(obj).forEach((item, index) => items1.push(item));
+          const item1 = closure_1_16(obj).forEach((arg0) => items1.push(arg0));
           const arr2 = closure_1_16(obj);
         }
         if (null != owner) {
           items = [owner];
           const items1 = [];
-          const item2 = items.forEach((item, index) => {
-            const tmp = closure_1_12(item.user);
+          const item2 = items.forEach((user) => {
+            const tmp = closure_1_12(user.user);
             if (null != tmp) {
-              const nick = item.nick;
+              const nick = user.nick;
               if (null != tmp) {
                 let tmp3 = null;
                 if (null != nick) {
@@ -754,31 +788,31 @@ class UserSearchManager extends tmp2 {
               items.push(tmp);
             }
           });
-          const item3 = items1.forEach((item, index) => items1.push(item));
+          const item3 = items1.forEach((arg0) => items1.push(arg0));
         }
       });
       guildId.updateUsers(items, "load_forum_posts");
     };
     applyArgumentsResult._handleLoadMessagesSuccess = function _handleLoadMessagesSuccess(messages) {
       messages = messages.messages;
-      applyArgumentsResult.updateUsers(messages.flatMap((item, index) => callback({ message: item })), "load_messages_success");
+      applyArgumentsResult.updateUsers(messages.flatMap((message) => callback({ message })), "load_messages_success");
     };
     applyArgumentsResult._handleLoadPinnedMessagesSuccess = function _handleLoadPinnedMessagesSuccess(pins) {
       pins = pins.pins;
       const items = [];
-      let item = pins.forEach((item, index) => {
-        item = closure_1_16({ message: item.message }).forEach((item, index) => arr.push(item));
+      let item = pins.forEach((message) => {
+        const item = closure_1_16({ message: message.message }).forEach((arg0) => arr.push(arg0));
       });
       items.updateUsers(items, "load_pinned_messages_success");
     };
     applyArgumentsResult._handleSearchMessagesSuccess = function _handleSearchMessagesSuccess(data) {
       data = data.data;
       const items = [];
-      let item = data.forEach((item, index) => {
-        const messages = item.messages;
-        item = messages.forEach((item, index) => {
-          item = item.forEach((item, index) => {
-            item = closure_1_16({ message: item }).forEach((item, index) => arr.push(item));
+      let item = data.forEach((messages) => {
+        messages = messages.messages;
+        let item = messages.forEach((arr) => {
+          let item = arr.forEach((message) => {
+            const item = closure_1_16({ message }).forEach((arg0) => arr.push(arg0));
           });
         });
       });
@@ -790,21 +824,21 @@ class UserSearchManager extends tmp2 {
       const items = [];
       let items1 = items;
       if (firstMessages != null) {
-        let item = firstMessages.forEach((item, index) => {
-          item = closure_1_16({ message: item, nicknameContextId: guildId }).forEach((item, index) => arr.push(item));
+        let item = firstMessages.forEach((message) => {
+          const item = closure_1_16({ message, nicknameContextId: guildId }).forEach((arg0) => arr.push(arg0));
         });
       }
       if (mostRecentMessages != null) {
-        const item1 = mostRecentMessages.forEach((item, index) => {
-          item = closure_1_16({ message: item, nicknameContextId: guildId }).forEach((item, index) => arr.push(item));
+        const item1 = mostRecentMessages.forEach((message) => {
+          const item = closure_1_16({ message, nicknameContextId: guildId }).forEach((arg0) => arr.push(arg0));
         });
       }
       if (null != owners) {
         items1 = [];
-        const item2 = owners.forEach((item, index) => {
-          const tmp = closure_1_12(item.user);
+        const item2 = owners.forEach((user) => {
+          const tmp = closure_1_12(user.user);
           if (null != tmp) {
-            const nick = item.nick;
+            const nick = user.nick;
             if (null != tmp) {
               let tmp3 = null;
               if (null != nick) {
@@ -818,19 +852,19 @@ class UserSearchManager extends tmp2 {
             items.push(tmp);
           }
         });
-        const item3 = items1.forEach((item, index) => items1.push(item));
+        const item3 = items1.forEach((arg0) => items1.push(arg0));
       }
       guildId.updateUsers(items, "load_threads_success");
     };
     applyArgumentsResult._handleMessageCreateOrUpdate = function _handleMessageCreateOrUpdate(message) {
-      applyArgumentsResult.updateUsers(getUsersFromMessage({ message: message.message }), "message_create_or_update");
+      applyArgumentsResult.updateUsers(closure_1_16({ message: message.message }), "message_create_or_update");
     };
     applyArgumentsResult._handleGuildScheduledEventUsersFetchSuccess = function _handleGuildScheduledEventUsersFetchSuccess(arg0) {
       ({ guildId: closure_0, guildScheduledEventUsers } = arg0);
       const items = [];
-      const item = guildScheduledEventUsers.forEach((item, index) => {
-        const member = item.member;
-        const tmp = closure_1_12(item.user);
+      const item = guildScheduledEventUsers.forEach((member) => {
+        member = member.member;
+        const tmp = closure_1_12(member.user);
         if (null != tmp) {
           if (member != null) {
             const nick = member.nick;
@@ -843,9 +877,10 @@ class UserSearchManager extends tmp2 {
                 tmp3 = nick;
               }
             }
-            tmp.nicknames[closure_0] = tmp3;
+            tmp.nicknames[tmp2] = tmp3;
           }
           items.push(tmp);
+          tmp2 = closure_0;
         }
       });
       applyArgumentsResult.updateUsers(items, "guild_scheduled_event_users_fetch_success");
@@ -879,39 +914,47 @@ prototype2["updateUsers"] = function updateUsers(arr) {
   if (null != _worker) {
     const found = arr.filter(isDiscordFrontendDevelopment.isNotNullish);
     for (const item10007 of found) {
+      let tmp2 = item10007;
       let id;
       if (item10007 != null) {
         id = item10007.id;
       }
       if (null == id) {
+        let tmp20 = importDefault;
+        let tmp21 = dependencyMap;
         let obj3 = _modDef1208;
         let obj = { action: null, userFields: null };
         obj[0] = arg1;
         obj = { userIsNull: null, idIsNull: true, usernameIsNull: null, isBot: null, isFriend: null, isProvisional: null, globalNameIsNull: null, usersArrayLength: null };
-        obj[0] = null == item10007;
+        let tmp22 = item10007;
+        obj[0] = null == tmp2;
         let username;
-        if (item10007 != null) {
-          username = item10007.username;
+        if (tmp2 != null) {
+          username = tmp2.username;
         }
         obj[2] = null == username;
+        let tmp5 = item10007;
         let isBot;
-        if (item10007 != null) {
-          isBot = item10007.isBot;
+        if (tmp2 != null) {
+          isBot = tmp2.isBot;
         }
         obj[3] = isBot;
+        let tmp7 = item10007;
         let isFriend;
-        if (item10007 != null) {
-          isFriend = item10007.isFriend;
+        if (tmp2 != null) {
+          isFriend = tmp2.isFriend;
         }
         obj[4] = isFriend;
+        let tmp9 = item10007;
         let isProvisional;
-        if (item10007 != null) {
-          isProvisional = item10007.isProvisional;
+        if (tmp2 != null) {
+          isProvisional = tmp2.isProvisional;
         }
         obj[5] = isProvisional;
+        let tmp11 = item10007;
         let globalName;
-        if (item10007 != null) {
-          globalName = item10007.globalName;
+        if (tmp2 != null) {
+          globalName = tmp2.globalName;
         }
         obj = { category: "debug", message: "User missing id", data: null };
         obj[6] = null == globalName;
@@ -928,7 +971,7 @@ prototype2["updateUsers"] = function updateUsers(arr) {
     _worker.postMessage(obj1);
   }
 };
-prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResults, _limit) {
+prototype2["getUserSearchContext"] = function getUserSearchContext(handleUserSearchResults, _limit) {
   let num = _limit;
   if (_limit === undefined) {
     num = 10;
@@ -968,7 +1011,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResu
     };
     obj._worker = _worker;
     obj._uuid = obj(514).v4();
-    obj._callback = parseUserResults;
+    obj._callback = handleUserSearchResults;
     obj._limit = num;
     obj._currentQuery = null;
     obj._nextQuery = null;
@@ -981,7 +1024,7 @@ prototype2["requestDebugState"] = function requestDebugState() {
   return Promise.resolve(null);
 };
 const userSearchManager = new UserSearchManager();
-let result = obj132.fileFinishedImporting("modules/autocompleter/UserSearchManager.tsx");
+let result = set.fileFinishedImporting("modules/autocompleter/UserSearchManager.tsx");
 
 export default userSearchManager;
 export { UserSearchContext };

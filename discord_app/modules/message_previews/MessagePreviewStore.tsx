@@ -4,11 +4,11 @@
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "reinjectEphemerals" /* 4994 */;
 
-let object = fn;
+let object = arg1;
 let c6 = -Infinity;
 let closure_7 = new timestampDefault("MessagePreviewStore");
 const Store = initializeDefault.Store;
@@ -84,7 +84,7 @@ prototype["isLatest"] = function isLatest(arg0, arg1) {
 };
 prototype["isLocalFetchNeeded"] = function isLocalFetchNeeded(closure_1_0) {
   const guilds = this.guilds;
-  const value = guilds.get(object);
+  const value = guilds.get(closure_1_0);
   let flag;
   if (value != null) {
     flag = value.localNeeded;
@@ -266,8 +266,10 @@ prototype["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded(
   closure_7.verbose("adding remote previews (guildId: " + guildId.guildId + ", messages: " + guildId.messages.length + ")");
   const dataResult = this.data(guildId.guildId);
   for (const item10024 of tmp2) {
+    let tmp3 = item10024;
     if (!dataResult.isLatest(item10024.channel_id, self.generation)) {
-      let putResult = dataResult.put(item10024.channel_id, item10024, self.generation);
+      let tmp4 = item10024;
+      let putResult = dataResult.put(tmp3.channel_id, tmp3, self.generation);
     }
     continue;
   }
@@ -276,21 +278,26 @@ prototype["handleMessagePreviewsLocallyLoaded"] = function handleMessagePreviews
   closure_7.verbose("adding local previews (guildId: " + guildId.guildId + ", messages: " + guildId.messages.length + ")");
   const dataResult = this.data(guildId.guildId);
   while (tmp2 !== undefined) {
+    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     [tmp6, tmp8] = tmp5;
+    let tmp7 = tmp6;
     if (!dataResult.has(tmp6)) {
-      let putResult = dataResult.put(tmp6, tmp8, c6);
+      let tmp9 = tmp6;
+      let tmp10 = tmp8;
+      let tmp11 = c6;
+      let putResult = dataResult.put(tmp7, tmp8, c6);
     }
     continue;
   }
   dataResult.localNeeded = false;
-  tmp2 = guildId.messages[Symbol.iterator]();
 };
 function handleLogout() {
   const guilds = this.guilds;
   guilds.clear();
 }
 prototype["handleLogout"] = handleLogout;
+object = undefined;
 object = new Object(dispatcherDefault, {
   CONNECTION_OPEN(arg0) {
     return obj.handleConnectionOpen(arg0);
@@ -328,12 +335,50 @@ object = new Object(dispatcherDefault, {
   THREAD_LIST_SYNC(arg0) {
     return obj.handleThreadListSync(arg0);
   }
-}, tmp, MessagePreviewStore, Object, prototype, new.target, undefined, handleLogout, globalThis, fn);
+}, tmp, MessagePreviewStore, Object, prototype, new.target, undefined, handleLogout, globalThis, arg1);
 // ThrowIfThisInitialized (0x7c)
-const tmp3 = new timestampDefault("MessagePreviewStore");
+let obj = {
+  CONNECTION_OPEN(arg0) {
+    return obj.handleConnectionOpen(arg0);
+  },
+  GUILD_CREATE(arg0) {
+    return obj.handleGuildCreate(arg0);
+  },
+  GUILD_DELETE(arg0) {
+    return obj.handleGuildDelete(arg0);
+  },
+  LOAD_MESSAGES_SUCCESS(arg0) {
+    return obj.handleLoadMessagesSuccess(arg0);
+  },
+  LOCAL_MESSAGES_LOADED(arg0) {
+    return obj.handleLocalMessagesLoaded(arg0);
+  },
+  LOGOUT(arg0) {
+    return obj.handleLogout(arg0);
+  },
+  MESSAGE_CREATE(arg0) {
+    return obj.handleMessageCreate(arg0);
+  },
+  MESSAGE_DELETE(arg0) {
+    return obj.handleMessageDelete(arg0);
+  },
+  MESSAGE_PREVIEWS_LOADED(arg0) {
+    return obj.handleMessagePreviewsLoaded(arg0);
+  },
+  MESSAGE_PREVIEWS_LOCALLY_LOADED(guildId) {
+    return obj.handleMessagePreviewsLocallyLoaded(guildId);
+  },
+  MESSAGE_UPDATE(arg0) {
+    return obj.handleMessageUpdate(arg0);
+  },
+  THREAD_LIST_SYNC(arg0) {
+    return obj.handleThreadListSync(arg0);
+  }
+};
+let tmp3 = new timestampDefault("MessagePreviewStore");
 object.guilds = new Map();
 object.generation = 0;
 const map = new Map();
-let result = require("obj132").fileFinishedImporting("modules/message_previews/MessagePreviewStore.tsx");
+let result = require("set").fileFinishedImporting("modules/message_previews/MessagePreviewStore.tsx");
 
 export default object;

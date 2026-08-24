@@ -1,26 +1,28 @@
 // === Module 14791: NotificationPermissionSettingsHeader ===
 
 // Module 14791 (NotificationPermissionSettingsHeader)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import EventActionType from "EventActionType" /* 11582 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: c5, NOOP: closure_6 } = ME);
 ({ EventActionLocation: error, EventActionType: closure_8, NotificationNudgeAnalyticsAction: c9, NotificationNudgeSurface: c10 } = EventActionType);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, cardContent: null, iconCircle: null, body: null };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
 createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
+let obj2 = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = callback3();
@@ -29,7 +31,8 @@ export default function NotificationPermissionSettingsHeader() {
   const items = [canSeePushNotificationNudge];
   const effect = React.useEffect(() => {
     if (canSeePushNotificationNudge) {
-      const obj = { action: null, prompt_type: null };
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { action: null, prompt_type: null };
       obj[0] = closure_1_9.IMPRESSION;
       obj[1] = closure_1_10.NOTIFICATION_SETTINGS_PERMISSION_HEADER;
       obj.track(closure_1_5.CONTEXTUAL_REMINDER_ACTION, obj);

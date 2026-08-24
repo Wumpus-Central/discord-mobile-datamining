@@ -2,36 +2,42 @@
 
 // Module 8567 (ChangeEmailWarning)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { COMMON_SCAMS_EDUCATION_HC_ARTICLE as closure_7 } from "ChangeEmailReasons" /* 8565 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { flex: 1, padding: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
+createCacheKey = { container: null, title: null, body: null, buttonContainer: null };
+createCacheKey = { flex: 1, padding: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16 };
+let obj1 = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+let obj2 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ChangeEmailWarning.tsx");
+let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailWarning.tsx");
 
 export default function ChangeEmailWarning(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
+  let navigation;
   const tmp = callback3();
   let obj = changeEmailReason(1500);
-  const navigation = obj.useNavigation();
+  navigation = obj.useNavigation();
   obj1 = changeEmailReason(589);
   const items = [closure_6];
   const items1 = [navigation, changeEmailReason];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   let tmp7 = null;
   if (null != stateFromStores) {
+    obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     const items2 = [callback(tmp2(5447).TrafficConeSpotIllustration, {}), , , ];

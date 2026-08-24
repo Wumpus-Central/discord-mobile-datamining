@@ -1,10 +1,10 @@
 // === Module 14293: _addRestrictedScheduleRule ===
 
 // Module 14293 (_addRestrictedScheduleRule)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = fn;
+const require = arg1;
 function _addRestrictedScheduleRule() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -155,9 +155,9 @@ function _deleteRestrictedScheduleRule() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/RestrictedScheduleActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/RestrictedScheduleActionCreators.tsx");
 
-export const addRestrictedScheduleRule = function addRestrictedScheduleRule(closure_1_5, arg1) {
+export const addRestrictedScheduleRule = function addRestrictedScheduleRule(arg0, arg1) {
   const self = this;
   const apply = _addRestrictedScheduleRule.apply;
   if (typeof apply === "unknown") {
@@ -167,7 +167,7 @@ export const addRestrictedScheduleRule = function addRestrictedScheduleRule(clos
   }
   return applyArgumentsResult;
 };
-export const updateRestrictedScheduleRule = function updateRestrictedScheduleRule(closure_1_5, ruleId, arg2) {
+export const updateRestrictedScheduleRule = function updateRestrictedScheduleRule(arg0, ruleId, arg2) {
   const self = this;
   const apply = _updateRestrictedScheduleRule.apply;
   if (typeof apply === "unknown") {

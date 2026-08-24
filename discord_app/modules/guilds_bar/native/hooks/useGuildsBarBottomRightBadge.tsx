@@ -1,14 +1,14 @@
 // === Module 15560: useGuildsBarBottomRightBadge ===
 
 // Module 15560 (useGuildsBarBottomRightBadge)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let closure_6 = createCacheKey.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
-const result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBottomRightBadge.tsx");
+const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBottomRightBadge.tsx");
 
 export default function useGuildsBarBottomRightBadge(mentionCount) {
   mentionCount = mentionCount.mentionCount;
@@ -18,9 +18,14 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
   if (flag === undefined) {
     flag = false;
   }
+  let React;
+  let first;
   let callback;
+  let token;
+  let token1;
+  let memo;
   const tmp = callback();
-  const React = tmp;
+  React = tmp;
   const tmp2 = flag(React.useState(() => {
     if (mentionCount > 0) {
       let BADGE_MASK_UNREAD_SIZE = mentionCount(joinRequestState[4]).BADGE_MASK_SIZE;
@@ -29,13 +34,13 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
     }
     return BADGE_MASK_UNREAD_SIZE;
   }), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   callback = tmp2[1];
-  const token = mentionCount(joinRequestState[5]).useToken(isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  token = mentionCount(joinRequestState[5]).useToken(isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_SIZE);
   let obj = mentionCount(joinRequestState[5]);
-  const token1 = mentionCount(joinRequestState[5]).useToken(isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  token1 = mentionCount(joinRequestState[5]).useToken(isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_MARGIN);
   let items = [tmp.bottomRightBadge, token1];
-  const memo = React.useMemo(() => {
+  memo = React.useMemo(() => {
     const items = [bottomRightBadge.bottomRightBadge, { bottom: token1 - mentionCount(joinRequestState[4]).BADGE_PADDING }];
     return items;
   }, items);

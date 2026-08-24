@@ -3,25 +3,28 @@
 // Module 15216 (ChooseAccount)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { MultiAccountTokenStatus } from "initialize" /* 11585 */;
 import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11586 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ MAX_ACCOUNTS: error, MultiAccountSwitchLocation: closure_8 } = MAX_ACCOUNTS);
 ({ AnalyticEvents: c9, AuthStates: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.sm, paddingTop: ThemesDefault.space.PX_16, margin: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, mainCard: null, addAccountLabel: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.sm, paddingTop: ThemesDefault.space.PX_16, margin: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.sm, flexDirection: "column", alignItems: "stretch", alignSelf: "stretch", display: "flex" };
+let obj1 = { marginVertical: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.sm, flexDirection: "column", alignItems: "stretch", alignSelf: "stretch", display: "flex" };
 createCacheKey[2] = { color: ThemesDefault.colors.TEXT_LINK };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/multi_account/native/ChooseAccount.tsx");
+let obj2 = { color: ThemesDefault.colors.TEXT_LINK };
+let result = require("set").fileFinishedImporting("modules/multi_account/native/ChooseAccount.tsx");
 
 export default function ChooseAccount() {
   function _handlePressRemove() {
@@ -76,10 +79,10 @@ export default function ChooseAccount() {
                 const obj2 = { username: null };
                 obj2[0] = combined;
                 obj1[1] = intl(intl2, obj2);
-                intl = lib(1236).intl;
+                intl = tmp31(1236).intl;
                 obj1[2] = intl.string(lib(1236).t.N86XcP);
                 obj1[3] = lib(1297).ButtonColors.RED;
-                intl2 = lib(1236).intl;
+                intl2 = tmp31(1236).intl;
                 string = intl2.string;
                 obj1[4] = string(lib(1236).t["ETE/oC"]);
                 obj1 = closure_1_1(4656).confirm(obj1);
@@ -137,11 +140,69 @@ export default function ChooseAccount() {
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
-    multiAccountUsers.map((item, index) => {
-      let obj = { size: arr(dependencyMap[15]).Icon.Sizes.SMALL_20, source: multiAccountUsers(dependencyMap[23]), disableColor: true };
-      obj[2] = closure_1_11(item(dependencyMap[15]).Icon, obj);
-      obj[2] = closure_1_11(item(dependencyMap[22]).PressableOpacity, obj);
-      return closure_1_11(multiAccountUsers(dependencyMap[21]), obj, item.id);
+    multiAccountUsers.map((id) => {
+      let obj = {
+        user: id,
+        onPressUser() {
+          if (arr.tokenStatus === closure_1_6.INVALID) {
+            arr = arr.push(closure_1_10.LOGIN);
+            closure_1_1(closure_1_3[11]).track(closure_1_9.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
+            const obj2 = closure_1_1(closure_1_3[11]);
+          } else {
+            closure_1_2(closure_1_3[12]).switchAccount(tmp.id, undefined, closure_1_8.CHOOSE_ACCOUNT);
+            const obj = closure_1_2(closure_1_3[12]);
+          }
+          return tmp4;
+        },
+        trailing: null
+      };
+      obj = {
+        accessibilityRole: "button",
+        onPress() {
+          let obj = closure_1_1(closure_1_3[16]);
+          obj.hideActionSheet();
+          obj1 = arr(closure_1_3[17]);
+          obj = { key: "RemoveAccount", options: null, hasIcons: false };
+          obj = { label: null, onPress: null };
+          const intl = arr(closure_1_3[14]).intl;
+          obj[0] = intl.string(arr(closure_1_3[14]).t["DSN+hw"]);
+          obj[1] = function onPress() {
+            if (arr.tokenStatus === closure_1_6.INVALID) {
+              arr = arr.push(closure_1_10.LOGIN);
+              closure_1_1(closure_1_3[11]).track(closure_1_9.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
+              const obj2 = closure_1_1(closure_1_3[11]);
+            } else {
+              closure_1_2(closure_1_3[12]).switchAccount(tmp.id, undefined, closure_1_8.CHOOSE_ACCOUNT);
+              const obj = closure_1_2(closure_1_3[12]);
+            }
+            return tmp4;
+          };
+          const items = [obj, ];
+          obj1 = { label: null, onPress: null, isDestructive: true };
+          const intl2 = arr(closure_1_3[14]).intl;
+          obj1[0] = intl2.string(arr(closure_1_3[14]).t.lSLMaU);
+          obj1[1] = function onPress() {
+            return (function handlePressRemove(closure_0) {
+              const self = this;
+              const apply = closure_2.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            })(closure_0);
+          };
+          items[1] = obj1;
+          obj[1] = items;
+          const result = obj1.showSimpleActionSheet(obj);
+        },
+        children: null
+      };
+      obj = { size: arr(closure_1_3[15]).Icon.Sizes.SMALL_20, source: multiAccountUsers(closure_1_3[23]), disableColor: true };
+      obj[2] = closure_1_11(id(closure_1_3[15]).Icon, obj);
+      obj[2] = closure_1_11(id(closure_1_3[22]).PressableOpacity, obj);
+      return closure_1_11(multiAccountUsers(closure_1_3[21]), obj, id.id);
     }),
 
   ];
@@ -154,17 +215,17 @@ export default function ChooseAccount() {
   obj2[3] = function handlePressAddAccount() {
     if (multiAccountUsers.length >= closure_1_7) {
       let obj = { title: null, body: null, isDismissable: true };
-      const intl = arr(dependencyMap[14]).intl;
-      obj[0] = intl.string(arr(dependencyMap[14]).t.w7wfXi);
-      const intl2 = arr(dependencyMap[14]).intl;
+      const intl = arr(closure_1_3[14]).intl;
+      obj[0] = intl.string(arr(closure_1_3[14]).t.w7wfXi);
+      const intl2 = arr(closure_1_3[14]).intl;
       obj = { maxNumAccounts: null };
       obj[0] = tmp;
-      obj[1] = intl2.formatToPlainString(arr(dependencyMap[14]).t.WOyelG, obj);
-      multiAccountUsers(dependencyMap[13]).show(obj);
-      const obj2 = multiAccountUsers(dependencyMap[13]);
+      obj[1] = intl2.formatToPlainString(arr(closure_1_3[14]).t.WOyelG, obj);
+      multiAccountUsers(closure_1_3[13]).show(obj);
+      const obj2 = multiAccountUsers(closure_1_3[13]);
     } else {
       arr = arr.push(closure_1_10.LOGIN);
-      obj = multiAccountUsers(dependencyMap[11]);
+      obj = multiAccountUsers(closure_1_3[11]);
       obj.track(closure_1_9.LOGIN_VIEWED, { source: "choose_account_add_account" });
     }
   };

@@ -1,9 +1,9 @@
 // === Module 13110: isHookModuleTooOld ===
 
 // Module 13110 (isHookModuleTooOld)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("lib/hook/Hook.native.tsx");
+const result = set.fileFinishedImporting("lib/hook/Hook.native.tsx");
 
 export function isHookModuleTooOld() {
   return true;

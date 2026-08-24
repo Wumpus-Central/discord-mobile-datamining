@@ -11,8 +11,13 @@ class GuildPromptsStore extends PersistedStore {
 const prototype = GuildPromptsStore.prototype;
 prototype["initialize"] = function initialize(obj) {
   for (const key10004 in arg0) {
+    let tmp = key10004;
+    let tmp2 = closure_0;
     let _Set = Set;
+    let tmp3 = new.target;
+    let tmp4 = new.target;
     let set = new Set(arg0[key10004]);
+    let tmp6 = set;
     closure_0[key10004] = set;
     continue;
   }
@@ -35,9 +40,10 @@ const guildPromptsStore = new GuildPromptsStore(dispatcherDefault, {
     if (null == dependencyMap[guildId]) {
       const _Set = Set;
       const set = new Set();
-      dependencyMap[guildId] = set;
-      dependencyMap[guildId].add(_prompt);
+      tmp[guildId] = set;
+      tmp[guildId].add(_prompt);
       let flag = true;
+      const obj2 = tmp[guildId];
     } else {
       const hasItem = obj.has(_prompt);
       flag = !hasItem;
@@ -59,6 +65,6 @@ const guildPromptsStore = new GuildPromptsStore(dispatcherDefault, {
     return flag;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild/GuildPromptsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild/GuildPromptsStore.tsx");
 
 export default guildPromptsStore;

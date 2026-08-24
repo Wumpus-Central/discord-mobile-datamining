@@ -4,23 +4,24 @@
 import ThemesDefault from "Themes" /* 712 */;
 import computeChannelNameDefault from "computeChannelName" /* 4984 */;
 import GatedContentDefault from "GatedContent" /* 11839 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getParticipants from "getParticipants" /* 4773 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "getParticipants" /* 4773 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 16 };
+createCacheKey = { subtitle: { textAlign: "center", lineHeight: 22 }, subtitleContainer: { alignItems: "center" }, divider: null, subtitleMeasure: null };
+createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { position: "absolute", opacity: 0, left: 0, right: 0 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/spoiler_channels/native/ChannelSpoiler.tsx");
+const result = require("set").fileFinishedImporting("modules/spoiler_channels/native/ChannelSpoiler.tsx");
 
 export default function ChannelSpoiler(channelId) {
   const _require = channelId;
@@ -47,12 +48,12 @@ export default function ChannelSpoiler(channelId) {
   const callback = obj3.useCallback(() => {
     if (closure_2) {
       if (closure_1_6.getChatOpen(channelId.channelId)) {
-        callback(isVocalResult[13]).updateChatOpen(channelId.channelId, false);
+        callback(isVocalResult[13]).updateChatOpen(tmp2.channelId, false);
         let obj = { mode: null };
-        obj[0] = VoicePanelControlsModes.FLOATING_DEFAULT;
+        obj[0] = closure_1_9.FLOATING_DEFAULT;
         setControlsMode(obj);
-        const obj2 = callback(isVocalResult[13]);
       }
+      tmp2 = channelId;
     }
     obj = callback(isVocalResult[14]);
     obj.nsfwReturnToSafety(channelId.guildId);
@@ -99,7 +100,7 @@ export default function ChannelSpoiler(channelId) {
     if ("" !== str.trim()) {
       obj1 = { spacing: 4, style: null, children: null };
       obj1[1] = tmp4.subtitleContainer;
-      let obj2 = { style: null, pointerEvents: "none", children: null };
+      const obj2 = { style: null, pointerEvents: "none", children: null };
       obj2[0] = tmp4.subtitleMeasure;
       obj3 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: null, children: null };
       obj3[2] = callback1;
@@ -133,6 +134,8 @@ export default function ChannelSpoiler(channelId) {
       items5[3] = callback(View, obj9);
       obj1[2] = items5;
       tmp23Result = callback2(tmp(4733).Stack, obj1);
+      const tmp23 = callback2;
+      const tmp25 = View;
     }
     str = stateFromStores1.topic;
   }

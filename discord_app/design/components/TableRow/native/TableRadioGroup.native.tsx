@@ -1,21 +1,22 @@
 // === Module 8101: context ===
 
 // Module 8101 (context)
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const context = importAllResult.createContext({ selectedValue: null, onSelect: require("ME").NOOP });
-const result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");
 
 export const TableRadioGroupContext = context;
 export const TableRadioGroup = function TableRadioGroup(arg0) {
   ({ value, defaultValue, onChange } = arg0);
+  let callback;
   importAllResult = undefined;
   jsx = undefined;
-  let callback;
+  callback = undefined;
   dependencyMap = tmp;
   let obj = importAllResult;
   let tmp2 = null;
@@ -59,7 +60,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     }
   }, items1);
   const items2 = [tmp4, callback];
-  { value: obj.useMemo(() => ({ selectedValue: c3, onSelect: callback }), items2), children: null };
+  obj = { value: obj.useMemo(() => ({ selectedValue: c3, onSelect: callback }), items2), children: null };
   obj = {
     accessibilityRole: "radiogroup",
     accessibilityLabel,

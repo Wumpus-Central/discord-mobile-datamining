@@ -1,7 +1,7 @@
 // === Module 15011: GUILD_SELECT_ALL_SERVERS_OPTION_ID ===
 
 // Module 15011 (GUILD_SELECT_ALL_SERVERS_OPTION_ID)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let closure_0 = { selectedGuildId: "0" };
@@ -17,7 +17,7 @@ let obj = keys.create((arg0) => {
   };
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
 export const useUserSafetySettingsSelectedGuildStore = obj;

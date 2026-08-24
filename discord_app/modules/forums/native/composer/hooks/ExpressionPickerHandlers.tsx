@@ -1,9 +1,9 @@
 // === Module 10174: usePressEmojiHandler ===
 
 // Module 10174 (usePressEmojiHandler)
-import noop from "noop" /* 19 */;
+import closure_0 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
 
 export const usePressEmojiHandler = function usePressEmojiHandler(selection) {
   selection = selection.selection;
@@ -11,6 +11,7 @@ export const usePressEmojiHandler = function usePressEmojiHandler(selection) {
   const handleTextChange = selection.handleTextChange;
   const focusTextInput = selection.focusTextInput;
   const setSelection = selection.setSelection;
+  closure_5 = undefined;
   closure_5 = selection.useRef({ selection, draftContent, handleTextChange, focusTextInput, setSelection });
   const effect = selection.useEffect(() => {
     closure_5.current = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
@@ -66,11 +67,11 @@ export const usePressGIFHandler = function usePressGIFHandler(selection) {
     }
     const substr1 = draftContent.substring(start);
     if (substr.endsWith(" ")) {
-      handleTextChange(substr + url + substr1);
+      tmp4(substr + url + substr1);
       let length = substr + url.length;
     } else {
       const _HermesInternal = HermesInternal;
-      handleTextChange(substr + " " + url + substr1);
+      tmp4(substr + " " + url + substr1);
       const _HermesInternal2 = HermesInternal;
       length = substr + " " + url.length;
     }

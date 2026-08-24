@@ -4,12 +4,12 @@
 import isStreamKey from "isStreamKey" /* 4531 */;
 import mapped from "mapped" /* 9668 */;
 import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17055 */;
-import reset from "reset" /* 4652 */;
-import getHookError from "getHookError" /* 4563 */;
+import closure_2 from "reset" /* 4652 */;
+import closure_3 from "getHookError" /* 4563 */;
 import { MediaEngineHookTypes } from "ME" /* 676 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");
 
 export const AVErrorStreamSoundshareFailedDefinition = {
   getActiveErrors() {
@@ -23,6 +23,7 @@ export const AVErrorStreamSoundshareFailedDefinition = {
         const merged = Object.assign(obj2.getStreamErrorContext(isStreamKey.encodeStreamKey(currentUserActiveStream)));
         const items = [obj];
         tmp2 = items;
+        const obj3 = isStreamKey;
       }
     }
     return tmp2;

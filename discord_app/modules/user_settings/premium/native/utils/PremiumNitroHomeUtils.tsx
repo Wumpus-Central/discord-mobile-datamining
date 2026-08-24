@@ -1,12 +1,12 @@
 // === Module 12874: trackIfScrolledToBottom ===
 
 // Module 12874 (trackIfScrolledToBottom)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx");
 
 export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedType) {
   ({ nativeEvent, hasTrackedScrolledToBottom } = trackedType);
@@ -20,7 +20,8 @@ export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedT
     current = sum < Math.floor(tmp3.height);
   }
   if (!current) {
-    const obj = { type: null };
+    let obj = expandEventPropertiesDefault;
+    obj = { type: null };
     obj[0] = trackedType.trackedType;
     obj.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);
     hasTrackedScrolledToBottom.current = true;

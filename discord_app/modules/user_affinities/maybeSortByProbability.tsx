@@ -1,9 +1,9 @@
 // === Module 8284: maybeSortByProbability ===
 
 // Module 8284 (maybeSortByProbability)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
+const result = set.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
 export const maybeSortByProbability = function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   let sort = reduced;

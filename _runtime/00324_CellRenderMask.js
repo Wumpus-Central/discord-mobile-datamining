@@ -2,8 +2,8 @@
 
 // Module 324 (CellRenderMask)
 import _createClassDefault from "_createClass" /* 42 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 
 const CellRenderMask = importDefault;
 class CellRenderMask {
@@ -90,7 +90,6 @@ let items = [
         items1.push(obj);
         const tmp26 = callback(self._findRegion(VirtualizedList.last), 2);
       }
-      const tmp = CellRenderMask(38);
     }
   },
   {
@@ -107,14 +106,14 @@ let items = [
       let everyResult = this._numCells === _numCells._numCells && self._regions.length === _numCells._regions.length;
       if (everyResult) {
         const _regions = self._regions;
-        everyResult = _regions.every((item, index) => item.first === _regions._regions[index].first && item.last === _regions._regions[index].last && item.isSpacer === _regions._regions[index].isSpacer);
+        everyResult = _regions.every((first) => first.first === _regions._regions[arg1].first && first.last === _regions._regions[arg1].last && first.isSpacer === _regions._regions[arg1].isSpacer);
       }
       return everyResult;
     }
   },
   {
     key: "_findRegion",
-    value: function _findRegion(VirtualizedList) {
+    value: function _findRegion(first) {
       let rounded;
       let tmp4;
       let diff = this._regions.length - 1;
@@ -124,18 +123,20 @@ let items = [
           let _Math = Math;
           rounded = Math.floor((num + diff) / 2);
           tmp4 = tmp._regions[rounded];
-          if (VirtualizedList >= tmp4.first) {
-            if (VirtualizedList <= tmp4.last) {
+          let tmp5 = diff;
+          let tmp6 = num;
+          if (first >= tmp4.first) {
+            if (first <= tmp4.last) {
               break;
             }
           }
-          if (VirtualizedList < tmp4.first) {
+          if (first < tmp4.first) {
             let diff1 = rounded - 1;
             let sum = num;
           } else {
             diff1 = diff;
             sum = num;
-            if (VirtualizedList > tmp4.last) {
+            if (first > tmp4.last) {
               sum = rounded + 1;
               diff1 = diff;
             }
@@ -146,7 +147,7 @@ let items = [
         const items = [tmp4, rounded];
         return items;
       }
-      CellRenderMask(38)(false, "A region was not found containing cellIdx " + VirtualizedList);
+      CellRenderMask(38)(false, "A region was not found containing cellIdx " + first);
     }
   }
 ];

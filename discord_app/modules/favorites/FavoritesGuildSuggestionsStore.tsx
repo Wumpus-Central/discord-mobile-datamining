@@ -1,17 +1,17 @@
 // === Module 15464: items ===
 
 // Module 15464 (items)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import withContent from "withContent" /* 1383 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "withContent" /* 1383 */;
 import { NOOP } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import keys from "keys" /* 644 */;
 
-const require = fn;
+const require = arg1;
 let items = [];
 let closure_8 = keys.create(() => ({ suggestions: items, dismiss: NOOP }));
-const result = require("obj132").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsStore.tsx");
 
 export const NO_SUGGESTIONS = items;
 export const useFavoritesGuildSuggestions = function useFavoritesGuildSuggestions() {

@@ -2,12 +2,12 @@
 
 // Module 15247 (ExternalLink)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ Linking: c4, ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
@@ -17,13 +17,13 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     str = "space-between";
   }
   container[3] = str;
-  const space = ThemesDefault.space;
+  const space = tmp(712).space;
   container[4] = arg0 ? space.PX_24 : space.PX_16;
-  const space2 = ThemesDefault.space;
+  const space2 = tmp(712).space;
   container[5] = arg0 ? space2.PX_24 : space2.PX_16;
   return { container, description: { textAlign: "center", marginTop: 8 } };
 });
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/ExternalLink.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/ExternalLink.tsx");
 
 export default function ExternalLink(externalURL) {
   externalURL = externalURL.externalURL;
@@ -40,6 +40,7 @@ export default function ExternalLink(externalURL) {
   const effect = React.useEffect(() => {
     callback();
   }, items1);
+  obj = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: tmp.container, children: null };
   obj = { children: null };
   obj1 = { children: null };
   const intl = externalURL(callback[8]).intl;

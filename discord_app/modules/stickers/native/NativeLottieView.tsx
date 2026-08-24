@@ -6,12 +6,12 @@ import jsxProd from "jsxProd" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8219 */;
 import noop from "noop" /* 19 */;
-import noop2 from "noop" /* 19 */;
-import obj132 from "obj132" /* 500 */;
+import closure_2 from "noop" /* 19 */;
+import set from "set" /* 500 */;
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
 let jsx = jsxProd.jsx;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
 } else {
   importDefaultResult = get_ActivityIndicator.requireNativeComponent("NativeLottieNode");
@@ -19,7 +19,7 @@ if (obj132.isAndroid()) {
 let c4 = importDefaultResult;
 let closure_5 = codegenNativeCommandsDefault({ supportedCommands: ["setup"] });
 let obj = { LOOP: 0, [0]: "LOOP", STILL: 1, [1]: "STILL", ONCE: 2, [2]: "ONCE" };
-const result = obj132.fileFinishedImporting("modules/stickers/native/NativeLottieView.tsx");
+const result = set.fileFinishedImporting("modules/stickers/native/NativeLottieView.tsx");
 
 export default function NativeLottieView(accessibilityLabel) {
   ({ width, height, opacity } = accessibilityLabel);
@@ -35,8 +35,10 @@ export default function NativeLottieView(accessibilityLabel) {
   if (flag === undefined) {
     flag = true;
   }
+  let ref;
   obj = undefined;
-  const ref = obj.useRef(null);
+  jsx = undefined;
+  ref = obj.useRef(null);
   obj = { asset, url, width, height, animating: flag, accessibilityLabel: accessibilityLabel.accessibilityLabel };
   jsx = ref(obj);
   LOOP(() => {
@@ -53,7 +55,7 @@ export default function NativeLottieView(accessibilityLabel) {
       tmp2 = 0 !== height;
     }
     if (tmp2) {
-      closure_1_5.setup(ref.current, asset, url, width, height, LOOP, animating, accessibilityLabel);
+      closure_1_5.setup(ref.current, asset, url, width, height, tmp, animating, accessibilityLabel);
     }
   }, items);
   return <closure_4 ref={ref} style={{ width, height, opacity }} />;

@@ -5,28 +5,30 @@ import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import databaseNameDefault from "databaseName" /* 1971 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { PersistedStore } from "getClass" /* 590 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  let obj = { title: store.getName() };
+  let obj = { header: null, children: null };
+  obj = { title: store.getName() };
   obj[0] = jsx(store(6949).BottomSheetTitleHeader, { title: store.getName() });
   obj = { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) };
   obj[1] = jsx(store(7177).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) });
   return jsx(store(7175).ActionSheet, { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) });
 }
 let c4 = importAllResult;
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_12, flex: 1 };
+let obj = { container: null, sectionHeader: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_12, flex: 1 };
 obj[0] = obj;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
 obj[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
@@ -39,7 +41,6 @@ let closure_10 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
       callback(table[10]).open({ key: "disable_database", content: "Database has been disabled." });
       const tmpResult = callback(table[10]);
     }
-    const obj = callback(table[9]);
   }
 }));
 let closure_11 = importAllResult.memo(() => {
@@ -86,7 +87,7 @@ let closure_13 = importAllResult.memo(() => {
   });
 });
 let closure_14 = { DATABASE_CONTROLS: 0, [0]: "DATABASE_CONTROLS", DATABASE_CURRENT: 1, [1]: "DATABASE_CURRENT", PERSISTED_STORES: 2, [2]: "PERSISTED_STORES" };
-let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx");
 
 export default function DevToolsDataStorageScreen() {
   const tmp = callback2();
@@ -97,10 +98,10 @@ export default function DevToolsDataStorageScreen() {
     closure_0 = arg0;
     PersistedStore = found(persistedStores[11]).PersistedStore;
     const all = PersistedStore.getAll();
-    found = all.filter((item, index) => {
-      let hasItem = item instanceof closure_1_6;
+    found = all.filter((getName) => {
+      let hasItem = getName instanceof closure_1_6;
       if (hasItem) {
-        const name = item.getName();
+        const name = getName.getName();
         hasItem = name.toLocaleLowerCase().includes(closure_0.toLocaleLowerCase());
         const toLocaleLowerCaseResult = name.toLocaleLowerCase();
       }
@@ -109,12 +110,12 @@ export default function DevToolsDataStorageScreen() {
     const items = [, , ];
     ({ DATABASE_CONTROLS: arr2[0], DATABASE_CURRENT: arr2[1], PERSISTED_STORES: arr2[2] } = closure_14);
     return {
-      sections: items.map((item, index) => {
-        if (closure_1_14.DATABASE_CONTROLS === item) {
+      sections: items.map((arg0) => {
+        if (closure_1_14.DATABASE_CONTROLS === arg0) {
           return 3;
-        } else if (closure_1_14.DATABASE_CURRENT === item) {
+        } else if (tmp.DATABASE_CURRENT === arg0) {
           return 1;
-        } else if (closure_1_14.PERSISTED_STORES === item) {
+        } else if (tmp.PERSISTED_STORES === arg0) {
           let num3 = 1;
           if (found.length > 0) {
             num3 = found.length;
@@ -135,40 +136,42 @@ export default function DevToolsDataStorageScreen() {
     const lib = arg1;
     if (closure_1_14.DATABASE_CONTROLS === arg0) {
       if (0 === arg1) {
-        return <closure_1_10 />;
+        return closure_1_8(closure_1_10, {});
       } else if (1 === arg1) {
-        return <closure_1_12 />;
+        return closure_1_8(closure_1_12, {});
       } else if (2 === arg1) {
-        return <closure_1_13 />;
+        return closure_1_8(closure_1_13, {});
       } else {
         return null;
       }
-    } else if (closure_1_14.DATABASE_CURRENT === arg0) {
+    } else if (tmp.DATABASE_CURRENT === arg0) {
       let tmp14 = null;
       if (0 === arg1) {
-        tmp14 = <closure_1_11 />;
+        tmp14 = closure_1_8(closure_1_11, {});
       }
       return tmp14;
-    } else if (closure_1_14.PERSISTED_STORES === arg0) {
+    } else if (tmp.PERSISTED_STORES === arg0) {
       if (0 === arg1) {
-        let obj = { size: "md", onChange: null };
+        let obj = { label: null, start: true };
+        obj = { size: "md", onChange: null };
         obj[1] = function onChange(arg0) {
           return callback2(callback(arg0));
         };
-        obj[0] = jsx(lib(persistedStores[18]).SearchField, { size: "md", onChange: null });
-        return jsx(lib(persistedStores[8]).TableRow, { size: "md", onChange: null });
+        obj[0] = closure_1_8(lib(persistedStores[18]).SearchField, obj);
+        return closure_1_8(lib(persistedStores[8]).TableRow, obj);
       } else {
         if (1 === arg1) {
           if (0 === persistedStores.length) {
-            return jsx(lib(persistedStores[8]).TableRow, { label: "No results found.", end: true });
+            return closure_1_8(lib(persistedStores[8]).TableRow, { label: "No results found.", end: true });
           }
         }
         obj = { label: null, end: null, onPress: null };
         obj[0] = persistedStores[arg1 - 1].getName();
         obj[1] = arg1 === persistedStores.length;
         obj[2] = function onPress() {
-          callback(persistedStores[19]);
-          const obj = {
+          let obj = callback(persistedStores[19]);
+          obj = { default: closure_2_15 };
+          obj = {
             store: closure_1_2[closure_0 - 1],
             close() {
               return callback(table[19]).hideActionSheet("DevToolsPersistedStoresActionSheet");
@@ -176,7 +179,7 @@ export default function DevToolsDataStorageScreen() {
           };
           obj.openLazy(Promise.resolve(obj), "DevToolsPersistedStoresActionSheet", obj);
         };
-        return jsx(lib(persistedStores[8]).TableRow, { label: null, end: null, onPress: null });
+        return closure_1_8(lib(persistedStores[8]).TableRow, obj);
       }
     } else {
       return null;
@@ -187,14 +190,14 @@ export default function DevToolsDataStorageScreen() {
     let str = "Database Controls";
     if (closure_1_14.DATABASE_CONTROLS !== arg0) {
       str = "Database (Current)";
-      if (closure_1_14.DATABASE_CURRENT !== arg0) {
-        if (closure_1_14.PERSISTED_STORES === arg0) {
+      if (tmp2.DATABASE_CURRENT !== arg0) {
+        if (tmp2.PERSISTED_STORES === arg0) {
           str = "Persisted Stores";
         }
       }
     }
     obj[3] = str;
-    return jsx(lib(persistedStores[20]).Text, { style: lib.sectionHeader, variant: "text-sm/semibold", color: "text-default", children: null });
+    return closure_1_8(lib(persistedStores[20]).Text, obj);
   }, items1);
   let obj = { sections: first.sections, renderItem: callback1, renderSectionHeader: callback2, insetEnd: null, itemSize: null, sectionHeaderSize: null, estimatedListSize: "windowSize", placeholderConfig: null, wrapChildren: true };
   const tmp4 = callback(persistedStores[17])();

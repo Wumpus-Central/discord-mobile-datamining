@@ -1,9 +1,9 @@
 // === Module 4778: getParticipantUserKey ===
 
 // Module 4778 (getParticipantUserKey)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/calls/getParticipantUserKey.tsx");
+const result = set.fileFinishedImporting("modules/calls/getParticipantUserKey.tsx");
 
 export default function getParticipantUserKey(str, id) {
   const formatted = str.toLowerCase();

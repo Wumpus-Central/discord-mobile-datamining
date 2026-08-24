@@ -1,13 +1,13 @@
 // === Module 8171: frozen ===
 
 // Module 8171 (frozen)
-import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "set" /* 2 */;
 
 const Image = get_ActivityIndicator.Image;
-const frozen = Object.freeze(new Set(["YouTube", "TikTok"]));
-const set = new Set(["YouTube", "TikTok"]);
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");
+let set = new Set(["YouTube", "TikTok"]);
+const frozen = Object.freeze(set);
+const result = set.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");
 
 export const getAssetUriForEmbed = function getAssetUriForEmbed(Image) {
   return Image.resolveAssetSource(Image).uri;

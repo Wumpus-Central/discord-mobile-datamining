@@ -1,10 +1,10 @@
 // === Module 7447: trackingConfigWithDefaults ===
 
 // Module 7447 (trackingConfigWithDefaults)
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_0 from "fetchFingerprint" /* 1218 */;
 import { LinkType } from "LinkType" /* 7442 */;
 
-const result = require("obj132").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 
 export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id) {
   let str;

@@ -2,14 +2,14 @@
 
 // Module 16317 (VoiceControlsNuxActionSheetImporter)
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import getParticipants from "getParticipants" /* 4773 */;
+import closure_5 from "getParticipants" /* 4773 */;
 import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
 import { isActivityParticipant } from "ParticipantTypes" /* 4544 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function VoiceControlsNuxActionSheetImporter() {
   return asyncRequireImpl(16318, dependencyMap.paths);
 }
@@ -27,14 +27,14 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
   callback = callback.useCallback((arg0) => {
     let tmp = null != arg0;
     if (tmp) {
-      tmp = isActivityParticipant(closure_1_5.getParticipant(channelId, arg0));
+      tmp = closure_1_7(closure_1_5.getParticipant(channelId, arg0));
     }
     callback(tmp);
   }, items);
-  channelId(mode[9]);
+  let obj = channelId(mode[9]);
   const fn = function h() {
     let tmp;
-    if (mode.get() === VoicePanelModes.PANEL) {
+    if (mode.get() === closure_1_6.PANEL) {
       const value = focused.get();
       let id;
       if (value != null) {
@@ -44,7 +44,7 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
     }
     return tmp;
   };
-  let obj = { mode, VoicePanelModes, focused };
+  obj = { mode, VoicePanelModes, focused };
   fn.__closure = obj;
   fn.__workletHash = 11330064461661;
   fn.__initData = closure_10;
@@ -80,6 +80,6 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
     }
   });
 });
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx");
 
 export default memoResult;

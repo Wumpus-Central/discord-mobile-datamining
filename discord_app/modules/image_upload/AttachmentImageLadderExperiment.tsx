@@ -1,7 +1,7 @@
 // === Module 1470: apexExperiment ===
 
 // Module 1470 (apexExperiment)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import items from "items" /* 1471 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
@@ -14,7 +14,7 @@ obj1.enabled = true;
 obj[1] = obj1;
 obj[3] = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const result = obj132.fileFinishedImporting("modules/image_upload/AttachmentImageLadderExperiment.tsx");
+const result = set.fileFinishedImporting("modules/image_upload/AttachmentImageLadderExperiment.tsx");
 
 export default apexExperiment;
 export const getAttachmentImageLadderConfig = function getAttachmentImageLadderConfig(location) {

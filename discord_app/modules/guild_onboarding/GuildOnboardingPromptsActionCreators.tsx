@@ -4,31 +4,35 @@
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
-import handleUpdate from "handleUpdate" /* 6788 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "handleUpdate" /* 6788 */;
 import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 5286 */;
 import ME from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 
-require = fn;
+require = arg1;
 function fetchOnboardingPrompts(guildId) {
   const _require = guildId;
-  let obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_START", guildId };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_START", guildId };
   obj.dispatch(obj);
   const HTTP = _require(530).HTTP;
   obj = { url: closure_10.GUILD_ONBOARDING(guildId), rejectWithError: false };
   const value = HTTP.get(obj);
-  return value.then((result) => {
-    const tmp = closure_1_8(result.body);
+  return value.then((body) => {
+    closure_0 = undefined;
+    const tmp = closure_1_8(body.body);
     closure_0 = tmp;
-    const obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS", guildId: closure_0 };
+    let obj = closure_1_1(closure_1_2[10]);
+    obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS", guildId: closure_0 };
     const merged = Object.assign(tmp);
-    return obj.dispatch(obj).then((result) => prompts.prompts);
+    return obj.dispatch(obj).then(() => prompts.prompts);
   }, (arg0) => {
-    const obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE", guildId: closure_0 };
+    let obj = closure_1_1(closure_1_2[10]);
+    obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE", guildId: closure_0 };
     obj.dispatch(obj);
     return arg0;
   });
@@ -80,19 +84,19 @@ function _maybeFetchOnboardingPrompts() {
               num2 = flags;
               const hasFlagResult = callback(closure_1_2[12]).hasFlag(num2, closure_1_12.COMPLETED_ONBOARDING);
               num2 = hasFlagResult;
-              const guild = closure_1_6.getGuild(callback);
+              const guild = closure_1_6.getGuild(tmp49);
               if (null != guild) {
                 const features = guild.features;
                 if (features.has(closure_1_11.GUILD_ONBOARDING)) {
-                  const onboardingPrompts = closure_1_7.getOnboardingPrompts(callback);
+                  const onboardingPrompts = closure_1_7.getOnboardingPrompts(tmp49);
                   if (!shouldFetchPromptsResult) {
                     if (onboardingPrompts.length > num2) {
-                      if (onboardingPrompts.every((item, index) => !item.inOnboarding)) {
-                        closure_1_17(callback);
+                      if (onboardingPrompts.every((inOnboarding) => !inOnboarding.inOnboarding)) {
+                        closure_1_17(tmp49);
                         const resolved = Promise.resolve();
                       } else {
                         if (!hasFlagResult) {
-                          closure_1_15(callback);
+                          closure_1_15(tmp49);
                         }
                         const resolved1 = Promise.resolve();
                       }
@@ -102,7 +106,7 @@ function _maybeFetchOnboardingPrompts() {
                   id = 1;
                   member = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_13(callback);
+                  obj1[0] = closure_1_13(tmp49);
                   return obj1;
                 }
               }
@@ -151,15 +155,18 @@ function _maybeFetchOnboardingPrompts() {
   return applyArgumentsResult;
 }
 function startOnboarding(guildId) {
-  const obj = { type: "GUILD_ONBOARDING_START", guildId };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_ONBOARDING_START", guildId };
   obj.dispatch(obj);
 }
 function _trackOnboardingDirectJoin(guildId) {
-  let obj = {};
+  let obj = expandEventPropertiesDefault;
+  obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
   obj.required = true;
   obj.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj);
+  const obj3 = collectGuildAnalyticsMetadata;
   obj = {};
   const obj4 = expandEventPropertiesDefault;
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
@@ -171,10 +178,11 @@ function _trackOnboardingDirectJoin(guildId) {
 }
 ({ AnalyticEvents: c9, Endpoints: c10, GuildFeatures: unpackModuleId } = ME);
 let c16 = -2;
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");
 
 export const loadOnboardingPrompts = function loadOnboardingPrompts(guildId) {
-  const obj = {};
+  let obj = expandEventPropertiesDefault;
+  obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.has_new_prompts = false;
   obj.number_of_prompts = 0;

@@ -1,7 +1,7 @@
 // === Module 1968: prefix ===
 
 // Module 1968 (prefix)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
 import TableId from "TableId" /* 1962 */;
 
@@ -115,12 +115,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof GuildEntityDaoTransaction !== "function") {
+    if (typeof closure_1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(GuildEntityDaoTransaction.prototype);
+    const obj = Object.create(closure_1_3.prototype);
     obj.transaction = transaction;
-    return callback(obj);
+    return closure_0(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
@@ -190,7 +190,7 @@ prototype2["putAll"] = function putAll(arg0, arr) {
     Replace = _require(1962).ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  return transaction.putAll(arr.map((item, index) => GuildEntityDao.cell(closure_0, item, null)), Replace);
+  return transaction.putAll(arr.map((arg0) => closure_1_2.cell(closure_0, arg0, null)), Replace);
 };
 prototype2["replaceAll"] = function replaceAll(arg0, arg1) {
   this.delete(arg0);
@@ -220,7 +220,7 @@ prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
   const transaction = this.transaction;
   return transaction.deleteGeneration([], arg0, arg1);
 };
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
 
 export { GuildEntityDao };
 export { GuildEntityDaoTransaction };

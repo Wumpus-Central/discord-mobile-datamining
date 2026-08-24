@@ -5,19 +5,19 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import updateImpersonating from "updateImpersonating" /* 6792 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import initialize from "initialize" /* 1982 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
-import handleUpdate from "handleUpdate" /* 6788 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "initialize" /* 1982 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "handleUpdate" /* 6788 */;
 import ME from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
 import importDefaultResult from "apply" /* 12 */;
 
-require = fn;
+require = arg1;
 function _updateOnboardingResponses(guildId, arg1) {
   const _require = guildId;
   let flag = arg1;
@@ -26,6 +26,7 @@ function _updateOnboardingResponses(guildId, arg1) {
   }
   let onboardingResponses;
   let obj;
+  obj = undefined;
   if (!closure_5.isFullServerPreview(guildId)) {
     obj = closure_9;
     if (flag) {
@@ -36,18 +37,19 @@ function _updateOnboardingResponses(guildId, arg1) {
       obj1 = obj;
     }
     onboardingResponses = obj1.getOnboardingResponses(guildId);
-    const mapped = onboardingPromptsForOnboarding.map((item, index) => {
-      const options = item.options;
-      return options.filter((item, index) => closure_1.includes(item.id));
+    const mapped = onboardingPromptsForOnboarding.map((options) => {
+      options = options.options;
+      return options.filter((id) => closure_1.includes(id.id));
     });
     const flatResult = mapped.flat();
     obj = {};
-    let item = onboardingPromptsForOnboarding.forEach((item, index) => {
-      obj[item.id] = Date.now();
-      const options = item.options;
-      item = options.forEach((item, index) => {
+    obj = {};
+    let item = onboardingPromptsForOnboarding.forEach((id) => {
+      obj[id.id] = Date.now();
+      const options = id.options;
+      const item = options.forEach((id) => {
         const timestamp = Date.now();
-        closure_3[item.id] = timestamp;
+        closure_3[id.id] = timestamp;
         return timestamp;
       });
     });
@@ -56,33 +58,33 @@ function _updateOnboardingResponses(guildId, arg1) {
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_12.GUILD_ONBOARDING_RESPONSES(guildId);
       const obj2 = { onboarding_responses: null, onboarding_prompts_seen: null, onboarding_responses_seen: null };
-      obj2[0] = flatResult.map((item, index) => item.id);
+      obj2[0] = flatResult.map((id) => id.id);
       obj2[1] = obj;
       obj2[2] = obj;
       obj1[1] = obj2;
       const postResult = HTTP.post(obj1);
-      let catchPromise = HTTP.post(obj1).then((result) => {
-        if (null != result.body) {
-          callback(obj[11]);
+      let catchPromise = HTTP.post(obj1).then((body) => {
+        if (null != body.body) {
+          obj = callback(obj[11]);
           obj = { type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS", guildId: null, options: null, prompts_seen: null, options_seen: null };
           obj[1] = closure_0;
-          obj[2] = result.body.onboarding_responses;
-          obj[3] = result.body.onboarding_prompts_seen;
-          obj[4] = result.body.onboarding_responses_seen;
+          obj[2] = body.body.onboarding_responses;
+          obj[3] = body.body.onboarding_prompts_seen;
+          obj[4] = body.body.onboarding_responses_seen;
           obj.dispatch(obj);
         }
-      }).catch((error) => {
+      }).catch((arg0) => {
         obj = callback(obj[12]);
-        return obj.captureException(error);
+        return obj.captureException(arg0);
       });
-      const nextPromise = HTTP.post(obj1).then((result) => {
-        if (null != result.body) {
-          callback(obj[11]);
+      const nextPromise = HTTP.post(obj1).then((body) => {
+        if (null != body.body) {
+          obj = callback(obj[11]);
           obj = { type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS", guildId: null, options: null, prompts_seen: null, options_seen: null };
           obj[1] = closure_0;
-          obj[2] = result.body.onboarding_responses;
-          obj[3] = result.body.onboarding_prompts_seen;
-          obj[4] = result.body.onboarding_responses_seen;
+          obj[2] = body.body.onboarding_responses;
+          obj[3] = body.body.onboarding_prompts_seen;
+          obj[4] = body.body.onboarding_responses_seen;
           obj.dispatch(obj);
         }
       });
@@ -90,35 +92,35 @@ function _updateOnboardingResponses(guildId, arg1) {
       const obj3 = { url: null, body: null, rejectWithError: false };
       obj3[0] = closure_12.GUILD_ONBOARDING_RESPONSES(guildId);
       const obj4 = { onboarding_responses: null, onboarding_prompts_seen: null, onboarding_responses_seen: null };
-      obj4[0] = flatResult.map((item, index) => item.id);
+      obj4[0] = flatResult.map((id) => id.id);
       obj4[1] = obj;
       obj4[2] = obj;
       obj3[1] = obj4;
       const putResult = HTTP.put(obj3);
-      catchPromise = HTTP.put(obj3).then((result) => {
-        if (null != result.body) {
-          callback(obj[11]);
+      catchPromise = HTTP.put(obj3).then((body) => {
+        if (null != body.body) {
+          obj = callback(obj[11]);
           obj = { type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS", guildId: null, options: null, prompts_seen: null, options_seen: null };
           obj[1] = closure_0;
-          obj[2] = result.body.onboarding_responses;
-          obj[3] = result.body.onboarding_prompts_seen;
-          obj[4] = result.body.onboarding_responses_seen;
+          obj[2] = body.body.onboarding_responses;
+          obj[3] = body.body.onboarding_prompts_seen;
+          obj[4] = body.body.onboarding_responses_seen;
           obj.dispatch(obj);
         }
-      }).catch((error) => {
-        callback(obj[12]);
-        obj = { cause: error };
-        error = new Error("Failed to update onboarding responses for guild " + closure_0 + ": " + error.statusCode, obj);
+      }).catch((cause) => {
+        obj = callback(obj[12]);
+        obj = { cause };
+        error = new Error("Failed to update onboarding responses for guild " + closure_0 + ": " + cause.statusCode, obj);
         obj.captureException(error);
       });
-      const nextPromise1 = HTTP.put(obj3).then((result) => {
-        if (null != result.body) {
-          callback(obj[11]);
+      const nextPromise1 = HTTP.put(obj3).then((body) => {
+        if (null != body.body) {
+          obj = callback(obj[11]);
           obj = { type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS", guildId: null, options: null, prompts_seen: null, options_seen: null };
           obj[1] = closure_0;
-          obj[2] = result.body.onboarding_responses;
-          obj[3] = result.body.onboarding_prompts_seen;
-          obj[4] = result.body.onboarding_responses_seen;
+          obj[2] = body.body.onboarding_responses;
+          obj[3] = body.body.onboarding_prompts_seen;
+          obj[4] = body.body.onboarding_responses_seen;
           obj.dispatch(obj);
         }
       });
@@ -128,28 +130,30 @@ function _updateOnboardingResponses(guildId, arg1) {
 }
 ({ AnalyticEvents: c10, AnalyticsPages: unpackModuleId, Endpoints: closure_12 } = ME);
 let obj = {
-  selectOption(closure_0, id, id2, arg3) {
+  selectOption(guildId, id, id2, arg3) {
     let dispatch = store2.getOnboardingPrompt(id);
     if (null != dispatch) {
       if (dispatch.singleSelect) {
         let obj = importDefaultResult;
         let withoutResult = obj.without(importDefaultResult.map(dispatch.options, "id"), id2);
+        const arr2 = importDefaultResult;
       } else {
         withoutResult = [];
       }
       dispatch = dispatcherDefault.dispatch;
       obj = { type: "GUILD_ONBOARDING_SELECT_OPTION", guildId: null, promptId: null, optionId: null, selected: null, removedOptionIds: null };
-      obj[1] = closure_0;
+      obj[1] = guildId;
       obj[2] = id;
       obj[3] = id2;
       obj[4] = arg3;
       obj[5] = withoutResult;
       dispatch(obj);
+      const tmp7 = dispatcherDefault;
     }
   },
   updateOnboardingResponses: importDefaultResult.debounce(_updateOnboardingResponses, 1000),
-  updateRolesLocal(closure_0, items2, differenceResult1) {
-    const selfMember = store.getSelfMember(closure_0);
+  updateRolesLocal(guildId, items2, differenceResult1) {
+    const selfMember = store.getSelfMember(guildId);
     let roles;
     if (selfMember != null) {
       roles = selfMember.roles;
@@ -157,19 +161,22 @@ let obj = {
     if (roles == null) {
       roles = [];
     }
-    if (closure_5.isViewingRoles(closure_0)) {
+    if (closure_5.isViewingRoles(guildId)) {
       const obj5 = updateImpersonating;
       const obj6 = importDefaultResult;
-      const result = obj5.updateImpersonatedRoles(closure_0, obj6.difference(importDefaultResult.union(roles, items2), differenceResult1));
+      const result = obj5.updateImpersonatedRoles(guildId, obj6.difference(importDefaultResult.union(roles, items2), differenceResult1));
+      const obj7 = importDefaultResult;
     } else {
       if (tmp2) {
-        const obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, addedRoleIds: null, removedRoleIds: null };
-        obj[1] = closure_0;
+        let obj = dispatcherDefault;
+        obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, addedRoleIds: null, removedRoleIds: null };
+        obj[1] = guildId;
         const obj3 = importDefaultResult;
         obj[2] = obj3.difference(importDefaultResult.union(roles, items2), differenceResult1);
         obj[3] = items2;
         obj[4] = differenceResult1;
         obj.dispatch(obj);
+        const obj4 = importDefaultResult;
       }
       tmp2 = items2.length > 0 || differenceResult1.length > 0;
     }
@@ -193,7 +200,7 @@ let obj = {
     const obj3 = items1(5285);
     [arr3, arr4] = callback2(tmp2Result.getChannelCoverageForOnboarding(guildId, prompts, defaultChannelIds), 2);
     const items = [...defaultChannelIds];
-    const mapped = items.map((item, index) => channel.getChannel(item));
+    const mapped = items.map((arg0) => channel.getChannel(arg0));
     const found = mapped.filter(tmp2(1370).isNotNullish);
     tmp2Result = tmp2(6793);
     const tmp6 = callback2(tmp2Result.getChannelCoverageForOnboarding(guildId, prompts, defaultChannelIds), 2);
@@ -201,13 +208,14 @@ let obj = {
       items1 = [];
     } else {
       const options = tmp.options;
-      items1 = options.map((item, index) => item.id);
+      items1 = options.map((id) => id.id);
     }
     const connections = obj.getConnections(guildId);
     const set = new Set(items);
     const providerConnectionState = items1(5285).getProviderConnectionState(connections);
     const tmp2Result1 = items1(5285);
     const applicationConnectionState = items1(5285).getApplicationConnectionState(connections);
+    const tmp12 = importDefault;
     const tmp2Result2 = items1(5285);
     obj = {};
     const obj8 = expandEventPropertiesDefault;
@@ -215,7 +223,7 @@ let obj = {
     obj.step = prompts.length - 1;
     let num2 = 0;
     if (null != tmp) {
-      num2 = selectedOptions.filter((item, index) => items1.includes(item.id)).length;
+      num2 = selectedOptions.filter((id) => items1.includes(id.id)).length;
     }
     obj.options_selected = num2;
     obj.skipped = items1.length > 0;
@@ -224,8 +232,8 @@ let obj = {
     obj.is_final_step = true;
     obj.roles_granted = selectedRoleIds.size;
     obj.channels_granted = tmp2Result.getFlattenedChannels(guildId, set, found, true).length;
-    obj.guild_onboarding_covered_channel_ids = arr3.map((item, index) => item.id);
-    obj.guild_onboarding_uncovered_channel_ids = arr4.map((item, index) => item.id);
+    obj.guild_onboarding_covered_channel_ids = arr3.map((id) => id.id);
+    obj.guild_onboarding_uncovered_channel_ids = arr4.map((id) => id.id);
     ({ connected: obj9.provider_connections_connected, notConnected: obj9.provider_connections_not_connected } = providerConnectionState);
     ({ connected: obj9.application_connections_connected, notConnected: obj9.application_connections_not_connected } = applicationConnectionState);
     obj8.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj);
@@ -260,7 +268,6 @@ let obj = {
       }
       const tmp2Result7 = tmp2(6792);
     }
-    const tmp12Result = DISCORD_EPOCHDefault;
   },
   onboardExistingMember(id, set) {
     set = new Set(set);
@@ -270,7 +277,7 @@ let obj = {
     } else {
       defaultChannelIds = [];
     }
-    const item = defaultChannelIds.forEach((item, index) => set.add(item));
+    const item = defaultChannelIds.forEach((arg0) => set.add(arg0));
     if (set.size > 0) {
       const obj2 = set(6794);
       const _Array = Array;
@@ -279,12 +286,14 @@ let obj = {
       obj2.bulkOptInChannels(id, Array.from(set), true, obj);
     }
   },
-  finishOnboarding(closure_0) {
-    const obj = { type: "GUILD_ONBOARDING_COMPLETE", guildId: closure_0 };
+  finishOnboarding(guildId) {
+    let obj = dispatcherDefault;
+    obj = { type: "GUILD_ONBOARDING_COMPLETE", guildId };
     obj.dispatch(obj);
   },
   setUserOnboardingStep(guildId, step) {
-    const obj = { type: "GUILD_ONBOARDING_SET_STEP", guildId, step };
+    let obj = dispatcherDefault;
+    obj = { type: "GUILD_ONBOARDING_SET_STEP", guildId, step };
     obj.dispatch(obj);
   },
   resetOnboarding(arg0) {
@@ -356,6 +365,6 @@ let obj = {
     })();
   }
 };
-let result = require("obj132").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingActionCreators.tsx");
 
 export default obj;

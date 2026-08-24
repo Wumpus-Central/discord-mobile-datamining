@@ -2,11 +2,11 @@
 
 // Module 10018 (canViewPotentiallyNSFWChannel)
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/MessageUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/MessageUtils.tsx");
 
 export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChannel(channel_id) {
   currentUser = currentUser.getCurrentUser();
@@ -14,6 +14,7 @@ export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChan
   let tmp3 = null != currentUser && null != channel;
   if (tmp3) {
     tmp3 = !shouldShowAgeGateForVoiceChannel.isChannelContentGated(channel);
+    const obj = shouldShowAgeGateForVoiceChannel;
   }
   return tmp3;
 };

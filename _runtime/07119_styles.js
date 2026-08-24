@@ -4,7 +4,8 @@
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const obj = {};
+let obj = { backdrop: null };
+obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.backgroundColor = "black";
 obj[0] = obj;

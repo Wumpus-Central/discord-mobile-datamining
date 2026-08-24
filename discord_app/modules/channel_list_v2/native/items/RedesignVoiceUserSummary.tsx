@@ -1,24 +1,25 @@
 // === Module 15393: RedesignVoiceUserSummary ===
 
 // Module 15393 (RedesignVoiceUserSummary)
-import noop from "noop" /* 19 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
-import getVoiceStatesForGuild from "getVoiceStatesForGuild" /* 4545 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/items/RedesignVoiceUserSummary.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/RedesignVoiceUserSummary.tsx");
 
 export default function RedesignVoiceUserSummary(channels) {
   channels = channels.channels;
   const guildId = channels.guildId;
   let stateFromStores;
+  let stateFromStores1;
   let obj = channels(stateFromStores[4]);
   const items = [closure_5];
   const items1 = [guildId];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getVoiceStates(guildId), items1);
   const items2 = [closure_4];
-  const stateFromStores1 = channels(stateFromStores[4]).useStateFromStores(items2, () => voiceChannelId.getVoiceChannelId());
+  stateFromStores1 = channels(stateFromStores[4]).useStateFromStores(items2, () => voiceChannelId.getVoiceChannelId());
   const items3 = [channels, stateFromStores1, stateFromStores];
   const stageIcon = stateFromStores1.useMemo(() => channels(stateFromStores[5]).isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores), items3);
   const obj2 = channels(stateFromStores[4]);
@@ -26,6 +27,6 @@ export default function RedesignVoiceUserSummary(channels) {
   obj[2] = stateFromStores1;
   obj[3] = stateFromStores;
   const summarizedVoiceUsers = channels(stateFromStores[5]).computeSummarizedVoiceUsers(obj);
-  const users = summarizedVoiceUsers.filter((item, index) => null != item);
+  const users = summarizedVoiceUsers.filter((arg0) => null != arg0);
   return jsx(guildId(stateFromStores[6]), { users, max: 8, renderIcon: true, guildId, stageIcon });
 };

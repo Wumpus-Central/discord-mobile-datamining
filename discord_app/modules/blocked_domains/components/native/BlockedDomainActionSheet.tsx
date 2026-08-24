@@ -11,21 +11,24 @@ import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
 import Background from "Background" /* 6950 */;
 import URLCallout from "URLCallout" /* 12420 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const createCacheKey = { padding: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, title: null, warningMessage: null };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
 
 export default function BlockedDomainActionSheet(url) {
   const tmp = callback3();
-  const obj = { spacing: 8, justify: "center", align: "center", children: null };
+  let obj = { startExpanded: true, children: null };
+  obj = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
+  obj = { spacing: 8, justify: "center", align: "center", children: null };
   const items = [callback(AccountAgeTier10LargeBadge.TrafficConeSpotIllustration, {}), , ];
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;

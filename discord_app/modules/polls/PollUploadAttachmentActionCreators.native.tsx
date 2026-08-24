@@ -1,11 +1,11 @@
 // === Module 11379: _handlePollGifAttachmentAdd ===
 
 // Module 11379 (_handlePollGifAttachmentAdd)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { DraftType } from "handleChanged" /* 4825 */;
 import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
 
-const require = fn;
+const require = arg1;
 function _handlePollGifAttachmentAdd() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -247,7 +247,7 @@ function _removeAllPollUploadAttachments() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 
 export const handlePollGifAttachmentAdd = function handlePollGifAttachmentAdd(closure_0, localCreationAnswerId, closure_2) {
   const self = this;

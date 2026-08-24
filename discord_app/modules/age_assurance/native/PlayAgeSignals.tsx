@@ -1,9 +1,9 @@
 // === Module 16676: _getAgeSignals ===
 
 // Module 16676 (_getAgeSignals)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = fn;
+const require = arg1;
 function _getAgeSignals() {
   const self = this;
   const tmp = callback(function*() {
@@ -40,24 +40,25 @@ function _getAgeSignals() {
             } else {
               (function applyFakeAgeSignalsScenarioFromExperiment() {
                 if (null != v1(table[1])) {
-                  const fakePlayAgeSignalsConfig = v3(table[2]).getFakePlayAgeSignalsConfig("PlayAgeSignals.getAgeSignals");
+                  const fakePlayAgeSignalsConfig = v3(tmp2[2]).getFakePlayAgeSignalsConfig("PlayAgeSignals.getAgeSignals");
                   ({ enabled, scenario } = fakePlayAgeSignalsConfig);
-                  const obj = v3(table[2]);
+                  const obj = v3(tmp2[2]);
                   let str2 = "";
                   if (enabled) {
                     str2 = scenario;
                   }
-                  const result = v1(table[1]).setFakeAgeSignalsScenario(str2);
-                  const tmpResult = v1(table[1]);
+                  const result = v1(tmp2[1]).setFakeAgeSignalsScenario(str2);
+                  const tmpResult = v1(tmp2[1]);
                 }
               })();
               v0 = 1;
               c0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = tmp5(closure_1_2[1]).getAgeSignals();
+              obj1[0] = tmp5(tmp6[1]).getAgeSignals();
               return obj1;
             }
             tmp5 = v0;
+            tmp6 = closure_1_2;
           }
         } else if (arg0 === 1) {
           c0 = 3;
@@ -88,7 +89,7 @@ function _getAgeSignals() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/age_assurance/native/PlayAgeSignals.tsx");
+let result = require("set").fileFinishedImporting("modules/age_assurance/native/PlayAgeSignals.tsx");
 
 export const AgeSignalsVerificationStatus = { VERIFIED: 0, SUPERVISED: 1, SUPERVISED_APPROVAL_PENDING: 2, SUPERVISED_APPROVAL_DENIED: 3, UNKNOWN: 4, DECLARED: 5 };
 export const getAgeSignals = function getAgeSignals() {

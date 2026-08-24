@@ -1,7 +1,7 @@
 // === Module 8518: prototype ===
 
 // Module 8518 (prototype)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 8517 */;
 import maybeMarkSeen from "maybeMarkSeen" /* 8519 */;
 
@@ -30,8 +30,10 @@ const prototype = function ForumChannelSeenManager(channelId) {
           let tmp3 = nextResult;
           let seenTimeDestructive = obj.computeSeenTimeDestructive(isForcedFlush);
           if (seenTimeDestructive > 0) {
-            items.push(tmp3);
-            let arr = items1.push(tmp5);
+            let tmp6 = nextResult;
+            let arr = items.push(tmp3);
+            let tmp8 = seenTimeDestructive;
+            arr = items1.push(tmp5);
           }
           continue;
         }
@@ -55,7 +57,7 @@ const prototype = function ForumChannelSeenManager(channelId) {
 }.prototype;
 class prototype extends AnalyticsFeedItemSeenManager {
 }
-let result = obj132.fileFinishedImporting("modules/forums/tracking/ForumChannelSeenManager.tsx");
+let result = set.fileFinishedImporting("modules/forums/tracking/ForumChannelSeenManager.tsx");
 
 export default prototype;
 export const getForumPostSeenManagerId = function getForumPostSeenManagerId(arg0) {

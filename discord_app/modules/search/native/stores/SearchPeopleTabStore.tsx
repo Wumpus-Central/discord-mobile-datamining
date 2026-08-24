@@ -4,12 +4,11 @@
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _toPropertyKey from "_toPropertyKey" /* 9636 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import handleChannelSelect from "handleChannelSelect" /* 6772 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleChannelSelect" /* 6772 */;
 
-require = fn;
+require = arg1;
 let closure_5 = [];
 class PeopleSearchManager {
   constructor() {
@@ -34,8 +33,7 @@ prototype["teardown"] = function teardown() {
 };
 prototype["search"] = function search(str) {
   const self = this;
-  str = str.toLowerCase();
-  const trimmed = str.trim();
+  const trimmed = str.toLowerCase().trim();
   this.searchQueryString = trimmed;
   if ("" === trimmed) {
     self.processResults();
@@ -44,18 +42,20 @@ prototype["search"] = function search(str) {
     self.userIndexes = userSearch.filter(trimmed);
     userSearch = self.userSearch;
     const response = userSearch.fetch(trimmed, true);
-    const trimmed1 = trimmed.toLocaleLowerCase().trim();
+    let trimmed1;
+    trimmed1 = trimmed.toLocaleLowerCase().trim();
     if (0 === trimmed1.length) {
       let items = [];
     } else {
+      const obj2 = applyDefault;
       const values = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
       const found = values.filter(trimmed1(11539).filterGroupDMs);
-      const mapped = found.map((item, index) => {
-        const items = [item, trimmed1(dependencyMap[3]).matchGroupDM(item, trimmed1), closure_1_4.getScoreWithoutFetchingLatest(item.id)];
+      const mapped = found.map((id) => {
+        const items = [id, trimmed1(closure_1_2[3]).matchGroupDM(id, trimmed1), closure_1_4.getScoreWithoutFetchingLatest(id.id)];
         return items;
       });
-      const found1 = mapped.filter((item, index) => {
-        [, tmp] = item;
+      const found1 = mapped.filter((arg0) => {
+        [, tmp] = arg0;
         return tmp > 0;
       });
       const sorted = found1.sort((arg0, arg1) => {
@@ -66,12 +66,12 @@ prototype["search"] = function search(str) {
         return diff;
       });
       const chainResult = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels());
-      items = sorted.map((item, index) => {
-        [tmp] = item;
+      items = sorted.map((arg0) => {
+        [tmp] = arg0;
         return tmp;
       }).value();
-      const iter = sorted.map((item, index) => {
-        [tmp] = item;
+      const iter = sorted.map((arg0) => {
+        [tmp] = arg0;
         return tmp;
       });
     }
@@ -83,19 +83,20 @@ prototype["processResults"] = function processResults() {
   const self = this;
   const userSearch = this.userSearch;
   this.userIndexes = userSearch.filter(this.searchQueryString);
-  let obj = { data: this.userIndexes, withGuildMembers: true, withAffinitySuggestions: true, withFriends: true, withFriendSuggestions: false, withFriendRequests: false, withFriendRequestsIncoming: false, withFriendRequestsOutgoing: false, excludeCurrentUser: true };
+  let obj = _toPropertyKey;
+  obj = { data: this.userIndexes, withGuildMembers: true, withAffinitySuggestions: true, withFriends: true, withFriendSuggestions: false, withFriendRequests: false, withFriendRequestsIncoming: false, withFriendRequestsOutgoing: false, excludeCurrentUser: true };
   const result = obj.parseUserSearchResults(obj);
   let arr3 = result;
   if (this.groupDMs.length > 0) {
     arr3 = result;
     if ("" !== self.searchQueryString) {
       obj = { title: null, items: null };
-      let intl = getSystemLocale.intl;
-      obj[0] = intl.string(getSystemLocale.t.qGlQrW);
+      let intl = tmp(1236).intl;
+      obj[0] = intl.string(tmp(1236).t.qGlQrW);
       obj[1] = self.groupDMs;
-      const findIndexResult = result.findIndex((item, index) => {
+      const findIndexResult = result.findIndex((title) => {
         const intl = callback(1236).intl;
-        return item.title === intl.string(callback(1236).t.y29JXs);
+        return title.title === intl.string(callback(1236).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         const items = [];
@@ -111,7 +112,7 @@ prototype["processResults"] = function processResults() {
     }
   }
   if (self.searchQueryString.length > 0) {
-    self.count = arr3.reduce((acc, item, index) => acc + item.items.length, 0);
+    self.count = arr3.reduce((arg0, items) => arg0 + items.items.length, 0);
   } else {
     self.count = null;
   }
@@ -175,6 +176,7 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault,
       userSearch = obj.userSearch;
       const subscription = userSearch.subscribe(() => obj.processResults(), true);
       value = obj;
+      const tmp11 = PeopleSearchManager;
     }
     const result = obj.set(id, value);
     value.search(id.searchQueryString);
@@ -188,6 +190,6 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault,
     map.delete(id);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/stores/SearchPeopleTabStore.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchPeopleTabStore.tsx");
 
 export default searchPeopleTabStoreImpl;

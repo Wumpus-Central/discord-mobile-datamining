@@ -2,14 +2,13 @@
 
 // Module 4590 (initCloneObject)
 import isPrototype from "isPrototype" /* 630 */;
-import object from "object" /* 4591 */;
-import overArg from "overArg" /* 4592 */;
 
 
 export default function initCloneObject(arg0) {
   if (typeof arg0.constructor === "function") {
     if (!isPrototype(arg0)) {
-      object(overArg(arg0));
+      tmp3(4591)(tmp3(4592)(arg0));
+      const tmp = tmp3(4591);
     }
     return {};
   }

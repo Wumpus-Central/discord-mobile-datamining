@@ -3,7 +3,8 @@
 // Module 1714 (BounceInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 
-let obj = { 0: { transform: items }, 55: null, 70: null, 85: null, 100: null };
+obj = { BounceIn: { name: "BounceIn", style: obj, duration: 0.6 }, BounceInRight: { name: "BounceInRight", style: obj, duration: 0.6 }, BounceInLeft: { name: "BounceInLeft", style: obj1, duration: 0.6 }, BounceInUp: { name: "BounceInUp", style: obj2, duration: 0.6 }, BounceInDown: { name: "BounceInDown", style: obj3, duration: 0.6 } };
+obj = { 0: { transform: items }, 55: null, 70: null, 85: null, 100: null };
 items = [{ scale: 0 }];
 const items1 = [{ scale: 1.2 }];
 obj[55] = { transform: items1 };
@@ -23,7 +24,7 @@ const items8 = [{ translateX: "-10px" }];
 obj[85] = { transform: items8 };
 const items9 = [{ translateX: "0px" }];
 obj[100] = { transform: items9 };
-const obj1 = { 0: { transform: items10 }, 55: null, 70: null, 85: null, 100: null };
+obj1 = { 0: { transform: items10 }, 55: null, 70: null, 85: null, 100: null };
 items10 = [{ translateX: "-100vw" }];
 const items11 = [{ translateX: "20px" }];
 obj1[55] = { transform: items11 };
@@ -33,7 +34,7 @@ const items13 = [{ translateX: "10px" }];
 obj1[85] = { transform: items13 };
 const items14 = [{ translateX: "0px" }];
 obj1[100] = { transform: items14 };
-const obj2 = { 0: { transform: items15 }, 55: null, 70: null, 85: null, 100: null };
+obj2 = { 0: { transform: items15 }, 55: null, 70: null, 85: null, 100: null };
 items15 = [{ translateY: "-100vh" }];
 const items16 = [{ translateY: "20px" }];
 obj2[55] = { transform: items16 };
@@ -43,7 +44,7 @@ const items18 = [{ translateY: "10px" }];
 obj2[85] = { transform: items18 };
 const items19 = [{ translateY: "0px" }];
 obj2[100] = { transform: items19 };
-const obj3 = { 0: { transform: items20 }, 55: null, 70: null, 85: null, 100: null };
+obj3 = { 0: { transform: items20 }, 55: null, 70: null, 85: null, 100: null };
 items20 = [{ translateY: "100vh" }];
 const items21 = [{ translateY: "-20px" }];
 obj3[55] = { transform: items21 };

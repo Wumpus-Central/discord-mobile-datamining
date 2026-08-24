@@ -1,10 +1,10 @@
 // === Module 4645: ? ===
 
 // Module 4645
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
 
 export default {
   getRobloxSubgameURL(closure_0) {

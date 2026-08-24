@@ -2,9 +2,9 @@
 
 // Module 5083 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
-import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
 import importDefaultResult from "apply" /* 12 */;
 
 let obj = importDefault;
@@ -37,6 +37,7 @@ class UserSettingsProto {
           obj = callback(1955);
           const result = obj.userSettingsTransaction(database);
           for (const key10014 in state) {
+            let tmp3 = key10014;
             obj = { id: null, value: null };
             let _Number = Number;
             obj[0] = Number(key10014);
@@ -54,7 +55,6 @@ class UserSettingsProto {
           }
           const result1 = callback(1955).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
-          const obj3 = callback(1955);
         }, "handleUserSettingsProtoChange");
       }
     };
@@ -82,26 +82,36 @@ prototype["getAll"] = function getAll(arg0) {
       }
     } else {
       while (true) {
+        let num = 2;
         c7 = 2;
         if (0 === c6) {
           if (arg0 === 1) {
+            let num6 = 3;
             c7 = 3;
             throw arg1;
           } else if (arg0 === 2) {
+            let num5 = 3;
             c7 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
+            closure_3 = tmp;
+            closure_2 = tmp2;
+            closure_0 = undefined;
             let lib;
             closure_2 = undefined;
             closure_3 = undefined;
             c4 = undefined;
             let _performance2 = performance;
             closure_0 = performance.now();
+            let tmp31 = closure_1_0;
+            let tmp32 = closure_1_1;
             let obj6 = closure_1_0(closure_1_1[4]);
+            let tmp33 = closure_1_0;
             let userSettingsResult = obj6.userSettings(closure_1_0);
             c6 = 1;
+            let num12 = 1;
             c7 = 1;
             obj1 = { value: null, done: false };
             obj1[0] = userSettingsResult.getMany();
@@ -109,34 +119,59 @@ prototype["getAll"] = function getAll(arg0) {
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
+            let num4 = 3;
             c7 = 3;
             throw arg1;
           } else if (arg0 === 2) {
+            let num3 = 3;
             c7 = 3;
             let obj2 = { value: null, done: true };
             obj2[0] = arg1;
             return obj2;
           } else {
+            let tmp22 = closure_2;
+            let tmp23 = closure_3;
             lib = arg1;
             let _performance = performance;
             closure_2 = performance.now();
+            let tmp24 = c5;
+            let tmp25 = closure_2;
+            let tmp26 = closure_0;
+            let tmp27 = lib;
             let _HermesInternal = HermesInternal;
+            let str5 = "loaded in ";
+            let str6 = "ms (settings: ";
+            let str7 = ")";
             let verboseResult = c5.verbose("loaded in " + closure_2 - closure_0 + "ms (settings: " + lib.length + ")");
             closure_3 = {};
+            let tmp29 = lib;
+            let tmp30 = lib;
             closure_0 = lib[Symbol.iterator]();
+            let tmp9 = lib;
+            let tmp10 = closure_0;
             while (closure_0 !== undefined) {
+              let tmp12 = closure_2;
+              c5 = 1;
               c4 = tmp11;
+              let tmp13 = closure_3;
+              let tmp14 = c4;
+              let tmp15 = c4;
               closure_3[c4.id] = c4.value;
               c5 = 0;
               continue;
             }
+            let tmp16 = closure_2;
+            let num2 = 3;
             c7 = 3;
             obj = { value: null, done: true };
             obj[0] = closure_3;
             return obj;
           }
         } else {
+          let tmp6 = c4;
+          let tmp7 = c4;
           c5 = 0;
+          let tmp8 = closure_0;
           closure_0.return();
           throw c4;
         }
@@ -172,6 +207,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       obj = callback(1955);
       const result = obj.userSettingsTransaction(database);
       for (const key10014 in state) {
+        let tmp3 = key10014;
         obj = { id: null, value: null };
         let _Number = Number;
         obj[0] = Number(key10014);
@@ -189,12 +225,11 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       }
       const result1 = callback(1955).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
-      const obj3 = callback(1955);
     }, "handleUserSettingsProtoChange");
   }
 };
 const tmp2 = new timestampDefault("UserSettingsProto");
 obj.throttledOnChange = importDefaultResult.debounce(obj.handleUserSettingsProtoChange, 0);
-let result = require("obj132").fileFinishedImporting("modules/app_database/modules/UserSettingsProto.tsx");
+let result = require("set").fileFinishedImporting("modules/app_database/modules/UserSettingsProto.tsx");
 
 export default obj;

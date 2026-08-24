@@ -1,10 +1,11 @@
 // === Module 7581: _uploadMessageAttachments ===
 
 // Module 7581 (_uploadMessageAttachments)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import initialize from "initialize" /* 7582 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 7582 */;
+import set from "set" /* 2 */;
 
-const require = fn;
+const require = arg1;
 function _uploadMessageAttachments() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -77,25 +78,25 @@ function _uploadMessageAttachments() {
               closure_7 = obj2.createMessageRecord(obj2);
               set.on("start", (file) => {
                 set.add(_undefined);
-                callback(_undefined[4]);
-                const obj = { type: "UPLOAD_START", channelId: c0, file, uploader: set, message: closure_7 };
+                let obj = callback(_undefined[4]);
+                obj = { type: "UPLOAD_START", channelId: c0, file, uploader: set, message: closure_7 };
                 obj.dispatch(obj);
               });
               set.on("compression-progress", (file) => {
-                callback(_undefined[4]);
-                const obj = { type: "UPLOAD_COMPRESSION_PROGRESS", channelId: c0, file };
+                let obj = callback(_undefined[4]);
+                obj = { type: "UPLOAD_COMPRESSION_PROGRESS", channelId: c0, file };
                 obj.dispatch(obj);
               });
               set.on("progress", (file) => {
-                callback(_undefined[4]);
-                const obj = { type: "UPLOAD_PROGRESS", channelId: c0, file };
+                let obj = callback(_undefined[4]);
+                obj = { type: "UPLOAD_PROGRESS", channelId: c0, file };
                 obj.dispatch(obj);
               });
               set.on("error", (file) => {
                 set.delete(_undefined);
                 set.cancel();
-                callback(_undefined[4]);
-                const obj = { type: "UPLOAD_FAIL", channelId: c0, file, messageId: id.id, shouldSendNotification: c4 };
+                let obj = callback(_undefined[4]);
+                obj = { type: "UPLOAD_FAIL", channelId: c0, file, messageId: id.id, shouldSendNotification: c4 };
                 obj.dispatch(obj);
               });
               set.on("complete", (id) => {
@@ -123,15 +124,15 @@ function _uploadMessageAttachments() {
                 if (set._aborted) {
                   const _setTimeout = setTimeout;
                   const timerId = setTimeout(() => {
-                    callback(table[4]);
-                    const obj = { type: "UPLOAD_COMPLETE", channelId: closure_0, file: closure_0, aborted: true };
+                    let obj = callback(table[4]);
+                    obj = { type: "UPLOAD_COMPLETE", channelId: closure_0, file: closure_0, aborted: true };
                     obj.dispatch(obj);
                   }, 0);
                 }
               });
               set.on("cancel-upload-item", (file) => {
-                callback(_undefined[4]);
-                const obj = { type: "UPLOAD_FILE_UPDATE", file, channelId: c0 };
+                let obj = callback(_undefined[4]);
+                obj = { type: "UPLOAD_FILE_UPDATE", file, channelId: c0 };
                 obj.dispatch(obj);
               });
               callback2 = {};
@@ -176,7 +177,7 @@ function _uploadMessageAttachments() {
   return applyArgumentsResult;
 }
 let set = new Set();
-const result = require("obj132").fileFinishedImporting("modules/media_uploads/uploadMessageAttachments.native.tsx");
+const result = set.fileFinishedImporting("modules/media_uploads/uploadMessageAttachments.native.tsx");
 
 export const uploadMessageAttachments = function uploadMessageAttachments(arg0) {
   const self = this;

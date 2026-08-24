@@ -1,13 +1,13 @@
 // === Module 1668: ? ===
 
 // Module 1668
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import isJest from "isJest" /* 1657 */;
 import { mockedRequestAnimationFrame } from "mockedRequestAnimationFrame" /* 1669 */;
 
-const JSReanimated = fn;
+const JSReanimated = arg1;
 if (!isJest.isJest()) {
   const _globalThis = globalThis;
   if (requestAnimationFrame) {
@@ -28,14 +28,14 @@ if (!isJest.isJest()) {
       this.getSensorCallback = (arg0, arg1, arg2) => {
         closure_0 = arg0;
         closure_1 = arg2;
-        if (self(dependencyMap[7]).SensorType.ACCELEROMETER !== arg1) {
-          if (self(dependencyMap[7]).SensorType.GRAVITY !== arg1) {
-            if (self(dependencyMap[7]).SensorType.GYROSCOPE !== arg1) {
-              if (self(dependencyMap[7]).SensorType.MAGNETIC_FIELD !== arg1) {
-                if (self(dependencyMap[7]).SensorType.ROTATION === arg1) {
+        if (self(closure_1_1[7]).SensorType.ACCELEROMETER !== arg1) {
+          if (tmp(tmp2[7]).SensorType.GRAVITY !== arg1) {
+            if (tmp(tmp2[7]).SensorType.GYROSCOPE !== arg1) {
+              if (tmp(tmp2[7]).SensorType.MAGNETIC_FIELD !== arg1) {
+                if (tmp(tmp2[7]).SensorType.ROTATION === arg1) {
                   return () => {
                     [tmp2, tmp3, tmp4, tmp5] = closure_2_2(closure_0.quaternion, 4);
-                    if (closure_0.platform === obj20.WEB_ANDROID) {
+                    if (closure_0.platform === closure_2_7.WEB_ANDROID) {
                       const items = [tmp5, -tmp4];
                       [tmp7, tmp6] = items;
                     }
@@ -43,7 +43,6 @@ if (!isJest.isJest()) {
                     const tmp8 = -Math.atan2(2 * (tmp4 * tmp5 + tmp2 * tmp3), tmp2 * tmp2 - tmp3 * tmp3 - tmp4 * tmp4 + tmp5 * tmp5);
                     const sinResult = Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4));
                     callback({ qw: tmp2, qx: tmp3, qy: tmp4, qz: tmp5, yaw: tmp8, pitch: Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4)), roll: -Math.atan2(2 * (tmp3 * tmp4 + tmp2 * tmp5), tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5), interfaceOrientation: 0 });
-                    const obj = { qw: tmp2, qx: tmp3, qy: tmp4, qz: tmp5, yaw: tmp8, pitch: Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4)), roll: -Math.atan2(2 * (tmp3 * tmp4 + tmp2 * tmp5), tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5), interfaceOrientation: 0 };
                   };
                 }
               }
@@ -55,7 +54,7 @@ if (!isJest.isJest()) {
         }
         return () => {
           ({ x, y, z } = closure_0);
-          if (closure_0.platform === obj20.WEB_ANDROID) {
+          if (closure_0.platform === closure_2_7.WEB_ANDROID) {
             const items = [-x, -y, -z];
             [tmp3, tmp2, tmp] = items;
           }
@@ -97,16 +96,16 @@ if (!isJest.isJest()) {
   const obj4 = { key: "enableLayoutAnimations", value: null };
   obj4[1] = function enableLayoutAnimations() {
     if (obj.isWeb()) {
-      const logger3 = JSReanimated(1658).logger;
+      const logger3 = tmp(1658).logger;
       logger3.warn("Layout Animations are not supported on web yet.");
     } else {
-      let tmpResult = JSReanimated(1657);
+      let tmpResult = tmp(1657);
       if (tmpResult.isJest()) {
-        const logger2 = JSReanimated(1658).logger;
+        const logger2 = tmp(1658).logger;
         logger2.warn("Layout Animations are no-ops when using Jest.");
       } else {
-        tmpResult = JSReanimated(1657);
-        const logger = JSReanimated(1658).logger;
+        tmpResult = tmp(1657);
+        const logger = tmp(1658).logger;
         const warn = logger.warn;
         if (isChromeDebuggerResult) {
           warn("Layout Animations are no-ops when using Chrome Debugger.");
@@ -116,7 +115,6 @@ if (!isJest.isJest()) {
         isChromeDebuggerResult = tmpResult.isChromeDebugger();
       }
     }
-    obj = JSReanimated(1657);
   };
   items[5] = obj4;
   const obj5 = { key: "configureLayoutAnimationBatch", value: null };
@@ -149,7 +147,7 @@ if (!isJest.isJest()) {
         self.nextSensorId = +self.nextSensorId + 1;
         return +self.nextSensorId;
       } else {
-        const logger = JSReanimated(1658).logger;
+        const logger = tmp(1658).logger;
         let str = "";
         let str2 = "";
         if (tmpResult.isWeb()) {
@@ -186,16 +184,16 @@ if (!isJest.isJest()) {
   const obj9 = { key: "subscribeForKeyboardEvents", value: null };
   obj9[1] = function subscribeForKeyboardEvents(arg0) {
     if (obj.isWeb()) {
-      const logger3 = JSReanimated(1658).logger;
+      const logger3 = tmp(1658).logger;
       logger3.warn("useAnimatedKeyboard is not available on web yet.");
     } else {
-      let tmpResult = JSReanimated(1657);
+      let tmpResult = tmp(1657);
       if (tmpResult.isJest()) {
-        const logger2 = JSReanimated(1658).logger;
+        const logger2 = tmp(1658).logger;
         logger2.warn("useAnimatedKeyboard is not available when using Jest.");
       } else {
-        tmpResult = JSReanimated(1657);
-        const logger = JSReanimated(1658).logger;
+        tmpResult = tmp(1657);
+        const logger = tmp(1658).logger;
         const warn = logger.warn;
         if (isChromeDebuggerResult) {
           warn("useAnimatedKeyboard is not available when using Chrome Debugger.");
@@ -225,19 +223,19 @@ if (!isJest.isJest()) {
       const _window5 = window;
       const accelerometer = new window.Accelerometer(obj);
       return accelerometer;
-    } else if (JSReanimated(1679).SensorType.GYROSCOPE === arg0) {
+    } else if (tmp(1679).SensorType.GYROSCOPE === arg0) {
       const _window4 = window;
       const gyroscope = new window.Gyroscope(obj);
       return gyroscope;
-    } else if (JSReanimated(1679).SensorType.GRAVITY === arg0) {
+    } else if (tmp(1679).SensorType.GRAVITY === arg0) {
       const _window3 = window;
       const gravitySensor = new window.GravitySensor(obj);
       return gravitySensor;
-    } else if (JSReanimated(1679).SensorType.MAGNETIC_FIELD === arg0) {
+    } else if (tmp(1679).SensorType.MAGNETIC_FIELD === arg0) {
       const _window2 = window;
       const magnetometer = new window.Magnetometer(obj);
       return magnetometer;
-    } else if (JSReanimated(1679).SensorType.ROTATION === arg0) {
+    } else if (tmp(1679).SensorType.ROTATION === arg0) {
       const _window = window;
       const absoluteOrientationSensor = new window.AbsoluteOrientationSensor(obj);
       return absoluteOrientationSensor;
@@ -248,13 +246,13 @@ if (!isJest.isJest()) {
   obj12[1] = function getSensorName(arg0) {
     if (JSReanimated(1679).SensorType.ACCELEROMETER === arg0) {
       return "Accelerometer";
-    } else if (JSReanimated(1679).SensorType.GRAVITY === arg0) {
+    } else if (tmp(1679).SensorType.GRAVITY === arg0) {
       return "GravitySensor";
-    } else if (JSReanimated(1679).SensorType.GYROSCOPE === arg0) {
+    } else if (tmp(1679).SensorType.GYROSCOPE === arg0) {
       return "Gyroscope";
-    } else if (JSReanimated(1679).SensorType.MAGNETIC_FIELD === arg0) {
+    } else if (tmp(1679).SensorType.MAGNETIC_FIELD === arg0) {
       return "Magnetometer";
-    } else if (JSReanimated(1679).SensorType.ROTATION === arg0) {
+    } else if (tmp(1679).SensorType.ROTATION === arg0) {
       return "AbsoluteOrientationSensor";
     }
   };
@@ -284,9 +282,9 @@ if (!isJest.isJest()) {
         self.platform = obj20.WEB_IOS;
       } else {
         if (obj2.test(opera)) {
-          self.platform = obj20.WEB_ANDROID;
+          self.platform = tmp.WEB_ANDROID;
         } else {
-          self.platform = obj20.WEB;
+          self.platform = tmp.WEB;
         }
         obj2 = /android/i;
       }

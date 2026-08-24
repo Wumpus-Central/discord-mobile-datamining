@@ -3,15 +3,15 @@
 // Module 7269 (loadForumPostData)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { computeThreadIdsSnapshot } from "maybeRebuildState" /* 7270 */;
-import handleLoadThreadsSuccess from "handleLoadThreadsSuccess" /* 7239 */;
-import handleLoadThreadsSuccess2 from "handleLoadThreadsSuccess" /* 7274 */;
+import closure_6 from "handleLoadThreadsSuccess" /* 7239 */;
+import closure_7 from "handleLoadThreadsSuccess" /* 7274 */;
 import { Endpoints } from "ME" /* 676 */;
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const require = fn;
+const require = arg1;
 function loadForumPostData() {
   const self = this;
   const apply = _loadForumPostData.apply;
@@ -152,24 +152,24 @@ function _loadForumPostDataForChannelId() {
               let channel = 2;
               if (0 === nextBatch.length) {
                 channel = 0;
-                closure_1_10.finishRequesting(callback, nextBatch);
+                closure_1_10.finishRequesting(tmp55, nextBatch);
                 c6 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
-                channel = channel.getChannel(callback);
+                channel = channel.getChannel(tmp55);
                 guild_id = undefined;
                 if (channel != null) {
                   guild_id = channel.guild_id;
                 }
                 if (null == guild_id) {
                   channel = 0;
-                  closure_1_10.finishRequesting(callback, nextBatch);
+                  closure_1_10.finishRequesting(tmp55, nextBatch);
                   c6 = 3;
                   return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const HTTP = callback(closure_1_2[9]).HTTP;
                   obj1 = { url: null, body: null, rejectWithError: true };
-                  obj1[0] = closure_1_8.FORUM_POSTS(callback);
+                  obj1[0] = closure_1_8.FORUM_POSTS(tmp55);
                   const obj2 = { thread_ids: null };
                   obj2[0] = nextBatch;
                   obj1[1] = obj2;
@@ -289,8 +289,8 @@ prototype2["hasRequested"] = function hasRequested(id, id2) {
 prototype2["finishRequesting"] = function finishRequesting(closure_0, nextBatch) {
   const requested = this.requested;
   closure_0 = requested.get(closure_0);
-  const item = nextBatch.forEach((item, index) => set.delete(item));
-  obj132.compact(closure_0);
+  const item = nextBatch.forEach((arg0) => set.delete(arg0));
+  set.compact(closure_0);
 };
 prototype2["getRequested"] = function getRequested(arg0) {
   const requested = this.requested;
@@ -314,13 +314,13 @@ prototype2["compact"] = function compact(arg0) {
     requested2.delete(arg0);
   }
 };
-Object.create(RequestQueue.prototype);
-let obj132 = Object.create(DefaultDict.prototype);
-obj132._set = {};
-obj132._defaultValueFunc = () => new Set();
-obj132.requested = obj132;
+let set = Object.create(RequestQueue.prototype);
+set = Object.create(DefaultDict.prototype);
+set._set = {};
+set._defaultValueFunc = () => new Set();
+set.requested = set;
 let c11 = null;
-const result = obj132.fileFinishedImporting("modules/forums/ForumPostDataLoader.tsx");
+const result = set.fileFinishedImporting("modules/forums/ForumPostDataLoader.tsx");
 
 export const BATCH_SIZE = 10;
 export const useFirstForumPostMessage = function useFirstForumPostMessage(stateFromStores, arg1) {
@@ -358,15 +358,15 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
     if (flag2) {
       const items2 = [id];
       c1 = false;
-      const item = items2.forEach((item, index) => {
-        const message = closure_1_6.getMessage(item);
+      const item = items2.forEach((arg0) => {
+        const message = closure_1_6.getMessage(arg0);
         const loaded = message.loaded;
         let tmp3 = !loaded;
         if (!loaded) {
           tmp3 = null == tmp2;
         }
         if (tmp3) {
-          obj132.request(id.id, item);
+          closure_1_10.request(id.id, arg0);
           c1 = true;
         }
       });
@@ -380,21 +380,21 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
       }
     } else {
       c1 = id;
-      if (!obj132.hasRequested(stateFromStores.id, id)) {
+      if (!set.hasRequested(stateFromStores.id, id)) {
         const arr3 = computeThreadIdsSnapshot(stateFromStores.id);
-        const findIndexResult = arr3.findIndex((item, index) => item === c1);
+        const findIndexResult = arr3.findIndex((arg0) => arg0 === c1);
         const substr = arr3.slice(findIndexResult, findIndexResult + 5);
-        const found = substr.filter((item, index) => !obj132.hasRequested(stateFromStores.id, item));
+        const found = substr.filter((id2) => !closure_1_10.hasRequested(stateFromStores.id, id2));
         c1 = false;
-        const item1 = found.forEach((item, index) => {
-          const message = closure_1_6.getMessage(item);
+        const item1 = found.forEach((arg0) => {
+          const message = closure_1_6.getMessage(arg0);
           const loaded = message.loaded;
           let tmp3 = !loaded;
           if (!loaded) {
             tmp3 = null == tmp2;
           }
           if (tmp3) {
-            obj132.request(id.id, item);
+            closure_1_10.request(id.id, arg0);
             c1 = true;
           }
         });
@@ -429,15 +429,15 @@ export const preloadForumThreads = function preloadForumThreads(channel) {
   const substr = computeThreadIdsSnapshot(channel.id).slice(0, 10);
   closure_0 = channel;
   c1 = false;
-  const item = substr.forEach((item, index) => {
-    const message = closure_1_6.getMessage(item);
+  const item = substr.forEach((arg0) => {
+    const message = closure_1_6.getMessage(arg0);
     const loaded = message.loaded;
     let tmp3 = !loaded;
     if (!loaded) {
       tmp3 = null == tmp2;
     }
     if (tmp3) {
-      obj132.request(id.id, item);
+      closure_1_10.request(id.id, arg0);
       c1 = true;
     }
   });
@@ -449,5 +449,4 @@ export const preloadForumThreads = function preloadForumThreads(channel) {
     const _setTimeout = setTimeout;
     timeout = setTimeout(loadForumPostData, 0);
   }
-  const arr = computeThreadIdsSnapshot(channel.id);
 };

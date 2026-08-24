@@ -1,9 +1,9 @@
 // === Module 10921: getIsInParty ===
 
 // Module 10921 (getIsInParty)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 
-const result = obj132.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
 
 export const getIsInParty = function getIsInParty(tmp8Result, activity) {
   let id;
@@ -23,6 +23,7 @@ export const getIsInParty = function getIsInParty(tmp8Result, activity) {
       }
     }
     tmp2 = null != id1 && tmp8Result.party.id === activity.party.id;
+    const tmp5 = null != id1 && tmp8Result.party.id === activity.party.id;
   }
   return tmp2;
 };

@@ -2,16 +2,18 @@
 
 // Module 11992 (useHandleBuyNow)
 import timestampDefault from "timestamp" /* 3 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 import { Routes } from "ME" /* 676 */;
 
-let require = fn;
+let require = arg1;
 function useHandleBuyNow(product) {
   product = product.product;
   require = product;
   const onBuy = product.onBuy;
+  let first;
+  let callback;
   let callback2;
   function _onPurchaseComplete() {
     const self = this;
@@ -85,8 +87,8 @@ function useHandleBuyNow(product) {
   }
   ({ analyticsLocations, orderId } = product);
   let tmp = callback2(_onPurchaseComplete.useState(false), 2);
-  const first = tmp[0];
-  let callback = tmp[1];
+  first = tmp[0];
+  callback = tmp[1];
   let obj = {
     product,
     analyticsLocations,
@@ -147,11 +149,11 @@ function useHandleBuyNow(product) {
                 v02 = 3;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = callback(first[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true });
+                obj1[0] = callback(closure_1_2[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true });
                 return obj1;
               } else {
                 v0 = 2;
-                if (first) {
+                if (closure_1_2) {
                   v0 = 0;
                 } else {
                   v0(true);
@@ -162,7 +164,7 @@ function useHandleBuyNow(product) {
                   return obj2;
                 }
               }
-              obj17 = lib(first[9]);
+              obj17 = lib(closure_1_2[9]);
             }
           } else {
             if (1 === tmp8) {
@@ -171,17 +173,17 @@ function useHandleBuyNow(product) {
               const _JSON2 = JSON;
               const _HermesInternal2 = HermesInternal;
               closure_1_7.error("Error performing web handoff: " + JSON.stringify(lib));
-              let obj6 = lib(first[11]);
+              let obj6 = lib(closure_1_2[11]);
               let obj3 = { tags: null };
               const obj4 = { source: "useHandleBuyNow", skuId: null };
               obj4[1] = lib.skuId;
               obj3[0] = obj4;
               const result = obj6.captureBillingException(lib, obj3);
               const obj5 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
-              const intl = lib(first[13]).intl;
-              obj5[1] = intl.string(lib(first[13]).t["rTU7/z"]);
-              callback(first[12]).open(obj5);
-              const obj10 = callback(first[12]);
+              const intl = lib(closure_1_2[13]).intl;
+              obj5[1] = intl.string(lib(closure_1_2[13]).t["rTU7/z"]);
+              callback(closure_1_2[12]).open(obj5);
+              const obj10 = callback(closure_1_2[12]);
             } else {
               if (2 === tmp8) {
                 v0 = 0;
@@ -190,7 +192,7 @@ function useHandleBuyNow(product) {
                 const _JSON = JSON;
                 const _HermesInternal = HermesInternal;
                 closure_1_7.error("Error running purchase: " + JSON.stringify(callback));
-                obj3 = lib(first[11]);
+                obj3 = lib(closure_1_2[11]);
                 obj6 = { tags: null };
                 const obj7 = { source: "useHandleBuyNow", skuId: null };
                 obj7[1] = lib.skuId;
@@ -201,7 +203,7 @@ function useHandleBuyNow(product) {
                   c5 = 3;
                   throw arg1;
                 } else if (arg0 !== 2) {
-                  obj1 = callback(first[7]);
+                  obj1 = callback(closure_1_2[7]);
                   obj1.hideActionSheet();
                   v0 = 0;
                 }
@@ -246,7 +248,7 @@ function useHandleBuyNow(product) {
 }
 let closure_7 = new timestampDefault("useHandleBuyNow");
 const tmp2 = new timestampDefault("useHandleBuyNow");
-let result = require("obj132").fileFinishedImporting("modules/collectibles/native/useHandleBuyNow.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleBuyNow.tsx");
 
 export default useHandleBuyNow;
 export { useHandleBuyNow };

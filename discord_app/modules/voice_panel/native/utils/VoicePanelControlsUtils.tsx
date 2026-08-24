@@ -1,7 +1,7 @@
 // === Module 11447: VOICE_PANEL_DRAWER_MAX_WIDTH ===
 
 // Module 11447 (VOICE_PANEL_DRAWER_MAX_WIDTH)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
 import VoicePanelModes from "VoicePanelModes" /* 11440 */;
 import CARD_SIZE from "CARD_SIZE" /* 11443 */;
@@ -22,7 +22,7 @@ function getControlsDrawerOpenWidth(width, left, right) {
 getControlsDrawerOpenWidth.__closure = { VOICE_PANEL_DRAWER_MAX_WIDTH };
 getControlsDrawerOpenWidth.__workletHash = 10795739180192;
 getControlsDrawerOpenWidth.__initData = { code: "function getControlsDrawerOpenWidth_VoicePanelControlsUtilsTsx2(windowWidth,safeAreaLeft,safeAreaRight){const{VOICE_PANEL_DRAWER_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,VOICE_PANEL_DRAWER_MAX_WIDTH);}" };
-const result = obj132.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
+const result = set.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
 
 export { getControlsDefaultWidth };
 export { getControlsDrawerOpenWidth };

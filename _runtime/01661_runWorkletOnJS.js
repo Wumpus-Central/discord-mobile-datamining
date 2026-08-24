@@ -6,10 +6,10 @@ import isWorkletFunction from "isWorkletFunction" /* 1679 */;
 import freezeObjectInDev from "freezeObjectInDev" /* 1684 */;
 import isJest from "isJest" /* 1657 */;
 
-function runWorkletOnJS(fn) {
-  fn(...HermesBuiltin.copyRestArgs());
+function runWorkletOnJS(arg0) {
+  arg0(...HermesBuiltin.copyRestArgs());
 }
-isJest.isJest();
+isJest = isJest.isJest();
 isJest = isJest.shouldBeUseWeb();
 let closure_5 = [];
 function setupMicrotasks() {
@@ -27,9 +27,12 @@ function setupMicrotasks() {
         let num2 = 0;
         if (0 < arr.length) {
           do {
+            let tmp2 = arr;
+            let tmp3 = num2;
             let tmp4 = arr[num2]();
             sum = num2 + 1;
             num2 = sum;
+            let tmp6 = arr;
             length = arr.length;
           } while (sum < length);
         }
@@ -63,12 +66,13 @@ function runOnUI(fn) {
   closure_0 = fn;
   return () => {
     const items = [...arguments];
-    if (isJest) {
-      let ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+    if (closure_1_3) {
+      let ReanimatedModule = closure_1_1(closure_1_2[1]).ReanimatedModule;
+      let obj = closure_1_1(closure_1_2[2]);
       fn = function s() {
         items(...items);
       };
-      let obj = { worklet: null, args: null };
+      obj = { worklet: null, args: null };
       obj[0] = items;
       obj[1] = items;
       fn.__closure = obj;
@@ -84,15 +88,15 @@ function runOnUI(fn) {
           closure_0 = closure_5;
           closure_5 = [];
           const ReanimatedModule = callback(1662).ReanimatedModule;
-          callback(1684);
+          let obj = callback(1684);
           fn = function n() {
-            const item = closure_0.forEach((item, index) => {
-              [tmp, tmp2] = item;
+            const item = closure_0.forEach((arg0) => {
+              [tmp, tmp2] = arg0;
               tmp(...tmp2);
             });
             closure_1_6();
           };
-          const obj = { queue: closure_5, callMicrotasks: closure_6 };
+          obj = { queue: closure_5, callMicrotasks: closure_6 };
           fn.__closure = obj;
           fn.__workletHash = 2773761092576;
           fn.__initData = closure_8;
@@ -112,11 +116,12 @@ function runOnUIImmediately(fn) {
   closure_0 = fn;
   return () => {
     const items = [...arguments];
-    const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+    const ReanimatedModule = closure_1_1(closure_1_2[1]).ReanimatedModule;
+    let obj = closure_1_1(closure_1_2[2]);
     fn = function u() {
       items(...items);
     };
-    const obj = { worklet: items, args: items };
+    obj = { worklet: items, args: items };
     fn.__closure = obj;
     fn.__workletHash = 6969436050040;
     fn.__initData = closure_1_10;
@@ -137,33 +142,33 @@ function runOnJS(__remoteFunction) {
           _scheduleRemoteFunctionOnJS = undefined;
           if (!closure_1_4) {
             if (globalThis._WORKLET) {
-              if (obj.isWorkletFunction(closure_1_11)) {
+              if (obj.isWorkletFunction(tmp)) {
                 let fn = () => {
                   let items = [...arguments];
                   __remoteFunction = closure_1_11;
                   _scheduleRemoteFunctionOnJS = undefined;
                   if (!closure_1_4) {
                     if (globalThis._WORKLET) {
-                      if (obj.isWorkletFunction(closure_1_11)) {
+                      if (obj.isWorkletFunction(tmp)) {
                         let fn = () => {
                           let items = [...arguments];
                           __remoteFunction = closure_1_11;
                           _scheduleRemoteFunctionOnJS = undefined;
                           if (!closure_1_4) {
                             if (globalThis._WORKLET) {
-                              if (obj.isWorkletFunction(closure_1_11)) {
+                              if (obj.isWorkletFunction(tmp)) {
                                 let fn = () => {
                                   let items = [...arguments];
                                   __remoteFunction = closure_1_11;
                                   _scheduleRemoteFunctionOnJS = undefined;
                                   if (!closure_1_4) {
                                     if (globalThis._WORKLET) {
-                                      if (obj.isWorkletFunction(closure_1_11)) {
+                                      if (obj.isWorkletFunction(tmp)) {
                                         let fn = () => { ... };
                                       } else {
-                                        let tmp5 = closure_1_11;
-                                        if (closure_1_11.__remoteFunction) {
-                                          __remoteFunction = closure_1_11.__remoteFunction;
+                                        let tmp5 = tmp;
+                                        if (tmp.__remoteFunction) {
+                                          __remoteFunction = tmp.__remoteFunction;
                                           tmp5 = __remoteFunction;
                                         }
                                         if (typeof tmp5 === "function") {
@@ -182,9 +187,9 @@ function runOnJS(__remoteFunction) {
                                   fn = () => { ... };
                                 };
                               } else {
-                                let tmp5 = closure_1_11;
-                                if (closure_1_11.__remoteFunction) {
-                                  __remoteFunction = closure_1_11.__remoteFunction;
+                                let tmp5 = tmp;
+                                if (tmp.__remoteFunction) {
+                                  __remoteFunction = tmp.__remoteFunction;
                                   tmp5 = __remoteFunction;
                                 }
                                 if (typeof tmp5 === "function") {
@@ -214,9 +219,9 @@ function runOnJS(__remoteFunction) {
                           };
                         };
                       } else {
-                        let tmp5 = closure_1_11;
-                        if (closure_1_11.__remoteFunction) {
-                          __remoteFunction = closure_1_11.__remoteFunction;
+                        let tmp5 = tmp;
+                        if (tmp.__remoteFunction) {
+                          __remoteFunction = tmp.__remoteFunction;
                           tmp5 = __remoteFunction;
                         }
                         if (typeof tmp5 === "function") {
@@ -246,9 +251,9 @@ function runOnJS(__remoteFunction) {
                   };
                 };
               } else {
-                let tmp5 = closure_1_11;
-                if (closure_1_11.__remoteFunction) {
-                  __remoteFunction = closure_1_11.__remoteFunction;
+                let tmp5 = tmp;
+                if (tmp.__remoteFunction) {
+                  __remoteFunction = tmp.__remoteFunction;
                   tmp5 = __remoteFunction;
                 }
                 if (typeof tmp5 === "function") {
@@ -317,12 +322,13 @@ export function executeOnUIRuntimeSync(arg0) {
   closure_0 = arg0;
   return () => {
     const items = [...arguments];
-    const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+    const ReanimatedModule = closure_1_1(closure_1_2[1]).ReanimatedModule;
+    let obj = closure_1_1(closure_1_2[2]);
     const fn = function u() {
       const tmp = items(...items);
-      return freezeObjectInDev.makeShareableCloneOnUIRecursive(tmp);
+      return closure_2_1(closure_2_2[2]).makeShareableCloneOnUIRecursive(tmp);
     };
-    const obj = { worklet: items, args: items, makeShareableCloneOnUIRecursive: freezeObjectInDev.makeShareableCloneOnUIRecursive };
+    obj = { worklet: items, args: items, makeShareableCloneOnUIRecursive: closure_1_1(closure_1_2[2]).makeShareableCloneOnUIRecursive };
     fn.__closure = obj;
     fn.__workletHash = 6038069575410;
     fn.__initData = closure_1_9;

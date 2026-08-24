@@ -7,18 +7,18 @@ import jsxProd from "jsxProd" /* 21 */;
 import { createElement } from "noop" /* 19 */;
 import importDefaultResult from "apply" /* 12 */;
 
-let require = fn;
+let require = arg1;
 ({ View: c3, Animated: c4, PanResponder: c5, SectionList: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsxs: error, jsx: closure_8 } = jsxProd);
 let closure_10 = 24 + StyleSheet.hairlineWidth;
 let closure_11 = importDefaultResult.memoize((arr) => {
-  const mapped = arr.map((item, index) => {
-    const items = [{ type: "section", data: item.category }, ...data.map((item, index) => ({ type: "row", data: item }))];
-    data = item.data;
+  const mapped = arr.map((category) => {
+    const items = [{ type: "section", data: category.category }, ...data.map((data) => ({ type: "row", data }))];
+    data = category.data;
     return items;
   });
-  return mapped.reduce((acc, item, index) => {
-    const items = [...item];
+  return mapped.reduce((arg0, arg1) => {
+    const items = [...arg1];
     return items;
   }, []);
 });
@@ -33,7 +33,8 @@ class Row extends Component {
       if (_view != null) {
         _view.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
           if (closure_1 != null) {
-            const obj = { frameHeight: null, pageY: null };
+            let obj = { layout: null, rowData: null, touch: null };
+            obj = { frameHeight: null, pageY: null };
             obj[0] = arg3;
             obj[1] = arg5;
             obj[0] = obj;
@@ -61,10 +62,15 @@ Row.prototype["render"] = function render() {
   const props = this.props;
   ({ rowData, list, activeDivider, isAfter } = props);
   const active2 = list.state.active;
+  let num = -1;
   ({ active, renderItem, style, sortingEnabled } = props);
+  if (null != active2) {
+    num = active2.rowData.index;
+  }
   let tmp3 = null;
   if (sortingEnabled) {
-    let obj = { onLongPress: null, onPressOut: null };
+    let obj = { sortHandlers: null, onLongPress: null, onPressOut: null };
+    obj = { onLongPress: null, onPressOut: null };
     obj[0] = self.handleLongPress;
     obj[1] = list.cancel;
     obj[0] = obj;
@@ -102,7 +108,7 @@ Row.prototype["render"] = function render() {
   }
   items1[2] = tmp9;
   obj1[3] = items1;
-  return callback(closure_3, obj1);
+  return closure_7(closure_3, obj1);
 };
 const Component2 = importAllResult.Component;
 class SortRow extends Component2 {
@@ -303,6 +309,7 @@ class SortableChannels extends Component3 {
           }
           let renderActiveDividerResult = renderActiveDivider(frameHeight, arg0, tmp5);
         } else {
+          obj = { style: null };
           obj = { height: null };
           obj[0] = frameHeight;
           obj[0] = obj;
@@ -356,7 +363,7 @@ class SortableChannels extends Component3 {
       obj.rowData = obj;
       obj.onRowActive = obj.handleRowActive;
       obj.isAfter = hoveringIndex > activeIndex;
-      return createElement(arg1 ? SortRow : Row, {});
+      return closure_1_9(arg1 ? closure_1_13 : closure_1_12, obj);
     };
     obj.renderItem = function renderItem(data) {
       let tmp = arg1;
@@ -399,7 +406,7 @@ class SortableChannels extends Component3 {
       obj.rowData = obj;
       obj.onRowActive = obj.handleRowActive;
       obj.isAfter = hoveringIndex > activeIndex;
-      return createElement(arg1 ? SortRow : Row, {});
+      return closure_1_9(arg1 ? closure_1_13 : closure_1_12, obj);
     };
     obj.getItemLayout = function getItemLayout(arg0, index) {
       return obj.getItemLayoutProps(index);
@@ -427,35 +434,51 @@ class SortableChannels extends Component3 {
       while (iter !== undefined) {
         let tmp2 = nextResult;
         if ("section" === nextResult.type) {
+          let tmp7 = obj;
+          let tmp8 = tmp2;
           let sectionHeight = obj.getSectionHeight(tmp2);
         } else {
+          let tmp5 = obj;
           sectionHeight = obj.getRowHeight();
         }
         let tmp = sectionHeight;
+        let tmp9 = num2;
         if (num2 === index) {
+          let tmp13 = iter;
           iter.return();
           break;
         } else {
+          let tmp10 = num;
+          let tmp11 = tmp;
           num = num + tmp;
+          let tmp12 = num2;
           num2 = num2 + 1;
           continue;
         }
         obj = { length: null, offset: null, index: null };
+        let tmp14 = tmp;
         obj[0] = tmp;
+        let tmp15 = num;
         obj[1] = num;
         obj[2] = index;
+        let tmp16 = tmp2;
+        let tmp17 = null;
         if (null == tmp2) {
           return obj;
         } else {
+          let tmp18 = tmp2;
           if (null != tmp2.data.id) {
             let id = tmp2.data.id;
           } else {
+            let tmp19 = tmp2;
             id = null;
             if (null != tmp2.data.channel) {
+              let tmp21 = tmp2;
               id = tmp2.data.channel.id;
             }
           }
           if (typeof id === "string") {
+            let tmp22 = obj;
             obj = { y: null, height: null };
             obj[0] = num;
             obj[1] = tmp;
@@ -538,13 +561,13 @@ prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueX
       if (null != active) {
         dy.dx = 0;
         const layout = active.layout;
-        self.moveY = layout.pageY + layout.frameHeight / 2 + dy.dy;
+        tmp.moveY = layout.pageY + layout.frameHeight / 2 + dy.dy;
         let str = "up";
-        if (dy.dy >= self.dy) {
+        if (dy.dy >= tmp.dy) {
           str = "down";
         }
-        self.direction = str;
-        self.dy = dy.dy;
+        tmp.direction = str;
+        tmp.dy = dy.dy;
         callback(arg0, dy);
       }
     },
@@ -553,9 +576,9 @@ prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueX
       const pan = state.pan;
       const onMoveStart = closure_1.onMoveStart;
       if (null != state.active) {
-        self.moved = true;
-        self.dy = 0;
-        self.direction = "down";
+        tmp.moved = true;
+        tmp.dy = 0;
+        tmp.direction = "down";
         if (onMoveStart != null) {
           onMoveStart();
         }
@@ -633,7 +656,8 @@ prototype["renderActive"] = function renderActive() {
 };
 prototype["render"] = function render() {
   const self = this;
-  const obj = { enableEmptySections: true };
+  let obj = { style: { flex: 1 }, onLayout: this.handleWrapperLayout, ref: this.setWrapperRef, children: null };
+  obj = { enableEmptySections: true };
   ({ active, panResponder } = this.state);
   const merged = Object.assign(this.props);
   const merged1 = Object.assign(panResponder.panHandlers);
@@ -650,10 +674,10 @@ prototype["render"] = function render() {
     return key.key;
   };
   obj.getItemLayout = self.getItemLayout;
-  const items = [callback2(closure_6, obj), self.renderActive()];
+  const items = [closure_8(closure_6, obj), self.renderActive()];
   obj[3] = items;
-  return callback(closure_3, obj);
+  return closure_7(closure_3, obj);
 };
-const result = require("obj132").fileFinishedImporting("components_native/common/SortableChannels.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/SortableChannels.tsx");
 
 export default SortableChannels;

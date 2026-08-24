@@ -4,14 +4,15 @@
 import noop2 from "noop" /* 19 */;
 import styles from "styles" /* 8110 */;
 import module_8106 from "module_8106" /* 8106 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_2 from "get ActivityIndicator" /* 17 */;
+import closure_3 from "jsxProd" /* 21 */;
 
 const noop = module_8106(noop2);
 
 export const SliderTrackMark = function SliderTrackMark(arg0) {
   ({ isTrue, thumbImage, StepMarker } = arg0);
-  let obj = { style: styles.styles.trackMarkContainer, children: null };
+  let obj = React;
+  obj = { style: styles.styles.trackMarkContainer, children: null };
   ({ index, currentValue, min, max } = arg0);
   let jsxResult = null;
   if (StepMarker) {
@@ -29,15 +30,15 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
     jsxResult1 = null;
     if (isTrue) {
       obj1 = { style: null, children: null };
-      obj1[0] = styles.styles.thumbImageContainer;
+      obj1[0] = tmp2(8110).styles.thumbImageContainer;
       const obj2 = { source: null, style: null };
       obj2[0] = thumbImage;
-      obj2[1] = styles.styles.thumbImage;
-      obj1[1] = <get ActivityIndicator.Image source={null} style={null} />;
-      jsxResult1 = <get ActivityIndicator.View style={null}>{null}</get ActivityIndicator.View>;
+      obj2[1] = tmp2(8110).styles.thumbImage;
+      obj1[1] = <tmp.Image source={null} style={null} />;
+      jsxResult1 = <tmp.View style={null}>{null}</tmp.View>;
     }
   }
   items[1] = jsxResult1;
   obj[1] = items;
-  return <get ActivityIndicator.View style={styles.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
+  return <RN.View style={styles.styles.trackMarkContainer}>{null}</RN.View>;
 };

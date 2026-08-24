@@ -6,9 +6,9 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import componentDidMountDefault from "componentDidMount" /* 4763 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx");
 
 export default function EditGuildScheduledEventResetWarningAlert(arg0) {
   ({ onClose, onConfirm } = arg0);

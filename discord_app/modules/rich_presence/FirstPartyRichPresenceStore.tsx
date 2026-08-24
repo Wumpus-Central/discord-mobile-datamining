@@ -12,6 +12,7 @@ function updateActivities() {
   while (iter !== undefined) {
     let activity = nextResult.getActivity();
     if (null != activity) {
+      let tmp4 = activity;
       let arr = items.push(tmp3);
     }
     continue;
@@ -37,6 +38,6 @@ prototype["getActivities"] = function getActivities() {
 };
 FirstPartyRichPresenceStore.displayName = "FirstPartyRichPresenceStore";
 const firstPartyRichPresenceStore = new FirstPartyRichPresenceStore(dispatcherDefault);
-const result = require("obj132").fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
+const result = require("set").fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
 
 export default firstPartyRichPresenceStore;

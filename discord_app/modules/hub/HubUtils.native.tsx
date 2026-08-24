@@ -2,7 +2,7 @@
 
 // Module 12831
 import _modDef11922 from "module_11922" /* 11922 */;
-import updateInvite from "updateInvite" /* 4359 */;
+import closure_2 from "updateInvite" /* 4359 */;
 import importDefaultResult from "apply" /* 12 */;
 
 let closure_3 = importDefaultResult.throttle((code) => {
@@ -14,6 +14,6 @@ const obj = {
     callback(invite);
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
+const result = require("set").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
 
 export default obj;

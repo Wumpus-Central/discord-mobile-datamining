@@ -12,7 +12,7 @@ function keysSorter(arr) {
     if (typeof arr === "object") {
       const _Object = Object;
       const sorted1 = keysSorter(Object.keys(arr)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
-      sorted = sorted1.map((item, index) => keys[item]);
+      sorted = sorted1.map((arg0) => keys[arg0]);
       const obj = keysSorter(Object.keys(arr));
     }
   }
@@ -66,10 +66,10 @@ arg5.parse = (str) => {
     let reduced = obj;
     if (str5) {
       let parts = str5.split("&");
-      const item = parts.forEach((item, index) => {
-        const parts = item.replace(/\+/g, " ").split("=");
+      const item = parts.forEach((str) => {
+        const parts = str.replace(/\+/g, " ").split("=");
         let joined;
-        const str = item.replace(/\+/g, " ");
+        str = str.replace(/\+/g, " ");
         if (parts.length > 0) {
           joined = parts.join("=");
         }
@@ -78,14 +78,13 @@ arg5.parse = (str) => {
           tmp3 = fn(obj[2])(joined);
         }
         fn(fn(obj[2])(parts.shift()), tmp3, obj);
-        const arr = parts.shift();
       });
       let _Object = Object;
       let keys = Object.keys(obj);
       let sorted = keys.sort();
       let _Object2 = Object;
-      reduced = sorted.reduce((acc, item, index) => {
-        if (Boolean(obj[item])) {
+      reduced = sorted.reduce((arg0, arg1) => {
+        if (Boolean(obj[arg1])) {
           if (typeof obj === "object") {
             const _Array2 = Array;
             if (!Array.isArray(obj)) {
@@ -105,21 +104,21 @@ arg5.parse = (str) => {
                     sorted1 = keys;
                     if (typeof keys === "object") {
                       const _Object2 = Object;
-                      const sorted2 = keysSorter(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
-                      sorted1 = sorted2.map((item, index) => keys[item]);
-                      const obj3 = keysSorter(Object.keys(keys));
+                      const sorted2 = closure_1_2(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
+                      sorted1 = sorted2.map((arg0) => keys[arg0]);
+                      const obj3 = closure_1_2(Object.keys(keys));
                     }
                   }
                   keys = sorted1.sort((arg0, arg1) => Number(arg0) - Number(arg1));
-                  const mapped = keys.map((item, index) => keys[item]);
+                  const mapped = keys.map((arg0) => keys[arg0]);
                 }
               }
-              acc[item] = sorted;
+              arg0[arg1] = sorted;
             }
-            return acc;
+            return arg0;
           }
         }
-        acc[item] = obj[item];
+        arg0[arg1] = obj[arg1];
       }, Object.create(null));
     }
     tmp2 = reduced;
@@ -129,6 +128,7 @@ arg5.parse = (str) => {
 };
 arg5.stringify = (arg0, arg1) => {
   let _require = arg0;
+  dependencyMap = arg1;
   const tmp = _require(4378)({ encode: true, strict: true, arrayFormat: "none" }, arg1);
   dependencyMap = tmp;
   _require = tmp;
@@ -147,25 +147,25 @@ arg5.stringify = (arg0, arg1) => {
         }
       } else if (!lib.encode) {
         const items1 = [arg0, "[", , , ];
-        if (!lib.encode) {
+        if (!tmp26.encode) {
           items1[2] = arg2;
           items1[3] = "]=";
-          if (!lib.encode) {
+          if (!tmp26.encode) {
             items1[4] = arg1;
             joined = items1.join("");
-          } else if (lib.strict) {
+          } else if (tmp26.strict) {
             let encodeURIComponentResult1 = lib(4377)(arg1);
           } else {
             const _encodeURIComponent3 = encodeURIComponent;
             encodeURIComponentResult1 = encodeURIComponent(arg1);
           }
-        } else if (lib.strict) {
+        } else if (tmp26.strict) {
           let encodeURIComponentResult2 = lib(4377)(arg2);
         } else {
           const _encodeURIComponent2 = encodeURIComponent;
           encodeURIComponentResult2 = encodeURIComponent(arg2);
         }
-      } else if (lib.strict) {
+      } else if (tmp26.strict) {
         let encodeURIComponentResult3 = lib(4377)(arg0);
       } else {
         const _encodeURIComponent = encodeURIComponent;
@@ -186,16 +186,16 @@ arg5.stringify = (arg0, arg1) => {
         }
       } else if (!lib.encode) {
         const items = [arg0, "[]=", ];
-        if (!lib.encode) {
+        if (!tmp20.encode) {
           items[2] = arg1;
           joined = items.join("");
-        } else if (lib.strict) {
+        } else if (tmp20.strict) {
           let encodeURIComponentResult1 = lib(4377)(arg1);
         } else {
           const _encodeURIComponent2 = encodeURIComponent;
           encodeURIComponentResult1 = encodeURIComponent(arg1);
         }
-      } else if (lib.strict) {
+      } else if (tmp20.strict) {
         let encodeURIComponentResult2 = lib(4377)(arg0);
       } else {
         const _encodeURIComponent = encodeURIComponent;
@@ -214,16 +214,16 @@ arg5.stringify = (arg0, arg1) => {
         }
       } else if (!lib.encode) {
         const items = [arg0, "=", ];
-        if (!lib.encode) {
+        if (!tmp20.encode) {
           items[2] = arg1;
           joined = items.join("");
-        } else if (lib.strict) {
+        } else if (tmp20.strict) {
           let encodeURIComponentResult1 = lib(4377)(arg1);
         } else {
           const _encodeURIComponent2 = encodeURIComponent;
           encodeURIComponentResult1 = encodeURIComponent(arg1);
         }
-      } else if (lib.strict) {
+      } else if (tmp20.strict) {
         let encodeURIComponentResult2 = lib(4377)(arg0);
       } else {
         const _encodeURIComponent = encodeURIComponent;
@@ -237,33 +237,33 @@ arg5.stringify = (arg0, arg1) => {
     const _Object = Object;
     const keys = Object.keys(arg0);
     const sorted = keys.sort();
-    const mapped = sorted.map((item, index) => {
-      const lib = item;
-      if (undefined === lib[item]) {
+    const mapped = sorted.map((arg0) => {
+      const lib = arg0;
+      if (undefined === lib[arg0]) {
         return "";
       } else if (null === arr) {
         if (!items.encode) {
-          return item;
+          return arg0;
         } else if (tmp13.strict) {
-          let encodeURIComponentResult = lib(4377)(item);
+          let encodeURIComponentResult = lib(4377)(arg0);
         } else {
           const _encodeURIComponent3 = encodeURIComponent;
-          encodeURIComponentResult = encodeURIComponent(item);
+          encodeURIComponentResult = encodeURIComponent(arg0);
         }
       } else {
         const _Array = Array;
         if (Array.isArray(arr)) {
           items = [];
           const substr = arr.slice();
-          item = substr.forEach((item, index) => {
-            if (undefined !== item) {
-              items.push(fn(closure_0, item, items.length));
+          const item = substr.forEach((arg0) => {
+            if (undefined !== arg0) {
+              items.push(closure_1_2(closure_0, arg0, items.length));
             }
           });
           return items.join("&");
         } else if (!items.encode) {
           if (!tmp.encode) {
-            return item + "=" + arr;
+            return arg0 + "=" + arr;
           } else if (tmp.strict) {
             let encodeURIComponentResult1 = lib(4377)(arr);
           } else {
@@ -271,14 +271,14 @@ arg5.stringify = (arg0, arg1) => {
             encodeURIComponentResult1 = encodeURIComponent(arr);
           }
         } else if (tmp.strict) {
-          let encodeURIComponentResult2 = lib(4377)(item);
+          let encodeURIComponentResult2 = lib(4377)(arg0);
         } else {
           const _encodeURIComponent = encodeURIComponent;
-          encodeURIComponentResult2 = encodeURIComponent(item);
+          encodeURIComponentResult2 = encodeURIComponent(arg0);
         }
       }
     });
-    const found = mapped.filter((item, index) => item.length > 0);
+    const found = mapped.filter((arg0) => arg0.length > 0);
     str2 = found.join("&");
   }
   return str2;

@@ -5,10 +5,10 @@ import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import closure_6 from "module_12485" /* 12485 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import participantFromServer from "participantFromServer" /* 1390 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "participantFromServer" /* 1390 */;
 import { ActivityLayoutMode } from "items3" /* 4481 */;
 import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
 import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_15 } from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16237 */;
@@ -18,7 +18,7 @@ import { jsx } from "jsxProd" /* 21 */;
 import Button from "Button" /* 1297 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 class BaseActivityPanelPIPView {
   constructor(arg0) {
     transitionState = global.transitionState;
@@ -92,11 +92,11 @@ class BaseActivityPanelPIPView {
               flag = false;
             }
             if (flag) {
-              flag = closure_0 === transitionState(stateFromStores[22]).TransitionStates.YEETED;
+              flag = closure_0 === closure_1_0(closure_1_2[22]).TransitionStates.YEETED;
             }
             if (flag) {
-              transitionState(stateFromStores[20]).runOnJS(closure_1)();
-              const obj = transitionState(stateFromStores[20]);
+              closure_1_0(closure_1_2[20]).runOnJS(closure_1)();
+              const obj = closure_1_0(closure_1_2[20]);
             }
           };
           obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
@@ -218,7 +218,7 @@ class BaseActivityPanelPIPView {
       const items = [{ name: "activate" }];
       obj[3] = items;
       obj[4] = function onAccessibilityAction() {
-        callback(width.PANEL);
+        callback(closure_1_11.PANEL);
       };
       return obj;
     }, items4);
@@ -254,7 +254,8 @@ let ACTIVITY_PIP_SIZE = ActivityPanelModes.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: unpackModuleId, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14 } = ActivityPanelModes);
 let closure_19 = { duration: 300 };
 const boxShadowStyle = Button.generateBoxShadowStyle(require("Button").EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-let obj = { borderRadius: ThemesDefault.radii.lg };
+let obj = { wrapper: null, mask: null };
+obj = { borderRadius: ThemesDefault.radii.lg };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
 obj[0] = obj;
@@ -271,6 +272,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   const transitionCleanUp = transitionState.transitionCleanUp;
   dependencyMap = undefined;
   activity = undefined;
+  let applicationId;
   let stateFromStores;
   let stateFromStores1;
   let memo;
@@ -281,7 +283,7 @@ const memoResult = importAllResult.memo((transitionState) => {
     return obj;
   });
   ({ channelId: c2, activity } = stateFromStoresObject);
-  let applicationId;
+  applicationId = undefined;
   if (activity != null) {
     applicationId = activity.applicationId;
   }
@@ -297,6 +299,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   tmpResult = tmp(589);
   const items2 = [memo];
   stateFromStores1 = tmpResult.useStateFromStores(items2, () => memo.getChannel(c2));
+  _require = undefined;
   const tmp8 = transitionCleanUp(1629)();
   _require = tmp8;
   const items3 = [tmp8.right];
@@ -308,18 +311,19 @@ const memoResult = importAllResult.memo((transitionState) => {
     if (num == null) {
       num = 0;
     }
-    const obj = { disable: false, override: Math.max(closure_1_14, num) };
+    let obj = { right: null };
+    obj = { disable: false, override: Math.max(closure_1_14, num) };
     obj[0] = obj;
     return obj;
   }, items3);
   const items4 = [activity, stateFromStores1, memo, stateFromStores, transitionCleanUp, transitionState];
   return activity.useMemo(() => {
-    { transitionState: closure_0, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: null != activity, context: transitionCleanUp(_undefined[31]), children: jsx(transitionCleanUp(_undefined[32]), obj) };
-    obj = { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig: closure_1_15, landscapeSafeAreasConfig: memo };
-    return <BaseActivityPanelPIPView channel={stateFromStores1} layoutMode={ActivityLayoutMode.PIP} portraitSafeAreasConfig={closure_1_15} landscapeSafeAreasConfig={memo} />;
+    obj = { transitionState: closure_0, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: null != activity, context: transitionCleanUp(_undefined[31]), children: closure_1_18(transitionCleanUp(_undefined[32]), obj) };
+    obj = { channel: stateFromStores1, layoutMode: closure_1_9.PIP, portraitSafeAreasConfig: closure_1_15, landscapeSafeAreasConfig: memo };
+    return closure_1_18(closure_1_24, obj);
   }, items4);
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelPIPView.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelPIPView.tsx");
 
 export default memoResult;
 export const useBaseActivityPanelPIPView = function useBaseActivityPanelPIPView() {
@@ -335,7 +339,8 @@ export const useBaseActivityPanelPIPView = function useBaseActivityPanelPIPView(
       if (num == null) {
         num = 0;
       }
-      const obj = { disable: false, override: Math.max(closure_1_14, num) };
+      let obj = { right: null };
+      obj = { disable: false, override: Math.max(closure_1_14, num) };
       obj[0] = obj;
       return obj;
     }, items)

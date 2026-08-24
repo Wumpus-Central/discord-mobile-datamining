@@ -3,12 +3,11 @@
 // Module 15880 (ChannelSubtitle)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4734 */;
-import getOrParseMessagePreviewMarkupAST from "getOrParseMessagePreviewMarkupAST" /* 10053 */;
 import getLayoutStyles from "getLayoutStyles" /* 10056 */;
 import getChannelSubtitleData from "getChannelSubtitleData" /* 15486 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = fn;
+require = arg1;
 function ChannelSubtitle(arg0) {
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
@@ -17,6 +16,7 @@ function ChannelSubtitle(arg0) {
   if (null == channelSubtitleData) {
     return null;
   } else {
+    obj = {};
     const merged = Object.assign(textProps);
     obj = { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null };
     obj[0] = channelSubtitleData.subtitle;
@@ -28,12 +28,12 @@ function ChannelSubtitle(arg0) {
     obj[3] = guildId;
     obj[4] = layout;
     obj[6] = !("voice" === channelSubtitleData.type && connected);
-    obj.children = getOrParseMessagePreviewMarkupAST.renderMessagePreviewMarkup(obj);
-    return jsx(Text.Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
+    obj.children = tmp(10053).renderMessagePreviewMarkup(obj);
+    return jsx(tmp(4734).Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
   }
 }
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
 
 export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
   ({ subtitle, layout } = arg0);

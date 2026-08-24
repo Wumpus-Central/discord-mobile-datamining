@@ -1,18 +1,20 @@
 // === Module 16930: useFetchHighlightedCreatorGuildDetails ===
 
 // Module 16930 (useFetchHighlightedCreatorGuildDetails)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx");
 
 export default function useFetchHighlightedCreatorGuildDetails(arg0) {
+  closure_0 = arg0;
   [tmp2, dependencyMap] = callback2(callback.useState(true), 2);
   const tmp = callback2(callback.useState(true), 2);
   [tmp4, closure_2] = callback2(callback.useState(), 2);
   const highlightedCreatorDetails = callback2(callback.useState(), 2);
   callback2 = highlightedCreatorDetails[1];
+  closure_0 = undefined;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -51,7 +53,7 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
               closure_1_1(true);
               closure_1_2(undefined);
               c4 = 2;
-              obj1 = callback(dependencyMap[3]);
+              obj1 = callback(closure_2_1[3]);
               c5 = 3;
               c6 = 1;
               obj1 = { value: null, done: false };

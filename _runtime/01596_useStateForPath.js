@@ -2,7 +2,7 @@
 
 // Module 1596 (useStateForPath)
 import NavigationFocusedRouteStateContext from "NavigationFocusedRouteStateContext" /* 1568 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
 
 require = arg1;
 

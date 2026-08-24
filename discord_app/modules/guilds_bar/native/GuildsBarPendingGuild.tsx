@@ -3,23 +3,25 @@
 // Module 15608
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
+import closure_7 from "handleConnectionOpen" /* 4197 */;
+import closure_8 from "insertUnsortedGuilds" /* 5078 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ getGuildIconSource: c5, getGuildIconURL: closure_6 } = GuildNSFWContentLevel);
-let obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+let obj = { guildIcon: null };
+obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj[0] = obj;
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) {
   guildId = guildId.guildId;
   let token;
   let stateFromStores;
+  let stateFromStores1;
   let stateFromStores3;
   let obj = guildId(stateFromStores[8]);
   const tmp = callback();
@@ -32,7 +34,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) 
   const obj3 = guildId(stateFromStores[10]);
   const items2 = [stateFromStores3];
   const items3 = [guildId];
-  const stateFromStores1 = guildId(stateFromStores[10]).useStateFromStores(items2, () => stateFromStores3.getRequest(guildId), items3);
+  stateFromStores1 = guildId(stateFromStores[10]).useStateFromStores(items2, () => stateFromStores3.getRequest(guildId), items3);
   const obj4 = guildId(stateFromStores[10]);
   const items4 = [stateFromStores3];
   const items5 = [guildId, token, stateFromStores];
@@ -76,19 +78,19 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) 
       if (applicationStatus != null) {
         applicationStatus = applicationStatus.applicationStatus;
       }
-      if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
-        let tmp2Result = guildId(stateFromStores[15]);
+      if (closure_1_0(closure_1_2[14]).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
+        let tmp2Result = tmp2(tmp3[15]);
         const result = tmp2Result.openMemberVerificationIncompleteAlert(closure_0);
-      } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-        tmp2Result = guildId(stateFromStores[15]);
+      } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+        tmp2Result = tmp2(tmp3[15]);
         const result1 = tmp2Result.openMemberVerificationPendingAlert(closure_0);
-      } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
-        token(stateFromStores[16])(closure_0);
-      } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+      } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
+        closure_1_1(tmp3[16])(closure_0);
+      } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
         const obj = { guildId: null, canWithdraw: true };
         obj[0] = closure_0;
-        const result2 = guildId(stateFromStores[15]).openMemberVerificationRejectedAlert(obj);
-        const tmp2Result1 = guildId(stateFromStores[15]);
+        const result2 = tmp2(tmp3[15]).openMemberVerificationRejectedAlert(obj);
+        const tmp2Result1 = tmp2(tmp3[15]);
       }
     }
   }), items6);
@@ -100,9 +102,9 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) 
   const memo1 = stateFromStores1.useMemo(() => {
     arr = token(stateFromStores[18])(arr, stateFromStores3);
     return {
-      accessibilityActions: arr.map((item, index) => ({ name: item.label, label: item.label })),
+      accessibilityActions: arr.map((label) => ({ name: label.label, label: label.label })),
       onAccessibilityAction(arg0) {
-        const found = arg0.find((item, index) => item.label === nativeEvent.nativeEvent.actionName);
+        const found = arg0.find((label) => label.label === nativeEvent.nativeEvent.actionName);
         if (found != null) {
           const action = found.action;
           if (action != null) {
@@ -130,7 +132,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) 
     obj = { source: null, style: null };
     obj[0] = tmp15;
     obj[1] = tmp.guildIcon;
-    let tmp19Result = jsx(tmp5(tmp3[21]), { source: null, style: null });
+    let tmp19Result = tmp19(tmp5(tmp3[21]), obj);
   } else {
     obj1 = { value: null, selected: null, animate: null, size: null };
     obj1[0] = guildName;
@@ -138,11 +140,11 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) 
     obj1[2] = stateFromStores;
     tmp5Result = tmp5(tmp3[11]);
     obj1[3] = tmp2(tmp3[11]).GuildIconSizes.LARGE;
-    tmp19Result = <tmp5Result value={null} selected={null} animate={null} size={null} />;
+    tmp19Result = tmp19(tmp5Result, obj1);
   }
   obj[14] = tmp19Result;
   return <tmp5Result id={guildId} accessibilityActions={accessibilityActions} onAccessibilityAction={onAccessibilityAction} cutouts={cutouts} selected={stateFromStores} sharedId={sharedValue} circle={!stateFromStores} overState="ct" unread={null} label={null} config={null} styles={null} externalChildren={null} expandedChildren={null}>{"function runOnUI_Pnpm_threadsTs3(worklet){const{__DEV__,SHOULD_BE_USE_WEB,isWorkletFunction,IS_JEST,ReanimatedModule,makeShareableCloneRecursive,callMicrotasks}=this.__closure;if(__DEV__&&!SHOULD_BE_USE_WEB&&_WORKLET){throw new ReanimatedError('`runOnUI` cannot be called on the UI runtime. Please call the function synchronously or use `queueMicrotask` or `requestAnimationFrame` instead.');}if(__DEV__&&!SHOULD_BE_USE_WEB&&!isWorkletFunction(worklet)){throw new ReanimatedError('`runOnUI` can only be used with worklets.');}return function(...args){if(IS_JEST){ReanimatedModule.scheduleOnUI(makeShareableCloneRecursive(function(){'worklet';worklet(...args);}));return;}if(__DEV__){makeShareableCloneRecursive(worklet);makeShareableCloneRecursive(args);}_runOnUIQueue.push([worklet,args]);if(_runOnUIQueue.length===1){queueMicrotask(function(){const queue=_runOnUIQueue;_runOnUIQueue=[];ReanimatedModule.scheduleOnUI(makeShareableCloneRecursive(function(){'worklet';queue.forEach(function([worklet,args]){worklet(...args);});callMicrotasks();}));});}};}"}</tmp5Result>;
 });
-let result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuild.tsx");
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuild.tsx");
 
 export default memoResult;

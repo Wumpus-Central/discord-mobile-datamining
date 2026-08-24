@@ -5,47 +5,48 @@ import noopAll from "noop" /* 19 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/channel_following/native/showChannelFollowingActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_following/native/showChannelFollowingActionSheet.tsx");
 
 export const showChannelFollowingActionSheet = function showChannelFollowingActionSheet(id, guildId) {
   const _require = id;
   importDefault = guildId;
-  const obj = {
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
+  obj = {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId: arg2,
     targetGuildId: arg3,
     reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
-      closure_1_1(closure_1_2[2]);
-      let obj = {
+      let obj = closure_1_1(closure_1_2[2]);
+      obj = {
         sourceChannelId: closure_0,
         sourceGuildId: closure_1,
         targetChannelId,
         targetGuildId,
         reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
-          closure_1_1(closure_1_2[2]);
-          let obj = {
+          let obj = closure_1_1(closure_1_2[2]);
+          obj = {
             sourceChannelId: closure_0,
             sourceGuildId: closure_1,
             targetChannelId,
             targetGuildId,
             reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
-              closure_1_1(closure_1_2[2]);
-              let obj = {
+              let obj = closure_1_1(closure_1_2[2]);
+              obj = {
                 sourceChannelId: closure_0,
                 sourceGuildId: closure_1,
                 targetChannelId,
                 targetGuildId,
                 reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
-                  closure_1_1(closure_1_2[2]);
-                  let obj = { sourceChannelId: closure_0, sourceGuildId: closure_1, targetChannelId, targetGuildId, reopenActionSheetWithTarget() { ... }, onSuccess() { ... }, onCancel() { ... } };
+                  let obj = closure_1_1(closure_1_2[2]);
+                  obj = { sourceChannelId: closure_0, sourceGuildId: closure_1, targetChannelId, targetGuildId, reopenActionSheetWithTarget() { ... }, onSuccess() { ... }, onCancel() { ... } };
                   obj.openLazy(closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "NewChannelFollower." + closure_0, obj);
                 },
                 onSuccess() {
-                  callback(dependencyMap[5]);
-                  const obj = { importer() { ... }, hideActionSheet: true };
+                  let obj = callback(dependencyMap[5]);
+                  obj = { importer() { ... }, hideActionSheet: true };
                   obj.openLazy(obj);
                 },
                 onCancel() {
@@ -55,8 +56,8 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
               obj.openLazy(closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "NewChannelFollower." + closure_0, obj);
             },
             onSuccess() {
-              callback(dependencyMap[5]);
-              const obj = {
+              let obj = callback(dependencyMap[5]);
+              obj = {
                 importer() {
                   return callback(paths[4])(paths[6], paths.paths).then(() => { ... });
                 },
@@ -71,11 +72,11 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
           obj.openLazy(closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "NewChannelFollower." + closure_0, obj);
         },
         onSuccess() {
-          callback(dependencyMap[5]);
-          const obj = {
+          let obj = callback(dependencyMap[5]);
+          obj = {
             importer() {
-              return callback(paths[4])(paths[6], paths.paths).then((result) => {
-                closure_0 = result.default;
+              return callback(paths[4])(paths[6], paths.paths).then((arg0) => {
+                closure_0 = arg0.default;
                 return () => { ... };
               });
             },
@@ -90,11 +91,11 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
       obj.openLazy(closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "NewChannelFollower." + closure_0, obj);
     },
     onSuccess() {
-      callback(dependencyMap[5]);
-      const obj = {
+      let obj = callback(dependencyMap[5]);
+      obj = {
         importer() {
-          return callback(paths[4])(paths[6], paths.paths).then((result) => {
-            closure_0 = result.default;
+          return callback(paths[4])(paths[6], paths.paths).then((arg0) => {
+            closure_0 = arg0.default;
             return (arg0) => {
               const merged = Object.assign(arg0);
               return closure_1_3(closure_0, {});

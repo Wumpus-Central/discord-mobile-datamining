@@ -1,7 +1,7 @@
 // === Module 14732: flags ===
 
 // Module 14732 (flags)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import registerAsset from "registerAsset" /* 14733 */;
 import registerAsset2 from "registerAsset" /* 14734 */;
 import registerAsset3 from "registerAsset" /* 14735 */;
@@ -35,6 +35,6 @@ import registerAsset30 from "registerAsset" /* 14762 */;
 import registerAsset31 from "registerAsset" /* 14763 */;
 
 const obj = { bg: registerAsset, cs: registerAsset2, da: registerAsset3, de: registerAsset4, el: registerAsset5, "en-GB": registerAsset6, "en-US": registerAsset7, "es-ES": registerAsset8, "es-419": registerAsset9, fi: registerAsset10, fr: registerAsset11, hi: registerAsset12, hr: registerAsset13, hu: registerAsset14, it: registerAsset15, ja: registerAsset16, ko: registerAsset17, lt: registerAsset18, nl: registerAsset19, no: registerAsset20, pl: registerAsset21, "pt-BR": registerAsset22, ro: registerAsset23, ru: registerAsset24, "sv-SE": registerAsset25, th: registerAsset26, tr: registerAsset27, uk: registerAsset28, vi: registerAsset29, "zh-CN": registerAsset30, "zh-TW": registerAsset31 };
-const result = obj132.fileFinishedImporting("modules/auth/native/images/flags.tsx");
+const result = set.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = obj;

@@ -4,7 +4,7 @@
 import toJSDefault from "toJS" /* 1931 */;
 
 toJSDefault;
-const result = require("obj132").fileFinishedImporting("records/ConnectedAccountRecord.tsx");
+const result = require("set").fileFinishedImporting("records/ConnectedAccountRecord.tsx");
 class ConnectedAccountRecord extends tmp2 {
   constructor(arg0) {
     tmp = new ConnectedAccountRecord(new.target, new.target, global, ConnectedAccountRecord);

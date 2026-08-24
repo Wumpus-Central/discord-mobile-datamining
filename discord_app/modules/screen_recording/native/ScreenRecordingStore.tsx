@@ -1,7 +1,7 @@
 // === Module 15199: useScreenRecordingStore ===
 
 // Module 15199 (useScreenRecordingStore)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let obj = keys.create((arg0, arg1) => {
@@ -56,7 +56,7 @@ let obj = keys.create((arg0, arg1) => {
         const _Date = Date;
         obj[1] = Date.now();
       }
-      callback(obj);
+      closure_0(obj);
     },
     resetActionSheet() {
       return callback({ currentStep: 0, stepStartedTime: Date.now(), isCompleted: false });
@@ -67,6 +67,6 @@ let obj = keys.create((arg0, arg1) => {
     }
   };
 });
-const result = obj132.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingStore.tsx");
+const result = set.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingStore.tsx");
 
 export const useScreenRecordingStore = obj;

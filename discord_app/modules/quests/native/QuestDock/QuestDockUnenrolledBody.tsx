@@ -2,34 +2,38 @@
 
 // Module 14548 (QUEST_DOCK_EXPANDED_PADDING_BOTTOM)
 import ThemesDefault from "Themes" /* 712 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import initializeState from "initializeState" /* 7453 */;
-import QuestDockMode from "QuestDockMode" /* 14445 */;
+import closure_6 from "initializeState" /* 7453 */;
+import closure_7 from "QuestDockMode" /* 14445 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ QuestDockMode: closure_8, QuestsExperimentLocations: c9 } = QuestsExperimentLocations);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let obj = { borderRadius: ThemesDefault.modules.mobile.QUEST_DOCK_BORDER_RADIUS, overflow: "hidden", padding: 8, paddingRight: 16 };
+let obj = { wrapper: { flexGrow: 1, flexShrink: 0, justifyContent: "flex-end", paddingHorizontal: QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, paddingBottom: QUEST_DOCK_EXPANDED_PADDING_BOTTOM }, rewardContentWrapper: null, rewardContent: null, rewardContentCopy: null, premiumRewardPerkPill: null, titleRow: null, questDockRewardTile: null, questDockCtaWrapper: null, questDockCta: null, questDockCtaRow: null, questDockCtaSaparator: null };
+obj = { borderRadius: ThemesDefault.modules.mobile.QUEST_DOCK_BORDER_RADIUS, overflow: "hidden", padding: 8, paddingRight: 16 };
 obj[1] = obj;
 obj[2] = { alignItems: "center", flexDirection: "row", gap: 16 };
 obj[3] = { flexGrow: 1, flexShrink: 1, gap: 4 };
 obj[4] = { alignSelf: "flex-start" };
-const createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
+createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
 obj[5] = createCacheKey;
 obj[6] = { borderRadius: ThemesDefault.radii.lg };
 obj[7] = { marginTop: 12, paddingHorizontal: 4, paddingTop: 16, position: "relative" };
+let obj2 = { borderRadius: ThemesDefault.radii.lg };
 obj[8] = { borderRadius: ThemesDefault.radii.round };
 obj[9] = { alignSelf: "stretch" };
+let obj3 = { borderRadius: ThemesDefault.radii.round };
 obj[10] = { position: "absolute", left: -12, right: -12, top: 0, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, opacity: 1 };
 let closure_13 = createCacheKey.createStyles(obj);
+let obj4 = { position: "absolute", left: -12, right: -12, top: 0, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, opacity: 1 };
 const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   let obj = questCreative(isMobileActivityQuest[10]);
   questCreative = obj.useQuestCreative();
@@ -66,21 +70,21 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   const items2 = [questCreative.id, hasWatchVideoOnMobileTasks, setRestingQuestDockMode, isMobileActivityQuest, launchMobileActivity, isQuestAccessSuspended, trackQuestContentClickedWithImpression];
   const callback = obj1.useCallback(launchMobileActivity(function*() {
     c0 = 0;
-    if (isQuestAccessSuspended) {
+    if (closure_1_5) {
       obj1 = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
-      obj1[0] = questCreative.id;
-      obj1[1] = questCreative(6719).QuestContent.QUEST_BAR_MOBILE;
-      obj1[2] = questCreative(7480).QuestContentCTA.QUEST_ACCESS_SUSPENDED;
-      obj1[3] = questCreative(6719).QuestContent.QUEST_BAR_MOBILE;
-      trackQuestContentClickedWithImpression(obj1);
+      obj1[0] = closure_1_0.id;
+      obj1[1] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
+      obj1[2] = closure_1_0(7480).QuestContentCTA.QUEST_ACCESS_SUSPENDED;
+      obj1[3] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
+      closure_1_6(obj1);
       v0(14470)();
     }
-    const obj4 = questCreative(10477);
+    const obj4 = closure_1_0(10477);
     const obj3 = { questContentCTA: null, questContent: null, sourceQuestContent: null };
-    obj3[0] = questCreative(7480).QuestContentCTA.ACCEPT_QUEST;
-    obj3[1] = questCreative(6719).QuestContent.QUEST_BAR_MOBILE;
-    obj3[2] = questCreative(6719).QuestContent.QUEST_BAR_MOBILE;
-    yield obj4.enrollInQuest(questCreative.id, obj3);
+    obj3[0] = closure_1_0(7480).QuestContentCTA.ACCEPT_QUEST;
+    obj3[1] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
+    obj3[2] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
+    yield obj4.enrollInQuest(closure_1_0.id, obj3);
     if (1 === tmp4) {
       if (arg0 === 1) {
         dependencyMap = 3;
@@ -94,15 +98,15 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
         v0 = 2;
         dependencyMap = 1;
         const obj6 = { value: null, done: false };
-        obj6[0] = launchMobileActivity();
+        obj6[0] = closure_1_3();
         return obj6;
       } else {
         if (v0) {
           const obj7 = { questId: null, sourceQuestContent: null };
-          obj7[0] = questCreative.id;
-          obj7[1] = questCreative(6719).QuestContent.QUEST_BAR_MOBILE;
+          obj7[0] = closure_1_0.id;
+          obj7[1] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
           v0(14476)(obj7);
-          setRestingQuestDockMode(closure_1_8.COLLAPSED);
+          closure_1_4(closure_1_8.COLLAPSED);
           const tmp12 = v0(14476);
         }
         dependencyMap = 3;
@@ -122,7 +126,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   obj = { visible: tmp13, glow: true, style: null, children: null };
   const items3 = [tmp5.wrapper, ];
   obj1 = { paddingBottom: null };
-  tmp4(tmp2[26]);
+  let tmp4Result = tmp4(tmp2[26]);
   obj1[0] = Math.max(hasWatchVideoOnMobileTasks(isMobileActivityQuest[15])().bottom, QUEST_DOCK_EXPANDED_PADDING_BOTTOM);
   items3[1] = obj1;
   obj[2] = items3;
@@ -130,7 +134,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   const items4 = [callback(hasWatchVideoOnMobileTasks(isMobileActivityQuest[27]), {}), ];
   obj3 = { style: tmp5.rewardContent, children: null };
   let tmp24 = !stateFromStores;
-  const tmp4Result = tmp4(tmp2[28]);
+  tmp4Result = tmp4(tmp2[28]);
   if (stateFromStores) {
     tmp24 = !isRendered;
   }
@@ -161,20 +165,22 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   items6[1] = callback(isQuestAccessSuspended, obj8);
   items6[2] = callback(questCreative(isMobileActivityQuest[30]).Text, { color: "text-default", variant: "text-sm/normal", children: questsInstructionsToWinReward });
   obj5[1] = items6;
-  items5[1] = callback(isQuestAccessSuspended, obj5);
+  items5[1] = closure_12(isQuestAccessSuspended, obj5);
   obj3[1] = items5;
-  items4[1] = callback(isQuestAccessSuspended, obj3);
+  items4[1] = closure_12(isQuestAccessSuspended, obj3);
   obj2[1] = items4;
-  const items7 = [callback(isQuestAccessSuspended, obj2), ];
+  const items7 = [closure_12(isQuestAccessSuspended, obj2), ];
   const obj11 = { style: tmp5.questDockCtaWrapper, children: null };
   const items8 = [callback(isQuestAccessSuspended, { style: tmp5.questDockCtaSaparator }), ];
+  const obj10 = { questName: questCreative.config.messages.questName };
+  const obj12 = { style: tmp5.questDockCtaSaparator };
   const tmpResult2 = questCreative(isMobileActivityQuest[25]);
   items8[1] = callback(isQuestAccessSuspended, { style: tmp5.questDockCtaRow, children: callback(questCreative(isMobileActivityQuest[32]).ShinyButton, obj14) });
   obj11[1] = items8;
-  items7[1] = callback(isQuestAccessSuspended, obj11);
+  items7[1] = closure_12(isQuestAccessSuspended, obj11);
   obj[3] = items7;
-  return callback(tmp4Result, obj);
+  return closure_12(tmp4Result, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBody.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBody.tsx");
 
 export default memoResult;

@@ -1,12 +1,12 @@
 // === Module 15168: SearchableSelectActionComponent ===
 
 // Module 15168 (SearchableSelectActionComponent)
-import noop from "noop" /* 19 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx");
 
 export default function SearchableSelectActionComponent(defaultValues) {
   const _require = defaultValues;
@@ -105,27 +105,26 @@ export default function SearchableSelectActionComponent(defaultValues) {
       obj1[1] = function onTap() {
         if (defaultValues.type === defaultValues(customId[7]).ComponentType.CHANNEL_SELECT) {
           const _HermesInternal2 = HermesInternal;
-          const obj3 = guild_id(customId[10]);
+          const obj3 = guild_id(tmp3[10]);
           obj = { selectionActionComponent: null };
-          obj[0] = defaultValues;
+          obj[0] = tmp;
           const combined = "ChannelSelectComponentActionSheet:" + customId;
           const merged = Object.assign(obj);
-          obj3.openLazy(defaultValues(customId[12])(customId[11], customId.paths), combined, obj);
-          const tmp14 = defaultValues(customId[12])(customId[11], customId.paths);
+          obj3.openLazy(tmp2(tmp3[12])(tmp3[11], tmp3.paths), combined, obj);
+          const tmp14 = tmp2(tmp3[12])(tmp3[11], tmp3.paths);
         } else {
-          guild_id(customId[10]);
+          obj = guild_id(tmp3[10]);
           const _HermesInternal = HermesInternal;
           obj = { selectionActionComponent: null };
-          obj[0] = defaultValues;
+          obj[0] = tmp;
           const combined1 = "MentionableSelectComponentActionSheet:" + customId;
           const merged1 = Object.assign(obj);
-          obj.openLazy(defaultValues(customId[12])(customId[13], customId.paths), combined1, obj);
-          const tmp5 = defaultValues(customId[12])(customId[13], customId.paths);
+          obj.openLazy(tmp2(tmp3[12])(tmp3[13], tmp3.paths), combined1, obj);
+          const tmp5 = tmp2(tmp3[12])(tmp3[13], tmp3.paths);
         }
       };
       return <tmp4Result model={null} onTap={null} />;
     }
   }
   memo = state.selectedOptions;
-  let tmp5 = guild_id(customId[5]);
 };

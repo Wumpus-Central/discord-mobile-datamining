@@ -16,17 +16,18 @@ import getSearchEmptySource from "getSearchEmptySource" /* 9383 */;
 import handleDCShownToUser from "handleDCShownToUser" /* 9987 */;
 import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15070 */;
 import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15071 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 1381 */;
+import closure_6 from "set" /* 1381 */;
 import jsxProd from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = fn;
+require = arg1;
 function DismissableContentsEmpty() {
-  { style: callback4().emptyState, children: null };
-  const obj = { marginBottom: ThemesDefault.space.PX_16 };
+  let obj = { style: callback4().emptyState, children: null };
+  obj = { style: null, variant: "heading-lg/semibold", children: "No results found" };
+  obj = { marginBottom: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   const items = [callback2(Text.Text, obj), callback2(getSearchEmptySource.SearchEmpty, {})];
   obj[1] = items;
@@ -34,13 +35,17 @@ function DismissableContentsEmpty() {
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+let obj = { container: null, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj[0] = obj;
-const createCacheKey = { padding: ThemesDefault.space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
 obj[2] = { paddingBottom: ThemesDefault.space.PX_16 };
+let obj2 = { paddingBottom: ThemesDefault.space.PX_16 };
 obj[3] = { paddingBottom: ThemesDefault.space.PX_8 };
+let obj3 = { paddingBottom: ThemesDefault.space.PX_8 };
 obj[4] = { paddingBottom: ThemesDefault.space.PX_8 };
+let obj4 = { paddingBottom: ThemesDefault.space.PX_8 };
 obj[5] = { marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = importAllResult.memo((content) => {
@@ -52,8 +57,11 @@ let closure_11 = importAllResult.memo((content) => {
 let closure_12 = importAllResult.memo((arg0) => {
   ({ dailyCapOverridden, newUserMinAgeRequiredOverridden, forceBountiesSwipeUpNux, initialSearchQuery, onForceBountiesSwipeUpNuxChange, onSearchChange } = arg0);
   const tmp = callback4();
-  const obj = { title: "Global Overrides", hasIcons: false, children: null };
+  let obj = { children: null };
+  obj = { style: tmp.headerSection, children: null };
+  obj = { title: "Global Overrides", hasIcons: false, children: null };
   const items = [callback2(TableSwitchRow.TableSwitchRow, { onValueChange: handleDCShownToUser.overrideDismissibleContentFramework, value: dailyCapOverridden, label: "Daily limit", subLabel: "When enabled, bypass the daily limit of dismissible content shown" }), , ];
+  obj1 = { onValueChange: handleDCShownToUser.overrideDismissibleContentFramework, value: dailyCapOverridden, label: "Daily limit", subLabel: "When enabled, bypass the daily limit of dismissible content shown" };
   items[1] = callback2(TableSwitchRow.TableSwitchRow, { onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired, value: newUserMinAgeRequiredOverridden, label: "New user account minimum age", subLabel: "When enabled, bypass the minimum age requirement for new user accounts" });
   items[2] = callback2(TableSwitchRow.TableSwitchRow, { onValueChange: onForceBountiesSwipeUpNuxChange, value: forceBountiesSwipeUpNux, label: "Force bounties swipe-up NUX", subLabel: "When enabled, treat bounties swipe-up NUX as shown so scroll affordances always appear. Reopen the bounties modal after toggling." });
   obj[2] = items;
@@ -61,6 +69,7 @@ let closure_12 = importAllResult.memo((arg0) => {
   const items1 = [callback2(View, obj), , , ];
   const obj3 = { style: tmp.headerSection, children: null };
   const obj4 = { title: "Bulk actions", hasIcons: true, children: null };
+  const obj2 = { onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired, value: newUserMinAgeRequiredOverridden, label: "New user account minimum age", subLabel: "When enabled, bypass the minimum age requirement for new user accounts" };
   const items2 = [callback2(TableRowInner.TableRow, { label: "Clear all dismissed dismissible contents", onPress: updateUserGuildSettings.clearDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) }), , ];
   const obj5 = { label: "Clear all dismissed dismissible contents", onPress: updateUserGuildSettings.clearDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
   items2[1] = callback2(TableRowInner.TableRow, { label: "Clear all guild dismissed dismissible contents", onPress: updateUserGuildSettings.clearGuildDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) });
@@ -75,14 +84,15 @@ let closure_12 = importAllResult.memo((arg0) => {
   obj[0] = items1;
   return callback3(closure_9, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx");
+let obj5 = { marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx");
 
 export default function DevToolsDismissableContentsScreen() {
   const tmp = callback4();
   const ref = first.useRef(null);
   importDefault = first.useRef(0);
   let obj = ref(12529);
-  const tmp2 = useSafeAreaInsetsDefault();
+  let tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   callback = tmp5;
   first = callback(first.useState(() => {
@@ -99,9 +109,12 @@ export default function DevToolsDismissableContentsScreen() {
     }
     const items = [];
     for (const key10013 in ref(closure_1_2[7]).DismissibleContent) {
+      let tmp9 = key10013;
       let isNaNResult = tmp;
       if (!tmp) {
-        let tmp4 = ref(dependencyMap[20]);
+        let tmp2 = ref;
+        let tmp3 = closure_1_2;
+        let tmp4 = ref(closure_1_2[20]);
         let formatted = str.toLowerCase();
         isNaNResult = tmp4(formatted, key10013.toLowerCase());
       }
@@ -118,25 +131,26 @@ export default function DevToolsDismissableContentsScreen() {
       }
       continue;
     }
-    const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
+    const sorted = items.sort((localeCompare) => localeCompare.localeCompare(arg1));
     return items;
   }), 2);
   const first1 = tmp7[0];
   closure_6 = tmp7[1];
   obj1 = ref(589);
   let items = [closure_6];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ dailyCapOverridden: lib.dailyCapOverridden, newUserMinAgeRequiredOverridden: lib.newUserMinAgeRequiredOverridden }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ dailyCapOverridden: closure_6.dailyCapOverridden, newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  const tmp9 = callback(ref(14367).useForceBountiesSwipeUpNux(), 2);
+  let tmp9 = callback(ref(14367).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
+  callback4 = tmp11;
   const items1 = [tmp9[1]];
   callback = first.useCallback((arg0) => {
     callback(arg0);
     if (arg0) {
-      const result = ref(dependencyMap[25]).clearDismissedScrollAffordanceBountyIds();
-      const obj = ref(dependencyMap[25]);
+      const result = ref(closure_1_2[25]).clearDismissedScrollAffordanceBountyIds();
+      const obj = ref(closure_1_2[25]);
     }
   }, items1);
   const callback1 = first.useCallback(() => {
@@ -152,12 +166,16 @@ export default function DevToolsDismissableContentsScreen() {
   }, []);
   const items2 = [tmp5, callback1];
   const callback2 = first.useCallback((str) => {
-    dependencyMap(str);
+    let tmp5;
+    tmp5(str);
     const items = [];
     for (const key10015 in ref(closure_1_2[7]).DismissibleContent) {
+      let tmp13 = key10015;
       let isNaNResult = tmp3;
       if (!tmp3) {
-        let tmp6 = ref(dependencyMap[20]);
+        let tmp4 = ref;
+        tmp5 = closure_1_2;
+        let tmp6 = ref(closure_1_2[20]);
         let formatted = arg0.toLowerCase();
         isNaNResult = tmp6(formatted, key10015.toLowerCase());
       }
@@ -174,8 +192,8 @@ export default function DevToolsDismissableContentsScreen() {
       }
       continue;
     }
-    const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
-    lib(items);
+    const sorted = items.sort((localeCompare) => localeCompare.localeCompare(arg1));
+    closure_6(items);
     callback1();
   }, items2);
   const items3 = [dailyCapOverridden, newUserMinAgeRequiredOverridden, first2, first, callback, callback2];
@@ -184,6 +202,7 @@ export default function DevToolsDismissableContentsScreen() {
   }, []);
   const items4 = [first1.length];
   const memo = first.useMemo(() => dailyCapOverridden(callback1, { dailyCapOverridden, newUserMinAgeRequiredOverridden, forceBountiesSwipeUpNux: true === first2, initialSearchQuery: first, onForceBountiesSwipeUpNuxChange: callback, onSearchChange: callback2 }), items3);
+  obj = { style: tmp.container, children: null };
   callback4 = first.useCallback((content) => {
     const index = content.index;
     return dailyCapOverridden(callback, { content: content.item, start: 0 === index, end: index === first1.length - 1 });

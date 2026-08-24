@@ -132,6 +132,7 @@ export default forwardRef((onEndVisible) => {
   J.__initData = closure_13;
   animatedStyle = flag2(blankSpace[3]).useAnimatedStyle(J, []);
   const items2 = [animatedStyle];
+  obj = { children: null };
   const obj8 = flag2(blankSpace[3]);
   obj = { ref: tmp5 };
   const tmp15 = onContentSizeChange(() => {

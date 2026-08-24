@@ -3,13 +3,13 @@
 // Module 9910 (UserProfileVoiceActivityIcon)
 import noopAll from "noop" /* 19 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5287 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "sum" /* 505 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");
 
 export default function UserProfileVoiceActivityIcon(channel) {
   channel = channel.channel;
@@ -19,7 +19,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
-      isPrivateResult = closure_1_3.can(Permissions.CONNECT, channel);
+      isPrivateResult = closure_1_3.can(closure_1_4.CONNECT, channel);
     }
     return isPrivateResult;
   });
@@ -43,16 +43,18 @@ export default function UserProfileVoiceActivityIcon(channel) {
         const merged2 = Object.assign(merged);
         tmp8Result = jsx(tmp2(6892).StageIcon, {});
       } else if (channel.isNSFW()) {
+        obj1 = {};
         const merged3 = Object.assign(merged);
-        tmp8Result = jsx(tmp2(6894).VoiceWarningIcon, {});
+        tmp8Result = tmp8(tmp2(6894).VoiceWarningIcon, obj1);
       } else {
         if (tmp6) {
           let VoiceNormalIcon = tmp2(6893).VoiceLockIcon;
         } else {
           VoiceNormalIcon = tmp2(6896).VoiceNormalIcon;
         }
+        const obj2 = {};
         const merged4 = Object.assign(merged);
-        tmp8Result = <VoiceNormalIcon />;
+        tmp8Result = tmp8(VoiceNormalIcon, obj2);
       }
     }
   }

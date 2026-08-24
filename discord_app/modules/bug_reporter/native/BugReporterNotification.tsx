@@ -2,27 +2,28 @@
 
 // Module 10126 (BugReporterNotification)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import dispatcherDefault from "dispatcher" /* 10031 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import zustandStore from "zustandStore" /* 10127 */;
+import closure_6 from "zustandStore" /* 10127 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import "createCacheKey";
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
-const createCacheKey = { height: 64, width: 32, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = { preview: null, rightAccessoryContainer: null };
+createCacheKey = { height: 64, width: 32, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginLeft: ThemesDefault.space.PX_12 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/bug_reporter/native/BugReporterNotification.tsx");
+const obj1 = { marginLeft: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/bug_reporter/native/BugReporterNotification.tsx");
 
 export const BugReporterNotification = function BugReporterNotification(notification) {
   notification = notification.notification;
   const tmp = callback();
-  let obj = { source: { uri: notification.imageUri }, style: tmp.preview };
+  let obj = { style: tmp.rightAccessoryContainer, children: null };
+  obj = { source: { uri: notification.imageUri }, style: tmp.preview };
   const memo = React.useMemo(() => ({ type: "simple", text: "Bug Catcher Clyde" }), []);
   obj[1] = <closure_4 source={{ uri: notification.imageUri }} style={tmp.preview} />;
   obj = {
@@ -34,19 +35,22 @@ export const BugReporterNotification = function BugReporterNotification(notifica
       if (!closure_1_6.getField("isReportOpen")) {
         obj = { type: null, dismissReason: "notification_clicked", inAppNotificationId: null };
         ({ type: obj3[0], inAppNotificationId: obj3[2] } = notification);
-        notification(dependencyMap[9]).trackDismissed(obj);
-        const obj2 = notification(dependencyMap[9]);
-        _modDef5260.popAll();
-        dispatcherDefault.clearNotification();
+        notification(closure_1_2[9]).trackDismissed(obj);
+        const obj2 = notification(closure_1_2[9]);
+        closure_1_1(closure_1_2[10]).popAll();
+        const obj4 = closure_1_1(closure_1_2[10]);
+        closure_1_1(closure_1_2[11]).clearNotification();
         obj.setState({ isReportOpen: true });
+        const obj5 = closure_1_1(closure_1_2[11]);
         obj = { screenshotUri: null, screenshot: null };
         ({ imageUri: obj7[0], image: obj7[1] } = notification);
-        _modDef5260.pushLazy(notification(dependencyMap[13])(dependencyMap[12], dependencyMap.paths), obj);
+        closure_1_1(closure_1_2[10]).pushLazy(notification(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), obj);
+        const obj6 = closure_1_1(closure_1_2[10]);
       }
     },
     onSettingsPress() {
-      notification(table[14]);
-      const obj = { screen: constants.OVERVIEW };
+      let obj = notification(table[14]);
+      obj = { screen: constants.OVERVIEW };
       obj.openUserSettings(obj);
     },
     notification
@@ -60,19 +64,22 @@ export const BugReporterNotification = function BugReporterNotification(notifica
       if (!closure_1_6.getField("isReportOpen")) {
         obj = { type: null, dismissReason: "notification_clicked", inAppNotificationId: null };
         ({ type: obj3[0], inAppNotificationId: obj3[2] } = notification);
-        notification(dependencyMap[9]).trackDismissed(obj);
-        const obj2 = notification(dependencyMap[9]);
-        _modDef5260.popAll();
-        dispatcherDefault.clearNotification();
+        notification(closure_1_2[9]).trackDismissed(obj);
+        const obj2 = notification(closure_1_2[9]);
+        closure_1_1(closure_1_2[10]).popAll();
+        const obj4 = closure_1_1(closure_1_2[10]);
+        closure_1_1(closure_1_2[11]).clearNotification();
         obj.setState({ isReportOpen: true });
+        const obj5 = closure_1_1(closure_1_2[11]);
         obj = { screenshotUri: null, screenshot: null };
         ({ imageUri: obj7[0], image: obj7[1] } = notification);
-        _modDef5260.pushLazy(notification(dependencyMap[13])(dependencyMap[12], dependencyMap.paths), obj);
+        closure_1_1(closure_1_2[10]).pushLazy(notification(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), obj);
+        const obj6 = closure_1_1(closure_1_2[10]);
       }
     },
     onSettingsPress() {
-      notification(table[14]);
-      const obj = { screen: constants.OVERVIEW };
+      let obj = notification(table[14]);
+      obj = { screen: constants.OVERVIEW };
       obj.openUserSettings(obj);
     },
     notification

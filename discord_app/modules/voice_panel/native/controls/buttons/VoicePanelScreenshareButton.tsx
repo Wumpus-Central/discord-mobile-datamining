@@ -2,34 +2,36 @@
 
 // Module 16414 (MobilePhoneShareIcon)
 import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 19 */;
+import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 if (isMetaQuest.isMetaQuest()) {
   let MobilePhoneShareIcon = require("ScreenArrowIcon").ScreenArrowIcon;
 } else {
   MobilePhoneShareIcon = require("MobilePhoneShareIcon").MobilePhoneShareIcon;
 }
+isMetaQuest = { circle: null, iconContainer: null, icon: null };
 isMetaQuest = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
 isMetaQuest[0] = isMetaQuest;
 isMetaQuest[1] = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
 isMetaQuest[2] = { width: 24, height: 24 };
 let closure_10 = createCacheKey.createStyles(isMetaQuest);
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
 
 export default function ScreenshareButton(arg0) {
+  let channelId;
   let isActive;
   let isFeatureEnabled;
   let onPress;
   ({ props, wrapperSpecs } = arg0);
-  const channelId = onPress.useContext(isActive(isFeatureEnabled[10])).channelId;
+  channelId = onPress.useContext(isActive(isFeatureEnabled[10])).channelId;
   const tmp3 = callback2();
   let obj = channelId(isFeatureEnabled[11]);
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
@@ -44,10 +46,10 @@ export default function ScreenshareButton(arg0) {
   const items1 = [isActive, isFeatureEnabled, onPress];
   const callback = onPress.useCallback(() => {
     if (isFeatureEnabled) {
-      isActive(isFeatureEnabled[15]);
-      const obj = { source: "connected button", was_active: null };
+      let obj = isActive(isFeatureEnabled[15]);
+      obj = { source: "connected button", was_active: null };
       obj[1] = isActive;
-      obj.track(AnalyticEvents.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, obj);
+      obj.track(closure_1_6.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, obj);
       onPress();
     }
   }, items1);
@@ -101,5 +103,5 @@ export default function ScreenshareButton(arg0) {
   obj[1] = tmp16Result;
   items3[1] = callback(tmpResult, obj);
   obj[5] = items3;
-  return callback(tmpResult, obj);
+  return closure_8(tmpResult, obj);
 };

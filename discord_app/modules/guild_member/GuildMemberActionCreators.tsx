@@ -4,11 +4,11 @@
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import updateImpersonating from "updateImpersonating" /* 6792 */;
-import initialize from "initialize" /* 1982 */;
+import closure_3 from "initialize" /* 1982 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
 
 export const updateGuildSelfMember = function updateGuildSelfMember(closure_1_0, arg1) {
   let flag = arg2;
@@ -20,6 +20,7 @@ export const updateGuildSelfMember = function updateGuildSelfMember(closure_1_0,
     obj[0] = arg1;
     const result = updateImpersonating.updateImpersonatedData(closure_1_0, obj);
   } else {
+    obj = dispatcherDefault;
     obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, flags: null };
     obj[1] = closure_1_0;
     ({ roles: obj2[2], flags: obj2[3] } = arg1);

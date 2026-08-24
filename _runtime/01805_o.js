@@ -20,10 +20,9 @@ fn.__initData = { code: "function pnpm_processBoxShadowTs1(value){return value.e
 function parseBoxShadowString(str) {
   const items = [];
   const parts = str.split(/,(?![^()]*\))/);
-  const mapped = parts.map((item, index) => item.trim());
-  const found = mapped.filter((item, index) => "" !== item);
+  const mapped = parts.map((str) => str.trim());
+  const found = mapped.filter((arg0) => "" !== arg0);
   const iter = found[Symbol.iterator]();
-  str = iter.next();
   while (iter !== undefined) {
     let obj = { offsetX: 0, offsetY: 0 };
     let tmp2 = null;
@@ -31,82 +30,128 @@ function parseBoxShadowString(str) {
     let flag = false;
     let num = 0;
     let parts1 = str.split(/\s+(?![^(]*\))/);
+    let tmp5 = parts1;
+    let tmp6 = parts1;
     for (const item10041 of parts1) {
+      let tmp7 = item10041;
+      let tmp8 = fn;
       if (fn(item10041)) {
+        let tmp21 = num;
         if (0 === num) {
           tmp2 = item10041;
+          let tmp40 = num;
           num = num + 1;
         } else if (1 === num) {
+          let tmp36 = flag;
           if (flag) {
+            let tmp38 = obj2;
             obj2.return();
+            let tmp39 = iter;
             let items1 = [];
             iter.return();
             return items1;
           } else {
             tmp3 = item10041;
+            let tmp37 = num;
             num = num + 1;
           }
         } else if (2 === num) {
+          let tmp30 = flag;
           if (flag) {
+            let tmp34 = obj2;
             obj2.return();
+            let tmp35 = iter;
             let items2 = [];
             iter.return();
             return items2;
           } else {
-            obj.blurRadius = item10041;
+            let tmp31 = obj;
+            let tmp32 = item10041;
+            obj.blurRadius = tmp7;
+            let tmp33 = num;
             num = num + 1;
           }
         } else if (3 === num) {
+          let tmp24 = flag;
           if (flag) {
+            let tmp28 = obj2;
             obj2.return();
+            let tmp29 = iter;
             let items3 = [];
             iter.return();
             return items3;
           } else {
-            obj.spreadDistance = item10041;
+            let tmp25 = obj;
+            let tmp26 = item10041;
+            obj.spreadDistance = tmp7;
+            let tmp27 = num;
             num = num + 1;
           }
         } else {
+          let tmp22 = obj2;
           obj2.return();
+          let tmp23 = iter;
           let items4 = [];
           iter.return();
           return items4;
         }
         continue;
-      } else if ("inset" === item10041) {
-        if (obj.inset) {
-          obj2.return();
-          let items5 = [];
-          iter.return();
-          return items5;
-        } else {
-          if (null !== tmp2) {
-            flag = true;
-          }
-          obj.inset = true;
-          continue;
-        }
-      } else if (obj.color) {
-        obj2.return();
-        let items6 = [];
-        iter.return();
-        return items6;
       } else {
-        if (null != tmp2) {
-          flag = true;
+        let tmp9 = item10041;
+        if ("inset" === tmp7) {
+          let tmp16 = obj;
+          if (obj.inset) {
+            let tmp19 = obj2;
+            obj2.return();
+            let tmp20 = iter;
+            let items5 = [];
+            iter.return();
+            return items5;
+          } else {
+            let tmp17 = tmp2;
+            if (null !== tmp2) {
+              flag = true;
+            }
+            let tmp18 = obj;
+            obj.inset = true;
+            continue;
+          }
+        } else {
+          let tmp10 = obj;
+          if (obj.color) {
+            let tmp14 = obj2;
+            obj2.return();
+            let tmp15 = iter;
+            let items6 = [];
+            iter.return();
+            return items6;
+          } else {
+            let tmp11 = tmp2;
+            if (null != tmp2) {
+              flag = true;
+            }
+            let tmp12 = obj;
+            let tmp13 = item10041;
+            obj.color = tmp7;
+          }
         }
-        obj.color = item10041;
       }
       continue;
     }
+    let tmp41 = tmp2;
     if (null !== tmp2) {
+      let tmp42 = tmp3;
       if (null !== tmp3) {
+        let tmp43 = obj;
+        let tmp44 = tmp2;
         obj.offsetX = tmp2;
+        let tmp45 = tmp3;
         obj.offsetY = tmp3;
         let arr = items.push(obj);
         continue;
       }
     }
+    let tmp47 = iter;
     let items7 = [];
     iter.return();
     return items7;
@@ -162,76 +207,111 @@ function processBoxShadow(boxShadow) {
     while (iter !== undefined) {
       let tmp13 = nextResult;
       let obj = { offsetX: 0, offsetY: 0 };
+      let tmp14 = nextResult;
       for (const key10047 in nextResult) {
+        let tmp51 = key10047;
         if ("offsetX" === key10047) {
+          let tmp41 = nextResult;
           if (typeof tmp13.offsetX === "string") {
+            let tmp42 = parseLength;
+            let tmp43 = nextResult;
             let offsetX = parseLength(tmp13.offsetX);
           } else {
+            let tmp55 = nextResult;
             offsetX = tmp13.offsetX;
           }
           if (null === offsetX) {
+            let tmp47 = iter;
             let items1 = [];
             iter.return();
             return items1;
           } else {
+            let tmp45 = obj;
+            let tmp46 = offsetX;
             obj.offsetX = tmp44;
             continue;
           }
         } else {
           if ("offsetY" === key10047) {
+            let tmp34 = nextResult;
             if (typeof tmp13.offsetY === "string") {
+              let tmp35 = parseLength;
+              let tmp36 = nextResult;
               let offsetY = parseLength(tmp13.offsetY);
             } else {
+              let tmp54 = nextResult;
               offsetY = tmp13.offsetY;
             }
             if (null === offsetY) {
+              let tmp40 = iter;
               let items2 = [];
               iter.return();
               return items2;
             } else {
+              let tmp38 = obj;
+              let tmp39 = offsetY;
               obj.offsetY = tmp37;
               continue;
             }
           } else {
             if ("spreadDistance" === key10047) {
+              let tmp27 = nextResult;
               if (typeof tmp13.spreadDistance === "string") {
+                let tmp28 = parseLength;
+                let tmp29 = nextResult;
                 let spreadDistance = parseLength(tmp13.spreadDistance);
               } else {
+                let tmp53 = nextResult;
                 spreadDistance = tmp13.spreadDistance;
               }
               if (null === spreadDistance) {
+                let tmp33 = iter;
                 let items3 = [];
                 iter.return();
                 return items3;
               } else {
+                let tmp31 = obj;
+                let tmp32 = spreadDistance;
                 obj.spreadDistance = tmp30;
                 continue;
               }
             } else {
               if ("blurRadius" === key10047) {
+                let tmp19 = nextResult;
                 if (typeof tmp13.blurRadius === "string") {
+                  let tmp20 = parseLength;
+                  let tmp21 = nextResult;
                   let blurRadius = parseLength(tmp13.blurRadius);
                 } else {
+                  let tmp52 = nextResult;
                   blurRadius = tmp13.blurRadius;
                 }
                 let tmp22 = blurRadius;
                 if (null !== blurRadius) {
+                  let tmp23 = blurRadius;
                   if (tmp22 >= 0) {
+                    let tmp24 = obj;
+                    let tmp25 = blurRadius;
                     obj.blurRadius = tmp22;
                     continue;
                   }
                 }
+                let tmp26 = iter;
                 let items4 = [];
                 iter.return();
                 return items4;
               } else {
                 if ("color" === key10047) {
+                  let tmp17 = obj;
+                  let tmp18 = nextResult;
                   obj.color = tmp13.color;
                   continue;
                 } else {
                   if ("inset" !== key10047) {
                     continue;
                   } else {
+                    let tmp15 = obj;
+                    let tmp16 = nextResult;
                     obj.inset = tmp13.inset;
                     continue;
                   }
@@ -247,6 +327,7 @@ function processBoxShadow(boxShadow) {
         }
         continue;
       }
+      let tmp48 = obj;
       let arr = items.push(obj);
       continue;
     }

@@ -1,18 +1,19 @@
 // === Module 11236: SubmittingOverlay ===
 
 // Module 11236 (SubmittingOverlay)
-import obj132 from "obj132" /* 2 */;
+import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
 const jsx = jsxProd.jsx;
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
+let obj = { ellipsis: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 let closure_5 = { code: "function SubmittingOverlayTsx1(){const{withSpring,submitting,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(submitting?1:0,SUBTLE_SPRING,'animate-always')};}" };
-const result = obj132.fileFinishedImporting("modules/app_launcher/native/screens/home/SubmittingOverlay.tsx");
+const result = set.fileFinishedImporting("modules/app_launcher/native/screens/home/SubmittingOverlay.tsx");
 
 export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   submitting = submitting.submitting;
@@ -38,7 +39,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   obj = { style: items, children: null };
   items = [submitting.style, callback().ellipsis, animatedStyle];
   if (submitting) {
-    submitting = jsx(submitting(4760).Ellipsis, { variant: "active", size: "md" });
+    submitting = tmp5(submitting(4760).Ellipsis, { variant: "active", size: "md" });
   }
   obj[1] = submitting;
   return jsx(_modDef4115.View, { style: items, children: null });
